@@ -6264,6 +6264,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A904/test/_63586234_lassalagos.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A904/test/_63586234_lassalagos.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6318,6 +6319,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg.webp 400w"
                             width="1024"
                           />
                         </div>
@@ -6372,6 +6374,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/7DD4/test/_63721223_image1.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/7DD4/test/_63721223_image1.jpg.webp 400w"
                             width="976"
                           />
                         </div>
@@ -6426,6 +6429,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/13EDE/test/_63603618_040299897-1.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/13EDE/test/_63603618_040299897-1.jpg.webp 400w"
                             width="976"
                           />
                         </div>
@@ -6480,6 +6484,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/9298/test/_63582573_scaramucci.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/9298/test/_63582573_scaramucci.jpg.webp 400w"
                             width="976"
                           />
                         </div>
@@ -6534,6 +6539,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A71A/test/_63587724_jane7.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A71A/test/_63587724_jane7.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6588,6 +6594,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6642,6 +6649,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6696,6 +6704,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/1B9C/test/_63586070_kenya.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/1B9C/test/_63586070_kenya.jpg.webp 400w"
                             width="624"
                           />
                         </div>
