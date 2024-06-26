@@ -109,9 +109,7 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
 };
 
 const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
-  const { value: files, wasInvalid, fileTypes, max } = data;
-  const min = 1;
-  const required = true;
+  const { value: files, required, wasInvalid, fileTypes, min, max } = data;
   const MAX_PAYLOAD_SIZE = 1288490189;
   const RESERVED_FORM_DATA_SIZE = 10000;
   // we're making the assumption that each file chooser field is only allowed the max payload size less some for data (estimated maximum size ever needed)

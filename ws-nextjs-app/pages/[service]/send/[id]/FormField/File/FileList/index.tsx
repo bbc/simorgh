@@ -101,6 +101,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
               }
               src={`${thumbnailSrc}`}
               alt=""
+              aria-hidden="true"
             />
           </div>
           <span
@@ -136,7 +137,9 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
   });
   return (
     <>
-      <ul css={styles.fileList}>{listItems}</ul>
+      <ul role="list" css={styles.fileList}>
+        {listItems}
+      </ul>
     </>
   );
 };
