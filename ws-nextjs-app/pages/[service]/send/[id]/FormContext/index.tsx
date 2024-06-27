@@ -9,7 +9,7 @@ import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
-import isLive from '#app/lib/utilities/isLive';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import {
   Field,
   FieldData,
@@ -80,6 +80,7 @@ export const FormContextProvider = ({
 }: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
   const {
     query: { id },
+    asPath,
   } = useRouter();
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
@@ -142,7 +143,8 @@ export const FormContextProvider = ({
       formData.append(key, fieldValue as string);
     });
     try {
-      const domain = `https://www.${isLive() ? '' : 'test.'}bbc.com`;
+      const environment = getEnvironment(asPath);
+      const domain = `https://www.${environment === 'test' ? 'test.' : ''}bbc.com`;
       const url = `${domain}/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
