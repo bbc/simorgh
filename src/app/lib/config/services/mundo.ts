@@ -268,14 +268,23 @@ export const service: DefaultServiceConfig = {
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
-        retentionPeriodDays:
-          "We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.",
+        retentionPeriodDays: `We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.`,
         privacyInfoHtml:
           'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
           'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
         removalGuidelineText:
           'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
+        validationFilesNotEnough:
+          'No hay suficientes archivos. Por favor añade al menos {{minFiles}}.',
+        validationFilesTooMany:
+          'Hay demasiados archivos. Puedes añadir {{maxFiles}}. ',
+        validationFilesInvalidType:
+          'Disculpa, no podemos utilizar este tipo de archivo. Por favor, utiliza {{fileTypes}}.',
+        validationFilesTooSmall:
+          'Este archivo no es correcto. Intenta seleccionar otro.',
+        validationFilesSizeExceeded:
+          'Disculpa, estos archivos son muy pesados. Solo puedes cargar hasta 1,2 GB a la vez.',
       },
     },
     mostRead: {

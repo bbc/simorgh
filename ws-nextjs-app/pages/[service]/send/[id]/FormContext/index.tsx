@@ -13,10 +13,12 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import {
   Field,
   FieldData,
+  FileData,
   FormScreen,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
+  OnFocusOutHandler,
 } from '../types';
 import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
@@ -31,6 +33,7 @@ type SubmissionError = {
 export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
+  handleFocusOut: OnFocusOutHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
@@ -49,6 +52,7 @@ const getInitialFormState = (
     (acc, field) => ({
       ...acc,
       [field.id]: {
+        ...(field.validation && field.validation),
         isValid: true,
         required: field.validation.mandatory ?? false,
         wordLimit: field.validation.wordLimit ?? undefined,
@@ -92,16 +96,31 @@ export const FormContextProvider = ({
   const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
-    setFormState(prevState => {
-      const currState = { ...prevState[name], value };
-      // As part of GEL guidelines, we should validate during user input, following an initial submit.
-      const validateFunction = validateFunctions[currState.htmlType];
-      const validatedData = validateFunction
+    const prevState = formState[name];
+    const currState = { ...prevState, value };
+    let validatedData = currState;
+    if (currState.htmlType === 'file') {
+      const validateFunction = validateFunctions.file;
+      validatedData = validateFunction
         ? validateFunction(currState)
         : currState;
-
+    }
+    setFormState(prevFormState => {
       const updatedState = { [name]: { ...validatedData } };
-      return { ...prevState, ...updatedState };
+      return { ...prevFormState, ...updatedState };
+    });
+  };
+
+  const handleFocusOut = (name: OnChangeInputName) => {
+    const currState = formState[name];
+    const validateFunction = validateFunctions[currState.htmlType];
+    const validatedData = validateFunction
+      ? validateFunction(currState)
+      : currState;
+
+    setFormState(prevFormState => {
+      const updatedState = { [name]: { ...validatedData } };
+      return { ...prevFormState, ...updatedState };
     });
   };
 
@@ -129,9 +148,9 @@ export const FormContextProvider = ({
 
       if (fieldValue === '') return;
       if (isFileHtmlType) {
-        const fileList = fieldValue as File[];
+        const fileList = fieldValue as FileData[];
 
-        fileList.forEach(file => {
+        fileList.forEach(({ file }: FileData) => {
           formData.append(key, file);
         });
         return;
@@ -200,6 +219,7 @@ export const FormContextProvider = ({
       value={{
         formState,
         handleChange,
+        handleFocusOut,
         handleSubmit,
         submissionError,
         submitted,

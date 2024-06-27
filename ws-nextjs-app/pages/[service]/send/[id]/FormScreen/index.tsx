@@ -56,16 +56,19 @@ export default function FormScreen({
         <LiveRegionContextProvider>
           {formFields}
 
-          <strong // TODO: need translations for this, it doesn't come through from the api
-            css={styles.privacyHeading}
-          >
-            {translation}
-          </strong>
-          <div
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: privacyNotice }}
-            css={styles.privacyNotice}
-          />
+          <div css={styles.privacyContainer}>
+            <strong // TODO: need translations for this, it doesn't come through from the api
+              css={styles.privacyHeading}
+            >
+              {translation}
+            </strong>
+            <div
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: privacyNotice }}
+              css={styles.privacyNotice}
+            />
+          </div>
+
           {!submitted ? <Submit /> : <Loader />}
           <LiveRegion />
         </LiveRegionContextProvider>

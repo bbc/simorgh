@@ -46,4 +46,8 @@ export default {
       ...fontVariants.sansBold,
       ...fontSizes.longPrimer,
     }),
+  privacyContainer: ({ spacings }: Theme) =>
+    css({
+      marginTop: `${spacings.DOUBLE}rem`,
+    }),
 };
