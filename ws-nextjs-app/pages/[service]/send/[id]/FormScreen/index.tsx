@@ -25,7 +25,7 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submissionError, submitted } = useFormContext();
+  const { handleSubmit, submitted } = useFormContext();
   const translation = 'Our data policy';
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -55,27 +55,23 @@ export default function FormScreen({
         <LiveRegionContextProvider>
           {formFields}
 
-          <strong // TODO: need translations for this, it doesn't come through from the api
-            css={styles.privacyHeading}
-          >
-            {translation}
-          </strong>
-          <div
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: privacyNotice }}
-            css={styles.privacyNotice}
-          />
+          <div css={styles.privacyContainer}>
+            <strong // TODO: need translations for this, it doesn't come through from the api
+              css={styles.privacyHeading}
+            >
+              {translation}
+            </strong>
+            <div
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: privacyNotice }}
+              css={styles.privacyNotice}
+            />
+          </div>
+
           {!submitted && <Submit />}
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>
-      {submissionError && (
-        <div css={styles.submissionError}>
-          {`Error: ${submissionError.status} - ${submissionError.code} - ${submissionError.message}`}
-          <br />
-          {`Recoverable: ${submissionError.isRecoverable}`}
-        </div>
-      )}
     </>
   );
 }
