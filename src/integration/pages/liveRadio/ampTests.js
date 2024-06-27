@@ -28,4 +28,5 @@ export default service => {
     );
     expect(scheduleWrapper).not.toBeInTheDocument();
   });
+  
 };
