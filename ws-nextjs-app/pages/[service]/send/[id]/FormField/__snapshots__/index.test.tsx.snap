@@ -27,7 +27,6 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-bottom: 1rem;
 }
 
 .emotion-2 {
@@ -43,7 +42,6 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   cursor: pointer;
   box-sizing: border-box;
   border: solid 0.0625rem #141414;
-  margin-bottom: 0.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -78,6 +76,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
@@ -138,6 +137,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
       <label
         class="emotion-3"
         for="testCheckboxID"
+        id="label-testCheckboxID"
       >
         This is a text field (optional)
       </label>
@@ -173,6 +173,7 @@ exports[`FormField should render a required input with an associated label 1`] =
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -250,6 +251,7 @@ exports[`FormField should render a required input with an associated label 1`] =
     <label
       class="emotion-1"
       for="testAllyID"
+      id="label-testAllyID"
     >
       This is a required text field
     </label>
@@ -293,6 +295,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -370,6 +373,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
     <label
       class="emotion-1"
       for="testTelID"
+      id="label-testTelID"
     >
       This is a text field (optional)
     </label>
@@ -414,6 +418,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -491,6 +496,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
     <label
       class="emotion-1"
       for="testTextID"
+      id="label-testTextID"
     >
       This is a text field (optional)
     </label>
@@ -535,6 +541,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -584,6 +591,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   resize: none;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -613,6 +621,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
     <label
       class="emotion-1"
       for="testTextAreaID"
+      id="label-testTextAreaID"
     >
       This is a text field (optional)
     </label>
@@ -654,6 +663,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -731,6 +741,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
     <label
       class="emotion-1"
       for="testEmailID"
+      id="label-testEmailID"
     >
       This is a text field (optional)
     </label>

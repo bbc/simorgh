@@ -12,14 +12,22 @@ type Props = {
   className?: string;
   labelText: string;
   required: boolean;
+  useErrorTheme: boolean;
 };
 
-export default ({ id, forId, labelText, className, required }: Props) => (
+export default ({
+  id,
+  forId,
+  labelText,
+  className,
+  required,
+  useErrorTheme,
+}: Props) => (
   <Text
     as="label"
     className={className}
     htmlFor={forId}
-    css={styles.fieldLabel}
+    css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
     dangerouslySetInnerHTML={{
       __html: required ? labelText : `${labelText} ${optionalTranslation}`,
     }}
