@@ -9,6 +9,7 @@ import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
+import isLive from '#app/lib/utilities/isLive';
 import {
   Field,
   FieldData,
@@ -141,7 +142,8 @@ export const FormContextProvider = ({
       formData.append(key, fieldValue as string);
     });
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const domain = `https://www.${isLive() ? '' : 'test.'}bbc.com`;
+      const url = `${domain}/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.responseType = 'json';
