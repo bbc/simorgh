@@ -135,6 +135,7 @@ exports[`Form should render and match snapshot 1`] = `
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -196,6 +197,7 @@ exports[`Form should render and match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   resize: none;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -227,7 +229,6 @@ exports[`Form should render and match snapshot 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-bottom: 1rem;
 }
 
 .emotion-20 {
@@ -243,7 +244,6 @@ exports[`Form should render and match snapshot 1`] = `
   cursor: pointer;
   box-sizing: border-box;
   border: solid 0.0625rem #141414;
-  margin-bottom: 0.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -278,6 +278,7 @@ exports[`Form should render and match snapshot 1`] = `
   font-weight: 400;
   display: inline-block;
   margin-bottom: 0.375rem;
+  color: #141414;
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
@@ -301,6 +302,10 @@ exports[`Form should render and match snapshot 1`] = `
 }
 
 .emotion-22 {
+  margin-top: 1rem;
+}
+
+.emotion-23 {
   color: #000000;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -310,20 +315,20 @@ exports[`Form should render and match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-23 {
+.emotion-24 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -332,42 +337,42 @@ exports[`Form should render and match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-24 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-23 p {
+.emotion-24 p {
   color: #000000;
 }
 
-.emotion-23 a {
+.emotion-24 a {
   color: #222222;
   border-bottom: 0.0625rem solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-23 a:visited {
+.emotion-24 a:visited {
   color: #6E6E73;
   border-bottom: 0.0625rem solid #6E6E73;
 }
 
-.emotion-23 a:focus,
-.emotion-23 a:hover {
+.emotion-24 a:focus,
+.emotion-24 a:hover {
   border-bottom: 0.125rem solid #B80000;
   color: #B80000;
 }
 
-.emotion-24 {
+.emotion-25 {
   background-color: #0071F1;
   color: #FFFFFF;
   width: 100%;
@@ -383,32 +388,32 @@ exports[`Form should render and match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-25 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-25 {
     margin-top: 0.5rem;
   }
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   background-color: #0051AD;
 }
 
 @media (min-width: 80rem) {
-  .emotion-24 {
+  .emotion-25 {
     margin-top: 0;
   }
 }
 
-.emotion-25 {
+.emotion-26 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -477,6 +482,7 @@ exports[`Form should render and match snapshot 1`] = `
       <label
         class="emotion-4"
         for="txt49018765"
+        id="label-txt49018765"
       >
         Nombre (optional)
       </label>
@@ -497,6 +503,7 @@ exports[`Form should render and match snapshot 1`] = `
       <label
         class="emotion-4"
         for="txt49018835"
+        id="label-txt49018835"
       >
         Dirección de email (optional)
       </label>
@@ -517,6 +524,7 @@ exports[`Form should render and match snapshot 1`] = `
       <label
         class="emotion-4"
         for="txt49018894"
+        id="label-txt49018894"
       >
         Ciudad y país (optional)
       </label>
@@ -537,6 +545,7 @@ exports[`Form should render and match snapshot 1`] = `
       <label
         class="emotion-4"
         for="txt49018963"
+        id="label-txt49018963"
       >
         Número de teléfono (optional)
       </label>
@@ -557,6 +566,7 @@ exports[`Form should render and match snapshot 1`] = `
       <label
         class="emotion-4"
         for="txt49019016"
+        id="label-txt49019016"
       >
         Comentario (optional)
       </label>
@@ -584,53 +594,58 @@ exports[`Form should render and match snapshot 1`] = `
         <label
           class="emotion-21"
           for="chk49021805"
+          id="label-chk49021805"
         >
           Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario. (optional)
         </label>
       </div>
     </div>
-    <strong
+    <div
       class="emotion-22"
     >
-      Our data policy
-    </strong>
-    <div
-      class="emotion-23"
-    >
-      Si bien leemos lo mensajes que recibimos, no podemos garantizar que responderemos a todos.
-      <p />
+      <strong
+        class="emotion-23"
+      >
+        Our data policy
+      </strong>
+      <div
+        class="emotion-24"
+      >
+        Si bien leemos lo mensajes que recibimos, no podemos garantizar que responderemos a todos.
+        <p />
+        
       
+        <p>
+          Los datos personales que proporcione serán procesados por la BBC y cualquier proveedor de servicios relevante del que dependamos para respaldar nuestros sistemas de quejas y de participación de la audiencia con el fin manejar sus comentarios. La BBC y nuestros proveedores de servicios retendrán sus datos de acuerdo con nuestra política de retención y el Reglamento General de Protección de Datos.
+        </p>
+        
       
-      <p>
-        Los datos personales que proporcione serán procesados por la BBC y cualquier proveedor de servicios relevante del que dependamos para respaldar nuestros sistemas de quejas y de participación de la audiencia con el fin manejar sus comentarios. La BBC y nuestros proveedores de servicios retendrán sus datos de acuerdo con nuestra política de retención y el Reglamento General de Protección de Datos.
-      </p>
-      
-      
-      <p>
-        La BBC procesa sus datos sobre la base de sus intereses legítimos como organización de medios para responder a los comentarios y preocupaciones de la audiencia. Visite la 
-        <a
-          href="https://www.bbc.com/mundo/institucional-36400009"
-        >
-          Cláusula de privacidad
-        </a>
-         y 
-        <a
-          href="http://www.bbc.co.uk/usingthebbc/cookies/"
-        >
-          Cookies
-        </a>
-         de la BBC para obtener más información sobre cómo la BBC maneja sus datos. Si presenta una queja ante la BBC sobre cómo manejamos sus datos personales y usted no está satisfecho con nuestra respuesta, puede presentar una queja ante la Oficina del Comisionado de Información de Reino Unido.
-      </p>
+        <p>
+          La BBC procesa sus datos sobre la base de sus intereses legítimos como organización de medios para responder a los comentarios y preocupaciones de la audiencia. Visite la 
+          <a
+            href="https://www.bbc.com/mundo/institucional-36400009"
+          >
+            Cláusula de privacidad
+          </a>
+           y 
+          <a
+            href="http://www.bbc.co.uk/usingthebbc/cookies/"
+          >
+            Cookies
+          </a>
+           de la BBC para obtener más información sobre cómo la BBC maneja sus datos. Si presenta una queja ante la BBC sobre cómo manejamos sus datos personales y usted no está satisfecho con nuestra respuesta, puede presentar una queja ante la Oficina del Comisionado de Información de Reino Unido.
+        </p>
+      </div>
     </div>
     <button
-      class="emotion-24"
+      class="emotion-25"
       type="submit"
     >
       Submit
     </button>
     <span
       aria-live="polite"
-      class="emotion-25"
+      class="emotion-26"
     />
   </form>
 </div>
