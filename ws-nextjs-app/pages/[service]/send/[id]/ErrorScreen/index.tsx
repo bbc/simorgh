@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import GenericMessage from '../GenericMessage';
 
 const ERROR_HEADING = 'Sorry, your message could not be sent.';
@@ -13,7 +13,14 @@ export default function ErrorScreen({ title }: Props) {
     document.title = `Error: ${title}`;
   }, [title]);
 
+  const ref = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
+
   return (
-    <GenericMessage heading={ERROR_HEADING}>{ERROR_MESSAGE}</GenericMessage>
+    <GenericMessage heading={ERROR_HEADING} ref={ref}>
+      {ERROR_MESSAGE}
+    </GenericMessage>
   );
 }
