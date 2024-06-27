@@ -29,4 +29,11 @@ export default service => {
     );
     expect(scheduleWrapper).not.toBeInTheDocument();
   });
+
+  it('should render an image placeholder', () => {
+    const scheduleWrapper = document.querySelector(
+      `div[data-e2e="image-placeholder"][placeholder]`,
+    );
+    expect(scheduleWrapper).toBeInTheDocument();
+  });
 };
