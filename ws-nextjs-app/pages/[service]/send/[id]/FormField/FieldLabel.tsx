@@ -12,18 +12,20 @@ export default ({
   children,
   className,
   required,
+  useErrorTheme,
 }: PropsWithChildren<{
   id?: InputProps['id'];
   forId: string;
   className?: string;
   required: boolean;
+  useErrorTheme: boolean;
 }>) => (
   <Text
     as="label"
     {...(id && { id })}
     className={className}
     htmlFor={forId}
-    css={styles.fieldLabel}
+    css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
   >
     {required ? children : `${children} ${optionalTranslation}`}
   </Text>
