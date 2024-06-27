@@ -20,13 +20,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           });
         });
 
-        // todo: Move to integration test
-        // it('should render an image placeholder', () => {
-        //   cy.get(`div[data-e2e="image-placeholder"][placeholder]`).should(
-        //     'exist',
-        //   );
-        // });
-
         it('embed URL should be reachable', () => {
           cy.testResponseCodeAndTypeRetry({
             path: embedUrl,

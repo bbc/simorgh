@@ -19,7 +19,6 @@ export default service => {
     const audioPlaceholderImage = document.querySelector(
       'div[data-e2e="image-placeholder"][placeholder]',
     );
-
     expect(audioPlaceholderImage).toBeInTheDocument();
   });
 
