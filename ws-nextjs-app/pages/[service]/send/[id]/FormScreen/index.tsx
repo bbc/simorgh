@@ -26,7 +26,7 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submissionError, submitted } = useFormContext();
+  const { handleSubmit, submitted } = useFormContext();
   const translation = 'Our data policy';
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -73,13 +73,6 @@ export default function FormScreen({
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>
-      {submissionError && (
-        <div css={styles.submissionError}>
-          {`Error: ${submissionError.status} - ${submissionError.code} - ${submissionError.message}`}
-          <br />
-          {`Recoverable: ${submissionError.isRecoverable}`}
-        </div>
-      )}
     </>
   );
 }

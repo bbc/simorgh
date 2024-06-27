@@ -9,6 +9,7 @@ import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import {
   Field,
   FieldData,
@@ -83,6 +84,7 @@ export const FormContextProvider = ({
 }: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
   const {
     query: { id },
+    asPath,
   } = useRouter();
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
@@ -124,14 +126,19 @@ export const FormContextProvider = ({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setSubmitted(true);
     setAttemptedSubmit(true);
-
     // Reset error state
     setSubmissionError(null);
+    const validatedFormData = validateFormState(formState);
+    setFormState(validatedFormData);
 
-    // Validate
-    setFormState(state => validateFormState(state));
+    const formInvalidErrors = Object.values(validatedFormData).filter(
+      item => item.isValid === false,
+    ).length;
+
+    if (formInvalidErrors > 0) return;
+
+    setSubmitted(true);
 
     const formData = new FormData();
 
@@ -154,23 +161,30 @@ export const FormContextProvider = ({
       }
       formData.append(key, fieldValue as string);
     });
-
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const environment = getEnvironment(asPath);
+      const domain = `https://www.${environment === 'test' ? 'test.' : ''}bbc.com`;
+      const url = `${domain}/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
       req.responseType = 'json';
       req.open('POST', url, true);
 
+      req.upload.onloadstart = () => {
+        setScreen('uploading');
+      };
+
       req.upload.onprogress = e => {
         setProgress(((e.loaded / e.total) * 100).toFixed(0));
       };
-
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
           if (req.status === OK) {
             setSubmissionID(req.response.submissionId);
+            setTimeout(() => {
+              setScreen('success');
+            }, 3000);
           }
           if (req.status !== OK) {
             const { message, code, status, isRecoverable } = new UGCSendError(
@@ -183,19 +197,20 @@ export const FormContextProvider = ({
               status,
               isRecoverable,
             });
-
-            setScreen('error');
+            setTimeout(() => {
+              setScreen('error');
+            }, 3000);
           }
         }
       };
-
       req.send(formData);
     } catch (error) {
       const { message, status } = error as UGCSendError;
 
       setSubmissionError({ message, status });
-
-      setScreen('error');
+      setTimeout(() => {
+        setScreen('error');
+      }, 3000);
     }
   };
 
