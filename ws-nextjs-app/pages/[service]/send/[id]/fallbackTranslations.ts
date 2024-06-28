@@ -7,7 +7,7 @@ const fallbackTranslations: UgcTranslations = {
     'To load this page, please enable JavaScript, or try a different browser',
 
   // Optional
-  optional: 'Optional',
+  optional: 'optional',
 
   // File upload
   fileUploadLiveRegionText: `Update, Here's what you're sending: `,
