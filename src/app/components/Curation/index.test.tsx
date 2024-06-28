@@ -5,7 +5,7 @@ import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzHomePage from '../../../../data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
-import { render } from '../react-testing-library-with-providers';
+import { render, screen } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
   VISUAL_STYLE,
@@ -215,6 +215,74 @@ describe('Curation', () => {
       );
 
       expect(document.querySelectorAll('section h2').length).toBe(1);
+    });
+
+    it('should have h3 summary titles when page has multiple curations and a curation title', () => {
+      const { summaries } = mundoFixture.data.curations[1];
+
+      render(
+        <Curation
+          title="2nd Curation"
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={1}
+          summaries={summaries}
+          curationLength={2}
+        />,
+      );
+      screen.debug();
+      expect(document.querySelectorAll('h3').length).toBe(4);
+    });
+
+    it('should have h3 summary titles when page has multiple curations and no curation title and is the first curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={2}
+        />,
+      );
+      screen.debug();
+      expect(document.querySelectorAll('h3').length).toBe(8);
+    });
+
+    it('should have h2 summary titles when page has one curation', () => {
+      const { summaries } = fixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={1}
+        />,
+      );
+      screen.debug();
+      expect(document.querySelectorAll('h2').length).toBe(24);
+      expect(document.querySelectorAll('h3').length).toBe(0);
+    });
+
+    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title="First Curation"
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+        />,
+      );
+      screen.debug();
+      expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
+      expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
     });
   });
 });

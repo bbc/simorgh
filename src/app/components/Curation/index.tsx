@@ -49,7 +49,6 @@ export default ({
   title = '',
   topStoriesTitle = '',
   link = '',
-  headingLevel = 2,
   position = 0,
   curationLength = 0,
   mostRead,
@@ -63,7 +62,6 @@ export default ({
     radioSchedule,
     embed,
   });
-
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -143,31 +141,31 @@ export default ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      return curationLength > 1 &&
-        summaries.length > 0 &&
-        (title || isFirstCuration) ? (
-        <section aria-labelledby={id} role="region">
-          {isFirstCuration ? (
-            <VisuallyHiddenText id={id} as="h2">
-              {curationSubheading}
-            </VisuallyHiddenText>
-          ) : (
-            <Subheading id={id} link={link}>
-              {curationSubheading}
-            </Subheading>
-          )}
+      if (summaries.length > 0) {
+        return curationLength > 1 && (title || isFirstCuration) ? (
+          <section aria-labelledby={id} role="region">
+            {isFirstCuration ? (
+              <VisuallyHiddenText id={id} as="h2">
+                {curationSubheading}
+              </VisuallyHiddenText>
+            ) : (
+              <Subheading id={id} link={link}>
+                {curationSubheading}
+              </Subheading>
+            )}
+            <GridComponent
+              summaries={summaries}
+              headingLevel={3} // multiple curations, don't we want the promos to all be h3?
+            />
+          </section>
+        ) : (
           <GridComponent
             summaries={summaries}
-            headingLevel={isFirstCuration ? 3 : headingLevel}
+            headingLevel={2} // if there is only one curation, don't we always want promos to be h2?
             isFirstCuration={isFirstCuration}
           />
-        </section>
-      ) : (
-        <GridComponent
-          summaries={summaries}
-          headingLevel={headingLevel}
-          isFirstCuration={isFirstCuration}
-        />
-      );
+        );
+      }
+      return null;
   }
 };
