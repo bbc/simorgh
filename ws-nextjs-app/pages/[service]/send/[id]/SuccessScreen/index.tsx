@@ -19,23 +19,23 @@ type Props = {
 
 const SuccessScreen = ({ title }: Props) => {
   const {
-    translations: { ugc = fallbackTranslations },
+    translations: {
+      ugc: {
+        successHeading = fallbackTranslations.successHeading,
+        successDescription = fallbackTranslations.successDescription,
+        submissionInfoSignedOutMessage = fallbackTranslations.submissionInfoSignedOutMessage,
+        referenceNumber = fallbackTranslations.referenceNumber,
+        retentionPeriodDays = fallbackTranslations.retentionPeriodDays,
+        privacyInfoHtml = fallbackTranslations.privacyInfoHtml,
+        emailToHtml = fallbackTranslations.emailToHtml,
+        removalGuidelineText = fallbackTranslations.removalGuidelineText,
+        privacyPolicyLinkHref = fallbackTranslations.privacyPolicyLinkHref,
+        privacyPolicyLinkText = fallbackTranslations.privacyPolicyLinkText,
+      } = {},
+    },
   } = useContext(ServiceContext);
 
   const { submissionID } = useFormContext();
-
-  const {
-    successHeading,
-    successDescription,
-    submissionInfoSignedOutMessage,
-    referenceNumber,
-    retentionPeriodDays,
-    privacyInfoHtml,
-    emailToHtml,
-    removalGuidelineText,
-    privacyPolicyLinkHref,
-    privacyPolicyLinkText,
-  } = ugc;
 
   const ref = useRef<HTMLHeadingElement>(null);
 
