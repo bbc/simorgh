@@ -276,6 +276,53 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
+      ugc: {
+        // No JavaScript
+
+        // Optional
+        optional: 'اختياري',
+
+        // File upload
+        fileUploadListHeading: 'هذا ما تحمّله:',
+        fileUploadButton: 'اختر ملفا',
+
+        // Submit button
+        submitButton: 'إرسال',
+
+        // Validation
+        validationRequired: 'رجاء املأ هذه الخانة الإلزامية.',
+        validationInvalidEmail:
+          'هذا لا يبدو صحيحا. يرجى إدخال بريد إلكتروني صحيح.',
+        validationFilesTooMany:
+          'لقد أضفت ملفات أكثر من المسموح. الحد الأقصى لعدد الملفات {{maxFiles}}.',
+        validationFilesNotEnough:
+          'لا توجد ملفات كافية. يرجى إضافة {{minFiles}} على الأقل.',
+        validationFilesSizeExceeded:
+          'عذرا، حجم هذه الملفات أكبر من المسموح. يمكنك تحميل ملفات يصل حجمها إلى 1.2 غيغابايت في المرة الواحدة.',
+        validationFilesTooSmall: 'هذا الملف لا يصلح. جرب ملفا آخر.',
+        validationFilesInvalidType:
+          'عذرا، لا يمكننا استقبال هذا النوع من الملفات. يرجى إضافة ملفات من الأنواع التالية {{fileTypes}}.',
+        submissionInfoSignedOutMessage:
+          'ربما تود الاحتفاظ بنسخة من تلك البيانات للرجوع إليها وقت الحاجة.',
+        referenceNumber: 'رقم المرجع',
+        emailToHtml:
+          'إذا غيرت رأيك راسلنا عبر {{emailLink}}. فقط اذكر رقم المرجع وأوضح أنك لا تريد أن نستخدمه.',
+        privacyInfoHtml:
+          'لا تقلق، نحن نحافظ على بياناتك — لمزيد من التفاصيل اقرأ {{privacyInfoLink}}.',
+
+        // Form Screen
+
+        // Uploading Screen
+        uploadingDescription: 'يرجى الانتظار حتى اكتمال الإرسال.',
+
+        // Success Screen
+        successHeading: 'لقد تم الإرسال',
+        successDescription: 'شكرا لاتصالك.',
+
+        // Error Screen
+        errorHeading: 'تعذر تحميل ملفاتك ',
+        errorDescription: 'جرب التحميل مرة أخرى.',
+      },
     },
     mostRead: {
       header: 'الأكثر قراءة',
