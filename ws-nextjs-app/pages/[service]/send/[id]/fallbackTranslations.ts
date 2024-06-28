@@ -1,4 +1,6 @@
-const fallbackTranslations = {
+import { UgcTranslations } from '#app/models/types/translations';
+
+const fallbackTranslations: UgcTranslations = {
   // No JavaScript
   noJsHeading: 'Sorry, this page cannot be loaded.',
   noJsDescription:
