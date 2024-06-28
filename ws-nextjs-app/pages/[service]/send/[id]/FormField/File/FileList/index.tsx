@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { SetStateAction, useEffect, useState } from 'react';
+import { SetStateAction, useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { FileData, InvalidMessageCodes } from '../../../types';
 import { useFormContext } from '../../../FormContext';
 import styles from '../styles';
@@ -27,6 +28,15 @@ interface handleFileDeletionParams {
 }
 
 export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
+  const {
+    translations: {
+      ugc: {
+        fileUploadLiveRegionUpdateText = fallbackTranslations.fileUploadLiveRegionUpdateText,
+        fileUploadRemoveButton = fallbackTranslations.fileUploadRemoveButton,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
   const { handleChange } = useFormContext();
   const [thumbnailState, setThumbnailState] = useState<string[]>([]);
   const { replaceLiveRegionWith } = useLiveRegionContext();
@@ -46,10 +56,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
       return thumbnailClone;
     });
 
-    // Needs translation
-    replaceLiveRegionWith(
-      `${fallbackTranslations.fileUploadLiveRegionUpdateText} ${fileName}`,
-    );
+    replaceLiveRegionWith(`${fileUploadLiveRegionUpdateText} ${fileName}`);
   };
 
   useEffect(() => {
@@ -124,10 +131,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
             }
           >
             <DeleteSvg />
-            {/* Needs translation */}
-            <VisuallyHiddenText>
-              {fallbackTranslations.fileUploadRemoveButton}
-            </VisuallyHiddenText>
+            <VisuallyHiddenText>{fileUploadRemoveButton}</VisuallyHiddenText>
           </button>
         </div>
 

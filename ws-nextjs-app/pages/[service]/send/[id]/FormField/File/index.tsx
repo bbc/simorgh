@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { ChangeEvent, useEffect, useRef } from 'react';
+import { ChangeEvent, useContext, useEffect, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Label from '../FieldLabel';
 import { InputProps, FileData } from '../../types';
 import { useFormContext } from '../../FormContext';
@@ -19,6 +20,16 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
+  const {
+    translations: {
+      ugc: {
+        fileUploadButton = fallbackTranslations.fileUploadButton,
+        fileUploadLiveRegionText = fallbackTranslations.fileUploadLiveRegionText,
+        fileUploadListHeading = fallbackTranslations.fileUploadListHeading,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
   const { isValid, required, wasInvalid, hasNestedErrorLabel, messageCode } =
     inputState ?? {};
   const { handleChange } = useFormContext();
@@ -44,7 +55,7 @@ export default ({
     const uploaded = [...filesInState];
 
     // Needs translation
-    let liveRegionText = fallbackTranslations.fileUploadLiveRegionText;
+    let liveRegionText = fileUploadLiveRegionText;
 
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
@@ -80,12 +91,11 @@ export default ({
         onClick={() => handleUploadClick()}
       >
         <UploadSvg />
-        {fallbackTranslations.fileUploadButton}
+        {fileUploadButton}
       </button>
-      {/* Needs translation */}
       {hasFiles && (
         <Text as="p" fontVariant="sansRegular" size="bodyCopy">
-          {fallbackTranslations.fileUploadListHeading}
+          {fileUploadListHeading}
         </Text>
       )}
       {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (

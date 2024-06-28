@@ -17,11 +17,12 @@ export default function ErrorScreen({ title }: Props) {
     },
   } = useContext(ServiceContext);
 
+  const ref = useRef<HTMLHeadingElement>(null);
+
   useEffect(() => {
     document.title = `Error: ${title}`;
   }, [title]);
 
-  const ref = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     ref.current?.focus();
   }, []);

@@ -210,6 +210,7 @@ export interface Translations {
     validationFilesInvalidType: string;
     validationFilesTooSmall: string;
     validationFilesSizeExceeded: string;
+    validationWordLimit: string;
     confirmationStepTitle: string;
     confirmationStepDescriptionHtml: string;
     referenceNumber: string;

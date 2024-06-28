@@ -47,13 +47,13 @@ const SuccessScreen = ({ title }: Props) => {
     document.title = `${successHeading}: ${title}`;
   }, [successHeading, title]);
 
-  const retentionPolicy = retentionPeriodDays.replace(
+  const retentionPolicy = retentionPeriodDays?.replace(
     '{{days}}',
     DEFAULT_RETENTION_POLICY_DAY,
   );
 
-  const privacyClauses = privacyInfoHtml.split('{{privacyInfoLink}}');
-  const emailGuidelineClauses = emailToHtml.split('{{emailLink}}');
+  const privacyClauses = privacyInfoHtml?.split('{{privacyInfoLink}}');
+  const emailGuidelineClauses = emailToHtml?.split('{{emailLink}}');
 
   return (
     <div css={styles.outerContainer}>

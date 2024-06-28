@@ -1,10 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useContext } from 'react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
 import InvalidMessageBox from './InvalidMessageBox';
+import fallbackTranslations from '../fallbackTranslations';
 
 export default ({
   id,
@@ -16,6 +19,14 @@ export default ({
   hasAttemptedSubmit,
 }: InputProps) => {
   const {
+    translations: {
+      ugc: {
+        validationWordLimit = fallbackTranslations.validationWordLimit,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
+  const {
     isValid,
     value = '',
     required,
@@ -24,7 +35,6 @@ export default ({
     messageCode,
   } = inputState ?? {};
   const hasWordLimit = !!wordLimit;
-  const translation = `Maximum ${wordLimit} Words`; // hardcoded
   const describedByWordLimit = `${id}-wordLimit`;
   const useErrorTheme = hasAttemptedSubmit && !isValid;
   const labelId = `label-${id}`;
@@ -50,7 +60,7 @@ export default ({
           size="brevier"
           id={describedByWordLimit}
         >
-          {translation}
+          {validationWordLimit.replace('{{wordLimit}}', wordLimit?.toString())}
         </Paragraph>
       )}
       <textarea

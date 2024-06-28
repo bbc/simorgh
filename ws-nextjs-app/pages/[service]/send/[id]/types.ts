@@ -10,7 +10,7 @@ export enum InvalidMessageCodes {
   NotEnoughFiles = 'validationFilesNotEnough',
   TooManyFiles = 'validationFilesTooMany',
   WrongFileType = 'validationFilesInvalidType',
-  FileTooSmall = 'validationFileTooSmall',
+  FileTooSmall = 'validationFilesTooSmall',
   FileTooBig = 'validationFilesSizeExceeded',
 }
 

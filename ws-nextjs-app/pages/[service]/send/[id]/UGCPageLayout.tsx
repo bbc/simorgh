@@ -14,7 +14,15 @@ import GenericMessage from './GenericMessage';
 import fallbackTranslations from './fallbackTranslations';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
-  const { lang } = useContext(ServiceContext);
+  const {
+    lang,
+    translations: {
+      ugc: {
+        noJsHeading = fallbackTranslations.noJsHeading,
+        noJsDescription = fallbackTranslations.noJsDescription,
+      } = {},
+    },
+  } = useContext(ServiceContext);
   const { title, description, sections, privacyNotice } = pageData;
 
   const { fields } = sections?.[0] ?? {};
@@ -33,8 +41,8 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>
             <noscript>
-              <GenericMessage heading={fallbackTranslations.noJsHeading}>
-                {fallbackTranslations.noJsDescription}
+              <GenericMessage heading={noJsHeading}>
+                {noJsDescription}
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>

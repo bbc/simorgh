@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useFormContext } from '../FormContext';
 import { Field } from '../types';
 import FormField from '../FormField';
@@ -27,6 +28,12 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
+  const {
+    translations: {
+      ugc: { dataPolicyHeading = fallbackTranslations.dataPolicyHeading } = {},
+    },
+  } = useContext(ServiceContext);
+
   const { handleSubmit, submitted } = useFormContext();
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
@@ -58,9 +65,7 @@ export default function FormScreen({
           {formFields}
 
           <div css={styles.privacyContainer}>
-            <strong css={styles.privacyHeading}>
-              {fallbackTranslations.dataPolicyHeading}
-            </strong>
+            <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
             <div
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: privacyNotice }}
