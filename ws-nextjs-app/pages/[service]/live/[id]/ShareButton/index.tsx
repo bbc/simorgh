@@ -1,8 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/button-has-type */
-import React, { useRef } from 'react';
+/** @jsx jsx */
+import { useRef } from 'react';
+import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import styles from './styles';
 
 const ShareButton = ({
   contentId,
@@ -23,8 +27,11 @@ const ShareButton = ({
     clickTrackerHandler(event);
     try {
       const shareUrl = `${window.location.href}#${contentId}`;
+      console.log(shareUrl);
       await navigator.share({
         url: shareUrl,
+        text: headline,
+        title: headline,
       });
 
       console.log('Successful share');
@@ -39,10 +46,9 @@ const ShareButton = ({
   };
 
   return (
-    /* @ts-ignore */
     <div ref={viewRef}>
-      <button ref={focusRef} onClick={handleShare}>
-        Click to share {headline}
+      <button ref={focusRef} onClick={handleShare} css={styles}>
+        Share<VisuallyHiddenText> ,{headline}</VisuallyHiddenText>
       </button>
     </div>
   );

@@ -192,14 +192,16 @@ const Post = ({ post }: { post: PostType }) => {
   const [headline, setHeadline] = useState('');
 
   useEffect(() => {
-    setHashValue(window.location.hash.substring(1));
+    const URLHash = window.location.hash.substring(1);
+    setHashValue(URLHash);
+
     if (hashValue) {
       window.location.href = `#${hashValue}`;
     }
     if ('share' in navigator) {
       setCanShare(true);
     }
-  }, []);
+  }, [hashValue]);
 
   return (
     <>
@@ -225,16 +227,16 @@ const Post = ({ post }: { post: PostType }) => {
         <div css={styles.postContent}>
           <PostContent contentBlocks={contentBlocks} />
         </div>
+        {canShare && (
+          <ShareButton
+            eventTrackingData={{
+              componentName: urn,
+            }}
+            contentId={urn}
+            headline={headline}
+          />
+        )}
       </article>
-      {canShare && (
-        <ShareButton
-          eventTrackingData={{
-            componentName: urn,
-          }}
-          contentId={urn}
-          headline={headline}
-        />
-      )}
     </>
   );
 };
