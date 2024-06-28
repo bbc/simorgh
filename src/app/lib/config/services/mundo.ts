@@ -258,13 +258,23 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'No te lo pierdas',
       latestMediaTitle: 'Más videos',
       ugc: {
-        // submitButton: 'Enviar',
+        // No JavaScript
+
+        // Optional
+        optional: 'opcional',
+
+        // File upload
+        fileUploadListHeading: 'Esto es lo que estás subiendo:',
+        fileUploadButton: 'Seleccionar un archivo',
+
+        // Submit button
+        submitButton: 'Enviar',
+
+        // Validation
         validationRequired: 'Algo está faltando.',
         validationInvalidEmail:
           'Algo no luce bien. Por favor, introduce una dirección de correo electrónico correcta.',
         validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
-        confirmationStepTitle: 'Mensaje enviado',
-        confirmationStepDescriptionHtml: 'Gracias por contactarnos.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
@@ -285,6 +295,20 @@ export const service: DefaultServiceConfig = {
           'Este archivo no es correcto. Intenta seleccionar otro.',
         validationFilesSizeExceeded:
           'Disculpa, estos archivos son muy pesados. Solo puedes cargar hasta 1,2 GB a la vez.',
+
+        // Form Screen
+
+        // Uploading Screen
+        uploadingDescription:
+          'Por favor, espera mientras hasta que haya finalizado.',
+
+        // Success Screen
+        successHeading: 'Mensaje enviado',
+        successDescription: 'Gracias por contactarnos.',
+
+        // Error Screen
+        errorHeading: 'Disculpa, hubo un problema al subir esto.',
+        errorDescription: 'Por favor, regresa e inténtalo más tarde.',
       },
     },
     mostRead: {

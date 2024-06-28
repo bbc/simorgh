@@ -241,8 +241,6 @@ export type UgcTranslations = {
   validationFilesTooSmall: string;
   validationFilesSizeExceeded: string;
   validationWordLimit: string;
-  confirmationStepTitle: string;
-  confirmationStepDescriptionHtml: string;
   referenceNumber: string;
   submissionInfoSignedOutMessage: string;
   retentionPeriodDays: string;
