@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import GenericMessage from '../GenericMessage';
-
-const UPLOADING_HEADING = 'Uploading';
-const UPLOADING_MESSAGE = 'Please wait until it is finished.';
+import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   title: string;
@@ -19,8 +17,8 @@ export default function UploadingScreen({ title }: Props) {
   }, []);
 
   return (
-    <GenericMessage heading={UPLOADING_HEADING} ref={ref}>
-      {UPLOADING_MESSAGE}
+    <GenericMessage heading={fallbackTranslations.uploadingHeading} ref={ref}>
+      {fallbackTranslations.uploadingDescription}
     </GenericMessage>
   );
 }

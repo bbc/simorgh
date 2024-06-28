@@ -13,6 +13,7 @@ import {
   VIDEO_SVG_DATA_URI,
 } from '../svgs';
 import InvalidMessageBox from '../../InvalidMessageBox';
+import fallbackTranslations from '../../../fallbackTranslations';
 
 interface FileListProps {
   files: FileData[];
@@ -46,7 +47,9 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
     });
 
     // Needs translation
-    replaceLiveRegionWith(`Update, removed ${fileName}`);
+    replaceLiveRegionWith(
+      `${fallbackTranslations.fileUploadLiveRegionUpdateText} ${fileName}`,
+    );
   };
 
   useEffect(() => {
@@ -122,7 +125,9 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
           >
             <DeleteSvg />
             {/* Needs translation */}
-            <VisuallyHiddenText>Remove</VisuallyHiddenText>
+            <VisuallyHiddenText>
+              {fallbackTranslations.fileUploadRemoveButton}
+            </VisuallyHiddenText>
           </button>
         </div>
 
@@ -136,11 +141,10 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
       </li>
     );
   });
+
   return (
-    <>
-      <ul role="list" css={styles.fileList}>
-        {listItems}
-      </ul>
-    </>
+    <ul role="list" css={styles.fileList}>
+      {listItems}
+    </ul>
   );
 };

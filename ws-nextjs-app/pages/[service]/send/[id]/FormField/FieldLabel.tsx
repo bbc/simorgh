@@ -4,8 +4,8 @@ import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { InputProps } from '../types';
 import styles from './styles';
+import fallbackTranslations from '../fallbackTranslations';
 
-const optionalTranslation = '(optional)';
 export default ({
   id,
   forId,
@@ -27,6 +27,6 @@ export default ({
     htmlFor={forId}
     css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
   >
-    {required ? children : `${children} ${optionalTranslation}`}
+    {required ? children : `${children} (${fallbackTranslations.optional})`}
   </Text>
 );

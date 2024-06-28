@@ -6,29 +6,7 @@ import Paragraph from '#app/components/Paragraph';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { InvalidMessageCodes, InvalidMessageBoxProps } from '../types';
 import styles from './styles';
-
-const defaultUGC = {
-  submitButtonText: 'Send',
-  validationRequired: `There's something missing.`,
-  validationInvalidEmail: `That doesn't look right. Please enter a proper email address.`,
-  validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
-  validationFilesNotEnough: `There aren't enough files. Please add at least {{minFiles}}`,
-  validationFilesTooMany: `There are too many files. You can add {{maxFiles}}.`,
-  validationFilesInvalidType: `Sorry, we can't use this type of file. Please add {{fileTypes}}.`,
-  validationFileTooSmall: 'This file is broken. Try picking another.',
-  validationFilesSizeExceeded:
-    'Sorry, these files are too big. You can only upload up to 1.2 GB at a time.',
-  confirmationStepTitle: 'Message sent',
-  confirmationStepDescriptionHtml: 'Thanks for getting in touch.',
-  referenceNumber: 'Reference number',
-  submissionInfoSignedOutMessage:
-    'You may wish to make a note of these details for your reference.',
-  retentionPeriodDays: `We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.`,
-  privacyInfoHtml: `Don't worry, we protect your information — read the {{privacyInfoLink}} for more details.`,
-  emailToHtml: `If you change your mind and don't want us to use it, just email us at {{emailLink}}. Don't forget the reference number.`,
-  removalGuidelineText:
-    'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
-};
+import fallbackTranslations from '../fallbackTranslations';
 
 const ErrorSymbol = () => (
   <svg
@@ -50,7 +28,7 @@ export default ({
   suffix,
 }: InvalidMessageBoxProps) => {
   const {
-    translations: { ugc = defaultUGC },
+    translations: { ugc = fallbackTranslations },
   } = useContext(ServiceContext);
 
   const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];

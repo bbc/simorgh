@@ -10,6 +10,7 @@ import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
 import Loader from '../Loader';
+import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   title: string;
@@ -27,7 +28,7 @@ export default function FormScreen({
   privacyNotice,
 }: Props) {
   const { handleSubmit, submitted } = useFormContext();
-  const translation = 'Our data policy';
+
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
   ));
@@ -57,10 +58,8 @@ export default function FormScreen({
           {formFields}
 
           <div css={styles.privacyContainer}>
-            <strong // TODO: need translations for this, it doesn't come through from the api
-              css={styles.privacyHeading}
-            >
-              {translation}
+            <strong css={styles.privacyHeading}>
+              {fallbackTranslations.dataPolicyHeading}
             </strong>
             <div
               // eslint-disable-next-line react/no-danger

@@ -8,27 +8,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import TickSvg from './svgs';
 import { useFormContext } from '../FormContext';
+import fallbackTranslations from '../fallbackTranslations';
 
 const DEFAULT_RETENTION_POLICY_DAY = '270';
 const DEFAULT_EMAIL = 'CannotFindEmail@bbc.co.uk';
-
-const defaultTranslations = {
-  confirmationStepTitle: 'Message sent',
-  confirmationStepDescriptionHtml: 'Thanks for getting in touch.',
-  referenceNumber: 'Reference number',
-  submissionInfoSignedOutMessage:
-    'You may wish to make a note of these details for your reference.',
-  retentionPeriodDays:
-    "We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.",
-  privacyInfoHtml:
-    "Don't worry, we protect your information — read the {{privacyInfoLink}} for more details.",
-  emailToHtml:
-    "If you change your mind and don't want us to use it, just email us at {{emailLink}}. Don't forget the reference number.",
-  removalGuidelineText:
-    'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
-  privacyPolicyLinkHref: 'https://www.bbc.com/privacy/',
-  privacyPolicyLinkText: 'Privacy Policy',
-};
 
 type Props = {
   title: string;
@@ -36,14 +19,14 @@ type Props = {
 
 const SuccessScreen = ({ title }: Props) => {
   const {
-    translations: { ugc = defaultTranslations },
+    translations: { ugc = fallbackTranslations },
   } = useContext(ServiceContext);
 
   const { submissionID } = useFormContext();
 
   const {
-    confirmationStepTitle,
-    confirmationStepDescriptionHtml,
+    successHeading,
+    successDescription,
     submissionInfoSignedOutMessage,
     referenceNumber,
     retentionPeriodDays,
@@ -61,8 +44,8 @@ const SuccessScreen = ({ title }: Props) => {
   }, []);
 
   useEffect(() => {
-    document.title = `${confirmationStepTitle}: ${title}`;
-  }, [confirmationStepTitle, title]);
+    document.title = `${successHeading}: ${title}`;
+  }, [successHeading, title]);
 
   const retentionPolicy = retentionPeriodDays.replace(
     '{{days}}',
@@ -86,9 +69,9 @@ const SuccessScreen = ({ title }: Props) => {
               css={styles.heading}
               {...(ref && { ref })}
             >
-              {confirmationStepTitle}
+              {successHeading}
             </Heading>
-            <Paragraph>{confirmationStepDescriptionHtml}</Paragraph>
+            <Paragraph>{successDescription}</Paragraph>
           </div>
         </div>
       </div>

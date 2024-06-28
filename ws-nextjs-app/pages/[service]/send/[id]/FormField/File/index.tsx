@@ -10,6 +10,7 @@ import styles from './styles';
 import { UploadSvg } from './svgs';
 import FileList from './FileList';
 import InvalidMessageBox from '../InvalidMessageBox';
+import fallbackTranslations from '../../fallbackTranslations';
 
 export default ({
   id,
@@ -39,10 +40,12 @@ export default ({
     const chosenFiles = Array.prototype.slice.call(
       event.target.files,
     ) as File[];
+
     const uploaded = [...filesInState];
 
     // Needs translation
-    let liveRegionText = `Update, Here's what you're sending: `;
+    let liveRegionText = fallbackTranslations.fileUploadLiveRegionText;
+
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
       liveRegionText = `${liveRegionText}${file.name}, `;
@@ -77,12 +80,12 @@ export default ({
         onClick={() => handleUploadClick()}
       >
         <UploadSvg />
-        Choose a file
+        {fallbackTranslations.fileUploadButton}
       </button>
       {/* Needs translation */}
       {hasFiles && (
         <Text as="p" fontVariant="sansRegular" size="bodyCopy">
-          Here&apos;s what you&apos;re sending:
+          {fallbackTranslations.fileUploadListHeading}
         </Text>
       )}
       {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (

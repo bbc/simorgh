@@ -258,7 +258,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'No te lo pierdas',
       latestMediaTitle: 'Más videos',
       ugc: {
-        submitButtonText: 'Enviar',
+        // submitButton: 'Enviar',
         validationRequired: 'Algo está faltando.',
         validationInvalidEmail:
           'Algo no luce bien. Por favor, introduce una dirección de correo electrónico correcta.',

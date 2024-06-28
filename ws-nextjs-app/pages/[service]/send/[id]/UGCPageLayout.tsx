@@ -11,10 +11,7 @@ import SuccessScreen from './SuccessScreen';
 import ErrorScreen from './ErrorScreen';
 import UploadingScreen from './UploadingScreen';
 import GenericMessage from './GenericMessage';
-
-const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
-const NO_JS_MESSAGE =
-  'To load this page, please enable JavaScript, or try a different browser';
+import fallbackTranslations from './fallbackTranslations';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
@@ -36,8 +33,8 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>
             <noscript>
-              <GenericMessage heading={NO_JS_HEADING}>
-                {NO_JS_MESSAGE}
+              <GenericMessage heading={fallbackTranslations.noJsHeading}>
+                {fallbackTranslations.noJsDescription}
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>
