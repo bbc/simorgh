@@ -267,11 +267,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'સૌથી વધુ જોવાયેલ',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -323,10 +318,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'સમાચાર',
         url: '/gujarati',
-      },
-      {
-        title: 'લોકસભા ચૂંટણી 2024',
-        url: '/gujarati/topics/cg843q7vgq3t',
       },
       {
         title: 'ગુજરાત',

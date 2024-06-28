@@ -28,7 +28,9 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import {
   render,
+  screen,
   waitFor,
+  act,
 } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
@@ -109,10 +111,16 @@ const Context = ({
 };
 
 beforeEach(() => {
+  process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
   fetch.resetMocks();
   ATIAnalytics.mockImplementation(
     jest.requireActual('../../components/ATIAnalytics').default,
   );
+});
+
+afterEach(() => {
+  delete process.env.SIMORGH_ICHEF_BASE_URL;
 });
 
 describe('Article Page', () => {
@@ -433,6 +441,100 @@ describe('Article Page', () => {
     expect(getByTestId('features')).toBeInTheDocument();
   });
 
+  it('should render image with the .webp image extension', () => {
+    const imageBlock = articleDataNews.content.model.blocks[5];
+    const imageAltText =
+      imageBlock.model.blocks[0].model.blocks[0].model.blocks[0].model.text;
+    const imageLocator = imageBlock.model.blocks[1].model.locator;
+    const imageOriginCode = imageBlock.model.blocks[1].model.originCode;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640/${imageOriginCode}/${imageLocator}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/240/${imageOriginCode}/${imageLocator}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320/${imageOriginCode}/${imageLocator}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/480/${imageOriginCode}/${imageLocator}.webp 480w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/624/${imageOriginCode}/${imageLocator}.webp 624w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/800/${imageOriginCode}/${imageLocator}.webp 800w`,
+    ].join(', ');
+
+    render(
+      <Context service="news">
+        <ArticlePage
+          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+        />
+      </Context>,
+    );
+
+    const { src, srcset } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
+  });
+
+  it('should render secondary column images with the .webp image extension', async () => {
+    const pageDataWithSecondaryColumn = {
+      ...articleDataNews,
+      secondaryColumn: {
+        topStories: [],
+        features: [
+          {
+            headlines: {
+              headline:
+                'Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 42',
+            },
+            locators: {
+              assetUri: '/kyrgyz/kyrgyzstan-23087521',
+              cpsUrn: 'urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087521',
+              curie:
+                'http://www.bbc.co.uk/asset/eda3de40-cfd2-7449-87b4-2a26392fa543',
+              assetId: '23087521',
+            },
+            summary:
+              'Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.',
+            timestamp: 1477898711000,
+            language: 'ky',
+            cpsType: 'STY',
+            indexImage: {
+              id: '63486487',
+              subType: 'index',
+              href: 'http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg',
+              path: '/cpsdevpb/13284/test/_63486487_63486486.jpg',
+              height: 549,
+              width: 976,
+              altText: 'Өзбекстандын',
+              caption: 'Өзбекстандын',
+              copyrightHolder: 'Getty Images',
+              originCode: 'cpsdevpb',
+              type: 'image',
+            },
+            options: {
+              isBreakingNews: false,
+              isFactCheck: false,
+            },
+            id: 'urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521',
+            type: 'cps',
+          },
+        ],
+      },
+    };
+
+    const imageBlock =
+      pageDataWithSecondaryColumn.secondaryColumn.features[0].indexImage;
+    const { altText: imageAltText, path: imagePath } = imageBlock;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/400${imagePath}.webp`;
+
+    await act(async () => {
+      render(
+        <Context service="news">
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+    });
+
+    const { src } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
+  });
+
   describe('when isApp is true', () => {
     it('should remove the top stories and features sections', async () => {
       const pageDataWithSecondaryColumn = {
@@ -653,7 +755,7 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[0].innerHTML)[
+      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
         '@graph'
       ][0]['@type'];
 

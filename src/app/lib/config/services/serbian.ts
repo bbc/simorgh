@@ -105,15 +105,14 @@ export const service: SerbianConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Najgledanije',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     navigation: [
       {
         title: 'Početna strana',
         url: '/serbian/lat',
+      },
+      {
+        title: 'Euro 2024',
+        url: '/serbian/lat/topics/cl442rlk0mjt',
       },
       {
         title: 'Ukrajina',
@@ -430,15 +429,14 @@ export const service: SerbianConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Најгледаније',
-      numberOfItems: 5,
-      hasMostWatched: true,
-    },
     navigation: [
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
+      },
+      {
+        title: 'Еуро 2024',
+        url: '/serbian/cyr/topics/cz998753m4qt',
       },
       {
         title: 'Украјина',

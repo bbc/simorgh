@@ -84,9 +84,9 @@ export const service: DefaultServiceConfig = {
         liveCoverage: 'Rahoto kai-tsaye',
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
-        summary: 'Takaitacce',
+        summary: 'Taƙaitattu',
       },
-      gist: 'Takaitacce',
+      gist: 'Taƙaitattu',
       error: {
         404: {
           statusCode: '404',
@@ -286,11 +286,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Wadanda aka fi kallo',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

@@ -279,11 +279,6 @@ const baseServiceConfig = {
     numberOfItems: 10,
     hasMostRead: true,
   },
-  mostWatched: {
-    header: 'Найпопулярніше',
-    numberOfItems: 5,
-    hasMostWatched: false,
-  },
   radioSchedule: {
     hasRadioSchedule: false,
   },
@@ -345,11 +340,15 @@ const baseServiceConfig = {
     },
     {
       title: 'Книга року BBC',
-      url: '/ukrainian/features-50320117',
+      url: '/ukrainian/topics/cqwrq3rkdrnt',
     },
     {
       title: 'Подкасти',
       url: '/ukrainian/podcasts/p09jsy3h',
+    },
+    {
+      title: 'Євро – 2024',
+      url: '/ukrainian/topics/ckvv0w1kqnzt',
     },
   ],
 };

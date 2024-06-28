@@ -1,122 +1,38 @@
 /** @jsx jsx */
-import {
-  ChangeEvent,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { ChangeEvent, useEffect, useRef } from 'react';
 import { jsx } from '@emotion/react';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
 import Label from '../FieldLabel';
-import { InputProps } from '../../types';
+import { InputProps, FileData } from '../../types';
 import { useFormContext } from '../../FormContext';
 import styles from './styles';
-import {
-  AUDIO_SVG_DATA_URI,
-  DOCUMENT_SVG_DATA_URI,
-  DeleteSvg,
-  UploadSvg,
-  VIDEO_SVG_DATA_URI,
-} from './svgs';
+import { UploadSvg } from './svgs';
+import FileList from './FileList';
+import InvalidMessageBox from '../InvalidMessageBox';
 
-interface FileListProps {
-  files: File[];
-  name: string;
-}
-
-const FileList = ({ files, name }: FileListProps) => {
-  const { handleChange } = useFormContext();
-  const [thumbnailState, setThumbnailState] = useState<string[]>([]);
-
-  const handleFileDeletion = (fileIndex: number) => {
-    const filesClone = [...files];
-    filesClone.splice(fileIndex, 1);
-    handleChange(name, filesClone);
-
-    setThumbnailState(prevState => {
-      const thumbnailClone = [...prevState];
-      thumbnailClone.splice(fileIndex, 1);
-
-      return thumbnailClone;
-    });
-  };
-
-  useEffect(() => {
-    Promise.all(
-      files.map(async file => {
-        return new Promise(resolve => {
-          const fileType = file.type.substring(0, file.type.indexOf('/'));
-
-          const fileReader = new FileReader();
-          fileReader.onloadend = () => {
-            resolve(fileReader.result);
-          };
-
-          switch (fileType) {
-            case 'image':
-              fileReader.readAsDataURL(file);
-              break;
-            case 'video':
-              resolve(VIDEO_SVG_DATA_URI);
-              break;
-            case 'audio':
-              resolve(AUDIO_SVG_DATA_URI);
-              break;
-            default:
-              resolve(DOCUMENT_SVG_DATA_URI);
-              break;
-          }
-        });
-      }),
-    ).then(result => setThumbnailState(result as SetStateAction<string[]>));
-  }, [files]);
-
-  const listItems = files.map((file: File, index: number) => {
-    const key = `${index}-${file.name}`;
-    const thumbnailSrc = thumbnailState[index];
-    const isThumbnailSvg = thumbnailSrc?.startsWith('data:image/svg');
-    const ariaDescribedById = `file-list-item-${index}`;
-
-    return (
-      <li css={styles.fileListItem} key={key}>
-        <div css={styles.fileThumbnailContainer}>
-          <img
-            css={
-              isThumbnailSvg ? styles.fileThumbnailSvg : styles.fileThumbnailImg
-            }
-            src={`${thumbnailSrc}`}
-            alt=""
-          />
-        </div>
-        <span id={ariaDescribedById}>{file.name}</span>
-        <button
-          type="button"
-          aria-describedby={ariaDescribedById}
-          onClick={() => handleFileDeletion(index)}
-        >
-          <DeleteSvg />
-          <VisuallyHiddenText>Remove</VisuallyHiddenText>
-        </button>
-      </li>
-    );
-  });
-  return (
-    <>
-      <Text as="p" fontVariant="sansRegular" size="bodyCopy">
-        Here&apos;s what you&apos;re sending:
-      </Text>
-      <ul css={styles.fileList}>{listItems}</ul>
-    </>
-  );
-};
-
-export default ({ id, name, inputState, describedBy, label }: InputProps) => {
-  const { isValid, required } = inputState ?? {};
+export default ({
+  id,
+  name,
+  inputState,
+  label,
+  hasAttemptedSubmit,
+}: InputProps) => {
+  const { isValid, required, wasInvalid, hasNestedErrorLabel, messageCode } =
+    inputState ?? {};
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
-  const filesInState = inputState.value as File[];
+  const filesInState = inputState.value as FileData[];
+  const { replaceLiveRegionWith } = useLiveRegionContext();
+  const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
+  const labelId = `label-${id}`;
+  const errorBoxId = `${id}-error`;
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current as number);
+    };
+  }, []);
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
@@ -125,11 +41,19 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
     ) as File[];
     const uploaded = [...filesInState];
 
+    // Needs translation
+    let liveRegionText = `Update, Here's what you're sending: `;
     chosenFiles.forEach(file => {
-      uploaded.push(file);
+      uploaded.push({ file } as FileData);
+      liveRegionText = `${liveRegionText}${file.name}, `;
     });
 
     handleChange(name, uploaded);
+    // Adds 1s delay for MacOS file explorer to bring focus back to browser, so VoiceOver can pickup the DOM change in time
+    timeoutRef.current = setTimeout(
+      () => replaceLiveRegionWith(liveRegionText),
+      1000,
+    );
   };
 
   const handleUploadClick = () => {
@@ -140,11 +64,12 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
 
   const fileArrayLength = filesInState.length;
   const hasFiles = fileArrayLength !== 0;
-  const labelId = `${id}-label`;
 
   return (
     <>
-      <Label id={labelId}>{label}</Label>
+      <Label required={required} forId={id} id={labelId} useErrorTheme={false}>
+        {label}
+      </Label>
       <button
         aria-describedby={labelId}
         css={styles.fileUploadButton}
@@ -154,6 +79,20 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
         <UploadSvg />
         Choose a file
       </button>
+      {/* Needs translation */}
+      {hasFiles && (
+        <Text as="p" fontVariant="sansRegular" size="bodyCopy">
+          Here&apos;s what you&apos;re sending:
+        </Text>
+      )}
+      {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (
+        <InvalidMessageBox
+          id={errorBoxId}
+          suffix={label}
+          messageCode={messageCode}
+          hasArrowStyle={false}
+        />
+      )}
       <input
         id={id}
         name={name}
@@ -161,12 +100,21 @@ export default ({ id, name, inputState, describedBy, label }: InputProps) => {
         onChange={event => event.target.files && handleFileChange(event)}
         ref={inputRef}
         multiple
-        aria-invalid={!isValid}
-        aria-required={required}
-        aria-describedby={describedBy}
+        {...(hasAttemptedSubmit && {
+          ...(wasInvalid && { 'aria-invalid': !isValid }),
+          ...(required && { 'aria-required': required }),
+          ...(!isValid && { 'aria-describedby': errorBoxId }),
+        })}
         css={styles.fileInput}
       />
-      {hasFiles && <FileList files={filesInState} name={name} />}
+
+      {hasFiles && (
+        <FileList
+          files={filesInState}
+          name={name}
+          hasAttemptedSubmit={hasAttemptedSubmit}
+        />
+      )}
     </>
   );
 };

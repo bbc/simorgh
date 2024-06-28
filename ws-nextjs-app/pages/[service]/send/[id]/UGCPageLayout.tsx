@@ -6,9 +6,15 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 import { PageProps } from './types';
 import { FormContext, FormContextProvider } from './FormContext';
-import Form from './Form';
-import Uploading from './Uploading';
-import SuccessMessage from './SuccessMessage';
+import FormScreen from './FormScreen';
+import SuccessScreen from './SuccessScreen';
+import ErrorScreen from './ErrorScreen';
+import UploadingScreen from './UploadingScreen';
+import GenericMessage from './GenericMessage';
+
+const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
+const NO_JS_MESSAGE =
+  'To load this page, please enable JavaScript, or try a different browser';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { lang } = useContext(ServiceContext);
@@ -16,7 +22,6 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
 
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
-
   return (
     <>
       <Metadata
@@ -30,31 +35,41 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
       <div css={styles.grid}>
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>
-            <FormContextProvider initialScreen={initialScreen} fields={fields}>
-              <FormContext.Consumer>
-                {({ screen }) => {
-                  switch (screen) {
-                    case 'form':
-                      return (
-                        <Form
-                          title={title}
-                          description={description}
-                          sectionTitle={sectionTitle}
-                          privacyNotice={privacyNotice?.default}
-                          fields={fields}
-                        />
-                      );
-                    case 'uploading':
-                      return <Uploading />;
-                    case 'success':
-                      return <SuccessMessage />;
-                    case 'error':
-                    default:
-                      return <div>Error</div>;
-                  }
-                }}
-              </FormContext.Consumer>
-            </FormContextProvider>
+            <noscript>
+              <GenericMessage heading={NO_JS_HEADING}>
+                {NO_JS_MESSAGE}
+              </GenericMessage>
+            </noscript>
+            <div css={styles.screenContainer}>
+              <FormContextProvider
+                initialScreen={initialScreen}
+                fields={fields}
+              >
+                <FormContext.Consumer>
+                  {({ screen }) => {
+                    switch (screen) {
+                      case 'form':
+                        return (
+                          <FormScreen
+                            title={title}
+                            description={description}
+                            sectionTitle={sectionTitle}
+                            privacyNotice={privacyNotice?.default}
+                            fields={fields}
+                          />
+                        );
+                      case 'uploading':
+                        return <UploadingScreen title={title} />;
+                      case 'success':
+                        return <SuccessScreen title={title} />;
+                      case 'error':
+                      default:
+                        return <ErrorScreen title={title} />;
+                    }
+                  }}
+                </FormContext.Consumer>
+              </FormContextProvider>
+            </div>
           </main>
         </div>
       </div>

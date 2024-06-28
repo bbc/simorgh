@@ -13,6 +13,10 @@ export default () => {
       it('has a link', () => {
         expect(messageBanner.querySelector('a').href).toMatchSnapshot();
       });
+
+      it('has an image', () => {
+        expect(messageBanner.querySelector('img')).toMatchSnapshot();
+      });
     }
   });
 };

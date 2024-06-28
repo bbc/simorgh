@@ -13,7 +13,7 @@ export default {
     return css({
       display: 'block',
       padding: `${topBottomPadding} ${leftRightPadding} ${topBottomPadding} ${leftRightPadding}`,
-      border: 'none',
+      border: `${pixelsToRem(1)}rem solid transparent`,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       color: palette.WHITE,
       cursor: 'pointer',
@@ -44,7 +44,8 @@ export default {
       padding: '0',
       margin: '0',
     }),
-  fileListItem: ({ spacings, palette, fontVariants, fontSizes, mq }: Theme) =>
+  fileListItem: () => css({ listStyleType: 'none' }),
+  fileDetails: ({ spacings, palette, fontVariants, fontSizes, mq }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -53,6 +54,7 @@ export default {
       paddingBlock: `${pixelsToRem(13)}rem`,
       paddingInlineEnd: `${pixelsToRem(17)}rem`,
       height: `${spacings.QUADRUPLE * 2}rem`,
+
       [mq.GROUP_3_MIN_WIDTH]: {
         width: '85%',
       },
@@ -69,7 +71,7 @@ export default {
         width: `${spacings.QUADRUPLE}rem`,
         height: `${spacings.QUADRUPLE}rem`,
         backgroundColor: '#E11B52',
-        border: 0,
+        border: `${pixelsToRem(1)}rem solid transparent`,
         cursor: 'pointer',
         svg: {
           color: palette.WHITE,
@@ -80,6 +82,7 @@ export default {
           svg: {
             color: palette.BLACK,
             fill: 'currentcolor',
+            [mq.HIGH_CONTRAST]: { stroke: palette.WHITE },
           },
         },
       },

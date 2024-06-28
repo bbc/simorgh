@@ -20,6 +20,7 @@ import { Helmet } from 'react-helmet';
 import {
   render,
   act,
+  screen,
 } from '../../components/react-testing-library-with-providers';
 
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
@@ -207,7 +208,6 @@ describe('Story Page', () => {
             topStories: null,
             features: null,
             mostRead: pidginMostReadData,
-            mostWatched: null,
           },
         },
       }),
@@ -525,5 +525,114 @@ describe('Story Page', () => {
         'podcast-promo',
       ),
     );
+  });
+
+  it('should render image with the .webp image extension', async () => {
+    const imageBlock =
+      russianPageDataWithInlinePromo.data.article.content.blocks[13];
+    const { altText: imageAltText, path: imageLocator } = imageBlock;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640${imageLocator}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/240${imageLocator}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320${imageLocator}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/480${imageLocator}.webp 480w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/624${imageLocator}.webp 624w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/800${imageLocator}.webp 800w`,
+    ].join(', ');
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...russianPageDataWithInlinePromo,
+      }),
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'russian',
+        toggles,
+      });
+    });
+
+    const { src, srcset } = screen.getAllByAltText(imageAltText)[1];
+
+    expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
+  });
+
+  it('should render features analysis promo images with the .webp image extension', async () => {
+    const imageBlock =
+      russianPageDataWithInlinePromo.data.secondaryData.features[1].indexImage;
+    const { path: imagePath, altText: imageAltText } = imageBlock;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/400${imagePath}.webp`;
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...russianPageDataWithInlinePromo,
+      }),
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'russian',
+        toggles,
+      });
+    });
+
+    const { src } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
+  });
+
+  it('should render related content promo images with the .webp image extension', async () => {
+    const imageBlock =
+      russianPageDataWithInlinePromo.data.article.relatedContent.groups[0]
+        .promos[0].indexImage;
+    const { path: imagePath, altText: imageAltText } = imageBlock;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/70${imagePath}.webp 70w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/95${imagePath}.webp 95w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/144${imagePath}.webp 144w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/183${imagePath}.webp 183w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/240${imagePath}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320${imagePath}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp 660w`,
+    ].join(', ');
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...russianPageDataWithInlinePromo,
+      }),
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    await act(async () => {
+      render(<StoryPage pageData={pageData} />, {
+        service: 'russian',
+        toggles,
+      });
+    });
+
+    const { src, srcset } = screen.getByAltText(imageAltText);
+
+    expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
   });
 });

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -19,33 +19,37 @@ const ContextWrap = ({
   children,
   comscoreAnalyticsToggle,
   personalisation = defaultPersonalisation,
-}) => (
-  <RequestContextProvider
-    isAmp={platform === 'amp'}
-    pageType={pageType}
-    service="news"
-    statusCode={200}
-    bbcOrigin={origin}
-    pathname="/pathname"
-  >
-    <ServiceContextProvider service="pidgin">
-      <ToggleContext.Provider
-        value={{
-          toggleState: {
-            comscoreAnalytics: {
-              enabled: comscoreAnalyticsToggle,
-            },
-          },
-          toggleDispatch: mockToggleDispatch,
-        }}
-      >
-        <UserContext.Provider value={personalisation}>
-          {children}
-        </UserContext.Provider>
-      </ToggleContext.Provider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+}) => {
+  const requestContextValue = useMemo(
+    () => ({
+      toggleState: {
+        comscoreAnalytics: {
+          enabled: comscoreAnalyticsToggle,
+        },
+      },
+      toggleDispatch: mockToggleDispatch,
+    }),
+    [comscoreAnalyticsToggle],
+  );
+  return (
+    <RequestContextProvider
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      service="news"
+      statusCode={200}
+      bbcOrigin={origin}
+      pathname="/pathname"
+    >
+      <ServiceContextProvider service="pidgin">
+        <ToggleContext.Provider value={requestContextValue}>
+          <UserContext.Provider value={personalisation}>
+            {children}
+          </UserContext.Provider>
+        </ToggleContext.Provider>
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  );
+};
 
 describe('Comscore Analytics Container', () => {
   describe('AMP', () => {
