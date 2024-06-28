@@ -7,6 +7,14 @@ import { InputProps } from '../types';
 import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
 
+type Props = {
+  id?: InputProps['id'];
+  forId: string;
+  className?: string;
+  required: boolean;
+  useErrorTheme: boolean;
+};
+
 export default ({
   id,
   forId,
@@ -14,13 +22,7 @@ export default ({
   className,
   required,
   useErrorTheme,
-}: PropsWithChildren<{
-  id?: InputProps['id'];
-  forId: string;
-  className?: string;
-  required: boolean;
-  useErrorTheme: boolean;
-}>) => {
+}: PropsWithChildren<Props>) => {
   const {
     translations: { ugc: { optional = fallbackTranslations.optional } = {} },
   } = useContext(ServiceContext);
