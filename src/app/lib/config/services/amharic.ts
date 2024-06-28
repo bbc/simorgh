@@ -248,6 +248,52 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
       latestMediaTitle: 'የቅርብ ጊዜ',
+      ugc: {
+        // No JavaScript
+
+        // Optional
+        optional: 'ግዴት አይደለም',
+
+        // File upload
+        fileUploadListHeading: 'እየጫኑ ያሉት ይህ ነው፡',
+        fileUploadButton: 'ፋይል ይምረጡ',
+
+        // Submit button
+        submitButton: 'ላክ',
+
+        // Validation
+        validationRequired: 'አንድ የጎደለ ነገር አለ',
+        validationInvalidEmail: 'ትክክል አይመስልም። እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ።',
+        validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
+        validationFilesNotEnough: 'በቂ ፋይሎች አይደሉም። እባክዎ ቢያንስ {{minFiles}} ያስገቡ።',
+        validationFilesTooMany: 'ብዙ ፋይሎች ናቸው። መጫን የሚችሉት የፋይል መጠን {{maxFiles}}።',
+        validationFilesInvalidType:
+          'ይቅርታ፤ እንደዚህ አይነት ፋይሎችን መጠቀም አንችልም። እባክዎ {{fileTypes}} አይነት ፋይሎችን ይጨምሩ።',
+        validationFilesTooSmall: 'ፋይሉ ስህተት አለው። እባክዎ ሌላ ፋይል ይምረጡ።',
+        validationFilesSizeExceeded:
+          'ይቅርታ፤ እነዚህ ፋይሎች መጠናቸው ከፍ ያለ ነው። በአንድ ግዜ መጫን የሚችሉት 1.2GB ፋይል ነው።',
+        referenceNumber: 'መለያ ቁጥር',
+        submissionInfoSignedOutMessage: 'ለማስታወስ ያክል ዝርዝሩን በግልዎ መዝግበው መያዝ ይችላሉ።',
+        privacyInfoHtml:
+          'የግላዊ መረጃዎ ምስጢራዊነት የተጠበቀ ይሆናል፤ ዝርዝሩን ለማወቅ {{privacyInfoLink}} ክፍል ያንብቡ።',
+        emailToHtml:
+          '"ሃሳብዎን ቀይረው መጠቀም ካልፈለጉ፤ በዚህ አድራሻ ኢሜይል ይላኩ {{emailLink}}። የማጣቀሻ ቁጥሩንም ከመጻፍ አይዘንጉ።',
+        removalGuidelineText:
+          'በፕሮግራም ወይም በኦንላይን ላይ አንዳች ነገር አቅርበው ጥቅም ላይ ከዋለ በኋላ ልናነሳው አንችልም።',
+
+        // Form Screen
+
+        // Uploading Screen
+        uploadingDescription: 'እባክዎ እስኪጠናቀቅ ድረስ ይጠብቁ።',
+
+        // Success Screen
+        successHeading: 'መልዕክቱ ተልኳል',
+        successDescription: 'መልዕክት ስለላኩ እናመሰግናለን',
+
+        // Error Screen
+        errorHeading: 'መልዕክትዎ አልተጫነም',
+        errorDescription: 'በድጋሚ ለመጫን ይሞክሩ',
+      },
     },
     mostRead: {
       header: 'ብዙ የተነበቡ',
