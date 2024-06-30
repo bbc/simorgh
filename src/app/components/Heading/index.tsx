@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes } from 'react';
+import React, { FC, HTMLAttributes, ForwardedRef, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
@@ -30,38 +30,44 @@ const sizes: Sizes = {
   h4: 'greatPrimer',
 };
 
-const Heading: FC<Props> = ({
-  children,
-  className,
-  fontVariant = 'sansBold',
-  level,
-  size,
-  ...htmlAttributes
-}: Props) => {
-  const element: Element = `h${level}`;
+const Heading: FC<Props> = forwardRef(
+  (
+    {
+      children,
+      className,
+      fontVariant = 'sansBold',
+      level,
+      size,
+      ...htmlAttributes
+    }: Props,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const element: Element = `h${level}`;
 
-  return (
-    <Text
-      as={element}
-      fontVariant={fontVariant}
-      className={className}
-      size={size || sizes[element]}
-      css={{
-        /*
-         * margin: 0 is used to cancel the default spacing
-         * above and below the component.
-         * This is because we don't rely on one default spacing
-         * for all heading elements.
-         * Each use of this component will have to explicitly set
-         * the spacings with the `css` prop.
-         */
-        margin: 0,
-      }}
-      {...htmlAttributes}
-    >
-      {children}
-    </Text>
-  );
-};
+    return (
+      <Text
+        as={element}
+        fontVariant={fontVariant}
+        className={className}
+        size={size || sizes[element]}
+        css={{
+          /*
+           * margin: 0 is used to cancel the default spacing
+           * above and below the component.
+           * This is because we don't rely on one default spacing
+           * for all heading elements.
+           * Each use of this component will have to explicitly set
+           * the spacings with the `css` prop.
+           */
+          margin: 0,
+        }}
+        {...(ref && { ref })}
+        {...htmlAttributes}
+      >
+        {children}
+      </Text>
+    );
+  },
+);
 
 export default Heading;
