@@ -107,7 +107,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
-                      headingLevel={curationTitle ? 3 : 2}
+                      headingLevel={
+                        curationTitle && curationTitle.length ? 3 : 2
+                      }
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
                       summaries={summaries || []}
