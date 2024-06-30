@@ -20,10 +20,15 @@ export default {
         },
       },
     }),
-  fieldLabel: () =>
+  fieldLabel: ({ palette }: Theme) =>
     css({
       display: 'inline-block',
       marginBottom: `${pixelsToRem(6)}rem`,
+      color: palette.GREY_10,
+    }),
+  fieldLabelError: ({ palette }: Theme) =>
+    css({
+      color: palette.ERROR_CORE,
     }),
   focusIndicator: ({ palette }: Theme) =>
     css({
@@ -43,15 +48,28 @@ export default {
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
     }),
-  checkboxContainer: ({ spacings }: Theme) =>
+  textFieldError: ({ palette }: Theme) =>
+    css({
+      border: `solid 0.0625rem ${palette.ERROR_CORE}`,
+    }),
+  checkboxContainer: () =>
     css({
       display: 'flex',
       flexWrap: 'nowrap',
-      paddingBottom: `${spacings.DOUBLE}rem`,
+    }),
+  maxWordLabel: ({ palette }: Theme) =>
+    css({
+      marginBottom: `${pixelsToRem(6)}rem`,
+      color: palette.GREY_10,
+    }),
+  erroredMaxWordLabel: ({ palette }: Theme) =>
+    css({
+      color: palette.ERROR_CORE,
     }),
   textArea: () =>
     css({
       resize: 'none',
+      display: 'block',
     }),
   checkboxLabel: ({ spacings }: Theme) =>
     css({
@@ -59,7 +77,7 @@ export default {
       marginInlineStart: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
     }),
-  checkbox: ({ palette, spacings }: Theme) =>
+  checkbox: ({ palette }: Theme) =>
     css({
       display: 'inline-block',
       flex: 'initial',
@@ -69,7 +87,6 @@ export default {
       cursor: 'pointer',
       boxSizing: 'border-box',
       border: `solid 0.0625rem ${palette.GREY_10}`,
-      marginBottom: `${spacings.FULL}rem`,
       appearance: 'none',
       '&:checked::after': {
         content: '""',
@@ -80,6 +97,53 @@ export default {
         display: 'inline-block',
         width: '100%',
         height: '100%',
+      },
+    }),
+  checkboxError: ({ palette }: Theme) =>
+    css({
+      border: `solid 0.0625rem ${palette.ERROR_CORE}`,
+    }),
+  errorText: ({ palette }: Theme) =>
+    css({
+      color: palette.WHITE,
+    }),
+  errorSvg: ({ mq, palette }: Theme) =>
+    css({
+      fill: palette.WHITE,
+      verticalAlign: 'middle',
+      marginInlineEnd: '0.75rem',
+      minWidth: '1.5rem',
+      [mq.HIGH_CONTRAST]: {
+        path: {
+          fill: 'currentColor',
+        },
+      },
+    }),
+  errorMessageBox:
+    (hasArrowStyle: boolean) =>
+    ({ palette, spacings }: Theme) =>
+      css({
+        backgroundColor: palette.ERROR_CORE,
+        outline: 'solid 0.0625rem transparent',
+        padding: '0.75rem',
+        display: 'flex',
+        alignItems: 'center',
+        ...(!hasArrowStyle && {
+          marginTop: `${spacings.FULL}rem`,
+          marginBottom: `${spacings.FULL}rem`,
+        }),
+      }),
+  errorArrow: ({ palette, spacings }: Theme) =>
+    css({
+      backgroundColor: palette.ERROR_CORE,
+      clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
+      width: `${spacings.DOUBLE}rem`,
+      height: '0.75rem',
+      marginInlineStart: `${spacings.DOUBLE}rem`,
+      marginTop: `${spacings.FULL}rem`,
+      '&::after': {
+        content: '""',
+        border: '0.5rem solid transparent',
       },
     }),
 };
