@@ -296,7 +296,7 @@ export const service: DefaultServiceConfig = {
         dataPolicyHeading: undefined,
 
         // Uploading Screen
-        uploadingHeading: undefined,
+        uploadingHeading: 'በመጫን ላይ . . .',
         uploadingDescription: 'እባክዎ እስኪጠናቀቅ ድረስ ይጠብቁ።',
 
         // Success Screen

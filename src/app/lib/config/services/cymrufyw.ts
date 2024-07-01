@@ -290,7 +290,7 @@ export const service: DefaultServiceConfig = {
         dataPolicyHeading: undefined,
 
         // Uploading Screen
-        uploadingHeading: undefined,
+        uploadingHeading: "Wrthi'n llwytho dy ffeiliau i fyny...",
         uploadingDescription: 'Arhosa nes bydd wedi gorffen.',
 
         // Success Screen

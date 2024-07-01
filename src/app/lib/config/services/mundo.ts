@@ -309,7 +309,7 @@ export const service: DefaultServiceConfig = {
         dataPolicyHeading: undefined,
 
         // Uploading Screen
-        uploadingHeading: undefined,
+        uploadingHeading: 'Subiendo tus archivos...',
         uploadingDescription:
           'Por favor, espera mientras hasta que haya finalizado.',
 

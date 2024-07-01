@@ -327,7 +327,7 @@ export const service: DefaultServiceConfig = {
         dataPolicyHeading: undefined,
 
         // Uploading Screen
-        uploadingHeading: undefined,
+        uploadingHeading: 'جاري تحميل الملفات...',
         uploadingDescription: 'يرجى الانتظار حتى اكتمال الإرسال.',
 
         // Success Screen
