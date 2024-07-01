@@ -289,7 +289,7 @@ export const service: DefaultServiceConfig = {
         fileUploadRemoveButton: undefined,
 
         // Submit button
-        submitButton: 'ላክ',
+        submitButton: 'அனுப்பு',
 
         // Validation
         validationRequired: 'ஏதோ விடுபடுகிறது',
