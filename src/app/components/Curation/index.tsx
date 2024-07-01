@@ -125,6 +125,7 @@ export default ({
               componentName: messageBannerId,
               detailedPlacement: `${position + 1}`,
             }}
+            position={position}
           />
         );
       }

@@ -97,6 +97,7 @@ const MessageBanner = ({
   image,
   eventTrackingData,
   id,
+  position,
 }: MessageBannerProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
@@ -110,6 +111,7 @@ const MessageBanner = ({
       eventTrackingData={eventTrackingData}
       ref={viewRef}
       id={id}
+      position={position}
     />
   );
 };
