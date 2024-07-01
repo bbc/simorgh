@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/button-has-type */
 /** @jsx jsx */
 import { useRef } from 'react';
 import { jsx } from '@emotion/react';
@@ -38,13 +36,14 @@ const ShareButton = ({
   const focusRef = useRef<HTMLButtonElement>(null);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const handleShare = async (event: any) => {
+  const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
     clickTrackerHandler(event);
     try {
-      const shareUrl = `${window.location.href}#${contentId}`;
+      const currentUrlNoHash = window.location.href.split('#')[0];
+      const shareUrl = `${currentUrlNoHash}#${contentId}`;
+      // await navigator.clipboard.writeText(shareUrl);
       await navigator.share({
         url: shareUrl,
-        text: headline,
         title: headline,
       });
     } catch (error) {
@@ -52,14 +51,14 @@ const ShareButton = ({
       console.log('Error sharing', error);
     }
 
-    setTimeout(() => {
-      focusRef.current?.focus();
-    }, 0);
+    setTimeout(() => focusRef.current?.focus(), 0);
+
+    // focusRef.current?.focus();
   };
 
   return (
     <div ref={viewRef}>
-      <button ref={focusRef} onClick={handleShare} css={styles}>
+      <button type="button" ref={focusRef} onClick={handleShare} css={styles}>
         <ShareSvg />
         <span>Share</span>
         <VisuallyHiddenText> ,{headline}</VisuallyHiddenText>
