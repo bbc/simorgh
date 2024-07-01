@@ -284,7 +284,7 @@ export const service: DefaultServiceConfig = {
         // File upload
         fileUploadLiveRegionText: undefined,
         fileUploadLiveRegionUpdateText: undefined,
-        fileUploadListHeading: 'እየጫኑ ያሉት ይህ ነው፡',
+        fileUploadListHeading: 'நீங்கள் இதை பதிவேற்றுகிறீர்கள்...',
         fileUploadButton: 'கோப்பை தேர்வு செய்ய',
         fileUploadRemoveButton: undefined,
 
