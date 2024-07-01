@@ -12,6 +12,7 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];
   const eventTrackingData = { componentName: 'message-banner' };
+  const { position } = kyrgyzMessageBannerOnePromo;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -26,6 +27,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       const region = screen.getByRole('region');
@@ -40,6 +42,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       const heading = screen.getByText(kyrgyzMessageBannerOnePromo.title);
@@ -57,6 +60,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       expect(screen.getByText(kyrgyzMessageBannerOnePromo.title).nodeName).toBe(
@@ -72,6 +76,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       expect(screen.getByText(summary.description).nodeName).toBe('P');
@@ -85,6 +90,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       const ctaLink = screen.getByRole('link');
@@ -100,6 +106,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       const image = screen.getByAltText('');
@@ -116,6 +123,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
       const image = screen.getByAltText('');
@@ -134,6 +142,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
 
@@ -149,6 +158,7 @@ describe('MessageBanner', () => {
           linkText={summary.title}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
+          position={position}
         />,
       );
 
@@ -169,6 +179,7 @@ describe('MessageBanner', () => {
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
+          position={position}
         />,
       );
 
@@ -188,6 +199,7 @@ describe('MessageBanner', () => {
           linkText={summary.title}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
+          position={position}
         />,
       );
 
@@ -205,6 +217,7 @@ describe('MessageBanner', () => {
           linkText={summary.title}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
+          position={position}
         />,
       );
 
