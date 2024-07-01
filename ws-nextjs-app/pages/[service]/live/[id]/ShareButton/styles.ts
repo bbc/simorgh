@@ -11,13 +11,28 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
     backgroundColor: 'transparent',
     cursor: 'pointer',
-    '&:hover': {
+    '&:hover, &:focus': {
       border: `${pixelsToRem(2)}rem solid ${palette.BRAND_BACKGROUND}`,
       backgroundColor: palette.BRAND_BACKGROUND,
       color: palette.WHITE,
-      textDecoration: 'underline',
+      span: {
+        textDecoration: 'underline',
+      },
+      path: {
+        fill: palette.WHITE,
+      },
     },
     [mq.GROUP_4_MIN_WIDTH]: {
       margin: `${spacings.DOUBLE}rem 0 ${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem`,
+    },
+    span: {
+      verticalAlign: 'middle',
+    },
+    svg: {
+      verticalAlign: 'middle',
+      marginInlineEnd: `${spacings.FULL}rem`,
+      path: {
+        fill: palette.BLACK,
+      },
     },
   });
