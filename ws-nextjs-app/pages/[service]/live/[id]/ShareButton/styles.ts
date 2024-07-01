@@ -7,7 +7,9 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     ...fontSizes.pica,
     ...fontVariants.sansBold,
     padding: `${spacings.FULL + spacings.HALF}rem`,
-    margin: `${spacings.FULL}rem 0 ${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
+    marginTop: `${spacings.FULL}rem`,
+    marginBottom: `${spacings.TRIPLE}rem`,
+    marginInlineStart: `${spacings.DOUBLE}rem`,
     border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
     backgroundColor: 'transparent',
     cursor: 'pointer',
@@ -23,7 +25,7 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
       },
     },
     [mq.GROUP_4_MIN_WIDTH]: {
-      margin: `${spacings.FULL}rem 0 ${spacings.QUADRUPLE}rem ${spacings.DOUBLE}rem`,
+      marginBottom: `${spacings.QUADRUPLE}rem`,
     },
     span: {
       verticalAlign: 'middle',
