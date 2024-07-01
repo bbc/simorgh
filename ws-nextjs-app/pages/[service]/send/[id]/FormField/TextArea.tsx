@@ -60,7 +60,10 @@ export default ({
           size="brevier"
           id={describedByWordLimit}
         >
-          {validationWordLimit.replace('{{wordLimit}}', wordLimit?.toString())}
+          {validationWordLimit.replaceAll(
+            '{{wordLimit}}',
+            wordLimit?.toString(),
+          )}
         </Paragraph>
       )}
       <textarea

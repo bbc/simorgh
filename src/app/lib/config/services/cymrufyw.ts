@@ -276,7 +276,8 @@ export const service: DefaultServiceConfig = {
         // Messaging
         privacyPolicyLinkHref: undefined,
         privacyPolicyLinkText: undefined,
-        removalGuidelineText: undefined,
+        removalGuidelineText:
+          'Os ydych wedi cyflwyno rhywbeth ar gyfer rhaglen neu ar-lein, allwn ni ddim ei dynnu unwaith fyddwn wedi ei ddefnyddio.',
         retentionPeriodDays: undefined,
         referenceNumber: 'Cyfeirnod',
         submissionInfoSignedOutMessage:

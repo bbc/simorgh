@@ -336,7 +336,8 @@ export const service: DefaultServiceConfig = {
         // Messaging
         privacyPolicyLinkHref: undefined,
         privacyPolicyLinkText: undefined,
-        removalGuidelineText: undefined,
+        removalGuidelineText:
+          'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
         retentionPeriodDays: undefined,
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
