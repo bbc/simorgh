@@ -32,6 +32,8 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     },
     svg: {
       verticalAlign: 'middle',
+      width: `${spacings.DOUBLE}rem`,
+      height: `${spacings.DOUBLE}rem`,
       marginInlineEnd: `${spacings.FULL}rem`,
       path: {
         fill: palette.BLACK,
