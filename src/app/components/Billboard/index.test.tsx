@@ -87,7 +87,7 @@ describe('Billboard', () => {
       />,
     );
     const maskedImage = getByRole('img');
-    expect(maskedImage.getAttribute('src')).toEqual(imageUrl);
+    expect(maskedImage.getAttribute('src')).toEqual(imageUrl); // test is failing but when the BFF code change is in, it won't any more as image url will be webp in both places
   });
 
   it('should have an masked image with the correct alt text', () => {

@@ -104,7 +104,7 @@ describe('MessageBanner', () => {
       );
       const image = screen.getByAltText('');
       expect(image.getAttribute('src')).toEqual(
-        summary.imageUrl.replace('{width}', 'raw'),
+        summary.imageUrl.replace('{width}', 'raw'), // test is failing but when the BFF code change is in, it won't any more as image url will be webp in both places
       );
     });
 
