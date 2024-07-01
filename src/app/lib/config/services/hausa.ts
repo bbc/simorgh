@@ -318,13 +318,10 @@ export const service: DefaultServiceConfig = {
         privacyPolicyLinkHref: undefined,
         privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
-        referenceNumber: 'Reference number',
-        submissionInfoSignedOutMessage:
-          'You may wish to make a note of these details for your reference.',
-        privacyInfoHtml:
-          "Don't worry, we protect your information — read the {{privacyInfoLink}} for more details.",
-        emailToHtml:
-          "Email {{emailLink}} if you change your mind. Just quote the reference number and tell us you don't want us to use it.",
+        referenceNumber: undefined,
+        submissionInfoSignedOutMessage: undefined,
+        privacyInfoHtml: undefined,
+        emailToHtml: undefined,
         removalGuidelineText:
           'Idan har kun aiko da wani abu don a sanya a shirye-shirye ko a wallafa, ba za mu iya cire shi ba idan har mun yi amfani da shi.',
 
