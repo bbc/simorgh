@@ -259,13 +259,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Más videos',
       ugc: {
         // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
 
         // Optional
         optional: 'opcional',
 
         // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
         fileUploadListHeading: 'Esto es lo que estás subiendo:',
         fileUploadButton: 'Seleccionar un archivo',
+        fileUploadRemoveButton: undefined,
 
         // Submit button
         submitButton: 'Enviar',
@@ -274,7 +279,7 @@ export const service: DefaultServiceConfig = {
         validationRequired: 'Algo está faltando.',
         validationInvalidEmail:
           'Algo no luce bien. Por favor, introduce una dirección de correo electrónico correcta.',
-        validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
+        validationInvalidTelephone: undefined,
         validationFilesNotEnough:
           'No hay suficientes archivos. Por favor añade al menos {{minFiles}}.',
         validationFilesTooMany:
@@ -285,6 +290,13 @@ export const service: DefaultServiceConfig = {
           'Este archivo no es correcto. Intenta seleccionar otro.',
         validationFilesSizeExceeded:
           'Disculpa, estos archivos son muy pesados. Solo puedes cargar hasta 1,2 GB a la vez.',
+        validationWordLimit: undefined,
+
+        // Messaging
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+        removalGuidelineText: undefined,
+        retentionPeriodDays: undefined,
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
@@ -294,8 +306,10 @@ export const service: DefaultServiceConfig = {
           'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
 
         // Form Screen
+        dataPolicyHeading: undefined,
 
         // Uploading Screen
+        uploadingHeading: undefined,
         uploadingDescription:
           'Por favor, espera mientras hasta que haya finalizado.',
 

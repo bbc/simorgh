@@ -250,13 +250,18 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'የቅርብ ጊዜ',
       ugc: {
         // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
 
         // Optional
         optional: 'ግዴት አይደለም',
 
         // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
         fileUploadListHeading: 'እየጫኑ ያሉት ይህ ነው፡',
         fileUploadButton: 'ፋይል ይምረጡ',
+        fileUploadRemoveButton: undefined,
 
         // Submit button
         submitButton: 'ላክ',
@@ -264,7 +269,7 @@ export const service: DefaultServiceConfig = {
         // Validation
         validationRequired: 'አንድ የጎደለ ነገር አለ',
         validationInvalidEmail: 'ትክክል አይመስልም። እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ።',
-        validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
+        validationInvalidTelephone: undefined,
         validationFilesNotEnough: 'በቂ ፋይሎች አይደሉም። እባክዎ ቢያንስ {{minFiles}} ያስገቡ።',
         validationFilesTooMany: 'ብዙ ፋይሎች ናቸው። መጫን የሚችሉት የፋይል መጠን {{maxFiles}}።',
         validationFilesInvalidType:
@@ -272,6 +277,12 @@ export const service: DefaultServiceConfig = {
         validationFilesTooSmall: 'ፋይሉ ስህተት አለው። እባክዎ ሌላ ፋይል ይምረጡ።',
         validationFilesSizeExceeded:
           'ይቅርታ፤ እነዚህ ፋይሎች መጠናቸው ከፍ ያለ ነው። በአንድ ግዜ መጫን የሚችሉት 1.2GB ፋይል ነው።',
+        validationWordLimit: undefined,
+
+        // Messaging
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+        retentionPeriodDays: undefined,
         referenceNumber: 'መለያ ቁጥር',
         submissionInfoSignedOutMessage: 'ለማስታወስ ያክል ዝርዝሩን በግልዎ መዝግበው መያዝ ይችላሉ።',
         privacyInfoHtml:
@@ -282,8 +293,10 @@ export const service: DefaultServiceConfig = {
           'በፕሮግራም ወይም በኦንላይን ላይ አንዳች ነገር አቅርበው ጥቅም ላይ ከዋለ በኋላ ልናነሳው አንችልም።',
 
         // Form Screen
+        dataPolicyHeading: undefined,
 
         // Uploading Screen
+        uploadingHeading: undefined,
         uploadingDescription: 'እባክዎ እስኪጠናቀቅ ድረስ ይጠብቁ።',
 
         // Success Screen

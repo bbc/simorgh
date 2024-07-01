@@ -278,13 +278,18 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'اخترنا لكم',
       ugc: {
         // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
 
         // Optional
         optional: 'اختياري',
 
         // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
         fileUploadListHeading: 'هذا ما تحمّله:',
         fileUploadButton: 'اختر ملفا',
+        fileUploadRemoveButton: undefined,
 
         // Submit button
         submitButton: 'إرسال',
@@ -293,6 +298,7 @@ export const service: DefaultServiceConfig = {
         validationRequired: 'رجاء املأ هذه الخانة الإلزامية.',
         validationInvalidEmail:
           'هذا لا يبدو صحيحا. يرجى إدخال بريد إلكتروني صحيح.',
+        validationInvalidTelephone: undefined,
         validationFilesTooMany:
           'لقد أضفت ملفات أكثر من المسموح. الحد الأقصى لعدد الملفات {{maxFiles}}.',
         validationFilesNotEnough:
@@ -304,6 +310,13 @@ export const service: DefaultServiceConfig = {
           'عذرا، لا يمكننا استقبال هذا النوع من الملفات. يرجى إضافة ملفات من الأنواع التالية {{fileTypes}}.',
         submissionInfoSignedOutMessage:
           'ربما تود الاحتفاظ بنسخة من تلك البيانات للرجوع إليها وقت الحاجة.',
+        validationWordLimit: undefined,
+
+        // Messaging
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+        retentionPeriodDays: undefined,
+        removalGuidelineText: undefined,
         referenceNumber: 'رقم المرجع',
         emailToHtml:
           'إذا غيرت رأيك راسلنا عبر {{emailLink}}. فقط اذكر رقم المرجع وأوضح أنك لا تريد أن نستخدمه.',
@@ -311,8 +324,10 @@ export const service: DefaultServiceConfig = {
           'لا تقلق، نحن نحافظ على بياناتك — لمزيد من التفاصيل اقرأ {{privacyInfoLink}}.',
 
         // Form Screen
+        dataPolicyHeading: undefined,
 
         // Uploading Screen
+        uploadingHeading: undefined,
         uploadingDescription: 'يرجى الانتظار حتى اكتمال الإرسال.',
 
         // Success Screen
