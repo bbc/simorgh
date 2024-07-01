@@ -280,6 +280,69 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Labarai na musamman',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'wannan zaɓi ne',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'Ga abin da kuke dorawa:',
+        fileUploadButton: 'Ku zabi irin abin da za ka tura',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Aika',
+
+        // Validation
+        validationRequired: 'Ka manta wani abu',
+        validationInvalidEmail:
+          'Kamar akwai kuskure. Saka adireshin imail na na ƙwarai.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'Abubuwan da ka tura ba su isa ba. Ka ƙara a ƙalla {{minFiles}}.',
+        validationFilesTooMany:
+          'Ka sanya abubuwa da yawa. {{maxFiles}} ne iya yawan abin da za ka iya sakawa.',
+        validationFilesInvalidType:
+          'Ba za mu iya amfani da wannan abin ba. Ku ƙara {{fileTypes}}.',
+        validationFilesTooSmall: undefined,
+        validationFilesSizeExceeded:
+          'Waɗannan abubuwan sun yi nauyi. Za ka iya tura abu mai nauyin 12GB ne kawai a lokaci guda.',
+        validationWordLimit: 'Iya yawan kalmomi {{wordLimit}}',
+
+        // Messaging
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+        retentionPeriodDays: undefined,
+        referenceNumber: 'Reference number',
+        submissionInfoSignedOutMessage:
+          'You may wish to make a note of these details for your reference.',
+        privacyInfoHtml:
+          "Don't worry, we protect your information — read the {{privacyInfoLink}} for more details.",
+        emailToHtml:
+          "Email {{emailLink}} if you change your mind. Just quote the reference number and tell us you don't want us to use it.",
+        removalGuidelineText:
+          'Idan har kun aiko da wani abu don a sanya a shirye-shirye ko a wallafa, ba za mu iya cire shi ba idan har mun yi amfani da shi.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'Saƙon da kake ɗorawa na hawa...',
+        uploadingDescription: 'Ka jira har sai ya kammala.',
+
+        // Success Screen
+        successHeading: 'Saƙonka ya tafi',
+        successDescription: 'Mun gode da tuntuɓarmu.',
+
+        // Error Screen
+        errorHeading: 'Saƙonka bai je ba',
+        errorDescription: 'Sake aikawa.',
+      },
     },
     mostRead: {
       header: 'Wanda aka fi karantawa',
