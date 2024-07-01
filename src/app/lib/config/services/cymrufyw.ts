@@ -239,6 +239,68 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Prif Straeon',
       featuresAnalysisTitle: 'Cylchgrawn',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'dewisol',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: "Dyma beth rwyt ti'n ei lwytho i fyny:",
+        fileUploadButton: 'Dewisa ffeil',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Anfon',
+
+        // Validation
+        validationRequired: 'Mae rhywbeth ar goll.',
+        validationInvalidEmail:
+          'Dydy hynny ddim yn edrych yn iawn. Rho gyfeiriad e-bost cywir.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'Does dim digon o ffeiliau. Ychwanega o leiaf {{minFiles}}.',
+        validationFilesTooMany:
+          'Mae gormod o ffeiliau. Mae modd ychwanegu {{maxFiles}}.',
+        validationFilesInvalidType:
+          "Yn anffodus, allwn ni ddim defnyddio'r math yma o ffeil. Ychwanega {{fileTypes}}.",
+        validationFilesTooSmall: "Mae'r ffeil yma wedi torri. Dewisa un arall.",
+        validationFilesSizeExceeded:
+          "Yn anffodus, mae'r ffeiliau yma'n rhy fawr. Dim ond 1.2 GB mae modd ei lwytho ar y tro.",
+        validationWordLimit: undefined,
+
+        // Messaging
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+        removalGuidelineText: undefined,
+        retentionPeriodDays: undefined,
+        referenceNumber: 'Cyfeirnod',
+        submissionInfoSignedOutMessage:
+          "Efallai y byddi di'n dymuno gwneud nodyn o'r manylion hyn ar gyfer dy gofnodion.",
+        privacyInfoHtml:
+          "Paid â phoeni, rydyn ni'n diogelu dy wybodaeth — darllena'r {{privacyInfoLink}} i gael rhagor o fanylion.",
+        emailToHtml:
+          "E-bostia {{emailLink}} os byddi di'n newid dy feddwl. Noda'r cyfeirnod a dweda wrthym ni nad wyt ti eisiau i ni ei ddefnyddio.",
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: undefined,
+        uploadingDescription: 'Arhosa nes bydd wedi gorffen.',
+
+        // Success Screen
+        successHeading: 'Wedi anfon y neges',
+        successDescription: 'Diolch am gysylltu â ni.',
+
+        // Error Screen
+        errorHeading: 'Dydy dy ffeiliau ddim wedi cael eu llwytho i fyny.',
+        errorDescription: 'Ceisia eu llwytho i fyny eto.',
+      },
     },
     mostRead: {
       header: 'Mwyaf poblogaidd',
