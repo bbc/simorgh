@@ -277,7 +277,7 @@ export const service: DefaultServiceConfig = {
         validationFilesTooSmall: 'ፋይሉ ስህተት አለው። እባክዎ ሌላ ፋይል ይምረጡ።',
         validationFilesSizeExceeded:
           'ይቅርታ፤ እነዚህ ፋይሎች መጠናቸው ከፍ ያለ ነው። በአንድ ግዜ መጫን የሚችሉት 1.2GB ፋይል ነው።',
-        validationWordLimit: undefined,
+        validationWordLimit: 'የሚፈቀደው የቃላት መጠን {{wordLimit}}',
 
         // Messaging
         privacyPolicyLinkHref: undefined,

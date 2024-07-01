@@ -310,7 +310,7 @@ export const service: DefaultServiceConfig = {
           'عذرا، لا يمكننا استقبال هذا النوع من الملفات. يرجى إضافة ملفات من الأنواع التالية {{fileTypes}}.',
         submissionInfoSignedOutMessage:
           'ربما تود الاحتفاظ بنسخة من تلك البيانات للرجوع إليها وقت الحاجة.',
-        validationWordLimit: undefined,
+        validationWordLimit: 'الحد الأقصى للكلمات {{wordLimit}}',
 
         // Messaging
         privacyPolicyLinkHref: undefined,

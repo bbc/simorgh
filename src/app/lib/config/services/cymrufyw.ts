@@ -271,7 +271,7 @@ export const service: DefaultServiceConfig = {
         validationFilesTooSmall: "Mae'r ffeil yma wedi torri. Dewisa un arall.",
         validationFilesSizeExceeded:
           "Yn anffodus, mae'r ffeiliau yma'n rhy fawr. Dim ond 1.2 GB mae modd ei lwytho ar y tro.",
-        validationWordLimit: undefined,
+        validationWordLimit: 'Dim mwy na {{wordLimit}} gair',
 
         // Messaging
         privacyPolicyLinkHref: undefined,

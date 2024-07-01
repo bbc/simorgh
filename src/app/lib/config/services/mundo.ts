@@ -290,7 +290,7 @@ export const service: DefaultServiceConfig = {
           'Este archivo no es correcto. Intenta seleccionar otro.',
         validationFilesSizeExceeded:
           'Disculpa, estos archivos son muy pesados. Solo puedes cargar hasta 1,2 GB a la vez.',
-        validationWordLimit: undefined,
+        validationWordLimit: 'Máximo {{wordLimit}} palabras.',
 
         // Messaging
         privacyPolicyLinkHref: undefined,

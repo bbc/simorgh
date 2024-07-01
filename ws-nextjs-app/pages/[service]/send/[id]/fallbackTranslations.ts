@@ -29,7 +29,7 @@ const fallbackTranslations: UgcTranslations = {
   validationFilesTooSmall: 'This file is broken. Try picking another.',
   validationFilesSizeExceeded:
     'Sorry, these files are too big. You can only upload up to 1.2 GB at a time.',
-  validationWordLimit: 'Maximum {{wordLimit}} Words',
+  validationWordLimit: 'Maximum {{wordLimit}} words',
   referenceNumber: 'Reference number',
   submissionInfoSignedOutMessage:
     'You may wish to make a note of these details for your reference.',
