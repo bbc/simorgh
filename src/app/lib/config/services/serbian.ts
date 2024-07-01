@@ -392,8 +392,6 @@ export const service: SerbianConfig = {
         validationWordLimit: 'Najviše {{wordLimit}} reči',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'Referentni broj',
         submissionInfoSignedOutMessage:
@@ -416,6 +414,8 @@ export const service: SerbianConfig = {
         // Success Screen
         successHeading: 'Poruka poslata',
         successDescription: 'Hvala vam što ste nam se javili',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'Vaša poruka nije otišla',

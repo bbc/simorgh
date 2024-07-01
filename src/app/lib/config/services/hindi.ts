@@ -330,8 +330,6 @@ export const service: DefaultServiceConfig = {
           'अधिकतम {{wordLimit}} शब्दों की फाइल ही भेज सकते हैं',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'रेफरेंस नंबर',
         submissionInfoSignedOutMessage:
@@ -351,6 +349,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'संदेश भेजा जा चुका है',
         successDescription: 'हमसे संपर्क करने के लिए आपका शुक्रिया',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'आपका संदेश नहीं भेजा गया है',

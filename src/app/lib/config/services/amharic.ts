@@ -280,8 +280,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'የሚፈቀደው የቃላት መጠን {{wordLimit}}',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'መለያ ቁጥር',
         submissionInfoSignedOutMessage: 'ለማስታወስ ያክል ዝርዝሩን በግልዎ መዝግበው መያዝ ይችላሉ።',
@@ -302,6 +300,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'መልዕክቱ ተልኳል',
         successDescription: 'መልዕክት ስለላኩ እናመሰግናለን',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'መልዕክትዎ አልተጫነም',

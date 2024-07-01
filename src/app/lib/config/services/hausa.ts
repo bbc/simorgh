@@ -315,8 +315,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Iya yawan kalmomi {{wordLimit}}',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: undefined,
         submissionInfoSignedOutMessage: undefined,
@@ -335,6 +333,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Saƙonka ya tafi',
         successDescription: 'Mun gode da tuntuɓarmu.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'Saƙonka bai je ba',

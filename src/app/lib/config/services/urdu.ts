@@ -312,8 +312,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'الفاظ کی مقررہ حد {{wordLimit}}',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'ریفرینس نمبر',
         submissionInfoSignedOutMessage:
@@ -334,6 +332,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'پیغام بھیج دیا گیا',
         successDescription: 'رابطہ کرنے کا شکریہ',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'آپ کا پیغام نہیں بھیجا جا سکا',

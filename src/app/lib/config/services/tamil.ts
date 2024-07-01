@@ -308,8 +308,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'அதிகட்சம் {{wordLimit}} சொற்கள்',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'குறிப்பு எண்',
         submissionInfoSignedOutMessage:
@@ -331,6 +329,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'செய்தி அனுப்பப்பட்டது',
         successDescription: 'தொடர்பு கொண்டதற்கு நன்றி',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'செய்தி செல்லவில்லை',

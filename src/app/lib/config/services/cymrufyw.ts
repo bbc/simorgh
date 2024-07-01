@@ -274,8 +274,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Dim mwy na {{wordLimit}} gair',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         removalGuidelineText:
           'Os ydych wedi cyflwyno rhywbeth ar gyfer rhaglen neu ar-lein, allwn ni ddim ei dynnu unwaith fyddwn wedi ei ddefnyddio.',
         retentionPeriodDays: undefined,
@@ -297,6 +295,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Wedi anfon y neges',
         successDescription: 'Diolch am gysylltu â ni.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'Dydy dy ffeiliau ddim wedi cael eu llwytho i fyny.',

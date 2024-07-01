@@ -293,8 +293,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Máximo {{wordLimit}} palabras.',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         removalGuidelineText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'Número de referencia',
@@ -316,6 +314,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'Disculpa, hubo un problema al subir esto.',

@@ -279,8 +279,6 @@ export const service: DefaultServiceConfig = {
           'Nas lugha na {{wordLimit}} facal · Maximum {{wordLimit}} words',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'Aireamh clàraidh · Reference number',
         submissionInfoSignedOutMessage:
@@ -305,6 +303,8 @@ export const service: DefaultServiceConfig = {
         successHeading: 'Teachdaireachd air a chuir · Message sent',
         successDescription:
           'Tapadh leat airson fios a chuir thugainn. · Thanks for getting in touch.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading:

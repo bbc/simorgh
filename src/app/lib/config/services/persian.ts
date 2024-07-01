@@ -334,8 +334,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'حداکثر {{wordLimit}} واژه',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         removalGuidelineText:
           'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
         retentionPeriodDays: undefined,
@@ -357,6 +355,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'پیغام فرستاده شد',
         successDescription: 'از تماس شما سپاسگزاریم.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'امکان آپلود فایل هایتان وجود ندارد.',

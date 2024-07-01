@@ -313,8 +313,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'الحد الأقصى للكلمات {{wordLimit}}',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         removalGuidelineText: undefined,
         referenceNumber: 'رقم المرجع',
@@ -333,6 +331,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'لقد تم الإرسال',
         successDescription: 'شكرا لاتصالك.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'تعذر تحميل ملفاتك ',

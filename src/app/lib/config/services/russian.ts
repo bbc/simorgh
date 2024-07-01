@@ -272,8 +272,6 @@ export const mainTranslations = {
     validationWordLimit: 'Максимум {{wordLimit}} слов',
 
     // Messaging
-    privacyPolicyLinkHref: undefined,
-    privacyPolicyLinkText: undefined,
     retentionPeriodDays: undefined,
     referenceNumber: 'Запишите этот номер',
     submissionInfoSignedOutMessage: 'Запишите эти детали для вашего сведения.',
@@ -293,6 +291,8 @@ export const mainTranslations = {
     // Success Screen
     successHeading: 'Письмо отправлено',
     successDescription: 'Спасибо за контакт!',
+    privacyPolicyLinkHref: undefined,
+    privacyPolicyLinkText: undefined,
 
     // Error Screen
     errorHeading: 'Ваше сообщение не отправлено',

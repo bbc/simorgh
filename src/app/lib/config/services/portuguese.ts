@@ -315,8 +315,6 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Máximo de {{wordLimit}} palavras',
 
         // Messaging
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
         retentionPeriodDays: undefined,
         referenceNumber: 'Número de referência',
         submissionInfoSignedOutMessage:
@@ -337,6 +335,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Mensagem enviada',
         successDescription: 'Obrigado por entrar em contato.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
 
         // Error Screen
         errorHeading: 'Sua mensagem não foi enviada',
