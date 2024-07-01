@@ -104,6 +104,7 @@ export default ({
               }}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
+              position={position}
             />
           </div>
         );

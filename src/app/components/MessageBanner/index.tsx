@@ -19,6 +19,7 @@ interface MessageBannerProps {
   image?: string;
   id?: string;
   eventTrackingData?: EventTrackingMetadata;
+  position: number;
 }
 
 const Banner = forwardRef(
@@ -31,12 +32,15 @@ const Banner = forwardRef(
       image,
       eventTrackingData,
       id = 'message-banner-1',
+      position,
     }: MessageBannerProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
-
+    const imageUrl = `${image
+      .replace('/news/', '/ace/ws/')
+      .replace('x{height}', 'xn')}.webp`;
     return (
       <section
         css={styles.container}
@@ -71,8 +75,9 @@ const Banner = forwardRef(
               <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
                 <Image
                   alt=""
-                  src={`${image.replace('{width}', 'raw')}`}
+                  src={`${imageUrl.replace('{width}', 'raw')}`}
                   placeholder={false}
+                  lazyLoad={position !== 0}
                   aspectRatio={[16, 9]}
                 />
               </div>

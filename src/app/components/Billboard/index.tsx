@@ -20,6 +20,7 @@ interface BillboardProps {
   id?: string;
   eventTrackingData?: EventTrackingMetadata;
   showLiveLabel?: boolean;
+  position: number;
 }
 
 const Billboard = forwardRef(
@@ -33,22 +34,26 @@ const Billboard = forwardRef(
       id = 'billboard-1',
       eventTrackingData,
       showLiveLabel,
+      position,
     }: BillboardProps,
     viewRef,
   ) => {
     const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
+    const imageUrl = `${image
+      .replace('/news/', '/ace/ws/')
+      .replace('x{height}', 'xn')}.webp`;
     return (
       <section role="region" aria-labelledby={id} data-testid={id}>
         <div css={styles.headerContainer} ref={viewRef}>
           <div css={styles.backgroundContainer} />
           <div css={styles.contentContainer}>
             <MaskedImage
-              imageUrl={image}
+              imageUrl={imageUrl}
               imageUrlTemplate={image}
               altText={altText}
               imageWidth={660}
               showPlaceholder={false}
+              position={position}
             />
             <div css={styles.textContainer}>
               <Heading level={2} size="paragon" css={styles.heading} id={id}>
@@ -96,6 +101,7 @@ export default ({
   id,
   eventTrackingData,
   showLiveLabel,
+  position,
 }: BillboardProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
@@ -110,6 +116,7 @@ export default ({
       eventTrackingData={eventTrackingData}
       ref={viewRef}
       showLiveLabel={showLiveLabel}
+      position={position}
     />
   );
 };
