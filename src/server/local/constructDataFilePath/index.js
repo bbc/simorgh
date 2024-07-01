@@ -15,7 +15,6 @@ export default ({
     case 'frontpage':
     case 'homePage':
     case 'mostRead':
-    case 'mostWatched':
     case 'secondaryColumn':
     case 'recommendations':
       dataPath = `${variant || 'index'}.json`;

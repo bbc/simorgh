@@ -246,11 +246,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: false,
     },
-    mostWatched: {
-      header: 'Mwyaf poblogaidd',
-      numberOfItems: 5,
-      hasMostWatched: false,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
