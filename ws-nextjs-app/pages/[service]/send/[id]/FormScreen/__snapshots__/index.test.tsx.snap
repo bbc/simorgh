@@ -152,6 +152,27 @@ exports[`Form should render and match snapshot 1`] = `
   }
 }
 
+.emotion-4 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-4 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
 .emotion-5 {
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
@@ -301,6 +322,27 @@ exports[`Form should render and match snapshot 1`] = `
   }
 }
 
+.emotion-21 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-21 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-21 a:focus,
+.emotion-21 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
 .emotion-22 {
   margin-top: 1rem;
 }
@@ -373,14 +415,15 @@ exports[`Form should render and match snapshot 1`] = `
 }
 
 .emotion-25 {
-  background-color: #0071F1;
-  color: #FFFFFF;
-  width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  margin-top: 1rem;
+  background-color: #0071F1;
+  color: #FFFFFF;
+  width: 100%;
   border: none;
   outline: solid 0.0625rem transparent;
   padding: 0.75rem 0;
@@ -396,7 +439,8 @@ exports[`Form should render and match snapshot 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-25 {
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -405,12 +449,6 @@ exports[`Form should render and match snapshot 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   background-color: #0051AD;
-}
-
-@media (min-width: 80rem) {
-  .emotion-25 {
-    margin-top: 0;
-  }
 }
 
 .emotion-26 {
