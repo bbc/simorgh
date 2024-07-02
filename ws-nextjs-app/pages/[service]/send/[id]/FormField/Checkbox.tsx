@@ -51,9 +51,8 @@ export default ({
           id={labelId}
           css={[styles.checkboxLabel]}
           useErrorTheme={useErrorTheme}
-        >
-          {label}
-        </Label>
+          labelText={label}
+        />
       </div>
       {hasAttemptedSubmit && !isValid && (
         <InvalidMessageBox
