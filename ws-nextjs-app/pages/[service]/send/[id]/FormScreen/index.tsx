@@ -9,7 +9,6 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import Loader from '../Loader';
 
 const PRIVACY_POLICY_HEADER_TRANSLATION = 'Our data policy';
 
@@ -76,7 +75,7 @@ export default function FormScreen({
             </div>
           )}
 
-          {!submitted ? <Submit /> : <Loader />}
+          {!submitted && <Submit />}
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>
