@@ -30,14 +30,14 @@ import {
 } from './types';
 import ShareButton from '../ShareButton';
 
-const PostLabel = ({
-  hasLabel,
-  labelText,
+const PostBreakingNewsLabel = ({
+  isBreakingNews,
+  breakingNewsLabelText,
 }: {
-  hasLabel: boolean;
-  labelText?: string;
+  isBreakingNews: boolean;
+  breakingNewsLabelText?: string;
 }) => {
-  return hasLabel ? (
+  return isBreakingNews ? (
     <>
       <Text
         css={styles.breakingNewsLabel}
@@ -45,7 +45,7 @@ const PostLabel = ({
         fontVariant="sansBold"
         data-testid="breaking-news-label"
       >
-        {labelText}
+        {breakingNewsLabelText}
       </Text>
       <VisuallyHiddenText>, </VisuallyHiddenText>
     </>
@@ -53,7 +53,6 @@ const PostLabel = ({
 };
 
 const PostHeaderBanner = ({
-  isSharedPost,
   isBreakingNews,
   timestamp: curated,
 }: {
@@ -88,8 +87,10 @@ const PostHeaderBanner = ({
         padding={false}
         isRelative={isRelative}
       />
-      <PostLabel hasLabel={isBreakingNews} labelText={breaking} />
-      <PostLabel hasLabel={isSharedPost} labelText="SHARED" />
+      <PostBreakingNewsLabel
+        isBreakingNews={isBreakingNews}
+        breakingNewsLabelText={breaking}
+      />
     </span>
   );
 };
@@ -198,6 +199,7 @@ const Post = ({ post }: { post: PostType }) => {
     if (hashValue) {
       window.location.href = `#${hashValue}`;
     }
+
     if ('share' in navigator) {
       setCanShare(true);
     }
