@@ -94,18 +94,11 @@ const PostHeaderBanner = ({
   );
 };
 
-const PostHeadings = ({
-  headerBlock,
-  setHeadline,
-}: {
-  headerBlock: PostHeadingBlock;
-  setHeadline: Dispatch<SetStateAction<string>>;
-}) => {
+const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const isHeadline = headerBlock.type === 'headline';
   const headingText =
     headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  if (isHeadline) setHeadline(headingText);
   return (
     <>
       {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
@@ -178,6 +171,9 @@ const Post = ({ post }: { post: PostType }) => {
     post,
   );
 
+  const firstHeadingText =
+    headerBlocks[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
     ['content', 'model', 'blocks'],
@@ -189,7 +185,6 @@ const Post = ({ post }: { post: PostType }) => {
   const timestamp = post?.dates?.curated ?? '';
   const [canShare, setCanShare] = useState(false);
   const [hashValue, setHashValue] = useState('');
-  const [headline, setHeadline] = useState('');
 
   useEffect(() => {
     const URLHash = window.location.hash.substring(1);
@@ -198,7 +193,7 @@ const Post = ({ post }: { post: PostType }) => {
     if (hashValue) {
       window.location.href = `#${hashValue}`;
     }
-
+    setCanShare(true);
     if ('share' in navigator) {
       setCanShare(true);
     }
@@ -215,11 +210,7 @@ const Post = ({ post }: { post: PostType }) => {
           />
 
           {headerBlocks.map(headerBlock => (
-            <PostHeadings
-              key={headerBlock.id}
-              headerBlock={headerBlock}
-              setHeadline={setHeadline}
-            />
+            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
           ))}
         </span>
       </Heading>
@@ -232,7 +223,7 @@ const Post = ({ post }: { post: PostType }) => {
             componentName: urn,
           }}
           contentId={urn}
-          headline={headline}
+          headline={firstHeadingText}
         />
       )}
     </article>
