@@ -15823,24 +15823,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@npm:0.28.0":
-  version: 0.28.0
-  resolution: "ramda@npm:0.28.0"
-  checksum: 10/1925e1881ece9feacd7eae620036996dcd3fb4973d931200e8594813238169afeaae8cc4377b4cb40978c26a07929f4e7f88cb2776a6c41b2e65f18dfba6530d
-  languageName: node
-  linkType: hard
-
 "ramda@npm:0.29.0":
   version: 0.29.0
   resolution: "ramda@npm:0.29.0"
   checksum: 10/b156660f2c58b4a13bcc4f1a0eabc1145d8db11d33d26a2fb03cd6adf3983a1c1f2bbaaf708c421029e9b09684262d056752623f7e62b79a503fb9217dec69d4
-  languageName: node
-  linkType: hard
-
-"ramda@patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch::locator=simorgh%40workspace%3A.":
-  version: 0.28.0
-  resolution: "ramda@patch:ramda@npm%3A0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch::version=0.28.0&hash=d78dd0&locator=simorgh%40workspace%3A."
-  checksum: 10/5dadd1ec7fc082dce2497b77d207f4b5241196dea1f1d5a35aa247ea150ef549ac5dc58e8a42e285061964b42f1d0173a7249b2230407b7d8a3325b3fd9a6741
   languageName: node
   linkType: hard
 
