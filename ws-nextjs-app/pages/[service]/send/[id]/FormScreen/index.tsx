@@ -9,7 +9,8 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import Loader from '../Loader';
+
+const PRIVACY_POLICY_HEADER_TRANSLATION = 'Our data policy';
 
 type Props = {
   title: string;
@@ -27,7 +28,7 @@ export default function FormScreen({
   privacyNotice,
 }: Props) {
   const { handleSubmit, submitted } = useFormContext();
-  const translation = 'Our data policy';
+
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
   ));
@@ -43,33 +44,38 @@ export default function FormScreen({
       >
         {title}
       </Heading>
-      <div
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: description }}
-        css={styles.description}
-      />
-      <Heading level={2} size="doublePica">
-        {sectionTitle}
-      </Heading>
-
+      {description && (
+        <div
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: description }}
+          css={styles.description}
+        />
+      )}
+      {sectionTitle && (
+        <Heading level={2} size="doublePica">
+          {sectionTitle}
+        </Heading>
+      )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {formFields}
 
-          <div css={styles.privacyContainer}>
-            <strong // TODO: need translations for this, it doesn't come through from the api
-              css={styles.privacyHeading}
-            >
-              {translation}
-            </strong>
-            <div
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: privacyNotice }}
-              css={styles.privacyNotice}
-            />
-          </div>
+          {privacyNotice && (
+            <div css={styles.privacyContainer}>
+              <strong // TODO: need translations for this, it doesn't come through from the api
+                css={styles.privacyHeading}
+              >
+                {PRIVACY_POLICY_HEADER_TRANSLATION}
+              </strong>
+              <div
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{ __html: privacyNotice }}
+                css={styles.privacyNotice}
+              />
+            </div>
+          )}
 
-          {!submitted ? <Submit /> : <Loader />}
+          {!submitted && <Submit />}
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>
