@@ -9,7 +9,6 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import Loader from '../Loader';
 
 type Props = {
   title: string;
@@ -69,7 +68,7 @@ export default function FormScreen({
             />
           </div>
 
-          {!submitted ? <Submit /> : <Loader />}
+          {!submitted && <Submit />}
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>
