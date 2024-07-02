@@ -124,7 +124,7 @@ describe('Promo component - Image', () => {
     });
   });
 
-  it('should have a webp file extension - programmes iChef recipes', () => {
+  it('should have only one webp file extension when URL has one already - programmes iChef recipes', () => {
     render(<FixtureProgrammesWithWebp />);
 
     const image = screen.getByAltText('Test image alt text');
@@ -152,7 +152,7 @@ describe('Promo component - Image', () => {
     });
   });
 
-  it('should have webp file extension - all other iChef Recipes', () => {
+  it('should have only one webp file extension when URL has one already - all other iChef Recipes', () => {
     render(<FixtureWithWebp />);
 
     const image = screen.getByAltText('Test image alt text');
