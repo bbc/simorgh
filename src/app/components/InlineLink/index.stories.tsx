@@ -44,6 +44,23 @@ export const InlineLinkInsideText = (
   );
 };
 
+export const TestingUploaderFormBackButtonInlineLink = () => {
+  return (
+    <>
+      <h1>Form 1 - Live Form (will error)</h1>
+      <InlineLink
+        to="https://www.test.bbc.com/mundo/send/u50853489?renderer_env=live"
+        text="https://www.test.bbc.com/mundo/send/u50853489?renderer_env=live"
+      />
+      <h1>Form 2 - Test From (should succeed)</h1>
+      <InlineLink
+        to="https://www.test.bbc.com/somali/send/u130092370?renderer_env=test"
+        text="https://www.test.bbc.com/somali/send/u130092370?renderer_env=test"
+      />
+    </>
+  );
+};
+
 export default {
   title: 'Components/InlineLink',
   Component: InternalInlineLink,
