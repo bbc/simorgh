@@ -56,7 +56,6 @@ const PostHeaderBanner = ({
   isBreakingNews,
   timestamp: curated,
 }: {
-  isSharedPost: boolean;
   isBreakingNews: boolean;
   breakingNewsLabelText?: string;
   timestamp: string;
@@ -206,40 +205,37 @@ const Post = ({ post }: { post: PostType }) => {
   }, [hashValue]);
 
   return (
-    <>
-      <article css={styles.postContainer}>
-        <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
-          {/* eslint-disable-next-line jsx-a11y/aria-role */}
-          <span role="text">
-            <PostHeaderBanner
-              isSharedPost={hashValue === urn}
-              isBreakingNews={isBreakingNews}
-              timestamp={timestamp}
-            />
-
-            {headerBlocks.map(headerBlock => (
-              <PostHeadings
-                key={headerBlock.id}
-                headerBlock={headerBlock}
-                setHeadline={setHeadline}
-              />
-            ))}
-          </span>
-        </Heading>
-        <div css={styles.postContent}>
-          <PostContent contentBlocks={contentBlocks} />
-        </div>
-        {canShare && (
-          <ShareButton
-            eventTrackingData={{
-              componentName: urn,
-            }}
-            contentId={urn}
-            headline={headline}
+    <article css={styles.postContainer}>
+      <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          <PostHeaderBanner
+            isBreakingNews={isBreakingNews}
+            timestamp={timestamp}
           />
-        )}
-      </article>
-    </>
+
+          {headerBlocks.map(headerBlock => (
+            <PostHeadings
+              key={headerBlock.id}
+              headerBlock={headerBlock}
+              setHeadline={setHeadline}
+            />
+          ))}
+        </span>
+      </Heading>
+      <div css={styles.postContent}>
+        <PostContent contentBlocks={contentBlocks} />
+      </div>
+      {canShare && (
+        <ShareButton
+          eventTrackingData={{
+            componentName: urn,
+          }}
+          contentId={urn}
+          headline={headline}
+        />
+      )}
+    </article>
   );
 };
 
