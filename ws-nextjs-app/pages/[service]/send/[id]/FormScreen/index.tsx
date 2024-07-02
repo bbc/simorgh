@@ -10,7 +10,6 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import Loader from '../Loader';
 import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
@@ -51,29 +50,38 @@ export default function FormScreen({
       >
         {title}
       </Heading>
-      <div
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: description }}
-        css={styles.description}
-      />
-      <Heading level={2} size="doublePica">
-        {sectionTitle}
-      </Heading>
-
+      {description && (
+        <div
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: description }}
+          css={styles.description}
+        />
+      )}
+      {sectionTitle && (
+        <Heading level={2} size="doublePica">
+          {sectionTitle}
+        </Heading>
+      )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {formFields}
 
-          <div css={styles.privacyContainer}>
-            <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
-            <div
-              // eslint-disable-next-line react/no-danger
-              dangerouslySetInnerHTML={{ __html: privacyNotice }}
-              css={styles.privacyNotice}
-            />
-          </div>
+          {privacyNotice && (
+            <div css={styles.privacyContainer}>
+              <strong // TODO: need translations for this, it doesn't come through from the api
+                css={styles.privacyHeading}
+              >
+                {dataPolicyHeading}
+              </strong>
+              <div
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{ __html: privacyNotice }}
+                css={styles.privacyNotice}
+              />
+            </div>
+          )}
 
-          {!submitted ? <Submit /> : <Loader />}
+          {!submitted && <Submit />}
           <LiveRegion />
         </LiveRegionContextProvider>
       </form>

@@ -81,9 +81,13 @@ export default ({
 
   return (
     <>
-      <Label required={required} forId={id} id={labelId} useErrorTheme={false}>
-        {label}
-      </Label>
+      <Label
+        required={required}
+        forId={id}
+        id={labelId}
+        useErrorTheme={false}
+        labelText={label}
+      />
       <button
         aria-describedby={labelId}
         css={styles.fileUploadButton}

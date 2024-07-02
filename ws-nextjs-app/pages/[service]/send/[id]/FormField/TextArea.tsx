@@ -47,9 +47,8 @@ export default ({
         id={labelId}
         required={required}
         useErrorTheme={useErrorTheme}
-      >
-        {label}
-      </Label>
+        labelText={label}
+      />
       {hasWordLimit && (
         <Paragraph
           css={[
