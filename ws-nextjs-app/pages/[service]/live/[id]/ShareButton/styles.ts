@@ -13,7 +13,7 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
     backgroundColor: 'transparent',
     cursor: 'pointer',
-    '&:hover, &:focus': {
+    '&:hover, &:focus-visible': {
       border: `${pixelsToRem(2)}rem solid ${palette.BRAND_BACKGROUND}`,
       backgroundColor: palette.BRAND_BACKGROUND,
       color: palette.WHITE,
