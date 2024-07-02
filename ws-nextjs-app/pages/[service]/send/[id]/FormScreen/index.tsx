@@ -68,11 +68,7 @@ export default function FormScreen({
 
           {privacyNotice && (
             <div css={styles.privacyContainer}>
-              <strong // TODO: need translations for this, it doesn't come through from the api
-                css={styles.privacyHeading}
-              >
-                {dataPolicyHeading}
-              </strong>
+              <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
