@@ -62,9 +62,13 @@ const Image = props => {
   const isProgrammeImage = src.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
-  const primarySrcSet = createSrcSet(src, '.webp', isProgrammeImage);
+  const suffix = src.endsWith('.webp') ? '' : '.webp';
+  const primarySrcSet = createSrcSet(src, suffix, isProgrammeImage);
 
-  const fallbackSrcSet = createSrcSet(src, '', isProgrammeImage);
+  const fallbackSrcSet = createSrcSet(src, '', isProgrammeImage).replaceAll(
+    '.webp',
+    '',
+  );
 
   const sizes = createSizes(useLargeImages, isProgrammeImage);
   return (
