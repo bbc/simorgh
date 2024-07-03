@@ -7,7 +7,9 @@ import Text from '../Text';
 import TranscriptTimestamp from './TranscriptTimestamp';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderTranscriptItems = (transcriptBlocks: any) =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transcriptBlocks.map((item: any, index: number) => {
     if (!item) {
       return null;
@@ -19,6 +21,7 @@ const renderTranscriptItems = (transcriptBlocks: any) =>
     // TO DO - move this to BFF
     const formattedTimestamp = timestamp.slice(3, -4);
     return (
+      // eslint-disable-next-line react/no-array-index-key
       <li key={index} css={styles.listItem}>
         <Text>
           <span role="text">
@@ -31,10 +34,10 @@ const renderTranscriptItems = (transcriptBlocks: any) =>
   });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Transcript = (transcript: any, title: any) => {
+const Transcript = ({ transcript, title }: any) => {
   // TO DO - FIX TYPES SO TITLE COMES THROUGH
   // TODO add types and destructing etc
-  const transcriptBlocks = transcript?.block?.model?.blocks;
+  const transcriptBlocks = transcript?.model?.blocks;
   if (!transcriptBlocks) {
     return null;
   }
@@ -44,7 +47,7 @@ const Transcript = (transcript: any, title: any) => {
         <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
           Read transcript
         </Text>
-        {/* <VisuallyHiddenText>, {title}</VisuallyHiddenText> */}
+        <VisuallyHiddenText>, {title}</VisuallyHiddenText>
       </summary>
       <ol css={styles.ul} role="list">
         {renderTranscriptItems(transcriptBlocks)}

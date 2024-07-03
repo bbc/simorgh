@@ -3,8 +3,10 @@ import Transcript from '.';
 import transcriptFixture from './fixture.json';
 // import { StoryProps, StoryArgs } from '../../models/types/storybook';
 
-const Component = (transcript: any) => {
-  return <Transcript transcript={transcriptFixture} />;
+const Component = () => {
+  return (
+    <Transcript transcript={transcriptFixture} title="Title of my video" />
+  );
 };
 
 export default {

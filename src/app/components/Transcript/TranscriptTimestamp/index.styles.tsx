@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  time: ({ spacings, mq }: Theme) =>
+  time: ({ mq }: Theme) =>
     css({
       // paddingInlineEnd: `${spacings.DOUBLE}rem`,
       float: 'inline-start',
