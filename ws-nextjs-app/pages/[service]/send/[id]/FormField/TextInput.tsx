@@ -32,9 +32,8 @@ export default ({
         id={labelId}
         forId={id}
         useErrorTheme={useErrorTheme}
-      >
-        {label}
-      </Label>
+        labelText={label}
+      />
       <div>
         <input
           css={[
