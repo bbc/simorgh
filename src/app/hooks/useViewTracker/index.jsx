@@ -65,22 +65,6 @@ const useViewTracker = (props = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
-        console.log('VIEW TRACK');
-        console.log('campaignID', campaignID);
-        console.log('componentName', componentName);
-        console.log('format', format);
-        console.log('isInView', isInView);
-        console.log('pageIdentifier', pageIdentifier);
-        console.log('platform', platform);
-        console.log('producerId', producerId);
-        console.log('service', service);
-        console.log('statsDestination', statsDestination);
-        console.log('trackingIsEnabled', trackingIsEnabled);
-        console.log('eventSent', eventSent);
-        console.log('advertiserID', advertiserID);
-        console.log('url', url);
-        console.log('optimizely', optimizely);
-        console.log('detailedPlacement', detailedPlacement);
 
         const shouldSendEvent = [
           hasRequiredProps,
