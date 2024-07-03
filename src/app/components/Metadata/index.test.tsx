@@ -56,7 +56,6 @@ interface MetadataWithContextProps extends MetadataProps {
   pageType: PageTypes;
   id?: string | null;
   pathname: string;
-  description?: string;
 }
 
 const MetadataWithContext = ({
