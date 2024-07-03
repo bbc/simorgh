@@ -38,9 +38,6 @@ const Banner = forwardRef(
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
-    const imageUrl = `${image
-      .replace('/news/', '/ace/ws/')
-      .replace('x{height}', 'xn')}.webp`;
     return (
       <section
         css={styles.container}
@@ -75,7 +72,7 @@ const Banner = forwardRef(
               <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
                 <Image
                   alt=""
-                  src={`${imageUrl.replace('{width}', 'raw')}`}
+                  src={`${image.replace('{width}', 'raw')}`}
                   placeholder={false}
                   lazyLoad={position !== 0}
                   aspectRatio={[16, 9]}
