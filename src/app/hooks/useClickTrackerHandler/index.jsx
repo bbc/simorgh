@@ -52,7 +52,6 @@ const useClickTrackerHandler = (props = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
-
         if (shouldSendEvent) {
           const nextPageUrl = path(['currentTarget', 'href'], event);
 
