@@ -53,8 +53,6 @@ const ShareButton = ({
     }
 
     setTimeout(() => focusRef.current?.focus(), 0);
-
-    // focusRef.current?.focus();
   };
 
   return (
