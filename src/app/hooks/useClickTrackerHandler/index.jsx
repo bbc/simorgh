@@ -35,26 +35,13 @@ const useClickTrackerHandler = (props = {}) => {
 
   return useCallback(
     async event => {
-      console.log('CLICK TRACKER');
-      console.log('Event:', event);
-
       const shouldRegisterClick = [
         trackingIsEnabled,
         !clicked,
         isValidClick(event),
       ].every(Boolean);
-
-      console.log('Should register click:', shouldRegisterClick);
-
       if (shouldRegisterClick) {
         setClicked(true);
-        console.log('campaignID', campaignID);
-        console.log('componentName', componentName);
-        console.log('pageIdentifier', pageIdentifier);
-        console.log('platform', platform);
-        console.log('producerId', producerId);
-        console.log('service', service);
-        console.log('statsDestination', statsDestination);
 
         const shouldSendEvent = [
           campaignID,
@@ -66,11 +53,8 @@ const useClickTrackerHandler = (props = {}) => {
           statsDestination,
         ].every(Boolean);
 
-        console.log('Should send event:', shouldSendEvent);
-
         if (shouldSendEvent) {
           const nextPageUrl = path(['currentTarget', 'href'], event);
-          console.log('Next page URL:', nextPageUrl);
 
           event.stopPropagation();
           event.preventDefault();
@@ -86,8 +70,6 @@ const useClickTrackerHandler = (props = {}) => {
               optimizely.user.id,
               overrideAttributes,
             );
-
-            console.log('Optimizely track called');
           }
 
           try {
@@ -105,15 +87,12 @@ const useClickTrackerHandler = (props = {}) => {
               url,
               detailedPlacement,
             });
-
-            console.log('Beacon sent');
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {
                 optimizely.close();
               }
               window.location.assign(nextPageUrl);
-              console.log('Navigating to:', nextPageUrl);
             }
           }
         }
