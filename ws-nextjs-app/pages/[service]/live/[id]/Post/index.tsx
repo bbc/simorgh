@@ -1,11 +1,5 @@
 /** @jsx jsx */
-import React, {
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
@@ -183,7 +177,7 @@ const Post = ({ post }: { post: PostType }) => {
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
-  const [canShare, setCanShare] = useState(false);
+  const [hasShareApi, setHasShareApi] = useState(false);
   const [hashValue, setHashValue] = useState('');
 
   useEffect(() => {
@@ -193,9 +187,8 @@ const Post = ({ post }: { post: PostType }) => {
     if (hashValue) {
       window.location.href = `#${hashValue}`;
     }
-    setCanShare(true);
     if ('share' in navigator) {
-      setCanShare(true);
+      setHasShareApi(true);
     }
   }, [hashValue]);
 
@@ -217,7 +210,7 @@ const Post = ({ post }: { post: PostType }) => {
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-      {canShare && (
+      {hasShareApi && (
         <ShareButton
           eventTrackingData={{
             componentName: urn,
