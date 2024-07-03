@@ -4,7 +4,11 @@ import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { FileData, InvalidMessageCodes } from '../../../types';
+import {
+  FileData,
+  InvalidMessageCodes,
+  ValidationConditions,
+} from '../../../types';
 import { useFormContext } from '../../../FormContext';
 import styles from '../styles';
 import {
@@ -20,6 +24,7 @@ interface FileListProps {
   files: FileData[];
   name: string;
   hasAttemptedSubmit: boolean;
+  validation?: ValidationConditions;
 }
 
 interface handleFileDeletionParams {
@@ -27,7 +32,12 @@ interface handleFileDeletionParams {
   fileName: string;
 }
 
-export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
+export default ({
+  files,
+  name,
+  hasAttemptedSubmit,
+  validation,
+}: FileListProps) => {
   const {
     translations: {
       ugc: {
@@ -141,6 +151,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
             id={errorBoxAriaDescribedById}
             messageCode={fileData.messageCode as InvalidMessageCodes}
             suffix={file.name}
+            validation={validation}
           />
         )}
       </li>

@@ -4,7 +4,11 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import { InvalidMessageCodes, InvalidMessageBoxProps } from '../types';
+import {
+  InvalidMessageCodes,
+  InvalidMessageBoxProps,
+  ValidationConditions,
+} from '../types';
 import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
 
@@ -21,17 +25,42 @@ const ErrorSymbol = () => (
   </svg>
 );
 
+const formatValidationMessage = (
+  messageCode: string,
+  validation?: ValidationConditions,
+) => {
+  if (!validation) return messageCode;
+
+  let message = messageCode;
+
+  if (validation?.min) {
+    message = message.replace('{{minFiles}}', `${validation.min}`);
+  }
+  if (validation?.max) {
+    message = message.replace('{{maxFiles}}', `${validation.max}`);
+  }
+  if (validation?.fileTypes) {
+    message = message.replace('{{fileTypes}}', validation.fileTypes.join(', '));
+  }
+
+  return message;
+};
+
 export default ({
   id,
   messageCode,
   hasArrowStyle = true,
   suffix,
+  validation,
 }: InvalidMessageBoxProps) => {
   const {
     translations: { ugc = fallbackTranslations },
   } = useContext(ServiceContext);
 
-  const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
+  const message = formatValidationMessage(
+    ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
+    validation,
+  );
 
   return (
     <>

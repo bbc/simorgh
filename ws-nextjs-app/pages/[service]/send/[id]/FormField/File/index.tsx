@@ -30,12 +30,22 @@ export default ({
     },
   } = useContext(ServiceContext);
 
-  const { isValid, required, wasInvalid, hasNestedErrorLabel, messageCode } =
-    inputState ?? {};
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
-  const filesInState = inputState.value as FileData[];
   const { replaceLiveRegionWith } = useLiveRegionContext();
+
+  const {
+    isValid,
+    required,
+    wasInvalid,
+    hasNestedErrorLabel,
+    messageCode,
+    min,
+    max,
+    fileTypes,
+  } = inputState ?? {};
+
+  const filesInState = inputState.value as FileData[];
   const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
   const labelId = `label-${id}`;
   const errorBoxId = `${id}-error`;
@@ -54,7 +64,6 @@ export default ({
 
     const uploaded = [...filesInState];
 
-    // Needs translation
     let liveRegionText = fileUploadLiveRegionText;
 
     chosenFiles.forEach(file => {
@@ -108,6 +117,7 @@ export default ({
           suffix={label}
           messageCode={messageCode}
           hasArrowStyle={false}
+          validation={{ min, max, fileTypes }}
         />
       )}
       <input
@@ -130,6 +140,7 @@ export default ({
           files={filesInState}
           name={name}
           hasAttemptedSubmit={hasAttemptedSubmit}
+          validation={{ min, max, fileTypes }}
         />
       )}
     </>
