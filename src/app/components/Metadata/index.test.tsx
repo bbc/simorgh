@@ -69,7 +69,7 @@ const MetadataWithContext = ({
   title,
   lang,
   twitterHandle,
-  description = '',
+  description,
   openGraphType,
   image,
   imageAltText,
