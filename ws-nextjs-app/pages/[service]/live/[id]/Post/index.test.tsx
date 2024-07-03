@@ -150,5 +150,23 @@ describe('Post', () => {
         container.querySelector('[data-e2e="media-loader__placeholder"]'),
       ).toBeInTheDocument();
     });
+
+    it('should render share button when share api is availible', async () => {
+      // @ts-expect-error overwrites share to exist
+      window.navigator.share = {};
+
+      await act(async () => {
+        render(<Post post={singlePostWithTitle} />);
+      });
+
+      expect(screen.getByRole('button')).toBeInTheDocument();
+    });
+    it('should not render share button when share api is unavailible', async () => {
+      await act(async () => {
+        render(<Post post={singlePostWithTitle} />);
+      });
+
+      expect(screen.getByRole('button')).toBeInTheDocument();
+    });
   });
 });
