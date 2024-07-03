@@ -83,7 +83,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) as string;
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);

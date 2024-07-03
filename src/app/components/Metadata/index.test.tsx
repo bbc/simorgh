@@ -34,7 +34,7 @@ type Platform = 'canonical' | 'amp';
 const getArticleMetadataProps = (data: PageDataProps) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: getSummary(data),
+  description: getSummary(data) as string,
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,
@@ -56,6 +56,7 @@ interface MetadataWithContextProps extends MetadataProps {
   pageType: PageTypes;
   id?: string | null;
   pathname: string;
+  description?: string;
 }
 
 const MetadataWithContext = ({
@@ -68,7 +69,7 @@ const MetadataWithContext = ({
   title,
   lang,
   twitterHandle,
-  description,
+  description = '',
   openGraphType,
   image,
   imageAltText,
