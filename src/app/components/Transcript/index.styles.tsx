@@ -57,7 +57,7 @@ export default {
       paddingBottom: `${spacings.DOUBLE}rem`,
       '::after': {
         content: '""',
-        display: 'table',
+        display: 'block',
         clear: 'both',
       },
     }),
