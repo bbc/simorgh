@@ -67,6 +67,8 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
+  const { atiAnalytics } = pageData ?? {};
+
   return (
     <ToggleContextProvider toggles={toggles}>
       <ServiceContextProvider
@@ -93,7 +95,7 @@ export default function App({ Component, pageProps }: Props) {
           isUK={isUK ?? false}
           counterName={pageData?.atiAnalytics?.pageIdentifier ?? null}
         >
-          <EventTrackingContextProvider data={pageData}>
+          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
             <UserContextProvider>
               <PageWrapper pageData={pageData} status={status}>
                 {status === 200 ? (
