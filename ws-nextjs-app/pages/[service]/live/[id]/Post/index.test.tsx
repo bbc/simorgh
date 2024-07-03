@@ -151,22 +151,12 @@ describe('Post', () => {
       ).toBeInTheDocument();
     });
 
-    it('should render share button when share api is availible', async () => {
-      // @ts-expect-error overwrites share to exist
-      window.navigator.share = {};
-
+    it('should not render share button by default', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitle} />);
       });
 
-      expect(screen.getByRole('button')).toBeInTheDocument();
-    });
-    it('should not render share button when share api is unavailible', async () => {
-      await act(async () => {
-        render(<Post post={singlePostWithTitle} />);
-      });
-
-      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
     });
   });
 });

@@ -158,7 +158,13 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   );
 };
 
-const Post = ({ post }: { post: PostType }) => {
+const Post = ({
+  post,
+  hasShareApi = false,
+}: {
+  post: PostType;
+  hasShareApi?: boolean;
+}) => {
   const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
@@ -177,21 +183,6 @@ const Post = ({ post }: { post: PostType }) => {
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
-  const [hasShareApi, setHasShareApi] = useState(false);
-  const [hashValue, setHashValue] = useState('');
-
-  useEffect(() => {
-    const URLHash = window.location.hash.substring(1);
-    setHashValue(URLHash);
-
-    if (hashValue) {
-      window.location.href = `#${hashValue}`;
-    }
-    setHasShareApi(true);
-    if ('share' in navigator) {
-      setHasShareApi(true);
-    }
-  }, [hashValue]);
 
   return (
     <article css={styles.postContainer}>
