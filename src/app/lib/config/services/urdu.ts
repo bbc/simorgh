@@ -283,7 +283,7 @@ export const service: DefaultServiceConfig = {
         noJsDescription: undefined,
 
         // Optional
-        optional: 'ግዴት አይደለም',
+        optional: 'اختیاری',
 
         // File upload
         fileUploadLiveRegionText: undefined,

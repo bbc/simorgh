@@ -286,7 +286,7 @@ export const service: DefaultServiceConfig = {
         privacyInfoHtml:
           'የግላዊ መረጃዎ ምስጢራዊነት የተጠበቀ ይሆናል፤ ዝርዝሩን ለማወቅ {{privacyInfoLink}} ክፍል ያንብቡ።',
         emailToHtml:
-          '"ሃሳብዎን ቀይረው መጠቀም ካልፈለጉ፤ በዚህ አድራሻ ኢሜይል ይላኩ {{emailLink}}። የማጣቀሻ ቁጥሩንም ከመጻፍ አይዘንጉ።',
+          'ሃሳብዎን ቀይረው መጠቀም ካልፈለጉ፤ በዚህ አድራሻ ኢሜይል ይላኩ {{emailLink}}። የማጣቀሻ ቁጥሩንም ከመጻፍ አይዘንጉ።',
         removalGuidelineText:
           'በፕሮግራም ወይም በኦንላይን ላይ አንዳች ነገር አቅርበው ጥቅም ላይ ከዋለ በኋላ ልናነሳው አንችልም።',
 
