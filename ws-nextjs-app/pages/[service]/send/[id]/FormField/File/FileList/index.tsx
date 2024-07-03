@@ -114,6 +114,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
             {file.name}
           </span>
           <button
+            css={styles.focusIndicator}
             type="button"
             aria-describedby={ariaDescribedById}
             onClick={() =>

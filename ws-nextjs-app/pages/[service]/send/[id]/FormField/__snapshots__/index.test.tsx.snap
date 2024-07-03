@@ -99,6 +99,27 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   }
 }
 
+.emotion-3 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-3 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-3 a:focus,
+.emotion-3 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -167,6 +188,27 @@ exports[`FormField should render a required input with an associated label 1`] =
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.emotion-1 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-1 a:focus,
+.emotion-1 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
 }
 
 .emotion-2 {
@@ -268,6 +310,27 @@ exports[`FormField should render a tel input with an associated label 1`] = `
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.emotion-1 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-1 a:focus,
+.emotion-1 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
 }
 
 .emotion-2 {
@@ -372,6 +435,27 @@ exports[`FormField should render a text input with an associated label 1`] = `
   }
 }
 
+.emotion-1 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-1 a:focus,
+.emotion-1 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
 .emotion-2 {
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
@@ -474,6 +558,27 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   }
 }
 
+.emotion-1 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-1 a:focus,
+.emotion-1 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
 .emotion-2 {
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
@@ -573,6 +678,27 @@ exports[`FormField should render an email input with an associated label 1`] = `
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.emotion-1 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-1 a:focus,
+.emotion-1 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
 }
 
 .emotion-2 {
