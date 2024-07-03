@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
