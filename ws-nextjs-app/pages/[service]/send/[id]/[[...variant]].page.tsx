@@ -3,8 +3,10 @@ import nodeLogger from '#lib/logger.node';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import isLitePath from '#app/routes/utils/isLitePath';
+import isAppPath from '#app/routes/utils/isAppPath';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 import UGCPageLayout from './UGCPageLayout';
+import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 
 const logger = nodeLogger(__filename);
 
@@ -14,7 +16,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
+  const { headers: reqHeaders } = context.req;
   const isLite = isLitePath(context.resolvedUrl);
+  const isApp = isAppPath(context.resolvedUrl);
 
   const {
     id,
@@ -46,7 +50,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
+      bbcOrigin: reqHeaders['bbc-origin'] || null,
+      error: data?.error || null,
       id,
+      isApp,
       isLite,
       isAmp: false,
       isNextJs: true,
@@ -64,6 +71,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: status ?? 500,
       toggles,
+      variant: variant?.[0] || null,
+      ...extractHeaders(reqHeaders),
       timeOnServer: Date.now(), // TODO: check if needed?
     },
   };
