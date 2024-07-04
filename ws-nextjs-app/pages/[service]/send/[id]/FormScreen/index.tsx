@@ -36,12 +36,21 @@ export default function FormScreen({
     if (hasValidationErrors) {
       // needs translations
       document.title = `Something Missing: ${title}`;
-      ref.current?.focus();
+      // ref.current?.focus();
+      // console.log('ref in useEffect', ref);
     }
   }, [title, hasValidationErrors]);
 
+  useEffect(() => {
+    if (hasValidationErrors) {
+      ref.current?.focus();
+      ref.current?.scrollTo(); // maybe temp
+      console.log('ref in useEffect', ref);
+    }
+  }, [hasValidationErrors]);
+
   const formFields = fields?.map(({ id, label, htmlType }, i) => (
-    <FormField key={id} id={id} label={label} htmlType={htmlType} />
+    <FormField key={id} id={id} label={label} htmlType={htmlType} ref={ref} />
   ));
 
   return (
@@ -69,14 +78,14 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
-          {hasValidationErrors && (
+          {/* {hasValidationErrors && (
             <>
               <div tabIndex={-1} ref={ref} css={styles.heading}>
                 My Temp Ref
               </div>
               <InvalidMessageBox id="123" messageCode={null} />
             </>
-          )}
+          )} */}
           {formFields}
 
           {privacyNotice && (

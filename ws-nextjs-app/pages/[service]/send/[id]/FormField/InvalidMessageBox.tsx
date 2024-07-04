@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { useContext, ForwardedRef, forwardRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
@@ -43,33 +43,35 @@ const ErrorSymbol = () => (
   </svg>
 );
 
-export default ({
-  id,
-  messageCode,
-  hasArrowStyle = true,
-  suffix,
-}: InvalidMessageBoxProps) => {
-  const {
-    translations: { ugc = defaultUGC },
-  } = useContext(ServiceContext);
+const ErrorMessageBox = forwardRef(
+  (
+    { id, messageCode, hasArrowStyle = true, suffix }: InvalidMessageBoxProps,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const {
+      translations: { ugc = defaultUGC },
+    } = useContext(ServiceContext);
 
-  const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
+    const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
 
-  return (
-    <>
-      {hasArrowStyle && <div css={styles.errorArrow} />}
-      <div css={styles.errorMessageBox(hasArrowStyle)}>
-        <ErrorSymbol />
-        <Paragraph
-          id={id}
-          css={styles.errorText}
-          fontVariant="sansBold"
-          size="minion"
-        >
-          {message}
-          <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
-        </Paragraph>
-      </div>
-    </>
-  );
-};
+    return (
+      <>
+        {hasArrowStyle && <div css={styles.errorArrow} />}
+        <div css={styles.errorMessageBox(hasArrowStyle)} {...(ref && { ref })}>
+          <ErrorSymbol />
+          <Paragraph
+            id={id}
+            css={styles.errorText}
+            fontVariant="sansBold"
+            size="minion"
+          >
+            {message}
+            <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
+          </Paragraph>
+        </div>
+      </>
+    );
+  },
+);
+
+export default ErrorMessageBox;
