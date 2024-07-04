@@ -6,6 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { Tag } from '#app/components/LinkedData/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -234,7 +235,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         headline={headline}
         datePublished={firstPublished}
         dateModified={lastPublished}
-        aboutTags={aboutTags}
+        aboutTags={aboutTags as Tag[] | undefined}
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
