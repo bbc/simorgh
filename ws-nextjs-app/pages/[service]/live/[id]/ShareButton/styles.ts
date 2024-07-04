@@ -22,10 +22,20 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
       },
       path: {
         fill: palette.WHITE,
+        [mq.HIGH_CONTRAST]: {
+          fill: 'canvasText',
+        },
+      },
+      [mq.HIGH_CONTRAST]: {
+        color: 'canvasText',
+        backgroundColor: 'canvas',
       },
     },
     [mq.GROUP_4_MIN_WIDTH]: {
       marginBottom: `${spacings.QUADRUPLE}rem`,
+    },
+    [mq.HIGH_CONTRAST]: {
+      color: 'canvasText',
     },
     span: {
       verticalAlign: 'middle',
@@ -37,6 +47,9 @@ export default ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
       marginInlineEnd: `${spacings.FULL}rem`,
       path: {
         fill: palette.BLACK,
+        [mq.HIGH_CONTRAST]: {
+          fill: 'canvasText',
+        },
       },
     },
   });
