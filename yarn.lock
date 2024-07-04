@@ -15830,6 +15830,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ramda@npm:0.30.0":
+  version: 0.30.0
+  resolution: "ramda@npm:0.30.0"
+  checksum: 10/18112bc9328bbbdc7b1e59ad5e548e7636813defe00446a083720d7fe8247df23b9b049348f7a10edeec0d2be6813fc19427a5cff792f6e1404079f4136d75f8
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -17119,7 +17126,7 @@ __metadata:
     path-to-regexp: "npm:6.2.2"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
-    ramda: "npm:0.29.0"
+    ramda: "npm:0.30.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-helmet: "npm:6.1.0"
