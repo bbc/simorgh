@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
 import { useRef } from 'react';
 import { jsx } from '@emotion/react';
@@ -59,8 +60,10 @@ const ShareButton = ({
     <div ref={viewRef}>
       <button type="button" ref={focusRef} onClick={handleShare} css={styles}>
         <ShareSvg />
-        <span>Share</span>
-        <VisuallyHiddenText>, {headline}</VisuallyHiddenText>
+        <span role="text">
+          <span>Share</span>
+          <VisuallyHiddenText>, {headline}</VisuallyHiddenText>
+        </span>
       </button>
     </div>
   );
