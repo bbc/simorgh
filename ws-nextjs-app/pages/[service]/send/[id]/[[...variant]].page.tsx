@@ -60,7 +60,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
           }
         : null,
       pageType: UGC_PAGE,
-      pathname: null,
+      pathname: context.resolvedUrl,
       service,
       status: status ?? 500,
       toggles,
