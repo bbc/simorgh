@@ -208,15 +208,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
-        articleId={getArticleId(pageData)}
+        articleId={getArticleId(pageData) as string | undefined}
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
-        aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
+        section={getArticleSection(pageData) as string | undefined}
+        aboutTags={aboutTags as string[] | undefined}
+        mentionsTags={getMentions(pageData) as string[] | undefined}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}
