@@ -42,8 +42,14 @@ const ShareButton = ({
   const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
     clickTrackerHandler(event);
     try {
-      const currentUrlNoHash = window.location.href.split('#')[0];
-      const shareUrl = `${currentUrlNoHash}#${contentId}`;
+      const currentUrlNoHash = new URL(window.location.href.split('#')[0]);
+
+      const newParams = new URLSearchParams([
+        ...Array.from(currentUrlNoHash.searchParams.entries()),
+        ...Object.entries({ post: contentId }),
+      ]).toString();
+
+      const shareUrl = `${currentUrlNoHash.origin}${currentUrlNoHash.pathname}?${newParams}#${contentId}`;
       // await navigator.clipboard.writeText(shareUrl);
       await navigator.share({
         url: shareUrl,
@@ -59,9 +65,14 @@ const ShareButton = ({
 
   return (
     <div ref={viewRef}>
-      <button type="button" ref={focusRef} onClick={handleShare} css={styles}>
+      <button
+        type="button"
+        ref={focusRef}
+        onClick={handleShare}
+        css={styles.button}
+      >
         <ShareSvg />
-        <span role="text">
+        <span role="text" css={styles.buttonText}>
           <span>Share</span>
           <VisuallyHiddenText>, {headline}</VisuallyHiddenText>
         </span>
