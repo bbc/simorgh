@@ -4,10 +4,11 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 export const focusIndicatorThickness = `${pixelsToRem(3)}rem`; // 3px
 
 const focusIndicator = ({ palette }: Theme) => css`
-  // Adds focus indicator styling to all a and button elements by default.
+  // Adds focus indicator styling to all a, button and h3 elements by default.
   a:focus-visible,
   button:focus-visible,
   button[type='submit']:focus-visible,
+  button[type='button']:focus-visible,
   h3:focus-visible {
     outline: ${focusIndicatorThickness} solid ${palette.BLACK};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.WHITE};
