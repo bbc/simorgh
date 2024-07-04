@@ -70,12 +70,7 @@ export default function FormScreen({
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {hasValidationErrors && (
-            <>
-              <div tabIndex={-1} ref={ref} css={styles.heading}>
-                My Temp Ref
-              </div>
-              <InvalidMessageBox id="123" messageCode={null} />
-            </>
+            <InvalidMessageBox id="123" messageCode={null} ref={ref} />
           )}
           {formFields}
 
