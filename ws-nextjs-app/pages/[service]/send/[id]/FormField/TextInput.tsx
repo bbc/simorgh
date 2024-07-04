@@ -38,6 +38,7 @@ const TextInput = forwardRef(
           forId={id}
           useErrorTheme={useErrorTheme}
           labelText={label}
+          {...(!isValid && ref && { ref })}
         />
         <div>
           <input
@@ -65,7 +66,6 @@ const TextInput = forwardRef(
             id={errorBoxId}
             messageCode={messageCode}
             suffix={label}
-            {...(ref && { ref })}
           />
         )}
       </>

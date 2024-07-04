@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import { ForwardedRef, forwardRef } from 'react';
 import Text from '#app/components/Text';
 import { InputProps } from '../types';
 import styles from './styles';
@@ -15,22 +16,25 @@ type Props = {
   useErrorTheme: boolean;
 };
 
-export default ({
-  id,
-  forId,
-  labelText,
-  className,
-  required,
-  useErrorTheme,
-}: Props) => (
-  <Text
-    as="label"
-    className={className}
-    htmlFor={forId}
-    css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
-    dangerouslySetInnerHTML={{
-      __html: required ? labelText : `${labelText} ${optionalTranslation}`,
-    }}
-    {...(id && { id })}
-  />
+const FieldLabel = forwardRef(
+  (
+    { id, forId, labelText, className, required, useErrorTheme }: Props,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    return (
+      <Text
+        as="label"
+        className={className}
+        htmlFor={forId}
+        css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
+        dangerouslySetInnerHTML={{
+          __html: required ? labelText : `${labelText} ${optionalTranslation}`,
+        }}
+        {...(id && { id })}
+        {...(ref && { ref })}
+      />
+    );
+  },
 );
+
+export default FieldLabel;
