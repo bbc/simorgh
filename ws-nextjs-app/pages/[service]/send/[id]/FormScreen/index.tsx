@@ -40,8 +40,8 @@ export default function FormScreen({
     }
   }, [title, hasValidationErrors]);
 
-  const formFields = fields?.map(({ id, label, htmlType }, i) => (
-    <FormField key={id} id={id} label={label} htmlType={htmlType} />
+  const formFields = fields?.map(({ id, label, htmlType }) => (
+    <FormField key={id} id={id} label={label} htmlType={htmlType} ref={ref} />
   ));
 
   return (
@@ -69,9 +69,9 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
-          {hasValidationErrors && (
+          {/* {hasValidationErrors && (
             <InvalidMessageBox id="123" messageCode={null} ref={ref} />
-          )}
+          )} */}
           {formFields}
 
           {privacyNotice && (
