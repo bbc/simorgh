@@ -41,6 +41,7 @@ export type ContextProps = {
   progress: string;
   screen: FormScreen;
   submissionID: string | null;
+  hasValidationErrors: boolean;
 };
 
 export const FormContext = createContext({} as ContextProps);
@@ -93,6 +94,7 @@ export const FormContextProvider = ({
   const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
+  const [hasValidationErrors, setHasValidationErrors] = useState(false);
   const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
@@ -109,6 +111,7 @@ export const FormContextProvider = ({
       const updatedState = { [name]: { ...validatedData } };
       return { ...prevFormState, ...updatedState };
     });
+    setHasValidationErrors(false); // temp - means that ref updates
   };
 
   const handleFocusOut = (name: OnChangeInputName) => {
@@ -135,6 +138,11 @@ export const FormContextProvider = ({
     const formInvalidErrors = Object.values(validatedFormData).filter(
       item => item.isValid === false,
     ).length;
+
+    if (formInvalidErrors > 0) {
+      setHasValidationErrors(true);
+      return;
+    }
 
     if (formInvalidErrors > 0) return;
 
@@ -227,6 +235,7 @@ export const FormContextProvider = ({
         hasAttemptedSubmit,
         screen,
         submissionID,
+        hasValidationErrors,
       }}
     >
       {children}
