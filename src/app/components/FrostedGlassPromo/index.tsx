@@ -15,6 +15,7 @@ import withData from './withData';
 
 import styles from './styles';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
+import { PromoProps } from './types';
 
 const PANEL_OFFSET = 250;
 
@@ -152,10 +153,10 @@ const FrostedGlassPromo = ({
 // It uses a withData HoC to convert the prop to a standardised schema
 // This array is the list of props that should just be passed straight through
 // to the component, without requiring any preprocessing
-const propsToPassThrough = [
+const propsToPassThrough: (keyof PromoProps | 'children')[] = [
   'minimumContrast',
   'paletteSize',
   'isAmp',
-] as string[];
+];
 
 export default withData(FrostedGlassPromo, propsToPassThrough);
