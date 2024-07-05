@@ -88,7 +88,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
+  const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
   const blocks = pathOr<OptimoBlock[]>(
     [],
@@ -216,7 +216,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData) as string | undefined}
-        aboutTags={aboutTags as string[] | undefined}
+        aboutTags={aboutTags}
         mentionsTags={getMentions(pageData) as string[] | undefined}
         lang={getLang(pageData)}
         description={description}
@@ -235,7 +235,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         headline={headline}
         datePublished={firstPublished}
         dateModified={lastPublished}
-        aboutTags={aboutTags as Tag[] | undefined}
+        aboutTags={aboutTags}
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
