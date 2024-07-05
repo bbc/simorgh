@@ -338,10 +338,6 @@ export const service: DefaultServiceConfig = {
         url: '/tamil',
       },
       {
-        title: 'டி20 உலகக் கோப்பை',
-        url: '/tamil/topics/c1nqez19x01t',
-      },
-      {
         title: 'உலகம்',
         url: '/tamil/topics/c40379e2n2zt',
       },
