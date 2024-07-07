@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: 'يستحق الانتباه',
+      brandTitle: 'غزة اليوم',
       brandDescription:
-        'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
+        'بودكاست يومي يتابع التطورات الميدانية والإنسانية في قطاع غزة من خلال مشاهدات الغزيين ومتابعات الصحفيين والمراسلين والخبراء في الشأن الإنساني.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
-        alt: 'يستحق الانتباه',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0j3qp08.jpg',
+        alt: 'غزة اليوم',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
+        href: 'https://www.bbc.com/arabic/podcasts/p086jpqy',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -283,11 +283,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'الأكثر مشاهدة',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/arabic/tv-and-radio-57895092',
@@ -374,11 +369,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'بودكاست',
-        url: '/arabic/tv-and-radio-52067221',
+        url: '/arabic/topics/cljddp5lw0dt',
       },
       {
         title: 'برامجنا',
-        url: '/arabic/tv-and-radio-37728883',
+        url: '/arabic/topics/crgyknwdlwnt',
       },
     ],
   },

@@ -300,11 +300,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'सबसे ज्यादा देखे गए',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -362,10 +357,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'होम पेज',
         url: '/hindi',
-      },
-      {
-        title: 'लोकसभा चुनाव 2024',
-        url: '/hindi/topics/cm5m26q8qxpt',
       },
       {
         title: 'भारत',

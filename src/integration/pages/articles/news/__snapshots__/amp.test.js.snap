@@ -391,7 +391,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
         "width": 1024,
       },
       "inLanguage": {
@@ -415,7 +415,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       },
-      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
       "url": "http://localhost:7080/news/articles/c0g992jmmkko",
     },
   ],
@@ -424,9 +424,9 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
 
 exports[`AMP Articles SEO OG description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`AMP Articles SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png"`;
+exports[`AMP Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
-exports[`AMP Articles SEO OG image alt 1`] = `"BBC News"`;
+exports[`AMP Articles SEO OG image alt 1`] = `"Pauline Clayton"`;
 
 exports[`AMP Articles SEO OG locale 1`] = `"en_GB"`;
 
@@ -448,9 +448,9 @@ exports[`AMP Articles SEO Twitter creator 1`] = `"@BBCNews"`;
 
 exports[`AMP Articles SEO Twitter description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`AMP Articles SEO Twitter image alt 1`] = `"BBC News"`;
+exports[`AMP Articles SEO Twitter image alt 1`] = `"Pauline Clayton"`;
 
-exports[`AMP Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png"`;
+exports[`AMP Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
 exports[`AMP Articles SEO Twitter site 1`] = `"@BBCNews"`;
 

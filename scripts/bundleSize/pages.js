@@ -6,7 +6,6 @@ export const pages = [
   'MostReadPage',
   'LiveRadioPage',
   'MediaAssetPage',
-  'MostWatchedPage',
   'OnDemandAudioPage',
   'OnDemandTvPage',
   'PhotoGalleryPage',

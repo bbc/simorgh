@@ -22,7 +22,6 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
-import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
@@ -301,33 +300,6 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it('should route to and render a most watched page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/pidgin/media/video';
-      fetchMock.mock(
-        'http://localhost/pidgin/mostwatched.json',
-        mostWatchedData,
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'pidgin',
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'pidgin',
-      });
-      const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
-
-      expect(
-        await screen.findByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a media asset page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/yoruba/media-23256797';
@@ -335,7 +307,6 @@ describe('Routes', () => {
       fetch.mockResponse(
         JSON.stringify({
           ...mediaAssetPageJson,
-          secondaryData: { mostWatched: mostWatchedData },
         }),
       );
 
@@ -366,7 +337,6 @@ describe('Routes', () => {
       fetch.mockResponse(
         JSON.stringify({
           ...legacyMediaAssetPage,
-          secondaryData: { mostWatched: mostWatchedData },
         }),
       );
 

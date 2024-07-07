@@ -12,6 +12,7 @@ export const CONSENT_FOCUS = '#68A1F8';
 export const DARK_SALTIRE = '#23104C';
 export const DIM_GREY = '#696969';
 export const EBON = '#222222';
+export const ERROR_CORE = '#E51854';
 export const GHOST = '#FDFDFD';
 export const GREY_10 = '#141414';
 export const GREY_11 = '#BABABA';
