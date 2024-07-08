@@ -46,29 +46,38 @@ const formatValidationMessage = (
   return message;
 };
 
-const InvalidMessageBox = forwardRef(({
-  id,
-  messageCode,
-  hasArrowStyle = true,
-  suffix,
-  validation,
-}: InvalidMessageBoxProps, ref: ForwardedRef<HTMLElement>,) => {
-  const {
-    translations: { ugc = fallbackTranslations },
-  } = useContext(ServiceContext);
+const InvalidMessageBox = forwardRef(
+  (
+    {
+      id,
+      messageCode,
+      hasArrowStyle = true,
+      isErrorSummary = false,
+      suffix,
+      validation,
+    }: InvalidMessageBoxProps,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const {
+      translations: { ugc = fallbackTranslations },
+    } = useContext(ServiceContext);
 
-  const message = formatValidationMessage(
-    ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
-    validation,
-  );
+    const message = formatValidationMessage(
+      ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
+      validation,
+    );
 
     return (
       <>
         {hasArrowStyle && <div css={styles.errorArrow} />}
         <div
-          css={styles.errorMessageBox(hasArrowStyle)}
           tabIndex={-1}
           {...(ref && { ref })}
+          css={[
+            styles.errorMessageBox,
+            !hasArrowStyle && styles.hasArrowStyle,
+            isErrorSummary && styles.focusIndicatorInvert,
+          ]}
         >
           <ErrorSymbol />
           <Paragraph

@@ -46,6 +46,7 @@ export type InvalidMessageBoxProps = {
   id: string;
   messageCode: InvalidMessageCodes | null;
   hasArrowStyle?: boolean;
+  isErrorSummary?: boolean;
   suffix?: string;
   validation?: ValidationConditions;
 };

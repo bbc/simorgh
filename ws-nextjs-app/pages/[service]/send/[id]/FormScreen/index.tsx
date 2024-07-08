@@ -31,12 +31,17 @@ export default function FormScreen({
   const { handleSubmit, submitted, hasValidationErrors, attemptedSubmitCount } =
     useFormContext();
 
+  const {
+    translations: {
+      ugc: { dataPolicyHeading = fallbackTranslations.dataPolicyHeading } = {},
+    },
+  } = useContext(ServiceContext);
+
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (hasValidationErrors) {
-      // needs translations
-      document.title = `Something Missing: ${title}`;
+      document.title = `Error: ${title}`;
       ref.current?.focus();
     } else {
       document.title = title;
@@ -44,12 +49,6 @@ export default function FormScreen({
   }, [title, hasValidationErrors, attemptedSubmitCount]);
 
   const hasAttemptedSubmit = attemptedSubmitCount > 0;
-
-  const {
-    translations: {
-      ugc: { dataPolicyHeading = fallbackTranslations.dataPolicyHeading } = {},
-    },
-  } = useContext(ServiceContext);
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -87,6 +86,7 @@ export default function FormScreen({
               messageCode={null}
               ref={ref}
               suffix={sectionTitle}
+              isErrorSummary
             />
           )}
           {formFields}
