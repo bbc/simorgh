@@ -332,6 +332,10 @@ export const service: DefaultServiceConfig = {
         url: '/gujarati/topics/c83plvezd90t',
       },
       {
+        title: 'હવામાન સમાચાર',
+        url: '/gujarati/topics/cv2gk3nze31t',
+      },
+      {
         title: 'સ્પોર્ટ્સ',
         url: '/gujarati/topics/c404vn5qxq9t',
       },

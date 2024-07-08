@@ -755,7 +755,7 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
+      const schemaType = JSON.parse(helmetContent.scriptTags[0].innerHTML)[
         '@graph'
       ][0]['@type'];
 
