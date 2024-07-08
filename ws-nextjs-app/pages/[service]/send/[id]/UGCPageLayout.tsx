@@ -9,22 +9,24 @@ import { FormContext, FormContextProvider } from './FormContext';
 import FormScreen from './FormScreen';
 import SuccessScreen from './SuccessScreen';
 import ErrorScreen from './ErrorScreen';
+import UploadingScreen from './UploadingScreen';
 import GenericMessage from './GenericMessage';
-
-const NO_JS_HEADING = 'Sorry, this page cannot be loaded.';
-const NO_JS_MESSAGE =
-  'To load this page, please enable JavaScript, or try a different browser';
-
-const UPLOADING_HEADING = 'Uploading';
-const UPLOADING_MESSAGE = 'Please wait until it is finished.';
+import fallbackTranslations from './fallbackTranslations';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
-  const { lang } = useContext(ServiceContext);
+  const {
+    lang,
+    translations: {
+      ugc: {
+        noJsHeading = fallbackTranslations.noJsHeading,
+        noJsDescription = fallbackTranslations.noJsDescription,
+      } = {},
+    },
+  } = useContext(ServiceContext);
   const { title, description, sections, privacyNotice } = pageData;
 
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
-
   return (
     <>
       <Metadata
@@ -39,8 +41,8 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         <div css={styles.primaryColumn}>
           <main role="main" css={styles.mainContent}>
             <noscript>
-              <GenericMessage heading={NO_JS_HEADING}>
-                {NO_JS_MESSAGE}
+              <GenericMessage heading={noJsHeading}>
+                {noJsDescription}
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>
@@ -62,13 +64,9 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                           />
                         );
                       case 'uploading':
-                        return (
-                          <GenericMessage heading={UPLOADING_HEADING}>
-                            {UPLOADING_MESSAGE}
-                          </GenericMessage>
-                        );
+                        return <UploadingScreen title={title} />;
                       case 'success':
-                        return <SuccessScreen />;
+                        return <SuccessScreen title={title} />;
                       case 'error':
                       default:
                         return <ErrorScreen title={title} />;

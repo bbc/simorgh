@@ -1,19 +1,35 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext, useRef } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import GenericMessage from '../GenericMessage';
-
-const ERROR_HEADING = 'Sorry, your message could not be sent.';
-const ERROR_MESSAGE = 'Please try again later.';
+import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   title: string;
 };
 
 export default function ErrorScreen({ title }: Props) {
+  const {
+    translations: {
+      ugc: {
+        errorHeading = fallbackTranslations.errorHeading,
+        errorDescription = fallbackTranslations.errorDescription,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
+  const ref = useRef<HTMLHeadingElement>(null);
+
   useEffect(() => {
     document.title = `Error: ${title}`;
   }, [title]);
 
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
+
   return (
-    <GenericMessage heading={ERROR_HEADING}>{ERROR_MESSAGE}</GenericMessage>
+    <GenericMessage heading={errorHeading} ref={ref}>
+      {errorDescription}
+    </GenericMessage>
   );
 }
