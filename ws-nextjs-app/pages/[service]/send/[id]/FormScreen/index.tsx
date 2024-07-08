@@ -1,16 +1,16 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useFormContext } from '../FormContext';
 import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-
-const PRIVACY_POLICY_HEADER_TRANSLATION = 'Our data policy';
+import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   title: string;
@@ -27,6 +27,12 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
+  const {
+    translations: {
+      ugc: { dataPolicyHeading = fallbackTranslations.dataPolicyHeading } = {},
+    },
+  } = useContext(ServiceContext);
+
   const { handleSubmit, submitted } = useFormContext();
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
@@ -62,11 +68,7 @@ export default function FormScreen({
 
           {privacyNotice && (
             <div css={styles.privacyContainer}>
-              <strong // TODO: need translations for this, it doesn't come through from the api
-                css={styles.privacyHeading}
-              >
-                {PRIVACY_POLICY_HEADER_TRANSLATION}
-              </strong>
+              <strong css={styles.privacyHeading}>{dataPolicyHeading}</strong>
               <div
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{ __html: privacyNotice }}
