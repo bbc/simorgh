@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
@@ -9,6 +9,7 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
+import InvalidMessageBox from '../FormField/InvalidMessageBox';
 
 const PRIVACY_POLICY_HEADER_TRANSLATION = 'Our data policy';
 
@@ -27,7 +28,19 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submitted } = useFormContext();
+  const { handleSubmit, submitted, hasValidationErrors } = useFormContext();
+
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (hasValidationErrors) {
+      // needs translations
+      document.title = `Something Missing: ${title}`;
+      ref.current?.focus();
+    } else {
+      document.title = title;
+    }
+  }, [title, hasValidationErrors]);
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -58,6 +71,15 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
+          {hasValidationErrors && (
+            <InvalidMessageBox
+              id=""
+              hasArrowStyle={false}
+              messageCode={null}
+              ref={ref}
+              suffix={sectionTitle}
+            />
+          )}
           {formFields}
 
           {privacyNotice && (

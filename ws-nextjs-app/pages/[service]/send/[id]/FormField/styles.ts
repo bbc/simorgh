@@ -134,6 +134,9 @@ export default {
           marginTop: `${spacings.FULL}rem`,
           marginBottom: `${spacings.FULL}rem`,
         }),
+        '&:focus': {
+          outline: 'none',
+        },
       }),
   errorArrow: ({ palette, spacings }: Theme) =>
     css({
