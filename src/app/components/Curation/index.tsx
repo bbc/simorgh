@@ -155,7 +155,7 @@ export default ({
             )}
             <GridComponent
               summaries={summaries}
-              headingLevel={3} // multiple curations, don't we want the promos to all be h3?
+              headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
             />
           </section>
         ) : (
