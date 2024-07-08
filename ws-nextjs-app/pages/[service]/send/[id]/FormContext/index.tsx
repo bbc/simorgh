@@ -37,7 +37,7 @@ export type ContextProps = {
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
-  hasAttemptedSubmit: boolean;
+  attemptedSubmitCount: number;
   hasValidationErrors: boolean;
   progress: string;
   screen: FormScreen;
@@ -78,6 +78,16 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
   return Object.fromEntries(formEntries);
 };
 
+const isFormStateValid = (state: Record<OnChangeInputName, FieldData>) => {
+  const formInvalidErrors = Object.values(state).filter(
+    item => item.isValid === false,
+  ).length;
+
+  const isValid = formInvalidErrors === 0;
+
+  return isValid;
+};
+
 export const FormContextProvider = ({
   initialScreen = 'form',
   fields,
@@ -93,7 +103,7 @@ export const FormContextProvider = ({
   const [progress, setProgress] = useState('0');
   const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
-  const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
+  const [attemptedSubmitCount, setAttemptedSubmitCount] = useState(0);
   const [hasValidationErrors, setHasValidationErrors] = useState(false);
   const [submissionID, setSubmissionID] = useState(null);
 
@@ -101,17 +111,20 @@ export const FormContextProvider = ({
     const prevState = formState[name];
     const currState = { ...prevState, value };
     let validatedData = currState;
+
     if (currState.htmlType === 'file') {
       const validateFunction = validateFunctions.file;
       validatedData = validateFunction
         ? validateFunction(currState)
         : currState;
     }
+
     setFormState(prevFormState => {
       const updatedState = { [name]: { ...validatedData } };
       return { ...prevFormState, ...updatedState };
     });
-    setHasValidationErrors(false); // TO DO
+
+    // ADD VALIDAITON FOR FILES TOO
   };
 
   const handleFocusOut = (name: OnChangeInputName) => {
@@ -120,26 +133,25 @@ export const FormContextProvider = ({
     const validatedData = validateFunction
       ? validateFunction(currState)
       : currState;
+    const updatedState = { [name]: { ...validatedData } };
+    const newFormState = { ...formState, ...updatedState };
 
-    setFormState(prevFormState => {
-      const updatedState = { [name]: { ...validatedData } };
-      return { ...prevFormState, ...updatedState };
-    });
+    const isFormValid = isFormStateValid(newFormState);
+
+    setHasValidationErrors(!isFormValid);
+    setFormState(newFormState);
   };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setAttemptedSubmit(true);
+    setAttemptedSubmitCount(prevCount => prevCount + 1);
     // Reset error state
     setSubmissionError(null);
     const validatedFormData = validateFormState(formState);
     setFormState(validatedFormData);
 
-    const formInvalidErrors = Object.values(validatedFormData).filter(
-      item => item.isValid === false,
-    ).length;
-
-    if (formInvalidErrors > 0) {
+    const isFormValid = isFormStateValid(validatedFormData);
+    if (!isFormValid) {
       setHasValidationErrors(true);
       return;
     }
@@ -230,7 +242,7 @@ export const FormContextProvider = ({
         submissionError,
         submitted,
         progress,
-        hasAttemptedSubmit,
+        attemptedSubmitCount,
         hasValidationErrors,
         screen,
         submissionID,

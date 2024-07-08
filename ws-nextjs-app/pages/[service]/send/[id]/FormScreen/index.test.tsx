@@ -53,7 +53,7 @@ describe('Form', () => {
             submissionError: null,
             submitted: false,
             progress: '0',
-            hasAttemptedSubmit: false,
+            attemptedSubmitCount: 0,
             screen: 'form',
             submissionID: null,
           }}

@@ -28,7 +28,8 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submitted, hasValidationErrors } = useFormContext();
+  const { handleSubmit, submitted, hasValidationErrors, attemptedSubmitCount } =
+    useFormContext();
 
   const ref = useRef<HTMLElement>(null);
 
@@ -40,7 +41,9 @@ export default function FormScreen({
     } else {
       document.title = title;
     }
-  }, [title, hasValidationErrors]);
+  }, [title, hasValidationErrors, attemptedSubmitCount]);
+
+  const hasAttemptedSubmit = attemptedSubmitCount > 0;
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
@@ -71,7 +74,7 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
-          {hasValidationErrors && (
+          {hasAttemptedSubmit && hasValidationErrors && (
             <InvalidMessageBox
               id=""
               hasArrowStyle={false}
