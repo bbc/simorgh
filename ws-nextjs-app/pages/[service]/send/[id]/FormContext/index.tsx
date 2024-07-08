@@ -118,13 +118,14 @@ export const FormContextProvider = ({
         ? validateFunction(currState)
         : currState;
     }
+    const updatedState = { [name]: { ...validatedData } };
+    const newFormState = { ...formState, ...updatedState };
+    setFormState(newFormState);
 
-    setFormState(prevFormState => {
-      const updatedState = { [name]: { ...validatedData } };
-      return { ...prevFormState, ...updatedState };
-    });
-
-    // ADD VALIDAITON FOR FILES TOO
+    if (currState.htmlType === 'file') {
+      const isFormValid = isFormStateValid(newFormState);
+      setHasValidationErrors(!isFormValid);
+    }
   };
 
   const handleFocusOut = (name: OnChangeInputName) => {
