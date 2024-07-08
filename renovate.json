@@ -1,6 +1,7 @@
 {
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
+  "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
