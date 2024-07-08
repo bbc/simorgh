@@ -21,7 +21,6 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
-      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
       INTEGRATION_TEST_BUILD: true
       
     steps:
