@@ -10,7 +10,7 @@ export enum InvalidMessageCodes {
   NotEnoughFiles = 'validationFilesNotEnough',
   TooManyFiles = 'validationFilesTooMany',
   WrongFileType = 'validationFilesInvalidType',
-  FileTooSmall = 'validationFileTooSmall',
+  FileTooSmall = 'validationFilesTooSmall',
   FileTooBig = 'validationFilesSizeExceeded',
 }
 
@@ -47,6 +47,7 @@ export type InvalidMessageBoxProps = {
   messageCode: InvalidMessageCodes | null;
   hasArrowStyle?: boolean;
   suffix?: string;
+  validation?: ValidationConditions;
 };
 
 export type FetchParameters = {

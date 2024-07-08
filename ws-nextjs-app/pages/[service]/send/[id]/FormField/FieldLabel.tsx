@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useContext } from 'react';
 import { InputProps } from '../types';
 import styles from './styles';
-
-const optionalTranslation = '(optional)';
+import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   id?: InputProps['id'];
@@ -22,15 +23,21 @@ export default ({
   className,
   required,
   useErrorTheme,
-}: Props) => (
-  <Text
-    as="label"
-    className={className}
-    htmlFor={forId}
-    css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
-    dangerouslySetInnerHTML={{
-      __html: required ? labelText : `${labelText} ${optionalTranslation}`,
-    }}
-    {...(id && { id })}
-  />
-);
+}: Props) => {
+  const {
+    translations: { ugc: { optional = fallbackTranslations.optional } = {} },
+  } = useContext(ServiceContext);
+
+  return (
+    <Text
+      as="label"
+      className={className}
+      htmlFor={forId}
+      css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
+      dangerouslySetInnerHTML={{
+        __html: required ? labelText : `${labelText} (${optional})`,
+      }}
+      {...(id && { id })}
+    />
+  );
+};
