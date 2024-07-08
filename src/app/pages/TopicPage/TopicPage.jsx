@@ -95,7 +95,6 @@ const TopicPage = ({ pageData }) => {
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
-                    headingLevel={curationTitle && curationTitle.length ? 3 : 2} // if there is a non empty curation title we always want h3 unless it is a single curation
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
                     summaries={summaries}
