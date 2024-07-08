@@ -9,7 +9,7 @@ const styles = {
       color: palette.BLACK,
       ...fontSizes.pica,
       ...fontVariants.sansBold,
-      padding: `${spacings.FULL + spacings.HALF}rem`,
+      padding: `${pixelsToRem(10)}rem`,
       marginTop: `${spacings.FULL}rem`,
       marginBottom: `${spacings.TRIPLE}rem`,
       marginInlineStart: `${spacings.DOUBLE}rem`,
@@ -20,6 +20,7 @@ const styles = {
         color: palette.WHITE,
         border: `${pixelsToRem(2)}rem solid ${palette.BRAND_BACKGROUND}`,
         backgroundColor: palette.BRAND_BACKGROUND,
+        textDecoration: 'underline',
         path: {
           fill: palette.WHITE,
           [mq.HIGH_CONTRAST]: {
@@ -29,10 +30,12 @@ const styles = {
         [mq.HIGH_CONTRAST]: {
           backgroundColor: 'canvas',
           color: 'canvasText',
+          border: `${pixelsToRem(2)}rem solid`,
         },
       },
       [mq.HIGH_CONTRAST]: {
         color: 'canvasText',
+        border: `${pixelsToRem(2)}rem solid`,
       },
       svg: {
         width: `${spacings.DOUBLE}rem`,
