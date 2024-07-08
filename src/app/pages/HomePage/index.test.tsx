@@ -112,9 +112,10 @@ describe('Home Page', () => {
     render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
-
     const getLinkedDataOutput = () => {
-      return JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
+      return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+        JSON.parse(innerHTML),
+      );
     };
 
     expect(getLinkedDataOutput()).toMatchSnapshot();
