@@ -15,7 +15,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
         beforeEach(() => {
           cy.get('[data-e2e=media-player] iframe').then($iframe => {
-            cy.log($iframe, 'after beforeeach');
             embedUrl = $iframe.attr('src');
           });
         });
