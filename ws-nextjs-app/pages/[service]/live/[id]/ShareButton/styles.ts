@@ -4,6 +4,8 @@ import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 const styles = {
   button: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     css({
+      display: 'inline-flex',
+      alignItems: 'center',
       color: palette.BLACK,
       ...fontSizes.pica,
       ...fontVariants.sansBold,
@@ -14,10 +16,8 @@ const styles = {
       border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
       backgroundColor: 'transparent',
       cursor: 'pointer',
-      textUnderlineOffset: '2px',
       '&:hover, &:focus-visible': {
         color: palette.WHITE,
-        textDecoration: 'underline',
         border: `${pixelsToRem(2)}rem solid ${palette.BRAND_BACKGROUND}`,
         backgroundColor: palette.BRAND_BACKGROUND,
         path: {
@@ -31,14 +31,10 @@ const styles = {
           color: 'canvasText',
         },
       },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: `${spacings.QUADRUPLE}rem`,
-      },
       [mq.HIGH_CONTRAST]: {
         color: 'canvasText',
       },
       svg: {
-        verticalAlign: 'middle',
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
         marginInlineEnd: `${spacings.FULL}rem`,
@@ -49,10 +45,6 @@ const styles = {
           },
         },
       },
-    }),
-  buttonText: () =>
-    css({
-      verticalAlign: 'middle',
     }),
 };
 export default styles;

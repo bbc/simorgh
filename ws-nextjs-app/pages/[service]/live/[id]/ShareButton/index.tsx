@@ -72,7 +72,7 @@ const ShareButton = ({
         css={styles.button}
       >
         <ShareSvg />
-        <span role="text" css={styles.buttonText}>
+        <span role="text">
           <span>Share</span>
           <VisuallyHiddenText>, {headline}</VisuallyHiddenText>
         </span>
