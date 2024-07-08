@@ -161,7 +161,7 @@ export default ({
         ) : (
           <GridComponent
             summaries={summaries}
-            headingLevel={2} // if there is only one curation, don't we always want promos to be h2?
+            headingLevel={2} // if there is only one curation, all promos should be h2
             isFirstCuration={isFirstCuration}
           />
         );
