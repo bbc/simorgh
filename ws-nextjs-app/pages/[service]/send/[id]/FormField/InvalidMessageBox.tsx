@@ -2,7 +2,7 @@
 import { useContext, ForwardedRef, forwardRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
-import Paragraph from '#app/components/Paragraph';
+import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   InvalidMessageCodes,
@@ -71,24 +71,24 @@ const InvalidMessageBox = forwardRef(
       <>
         {hasArrowStyle && <div css={styles.errorArrow} />}
         <div
-          tabIndex={-1}
-          {...(ref && { ref })}
-          css={[
-            styles.errorMessageBox,
-            !hasArrowStyle && styles.hasArrowStyle,
-            isErrorSummary && styles.focusIndicatorInvert,
-          ]}
+          css={[styles.errorMessageBox, !hasArrowStyle && styles.hasArrowStyle]}
         >
           <ErrorSymbol />
-          <Paragraph
+          <Text
             id={id}
-            css={styles.errorText}
+            css={[
+              styles.errorText,
+              isErrorSummary && styles.focusIndicatorErrorSummary,
+            ]}
             fontVariant="sansBold"
             size="minion"
+            as="strong"
+            {...(isErrorSummary && { tabIndex: -1 })}
+            {...(ref && { ref })}
           >
             {message}
             <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
-          </Paragraph>
+          </Text>
         </div>
       </>
     );
