@@ -32,7 +32,7 @@ export default {
     css({
       color: palette.ERROR_CORE,
     }),
-  focusIndicator: ({ palette }: Theme) =>
+  focusIndicatorInput: ({ palette }: Theme) =>
     css({
       '&:focus': {
         outline: `${focusIndicatorThickness} solid ${palette.WHITE}`,
@@ -40,12 +40,11 @@ export default {
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
-  // switch
-  focusIndicatorInvert: ({ palette }: Theme) =>
+  focusIndicatorErrorSummary: ({ palette }: Theme) =>
     css({
-      '&:focus': {
-        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
+      '&:focus-visible': {
+        outline: `${focusIndicatorThickness} solid ${palette.WHITE}`,
+        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.BLACK}`,
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),

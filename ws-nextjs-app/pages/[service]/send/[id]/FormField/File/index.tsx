@@ -99,7 +99,7 @@ export default ({
       />
       <button
         aria-describedby={labelId}
-        css={[styles.fileUploadButton, styles.focusIndicator]}
+        css={[styles.fileUploadButton, styles.focusIndicatorInput]}
         type="button"
         onClick={() => handleUploadClick()}
       >

@@ -134,7 +134,7 @@ export default ({
             {file.name}
           </span>
           <button
-            css={styles.focusIndicator}
+            css={styles.focusIndicatorInput}
             type="button"
             aria-describedby={ariaDescribedById}
             onClick={() =>
