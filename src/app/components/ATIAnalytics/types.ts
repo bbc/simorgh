@@ -27,6 +27,7 @@ export interface PageData {
       producer?: string;
     };
     atiAnalytics?: {
+      pageIdentifier?: string;
       producerId?: string;
       chapter?: string;
     };

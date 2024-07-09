@@ -27,8 +27,8 @@ interface Props extends AppProps {
     pageData: {
       metadata: {
         type: PageTypes;
+        atiAnalytics?: { pageIdentifier: string };
       };
-      atiAnalytics?: { pageIdentifier: string };
     };
     pageLang?: string;
     pageType: PageTypes;
@@ -67,6 +67,8 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
+  const { metadata: { atiAnalytics } = {} } = pageData;
+
   return (
     <ToggleContextProvider toggles={toggles}>
       <ServiceContextProvider
@@ -91,9 +93,9 @@ export default function App({ Component, pageProps }: Props) {
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
-          counterName={pageData?.atiAnalytics?.pageIdentifier ?? null}
+          counterName={atiAnalytics?.pageIdentifier ?? null}
         >
-          <EventTrackingContextProvider data={pageData}>
+          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
             <UserContextProvider>
               <PageWrapper pageData={pageData} status={status}>
                 {status === 200 ? (
