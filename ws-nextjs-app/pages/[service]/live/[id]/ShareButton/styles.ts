@@ -30,12 +30,12 @@ const styles = {
         [mq.HIGH_CONTRAST]: {
           backgroundColor: 'canvas',
           color: 'canvasText',
-          border: `${pixelsToRem(2)}rem solid`,
+          border: `${pixelsToRem(2)}rem solid canvasText`,
         },
       },
       [mq.HIGH_CONTRAST]: {
         color: 'canvasText',
-        border: `${pixelsToRem(2)}rem solid`,
+        border: `${pixelsToRem(2)}rem solid canvasText`,
       },
       svg: {
         width: `${spacings.DOUBLE}rem`,
