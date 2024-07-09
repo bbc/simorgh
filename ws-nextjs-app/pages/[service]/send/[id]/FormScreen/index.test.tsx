@@ -11,6 +11,7 @@ import {
   privacyNotice,
   fields,
 } from './fixture';
+import * as FormContextModule from '../FormContext';
 import { FormContext } from '../FormContext';
 import Form from '.';
 import { Field } from '../types';
@@ -74,5 +75,59 @@ describe('Form', () => {
     fireEvent.click(submitButton as HTMLButtonElement);
 
     expect(handleSubmit).toHaveBeenCalled();
+  });
+
+  it('should render an error summary box on an invalid form', async () => {
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      .mockImplementationOnce(() => ({
+        handleSubmit: jest.fn(e => e.preventDefault()),
+        submitted: false,
+        hasValidationErrors: true,
+        attemptedSubmitCount: 1,
+      }));
+
+    const { container } = await act(() => {
+      return render(
+        <Form
+          title={title}
+          description={description}
+          sectionTitle={sectionTitle}
+          privacyNotice={privacyNotice}
+          fields={fields as Field[]}
+        />,
+      );
+    });
+
+    const errorSuammry = container.querySelector('strong[id=errorSummaryBox]');
+
+    expect(errorSuammry).toBeInTheDocument();
+  });
+
+  it('should render no error summary box on a valid form', async () => {
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      .mockImplementationOnce(() => ({
+        handleSubmit: jest.fn(e => e.preventDefault()),
+        submitted: false,
+        hasValidationErrors: false,
+        attemptedSubmitCount: 1,
+      }));
+
+    const { container } = await act(() => {
+      return render(
+        <Form
+          title={title}
+          description={description}
+          sectionTitle={sectionTitle}
+          privacyNotice={privacyNotice}
+          fields={fields as Field[]}
+        />,
+      );
+    });
+
+    const errorSuammry = container.querySelector('strong[id=errorSummaryBox]');
+
+    expect(errorSuammry).toBe(null);
   });
 });

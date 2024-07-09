@@ -81,7 +81,7 @@ export default function FormScreen({
         <LiveRegionContextProvider>
           {hasAttemptedSubmit && hasValidationErrors && (
             <InvalidMessageBox
-              id=""
+              id="errorSummaryBox"
               hasArrowStyle={false}
               messageCode={null}
               ref={ref}
