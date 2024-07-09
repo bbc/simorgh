@@ -6,8 +6,8 @@ import { CurationGridProps } from '../types';
 
 const CurationGrid = ({
   summaries,
-  headingLevel,
   isFirstCuration,
+  headingLevel,
 }: CurationGridProps) => {
   const hasMultiplePromos = summaries.length > 1;
   const firstPromo = summaries[0];
@@ -27,8 +27,8 @@ const CurationGrid = ({
               <li css={styles.item} key={promo.id}>
                 <CurationPromo
                   {...promo}
-                  headingLevel={headingLevel}
                   lazy={lazyLoadImages}
+                  headingLevel={headingLevel}
                 />
               </li>
             );
@@ -38,8 +38,8 @@ const CurationGrid = ({
         <div css={styles.item}>
           <CurationPromo
             {...firstPromo}
-            headingLevel={headingLevel}
             lazy={!isFirstCuration}
+            headingLevel={headingLevel}
           />
         </div>
       )}
