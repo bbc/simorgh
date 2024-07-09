@@ -20,7 +20,6 @@ const styles = {
         color: palette.WHITE,
         border: `${pixelsToRem(2)}rem solid ${palette.BRAND_BACKGROUND}`,
         backgroundColor: palette.BRAND_BACKGROUND,
-        textDecoration: 'underline',
         path: {
           fill: palette.WHITE,
           [mq.HIGH_CONTRAST]: {
@@ -31,6 +30,7 @@ const styles = {
           backgroundColor: 'canvas',
           color: 'canvasText',
           border: `${pixelsToRem(2)}rem solid canvasText`,
+          textDecoration: 'underline',
         },
       },
       [mq.HIGH_CONTRAST]: {
