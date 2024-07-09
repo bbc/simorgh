@@ -27,7 +27,7 @@ interface Props extends AppProps {
     pageData: {
       metadata: {
         type: PageTypes;
-        atiAnalytics?: { pageIdentifier: string };
+        atiAnalytics?: { pageIdentifier?: string };
       };
     };
     pageLang?: string;
@@ -67,7 +67,7 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
-  const { metadata: { atiAnalytics } = {} } = pageData;
+  const { metadata: { atiAnalytics = {} } = {} } = pageData ?? {};
 
   return (
     <ToggleContextProvider toggles={toggles}>
