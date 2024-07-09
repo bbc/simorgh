@@ -151,7 +151,7 @@ export default ({
             id={errorBoxAriaDescribedById}
             messageCode={fileData.messageCode as InvalidMessageCodes}
             suffix={file.name}
-            validation={validation}
+            validationCriteria={validation}
           />
         )}
       </li>
