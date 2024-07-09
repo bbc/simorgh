@@ -15,6 +15,23 @@ export interface AMPAnalyticsData {
   triggers: { trackPageview: { on: string; request: string } };
 }
 
+export interface ATIData {
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
+  categoryName?: string | null;
+  contentId?: string | null;
+  contentType?: string;
+  language?: string | null;
+  ldpThingIds?: string | null;
+  ldpThingLabels?: string | null;
+  nationsProducer?: string | null;
+  pageIdentifier?: string;
+  pageTitle?: string | null;
+  producerId?: string | null;
+  producerName?: string | null;
+  timePublished?: string | null;
+  timeUpdated?: string | null;
+}
+
 export interface PageData {
   metadata?: {
     analyticsLabels?: {
@@ -59,23 +76,6 @@ export interface PageData {
   lastRecordTimeStamp?: string;
   contentType?: string;
   title?: string;
-}
-
-export interface ATIData {
-  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
-  categoryName?: string | null;
-  contentId?: string | null;
-  contentType?: string;
-  language?: string | null;
-  ldpThingIds?: string | null;
-  ldpThingLabels?: string | null;
-  nationsProducer?: string | null;
-  pageIdentifier?: string;
-  pageTitle?: string | null;
-  producerId?: string | null;
-  producerName?: string | null;
-  timePublished?: string | null;
-  timeUpdated?: string | null;
 }
 
 export interface ATIDataWithContexts {

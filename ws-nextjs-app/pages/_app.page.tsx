@@ -68,7 +68,7 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
-  const { metadata: { atiAnalytics = {} } = {} } = pageData ?? {};
+  const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
 
   return (
     <ToggleContextProvider toggles={toggles}>
