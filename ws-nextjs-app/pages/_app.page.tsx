@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
 import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
@@ -27,7 +28,7 @@ interface Props extends AppProps {
     pageData: {
       metadata: {
         type: PageTypes;
-        atiAnalytics?: { pageIdentifier?: string };
+        atiAnalytics?: ATIData;
       };
     };
     pageLang?: string;

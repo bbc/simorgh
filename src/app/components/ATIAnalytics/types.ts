@@ -26,11 +26,7 @@ export interface PageData {
       pageTitle?: string;
       producer?: string;
     };
-    atiAnalytics?: {
-      pageIdentifier?: string;
-      producerId?: string;
-      chapter?: string;
-    };
+    atiAnalytics?: ATIData;
     locators?: { optimoUrn?: string; curie?: string };
     passport?: {
       category?: { categoryId?: string; categoryName?: string };
