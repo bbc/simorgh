@@ -33,22 +33,31 @@ export default function FormScreen({
 
   const {
     translations: {
-      ugc: { dataPolicyHeading = fallbackTranslations.dataPolicyHeading } = {},
+      ugc: {
+        dataPolicyHeading = fallbackTranslations.dataPolicyHeading,
+        validationRequired = fallbackTranslations.validationRequired,
+      } = {},
     },
   } = useContext(ServiceContext);
 
   const ref = useRef<HTMLElement>(null);
 
+  const hasAttemptedSubmit = attemptedSubmitCount > 0;
+
   useEffect(() => {
-    if (hasValidationErrors) {
-      document.title = `Error: ${title}`;
+    if (hasValidationErrors && hasAttemptedSubmit) {
+      document.title = `${validationRequired}: ${title}`;
       ref.current?.focus();
     } else {
       document.title = title;
     }
-  }, [title, hasValidationErrors, attemptedSubmitCount]);
-
-  const hasAttemptedSubmit = attemptedSubmitCount > 0;
+  }, [
+    title,
+    hasValidationErrors,
+    hasAttemptedSubmit,
+    attemptedSubmitCount,
+    validationRequired,
+  ]);
 
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
