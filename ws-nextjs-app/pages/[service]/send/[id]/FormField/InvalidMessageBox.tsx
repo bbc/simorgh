@@ -54,7 +54,7 @@ const InvalidMessageBox = forwardRef(
       hasArrowStyle = true,
       isErrorSummary = false,
       suffix,
-      validation,
+      validationCriteria,
     }: InvalidMessageBoxProps,
     ref: ForwardedRef<HTMLElement>,
   ) => {
@@ -64,8 +64,12 @@ const InvalidMessageBox = forwardRef(
 
     const message = formatValidationMessage(
       ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
-      validation,
+      validationCriteria,
     );
+
+    // We only include visually hidden text on generic error messages.
+    const includeVisuallyHiddenText =
+      !isErrorSummary && message === ugc[InvalidMessageCodes.FieldRequired];
 
     return (
       <>
@@ -87,7 +91,9 @@ const InvalidMessageBox = forwardRef(
             {...(ref && { ref })}
           >
             {message}
-            <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
+            {includeVisuallyHiddenText && (
+              <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
+            )}
           </Text>
         </div>
       </>

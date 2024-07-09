@@ -48,7 +48,7 @@ export type InvalidMessageBoxProps = {
   hasArrowStyle?: boolean;
   isErrorSummary?: boolean;
   suffix?: string;
-  validation?: ValidationConditions;
+  validationCriteria?: ValidationConditions;
 };
 
 export type FetchParameters = {

@@ -117,7 +117,7 @@ export default ({
           suffix={label}
           messageCode={messageCode}
           hasArrowStyle={false}
-          validation={{ min, max, fileTypes }}
+          validationCriteria={{ min, max, fileTypes }}
         />
       )}
       <input
