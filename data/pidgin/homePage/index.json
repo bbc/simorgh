@@ -1,62 +1,114 @@
 {
   "data": {
-    "title": "BBC News Pidgin",
-    "description": "",
+    "title": "Domot - BBC News Pidgin",
+    "description": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.",
     "pageType": "home",
     "curations": [
       {
         "summaries": [
           {
             "type": "article",
-            "title": "ATMs across the country",
-            "firstPublished": "2019-09-10T09:58:47.000Z",
-            "lastPublished": "2019-09-10T10:01:20.000Z",
-            "link": "https://www.bbc.com/pidgin/23248287",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg",
-            "description": "Here we have an article about a particular topic",
-            "imageAlt": "-",
-            "id": "cda3bf00-2939-1a46-b6c1-f4376b944663"
+            "isLive": false,
+            "title": "Democrats dey reason Kamala Harris to replace Biden - but she go fit beat Trump to be US president?",
+            "firstPublished": "2024-07-09T10:07:49.862Z",
+            "lastPublished": "2024-07-09T10:59:34.778Z",
+            "link": "https://www.bbc.com/pidgin/articles/cv2g5nqpx24o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2d30/live/76d30dd0-3ddb-11ef-96a8-e710c6bfc866.png.webp",
+            "description": "As Joe Biden dey fight to stay as im party nominee, some say im unpopular vice-president na di right person to take over.",
+            "imageAlt": "Collage foto of Harris and Trump",
+            "id": "cv2g5nqpx24o"
           },
           {
             "type": "article",
-            "title": "Template article 4",
-            "firstPublished": "2023-08-15T14:12:01.110Z",
-            "lastPublished": "2023-08-15T14:12:01.110Z",
-            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg",
-            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
-            "imageAlt": "Bird",
-            "id": "c0ny73k281vo"
+            "isLive": false,
+            "title": "Six ways to tackle high cost of food for Nigeria - Tinubu plan to suspend tax on imported brown rice, corn, odas",
+            "firstPublished": "2024-07-08T19:44:09.335Z",
+            "lastPublished": "2024-07-08T19:44:09.335Z",
+            "link": "https://www.bbc.com/pidgin/articles/cy79v7rj09vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4f99/live/7b83d700-3d5f-11ef-b74c-bb483a802c97.jpg.webp",
+            "description": "President Bola Tinubu dey plan to suspend di payment of duties, tariffs and taxes on some food items wey dem dey import to di kontri through land and sea borders.",
+            "imageAlt": "Nigeria first lady Remi Tinubu dey tend to her garden",
+            "id": "cy79v7rj09vo"
           },
           {
             "type": "article",
-            "title": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
-            "firstPublished": "2020-02-17T11:57:10.000Z",
-            "lastPublished": "2020-02-17T11:57:10.000Z",
-            "link": "https://www.bbc.com/pidgin/23267825",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
-            "description": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
-            "imageAlt": "Joseph shabalala",
-            "id": "877b3c91-b210-a84c-bf03-ab64f54bff8a"
+            "isLive": false,
+            "title": "Boeing go plead guilty to criminal fraud charge",
+            "firstPublished": "2024-07-08T14:55:06.048Z",
+            "lastPublished": "2024-07-08T14:55:06.048Z",
+            "link": "https://www.bbc.com/pidgin/articles/c978gv7340ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7519/live/043b4950-3d35-11ef-b74c-bb483a802c97.png.webp",
+            "description": "Di company don dey inside hot soup sake of dia safety records since di two almost identical crashes wey happun wit 737 Max plans for 2018 and 2019.",
+            "imageAlt": "Di families of pipo wey die from Boein plane crashes",
+            "id": "c978gv7340ro"
           },
           {
             "type": "article",
-            "title": "Jacob Zuma: Staying!!!",
-            "firstPublished": "2017-08-08T18:17:04.000Z",
-            "lastPublished": "2017-08-08T18:52:19.000Z",
-            "link": "https://www.bbc.com/pidgin/tori-23146434",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/BBC4/test/_63586084_zuma.jpg",
-            "description": "Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.",
-            "imageAlt": "Jacob Zuma na cat with nine lives",
-            "id": "11c2d7ba-333a-0c4b-9071-86df752ebc47"
+            "isLive": false,
+            "title": "Tinubu first assignment afta im reappointment as Ecowas chairman",
+            "firstPublished": "2024-07-07T15:55:36.110Z",
+            "lastPublished": "2024-07-07T20:15:23.545Z",
+            "link": "https://www.bbc.com/pidgin/articles/c1vdrrzqg4po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d953/live/69b260b0-3c9b-11ef-bbe0-29f79e992ddd.jpg.webp",
+            "description": "For one rival meeting on Saturday for Niamey, di military rulers of Niger, Mali, and Burkina Faso form a breakaway confederation of Sahel states, sometin wey catch many pipo by surprise for mata wey end any expectation of say dem bin wan rejoin Ecowas.",
+            "imageAlt": "ECOWAS ",
+            "id": "c1vdrrzqg4po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Meet winners of UK general election wey get Nigerian roots",
+            "firstPublished": "2024-07-06T11:55:52.441Z",
+            "lastPublished": "2024-07-06T15:12:42.507Z",
+            "link": "https://www.bbc.com/pidgin/articles/cqqly4rl4l6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7f25/live/33598a50-3b85-11ef-bdc5-41d7421c2adf.png.webp",
+            "description": "Di Labour Party win landslide victory for UK general election wey happun on 4 July 2024 - di party sweep hundreds of seats across di kontri and end 14 years of Conservative rule.",
+            "imageAlt": "Fotos of some Nigerians wey win for di UK election",
+            "id": "cqqly4rl4l6o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ceasefire dey end war?",
+            "firstPublished": "2024-07-06T07:50:06.028Z",
+            "lastPublished": "2024-07-06T07:50:06.028Z",
+            "link": "https://www.bbc.com/pidgin/articles/cd1xqyw39lxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5723/live/a2bb5d30-3ae3-11ef-bdc5-41d7421c2adf.jpg.webp",
+            "description": "Israel dey reason Hamas proposals on ceasefire for Gaza, but e go fit end di war for good?",
+            "imageAlt": "Israel and Gaza war",
+            "id": "cd1xqyw39lxo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Samoa Agreement: No LGBTQ condition or $150bn deal for Nigeria, BBC find",
+            "firstPublished": "2024-07-05T17:05:43.753Z",
+            "lastPublished": "2024-07-05T17:24:18.253Z",
+            "link": "https://www.bbc.com/pidgin/articles/cx02gd0nkqno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e81e/live/a0c594c0-3af0-11ef-9274-0f3adc594d24.jpg.webp",
+            "description": "One copy of di 172-page Samoa Agreement wey we retrieve from di European Commission website no include any clause wey support same sex relationships, unless di kontri bin sign anoda version, wey be say we no find di evidence.",
+            "imageAlt": "Bola Tinubu",
+            "id": "cx02gd0nkqno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Sir Keir Starmer in, Rishi Sunak out - Who be UK new Prime Minister and wetin go happun next?",
+            "firstPublished": "2024-07-05T11:32:42.509Z",
+            "lastPublished": "2024-07-05T11:32:42.509Z",
+            "link": "https://www.bbc.com/pidgin/articles/cp4wxwz5895o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f036/live/6a2b5170-3aff-11ef-9274-0f3adc594d24.jpg.webp",
+            "description": "Apart from say im be politicians, Keir Starmer na also lawyer - for 2008, dem name am di Director of Public Prosecutions, di most senior criminal prosecutor for England and Wales.",
+            "imageAlt": "Sir Keir Starmer",
+            "id": "cp4wxwz5895o"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:87d69ac2-34a2-4013-a7b0-99b013ff7810",
+        "curationId": "urn:bbc:tipo:list:41c2dccc-4711-4e01-85d4-72d531765fa8",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
+        "title": "Top Tori",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
@@ -64,167 +116,376 @@
         "summaries": [
           {
             "type": "article",
-            "title": "How Lagos Dey Fight Lassa Fever",
-            "firstPublished": "2017-08-09T17:42:05.000Z",
-            "lastPublished": "2017-08-09T17:42:05.000Z",
-            "link": "https://www.bbc.com/pidgin/tori-23146625",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
-            "description": "100 workers for LUTH dey under observation after two people die from Lassa Fever.",
-            "imageAlt": "Nurses for LUTH isolation Center",
-            "id": "fd1307eb-2887-1b40-b64c-d95841bdfebd"
+            "isLive": false,
+            "title": "French election results: Wetin just happen for France shock parliamentary poll?",
+            "firstPublished": "2024-07-08T07:26:36.113Z",
+            "lastPublished": "2024-07-08T08:42:03.424Z",
+            "link": "https://www.bbc.com/pidgin/articles/cpe348yn89wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/75f7/live/eb543670-3cfa-11ef-bbe0-29f79e992ddd.jpg.webp",
+            "description": "France dey face political deadlock afta parliamentary elections give big blow to di far-right National Rally - but no give any party majority.",
+            "imageAlt": "Radical left leader Jean-Luc Mélenchon dey celebrate",
+            "id": "cpe348yn89wo"
           },
           {
-            "type": "video",
-            "title": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
-            "firstPublished": "2020-02-17T11:51:13.000Z",
-            "lastPublished": "2020-02-17T11:51:13.000Z",
-            "link": "https://www.bbc.com/pidgin/media-23267821",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
-            "description": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
-            "imageAlt": "Keyframe #2",
-            "id": "0f35c912-afc7-1a4b-9518-7853401c1149"
+            "type": "article",
+            "isLive": false,
+            "title": "Justin Bieber perform for popular Indian multi-million dollars wedding",
+            "firstPublished": "2024-07-08T20:09:22.081Z",
+            "lastPublished": "2024-07-08T20:09:22.081Z",
+            "link": "https://www.bbc.com/pidgin/articles/c72050e10z7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d814/live/fb5716a0-3d63-11ef-b74c-bb483a802c97.png.webp",
+            "description": "Although di family neva tok pim for who go perform for di main wedding gan-gan, tori dey go up and down say e be like na Adele. ",
+            "imageAlt": "Anant Ambani and Radhika Merchant",
+            "id": "c72050e10z7o"
           },
           {
-            "type": "audio",
-            "duration": "PT26M14S",
-            "title": "Kojey Radical: Why gigs feel like football matches",
-            "firstPublished": "2020-02-17T11:53:41.000Z",
-            "lastPublished": "2020-02-17T11:53:41.000Z",
-            "link": "https://www.bbc.com/pidgin/23267823",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7DD4/test/_63721223_image1.jpg",
-            "description": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
-            "imageAlt": "-",
-            "id": "5649a73b-773b-5b45-9f3e-cb0ed14efb5b"
+            "type": "article",
+            "isLive": false,
+            "title": "E dirty pass toilet seat? - How you fit stop water bottle from becoming headquarters of dirty",
+            "firstPublished": "2024-07-07T15:22:53.440Z",
+            "lastPublished": "2024-07-07T15:22:53.440Z",
+            "link": "https://www.bbc.com/pidgin/articles/cnl05152e5ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7b40/live/4064de80-3c74-11ef-8be4-dbc4b0679144.jpg.webp",
+            "description": "Failure to clean your water bottle regularly fit be risk to yout health. ",
+            "imageAlt": "Woman wey dey drink from water bottle",
+            "id": "cnl05152e5ro"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Uncommon plants wey pipo hide inside  toys - and oda style wey traffickers dey use",
+            "firstPublished": "2024-07-07T07:30:08.525Z",
+            "lastPublished": "2024-07-07T07:30:08.525Z",
+            "link": "https://www.bbc.com/pidgin/articles/cw4yjg4elpxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bb09/live/dccf8420-3957-11ef-bbe0-29f79e992ddd.jpg.webp",
+            "description": "How endangered species are smuggled out of Africa and what is being done to prevent it.",
+            "imageAlt": "A box for a toddler's kitchen set which had contained succulents",
+            "id": "cw4yjg4elpxo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Why human beings start to dey kiss",
+            "firstPublished": "2024-07-06T12:53:32.921Z",
+            "lastPublished": "2024-07-06T15:11:22.377Z",
+            "link": "https://www.bbc.com/pidgin/articles/ce98e35ry49o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9af2/live/edfb5cc0-3ba9-11ef-a1ac-3182bf7863a8.jpg.webp",
+            "description": "Di hype of kissing from romance feems wey don plenti but shey na true say di first kiss na wetn go tell us say we don meet di one? ",
+            "imageAlt": "Woman wey dey poke her mouth",
+            "id": "ce98e35ry49o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Couple mark 50 years of marriage for di 'divorce capital' of Nigeria",
+            "firstPublished": "2024-07-06T10:43:53.979Z",
+            "lastPublished": "2024-07-06T10:43:53.979Z",
+            "link": "https://www.bbc.com/pidgin/articles/c97de9xnj87o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/32cd/live/cdd776b0-3b7f-11ef-bbe0-29f79e992ddd.png.webp",
+            "description": "For one 2022 research wey BBC collabo wit di local goment to do, dem find out say 32% of marriages for Kano state dey last just between three to six months.",
+            "imageAlt": "Mahmud Kabir Yusuf and Rabiatu Tahir",
+            "id": "c97de9xnj87o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "States for Nigeria wey go witness flood inside 2024 - NiMet",
+            "firstPublished": "2024-07-05T12:11:37.482Z",
+            "lastPublished": "2024-07-05T12:15:11.275Z",
+            "link": "https://www.bbc.com/pidgin/articles/c0jq1ez1wwno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/05fc/live/71f3a2f0-3ac7-11ef-bdc5-41d7421c2adf.png.webp",
+            "description": "Di mid-summer drought na wen di weather dey dry for long time wey no normal and dis shele same time towards di end of July.",
+            "imageAlt": "Flood for Nigeria",
+            "id": "c0jq1ez1wwno"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:776c8719-77b4-4473-ba9e-0812888495f4",
+        "curationId": "urn:bbc:tipo:list:81d92884-1db4-4dfa-b1ec-d52c0ce41a24",
         "curationType": "tipo-curation",
         "position": 1,
-        "title": "Informate me",
-        "visualProminence": "HIGH"
-      },
-      {
-        "summaries": [
-          {
-            "type": "commentary",
-            "title": "Live Promo with Media Type None",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "Pidgin test 2 - Description",
-            "imageAlt": "",
-            "id": "c7p765ynk9qt"
-          },
-          {
-            "type": "article",
-            "title": "Live Pidgin Disco 1 Media Type Text",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cgl2vz8d587t"
-          },
-          {
-            "type": "audio",
-            "title": "Live Pidgin Disco 2 Media Type Audio",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cy0mg3kvxnlt"
-          },
-          {
-            "type": "video",
-            "title": "Live Pidgin Disco 3 Media Type Video",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cly58zvmwygt"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:30934ac9-baec-44b4-bd80-738622667d8d",
-        "curationType": "tipo-curation",
-        "position": 2,
-        "title": "Normal Curation with Live Promos",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
-      },
-      {
-        "summaries": [
-          {
-            "type": "commentary",
-            "title": "Live Pidgin Disco 4 Media Type None",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cemy52djeq5t"
-          },
-          {
-            "type": "article",
-            "title": "Live Pidgin Disco 5 Media Type Text",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "c65nm48pr8et"
-          },
-          {
-            "type": "audio",
-            "title": "Live Pidgin Disco 6 Media Type Audio",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cpvg17j60m7t"
-          },
-          {
-            "type": "video",
-            "title": "Live Pidgin Disco 7 Media Type Video",
-            "firstPublished": "",
-            "lastPublished": "",
-            "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
-            "description": "",
-            "imageAlt": "",
-            "id": "cg2pr8l7j3nt"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:b016ab49-c95c-4129-9a06-c28fac463064",
-        "curationType": "tipo-curation",
-        "position": 3,
-        "title": "Hierarchical Curation with Live Promos",
+        "title": "Special Tori",
         "visualProminence": "HIGH",
-        "visualStyle": "NONE"
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Elderly pipo wey dem accuse of witchcraft and kill sake of dia lands ",
+            "firstPublished": "2024-07-08T11:01:36.679Z",
+            "lastPublished": "2024-07-08T11:01:36.679Z",
+            "link": "https://www.bbc.com/pidgin/articles/crg78ppkxz2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3e86/live/bedd2c50-3d18-11ef-9e1c-3b4a473456a6.jpg.webp",
+            "description": "BBC Africa Eye don investigate a shocking series of elderly pipo wey dey face accuse of witchcraft and dem kill along Kenya Kilifi coast,",
+            "imageAlt": "Kenya elderly man Tambala Jefwa wey suffer attack",
+            "id": "crg78ppkxz2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ghana Chef Ebenezer Smith cooking marathon na fake - GWR",
+            "firstPublished": "2024-07-02T18:15:19.508Z",
+            "lastPublished": "2024-07-03T09:18:09.303Z",
+            "link": "https://www.bbc.com/pidgin/articles/cp38nzkyk55o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a056/live/d29acb90-3894-11ef-bbe0-29f79e992ddd.jpg.webp",
+            "description": "Alina Polianskaya add say di current and true record holder na 119 hr 57 min 16 sec and na Alan Fisher achieve am.",
+            "imageAlt": "Millenium chef smith",
+            "id": "cp38nzkyk55o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "'Why I don donate blood 82 times and I go still give more'",
+            "firstPublished": "2024-07-03T08:16:35.176Z",
+            "lastPublished": "2024-07-03T08:16:35.176Z",
+            "link": "https://www.bbc.com/pidgin/articles/ced31pjxv0po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/64c1/live/e54c1ab0-3a41-11ef-bbe0-29f79e992ddd.jpg.webp",
+            "description": "Michael Mzega wey don donate blood 82 times tok about why im start, im experience and why e dey important for am to kontinu to donate blood",
+            "imageAlt": "Blood donor Michael Mzega",
+            "id": "ced31pjxv0po"
+          },
+          {
+            "type": "video",
+            "duration": "PT4M7S",
+            "isLive": false,
+            "title": "Woman wey dem comot 3kg fibroid from her belle tok wetin her eye see",
+            "firstPublished": "2024-07-01T06:03:48.970Z",
+            "lastPublished": "2024-07-02T06:47:50.249Z",
+            "link": "https://www.bbc.com/pidgin/articles/c90ej93l3jjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3459/live/f52ed670-383e-11ef-bbe0-29f79e992ddd.jpg.webp",
+            "description": "One symptoms wey dey clear for pipo wey get fibroid na painful menstruations and for Princess, her own really give serious problem as a woman.",
+            "imageAlt": "Princesssa Oreo",
+            "id": "c90ej93l3jjo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 9,
+        "curationId": "urn:bbc:vivo:curation:a08ec947-e61c-4371-9923-8a027ab97fe7",
+        "curationType": "vivo-stream",
+        "position": 2,
+        "title": "Ginger Me",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Spain vs France Euro 2024 ogbonge semi-final clash updates",
+            "firstPublished": "2024-07-09T10:51:58.325Z",
+            "lastPublished": "2024-07-09T10:51:58.325Z",
+            "link": "https://www.bbc.com/pidgin/articles/ck7gxxxjznro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9ae1/live/fb245850-3ddb-11ef-b74c-bb483a802c97.png.webp",
+            "description": "Spain and France go face diasef for di semi-final of di Euro 2024 and dis na one game wey pipo dey anticipate to watch as di outcome go decide who go enta final.",
+            "imageAlt": "Yamal and Mbappe",
+            "id": "ck7gxxxjznro"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Who go win Euro 2024? Experts drop dia prediction",
+            "firstPublished": "2024-07-08T17:01:44.743Z",
+            "lastPublished": "2024-07-08T17:01:44.743Z",
+            "link": "https://www.bbc.com/pidgin/articles/cp38k0kp26do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/08a4/live/45b30640-3c52-11ef-af69-b31df2cf8ee3.png.webp",
+            "description": "Four teams remain for Euro 2024 as France meet Spain and England face di Netherlands for semi-finals - but which team go win di trophy? ",
+            "imageAlt": "A split image of England's Jude Bellingham, France's Kylian Mbappe, Netherlands' Virgil van Dijk, Spain's Lamine Yamal",
+            "id": "cp38k0kp26do"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Euro 2024 Semi-final fixtures & quarter-final results",
+            "firstPublished": "2024-07-07T16:13:00.728Z",
+            "lastPublished": "2024-07-07T16:13:00.728Z",
+            "link": "https://www.bbc.com/pidgin/articles/cz9x17l21neo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e69c/live/b2e5eb20-3c74-11ef-a044-9d4367d5b599.png.webp",
+            "description": "Out of di 24 teams wey start Euro 2024 competition na only four teams remain.",
+            "imageAlt": "Saka, Mbappe, Gakpo and Yamal",
+            "id": "cz9x17l21neo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "John Cena don announce retirement from wrestling",
+            "firstPublished": "2024-07-07T11:07:16.872Z",
+            "lastPublished": "2024-07-07T11:07:16.872Z",
+            "link": "https://www.bbc.com/pidgin/articles/ck5grz0ww9po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/54de/live/c27e2fa0-3c4e-11ef-bbe0-29f79e992ddd.png.webp",
+            "description": "Di 47 year old wey start to dey act 18 years ago, say im final in ring competition go happun for 2025 as part of im farewell tour.",
+            "imageAlt": "John Cena",
+            "id": "ck5grz0ww9po"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/pidgin/topics/cjgn7gv77vrt",
+        "curationId": "urn:bbc:vivo:curation:c61facc2-a4fa-4890-a0d9-a1718cccf88d",
+        "curationType": "vivo-stream",
+        "position": 3,
+        "title": "Sport",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Leading candidates for Ghana presidential election and dia running mates",
+            "firstPublished": "2024-07-05T09:01:38.615Z",
+            "lastPublished": "2024-07-05T11:37:52.734Z",
+            "link": "https://www.bbc.com/pidgin/articles/c3ggv045wgdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/daec/live/d87dbc40-3ac2-11ef-bbe0-29f79e992ddd.png.webp",
+            "description": "Cost of living don rise, di local currency dey depreciate against di major foreign trading currencies wia businesses don dey suffer - na one of di problem wey dey di new president front",
+            "imageAlt": "John Mahama, Prof Naana Jane, Dr. Bawumia and Dr. Matthew Prempeh",
+            "id": "c3ggv045wgdo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Why govment wan regulate cement price for Ghana",
+            "firstPublished": "2024-07-02T09:38:16.764Z",
+            "lastPublished": "2024-07-05T05:31:25.301Z",
+            "link": "https://www.bbc.com/pidgin/articles/c29dxx2xez4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/21ea/live/15afecc0-3a8f-11ef-a92c-ed18118ffbf5.jpg.webp",
+            "description": "For now consumers already begin to pay 108 - 115 Ghana cedid ($7-8) for one bag of cement wey depending wia you buy am and which brand, you fit to pay more.",
+            "imageAlt": "stack of cement",
+            "id": "c29dxx2xez4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Nigeria face Benin for Group D, Ghana dey same group wit Angola inside 2025 Afcon qualifying draw",
+            "firstPublished": "2024-07-04T15:05:38.604Z",
+            "lastPublished": "2024-07-04T15:22:11.122Z",
+            "link": "https://www.bbc.com/pidgin/articles/cv2g8v57lk3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8635/live/2818e570-3a11-11ef-9b98-a3b521d836c3.png.webp",
+            "description": "Defending champions Cote D'ivoire go begin dia campaign for Group G wit Zambia, Sierra Leone and Chad.",
+            "imageAlt": "Lookman, Kudus, Salah, Mane",
+            "id": "cv2g8v57lk3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Players wit African roots wey dey shine for Euro 2024",
+            "firstPublished": "2024-07-04T14:40:25.323Z",
+            "lastPublished": "2024-07-04T14:40:25.323Z",
+            "link": "https://www.bbc.com/pidgin/articles/c2q0kzgq7g7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f304/live/4f739d50-3a01-11ef-a044-9d4367d5b599.png.webp",
+            "description": "Since di Euro 2024 start, some players wit African roots don dey do well. If not for one reason or di oda, dis players fit to dey play for kontris in Africa.",
+            "imageAlt": "Yamal, Mbappe, Saka, Musiala",
+            "id": "c2q0kzgq7g7o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 30,
+        "link": "https://www.bbc.com/pidgin/topics/cg72673yg2rt",
+        "curationId": "urn:bbc:vivo:curation:588d9c07-a818-4dd3-904a-bc425394a8ff",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Informate Me",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 5,
+        "title": "Di one wey dem dey read well well",
+        "visualProminence": "LOW",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/pidgin/popular/read",
+        "mostRead": {
+          "generated": "2024-07-09T10:50:48.522Z",
+          "lastRecordTimeStamp": "2024-07-09T10:48:00Z",
+          "firstRecordTimeStamp": "2024-07-09T08:48:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cxr020n5x05o",
+              "rank": 1,
+              "title": "How 95 stolen luxury vehicles from US and Canada end up for Ghana ",
+              "href": "https://www.bbc.com/pidgin/articles/cxr020n5x05o",
+              "timestamp": "2023-04-19T12:28:24.719Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgxxvnw5g4go",
+              "rank": 2,
+              "title": "‘Nigeria we hail thee’ na our heritage - Tinubu on why Nigeria reverse to old national anthem",
+              "href": "https://www.bbc.com/pidgin/articles/cgxxvnw5g4go",
+              "timestamp": "2024-05-30T11:03:03.528Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cx02gd0nkqno",
+              "rank": 3,
+              "title": "Samoa Agreement: No LGBTQ condition or $150bn deal for Nigeria, BBC find",
+              "href": "https://www.bbc.com/pidgin/articles/cx02gd0nkqno",
+              "timestamp": "2024-07-05T17:24:18.253Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cp38k0kp26do",
+              "rank": 4,
+              "title": "Who go win Euro 2024? Experts drop dia prediction",
+              "href": "https://www.bbc.com/pidgin/articles/cp38k0kp26do",
+              "timestamp": "2024-07-08T17:01:44.743Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cy79v7rj09vo",
+              "rank": 5,
+              "title": "Six ways to tackle high cost of food for Nigeria - Tinubu plan to suspend tax on imported brown rice, corn, odas",
+              "href": "https://www.bbc.com/pidgin/articles/cy79v7rj09vo",
+              "timestamp": "2024-07-08T19:44:09.335Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cv2g5nqpx24o",
+              "rank": 6,
+              "title": "Democrats dey reason Kamala Harris to replace Biden - but she go fit beat Trump to be US president?",
+              "href": "https://www.bbc.com/pidgin/articles/cv2g5nqpx24o",
+              "timestamp": "2024-07-09T10:11:00.842Z"
+            },
+            {
+              "id": "99da8596-b4cc-4dd7-9da5-56bc2eddc5da",
+              "rank": 7,
+              "title": "Tiwa Savage and oda celebs wey face blackmail over sex tape",
+              "href": "/pidgin/tori-58929073",
+              "timestamp": "2021-10-20T07:23:51.000Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c5115105n1no",
+              "rank": 8,
+              "title": "Nigeria National Anthem: Who compose 'Nigeria We Hail Thee'?",
+              "href": "https://www.bbc.com/pidgin/articles/c5115105n1no",
+              "timestamp": "2024-05-30T12:09:30.341Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cz9x17l21neo",
+              "rank": 9,
+              "title": "Euro 2024 Semi-final fixtures & quarter-final results",
+              "href": "https://www.bbc.com/pidgin/articles/cz9x17l21neo",
+              "timestamp": "2024-07-07T16:13:00.728Z"
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ce58gpg81k1o",
+              "rank": 10,
+              "title": "SSANU, NASU suspend planned strike",
+              "href": "https://www.bbc.com/pidgin/articles/ce58gpg81k1o",
+              "timestamp": "2024-07-08T14:27:11.030Z"
+            }
+          ]
+        }
       }
     ],
     "metadata": {
       "atiAnalytics": {
-        "contentId": "urn:bbc:tipo:topic:c93v2kkz841t",
+        "contentId": "urn:bbc:tipo:topic:ck3yk9nz25qt",
         "contentType": "index-home",
         "pageIdentifier": "pidgin.page",
-        "pageTitle": "BBC News Pidgin"
-      }
+        "pageTitle": "Domot - BBC News Pidgin"
+      },
+      "type": ""
     }
   },
   "contentType": "application/json; charset=utf-8"
