@@ -31,7 +31,7 @@ const Stream = ({
     if (hashValue) {
       window.location.href = `#${hashValue}`;
     }
-    setHasShareApi(true);
+
     if ('share' in navigator) {
       setHasShareApi(true);
     }
