@@ -291,6 +291,10 @@ exports[`Form should render and match snapshot 1`] = `
     -ms-appearance: auto;
     appearance: auto;
   }
+
+  .emotion-20:checked::after {
+    content: none;
+  }
 }
 
 .emotion-20:focus {

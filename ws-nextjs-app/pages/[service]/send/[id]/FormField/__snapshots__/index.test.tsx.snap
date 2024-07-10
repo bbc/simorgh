@@ -68,6 +68,10 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
     -ms-appearance: auto;
     appearance: auto;
   }
+
+  .emotion-2:checked::after {
+    content: none;
+  }
 }
 
 .emotion-2:focus {
