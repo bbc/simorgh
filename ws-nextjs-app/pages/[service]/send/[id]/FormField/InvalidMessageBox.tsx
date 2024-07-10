@@ -75,20 +75,21 @@ const InvalidMessageBox = forwardRef(
       <>
         {hasArrowStyle && <div css={styles.errorArrow} />}
         <div
-          css={[styles.errorMessageBox, !hasArrowStyle && styles.hasArrowStyle]}
+          css={[
+            styles.errorMessageBox,
+            !hasArrowStyle && styles.hasArrowStyle,
+            isErrorSummary && styles.focusIndicatorInput,
+          ]}
+          {...(isErrorSummary && { tabIndex: -1 })}
+          {...(ref && { ref })}
         >
           <ErrorSymbol />
           <Text
             id={id}
-            css={[
-              styles.errorText,
-              isErrorSummary && styles.focusIndicatorInput,
-            ]}
+            css={styles.errorText}
             fontVariant="sansBold"
             size="minion"
             as="strong"
-            {...(isErrorSummary && { tabIndex: -1 })}
-            {...(ref && { ref })}
           >
             {message}
             {includeVisuallyHiddenText && (
