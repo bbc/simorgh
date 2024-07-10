@@ -82,7 +82,7 @@ const InvalidMessageBox = forwardRef(
             id={id}
             css={[
               styles.errorText,
-              isErrorSummary && styles.focusIndicatorErrorSummary,
+              isErrorSummary && styles.focusIndicatorInput,
             ]}
             fontVariant="sansBold"
             size="minion"
