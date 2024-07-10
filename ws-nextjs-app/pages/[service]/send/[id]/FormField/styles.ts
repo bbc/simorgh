@@ -40,6 +40,14 @@ export default {
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
+  focusIndicatorErrorSummary: ({ palette }: Theme) =>
+    css({
+      '&:focus': {
+        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
+        outlineOffset: `${focusIndicatorThickness}`,
+      },
+    }),
   textField: ({ spacings, fontVariants, fontSizes, palette }: Theme) =>
     css({
       border: `solid 0.0625rem ${palette.GREY_10}`,

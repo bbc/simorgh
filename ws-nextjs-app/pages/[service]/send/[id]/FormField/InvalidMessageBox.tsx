@@ -78,7 +78,7 @@ const InvalidMessageBox = forwardRef(
           css={[
             styles.errorMessageBox,
             !hasArrowStyle && styles.hasArrowStyle,
-            isErrorSummary && styles.focusIndicatorInput,
+            isErrorSummary && styles.focusIndicatorErrorSummary,
           ]}
           {...(isErrorSummary && { tabIndex: -1 })}
           {...(ref && { ref })}
