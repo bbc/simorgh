@@ -102,6 +102,9 @@ export default {
       },
       [mq.HIGH_CONTRAST]: {
         appearance: 'auto', // renders browser default checkbox
+        '&:checked::after': {
+          content: 'none',
+        },
       },
     }),
   checkboxError: ({ palette }: Theme) =>
