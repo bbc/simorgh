@@ -44,9 +44,11 @@ describe('ClosedScreen', () => {
       render(<ClosedScreen title={MOCK_TITLE} />),
     );
 
+    const h1 = container.querySelector('h1');
     const p = container.querySelector('p');
     const time = container.querySelector('time');
 
+    expect(h1).not.toBeNull();
     expect(p).toBeNull();
     expect(time).toBeNull();
   });
