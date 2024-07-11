@@ -56,6 +56,10 @@ const fallbackTranslations: UgcTranslations = {
   // Error Screen
   errorHeading: 'Sorry, your message could not be sent.',
   errorDescription: 'Please try again later.',
+
+  // Closed Screen
+  closedHeading: 'This is now closed',
+  closedDescription: 'This closed on',
 };
 
 export default fallbackTranslations;

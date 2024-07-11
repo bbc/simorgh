@@ -264,4 +264,8 @@ export type UgcTranslations = {
   // Error Screen
   errorHeading: string;
   errorDescription: string;
+
+  // Closed Screen
+  closedHeading: string;
+  closedDescription: string;
 };

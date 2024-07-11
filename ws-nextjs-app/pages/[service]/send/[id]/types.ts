@@ -120,6 +120,9 @@ export type PageProps = {
       url: string;
       additional: string;
     };
+    campaignStatus: 'open' | 'closed';
+    openingTime?: string;
+    closingTime?: string;
   };
 };
 
