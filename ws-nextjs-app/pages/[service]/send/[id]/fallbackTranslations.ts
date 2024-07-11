@@ -59,7 +59,7 @@ const fallbackTranslations: UgcTranslations = {
 
   // Closed Screen
   closedHeading: 'This is now closed',
-  closedDescription: 'This closed on',
+  closedDescription: 'This closed on {{date}}.',
 };
 
 export default fallbackTranslations;

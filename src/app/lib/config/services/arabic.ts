@@ -337,6 +337,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'تعذر تحميل ملفاتك ',
         errorDescription: 'جرب التحميل مرة أخرى.',
+
+        // Closed Screen
+        closedHeading: 'أغلق باب المشاركة',
+        closedDescription: 'أغلق باب المشاركة يوم {{date}}.',
       },
     },
     mostRead: {

@@ -361,6 +361,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'امکان آپلود فایل هایتان وجود ندارد.',
         errorDescription: 'دوباره آنها را آپلود کنید.',
+
+        // Closed Screen
+        closedHeading: 'امکان ارسال دیگر وجود ندارد.',
+        closedDescription: 'امکان ارسال در {{date}} تمام شد.',
       },
     },
     mostRead: {

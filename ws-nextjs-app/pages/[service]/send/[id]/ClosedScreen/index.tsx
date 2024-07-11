@@ -37,11 +37,13 @@ export default function ClosedScreen({ title, closingTime }: Props) {
     ref.current?.focus();
   }, []);
 
+  const dateDescription = closedDescription?.split('{{date}}');
+
   return (
     <GenericMessage heading={closedHeading} ref={ref}>
       {closingTime && (
         <>
-          {`${closedDescription} `}
+          {`${dateDescription?.[0]}`}
           <TimeStampContainer
             css={styles.timestamp}
             timestamp={closingTime}
@@ -54,6 +56,7 @@ export default function ClosedScreen({ title, closingTime }: Props) {
             altCalendar={altCalendar}
             padding={false}
           />
+          {`${dateDescription?.[1]}`}
         </>
       )}
     </GenericMessage>

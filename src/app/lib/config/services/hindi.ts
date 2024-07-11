@@ -355,6 +355,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'आपका संदेश नहीं भेजा गया है',
         errorDescription: 'कृपया फिर भेजने का प्रयास करें',
+
+        // Closed Screen
+        closedHeading: 'अब यह विकल्प बंद हो चुका है',
+        closedDescription: 'ये इस तारीख़ को बंद हो चुका है {{date}}.',
       },
     },
     mostRead: {

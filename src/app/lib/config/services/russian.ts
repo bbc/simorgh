@@ -297,6 +297,10 @@ export const mainTranslations = {
     // Error Screen
     errorHeading: 'Ваше сообщение не отправлено',
     errorDescription: 'Попробуйте отправить еще раз',
+
+    // Closed Screen
+    closedHeading: 'Прием закрыт',
+    closedDescription: 'Прием закрылся {{date}}.',
   },
 };
 

@@ -341,6 +341,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Sua mensagem não foi enviada',
         errorDescription: 'Tente enviar novamente.',
+
+        // Closed Screen
+        closedHeading: 'Está encerrado',
+        closedDescription: 'Foi encerrado em {{date}}.',
       },
     },
     mostRead: {
