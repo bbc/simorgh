@@ -42,7 +42,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
       <Metadata
         title={title}
         lang={lang}
-        description=""
+        description={description}
         openGraphType="website"
         hasAmpPage={false}
       />
