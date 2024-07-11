@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
 import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
@@ -27,8 +28,8 @@ interface Props extends AppProps {
     pageData: {
       metadata: {
         type: PageTypes;
+        atiAnalytics?: ATIData;
       };
-      atiAnalytics?: { pageIdentifier: string };
     };
     pageLang?: string;
     pageType: PageTypes;
@@ -67,6 +68,8 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
+  const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
   return (
     <ToggleContextProvider toggles={toggles}>
       <ServiceContextProvider
@@ -91,9 +94,9 @@ export default function App({ Component, pageProps }: Props) {
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
-          counterName={pageData?.atiAnalytics?.pageIdentifier ?? null}
+          counterName={atiAnalytics?.pageIdentifier ?? null}
         >
-          <EventTrackingContextProvider data={pageData}>
+          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
             <UserContextProvider>
               <PageWrapper pageData={pageData} status={status}>
                 {status === 200 ? (

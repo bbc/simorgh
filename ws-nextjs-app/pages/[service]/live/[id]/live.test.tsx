@@ -38,6 +38,7 @@ const mockPageData = {
     altText: 'Man',
     copyright: 'BBC',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const mockPageDataWithPosts = {
@@ -49,6 +50,7 @@ const mockPageDataWithPosts = {
     content: postFixture,
     contributors: 'Not a random dude',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const mockPageDataWithoutKeyPoints = {
@@ -64,6 +66,7 @@ const mockPageDataWithoutKeyPoints = {
     content: postFixture,
     contributors: 'Not a random dude',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const mockPageDataWithMetadata = ({
