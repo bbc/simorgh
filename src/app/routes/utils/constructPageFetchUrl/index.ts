@@ -31,6 +31,7 @@ export interface UrlConstructParams {
   service: Services;
   variant?: Variants;
   page?: string;
+  post?: string;
   isAmp?: boolean;
 }
 
@@ -124,6 +125,7 @@ const constructPageFetchUrl = ({
   service,
   variant,
   page,
+  post,
   isAmp,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
@@ -144,6 +146,9 @@ const constructPageFetchUrl = ({
     }),
     ...(page && {
       page,
+    }),
+    ...(post && {
+      post,
     }),
     ...(isAmp && {
       isAmp,

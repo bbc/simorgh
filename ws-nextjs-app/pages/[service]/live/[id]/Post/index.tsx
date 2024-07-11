@@ -12,6 +12,7 @@ import MediaLoader from '#app/components/MediaLoader';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
@@ -22,6 +23,13 @@ import {
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+
+const makeLinkToPost = (origin: string, pathname: string, postURN: string) => {
+  if (!origin || !pathname || !postURN) return '';
+  // origin returns host on 7080, so hard coding 7081
+  const linkToPost = `http://localhost:7081${pathname}#${postURN}`;
+  return linkToPost;
+};
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -159,6 +167,7 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
 };
 
 const Post = ({ post }: { post: PostType }) => {
+  const { origin, pathname } = useContext(RequestContext);
   const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
@@ -171,11 +180,14 @@ const Post = ({ post }: { post: PostType }) => {
     post,
   );
 
+  const postURN = pathOr<string>('', ['urn'], post);
+  const linkToPost = makeLinkToPost(origin, pathname, postURN);
+
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
   return (
-    <article css={styles.postContainer}>
+    <article css={styles.postContainer} id={postURN}>
       <Heading level={3} css={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
@@ -190,6 +202,7 @@ const Post = ({ post }: { post: PostType }) => {
       </Heading>
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
+        <a href={linkToPost}>Link to post</a>
       </div>
     </article>
   );
