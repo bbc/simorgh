@@ -31,7 +31,7 @@ const kyrgyzBillboard = {
       firstPublished: '2016-11-09T03:55:21.000Z',
       link: 'https://www.bbc.com/kyrgyz/world-23090100',
       imageUrl:
-        'https://ichef.test.bbci.co.uk/ace/ws/{240}/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
+        'https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
       description:
         'Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.',
       imageAlt: 'Trump',
