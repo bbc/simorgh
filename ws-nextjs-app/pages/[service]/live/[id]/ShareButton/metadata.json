@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 10,
+    "month": "July",
+    "year": 2024
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Live-page-Accessibility-Acceptance-Criteria--CSrXWygWG17ZvAFqtlpn~PwWAg-KZQODmAf9tvodUlxsAVnA#:uid=480505399615451518180616&h2=Share-tools",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Live-page-Accessibility-Acceptance-Criteria--CSrXWygWG17ZvAFqtlpn~PwWAg-KZQODmAf9tvodUlxsAVnA#:uid=480505399615451518180616&h2=Share-tools",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1_oZ-8naaQ7-imY7LVoGLRBrmdmrtd85pnbSRWty2GT4/edit?gid=1748460042",
+      "label": "Accessibility Swarm"
+    }
+  }
+}
