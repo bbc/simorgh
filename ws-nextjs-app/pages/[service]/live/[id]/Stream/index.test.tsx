@@ -87,4 +87,28 @@ describe('Live Page Stream', () => {
 
     expect(screen.queryByTestId('live-contributors')).not.toBeInTheDocument();
   });
+  it('should render share button when share api is availible', async () => {
+    // @ts-expect-error overwrites share to exist
+    window.navigator.share = {};
+
+    await act(async () => {
+      render(
+        <Stream streamContent={mockStreamContentSingle} contributors={null} />,
+      );
+    });
+
+    expect(screen.getByRole('button')).toBeInTheDocument();
+  });
+  it('should not render share button when share api is unavailible', async () => {
+    // @ts-expect-error overwrites share to exist
+    delete window.navigator.share;
+
+    await act(async () => {
+      render(
+        <Stream streamContent={mockStreamContentSingle} contributors={null} />,
+      );
+    });
+
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+  });
 });
