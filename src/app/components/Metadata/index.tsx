@@ -105,7 +105,8 @@ const MetadataContainer = ({
 
   const isFormula1 = pathname.startsWith('/sport/formula1');
 
-  const canonicalToUse = isUK && isFormula1 ? canonicalUkLink : canonicalNonUkLink;
+  const canonicalToUse =
+   isUK && isFormula1 ? canonicalUkLink : canonicalNonUkLink;
 
   const htmlAttributes = {
     dir,
