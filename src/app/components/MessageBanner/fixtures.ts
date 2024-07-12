@@ -6,7 +6,7 @@ const kyrgyzMessageBannerOnePromo = {
       firstPublished: '',
       link: 'https://www.bbc.com/kyrgyz',
       imageUrl:
-        'https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
+        'https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
       description:
         'Follow all the updates minute-by-minute as the transfer window opens in the world’s most popular league! Ronaldo, Tielemans and Bellingham gossip.',
       imageAlt: 'alt text',
