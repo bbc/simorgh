@@ -61,7 +61,7 @@ const MetadataContainer = ({
     canonicalNonUkLink,
     ampNonUkLink,
     pathname,
-    isUk,
+    isUK,
   } = useContext(RequestContext);
 
   const {
@@ -105,7 +105,7 @@ const MetadataContainer = ({
 
   const isFormula1 = pathname.startsWith('/sport/formula1');
 
-  const canonicalToUse = isUk && isFormula1 ? canonicalUkLink : canonicalNonUkLink;
+  const canonicalToUse = isUK && isFormula1 ? canonicalUkLink : canonicalNonUkLink;
 
   const htmlAttributes = {
     dir,
