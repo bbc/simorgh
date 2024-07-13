@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import GenericMessage from '../GenericMessage';
@@ -27,20 +27,14 @@ export default function ClosedScreen({ title, closingTime }: Props) {
     },
   } = useContext(ServiceContext);
 
-  const ref = useRef<HTMLHeadingElement>(null);
-
   useEffect(() => {
     document.title = `${closedHeading}: ${title}`;
   }, [closedHeading, title]);
 
-  useEffect(() => {
-    ref.current?.focus();
-  }, []);
-
   const dateDescription = closedDescription?.split('{{date}}');
 
   return (
-    <GenericMessage heading={closedHeading} ref={ref}>
+    <GenericMessage heading={closedHeading}>
       {closingTime && (
         <>
           {`${dateDescription?.[0]}`}
