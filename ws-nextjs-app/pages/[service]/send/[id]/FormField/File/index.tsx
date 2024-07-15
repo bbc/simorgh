@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { ChangeEvent, useEffect, useRef } from 'react';
+import { ChangeEvent, useContext, useEffect, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import Label from '../FieldLabel';
 import { InputProps, FileData } from '../../types';
 import { useFormContext } from '../../FormContext';
@@ -10,6 +11,7 @@ import styles from './styles';
 import { UploadSvg } from './svgs';
 import FileList from './FileList';
 import InvalidMessageBox from '../InvalidMessageBox';
+import fallbackTranslations from '../../fallbackTranslations';
 
 export default ({
   id,
@@ -18,12 +20,32 @@ export default ({
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, required, wasInvalid, hasNestedErrorLabel, messageCode } =
-    inputState ?? {};
+  const {
+    translations: {
+      ugc: {
+        fileUploadButton = fallbackTranslations.fileUploadButton,
+        fileUploadLiveRegionText = fallbackTranslations.fileUploadLiveRegionText,
+        fileUploadListHeading = fallbackTranslations.fileUploadListHeading,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);
-  const filesInState = inputState.value as FileData[];
   const { replaceLiveRegionWith } = useLiveRegionContext();
+
+  const {
+    isValid,
+    required,
+    wasInvalid,
+    hasNestedErrorLabel,
+    messageCode,
+    min,
+    max,
+    fileTypes,
+  } = inputState ?? {};
+
+  const filesInState = inputState.value as FileData[];
   const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
   const labelId = `label-${id}`;
   const errorBoxId = `${id}-error`;
@@ -39,10 +61,11 @@ export default ({
     const chosenFiles = Array.prototype.slice.call(
       event.target.files,
     ) as File[];
+
     const uploaded = [...filesInState];
 
-    // Needs translation
-    let liveRegionText = `Update, Here's what you're sending: `;
+    let liveRegionText = fileUploadLiveRegionText;
+
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
       liveRegionText = `${liveRegionText}${file.name}, `;
@@ -76,17 +99,16 @@ export default ({
       />
       <button
         aria-describedby={labelId}
-        css={[styles.fileUploadButton, styles.focusIndicator]}
+        css={[styles.fileUploadButton, styles.focusIndicatorInput]}
         type="button"
         onClick={() => handleUploadClick()}
       >
         <UploadSvg />
-        Choose a file
+        {fileUploadButton}
       </button>
-      {/* Needs translation */}
       {hasFiles && (
         <Text as="p" fontVariant="sansRegular" size="bodyCopy">
-          Here&apos;s what you&apos;re sending:
+          {fileUploadListHeading}
         </Text>
       )}
       {!hasNestedErrorLabel && hasAttemptedSubmit && !isValid && (
@@ -95,6 +117,7 @@ export default ({
           suffix={label}
           messageCode={messageCode}
           hasArrowStyle={false}
+          validationCriteria={{ min, max, fileTypes }}
         />
       )}
       <input
@@ -117,6 +140,7 @@ export default ({
           files={filesInState}
           name={name}
           hasAttemptedSubmit={hasAttemptedSubmit}
+          validation={{ min, max, fileTypes }}
         />
       )}
     </>

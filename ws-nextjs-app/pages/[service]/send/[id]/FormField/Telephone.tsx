@@ -39,7 +39,7 @@ export default ({
           id={id}
           css={[
             styles.textField,
-            styles.focusIndicator,
+            styles.focusIndicatorInput,
             useErrorTheme && styles.textFieldError,
           ]}
           name={name}

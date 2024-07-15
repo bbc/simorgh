@@ -1,34 +1,16 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { useContext, ForwardedRef, forwardRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
-import Paragraph from '#app/components/Paragraph';
+import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import { InvalidMessageCodes, InvalidMessageBoxProps } from '../types';
+import {
+  InvalidMessageCodes,
+  InvalidMessageBoxProps,
+  ValidationConditions,
+} from '../types';
 import styles from './styles';
-
-const defaultUGC = {
-  submitButtonText: 'Send',
-  validationRequired: `There's something missing.`,
-  validationInvalidEmail: `That doesn't look right. Please enter a proper email address.`,
-  validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
-  validationFilesNotEnough: `There aren't enough files. Please add at least {{minFiles}}`,
-  validationFilesTooMany: `There are too many files. You can add {{maxFiles}}.`,
-  validationFilesInvalidType: `Sorry, we can't use this type of file. Please add {{fileTypes}}.`,
-  validationFileTooSmall: 'This file is broken. Try picking another.',
-  validationFilesSizeExceeded:
-    'Sorry, these files are too big. You can only upload up to 1.2 GB at a time.',
-  confirmationStepTitle: 'Message sent',
-  confirmationStepDescriptionHtml: 'Thanks for getting in touch.',
-  referenceNumber: 'Reference number',
-  submissionInfoSignedOutMessage:
-    'You may wish to make a note of these details for your reference.',
-  retentionPeriodDays: `We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.`,
-  privacyInfoHtml: `Don't worry, we protect your information — read the {{privacyInfoLink}} for more details.`,
-  emailToHtml: `If you change your mind and don't want us to use it, just email us at {{emailLink}}. Don't forget the reference number.`,
-  removalGuidelineText:
-    'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
-};
+import fallbackTranslations from '../fallbackTranslations';
 
 const ErrorSymbol = () => (
   <svg
@@ -43,33 +25,81 @@ const ErrorSymbol = () => (
   </svg>
 );
 
-export default ({
-  id,
-  messageCode,
-  hasArrowStyle = true,
-  suffix,
-}: InvalidMessageBoxProps) => {
-  const {
-    translations: { ugc = defaultUGC },
-  } = useContext(ServiceContext);
+const formatValidationMessage = (
+  messageCode: string,
+  validation?: ValidationConditions,
+) => {
+  if (!validation) return messageCode;
 
-  const message = ugc[messageCode ?? InvalidMessageCodes.FieldRequired];
+  let message = messageCode;
 
-  return (
-    <>
-      {hasArrowStyle && <div css={styles.errorArrow} />}
-      <div css={styles.errorMessageBox(hasArrowStyle)}>
-        <ErrorSymbol />
-        <Paragraph
-          id={id}
-          css={styles.errorText}
-          fontVariant="sansBold"
-          size="minion"
-        >
-          {message}
-          <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
-        </Paragraph>
-      </div>
-    </>
-  );
+  if (validation?.min) {
+    message = message.replace('{{minFiles}}', `${validation.min}`);
+  }
+  if (validation?.max) {
+    message = message.replace('{{maxFiles}}', `${validation.max}`);
+  }
+  if (validation?.fileTypes) {
+    message = message.replace('{{fileTypes}}', validation.fileTypes.join(', '));
+  }
+
+  return message;
 };
+
+const InvalidMessageBox = forwardRef(
+  (
+    {
+      id,
+      messageCode,
+      hasArrowStyle = true,
+      isErrorSummary = false,
+      suffix,
+      validationCriteria,
+    }: InvalidMessageBoxProps,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const {
+      translations: { ugc = fallbackTranslations },
+    } = useContext(ServiceContext);
+
+    const message = formatValidationMessage(
+      ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
+      validationCriteria,
+    );
+
+    // We only include visually hidden text on generic error messages.
+    const includeVisuallyHiddenText =
+      !isErrorSummary && message === ugc[InvalidMessageCodes.FieldRequired];
+
+    return (
+      <>
+        {hasArrowStyle && <div css={styles.errorArrow} />}
+        <div
+          css={[
+            styles.errorMessageBox,
+            !hasArrowStyle && styles.hasArrowStyle,
+            isErrorSummary && styles.focusIndicatorErrorSummary,
+          ]}
+          {...(isErrorSummary && { tabIndex: -1 })}
+          {...(ref && { ref })}
+        >
+          <ErrorSymbol />
+          <Text
+            id={id}
+            css={styles.errorText}
+            fontVariant="sansBold"
+            size="minion"
+            as="strong"
+          >
+            {message}
+            {includeVisuallyHiddenText && (
+              <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
+            )}
+          </Text>
+        </div>
+      </>
+    );
+  },
+);
+
+export default InvalidMessageBox;

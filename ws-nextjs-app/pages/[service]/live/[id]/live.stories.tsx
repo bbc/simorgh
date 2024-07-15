@@ -13,6 +13,7 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const Component = () => (
