@@ -179,7 +179,7 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 />
 `;
 
-exports[`AMP Articles Main heading should match text 1`] = `"This is the SEO headline of this test article"`;
+exports[`AMP Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -257,7 +257,7 @@ exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Articles SEO Heading level 1 1`] = `"This is the SEO headline of this test article"`;
+exports[`AMP Articles SEO Heading level 1 1`] = `"This is the headline of this test article"`;
 
 exports[`AMP Articles SEO Lang attribute 1`] = `"en-gb"`;
 

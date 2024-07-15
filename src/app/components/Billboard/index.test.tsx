@@ -86,11 +86,8 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-
     const maskedImage = getByRole('img');
-    expect(maskedImage.getAttribute('src')).toEqual(
-      imageUrl.replace('{width}', '240'),
-    );
+    expect(maskedImage.getAttribute('src')).toEqual(imageUrl);
   });
 
   it('should have an masked image with the correct alt text', () => {
