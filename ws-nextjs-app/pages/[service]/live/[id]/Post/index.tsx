@@ -22,6 +22,7 @@ import {
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+import ShareButton from '../ShareButton';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -64,7 +65,6 @@ const PostHeaderBanner = ({
     },
   } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
-
   return (
     <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
@@ -158,31 +158,42 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   );
 };
 
-const Post = ({ post }: { post: PostType }) => {
+const Post = ({
+  post,
+  hasShareApi = false,
+}: {
+  post: PostType;
+  hasShareApi?: boolean;
+}) => {
   const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
     post,
   );
 
+  const firstHeadingText =
+    headerBlocks[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
     ['content', 'model', 'blocks'],
     post,
   );
+  const { urn } = post;
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
   return (
     <article css={styles.postContainer}>
-      <Heading level={3} css={styles.heading}>
+      <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
             isBreakingNews={isBreakingNews}
             timestamp={timestamp}
           />
+
           {headerBlocks.map(headerBlock => (
             <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
           ))}
@@ -191,6 +202,15 @@ const Post = ({ post }: { post: PostType }) => {
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
+      {hasShareApi && (
+        <ShareButton
+          eventTrackingData={{
+            componentName: urn,
+          }}
+          contentId={urn}
+          headline={firstHeadingText}
+        />
+      )}
     </article>
   );
 };
