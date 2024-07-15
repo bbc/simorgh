@@ -293,6 +293,69 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'टॉप स्टोरी',
       featuresAnalysisTitle: 'ज़रूर पढ़ें',
       latestMediaTitle: 'ताज़ा',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'वैकल्पिक',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'आप इसे अपलोड कर रहे हैं:',
+        fileUploadButton: 'एक फाइल चुनें',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'भेजें',
+
+        // Validation
+        validationRequired: 'कुछ तो गड़बड़ है',
+        validationInvalidEmail:
+          'कुछ गड़बड़ लग रही है. कृपया आप सही ई-मेल लिखें',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'यहां आवश्यक फाइलों की संख्या पूरी नहीं है. कृपया भेजने के लिए कम से कम फाइलें अपलोड करें {{minFiles}}.',
+        validationFilesTooMany:
+          'यहां पर ज़्यादा फाइलें हैं. आप अधिकतम फाइलें ही भेज सकते हैं {{maxFiles}}.',
+        validationFilesInvalidType:
+          'खेद है. हम इस तरह की फाइल का इस्तेमाल नहीं कर सकते. आप इन फाइलों में से किसी एक तरह की फाइल का चुनाव करें {{fileTypes}}.',
+        validationFilesTooSmall:
+          'इस फाइल में कुछ गड़बड़ है. किसी अन्य फाइल का चुनाव करें',
+        validationFilesSizeExceeded:
+          'खेद है. आपकी फाइलें काफी बड़ी हैं. आप एक बार में केवल 2GB की फाइलें ही अपलोड कर सकते हैं',
+        validationWordLimit:
+          'अधिकतम {{wordLimit}} शब्दों की फाइल ही भेज सकते हैं',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'रेफरेंस नंबर',
+        submissionInfoSignedOutMessage:
+          'आप अपने रेफरेंस के लिए इन बातो को नोट कर सकते हैं',
+        privacyInfoHtml: undefined,
+        emailToHtml:
+          'ई-मेल {{emailLink}} अगर आप अपना विचार बदलते हैं, तो बस अपने रेफरेंस नंबर के साथ हमें ई-मेल करें कि आप अपनी भेजी सामग्री इस्तेमाल नहीं होने देना चाहते हैं',
+        removalGuidelineText: undefined,
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'आपकी फाइल अपलोड हो रही है...',
+        uploadingDescription: 'जब तक पूरा न हो जाए, तब तक इंतज़ार करें',
+
+        // Success Screen
+        successHeading: 'संदेश भेजा जा चुका है',
+        successDescription: 'हमसे संपर्क करने के लिए आपका शुक्रिया',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'आपका संदेश नहीं भेजा गया है',
+        errorDescription: 'कृपया फिर भेजने का प्रयास करें',
+      },
     },
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',

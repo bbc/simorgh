@@ -18,6 +18,8 @@ import {
   mundoWithBadgeAndDescr,
   mundoMultipleCurations,
   amharicOnlyTitle,
+  amharicSingleItemNoCurationTitle,
+  pidginSingleCurationEmptyStringSubheading,
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
@@ -93,6 +95,32 @@ describe('Topic Page', () => {
     );
     expect(container.getElementsByTagName('section').length).toEqual(0);
   });
+  it('should render promos with h2s when there is a single curation with a curation title', () => {
+    const { container } = render(
+      <TopicPage pageData={amharicSingleItem} />,
+      getOptionParams({ service: 'amharic', lang: 'am' }),
+    );
+    expect(container.getElementsByTagName('h2').length).toEqual(1);
+    expect(container.getElementsByTagName('h3').length).toEqual(0);
+  });
+
+  it('should render promos with h2s when there is a single curation without a curation title', () => {
+    const { container } = render(
+      <TopicPage pageData={amharicSingleItemNoCurationTitle} />,
+      getOptionParams({ service: 'amharic', lang: 'am' }),
+    );
+    expect(container.getElementsByTagName('h2').length).toEqual(1);
+    expect(container.getElementsByTagName('h3').length).toEqual(0);
+  });
+
+  it('should render promos with h2s when there is a single curation with an empty string for the title', () => {
+    const { container } = render(
+      <TopicPage pageData={pidginSingleCurationEmptyStringSubheading} />,
+      getOptionParams({ service: 'amharic', lang: 'am' }),
+    );
+    expect(container.getElementsByTagName('h2').length).toEqual(24);
+    expect(container.getElementsByTagName('h3').length).toEqual(0);
+  });
 
   it('should render curation subheading as h2 when curation title exists', () => {
     const { container } = render(
@@ -112,7 +140,7 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('h2').length).toEqual(2);
   });
 
-  it('should render promo headings as h2 when there is no curation subheading', () => {
+  it('should render promo headings in multiple curations as h2 when there is no curation subheading', () => {
     const { container } = render(
       <TopicPage pageData={pidginMultipleItems} service="pidgin" />,
       getOptionParams(),
@@ -286,7 +314,9 @@ describe('Topic Page', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
       const getLinkedDataOutput = () => {
-        return JSON.parse(Helmet.peek().scriptTags[1].innerHTML);
+        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+          JSON.parse(innerHTML),
+        );
       };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();
