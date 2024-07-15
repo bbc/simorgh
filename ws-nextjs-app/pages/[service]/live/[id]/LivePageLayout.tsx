@@ -52,7 +52,7 @@ type ComponentProps = {
     promoImage: LivePromoImage | null;
     startDateTime?: string;
     endDateTime?: string;
-    atiAnalytics: ATIData;
+    metadata: { atiAnalytics: ATIData };
   };
 };
 
@@ -69,7 +69,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
     isLive,
     summaryPoints: { content: keyPoints },
     liveTextStream,
-    atiAnalytics,
+    metadata: { atiAnalytics = undefined } = {},
     headerImage,
     promoImage,
   } = pageData;
