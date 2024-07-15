@@ -257,6 +257,7 @@ exports[`FormField should render a required input with an associated label 1`] =
     </label>
     <div>
       <input
+        aria-invalid="false"
         class="emotion-2"
         id="testAllyID"
         name="testAllyID"

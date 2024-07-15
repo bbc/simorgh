@@ -11,6 +11,7 @@
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081",
+    "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https",
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",
     "stop": "lsof -t -i:7081 | xargs kill",
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
@@ -39,6 +40,6 @@
   },
   "dependencies": {
     "next": "14.2.3",
-    "undici": "6.18.2"
+    "undici": "6.19.2"
   }
 }
