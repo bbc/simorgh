@@ -104,7 +104,7 @@ describe('MessageBanner', () => {
       );
       const image = screen.getByAltText('');
       expect(image.getAttribute('src')).toEqual(
-        summary.imageUrl.replace('{width}', 'raw'),
+        summary.imageUrl.replace('{width}', '240'),
       );
     });
 
