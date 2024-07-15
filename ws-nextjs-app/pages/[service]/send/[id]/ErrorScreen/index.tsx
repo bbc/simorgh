@@ -20,8 +20,8 @@ export default function ErrorScreen({ title }: Props) {
   const ref = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    document.title = `Error: ${title}`;
-  }, [title]);
+    document.title = `${errorHeading}: ${title}`;
+  }, [title, errorHeading]);
 
   useEffect(() => {
     ref.current?.focus();

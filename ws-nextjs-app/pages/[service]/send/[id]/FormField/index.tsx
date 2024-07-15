@@ -30,8 +30,10 @@ export type FormComponentProps = {
 };
 
 const FormField = ({ id, htmlType, label }: FormComponentProps) => {
-  const { handleChange, handleFocusOut, formState, hasAttemptedSubmit } =
+  const { handleChange, handleFocusOut, formState, attemptedSubmitCount } =
     useFormContext();
+
+  const hasAttemptedSubmit = attemptedSubmitCount > 0;
 
   const Component = FormComponents?.[htmlType];
   if (!Component) return null;

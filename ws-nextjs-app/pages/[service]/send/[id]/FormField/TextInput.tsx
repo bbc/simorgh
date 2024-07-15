@@ -38,7 +38,7 @@ export default ({
         <input
           css={[
             styles.textField,
-            styles.focusIndicator,
+            styles.focusIndicatorInput,
             useErrorTheme && styles.textFieldError,
           ]}
           id={id}
