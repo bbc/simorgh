@@ -173,7 +173,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 />
 `;
 
-exports[`Canonical Articles Main heading should match text 1`] = `"این عنوان این مقاله آزمایشی است"`;
+exports[`Canonical Articles Main heading should match text 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`Canonical Articles Media Player Caption should have a caption under the media player 1`] = `"توضیح ویدئو، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
@@ -323,7 +323,7 @@ exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Articles SEO Heading level 1 1`] = `"این عنوان این مقاله آزمایشی است"`;
+exports[`Canonical Articles SEO Heading level 1 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"fa"`;
 

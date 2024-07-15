@@ -130,7 +130,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 />
 `;
 
-exports[`Canonical Articles Main heading should match text 1`] = `"Wannan shine taken wannan labarin gwajin"`;
+exports[`Canonical Articles Main heading should match text 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
 
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -208,7 +208,7 @@ exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Articles SEO Heading level 1 1`] = `"Wannan shine taken wannan labarin gwajin"`;
+exports[`Canonical Articles SEO Heading level 1 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"ha"`;
 

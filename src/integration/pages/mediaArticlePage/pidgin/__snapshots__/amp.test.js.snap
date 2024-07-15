@@ -293,27 +293,6 @@ exports[`AMP Media Article Page Latest Media should match text and url 4`] = `
 
 exports[`AMP Media Article Page Main heading should match text 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
 
-exports[`AMP Media Article Page Related Content should match text and url 1`] = `
-{
-  "text": "Key tins wey INEC chairman Mahmood Yakubu tok for Chattam house about 2023 elections",
-  "url": "/pidgin/articles/cgrznj8yg5do",
-}
-`;
-
-exports[`AMP Media Article Page Related Content should match text and url 2`] = `
-{
-  "text": "PDP fire back afta APC call for di prosecution of Atiku for corruption",
-  "url": "/pidgin/articles/c1w09yl32yeo",
-}
-`;
-
-exports[`AMP Media Article Page Related Content should match text and url 3`] = `
-{
-  "text": "Security go be one of my biggest priority - Kwankwaso ",
-  "url": "/pidgin/articles/cl519qjj0lvo",
-}
-`;
-
 exports[`AMP Media Article Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
