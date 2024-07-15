@@ -19,6 +19,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     lang,
     translations: {
       ugc: {
+        closedHeading = fallbackTranslations.closedHeading,
         noJsHeading = fallbackTranslations.noJsHeading,
         noJsDescription = fallbackTranslations.noJsDescription,
       } = {},
@@ -37,10 +38,13 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
 
+  const metadataTitle =
+    campaignStatus === 'open' ? title : `${closedHeading}: ${title}`;
+
   return (
     <>
       <Metadata
-        title={title}
+        title={metadataTitle}
         lang={lang}
         description={description}
         openGraphType="website"
