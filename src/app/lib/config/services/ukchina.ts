@@ -395,6 +395,7 @@ export const service: ChineseConfig = {
         breaking: '最新消息',
         postedAt: '張貼在',
         summary: '概要',
+        shareButtonText: '分享',
       },
       gist: '概要',
       error: {
