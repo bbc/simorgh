@@ -5960,12 +5960,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ramda@npm:0.28.15":
-  version: 0.28.15
-  resolution: "@types/ramda@npm:0.28.15"
+"@types/ramda@npm:0.30.0":
+  version: 0.30.0
+  resolution: "@types/ramda@npm:0.30.0"
   dependencies:
-    ts-toolbelt: "npm:^6.15.1"
-  checksum: 10/9874b8b9edcf649fcefabe2145407d37d57a6cec1a1ad486b3ea10f8a166335e94a82ae9af56d94b2e59018ddcc2b4ac067570bb56c5616ace327e2eaeff0d21
+    types-ramda: "npm:^0.30.0"
+  checksum: 10/abe9d9c872778d2598298a0c4805fa715618fe79a4d7e203c71076bc72e28c97f04ffb108274cbfc33b0407a5aa3c2c37f609705a175d4102418e292e4e55a22
   languageName: node
   linkType: hard
 
@@ -15823,13 +15823,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@npm:0.28.0":
-  version: 0.28.0
-  resolution: "ramda@npm:0.28.0"
-  checksum: 10/1925e1881ece9feacd7eae620036996dcd3fb4973d931200e8594813238169afeaae8cc4377b4cb40978c26a07929f4e7f88cb2776a6c41b2e65f18dfba6530d
-  languageName: node
-  linkType: hard
-
 "ramda@npm:0.29.0":
   version: 0.29.0
   resolution: "ramda@npm:0.29.0"
@@ -15837,10 +15830,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch::locator=simorgh%40workspace%3A.":
-  version: 0.28.0
-  resolution: "ramda@patch:ramda@npm%3A0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch::version=0.28.0&hash=d78dd0&locator=simorgh%40workspace%3A."
-  checksum: 10/5dadd1ec7fc082dce2497b77d207f4b5241196dea1f1d5a35aa247ea150ef549ac5dc58e8a42e285061964b42f1d0173a7249b2230407b7d8a3325b3fd9a6741
+"ramda@npm:0.30.1":
+  version: 0.30.1
+  resolution: "ramda@npm:0.30.1"
+  checksum: 10/f3e1a7bc11f3a113edb3bb4764c2c22088c5896594934c01cf1980184d00f1d5a7af82761a3389419e2d51542ad2121ff44e718f40792d167e2846bba79a4c6d
   languageName: node
   linkType: hard
 
@@ -17057,7 +17050,7 @@ __metadata:
     "@types/jsdom": "npm:^21.0.0"
     "@types/loadable__component": "npm:5.13.9"
     "@types/node-fetch": "npm:^2.6.11"
-    "@types/ramda": "npm:0.28.15"
+    "@types/ramda": "npm:0.30.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/react-helmet": "npm:6.1.11"
@@ -17133,7 +17126,7 @@ __metadata:
     path-to-regexp: "npm:6.2.2"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
-    ramda: "patch:ramda@npm:0.28.0#./patches/ramda-npm-0.28.0-6a5fe8f6cc.patch"
+    ramda: "npm:0.30.1"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-helmet: "npm:6.1.0"
@@ -18238,10 +18231,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-toolbelt@npm:^6.15.1":
-  version: 6.15.5
-  resolution: "ts-toolbelt@npm:6.15.5"
-  checksum: 10/1816b11f6a4ca7b11da1e81613dda217535718862c9c7c1d9e5dbeb12abc765b6803dbc0c90ee8a5c1b782bc369e2851913005042921028d16e6ae8bf054b2da
+"ts-toolbelt@npm:^9.6.0":
+  version: 9.6.0
+  resolution: "ts-toolbelt@npm:9.6.0"
+  checksum: 10/2c2dea2631dbd7372a79cccc6d09a377a6ca2f319f767fd239d2e312cd1d9165a90f8c1777a047227bfdcda6aeba3addbadce88fdfc7f43caf4534d385a43c82
   languageName: node
   linkType: hard
 
@@ -18433,6 +18426,15 @@ __metadata:
     is-typed-array: "npm:^1.1.13"
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10/05e96cf4ff836743ebfc593d86133b8c30e83172cb5d16c56814d7bacfed57ce97e87ada9c4b2156d9aaa59f75cdef01c25bd9081c7826e0b869afbefc3e8c39
+  languageName: node
+  linkType: hard
+
+"types-ramda@npm:^0.30.0":
+  version: 0.30.1
+  resolution: "types-ramda@npm:0.30.1"
+  dependencies:
+    ts-toolbelt: "npm:^9.6.0"
+  checksum: 10/b865c8f97df911b82b51b3cb4afa9b52b971d344dd79d203cd118e424a03761aebfea538c643f6283f700a3b4000d07d2168e353691b5caff076542bad78e420
   languageName: node
   linkType: hard
 
