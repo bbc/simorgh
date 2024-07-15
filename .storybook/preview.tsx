@@ -9,10 +9,10 @@ import ThemeProvider from '../src/app/components/ThemeProvider';
 import { ServiceContextProvider } from '../src/app/contexts/ServiceContext';
 import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
+import { RequestContextProvider } from '../src/app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import withServicesDecorator from './withServicesDecorator';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
-import { RequestContextProvider } from '../src/app/contexts/RequestContext';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {

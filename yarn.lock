@@ -4566,6 +4566,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/manager-api@npm:8.2.2":
+  version: 8.2.2
+  resolution: "@storybook/manager-api@npm:8.2.2"
+  peerDependencies:
+    storybook: ^8.2.2
+  checksum: 10/ce246313724153e0b371a96549035916ff47606abf1d6be9c034ce9c7c44e5b842773e0934e898499672a0094be24094169cbb71ffa97b7a2975fb6bc066fb70
+  languageName: node
+  linkType: hard
+
 "@storybook/preset-react-webpack@npm:8.2.2":
   version: 8.2.2
   resolution: "@storybook/preset-react-webpack@npm:8.2.2"
@@ -15842,6 +15851,7 @@ __metadata:
     "@storybook/builder-webpack5": "npm:8.2.2"
     "@storybook/cli": "npm:8.2.2"
     "@storybook/core-common": "npm:8.2.2"
+    "@storybook/manager-api": "npm:8.2.2"
     "@storybook/react": "npm:8.2.2"
     "@storybook/react-webpack5": "npm:8.2.2"
     "@storybook/theming": "npm:8.2.2"
