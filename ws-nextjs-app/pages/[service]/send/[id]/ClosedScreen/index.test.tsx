@@ -22,7 +22,7 @@ describe('ClosedScreen', () => {
 
     const h1 = container.querySelector('h1');
 
-    expect(h1?.innerHTML).toBe('This is now closed');
+    expect(h1?.innerHTML).toBe(MOCK_TITLE);
   });
 
   it('Should have a P tag and TIME tag', async () => {

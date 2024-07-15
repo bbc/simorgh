@@ -34,7 +34,7 @@ export default function ClosedScreen({ title, closingTime }: Props) {
   const dateDescription = closedDescription?.split('{{date}}');
 
   return (
-    <GenericMessage heading={closedHeading}>
+    <GenericMessage heading={title}>
       {closingTime && (
         <>
           {`${dateDescription?.[0]}`}
