@@ -113,9 +113,11 @@ export default ({ service, pageType, variant, currentPath }) => {
                 cy.url().should('eq', $href);
               });
           });
+        cy.go('back');
       });
 
       it('clicking the message banner should navigate to the correct page', () => {
+        cy.log(`message banner is ${messageBanner}`);
         if (messageBanner) {
           cy.get(
             `[data-testid="${`message-banner-${idSanitiser(
