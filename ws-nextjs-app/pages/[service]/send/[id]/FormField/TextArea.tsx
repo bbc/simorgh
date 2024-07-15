@@ -70,7 +70,7 @@ export default ({
         css={[
           styles.textField,
           styles.textArea,
-          styles.focusIndicator,
+          styles.focusIndicatorInput,
           useErrorTheme && styles.textFieldError,
         ]}
         name={name}

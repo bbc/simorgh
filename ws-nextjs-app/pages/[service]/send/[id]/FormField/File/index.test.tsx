@@ -16,7 +16,7 @@ import {
   VIDEO_SVG_DATA_URI,
 } from './svgs';
 import { FormContext } from '../../FormContext';
-import { FileData, HtmlType } from '../../types';
+import { HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,

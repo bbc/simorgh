@@ -99,7 +99,7 @@ export default ({
       />
       <button
         aria-describedby={labelId}
-        css={[styles.fileUploadButton, styles.focusIndicator]}
+        css={[styles.fileUploadButton, styles.focusIndicatorInput]}
         type="button"
         onClick={() => handleUploadClick()}
       >
@@ -117,7 +117,7 @@ export default ({
           suffix={label}
           messageCode={messageCode}
           hasArrowStyle={false}
-          validation={{ min, max, fileTypes }}
+          validationCriteria={{ min, max, fileTypes }}
         />
       )}
       <input
