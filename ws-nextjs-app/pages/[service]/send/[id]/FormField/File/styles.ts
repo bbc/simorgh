@@ -107,5 +107,5 @@ export default {
       width: `${spacings.QUADRUPLE}rem`,
       height: `${spacings.QUADRUPLE}rem`,
     }),
-  focusIndicator: formFieldStyles.focusIndicator,
+  focusIndicatorInput: formFieldStyles.focusIndicatorInput,
 };

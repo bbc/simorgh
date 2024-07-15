@@ -30,7 +30,7 @@ export default ({
         <input
           css={[
             styles.checkbox,
-            styles.focusIndicator,
+            styles.focusIndicatorInput,
             useErrorTheme && styles.checkboxError,
           ]}
           id={id}
