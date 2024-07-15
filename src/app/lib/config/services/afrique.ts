@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgent',
         postedAt: 'Posté à',
         summary: 'Points clés',
+        shareButtonText: 'Partager',
       },
       gist: 'Points clés',
       error: {

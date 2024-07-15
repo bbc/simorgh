@@ -84,6 +84,7 @@ export const service: DefaultServiceConfig = {
         breaking: `Ivy'akakanya`,
         postedAt: 'Vyashizwe isaha',
         summary: 'Incamake',
+        shareButtonText: 'Sangira',
       },
       gist: 'Incamake',
       error: {

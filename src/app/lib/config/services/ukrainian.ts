@@ -85,6 +85,7 @@ const baseServiceConfig = {
       breaking: 'Терміново',
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
+      shareButtonText: 'Поділитися',
     },
     gist: 'Стисло',
     error: {

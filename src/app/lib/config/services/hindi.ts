@@ -93,6 +93,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग न्यूज़',
         postedAt: 'पोस्ट किया गया',
         summary: 'सारांश',
+        shareButtonText: 'साझा कीजिए',
       },
       gist: 'सारांश',
       error: {

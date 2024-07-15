@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ਤਾਜ਼ਾ',
         postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
         summary: 'ਸਾਰ',
+        shareButtonText: 'ਸਾਂਝਾ ਕਰੋ',
       },
       gist: 'ਸਾਰ',
       error: {

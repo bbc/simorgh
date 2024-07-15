@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Təcili xəbər',
         postedAt: 'Xəbərin vaxtı',
         summary: 'Xülasə',
+        shareButtonText: 'Paylaş',
       },
       gist: 'Xülasə',
       error: {

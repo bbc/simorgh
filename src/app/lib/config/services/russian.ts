@@ -132,6 +132,7 @@ export const mainTranslations = {
     breaking: 'Срочно',
     postedAt: 'Отправлено в',
     summary: 'Коротко',
+    shareButtonText: 'Поделиться',
   },
   gist: 'Коротко',
   error: {

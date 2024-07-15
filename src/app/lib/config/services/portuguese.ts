@@ -95,6 +95,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgente',
         postedAt: 'Publicado às',
         summary: 'Pontos-chave',
+        shareButtonText: 'Compartilhar',
       },
       gist: 'Pontos-chave',
       error: {

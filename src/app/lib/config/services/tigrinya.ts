@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ሓድሽ ዜና',
         postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
+        shareButtonText: 'ኣባፅሑ',
       },
       error: {
         404: {

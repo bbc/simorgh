@@ -91,6 +91,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'بریکنگ',
         postedAt: 'پوسٹ کیا گیا',
         summary: 'خلاصہ',
+        shareButtonText: 'شیئر',
       },
       gist: 'خلاصہ',
       error: {
