@@ -94,6 +94,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'عاجل',
         postedAt: 'توقيت النشر',
         summary: 'ملخص',
+        shareButtonText: 'شارك',
       },
       gist: 'ملخص',
       error: {

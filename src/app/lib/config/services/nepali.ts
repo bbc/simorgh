@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग',
         postedAt: 'पोस्ट गरिएको',
         summary: 'सारांश',
+        shareButtonText: 'शेयर गर्नुहोस्',
       },
       gist: 'सारांश',
       error: {
