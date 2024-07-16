@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Amma nu gahe',
         postedAt: '...tti maxxanfame',
         summary: 'Guduunfaa',
+        shareButtonText: 'Qoodi',
       },
       gist: 'Guduunfaa',
       error: {

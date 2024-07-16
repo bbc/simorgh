@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Newydd dorri',
         postedAt: 'Cyhoeddwyd am',
         summary: 'Crynodeb',
+        shareButtonText: 'Rhannu',
       },
       gist: 'Cipolwg',
       error: {

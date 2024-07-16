@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         breaking: '速報',
         postedAt: '投稿時間',
         summary: '要点',
+        shareButtonText: '共有する',
       },
       gist: '要点',
       error: {

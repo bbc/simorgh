@@ -171,6 +171,7 @@ export const service: SerbianConfig = {
         breaking: 'Vanredne',
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
+        shareButtonText: 'Deli',
       },
       gist: 'Sažetak',
       error: {
@@ -563,6 +564,7 @@ export const service: SerbianConfig = {
         breaking: 'Ванредне',
         postedAt: 'Објављено у',
         summary: 'Сажетак',
+        shareButtonText: 'Дели',
       },
       gist: 'Сажетак',
       error: {

@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'வந்துகொண்டிருக்கும் செய்தி',
         postedAt: 'பிரசுரிக்கப்பட்ட நேரம்',
         summary: 'முக்கிய சாராம்சம்',
+        shareButtonText: 'பகிர்க',
       },
       gist: 'முக்கிய சாராம்சம்',
       error: {

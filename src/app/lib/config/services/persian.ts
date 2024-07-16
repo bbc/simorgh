@@ -94,6 +94,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'خبر فوری',
         postedAt: 'به روزشده در',
         summary: 'خلاصه',
+        shareButtonText: 'هم‌رسانی',
       },
       gist: 'خلاصه',
       error: {

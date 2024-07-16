@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ሰበር',
         postedAt: 'የታተመዉ',
         summary: 'ጭምቅ ሃሳብ',
+        shareButtonText: 'ያጋሩ',
       },
       gist: 'ጭምቅ ሃሳብ',
       error: {

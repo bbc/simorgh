@@ -30,6 +30,7 @@ export interface Translations {
     breaking: string;
     postedAt: string;
     summary: string;
+    shareButtonText: string;
   };
   gist?: string;
   error: {

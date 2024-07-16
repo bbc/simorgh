@@ -85,6 +85,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
         summary: 'Taƙaitattu',
+        shareButtonText: 'Aika',
       },
       gist: 'Taƙaitattu',
       error: {

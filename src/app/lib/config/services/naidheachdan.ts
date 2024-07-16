@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Briseadh',
         postedAt: 'Air a chur suas aig',
         summary: 'Geàrr-chunntas',
+        shareButtonText: 'Sgaoil',
       },
       gist: 'Geàrr-shealladh',
       error: {
