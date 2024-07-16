@@ -87,7 +87,7 @@ export default {
       marginInlineStart: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
     }),
-  checkbox: ({ palette }: Theme) =>
+  checkbox: ({ palette, mq }: Theme) =>
     css({
       display: 'inline-block',
       flex: 'initial',
@@ -107,6 +107,12 @@ export default {
         display: 'inline-block',
         width: '100%',
         height: '100%',
+      },
+      [mq.HIGH_CONTRAST]: {
+        appearance: 'auto', // renders browser default checkbox
+        '&:checked::after': {
+          content: 'none',
+        },
       },
     }),
   checkboxError: ({ palette }: Theme) =>
