@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Чукул кабар',
         postedAt: 'Чыгарылган убакыт',
         summary: 'Корутунду',
+        shareButtonText: 'Бөлүшүү',
       },
       gist: 'Корутунду',
       error: {

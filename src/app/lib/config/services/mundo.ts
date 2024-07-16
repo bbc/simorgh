@@ -75,6 +75,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Último momento',
         postedAt: 'Publicado',
         summary: 'Puntos clave',
+        shareButtonText: 'Compartir',
       },
       gist: 'Sumario',
       error: {
