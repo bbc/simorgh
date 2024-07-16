@@ -15,12 +15,14 @@ const MaskedImage = ({
   imageWidth,
   altText = '',
   showPlaceholder = true,
+  position,
 }: {
   imageUrl: string;
   imageUrlTemplate: string;
   imageWidth: number;
   altText?: string;
   showPlaceholder?: boolean;
+  position: number;
 }) => {
   const { dir } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
@@ -60,6 +62,7 @@ const MaskedImage = ({
         fetchpriority="high"
         preload
         placeholder={showPlaceholder}
+        lazyLoad={position !== 0}
       />
     </div>
   );

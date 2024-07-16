@@ -12,6 +12,7 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];
   const { title, description, link, imageUrl, imageAlt } = summary;
+  const { position } = kyrgyzBillboard;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -25,6 +26,7 @@ describe('Billboard', () => {
         link={link}
         image={imageUrl}
         altText={imageAlt}
+        position={3}
       />,
     );
     const region = screen.getByRole('region');
@@ -39,6 +41,7 @@ describe('Billboard', () => {
         link={link}
         image={imageUrl}
         altText={imageAlt}
+        position={position}
       />,
     );
     const heading = screen.getByRole('heading', { level: 2, name: title });
@@ -56,6 +59,7 @@ describe('Billboard', () => {
         link={link}
         image={imageUrl}
         altText={imageAlt}
+        position={position}
       />,
     );
     expect(
@@ -71,6 +75,7 @@ describe('Billboard', () => {
         link={link}
         image={imageUrl}
         altText={imageAlt}
+        position={position}
       />,
     );
     expect(screen.getByText(description).nodeName).toBe('P');
@@ -84,10 +89,11 @@ describe('Billboard', () => {
         link={link}
         image={imageUrl}
         altText={imageAlt}
+        position={position}
       />,
     );
     const maskedImage = getByRole('img');
-    expect(maskedImage.getAttribute('src')).toEqual(imageUrl);
+    expect(maskedImage.getAttribute('src')).toEqual(imageUrl); // test is failing but when the BFF code change is in, it won't any more as image url will be webp in both places
   });
 
   it('should have an masked image with the correct alt text', () => {
@@ -98,6 +104,7 @@ describe('Billboard', () => {
         link={link}
         image={imageUrl}
         altText={imageAlt}
+        position={position}
       />,
     );
     const maskedImage = getByAltText(imageAlt);
@@ -118,6 +125,7 @@ describe('Billboard', () => {
             link={link}
             image={imageUrl}
             altText={imageAlt}
+            position={position}
           />,
         );
 
@@ -133,6 +141,7 @@ describe('Billboard', () => {
             image={imageUrl}
             eventTrackingData={eventTrackingData}
             altText={imageAlt}
+            position={position}
           />,
         );
 
@@ -153,6 +162,7 @@ describe('Billboard', () => {
             link={link}
             image={imageUrl}
             altText={imageAlt}
+            position={position}
           />,
         );
 
@@ -172,6 +182,7 @@ describe('Billboard', () => {
             image={imageUrl}
             eventTrackingData={eventTrackingData}
             altText={imageAlt}
+            position={position}
           />,
         );
 
@@ -189,6 +200,7 @@ describe('Billboard', () => {
             image={imageUrl}
             eventTrackingData={eventTrackingData}
             altText={imageAlt}
+            position={position}
           />,
         );
 
@@ -210,6 +222,7 @@ describe('Billboard', () => {
           image={imageUrl}
           altText={imageAlt}
           showLiveLabel
+          position={position}
         />,
       );
 
@@ -229,6 +242,7 @@ describe('Billboard', () => {
           image={imageUrl}
           altText={imageAlt}
           showLiveLabel
+          position={position}
         />,
         {
           service: 'kyrgyz',

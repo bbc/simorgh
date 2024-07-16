@@ -102,6 +102,7 @@ export default ({
               }}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
+              position={position}
             />
           </div>
         );
@@ -122,6 +123,7 @@ export default ({
               componentName: messageBannerId,
               detailedPlacement: `${position + 1}`,
             }}
+            position={position}
           />
         );
       }

@@ -191,27 +191,16 @@ describe('Home Page', () => {
   });
 
   describe('Lazy Loading', () => {
-    it('Only the first image, message banner, and billboard on the homepage are not lazy loaded, but all others are', () => {
+    it('Only the first image is not lazy loaded, but all others are', () => {
       // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
       render(<HomePage pageData={homePageData} />, {
         service: 'kyrgyz',
       });
 
-      const nonLazyLoadImages: string[] = [];
-      document
-        .querySelectorAll(
-          `[data-testid^="billboard"] img, [data-testid^="message-banner"] img`,
-        )
-        .forEach(image =>
-          nonLazyLoadImages.push(image.getAttribute(`src`) || ''),
-        );
-
       const imageList = document.querySelectorAll('img');
 
       imageList.forEach((image, index) => {
-        const src = image.getAttribute('src') || '';
-
-        if (index === 0 || nonLazyLoadImages.includes(src)) {
+        if (index === 0) {
           expect(image.getAttribute('loading')).toBeNull();
         } else {
           expect(image.getAttribute('loading')).toBe('lazy');

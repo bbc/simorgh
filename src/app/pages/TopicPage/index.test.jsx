@@ -297,7 +297,24 @@ describe('Topic Page', () => {
       expect(messageBanners).toHaveLength(1);
     });
   });
+  describe('Lazy Loading', () => {
+    it('Only the first image is not lazy loaded, but all others are', () => {
+      // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+      render(<TopicPage pageData={kyrgyzTopicWithMessageBanners} />, {
+        service: 'kyrgyz',
+      });
 
+      const imageList = document.querySelectorAll('img');
+
+      imageList.forEach((image, index) => {
+        if (index === 0) {
+          expect(image.getAttribute('loading')).toBeNull();
+        } else {
+          expect(image.getAttribute('loading')).toBe('lazy');
+        }
+      });
+    });
+  });
   describe('Analytics', () => {
     it('should render a Chartbeat component', () => {
       const { getByText } = render(
