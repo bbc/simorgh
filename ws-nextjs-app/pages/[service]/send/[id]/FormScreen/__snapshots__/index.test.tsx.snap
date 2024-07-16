@@ -284,6 +284,19 @@ exports[`Form should render and match snapshot 1`] = `
   height: 100%;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-20 {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    -ms-appearance: auto;
+    appearance: auto;
+  }
+
+  .emotion-20:checked::after {
+    content: none;
+  }
+}
+
 .emotion-20:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
