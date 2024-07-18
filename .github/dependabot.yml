@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: 'yarn'
+    directories:
+      - '/'
+      - '/ws-nextjs-app'
+    schedule:
+      interval: 'daily'
+    ignore:
+      - dependency-name: '@bbc*'
