@@ -85,6 +85,7 @@ const baseServiceConfig = {
       breaking: 'Терміново',
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
+      shareButtonText: 'Поділитися',
     },
     gist: 'Стисло',
     error: {
@@ -345,10 +346,6 @@ const baseServiceConfig = {
     {
       title: 'Подкасти',
       url: '/ukrainian/podcasts/p09jsy3h',
-    },
-    {
-      title: 'Євро – 2024',
-      url: '/ukrainian/topics/ckvv0w1kqnzt',
     },
   ],
 };

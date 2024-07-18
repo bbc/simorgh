@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
+import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
@@ -47,6 +48,17 @@ describe('Home Page', () => {
     expect(container.getElementsByTagName('section').length).toEqual(
       curationsWithSummaries.length,
     );
+  });
+
+  it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
+    const { container } = render(
+      <HomePage pageData={pidginHomePageDataFixture} />,
+      {
+        service: 'pidgin',
+      },
+    );
+    expect(container.querySelectorAll('h2').length).toBe(5);
+    expect(container.querySelectorAll('h3').length).toBe(27);
   });
 
   it('should apply provided margin size to the main element', () => {
@@ -112,9 +124,10 @@ describe('Home Page', () => {
     render(<HomePage pageData={homePageData} />, {
       service: 'kyrgyz',
     });
-
     const getLinkedDataOutput = () => {
-      return JSON.parse(Helmet.peek().scriptTags[0].innerHTML);
+      return Helmet.peek().scriptTags.map(({ innerHTML }) =>
+        JSON.parse(innerHTML),
+      );
     };
 
     expect(getLinkedDataOutput()).toMatchSnapshot();

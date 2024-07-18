@@ -1,30 +1,43 @@
 /** @jsx jsx */
-import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useContext } from 'react';
 import { InputProps } from '../types';
 import styles from './styles';
+import fallbackTranslations from '../fallbackTranslations';
 
-const optionalTranslation = '(optional)';
-export default ({
-  id,
-  forId,
-  children,
-  className,
-  required,
-}: PropsWithChildren<{
+type Props = {
   id?: InputProps['id'];
   forId: string;
   className?: string;
+  labelText: string;
   required: boolean;
-}>) => (
-  <Text
-    as="label"
-    {...(id && { id })}
-    className={className}
-    htmlFor={forId}
-    css={styles.fieldLabel}
-  >
-    {required ? children : `${children} ${optionalTranslation}`}
-  </Text>
-);
+  useErrorTheme: boolean;
+};
+
+export default ({
+  id,
+  forId,
+  labelText,
+  className,
+  required,
+  useErrorTheme,
+}: Props) => {
+  const {
+    translations: { ugc: { optional = fallbackTranslations.optional } = {} },
+  } = useContext(ServiceContext);
+
+  return (
+    <Text
+      as="label"
+      className={className}
+      htmlFor={forId}
+      css={[styles.fieldLabel, useErrorTheme && styles.fieldLabelError]}
+      dangerouslySetInnerHTML={{
+        __html: required ? labelText : `${labelText} (${optional})`,
+      }}
+      {...(id && { id })}
+    />
+  );
+};

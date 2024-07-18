@@ -150,5 +150,13 @@ describe('Post', () => {
         container.querySelector('[data-e2e="media-loader__placeholder"]'),
       ).toBeInTheDocument();
     });
+
+    it('should not render share button by default', async () => {
+      await act(async () => {
+        render(<Post post={singlePostWithTitle} />);
+      });
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    });
   });
 });

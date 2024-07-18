@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Kókó',
         postedAt: 'Tí a fiṣọwọ́ ní',
         summary: 'Ìsọníṣókí',
+        shareButtonText: 'Ṣe alábàápín',
       },
       gist: 'Ìsọníṣókí',
       error: {

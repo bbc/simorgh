@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'War deg deg ah',
         postedAt: '',
         summary: 'Kooban',
+        shareButtonText: 'La wadaag',
       },
       gist: 'Kooban',
       error: {

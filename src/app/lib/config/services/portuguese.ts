@@ -95,6 +95,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgente',
         postedAt: 'Publicado às',
         summary: 'Pontos-chave',
+        shareButtonText: 'Compartilhar',
       },
       gist: 'Pontos-chave',
       error: {
@@ -279,6 +280,73 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
       latestMediaTitle: 'Mais recentes',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'opcional',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'O que você está uploading:',
+        fileUploadButton: 'Selecione um arquivo',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Enviar',
+
+        // Validation
+        validationRequired: 'Falta alguma coisa.',
+        validationInvalidEmail:
+          'Algo não está correto. Digite um endereço de email válido.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'O número de arquivos não é suficiente. Adicione pelo menos {{minFiles}} arquivos.',
+        validationFilesTooMany:
+          'Existem muitos arquivos. Você pode adicionar até {{maxFiles}} arquivos.',
+        validationFilesInvalidType:
+          'Esse tipo de arquivo não pode ser utilizado. Adicionar {{fileTypes}}.',
+        validationFilesTooSmall:
+          'Este arquivo está corrompido. Tente escolher outro arquivo.',
+        validationFilesSizeExceeded:
+          'Estes arquivos são muito grandes. Você só pode fazer upload de até 1,2GB de cada vez.',
+        validationWordLimit: 'Máximo de {{wordLimit}} palavras',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'Número de referência',
+        submissionInfoSignedOutMessage:
+          'Você deve anotar esses detalhes para sua referência.',
+        privacyInfoHtml:
+          'Não se preocupe, nós protegemos seus dados pessoais — para maiores detalhes, leia {{privacyInfoLink}}.',
+        emailToHtml:
+          'Envie email para {{emailLink}} caso você mude de ideia. Mencione o número de referência e diga apenas que você não quer que o material seja utilizado.',
+        removalGuidelineText: undefined,
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'Uploading seus arquivos...',
+        uploadingDescription: 'Aguarde até finalizar.',
+
+        // Success Screen
+        successHeading: 'Mensagem enviada',
+        successDescription: 'Obrigado por entrar em contato.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'Sua mensagem não foi enviada',
+        errorDescription: 'Tente enviar novamente.',
+
+        // Closed Screen
+        closedHeading: 'Está encerrado',
+        closedDescription: 'Foi encerrado em {{date}}.',
+      },
     },
     mostRead: {
       header: 'Mais lidas',

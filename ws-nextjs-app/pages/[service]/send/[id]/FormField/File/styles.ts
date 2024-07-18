@@ -1,5 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
+import formFieldStyles from '../styles';
 
 export default {
   fileInput: () =>
@@ -44,7 +45,8 @@ export default {
       padding: '0',
       margin: '0',
     }),
-  fileListItem: ({ spacings, palette, fontVariants, fontSizes, mq }: Theme) =>
+  fileListItem: () => css({ listStyleType: 'none' }),
+  fileDetails: ({ spacings, palette, fontVariants, fontSizes, mq }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -53,6 +55,7 @@ export default {
       paddingBlock: `${pixelsToRem(13)}rem`,
       paddingInlineEnd: `${pixelsToRem(17)}rem`,
       height: `${spacings.QUADRUPLE * 2}rem`,
+
       [mq.GROUP_3_MIN_WIDTH]: {
         width: '85%',
       },
@@ -104,4 +107,5 @@ export default {
       width: `${spacings.QUADRUPLE}rem`,
       height: `${spacings.QUADRUPLE}rem`,
     }),
+  focusIndicatorInput: formFieldStyles.focusIndicatorInput,
 };
