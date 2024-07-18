@@ -3,8 +3,24 @@ updates:
   - package-ecosystem: 'yarn'
     directories:
       - '/'
-      - '/ws-nextjs-app'
+      - 'ws-nextjs-app'
     schedule:
       interval: 'daily'
+    open-pull-requests-limit: 2
     ignore:
-      - dependency-name: '@bbc*'
+      - dependency-name: '@bbc/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@loadable/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'webpack'
+        update-types: ['version-update:semver-major']
+    groups:
+      psammead-minor-patch:
+        patterns:
+          - '@bbc/*'
+      loadable-minor-patch:
+        patterns:
+          - '@loadable/*'
+      webpack-minor-patch:
+        patterns:
+          - 'webpack'
