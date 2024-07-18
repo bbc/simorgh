@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: 'npm'
     directories:
       - '/'
-      - 'ws-nextjs-app'
+      - '/ws-nextjs-app'
     schedule:
       interval: 'daily'
     open-pull-requests-limit: 2
