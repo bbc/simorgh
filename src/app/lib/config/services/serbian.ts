@@ -111,10 +111,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat',
       },
       {
-        title: 'Euro 2024',
-        url: '/serbian/lat/topics/cl442rlk0mjt',
-      },
-      {
         title: 'Ukrajina',
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
@@ -498,10 +494,6 @@ export const service: SerbianConfig = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
-      },
-      {
-        title: 'Еуро 2024',
-        url: '/serbian/cyr/topics/cz998753m4qt',
       },
       {
         title: 'Украјина',

@@ -321,10 +321,6 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
-        title: 'Euro 2024',
-        url: '/turkce/topics/cd11gkz9yvxt',
-      },
-      {
         title: 'Rusya-Ukrayna Savaşı',
         url: '/turkce/topics/cy0ryl4pvx6t',
       },
