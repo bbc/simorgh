@@ -336,6 +336,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'செய்தி செல்லவில்லை',
         errorDescription: 'மீண்டும் முயற்சி',
+
+        // Closed Screen
+        closedHeading: 'இப்போது இது மூடப்பட்டுள்ளது.',
+        closedDescription: 'அன்று இது நிறைவடையும் {{date}}.',
       },
     },
     mostRead: {

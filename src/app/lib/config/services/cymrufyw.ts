@@ -302,6 +302,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Dydy dy ffeiliau ddim wedi cael eu llwytho i fyny.',
         errorDescription: 'Ceisia eu llwytho i fyny eto.',
+
+        // Closed Screen
+        closedHeading: 'Mae hwn wedi cau nawr',
+        closedDescription: 'Fe wnaeth hwn gau ar {{date}}.',
       },
     },
     mostRead: {

@@ -421,6 +421,10 @@ export const service: SerbianConfig = {
         // Error Screen
         errorHeading: 'Vaša poruka nije otišla',
         errorDescription: 'Pokušajte da pošaljete ponovo.',
+
+        // Closed Screen
+        closedHeading: 'Unos je sada zatvoren',
+        closedDescription: 'Unos je zatvoren {{date}}',
       },
     },
   },
