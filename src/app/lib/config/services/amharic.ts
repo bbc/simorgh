@@ -307,6 +307,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'መልዕክትዎ አልተጫነም',
         errorDescription: 'በድጋሚ ለመጫን ይሞክሩ',
+
+        // Closed Screen
+        closedHeading: 'ይህ አሁን ዝግ ነው',
+        closedDescription: 'ይህ የተዘጋው {{date}} ነው።',
       },
     },
     mostRead: {
