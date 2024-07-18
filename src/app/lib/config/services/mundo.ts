@@ -75,6 +75,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Último momento',
         postedAt: 'Publicado',
         summary: 'Puntos clave',
+        shareButtonText: 'Compartir',
       },
       gist: 'Sumario',
       error: {
@@ -320,6 +321,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Disculpa, hubo un problema al subir esto.',
         errorDescription: 'Por favor, regresa e inténtalo más tarde.',
+
+        // Closed Screen
+        closedHeading: 'Esto ya está cerrado.',
+        closedDescription: 'Esto cierra el {{date}}.',
       },
     },
     mostRead: {

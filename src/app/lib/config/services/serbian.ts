@@ -171,6 +171,7 @@ export const service: SerbianConfig = {
         breaking: 'Vanredne',
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
+        shareButtonText: 'Deli',
       },
       gist: 'Sažetak',
       error: {
@@ -420,6 +421,10 @@ export const service: SerbianConfig = {
         // Error Screen
         errorHeading: 'Vaša poruka nije otišla',
         errorDescription: 'Pokušajte da pošaljete ponovo.',
+
+        // Closed Screen
+        closedHeading: 'Unos je sada zatvoren',
+        closedDescription: 'Unos je zatvoren {{date}}',
       },
     },
   },
@@ -559,6 +564,7 @@ export const service: SerbianConfig = {
         breaking: 'Ванредне',
         postedAt: 'Објављено у',
         summary: 'Сажетак',
+        shareButtonText: 'Дели',
       },
       gist: 'Сажетак',
       error: {

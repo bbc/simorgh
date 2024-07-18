@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'وروستی',
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
+        shareButtonText: 'شریک یې کړئ',
       },
       gist: 'لنډیز',
       error: {

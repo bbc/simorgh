@@ -16986,7 +16986,7 @@ __metadata:
     next: "npm:14.2.3"
     npm-run-all2: "npm:6.2.0"
     ts-node: "npm:^10.9.2"
-    undici: "npm:6.18.2"
+    undici: "npm:6.19.2"
   languageName: unknown
   linkType: soft
 
@@ -18493,10 +18493,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.18.2":
-  version: 6.18.2
-  resolution: "undici@npm:6.18.2"
-  checksum: 10/27c66d84d02c2e4375ad30fae081fa1f4c4158e0880f51bb5ea7b4a6fc0a6582fa68084d45c6cae3cb56a754607191a973621a15d271111cee790bf0925db00b
+"undici@npm:6.19.2":
+  version: 6.19.2
+  resolution: "undici@npm:6.19.2"
+  checksum: 10/f4895c0c1e2fcde18076ac98965c231875811b8e14ceab1a7b19e940ed1a2fce69e0864e1186bfdc9347dffe0f39a00daf6dd5e7c0169b2b33de59a859dc2f1d
   languageName: node
   linkType: hard
 

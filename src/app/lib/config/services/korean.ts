@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: '속보',
         postedAt: '작성',
         summary: '요약',
+        shareButtonText: '공유',
       },
       gist: '요약',
       error: {

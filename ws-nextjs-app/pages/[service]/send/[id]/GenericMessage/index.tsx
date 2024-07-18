@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { forwardRef } from 'react';
+import React, { forwardRef, ReactNode } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
@@ -7,7 +7,7 @@ import styles from './styles';
 
 interface Props {
   heading: string;
-  children: string;
+  children: ReactNode | string;
 }
 
 const GenericMessage = forwardRef<HTMLElement, Props>(
@@ -24,7 +24,7 @@ const GenericMessage = forwardRef<HTMLElement, Props>(
         >
           {heading}
         </Heading>
-        <Paragraph>{children}</Paragraph>
+        {children && <Paragraph>{children}</Paragraph>}
       </>
     );
   },

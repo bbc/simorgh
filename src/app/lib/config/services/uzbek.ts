@@ -83,6 +83,7 @@ const defaultCyrillicConfig = {
       breaking: 'Шошилинч',
       postedAt: '...да чоп этилган',
       summary: 'Қисқача',
+      shareButtonText: 'Баҳам кўринг',
     },
     gist: 'Хулоса',
     error: {

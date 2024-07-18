@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Briseadh',
         postedAt: 'Air a chur suas aig',
         summary: 'Geàrr-chunntas',
+        shareButtonText: 'Sgaoil',
       },
       gist: 'Geàrr-shealladh',
       error: {
@@ -310,6 +311,10 @@ export const service: DefaultServiceConfig = {
         errorHeading:
           "Cha do dh'fhalbh do theachdaireachd · Your message didn't send",
         errorDescription: 'Feuch ri chur a-rithist. · Try sending it again.',
+
+        // Closed Screen
+        closedHeading: 'Tha seo a-nise dùinte.',
+        closedDescription: 'Dhùin seo air {{date}}.',
       },
     },
     mostRead: {

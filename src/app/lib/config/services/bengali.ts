@@ -75,6 +75,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ব্রেকিং',
         postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',
+        shareButtonText: 'শেয়ার করুন',
       },
       gist: 'সার সংক্ষেপ',
       error: {

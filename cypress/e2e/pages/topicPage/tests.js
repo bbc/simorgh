@@ -99,7 +99,7 @@ export default ({ service, pageType, variant, currentPath }) => {
           });
       });
 
-      it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
+      it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
           .first()
@@ -113,6 +113,7 @@ export default ({ service, pageType, variant, currentPath }) => {
                 cy.url().should('eq', $href);
               });
           });
+        cy.go('back');
       });
 
       it('clicking the message banner should navigate to the correct page', () => {

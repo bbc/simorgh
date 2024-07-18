@@ -178,6 +178,7 @@ export const service: ZhongwenConfig = {
         breaking: '最新消息',
         postedAt: '张贴于',
         summary: '概要',
+        shareButtonText: '分享',
       },
       gist: '概要',
       error: {
@@ -473,6 +474,7 @@ export const service: ZhongwenConfig = {
         breaking: '最新消息',
         postedAt: '張貼在',
         summary: '概要',
+        shareButtonText: '分享',
       },
       gist: '概要',
       error: {
