@@ -26,7 +26,7 @@ updates:
         patterns:
           - '@storybook/*'
           - 'storybook'
-      psammead-minor-patch:
+      bbc-minor-patch:
         patterns:
           - '@bbc/*'
       loadable-minor-patch:
