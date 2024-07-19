@@ -3,11 +3,18 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { validVideoWithCaptionBlock } from './fixtureData';
+import {
+  validVideoWithCaptionBlock,
+  validVideoWithCaptionAndTranscriptBlock,
+} from './fixtureData';
 import MediaPlayerContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 
-const Component = ({ service, isAmp = false }) => {
+const Component = ({
+  service,
+  isAmp = false,
+  blocks = validVideoWithCaptionBlock,
+}) => {
   return (
     <RequestContextProvider
       isAmp={isAmp}
@@ -29,7 +36,7 @@ const Component = ({ service, isAmp = false }) => {
       >
         <BrowserRouter>
           <MediaPlayerContainer
-            blocks={validVideoWithCaptionBlock}
+            blocks={blocks}
             assetId="c3wmq4d1y3wo"
             assetType="articles"
             showPlaceholder
@@ -47,6 +54,13 @@ export default {
 };
 
 export const Amp = (_, globalArgs) => <Component isAmp {...globalArgs} />;
+export const CanonicalWithTranscript = () => (
+  <Component
+    isAmp
+    blocks={validVideoWithCaptionAndTranscriptBlock}
+  />
+);
+
 export const Canonical = Component;
 
 Amp.decorators = [AmpDecorator];
