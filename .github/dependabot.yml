@@ -15,6 +15,14 @@ updates:
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
     groups:
+      babel:
+        patterns:
+          - '@babel/*'
+          - 'babel-*'
+      storybook:
+        patterns:
+          - '@storybook/*'
+          - 'storybook'
       psammead-minor-patch:
         patterns:
           - '@bbc/*'
@@ -24,3 +32,4 @@ updates:
       webpack-minor-patch:
         patterns:
           - 'webpack'
+          - 'webpack-*'
