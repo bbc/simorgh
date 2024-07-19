@@ -92,11 +92,9 @@ const TopicPage = ({ pageData }) => {
                   visualStyle,
                   visualProminence,
                 });
-
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
-                    headingLevel={curationTitle && 3}
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
                     summaries={summaries}

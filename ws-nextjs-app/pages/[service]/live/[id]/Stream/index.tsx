@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
@@ -20,6 +20,22 @@ const Stream = ({
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
   } = useContext(ServiceContext);
+
+  const [hasShareApi, setHasShareApi] = useState(false);
+  const [hashValue, setHashValue] = useState('');
+
+  useEffect(() => {
+    const URLHash = window.location.hash.substring(1);
+    setHashValue(URLHash);
+
+    if (hashValue) {
+      window.location.href = `#${hashValue}`;
+    }
+
+    if ('share' in navigator) {
+      setHasShareApi(true);
+    }
+  }, [hashValue]);
 
   if (!streamContent) return null;
 
@@ -48,12 +64,12 @@ const Stream = ({
       )}
 
       {hasSinglePost ? (
-        <Post post={streamResults[0]} />
+        <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
         <ol role="list" css={styles.orderedList}>
           {streamResults.map(post => (
             <li key={post.urn} css={styles.listItem}>
-              <Post post={post} />
+              <Post post={post} hasShareApi={hasShareApi} />
             </li>
           ))}
         </ol>

@@ -32,11 +32,19 @@ export default {
     css({
       color: palette.ERROR_CORE,
     }),
-  focusIndicator: ({ palette }: Theme) =>
+  focusIndicatorInput: ({ palette }: Theme) =>
     css({
       '&:focus': {
         outline: `${focusIndicatorThickness} solid ${palette.WHITE}`,
         boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.BLACK}`,
+        outlineOffset: `${focusIndicatorThickness}`,
+      },
+    }),
+  focusIndicatorErrorSummary: ({ palette }: Theme) =>
+    css({
+      '&:focus': {
+        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
@@ -79,7 +87,7 @@ export default {
       marginInlineStart: `${spacings.DOUBLE}rem`,
       cursor: 'pointer',
     }),
-  checkbox: ({ palette }: Theme) =>
+  checkbox: ({ palette, mq }: Theme) =>
     css({
       display: 'inline-block',
       flex: 'initial',
@@ -99,6 +107,12 @@ export default {
         display: 'inline-block',
         width: '100%',
         height: '100%',
+      },
+      [mq.HIGH_CONTRAST]: {
+        appearance: 'auto', // renders browser default checkbox
+        '&:checked::after': {
+          content: 'none',
+        },
       },
     }),
   checkboxError: ({ palette }: Theme) =>
@@ -121,20 +135,19 @@ export default {
         },
       },
     }),
-  errorMessageBox:
-    (hasArrowStyle: boolean) =>
-    ({ palette, spacings }: Theme) =>
-      css({
-        backgroundColor: palette.ERROR_CORE,
-        outline: 'solid 0.0625rem transparent',
-        padding: '0.75rem',
-        display: 'flex',
-        alignItems: 'center',
-        ...(!hasArrowStyle && {
-          marginTop: `${spacings.FULL}rem`,
-          marginBottom: `${spacings.FULL}rem`,
-        }),
-      }),
+  errorMessageBox: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.ERROR_CORE,
+      outline: 'solid 0.0625rem transparent',
+      padding: '0.75rem',
+      display: 'flex',
+      alignItems: 'center',
+    }),
+  hasArrowStyle: ({ spacings }: Theme) =>
+    css({
+      marginTop: `${spacings.FULL}rem`,
+      marginBottom: `${spacings.FULL}rem`,
+    }),
   errorArrow: ({ palette, spacings }: Theme) =>
     css({
       backgroundColor: palette.ERROR_CORE,

@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Na Akpọtụ Ugbu A',
         postedAt: 'Ebisara na',
         summary: 'Nchịkọta',
+        shareButtonText: 'Kekọrịta',
       },
       gist: 'Nchịkọta',
       error: {

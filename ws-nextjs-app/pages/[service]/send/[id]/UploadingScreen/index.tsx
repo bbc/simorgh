@@ -18,8 +18,8 @@ export default function UploadingScreen({ title }: Props) {
   } = useContext(ServiceContext);
 
   useEffect(() => {
-    document.title = `Uploading: ${title}`;
-  }, [title]);
+    document.title = `${uploadingHeading}: ${title}`;
+  }, [title, uploadingHeading]);
 
   const ref = useRef<HTMLHeadingElement>(null);
   useEffect(() => {

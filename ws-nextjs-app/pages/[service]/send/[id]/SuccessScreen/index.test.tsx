@@ -11,6 +11,8 @@ jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
 
+const MOCK_TITLE = 'Test Title';
+
 describe('SuccessScreen', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
@@ -18,7 +20,7 @@ describe('SuccessScreen', () => {
 
   it('Should have a h1', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen />);
+      return render(<SuccessScreen title={MOCK_TITLE} />);
     });
     const h1 = container.querySelector('h1');
 
@@ -36,7 +38,7 @@ describe('SuccessScreen', () => {
     const { container } = await act(() => {
       return render(
         <FormContext.FormContextProvider fields={[]}>
-          <SuccessScreen />
+          <SuccessScreen title={MOCK_TITLE} />
         </FormContext.FormContextProvider>,
       );
     });
@@ -46,7 +48,7 @@ describe('SuccessScreen', () => {
 
   it('Should have a retention policy', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen />);
+      return render(<SuccessScreen title={MOCK_TITLE} />);
     });
 
     expect(container.innerHTML).toContain(
@@ -56,7 +58,7 @@ describe('SuccessScreen', () => {
 
   it('Should provide an email for removal services', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen />);
+      return render(<SuccessScreen title={MOCK_TITLE} />);
     });
 
     const emailAnchor = container.querySelector(
@@ -68,7 +70,7 @@ describe('SuccessScreen', () => {
 
   it('Should have a privacy policy link', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen />);
+      return render(<SuccessScreen title={MOCK_TITLE} />);
     });
 
     const policyAnchor = container.querySelector(

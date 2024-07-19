@@ -115,7 +115,7 @@
             "min": 0,
             "max": 3
           },
-          "label": "Attach your file (optional)",
+          "label": "Upload your photos and videos",
           "description": "",
           "htmlType": "file"
         },
@@ -155,9 +155,7 @@
   "includeDataRetentionText": true,
   "includeRightToRevokeText": true,
   "includeRemovalGuidelineText": true,
-  "emailAddressFields": [
-    "txt130088442"
-  ],
+  "emailAddressFields": ["txt130088442"],
   "promo": {
     "title": "",
     "promos": []

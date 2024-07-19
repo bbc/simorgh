@@ -2,8 +2,10 @@ import { GetServerSideProps } from 'next';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import isLitePath from '#app/routes/utils/isLitePath';
+import isAppPath from '#app/routes/utils/isAppPath';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 import UGCPageLayout from './UGCPageLayout';
+import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -11,7 +13,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
 
+  const { headers: reqHeaders } = context.req;
   const isLite = isLitePath(context.resolvedUrl);
+  const isApp = isAppPath(context.resolvedUrl);
 
   const {
     id,
@@ -33,7 +37,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
+      bbcOrigin: reqHeaders['bbc-origin'] || null,
+      error: data?.error || null,
       id,
+      isApp,
       isLite,
       isAmp: false,
       isNextJs: true,
@@ -47,11 +54,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
           }
         : null,
       pageType: UGC_PAGE,
-      pathname: null,
+      pathname: context.resolvedUrl,
       service,
       status: status ?? 500,
       toggles,
+      variant: variant?.[0] || null,
       timeOnServer: Date.now(), // TODO: check if needed?
+      ...extractHeaders(reqHeaders),
     },
   };
 };

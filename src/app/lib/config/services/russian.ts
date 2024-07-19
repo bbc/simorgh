@@ -132,6 +132,7 @@ export const mainTranslations = {
     breaking: 'Срочно',
     postedAt: 'Отправлено в',
     summary: 'Коротко',
+    shareButtonText: 'Поделиться',
   },
   gist: 'Коротко',
   error: {
@@ -171,7 +172,7 @@ export const mainTranslations = {
     listItemImage: 'Добавить фото',
     published: 'Опубликовано',
     reportingFrom: 'Место сообщения',
-    role: 'Должность',
+    role: 'Место работы',
   },
   media: {
     noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
@@ -297,6 +298,10 @@ export const mainTranslations = {
     // Error Screen
     errorHeading: 'Ваше сообщение не отправлено',
     errorDescription: 'Попробуйте отправить еще раз',
+
+    // Closed Screen
+    closedHeading: 'Прием закрыт',
+    closedDescription: 'Прием закрылся {{date}}.',
   },
 };
 
