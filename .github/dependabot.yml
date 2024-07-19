@@ -19,6 +19,9 @@ updates:
         patterns:
           - '@babel/*'
           - 'babel-*'
+      emotion:
+        patterns:
+          - '@emotion/*'
       storybook:
         patterns:
           - '@storybook/*'
