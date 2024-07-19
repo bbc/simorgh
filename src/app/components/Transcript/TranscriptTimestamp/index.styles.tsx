@@ -8,13 +8,7 @@ const styles = {
       // marginBottom: 'inherit',
       width: '100%',
       [mq.GROUP_1_MIN_WIDTH]: {
-        width: '25%',
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        width: '15%',
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: '10%',
+        width: 'auto',
       },
     }),
 };

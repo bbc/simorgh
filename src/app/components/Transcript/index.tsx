@@ -23,11 +23,10 @@ const renderTranscriptItems = (transcriptBlocks: any) =>
     return (
       // eslint-disable-next-line react/no-array-index-key
       <li key={index} css={styles.listItem}>
-        <Text>
-          <span role="text">
-            <TranscriptTimestamp timestamp={formattedTimestamp} />
-            <span css={styles.itemText}>{text}</span>
-          </span>
+        <Text role="text" css={styles.transcriptText}>
+          <TranscriptTimestamp timestamp={formattedTimestamp} />
+          <VisuallyHiddenText> </VisuallyHiddenText>
+          <span css={styles.itemText}>{text}</span>
         </Text>
       </li>
     );
@@ -44,15 +43,20 @@ const Transcript = ({ transcript, title }: any) => {
   return (
     <details css={styles.transcript}>
       <summary css={styles.summary}>
-        <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
+        <Text
+          size="pica"
+          fontVariant="sansBold"
+          css={styles.summaryTitle}
+          role="text"
+        >
           Read transcript
         </Text>
         <VisuallyHiddenText>, {title}</VisuallyHiddenText>
       </summary>
-      <ol css={styles.ul} role="list">
+      <ul css={styles.ul} role="list">
         {renderTranscriptItems(transcriptBlocks)}
-      </ol>
-      <Text size="brevier" css={styles.disclaimer}>
+      </ul>
+      <Text size="brevier" css={styles.disclaimer} as="strong">
         This transcript was auto generated.
       </Text>
     </details>
