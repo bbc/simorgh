@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'وروستی',
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
+        shareButtonText: 'شریک یې کړئ',
       },
       gist: 'لنډیز',
       error: {
@@ -274,11 +275,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'تر ټولو ډېر لیدل شوی',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

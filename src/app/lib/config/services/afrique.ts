@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgent',
         postedAt: 'Posté à',
         summary: 'Points clés',
+        shareButtonText: 'Partager',
       },
       gist: 'Points clés',
       error: {
@@ -269,11 +270,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Les plus vus',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

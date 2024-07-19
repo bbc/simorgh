@@ -304,6 +304,65 @@ const pidginPageData = {
           position: [6],
         },
         {
+          id: '21bc192b',
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                id: '78a0870a',
+                type: 'altText',
+                model: {
+                  blocks: [
+                    {
+                      id: 'c6fbe914',
+                      type: 'text',
+                      model: {
+                        blocks: [
+                          {
+                            id: 'b4f87fca',
+                            type: 'paragraph',
+                            model: {
+                              text: '...',
+                              blocks: [
+                                {
+                                  id: '487e481b',
+                                  type: 'fragment',
+                                  model: {
+                                    text: '...',
+                                    attributes: [],
+                                  },
+                                  position: [6, 1, 1, 1, 1],
+                                },
+                              ],
+                            },
+                            position: [6, 1, 1, 1],
+                          },
+                        ],
+                      },
+                      position: [6, 1, 1],
+                    },
+                  ],
+                },
+                position: [6, 1],
+              },
+              {
+                id: '03897da1',
+                type: 'rawImage',
+                model: {
+                  width: 819,
+                  height: 461,
+                  locator: '1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg',
+                  originCode: 'cpsprodpb',
+                  copyrightHolder: 'Getty Images',
+                  suitableForSyndication: true,
+                },
+                position: [6, 2],
+              },
+            ],
+          },
+          position: [6],
+        },
+        {
           id: 'e094dc5b',
           type: 'wsoj',
           model: {

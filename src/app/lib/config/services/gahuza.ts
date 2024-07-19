@@ -84,6 +84,7 @@ export const service: DefaultServiceConfig = {
         breaking: `Ivy'akakanya`,
         postedAt: 'Vyashizwe isaha',
         summary: 'Incamake',
+        shareButtonText: 'Sangira',
       },
       gist: 'Incamake',
       error: {
@@ -281,11 +282,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Ivyarabwe cane',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

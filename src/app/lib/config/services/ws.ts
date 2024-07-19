@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Breaking',
         postedAt: 'Posted at',
         summary: 'Summary',
+        shareButtonText: 'Share',
       },
       gist: 'At a glance',
       error: {
@@ -208,11 +209,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Most watched',
-      numberOfItems: 10,
-      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,

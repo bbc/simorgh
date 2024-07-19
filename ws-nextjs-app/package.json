@@ -11,6 +11,7 @@
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081",
+    "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https",
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",
     "stop": "lsof -t -i:7081 | xargs kill",
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
@@ -22,9 +23,9 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.24.6",
-    "@babel/plugin-proposal-export-default-from": "7.24.6",
-    "@babel/preset-react": "7.24.6",
+    "@babel/core": "7.24.9",
+    "@babel/plugin-proposal-export-default-from": "7.24.7",
+    "@babel/preset-react": "7.24.7",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
     "@testing-library/jest-dom": "6.4.5",
@@ -39,6 +40,6 @@
   },
   "dependencies": {
     "next": "14.2.3",
-    "undici": "6.18.1"
+    "undici": "6.19.2"
   }
 }

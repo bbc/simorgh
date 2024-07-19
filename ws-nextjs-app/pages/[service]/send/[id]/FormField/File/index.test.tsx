@@ -7,6 +7,7 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import userEvent from '@testing-library/user-event';
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 
 import FileField from '.';
 import {
@@ -15,20 +16,30 @@ import {
   VIDEO_SVG_DATA_URI,
 } from './svgs';
 import { FormContext } from '../../FormContext';
+import { HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,
   required: false,
   value: [],
-  htmlType: 'file',
+  htmlType: 'file' as HtmlType,
   messageCode: null,
+  wasInvalid: false,
 };
 
 const blob = new Blob(['data:image/png;base64,']);
 const mockImgFile = new File([blob], 'img.png', {
   type: 'image/png',
 });
-const imageFileInputState = { ...defaultInputState, value: [mockImgFile] };
+const imageFileInputState = {
+  ...defaultInputState,
+  value: [
+    {
+      file: mockImgFile,
+      messageCode: null,
+    },
+  ],
+};
 
 describe('File', () => {
   afterEach(() => {
@@ -128,7 +139,9 @@ describe('File', () => {
     fireEvent.change(inputFile, { target: { files: [mockImgFile] } });
 
     expect(contextValue.handleChange).toHaveBeenCalledWith('bar', [
-      mockImgFile,
+      {
+        file: mockImgFile,
+      },
     ]);
   });
 
@@ -138,12 +151,14 @@ describe('File', () => {
     await act(async () => {
       render(
         <FormContext.Provider value={contextValue}>
-          <FileField
-            id="foo"
-            name="bar"
-            inputState={imageFileInputState}
-            describedBy="foo"
-          />
+          <LiveRegionContextProvider>
+            <FileField
+              id="foo"
+              name="bar"
+              inputState={imageFileInputState}
+              describedBy="foo"
+            />
+          </LiveRegionContextProvider>
         </FormContext.Provider>,
       );
     });
@@ -162,12 +177,14 @@ describe('File', () => {
     await act(async () => {
       render(
         <FormContext.Provider value={contextValue}>
-          <FileField
-            id="foo"
-            name="bar"
-            inputState={imageFileInputState}
-            describedBy="foo"
-          />
+          <LiveRegionContextProvider>
+            <FileField
+              id="foo"
+              name="bar"
+              inputState={imageFileInputState}
+              describedBy="foo"
+            />
+          </LiveRegionContextProvider>
         </FormContext.Provider>,
       );
     });
@@ -175,10 +192,11 @@ describe('File', () => {
     const removeButton = screen.getByRole('button', {
       name: /remove/i,
     });
+
     await user.click(removeButton);
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         'undefined',
       ),
@@ -198,7 +216,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         'data:image/png;base64,ZGF0YTppbWFnZS9wbmc7YmFzZTY0LA==',
       ),
@@ -209,7 +227,15 @@ describe('File', () => {
     const mockVideoFile = new File([blob], 'video.mp4', {
       type: 'video/mp4',
     });
-    const inputState = { ...defaultInputState, value: [mockVideoFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockVideoFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -223,7 +249,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         VIDEO_SVG_DATA_URI,
       ),
@@ -234,7 +260,15 @@ describe('File', () => {
     const mockAudioFile = new File([blob], 'audio.mp3', {
       type: 'audio/mpeg',
     });
-    const inputState = { ...defaultInputState, value: [mockAudioFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockAudioFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -248,7 +282,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         AUDIO_SVG_DATA_URI,
       ),
@@ -259,7 +293,15 @@ describe('File', () => {
     const mockFile = new File([blob], 'pdf.pdf', {
       type: 'application/pdf',
     });
-    const inputState = { ...defaultInputState, value: [mockFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -273,7 +315,7 @@ describe('File', () => {
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         DOCUMENT_SVG_DATA_URI,
       ),

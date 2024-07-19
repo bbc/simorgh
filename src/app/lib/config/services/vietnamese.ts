@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Tin mới nhất',
         postedAt: 'Đăng ở',
         summary: 'Tóm tắt',
+        shareButtonText: 'Chia sẻ',
       },
       gist: 'Tóm tắt',
       error: {
@@ -261,11 +262,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Nghe/Xem nhiều nhất',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

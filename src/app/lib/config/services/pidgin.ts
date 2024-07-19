@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Breaking',
         postedAt: 'Posted at',
         summary: 'Summary',
+        shareButtonText: 'Share dis tori',
       },
       gist: 'Summary',
       error: {
@@ -257,11 +258,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'De one we dem update for:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'De one we dem don look',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

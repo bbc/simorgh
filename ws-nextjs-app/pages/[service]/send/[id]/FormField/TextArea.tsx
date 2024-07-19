@@ -1,50 +1,82 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import Paragraph from '#app/components/Paragraph';
-import pixelsToRem from '#app/utilities/pixelsToRem';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useContext } from 'react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
+import InvalidMessageBox from './InvalidMessageBox';
+import fallbackTranslations from '../fallbackTranslations';
 
 export default ({
   id,
   name,
   handleChange,
+  handleFocusOut,
   inputState,
-  describedBy,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
+  const {
+    translations: {
+      ugc: {
+        validationWordLimit = fallbackTranslations.validationWordLimit,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
   const {
     isValid,
     value = '',
     required,
     wasInvalid,
     wordLimit,
+    messageCode,
   } = inputState ?? {};
   const hasWordLimit = !!wordLimit;
-  const translation = `Maximum ${wordLimit} Words`; // hardcoded
   const describedByWordLimit = `${id}-wordLimit`;
+  const useErrorTheme = hasAttemptedSubmit && !isValid;
+  const labelId = `label-${id}`;
+  const errorBoxId = `${id}-error`;
 
   return (
     <>
-      <Label id={id}>{label}</Label>
+      <Label
+        forId={id}
+        id={labelId}
+        required={required}
+        useErrorTheme={useErrorTheme}
+        labelText={label}
+      />
       {hasWordLimit && (
         <Paragraph
-          css={{ marginBottom: `${pixelsToRem(6)}rem` }}
+          css={[
+            styles.maxWordLabel,
+            useErrorTheme && styles.erroredMaxWordLabel,
+          ]}
           fontVariant="sansRegular"
           size="brevier"
           id={describedByWordLimit}
         >
-          {translation}
+          {validationWordLimit.replaceAll(
+            '{{wordLimit}}',
+            wordLimit?.toString(),
+          )}
         </Paragraph>
       )}
       <textarea
         id={id}
-        css={[styles.textField, styles.textArea, styles.focusIndicator]}
+        css={[
+          styles.textField,
+          styles.textArea,
+          styles.focusIndicatorInput,
+          useErrorTheme && styles.textFieldError,
+        ]}
         name={name}
         value={value as string}
         onChange={e => handleChange(e.target.name, e.target.value)}
+        onBlur={e => handleFocusOut(e.target.name)}
         {...(hasWordLimit && { 'aria-describedby': describedByWordLimit })}
         {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
         {...(hasAttemptedSubmit && {
@@ -52,11 +84,18 @@ export default ({
           ...(required && !isValid && { 'aria-required': required }),
           ...(!isValid && {
             'aria-describedby':
-              describedBy + (hasWordLimit ? `, ${describedByWordLimit}` : ''),
+              errorBoxId + (hasWordLimit ? ` ${describedByWordLimit}` : ''),
           }),
         })}
         rows={4}
       />
+      {hasAttemptedSubmit && !isValid && (
+        <InvalidMessageBox
+          id={errorBoxId}
+          messageCode={messageCode}
+          suffix={label}
+        />
+      )}
     </>
   );
 };

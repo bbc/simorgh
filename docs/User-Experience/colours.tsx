@@ -62,7 +62,7 @@ export const CROSS_PLATFORM = [
   { colorName: 'ALERT_CORE', colorCode: '#FFB32B' },
   { colorName: 'ALERT_LIGHT', colorCode: '#FFCE2B' },
   { colorName: 'ALERT_DARK', colorCode: '#C8871E' },
-  { colorName: 'ERROR_CORE', colorCode: '#F51A5A' },
+  { colorName: 'ERROR_CORE', colorCode: '#E51854' },
   { colorName: 'ERROR_LIGHT', colorCode: '#FF4060' },
   { colorName: 'ERROR_DARK', colorCode: '#E4134F' },
 ];

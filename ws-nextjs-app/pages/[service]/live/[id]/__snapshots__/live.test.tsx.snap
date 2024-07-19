@@ -1471,6 +1471,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               >
                 <h3
                   class="emotion-36"
+                  id="asset:2aa3edd0-abe6-4cf3-a2fe-a1a5e98aa71e"
+                  tabindex="-1"
                 >
                   <span
                     role="text"
@@ -1528,6 +1530,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               >
                 <h3
                   class="emotion-36"
+                  id="asset:7cfd060e-d8e0-4364-b177-31d58ae0c062"
+                  tabindex="-1"
                 >
                   <span
                     role="text"
@@ -1574,6 +1578,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               >
                 <h3
                   class="emotion-36"
+                  id="asset:1009a4c7-ef57-4d77-a0f7-3ef886baee4c"
+                  tabindex="-1"
                 >
                   <span
                     role="text"
@@ -1754,6 +1760,8 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               >
                 <h3
                   class="emotion-36"
+                  id="asset:5a8d509c-fb87-4763-90ed-1e63a70c30a2"
+                  tabindex="-1"
                 >
                   <span
                     role="text"
