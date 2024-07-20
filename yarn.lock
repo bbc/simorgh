@@ -3357,17 +3357,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/utils@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@emotion/utils@npm:1.2.1"
-  checksum: 10/472fa529c64a13edff80aa11698092e8841c1ffb5001c739d84eb9d0fdd6d8e1cd1848669310578ccfa6383b8601132eca54f8749fca40af85d21fdfc9b776c4
-  languageName: node
-  linkType: hard
-
-"@emotion/utils@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@emotion/utils@npm:1.3.0"
-  checksum: 10/ba391a71dd6071730faf6a1c577ff8466904ffc89b2d67e2fc6f38046962aa4531570cc79b75ceec587ea410f24390e49d4e8e2f5015b07412aba6f915e2053c
+"@emotion/utils@npm:^1.2.1, @emotion/utils@npm:^1.3.0":
+  version: 1.4.0
+  resolution: "@emotion/utils@npm:1.4.0"
+  checksum: 10/e4cdb51819db01fec21c3e35a1391900c9e7f3ac1e7ecb419c8e408464830cd7ef6e1a116381cbfe3fb1039406fb7ed35f16a1575d502c92bc9f81bc13a3ee5a
   languageName: node
   linkType: hard
 
