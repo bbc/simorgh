@@ -7,7 +7,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-
+import { css } from '@emotion/react';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -90,6 +90,12 @@ const MediaPlayerContainer = ({
     width: 100%;
   `;
 
+  const FigureStylesTranscript = ({ palette, isDarkUi }) =>
+    css({
+      background: isDarkUi ? palette.GREY_10 : palette.WHITE,
+      paddingBottom: `0`,
+    });
+
   const mediaIsValid = available && (clipId || blockId);
   if (!mediaIsValid) {
     if (isLegacyMedia && available) {
@@ -154,7 +160,7 @@ const MediaPlayerContainer = ({
         embedSource={makeAbsolute(embedSource)}
       />
       {showCaption && caption ? (
-        <Figure>
+        <Figure css={transcriptBlock && FigureStylesTranscript}>
           {mediaPlayer}
           {showCaption && caption}
         </Figure>
