@@ -26,7 +26,7 @@
     "@babel/core": "7.24.9",
     "@babel/plugin-proposal-export-default-from": "7.24.7",
     "@babel/preset-react": "7.24.7",
-    "@emotion/babel-plugin": "11.11.0",
+    "@emotion/babel-plugin": "11.12.0",
     "@emotion/jest": "^11.11.0",
     "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "15.0.7",
