@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Send A11y I can see the skip to content link 1`] = `"U gudub qaybta macluumaadka"`;
+
+exports[`Canonical Send Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Somali",
+  "url": "/somali",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 2`] = `
+{
+  "text": "Sababta aad ku aamini kartid BBC News",
+  "url": "https://www.bbc.com/somali/hayadeed-49283375",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 3`] = `
+{
+  "text": "Shuruucda isticmaalka",
+  "url": "https://www.bbc.com/somali/hayadeed-37098011",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 4`] = `
+{
+  "text": "Ku saabsan BBC",
+  "url": "https://www.bbc.com/somali/hayadeed-37098081",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 5`] = `
+{
+  "text": "Shuruucda xogta gaarka ah",
+  "url": "https://www.bbc.com/somali/hayadeed-37098082",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 7`] = `
+{
+  "text": "La xiriir BBC",
+  "url": "https://www.bbc.co.uk/somali/send/u50853709",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 8`] = `
+{
+  "text": "Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
+
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+
+exports[`Canonical Send Header I can see the branding 1`] = `"BBC News, Somali"`;
+
+exports[`Canonical Send Header Navigation link should match text and url 1`] = `
+{
+  "text": "War",
+  "url": "/somali",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 2`] = `
+{
+  "text": "Ganacsi",
+  "url": "/somali/topics/c2dwqd32v4yt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 3`] = `
+{
+  "text": "Cayaaraha",
+  "url": "/somali/topics/cpzd4zj1pn2t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 4`] = `
+{
+  "text": "Muuqaal",
+  "url": "/somali/topics/c7pl4k5r9xxt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 5`] = `
+{
+  "text": "Barnaamijyada Idaacadda",
+  "url": "/somali/topics/cn6rqlrkm0pt",
+}
+`;
+
+exports[`Canonical Send UGC form should render a heading 1`] = `"Test campaign for /:service/send/:campaignId endpoint UGC Spike WSTEAMA-98 2022"`;
+
+exports[`Canonical Send UGC form should render a submit button 1`] = `"Submit"`;
