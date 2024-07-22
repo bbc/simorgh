@@ -1,5 +1,4 @@
 import React from 'react';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';
@@ -15,11 +14,7 @@ const twentyFourHoursAgo = timestampGenerator({
 const twoDaysAgo = timestampGenerator({ days: 2 });
 const threeDaysAgo = timestampGenerator({ days: 3 });
 
-const WrappedArticleTimestamp = ({ service, ...rest }) => (
-  <ServiceContextProvider service={service || 'news'}>
-    <ArticleTimestamp {...rest} />
-  </ServiceContextProvider>
-);
+const WrappedArticleTimestamp = ({ ...rest }) => <ArticleTimestamp {...rest} />;
 
 export default {
   Component: WrappedArticleTimestamp,
@@ -28,81 +23,73 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const A = (_, globalArgs) => (
+export const A = () => (
   <WrappedArticleTimestamp
     firstPublished={threeHoursAgo}
     lastPublished={threeHoursAgo}
-    {...globalArgs}
   />
 );
 A.storyName =
   'lastPublished === firstPublished and firstPublished < 10 hours ago';
 
-export const B = (_, globalArgs) => (
+export const B = () => (
   <WrappedArticleTimestamp
     firstPublished={elevenHoursAgo}
     lastPublished={elevenHoursAgo}
-    {...globalArgs}
   />
 );
 B.storyName =
   'lastPublished === firstPublished and firstPublished today and > 10 hours ago';
 
-export const C = (_, globalArgs) => (
+export const C = () => (
   <WrappedArticleTimestamp
     firstPublished={twentyFourHoursAgo}
     lastPublished={twentyFourHoursAgo}
-    {...globalArgs}
   />
 );
 C.storyName =
   'lastPublished === firstPublished and firstPublished before today';
 
-export const D = (_, globalArgs) => (
+export const D = () => (
   <WrappedArticleTimestamp
     firstPublished={fiveHoursAgo}
     lastPublished={threeHoursAgo}
-    {...globalArgs}
   />
 );
 D.storyName =
   'lastPublished today < 10 hours ago and firstPublished today < 10 hours ago';
 
-export const E = (_, globalArgs) => (
+export const E = () => (
   <WrappedArticleTimestamp
     firstPublished={twelveHoursAgo}
     lastPublished={elevenHoursAgo}
-    {...globalArgs}
   />
 );
 E.storyName =
   'lastPublished today more than 10 hours ago and firstPublished today more than 10 hours ago';
 
-export const F = (_, globalArgs) => (
+export const F = () => (
   <WrappedArticleTimestamp
     firstPublished={threeDaysAgo}
     lastPublished={threeDaysAgo}
-    {...globalArgs}
   />
 );
 F.storyName =
   'lastPublished before today and firstPublished same day as lastPublished';
 
-export const G = (_, globalArgs) => (
+export const G = () => (
   <WrappedArticleTimestamp
     firstPublished={threeDaysAgo}
     lastPublished={twoDaysAgo}
-    {...globalArgs}
   />
 );
 G.storyName =
   'lastPublished before today, !==firstPublished day and firstPublished before today';
 
-export const H = (_, globalArgs) => (
+export const H = () => (
   <WrappedArticleTimestamp
     firstPublished={threeDaysAgo}
     lastPublished={elevenHoursAgo}
-    {...globalArgs}
   />
 );
 H.storyName =

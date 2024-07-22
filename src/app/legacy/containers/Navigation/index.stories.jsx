@@ -21,6 +21,6 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const Canonical = (_, globalArgs) => <Component {...globalArgs} />;
-export const Amp = (_, globalArgs) => <Component isAmp {...globalArgs} />;
+export const Canonical = (_, { service }) => <Component service={service} />;
+export const Amp = (_, { service }) => <Component isAmp service={service} />;
 Amp.decorators = [AmpDecorator];

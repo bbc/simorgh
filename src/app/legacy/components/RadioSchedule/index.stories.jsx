@@ -6,8 +6,6 @@ export default {
   Component,
 };
 
-export const RadioSchedule = (_, globalArgs) => <Component {...globalArgs} />;
+export const RadioSchedule = () => <Component />;
 
-export const ScheduleDifferentHeights = (_, globalArgs) => (
-  <Component {...globalArgs} withLongSummary />
-);
+export const ScheduleDifferentHeights = () => <Component withLongSummary />;
