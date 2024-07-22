@@ -130,7 +130,7 @@ export type AresMediaBlock = {
     title: string;
     blocks: AresMediaBlock[];
     imageUrl: string;
-    format: 'audio' | 'video';
+    format: 'audio' | 'video' | 'audio_video';
     embedding: boolean;
     versions: {
       versionId: string;

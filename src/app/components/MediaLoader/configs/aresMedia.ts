@@ -47,6 +47,8 @@ export default ({
 
   const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
 
+  const actualFormat = format === 'audio_video' ? 'video' : format;
+
   const rawDuration =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
       ?.duration;
@@ -79,7 +81,7 @@ export default ({
     datetime:
       aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
         ?.durationISO8601,
-    type: format || 'video',
+    type: actualFormat || 'video',
     guidanceMessage,
   };
 
@@ -111,7 +113,7 @@ export default ({
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
 
   return {
-    mediaType: format || 'video',
+    mediaType: actualFormat || 'video',
     orientation: isPortrait ? 'portrait' : 'landscape',
     playerConfig: {
       ...basePlayerConfig,

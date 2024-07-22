@@ -34,6 +34,7 @@ const ComponentWithContext = ({ data: { data }, isLite }) => {
           service="news"
           pathname="/news/articles/c000000000o"
           isUK
+          id="c000000000o"
         >
           <UserContextProvider>
             <MemoryRouter>
