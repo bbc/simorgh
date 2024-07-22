@@ -106,7 +106,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('[data-e2e="media-player__placeholder"] strong')
+                  cy.get('[data-e2e="media-player__guidance"] strong')
                     .should('be.visible')
                     .and('contain', longGuidanceWarning);
                   // Check for video with no guidance message

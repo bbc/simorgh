@@ -71,7 +71,7 @@ const checkA11y = () => {
          * Exclude SMP Toucan media player element as these are outside the control of Simorgh
          */
         id: 'aria-valid-attr',
-        selector: '*:not([id*="toucan-"])',
+        selector: '*:not([id*="toucan"])',
       },
     ],
   });
