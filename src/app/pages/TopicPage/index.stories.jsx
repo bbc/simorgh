@@ -70,7 +70,9 @@ export default {
   decorators: [withServicesDecorator({ defaultService: 'mundo' })],
 };
 
-export const Example = (_, globalArgs) => <Component {...globalArgs} />;
+export const Example = (_, { service, variant }) => (
+  <Component service={service} variant={variant} />
+);
 
 export const MundoWithBannerVariations = () => (
   <Component service="mundo" fixture={mundoTopicWithMessageBannerVariations} />

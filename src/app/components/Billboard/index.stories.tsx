@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Billboard from '.';
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
+import { StoryArgs } from '../../models/types/storybook';
 import metadata from './metadata.json';
 import readme from './README.md';
 
-interface Props extends StoryProps {
+interface Props {
   text?: string;
   longText?: string;
   showLiveLabel?: boolean;
@@ -37,10 +37,14 @@ export default {
   },
 };
 
-export const Example = (_: StoryArgs, globalArgs: Props) => (
-  <Component {...globalArgs} />
-);
+export const Example = (_: StoryArgs, globalArgs: Props) => {
+  const { text, longText } = globalArgs;
+
+  return <Component text={text} longText={longText} />;
+};
 
 export const WithLiveLabel = (_: StoryArgs, globalArgs: Props) => {
-  return <Component {...globalArgs} showLiveLabel />;
+  const { text, longText } = globalArgs;
+
+  return <Component text={text} longText={longText} showLiveLabel />;
 };
