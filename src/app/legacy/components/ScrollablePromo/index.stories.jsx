@@ -31,32 +31,37 @@ export default {
   ScrollablePromoComponent,
 };
 
-export const ThreeLinks = () => <ScrollablePromoComponent data={threeLinks} />;
-
-export const OnlyOneLink = () => (
-  <ScrollablePromoComponent data={oneLinkOnly} />
+export const ThreeLinks = (_, { service }) => (
+  <ScrollablePromoComponent data={threeLinks} service={service} />
 );
 
-export const OneLinkWithNoTitle = () => (
-  <ScrollablePromoComponent data={oneLinkWithNoTitle} />
+export const OnlyOneLink = (_, { service }) => (
+  <ScrollablePromoComponent data={oneLinkOnly} service={service} />
 );
 
-export const MoreThanThreeLinks = () => (
-  <ScrollablePromoComponent data={moreThanThreeLinks} />
+export const OneLinkWithNoTitle = (_, { service }) => (
+  <ScrollablePromoComponent data={oneLinkWithNoTitle} service={service} />
 );
 
-export const NoImagesInData = () => (
-  <ScrollablePromoComponent data={twoLinksWithNoImages} />
+export const MoreThanThreeLinks = (_, { service }) => (
+  <ScrollablePromoComponent data={moreThanThreeLinks} service={service} />
 );
 
-export const TruncatedTextInSingleLink = () => (
-  <ScrollablePromoComponent data={truncatedTextInSingleLink} />
+export const NoImagesInData = (_, { service }) => (
+  <ScrollablePromoComponent data={twoLinksWithNoImages} service={service} />
+);
+
+export const TruncatedTextInSingleLink = (_, { service }) => (
+  <ScrollablePromoComponent
+    data={truncatedTextInSingleLink}
+    service={service}
+  />
 );
 
 export const ArabicText = () => (
   <ScrollablePromoComponent data={arabicText} service="arabic" />
 );
 
-export const WithTimestamp = () => (
-  <ScrollablePromoComponent data={oneLinkWithTimestamp} />
+export const WithTimestamp = (_, { service }) => (
+  <ScrollablePromoComponent data={oneLinkWithTimestamp} service={service} />
 );
