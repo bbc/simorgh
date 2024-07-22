@@ -15,14 +15,47 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     describe('Media Player', () => {
       const language = appConfig[config[service].name][variant].lang;
-      const pageTypeForFetch = CafEnabledServices.includes(service)
-        ? 'article'
-        : 'cpsAsset';
+      const isCafService = CafEnabledServices.includes(service);
+      const pageTypeForFetch = isCafService ? 'article' : 'cpsAsset';
 
-      it('should render an iframe with a valid URL', () => {
-        if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
-            ({ body }) => {
+      if (isCafService) {
+        it('should render media player component', () => {
+          cy.getPageData({
+            service,
+            pageType: 'article',
+            variant,
+          }).then(({ body }) => {
+            const {
+              data: { article: jsonData },
+            } = body;
+
+            if (hasMedia(jsonData)) {
+              const embedUrl = getEmbedUrl(jsonData, language);
+              cy.log(embedUrl);
+              cy.get('figure[data-e2e="media-loader__container"]').should(
+                'be.visible',
+              );
+              cy.testResponseCodeAndTypeRetry({
+                path: embedUrl,
+                responseCode: 200,
+                type: 'text/html',
+                allowFallback: true,
+              });
+            } else {
+              cy.log(
+                `No media on ${pageType} for ${Cypress.env('currentPath')}`,
+              );
+            }
+          });
+        });
+      } else {
+        it('should render an iframe with a valid URL', () => {
+          if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
+            cy.getPageData({
+              service,
+              pageType: pageTypeForFetch,
+              variant,
+            }).then(({ body }) => {
               const {
                 data: { article: jsonData },
               } = body;
@@ -42,12 +75,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                   `No media on ${pageType} for ${Cypress.env('currentPath')}`,
                 );
               }
-            },
-          );
-        } else {
-          cy.log('skipped test for cps russian map');
-        }
-      });
+            });
+          } else {
+            cy.log('skipped test for cps russian map');
+          }
+        });
+      }
     });
 
     if (appToggles.chartbeatAnalytics.enabled && envConfig.chartbeatEnabled) {
