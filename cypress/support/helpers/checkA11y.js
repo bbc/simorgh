@@ -66,6 +66,13 @@ const checkA11y = () => {
         id: 'color-contrast',
         enabled: false,
       },
+      {
+        /*
+         * Exclude SMP Toucan media player element as these are outside the control of Simorgh
+         */
+        id: 'aria-valid-attr',
+        selector: '*:not([id*="toucan-"])',
+      },
     ],
   });
   cy.checkA11y(
