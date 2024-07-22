@@ -1,6 +1,7 @@
 {
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
+  "labels": ["dependencies"],
   "packageRules": [
     {
       "matchPackagePatterns": ["^@loadable"],
