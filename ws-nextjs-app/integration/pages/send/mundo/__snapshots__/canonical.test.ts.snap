@@ -133,3 +133,7 @@ exports[`Canonical Send Header Navigation link should match text and url 10`] = 
   "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
+
+exports[`Canonical Send UGC form should render a heading 1`] = `"Escríbenos"`;
+
+exports[`Canonical Send UGC form should render a submit button 1`] = `"Enviar"`;
