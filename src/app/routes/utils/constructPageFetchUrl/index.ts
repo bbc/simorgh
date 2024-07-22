@@ -180,6 +180,13 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;
       }
+      case LIVE_PAGE: {
+        const variantPath = variant ? `/${variant}` : '';
+        fetchUrl = Url(
+          `${process.env.SIMORGH_NEXTJS_APP_BASE_URL}/api/local/${service}${variantPath}/live/${id}`,
+        );
+        break;
+      }
       default:
         return fetchUrl;
     }
