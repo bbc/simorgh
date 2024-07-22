@@ -1,3 +1,4 @@
+import cafServicesConst from '../../../app/lib/cafServices.const';
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedLegacyTests,
@@ -6,8 +7,11 @@ import {
 
 export default service => {
   runCommonCrossPlatformTests(service);
-  runMediaPlayerEmbedLegacyTests();
   runTimestampTests();
+
+  if (!cafServicesConst.includes(service)) {
+    runMediaPlayerEmbedLegacyTests();
+  }
 
   const bulletedListItem = document.querySelector('main ul[role="list"] > li');
 

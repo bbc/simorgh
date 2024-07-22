@@ -216,19 +216,6 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 }
 `;
 
-exports[`Canonical Articles SEO Linked data should match text 2`] = `
-{
-  "@context": "http://schema.org",
-  "@type": "VideoObject",
-  "description": "They may be tiny, but us humans could learn a thing or two from ants.",
-  "duration": "PT3M11S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
-  "name": "Five things ants can teach us about management",
-  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
-  "uploadDate": "2018-10-22T14:35:32.000Z",
-}
-`;
-
 exports[`Canonical Articles SEO OG description 1`] = `"This is the SEO headline of this test article"`;
 
 exports[`Canonical Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"`;
