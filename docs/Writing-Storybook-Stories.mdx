@@ -134,6 +134,8 @@ export const MyFirstStory = ({ backgroundColor }, { service, variant }) => (
 );
 ```
 
+**Do not spread the second argument in its entirety, always destructure**. If you spread, this can potentially cause issues with rendering as the second argument contains Storybook specific functions that shouldn't be spread into components.
+
 ## Manually defining `service` and `variant` values
 
 You can of course supply the `service` and `variant` values manually in your story, for example:
