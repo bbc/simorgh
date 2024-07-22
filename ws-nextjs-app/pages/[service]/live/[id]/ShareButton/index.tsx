@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 
 const ShareSvg = () => (
@@ -38,6 +39,11 @@ const ShareButton = ({
   const viewRef = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const {
+    translations: {
+      liveExperiencePage: { shareButtonText = 'Share' },
+    },
+  } = useContext(ServiceContext);
 
   const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
     clickTrackerHandler(event);
@@ -73,7 +79,7 @@ const ShareButton = ({
       >
         <ShareSvg />
         <span role="text">
-          <span>Share</span>
+          <span>{shareButtonText}</span>
           <VisuallyHiddenText>, {headline}</VisuallyHiddenText>
         </span>
       </button>

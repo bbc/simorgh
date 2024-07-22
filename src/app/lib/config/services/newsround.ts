@@ -59,6 +59,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Breaking',
         postedAt: 'Posted at',
         summary: 'Summary',
+        shareButtonText: 'Share',
       },
       gist: 'At a glance',
       error: {

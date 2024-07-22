@@ -30,6 +30,7 @@ export interface Translations {
     breaking: string;
     postedAt: string;
     summary: string;
+    shareButtonText: string;
   };
   gist?: string;
   error: {
@@ -264,4 +265,8 @@ export type UgcTranslations = {
   // Error Screen
   errorHeading: string;
   errorDescription: string;
+
+  // Closed Screen
+  closedHeading: string;
+  closedDescription: string;
 };

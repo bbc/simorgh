@@ -93,6 +93,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Terbaru',
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
+        shareButtonText: 'Kirim',
       },
       gist: 'Rangkuman',
       error: {
