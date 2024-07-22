@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ScrollablePromo from '.';
 import {
   threeLinks,
@@ -18,14 +17,13 @@ const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
-const ScrollablePromoComponent = ({ data, service, script, dir }) => (
-  <ToggleContextProvider>
-    <BackGround>
-      <ServiceContextProvider service={service} script={script} dir={dir}>
-        <ScrollablePromo blocks={data} />
-      </ServiceContextProvider>
-    </BackGround>
-  </ToggleContextProvider>
+
+const ScrollablePromoComponent = ({ data, service }) => (
+  <BackGround>
+    <ServiceContextProvider service={service}>
+      <ScrollablePromo blocks={data} />
+    </ServiceContextProvider>
+  </BackGround>
 );
 
 export default {
@@ -33,34 +31,32 @@ export default {
   ScrollablePromoComponent,
 };
 
-export const ThreeLinks = (_, globalArgs) => (
-  <ScrollablePromoComponent data={threeLinks} {...globalArgs} />
+export const ThreeLinks = () => <ScrollablePromoComponent data={threeLinks} />;
+
+export const OnlyOneLink = () => (
+  <ScrollablePromoComponent data={oneLinkOnly} />
 );
 
-export const OnlyOneLink = (_, globalArgs) => (
-  <ScrollablePromoComponent data={oneLinkOnly} {...globalArgs} />
+export const OneLinkWithNoTitle = () => (
+  <ScrollablePromoComponent data={oneLinkWithNoTitle} />
 );
 
-export const OneLinkWithNoTitle = (_, globalArgs) => (
-  <ScrollablePromoComponent data={oneLinkWithNoTitle} {...globalArgs} />
+export const MoreThanThreeLinks = () => (
+  <ScrollablePromoComponent data={moreThanThreeLinks} />
 );
 
-export const MoreThanThreeLinks = (_, globalArgs) => (
-  <ScrollablePromoComponent data={moreThanThreeLinks} {...globalArgs} />
+export const NoImagesInData = () => (
+  <ScrollablePromoComponent data={twoLinksWithNoImages} />
 );
 
-export const NoImagesInData = (_, globalArgs) => (
-  <ScrollablePromoComponent data={twoLinksWithNoImages} {...globalArgs} />
-);
-
-export const TruncatedTextInSingleLink = (_, globalArgs) => (
-  <ScrollablePromoComponent data={truncatedTextInSingleLink} {...globalArgs} />
+export const TruncatedTextInSingleLink = () => (
+  <ScrollablePromoComponent data={truncatedTextInSingleLink} />
 );
 
 export const ArabicText = () => (
   <ScrollablePromoComponent data={arabicText} service="arabic" />
 );
 
-export const WithTimestamp = (_, globalArgs) => (
-  <ScrollablePromoComponent data={oneLinkWithTimestamp} {...globalArgs} />
+export const WithTimestamp = () => (
+  <ScrollablePromoComponent data={oneLinkWithTimestamp} />
 );

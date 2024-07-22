@@ -21,4 +21,9 @@ export default {
   Component,
 };
 
-export const Default = (_, globalArgs) => <Component {...globalArgs} />;
+export const Default = (_, globalArgs) => {
+  const {service, locale, script, dir, timezone} = globalArgs;
+
+  return <Component service={service} locale={locale} script={script} dir={dir} timezone={timezone} />
+};
+

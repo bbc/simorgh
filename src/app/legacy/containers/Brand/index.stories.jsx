@@ -11,4 +11,4 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const Brand = (_, globalArgs) => <Component {...globalArgs} />;
+export const Brand = () => <Component />;
