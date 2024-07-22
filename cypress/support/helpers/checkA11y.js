@@ -2,6 +2,7 @@ const exclude = [
   // These elements can contain a11y violations as we have no control over what is rendered inside of them
   '.bbc-news-vj-embed-wrapper, [id^="include-"]', // VJ includes
   '[class*=dotcom], [id*=dotcom], amp-ad', // GNL ads
+  '[id^="toucan-"]', // SMP Toucan player
 ];
 
 const logA11yViolations = violations => {
@@ -65,13 +66,6 @@ const checkA11y = () => {
          */
         id: 'color-contrast',
         enabled: false,
-      },
-      {
-        /*
-         * Exclude SMP Toucan media player element as these are outside the control of Simorgh
-         */
-        id: 'aria-valid-attr',
-        selector: '*:not([id*="toucan"])',
       },
     ],
   });
