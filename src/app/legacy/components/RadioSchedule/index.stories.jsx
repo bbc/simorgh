@@ -6,8 +6,6 @@ export default {
   Component,
 };
 
-export const RadioSchedule = () => <Component  />;
+export const RadioSchedule = () => <Component />;
 
-export const ScheduleDifferentHeights = () => (
-  <Component  withLongSummary />
-);
+export const ScheduleDifferentHeights = () => <Component withLongSummary />;
