@@ -7,7 +7,12 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
+import { PageTypes } from '#app/models/types/global';
+import { BumpType, MediaBlock, Orientation, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -16,6 +21,11 @@ import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
+
+const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+];
 
 const logger = nodeLogger(__filename);
 
@@ -77,13 +87,17 @@ const AdvertTagLoader = () => {
   );
 };
 
-const MediaContainer = ({
-  playerConfig,
-  showAds,
-}: {
+type MediaContainerProps = {
+  orientation: Orientation;
   playerConfig: PlayerConfig;
   showAds: boolean;
-}) => {
+};
+
+const MediaContainer = ({
+  orientation = 'landscape',
+  playerConfig,
+  showAds,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -134,18 +148,21 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={styles.mediaContainer}
+      css={
+        orientation === 'landscape'
+          ? styles.mediaContainerLandscape
+          : styles.mediaContainerPortrait
+      }
     />
   );
 };
 
 type Props = {
-  className?: string;
   blocks: MediaBlock[];
+  className?: string;
 };
 
 const MediaLoader = ({ blocks, className }: Props) => {
-  const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -160,10 +177,13 @@ const MediaLoader = ({ blocks, className }: Props) => {
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
+  const showPlaceholder = !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
+
+  const [isPlaceholder, setIsPlaceholder] = useState(showPlaceholder);
+
   if (isLite) return null;
 
   const producer = getProducerFromServiceName(service);
-
   const config = buildConfig({
     blocks,
     counterName,
@@ -181,7 +201,8 @@ const MediaLoader = ({ blocks, className }: Props) => {
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
+  const { mediaType, orientation, playerConfig, placeholderConfig, showAds } =
+    config;
 
   const {
     mediaInfo,
@@ -202,6 +223,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
+          orientation={orientation}
           src={placeholderSrc}
           srcSet={placeholderSrcset}
           noJsMessage={translatedNoJSMessage}
@@ -209,7 +231,11 @@ const MediaLoader = ({ blocks, className }: Props) => {
           onClick={() => setIsPlaceholder(false)}
         />
       ) : (
-        <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+        <MediaContainer
+          orientation={orientation}
+          playerConfig={playerConfig}
+          showAds={showAds}
+        />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </figure>

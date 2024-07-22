@@ -21,6 +21,7 @@ describe('Media Player: Placeholder', () => {
   it('should render a video placeholder', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
@@ -34,6 +35,7 @@ describe('Media Player: Placeholder', () => {
   it('should render a video placeholder without duration', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.' }}
@@ -47,6 +49,7 @@ describe('Media Player: Placeholder', () => {
   it('should render an audio placeholder', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{
@@ -64,6 +67,7 @@ describe('Media Player: Placeholder', () => {
   it('should render an audio placeholder without duration', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ type: 'audio', title: 'Dog barks at cat.' }}
@@ -77,6 +81,7 @@ describe('Media Player: Placeholder', () => {
   it('should call onClick when the placeholder and play button is clicked', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
@@ -92,6 +97,7 @@ describe('Media Player: Placeholder', () => {
   it('should render a video placeholder with guidance', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{
@@ -110,6 +116,7 @@ describe('Media Player: Placeholder', () => {
   it('should render no-js styles when noJsClassName prop is used', () => {
     const { container } = render(
       <Placeholder
+        orientation="landscape"
         onClick={mockOnClick}
         src="http://foo.bar/placeholder.png"
         mediaInfo={{

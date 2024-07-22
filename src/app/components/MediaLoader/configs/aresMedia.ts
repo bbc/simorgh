@@ -41,6 +41,10 @@ export default ({
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
       ?.versionId;
 
+  const isPortrait = aresMediaBlock?.model?.blocks?.[0]?.model?.[
+    versionParameter
+  ]?.[0]?.types?.find(type => type === 'Portrait');
+
   const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
 
   const rawDuration =
@@ -108,6 +112,7 @@ export default ({
 
   return {
     mediaType: format || 'video',
+    orientation: isPortrait ? 'portrait' : 'landscape',
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',

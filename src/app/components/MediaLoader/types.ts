@@ -1,6 +1,8 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 
+export type Orientation = 'landscape' | 'portrait';
+
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -59,6 +61,7 @@ export type ConfigBuilderProps = {
 
 export type ConfigBuilderReturnProps = {
   mediaType: string;
+  orientation: Orientation;
   playerConfig: PlayerConfig;
   placeholderConfig: {
     mediaInfo: MediaInfo;
@@ -133,13 +136,14 @@ export type AresMediaBlock = {
       versionId: string;
       duration: number;
       durationISO8601?: string;
-
+      types?: string[];
       warnings?: { [key: string]: string };
     }[];
     webcastVersions: {
       versionId: string;
       duration: number;
       durationISO8601?: string;
+      types?: string[];
       warnings?: { [key: string]: string };
     }[];
     smpKind: string;

@@ -18,6 +18,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+import MediaLoader from '#app/components/MediaLoader';
 
 import {
   getArticleId,
@@ -64,7 +65,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp, isAmp } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -124,8 +125,8 @@ const ArticlePage = ({ pageData }) => {
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: articleMediaPlayer,
-    video: articleMediaPlayer,
+    audio: isAmp ? articleMediaPlayer : MediaLoader,
+    video: isAmp ? articleMediaPlayer : MediaLoader,
     text,
     byline: props =>
       hasByline ? (

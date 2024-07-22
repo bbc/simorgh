@@ -7,9 +7,14 @@ export default {
       paddingBottom: `${spacings.TRIPLE}rem`,
       width: '100%',
     }),
-  mediaContainer: ({ palette }: Theme) =>
+  mediaContainerLandscape: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.BLACK,
       aspectRatio: '16 / 9',
+    }),
+  mediaContainerPortrait: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.BLACK,
+      aspectRatio: '9 / 16',
     }),
 };

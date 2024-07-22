@@ -6,6 +6,9 @@ import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import MediaLoader from '#app/components/MediaLoader';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -71,6 +74,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { isAmp } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -139,7 +143,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
@@ -149,7 +157,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     text,

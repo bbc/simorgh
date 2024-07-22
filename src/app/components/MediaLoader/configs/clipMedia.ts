@@ -105,6 +105,7 @@ export default ({
 
   return {
     mediaType: type || 'video',
+    orientation: 'landscape',
     playerConfig: {
       ...basePlayerConfig,
       playlistObject: {

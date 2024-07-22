@@ -20,8 +20,7 @@ describe('MediaLoader', () => {
   describe('BUMP Loader', () => {
     beforeEach(() => {
       jest.restoreAllMocks();
-      // @ts-expect-error Mocking require to prevent race condition.
-      window.require = jest.fn();
+
       (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
       (useState as jest.Mock).mockImplementation(() => [false, () => false]);
     });
