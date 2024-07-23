@@ -10,14 +10,17 @@ import TickSvg from './svgs';
 import { useFormContext } from '../FormContext';
 import fallbackTranslations from '../fallbackTranslations';
 
-const DEFAULT_RETENTION_POLICY_DAY = '270';
-const DEFAULT_EMAIL = 'CannotFindEmail@bbc.co.uk';
-
 type Props = {
   title: string;
+  replyEmailAddress: string;
+  retentionPeriod: string;
 };
 
-const SuccessScreen = ({ title }: Props) => {
+const SuccessScreen = ({
+  title,
+  replyEmailAddress,
+  retentionPeriod,
+}: Props) => {
   const {
     translations: {
       ugc: {
@@ -49,7 +52,7 @@ const SuccessScreen = ({ title }: Props) => {
 
   const retentionPolicy = retentionPeriodDays?.replace(
     '{{days}}',
-    DEFAULT_RETENTION_POLICY_DAY,
+    retentionPeriod,
   );
 
   const privacyClauses = privacyInfoHtml?.split('{{privacyInfoLink}}');
@@ -87,10 +90,10 @@ const SuccessScreen = ({ title }: Props) => {
         <Paragraph>
           {emailGuidelineClauses?.[0]}
           <a
-            href={`mailto:${DEFAULT_EMAIL}`}
+            href={`mailto:${replyEmailAddress}`}
             className="focusIndicatorReducedWidth"
           >
-            {DEFAULT_EMAIL}
+            {replyEmailAddress}
           </a>
           {emailGuidelineClauses?.[1]} {removalGuidelineText}
         </Paragraph>
