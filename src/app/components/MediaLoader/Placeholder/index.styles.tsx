@@ -10,6 +10,10 @@ const styles = {
   placeholderPortrait: () =>
     css({
       aspectRatio: '9 / 16',
+
+      img: {
+        objectFit: 'fill',
+      },
     }),
   placeholder: ({ palette }: Theme) =>
     css({
