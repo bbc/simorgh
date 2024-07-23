@@ -12,6 +12,8 @@ jest.mock('next/router', () => ({
 }));
 
 const MOCK_TITLE = 'Test Title';
+const MOCK_EMAIL = 'test@bbc.co.uk';
+const MOCK_RETENTION_PERIOD = '270';
 
 describe('SuccessScreen', () => {
   beforeEach(() => {
@@ -20,7 +22,13 @@ describe('SuccessScreen', () => {
 
   it('Should have a h1', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen title={MOCK_TITLE} />);
+      return render(
+        <SuccessScreen
+          title={MOCK_TITLE}
+          replyEmailAddress={MOCK_EMAIL}
+          retentionPeriod={MOCK_RETENTION_PERIOD}
+        />,
+      );
     });
     const h1 = container.querySelector('h1');
 
@@ -38,7 +46,11 @@ describe('SuccessScreen', () => {
     const { container } = await act(() => {
       return render(
         <FormContext.FormContextProvider fields={[]}>
-          <SuccessScreen title={MOCK_TITLE} />
+          <SuccessScreen
+            title={MOCK_TITLE}
+            replyEmailAddress={MOCK_EMAIL}
+            retentionPeriod={MOCK_RETENTION_PERIOD}
+          />
         </FormContext.FormContextProvider>,
       );
     });
@@ -48,21 +60,33 @@ describe('SuccessScreen', () => {
 
   it('Should have a retention policy', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen title={MOCK_TITLE} />);
+      return render(
+        <SuccessScreen
+          title={MOCK_TITLE}
+          replyEmailAddress={MOCK_EMAIL}
+          retentionPeriod={MOCK_RETENTION_PERIOD}
+        />,
+      );
     });
 
     expect(container.innerHTML).toContain(
-      `We'll keep your submission for up to`,
+      `We'll keep your submission for up to 270 days – and if we don't use it we'll then delete it and any other information you sent us.`,
     );
   });
 
   it('Should provide an email for removal services', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen title={MOCK_TITLE} />);
+      return render(
+        <SuccessScreen
+          title={MOCK_TITLE}
+          replyEmailAddress={MOCK_EMAIL}
+          retentionPeriod={MOCK_RETENTION_PERIOD}
+        />,
+      );
     });
 
     const emailAnchor = container.querySelector(
-      'a[href="mailto:CannotFindEmail@bbc.co.uk"]',
+      'a[href="mailto:test@bbc.co.uk"]',
     );
 
     expect(emailAnchor).toBeInTheDocument();
@@ -70,7 +94,13 @@ describe('SuccessScreen', () => {
 
   it('Should have a privacy policy link', async () => {
     const { container } = await act(() => {
-      return render(<SuccessScreen title={MOCK_TITLE} />);
+      return render(
+        <SuccessScreen
+          title={MOCK_TITLE}
+          replyEmailAddress={MOCK_EMAIL}
+          retentionPeriod={MOCK_RETENTION_PERIOD}
+        />,
+      );
     });
 
     const policyAnchor = container.querySelector(
