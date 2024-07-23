@@ -182,9 +182,8 @@ const constructPageFetchUrl = ({
       }
       case LIVE_PAGE: {
         const variantPath = variant ? `/${variant}` : '';
-        fetchUrl = Url(
-          `${process.env.SIMORGH_NEXTJS_APP_BASE_URL}/api/local/${service}${variantPath}/live/${id}`,
-        );
+        const host = `http://${process.env.HOSTNAME || 'localhost'}:${process.env.PORT}`;
+        fetchUrl = Url(`${host}/api/local/${service}${variantPath}/live/${id}`);
         break;
       }
       default:
