@@ -50,7 +50,6 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     locale={locale}
                     timezone={timezone}
                     service={service}
-                    // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
                     script={script}
                     altCalendar={altCalendar}
                     padding={false}
