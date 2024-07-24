@@ -77,7 +77,7 @@ describe('insertPodcastPromo', () => {
     ({ inputBlocks, expectedIndex }) => {
       const findClearedIndex = transformedData =>
         transformedData.content.blocks.findIndex(
-          pathEq(['simorghMetadata', 'clear'], true),
+          pathEq(true, ['simorghMetadata', 'clear']),
         );
 
       pipe(
