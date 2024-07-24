@@ -33,6 +33,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     privacyNotice,
     campaignStatus,
     closingTime,
+    settings,
   } = pageData;
 
   const { fields } = sections?.[0] ?? {};
@@ -81,7 +82,13 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                         case 'uploading':
                           return <UploadingScreen title={title} />;
                         case 'success':
-                          return <SuccessScreen title={title} />;
+                          return (
+                            <SuccessScreen
+                              title={title}
+                              replyEmailAddress={settings.replyEmailAddress}
+                              retentionPeriod={settings.retentionPeriodDays}
+                            />
+                          );
                         case 'error':
                         default:
                           return <ErrorScreen title={title} />;
