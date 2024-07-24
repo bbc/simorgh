@@ -109,7 +109,7 @@ export default {
         width: '100%',
         height: '100%',
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         appearance: 'auto', // renders browser default checkbox
         '&:checked::after': {
           content: 'none',
@@ -130,7 +130,7 @@ export default {
       verticalAlign: 'middle',
       marginInlineEnd: '0.75rem',
       minWidth: '1.5rem',
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         path: {
           fill: 'currentColor',
         },

@@ -7,7 +7,7 @@ export default {
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
       },
     }),
