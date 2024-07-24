@@ -16,7 +16,7 @@ const styles = {
     css({
       backgroundColor: palette.WHITE,
       padding: `${spacings.DOUBLE}rem`,
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         border: '0.1875rem solid transparent',
       },
     }),
