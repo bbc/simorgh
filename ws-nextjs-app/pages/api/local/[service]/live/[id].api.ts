@@ -12,7 +12,7 @@ export default async function handler(
       process.cwd(),
       '..',
       'data',
-      `${service}`,
+      service as string,
       'livePage',
       `${id}.json`,
     );
