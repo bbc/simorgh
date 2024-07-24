@@ -30,7 +30,7 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { HIGH_CONTRAST } from '#app/components/ThemeProvider/mediaQueries';
+import { FORCED_COLOURS } from '#app/components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
@@ -62,7 +62,7 @@ const ResponsivePodcastPromoWrapper = styled.div`
 
 const StyledPromoComponent = styled(PromoComponent)`
   padding: 0;
-  ${HIGH_CONTRAST} {
+  ${FORCED_COLOURS} {
     border: 0.1875rem solid transparent;
   }
 `;
