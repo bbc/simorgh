@@ -57,7 +57,7 @@ export default {
       padding: `${spacings.FULL}rem`,
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
-      [mq.HIGH_CONTRAST]: { borderColor: 'canvasText', outline: '0' },
+      [mq.FORCED_COLOURS]: { borderColor: 'canvasText', outline: '0' },
     }),
   textFieldError: ({ palette }: Theme) =>
     css({
