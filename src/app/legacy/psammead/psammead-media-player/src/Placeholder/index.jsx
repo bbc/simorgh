@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string, func, shape, oneOf } from 'prop-types';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
 import Guidance from '../Guidance';
@@ -35,9 +34,15 @@ const Placeholder = ({
   onClick,
   service,
   src,
-  srcset,
-  mediaInfo,
-  noJsClassName,
+  srcset = null,
+  mediaInfo = {
+    datetime: null,
+    duration: null,
+    durationSpoken: null,
+    type: 'video',
+    guidanceMessage: null,
+  },
+  noJsClassName = null,
   noJsMessage,
 }) => {
   const { title, datetime, duration, durationSpoken, type, guidanceMessage } =
@@ -70,34 +75,6 @@ const Placeholder = ({
       <Image alt="" src={src} srcset={srcset} />
     </StyledPlaceholder>
   );
-};
-
-Placeholder.propTypes = {
-  onClick: func.isRequired,
-  service: string.isRequired,
-  src: string.isRequired,
-  srcset: string,
-  noJsClassName: string,
-  noJsMessage: string.isRequired,
-  mediaInfo: shape({
-    title: string.isRequired,
-    datetime: string,
-    duration: string,
-    durationSpoken: string,
-    type: oneOf(['audio', 'video']),
-    guidanceMessage: string,
-  }),
-};
-Placeholder.defaultProps = {
-  srcset: null,
-  noJsClassName: null,
-  mediaInfo: shape({
-    datetime: null,
-    duration: null,
-    durationSpoken: null,
-    type: 'video',
-    guidanceMessage: null,
-  }),
 };
 
 export default Placeholder;

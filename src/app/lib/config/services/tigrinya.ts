@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ሓድሽ ዜና',
         postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
+        shareButtonText: 'ኣባፅሑ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -246,11 +247,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'ብብዝሒ ዝተራእየ',
-      numberOfItems: 2,
-      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: true,

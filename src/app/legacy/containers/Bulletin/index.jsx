@@ -1,16 +1,23 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '#psammead/psammead-bulletin/src';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
-const BulletinImage = ({ imageValues, lazyLoad }) => {
+const BulletinImage = ({
+  imageValues = {
+    path: '',
+    height: '',
+    width: '',
+    altText: '',
+    copyrightHolder: '',
+  },
+  lazyLoad = false,
+}) => {
   const { path, height, width, altText, copyrightHolder } = imageValues;
 
   const ratio = (height / width) * 100;
@@ -51,26 +58,7 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
   );
 };
 
-BulletinImage.propTypes = {
-  lazyLoad: bool,
-  imageValues: oneOfType([
-    tvBulletinItem.indexImage,
-    radioBulletinItem.indexImage,
-  ]),
-};
-
-BulletinImage.defaultProps = {
-  lazyLoad: false,
-  imageValues: shape({
-    path: '',
-    height: '',
-    width: '',
-    altText: '',
-    copyrightHolder: '',
-  }),
-};
-
-const BulletinContainer = ({ item, lazyLoadImage }) => {
+const BulletinContainer = ({ item, lazyLoadImage = true }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
 
   const headline = pathOr(null, ['name'], item);
@@ -118,15 +106,6 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       ariaId={`${headline}${allyLink}`}
     />
   );
-};
-
-BulletinContainer.propTypes = {
-  item: oneOfType([shape(tvBulletinItem), shape(radioBulletinItem)]).isRequired,
-  lazyLoadImage: bool,
-};
-
-BulletinContainer.defaultProps = {
-  lazyLoadImage: true,
 };
 
 export default BulletinContainer;

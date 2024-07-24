@@ -326,6 +326,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp"
+        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
         width="976"
       />
     </div>
@@ -527,6 +528,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
+        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
         width="624"
       />
     </div>
@@ -728,6 +730,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp"
+        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp 400w"
         width="800"
       />
     </div>
@@ -928,6 +931,7 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
+        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp 400w"
         width="400"
       />
     </div>

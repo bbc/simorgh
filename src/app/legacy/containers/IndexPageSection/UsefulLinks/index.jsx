@@ -1,6 +1,4 @@
 import React from 'react';
-import { shape, arrayOf, string } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -17,7 +15,6 @@ import {
   UsefulLinksLi,
   UsefulLinksUl,
 } from '#psammead/psammead-useful-links/src';
-import { storyItem } from '#models/propTypes/storyItem';
 
 // Apply the right margin-top between the section label and multiple useful items
 const UsefulLinksWrapper = styled.div`
@@ -76,12 +73,6 @@ const UsefulLinksComponent = ({ items, script, service }) => {
       </UsefulLink>
     </UsefulLinkWrapper>
   );
-};
-
-UsefulLinksComponent.propTypes = {
-  items: arrayOf(shape(storyItem)).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
 };
 
 export default UsefulLinksComponent;

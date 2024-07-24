@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
+import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
@@ -47,6 +48,17 @@ describe('Home Page', () => {
     expect(container.getElementsByTagName('section').length).toEqual(
       curationsWithSummaries.length,
     );
+  });
+
+  it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
+    const { container } = render(
+      <HomePage pageData={pidginHomePageDataFixture} />,
+      {
+        service: 'pidgin',
+      },
+    );
+    expect(container.querySelectorAll('h2').length).toBe(5);
+    expect(container.querySelectorAll('h3').length).toBe(27);
   });
 
   it('should apply provided margin size to the main element', () => {
@@ -119,6 +131,52 @@ describe('Home Page', () => {
     };
 
     expect(getLinkedDataOutput()).toMatchSnapshot();
+  });
+
+  it('should render images with the .webp image extension', () => {
+    const path =
+      homePageData.curations[1].summaries?.[0].imageUrl?.split('{width}')[1];
+
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/standard/240${path}`;
+    const expectedWebpSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/standard/85${path}.webp 85w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/120${path}.webp 120w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/170${path}.webp 170w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/232${path}.webp 232w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/325${path}.webp 325w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/450${path}.webp 450w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/660${path}.webp 660w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/800${path}.webp 800w`,
+    ].join(', ');
+
+    const expectedJPGSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/standard/85${path} 85w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/120${path} 120w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/170${path} 170w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/232${path} 232w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/325${path} 325w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/450${path} 450w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/660${path} 660w`,
+      `https://ichef.test.bbci.co.uk/ace/standard/800${path} 800w`,
+    ].join(', ');
+
+    // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
+    const { container } = render(<HomePage pageData={homePageData} />, {
+      service: 'kyrgyz',
+      pageType: 'home',
+    });
+
+    const promoImage = container.querySelectorAll('div.promo-image picture')[0];
+
+    const [webpSource, jpgSource, img] = promoImage.childNodes as unknown as [
+      HTMLSourceElement,
+      HTMLSourceElement,
+      HTMLImageElement,
+    ];
+
+    expect(webpSource.srcset).toEqual(expectedWebpSrcSetURLs);
+    expect(jpgSource.srcset).toEqual(expectedJPGSrcSetURLs);
+    expect(img.src).toEqual(imageURL);
   });
 
   describe('Analytics', () => {
@@ -212,6 +270,35 @@ describe('Home Page', () => {
       expect(homePageAds).toHaveLength(2);
 
       expect(getBootstrapScript()).toBeTruthy();
+    });
+    it('should display the MPU ad in the correct location', () => {
+      const { container } = render(
+        <BrowserRouter>
+          {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
+          <HomePage pageData={homePageData} />
+        </BrowserRouter>,
+        {
+          service: 'kyrgyz',
+          toggles: {
+            ads: { enabled: true },
+          },
+          showAdsBasedOnLocation: true,
+        },
+      );
+      const sections = container.querySelectorAll(`section`);
+      const sectionIds: (string | null)[] = Array.from(sections).map(
+        section =>
+          section.getAttribute('aria-labelledby') ||
+          section.getAttribute('data-e2e'),
+      );
+      const mpuIndex = sectionIds.lastIndexOf('advertisement');
+      const firstNonBannerIndex = sectionIds.findIndex(
+        sectionId =>
+          sectionId !== 'advertisement' &&
+          !sectionId?.startsWith('billboard') &&
+          !sectionId?.startsWith('message-banner'),
+      );
+      expect(mpuIndex).toBe(firstNonBannerIndex + 1);
     });
 
     it.each`

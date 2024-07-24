@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directories:
+      - '/'
+      - '/ws-nextjs-app'
+    schedule:
+      interval: 'daily'
+    ignore:
+      - dependency-name: '@bbc/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@loadable/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'webpack'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'winston'
+      # TODO - Remove this ignore once the Ramda dependency update has been merged: https://github.com/bbc/simorgh/pull/11744
+      - dependency-name: 'ramda'
+    labels:
+      - "dependencies"
+    groups:
+      babel:
+        patterns:
+          - '@babel/*'
+          - 'babel-*'
+      emotion:
+        patterns:
+          - '@emotion/*'
+      storybook:
+        patterns:
+          - '@storybook/*'
+          - 'storybook'
+      bbc-minor-patch:
+        patterns:
+          - '@bbc/*'
+      loadable-minor-patch:
+        patterns:
+          - '@loadable/*'
+      webpack-minor-patch:
+        patterns:
+          - 'webpack'
+          - 'webpack-*'

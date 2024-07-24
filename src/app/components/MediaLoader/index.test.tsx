@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { act } from '@testing-library/react-hooks';
+import {
+  act,
+  render,
+} from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
 import { aresMediaBlocks } from './fixture';
-import { render } from '../react-testing-library-with-providers';
 import { MediaBlock } from './types';
 
 jest.mock('react', () => ({

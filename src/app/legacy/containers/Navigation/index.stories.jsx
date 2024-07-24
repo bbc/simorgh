@@ -4,7 +4,6 @@ import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Navigation from '.';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service }) => (
   <RequestContextProvider
     isAmp={isAmp}
@@ -22,6 +21,6 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const Canonical = (_, globalArgs) => <Component {...globalArgs} />;
-export const Amp = (_, globalArgs) => <Component isAmp {...globalArgs} />;
+export const Canonical = (_, { service }) => <Component service={service} />;
+export const Amp = (_, { service }) => <Component isAmp service={service} />;
 Amp.decorators = [AmpDecorator];

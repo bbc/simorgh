@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { oneOf, shape, string } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
@@ -12,7 +11,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const rtlStyles = ({ theme }) => `
@@ -76,12 +74,6 @@ const Caption = styled.figcaption`
   }
   ${({ dir }) => (dir === 'rtl' ? rtlStyles : ltrStyles)}
 `;
-
-Caption.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  service: string.isRequired,
-};
 
 Caption.defaultProps = {
   dir: 'ltr',

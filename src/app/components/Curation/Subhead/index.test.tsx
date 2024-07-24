@@ -10,7 +10,6 @@ interface Props {
   link?: string;
 }
 
-/* eslint-disable react/prop-types */
 const SubheadWithContext = ({
   children = '',
   link = '',

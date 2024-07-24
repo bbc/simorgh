@@ -2075,17 +2075,15 @@ exports[`Story Page should render correctly when the secondary column data is no
                     class="emotion-27"
                     style="padding-bottom: 56.25%;"
                   >
-                    <picture>
-                      <img
-                        alt="Some people at the NTA awards"
-                        class="emotion-28"
-                        height="549"
-                        sizes="(min-width: 1008px) 645px, 100vw"
-                        src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                        srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                        width="976"
-                      />
-                    </picture>
+                    <img
+                      alt="Some people at the NTA awards"
+                      class="emotion-28"
+                      height="549"
+                      sizes="(min-width: 1008px) 645px, 100vw"
+                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp"
+                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
+                      width="976"
+                    />
                     <p
                       class="emotion-29"
                       role="text"
@@ -2244,18 +2242,16 @@ exports[`Story Page should render correctly when the secondary column data is no
                     class="emotion-27"
                     style="padding-bottom: 56.25%;"
                   >
-                    <picture>
-                      <img
-                        alt="That guy from bodyguard at the NTAs"
-                        class="emotion-28"
-                        height="549"
-                        loading="lazy"
-                        sizes="(min-width: 1008px) 645px, 100vw"
-                        src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg"
-                        srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 800w"
-                        width="976"
-                      />
-                    </picture>
+                    <img
+                      alt="That guy from bodyguard at the NTAs"
+                      class="emotion-28"
+                      height="549"
+                      loading="lazy"
+                      sizes="(min-width: 1008px) 645px, 100vw"
+                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp"
+                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 800w"
+                      width="976"
+                    />
                     <p
                       class="emotion-29"
                       role="text"
@@ -5561,17 +5557,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     class="emotion-27"
                     style="padding-bottom: 56.25%;"
                   >
-                    <picture>
-                      <img
-                        alt="Some people at the NTA awards"
-                        class="emotion-28"
-                        height="549"
-                        sizes="(min-width: 1008px) 645px, 100vw"
-                        src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                        srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                        width="976"
-                      />
-                    </picture>
+                    <img
+                      alt="Some people at the NTA awards"
+                      class="emotion-28"
+                      height="549"
+                      sizes="(min-width: 1008px) 645px, 100vw"
+                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp"
+                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
+                      width="976"
+                    />
                     <p
                       class="emotion-29"
                       role="text"
@@ -5730,18 +5724,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     class="emotion-27"
                     style="padding-bottom: 56.25%;"
                   >
-                    <picture>
-                      <img
-                        alt="That guy from bodyguard at the NTAs"
-                        class="emotion-28"
-                        height="549"
-                        loading="lazy"
-                        sizes="(min-width: 1008px) 645px, 100vw"
-                        src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg"
-                        srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 800w"
-                        width="976"
-                      />
-                    </picture>
+                    <img
+                      alt="That guy from bodyguard at the NTAs"
+                      class="emotion-28"
+                      height="549"
+                      loading="lazy"
+                      sizes="(min-width: 1008px) 645px, 100vw"
+                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp"
+                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg.webp 800w"
+                      width="976"
+                    />
                     <p
                       class="emotion-29"
                       role="text"
@@ -6073,7 +6065,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
               >
                 <section
                   aria-labelledby="top-stories-heading"
-                  class=" emotion-172 emotion-173"
+                  class="emotion-172 emotion-173"
                   data-e2e="top-stories-heading"
                   role="region"
                 >
@@ -6217,7 +6209,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
               >
                 <section
                   aria-labelledby="features-analysis-heading"
-                  class=" emotion-172 emotion-173"
+                  class="emotion-172 emotion-173"
                   data-e2e="features-analysis-heading"
                   role="region"
                 >
@@ -6272,6 +6264,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A904/test/_63586234_lassalagos.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A904/test/_63586234_lassalagos.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6326,6 +6319,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg.webp 400w"
                             width="1024"
                           />
                         </div>
@@ -6380,6 +6374,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/7DD4/test/_63721223_image1.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/7DD4/test/_63721223_image1.jpg.webp 400w"
                             width="976"
                           />
                         </div>
@@ -6434,6 +6429,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/13EDE/test/_63603618_040299897-1.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/13EDE/test/_63603618_040299897-1.jpg.webp 400w"
                             width="976"
                           />
                         </div>
@@ -6488,6 +6484,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/9298/test/_63582573_scaramucci.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/9298/test/_63582573_scaramucci.jpg.webp 400w"
                             width="976"
                           />
                         </div>
@@ -6542,6 +6539,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A71A/test/_63587724_jane7.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/A71A/test/_63587724_jane7.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6596,6 +6594,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6650,6 +6649,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg.webp 400w"
                             width="624"
                           />
                         </div>
@@ -6704,6 +6704,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             loading="lazy"
                             sizes="(min-width: 1008px) 400px"
                             src="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/1B9C/test/_63586070_kenya.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/400/cpsdevpb/1B9C/test/_63586070_kenya.jpg.webp 400w"
                             width="624"
                           />
                         </div>

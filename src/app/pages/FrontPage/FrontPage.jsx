@@ -3,7 +3,6 @@ import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
@@ -107,10 +106,6 @@ const FrontPage = ({ pageData }) => {
       </main>
     </>
   );
-};
-
-FrontPage.propTypes = {
-  pageData: frontPageDataPropTypes.isRequired,
 };
 
 export default FrontPage;

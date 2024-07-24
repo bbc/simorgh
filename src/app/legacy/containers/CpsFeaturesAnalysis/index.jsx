@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import {
   StoryPromoLi,
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
-import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -62,7 +60,7 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   }
 `;
 
-const PromoListComponent = ({ promoItems, dir }) => {
+const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
   const viewRef = useViewTracker(eventTrackingData.block);
@@ -93,17 +91,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
   );
 };
 
-PromoListComponent.propTypes = {
-  promoItems: arrayOf(oneOfType([shape(storyItem), shape(linkPromo)]))
-    .isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-PromoListComponent.defaultProps = {
-  dir: 'ltr',
-};
-
-const PromoComponent = ({ promo, dir }) => {
+const PromoComponent = ({ promo, dir = 'ltr' }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
   const viewRef = useViewTracker(eventTrackingData);
@@ -122,19 +110,10 @@ const PromoComponent = ({ promo, dir }) => {
   );
 };
 
-PromoComponent.propTypes = {
-  promo: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-PromoComponent.defaultProps = {
-  dir: 'ltr',
-};
-
 const FeaturesAnalysis = ({
-  content,
-  parentColumns,
-  sectionLabelBackground,
+  content = [],
+  parentColumns = null,
+  sectionLabelBackground = undefined,
 }) => {
   const { translations } = useContext(ServiceContext);
 
@@ -156,25 +135,6 @@ const FeaturesAnalysis = ({
       sectionLabelBackground={sectionLabelBackground}
     />
   );
-};
-
-FeaturesAnalysis.propTypes = {
-  content: arrayOf(shape(storyItem)),
-  parentColumns: shape({
-    group0: number,
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-  sectionLabelBackground: string,
-};
-
-FeaturesAnalysis.defaultProps = {
-  content: [],
-  parentColumns: null,
-  sectionLabelBackground: undefined,
 };
 
 export default FeaturesAnalysis;

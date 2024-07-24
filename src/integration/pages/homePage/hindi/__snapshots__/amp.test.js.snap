@@ -207,61 +207,54 @@ exports[`AMP Home Page Header Navigation link should match text and url 1`] = `
 
 exports[`AMP Home Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "लोकसभा चुनाव 2024",
-  "url": "/hindi/topics/cm5m26q8qxpt",
-}
-`;
-
-exports[`AMP Home Page Header Navigation link should match text and url 3`] = `
-{
   "text": "भारत",
   "url": "/hindi/topics/ckdxnkz7607t",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 3`] = `
 {
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 4`] = `
 {
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/institutional-61824775",
@@ -410,9 +403,15 @@ exports[`AMP Home Page SEO Linked data should match text 1`] = `
           "position": 3,
           "url": "https://www.bbc.com/hindi/international-23069805",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/hindi/articles/c558wpnqq4qo",
+        },
       ],
       "name": "BBC News हिंदी",
-      "numberOfItems": 3,
+      "numberOfItems": 4,
     },
   ],
 }

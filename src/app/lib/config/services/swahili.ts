@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Habari za hivi punde',
         postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
+        shareButtonText: 'Mshirikishe mwenzako',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -272,11 +273,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Iliyoangaliwa zaidi',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

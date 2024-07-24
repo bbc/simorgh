@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import { string, shape, node, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { LUNAR } from '#app/components/ThemeProvider/palette';
 import {
@@ -9,7 +8,6 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 
@@ -62,17 +60,17 @@ const SingleTopicTagItem = styled.div`
   }
 `;
 
-export const TopicTag = forwardRef(({ name, link, onClick }, ref) => (
+export const TopicTag = forwardRef(({ name, link, onClick = null }, ref) => (
   <a href={link} onClick={onClick} ref={ref}>
     {name}
   </a>
 ));
 
 export const TopicTags = ({
-  children,
+  children = [],
   script,
   service,
-  tagBackgroundColour,
+  tagBackgroundColour = LUNAR,
 }) => {
   const hasMultipleChildren = children.length > 1;
 
@@ -110,24 +108,4 @@ export const TopicTags = ({
       )}
     </>
   );
-};
-
-TopicTag.propTypes = {
-  name: string.isRequired,
-  link: string.isRequired,
-  onClick: func,
-};
-
-TopicTag.defaultProps = { onClick: null };
-
-TopicTags.propTypes = {
-  children: node,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  tagBackgroundColour: string,
-};
-
-TopicTags.defaultProps = {
-  children: [],
-  tagBackgroundColour: LUNAR,
 };

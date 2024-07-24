@@ -44,10 +44,11 @@ const Billboard = forwardRef(
           <div css={styles.backgroundContainer} />
           <div css={styles.contentContainer}>
             <MaskedImage
-              imageUrl={image}
+              imageUrl={image.replace('{width}', '240')}
               imageUrlTemplate={image}
               altText={altText}
               imageWidth={660}
+              showPlaceholder={false}
             />
             <div css={styles.textContainer}>
               <Heading level={2} size="paragon" css={styles.heading} id={id}>

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -128,15 +127,6 @@ const Promo = ({ block, onClick }) => {
       )}
     </WrapperPromoBox>
   );
-};
-
-Promo.propTypes = {
-  block: shape({
-    model: shape({
-      blocks: arrayOf(oneOfType([string, object])),
-    }).isRequired,
-  }).isRequired,
-  onClick: func.isRequired,
 };
 
 export default Promo;

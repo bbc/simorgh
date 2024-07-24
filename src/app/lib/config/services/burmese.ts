@@ -86,6 +86,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'သတင်းထူး',
         postedAt: 'ပို့စ် တင်တဲ့အချိန်',
         summary: 'အနှစ်ချုပ်',
+        shareButtonText: 'ဝေမျှပါ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -297,11 +298,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'လူကြည့်အများဆုံး',
-      numberOfItems: 5,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

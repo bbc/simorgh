@@ -56,12 +56,11 @@ const buildImageProperties = (imageProps?: ImageProps) => {
     originCode,
     locator,
     resolution: 400,
-    isWebP: true,
   });
 
   return {
     ratio: 52,
-    srcset: primarySrcset,
+    srcSet: primarySrcset,
     fallbackSrcset,
     sizes: '(min-width: 1008px) 400px',
     src,

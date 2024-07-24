@@ -113,11 +113,6 @@ export const service: ZhongwenConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: '热播',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     navigation: [
       {
         title: '主页',
@@ -183,6 +178,7 @@ export const service: ZhongwenConfig = {
         breaking: '最新消息',
         postedAt: '张贴于',
         summary: '概要',
+        shareButtonText: '分享',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -417,11 +413,6 @@ export const service: ZhongwenConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: '熱播',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     navigation: [
       {
         title: '主頁',
@@ -487,6 +478,7 @@ export const service: ZhongwenConfig = {
         breaking: '最新消息',
         postedAt: '張貼在',
         summary: '概要',
+        shareButtonText: '分享',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

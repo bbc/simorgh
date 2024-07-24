@@ -1,6 +1,5 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import { arrayOf, bool, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   StoryPromoLi,
@@ -8,7 +7,6 @@ import {
 } from '#psammead/psammead-story-promo-list/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
@@ -20,22 +18,11 @@ const MediaStoryPromoLi = styled(StoryPromoLi)`
   }
 `;
 
-const MostWatchedOl = styled.ol`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`;
-
-MostWatchedOl.defaultProps = {
-  role: 'list',
-  'data-e2e': 'most-watched-ol',
-};
-
 const RelatedContentPromoList = ({
   promoItems,
   dir,
-  isMediaContent,
-  eventTrackingData,
+  isMediaContent = false,
+  eventTrackingData = null,
 }) => {
   const blockLevelEventTrackingData = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(blockLevelEventTrackingData);
@@ -50,7 +37,7 @@ const RelatedContentPromoList = ({
         group4: 8,
         group5: 8,
       }}
-      as={isMediaContent ? MostWatchedOl : StoryPromoUl}
+      as={StoryPromoUl}
       enableGelGutters
     >
       {promoItems.map((item, index) => (
@@ -81,20 +68,6 @@ const RelatedContentPromoList = ({
       ))}
     </Grid>
   );
-};
-
-RelatedContentPromoList.propTypes = {
-  dir: string.isRequired,
-  isMediaContent: bool,
-  promoItems: arrayOf(shape(storyItem)).isRequired,
-  eventTrackingData: shape({
-    componentName: string,
-  }),
-};
-
-RelatedContentPromoList.defaultProps = {
-  isMediaContent: false,
-  eventTrackingData: null,
 };
 
 export default RelatedContentPromoList;

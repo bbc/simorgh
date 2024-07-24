@@ -9,7 +9,6 @@ import {
   MEDIA_ARTICLE_PAGE,
   FEATURE_INDEX_PAGE,
   MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_PAGE,
   ERROR_PAGE,
@@ -24,10 +23,6 @@ import {
   buildTvRadioATIUrl,
 } from './tvRadioPage/buildParams';
 import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
-import {
-  buildMostWatchedATIParams,
-  buildMostWatchedATIUrl,
-} from './mostWatchedPage/buildParams';
 import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
@@ -67,7 +62,6 @@ const pageTypeUrlBuilders = {
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
   [MOST_READ_PAGE]: noOp,
-  [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
   [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: noOp,
@@ -88,7 +82,6 @@ const pageTypeParamBuilders = {
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
   [MOST_READ_PAGE]: noOp,
-  [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
   [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: noOp,

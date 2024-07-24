@@ -1250,7 +1250,6 @@ storiesOf(STORY_KIND, module)
   .add(
     'Example with Top story and regular promos',
     ({ service, script, dir, text }) => {
-      // eslint-disable-next-line react/prop-types
       const generateStory = ({ promoType, mediaType }) => {
         const MediaIndicatorComponent = () => (
           <ExampleMediaIndicator

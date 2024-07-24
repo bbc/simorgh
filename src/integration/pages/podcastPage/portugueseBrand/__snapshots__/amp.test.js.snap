@@ -256,13 +256,20 @@ exports[`AMP Podcast Page Header Navigation link should match text and url 8`] =
 }
 `;
 
+exports[`AMP Podcast Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "BBC Lê",
+  "url": "/portuguese/topics/cxndrr1qgllt",
+}
+`;
+
 exports[`AMP Podcast Page I can see the brand title 1`] = `"Que História!"`;
 
 exports[`AMP Podcast Page I can see the episode summary 1`] = `"Andrea Fleck fez descoberta surpreendente após resolver pesquisar passado de seu pai, que tinha sido adotado quando bebê."`;
 
 exports[`AMP Podcast Page I can see the episode title 1`] = `"'Descobri que meu cabeleireiro é meu irmão'"`;
 
-exports[`AMP Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p09clsjd.jpg"`;
+exports[`AMP Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p09clsjd.jpg.webp"`;
 
 exports[`AMP Podcast Page Main heading should match text 1`] = `"Que História!, 'Descobri que meu cabeleireiro é meu irmão'"`;
 

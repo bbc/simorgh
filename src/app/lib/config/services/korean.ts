@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: '속보',
         postedAt: '작성',
         summary: '요약',
+        shareButtonText: '공유',
       },
       downloads: {
         instructions: '오늘의 뉴스를 다운받아 보실 수 있습니다',
@@ -265,11 +266,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: '인기 콘텐츠',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

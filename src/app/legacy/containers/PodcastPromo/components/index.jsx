@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from '@emotion/styled';
-import { string, shape, arrayOf, element, oneOfType } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 import Title from './title';
@@ -25,11 +23,17 @@ const Wrapper = styled.section`
   padding: ${GEL_SPACING_DBL};
 `;
 
-const PodcastPromo = ({ script, service, children, ...props }) => (
-  <PodcastContext.Provider value={{ script, service }}>
-    <Wrapper {...props}>{children}</Wrapper>
-  </PodcastContext.Provider>
-);
+const PodcastPromo = ({ script, service, children, ...props }) => {
+  const podcastPromoValue = useMemo(
+    () => ({ script, service }),
+    [script, service],
+  );
+  return (
+    <PodcastContext.Provider value={podcastPromoValue}>
+      <Wrapper {...props}>{children}</Wrapper>
+    </PodcastContext.Provider>
+  );
+};
 
 PodcastPromo.Title = withPodcastContext(Title);
 PodcastPromo.Card = Card;
@@ -39,13 +43,5 @@ PodcastPromo.Card.Content = CardContent;
 PodcastPromo.Card.Title = withPodcastContext(CardTitle);
 PodcastPromo.Card.Description = withPodcastContext(CardDescription);
 PodcastPromo.Card.EpisodesText = withPodcastContext(CardEpisodesText);
-
-PodcastPromo.propTypes = {
-  children: oneOfType([element, arrayOf(element)]).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-};
-
-PodcastPromo.defaultProps = {};
 
 export default PodcastPromo;

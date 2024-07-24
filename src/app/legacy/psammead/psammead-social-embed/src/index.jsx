@@ -1,5 +1,4 @@
 import React, { useContext, useId } from 'react';
-import { shape, string, func } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   EmbedConsentBannerCanonical,
@@ -48,10 +47,10 @@ export const CanonicalSocialEmbed = ({
   service,
   skipLink,
   id,
-  oEmbed,
+  oEmbed = null,
   caption,
   fallback,
-  onRender,
+  onRender = null,
 }) => {
   const { pageType } = useContext(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
@@ -121,7 +120,7 @@ export const AmpSocialEmbed = ({
   id,
   caption,
   fallback,
-  source,
+  source = null,
 }) => {
   const { pageType } = useContext(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
@@ -155,48 +154,4 @@ export const AmpSocialEmbed = ({
       )}
     </SkipLinkWrapper>
   );
-};
-
-const sharedPropTypes = {
-  provider: string.isRequired,
-  service: string.isRequired,
-  skipLink: shape({
-    text: string.isRequired,
-    endTextId: string.isRequired,
-    endTextVisuallyHidden: string.isRequired,
-  }).isRequired,
-  caption: shape({
-    textPrefixVisuallyHidden: string,
-    text: string.isRequired,
-  }),
-  fallback: shape({
-    text: string.isRequired,
-    linkText: string.isRequired,
-    linkTextSuffixVisuallyHidden: string,
-    linkHref: string.isRequired,
-    warningText: string,
-  }).isRequired,
-};
-
-CanonicalSocialEmbed.defaultProps = {
-  oEmbed: null,
-  onRender: null,
-};
-
-CanonicalSocialEmbed.propTypes = {
-  ...sharedPropTypes,
-  oEmbed: shape({
-    html: string.isRequired,
-  }),
-  onRender: func,
-};
-
-AmpSocialEmbed.defaultProps = {
-  source: null,
-};
-
-AmpSocialEmbed.propTypes = {
-  ...sharedPropTypes,
-  id: string.isRequired,
-  source: string,
 };

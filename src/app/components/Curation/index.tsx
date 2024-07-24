@@ -6,7 +6,6 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
-import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -50,7 +49,6 @@ export default ({
   title = '',
   topStoriesTitle = '',
   link = '',
-  headingLevel = 2,
   position = 0,
   curationLength = 0,
   mostRead,
@@ -64,9 +62,7 @@ export default ({
     radioSchedule,
     embed,
   });
-
   const GridComponent = getGridComponent(componentName);
-  const environmentIsLive = isLive();
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
@@ -91,22 +87,8 @@ export default ({
       return null;
     case BILLBOARD: {
       const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
-
       if (firstSummary) {
-        return environmentIsLive ? (
-          <MessageBanner
-            heading={title}
-            description={description}
-            link={summaryLink}
-            linkText={linkText}
-            image={imageUrl}
-            id={messageBannerId}
-            eventTrackingData={{
-              componentName: messageBannerId,
-              detailedPlacement: `${position + 1}`,
-            }}
-          />
-        ) : (
+        return (
           <div css={styles.billboardContainer}>
             <Billboard
               heading={firstSummary.title}
@@ -159,31 +141,31 @@ export default ({
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
-      return curationLength > 1 &&
-        summaries.length > 0 &&
-        (title || isFirstCuration) ? (
-        <section aria-labelledby={id} role="region">
-          {isFirstCuration ? (
-            <VisuallyHiddenText id={id} as="h2">
-              {curationSubheading}
-            </VisuallyHiddenText>
-          ) : (
-            <Subheading id={id} link={link}>
-              {curationSubheading}
-            </Subheading>
-          )}
+      if (summaries.length > 0) {
+        return curationLength > 1 && (title || isFirstCuration) ? (
+          <section aria-labelledby={id} role="region">
+            {isFirstCuration ? (
+              <VisuallyHiddenText id={id} as="h2">
+                {curationSubheading}
+              </VisuallyHiddenText>
+            ) : (
+              <Subheading id={id} link={link}>
+                {curationSubheading}
+              </Subheading>
+            )}
+            <GridComponent
+              summaries={summaries}
+              headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
+            />
+          </section>
+        ) : (
           <GridComponent
             summaries={summaries}
-            headingLevel={isFirstCuration ? 3 : headingLevel}
+            headingLevel={2} // if there is only one curation, all promos should be h2
             isFirstCuration={isFirstCuration}
           />
-        </section>
-      ) : (
-        <GridComponent
-          summaries={summaries}
-          headingLevel={headingLevel}
-          isFirstCuration={isFirstCuration}
-        />
-      );
+        );
+      }
+      return null;
   }
 };

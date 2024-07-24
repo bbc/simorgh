@@ -1,5 +1,4 @@
-import React from 'react';
-import { node, string, shape, bool } from 'prop-types';
+import React, { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -18,50 +17,39 @@ const ContextWrap = ({
   origin,
   children,
   nielsenAnalyticsToggle,
-  personalisation,
+  personalisation = defaultPersonalisation,
   service,
   pathname,
-}) => (
-  <RequestContextProvider
-    isAmp={platform === 'amp'}
-    pageType={pageType}
-    service={service}
-    statusCode={200}
-    bbcOrigin={origin}
-    pathname={pathname}
-  >
-    <ServiceContextProvider service="pidgin">
-      <ToggleContext.Provider
-        value={{
-          toggleState: {
-            nielsenAnalytics: {
-              enabled: nielsenAnalyticsToggle,
-            },
-          },
-          toggleDispatch: mockToggleDispatch,
-        }}
-      >
-        <UserContext.Provider value={personalisation}>
-          {children}
-        </UserContext.Provider>
-      </ToggleContext.Provider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
-
-ContextWrap.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  origin: string.isRequired,
-  platform: string.isRequired,
-  nielsenAnalyticsToggle: bool.isRequired,
-  personalisation: shape({}),
-  service: string.isRequired,
-  pathname: string.isRequired,
-};
-
-ContextWrap.defaultProps = {
-  personalisation: defaultPersonalisation,
+}) => {
+  const memoizedRequestContextValue = useMemo(
+    () => ({
+      toggleState: {
+        nielsenAnalytics: {
+          enabled: nielsenAnalyticsToggle,
+        },
+      },
+      toggleDispatch: mockToggleDispatch,
+    }),
+    [nielsenAnalyticsToggle],
+  );
+  return (
+    <RequestContextProvider
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      service={service}
+      statusCode={200}
+      bbcOrigin={origin}
+      pathname={pathname}
+    >
+      <ServiceContextProvider service="pidgin">
+        <ToggleContext.Provider value={memoizedRequestContextValue}>
+          <UserContext.Provider value={personalisation}>
+            {children}
+          </UserContext.Provider>
+        </ToggleContext.Provider>
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  );
 };
 
 describe('Nielsen Analytics Container', () => {

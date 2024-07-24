@@ -6,7 +6,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -23,7 +22,6 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import MostWatchedContainer from '#containers/MostWatched';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
@@ -39,7 +37,6 @@ import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import MediaMessage from './MediaMessage';
 import Disclaimer from '../../components/Disclaimer';
 
@@ -70,10 +67,6 @@ const MediaAssetPageGrid = ({ children, ...props }) => (
   </GelPageGrid>
 );
 
-MediaAssetPageGrid.propTypes = {
-  children: node.isRequired,
-};
-
 const StyledImageWrapper = styled.div`
   grid-column: 5 / span 12;
   @media (max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
@@ -87,7 +80,7 @@ const StyledImageWrapper = styled.div`
 
 const MediaAssetPage = ({ pageData }) => {
   const { brandName, showRelatedTopics } = useContext(ServiceContext);
-  const { canonicalLink, isAmp } = useContext(RequestContext);
+  const { canonicalLink } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -120,7 +113,6 @@ const MediaAssetPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const mostWatchedData = path(['mostWatched'], pageData);
 
   // ATI
   const { atiAnalytics } = metadata;
@@ -193,10 +185,6 @@ const MediaAssetPage = ({ pageData }) => {
     }
   `;
 
-  const MostWatchedWrapper = styled.div`
-    padding-bottom: ${GEL_SPACING_QUAD};
-  `;
-
   return (
     <>
       <ChartbeatAnalytics
@@ -244,15 +232,8 @@ const MediaAssetPage = ({ pageData }) => {
       )}
 
       <CpsRelatedContent content={relatedContent} isMediaContent />
-      {!isAmp && (
-        <MostWatchedWrapper>
-          <MostWatchedContainer data={mostWatchedData} />
-        </MostWatchedWrapper>
-      )}
     </>
   );
 };
-
-MediaAssetPage.propTypes = cpsAssetPagePropTypes;
 
 export default MediaAssetPage;
