@@ -115,6 +115,10 @@ export type PageProps = {
   pageData: {
     title: string;
     description: string;
+    settings: {
+      replyEmailAddress: string;
+      retentionPeriodDays: string;
+    };
     sections: Section[];
     privacyNotice: {
       default: string;
