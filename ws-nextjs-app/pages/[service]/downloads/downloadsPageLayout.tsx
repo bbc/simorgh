@@ -10,7 +10,7 @@ import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-containe
 import styles from './styles';
 import { PageProps } from './types';
 
-const downloadsPageLayout = ({ service, pageData }: PageProps) => {
+const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   const {
     lang,
     timezone,
@@ -21,7 +21,7 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
       downloads: {
         instructions = 'You can download and view today’s news.',
         title = 'File Download',
-      },
+      } = {},
     },
   } = useContext(ServiceContext);
 
@@ -84,4 +84,4 @@ const downloadsPageLayout = ({ service, pageData }: PageProps) => {
   );
 };
 
-export default downloadsPageLayout;
+export default DownloadsPageLayout;
