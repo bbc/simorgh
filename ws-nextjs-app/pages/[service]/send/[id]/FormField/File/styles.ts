@@ -83,7 +83,7 @@ export default {
           svg: {
             color: palette.BLACK,
             fill: 'currentcolor',
-            [mq.HIGH_CONTRAST]: { stroke: palette.WHITE },
+            [mq.FORCED_COLOURS]: { stroke: palette.WHITE },
           },
         },
       },

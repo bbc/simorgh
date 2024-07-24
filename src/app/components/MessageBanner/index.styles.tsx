@@ -17,7 +17,7 @@ const styles = {
         background:
           'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         border: '0.1875rem solid transparent',
       },
     }),
