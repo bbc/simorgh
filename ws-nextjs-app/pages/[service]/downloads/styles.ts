@@ -23,7 +23,7 @@ export default {
         gridColumn: '1 / span 12',
       },
     }),
-  orderedList : ({ mq }) => 
+  orderedList : ({ mq }: Theme) => 
     css({
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fill, minmax(100%, 1fr))',
