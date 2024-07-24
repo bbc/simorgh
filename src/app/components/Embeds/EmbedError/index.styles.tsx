@@ -14,7 +14,7 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `0 0 ${spacings.TRIPLE}rem`,
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         border: `${pixelsToRem(3)}rem solid transparent`,
       },
     }),
