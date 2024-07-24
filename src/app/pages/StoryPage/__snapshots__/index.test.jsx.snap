@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Story Page should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later 1`] = `<div />`;
-
 exports[`Story Page should render correctly when the secondary column data is not available 1`] = `
 .emotion-1 {
   width: 100%;
