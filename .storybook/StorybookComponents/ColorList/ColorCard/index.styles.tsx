@@ -10,21 +10,21 @@ const styles = {
 
   color:
     colorCode =>
-      ({ spacings, mq }: Theme) =>
-        css({
-          '::before': {
-            content: '""',
-            display: 'block',
-            height: '4rem',
-            margin: `-${spacings.FULL}rem`,
-            marginBottom: `${spacings.FULL}rem`,
+    ({ spacings, mq }: Theme) =>
+      css({
+        '::before': {
+          content: '""',
+          display: 'block',
+          height: '4rem',
+          margin: `-${spacings.FULL}rem`,
+          marginBottom: `${spacings.FULL}rem`,
+          background: colorCode,
+          [mq.FORCED_COLOURS]: {
             background: colorCode,
-            [mq.FORCED_COLOURS]: {
-              background: colorCode,
-              forcedColorAdjust: 'none',
-            },
+            forcedColorAdjust: 'none',
           },
-        }),
+        },
+      }),
 
   text: { display: 'block' },
 };

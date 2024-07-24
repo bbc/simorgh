@@ -396,11 +396,11 @@ export type GelFontSize =
 
 type FontSize = {
   [x: string]:
-  | string
-  | {
-    fontSize: string;
-    lineHeight: string;
-  };
+    | string
+    | {
+        fontSize: string;
+        lineHeight: string;
+      };
   fontSize: string;
   lineHeight: string;
 };
