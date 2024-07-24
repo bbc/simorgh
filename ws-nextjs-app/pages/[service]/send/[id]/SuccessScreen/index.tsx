@@ -86,17 +86,19 @@ const SuccessScreen = ({
           </Text>
           <Paragraph>{submissionID}</Paragraph>
         </div>
-        <Paragraph>{retentionPolicy}</Paragraph>
-        <Paragraph>
-          {emailGuidelineClauses?.[0]}
-          <a
-            href={`mailto:${replyEmailAddress}`}
-            className="focusIndicatorReducedWidth"
-          >
-            {replyEmailAddress}
-          </a>
-          {emailGuidelineClauses?.[1]} {removalGuidelineText}
-        </Paragraph>
+        {retentionPeriod && <Paragraph>{retentionPolicy}</Paragraph>}
+        {replyEmailAddress && (
+          <Paragraph>
+            {replyEmailAddress && emailGuidelineClauses?.[0]}
+            <a
+              href={`mailto:${replyEmailAddress}`}
+              className="focusIndicatorReducedWidth"
+            >
+              {replyEmailAddress}
+            </a>
+            {emailGuidelineClauses?.[1]} {removalGuidelineText}
+          </Paragraph>
+        )}
         <Paragraph>
           {privacyClauses?.[0]}
           <a
