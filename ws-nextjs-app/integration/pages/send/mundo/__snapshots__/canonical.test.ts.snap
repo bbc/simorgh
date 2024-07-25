@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Send A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
+
+exports[`Canonical Send Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Mundo",
+  "url": "/mundo",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 2`] = `
+{
+  "text": "Por qué puedes confiar en la BBC",
+  "url": "https://www.bbc.com/mundo/institucional-51359666",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 3`] = `
+{
+  "text": "Términos de uso",
+  "url": "https://www.bbc.com/mundo/institucional-36400005",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 4`] = `
+{
+  "text": "Sobre la BBC",
+  "url": "https://www.bbc.com/mundo/institucional-36400007",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 5`] = `
+{
+  "text": "Política de privacidad",
+  "url": "https://www.bbc.com/mundo/institucional-36400009",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 7`] = `
+{
+  "text": "Escribe a BBC Mundo",
+  "url": "https://www.bbc.co.uk/mundo/send/u50853489",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 8`] = `
+{
+  "text": "Lee sobre nuestra postura acerca de enlaces externos.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
+
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`Canonical Send Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`Canonical Send Header Navigation link should match text and url 1`] = `
+{
+  "text": "Noticias",
+  "url": "/mundo",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 2`] = `
+{
+  "text": "América Latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 4`] = `
+{
+  "text": "Hay Festival",
+  "url": "/mundo/topics/cr50y7p7qyqt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 5`] = `
+{
+  "text": "Economía",
+  "url": "/mundo/topics/c06gq9v4xp3t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciencia",
+  "url": "/mundo/topics/ckdxnw959n7t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 7`] = `
+{
+  "text": "Salud",
+  "url": "/mundo/topics/cpzd498zkxgt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 8`] = `
+{
+  "text": "Cultura",
+  "url": "/mundo/topics/c2dwq9zyv4yt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 9`] = `
+{
+  "text": "Tecnología",
+  "url": "/mundo/topics/cyx5krnw38vt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 10`] = `
+{
+  "text": "Centroamérica Cuenta",
+  "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
+exports[`Canonical Send UGC form should render a heading 1`] = `"Escríbenos"`;
+
+exports[`Canonical Send UGC form should render a submit button 1`] = `"Enviar"`;

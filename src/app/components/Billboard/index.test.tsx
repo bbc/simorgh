@@ -87,7 +87,9 @@ describe('Billboard', () => {
       />,
     );
     const maskedImage = getByRole('img');
-    expect(maskedImage.getAttribute('src')).toEqual(imageUrl);
+    expect(maskedImage.getAttribute('src')).toEqual(
+      'https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
+    );
   });
 
   it('should have an masked image with the correct alt text', () => {

@@ -1,14 +1,8 @@
 {
   "extends": ["config:recommended", ":pinDependencies"],
   "enabledManagers": ["npm"],
+  "labels": ["dependencies"],
   "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "excludePackagePatterns": ["^@bbc", "^@loadable", "webpack"],
-      "matchUpdateTypes": ["patch"],
-      "groupName": "all 3rd party patch dependencies",
-      "groupSlug": "all-patch"
-    },
     {
       "matchPackagePatterns": ["^@loadable"],
       "matchUpdateTypes": ["minor", "patch"],
