@@ -5,7 +5,7 @@ import insert from 'ramda/src/insert';
 
 const getBlocks = pathOr([], ['content', 'model', 'blocks']);
 const setBlocks = assocPath(['content', 'model', 'blocks']);
-const isDisclaimerToggledOn = pathEq(['disclaimer', 'enabled'], true);
+const isDisclaimerToggledOn = pathEq(true, ['disclaimer', 'enabled']);
 const disclaimerBlock = {
   type: 'disclaimer',
   model: {},

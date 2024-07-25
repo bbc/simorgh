@@ -48,7 +48,7 @@ export default {
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
-  textField: ({ spacings, fontVariants, fontSizes, palette }: Theme) =>
+  textField: ({ spacings, fontVariants, fontSizes, palette, mq }: Theme) =>
     css({
       border: `solid 0.0625rem ${palette.GREY_10}`,
       outline: 'solid 0.0625rem transparent',
@@ -57,6 +57,7 @@ export default {
       padding: `${spacings.FULL}rem`,
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
+      [mq.FORCED_COLOURS]: { borderColor: 'canvasText', outline: '0' },
     }),
   textFieldError: ({ palette }: Theme) =>
     css({
@@ -108,7 +109,7 @@ export default {
         width: '100%',
         height: '100%',
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         appearance: 'auto', // renders browser default checkbox
         '&:checked::after': {
           content: 'none',
@@ -129,7 +130,7 @@ export default {
       verticalAlign: 'middle',
       marginInlineEnd: '0.75rem',
       minWidth: '1.5rem',
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         path: {
           fill: 'currentColor',
         },

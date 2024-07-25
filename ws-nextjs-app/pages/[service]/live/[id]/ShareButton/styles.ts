@@ -22,18 +22,18 @@ const styles = {
         backgroundColor: palette.BRAND_BACKGROUND,
         path: {
           fill: palette.WHITE,
-          [mq.HIGH_CONTRAST]: {
+          [mq.FORCED_COLOURS]: {
             fill: 'canvasText',
           },
         },
-        [mq.HIGH_CONTRAST]: {
+        [mq.FORCED_COLOURS]: {
           backgroundColor: 'canvas',
           color: 'canvasText',
           border: `${pixelsToRem(2)}rem solid canvasText`,
           textDecoration: 'underline',
         },
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         color: 'canvasText',
         border: `${pixelsToRem(2)}rem solid canvasText`,
       },
@@ -43,7 +43,7 @@ const styles = {
         marginInlineEnd: `${spacings.FULL}rem`,
         path: {
           fill: palette.BLACK,
-          [mq.HIGH_CONTRAST]: {
+          [mq.FORCED_COLOURS]: {
             fill: 'canvasText',
           },
         },
