@@ -45,7 +45,6 @@ Object.keys(config)
             service,
             pageType,
             variant,
-            isAmp: true,
           });
         });
       });
