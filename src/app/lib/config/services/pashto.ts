@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'وروستی',
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
+        shareButtonText: 'شریک یې کړئ',
       },
       gist: 'لنډیز',
       error: {
@@ -275,11 +276,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'تر ټولو ډېر لیدل شوی',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
@@ -361,15 +357,19 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'ځانګړې پاڼې',
-        url: '/pashto/in-depth-54540873',
+        url: '/pashto/topics/c6pxyz4e0ryt',
       },
       {
         title: 'کالم',
-        url: '/pashto/columns-54029178',
+        url: '/pashto/topics/cq57nwne9lzt',
       },
       {
         title: 'پر سټلایت خپرونې',
         url: '/pashto/articles/c4n55eygdn0o',
+      },
+      {
+        title: 'راډیویي خپرونې',
+        url: '/pashto/topics/c9xz1ekw79nt',
       },
     ],
   },

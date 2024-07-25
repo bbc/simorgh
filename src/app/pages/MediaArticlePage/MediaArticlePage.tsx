@@ -6,6 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { Tag } from '#app/components/LinkedData/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -42,7 +43,7 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import { OptimoBlock } from '../../models/types/optimo';
+import { Article, OptimoBlock } from '../../models/types/optimo';
 import {
   MetadataFormats,
   MetadataTaggings,
@@ -67,11 +68,10 @@ import styles from './MediaArticlePage.styles';
 import {
   ComponentToRenderProps,
   EmbedHtmlProps,
-  MediaArticlePageProps,
   TimestampProps,
 } from './types';
 
-const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
+const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -84,11 +84,11 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) as string;
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
+  const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
   const blocks = pathOr<OptimoBlock[]>(
     [],
@@ -209,15 +209,15 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
-        articleId={getArticleId(pageData)}
+        articleId={getArticleId(pageData) as string | undefined}
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
+        section={getArticleSection(pageData) as string | undefined}
         aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
+        mentionsTags={getMentions(pageData) as string[] | undefined}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}

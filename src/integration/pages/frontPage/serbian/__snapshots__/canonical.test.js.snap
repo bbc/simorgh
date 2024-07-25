@@ -370,7 +370,7 @@ exports[`Story Promo Image should match image 1`] = `
   alt="test"
   class="bbc-139onq"
   height="1152"
-  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp"
   style="aspect-ratio:2048 / 1152"
   width="2048"
 />

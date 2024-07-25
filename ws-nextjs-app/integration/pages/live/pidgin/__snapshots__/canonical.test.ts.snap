@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical Live Header I can see the branding 1`] = `".css-1jefi8v{box-sizing:content-box;color:#FFFFFF;fill:currentColor;height:1.25rem;}@media (min-width: 25rem){.css-1jefi8v{height:1.5rem;}}@media (min-width: 37.5rem){.css-1jefi8v{height:1.875rem;}}@media screen and (-ms-high-contrast: active),print{.css-1jefi8v{fill:windowText;}}.css-m04vo2{-webkit-clip-path:inset(100%);clip-path:inset(100%);clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}BBC News, Pidgin"`;
+exports[`Canonical Live Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
 exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 {
@@ -65,52 +65,22 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
   class="css-1jvsvcw"
   data-e2e="media-loader__placeholder"
 >
-  <style
-    data-emotion="css r6z5ec"
-  >
-    .css-r6z5ec{z-index:1;}
-  </style>
-  <style
-    data-emotion="css w22u5j"
-  >
-    .css-w22u5j{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34, 34, 34, 0.75);z-index:1;}@media (min-width: 37.5rem){.css-w22u5j{font-size:0.875rem;}}@media screen and (-ms-high-contrast: active){.css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j .guidance-message{display:none;}
-  </style>
   <div
     class="css-w22u5j edwq9ck2"
     data-e2e="media-player__guidance"
   >
-    <style
-      data-emotion="css 1l7spgt"
-    >
-      .css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}
-    </style>
     <strong
       aria-hidden="true"
       class="guidance-message css-1l7spgt edwq9ck1"
     >
       Contains strong language and some upsetting scenes.
     </strong>
-    <style
-      data-emotion="css 17whsh0"
-    >
-      .css-17whsh0{position:absolute;bottom:0;}
-    </style>
     <noscript
       class="css-17whsh0 edwq9ck0"
     >
       &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
-  <style
-    data-emotion="css sr9pw3"
-  >
-    .css-sr9pw3{position:absolute;bottom:0;left:0;z-index:1;}.no-js .css-sr9pw3{display:none;}.css-sr9pw3:focus-visible::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;box-shadow:0 0 0 0.1875rem #FFFFFF inset;border:0.1875rem solid #000000;}
-  </style>
-  <style
-    data-emotion="css g64ss1"
-  >
-    .css-g64ss1{background-color:#222222;border:none;color:#FFFFFF;cursor:pointer;display:block;font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;font-size:0.75rem;line-height:1rem;height:5rem;padding:0;-webkit-transition:background-color 300ms;transition:background-color 300ms;width:5rem;position:absolute;bottom:0;left:0;z-index:1;}.css-g64ss1:hover,.css-g64ss1:focus{background-color:#B80000;-webkit-transition:background-color 300ms;transition:background-color 300ms;}.no-js .css-g64ss1{display:none;}.css-g64ss1:focus-visible::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;box-shadow:0 0 0 0.1875rem #FFFFFF inset;border:0.1875rem solid #000000;}
-  </style>
   <button
     class="focusIndicatorRemove css-g64ss1 e1ita3o32"
   >
@@ -119,20 +89,10 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     >
       Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
-    <style
-      data-emotion="css 1apn3of"
-    >
-      .css-1apn3of &gt;svg{color:#FFFFFF;fill:currentColor;height:1.5rem;margin-top:0.5rem;width:1.5rem;}
-    </style>
     <div
       aria-hidden="true"
       class="css-1apn3of e1ita3o31"
     >
-      <style
-        data-emotion="css vja2s5"
-      >
-        .css-vja2s5{vertical-align:middle;margin:0 0.25rem;color:#222222;fill:currentColor;width:0.75rem;height:0.75rem;}
-      </style>
       <svg
         aria-hidden="true"
         class="css-vja2s5 e1s2dgdk5"
@@ -156,11 +116,6 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
         </g>
       </svg>
     </div>
-    <style
-      data-emotion="css 11ia5vc"
-    >
-      .css-11ia5vc{display:block;margin-top:0.5rem;}
-    </style>
     <time
       aria-hidden="true"
       class="css-11ia5vc e1ita3o30"
@@ -169,25 +124,15 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
       00:34
     </time>
   </button>
-  <style
-    data-emotion="css 1mbot1y"
-  >
-    .css-1mbot1y{overflow:hidden;position:relative;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);-webkit-background-position:center center;background-position:center center;background-repeat:no-repeat;-webkit-background-size:60px 17px;background-size:60px 17px;background-color:#F2F2F2;}@media (min-width: 25rem){.css-1mbot1y{-webkit-background-size:77px 22px;background-size:77px 22px;}}@media (min-width: 63rem){.css-1mbot1y{-webkit-background-size:93px 27px;background-size:93px 27px;}}
-  </style>
   <div
-    class="css-1mbot1y"
-    style="padding-bottom:0"
+    class="css-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
   >
-    <style
-      data-emotion="css 1uq6tv3"
-    >
-      .css-1uq6tv3{width:100%;object-fit:cover;height:100%;}
-    </style>
     <img
       alt=""
       class="css-1uq6tv3"
-      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg"
-      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg 800w"
+      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
+      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
       style="aspect-ratio:auto"
     />
   </div>
@@ -199,52 +144,22 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
   class="css-1jvsvcw"
   data-e2e="media-loader__placeholder"
 >
-  <style
-    data-emotion="css r6z5ec"
-  >
-    .css-r6z5ec{z-index:1;}
-  </style>
-  <style
-    data-emotion="css w22u5j"
-  >
-    .css-w22u5j{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34, 34, 34, 0.75);z-index:1;}@media (min-width: 37.5rem){.css-w22u5j{font-size:0.875rem;}}@media screen and (-ms-high-contrast: active){.css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j .guidance-message{display:none;}
-  </style>
   <div
     class="css-w22u5j edwq9ck2"
     data-e2e="media-player__guidance"
   >
-    <style
-      data-emotion="css 1l7spgt"
-    >
-      .css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}
-    </style>
     <strong
       aria-hidden="true"
       class="guidance-message css-1l7spgt edwq9ck1"
     >
       Contains strong language and some upsetting scenes.
     </strong>
-    <style
-      data-emotion="css 17whsh0"
-    >
-      .css-17whsh0{position:absolute;bottom:0;}
-    </style>
     <noscript
       class="css-17whsh0 edwq9ck0"
     >
       &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
-  <style
-    data-emotion="css sr9pw3"
-  >
-    .css-sr9pw3{position:absolute;bottom:0;left:0;z-index:1;}.no-js .css-sr9pw3{display:none;}.css-sr9pw3:focus-visible::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;box-shadow:0 0 0 0.1875rem #FFFFFF inset;border:0.1875rem solid #000000;}
-  </style>
-  <style
-    data-emotion="css g64ss1"
-  >
-    .css-g64ss1{background-color:#222222;border:none;color:#FFFFFF;cursor:pointer;display:block;font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;font-size:0.75rem;line-height:1rem;height:5rem;padding:0;-webkit-transition:background-color 300ms;transition:background-color 300ms;width:5rem;position:absolute;bottom:0;left:0;z-index:1;}.css-g64ss1:hover,.css-g64ss1:focus{background-color:#B80000;-webkit-transition:background-color 300ms;transition:background-color 300ms;}.no-js .css-g64ss1{display:none;}.css-g64ss1:focus-visible::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;box-shadow:0 0 0 0.1875rem #FFFFFF inset;border:0.1875rem solid #000000;}
-  </style>
   <button
     class="focusIndicatorRemove css-g64ss1 e1ita3o32"
   >
@@ -253,20 +168,10 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     >
       Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
-    <style
-      data-emotion="css 1apn3of"
-    >
-      .css-1apn3of &gt;svg{color:#FFFFFF;fill:currentColor;height:1.5rem;margin-top:0.5rem;width:1.5rem;}
-    </style>
     <div
       aria-hidden="true"
       class="css-1apn3of e1ita3o31"
     >
-      <style
-        data-emotion="css vja2s5"
-      >
-        .css-vja2s5{vertical-align:middle;margin:0 0.25rem;color:#222222;fill:currentColor;width:0.75rem;height:0.75rem;}
-      </style>
       <svg
         aria-hidden="true"
         class="css-vja2s5 e1s2dgdk5"
@@ -290,11 +195,6 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
         </g>
       </svg>
     </div>
-    <style
-      data-emotion="css 11ia5vc"
-    >
-      .css-11ia5vc{display:block;margin-top:0.5rem;}
-    </style>
     <time
       aria-hidden="true"
       class="css-11ia5vc e1ita3o30"
@@ -303,25 +203,15 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
       00:34
     </time>
   </button>
-  <style
-    data-emotion="css 1mbot1y"
-  >
-    .css-1mbot1y{overflow:hidden;position:relative;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);-webkit-background-position:center center;background-position:center center;background-repeat:no-repeat;-webkit-background-size:60px 17px;background-size:60px 17px;background-color:#F2F2F2;}@media (min-width: 25rem){.css-1mbot1y{-webkit-background-size:77px 22px;background-size:77px 22px;}}@media (min-width: 63rem){.css-1mbot1y{-webkit-background-size:93px 27px;background-size:93px 27px;}}
-  </style>
   <div
-    class="css-1mbot1y"
-    style="padding-bottom:0"
+    class="css-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
   >
-    <style
-      data-emotion="css 1uq6tv3"
-    >
-      .css-1uq6tv3{width:100%;object-fit:cover;height:100%;}
-    </style>
     <img
       alt=""
       class="css-1uq6tv3"
-      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg"
-      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg 800w"
+      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
+      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
       style="aspect-ratio:auto"
     />
   </div>
@@ -333,61 +223,26 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
   class="css-17euut"
   data-e2e="media-loader__container"
 >
-  <style
-    data-emotion="css 1jvsvcw"
-  >
-    .css-1jvsvcw{position:relative;aspect-ratio:16/9;cursor:pointer;}.no-js .css-1jvsvcw{cursor:default;}.css-1jvsvcw:hover .focusIndicatorRemove,.css-1jvsvcw:focus .focusIndicatorRemove{background-color:#B80000;}
-  </style>
   <div
     class="css-1jvsvcw"
     data-e2e="media-loader__placeholder"
   >
-    <style
-      data-emotion="css r6z5ec"
-    >
-      .css-r6z5ec{z-index:1;}
-    </style>
-    <style
-      data-emotion="css w22u5j"
-    >
-      .css-w22u5j{font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34, 34, 34, 0.75);z-index:1;}@media (min-width: 37.5rem){.css-w22u5j{font-size:0.875rem;}}@media screen and (-ms-high-contrast: active){.css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j{background-color:rgba(34, 34, 34, 0.75);}@media screen and (-ms-high-contrast: active){.no-js .css-w22u5j{background-color:transparent;}}.no-js .css-w22u5j .guidance-message{display:none;}
-    </style>
     <div
       class="css-w22u5j edwq9ck2"
       data-e2e="media-player__guidance"
     >
-      <style
-        data-emotion="css 1l7spgt"
-      >
-        .css-1l7spgt{display:block;font-weight:normal;padding:0.5rem;border-bottom:0.0625rem solid transparent;}@media screen and (-ms-high-contrast: active){.css-1l7spgt{background-color:window;}}@media (min-width: 25rem){.css-1l7spgt{padding:1rem;}}
-      </style>
       <strong
         aria-hidden="true"
         class="guidance-message css-1l7spgt edwq9ck1"
       >
         Contains strong language and some upsetting scenes.
       </strong>
-      <style
-        data-emotion="css 17whsh0"
-      >
-        .css-17whsh0{position:absolute;bottom:0;}
-      </style>
       <noscript
         class="css-17whsh0 edwq9ck0"
       >
         &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
       </noscript>
     </div>
-    <style
-      data-emotion="css sr9pw3"
-    >
-      .css-sr9pw3{position:absolute;bottom:0;left:0;z-index:1;}.no-js .css-sr9pw3{display:none;}.css-sr9pw3:focus-visible::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;box-shadow:0 0 0 0.1875rem #FFFFFF inset;border:0.1875rem solid #000000;}
-    </style>
-    <style
-      data-emotion="css g64ss1"
-    >
-      .css-g64ss1{background-color:#222222;border:none;color:#FFFFFF;cursor:pointer;display:block;font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-weight:700;font-style:normal;font-size:0.75rem;line-height:1rem;height:5rem;padding:0;-webkit-transition:background-color 300ms;transition:background-color 300ms;width:5rem;position:absolute;bottom:0;left:0;z-index:1;}.css-g64ss1:hover,.css-g64ss1:focus{background-color:#B80000;-webkit-transition:background-color 300ms;transition:background-color 300ms;}.no-js .css-g64ss1{display:none;}.css-g64ss1:focus-visible::before{content:'';position:absolute;left:0;right:0;top:0;bottom:0;box-shadow:0 0 0 0.1875rem #FFFFFF inset;border:0.1875rem solid #000000;}
-    </style>
     <button
       class="focusIndicatorRemove css-g64ss1 e1ita3o32"
     >
@@ -396,20 +251,10 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       >
         Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
       </span>
-      <style
-        data-emotion="css 1apn3of"
-      >
-        .css-1apn3of &gt;svg{color:#FFFFFF;fill:currentColor;height:1.5rem;margin-top:0.5rem;width:1.5rem;}
-      </style>
       <div
         aria-hidden="true"
         class="css-1apn3of e1ita3o31"
       >
-        <style
-          data-emotion="css vja2s5"
-        >
-          .css-vja2s5{vertical-align:middle;margin:0 0.25rem;color:#222222;fill:currentColor;width:0.75rem;height:0.75rem;}
-        </style>
         <svg
           aria-hidden="true"
           class="css-vja2s5 e1s2dgdk5"
@@ -433,11 +278,6 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
           </g>
         </svg>
       </div>
-      <style
-        data-emotion="css 11ia5vc"
-      >
-        .css-11ia5vc{display:block;margin-top:0.5rem;}
-      </style>
       <time
         aria-hidden="true"
         class="css-11ia5vc e1ita3o30"
@@ -446,39 +286,19 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
         00:34
       </time>
     </button>
-    <style
-      data-emotion="css 1mbot1y"
-    >
-      .css-1mbot1y{overflow:hidden;position:relative;height:100%;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);-webkit-background-position:center center;background-position:center center;background-repeat:no-repeat;-webkit-background-size:60px 17px;background-size:60px 17px;background-color:#F2F2F2;}@media (min-width: 25rem){.css-1mbot1y{-webkit-background-size:77px 22px;background-size:77px 22px;}}@media (min-width: 63rem){.css-1mbot1y{-webkit-background-size:93px 27px;background-size:93px 27px;}}
-    </style>
     <div
-      class="css-1mbot1y"
-      style="padding-bottom:0"
+      class="css-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
     >
-      <style
-        data-emotion="css 1uq6tv3"
-      >
-        .css-1uq6tv3{width:100%;object-fit:cover;height:100%;}
-      </style>
       <img
         alt=""
         class="css-1uq6tv3"
-        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg"
-        srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg 800w"
+        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
+        srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
         style="aspect-ratio:auto"
       />
     </div>
   </div>
-  <style
-    data-emotion="css o7krj9"
-  >
-    .css-o7krj9{color:#545658;margin-top:0.5rem;margin-inline:0.5rem 0;padding-inline:0.5rem;width:calc(100% - 0.5rem);border-inline-start:0.0625rem solid #6E6E73;}@media (min-width: 25rem) and (max-width: 37.4375rem){.css-o7krj9{width:calc(100% - 1rem);margin-inline:1rem 0;padding-inline:0.5rem 1rem;}}@media (min-width: 63rem){.css-o7krj9{width:100%;margin:0.5rem 0 0;padding-inline:0.5rem 0;}}.css-o7krj9&gt;span&gt;p{padding-bottom:1.5rem;margin:0;}.css-o7krj9&gt;span&gt;p:last-child{padding-bottom:0;}
-  </style>
-  <style
-    data-emotion="css 1562tom"
-  >
-    .css-1562tom{color:#141414;font-size:0.9375rem;line-height:1.125rem;font-family:Helmet,Freesans,Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;color:#545658;margin-top:0.5rem;margin-inline:0.5rem 0;padding-inline:0.5rem;width:calc(100% - 0.5rem);border-inline-start:0.0625rem solid #6E6E73;}@media (min-width: 20rem) and (max-width: 37.4375rem){.css-1562tom{font-size:0.9375rem;line-height:1.125rem;}}@media (min-width: 37.5rem){.css-1562tom{font-size:0.875rem;line-height:1.125rem;}}@media (min-width: 25rem) and (max-width: 37.4375rem){.css-1562tom{width:calc(100% - 1rem);margin-inline:1rem 0;padding-inline:0.5rem 1rem;}}@media (min-width: 63rem){.css-1562tom{width:100%;margin:0.5rem 0 0;padding-inline:0.5rem 0;}}.css-1562tom&gt;span&gt;p{padding-bottom:1.5rem;margin:0;}.css-1562tom&gt;span&gt;p:last-child{padding-bottom:0;}
-  </style>
   <figcaption
     class="css-1562tom"
     dir="ltr"

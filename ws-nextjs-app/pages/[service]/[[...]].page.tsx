@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 import logResponseTime from '#server/utilities/logResponseTime';
+import isLitePath from '#app/routes/utils/isLitePath';
 import { Services, Variants } from '../../../src/app/models/types/global';
 import extractHeaders from '../../../src/server/utilities/extractHeaders';
 
@@ -14,6 +15,8 @@ type PageDataParams = {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  const isLite = isLitePath(context.resolvedUrl);
+
   logResponseTime(
     {
       path: context.resolvedUrl,
@@ -30,6 +33,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
+      isLite,
       isNextJs: true,
       service,
       status: 404,

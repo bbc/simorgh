@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Global } from '@emotion/react';
-import isChromatic from 'chromatic';
+import isChromatic from 'chromatic/isChromatic';
 import { forceVisible } from 'react-lazyload';
 import { Preview } from '@storybook/react';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
@@ -12,6 +12,7 @@ import { UserContextProvider } from '../src/app/contexts/UserContext';
 import { EventTrackingContextProvider } from '../src/app/contexts/EventTrackingContext';
 import withServicesDecorator from './withServicesDecorator';
 import pageDataFixture from '../data/news/articles/c0g992jmmkko.json';
+import { RequestContextProvider } from '../src/app/contexts/RequestContext';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -178,12 +179,42 @@ const NOTO_SANS_TAMIL_BOLD = {
   },
 };
 
-const MALLANNA_REGULAR = {
+const NOTO_SANS_TELUGU_REGULAR = {
   '@font-face': {
-    fontFamily: 'Mallanna',
+    fontFamily: 'Noto Sans Telugu',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/Mallanna/normal.woff') format('woff'), url('fonts/Mallanna/normal.eot') format('eot'), url('fonts/Mallanna/normal.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansTelugu/normal.woff') format('woff'), url('fonts/NotoSansTelugu/normal.eot') format('eot'), url('fonts/NotoSansTelugu/normal.ttf') format('ttf')`,
+    fontDisplay: 'swap',
+  },
+};
+
+const NOTO_SANS_TELUGU_BOLD = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Telugu',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansTelugu/bold.woff') format('woff'), url('fonts/NotoSansTelugu/bold.eot') format('eot'), url('fonts/NotoSansTelugu/bold.ttf') format('ttf')`,
+    fontDisplay: 'swap',
+  },
+};
+
+const NOTO_SANS_GUJARATI_REGULAR = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Gujarati',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansGujarati/normal.woff') format('woff'), url('fonts/NotoSansGujarati/normal.eot') format('eot'), url('fonts/NotoSansGujarati/normal.ttf') format('ttf')`,
+    fontDisplay: 'swap',
+  },
+};
+
+const NOTO_SANS_GUJARATI_BOLD = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Gujarati',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansGujarati/bold.woff') format('woff'), url('fonts/NotoSansGujarati/bold.eot') format('eot'), url('fonts/NotoSansGujarati/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -491,7 +522,18 @@ const preview: Preview = {
             title: 'ukrainian-ru-UA',
           },
         ],
-        // Should "Container size" be shown, or just the "circlehollow" icon
+        dynamicTitle: true,
+      },
+    },
+    isLite: {
+      description: 'Toggle Lite mode',
+      defaultValue: false,
+      toolbar: {
+        icon: 'lightning',
+        items: [
+          { value: false, title: 'Lite mode OFF' },
+          { value: true, title: 'Lite mode ON' },
+        ],
         dynamicTitle: true,
       },
     },
@@ -543,27 +585,32 @@ const preview: Preview = {
         },
         group1: {
           name: 'Group 1 (240px - 399px)',
-          styles: { width: '399px', height: '900px' },
+          styles: { width: '240px', height: '900px' },
+          type: 'mobile',
+        },
+        group1_320: {
+          name: 'Group 1 - 320px (320px - 399px)',
+          styles: { width: '320px', height: '900px' },
           type: 'mobile',
         },
         group2: {
           name: 'Group 2 (400px - 599px)',
-          styles: { width: '599px', height: '900px' },
+          styles: { width: '400px', height: '900px' },
           type: 'mobile',
         },
         group3: {
           name: 'Group 3 (600px - 899px)',
-          styles: { width: '899px', height: '900px' },
+          styles: { width: '600px', height: '900px' },
           type: 'mobile',
         },
         group4: {
           name: 'Group 4 (900px - 1007px)',
-          styles: { width: '1007px', height: '900px' },
+          styles: { width: '900px', height: '900px' },
           type: 'tablet',
         },
         group5: {
           name: 'Group 5 (1008px - 1279px)',
-          styles: { width: '1279px', height: '900px' },
+          styles: { width: '1008px', height: '900px' },
           type: 'desktop',
         },
         group6: {
@@ -606,7 +653,10 @@ const preview: Preview = {
               NOTO_SERIF_SINHALA_BOLD,
               NOTO_SANS_TAMIL_REGULAR,
               NOTO_SANS_TAMIL_BOLD,
-              MALLANNA_REGULAR,
+              NOTO_SANS_TELUGU_REGULAR,
+              NOTO_SANS_TELUGU_BOLD,
+              NOTO_SANS_GUJARATI_REGULAR,
+              NOTO_SANS_GUJARATI_BOLD,
               NOTO_SANS_ETHIOPIC_REGULAR,
               NOTO_SANS_ETHIOPIC_BOLD,
               PADAUK_REGULAR,
@@ -623,20 +673,25 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ThemeProvider service={context.globals.service.service}>
+      <ThemeProvider
+        service={context.globals.service.service}
+        variant={context.globals.service.variant}
+      >
         <ToggleContextProvider toggles={{}}>
           <ServiceContextProvider
             service={context.globals.service.service}
             variant={context.globals.service.variant}
           >
-            <EventTrackingContextProvider
-              // @ts-expect-error - mock data for Storybook
-              pageData={pageDataFixture}
-            >
-              <UserContextProvider>
-                <Story />
-              </UserContextProvider>
-            </EventTrackingContextProvider>
+            <RequestContextProvider isLite={context.globals.isLite}>
+              <EventTrackingContextProvider
+                // @ts-expect-error - mock data for Storybook
+                pageData={pageDataFixture}
+              >
+                <UserContextProvider>
+                  <Story />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </RequestContextProvider>
           </ServiceContextProvider>
         </ToggleContextProvider>
       </ThemeProvider>

@@ -18,7 +18,6 @@ import {
   getGreatPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import { string, arrayOf, shape } from 'prop-types';
 import Blocks from '#containers/Blocks';
 import Text from '#containers/Text';
 import { GridItemLarge } from '#components/Grid';
@@ -137,15 +136,6 @@ const Gist = ({ blocks }) => {
       </GistWrapper>
     </GridItemLarge>
   );
-};
-
-Gist.propTypes = {
-  blocks: arrayOf(
-    shape({
-      type: string.isRequired,
-      id: string.isRequired,
-    }),
-  ).isRequired,
 };
 
 export default Gist;

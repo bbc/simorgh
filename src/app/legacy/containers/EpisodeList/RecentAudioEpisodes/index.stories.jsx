@@ -6,7 +6,6 @@ import withServicesDecorator from '#storybook/withServicesDecorator';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
 
-/* eslint-disable react/prop-types */
 const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
   <RequestContextProvider
     service={service}

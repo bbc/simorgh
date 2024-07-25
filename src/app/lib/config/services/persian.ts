@@ -94,6 +94,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'خبر فوری',
         postedAt: 'به روزشده در',
         summary: 'خلاصه',
+        shareButtonText: 'هم‌رسانی',
       },
       gist: 'خلاصه',
       error: {
@@ -298,17 +299,80 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
       latestMediaTitle: 'تازه ترین',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'اختیاری',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'مواردی که آپلود می کنید:',
+        fileUploadButton: 'انتخاب فایل',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'ارسال',
+
+        // Validation
+        validationRequired: 'موردی تکمیل نشده است.',
+        validationInvalidEmail:
+          'به نظر صحیح نیست. یک آدرس ایمیل درست وارد کنید.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'فایل ها به تعداد کافی نیست. کمترین تعداد فایل {{minFiles}} است.',
+        validationFilesTooMany:
+          'تعداد فایل ها زیاد است. حداکثر می توانید {{maxFiles}} فایل اضافه کنید.',
+        validationFilesInvalidType:
+          'نمی توانیم این نوع فایل را استفاده کنیم. انواع فایل قابل قبول اینها هستند {{fileTypes}}.',
+        validationFilesTooSmall:
+          'این فایل مشکل دارد. یک فایل دیگر انتخاب کنید.',
+        validationFilesSizeExceeded:
+          'اندازه فایل ها زیاد است. هر بار حداکثر می توانید ۱/۲ گیگابایت آپلود کنید.',
+        validationWordLimit: 'حداکثر {{wordLimit}} واژه',
+
+        // Messaging
+        removalGuidelineText:
+          'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
+        retentionPeriodDays: undefined,
+        referenceNumber: 'شماره',
+        submissionInfoSignedOutMessage:
+          'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
+        privacyInfoHtml:
+          'نگران نباشید، ما از اطلاعات شما محافظت می کنیم - برای اطلاعات بیشتر {{privacyInfoLink}} را بخوانید.',
+        emailToHtml:
+          'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'در حال آپلود فایل ها...',
+        uploadingDescription: 'لطفا صبر کنید تا کامل شود.',
+
+        // Success Screen
+        successHeading: 'پیغام فرستاده شد',
+        successDescription: 'از تماس شما سپاسگزاریم.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'امکان آپلود فایل هایتان وجود ندارد.',
+        errorDescription: 'دوباره آنها را آپلود کنید.',
+
+        // Closed Screen
+        closedHeading: 'امکان ارسال دیگر وجود ندارد.',
+        closedDescription: 'امکان ارسال در {{date}} تمام شد.',
+      },
     },
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'پربیننده ترین',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
@@ -410,6 +474,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'دانش',
         url: '/persian/topics/ckdxnwr4r1yt',
+      },
+      {
+        title: 'فراتر از خبر',
+        url: '/persian/topics/cxr3ex12k6et',
       },
     ],
   },

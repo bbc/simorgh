@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
-import { shape, arrayOf, string } from 'prop-types';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -83,7 +82,7 @@ const RelatedContentSection = ({ content }) => {
   const eventTrackingDataSend = path(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
 
-  if (!pathEq(['type'], 'relatedContent', blocks)) return null;
+  if (!pathEq('relatedContent', ['type'], blocks)) return null;
 
   if (!blocks) return null;
 
@@ -91,7 +90,7 @@ const RelatedContentSection = ({ content }) => {
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
-    pathEq([0, 'type'], 'title', items) &&
+    pathEq('title', [0, 'type'], items) &&
     pathOr(
       [],
       [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
@@ -164,21 +163,6 @@ const RelatedContentSection = ({ content }) => {
       )}
     </StyledRelatedContentSection>
   );
-};
-
-RelatedContentSection.propTypes = {
-  content: arrayOf(
-    shape({
-      type: string,
-      model: shape({
-        blocks: arrayOf(
-          shape({
-            type: string,
-          }),
-        ),
-      }),
-    }),
-  ).isRequired,
 };
 
 export default RelatedContentSection;

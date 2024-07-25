@@ -41,14 +41,14 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    const heading = screen.getByText(title);
-    const messageBannerEl = getByRole('region');
-    expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
+    const heading = screen.getByRole('heading', { level: 2, name: title });
+    const billboardEl = getByRole('region');
+    expect(billboardEl.getAttribute('aria-labelledby')).toBe(
       heading.getAttribute('id'),
     );
   });
 
-  it('should display the banner heading correctly as an H2', () => {
+  it('should display the billboard heading correctly as an H2', () => {
     render(
       <Billboard
         heading={title}
@@ -58,10 +58,12 @@ describe('Billboard', () => {
         altText={imageAlt}
       />,
     );
-    expect(screen.getByText(title).nodeName).toBe('H2');
+    expect(
+      screen.getByRole('heading', { level: 2, name: title }),
+    ).toBeInTheDocument();
   });
 
-  it('should display the banner subtext correctly as a Paragraph', () => {
+  it('should display the billboard subtext correctly as a Paragraph', () => {
     render(
       <Billboard
         heading={title}
@@ -74,7 +76,7 @@ describe('Billboard', () => {
     expect(screen.getByText(description).nodeName).toBe('P');
   });
 
-  it('should render an masked image with the correct image src', () => {
+  it('should render a masked image with the correct image src', () => {
     const { getByRole } = render(
       <Billboard
         heading={title}
@@ -85,7 +87,9 @@ describe('Billboard', () => {
       />,
     );
     const maskedImage = getByRole('img');
-    expect(maskedImage.getAttribute('src')).toEqual(imageUrl);
+    expect(maskedImage.getAttribute('src')).toEqual(
+      'https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
+    );
   });
 
   it('should have an masked image with the correct alt text', () => {

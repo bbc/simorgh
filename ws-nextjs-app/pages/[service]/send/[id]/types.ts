@@ -7,32 +7,48 @@ export enum InvalidMessageCodes {
   FieldRequired = 'validationRequired',
   WrongEmailFormat = 'validationInvalidEmail',
   WrongTelFormat = 'validationInvalidTelephone',
+  NotEnoughFiles = 'validationFilesNotEnough',
+  TooManyFiles = 'validationFilesTooMany',
+  WrongFileType = 'validationFilesInvalidType',
+  FileTooSmall = 'validationFilesTooSmall',
+  FileTooBig = 'validationFilesSizeExceeded',
 }
 
 export type OnChangeInputName = ChangeEvent<HTMLInputElement>['target']['name'];
 
+export type FileData = {
+  file: File;
+  messageCode?: InvalidMessageCodes | null;
+};
+
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
-  | FileList
-  | File
+  | FileData[]
   | boolean;
 
 export type OnChangeHandler = (
   name: OnChangeInputName,
   value: OnChangeInputValue,
 ) => void;
+export type OnFocusOutHandler = (name: OnChangeInputName) => void;
 
 export type InputProps = {
   id: string;
   name: string;
+  label: string;
   handleChange: (name: OnChangeInputName, value: OnChangeInputValue) => void;
+  handleFocusOut: (name: OnChangeInputName) => void;
   inputState: FieldData;
-  describedBy: string;
+  hasAttemptedSubmit: boolean;
 };
 
 export type InvalidMessageBoxProps = {
   id: string;
   messageCode: InvalidMessageCodes | null;
+  hasArrowStyle?: boolean;
+  isErrorSummary?: boolean;
+  suffix?: string;
+  validationCriteria?: ValidationConditions;
 };
 
 export type FetchParameters = {
@@ -64,34 +80,54 @@ export type HtmlType =
   | 'file'
   | '';
 
+export type ValidationConditions = {
+  min?: number;
+  max?: number;
+  fileTypes?: string[];
+  mandatory?: boolean;
+  wordLimit?: number;
+};
+
 export type Field = {
   id: string;
   type: string;
-  validation: {
-    min?: number;
-    max?: number;
-    fileTypes?: string[];
-    mandatory?: boolean;
-  };
+  validation: ValidationConditions;
   htmlType: HtmlType;
   label: string;
   description: string;
   textArea?: boolean;
 };
 
-export type FieldData = {
+export type FieldData = ValidationConditions & {
+  hasNestedErrorLabel?: boolean;
   isValid: boolean;
   required: boolean;
   value: OnChangeInputValue;
   htmlType: HtmlType;
   messageCode: InvalidMessageCodes | null;
+  wasInvalid: boolean;
 };
 
+export type FormScreen = 'form' | 'uploading' | 'success' | 'error';
+
 export type PageProps = {
+  initialScreen?: FormScreen;
   pageData: {
     title: string;
     description: string;
+    settings: {
+      replyEmailAddress: string;
+      retentionPeriodDays: string;
+    };
     sections: Section[];
+    privacyNotice: {
+      default: string;
+      url: string;
+      additional: string;
+    };
+    campaignStatus: 'open' | 'closed';
+    openingTime?: string;
+    closingTime?: string;
   };
 };
 

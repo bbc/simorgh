@@ -118,14 +118,14 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
 {
   "text": "ځانګړې پاڼې",
-  "url": "/pashto/in-depth-54540873",
+  "url": "/pashto/topics/c6pxyz4e0ryt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 9`] = `
 {
   "text": "کالم",
-  "url": "/pashto/columns-54029178",
+  "url": "/pashto/topics/cq57nwne9lzt",
 }
 `;
 
@@ -136,13 +136,20 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 }
 `;
 
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 11`] = `
+{
+  "text": "راډیویي خپرونې",
+  "url": "/pashto/topics/c9xz1ekw79nt",
+}
+`;
+
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
 
 exports[`Canonical On Demand Audio Page I can see the episode title 1`] = `"۱ می ۲۰۲۰"`;
 
-exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png"`;
+exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png.webp"`;
 
 exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
 

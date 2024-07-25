@@ -1,8 +1,4 @@
 import React from 'react';
-import { bool, element, string, number, object } from 'prop-types';
-import variantPropType from '#models/propTypes/variants';
-import { pageDataPropType } from '#models/propTypes/data';
-import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
 
 // context providers
 import { RequestContextProvider } from '../../../contexts/RequestContext';
@@ -15,23 +11,25 @@ const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
       toggles,
-      bbcOrigin,
-      status,
-      id,
+      bbcOrigin = null,
+      status = null,
+      id = null,
       service,
-      isAmp,
-      isApp,
-      isCaf,
+      isAmp = false,
+      isApp = false,
+      isLite = false,
+      isCaf = false,
       pageType,
       pathname,
-      previousPath,
-      variant,
-      timeOnServer,
-      pageData,
-      showAdsBasedOnLocation,
-      mvtExperiments,
-      isNextJs,
-      isUK,
+      previousPath = null,
+      variant = null,
+      timeOnServer = null,
+      pageData = null,
+      showAdsBasedOnLocation = false,
+      showCookieBannerBasedOnCountry = true,
+      mvtExperiments = null,
+      isNextJs = false,
+      isUK = false,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -49,6 +47,7 @@ const WithContexts = Component => {
             id={id}
             isAmp={isAmp}
             isApp={isApp}
+            isLite={isLite}
             isCaf={isCaf}
             pageType={pageType}
             service={service}
@@ -58,6 +57,7 @@ const WithContexts = Component => {
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
+            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
@@ -76,50 +76,7 @@ const WithContexts = Component => {
     );
   };
 
-  WithContextsContainer.propTypes = {
-    bbcOrigin: string,
-    derivedPageType: string,
-    status: number,
-    id: string,
-    isAmp: bool.isRequired,
-    isApp: bool.isRequired,
-    isCaf: bool,
-    pageData: pageDataPropType,
-    pageType: string.isRequired,
-    pathname: string.isRequired,
-    previousPath: string,
-    service: string.isRequired,
-    variant: variantPropType,
-    timeOnServer: number,
-    showAdsBasedOnLocation: bool,
-    // eslint-disable-next-line react/forbid-prop-types
-    toggles: object.isRequired,
-    mvtExperiments: mvtExperimentPropType,
-    isNextJs: bool,
-    isUK: bool,
-  };
-
-  WithContextsContainer.defaultProps = {
-    bbcOrigin: null,
-    derivedPageType: null,
-    status: null,
-    id: null,
-    pageData: null,
-    previousPath: null,
-    variant: null,
-    timeOnServer: null,
-    showAdsBasedOnLocation: false,
-    mvtExperiments: null,
-    isNextJs: false,
-    isUK: false,
-    isCaf: false,
-  };
-
   return WithContextsContainer;
-};
-
-WithContexts.propTypes = {
-  Component: element,
 };
 
 export default WithContexts;

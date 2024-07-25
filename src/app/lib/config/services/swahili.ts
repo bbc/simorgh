@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Habari za hivi punde',
         postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
+        shareButtonText: 'Mshirikishe mwenzako',
       },
       gist: 'Muhtasari',
       error: {
@@ -269,11 +270,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Iliyoangaliwa zaidi',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Vipindi vya Redio',
@@ -349,7 +345,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Vipindi vya Redio',
-        url: '/swahili/media-54071673',
+        url: '/swahili/topics/ckrdle3133xt',
       },
     ],
   },

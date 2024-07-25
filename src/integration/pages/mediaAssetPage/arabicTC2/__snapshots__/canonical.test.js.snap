@@ -125,14 +125,14 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 {
   "text": "بودكاست",
-  "url": "/arabic/tv-and-radio-52067221",
+  "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 {
   "text": "برامجنا",
-  "url": "/arabic/tv-and-radio-37728883",
+  "url": "/arabic/topics/crgyknwdlwnt",
 }
 `;
 

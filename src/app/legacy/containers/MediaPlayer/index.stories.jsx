@@ -7,7 +7,6 @@ import { validVideoWithCaptionBlock } from './fixtureData';
 import MediaPlayerContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ service, isAmp = false }) => {
   return (
     <RequestContextProvider
@@ -47,7 +46,7 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const Amp = (_, globalArgs) => <Component isAmp {...globalArgs} />;
+export const Amp = (_, { service }) => <Component isAmp service={service} />;
 export const Canonical = Component;
 
 Amp.decorators = [AmpDecorator];

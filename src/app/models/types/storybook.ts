@@ -5,4 +5,5 @@ export type StoryArgs = Record<string, string | number | boolean>;
 export interface StoryProps {
   service: Services;
   variant: Variants;
+  isLite?: boolean;
 }

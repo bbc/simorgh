@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         breaking: '速報',
         postedAt: '投稿時間',
         summary: '要点',
+        shareButtonText: '共有する',
       },
       gist: '要点',
       error: {
@@ -249,11 +250,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'よく見られています',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

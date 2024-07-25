@@ -21,6 +21,7 @@ interface Palette extends BrandPalette {
   DARK_SALTIRE: string;
   DIM_GREY: string;
   EBON: string;
+  ERROR_CORE: string;
   GHOST: string;
   GREY_10: string;
   GREY_11: string;
@@ -49,6 +50,8 @@ interface Palette extends BrandPalette {
   POSTBOX: string;
   POSTBOX_30: string;
   RHINO: string;
+  SERVICE_NEUTRAL_CORE: string;
+  SERVICE_NEUTRAL_DARK: string;
   SHADOW: string;
   SPORT_MIST: string;
   SPORT_SILVER: string;
@@ -56,6 +59,7 @@ interface Palette extends BrandPalette {
   SPORT_YELLOW_30: string;
   STONE: string;
   STORM: string;
+  SUCCESS_CORE: string;
   WEATHER_BLUE: string;
   WHITE: string;
 }
@@ -76,7 +80,7 @@ interface MediaQueries {
   GROUP_4_MIN_WIDTH: string;
   GROUP_4_ONLY: string;
   GROUP_5_MIN_WIDTH: string;
-  HIGH_CONTRAST: string;
+  FORCED_COLOURS: string;
 }
 
 interface Spacings {
@@ -486,5 +490,6 @@ declare module '@emotion/react' {
     brandSVG: BrandSVG;
     gridWidths: GridWidths;
     isDarkUi: boolean;
+    isLite: boolean;
   }
 }

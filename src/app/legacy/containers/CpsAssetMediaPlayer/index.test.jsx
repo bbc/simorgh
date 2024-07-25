@@ -11,13 +11,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
 
-const GenerateMediaPlayer = ({
-  /* eslint-disable react/prop-types */
-  platform,
-  blocks,
-  assetUri,
-  /* eslint-enable react/prop-types */
-}) => (
+const GenerateMediaPlayer = ({ platform, blocks, assetUri }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"

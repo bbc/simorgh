@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Kókó',
         postedAt: 'Tí a fiṣọwọ́ ní',
         summary: 'Ìsọníṣókí',
+        shareButtonText: 'Ṣe alábàápín',
       },
       gist: 'Ìsọníṣókí',
       error: {
@@ -251,11 +252,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Èyí tí a wò jùlọ',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

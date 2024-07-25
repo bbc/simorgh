@@ -2,6 +2,21 @@
   "data": {
     "article": {
       "metadata": {
+        "atiAnalytics": {
+          "campaigns": null,
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012",
+          "contentType": "article-photo-gallery",
+          "language": "es",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "pageIdentifier": "sport::mundo.sport.photo_gallery.36935058.page",
+          "pageTitle": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
+          "producerId": null,
+          "timePublished": "2016-08-07T09:21:02.000Z",
+          "timeUpdated": "2016-08-07T09:21:02.000Z",
+          "producerName": "MUNDO"
+        },
         "id": "urn:bbc:ares::asset:mundo/deportes-36935058",
         "locators": {
           "assetUri": "/mundo/deportes-36935058",
@@ -13,7 +28,7 @@
         "type": "PGL",
         "createdBy": "mundo-v6",
         "language": "es",
-        "lastUpdated": 1684460220238,
+        "lastUpdated": 1709552857000,
         "firstPublished": 1470561662000,
         "lastPublished": 1470561662000,
         "timestamp": 1470561662000,
@@ -43,30 +58,14 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.23",
-        "blockTypes": [
-          "image"
-        ],
+        "version": "v1.4.41",
+        "blockTypes": ["image"],
         "includeComments": false,
-        "atiAnalytics": {
-          "campaigns": null,
-          "categoryName": null,
-          "contentId": "urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012",
-          "contentType": "article-photo-gallery",
-          "language": "es",
-          "ldpThingIds": null,
-          "ldpThingLabels": null,
-          "pageIdentifier": "sport::mundo.sport.photo_gallery.36935058.page",
-          "pageTitle": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
-          "producerId": null,
-          "timePublished": "2016-08-07T09:21:02.000Z",
-          "timeUpdated": "2016-08-07T09:21:02.000Z",
-          "producerName": "MUNDO"
-        },
         "readTime": 2,
         "siteUri": "/mundo",
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
       },
       "content": {
         "blocks": [
@@ -351,6 +350,7 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
           "taggings": []
         },
+        "cpsType": "PGL",
         "indexImage": {
           "id": "90689319",
           "subType": "index",
@@ -363,6 +363,7 @@
           "originCode": "cpsprodpb",
           "type": "image"
         },
+        "serviceIdentifier": "Mundo-v6",
         "id": "urn:bbc:ares::asset:mundo/deportes-36935058",
         "type": "cps"
       },
@@ -476,8 +477,7 @@
     "secondaryData": {
       "topStories": null,
       "features": null,
-      "mostRead": null,
-      "mostWatched": null
+      "mostRead": null
     }
   },
   "contentType": "application/json; charset=utf-8"

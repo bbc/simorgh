@@ -3,3 +3,5 @@
 exports[`AMP Articles Gist list item should match text 1`] = `"Lorem ipsum dolor sit amet, consectetur adipiscing elit."`;
 
 exports[`AMP Articles Gist title should match text 1`] = `"Points clés"`;
+
+exports[`AMP Articles Media Player Caption should have a caption under the media player 1`] = `"Légende vidéo, Running Horses"`;

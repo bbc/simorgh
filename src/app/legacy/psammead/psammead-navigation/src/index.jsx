@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { shape, string, node, bool, oneOf } from 'prop-types';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -12,7 +11,6 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
@@ -133,7 +131,12 @@ const StyledSpan = styled.span`
   }
 `;
 
-const CurrentLink = ({ linkId, children: link, script, currentPageText }) => (
+const CurrentLink = ({
+  linkId,
+  children: link,
+  script,
+  currentPageText = null,
+}) => (
   <>
     <StyledSpan
       // eslint-disable-next-line jsx-a11y/aria-role
@@ -148,39 +151,26 @@ const CurrentLink = ({ linkId, children: link, script, currentPageText }) => (
   </>
 );
 
-CurrentLink.propTypes = {
-  linkId: string.isRequired,
-  children: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  currentPageText: string,
-};
-
-CurrentLink.defaultProps = {
-  currentPageText: null,
-};
-
 export const NavigationUl = ({ children, ...props }) => (
   <StyledUnorderedList role="list" {...props}>
     {children}
   </StyledUnorderedList>
 );
 
-NavigationUl.propTypes = {
-  children: node.isRequired,
-};
-
 export const NavigationLi = ({
   children: link,
   url,
   script,
-  currentPageText,
-  active,
+  clickTrackerHandler = null,
+  currentPageText = null,
+  active = false,
   service,
-  dir,
+  dir = 'ltr',
+  viewRef = null,
   ...props
 }) => {
   return (
-    <StyledListItem dir={dir} role="listitem">
+    <StyledListItem dir={dir} role="listitem" ref={viewRef}>
       {active && currentPageText ? (
         <StyledLink
           href={url}
@@ -190,6 +180,7 @@ export const NavigationLi = ({
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
           className="focusIndicatorRemove"
+          onClick={clickTrackerHandler}
           {...props}
         >
           <CurrentLink
@@ -206,6 +197,7 @@ export const NavigationLi = ({
           script={script}
           service={service}
           className="focusIndicatorRemove"
+          onClick={clickTrackerHandler}
           {...props}
         >
           {link}
@@ -213,22 +205,6 @@ export const NavigationLi = ({
       )}
     </StyledListItem>
   );
-};
-
-NavigationLi.propTypes = {
-  children: node.isRequired,
-  url: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  active: bool,
-  currentPageText: string,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-NavigationLi.defaultProps = {
-  active: false,
-  currentPageText: null,
-  dir: 'ltr',
 };
 
 // ampOpenClass is the class added to the Navigation, and is toggled on tap.
@@ -267,7 +243,13 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Navigation = ({ children, dir, isOpen, ampOpenClass, ...props }) => {
+const Navigation = ({
+  children,
+  dir = 'ltr',
+  isOpen = false,
+  ampOpenClass = null,
+  ...props
+}) => {
   return (
     <StyledNav
       role="navigation"
@@ -279,19 +261,6 @@ const Navigation = ({ children, dir, isOpen, ampOpenClass, ...props }) => {
       <NavWrapper>{children}</NavWrapper>
     </StyledNav>
   );
-};
-
-Navigation.propTypes = {
-  children: node.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  isOpen: bool,
-  ampOpenClass: string,
-};
-
-Navigation.defaultProps = {
-  dir: 'ltr',
-  isOpen: false,
-  ampOpenClass: null,
 };
 
 export default Navigation;

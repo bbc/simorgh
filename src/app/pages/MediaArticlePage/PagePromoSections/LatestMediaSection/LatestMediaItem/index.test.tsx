@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   render,
   screen,
@@ -28,8 +28,10 @@ const Fixture = ({ mediaType, imageAlt }: FixtureProps) => {
       "A wannan bidiyo, malamin ya yi bayani a kan muhimmancin tafsirin Alqur'ani mai girma wanda akan yawaita yi cikin watan azumin Ramadan.",
     imageAlt,
   };
+
+  const memoizedValue = useMemo(() => ({ mediaType }), [mediaType]);
   return (
-    <PromoContext.Provider value={{ mediaType }}>
+    <PromoContext.Provider value={memoizedValue}>
       <LatestMediaItem
         item={item}
         ariaLabelledBy="promo-item"

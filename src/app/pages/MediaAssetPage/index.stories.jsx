@@ -6,7 +6,6 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import MediaAssetPage from '.';
 import pageData from './fixtureData';
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false } = {}) => (
   <BrowserRouter>
     <MediaAssetPage

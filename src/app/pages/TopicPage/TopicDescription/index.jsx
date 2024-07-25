@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { string } from 'prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -36,10 +35,6 @@ const TopicDescription = ({ children }) => {
       {children}
     </Paragraph>
   );
-};
-
-TopicDescription.propTypes = {
-  children: string.isRequired,
 };
 
 export default TopicDescription;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { arrayOf, bool, shape, string, oneOf } from 'prop-types';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
@@ -12,7 +11,12 @@ import IndexAlsosContainer from '../testHelpers/IndexAlsosContainer';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
-const Info = ({ promoType, isLive, alsoItems, promoHasImage }) => (
+const Info = ({
+  promoType = 'regular',
+  isLive,
+  alsoItems,
+  promoHasImage = true,
+}) => (
   <>
     <Headline
       script={latin}
@@ -49,37 +53,15 @@ const Info = ({ promoType, isLive, alsoItems, promoHasImage }) => (
   </>
 );
 
-Info.propTypes = {
-  promoType: string,
-  isLive: bool.isRequired,
-  alsoItems: arrayOf(shape()).isRequired,
-  promoHasImage: bool,
-};
-
-Info.defaultProps = {
-  promoType: 'regular',
-  promoHasImage: true,
-};
-
 const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaInfo = ({ dir, service }) => (
+const MediaInfo = ({ dir = 'ltr', service = 'news' }) => (
   <MediaIndicator script={latin} service={service} dir={dir}>
     <StyledTime datetime="PT2M15S">2:15</StyledTime>
   </MediaIndicator>
 );
-
-MediaInfo.propTypes = {
-  dir: oneOf(['rtl', 'ltr']),
-  service: string,
-};
-
-MediaInfo.defaultProps = {
-  dir: 'ltr',
-  service: 'news',
-};
 
 describe('StoryPromo', () => {
   it('should render correctly', () => {

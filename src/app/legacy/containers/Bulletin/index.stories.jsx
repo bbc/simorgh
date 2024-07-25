@@ -18,7 +18,6 @@ const noImageAudioFixture = dissocPath(['indexImage'], radioBulletinItem);
 const liveTvFixture = liveTvBulletinItem;
 const audioLiveFixture = liveRadioBulletinItem;
 
-// eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, item }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
@@ -38,44 +37,44 @@ export default {
 };
 
 // Canonical
-export const TVBulletin = (_, globalArgs) => (
-  <Component {...globalArgs} item={tvFixture} />
+export const TVBulletin = (_, { service }) => (
+  <Component service={service} item={tvFixture} />
 );
-export const LiveTVBulletin = (_, globalArgs) => (
-  <Component {...globalArgs} item={liveTvFixture} />
+export const LiveTVBulletin = (_, { service }) => (
+  <Component service={service} item={liveTvFixture} />
 );
-export const RadioBulletin = (_, globalArgs) => (
-  <Component {...globalArgs} item={audioFixture} />
+export const RadioBulletin = (_, { service }) => (
+  <Component service={service} item={audioFixture} />
 );
-export const LiveRadioBulletin = (_, globalArgs) => (
-  <Component {...globalArgs} item={audioLiveFixture} />
+export const LiveRadioBulletin = (_, { service }) => (
+  <Component service={service} item={audioLiveFixture} />
 );
-export const RadioBulletinWithoutImage = (_, globalArgs) => (
-  <Component {...globalArgs} item={noImageAudioFixture} />
+export const RadioBulletinWithoutImage = (_, { service }) => (
+  <Component service={service} item={noImageAudioFixture} />
 );
 
 // Amp
-export const TVBulletinAmp = (_, globalArgs) => (
-  <Component {...globalArgs} isAmp item={tvFixture} />
+export const TVBulletinAmp = (_, { service }) => (
+  <Component service={service} isAmp item={tvFixture} />
 );
 TVBulletinAmp.decorators = [ampDecorator];
 
-export const LiveTVBulletinAmp = (_, globalArgs) => (
-  <Component {...globalArgs} isAmp item={liveTvFixture} />
+export const LiveTVBulletinAmp = (_, { service }) => (
+  <Component service={service} isAmp item={liveTvFixture} />
 );
 LiveTVBulletinAmp.decorators = [ampDecorator];
 
-export const RadioBulletinAmp = (_, globalArgs) => (
-  <Component {...globalArgs} isAmp item={audioFixture} />
+export const RadioBulletinAmp = (_, { service }) => (
+  <Component service={service} isAmp item={audioFixture} />
 );
 RadioBulletinAmp.decorators = [ampDecorator];
 
-export const LiveRadioBulletinAmp = (_, globalArgs) => (
-  <Component {...globalArgs} isAmp item={audioLiveFixture} />
+export const LiveRadioBulletinAmp = (_, { service }) => (
+  <Component service={service} isAmp item={audioLiveFixture} />
 );
 LiveRadioBulletinAmp.decorators = [ampDecorator];
 
-export const RadioBulletinWithoutImageAmp = (_, globalArgs) => (
-  <Component {...globalArgs} isAmp item={noImageAudioFixture} />
+export const RadioBulletinWithoutImageAmp = (_, { service }) => (
+  <Component service={service} isAmp item={noImageAudioFixture} />
 );
 RadioBulletinWithoutImageAmp.decorators = [ampDecorator];

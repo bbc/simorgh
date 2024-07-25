@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { number, oneOfType, string, bool, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 import { RequestContext } from '../../../../contexts/RequestContext';
-import { FRONT_PAGE } from '../../../../routes/utils/pageTypes';
+import { FRONT_PAGE, HOME_PAGE } from '../../../../routes/utils/pageTypes';
 
 export { default as AmpImg } from './index.amp';
 
@@ -37,20 +36,19 @@ const StyledImg = styled.img`
 export const Img = props => {
   const {
     src,
-    srcset,
-    sizes,
-    fallbackSrcset,
-    primaryMimeType,
-    fallbackMimeType,
-    onLoad,
+    srcset = null,
+    sizes = null,
+    fallbackSrcset = null,
+    primaryMimeType = 'image/jpeg',
+    fallbackMimeType = 'image/jpeg',
+    onLoad = () => {},
     ...otherProps
   } = props;
 
   const { pageType } = useContext(RequestContext);
-
   return (
     <>
-      {pageType === FRONT_PAGE && (
+      {[FRONT_PAGE, HOME_PAGE].includes(pageType) && (
         <StyledPicture onLoad={onLoad}>
           {srcset && (
             <source srcSet={srcset} type={primaryMimeType} sizes={sizes} />
@@ -65,7 +63,8 @@ export const Img = props => {
           <StyledImg src={src} {...otherProps} />
         </StyledPicture>
       )}
-      {pageType !== FRONT_PAGE && (
+
+      {![FRONT_PAGE, HOME_PAGE].includes(pageType) && (
         <StyledImg
           sizes={sizes}
           srcSet={fallbackSrcset}
@@ -75,32 +74,6 @@ export const Img = props => {
       )}
     </>
   );
-};
-
-Img.propTypes = {
-  alt: string.isRequired,
-  fade: bool,
-  height: oneOfType([string, number]),
-  sizes: string,
-  src: string.isRequired,
-  srcset: string,
-  fallbackSrcset: string,
-  primaryMimeType: string,
-  fallbackMimeType: string,
-  width: oneOfType([string, number]),
-  onLoad: func,
-};
-
-Img.defaultProps = {
-  fade: false,
-  height: null,
-  sizes: null,
-  srcset: null,
-  fallbackSrcset: null,
-  primaryMimeType: 'image/jpeg',
-  fallbackMimeType: 'image/jpeg',
-  width: null,
-  onLoad: () => {},
 };
 
 export default Img;

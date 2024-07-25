@@ -1,4 +1,8 @@
-import { renderHook, cleanup } from '@testing-library/react-hooks';
+import {
+  renderHook,
+  cleanup,
+} from '#app/components/react-testing-library-with-providers';
+
 import useMediaQuery from '.';
 
 describe('useMediaQuery', () => {
@@ -36,9 +40,8 @@ describe('useMediaQuery', () => {
   it('should call removeListener on cleanup', () => {
     const testFn = jest.fn();
     renderHook(() => useMediaQuery('(max-width: 600px)', testFn));
-    cleanup().then(() => {
-      expect(mockRemoveListener.mock.calls.length).toEqual(1);
-      expect(mockRemoveListener.mock.calls[0][0]).toEqual(testFn);
-    });
+    cleanup();
+    expect(mockRemoveListener.mock.calls.length).toEqual(1);
+    expect(mockRemoveListener.mock.calls[0][0]).toEqual(testFn);
   });
 });

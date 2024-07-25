@@ -93,6 +93,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Terbaru',
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
+        shareButtonText: 'Kirim',
       },
       gist: 'Rangkuman',
       error: {
@@ -289,11 +290,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Terpopuler',
-      numberOfItems: 5,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Siaran radio',
@@ -350,10 +346,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Berita',
         url: '/indonesia',
-      },
-      {
-        title: 'Pemilu 2024',
-        url: '/indonesia/topics/ck0mgrlgyplt',
       },
       {
         title: 'Indonesia',

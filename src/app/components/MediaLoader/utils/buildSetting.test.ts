@@ -54,7 +54,7 @@ describe('buildSettings', () => {
         summary:
           'BBC launch trailer for We Know Our Place women\'s sport campaign"',
         holdingImageURL:
-          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg',
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
         items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
         embedRights: 'allowed',
       },
@@ -121,7 +121,7 @@ describe('buildSettings', () => {
         title: 'Five things ants can teach us about management',
         summary: 'This is a caption!',
         holdingImageURL:
-          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
         embedRights: 'allowed',
@@ -169,7 +169,7 @@ describe('buildSettings', () => {
         title: 'Five things ants can teach us about management',
         summary: 'This is a caption!',
         holdingImageURL:
-          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
         embedRights: 'allowed',

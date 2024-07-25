@@ -209,40 +209,33 @@ exports[`AMP On Demand Audio Page Header Navigation link should match text and u
 
 exports[`AMP On Demand Audio Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Pemilu 2024",
-  "url": "/indonesia/topics/ck0mgrlgyplt",
-}
-`;
-
-exports[`AMP On Demand Audio Page Header Navigation link should match text and url 3`] = `
-{
   "text": "Indonesia",
   "url": "/indonesia/topics/cjgn7k8yx4gt",
 }
 `;
 
-exports[`AMP On Demand Audio Page Header Navigation link should match text and url 4`] = `
+exports[`AMP On Demand Audio Page Header Navigation link should match text and url 3`] = `
 {
   "text": "Dunia",
   "url": "/indonesia/topics/cyz8evpl224t",
 }
 `;
 
-exports[`AMP On Demand Audio Page Header Navigation link should match text and url 5`] = `
+exports[`AMP On Demand Audio Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Viral",
   "url": "/indonesia/topics/cn5w7g2nq6dt",
 }
 `;
 
-exports[`AMP On Demand Audio Page Header Navigation link should match text and url 6`] = `
+exports[`AMP On Demand Audio Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Liputan Mendalam",
   "url": "/indonesia/topics/cw9qgeqd18zt",
 }
 `;
 
-exports[`AMP On Demand Audio Page Header Navigation link should match text and url 7`] = `
+exports[`AMP On Demand Audio Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Majalah",
   "url": "/indonesia/topics/cpxrqmrkeg8t",
@@ -255,7 +248,7 @@ exports[`AMP On Demand Audio Page I can see the episode summary 1`] = `"Berita t
 
 exports[`AMP On Demand Audio Page I can see the episode title 1`] = `"27 April 2020"`;
 
-exports[`AMP On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b4828.png"`;
+exports[`AMP On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b4828.png.webp"`;
 
 exports[`AMP On Demand Audio Page Main heading should match text 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
 

@@ -14,8 +14,6 @@ import {
   legacyAssetPagePath,
   liveRadioPath,
   mostReadDataRegexPath,
-  mostWatchedDataPath,
-  mostWatchedPagePath,
   onDemandRadioPath,
   onDemandTvPath,
   podcastBrandPath,
@@ -324,38 +322,6 @@ describe('mostReadDataRegexPath', () => {
     '/news/trad/mostread.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
-});
-
-describe('mostWatchedDataPath', () => {
-  const validRoutes = [
-    '/news/mostwatched.json',
-    '/zhongwen/mostwatched/simp.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, mostWatchedDataPath);
-
-  const invalidRoutes = [
-    '/foobar/mostwatched.json',
-    '/foobar/mostwatched',
-    '/foobar/mostwatched.js',
-    '/news/trad/mostwatched.json',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedDataPath);
-});
-
-describe('mostWatchedPagePath', () => {
-  const validRoutes = [
-    '/pidgin/media/video',
-    '/pashto/media/video',
-    '/zhongwen/simp/media/video',
-  ];
-  shouldMatchValidRoutes(validRoutes, mostWatchedPagePath);
-
-  const invalidRoutes = [
-    '/foobar/media/video',
-    '/pidgin/video/media',
-    '/zhongwen/media/video/simp',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, mostWatchedPagePath);
 });
 
 describe('secondaryColumnDataRegexPath', () => {
