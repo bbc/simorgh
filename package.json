@@ -96,7 +96,7 @@
     "@emotion/cache": "11.11.0",
     "@emotion/react": "11.11.4",
     "@emotion/server": "11.11.0",
-    "@emotion/styled": "11.11.5",
+    "@emotion/styled": "11.13.0",
     "@loadable/component": "5.16.4",
     "@loadable/server": "5.16.5",
     "@optimizely/react-sdk": "2.9.2",
