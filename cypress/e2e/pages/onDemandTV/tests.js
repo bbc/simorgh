@@ -11,7 +11,7 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
 
-export default ({ service, pageType, variant, isAmp }) => {
+export default ({ service, pageType, variant }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(
       'Video Player',
