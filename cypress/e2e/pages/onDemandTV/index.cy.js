@@ -1,8 +1,7 @@
 import config from '../../../support/config/services';
 import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
-import testsForCanonicalOnly from './testsForCanonicalOnly';
-import crossPlatformTests from './tests';
+import e2eTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
 import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv';
 
@@ -21,12 +20,7 @@ Object.keys(config)
           )}${overrideRendererOnTest()}`;
           visitPage(newPath, pageType);
         });
-        crossPlatformTests({
-          service,
-          pageType,
-          variant,
-        });
-        testsForCanonicalOnly({
+        e2eTests({
           service,
           pageType,
           variant,
@@ -41,7 +35,7 @@ Object.keys(config)
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
           });
-          crossPlatformTests({
+          e2eTests({
             service,
             pageType,
             variant,
