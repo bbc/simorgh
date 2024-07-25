@@ -48,12 +48,12 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: 'غزة اليوم',
+      brandTitle: 'يستحق الانتباه',
       brandDescription:
-        'بودكاست يومي يتابع التطورات الميدانية والإنسانية في قطاع غزة من خلال مشاهدات الغزيين ومتابعات الصحفيين والمراسلين والخبراء في الشأن الإنساني.',
+        'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0j3qp08.jpg',
-        alt: 'غزة اليوم',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
+        alt: 'يستحق الانتباه',
       },
       linkLabel: {
         text: 'الحلقات',
