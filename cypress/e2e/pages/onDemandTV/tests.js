@@ -30,7 +30,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             }
 
             const language = appConfig[service][variant].lang;
-            const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
+            const embedUrl = getEmbedUrl({ body: jsonData, language });
             const isBrandPage = isBrand(jsonData);
 
             cy.get('iframe').then(iframe => {
