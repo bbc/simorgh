@@ -71,7 +71,7 @@ const Banner = forwardRef(
               <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
                 <Image
                   alt=""
-                  src={image.replace('{width}', 'raw')}
+                  src={`${image.replace('{width}', '240')}`}
                   placeholder={false}
                   aspectRatio={[16, 9]}
                 />

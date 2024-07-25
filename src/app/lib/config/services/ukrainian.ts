@@ -85,6 +85,7 @@ const baseServiceConfig = {
       breaking: 'Терміново',
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
+      shareButtonText: 'Поділитися',
     },
     gist: 'Стисло',
     error: {
@@ -279,11 +280,6 @@ const baseServiceConfig = {
     numberOfItems: 10,
     hasMostRead: true,
   },
-  mostWatched: {
-    header: 'Найпопулярніше',
-    numberOfItems: 5,
-    hasMostWatched: false,
-  },
   radioSchedule: {
     hasRadioSchedule: false,
   },
@@ -345,7 +341,7 @@ const baseServiceConfig = {
     },
     {
       title: 'Книга року BBC',
-      url: '/ukrainian/features-50320117',
+      url: '/ukrainian/topics/cqwrq3rkdrnt',
     },
     {
       title: 'Подкасти',

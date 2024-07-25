@@ -71,6 +71,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'બ્રેકિંગ',
         postedAt: 'અહીં પોસ્ટ કર્યું',
         summary: 'સારાંશ',
+        shareButtonText: 'શેર કરો',
       },
       gist: 'સારાંશ',
       error: {
@@ -267,11 +268,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'સૌથી વધુ જોવાયેલ',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -325,10 +321,6 @@ export const service: DefaultServiceConfig = {
         url: '/gujarati',
       },
       {
-        title: 'લોકસભા ચૂંટણી 2024',
-        url: '/gujarati/topics/cg843q7vgq3t',
-      },
-      {
         title: 'ગુજરાત',
         url: '/gujarati/topics/cz74kjn4j5wt',
       },
@@ -339,6 +331,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'વિદેશ',
         url: '/gujarati/topics/c83plvezd90t',
+      },
+      {
+        title: 'હવામાન સમાચાર',
+        url: '/gujarati/topics/cv2gk3nze31t',
       },
       {
         title: 'સ્પોર્ટ્સ',

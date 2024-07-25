@@ -10,7 +10,7 @@ import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
-import { FRONT_PAGE } from '../../routes/utils/pageTypes';
+import { FRONT_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
 
 type Props = {
   alt: string;
@@ -64,13 +64,11 @@ const Image = ({
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-
   if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
-
   const [aspectRatioX, aspectRatioY] = aspectRatio ||
     (hasDimensions && [width, height]) || [null, null];
 
@@ -79,22 +77,30 @@ const Image = ({
     aspectRatioY as number,
   );
 
-  const hasFallback = srcSet && fallbackSrcSet;
+  const hasFallback =
+    srcSet &&
+    fallbackSrcSet &&
+    (pageType === FRONT_PAGE || pageType === HOME_PAGE);
   const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
-
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
-    if (pageType !== FRONT_PAGE) return fallbackSrcSet;
+    if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE) {
+      return fallbackSrcSet;
+    }
     return undefined;
   };
   const getImgSizes = () => {
-    if ((!hasFallback && srcSet) || pageType !== FRONT_PAGE) return sizes;
+    if (
+      (!hasFallback && srcSet) ||
+      (pageType !== FRONT_PAGE && pageType !== HOME_PAGE)
+    ) {
+      return sizes;
+    }
     return undefined;
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
-
   return (
     <>
       {preload && (
@@ -158,16 +164,17 @@ const Image = ({
           </>
         ) : (
           <ImageWrapper>
-            {hasFallback && pageType === FRONT_PAGE && (
-              <>
-                <source srcSet={srcSet} type={mediaType} sizes={sizes} />
-                <source
-                  srcSet={fallbackSrcSet}
-                  type={fallbackMediaType}
-                  sizes={sizes}
-                />
-              </>
-            )}
+            {hasFallback &&
+              (pageType === FRONT_PAGE || pageType === HOME_PAGE) && (
+                <>
+                  <source srcSet={srcSet} type={mediaType} sizes={sizes} />
+                  <source
+                    srcSet={fallbackSrcSet}
+                    type={fallbackMediaType}
+                    sizes={sizes}
+                  />
+                </>
+              )}
             <img
               onLoad={() => setIsLoaded(true)}
               src={src}

@@ -211,30 +211,67 @@ describe('FormField', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render a required input with an associated label', async () => {
+    const mockFormState = {
+      testAllyID: {
+        isValid: true,
+        required: true,
+        value: '',
+        htmlType: 'text',
+        messageCode: null,
+        wasInvalid: false,
+      },
+    };
+
+    jest.spyOn(FormContext, 'useFormContext').mockImplementationOnce(
+      () =>
+        ({
+          formState: mockFormState,
+          handleChange: () => null,
+          attemptedSubmitCount: 0,
+        }) as unknown as ContextProps,
+    );
+
+    const { container } = await act(() => {
+      return render(
+        <ComponentWithContext
+          props={{
+            id: 'testAllyID',
+            htmlType: 'text',
+            label: 'This is a required text field',
+          }}
+          fields={[]}
+        />,
+      );
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
   it.each([
     {
-      hasAttemptedSubmit: true,
+      attemptedSubmitCount: 1,
       required: true,
       isValid: false,
       wasInvalid: true,
       expectedAria: '[aria-invalid=true][aria-required=true]',
     },
     {
-      hasAttemptedSubmit: true,
+      attemptedSubmitCount: 1,
       required: false,
       isValid: false,
       wasInvalid: true,
       expectedAria: '[aria-invalid=true]',
     },
     {
-      hasAttemptedSubmit: true,
+      attemptedSubmitCount: 1,
       required: false,
       isValid: true,
       wasInvalid: true,
       expectedAria: '[aria-invalid=false]',
     },
     {
-      hasAttemptedSubmit: false,
+      attemptedSubmitCount: 0,
       required: true,
       isValid: true,
       wasInvalid: false,
@@ -243,7 +280,7 @@ describe('FormField', () => {
   ])(
     `should apply these attributes: $expectedAria, when attempted submit count is is $attemptCount, required is $required, isValid is $isValid and when the 'previously submitted' flag is $wasInvalid`,
     async ({
-      hasAttemptedSubmit,
+      attemptedSubmitCount,
       required,
       isValid,
       expectedAria,
@@ -265,7 +302,7 @@ describe('FormField', () => {
           ({
             formState: mockFormState,
             handleChange: () => null,
-            hasAttemptedSubmit,
+            attemptedSubmitCount,
           }) as unknown as ContextProps,
       );
 

@@ -56,12 +56,11 @@ const buildImageProperties = (imageProps?: ImageProps) => {
     originCode,
     locator,
     resolution: 400,
-    isWebP: true,
   });
 
   return {
     ratio: 52,
-    srcset: primarySrcset,
+    srcSet: primarySrcset,
     fallbackSrcset,
     sizes: '(min-width: 1008px) 400px',
     src,
@@ -171,7 +170,10 @@ const validate = (props: FormattedPromo) => {
 };
 
 const withData =
-  (Component: React.ElementType, propsToPassThrough: string[] = []) =>
+  (
+    Component: React.ElementType,
+    propsToPassThrough: (keyof PromoProps | 'children')[] = [],
+  ) =>
   (props: PropsWithChildren<PromoProps>) => {
     const data = normalise(props);
     const additionalProps = pick(propsToPassThrough, props);

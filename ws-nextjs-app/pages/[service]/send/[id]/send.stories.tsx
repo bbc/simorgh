@@ -4,6 +4,7 @@ import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import somaliFormFixture from '#data/somali/send/u130092370.json';
+import hausaClosedFormFixture from '#data/hausa/send/u143732177.json';
 import UGCPage from './UGCPageLayout';
 import { FormScreen, PageProps } from './types';
 
@@ -44,13 +45,18 @@ export default {
 export const Form = () => (
   <Component initialScreen="form" fixtureData={mundoFormFixture} />
 );
-export const UploaderForm = () => (
+export const FormWithFileUpload = () => (
   <Component initialScreen="form" fixtureData={somaliFormFixture} />
 );
-export const Uploading = () => (
+export const UploadingScreen = () => (
   <Component initialScreen="uploading" fixtureData={mundoFormFixture} />
 );
-
-export const Success = () => (
+export const SuccessScreen = () => (
   <Component initialScreen="success" fixtureData={mundoFormFixture} />
+);
+export const ErrorScreen = () => (
+  <Component initialScreen="error" fixtureData={mundoFormFixture} />
+);
+export const ClosedScreen = () => (
+  <Component initialScreen="form" fixtureData={hausaClosedFormFixture} />
 );

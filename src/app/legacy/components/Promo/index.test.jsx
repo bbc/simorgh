@@ -22,11 +22,43 @@ const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   </Promo>
 );
 
+const FixtureWithWebp = ({
+  useLargeImages = false,
+  timestamp = Date.now(),
+}) => (
+  <Promo>
+    <Promo.Image
+      useLargeImages={useLargeImages}
+      src="https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg.webp"
+      alt="Test image alt text"
+      loading="lazy"
+    />
+    <Promo.Heading>test heading</Promo.Heading>
+    <Promo.A>test link tag</Promo.A>
+    <Promo.Body>test body</Promo.Body>
+    <Promo.Timestamp>{timestamp}</Promo.Timestamp>
+  </Promo>
+);
+
 const FixtureProgrammes = ({ useLargeImages = false }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
       src="https://ichef.bbci.co.uk/images/ic/{width}xn/p06vzdgj.jpg"
+      alt="Test image alt text"
+      loading="lazy"
+    />
+    <Promo.Heading>test heading</Promo.Heading>
+    <Promo.A>test link tag</Promo.A>
+    <Promo.Body>test body</Promo.Body>
+  </Promo>
+);
+
+const FixtureProgrammesWithWebp = ({ useLargeImages = false }) => (
+  <Promo>
+    <Promo.Image
+      useLargeImages={useLargeImages}
+      src="https://ichef.bbci.co.uk/images/ic/{width}xn/p06vzdgj.jpg.webp"
       alt="Test image alt text"
       loading="lazy"
     />
@@ -45,12 +77,12 @@ describe('Promo component - Image', () => {
       `(min-width: 63rem) 232px, (min-width: 37.5rem) 50vw, 33vw`,
     );
   });
-  it('should use large image resolution and width when large image is true', () => {
+  it('should use large image resolution and width when large image is true on desktop', () => {
     render(<Fixture useLargeImages />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute(
       'sizes',
-      `(min-width: 63rem) 660px, (min-width: 37.5rem) 50vw, 33vw`,
+      `(min-width: 63rem) 800px, (min-width: 37.5rem) 66vw, 100vw`,
     );
   });
 
@@ -60,7 +92,7 @@ describe('Promo component - Image', () => {
     const image = screen.getByAltText('Test image alt text');
     const srcSet = image.getAttribute('srcSet');
 
-    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672];
+    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672, 800];
     expectedResolutions.forEach(resolution => {
       expect(srcSet).toContain(`${resolution}w`);
     });
@@ -72,9 +104,65 @@ describe('Promo component - Image', () => {
     const image = screen.getByAltText('Test image alt text');
     const srcSet = image.getAttribute('srcSet');
 
-    const expectedResolutions = [85, 120, 170, 232, 325, 450, 660];
+    const expectedResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
     expectedResolutions.forEach(resolution => {
       expect(srcSet).toContain(`${resolution}w`);
+    });
+  });
+
+  it('should append a webp file extension - programmes iChef recipes', () => {
+    render(<FixtureProgrammes />);
+
+    const image = screen.getByAltText('Test image alt text');
+    const srcSet = image.getAttribute('srcSet');
+
+    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672, 800];
+    expectedResolutions.forEach(resolution => {
+      expect(srcSet).toContain(
+        `https://ichef.bbci.co.uk/images/ic/${resolution}xn/p06vzdgj.jpg.webp ${resolution}w`,
+      );
+    });
+  });
+
+  it('should have only one webp file extension when URL has one already - programmes iChef recipes', () => {
+    render(<FixtureProgrammesWithWebp />);
+
+    const image = screen.getByAltText('Test image alt text');
+    const srcSet = image.getAttribute('srcSet');
+
+    const expectedResolutions = [96, 128, 176, 240, 352, 464, 672, 800];
+    expectedResolutions.forEach(resolution => {
+      expect(srcSet).toContain(
+        `https://ichef.bbci.co.uk/images/ic/${resolution}xn/p06vzdgj.jpg.webp ${resolution}w`,
+      );
+    });
+  });
+
+  it('should append a webp file extension - all other iChef Recipes', () => {
+    render(<Fixture />);
+
+    const image = screen.getByAltText('Test image alt text');
+    const srcSet = image.getAttribute('srcSet');
+
+    const expectedResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
+    expectedResolutions.forEach(resolution => {
+      expect(srcSet).toContain(
+        `https://ichef.test.bbci.co.uk/ace/ws/${resolution}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg.webp ${resolution}w`,
+      );
+    });
+  });
+
+  it('should have only one webp file extension when URL has one already - all other iChef Recipes', () => {
+    render(<FixtureWithWebp />);
+
+    const image = screen.getByAltText('Test image alt text');
+    const srcSet = image.getAttribute('srcSet');
+
+    const expectedResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
+    expectedResolutions.forEach(resolution => {
+      expect(srcSet).toContain(
+        `https://ichef.test.bbci.co.uk/ace/ws/${resolution}/cpsdevpb/3502/test/0c533a40-770b-11ed-bd83-8f15ba358e41.jpg.webp ${resolution}w`,
+      );
     });
   });
 });

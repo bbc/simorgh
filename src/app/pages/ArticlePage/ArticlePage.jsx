@@ -87,7 +87,7 @@ const ArticlePage = ({ pageData }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+  const startsWithHeading = propEq('headline', 'type')(blocks[0] || {});
 
   const bylineBlock = blocks.find(block => block.type === 'byline');
   const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);

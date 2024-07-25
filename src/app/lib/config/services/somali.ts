@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'War deg deg ah',
         postedAt: '',
         summary: 'Kooban',
+        shareButtonText: 'La wadaag',
       },
       gist: 'Kooban',
       error: {
@@ -270,11 +271,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Ugu daawasho badan',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

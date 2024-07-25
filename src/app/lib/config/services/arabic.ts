@@ -57,7 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
+        href: 'https://www.bbc.com/arabic/podcasts/p086jpqy',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -94,6 +94,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'عاجل',
         postedAt: 'توقيت النشر',
         summary: 'ملخص',
+        shareButtonText: 'شارك',
       },
       gist: 'ملخص',
       error: {
@@ -276,17 +277,78 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'اختياري',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'هذا ما تحمّله:',
+        fileUploadButton: 'اختر ملفا',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'إرسال',
+
+        // Validation
+        validationRequired: 'رجاء املأ هذه الخانة الإلزامية.',
+        validationInvalidEmail:
+          'هذا لا يبدو صحيحا. يرجى إدخال بريد إلكتروني صحيح.',
+        validationInvalidTelephone: undefined,
+        validationFilesTooMany:
+          'لقد أضفت ملفات أكثر من المسموح. الحد الأقصى لعدد الملفات {{maxFiles}}.',
+        validationFilesNotEnough:
+          'لا توجد ملفات كافية. يرجى إضافة {{minFiles}} على الأقل.',
+        validationFilesSizeExceeded:
+          'عذرا، حجم هذه الملفات أكبر من المسموح. يمكنك تحميل ملفات يصل حجمها إلى 1.2 غيغابايت في المرة الواحدة.',
+        validationFilesTooSmall: 'هذا الملف لا يصلح. جرب ملفا آخر.',
+        validationFilesInvalidType:
+          'عذرا، لا يمكننا استقبال هذا النوع من الملفات. يرجى إضافة ملفات من الأنواع التالية {{fileTypes}}.',
+        submissionInfoSignedOutMessage:
+          'ربما تود الاحتفاظ بنسخة من تلك البيانات للرجوع إليها وقت الحاجة.',
+        validationWordLimit: 'الحد الأقصى للكلمات {{wordLimit}}',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        removalGuidelineText: undefined,
+        referenceNumber: 'رقم المرجع',
+        emailToHtml:
+          'إذا غيرت رأيك راسلنا عبر {{emailLink}}. فقط اذكر رقم المرجع وأوضح أنك لا تريد أن نستخدمه.',
+        privacyInfoHtml:
+          'لا تقلق، نحن نحافظ على بياناتك — لمزيد من التفاصيل اقرأ {{privacyInfoLink}}.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'جاري تحميل الملفات...',
+        uploadingDescription: 'يرجى الانتظار حتى اكتمال الإرسال.',
+
+        // Success Screen
+        successHeading: 'لقد تم الإرسال',
+        successDescription: 'شكرا لاتصالك.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'تعذر تحميل ملفاتك ',
+        errorDescription: 'جرب التحميل مرة أخرى.',
+
+        // Closed Screen
+        closedHeading: 'أغلق باب المشاركة',
+        closedDescription: 'أغلق باب المشاركة يوم {{date}}.',
+      },
     },
     mostRead: {
       header: 'الأكثر قراءة',
       lastUpdated: 'آخر تحديث',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'الأكثر مشاهدة',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
@@ -374,11 +436,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'بودكاست',
-        url: '/arabic/tv-and-radio-52067221',
+        url: '/arabic/topics/cljddp5lw0dt',
       },
       {
         title: 'برامجنا',
-        url: '/arabic/tv-and-radio-37728883',
+        url: '/arabic/topics/crgyknwdlwnt',
       },
     ],
   },

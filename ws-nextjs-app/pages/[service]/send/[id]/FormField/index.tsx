@@ -10,7 +10,6 @@ import Checkbox from './Checkbox';
 import Telephone from './Telephone';
 import TextArea from './TextArea';
 import File from './File';
-import InvalidMessageBox from './InvalidMessageBox';
 
 const FormComponents: Record<
   string,
@@ -31,13 +30,13 @@ export type FormComponentProps = {
 };
 
 const FormField = ({ id, htmlType, label }: FormComponentProps) => {
-  const { handleChange, formState, hasAttemptedSubmit } = useFormContext();
+  const { handleChange, handleFocusOut, formState, attemptedSubmitCount } =
+    useFormContext();
+
+  const hasAttemptedSubmit = attemptedSubmitCount > 0;
 
   const Component = FormComponents?.[htmlType];
   if (!Component) return null;
-
-  const { isValid, messageCode } = formState?.[id] ?? {};
-  const ariaErrorDescribedById = `${id}-error`;
 
   // As part of GEL guidelines, we should show the invalid message only after the initial submit.
   return (
@@ -47,16 +46,10 @@ const FormField = ({ id, htmlType, label }: FormComponentProps) => {
         id={id}
         name={id}
         handleChange={handleChange}
+        handleFocusOut={handleFocusOut}
         inputState={formState?.[id]}
-        describedBy={ariaErrorDescribedById}
         hasAttemptedSubmit={hasAttemptedSubmit}
       />
-      {hasAttemptedSubmit && !isValid && (
-        <InvalidMessageBox
-          id={ariaErrorDescribedById}
-          messageCode={messageCode}
-        />
-      )}
     </div>
   );
 };

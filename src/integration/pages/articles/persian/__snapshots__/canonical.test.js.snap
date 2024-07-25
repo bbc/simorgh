@@ -173,8 +173,8 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   class="bbc-139onq"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
-  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 640w"
   style="aspect-ratio:640 / 360"
   width="640"
 />

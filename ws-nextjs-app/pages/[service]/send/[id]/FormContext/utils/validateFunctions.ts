@@ -1,4 +1,4 @@
-import { FieldData, InvalidMessageCodes } from '../../types';
+import { FieldData, FileData, InvalidMessageCodes } from '../../types';
 
 const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) => {
   return wasInvalid || !isValid;
@@ -108,9 +108,73 @@ const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
   };
 };
 
-const isValidFile: (data: FieldData) => FieldData = (data: FieldData) => {
-  const isValid = true;
-  return { ...data, isValid };
+const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
+  const { value: files, required, wasInvalid, fileTypes, min, max } = data;
+  const MAX_PAYLOAD_SIZE = 1288490189;
+  const RESERVED_FORM_DATA_SIZE = 10000;
+  // we're making the assumption that each file chooser field is only allowed the max payload size less some for data (estimated maximum size ever needed)
+  // This will break if you have 2 file choosers in the form as each will have a separate allowance which could result in the total payload being exceeded (fails on Backend) - quite an edge case though
+  const TOTAL_FILES_MAX_SIZE = MAX_PAYLOAD_SIZE - RESERVED_FORM_DATA_SIZE;
+
+  let isValid = true;
+  let messageCode = null;
+  let hasNestedErrorLabel = false;
+
+  // CHECK INDIVIDUAL FILES
+  const validatedFiles = (files as FileData[]).map((fileData: FileData) => {
+    const { file } = fileData;
+    let fileMessageCode = null;
+
+    // Chrome interprets a wma file as video so the following checks whether this has happened and switches the video back to audio
+    const fileType =
+      file.type === 'video/x-ms-wma' ? 'audio/x-ms-wma' : file.type;
+
+    if (!fileTypes?.includes(fileType)) {
+      fileMessageCode = InvalidMessageCodes.WrongFileType;
+      hasNestedErrorLabel = true;
+      isValid = false;
+    }
+    if (file.size <= 0) {
+      fileMessageCode = InvalidMessageCodes.FileTooSmall;
+      hasNestedErrorLabel = true;
+      isValid = false;
+    }
+
+    return { ...fileData, messageCode: fileMessageCode };
+  });
+  if (min != null && (files as FileData[])?.length < min && required) {
+    isValid = false;
+    messageCode = InvalidMessageCodes.NotEnoughFiles;
+    hasNestedErrorLabel = false;
+  }
+
+  if (max != null && (files as FileData[])?.length > max) {
+    isValid = false;
+    messageCode = InvalidMessageCodes.TooManyFiles;
+    hasNestedErrorLabel = false;
+  }
+
+  const totalUploadedSize = (files as FileData[]).reduce(
+    (accumulated, currentValue) => accumulated + currentValue.file.size,
+    0,
+  );
+
+  if (totalUploadedSize >= TOTAL_FILES_MAX_SIZE) {
+    isValid = false;
+    messageCode = InvalidMessageCodes.FileTooBig;
+    hasNestedErrorLabel = false;
+  }
+
+  const wasInvalidUpdate = wasPreviouslyInvalidCheck(wasInvalid, isValid);
+
+  return {
+    ...data,
+    value: validatedFiles,
+    isValid,
+    hasNestedErrorLabel,
+    wasInvalid: wasInvalidUpdate,
+    messageCode,
+  };
 };
 
 const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
@@ -119,7 +183,7 @@ const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
   checkbox: isValidCheck,
   phone: isValidTel,
   textarea: isValidText,
-  file: isValidFile,
+  file: isValidFiles,
 };
 
 export default validateFunctions;

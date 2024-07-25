@@ -21,6 +21,7 @@ interface Palette extends BrandPalette {
   DARK_SALTIRE: string;
   DIM_GREY: string;
   EBON: string;
+  ERROR_CORE: string;
   GHOST: string;
   GREY_10: string;
   GREY_11: string;
@@ -79,7 +80,7 @@ interface MediaQueries {
   GROUP_4_MIN_WIDTH: string;
   GROUP_4_ONLY: string;
   GROUP_5_MIN_WIDTH: string;
-  HIGH_CONTRAST: string;
+  FORCED_COLOURS: string;
 }
 
 interface Spacings {

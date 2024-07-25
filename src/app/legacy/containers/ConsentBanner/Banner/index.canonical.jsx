@@ -49,7 +49,15 @@ const CanonicalConsentBannerContainer = ({
   const headingRef = useRef(null);
 
   useEffect(() => {
-    headingRef.current?.focus();
+    const hasHashInUrl = window.location.hash;
+
+    if (hasHashInUrl) {
+      const urlHashValue = window.location.href.split('#')[1];
+      const isShareUrl = urlHashValue.startsWith('asset:');
+      if (!isShareUrl) headingRef.current?.focus();
+    } else {
+      headingRef.current?.focus();
+    }
   }, []);
 
   return (

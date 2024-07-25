@@ -93,6 +93,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Terbaru',
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
+        shareButtonText: 'Kirim',
       },
       gist: 'Rangkuman',
       error: {
@@ -288,11 +289,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Terakhir diperbarui:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Terpopuler',
-      numberOfItems: 5,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

@@ -74,7 +74,7 @@ const styles = {
       textAlign: 'center',
       margin: '0 0.125rem',
       svg: {
-        [mq.HIGH_CONTRAST]: {
+        [mq.FORCED_COLOURS]: {
           fill: 'linkText',
         },
         fill: 'currentColor',
@@ -94,7 +94,7 @@ const styles = {
       margin: '0 0.125rem',
       color: palette.GREY_5,
       svg: {
-        [mq.HIGH_CONTRAST]: {
+        [mq.FORCED_COLOURS]: {
           fill: 'canvasText',
         },
         fill: 'currentColor',

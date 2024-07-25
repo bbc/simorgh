@@ -41,13 +41,19 @@ export default {
   mainContent: ({ spacings, palette, mq }: Theme) =>
     css({
       background: palette.WHITE,
+      outline: `${pixelsToRem(1)}rem transparent solid`,
       padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       [mq.GROUP_1_MIN_WIDTH]: {
         padding: `${spacings.TRIPLE}rem ${spacings.FULL}rem`,
       },
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem`,
-        width: '35rem',
+      },
+    }),
+  screenContainer: () =>
+    css({
+      '.no-js &': {
+        display: 'none',
       },
     }),
 };

@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Son dakika',
         postedAt: 'Basım saati',
         summary: 'Özet',
+        shareButtonText: 'Paylaş',
       },
       gist: 'Özet',
       error: {
@@ -263,11 +264,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'En fazla izlenen içerik',
-      numberOfItems: 5,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -323,10 +319,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
-      },
-      {
-        title: '31 Mart 2024 Yerel Seçimleri',
-        url: '/turkce/topics/cv2lyll8e02t',
       },
       {
         title: 'Rusya-Ukrayna Savaşı',

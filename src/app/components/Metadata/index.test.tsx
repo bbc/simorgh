@@ -34,7 +34,7 @@ type Platform = 'canonical' | 'amp';
 const getArticleMetadataProps = (data: PageDataProps) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: getSummary(data),
+  description: getSummary(data) as string,
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,

@@ -334,18 +334,16 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
             class="emotion-8"
             style="padding-bottom: 56.25%; overflow: hidden;"
           >
-            <picture>
-              <img
-                alt="Kwesi and James dey check radio"
-                class="emotion-9"
-                height="549"
-                loading="lazy"
-                sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg"
-                srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg 660w"
-                width="976"
-              />
-            </picture>
+            <img
+              alt="Kwesi and James dey check radio"
+              class="emotion-9"
+              height="549"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/C576/production/_102105505_p06bhwsd.jpg.webp 660w"
+              width="976"
+            />
           </div>
           <div
             class="emotion-10 emotion-11"

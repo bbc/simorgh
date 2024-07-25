@@ -12,6 +12,12 @@ const externalLinks = {
           'https://podcasts.apple.com/br/podcast/que-hist%C3%B3ria/id1492686435',
         linkType: 'apple',
       },
+      {
+        linkText: 'YouTube',
+        linkUrl:
+          'https://www.youtube.com/playlist?list=PLCX5XjxKTpTmh19ipbvr6OACmBWczOLJO',
+        linkType: 'youtube',
+      },
     ],
     p09qw1cn: [
       {

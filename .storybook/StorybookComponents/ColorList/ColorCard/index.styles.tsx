@@ -19,7 +19,7 @@ const styles = {
           margin: `-${spacings.FULL}rem`,
           marginBottom: `${spacings.FULL}rem`,
           background: colorCode,
-          [mq.HIGH_CONTRAST]: {
+          [mq.FORCED_COLOURS]: {
             background: colorCode,
             forcedColorAdjust: 'none',
           },
