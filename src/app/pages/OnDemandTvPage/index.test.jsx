@@ -24,13 +24,12 @@ const toggles = {
   },
 };
 
-const Page = ({ pageData, service, isAmp = false }) => (
+const Page = ({ pageData, service = false }) => (
   <StaticRouter>
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
-          isAmp={isAmp}
           pageType={pageType}
           derivedPageType="On Demand TV"
           pathname="/pathname"
@@ -44,16 +43,13 @@ const Page = ({ pageData, service, isAmp = false }) => (
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service, isAmp = false }) => {
+const renderPage = async ({ pageData, service = false }) => {
   let result;
   await act(async () => {
-    result = await render(
-      <Page pageData={pageData} service={service} isAmp={isAmp} />,
-      {
-        pageType,
-        derivedPageType: 'On Demand TV',
-      },
-    );
+    result = await render(<Page pageData={pageData} service={service} />, {
+      pageType,
+      derivedPageType: 'On Demand TV',
+    });
   });
 
   return result;
@@ -219,28 +215,6 @@ it('should show the video player on canonical with no live override', async () =
   );
 });
 
-it('should show the video player on amp with no live override', async () => {
-  process.env.SIMORGH_APP_ENV = 'live';
-  fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData({
-    path: 'some-ondemand-tv-path',
-    pageType,
-    toggles,
-  });
-  const { container } = await renderPage({
-    pageData,
-    service: 'pashto',
-    isAmp: true,
-  });
-  const videoPlayerIframeSrc = container
-    .querySelector('amp-iframe')
-    .getAttribute('src');
-
-  expect(videoPlayerIframeSrc).toEqual(
-    'https://polling.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp',
-  );
-});
-
 it('should show the video player on canonical with live override', async () => {
   process.env.SIMORGH_APP_ENV = 'test';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
@@ -259,27 +233,6 @@ it('should show the video player on canonical with live override', async () => {
 
   expect(videoPlayerIframeSrc).toEqual(
     '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
-  );
-});
-
-it('should show the video player on amp with live override', async () => {
-  fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData({
-    path: 'some-ondemand-tv-path',
-    pageType,
-    toggles,
-  });
-  const { container } = await renderPage({
-    pageData,
-    service: 'pashto',
-    isAmp: true,
-  });
-  const videoPlayerIframeSrc = container
-    .querySelector('amp-iframe')
-    .getAttribute('src');
-
-  expect(videoPlayerIframeSrc).toEqual(
-    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
   );
 });
 
