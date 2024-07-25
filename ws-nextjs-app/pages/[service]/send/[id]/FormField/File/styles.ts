@@ -83,7 +83,7 @@ export default {
           svg: {
             color: palette.BLACK,
             fill: 'currentcolor',
-            [mq.HIGH_CONTRAST]: { stroke: palette.WHITE },
+            [mq.FORCED_COLOURS]: { stroke: palette.WHITE },
           },
         },
       },
@@ -107,5 +107,5 @@ export default {
       width: `${spacings.QUADRUPLE}rem`,
       height: `${spacings.QUADRUPLE}rem`,
     }),
-  focusIndicator: formFieldStyles.focusIndicator,
+  focusIndicatorInput: formFieldStyles.focusIndicatorInput,
 };

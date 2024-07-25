@@ -1,0 +1,40 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directories:
+      - '/'
+      - '/ws-nextjs-app'
+    schedule:
+      interval: 'daily'
+    ignore:
+      - dependency-name: '@bbc/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@loadable/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'webpack'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'winston'
+    labels:
+      - 'dependencies'
+    groups:
+      babel:
+        patterns:
+          - '@babel/*'
+          - 'babel-*'
+      emotion:
+        patterns:
+          - '@emotion/*'
+      storybook:
+        patterns:
+          - '@storybook/*'
+          - 'storybook'
+      bbc-minor-patch:
+        patterns:
+          - '@bbc/*'
+      loadable-minor-patch:
+        patterns:
+          - '@loadable/*'
+      webpack-minor-patch:
+        patterns:
+          - 'webpack'
+          - 'webpack-*'

@@ -134,7 +134,7 @@ export default ({
             {file.name}
           </span>
           <button
-            css={styles.focusIndicator}
+            css={styles.focusIndicatorInput}
             type="button"
             aria-describedby={ariaDescribedById}
             onClick={() =>
@@ -151,7 +151,7 @@ export default ({
             id={errorBoxAriaDescribedById}
             messageCode={fileData.messageCode as InvalidMessageCodes}
             suffix={file.name}
-            validation={validation}
+            validationCriteria={validation}
           />
         )}
       </li>

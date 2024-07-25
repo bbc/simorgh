@@ -9,6 +9,7 @@ export default ({
   id,
   name,
   handleChange,
+  handleFocusOut,
   inputState,
   label,
   hasAttemptedSubmit,
@@ -30,7 +31,7 @@ export default ({
         <input
           css={[
             styles.checkbox,
-            styles.focusIndicator,
+            styles.focusIndicatorInput,
             useErrorTheme && styles.checkboxError,
           ]}
           id={id}
@@ -38,6 +39,7 @@ export default ({
           type="checkbox"
           checked={value as boolean}
           onChange={e => handleChange(e.target.name, e.target.checked)}
+          onBlur={e => handleFocusOut(e.target.name)}
           {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
           {...(hasAttemptedSubmit && {
             ...(wasInvalid && { 'aria-invalid': !isValid }),

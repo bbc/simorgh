@@ -72,8 +72,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: status ?? 500,
       toggles,
       variant: variant?.[0] || null,
-      ...extractHeaders(reqHeaders),
       timeOnServer: Date.now(), // TODO: check if needed?
+      ...extractHeaders(reqHeaders),
     },
   };
 };

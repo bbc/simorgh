@@ -23,7 +23,7 @@ export default {
     css({
       marginInlineEnd: `${spacings.FULL}rem`,
       fill: palette.SUCCESS_CORE,
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         path: {
           fill: 'currentColor',
         },

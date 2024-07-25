@@ -46,8 +46,9 @@ export type InvalidMessageBoxProps = {
   id: string;
   messageCode: InvalidMessageCodes | null;
   hasArrowStyle?: boolean;
+  isErrorSummary?: boolean;
   suffix?: string;
-  validation?: ValidationConditions;
+  validationCriteria?: ValidationConditions;
 };
 
 export type FetchParameters = {
@@ -114,12 +115,19 @@ export type PageProps = {
   pageData: {
     title: string;
     description: string;
+    settings: {
+      replyEmailAddress: string;
+      retentionPeriodDays: string;
+    };
     sections: Section[];
     privacyNotice: {
       default: string;
       url: string;
       additional: string;
     };
+    campaignStatus: 'open' | 'closed';
+    openingTime?: string;
+    closingTime?: string;
   };
 };
 

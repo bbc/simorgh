@@ -95,6 +95,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgente',
         postedAt: 'Publicado às',
         summary: 'Pontos-chave',
+        shareButtonText: 'Compartilhar',
       },
       gist: 'Pontos-chave',
       error: {
@@ -341,6 +342,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Sua mensagem não foi enviada',
         errorDescription: 'Tente enviar novamente.',
+
+        // Closed Screen
+        closedHeading: 'Está encerrado',
+        closedDescription: 'Foi encerrado em {{date}}.',
       },
     },
     mostRead: {

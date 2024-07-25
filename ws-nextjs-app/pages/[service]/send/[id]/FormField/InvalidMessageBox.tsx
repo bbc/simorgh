@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { useContext, ForwardedRef, forwardRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
-import Paragraph from '#app/components/Paragraph';
+import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   InvalidMessageCodes,
@@ -46,37 +46,60 @@ const formatValidationMessage = (
   return message;
 };
 
-export default ({
-  id,
-  messageCode,
-  hasArrowStyle = true,
-  suffix,
-  validation,
-}: InvalidMessageBoxProps) => {
-  const {
-    translations: { ugc = fallbackTranslations },
-  } = useContext(ServiceContext);
+const InvalidMessageBox = forwardRef(
+  (
+    {
+      id,
+      messageCode,
+      hasArrowStyle = true,
+      isErrorSummary = false,
+      suffix,
+      validationCriteria,
+    }: InvalidMessageBoxProps,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const {
+      translations: { ugc = fallbackTranslations },
+    } = useContext(ServiceContext);
 
-  const message = formatValidationMessage(
-    ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
-    validation,
-  );
+    const message = formatValidationMessage(
+      ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
+      validationCriteria,
+    );
 
-  return (
-    <>
-      {hasArrowStyle && <div css={styles.errorArrow} />}
-      <div css={styles.errorMessageBox(hasArrowStyle)}>
-        <ErrorSymbol />
-        <Paragraph
-          id={id}
-          css={styles.errorText}
-          fontVariant="sansBold"
-          size="minion"
+    // We only include visually hidden text on generic error messages.
+    const includeVisuallyHiddenText =
+      !isErrorSummary && message === ugc[InvalidMessageCodes.FieldRequired];
+
+    return (
+      <>
+        {hasArrowStyle && <div css={styles.errorArrow} />}
+        <div
+          css={[
+            styles.errorMessageBox,
+            !hasArrowStyle && styles.hasArrowStyle,
+            isErrorSummary && styles.focusIndicatorErrorSummary,
+          ]}
+          {...(isErrorSummary && { tabIndex: -1 })}
+          {...(ref && { ref })}
         >
-          {message}
-          <VisuallyHiddenText>{`, ${suffix}`}</VisuallyHiddenText>
-        </Paragraph>
-      </div>
-    </>
-  );
-};
+          <ErrorSymbol />
+          <Text
+            id={id}
+            css={styles.errorText}
+            fontVariant="sansBold"
+            size="minion"
+            as="strong"
+          >
+            {message}
+            {includeVisuallyHiddenText && (
+              <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
+            )}
+          </Text>
+        </div>
+      </>
+    );
+  },
+);
+
+export default InvalidMessageBox;
