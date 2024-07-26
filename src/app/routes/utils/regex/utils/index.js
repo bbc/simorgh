@@ -146,7 +146,7 @@ export const getPodcastBrandRegex = services => {
 
 export const getOnDemandRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?:lite(${liteRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):lite(${liteRegex})?`;
 };
 
 export const getOnDemandTvRegex = services => {

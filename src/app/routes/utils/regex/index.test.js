@@ -236,11 +236,9 @@ describe('frontPageManifestPath', () => {
 describe('onDemandRadioPath', () => {
   const validRoutes = [
     '/indonesia/bbc_indonesian_radio/w34rfd4k', // onDemand radio any media id
-    '/hausa/bbc_hausa_radio/abcd1234.amp', // onDemand radio amp w/ any media id
     '/persian/bbc_abcdefg_radio/hijklmn', // onDemand radio with a-z inside service id and for media id
     '/arabic/bbc_arabic_radio/radioschedule', // default radio schedule route
     '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k', // onDemand radio brand any media id
-    '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k.amp', // onDemand radio brand amp any media id
     '/zhongwen/simp/bbc_cantonese_radio/w5192pdkg', // onDemand radio with valid variant
   ];
   shouldMatchValidRoutes(validRoutes, onDemandRadioPath);
@@ -253,6 +251,8 @@ describe('onDemandRadioPath', () => {
     '/persian/foobar/abcd1234.amp',
     '/indonesia/bbc_indonesian_radio/programmes/',
     '/zhongwen/troll/bbc_cantonese_radio/w5192pdkg', // onDemand radio with invalid variant
+    '/hausa/bbc_hausa_radio/abcd1234.amp', // onDemand radio amp w/ any media id
+    '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k.amp', // onDemand radio brand amp any media id
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, onDemandRadioPath);
 });
