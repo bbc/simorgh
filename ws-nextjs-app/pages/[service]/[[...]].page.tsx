@@ -1,21 +1,66 @@
+import React from 'react';
 import { GetServerSideProps } from 'next';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isLitePath from '#app/routes/utils/isLitePath';
-import { Services, Variants } from '../../../src/app/models/types/global';
-import extractHeaders from '../../../src/server/utilities/extractHeaders';
+import extractHeaders from '#server/utilities/extractHeaders';
+import parseAvRoute from '../../utilities/parseAvRoute';
 
-// This route does nothing other than return a 404 status code for other routes not yet supported in the Next.JS app
-export default function CatchAll() {
+export default function CatchAll({
+  isAvEmbeds,
+  pageData,
+}: {
+  isAvEmbeds: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pageData: any;
+}) {
+  if (isAvEmbeds)
+    return (
+      <div>
+        <h1>
+          AV Embeds -{' '}
+          {pageData?.output?.isSyndicationRoute
+            ? 'Syndication'
+            : 'Non-Syndincation'}
+        </h1>
+        <p>Input:</p>
+        <pre>{JSON.stringify(pageData?.input, null, 2)}</pre>
+        <p>Output:</p>
+        <pre>{JSON.stringify(pageData?.output, null, 2)}</pre>
+      </div>
+    );
+
   return null;
 }
 
-type PageDataParams = {
-  service: Services;
-  variant: Variants;
-};
-
 export const getServerSideProps: GetServerSideProps = async context => {
-  const isLite = isLitePath(context.resolvedUrl);
+  const {
+    resolvedUrl,
+    query: { service, variant },
+    req: { headers: reqHeaders },
+  } = context;
+
+  const isAvEmbeds = resolvedUrl.includes('av-embeds');
+
+  if (isAvEmbeds) {
+    const { status, data } = parseAvRoute(context.params);
+    context.res.statusCode = status;
+
+    return {
+      props: {
+        bbcOrigin: reqHeaders['bbc-origin'] || null,
+        isNextJs: true,
+        isAvEmbeds: true,
+        pageData: data,
+        service,
+        status,
+        ...extractHeaders(reqHeaders),
+      },
+    };
+  }
+
+  // \/\/\/ Default fallback for unknown routes \/\/\/
+
+  const isLite = isLitePath(resolvedUrl);
 
   logResponseTime(
     {
@@ -24,10 +69,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     context.res,
     () => null,
   );
-
-  const { service, variant } = context.query as PageDataParams;
-
-  const { headers: reqHeaders } = context.req;
 
   context.res.statusCode = 404;
   return {

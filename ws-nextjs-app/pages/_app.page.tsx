@@ -24,6 +24,7 @@ interface Props extends AppProps {
     isApp?: boolean;
     isLite?: boolean;
     isNextJs: boolean;
+    isAvEmbeds?: boolean;
     mvtExperiments: MvtExperiment[] | null;
     pageData: {
       metadata: {
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }: Props) {
     isApp = false,
     isLite = false,
     isNextJs = true,
+    isAvEmbeds = false,
     mvtExperiments = null,
     pageData,
     pageLang = '',
@@ -67,6 +69,9 @@ export default function App({ Component, pageProps }: Props) {
     variant,
     isUK,
   } = pageProps;
+
+  // AV Embed pages only render the media player
+  if (isAvEmbeds) return <Component {...pageProps} />;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
 
