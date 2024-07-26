@@ -2,9 +2,9 @@ import { GetServerSidePropsContext } from 'next';
 import services from '#lib/config/services/loadableConfig';
 import { Services, Variants } from '#app/models/types/global';
 
-const CPS_ID_REGEX = /[0-9]{8,}$/;
+const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
 const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
-const TOPIC_ID_REGEX =
+const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
 const EMBED_ID_REGEX = /p[0-9a-z]{7,}/;
@@ -67,7 +67,6 @@ const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 
 const SERVICES = Object.keys(services) as Services[];
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
-const DATA_PLATFORMS = ['cps', 'articles', 'live'];
 
 type Query = GetServerSidePropsContext['query'];
 
@@ -96,15 +95,27 @@ const extractVariant = (query?: Query): Variants | null => {
 const extractDataPlatform = (query?: Query) => {
   if (!query?.['']) return null;
 
-  const queryArray = query?.[''];
+  const queryArray = query?.[''] as string[];
 
-  const dataPlatformFromQuery = DATA_PLATFORMS.find(p =>
-    queryArray.includes(p),
-  );
+  const assetId = queryArray.find((id: string) => {
+    return (
+      CPS_ID_REGEX.test(id) ||
+      OPTIMO_ID_REGEX.test(id) ||
+      TIPO_ID_REGEX.test(id)
+    );
+  });
 
-  const dataPlatform = dataPlatformFromQuery ?? 'cps';
+  if (!assetId) return null;
 
-  return dataPlatform ?? null;
+  const isCpsId = CPS_ID_REGEX.test(assetId);
+  const isOptimoId = OPTIMO_ID_REGEX.test(assetId);
+  const isTopicId = TIPO_ID_REGEX.test(assetId);
+
+  if (isCpsId) return 'cps';
+  if (isOptimoId) return 'articles';
+  if (isTopicId) return 'live';
+
+  return null;
 };
 
 const extractAssetId = (query?: Query) => {
@@ -116,7 +127,7 @@ const extractAssetId = (query?: Query) => {
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||
-      TOPIC_ID_REGEX.test(id)
+      TIPO_ID_REGEX.test(id)
     );
   });
 
@@ -145,6 +156,7 @@ const extractLang = (query?: Query) => {
 
 export default function parseAvSyndicationRoute(query?: Query) {
   const isSyndicationRoute = query?.service !== 'ws';
+
   const service = extractService(query);
   const variant = extractVariant(query);
   const dataPlatform = extractDataPlatform(query);
