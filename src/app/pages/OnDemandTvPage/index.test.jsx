@@ -24,7 +24,7 @@ const toggles = {
   },
 };
 
-const Page = ({ pageData, service = false }) => (
+const Page = ({ pageData, service }) => (
   <StaticRouter>
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
@@ -43,7 +43,7 @@ const Page = ({ pageData, service = false }) => (
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service = false }) => {
+const renderPage = async ({ pageData, service }) => {
   let result;
   await act(async () => {
     result = await render(<Page pageData={pageData} service={service} />, {
