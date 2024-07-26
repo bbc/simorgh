@@ -20,8 +20,5 @@ export type OpinionBlocks = {
 };
 
 export type OpinionPageProps = {
-  type: 'opinions';
-  model: {
-    blocks: OpinionBlocks[];
-  };
+  blocks: OpinionBlocks[];
 };
