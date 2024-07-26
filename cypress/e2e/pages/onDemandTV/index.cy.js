@@ -27,19 +27,4 @@ Object.keys(config)
         });
       });
     });
-    paths
-      .map(path => `${path}.amp`)
-      .forEach(currentPath => {
-        describe(`${pageType} - ${currentPath}`, () => {
-          beforeEach(() => {
-            Cypress.env('currentPath', currentPath);
-            visitPage(currentPath, pageType);
-          });
-          e2eTests({
-            service,
-            pageType,
-            variant,
-          });
-        });
-      });
   });
