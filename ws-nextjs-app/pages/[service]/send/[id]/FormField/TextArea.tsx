@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
-import InvalidMessageBox from './InvalidMessageBox';
+import InvalidMessageBox from '../MessageBox/InvalidMessageBox';
 import fallbackTranslations from '../fallbackTranslations';
 
 export default ({

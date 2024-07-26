@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext, ForwardedRef, forwardRef } from 'react';
+import { useContext, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
@@ -9,7 +9,7 @@ import {
   InvalidMessageBoxProps,
   ValidationConditions,
 } from '../types';
-import styles from './styles';
+import styles from '../FormField/styles';
 import fallbackTranslations from '../fallbackTranslations';
 
 const ErrorSymbol = () => (
@@ -55,7 +55,8 @@ const InvalidMessageBox = forwardRef(
       isErrorSummary = false,
       suffix,
       validationCriteria,
-    }: InvalidMessageBoxProps,
+      children,
+    }: PropsWithChildren<InvalidMessageBoxProps>,
     ref: ForwardedRef<HTMLElement>,
   ) => {
     const {
@@ -96,6 +97,7 @@ const InvalidMessageBox = forwardRef(
               <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
             )}
           </Text>
+          {children}
         </div>
       </>
     );

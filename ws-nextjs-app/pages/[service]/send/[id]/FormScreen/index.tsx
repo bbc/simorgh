@@ -10,8 +10,8 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import InvalidMessageBox from '../FormField/InvalidMessageBox';
 import fallbackTranslations from '../fallbackTranslations';
+import ErrorSummaryBox from '../MessageBox/ErrorSummaryBox';
 
 type Props = {
   title: string;
@@ -28,8 +28,13 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submitted, hasValidationErrors, attemptedSubmitCount } =
-    useFormContext();
+  const {
+    handleSubmit,
+    submitted,
+    hasValidationErrors,
+    attemptedSubmitCount,
+    formState,
+  } = useFormContext();
 
   const {
     translations: {
@@ -89,14 +94,7 @@ export default function FormScreen({
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {hasAttemptedSubmit && hasValidationErrors && (
-            <InvalidMessageBox
-              id="errorSummaryBox"
-              hasArrowStyle={false}
-              messageCode={null}
-              ref={ref}
-              suffix={sectionTitle}
-              isErrorSummary
-            />
+            <ErrorSummaryBox ref={ref} suffix={sectionTitle} />
           )}
           {formFields}
 
