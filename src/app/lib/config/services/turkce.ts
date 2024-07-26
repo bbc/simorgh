@@ -325,6 +325,10 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
+        title: '2024 Paris Olimpiyatları',
+        url: '/turkce/topics/cjrrzp9q7gwt',
+      },
+      {
         title: 'Rusya-Ukrayna Savaşı',
         url: '/turkce/topics/cy0ryl4pvx6t',
       },

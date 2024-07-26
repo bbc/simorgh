@@ -346,8 +346,8 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/c06gq9jxz3rt',
       },
       {
-        title: 'Bien-être',
-        url: '/afrique/topics/c0vmyy90q8zt',
+        title: 'JO 2024',
+        url: '/afrique/topics/cgrjz0yz4n9t',
       },
       {
         title: 'Science et technologie',
