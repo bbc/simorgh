@@ -28,13 +28,8 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const {
-    handleSubmit,
-    submitted,
-    hasValidationErrors,
-    attemptedSubmitCount,
-    formState,
-  } = useFormContext();
+  const { handleSubmit, submitted, hasValidationErrors, attemptedSubmitCount } =
+    useFormContext();
 
   const {
     translations: {
@@ -68,6 +63,11 @@ export default function FormScreen({
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
   ));
 
+  const labelMap: Record<string, string> = {};
+  fields?.forEach(({ id, label }) => {
+    labelMap[id] = label;
+  });
+
   return (
     <>
       <Heading
@@ -93,8 +93,13 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
+          {/* TODO - tidy and remove these values? */}
           {hasAttemptedSubmit && hasValidationErrors && (
-            <ErrorSummaryBox ref={ref} suffix={sectionTitle} />
+            <ErrorSummaryBox
+              ref={ref}
+              suffix={sectionTitle}
+              labelMap={labelMap}
+            />
           )}
           {formFields}
 
