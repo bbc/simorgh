@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { GetServerSideProps } from 'next';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isLitePath from '#app/routes/utils/isLitePath';
 import extractHeaders from '#server/utilities/extractHeaders';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import parseAvRoute from '../../utilities/parseAvRoute';
 
 export default function CatchAll({
@@ -13,6 +14,8 @@ export default function CatchAll({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pageData: any;
 }) {
+  const { translations } = useContext(ServiceContext);
+
   if (isAvEmbeds)
     return (
       <div>
@@ -26,6 +29,8 @@ export default function CatchAll({
         <pre>{JSON.stringify(pageData?.input, null, 2)}</pre>
         <p>Output:</p>
         <pre>{JSON.stringify(pageData?.output, null, 2)}</pre>
+        <p>I can access Contexts too:</p>
+        <pre>{JSON.stringify(translations, null, 2)}</pre>
       </div>
     );
 
@@ -51,7 +56,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
         isNextJs: true,
         isAvEmbeds: true,
         pageData: data,
-        service,
+        service: data?.output?.service ?? 'news',
+        variant: data?.output?.variant ?? null,
         status,
         ...extractHeaders(reqHeaders),
       },

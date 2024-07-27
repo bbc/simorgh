@@ -1,6 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
 import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
@@ -70,50 +71,62 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
-  // AV Embed pages only render the media player
-  if (isAvEmbeds) return <Component {...pageProps} />;
-
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
 
   return (
-    <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider
-        service={service}
-        variant={variant}
-        pageLang={pageLang}
-      >
-        <RequestContextProvider
-          bbcOrigin={bbcOrigin}
-          id={id}
-          isAmp={isAmp}
-          isApp={isApp}
-          isLite={isLite}
-          pageType={pageType}
+    <ThemeProvider service={service} variant={variant}>
+      <ToggleContextProvider toggles={toggles}>
+        <ServiceContextProvider
           service={service}
-          statusCode={status}
-          pathname={pathname}
-          previousPath={previousPath}
           variant={variant}
-          timeOnServer={timeOnServer}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          mvtExperiments={mvtExperiments}
-          isNextJs={isNextJs}
-          isUK={isUK ?? false}
-          counterName={atiAnalytics?.pageIdentifier ?? null}
+          pageLang={pageLang}
         >
-          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
-            <UserContextProvider>
-              <PageWrapper pageData={pageData} status={status}>
+          <RequestContextProvider
+            bbcOrigin={bbcOrigin}
+            id={id}
+            isAmp={isAmp}
+            isApp={isApp}
+            isLite={isLite}
+            pageType={pageType}
+            service={service}
+            statusCode={status}
+            pathname={pathname}
+            previousPath={previousPath}
+            variant={variant}
+            timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+            mvtExperiments={mvtExperiments}
+            isNextJs={isNextJs}
+            isUK={isUK ?? false}
+            counterName={atiAnalytics?.pageIdentifier ?? null}
+          >
+            {!isAvEmbeds ? (
+              <EventTrackingContextProvider
+                atiData={atiAnalytics}
+                data={pageData}
+              >
+                <UserContextProvider>
+                  <PageWrapper pageData={pageData} status={status}>
+                    {status === 200 ? (
+                      <Component {...pageProps} />
+                    ) : (
+                      <ErrorPage errorCode={status || 500} />
+                    )}
+                  </PageWrapper>
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            ) : (
+              <>
                 {status === 200 ? (
                   <Component {...pageProps} />
                 ) : (
                   <ErrorPage errorCode={status || 500} />
                 )}
-              </PageWrapper>
-            </UserContextProvider>
-          </EventTrackingContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+              </>
+            )}
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 }

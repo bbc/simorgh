@@ -2,6 +2,10 @@ import { GetServerSidePropsContext } from 'next';
 import services from '#lib/config/services/loadableConfig';
 import { Services, Variants } from '#app/models/types/global';
 
+// Key for grouped params from the dynamic route
+const QUERY_PARAM_KEY = '';
+
+// Asset ID regexes
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
 const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
 const TIPO_ID_REGEX =
@@ -9,6 +13,7 @@ const TIPO_ID_REGEX =
 
 const EMBED_ID_REGEX = /p[0-9a-z]{7,}/;
 
+// Language codes
 const LANGS = [
   'am',
   'ar',
@@ -71,11 +76,11 @@ const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 type Query = GetServerSidePropsContext['query'];
 
 const extractService = (query?: Query): Services | null => {
-  if (!query?.['']) return null;
+  if (!query?.[QUERY_PARAM_KEY]) return null;
 
   if (query.service !== 'ws') return query.service as Services;
 
-  const queryArray = query?.[''];
+  const queryArray = query?.[QUERY_PARAM_KEY];
 
   const service = SERVICES.find(s => queryArray.includes(s));
 
@@ -83,9 +88,9 @@ const extractService = (query?: Query): Services | null => {
 };
 
 const extractVariant = (query?: Query): Variants | null => {
-  if (!query?.['']) return null;
+  if (!query?.[QUERY_PARAM_KEY]) return null;
 
-  const queryArray = query?.[''];
+  const queryArray = query?.[QUERY_PARAM_KEY];
 
   const variant = VARIANTS.find(v => queryArray.includes(v));
 
@@ -93,9 +98,9 @@ const extractVariant = (query?: Query): Variants | null => {
 };
 
 const extractDataPlatform = (query?: Query) => {
-  if (!query?.['']) return null;
+  if (!query?.[QUERY_PARAM_KEY]) return null;
 
-  const queryArray = query?.[''] as string[];
+  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
 
   const assetId = queryArray.find((id: string) => {
     return (
@@ -119,9 +124,9 @@ const extractDataPlatform = (query?: Query) => {
 };
 
 const extractAssetId = (query?: Query) => {
-  if (!query?.['']) return null;
+  if (!query?.[QUERY_PARAM_KEY]) return null;
 
-  const queryArray = query?.[''] as string[];
+  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
 
   const assetId = queryArray.find((id: string) => {
     return (
@@ -135,9 +140,9 @@ const extractAssetId = (query?: Query) => {
 };
 
 const extractEmbedId = (query?: Query) => {
-  if (!query?.['']) return null;
+  if (!query?.[QUERY_PARAM_KEY]) return null;
 
-  const queryArray = query?.[''] as string[];
+  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
 
   const embedId = queryArray.find((id: string) => EMBED_ID_REGEX.test(id));
 
@@ -145,9 +150,9 @@ const extractEmbedId = (query?: Query) => {
 };
 
 const extractLang = (query?: Query) => {
-  if (!query?.['']) return null;
+  if (!query?.[QUERY_PARAM_KEY]) return null;
 
-  const queryArray = query?.[''] as string[];
+  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
 
   const lang = queryArray.find((l: string) => LANGS_REGEX.test(l));
 
@@ -164,8 +169,10 @@ export default function parseAvSyndicationRoute(query?: Query) {
   const embedId = extractEmbedId(query);
   const lang = extractLang(query);
 
+  const invalidAvRoute = !dataPlatform || !assetId;
+
   return {
-    status: 200,
+    status: !invalidAvRoute ? 200 : 404,
     data: {
       input: query,
       output: {

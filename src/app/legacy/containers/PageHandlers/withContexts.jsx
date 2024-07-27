@@ -1,6 +1,7 @@
 import React from 'react';
 
 // context providers
+import { ThemeProvider } from '../../../components/ThemeProvider';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 import { UserContextProvider } from '../../../contexts/UserContext';
@@ -35,44 +36,46 @@ const WithContexts = Component => {
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
 
     return (
-      <ToggleContextProvider toggles={toggles}>
-        <ServiceContextProvider
-          service={service}
-          variant={variant}
-          pageLang={pageData?.metadata?.language}
-        >
-          <RequestContextProvider
-            bbcOrigin={bbcOrigin}
-            derivedPageType={pageData?.metadata?.type}
-            id={id}
-            isAmp={isAmp}
-            isApp={isApp}
-            isLite={isLite}
-            isCaf={isCaf}
-            pageType={pageType}
+      <ThemeProvider service={service} variant={variant}>
+        <ToggleContextProvider toggles={toggles}>
+          <ServiceContextProvider
             service={service}
-            statusCode={status}
-            pathname={pathname}
-            previousPath={previousPath}
             variant={variant}
-            timeOnServer={timeOnServer}
-            showAdsBasedOnLocation={showAdsBasedOnLocation}
-            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-            mvtExperiments={mvtExperiments}
-            isNextJs={isNextJs}
-            isUK={isUK}
+            pageLang={pageData?.metadata?.language}
           >
-            <EventTrackingContextProvider
-              atiData={atiAnalytics}
-              data={pageData}
+            <RequestContextProvider
+              bbcOrigin={bbcOrigin}
+              derivedPageType={pageData?.metadata?.type}
+              id={id}
+              isAmp={isAmp}
+              isApp={isApp}
+              isLite={isLite}
+              isCaf={isCaf}
+              pageType={pageType}
+              service={service}
+              statusCode={status}
+              pathname={pathname}
+              previousPath={previousPath}
+              variant={variant}
+              timeOnServer={timeOnServer}
+              showAdsBasedOnLocation={showAdsBasedOnLocation}
+              showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+              mvtExperiments={mvtExperiments}
+              isNextJs={isNextJs}
+              isUK={isUK}
             >
-              <UserContextProvider>
-                <Component {...props} />
-              </UserContextProvider>
-            </EventTrackingContextProvider>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
+              <EventTrackingContextProvider
+                atiData={atiAnalytics}
+                data={pageData}
+              >
+                <UserContextProvider>
+                  <Component {...props} />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </RequestContextProvider>
+          </ServiceContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
     );
   };
 
