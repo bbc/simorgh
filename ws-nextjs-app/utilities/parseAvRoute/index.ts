@@ -169,7 +169,9 @@ export default function parseAvSyndicationRoute(query?: Query) {
   const embedId = extractEmbedId(query);
   const lang = extractLang(query);
 
-  const invalidAvRoute = !dataPlatform || !assetId;
+  const isValidService = service && SERVICES.includes(service);
+
+  const invalidAvRoute = !isValidService || !dataPlatform || !assetId;
 
   return {
     status: !invalidAvRoute ? 200 : 404,

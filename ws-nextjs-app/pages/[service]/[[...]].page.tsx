@@ -44,6 +44,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     req: { headers: reqHeaders },
   } = context;
 
+  // Probably need a better way to check if this is an AV Embeds route
   const isAvEmbeds = resolvedUrl.includes('av-embeds');
 
   if (isAvEmbeds) {
