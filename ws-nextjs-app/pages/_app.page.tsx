@@ -73,6 +73,13 @@ export default function App({ Component, pageProps }: Props) {
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
 
+  const ComponentOrError =
+    status === 200 ? (
+      <Component {...pageProps} />
+    ) : (
+      <ErrorPage errorCode={status || 500} />
+    );
+
   return (
     <ThemeProvider service={service} variant={variant}>
       <ToggleContextProvider toggles={toggles}>
@@ -100,30 +107,20 @@ export default function App({ Component, pageProps }: Props) {
             isUK={isUK ?? false}
             counterName={atiAnalytics?.pageIdentifier ?? null}
           >
-            {!isAvEmbeds ? (
-              <EventTrackingContextProvider
-                atiData={atiAnalytics}
-                data={pageData}
-              >
+            <EventTrackingContextProvider
+              atiData={atiAnalytics}
+              data={pageData}
+            >
+              {isAvEmbeds ? (
+                ComponentOrError
+              ) : (
                 <UserContextProvider>
                   <PageWrapper pageData={pageData} status={status}>
-                    {status === 200 ? (
-                      <Component {...pageProps} />
-                    ) : (
-                      <ErrorPage errorCode={status || 500} />
-                    )}
+                    {ComponentOrError}
                   </PageWrapper>
                 </UserContextProvider>
-              </EventTrackingContextProvider>
-            ) : (
-              <>
-                {status === 200 ? (
-                  <Component {...pageProps} />
-                ) : (
-                  <ErrorPage errorCode={status || 500} />
-                )}
-              </>
-            )}
+              )}
+            </EventTrackingContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>

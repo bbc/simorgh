@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { GetServerSideProps } from 'next';
 import extractHeaders from '#server/utilities/extractHeaders';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import parseAvRoute from '../../../utilities/parseAvRoute';
+import parseAvRoute from './parseAvRoute';
 
 export default function AvEmbeds({
   pageData,
@@ -10,8 +9,6 @@ export default function AvEmbeds({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pageData: any;
 }) {
-  const { translations } = useContext(ServiceContext);
-
   return (
     <div>
       <h1>
@@ -24,8 +21,6 @@ export default function AvEmbeds({
       <pre>{JSON.stringify(pageData?.input, null, 2)}</pre>
       <p>Output:</p>
       <pre>{JSON.stringify(pageData?.output, null, 2)}</pre>
-      <p>I can access Contexts too:</p>
-      <pre>{JSON.stringify(translations, null, 2)}</pre>
     </div>
   );
 }
@@ -55,7 +50,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
       isNextJs: true,
       isAvEmbeds: true,
-      pageData: data,
+      pageData: data
+        ? {
+            ...data,
+            metadata: { type: 'av-embeds' },
+          }
+        : null,
+      pageType: 'av-embeds',
       service: data?.output?.service ?? 'news',
       variant: data?.output?.variant ?? null,
       status,
