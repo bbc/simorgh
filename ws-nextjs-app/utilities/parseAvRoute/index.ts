@@ -1,9 +1,7 @@
-import { GetServerSidePropsContext } from 'next';
 import services from '#lib/config/services/loadableConfig';
 import { Services, Variants } from '#app/models/types/global';
 
-// Key for grouped params from the dynamic route
-const QUERY_PARAM_KEY = '';
+type Query = string[];
 
 // Asset ID regexes
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
@@ -73,36 +71,20 @@ const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 const SERVICES = Object.keys(services) as Services[];
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
-type Query = GetServerSidePropsContext['query'];
-
 const extractService = (query?: Query): Services | null => {
-  if (!query?.[QUERY_PARAM_KEY]) return null;
-
-  if (query.service !== 'ws') return query.service as Services;
-
-  const queryArray = query?.[QUERY_PARAM_KEY];
-
-  const service = SERVICES.find(s => queryArray.includes(s));
+  const service = SERVICES.find(s => query?.includes(s));
 
   return service ?? null;
 };
 
 const extractVariant = (query?: Query): Variants | null => {
-  if (!query?.[QUERY_PARAM_KEY]) return null;
-
-  const queryArray = query?.[QUERY_PARAM_KEY];
-
-  const variant = VARIANTS.find(v => queryArray.includes(v));
+  const variant = VARIANTS.find(v => query?.includes(v));
 
   return variant ?? null;
 };
 
-const extractDataPlatform = (query?: Query) => {
-  if (!query?.[QUERY_PARAM_KEY]) return null;
-
-  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
-
-  const assetId = queryArray.find((id: string) => {
+const extractPlatform = (query?: Query) => {
+  const assetId = query?.find((id: string) => {
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||
@@ -124,11 +106,7 @@ const extractDataPlatform = (query?: Query) => {
 };
 
 const extractAssetId = (query?: Query) => {
-  if (!query?.[QUERY_PARAM_KEY]) return null;
-
-  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
-
-  const assetId = queryArray.find((id: string) => {
+  const assetId = query?.find((id: string) => {
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||
@@ -140,21 +118,13 @@ const extractAssetId = (query?: Query) => {
 };
 
 const extractEmbedId = (query?: Query) => {
-  if (!query?.[QUERY_PARAM_KEY]) return null;
-
-  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
-
-  const embedId = queryArray.find((id: string) => EMBED_ID_REGEX.test(id));
+  const embedId = query?.find((id: string) => EMBED_ID_REGEX.test(id));
 
   return embedId ?? null;
 };
 
 const extractLang = (query?: Query) => {
-  if (!query?.[QUERY_PARAM_KEY]) return null;
-
-  const queryArray = query?.[QUERY_PARAM_KEY] as string[];
-
-  const lang = queryArray.find((l: string) => LANGS_REGEX.test(l));
+  const lang = query?.find((l: string) => LANGS_REGEX.test(l));
 
   return lang ?? null;
 };
@@ -172,13 +142,15 @@ const extractLang = (query?: Query) => {
  *  -/russian/av-embeds/38886884/vpid/p04s97g7
  *  -/news/av-embeds/58228280/pid/p09s9t1j
  */
-export default function parseAvSyndicationRoute(query?: Query) {
+export default function parseAvRoute(query?: Query) {
+  if (query?.length === 0) return { status: 404, data: null };
+
   // Assumes /ws/ routes are purely for Simorgh AMP pages
-  const isSyndicationRoute = query?.service !== 'ws';
+  const isSyndicationRoute = !query?.includes('ws');
 
   const service = extractService(query);
   const variant = extractVariant(query);
-  const dataPlatform = extractDataPlatform(query);
+  const platform = extractPlatform(query);
   const assetId = extractAssetId(query);
   const embedId = extractEmbedId(query);
   const lang = extractLang(query);
@@ -191,7 +163,7 @@ export default function parseAvSyndicationRoute(query?: Query) {
         isSyndicationRoute,
         service,
         variant,
-        dataPlatform,
+        platform,
         assetId,
         embedId,
         lang,

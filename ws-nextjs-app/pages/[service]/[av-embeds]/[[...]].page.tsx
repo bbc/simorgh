@@ -32,17 +32,23 @@ export default function AvEmbeds({
 
 export const getServerSideProps: GetServerSideProps = async context => {
   const {
-    query: { 'av-embeds': avEmbedsRouteVal },
+    resolvedUrl,
+    params,
     req: { headers: reqHeaders },
   } = context;
 
   // Check Next.js dynamic route value [av-embeds] is 'av-embeds'
-  if (avEmbedsRouteVal !== 'av-embeds') {
-    context.res.statusCode = 404;
-    return { props: { status: 404 } };
+  if (!resolvedUrl?.includes('av-embeds')) {
+    return { props: {}, notFound: true };
   }
+  const combinedParams = {
+    ...params,
+    ...context.query,
+  };
 
-  const { status, data } = parseAvRoute(context.params);
+  const values = Object.values(combinedParams).flat() as string[];
+
+  const { status, data } = parseAvRoute(values);
 
   // DO STUFF HERE TO FETCH MEDIA DATA IF 200
 
