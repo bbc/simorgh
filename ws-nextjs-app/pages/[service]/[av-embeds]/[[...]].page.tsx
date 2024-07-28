@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     req: { headers: reqHeaders },
   } = context;
 
-  // Check Next.js dynamic route value [av-embeds] is 'av-embeds'
+  // Check the dynamic route contains 'av-embeds'
   if (!resolvedUrl?.includes('av-embeds')) {
     return { props: {}, notFound: true };
   }
@@ -46,7 +46,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     ...context.query,
   };
 
-  const values = Object.values(combinedParams).flat() as string[];
+  const values = Object.values(combinedParams)?.flat() as string[];
 
   const { status, data } = parseAvRoute(values);
 
