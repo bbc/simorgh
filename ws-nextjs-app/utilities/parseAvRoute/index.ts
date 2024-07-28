@@ -72,7 +72,7 @@ const SERVICES = Object.keys(services) as Services[];
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
 const extractService = (query?: Query): Services | null => {
-  const service = SERVICES.find(s => query?.includes(s));
+  const service = SERVICES.find(s => s !== 'ws' && query?.includes(s));
 
   return service ?? null;
 };
@@ -146,6 +146,7 @@ export default function parseAvRoute(query?: Query) {
   if (query?.length === 0) return { status: 404, data: null };
 
   // Assumes /ws/ routes are purely for Simorgh AMP pages
+  // - only for testing
   const isSyndicationRoute = !query?.includes('ws');
 
   const service = extractService(query);
