@@ -11,7 +11,7 @@ const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
-const EMBED_ID_REGEX = /p[0-9a-z]{7,}/;
+const EMBED_ID_REGEX = /^p[0-9a-z]{7,}/;
 
 // Language codes
 const LANGS = [
@@ -159,7 +159,21 @@ const extractLang = (query?: Query) => {
   return lang ?? null;
 };
 
+/**
+ *  Syndication route patterns:
+ *  -/:service/av-embeds/:asset_id
+ *  -/:service/av-embeds/:asset_uri_wo_service
+ *  -/:service/av-embeds/:asset_id/vpid/:vpid
+ *  -/:service/av-embeds/:asset_uri_wo_service/pid/:pid
+ *
+ *  Syndication route examples:
+ *  -/news/av-embeds/67303123
+ *  -/serbian/cyr/av-embeds/srbija-68707945
+ *  -/russian/av-embeds/38886884/vpid/p04s97g7
+ *  -/news/av-embeds/58228280/pid/p09s9t1j
+ */
 export default function parseAvSyndicationRoute(query?: Query) {
+  // Assumes /ws/ routes are purely for Simorgh AMP pages
   const isSyndicationRoute = query?.service !== 'ws';
 
   const service = extractService(query);
@@ -169,12 +183,8 @@ export default function parseAvSyndicationRoute(query?: Query) {
   const embedId = extractEmbedId(query);
   const lang = extractLang(query);
 
-  const isValidService = service && SERVICES.includes(service);
-
-  const invalidAvRoute = !isValidService || !dataPlatform || !assetId;
-
   return {
-    status: !invalidAvRoute ? 200 : 404,
+    status: 200,
     data: {
       input: query,
       output: {

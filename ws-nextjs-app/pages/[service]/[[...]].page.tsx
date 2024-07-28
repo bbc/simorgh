@@ -49,6 +49,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (isAvEmbeds) {
     const { status, data } = parseAvRoute(context.params);
+
+    // DO STUFF HERE TO FETCH MEDIA DATA IF 200
+
     context.res.statusCode = status;
 
     return {
