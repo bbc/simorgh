@@ -41,12 +41,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
   if (!resolvedUrl?.includes('av-embeds')) {
     return { props: {}, notFound: true };
   }
-  const combinedParams = {
-    ...params,
-    ...context.query,
-  };
 
-  const values = Object.values(combinedParams)?.flat() as string[];
+  const values = Object.values(params ?? {})?.flat() as string[];
 
   const { status, data } = parseAvRoute(values);
 
