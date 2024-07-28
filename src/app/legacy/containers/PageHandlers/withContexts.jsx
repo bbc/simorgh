@@ -36,46 +36,46 @@ const WithContexts = Component => {
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
 
     return (
-      <ThemeProvider service={service} variant={variant}>
-        <ToggleContextProvider toggles={toggles}>
-          <ServiceContextProvider
+      <ToggleContextProvider toggles={toggles}>
+        <ServiceContextProvider
+          service={service}
+          variant={variant}
+          pageLang={pageData?.metadata?.language}
+        >
+          <RequestContextProvider
+            bbcOrigin={bbcOrigin}
+            derivedPageType={pageData?.metadata?.type}
+            id={id}
+            isAmp={isAmp}
+            isApp={isApp}
+            isLite={isLite}
+            isCaf={isCaf}
+            pageType={pageType}
             service={service}
+            statusCode={status}
+            pathname={pathname}
+            previousPath={previousPath}
             variant={variant}
-            pageLang={pageData?.metadata?.language}
+            timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+            mvtExperiments={mvtExperiments}
+            isNextJs={isNextJs}
+            isUK={isUK}
           >
-            <RequestContextProvider
-              bbcOrigin={bbcOrigin}
-              derivedPageType={pageData?.metadata?.type}
-              id={id}
-              isAmp={isAmp}
-              isApp={isApp}
-              isLite={isLite}
-              isCaf={isCaf}
-              pageType={pageType}
-              service={service}
-              statusCode={status}
-              pathname={pathname}
-              previousPath={previousPath}
-              variant={variant}
-              timeOnServer={timeOnServer}
-              showAdsBasedOnLocation={showAdsBasedOnLocation}
-              showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-              mvtExperiments={mvtExperiments}
-              isNextJs={isNextJs}
-              isUK={isUK}
+            <EventTrackingContextProvider
+              atiData={atiAnalytics}
+              data={pageData}
             >
-              <EventTrackingContextProvider
-                atiData={atiAnalytics}
-                data={pageData}
-              >
-                <UserContextProvider>
+              <UserContextProvider>
+                <ThemeProvider service={service} variant={variant}>
                   <Component {...props} />
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
+                </ThemeProvider>
+              </UserContextProvider>
+            </EventTrackingContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
     );
   };
 

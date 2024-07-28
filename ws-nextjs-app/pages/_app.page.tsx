@@ -81,49 +81,48 @@ export default function App({ Component, pageProps }: Props) {
     );
 
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ToggleContextProvider toggles={toggles}>
-        <ServiceContextProvider
+    <ToggleContextProvider toggles={toggles}>
+      <ServiceContextProvider
+        service={service}
+        variant={variant}
+        pageLang={pageLang}
+      >
+        <RequestContextProvider
+          bbcOrigin={bbcOrigin}
+          id={id}
+          isAmp={isAmp}
+          isApp={isApp}
+          isLite={isLite}
+          pageType={pageType}
           service={service}
+          statusCode={status}
+          pathname={pathname}
+          previousPath={previousPath}
           variant={variant}
-          pageLang={pageLang}
+          timeOnServer={timeOnServer}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+          mvtExperiments={mvtExperiments}
+          isNextJs={isNextJs}
+          isUK={isUK ?? false}
+          counterName={atiAnalytics?.pageIdentifier ?? null}
         >
-          <RequestContextProvider
-            bbcOrigin={bbcOrigin}
-            id={id}
-            isAmp={isAmp}
-            isApp={isApp}
-            isLite={isLite}
-            pageType={pageType}
-            service={service}
-            statusCode={status}
-            pathname={pathname}
-            previousPath={previousPath}
-            variant={variant}
-            timeOnServer={timeOnServer}
-            showAdsBasedOnLocation={showAdsBasedOnLocation}
-            mvtExperiments={mvtExperiments}
-            isNextJs={isNextJs}
-            isUK={isUK ?? false}
-            counterName={atiAnalytics?.pageIdentifier ?? null}
-          >
-            <EventTrackingContextProvider
-              atiData={atiAnalytics}
-              data={pageData}
-            >
-              {isAvEmbeds ? (
-                RenderChildrenOrError
-              ) : (
-                <UserContextProvider>
+          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
+            {isAvEmbeds ? (
+              <ThemeProvider service={service} variant={variant}>
+                {RenderChildrenOrError}
+              </ThemeProvider>
+            ) : (
+              <UserContextProvider>
+                <ThemeProvider service={service} variant={variant}>
                   <PageWrapper pageData={pageData} status={status}>
                     {RenderChildrenOrError}
                   </PageWrapper>
-                </UserContextProvider>
-              )}
-            </EventTrackingContextProvider>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
+                </ThemeProvider>
+              </UserContextProvider>
+            )}
+          </EventTrackingContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContextProvider>
   );
 }

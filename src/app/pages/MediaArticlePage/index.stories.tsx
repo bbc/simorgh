@@ -1,6 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -36,14 +37,16 @@ const ComponentWithContext = ({ data: { data }, isLite }) => {
           isUK
         >
           <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                }}
-              />
-            </MemoryRouter>
+            <ThemeProvider service="news">
+              <MemoryRouter>
+                <Page
+                  pageData={{
+                    ...data.article,
+                    secondaryColumn: data.secondaryData,
+                  }}
+                />
+              </MemoryRouter>
+            </ThemeProvider>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
