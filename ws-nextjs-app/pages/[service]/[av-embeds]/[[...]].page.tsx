@@ -1,6 +1,7 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
 import extractHeaders from '#server/utilities/extractHeaders';
+import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import parseAvRoute from './parseAvRoute';
 
 export default function AvEmbeds({
@@ -53,10 +54,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageData: data
         ? {
             ...data,
-            metadata: { type: 'av-embeds' },
+            metadata: { type: AV_EMBEDS },
           }
         : null,
-      pageType: 'av-embeds',
+      pageType: AV_EMBEDS,
       service: data?.output?.service ?? 'news',
       variant: data?.output?.variant ?? null,
       status,
