@@ -4,7 +4,7 @@ import extractHeaders from '#server/utilities/extractHeaders';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import parseAvRoute from '../../../utilities/parseAvRoute';
 
-export default function CatchAll({
+export default function AvEmbeds({
   pageData,
 }: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -36,12 +36,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     req: { headers: reqHeaders },
   } = context;
 
-  // Check dynamic route value is 'av-embeds'
+  // Check Next.js dynamic route value [av-embeds] is 'av-embeds'
   if (avEmbedsRouteVal !== 'av-embeds') {
     context.res.statusCode = 404;
-    return {
-      props: { isNextJs: true, status: 404 },
-    };
+    return { props: { status: 404 } };
   }
 
   const { status, data } = parseAvRoute(context.params);
