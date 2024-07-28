@@ -129,6 +129,12 @@ const extractLang = (query?: Query) => {
   return lang ?? null;
 };
 
+const extractAmp = (query?: Query) => {
+  const amp = query?.includes('amp');
+
+  return amp ?? null;
+};
+
 /**
  *  Syndication route patterns:
  *  -/:service/av-embeds/:asset_id
@@ -155,6 +161,7 @@ export default function parseAvRoute(query?: Query) {
   const assetId = extractAssetId(query);
   const embedId = extractEmbedId(query);
   const lang = extractLang(query);
+  const amp = extractAmp(query);
 
   return {
     status: 200,
@@ -168,6 +175,7 @@ export default function parseAvRoute(query?: Query) {
         assetId,
         embedId,
         lang,
+        isAmp: amp,
       },
     },
   };
