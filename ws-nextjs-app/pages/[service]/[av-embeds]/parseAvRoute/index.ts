@@ -2,6 +2,7 @@ import services from '#lib/config/services/loadableConfig';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
+type Platform = 'cps' | 'optimo' | 'tipo';
 
 // Asset ID regexes
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
@@ -83,26 +84,26 @@ const extractVariant = (query?: Query): Variants | null => {
   return variant ?? null;
 };
 
-const extractPlatform = (query?: Query) => {
-  const assetId = query?.find((id: string) => {
-    return (
-      CPS_ID_REGEX.test(id) ||
-      OPTIMO_ID_REGEX.test(id) ||
-      TIPO_ID_REGEX.test(id)
-    );
-  });
+const extractPlatform = (query?: Query): Platform | null => {
+  let platform: Platform | null = null;
 
-  if (!assetId) return null;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const id of query ?? []) {
+    if (CPS_ID_REGEX.test(id)) {
+      platform = 'cps';
+      break;
+    }
+    if (OPTIMO_ID_REGEX.test(id)) {
+      platform = 'optimo';
+      break;
+    }
+    if (TIPO_ID_REGEX.test(id)) {
+      platform = 'tipo';
+      break;
+    }
+  }
 
-  const isCpsId = CPS_ID_REGEX.test(assetId);
-  const isOptimoId = OPTIMO_ID_REGEX.test(assetId);
-  const isTipoId = TIPO_ID_REGEX.test(assetId);
-
-  if (isCpsId) return 'cps';
-  if (isOptimoId) return 'optimo';
-  if (isTipoId) return 'tipo';
-
-  return null;
+  return platform;
 };
 
 const extractAssetId = (query?: Query) => {
