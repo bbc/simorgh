@@ -73,7 +73,7 @@ export default function App({ Component, pageProps }: Props) {
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
 
-  const ComponentOrError =
+  const RenderChildrenOrError =
     status === 200 ? (
       <Component {...pageProps} />
     ) : (
@@ -112,11 +112,11 @@ export default function App({ Component, pageProps }: Props) {
               data={pageData}
             >
               {isAvEmbeds ? (
-                ComponentOrError
+                RenderChildrenOrError
               ) : (
                 <UserContextProvider>
                   <PageWrapper pageData={pageData} status={status}>
-                    {ComponentOrError}
+                    {RenderChildrenOrError}
                   </PageWrapper>
                 </UserContextProvider>
               )}
