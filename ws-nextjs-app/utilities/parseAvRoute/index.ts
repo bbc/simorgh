@@ -96,11 +96,11 @@ const extractPlatform = (query?: Query) => {
 
   const isCpsId = CPS_ID_REGEX.test(assetId);
   const isOptimoId = OPTIMO_ID_REGEX.test(assetId);
-  const isTopicId = TIPO_ID_REGEX.test(assetId);
+  const isTipoId = TIPO_ID_REGEX.test(assetId);
 
   if (isCpsId) return 'cps';
-  if (isOptimoId) return 'articles';
-  if (isTopicId) return 'live';
+  if (isOptimoId) return 'optimo';
+  if (isTipoId) return 'tipo';
 
   return null;
 };
