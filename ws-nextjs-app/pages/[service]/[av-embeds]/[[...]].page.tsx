@@ -16,7 +16,7 @@ export default function AvEmbeds({
         AV Embeds -{' '}
         {pageData?.output?.isSyndicationRoute
           ? 'Syndication'
-          : 'Non-Syndincation'}
+          : 'Non-Syndication'}
       </h1>
       <p>Input:</p>
       <pre>{JSON.stringify(pageData?.input, null, 2)}</pre>
