@@ -3,6 +3,7 @@ import logResponseTime from '#server/utilities/logResponseTime';
 import isLitePath from '#app/routes/utils/isLitePath';
 import extractHeaders from '#server/utilities/extractHeaders';
 
+// This route does nothing other than return a 404 status code for other routes not yet supported in the Next.JS app
 export default function CatchAll() {
   return null;
 }
