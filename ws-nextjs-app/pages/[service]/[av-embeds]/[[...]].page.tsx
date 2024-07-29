@@ -39,7 +39,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
-  // DO STUFF HERE TO FETCH MEDIA DATA IF 200
+  // Determine actual statusCode based on data fetch
+  const status = 200;
+
+  // Determine actual service and variant (if applicable) from either the parsed route or the data returned from the fetch for the media data from BFF
+  // We should always have a service to be able to display a 404 page if needed
+  const service = parsedRoute?.service ?? 'news';
+  const variant = parsedRoute?.variant ?? null;
+
+  context.res.statusCode = status;
 
   return {
     props: {
@@ -54,9 +62,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
           }
         : null,
       pageType: AV_EMBEDS,
-      service: parsedRoute?.service ?? 'news',
-      variant: parsedRoute?.variant ?? null,
-      status: 200,
+      service,
+      variant,
+      status,
       ...extractHeaders(reqHeaders),
     },
   };
