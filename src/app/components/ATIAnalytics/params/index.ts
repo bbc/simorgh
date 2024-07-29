@@ -49,6 +49,7 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   FEATURE_INDEX_PAGE,
   LIVE_PAGE,
   STATIC_PAGE,
+  DOWNLOADS_PAGE,
 ];
 
 const noOp = () => {

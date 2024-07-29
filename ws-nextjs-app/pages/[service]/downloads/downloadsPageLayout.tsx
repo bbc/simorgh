@@ -3,12 +3,30 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
+import ATIAnalytics from '#app/components/ATIAnalytics';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
 import styles from './styles';
 import { PageProps } from './types';
+
+const pageTitle = '다운로드 - BBC News 코리아';
+
+const atiAnalytics = {
+  campaigns: null,
+  categoryName: null,
+  contentType: DOWNLOADS_PAGE,
+  language: 'ko-KO',
+  ldpThingIds: null,
+  ldpThingLabels: null,
+  pageIdentifier: 'korean.downloads.page',
+  pageTitle,
+  producerId: 57,
+  producerName: 'KOREAN',
+};
 
 const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   const {
@@ -28,6 +46,8 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   const description = `${service} Downloads`;
   return (
     <>
+      <ATIAnalytics atiData={atiAnalytics} />
+      <ChartbeatAnalytics title={pageTitle} />
       <Metadata
         title={title}
         lang={lang}
