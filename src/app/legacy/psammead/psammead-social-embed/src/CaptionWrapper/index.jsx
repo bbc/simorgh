@@ -4,8 +4,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
-import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import CafEnabledServices from '#app/lib/cafServices.const';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 import { GREY_6, WHITE } from '../../../../../components/ThemeProvider/palette';
 
@@ -43,9 +42,7 @@ const CaptionWrapper = ({
   const isLive = pageType === LIVE_PAGE;
 
   // TODO: Remove isTransparentPage flag once all services have been moved to CAF and default to transparent styling
-  const isTransparentPage =
-    [ARTICLE_PAGE, LIVE_PAGE].includes(pageType) ||
-    CafEnabledServices.includes(service);
+  const isTransparentPage = true;
 
   return (
     <Container isTransparentPage={isTransparentPage}>
