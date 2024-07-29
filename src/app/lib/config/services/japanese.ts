@@ -303,6 +303,10 @@ export const service: DefaultServiceConfig = {
         url: '/japanese',
       },
       {
+        title: 'パリ五輪',
+        url: '/japanese/topics/c136egn3g6rt',
+      },
+      {
         title: 'ガザ',
         url: '/japanese/topics/cw5wn2e9rpnt',
       },
@@ -331,7 +335,7 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/topics/cdr56kqdr70t',
       },
       {
-        title: '解説・読み物',
+        title: '読み物',
         url: '/japanese/topics/c2xj7ep5812t',
       },
       {
@@ -339,7 +343,7 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/topics/c132079wln0t',
       },
       {
-        title: 'ワールドニュースTV',
+        title: 'ニュースTV',
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
