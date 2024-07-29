@@ -90,4 +90,18 @@ describe('parseAvRoute', () => {
       expect(result).toMatchObject(expectedOutput);
     },
   );
+
+  it('should strip query params from the route URL', () => {
+    const route = '/news/av-embeds/67303123?renderer_env=test';
+
+    const expectedOutput = {
+      service: 'news',
+      platform: 'cps',
+      assetId: '67303123',
+    };
+
+    const result = parseAvRoute(route);
+
+    expect(result).toMatchObject(expectedOutput);
+  });
 });

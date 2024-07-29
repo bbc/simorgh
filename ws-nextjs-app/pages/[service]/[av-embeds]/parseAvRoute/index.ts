@@ -150,7 +150,9 @@ const extractAmp = (query: Query) => {
  *  -/news/av-embeds/58228280/pid/p09s9t1j
  */
 export default function parseAvRoute(resolvedUrl: string) {
-  const query = resolvedUrl.split(/[/.]/).filter(Boolean);
+  const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+
+  const query = resolvedUrlWithoutQuery.split(/[/.]/).filter(Boolean);
 
   // Assumes /ws/ routes are purely for Simorgh AMP pages
   // - only for testing
