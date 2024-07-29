@@ -211,8 +211,6 @@ server.get(
 
       const { page } = query;
 
-      const isCaf = true;
-
       // Set derivedPageType based on matched route
       derivedPageType = pageType || derivedPageType;
 
@@ -233,7 +231,6 @@ server.get(
         toggles,
         getAgent,
         isAmp,
-        isCaf,
       });
 
       const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
@@ -244,7 +241,6 @@ server.get(
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
-      data.isCaf = isCaf;
       data.isLite = isLite;
 
       let { status } = data;

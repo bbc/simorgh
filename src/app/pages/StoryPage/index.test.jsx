@@ -14,7 +14,7 @@ import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160';
+import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160-LEGACY.json';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import { Helmet } from 'react-helmet';
 import {
