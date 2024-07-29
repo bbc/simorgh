@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Habari za hivi punde',
         postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
+        shareButtonText: 'Mshirikishe mwenzako',
       },
       gist: 'Muhtasari',
       error: {

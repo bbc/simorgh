@@ -44,6 +44,7 @@ describe('Form', () => {
   it('should handle submit', async () => {
     const handleSubmit = jest.fn(e => e.preventDefault());
     const handleChange = jest.fn();
+    const handleFocusOut = jest.fn();
     const { container } = await act(() => {
       return render(
         <FormContext.Provider
@@ -51,6 +52,7 @@ describe('Form', () => {
             formState: {},
             handleChange,
             handleSubmit,
+            handleFocusOut,
             submissionError: null,
             submitted: false,
             progress: '0',

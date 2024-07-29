@@ -75,8 +75,8 @@ exports[`Canonical Front Page Header Navigation link should match text and url 1
 
 exports[`Canonical Front Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Euro 2024",
-  "url": "/serbian/lat/topics/cl442rlk0mjt",
+  "text": "Pariz 2024",
+  "url": "/serbian/lat/topics/cv223zl2wp7t",
 }
 `;
 

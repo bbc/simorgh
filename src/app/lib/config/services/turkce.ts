@@ -73,6 +73,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Son dakika',
         postedAt: 'Basım saati',
         summary: 'Özet',
+        shareButtonText: 'Paylaş',
       },
       gist: 'Özet',
       error: {
@@ -320,8 +321,8 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
-        title: 'Euro 2024',
-        url: '/turkce/topics/cd11gkz9yvxt',
+        title: '2024 Paris Olimpiyatları',
+        url: '/turkce/topics/cjrrzp9q7gwt',
       },
       {
         title: 'Rusya-Ukrayna Savaşı',

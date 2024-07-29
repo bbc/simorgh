@@ -86,6 +86,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग',
         postedAt: 'वाजता पोस्ट केलं',
         summary: 'थोडक्यात',
+        shareButtonText: 'शेअर करा',
       },
       gist: 'थोडक्यात',
       error: {

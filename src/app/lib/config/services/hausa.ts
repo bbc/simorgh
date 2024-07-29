@@ -85,6 +85,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
         summary: 'Taƙaitattu',
+        shareButtonText: 'Aika',
       },
       gist: 'Taƙaitattu',
       error: {
@@ -339,6 +340,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Saƙonka bai je ba',
         errorDescription: 'Sake aikawa.',
+
+        // Closed Screen
+        closedHeading: 'This is now closed',
+        closedDescription: 'This closed on {{date}}.',
       },
     },
     mostRead: {

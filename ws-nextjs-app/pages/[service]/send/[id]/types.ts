@@ -115,12 +115,19 @@ export type PageProps = {
   pageData: {
     title: string;
     description: string;
+    settings: {
+      replyEmailAddress: string;
+      retentionPeriodDays: string;
+    };
     sections: Section[];
     privacyNotice: {
       default: string;
       url: string;
       additional: string;
     };
+    campaignStatus: 'open' | 'closed';
+    openingTime?: string;
+    closingTime?: string;
   };
 };
 

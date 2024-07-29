@@ -61,6 +61,19 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
   height: 100%;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    -ms-appearance: auto;
+    appearance: auto;
+  }
+
+  .emotion-2:checked::after {
+    content: none;
+  }
+}
+
 .emotion-2:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
@@ -238,6 +251,13 @@ exports[`FormField should render a required input with an associated label 1`] =
   }
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
 .emotion-2:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
@@ -361,6 +381,13 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   }
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
 .emotion-2:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
@@ -481,6 +508,13 @@ exports[`FormField should render a text input with an associated label 1`] = `
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 
@@ -609,6 +643,13 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   }
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
 .emotion-2:focus {
   outline: 0.1875rem solid #FFFFFF;
   box-shadow: 0 0 0 0.1875rem #000000;
@@ -726,6 +767,13 @@ exports[`FormField should render an email input with an associated label 1`] = `
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 

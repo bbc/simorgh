@@ -72,6 +72,7 @@ export const service: DefaultServiceConfig = {
         breaking: 'අලුත්ම පුවතක්',
         postedAt: 'යාවත්කාලීන කළේ',
         summary: 'සාරාංශය',
+        shareButtonText: 'යවන්න',
       },
       gist: 'සාරාංශය',
       error: {
