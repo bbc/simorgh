@@ -10,7 +10,7 @@ const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
-const EMBED_ID_REGEX = /^p[0-9a-z]{7,}/;
+const MEDIA_ID_REGEX = /^p[0-9a-z]{7,}/;
 
 // Language codes
 const LANGS = [
@@ -118,10 +118,10 @@ const extractAssetId = (query: Query) => {
   return assetId ?? null;
 };
 
-const extractEmbedId = (query: Query) => {
-  const embedId = query?.find((id: string) => EMBED_ID_REGEX.test(id));
+const extractMediaId = (query: Query) => {
+  const mediaId = query?.find((id: string) => MEDIA_ID_REGEX.test(id));
 
-  return embedId ?? null;
+  return mediaId ?? null;
 };
 
 const extractLang = (query: Query) => {
@@ -160,7 +160,7 @@ export default function parseAvRoute(resolvedUrl: string) {
   const variant = extractVariant(query);
   const platform = extractPlatform(query);
   const assetId = extractAssetId(query);
-  const embedId = extractEmbedId(query);
+  const mediaId = extractMediaId(query);
   const lang = extractLang(query);
   const amp = extractAmp(query);
 
@@ -170,7 +170,7 @@ export default function parseAvRoute(resolvedUrl: string) {
     variant,
     platform,
     assetId,
-    embedId,
+    mediaId,
     lang,
     isAmp: amp,
   };
