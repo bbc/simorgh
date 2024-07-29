@@ -29,7 +29,6 @@ export default function AvEmbeds({
 export const getServerSideProps: GetServerSideProps = async context => {
   const {
     resolvedUrl,
-    params,
     req: { headers: reqHeaders },
   } = context;
 
@@ -38,29 +37,26 @@ export const getServerSideProps: GetServerSideProps = async context => {
     return { props: {}, notFound: true };
   }
 
-  const values = Object.values(params ?? {})?.flat() as string[];
-
-  const { status, data } = parseAvRoute(values);
+  const parsedRoute = parseAvRoute(resolvedUrl);
 
   // DO STUFF HERE TO FETCH MEDIA DATA IF 200
-
-  context.res.statusCode = status;
 
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
       isNextJs: true,
       isAvEmbeds: true,
-      pageData: data
+      pageData: parsedRoute
         ? {
-            ...data,
+            input: resolvedUrl,
+            output: parsedRoute,
             metadata: { type: AV_EMBEDS },
           }
         : null,
       pageType: AV_EMBEDS,
-      service: data?.output?.service ?? 'news',
-      variant: data?.output?.variant ?? null,
-      status,
+      service: parsedRoute?.service ?? 'news',
+      variant: parsedRoute?.variant ?? null,
+      status: 200,
       ...extractHeaders(reqHeaders),
     },
   };
