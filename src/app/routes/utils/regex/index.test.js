@@ -362,10 +362,6 @@ describe('onDemandTvPath', () => {
   const validRoutes = [
     '/indonesia/bbc_indonesian_tv/tv/w34rfd4k',
     '/indonesia/bbc_indonesian_tv/tv_programmes/w4321',
-    '/indonesia/bbc_indonesian_tv/tv/w34rfd4k.amp',
-    '/indonesia/bbc_indonesian_tv/tv_programmes/w4321.amp',
-    '/persian/bbc_persian_tv/tv_programmes/abcd1234.amp',
-    '/persian/bbc_persian_tv/tv/abcd4321.amp',
   ];
   shouldMatchValidRoutes(validRoutes, onDemandTvPath);
 
@@ -380,6 +376,10 @@ describe('onDemandTvPath', () => {
     '/persian/foobar/abcd1234.amp',
     '/indonesia/bbc_indonesian_tv/tv_programmes/',
     '/indonesia/bbc_indonesian_tv/tv/',
+    '/indonesia/bbc_indonesian_tv/tv/w34rfd4k.amp',
+    '/indonesia/bbc_indonesian_tv/tv_programmes/w4321.amp',
+    '/persian/bbc_persian_tv/tv_programmes/abcd1234.amp',
+    '/persian/bbc_persian_tv/tv/abcd4321.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, onDemandTvPath);
 });

@@ -151,7 +151,7 @@ export const getOnDemandRadioRegex = services => {
 
 export const getOnDemandTvRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${tvMasterBrandRegex})/:brandEpisode(${brandEpisodeRegex})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?:lite(${liteRegex})?`;
+  return `/:service(${serviceRegex})/:serviceId(${tvMasterBrandRegex})/:brandEpisode(${brandEpisodeRegex})/:mediaId(${mediaIdRegex}):lite(${liteRegex})?`;
 };
 
 export const getTopicPageRegex = services => {
