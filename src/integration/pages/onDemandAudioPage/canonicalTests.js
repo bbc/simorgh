@@ -15,5 +15,5 @@ export default service => {
   runMediaPlayerEmbedLegacyTests();
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
-  runRadioScheduleTests({ isAmp: false }); // keep this for now until live radio also has amp removed
+  runRadioScheduleTests();
 };
