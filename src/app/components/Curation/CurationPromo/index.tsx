@@ -64,7 +64,7 @@ const CurationPromo = ({
               <VisuallyHiddenText data-testid="visually-hidden-text">
                 {typeTranslated}
               </VisuallyHiddenText>
-              {title}
+              {`${title} `}
               {showDuration && (
                 <VisuallyHiddenText>{durationString}</VisuallyHiddenText>
               )}
