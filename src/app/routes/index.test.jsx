@@ -21,6 +21,7 @@ import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
+import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
@@ -315,20 +316,18 @@ describe('Routes', () => {
         service: 'yoruba',
         pageType,
       });
-
       await renderRouter({
         pathname,
         pageData,
         pageType,
         service: 'yoruba',
       });
-
       const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
         'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
       expect(
-        screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).resolves.toBeInTheDocument();
+        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+      ).toBeInTheDocument();
     });
 
     it('should route to and render a legacy media asset page', async () => {
@@ -359,8 +358,8 @@ describe('Routes', () => {
         'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
 
       expect(
-        screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).resolves.toBeInTheDocument();
+        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+      ).toBeInTheDocument();
     });
 
     it('should route to and render a photo gallery page', async () => {
@@ -389,8 +388,8 @@ describe('Routes', () => {
         'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
 
       expect(
-        screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).resolves.toBeInTheDocument();
+        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+      ).toBeInTheDocument();
     });
 
     it('should route to and render a story page', async () => {
@@ -400,6 +399,8 @@ describe('Routes', () => {
       fetch.mockResponse(
         JSON.stringify({
           ...storyPageJson,
+          secondaryData: { mostRead: storyPageMostReadData },
+          recommendations: storyPageRecommendationsData,
         }),
       );
 
