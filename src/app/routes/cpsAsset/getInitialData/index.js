@@ -122,7 +122,7 @@ export default async ({ path: pathname, service, variant, toggles, isAmp }) => {
     const { topStories, features } = secondaryColumn;
     const { mostRead } = article;
 
-    // Skip transforming JSON when CAF is enabled and the pageType is not FIX
+    // Skip transforming JSON when the pageType is not FIX
     const skipTransformJson = article?.metadata?.type !== FEATURE_INDEX_PAGE;
 
     const response = {
