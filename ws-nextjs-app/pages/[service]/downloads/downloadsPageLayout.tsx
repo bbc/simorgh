@@ -24,7 +24,7 @@ const atiAnalytics = {
   ldpThingLabels: null,
   pageIdentifier: 'korean.downloads.page',
   pageTitle,
-  producerId: 57,
+  producerId: '57',
   producerName: 'KOREAN',
 };
 
