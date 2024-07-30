@@ -98,6 +98,12 @@ const fetchPageData = async ({
         cache.set(url, json);
       }
 
+      console.log('\n\n');
+      console.log('###########################');
+      console.log(JSON.stringify(json));
+      console.log('###########################');
+      console.log('\n\n');
+
       return {
         status,
         json,

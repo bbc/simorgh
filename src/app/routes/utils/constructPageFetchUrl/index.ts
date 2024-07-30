@@ -186,6 +186,12 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`${host}/api/local/${service}${variantPath}/live/${id}`);
         break;
       }
+      case UGC_PAGE: {
+        const variantPath = variant ? `/${variant}` : '';
+        const host = `http://${process.env.HOSTNAME || 'localhost'}:${process.env.PORT}`;
+        fetchUrl = Url(`${host}/api/local/${service}${variantPath}/send/${id}`);
+        break;
+      }
       default:
         return fetchUrl;
     }
