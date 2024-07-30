@@ -3924,5 +3924,4 @@ exports[`Media Asset Page should render component 1`] = `
       </div>
     </div>
   </div>
-</DocumentFragment>
-`;
+</DocumentFragment>`;
