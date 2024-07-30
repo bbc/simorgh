@@ -50,6 +50,7 @@ export default {
     }),
   textField: ({ spacings, fontVariants, fontSizes, palette, mq }: Theme) =>
     css({
+      scrollMarginTop: `${pixelsToRem(44)}rem`, // check height
       border: `solid 0.0625rem ${palette.GREY_10}`,
       outline: 'solid 0.0625rem transparent',
       width: '100%',
@@ -90,6 +91,7 @@ export default {
     }),
   checkbox: ({ palette, mq }: Theme) =>
     css({
+      scrollMarginTop: `${pixelsToRem(44)}rem`, // check height
       display: 'inline-block',
       flex: 'initial',
       flexShrink: 0,
@@ -141,6 +143,9 @@ export default {
       backgroundColor: palette.ERROR_CORE,
       outline: 'solid 0.0625rem transparent',
       padding: '0.75rem',
+    }),
+  strongWrapper: () =>
+    css({
       display: 'flex',
       alignItems: 'center',
     }),

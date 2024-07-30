@@ -84,19 +84,21 @@ const InvalidMessageBox = forwardRef(
           {...(isErrorSummary && { tabIndex: -1 })}
           {...(ref && { ref })}
         >
-          <ErrorSymbol />
-          <Text
-            id={id}
-            css={styles.errorText}
-            fontVariant="sansBold"
-            size="minion"
-            as="strong"
-          >
-            {message}
-            {includeVisuallyHiddenText && (
-              <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
-            )}
-          </Text>
+          <span css={styles.strongWrapper}>
+            <ErrorSymbol />
+            <Text
+              id={id}
+              css={styles.errorText}
+              fontVariant="sansBold"
+              size="minion"
+              as="strong"
+            >
+              {message}
+              {includeVisuallyHiddenText && (
+                <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
+              )}
+            </Text>
+          </span>
           {children}
         </div>
       </>

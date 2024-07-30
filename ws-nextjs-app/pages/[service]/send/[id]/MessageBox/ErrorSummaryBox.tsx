@@ -12,13 +12,10 @@ const ErrorSummaryBox = forwardRef(
   ({ suffix, labelMap }: ErrorSummaryProps, ref: ForwardedRef<HTMLElement>) => {
     const { formState } = useFormContext();
     const listOfErrors = getErrorList(formState);
-    // need to format error messages, reuse logic in Invalid message box?
-    const listItems = listOfErrors.map(({ id, messageCode }) => {
+    const listItems = listOfErrors.map(({ id }) => {
       return (
         <li key={`listItemFor-${id}`}>
-          <a href={`#${id}`}>
-            {messageCode} - {labelMap[id]}
-          </a>
+          <a href={`#${id}`}>{labelMap[id]}</a>
         </li>
       );
     });
