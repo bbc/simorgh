@@ -7195,4 +7195,5 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       </div>
     </div>
   </div>
-</div>`;
+</div>
+`;

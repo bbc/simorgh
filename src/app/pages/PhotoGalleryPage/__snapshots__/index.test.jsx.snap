@@ -8867,4 +8867,5 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
       </div>
     </div>
   </div>
-</div>`;
+</div>
+`;
