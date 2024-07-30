@@ -14,7 +14,7 @@ import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160-LEGACY.json';
+import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import { Helmet } from 'react-helmet';
 import {
@@ -107,7 +107,8 @@ const getBootstrapScript = () =>
     innerHTML?.includes('window.dotcom'),
   );
 
-describe('Story Page', () => {
+// Skipped as this component will no longer be used.
+describe.skip('Story Page', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';

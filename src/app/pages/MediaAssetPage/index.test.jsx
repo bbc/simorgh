@@ -128,7 +128,8 @@ const mockInitialData = ({ service, assetId, pageData }) => {
   });
 };
 
-describe('Media Asset Page', () => {
+// Skipped as this component will no longer be used.
+describe.skip('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;

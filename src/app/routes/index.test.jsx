@@ -299,7 +299,7 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it.skip('should route to and render a media asset page', async () => {
+    it('should route to and render a media asset page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/yoruba/media-23256797';
 
@@ -331,7 +331,7 @@ describe('Routes', () => {
       ).resolves.toBeInTheDocument();
     });
 
-    it.skip('should route to and render a legacy media asset page', async () => {
+    it('should route to and render a legacy media asset page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
 
@@ -363,7 +363,7 @@ describe('Routes', () => {
       ).resolves.toBeInTheDocument();
     });
 
-    it.skip('should route to and render a photo gallery page', async () => {
+    it('should route to and render a photo gallery page', async () => {
       const pathname = '/indonesia/indonesia-41635759';
 
       fetch.mockResponse(
@@ -393,7 +393,7 @@ describe('Routes', () => {
       ).resolves.toBeInTheDocument();
     });
 
-    it.skip('should route to and render a story page', async () => {
+    it('should route to and render a story page', async () => {
       suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
 
       const pathname = '/mundo/noticias-internacional-51266689';
