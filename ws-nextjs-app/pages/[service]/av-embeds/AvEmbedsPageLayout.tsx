@@ -16,7 +16,7 @@ const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => {
       <pre>{JSON.stringify(pageData?.input, null, 2)}</pre>
       <p>Output:</p>
       <pre>{JSON.stringify(pageData?.output, null, 2)}</pre>
-      {pageData?.mediaBlock?.length > 0 && (
+      {pageData?.mediaBlock && pageData?.mediaBlock?.length > 0 && (
         <>
           <p>Video Block:</p>
           <MediaLoader
