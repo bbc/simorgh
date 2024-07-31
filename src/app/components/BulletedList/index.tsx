@@ -7,6 +7,7 @@ import styles from './index.styles';
 type Props = {
   bulletPointShape?: string;
   bulletPointColour?: string;
+  className?: string;
 };
 
 export const BulletedListItem = ({ children }: PropsWithChildren) => {
@@ -20,10 +21,12 @@ export const BulletedListItem = ({ children }: PropsWithChildren) => {
 export const BulletedList = ({
   bulletPointShape = 'round',
   bulletPointColour = SHADOW,
+  className,
   children,
 }: PropsWithChildren<Props>) => {
   return (
     <ul
+      className={className}
       role="list"
       css={theme => [
         styles.bulletedList,
