@@ -43,10 +43,10 @@ export default function AmpRenderer({
         {AMP_CONSENT_JS}
         {AMP_ANALYTICS_JS}
         {AMP_EXPERIMENTATION_JS}
-        <AmpExperiment/>
       </head>
       <body className="amp-geo-pending">
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+        <AmpExperiment />
       </body>
     </html>
   );

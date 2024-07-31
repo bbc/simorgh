@@ -10,5 +10,3 @@ export type BaseRendererProps = {
   styles: string;
   title: ReactElement;
 };
-
-export
