@@ -294,9 +294,42 @@ describe('Live Page', () => {
     expect(CoverageEndTime).toBeFalsy();
   });
 
+  it('should use the seoTitle value combined with the pagination value as the page title', async () => {
+    const paginatedData = {
+      ...mockPageData,
+      liveTextStream: {
+        content: {
+          data: {
+            results: [],
+            page: {
+              index: 2,
+              total: 3,
+            },
+          },
+        },
+        contributors: 'Not a random dude',
+      },
+    };
+
+    await act(async () => {
+      render(<Live pageData={paginatedData} />, { service: 'pidgin' });
+    });
+
+    const { title: helmetTitle } = Helmet.peek();
+
+    expect(helmetTitle).toEqual(
+      `${mockPageData.seo.seoTitle}, Page 2 of 3 - BBC News Pidgin`,
+    );
+  });
+
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
       ...mockPageData,
+      seo: {
+        seoDescription: 'Pidgin test 2 - SEO Description',
+        datePublished: '2023-04-05T10:22:00.000Z',
+        dateModified: '2024-03-12T11:00:52+00:00',
+      },
       liveTextStream: {
         content: {
           data: {
@@ -327,7 +360,11 @@ describe('Live Page', () => {
       render(<Live pageData={mockPageData} />);
     });
 
-    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+      ),
+    ).toBeInTheDocument();
   });
 
   it('should render the live page description', async () => {
@@ -336,7 +373,9 @@ describe('Live Page', () => {
     });
 
     expect(
-      screen.getByText('Pidgin test 2 - the description'),
+      screen.getByText(
+        'The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering'
+      ),
     ).toBeInTheDocument();
   });
 
