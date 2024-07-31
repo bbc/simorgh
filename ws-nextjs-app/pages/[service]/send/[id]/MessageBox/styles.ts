@@ -2,30 +2,36 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 export default {
-  link: ({ palette, fontSizes }: Theme) =>
+  link: ({ palette, fontSizes, mq }: Theme) =>
     css({
       ...fontSizes.minion,
       color: palette.WHITE,
       display: 'inline-block',
-      // To CHECK
       padding: `${pixelsToRem(6)}rem 0`,
-      // borderBottom: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
-      '&:visited': {},
       '&:focus, &:hover': {
-        // TO CHECK
-        textDecoration: 'none',
-        // borderBottom: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
+        color: palette.ERROR_CORE,
+        backgroundColor: palette.WHITE,
+        backgroundClip: 'content-box',
+        [mq.FORCED_COLOURS]: {
+          // check
+          textDecoration: 'none',
+        },
+      },
+      '&:focus-visible': {
+        backgroundClip: 'padding-box',
       },
     }),
 
-  list: () =>
+  list: ({ spacings }: Theme) =>
     css({
       marginBottom: 0,
+      paddingInlineStart: 0, // reset
+      marginTop: `${spacings.HALF}rem`,
     }),
 
-  singleItem: () =>
+  singleItem: ({ spacings }: Theme) =>
     css({
-      // check
-      marginInlineStart: '2rem',
+      display: 'inline-block',
+      marginTop: `${spacings.HALF}rem`,
     }),
 };

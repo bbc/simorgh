@@ -24,8 +24,8 @@ const ErrorLink = ({ id, labelText }: ListItemsLinkProps) => {
   return (
     <a
       href={`#${id}`}
-      // to check
-      className="focusIndicatorReducedWidth"
+      className="focusIndicatorReducedWidthInverted"
+      // className="focusIndicatorReducedWidth"
       css={styles.link}
     >
       {labelText}
@@ -63,10 +63,13 @@ const ErrorSummaryBox = forwardRef(
         isErrorSummary
       >
         {isSingleError ? (
-          // check Text wrapper is ok
           <Text css={styles.singleItem}>{errorListItems}</Text>
         ) : (
-          <BulletedList bulletPointColour={WHITE} css={styles.list}>
+          <BulletedList
+            bulletPointColour={WHITE}
+            bulletPointShape="hidden"
+            css={styles.list}
+          >
             {errorListItems}
           </BulletedList>
         )}
