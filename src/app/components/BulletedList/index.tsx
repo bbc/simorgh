@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren } from 'react';
-// import { SHADOW } from '#app/components/ThemeProvider/palette';
+import { SHADOW } from '#app/components/ThemeProvider/palette';
 import styles from './index.styles';
 
 type Props = {
@@ -19,8 +19,7 @@ export const BulletedListItem = ({ children }: PropsWithChildren) => {
 
 export const BulletedList = ({
   bulletPointShape = 'round',
-  //   bulletPointColour = SHADOW,
-  bulletPointColour = '#3F3F42',
+  bulletPointColour = SHADOW,
   children,
 }: PropsWithChildren<Props>) => {
   return (
@@ -35,7 +34,6 @@ export const BulletedList = ({
               ? theme.palette.GREY_4
               : bulletPointColour,
             borderRadius: bulletPointShape === 'round' ? '50%' : '0',
-            insetInlineStart: '-1rem',
           },
         },
       ]}
