@@ -27,6 +27,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { TEST_API } = process.env;
 
+  // TEMPORARY: This will be changed to the correct API path once its implemented
   const path = `${TEST_API}/article/${extension}`;
   const optHeaders = { 'ctx-service-env': env };
 
