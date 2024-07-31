@@ -21,7 +21,6 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
-      INTEGRATION_TEST_BUILD: true
       
     steps:
       - uses: actions/checkout@v3
