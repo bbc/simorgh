@@ -50,7 +50,7 @@ export default {
     }),
   textField: ({ spacings, fontVariants, fontSizes, palette, mq }: Theme) =>
     css({
-      scrollMarginTop: `${pixelsToRem(44)}rem`, // check height
+      scrollMarginTop: `${pixelsToRem(44)}rem`, // Ensures label is visible after using error summary links
       border: `solid 0.0625rem ${palette.GREY_10}`,
       outline: 'solid 0.0625rem transparent',
       width: '100%',
@@ -83,6 +83,13 @@ export default {
       resize: 'none',
       display: 'block',
     }),
+  // Sets overflow to clip when field is empty
+  // Resolves A11y issue with scroll-top-margin on textareas on Chrome
+  // Reverts to overflow:auto once a value is provided
+  overflowOverride: () =>
+    css({
+      overflow: 'clip',
+    }),
   checkboxLabel: ({ spacings }: Theme) =>
     css({
       flex: 'auto',
@@ -91,7 +98,7 @@ export default {
     }),
   checkbox: ({ palette, mq }: Theme) =>
     css({
-      scrollMarginTop: `${pixelsToRem(44)}rem`, // check height
+      scrollMarginTop: `${pixelsToRem(8)}rem`, // Provides spacing after using error summary links
       display: 'inline-block',
       flex: 'initial',
       flexShrink: 0,

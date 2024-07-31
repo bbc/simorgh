@@ -72,6 +72,7 @@ export default ({
           styles.textArea,
           styles.focusIndicatorInput,
           useErrorTheme && styles.textFieldError,
+          !value && styles.overflowOverride,
         ]}
         name={name}
         value={value as string}
