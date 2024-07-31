@@ -8,6 +8,7 @@ import { useFormContext } from '../FormContext';
 import InvalidMessageBox from './InvalidMessageBox';
 import getErrorList from '../FormContext/utils/getErrorList';
 import styles from './styles';
+import { InvalidMessageCodes } from '../types';
 
 type ErrorSummaryProps = {
   suffix: string;
@@ -34,7 +35,6 @@ const ErrorLink = ({ id, labelText }: ListItemsLinkProps) => {
 
 const ErrorSummaryBox = forwardRef(
   ({ suffix, labelMap }: ErrorSummaryProps, ref: ForwardedRef<HTMLElement>) => {
-    // TO DO - Add translations for summary
     const { formState } = useFormContext();
     const listOfErrors = getErrorList(formState);
     const isSingleError = listOfErrors.length === 1;
@@ -57,7 +57,7 @@ const ErrorSummaryBox = forwardRef(
       <InvalidMessageBox
         id="errorSummaryBox"
         hasArrowStyle={false}
-        messageCode={null}
+        messageCode={InvalidMessageCodes.ErrorSummary}
         ref={ref}
         suffix={suffix}
         isErrorSummary

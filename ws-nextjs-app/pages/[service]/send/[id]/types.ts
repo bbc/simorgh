@@ -4,6 +4,7 @@ import { Services, Variants } from '#app/models/types/global';
 // Disabled due to known bug in ts-lint: https://github.com/typescript-eslint/tslint-to-eslint-config/issues/856
 // eslint-disable-next-line no-shadow
 export enum InvalidMessageCodes {
+  ErrorSummary = 'errorSummary',
   FieldRequired = 'validationRequired',
   WrongEmailFormat = 'validationInvalidEmail',
   WrongTelFormat = 'validationInvalidTelephone',

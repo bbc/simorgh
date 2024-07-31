@@ -68,7 +68,6 @@ const InvalidMessageBox = forwardRef(
       validationCriteria,
     );
 
-    // TO DO
     // We only include visually hidden text on generic error messages.
     const includeVisuallyHiddenText =
       !isErrorSummary && message === ugc[InvalidMessageCodes.FieldRequired];
