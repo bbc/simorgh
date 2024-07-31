@@ -185,7 +185,7 @@ const constructPageFetchUrl = ({
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}${variantPath}/live/${id}`,
+          `${host}${port}/api/local/${service}${variantPath}/livePage/${id}`,
         );
         break;
       }
