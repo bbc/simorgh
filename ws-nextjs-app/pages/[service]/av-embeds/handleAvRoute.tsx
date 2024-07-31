@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import extractHeaders from '#server/utilities/extractHeaders';
 import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import fetchPageData from '#app/routes/utils/fetchPageData';
@@ -8,20 +8,12 @@ import { FetchError } from '#app/models/types/fetch';
 import { OptimoBlock } from '#app/models/types/optimo';
 import parseAvRoute from './parseAvRoute';
 import getAgent from '../../../utilities/undiciAgent';
-import AvEmbedsPageLayout from './AvEmbedsPageLayout';
 
-export default AvEmbedsPageLayout;
-
-export const getServerSideProps: GetServerSideProps = async context => {
+export default async (context: GetServerSidePropsContext) => {
   const {
     resolvedUrl,
     req: { headers: reqHeaders },
   } = context;
-
-  // Check the dynamic route contains 'av-embeds'
-  if (!resolvedUrl?.includes('av-embeds')) {
-    return { props: {}, notFound: true };
-  }
 
   let pageStatus = 200;
   let pageJson;

@@ -1,17 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import { AvEmbedsPageProps } from './types';
 
-type PageProps = {
-  pageData: {
-    input: Record<string, unknown>;
-    output: Record<string, unknown>;
-    mediaBlock: MediaBlock[];
-  };
-};
-
-const AvEmbedsPageLayout = ({ pageData }: PageProps) => {
+const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => {
   return (
     <div style={{ maxWidth: 600 }}>
       <h1>
