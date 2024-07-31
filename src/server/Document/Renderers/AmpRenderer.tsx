@@ -6,9 +6,11 @@ import {
   AMP_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
+  AMP_EXPERIMENTATION_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
+import AmpExperiment from './AmpExperiment/AmpExperiment';
 
 export default function AmpRenderer({
   helmetMetaTags,
@@ -40,6 +42,8 @@ export default function AmpRenderer({
         {AMP_GEO_SCRIPT}
         {AMP_CONSENT_JS}
         {AMP_ANALYTICS_JS}
+        {AMP_EXPERIMENTATION_JS}
+        <AmpExperiment/>
       </head>
       <body className="amp-geo-pending">
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />

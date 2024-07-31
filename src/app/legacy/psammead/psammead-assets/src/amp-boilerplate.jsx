@@ -79,3 +79,11 @@ export const AMP_SCRIPT_JS = (
     src="https://cdn.ampproject.org/v0/amp-script-0.1.js"
   />
 );
+
+export const AMP_EXPERIMENTATION_JS = (
+  <script
+    async
+    custom-element="amp-experiment"
+    src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"
+  />
+);
