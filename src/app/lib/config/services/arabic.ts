@@ -57,7 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p086jpqy',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
