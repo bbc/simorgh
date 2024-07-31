@@ -1,14 +1,20 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { FC, PropsWithChildren, ForwardedRef, forwardRef } from 'react';
+import {
+  FC,
+  PropsWithChildren,
+  HTMLAttributes,
+  ForwardedRef,
+  forwardRef,
+} from 'react';
 import { SHADOW } from '#app/components/ThemeProvider/palette';
 import styles from './index.styles';
 
-type Props = {
+interface Props extends HTMLAttributes<HTMLUListElement> {
   bulletPointShape?: string;
   bulletPointColour?: string;
   className?: string;
-};
+}
 
 export const BulletedListItem = ({ children }: PropsWithChildren) => {
   return (
