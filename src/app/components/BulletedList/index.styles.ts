@@ -14,8 +14,7 @@ export default {
       ...fontVariants.sansRegular,
       '& > li': {
         position: 'relative',
-        // TODO - I've added Grey_10 here, it was not defined before.
-        color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
+        color: isDarkUi ? palette.GREY_2 : 'inherit',
       },
       '& > li::before': {
         top: '0.5rem',

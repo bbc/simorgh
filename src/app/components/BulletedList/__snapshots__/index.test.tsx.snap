@@ -4,11 +4,30 @@ exports[`BulletedList should render correctly from ltr 1`] = `
 .emotion-0 {
   margin-top: 0;
   list-style-type: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 .emotion-0>li {
   position: relative;
-  color: #3F3F42;
+  color: inherit;
 }
 
 .emotion-0>li::before {
@@ -16,13 +35,13 @@ exports[`BulletedList should render correctly from ltr 1`] = `
   content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
 }
 
 .emotion-0>li::before {
   border: 0.1875rem solid #3F3F42;
   background-color: #3F3F42;
   border-radius: 50%;
-  inset-inline-start: -1rem;
 }
 
 .emotion-1 {
@@ -60,11 +79,30 @@ exports[`BulletedList should render correctly from rtl 1`] = `
 .emotion-0 {
   margin-top: 0;
   list-style-type: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 .emotion-0>li {
   position: relative;
-  color: #3F3F42;
+  color: inherit;
 }
 
 .emotion-0>li::before {
@@ -72,13 +110,13 @@ exports[`BulletedList should render correctly from rtl 1`] = `
   content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
 }
 
 .emotion-0>li::before {
   border: 0.1875rem solid #3F3F42;
   background-color: #3F3F42;
   border-radius: 50%;
-  inset-inline-start: -1rem;
 }
 
 .emotion-1 {
@@ -116,11 +154,30 @@ exports[`BulletedList should render correctly with custom bulletPointShape and b
 .emotion-0 {
   margin-top: 0;
   list-style-type: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 .emotion-0>li {
   position: relative;
-  color: #3F3F42;
+  color: inherit;
 }
 
 .emotion-0>li::before {
@@ -128,13 +185,13 @@ exports[`BulletedList should render correctly with custom bulletPointShape and b
   content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
 }
 
 .emotion-0>li::before {
   border: 0.1875rem solid #f00;
   background-color: #f00;
   border-radius: 0;
-  inset-inline-start: -1rem;
 }
 
 .emotion-1 {
