@@ -24,13 +24,14 @@ export const BulletedList = ({
   className,
   children,
 }: PropsWithChildren<Props>) => {
+  const showBulletPoints = bulletPointShape !== 'hidden';
   return (
     <ul
       className={className}
       role="list"
       css={theme => [
         styles.bulletedList,
-        {
+        showBulletPoints && {
           '& > li::before': {
             border: `0.1875rem solid ${theme.isDarkUi ? theme.palette.GREY_4 : bulletPointColour}`,
             backgroundColor: theme.isDarkUi
