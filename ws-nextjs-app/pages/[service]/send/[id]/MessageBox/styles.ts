@@ -17,12 +17,15 @@ export default {
       color: palette.WHITE,
       display: 'inline-block',
       padding: `${pixelsToRem(6)}rem 0`,
+      [mq.FORCED_COLOURS]: {
+        textDecoration: 'none',
+      },
       '&:focus, &:hover': {
         color: palette.ERROR_CORE,
         backgroundColor: palette.WHITE,
         backgroundClip: 'content-box',
         [mq.FORCED_COLOURS]: {
-          textDecoration: 'none', // changes textDecoration for A11y
+          textDecoration: 'underline', // changes textDecoration for A11y
         },
       },
       '&:focus-visible': {
