@@ -162,13 +162,13 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
       role="list"
     >
       <li
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         role="listitem"
       >
         It is unordered
       </li>
       <li
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         role="listitem"
       >
         It has three list items
@@ -340,13 +340,13 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
       role="list"
     >
       <li
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         role="listitem"
       >
         It is unordered
       </li>
       <li
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         role="listitem"
       >
         It has three list items

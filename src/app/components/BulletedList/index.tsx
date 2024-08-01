@@ -7,31 +7,37 @@ import {
   ForwardedRef,
   forwardRef,
 } from 'react';
-import { SHADOW } from '#app/components/ThemeProvider/palette';
+import { SHADOW } from '../ThemeProvider/palette';
 import styles from './index.styles';
 
-interface Props extends HTMLAttributes<HTMLUListElement> {
+interface ListItemProps {
+  className?: string;
+}
+interface ListProps extends HTMLAttributes<HTMLUListElement> {
   bulletPointShape?: string;
   bulletPointColour?: string;
   className?: string;
 }
 
-export const BulletedListItem = ({ children }: PropsWithChildren) => {
+export const BulletedListItem = ({
+  children,
+  className,
+}: PropsWithChildren<ListItemProps>) => {
   return (
-    <li role="listitem" css={styles.bulletListItem}>
+    <li role="listitem" className={className} css={styles.bulletListItem}>
       {children}
     </li>
   );
 };
 
-export const BulletedList: FC<Props> = forwardRef(
+export const BulletedList: FC<ListProps> = forwardRef(
   (
     {
       bulletPointShape = 'round',
       bulletPointColour = SHADOW,
       className,
       children,
-    }: PropsWithChildren<Props>,
+    }: PropsWithChildren<ListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => {
     const showBulletPoints = bulletPointShape !== 'hidden';

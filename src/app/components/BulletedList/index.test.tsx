@@ -49,7 +49,6 @@ describe('BulletedList', () => {
     );
     const listEl = getByRole('list');
     const listStyle = window.getComputedStyle(listEl);
-    // expect(listStyle).toHaveStyle(`list-style-type: none`);
     expect(listStyle.listStyleType).toBe('none');
   });
 
