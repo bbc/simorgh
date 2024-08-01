@@ -24,7 +24,6 @@ const ErrorLink = ({ id, labelText }: ListItemsLinkProps) => {
     <a
       href={`#${id}`}
       className="focusIndicatorReducedWidthInverted"
-      // className="focusIndicatorReducedWidth"
       css={styles.link}
     >
       {labelText}
