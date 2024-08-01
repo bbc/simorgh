@@ -40,14 +40,6 @@ export default {
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
-  focusIndicatorErrorSummary: ({ palette }: Theme) =>
-    css({
-      '&:focus': {
-        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
-        outlineOffset: `${focusIndicatorThickness}`,
-      },
-    }),
   textField: ({ spacings, fontVariants, fontSizes, palette, mq }: Theme) =>
     css({
       scrollMarginTop: `${pixelsToRem(44)}rem`, // Ensures label is visible after using error summary links
@@ -128,50 +120,5 @@ export default {
   checkboxError: ({ palette }: Theme) =>
     css({
       border: `solid 0.0625rem ${palette.ERROR_CORE}`,
-    }),
-  errorText: ({ palette }: Theme) =>
-    css({
-      color: palette.WHITE,
-    }),
-  errorSvg: ({ mq, palette }: Theme) =>
-    css({
-      fill: palette.WHITE,
-      verticalAlign: 'middle',
-      marginInlineEnd: '0.75rem',
-      minWidth: '1.5rem',
-      [mq.FORCED_COLOURS]: {
-        path: {
-          fill: 'currentColor',
-        },
-      },
-    }),
-  errorMessageBox: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.ERROR_CORE,
-      outline: 'solid 0.0625rem transparent',
-      padding: '0.75rem',
-    }),
-  strongWrapper: () =>
-    css({
-      display: 'flex',
-      alignItems: 'center',
-    }),
-  hasArrowStyle: ({ spacings }: Theme) =>
-    css({
-      marginTop: `${spacings.FULL}rem`,
-      marginBottom: `${spacings.FULL}rem`,
-    }),
-  errorArrow: ({ palette, spacings }: Theme) =>
-    css({
-      backgroundColor: palette.ERROR_CORE,
-      clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
-      width: `${spacings.DOUBLE}rem`,
-      height: '0.75rem',
-      marginInlineStart: `${spacings.DOUBLE}rem`,
-      marginTop: `${spacings.FULL}rem`,
-      '&::after': {
-        content: '""',
-        border: '0.5rem solid transparent',
-      },
     }),
 };

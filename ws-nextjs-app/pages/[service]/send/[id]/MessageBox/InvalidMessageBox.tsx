@@ -9,7 +9,7 @@ import {
   InvalidMessageBoxProps,
   ValidationConditions,
 } from '../types';
-import styles from '../FormField/styles';
+import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
 
 const ErrorSymbol = () => (
