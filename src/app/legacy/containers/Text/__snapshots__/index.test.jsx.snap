@@ -348,7 +348,7 @@ exports[`TextContainer with data should render correctly 1`] = `
       role="list"
     >
       <li
-        class="emotion-24 emotion-25"
+        class="emotion-24"
         role="listitem"
       >
         This is a list item
@@ -364,7 +364,7 @@ exports[`TextContainer with data should render correctly 1`] = `
       role="list"
     >
       <li
-        class="emotion-24 emotion-25"
+        class="emotion-24"
         role="listitem"
       >
         This is a list item
