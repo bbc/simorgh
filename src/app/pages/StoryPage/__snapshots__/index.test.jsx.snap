@@ -4110,13 +4110,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-51 {
+  margin-top: 0;
+  list-style-type: none;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4135,42 +4135,46 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .emotion-51>li {
   position: relative;
+  color: inherit;
 }
 
 .emotion-51>li::before {
   top: 0.5rem;
-  content: ' ';
+  content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-51>li::before {
   border: 0.1875rem solid #3F3F42;
   background-color: #3F3F42;
   border-radius: 50%;
-  left: -1rem;
 }
 
-.emotion-53 {
+.emotion-52 {
   margin-bottom: 1rem;
 }
 
-.emotion-113 {
+.emotion-111 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
   min-height: 14rem;
 }
 
-.no-js .emotion-113 {
+.no-js .emotion-111 {
   min-height: 0;
 }
 
-.emotion-115 {
+.emotion-113 {
   position: relative;
 }
 
-.no-js .emotion-115 {
+.no-js .emotion-113 {
   display: none;
 }
 
-.emotion-117 {
+.emotion-115 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -4190,28 +4194,28 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-117 {
+  .emotion-115 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-117 {
+  .emotion-115 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-117 span {
+.emotion-115 span {
   color: #222222;
 }
 
-.emotion-117:hover span,
-.emotion-117:focus span {
+.emotion-115:hover span,
+.emotion-115:focus span {
   color: #B80000;
   border-bottom: 2px solid #B80000;
 }
 
-.emotion-117:not(:focus):not(:active) {
+.emotion-115:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -4222,7 +4226,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.emotion-119 {
+.emotion-117 {
   background-color: #FFFFFF;
   padding: 1rem;
   display: -webkit-box;
@@ -4243,7 +4247,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   border: 0.0625rem solid #8A8C8E;
 }
 
-.emotion-120 {
+.emotion-118 {
   color: #141414;
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -4253,20 +4257,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-120 {
+  .emotion-118 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-120 {
+  .emotion-118 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-121 {
+.emotion-119 {
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -4278,38 +4282,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-121 {
+  .emotion-119 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-121 {
+  .emotion-119 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-121 a {
+.emotion-119 a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.0625rem solid #141414;
 }
 
-.emotion-121 a:visited {
+.emotion-119 a:visited {
   color: #545658;
   border-bottom: 0.0625rem solid #545658;
 }
 
-.emotion-121 a:hover,
-.emotion-121 a:focus {
+.emotion-119 a:hover,
+.emotion-119 a:focus {
   color: #B80000;
   border-bottom: 0.125rem solid #B80000;
 }
 
-.emotion-122 {
+.emotion-120 {
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -4324,21 +4328,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-122 {
+  .emotion-120 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-122 {
+  .emotion-120 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-122:hover,
-.emotion-122:focus {
+.emotion-120:hover,
+.emotion-120:focus {
   background-color: #B80000;
   color: #FFFFFF;
   border: 0.0625rem solid #B80000;
@@ -4346,11 +4350,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   text-decoration: underline;
 }
 
-.emotion-122:focus-visible {
+.emotion-120:focus-visible {
   outline: 0.1875rem solid #000000;
 }
 
-.emotion-123 {
+.emotion-121 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -4361,55 +4365,55 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.emotion-130 {
+.emotion-128 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-130 {
+  .emotion-128 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-130 {
+    .emotion-128 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4417,7 +4421,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-130 {
+    .emotion-128 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4425,7 +4429,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-130 {
+    .emotion-128 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4433,7 +4437,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-130 {
+    .emotion-128 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -4441,7 +4445,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-130 {
+    .emotion-128 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -4449,7 +4453,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-130 {
+    .emotion-128 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -4458,43 +4462,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-130 {
+  .emotion-128 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-130 {
+  .emotion-128 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-130 {
+  .emotion-128 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
 
-.emotion-132 {
+.emotion-130 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-134 {
+.emotion-132 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-136 {
+.emotion-134 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -4504,7 +4508,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.emotion-143 {
+.emotion-141 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4516,27 +4520,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-143 {
+  .emotion-141 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-143 {
+  .emotion-141 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-143 {
+  .emotion-141 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-168 {
+  .emotion-166 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4544,7 +4548,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-168 {
+  .emotion-166 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4552,7 +4556,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-168 {
+  .emotion-166 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4560,7 +4564,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-168 {
+  .emotion-166 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -4568,7 +4572,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-168 {
+  .emotion-166 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -4576,7 +4580,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-168 {
+  .emotion-166 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -4584,49 +4588,49 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-168 {
+  .emotion-166 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-168 {
+    .emotion-166 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-168 {
+    .emotion-166 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-168 {
+    .emotion-166 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-168 {
+    .emotion-166 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-168 {
+    .emotion-166 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-168 {
+    .emotion-166 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
@@ -4634,35 +4638,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-168 {
+  .emotion-166 {
     margin-top: 2rem;
   }
 }
 
-.emotion-170 {
+.emotion-168 {
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-170 {
+  .emotion-168 {
     margin-bottom: 0.5rem;
     padding: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-172 {
+  .emotion-170 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-172 {
+  .emotion-170 {
     padding: 0 1rem;
   }
 }
 
-.emotion-175 {
+.emotion-173 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -4671,29 +4675,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-175 {
+  .emotion-173 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-175 {
+  .emotion-173 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-175 {
+  .emotion-173 {
     margin-top: 0;
   }
 }
 
-.emotion-177 {
+.emotion-175 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-179 {
+.emotion-177 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4703,7 +4707,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.emotion-181 {
+.emotion-179 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4723,7 +4727,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-181 {
+  .emotion-179 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -4731,7 +4735,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-183 {
+.emotion-181 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4751,102 +4755,102 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-183 {
+  .emotion-181 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-183 {
+  .emotion-181 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-183 {
+  .emotion-181 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-183 {
+  .emotion-181 {
     padding-right: 1rem;
   }
 }
 
-.emotion-185 {
+.emotion-183 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-187 {
+.emotion-185 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-187 {
+  .emotion-185 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-187:last-child {
+.emotion-185:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-187 {
+  .emotion-185 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-187 {
+  .emotion-185 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-187:first-child {
+.emotion-185:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-187:first-child {
+  .emotion-185:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-187:last-child {
+.emotion-185:last-child {
   padding-bottom: 0;
 }
 
-.emotion-189 {
+.emotion-187 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-189 {
+  .emotion-187 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-189 {
+    .emotion-187 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-189 {
+    .emotion-187 {
       display: block;
     }
   }
 }
 
-.emotion-191 {
+.emotion-189 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -4855,25 +4859,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-191 {
+  .emotion-189 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-191 {
+  .emotion-189 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-191>div {
+.emotion-189>div {
   vertical-align: middle;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-191 {
+  .emotion-189 {
     display: block;
     width: initial;
     padding: initial;
@@ -4882,22 +4886,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-191 {
+    .emotion-189 {
       padding-top: 0;
     }
   }
 }
 
-.emotion-191>div {
+.emotion-189>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-191 svg {
+.emotion-189 svg {
   margin: 0;
 }
 
-.emotion-193 {
+.emotion-191 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -4910,20 +4914,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-193 {
+  .emotion-191 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-193 {
+  .emotion-191 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-195 {
+.emotion-193 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -4933,7 +4937,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-195:before {
+.emotion-193:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -4945,17 +4949,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-195:hover,
-.emotion-195:focus {
+.emotion-193:hover,
+.emotion-193:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-195:visited {
+.emotion-193:visited {
   color: #6E6E73;
 }
 
-.emotion-197 {
+.emotion-195 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -4966,27 +4970,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-197 {
+  .emotion-195 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-197 {
+  .emotion-195 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-238 {
+.emotion-236 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-238 {
+  .emotion-236 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 1rem;
@@ -4995,67 +4999,67 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-240 {
+.emotion-238 {
   padding: 0.5rem 0 1rem;
   line-height: 0;
   height: 100%;
 }
 
-.emotion-240:last-child {
+.emotion-238:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-240 {
+  .emotion-238 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-240 {
+  .emotion-238 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-240:first-child {
+.emotion-238:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-240:first-child {
+  .emotion-238:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-240:last-child {
+.emotion-238:last-child {
   padding-bottom: 0;
 }
 
-.emotion-240:first-child {
+.emotion-238:first-child {
   padding: 0 0 0.5rem 0;
 }
 
-.emotion-240:last-child {
+.emotion-238:last-child {
   padding: 0.5rem 0 0 0;
 }
 
-.emotion-240:not(:first-child):not(:last-child) {
+.emotion-238:not(:first-child):not(:last-child) {
   padding: 0.5rem 0 0.5rem 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-240 {
+  .emotion-238 {
     padding: 0;
   }
 
-  .emotion-240:first-child,
-  .emotion-240:last-child,
-  .emotion-240:not(:first-child):not(:last-child) {
+  .emotion-238:first-child,
+  .emotion-238:last-child,
+  .emotion-238:not(:first-child):not(:last-child) {
     padding: 0;
   }
 }
 
-.emotion-242 {
+.emotion-240 {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -5070,16 +5074,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   text-decoration: none;
 }
 
-.emotion-242:hover a {
+.emotion-240:hover a {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-242:visited a {
+.emotion-240:visited a {
   color: #E6E8EA;
 }
 
-.emotion-243 {
+.emotion-241 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -5088,7 +5092,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 5;
 }
 
-.emotion-244 {
+.emotion-242 {
   position: relative;
   height: 0;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -5101,34 +5105,34 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-244 {
+  .emotion-242 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-244 {
+  .emotion-242 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-246 {
+.emotion-244 {
   height: 100%;
 }
 
-.emotion-247 {
+.emotion-245 {
   min-height: 100px;
   padding-bottom: 1rem;
   background-color: #202224;
 }
 
-.emotion-248 {
+.emotion-246 {
   margin: 0;
 }
 
-.emotion-249 {
+.emotion-247 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -5141,24 +5145,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-249:focus {
+.emotion-247:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 25rem) {
-  .emotion-249 {
+  .emotion-247 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-249:visited {
+.emotion-247:visited {
   color: #E6E8EA;
 }
 
-.emotion-250 {
+.emotion-248 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -5175,36 +5179,36 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-250 {
+  .emotion-248 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-250 {
+  .emotion-248 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-250 {
+  .emotion-248 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
   }
 }
 
-.emotion-348 {
+.emotion-346 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-350 {
+.emotion-348 {
   margin-top: 0;
 }
 
-.emotion-351 {
+.emotion-349 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -5212,24 +5216,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-351 {
+  .emotion-349 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-351 {
+  .emotion-349 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-351 {
+  .emotion-349 {
     margin-bottom: 1rem;
   }
 }
 
-.emotion-361 {
+.emotion-359 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -5238,7 +5242,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-361 {
+  .emotion-359 {
     display: grid;
     position: initial;
     width: initial;
@@ -5246,7 +5250,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-361 {
+    .emotion-359 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5254,7 +5258,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-361 {
+    .emotion-359 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5262,7 +5266,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-361 {
+    .emotion-359 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5270,7 +5274,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-361 {
+    .emotion-359 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5278,7 +5282,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-361 {
+    .emotion-359 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5286,7 +5290,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-361 {
+    .emotion-359 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5294,62 +5298,62 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-363 {
+.emotion-361 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-363 {
+  .emotion-361 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-363 {
+    .emotion-361 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-363 {
+    .emotion-361 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-363 {
+    .emotion-361 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-363 {
+    .emotion-361 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-363 {
+    .emotion-361 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-363 {
+    .emotion-361 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-365 {
+.emotion-363 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5362,30 +5366,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-366 {
+  .emotion-364 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-366 {
+  .emotion-364 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-366 {
+  .emotion-364 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-366 {
+  .emotion-364 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-367 {
+.emotion-365 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -5398,32 +5402,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-367 {
+  .emotion-365 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-367 {
+  .emotion-365 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-368 {
+.emotion-366 {
   padding-top: 0.2rem;
   padding-left: 0.25rem;
   padding-right: 0.5rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-368 {
+  .emotion-366 {
     padding-right: 0;
   }
 }
 
-.emotion-369 {
+.emotion-367 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5437,26 +5441,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-369 {
+  .emotion-367 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-369 {
+  .emotion-367 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-369:hover,
-.emotion-369:focus {
+.emotion-367:hover,
+.emotion-367:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-369:before {
+.emotion-367:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5468,7 +5472,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-370 {
+.emotion-368 {
   padding-top: 0.5rem;
 }
 
@@ -5654,18 +5658,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <ul
-                    class="emotion-51 emotion-52"
-                    dir="ltr"
+                    class="emotion-51"
                     role="list"
                   >
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       This is a unordered list
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       It can have 
@@ -5675,7 +5678,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                        in it
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       <a
@@ -5686,7 +5689,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       <i
@@ -5812,18 +5815,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <ul
-                    class="emotion-51 emotion-52"
-                    dir="ltr"
+                    class="emotion-51"
                     role="list"
                   >
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       This is a ordered list
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       It can have 
@@ -5833,7 +5835,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                        in it
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       <a
@@ -5844,7 +5846,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </a>
                     </li>
                     <li
-                      class="emotion-53 emotion-54"
+                      class="emotion-52 emotion-53"
                       role="listitem"
                     >
                       <i
@@ -5860,14 +5862,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <div
-                    class="emotion-113 emotion-114"
+                    class="emotion-111 emotion-112"
                     data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                   >
                     <div
-                      class="emotion-115 emotion-116"
+                      class="emotion-113 emotion-114"
                     >
                       <a
-                        class="focusIndicatorRemove emotion-117 emotion-118"
+                        class="focusIndicatorRemove emotion-115 emotion-116"
                         href="#end-of-twitter-content-1"
                       >
                         <span>
@@ -5875,18 +5877,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </span>
                       </a>
                       <div
-                        class="emotion-119"
+                        class="emotion-117"
                         data-testid="consentBanner"
                         id="consentBanner-1184522157050748929"
                       >
                         <strong
-                          class="emotion-120"
+                          class="emotion-118"
                           data-testid="banner-heading"
                         >
                           Allow Twitter content?
                         </strong>
                         <p
-                          class="emotion-121"
+                          class="emotion-119"
                           data-testid="banner-body"
                         >
                           Dis article contain content wey Twitter provide. We ask for una permission before anytin dey loaded, as dem fit dey use cookies and oda technologies. You fit wan read di Twitter 
@@ -5908,7 +5910,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                            before accepting. To view dis content choose 'accept and continue'.
                         </p>
                         <button
-                          class="emotion-122"
+                          class="emotion-120"
                           data-testid="banner-button"
                           type="button"
                         >
@@ -5916,7 +5918,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </button>
                       </div>
                       <p
-                        class="emotion-123 emotion-124"
+                        class="emotion-121 emotion-122"
                         id="end-of-twitter-content-1"
                         tabindex="-1"
                       >
@@ -5938,20 +5940,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   </p>
                 </div>
                 <div
-                  class="emotion-129 emotion-130 emotion-2"
+                  class="emotion-127 emotion-128 emotion-2"
                   dir="ltr"
                 >
                   <figure
-                    class="emotion-132 emotion-133"
+                    class="emotion-130 emotion-131"
                   >
                     <div
-                      class="emotion-134 emotion-135"
+                      class="emotion-132 emotion-133"
                       data-e2e="media-player"
                     >
                       <iframe
                         allow="autoplay"
                         allowfullscreen=""
-                        class="emotion-136 emotion-137"
+                        class="emotion-134 emotion-135"
                         height="362.953125"
                         loading="lazy"
                         scrolling="no"
@@ -5987,7 +5989,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <h2
-                    class="emotion-143 emotion-144"
+                    class="emotion-141 emotion-142"
                     id="This-is-a-heading"
                     tabindex="-1"
                   >
@@ -6010,7 +6012,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   dir="ltr"
                 >
                   <h2
-                    class="emotion-143 emotion-144"
+                    class="emotion-141 emotion-142"
                     id="This-is-a-crosshead"
                     tabindex="-1"
                   >
@@ -6059,32 +6061,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
               </main>
             </div>
             <div
-              class="emotion-167 emotion-168 emotion-2"
+              class="emotion-165 emotion-166 emotion-2"
               dir="ltr"
             >
               <div
-                class="emotion-170 emotion-171"
+                class="emotion-168 emotion-169"
               >
                 <section
                   aria-labelledby="top-stories-heading"
-                  class="emotion-172 emotion-173"
+                  class="emotion-170 emotion-171"
                   data-e2e="top-stories-heading"
                   role="region"
                 >
                   <div
-                    class="emotion-174 emotion-175 emotion-176"
+                    class="emotion-172 emotion-173 emotion-174"
                   >
                     <h2
-                      class="emotion-177 emotion-178"
+                      class="emotion-175 emotion-176"
                     >
                       <span
-                        class="emotion-179 emotion-180"
+                        class="emotion-177 emotion-178"
                       >
                         <span
-                          class="emotion-181 emotion-182"
+                          class="emotion-179 emotion-180"
                         >
                           <span
-                            class="emotion-183 emotion-184"
+                            class="emotion-181 emotion-182"
                             dir="ltr"
                             id="top-stories-heading"
                           >
@@ -6095,26 +6097,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </h2>
                   </div>
                   <ul
-                    class="emotion-185 emotion-186"
+                    class="emotion-183 emotion-184"
                     role="list"
                   >
                     <li
-                      class="emotion-187 emotion-188"
+                      class="emotion-185 emotion-186"
                     >
                       <div
-                        class="emotion-189 emotion-190"
+                        class="emotion-187 emotion-188"
                         data-e2e="story-promo"
                       >
                         <div
-                          class="emotion-191 emotion-192"
+                          class="emotion-189 emotion-190"
                           dir="ltr"
                         >
                           <h3
-                            class="emotion-193 emotion-194"
+                            class="emotion-191 emotion-192"
                           >
                             <a
                               aria-labelledby="top-stories-promo-pidgin23248287-1"
-                              class="focusIndicatorDisplayInlineBlock emotion-195 emotion-196"
+                              class="focusIndicatorDisplayInlineBlock emotion-193 emotion-194"
                               href="/pidgin/23248287"
                             >
                               <span
@@ -6125,7 +6127,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </a>
                           </h3>
                           <time
-                            class="emotion-197 emotion-25"
+                            class="emotion-195 emotion-25"
                             datetime="2019-09-10"
                           >
                             10th September 2019
@@ -6134,22 +6136,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-187 emotion-188"
+                      class="emotion-185 emotion-186"
                     >
                       <div
-                        class="emotion-189 emotion-190"
+                        class="emotion-187 emotion-188"
                         data-e2e="story-promo"
                       >
                         <div
-                          class="emotion-191 emotion-192"
+                          class="emotion-189 emotion-190"
                           dir="ltr"
                         >
                           <h3
-                            class="emotion-193 emotion-194"
+                            class="emotion-191 emotion-192"
                           >
                             <a
                               aria-labelledby="top-stories-promo-pidgintori23146434-1"
-                              class="focusIndicatorDisplayInlineBlock emotion-195 emotion-196"
+                              class="focusIndicatorDisplayInlineBlock emotion-193 emotion-194"
                               href="/pidgin/tori-23146434"
                             >
                               <span
@@ -6160,7 +6162,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </a>
                           </h3>
                           <time
-                            class="emotion-197 emotion-25"
+                            class="emotion-195 emotion-25"
                             datetime="2017-08-08"
                           >
                             8th August 2017
@@ -6169,22 +6171,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-187 emotion-188"
+                      class="emotion-185 emotion-186"
                     >
                       <div
-                        class="emotion-189 emotion-190"
+                        class="emotion-187 emotion-188"
                         data-e2e="story-promo"
                       >
                         <div
-                          class="emotion-191 emotion-192"
+                          class="emotion-189 emotion-190"
                           dir="ltr"
                         >
                           <h3
-                            class="emotion-193 emotion-194"
+                            class="emotion-191 emotion-192"
                           >
                             <a
                               aria-labelledby="top-stories-promo-httpswwwtestbbccoukpidginarticlescg9yj3x13m0o-feature-1"
-                              class="focusIndicatorDisplayInlineBlock emotion-195 emotion-196"
+                              class="focusIndicatorDisplayInlineBlock emotion-193 emotion-194"
                               href="https://www.test.bbc.co.uk/pidgin/articles/cg9yj3x13m0o"
                             >
                               <span
@@ -6195,7 +6197,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </a>
                           </h3>
                           <time
-                            class="emotion-197 emotion-25"
+                            class="emotion-195 emotion-25"
                             datetime="2021-05-10"
                           >
                             10th May 2021
@@ -6207,28 +6209,28 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </section>
               </div>
               <div
-                class="emotion-170 emotion-171"
+                class="emotion-168 emotion-169"
               >
                 <section
                   aria-labelledby="features-analysis-heading"
-                  class="emotion-172 emotion-173"
+                  class="emotion-170 emotion-171"
                   data-e2e="features-analysis-heading"
                   role="region"
                 >
                   <div
-                    class="emotion-174 emotion-175 emotion-176"
+                    class="emotion-172 emotion-173 emotion-174"
                   >
                     <h2
-                      class="emotion-177 emotion-178"
+                      class="emotion-175 emotion-176"
                     >
                       <span
-                        class="emotion-179 emotion-180"
+                        class="emotion-177 emotion-178"
                       >
                         <span
-                          class="emotion-181 emotion-182"
+                          class="emotion-179 emotion-180"
                         >
                           <span
-                            class="emotion-183 emotion-184"
+                            class="emotion-181 emotion-182"
                             dir="ltr"
                             id="features-analysis-heading"
                           >
@@ -6239,24 +6241,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </h2>
                   </div>
                   <ul
-                    class="emotion-238 emotion-239"
+                    class="emotion-236 emotion-237"
                     role="list"
                   >
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/tori-23146625"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6271,24 +6273,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/tori-23146625"
                               >
                                 How Lagos Dey Fight Lassa Fever
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2017-08-09"
                             >
                               9th August 2017
@@ -6298,20 +6300,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/media-23267821"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6326,24 +6328,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/media-23267821"
                               >
                                 Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2020-02-17"
                             >
                               17th February 2020
@@ -6353,20 +6355,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/23267823"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6381,24 +6383,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/23267823"
                               >
                                 Kojey Radical: Why gigs feel like football matches
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2020-02-17"
                             >
                               17th February 2020
@@ -6408,20 +6410,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/tori-23169387"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6436,24 +6438,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/tori-23169387"
                               >
                                 Libya: omo ile Ghana márùndínláàdóje pada sile
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2017-12-05"
                             >
                               5th December 2017
@@ -6463,20 +6465,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/news/world-africa-23143884"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6491,24 +6493,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/news/world-africa-23143884"
                               >
                                 Like Scaramucci, Like Others
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2017-08-08"
                             >
                               8th August 2017
@@ -6518,20 +6520,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/tori-23146975"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6546,24 +6548,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/tori-23146975"
                               >
                                 Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2017-08-09"
                             >
                               9th August 2017
@@ -6573,20 +6575,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/sport-51434980"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6601,24 +6603,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/sport-51434980"
                               >
                                 Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2020-02-17"
                             >
                               17th February 2020
@@ -6628,20 +6630,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/tori-23145776"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6656,24 +6658,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/tori-23145776"
                               >
                                 Anambra Church: Police Arrest 3
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2017-08-08"
                             >
                               8th August 2017
@@ -6683,20 +6685,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-240 emotion-241"
+                      class="emotion-238 emotion-239"
                     >
                       <div
-                        class="emotion-242"
+                        class="emotion-240"
                         data-testid="frosted-promo-0"
                       >
                         <a
                           aria-hidden="true"
-                          class="emotion-243"
+                          class="emotion-241"
                           href="/pidgin/23146654"
                           tabindex="-1"
                         />
                         <div
-                          class="emotion-244"
+                          class="emotion-242"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
                           <img
@@ -6711,24 +6713,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           />
                         </div>
                         <div
-                          class="lazyload-wrapper emotion-246"
+                          class="lazyload-wrapper emotion-244"
                         >
                           <div
-                            class="emotion-247"
+                            class="emotion-245"
                             data-testid="frosted-glass-lazyload-placeholder"
                           >
                             <h3
-                              class="emotion-248"
+                              class="emotion-246"
                             >
                               <a
-                                class="emotion-249"
+                                class="emotion-247"
                                 href="/pidgin/23146654"
                               >
                                 Kenya Decides 2017 in Pictures
                               </a>
                             </h3>
                             <time
-                              class="emotion-250 emotion-25"
+                              class="emotion-248 emotion-25"
                               datetime="2017-08-08"
                             >
                               8th August 2017
@@ -6741,29 +6743,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </section>
               </div>
               <div
-                class="emotion-348 emotion-349"
+                class="emotion-346 emotion-347"
               >
                 <section
                   aria-labelledby="Most-Read"
-                  class="emotion-350"
+                  class="emotion-348"
                   data-e2e="most-read"
                   data-testid="most-read"
                   role="region"
                 >
                   <div
-                    class="emotion-351 emotion-176"
+                    class="emotion-349 emotion-174"
                   >
                     <h2
-                      class="emotion-177 emotion-178"
+                      class="emotion-175 emotion-176"
                     >
                       <span
-                        class="emotion-179 emotion-180"
+                        class="emotion-177 emotion-178"
                       >
                         <span
-                          class="emotion-181 emotion-182"
+                          class="emotion-179 emotion-180"
                         >
                           <span
-                            class="emotion-183 emotion-184"
+                            class="emotion-181 emotion-182"
                             dir="ltr"
                             id="Most-Read"
                           >
@@ -6774,43 +6776,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </h2>
                   </div>
                   <ol
-                    class="emotion-361 emotion-2"
+                    class="emotion-359 emotion-2"
                     dir="ltr"
                     role="list"
                   >
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             1
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/tori-23135359"
                           >
                             Fin - the secret Facebook group of Nigerian women 4
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-06-21"
                             >
                               De one we dem update for: 21st June 2017
@@ -6820,38 +6822,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             2
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/tori-23146452"
                           >
                             Live Update: Voting Day for Kenya
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-08-08"
                             >
                               De one we dem update for: 8th August 2017
@@ -6861,38 +6863,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             3
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/tori-23139944"
                           >
                             South Africa no Get Money for Army
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-08-08"
                             >
                               De one we dem update for: 8th August 2017
@@ -6902,38 +6904,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             4
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/tori-23146754"
                           >
                             Kenya: Raila Odinga Don Reject Result
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-08-09"
                             >
                               De one we dem update for: 9th August 2017
@@ -6943,38 +6945,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             5
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/23141241"
                           >
                             Kaduna: Government Order More Police
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-08-08"
                             >
                               De one we dem update for: 8th August 2017
@@ -6984,38 +6986,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             6
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/23203390"
                           >
                             Holi festival photos
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2018-06-07"
                             >
                               De one we dem update for: 7th June 2018
@@ -7025,38 +7027,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             7
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/sport-23135581"
                           >
                             Fin - the secret Facebook group of Nigerian women 18
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-06-22"
                             >
                               De one we dem update for: 22nd June 2017
@@ -7066,38 +7068,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             8
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/igbo/23170719"
                           >
                             Water Solutions for traffic gridlock in Lagos
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-12-08"
                             >
                               De one we dem update for: 8th December 2017
@@ -7107,38 +7109,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             9
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/sport-23135580"
                           >
                             Fin - the secret Facebook group of Nigerian women 17
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-06-22"
                             >
                               De one we dem update for: 22nd June 2017
@@ -7148,38 +7150,38 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                     </li>
                     <li
-                      class="emotion-363 emotion-2"
+                      class="emotion-361 emotion-2"
                       dir="ltr"
                       role="listitem"
                     >
                       <div
-                        class="emotion-365"
+                        class="emotion-363"
                       >
                         <div
-                          class="emotion-366"
+                          class="emotion-364"
                           dir="ltr"
                         >
                           <span
-                            class="emotion-367"
+                            class="emotion-365"
                           >
                             10
                           </span>
                         </div>
                         <div
-                          class="emotion-368"
+                          class="emotion-366"
                           dir="ltr"
                         >
                           <a
-                            class="focusIndicatorDisplayTableCell emotion-369"
+                            class="focusIndicatorDisplayTableCell emotion-367"
                             href="/pidgin/tori-23135358"
                           >
                             Fin - the secret Facebook group of Nigerian women 3
                           </a>
                           <div
-                            class="emotion-370"
+                            class="emotion-368"
                           >
                             <time
-                              class="emotion-197 emotion-25"
+                              class="emotion-195 emotion-25"
                               datetime="2017-06-21"
                             >
                               De one we dem update for: 21st June 2017
