@@ -14,6 +14,16 @@ export default async function handler(
 ) {
   try {
     const { service, pageType, id } = req.query;
+
+    console.log('\n\n');
+    console.log('###########################');
+    console.log(req);
+    console.log(service);
+    console.log(pageType);
+    console.log(id);
+    console.log('###########################');
+    console.log('\n\n');
+
     const dataFilePath = path.join(
       process.cwd(),
       '..',
