@@ -34,4 +34,9 @@ export default {
       display: 'inline-block',
       marginTop: `${spacings.HALF}rem`,
     }),
+
+  listItem: () =>
+    css({
+      marginBottom: 0, // reset
+    }),
 };

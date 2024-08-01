@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import React, { ForwardedRef, forwardRef } from 'react';
 import { WHITE } from '#app/components/ThemeProvider/palette';
-import { BulletedList } from '#app/components/BulletedList';
+import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
 import Text from '#app/components/Text';
 import { useFormContext } from '../FormContext';
 import InvalidMessageBox from './InvalidMessageBox';
@@ -46,9 +46,9 @@ const ErrorSummaryBox = forwardRef(
           {isSingleError ? (
             <ErrorLink id={id} labelText={labelText} />
           ) : (
-            <li key={`listItemFor-${id}`}>
+            <BulletedListItem css={styles.listItem} key={`listItemFor-${id}`}>
               <ErrorLink id={id} labelText={labelText} />
-            </li>
+            </BulletedListItem>
           )}
         </>
       );
