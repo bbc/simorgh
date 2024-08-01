@@ -93,11 +93,7 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
-          <ErrorSummaryBox
-            ref={ref}
-            suffix={sectionTitle}
-            labelMap={labelMap}
-          />
+          <ErrorSummaryBox ref={ref} labelMap={labelMap} />
           {formFields}
 
           {privacyNotice && (
