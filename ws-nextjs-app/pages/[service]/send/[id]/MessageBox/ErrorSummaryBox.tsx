@@ -37,6 +37,9 @@ const ErrorSummaryBox = forwardRef(
   ({ suffix, labelMap }: ErrorSummaryProps, ref: ForwardedRef<HTMLElement>) => {
     const { formState } = useFormContext();
     const listOfErrors = getErrorList(formState);
+    if (listOfErrors.length === 0) {
+      return null;
+    }
     const isSingleError = listOfErrors.length === 1;
 
     const errorListItems = listOfErrors.map(({ id }) => {

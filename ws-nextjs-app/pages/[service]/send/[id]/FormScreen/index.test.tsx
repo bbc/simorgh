@@ -25,6 +25,22 @@ jest.mock('next/router', () => ({
 
 describe('Form', () => {
   it('should render and match snapshot', async () => {
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      .mockImplementationOnce(() => ({
+        handleSubmit: jest.fn(e => e.preventDefault()),
+        formState: {},
+        submitted: false,
+        hasValidationErrors: false,
+        attemptedSubmitCount: 1,
+      }))
+      .mockImplementationOnce(() => ({
+        handleSubmit: jest.fn(e => e.preventDefault()),
+        formState: {},
+        submitted: false,
+        hasValidationErrors: false,
+        attemptedSubmitCount: 1,
+      }));
     const { container } = await act(() => {
       return render(
         <Form
@@ -86,12 +102,13 @@ describe('Form', () => {
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => ({
         handleSubmit: jest.fn(e => e.preventDefault()),
+        formState: {},
         submitted: false,
         hasValidationErrors: true,
         attemptedSubmitCount: 1,
       }));
 
-    jest.spyOn(ErrorListModule, 'default').mockReturnValue([
+    jest.spyOn(ErrorListModule, 'default').mockReturnValueOnce([
       {
         id: 'txt49018765',
         messageCode: 'validationRequired',
@@ -127,6 +144,14 @@ describe('Form', () => {
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => ({
         handleSubmit: jest.fn(e => e.preventDefault()),
+        formState: {},
+        submitted: false,
+        hasValidationErrors: false,
+        attemptedSubmitCount: 1,
+      }))
+      .mockImplementationOnce(() => ({
+        handleSubmit: jest.fn(e => e.preventDefault()),
+        formState: {},
         submitted: false,
         hasValidationErrors: false,
         attemptedSubmitCount: 1,

@@ -93,14 +93,11 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
-          {/* TODO - tidy and remove these values? */}
-          {hasAttemptedSubmit && hasValidationErrors && (
-            <ErrorSummaryBox
-              ref={ref}
-              suffix={sectionTitle}
-              labelMap={labelMap}
-            />
-          )}
+          <ErrorSummaryBox
+            ref={ref}
+            suffix={sectionTitle}
+            labelMap={labelMap}
+          />
           {formFields}
 
           {privacyNotice && (
