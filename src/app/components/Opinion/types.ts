@@ -1,6 +1,6 @@
 export type TitleProps = {
   text: string;
-  link: string;
+  canonicalUrl: string;
 };
 
 export type QuoteProps = {
@@ -9,14 +9,14 @@ export type QuoteProps = {
   attributionLocation: string;
 };
 
-export type QuoteList = {
+export type QuoteListProps = {
   connotation: string;
   quotes: QuoteProps[];
 };
 
 export type OpinionBlocks = {
   type: string;
-  model: QuoteList | TitleProps;
+  model: QuoteListProps | TitleProps;
 };
 
 export type OpinionPageProps = {

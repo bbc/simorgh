@@ -1,4 +1,5 @@
 import { Theme, css, keyframes } from '@emotion/react';
+import { HoverStatus } from '../utils/useHovering';
 
 const forwardAnimation = ({ palette }: Theme) =>
   keyframes({
@@ -24,13 +25,13 @@ const initialStyle = css({
   borderLeft: 'solid red 0.2rem',
 });
 
-const transitionStyle = (forwardTrigger: boolean) => (theme: Theme) =>
+const transitionStyle = (forwardTrigger: HoverStatus) => (theme: Theme) =>
   css({
-    animation: `${forwardTrigger ? forwardAnimation(theme) : reverseAnimation(theme)} 0.2s ease-out`,
+    animation: `${forwardTrigger === HoverStatus.HOVERING ? forwardAnimation(theme) : reverseAnimation(theme)} 0.2s ease-out`,
     animationFillMode: 'forwards',
   });
 
-export default (trigger: boolean | null) => [
+export default (trigger: HoverStatus) => [
   initialStyle,
-  trigger != null && transitionStyle(trigger),
+  trigger !== HoverStatus.INITIAL_STATE && transitionStyle(trigger),
 ];

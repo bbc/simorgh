@@ -5,8 +5,8 @@ export default {
       {
         type: 'title',
         model: {
-          text: 'Tomato shortages have caused the price of ketchup to soar.',
-          canonicalUrl: 'https://www.bbc.com/mundo/articles/c20myn5q195o',
+          text: 'Australian school bans clapping in assemblies.',
+          canonicalUrl: 'https://www.bbc.co.uk/news/world-australia-36842731',
         },
       },
       {
@@ -15,17 +15,17 @@ export default {
           connotation: 'positive',
           quotes: [
             {
-              text: `I'm scared this might affect my job security`,
+              text: `Clapping is quite distressing for me as a hearing aid wearer.`,
               attribution: `Factory worker`,
               attributionLocation: `London`,
             },
             {
-              text: `I never thought ketchup would be something I'd have to budget for.`,
+              text: `I have really bad anxiety and policies like this would've helped me a lot at school.`,
               attribution: `Student`,
               attributionLocation: `London`,
             },
             {
-              text: `Feels like everything's going up except my paycheck. Even ketchup isn't safe.`,
+              text: `I think it's a step forward to building a more inclusive and nuturing environment for my children.`,
               attribution: `Parent`,
               attributionLocation: `London`,
             },
@@ -38,18 +38,18 @@ export default {
           connotation: 'negative',
           quotes: [
             {
-              text: `Who care's anyway, it's a rubbish fruit used to make a tasteless sauce.`,
+              text: `What next, ban clapping in glastonbury? What nonsense.`,
               attribution: `Experienced Professional`,
               attributionLocation: `London`,
             },
             {
-              text: `Never liked the taste anyway.`,
-              attribution: `Student`,
+              text: `Teachers should be working on making my children's grades better, not on unecessary policies like this.`,
+              attribution: `Parent`,
               attributionLocation: `London`,
             },
             {
-              text: `I never understood the hype over ketchup it's just red gloop.`,
-              attribution: `Young professional`,
+              text: `I'm fed up with minority students generalising themselves and misrepresenting the wider student body.`,
+              attribution: `Student`,
               attributionLocation: `London`,
             },
           ],

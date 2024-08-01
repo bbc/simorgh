@@ -1,14 +1,22 @@
 import { useState } from 'react';
 
+export enum HoverStatus {
+  HOVERING = 'hovering',
+  NOT_HOVERING = 'not_hovering',
+  INITIAL_STATE = 'initial_state',
+}
+
 const useOnHovering = () => {
-  const [hovering, setOnHover] = useState(null as unknown as boolean);
+  const [hovering, setOnHover] = useState(
+    HoverStatus.INITIAL_STATE as HoverStatus,
+  );
 
   const onMouseEnter = () => {
-    setOnHover(true);
+    setOnHover(HoverStatus.HOVERING);
   };
 
   const onMouseLeave = () => {
-    setOnHover(false);
+    setOnHover(HoverStatus.NOT_HOVERING);
   };
 
   return { hovering, listeners: { onMouseEnter, onMouseLeave } };
