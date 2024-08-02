@@ -18,41 +18,41 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-  
-    - name: Simorgh E2E Build
-      uses: cypress-io/github-action@v6
-      with:
-        runTests: false
-        build: yarn build
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+    
+      - name: Simorgh E2E Build
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
+          build: yarn build
 
-    - name: Simorgh NextJS E2E Build
-      uses: cypress-io/github-action@v6
-      with:
-        working-directory: ws-nextjs-app
-        runTests: false
-        build: yarn build
+      - name: Simorgh NextJS E2E Build
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ws-nextjs-app
+          runTests: false
+          build: yarn build
 
-    - name: Save Simorgh E2E Build
-      uses: actions/upload-artifact@v4
-      with:
-        name: simorgh-build
-        if-no-files-found: error
-        path: build
-  
-    - name: Save Simorgh NextJS E2E Build
-      uses: actions/upload-artifact@v4
-      with:
-        name: simorgh-nextjs-build
-        if-no-files-found: error
-        path: ws-nextjs-app/build
+      - name: Save Simorgh E2E Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: simorgh-build
+          if-no-files-found: error
+          path: build
+    
+      - name: Save Simorgh NextJS E2E Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: simorgh-nextjs-build
+          if-no-files-found: error
+          path: ws-nextjs-app/build
 
   cypress-run:
     runs-on: ubuntu-latest
