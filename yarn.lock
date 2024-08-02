@@ -16645,6 +16645,7 @@ __metadata:
     "@testing-library/react": "npm:15.0.7"
     babel-plugin-transform-rename-import: "npm:2.3.0"
     cypress: "npm:13.10.0"
+    cypress-split: "npm:^1.24.0"
     cypress-terminal-report: "npm:6.0.2"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"

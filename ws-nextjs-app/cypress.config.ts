@@ -1,11 +1,13 @@
 /* eslint-disable no-param-reassign */
 import { defineConfig } from 'cypress';
+import cypressSplit from 'cypress-split';
 
 export default defineConfig({
   // Consider moving 'retries' to a per-test level once we have more tests
   retries: 3,
   e2e: {
     setupNodeEvents(on, config) {
+      cypressSplit(on, config);
       if (!config.env.APP_ENV) {
         config.env.APP_ENV = 'local';
       }
