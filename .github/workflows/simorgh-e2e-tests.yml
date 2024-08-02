@@ -20,7 +20,7 @@ jobs:
         node-version: [18.x]
   steps:
     - name: Checkout
-        uses: actions/checkout@v3
+      uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -41,18 +41,18 @@ jobs:
         build: yarn build
 
     - name: Save Simorgh E2E Build
-        uses: actions/upload-artifact@v4
-        with:
-          name: simorgh-build
-          if-no-files-found: error
-          path: build
+      uses: actions/upload-artifact@v4
+      with:
+        name: simorgh-build
+        if-no-files-found: error
+        path: build
   
     - name: Save Simorgh NextJS E2E Build
-        uses: actions/upload-artifact@v4
-        with:
-          name: simorgh-nextjs-build
-          if-no-files-found: error
-          path: ws-nextjs-app/build
+      uses: actions/upload-artifact@v4
+      with:
+        name: simorgh-nextjs-build
+        if-no-files-found: error
+        path: ws-nextjs-app/build
 
   cypress-run:
     runs-on: ubuntu-latest
