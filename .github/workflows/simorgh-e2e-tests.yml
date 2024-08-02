@@ -93,7 +93,10 @@ jobs:
         with:
           name: simorgh-nextjs-build
           path: ws-nextjs-app
-
+          
+      - name: List all files
+        run: ls -a
+    
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v6
         env:
