@@ -69,6 +69,7 @@ jobs:
       CYPRESS_SMOKE: true
       BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
       CYPRESS_APP_ENV: 'local'
+      YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
     steps:
       - name: Checkout
