@@ -99,6 +99,7 @@ jobs:
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}
         with:
+          install-command: yarn install
           start: yarn start
 
       - name: Run Simorgh NextJS E2Es
@@ -108,4 +109,5 @@ jobs:
           SPLIT_INDEX: ${{ strategy.job-index }}
         with:
           working-directory: ws-nextjs-app
+          install-command: yarn install
           start: yarn start
