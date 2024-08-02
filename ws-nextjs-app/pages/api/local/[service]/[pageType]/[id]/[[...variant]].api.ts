@@ -2,38 +2,47 @@ import fs from 'node:fs/promises';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+type RequestPathParts = {
+  service: string;
+  pageType: string;
+  id: string;
+  variant?: string[];
+};
+
 const getFixtureLocation = (pageType: string) =>
   ({
     live: 'livePage',
     send: 'send',
   })[pageType];
 
-const constructDataFilePath = (dataPathId: string[]) => {
-  if (dataPathId.length > 4) {
+const constructDataFilePath = ({
+  service,
+  pageType,
+  id,
+  variant = [],
+}: RequestPathParts) => {
+  if (variant && variant.length > 1) {
     throw new Error('Invalid file path.');
   }
 
-  const [service, ...rest] = dataPathId;
-  const [pathSegment, pathSegment2, pathSegment3] = rest;
-  const pathHasVariant = ['simp', 'trad', 'cyr', 'lat'].includes(pathSegment);
-
-  return pathHasVariant
+  const [variantName] = variant;
+  return variantName
     ? path.join(
         process.cwd(),
         '..',
         'data',
         service,
-        getFixtureLocation(pathSegment2) as string,
-        pathSegment3,
-        `${pathSegment}.json`,
+        getFixtureLocation(pageType) as string,
+        id,
+        `${variantName}.json`,
       )
     : path.join(
         process.cwd(),
         '..',
         'data',
         service,
-        getFixtureLocation(pathSegment as string) as string,
-        `${pathSegment2}.json`,
+        getFixtureLocation(pageType as string) as string,
+        `${id}.json`,
       );
 };
 
@@ -42,8 +51,7 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   try {
-    const { id } = req.query;
-    const dataFilePath = constructDataFilePath(id as string[]);
+    const dataFilePath = constructDataFilePath(req.query as RequestPathParts);
     const pageData = await fs.readFile(dataFilePath, {
       encoding: 'utf8',
     });

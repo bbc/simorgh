@@ -2,17 +2,19 @@
  * @jest-environment node
  */
 import { testApiHandler } from 'next-test-api-route-handler';
-import * as pagesHandler from './[...id].api';
-import livePageData from '../../../../data/pidgin/livePage/c7p765ynk9qt.json';
-import dualScriptLivePageData from '../../../../data/zhongwen/livePage/c0000000000t/simp.json';
-import ugFormData from '../../../../data/mundo/send/u50853489.json';
+import * as pagesHandler from './[[...variant]].api';
+import livePageData from '../../../../../../../data/pidgin/livePage/c7p765ynk9qt.json';
+import dualScriptLivePageData from '../../../../../../../data/zhongwen/livePage/c0000000000t/simp.json';
+import ugFormData from '../../../../../../../data/mundo/send/u50853489.json';
 
 describe('API Routes', () => {
   it('should return Live Page data', async () => {
     await testApiHandler({
       pagesHandler,
       params: {
-        id: ['pidgin', 'live', 'c7p765ynk9qt'],
+        service: 'pidgin',
+        pageType: 'live',
+        id: 'c7p765ynk9qt',
       },
       test: async ({ fetch }) => {
         await fetch({ method: 'GET' });
@@ -28,7 +30,10 @@ describe('API Routes', () => {
     await testApiHandler({
       pagesHandler,
       params: {
-        id: ['zhongwen', 'simp', 'live', 'c0000000000t'],
+        service: 'zhongwen',
+        pageType: 'live',
+        id: 'c0000000000t',
+        variant: ['simp'],
       },
       test: async ({ fetch }) => {
         await fetch({ method: 'GET' });
@@ -44,7 +49,9 @@ describe('API Routes', () => {
     await testApiHandler({
       pagesHandler,
       params: {
-        id: ['mundo', 'send', 'u50853489'],
+        service: 'mundo',
+        pageType: 'send',
+        id: 'u50853489',
       },
       test: async ({ fetch }) => {
         await fetch({ method: 'GET' });
@@ -60,7 +67,9 @@ describe('API Routes', () => {
     await testApiHandler({
       pagesHandler,
       params: {
-        id: ['swahili', 'invalidType', 'u50853489'],
+        service: 'swahili',
+        pageType: 'invalidType',
+        id: 'u50853489',
       },
       test: async ({ fetch }) => {
         await fetch({ method: 'GET' });
@@ -80,15 +89,10 @@ describe('API Routes', () => {
     await testApiHandler({
       pagesHandler,
       params: {
-        id: [
-          'zhongwen',
-          'simp',
-          'live',
-          'c0000000000t',
-          'other',
-          'path',
-          'parts',
-        ],
+        service: 'zhongwen',
+        pageType: 'live',
+        id: 'c0000000000t',
+        variant: ['simp', 'other', 'path', 'parts'],
       },
       test: async ({ fetch }) => {
         await fetch({ method: 'GET' });
