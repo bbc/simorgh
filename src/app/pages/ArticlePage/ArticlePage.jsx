@@ -37,7 +37,6 @@ import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import WithExperimentContext from '#app/contexts/ExperimentContext';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -193,82 +192,80 @@ const ArticlePage = ({ pageData }) => {
   );
 
   return (
-    <WithExperimentContext>
-      <div css={styles.pageWrapper}>
-        <ATIAnalytics atiData={atiData} />
-        <ChartbeatAnalytics
-          sectionName={pageData?.relatedContent?.section?.name}
-          title={getPromoHeadline(pageData)}
-        />
-        <ComscoreAnalytics />
-        <NielsenAnalytics />
-        <ArticleMetadata
-          articleId={getArticleId(pageData)}
-          title={headline}
-          author={articleAuthor}
-          twitterHandle={articleAuthorTwitterHandle}
-          firstPublished={firstPublished}
-          lastPublished={lastPublished}
-          section={getArticleSection(pageData)}
-          aboutTags={aboutTags}
-          mentionsTags={getMentions(pageData)}
-          lang={getLang(pageData)}
-          description={description}
-          imageLocator={promoImage}
-          imageAltText={promoImageAltText}
-        />
-        <LinkedData
-          showAuthor
-          bylineLinkedData={bylineLinkedData}
-          type={
-            !isPGL
-              ? categoryName(isTrustProjectParticipant, taggings, formats)
-              : 'Article'
-          }
-          seoTitle={headline}
-          headline={headline}
-          description={description}
-          datePublished={firstPublished}
-          dateModified={lastPublished}
-          aboutTags={aboutTags}
-          imageLocator={promoImage}
-        />
-        {allowAdvertising && (
-          <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
-        )}
-        <div css={styles.grid}>
-          <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-            <main css={styles.mainContent} role="main">
-              <Blocks
-                blocks={articleBlocks}
-                componentsToRender={componentsToRender}
-              />
-            </main>
-            {showRelatedTopics && topics && (
-              <RelatedTopics
-                css={styles.relatedTopics}
-                topics={topics}
-                mobileDivider={false}
-                backgroundColour={GREY_2}
-                tagBackgroundColour={WHITE}
-              />
-            )}
-            <RelatedContentSection content={blocks} />
-          </div>
-          {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+    <div css={styles.pageWrapper}>
+      <ATIAnalytics atiData={atiData} />
+      <ChartbeatAnalytics
+        sectionName={pageData?.relatedContent?.section?.name}
+        title={getPromoHeadline(pageData)}
+      />
+      <ComscoreAnalytics />
+      <NielsenAnalytics />
+      <ArticleMetadata
+        articleId={getArticleId(pageData)}
+        title={headline}
+        author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
+        section={getArticleSection(pageData)}
+        aboutTags={aboutTags}
+        mentionsTags={getMentions(pageData)}
+        lang={getLang(pageData)}
+        description={description}
+        imageLocator={promoImage}
+        imageAltText={promoImageAltText}
+      />
+      <LinkedData
+        showAuthor
+        bylineLinkedData={bylineLinkedData}
+        type={
+          !isPGL
+            ? categoryName(isTrustProjectParticipant, taggings, formats)
+            : 'Article'
+        }
+        seoTitle={headline}
+        headline={headline}
+        description={description}
+        datePublished={firstPublished}
+        dateModified={lastPublished}
+        aboutTags={aboutTags}
+        imageLocator={promoImage}
+      />
+      {allowAdvertising && (
+        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+      )}
+      <div css={styles.grid}>
+        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+          <main css={styles.mainContent} role="main">
+            <Blocks
+              blocks={articleBlocks}
+              componentsToRender={componentsToRender}
+            />
+          </main>
+          {showRelatedTopics && topics && (
+            <RelatedTopics
+              css={styles.relatedTopics}
+              topics={topics}
+              mobileDivider={false}
+              backgroundColour={GREY_2}
+              tagBackgroundColour={WHITE}
+            />
+          )}
+          <RelatedContentSection content={blocks} />
         </div>
-        {!isApp && !isPGL && (
-          <MostRead
-            css={styles.mostReadSection}
-            data={mostReadInitialData}
-            columnLayout="multiColumn"
-            size="default"
-            headingBackgroundColour={GREY_2}
-            mobileDivider={showRelatedTopics && topics}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
-    </WithExperimentContext>
+      {!isApp && !isPGL && (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showRelatedTopics && topics}
+        />
+      )}
+    </div>
   );
 };
 

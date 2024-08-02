@@ -58,7 +58,7 @@ const didSuppressWarning = (message, ...rest) => {
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
-
+  console.log(message);
   const formattedMessage = getFormattedMessage(message, rest);
 
   throw new Error(

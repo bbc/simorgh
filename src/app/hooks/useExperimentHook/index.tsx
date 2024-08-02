@@ -7,9 +7,9 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { ServiceContext } from '../ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-enum Stages {
+export enum Stages {
   STAGE_1 = 'stage_1',
   STAGE_2 = 'stage_2',
   STAGE_3 = 'stage_3',
@@ -18,45 +18,36 @@ enum Stages {
 
 type ExperimentCriteria = Partial<{
   service: Services;
-  jsEnabled: boolean;
   isOperaMini: boolean;
   dataSaver: boolean;
   lowPower: boolean;
 }>;
 
+export type Navigator = {
+  connection: { saveData: boolean };
+  getBattery?: () => Promise<{ level: number }>;
+};
+
+const LOW_POWER_THRESHOLD = 0.2;
+
 const determineStage = ({
   service,
-  jsEnabled = true,
   isOperaMini,
   dataSaver,
   lowPower,
 }: ExperimentCriteria) => {
-  if (
-    service !== 'mundo' &&
-    !lowPower &&
-    !dataSaver &&
-    jsEnabled &&
-    !isOperaMini
-  ) {
+  if (service !== 'mundo' && !lowPower && !dataSaver && !isOperaMini) {
     return Stages.STAGE_3;
   }
 
-  if (
-    jsEnabled &&
-    (service === 'mundo' || dataSaver || isOperaMini || lowPower)
-  ) {
+  if (service === 'mundo' || dataSaver || isOperaMini || lowPower) {
     return Stages.STAGE_2;
-  }
-
-  if (!jsEnabled) {
-    return Stages.STAGE_1;
   }
 
   return Stages.DEFAULT;
 };
-const ExperimentContext = createContext(Stages.DEFAULT);
 
-const WithExperimentContext = ({ children }: PropsWithChildren) => {
+const useExperimentHook = () => {
   const [lowPower, setLowPower] = useState(false);
   const [dataSaver, setSaveDataMode] = useState(false);
   const isOperaMini = useOperaMiniDetection();
@@ -64,19 +55,16 @@ const WithExperimentContext = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     const initialiseDeviceStates = async () => {
-      const nav = navigator as any;
+      const nav = navigator as unknown as Navigator;
       const saveDataMode = nav.connection.saveData;
-
       if (nav.getBattery) {
         const manager = await nav.getBattery();
         const { level } = manager;
-        console.log('CHECK', manager);
-        console.log('CHECK LEVEL', level);
+        const isLowPower = level <= LOW_POWER_THRESHOLD;
+        setLowPower(isLowPower);
       }
-
       setSaveDataMode(saveDataMode);
     };
-
     initialiseDeviceStates();
   }, []);
 
@@ -84,25 +72,10 @@ const WithExperimentContext = ({ children }: PropsWithChildren) => {
     isOperaMini,
     service,
     dataSaver,
-    jsEnabled: true,
     lowPower,
   });
 
-  console.log('CHECK STATUSES', {
-    isOperaMini,
-    service,
-    dataSaver,
-    jsEnabled: true,
-    lowPower,
-  });
-
-  return (
-    <ExperimentContext.Provider value={stage}>
-      {children}
-    </ExperimentContext.Provider>
-  );
+  return stage;
 };
 
-export const useExperimentContext = () => useContext(ExperimentContext);
-
-export default WithExperimentContext;
+export default useExperimentHook;
