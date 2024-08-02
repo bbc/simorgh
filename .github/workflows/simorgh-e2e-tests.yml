@@ -87,12 +87,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: simorgh-build
+          path: build
 
       - name: Download the Simorgh Next.js build folder
         uses: actions/download-artifact@v4
         with:
           name: simorgh-nextjs-build
-          path: ws-nextjs-app
+          path: ws-nextjs-app/build
           
       - name: List all files
         run: ls -a
