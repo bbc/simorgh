@@ -61,7 +61,7 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [18.x]
-        containers: [1, 2, 3]
+        containers: [1, 2, 3, 4, 5, 6, 7, 8]
     env:
       CI: true
       LOG_LEVEL: 'error'
