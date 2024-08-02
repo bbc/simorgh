@@ -3,6 +3,7 @@ import { defineConfig } from 'cypress';
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
 import fs from 'fs';
 import path from 'path';
+import cypressSplit from 'cypress-split';
 import MomentTimezoneInclude from './src/app/legacy/psammead/moment-timezone-include/src';
 import { webpackDirAlias } from './dirAlias';
 
@@ -17,6 +18,7 @@ export default defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
+      cypressSplit(on, config);
       if (!config.env.APP_ENV) {
         config.env.APP_ENV = 'local';
       }

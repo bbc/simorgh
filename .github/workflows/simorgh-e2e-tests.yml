@@ -13,11 +13,55 @@ permissions:
   contents: read
 
 jobs:
-  cypress-run:
+  install:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
+  steps:
+    - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+  
+    - name: Simorgh E2E Build
+      uses: cypress-io/github-action@v6
+      with:
+        runTests: false
+        build: yarn build
+
+    - name: Simorgh NextJS E2E Build
+      uses: cypress-io/github-action@v6
+      with:
+        working-directory: ws-nextjs-app
+        runTests: false
+        build: yarn build
+
+    - name: Save Simorgh E2E Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: simorgh-build
+          if-no-files-found: error
+          path: build
+  
+    - name: Save Simorgh NextJS E2E Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: simorgh-nextjs-build
+          if-no-files-found: error
+          path: ws-nextjs-app/build
+
+  cypress-run:
+    runs-on: ubuntu-latest
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18.x]
+        containers: [1, 2, 3]
     env:
       CI: true
       LOG_LEVEL: 'error'
@@ -38,15 +82,30 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
+      - name: Download the Simorgh build folder
+        uses: actions/download-artifact@v4
+        with:
+          name: simorgh-build
+
+      - name: Download the Simorgh Next.js build folder
+        uses: actions/download-artifact@v4
+        with:
+          name: simorgh-nextjs-build
+          path: ws-nextjs-app
+
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v6
+        env:
+          SPLIT: ${{ strategy.job-total }}
+          SPLIT_INDEX: ${{ strategy.job-index }}
         with:
-          build: yarn build
           start: yarn start
 
       - name: Run Simorgh NextJS E2Es
         uses: cypress-io/github-action@v6
+        env:
+          SPLIT: ${{ strategy.job-total }}
+          SPLIT_INDEX: ${{ strategy.job-index }}
         with:
           working-directory: ws-nextjs-app
-          build: yarn build
           start: yarn start
