@@ -96,7 +96,7 @@ jobs:
           path: ws-nextjs-app/build
           
       - name: List all files
-        run: ls -a
+        run: ls -a && cp envConfig/local.env .env 
     
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v6
