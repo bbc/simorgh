@@ -185,17 +185,14 @@ const constructPageFetchUrl = ({
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}${variantPath}/live/${id}`,
+          `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
         );
         break;
       }
       case UGC_PAGE: {
-        const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
-        fetchUrl = Url(
-          `${host}${port}/api/local/${service}${variantPath}/send/${id}`,
-        );
+        fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
         break;
       }
       default:
