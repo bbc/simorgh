@@ -412,9 +412,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this connectSrc`, () => {
-          expect(generateConnectSrc()).toEqual(
-            connectSrcExpectation,
-          );
+          expect(generateConnectSrc()).toEqual(connectSrcExpectation);
         });
 
         it(`Then it has this defaultSrc`, () => {
@@ -452,9 +450,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this mediaSrc`, () => {
-          expect(generateMediaSrc()).toEqual(
-            mediaSrcExpectation,
-          );
+          expect(generateMediaSrc()).toEqual(mediaSrcExpectation);
         });
 
         it(`Then it has this workerSrc`, () => {
