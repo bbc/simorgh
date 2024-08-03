@@ -9,12 +9,6 @@ type RequestPathParts = {
   variant?: string[];
 };
 
-const getFixtureLocation = (pageType: string) =>
-  ({
-    live: 'livePage',
-    send: 'send',
-  })[pageType];
-
 const constructDataFilePath = ({
   service,
   pageType,
@@ -32,7 +26,7 @@ const constructDataFilePath = ({
         '..',
         'data',
         service,
-        getFixtureLocation(pageType) as string,
+        pageType as string,
         id,
         `${variantName}.json`,
       )
@@ -41,7 +35,7 @@ const constructDataFilePath = ({
         '..',
         'data',
         service,
-        getFixtureLocation(pageType as string) as string,
+        pageType as string,
         `${id}.json`,
       );
 };
