@@ -68,12 +68,31 @@ export default ({
 
     replaceLiveRegionWith(`${fileUploadLiveRegionUpdateText} ${fileName}`);
   };
+  const checkForDuplicate = files => {
+    const checkerObj = {};
+    const newArray: string[] = [];
+
+    files.forEach(fileData => {
+      const { file } = fileData;
+      checkerObj[file.name] = (checkerObj[file.name] || 0) + 1;
+    });
+
+    Object.entries(checkerObj).forEach(([key, value]) => {
+      if (value > 1) {
+        newArray.push(key);
+      }
+    });
+
+    // console.log('dupes', newArray);
+    return checkerObj;
+  };
 
   useEffect(() => {
     Promise.all(
       files.map(async fileData => {
         return new Promise(resolve => {
           const { file } = fileData;
+
           const fileType = file.type.substring(0, file.type.indexOf('/'));
 
           const fileReader = new FileReader();
@@ -100,9 +119,16 @@ export default ({
     ).then(result => setThumbnailState(result as SetStateAction<string[]>));
   }, [files]);
 
+  const nameCounts = checkForDuplicate(files);
+
   const listItems = files.map((fileData: FileData, index: number) => {
     const { file } = fileData;
-    const key = `${index}-${file.name}`;
+    const numOfOccurences = nameCounts[file.name];
+    nameCounts[file.name] = nameCounts[file.name] - 1;
+    const key =
+      numOfOccurences > 1
+        ? `${index}-${file.name}(${numOfOccurences})`
+        : `${index}-${file.name}`;
     const thumbnailSrc = thumbnailState[index];
     const isThumbnailSvg = thumbnailSrc?.startsWith('data:image/svg');
     const ariaDescribedById = `file-list-item-${index}`;
@@ -131,7 +157,9 @@ export default ({
               'aria-describedby': errorBoxAriaDescribedById,
             })}
           >
-            {file.name}
+            {numOfOccurences > 1
+              ? `${file.name} (${numOfOccurences})`
+              : file.name}
           </span>
           <button
             css={styles.focusIndicatorInput}

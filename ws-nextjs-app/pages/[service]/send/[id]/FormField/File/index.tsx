@@ -56,6 +56,23 @@ export default ({
     };
   }, []);
 
+  const checkForDuplicate = files => {
+    const checkerObj = {};
+    const newArray: string[] = [];
+
+    files.forEach(fileData => {
+      const { file } = fileData;
+      checkerObj[file.name] = (checkerObj[file.name] || 0) + 1;
+    });
+
+    Object.entries(checkerObj).forEach(([key, value]) => {
+      if (value > 1) {
+        newArray.push(key);
+      }
+    });
+
+    return checkerObj;
+  };
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
     const chosenFiles = Array.prototype.slice.call(
@@ -68,7 +85,15 @@ export default ({
 
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
-      liveRegionText = `${liveRegionText}${file.name}, `;
+      const nameCounts = checkForDuplicate(uploaded);
+
+      const numOfOccurences = nameCounts[file.name];
+      nameCounts[file.name] = nameCounts[file.name] - 1;
+
+      liveRegionText =
+        numOfOccurences > 1
+          ? `${liveRegionText}${file.name} (${numOfOccurences})`
+          : `${liveRegionText}${file.name}`;
     });
 
     handleChange(name, uploaded);
