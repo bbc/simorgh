@@ -6,7 +6,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
-import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
+import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import { GetServerSidePropsContext } from 'next';
 import Live from './LivePageLayout';
