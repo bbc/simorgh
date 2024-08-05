@@ -1,6 +1,6 @@
 import { FieldData, OnChangeInputName, ValidationError } from '../../types';
 
-const getErrorList = (state: Record<OnChangeInputName, FieldData>) => {
+const getValidationErrors = (state: Record<OnChangeInputName, FieldData>) => {
   const formEntriesNew = new Map(Object.entries(state));
 
   const errorList: ValidationError[] = [];
@@ -17,4 +17,4 @@ const getErrorList = (state: Record<OnChangeInputName, FieldData>) => {
   return errorList;
 };
 
-export default getErrorList;
+export default getValidationErrors;

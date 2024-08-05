@@ -1,4 +1,4 @@
-import getErrorList from './getErrorList';
+import getValidationErrors from './getValidationErrors';
 import { FieldData, OnChangeInputName } from '../../types';
 
 const stateData = {
@@ -55,9 +55,9 @@ const errorList = [
   },
 ];
 
-describe('getErrorList', () => {
+describe('getValidationErrors', () => {
   it(`should return a list of validation errors`, () => {
-    const result = getErrorList(stateData);
+    const result = getValidationErrors(stateData);
     expect(result).toStrictEqual(errorList);
   });
 });

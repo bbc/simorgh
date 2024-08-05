@@ -23,7 +23,7 @@ import {
 } from '../types';
 import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
-import getErrorList from './utils/getErrorList';
+import getValidationErrors from './utils/getValidationErrors';
 
 type SubmissionError = {
   message: string;
@@ -119,8 +119,8 @@ export const FormContextProvider = ({
     setFormState(newFormState);
 
     if (currState.htmlType === 'file') {
-      const listOfErrors = getErrorList(newFormState);
-      setValidationErrors(listOfErrors);
+      const validationErrorsList = getValidationErrors(newFormState);
+      setValidationErrors(validationErrorsList);
     }
   };
 
@@ -133,8 +133,8 @@ export const FormContextProvider = ({
     const updatedState = { [name]: { ...validatedData } };
     const newFormState = { ...formState, ...updatedState };
 
-    const listOfErrors = getErrorList(newFormState);
-    setValidationErrors(listOfErrors);
+    const validationErrorsList = getValidationErrors(newFormState);
+    setValidationErrors(validationErrorsList);
 
     setFormState(newFormState);
   };
@@ -147,10 +147,9 @@ export const FormContextProvider = ({
     const validatedFormData = validateFormStateOnSubmit(formState);
     setFormState(validatedFormData);
 
-    // const validationErrorsList = getValidationErrors(validatedFormData);
-    const listOfErrors = getErrorList(validatedFormData);
-    if (listOfErrors.length > 0) {
-      setValidationErrors(listOfErrors);
+    const validationErrorsList = getValidationErrors(validatedFormData);
+    if (validationErrorsList.length > 0) {
+      setValidationErrors(validationErrorsList);
       return;
     }
 
