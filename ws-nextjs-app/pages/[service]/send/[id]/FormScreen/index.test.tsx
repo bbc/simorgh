@@ -14,8 +14,7 @@ import {
 import * as FormContextModule from '../FormContext';
 import { FormContext } from '../FormContext';
 import Form from '.';
-import { Field } from '../types';
-import * as ErrorListModule from '../FormContext/utils/getErrorList';
+import { Field, InvalidMessageCodes } from '../types';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({
@@ -31,15 +30,15 @@ describe('Form', () => {
         handleSubmit: jest.fn(e => e.preventDefault()),
         formState: {},
         submitted: false,
-        hasValidationErrors: false,
-        attemptedSubmitCount: 1,
+        validationErrors: [],
+        attemptedSubmitCount: 0,
       }))
       .mockImplementationOnce(() => ({
         handleSubmit: jest.fn(e => e.preventDefault()),
         formState: {},
         submitted: false,
-        hasValidationErrors: false,
-        attemptedSubmitCount: 1,
+        validationErrors: [],
+        attemptedSubmitCount: 0,
       }));
     const { container } = await act(() => {
       return render(
@@ -52,12 +51,10 @@ describe('Form', () => {
         />,
       );
     });
-
     const form = container.querySelector('form');
     expect(form).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
-
   it('should handle submit', async () => {
     const handleSubmit = jest.fn(e => e.preventDefault());
     const handleChange = jest.fn();
@@ -71,7 +68,7 @@ describe('Form', () => {
             handleSubmit,
             handleFocusOut,
             submissionError: null,
-            hasValidationErrors: false,
+            validationErrors: [],
             submitted: false,
             progress: '0',
             attemptedSubmitCount: 0,
@@ -90,13 +87,10 @@ describe('Form', () => {
         </FormContext.Provider>,
       );
     });
-
     const submitButton = container.querySelector('button');
     fireEvent.click(submitButton as HTMLButtonElement);
-
     expect(handleSubmit).toHaveBeenCalled();
   });
-
   it('should render an error summary box on an invalid form', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
@@ -104,25 +98,34 @@ describe('Form', () => {
         handleSubmit: jest.fn(e => e.preventDefault()),
         formState: {},
         submitted: false,
-        hasValidationErrors: true,
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+          {
+            id: 'txt49018835',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+        attemptedSubmitCount: 1,
+      }))
+      .mockImplementationOnce(() => ({
+        handleSubmit: jest.fn(e => e.preventDefault()),
+        formState: {},
+        submitted: false,
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+          {
+            id: 'txt49018835',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
         attemptedSubmitCount: 1,
       }));
-
-    jest.spyOn(ErrorListModule, 'default').mockReturnValueOnce([
-      {
-        id: 'txt49018765',
-        messageCode: 'validationRequired',
-      },
-      {
-        id: 'txt49018835',
-        messageCode: 'validationRequired',
-      },
-      {
-        id: 'txt49019016',
-        messageCode: 'validationRequired',
-      },
-    ]);
-
     const { container } = await act(() => {
       return render(
         <Form
@@ -134,11 +137,9 @@ describe('Form', () => {
         />,
       );
     });
-
     const errorSummary = container.querySelector('strong[id=errorSummaryBox]');
     expect(errorSummary).toBeInTheDocument();
   });
-
   it('should render no error summary box on a valid form', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
@@ -146,17 +147,16 @@ describe('Form', () => {
         handleSubmit: jest.fn(e => e.preventDefault()),
         formState: {},
         submitted: false,
-        hasValidationErrors: false,
+        validationErrors: [],
         attemptedSubmitCount: 1,
       }))
       .mockImplementationOnce(() => ({
         handleSubmit: jest.fn(e => e.preventDefault()),
         formState: {},
         submitted: false,
-        hasValidationErrors: false,
+        validationErrors: [],
         attemptedSubmitCount: 1,
       }));
-
     const { container } = await act(() => {
       return render(
         <Form
@@ -168,9 +168,7 @@ describe('Form', () => {
         />,
       );
     });
-
     const errorSummmary = container.querySelector('strong[id=errorSummaryBox]');
-
     expect(errorSummmary).toBeNull();
   });
 });

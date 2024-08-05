@@ -28,7 +28,7 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submitted, hasValidationErrors, attemptedSubmitCount } =
+  const { handleSubmit, submitted, validationErrors, attemptedSubmitCount } =
     useFormContext();
 
   const {
@@ -43,6 +43,7 @@ export default function FormScreen({
   const ref = useRef<HTMLElement>(null);
 
   const hasAttemptedSubmit = attemptedSubmitCount > 0;
+  const hasValidationErrors = validationErrors.length > 0;
 
   useEffect(() => {
     if (hasValidationErrors && hasAttemptedSubmit) {
@@ -55,6 +56,7 @@ export default function FormScreen({
     title,
     hasValidationErrors,
     hasAttemptedSubmit,
+    // refocuses on error summary box after every submission attempt
     attemptedSubmitCount,
     validationRequired,
   ]);
@@ -93,7 +95,9 @@ export default function FormScreen({
       )}
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
-          <ErrorSummaryBox ref={ref} labelMap={labelMap} />
+          {hasAttemptedSubmit && hasValidationErrors && (
+            <ErrorSummaryBox ref={ref} labelMap={labelMap} />
+          )}
           {formFields}
 
           {privacyNotice && (
