@@ -19,7 +19,6 @@ import {
 } from '../svgs';
 import InvalidMessageBox from '../../InvalidMessageBox';
 import fallbackTranslations from '../../../fallbackTranslations';
-import checkForDuplicate from '../utils/checkForDuplicate';
 
 interface FileListProps {
   files: FileData[];
@@ -102,16 +101,10 @@ export default ({
     ).then(result => setThumbnailState(result as SetStateAction<string[]>));
   }, [files]);
 
-  const nameCounts = checkForDuplicate(files);
-
   const listItems = files.map((fileData: FileData, index: number) => {
     const { file } = fileData;
-    const numOfOccurences = nameCounts[file.name];
-    nameCounts[file.name] -= 1;
-    const key =
-      numOfOccurences > 1
-        ? `${index}-${file.name}(${numOfOccurences})`
-        : `${index}-${file.name}`;
+
+    const key = `${index}-${file.name}`;
     const thumbnailSrc = thumbnailState[index];
     const isThumbnailSvg = thumbnailSrc?.startsWith('data:image/svg');
     const ariaDescribedById = `file-list-item-${index}`;
@@ -140,9 +133,7 @@ export default ({
               'aria-describedby': errorBoxAriaDescribedById,
             })}
           >
-            {numOfOccurences > 1
-              ? `${file.name} (${numOfOccurences})`
-              : file.name}
+            {file.name}
           </span>
           <button
             css={styles.focusIndicatorInput}
