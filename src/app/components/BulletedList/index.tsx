@@ -12,6 +12,7 @@ import styles from './index.styles';
 
 interface ListItemProps {
   className?: string;
+  key?: string;
 }
 interface ListProps extends HTMLAttributes<HTMLUListElement> {
   bulletPointShape?: string;
@@ -22,9 +23,15 @@ interface ListProps extends HTMLAttributes<HTMLUListElement> {
 export const BulletedListItem = ({
   children,
   className,
+  key,
 }: PropsWithChildren<ListItemProps>) => {
   return (
-    <li role="listitem" className={className} css={styles.bulletListItem}>
+    <li
+      role="listitem"
+      className={className}
+      css={styles.bulletListItem}
+      key={key}
+    >
       {children}
     </li>
   );
