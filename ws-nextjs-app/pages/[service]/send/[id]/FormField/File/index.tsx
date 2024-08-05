@@ -12,6 +12,7 @@ import { UploadSvg } from './svgs';
 import FileList from './FileList';
 import InvalidMessageBox from '../InvalidMessageBox';
 import fallbackTranslations from '../../fallbackTranslations';
+import checkForDuplicate from './utils/checkForDuplicate';
 
 export default ({
   id,
@@ -56,23 +57,6 @@ export default ({
     };
   }, []);
 
-  const checkForDuplicate = files => {
-    const checkerObj = {};
-    const newArray: string[] = [];
-
-    files.forEach(fileData => {
-      const { file } = fileData;
-      checkerObj[file.name] = (checkerObj[file.name] || 0) + 1;
-    });
-
-    Object.entries(checkerObj).forEach(([key, value]) => {
-      if (value > 1) {
-        newArray.push(key);
-      }
-    });
-
-    return checkerObj;
-  };
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     // Converts FileList to an actual array
     const chosenFiles = Array.prototype.slice.call(

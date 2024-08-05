@@ -19,6 +19,7 @@ import {
 } from '../svgs';
 import InvalidMessageBox from '../../InvalidMessageBox';
 import fallbackTranslations from '../../../fallbackTranslations';
+import checkForDuplicate from '../utils/checkForDuplicate';
 
 interface FileListProps {
   files: FileData[];
@@ -67,24 +68,6 @@ export default ({
     });
 
     replaceLiveRegionWith(`${fileUploadLiveRegionUpdateText} ${fileName}`);
-  };
-  const checkForDuplicate = files => {
-    const checkerObj = {};
-    const newArray: string[] = [];
-
-    files.forEach(fileData => {
-      const { file } = fileData;
-      checkerObj[file.name] = (checkerObj[file.name] || 0) + 1;
-    });
-
-    Object.entries(checkerObj).forEach(([key, value]) => {
-      if (value > 1) {
-        newArray.push(key);
-      }
-    });
-
-    // console.log('dupes', newArray);
-    return checkerObj;
   };
 
   useEffect(() => {
