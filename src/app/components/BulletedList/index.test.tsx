@@ -1,20 +1,6 @@
 import React from 'react';
 import { render, screen } from '../react-testing-library-with-providers';
-import arabic from '../ThemeProvider/fontScripts/arabic';
-import latin from '../ThemeProvider/fontScripts/latin';
 import { BulletedList, BulletedListItem } from './index';
-
-const ltrProps = {
-  dir: 'ltr',
-  script: latin,
-  service: 'news',
-};
-
-const rtlProps = {
-  dir: 'rtl',
-  script: arabic,
-  service: 'arabic',
-};
 
 describe('BulletedList', () => {
   beforeEach(() => {
@@ -23,7 +9,7 @@ describe('BulletedList', () => {
 
   it('should render list with a proper role', () => {
     render(
-      <BulletedList {...ltrProps}>
+      <BulletedList>
         <BulletedListItem>First item on the list</BulletedListItem>
       </BulletedList>,
     );
@@ -33,7 +19,7 @@ describe('BulletedList', () => {
 
   it('should render list items with proper roles', () => {
     const { getByText } = render(
-      <BulletedList {...ltrProps}>
+      <BulletedList>
         <BulletedListItem>First item on the list</BulletedListItem>
       </BulletedList>,
     );
@@ -43,7 +29,7 @@ describe('BulletedList', () => {
 
   it('should confirm that the list-style is none, so that screen-readers do not read out "bullet', () => {
     const { getByRole } = render(
-      <BulletedList {...ltrProps}>
+      <BulletedList>
         <BulletedListItem>First item on the list</BulletedListItem>
       </BulletedList>,
     );
@@ -54,7 +40,7 @@ describe('BulletedList', () => {
 
   it('should confirm that the margin-top property is zero', () => {
     const { getByRole } = render(
-      <BulletedList {...ltrProps}>
+      <BulletedList>
         <BulletedListItem>First item on the list</BulletedListItem>
       </BulletedList>,
     );
@@ -65,11 +51,7 @@ describe('BulletedList', () => {
 
   it('should render correctly with custom bulletPointShape and bulletPointColour', () => {
     const { container } = render(
-      <BulletedList
-        {...ltrProps}
-        bulletPointShape="square"
-        bulletPointColour="#f00"
-      >
+      <BulletedList bulletPointShape="square" bulletPointColour="#f00">
         <BulletedListItem>First item on the list</BulletedListItem>
         <BulletedListItem>Second item on the list</BulletedListItem>
         <BulletedListItem>Final list item</BulletedListItem>
@@ -80,7 +62,7 @@ describe('BulletedList', () => {
 
   it('should render correctly from ltr', () => {
     const { container } = render(
-      <BulletedList {...ltrProps}>
+      <BulletedList>
         <BulletedListItem>First item on the list</BulletedListItem>
         <BulletedListItem>Second item on the list</BulletedListItem>
         <BulletedListItem>Final list item</BulletedListItem>
@@ -91,11 +73,12 @@ describe('BulletedList', () => {
 
   it('should render correctly from rtl', () => {
     const { container } = render(
-      <BulletedList {...rtlProps}>
+      <BulletedList>
         <BulletedListItem>العنصر الأول في القائمة</BulletedListItem>
         <BulletedListItem>البند الثاني في القائمة</BulletedListItem>
         <BulletedListItem>عنصر القائمة النهائية</BulletedListItem>
       </BulletedList>,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });

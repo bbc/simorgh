@@ -80,8 +80,8 @@ exports[`BulletedList should render correctly from rtl 1`] = `
   margin-top: 0;
   list-style-type: none;
   font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -89,14 +89,14 @@ exports[`BulletedList should render correctly from rtl 1`] = `
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 1rem;
-    line-height: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 1rem;
-    line-height: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
