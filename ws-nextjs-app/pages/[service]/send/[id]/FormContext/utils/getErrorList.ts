@@ -1,19 +1,17 @@
-import { FieldData, OnChangeInputName } from '../../types';
-
-type FieldError = {
-  id: string;
-  messageCode: string;
-};
+import { FieldData, OnChangeInputName, ValidationError } from '../../types';
 
 const getErrorList = (state: Record<OnChangeInputName, FieldData>) => {
   const formEntriesNew = new Map(Object.entries(state));
 
-  const errorList: FieldError[] = [];
+  const errorList: ValidationError[] = [];
 
   formEntriesNew.forEach((data, key) => {
     const { isValid, messageCode } = data;
     if (isValid === false) {
-      errorList.push({ id: key, messageCode: messageCode as string });
+      errorList.push({
+        id: key,
+        messageCode,
+      });
     }
   });
   return errorList;

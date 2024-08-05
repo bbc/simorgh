@@ -4,7 +4,8 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import ErrorSummaryBox from './ErrorSummaryBox';
-import * as ErrorListModule from '../FormContext/utils/getErrorList';
+import * as FormContextModule from '../FormContext';
+import { InvalidMessageCodes } from '../types';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
@@ -13,9 +14,8 @@ jest.mock('next/router', () => ({
 const labelMap = {
   txt49018765: 'Nombre',
   txt49018835: 'Dirección de email (Obligatorio)',
-  txt49018894: 'Ciudad y país',
-  txt49018963: 'Número de teléfono',
   txt49019016: 'Comentario (Obligatorio)',
+  upl130087996: 'Attach your file (optional)',
   chk49021805:
     'Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario.',
 } as Record<string, string>;
@@ -26,20 +26,25 @@ describe('ErrorSummaryBox', () => {
   });
 
   it('should render an unordered list for multiple validation errors', async () => {
-    jest.spyOn(ErrorListModule, 'default').mockReturnValueOnce([
-      {
-        id: 'txt49018765',
-        messageCode: 'validationRequired',
-      },
-      {
-        id: 'txt49018835',
-        messageCode: 'validationRequired',
-      },
-      {
-        id: 'txt49019016',
-        messageCode: 'validationRequired',
-      },
-    ]);
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+          {
+            id: 'txt49018835',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+          {
+            id: 'txt49019016',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+      }));
     const { container } = await act(() => {
       return render(<ErrorSummaryBox labelMap={labelMap} />);
     });
@@ -52,12 +57,17 @@ describe('ErrorSummaryBox', () => {
   });
 
   it('should render a span not a list for a single validation error', async () => {
-    jest.spyOn(ErrorListModule, 'default').mockReturnValueOnce([
-      {
-        id: 'txt49018765',
-        messageCode: 'validationRequired',
-      },
-    ]);
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+      }));
     const { container } = await act(() => {
       return render(<ErrorSummaryBox labelMap={labelMap} />);
     });
@@ -70,12 +80,17 @@ describe('ErrorSummaryBox', () => {
   });
 
   it('should render links with href to input id and label name', async () => {
-    jest.spyOn(ErrorListModule, 'default').mockReturnValueOnce([
-      {
-        id: 'txt49018765',
-        messageCode: 'validationRequired',
-      },
-    ]);
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+      }));
     const { container } = await act(() => {
       return render(<ErrorSummaryBox labelMap={labelMap} />);
     });
@@ -83,5 +98,28 @@ describe('ErrorSummaryBox', () => {
     const inputWithError = container.querySelector('a[href="#txt49018765"]');
     expect(inputWithError).toBeInTheDocument();
     expect(inputWithError?.textContent).toEqual(`Nombre`);
+  });
+
+  it('should prefix fileUpload href so that focus is taken to Upload button label', async () => {
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'upl130087996',
+            messageCode: null,
+          },
+        ],
+      }));
+    const { container } = await act(() => {
+      return render(<ErrorSummaryBox labelMap={labelMap} />);
+    });
+
+    const inputWithError = container.querySelector(
+      'a[href="#label-upl130087996"]',
+    );
+    expect(inputWithError).toBeInTheDocument();
+    expect(inputWithError?.textContent).toEqual(`Attach your file (optional)`);
   });
 });

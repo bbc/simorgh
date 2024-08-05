@@ -137,3 +137,8 @@ export type UGCSendErrorResponse = {
   code: string;
   status: number;
 };
+
+export type ValidationError = {
+  id: string;
+  messageCode: InvalidMessageCodes | null;
+};

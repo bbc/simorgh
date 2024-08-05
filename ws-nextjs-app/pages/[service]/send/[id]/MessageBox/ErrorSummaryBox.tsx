@@ -6,7 +6,6 @@ import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
 import Text from '#app/components/Text';
 import { useFormContext } from '../FormContext';
 import InvalidMessageBox from './InvalidMessageBox';
-import getErrorList from '../FormContext/utils/getErrorList';
 import styles from './styles';
 import { InvalidMessageCodes } from '../types';
 
@@ -20,9 +19,11 @@ type ListItemsLinkProps = {
 };
 
 const ErrorLink = ({ id, labelText }: ListItemsLinkProps) => {
+  const isFileUpload = id.substring(0, 3) === 'upl';
+  const linkHref = isFileUpload ? `#label-${id}` : `#${id}`;
   return (
     <a
-      href={`#${id}`}
+      href={linkHref}
       className="focusIndicatorReducedWidthInverted"
       css={styles.link}
     >
@@ -33,14 +34,13 @@ const ErrorLink = ({ id, labelText }: ListItemsLinkProps) => {
 
 const ErrorSummaryBox = forwardRef(
   ({ labelMap }: ErrorSummaryProps, ref: ForwardedRef<HTMLElement>) => {
-    const { formState } = useFormContext();
-    const listOfErrors = getErrorList(formState);
-    if (listOfErrors.length === 0) {
+    const { validationErrors } = useFormContext();
+    if (validationErrors.length === 0) {
       return null;
     }
-    const isSingleError = listOfErrors.length === 1;
+    const isSingleError = validationErrors.length === 1;
 
-    const errorListItems = listOfErrors.map(({ id }) => {
+    const errorListItems = validationErrors.map(({ id }) => {
       const labelText = labelMap[id];
       return (
         <>
