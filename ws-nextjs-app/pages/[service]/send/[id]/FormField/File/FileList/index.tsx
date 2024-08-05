@@ -107,7 +107,7 @@ export default ({
   const listItems = files.map((fileData: FileData, index: number) => {
     const { file } = fileData;
     const numOfOccurences = nameCounts[file.name];
-    nameCounts[file.name] = nameCounts[file.name] - 1;
+    nameCounts[file.name] -= 1;
     const key =
       numOfOccurences > 1
         ? `${index}-${file.name}(${numOfOccurences})`

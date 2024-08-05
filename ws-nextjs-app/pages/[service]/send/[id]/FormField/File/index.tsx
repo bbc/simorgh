@@ -70,9 +70,8 @@ export default ({
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
       const nameCounts = checkForDuplicate(uploaded);
-
       const numOfOccurences = nameCounts[file.name];
-      nameCounts[file.name] = nameCounts[file.name] - 1;
+      nameCounts[file.name] -= 1;
 
       liveRegionText =
         numOfOccurences > 1
