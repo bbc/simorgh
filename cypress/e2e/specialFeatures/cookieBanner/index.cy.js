@@ -39,6 +39,7 @@ const getPaths = service =>
   );
 
 const pageType = 'all';
+const urlsToExcludeFromAmpTests = ['_tv', '_radio'];
 
 Object.keys(config)
   .filter(service => serviceFilter(service))
@@ -57,7 +58,7 @@ Object.keys(config)
     paths
       .map(path => `${path}.amp`)
       .forEach(path => {
-        if (!path.includes('tv')) {
+        if (!urlsToExcludeFromAmpTests.some(url => path.includes(url))) {
           describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
             beforeEach(() => {
               visitPage(path, pageType);
