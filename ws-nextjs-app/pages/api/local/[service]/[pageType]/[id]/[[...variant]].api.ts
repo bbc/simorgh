@@ -7,7 +7,7 @@ type RequestPathParts = {
   service: Services;
   pageType: PageTypes;
   id: string;
-  variant?: Variants;
+  variant?: Variants[];
 };
 
 const constructDataFilePath = ({
