@@ -136,7 +136,7 @@ const ArticlePage = ({ pageData }) => {
     ),
     timestamp: props =>
       hasByline ? (
-        <Byline {...props}>
+        <Byline blocks={bylineContribBlocks}>
           <Timestamp
             firstPublished={new Date(firstPublished).getTime()}
             lastPublished={new Date(lastPublished).getTime()}
