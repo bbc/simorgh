@@ -70,7 +70,7 @@ export default ({
       file: File,
       ogFileName: string,
       fileNameCount = 1,
-    ) => {
+    ): File => {
       const newFile = new File(
         [file],
         fileNameCount > 1 ? `${ogFileName} (${fileNameCount})` : file.name,
