@@ -72,6 +72,10 @@ export const Checkbox = () => (
   />
 );
 
+export const CheckboxRequired = () => (
+  <Component id={fieldsData[6].id} htmlType="checkbox" label="Consent:" />
+);
+
 export const Phone = () => (
   <Component
     id={fieldsData1[3].id}
