@@ -2,9 +2,6 @@ import React from 'react';
 import path from 'ramda/src/path';
 import {
   ErrorPage,
-  MediaAssetPage,
-  PhotoGalleryPage,
-  StoryPage,
   FeatureIdxPage,
   ArticlePage,
   MediaArticlePage,
@@ -23,13 +20,12 @@ import {
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
-  const isCaf = path(['isCaf'], props);
 
   const PageType = {
-    [STORY_PAGE]: isCaf ? ArticlePage : StoryPage,
-    [CORRESPONDENT_STORY_PAGE]: isCaf ? ArticlePage : StoryPage,
-    [PHOTO_GALLERY_PAGE]: isCaf ? ArticlePage : PhotoGalleryPage,
-    [MEDIA_ASSET_PAGE]: isCaf ? MediaArticlePage : MediaAssetPage,
+    [STORY_PAGE]: ArticlePage,
+    [CORRESPONDENT_STORY_PAGE]: ArticlePage,
+    [PHOTO_GALLERY_PAGE]: ArticlePage,
+    [MEDIA_ASSET_PAGE]: MediaArticlePage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
   }[type];
 

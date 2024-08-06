@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import CafEnabledServices from '../../../../src/app/lib/cafServices.const';
 import { getEmbedUrl, hasMedia } from './helpers';
 import appToggles from '../../../support/helpers/useAppToggles';
 import envConfig from '../../../support/config/envs';
@@ -15,13 +14,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     describe('Media Player', () => {
       const language = appConfig[config[service].name][variant].lang;
-      const pageTypeForFetch = CafEnabledServices.includes(service)
-        ? 'article'
-        : 'cpsAsset';
 
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
+          cy.getPageData({ service, pageType: 'article', variant }).then(
             ({ body }) => {
               const {
                 data: { article: jsonData },
