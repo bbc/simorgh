@@ -46,8 +46,7 @@ export default ({
     fileTypes,
   } = inputState ?? {};
 
-  let filesInState = inputState.value as FileData[];
-  filesInState = checkForDuplicate(filesInState);
+  const filesInState = inputState.value as FileData[];
   const timeoutRef = useRef<number | null | NodeJS.Timeout>(null);
   const labelId = `label-${id}`;
   const errorBoxId = `${id}-error`;
@@ -71,8 +70,9 @@ export default ({
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
 
-      uploaded = checkForDuplicate(uploaded);
-      liveRegionText = `${liveRegionText}${file.name}`;
+      const removedDuplicates = checkForDuplicate(uploaded, liveRegionText);
+      uploaded = removedDuplicates.noDupFiles;
+      liveRegionText = removedDuplicates.updatedLiveRegionText;
     });
 
     handleChange(name, uploaded);

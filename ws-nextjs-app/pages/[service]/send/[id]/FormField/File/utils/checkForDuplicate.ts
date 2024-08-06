@@ -4,11 +4,11 @@ type CheckerObjType = {
   [key: string]: number;
 };
 
-export default (files: FileData[]) => {
+export default (files: FileData[], liveRegionText: string) => {
   const checkerObj = {} as CheckerObjType;
   const noDupFiles: { file: File }[] = [];
   const existingDups: string[] = [];
-
+  let updatedLiveRegionText = '';
   files.forEach(fileData => {
     const { file } = fileData;
     checkerObj[file.name.replace(/\s*\(\d+\)/g, '')] =
@@ -23,10 +23,12 @@ export default (files: FileData[]) => {
       const newFile = new File([file], newFileName, { type: file.type });
       noDupFiles.push({ file: newFile });
       checkerObj[file.name] -= 1;
+      updatedLiveRegionText = `${liveRegionText}${newFile.name}`;
     } else {
       existingDups.push(file.name);
       noDupFiles.push({ file });
+      updatedLiveRegionText = `${liveRegionText}${file.name}`;
     }
   });
-  return noDupFiles;
+  return { noDupFiles, updatedLiveRegionText };
 };
