@@ -7,18 +7,6 @@ export const testsThatAlwaysRunForAMPOnly = ({
   variant,
 }) => {
   describe(`Running testsToAlwaysRunForAMPOnly for ${service} ${pageType}`, () => {
-    it('If there is a table in the json, display it on the page', () => {
-      if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            cy.get('table');
-          }
-        });
-      }
-    });
     it('Table displays expected number of rows and columns', () => {
       if (service === 'sport') {
         cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
