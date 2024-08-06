@@ -12,7 +12,6 @@ import { UploadSvg } from './svgs';
 import FileList from './FileList';
 import InvalidMessageBox from '../InvalidMessageBox';
 import fallbackTranslations from '../../fallbackTranslations';
-import renameDuplicates from './utils/renameDuplicates';
 
 export default ({
   id,
@@ -63,15 +62,39 @@ export default ({
       event.target.files,
     ) as File[];
 
-    let uploaded = [...filesInState];
+    const uploaded = [...filesInState];
 
     let liveRegionText = fileUploadLiveRegionText;
 
+    const duplicateFileNameCheck = (
+      file: File,
+      ogFileName: string,
+      fileNameCount = 1,
+    ) => {
+      const newFile = new File(
+        [file],
+        fileNameCount > 1 ? `${ogFileName} (${fileNameCount})` : file.name,
+        {
+          type: file.type,
+          lastModified: file.lastModified,
+        },
+      );
+
+      if (
+        uploaded.some(uploadedFile => {
+          return newFile.name === uploadedFile.file.name;
+        })
+      ) {
+        return duplicateFileNameCheck(newFile, ogFileName, fileNameCount + 1);
+      }
+
+      return newFile;
+    };
+
     chosenFiles.forEach(file => {
-      uploaded.push({ file } as FileData);
-      const renamedDuplicates = renameDuplicates(uploaded, liveRegionText);
-      uploaded = renamedDuplicates.uploadedNoDuplicates;
-      liveRegionText = renamedDuplicates.liveRegionText;
+      const checkedFile = duplicateFileNameCheck(file, file.name);
+      uploaded.push({ file: checkedFile } as FileData);
+      liveRegionText = `${liveRegionText}${checkedFile.name}, `;
     });
 
     handleChange(name, uploaded);
