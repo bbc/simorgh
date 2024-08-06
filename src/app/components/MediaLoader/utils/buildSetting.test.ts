@@ -4,7 +4,6 @@ import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import { BuildConfigProps, MediaBlock } from '../types';
 
 const baseSettings = {
-  id: 'testID',
   pageType: 'article' as PageTypes,
   counterName: 'live_coverage.testID.page',
   isAmp: false,
