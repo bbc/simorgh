@@ -75,29 +75,29 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 2`] = `
 {
+  "text": "JO 2024",
+  "url": "/afrique/topics/cgrjz0yz4n9t",
+}
+`;
+
+exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
+{
   "text": "Afrique",
   "url": "/afrique/topics/cvqxn2k7kv7t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
 {
   "text": "Monde",
   "url": "/afrique/topics/cvqxn21vx11t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
 {
   "text": "Santé",
   "url": "/afrique/topics/c06gq9jxz3rt",
-}
-`;
-
-exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
-{
-  "text": "JO 2024",
-  "url": "/afrique/topics/cgrjz0yz4n9t",
 }
 `;
 
