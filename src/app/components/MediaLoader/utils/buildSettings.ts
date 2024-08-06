@@ -21,7 +21,6 @@ const buildSettings = ({
   counterName,
   statsDestination,
   producer,
-  id,
   isAmp,
   lang,
   pageType,
@@ -30,8 +29,6 @@ const buildSettings = ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: BuildConfigProps) => {
-  if (!id) return null;
-
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
