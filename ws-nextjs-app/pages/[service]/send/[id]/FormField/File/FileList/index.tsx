@@ -74,7 +74,6 @@ export default ({
       files.map(async fileData => {
         return new Promise(resolve => {
           const { file } = fileData;
-
           const fileType = file.type.substring(0, file.type.indexOf('/'));
 
           const fileReader = new FileReader();
@@ -103,7 +102,6 @@ export default ({
 
   const listItems = files.map((fileData: FileData, index: number) => {
     const { file } = fileData;
-
     const key = `${index}-${file.name}`;
     const thumbnailSrc = thumbnailState[index];
     const isThumbnailSvg = thumbnailSrc?.startsWith('data:image/svg');

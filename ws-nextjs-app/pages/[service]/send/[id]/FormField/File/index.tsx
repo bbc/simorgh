@@ -12,7 +12,7 @@ import { UploadSvg } from './svgs';
 import FileList from './FileList';
 import InvalidMessageBox from '../InvalidMessageBox';
 import fallbackTranslations from '../../fallbackTranslations';
-import checkForDuplicate from './utils/checkForDuplicate';
+import renameDuplicates from './utils/renameDuplicates';
 
 export default ({
   id,
@@ -69,10 +69,9 @@ export default ({
 
     chosenFiles.forEach(file => {
       uploaded.push({ file } as FileData);
-
-      const removedDuplicates = checkForDuplicate(uploaded, liveRegionText);
-      uploaded = removedDuplicates.noDupFiles;
-      liveRegionText = removedDuplicates.updatedLiveRegionText;
+      const renamedDuplicates = renameDuplicates(uploaded, liveRegionText);
+      uploaded = renamedDuplicates.uploadedNoDuplicates;
+      liveRegionText = renamedDuplicates.liveRegionText;
     });
 
     handleChange(name, uploaded);
