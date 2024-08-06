@@ -159,11 +159,14 @@ const constructPageFetchUrl = ({
   if (isLocal) {
     switch (pageType) {
       case ARTICLE_PAGE: {
+        const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
+
         fetchUrl = Url(
-          isCpsIdCheck(id)
-            ? `/${id}`
-            : `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+          isOptimoId
+            ? `/${service}/articles/${id}${variant ? `/${variant}` : ''}`
+            : `/${id}`,
         );
+
         break;
       }
       case CPS_ASSET:
