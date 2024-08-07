@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -59,13 +60,15 @@ const ComponentWithContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service={service}>
-        <Page
-          pageData={{
-            ...data.article,
-            secondaryColumn: data.secondaryData,
-            mostRead: data.secondaryData.mostRead,
-          }}
-        />
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
   );
@@ -87,13 +90,15 @@ const ComponentWithServiceContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
-        <Page
-          pageData={{
-            ...data.article,
-            secondaryColumn: data.secondaryData,
-            mostRead: data.secondaryData.mostRead,
-          }}
-        />
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>
   );
