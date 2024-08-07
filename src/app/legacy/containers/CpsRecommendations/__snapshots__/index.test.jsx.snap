@@ -100,7 +100,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1.5rem 0;
   padding: 1rem 0.5rem;
 }
@@ -242,7 +242,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -342,7 +342,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #F6F6F6;
+  background-color: #FDFDFD;
 }
 
 .emotion-23 {
@@ -677,7 +677,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1.5rem 0;
   padding: 1rem 0.5rem;
 }
@@ -819,7 +819,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1036,7 +1036,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #F6F6F6;
+  background-color: #FDFDFD;
 }
 
 .emotion-29 {
@@ -1524,7 +1524,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1.5rem 0;
   padding: 1rem 0.5rem;
 }
@@ -1666,7 +1666,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -1883,7 +1883,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #F6F6F6;
+  background-color: #FDFDFD;
 }
 
 .emotion-29 {
