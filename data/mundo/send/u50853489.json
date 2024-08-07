@@ -1,0 +1,112 @@
+{
+  "data": {
+    "projectId": "ugc-ws-mundo",
+    "title": "Escríbenos",
+    "description": "<p><strong>En BBC Mundo nos importa tu punto de vista.</strong></p>\n<p>Tus opiniones, comentarios y sugerencias son bienvenidos.</p>\n<p>A partir de ellos, podremos ofrecerte un mejor servicio.</p>\n<p>Por favor, utiliza el formulario para enviarnos un mensaje. Procuraremos responder a la mayor brevedad.</p>\n<p>Para enviar una queja,&nbsp;<a href=\"https://www.bbc.com/mundo/send/u50853472\" target=\"_blank\">haz clic aqu&iacute;</a>.</p>",
+    "campaignId": "u50853489",
+    "languageTag": "es",
+    "campaignStatus": "open",
+    "openingTime": "",
+    "closingTime": "",
+    "submissionUrl": "https://www.bbc.com/mundo",
+    "privacyNotice": {
+      "default": "<p>Si bien leemos lo mensajes que recibimos, no podemos garantizar que responderemos a todos.</p>\n<p>Los datos personales que proporcione ser&aacute;n procesados por la BBC y cualquier proveedor de servicios relevante del que dependamos para respaldar nuestros sistemas de quejas y de participaci&oacute;n de la audiencia con el fin manejar sus comentarios. La BBC y nuestros proveedores de servicios retendr&aacute;n sus datos de acuerdo con nuestra pol&iacute;tica de retenci&oacute;n y el Reglamento General de Protecci&oacute;n de Datos.</p>\n<p>La BBC procesa sus datos sobre la base de sus intereses leg&iacute;timos como organizaci&oacute;n de medios para responder a los comentarios y preocupaciones de la audiencia. Visite la <a href=\"https://www.bbc.com/mundo/institucional-36400009\">Cl&aacute;usula de privacidad</a> y <a href=\"http://www.bbc.co.uk/usingthebbc/cookies/\">Cookies</a> de la BBC para obtener m&aacute;s informaci&oacute;n sobre c&oacute;mo la BBC maneja sus datos. Si presenta una queja ante la BBC sobre c&oacute;mo manejamos sus datos personales y usted no est&aacute; satisfecho con nuestra respuesta, puede presentar una queja ante la Oficina del Comisionado de Informaci&oacute;n de Reino Unido.</p>",
+      "url": "https://www.bbc.com/mundo/institucional-36400009",
+      "additional": ""
+    },
+    "settings": {
+      "moderationRequired": false,
+      "brand": "BBC Mundo",
+      "brandId": "ws-mundo",
+      "replyEmailAddress": "BBCMundoEscribanos2@bbc.co.uk",
+      "ageGroup": [],
+      "exifMetadataEnabled": false,
+      "ppGroupId": "e24ff05b-d0f4-4e26-ab6d-ba5e9291d97a",
+      "pageBackgroundTemplateUrl": "https://ichef.bbci.co.uk/images/ic/$recipe/p08tcz26.png",
+      "brandLogo": "",
+      "brandType": "contact-form",
+      "webcoreBrand": "default",
+      "entryCap": "",
+      "readableRetentionPeriod": "270 days",
+      "retentionPeriodDays": "270",
+      "retentionExpiryDate": "",
+      "viewType": "submission",
+      "allowSubmissionWithoutEmail": false,
+      "winnerPickerEnabled": false,
+      "cta": { "title": "Get in touch", "buttonText": "Contact form" },
+      "allowEditing": false,
+      "signinRequired": false,
+      "accountPolicy": ""
+    },
+    "sections": [
+      {
+        "sectionText": { "title": "Envíanos tus comentarios" },
+        "fields": [
+          {
+            "id": "txt49018765",
+            "type": "text",
+            "validation": { "mandatory": true },
+            "htmlType": "text",
+            "label": "Nombre",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt49018835",
+            "type": "text",
+            "validation": { "mandatory": true },
+            "htmlType": "email",
+            "label": "Dirección de email (Obligatorio)",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt49018894",
+            "type": "text",
+            "validation": { "mandatory": false },
+            "htmlType": "text",
+            "label": "Ciudad y país",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt49018963",
+            "type": "text",
+            "validation": { "mandatory": false },
+            "htmlType": "phone",
+            "label": "Número de teléfono",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt49019016",
+            "type": "text",
+            "validation": { "mandatory": true },
+            "htmlType": "textarea",
+            "label": "Comentario (Obligatorio)",
+            "description": "",
+            "textArea": true
+          },
+          {
+            "id": "chk49021805",
+            "type": "checkbox",
+            "validation": { "mandatory": false },
+            "htmlType": "checkbox",
+            "description": "",
+            "label": "Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario."
+          }
+        ]
+      }
+    ],
+    "labels": [{ "label": "Yes" }, { "label": "No" }, { "label": "Maybe" }],
+    "secondaryLabels": [],
+    "retentionPolicyMessage": "We’ll keep it for up to 270 days – and if we don’t use it we’ll then delete it and any other information you sent us.",
+    "includeDataRetentionText": true,
+    "includeRightToRevokeText": true,
+    "includeRemovalGuidelineText": true,
+    "emailAddressFields": ["txt49018835"],
+    "promo": { "title": "", "promos": [] },
+    "campaignArchived": false
+  },
+  "contentType": "application/json; charset=utf-8"
+}

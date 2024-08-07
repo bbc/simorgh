@@ -5,9 +5,11 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
+import { runAppleItunesAppBannerTests } from '../../../common';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
+    runAppleItunesAppBannerTests();
   });
 });

@@ -1,6 +1,6 @@
 /**
  * @service mundo
- * @pathname /mundo/send/u50853489?renderer_env=live
+ * @pathname /mundo/send/u50853489
  */
 
 import runCanonicalTest from '../canonicalTests';

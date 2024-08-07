@@ -120,7 +120,7 @@ const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
     );
 
     const width = pathOr<number>(
-      240,
+      0,
       ['model', 'blocks', 0, 'model', 'blocks', 1, 'model', 'width'],
       item,
     );

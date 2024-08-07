@@ -19,6 +19,7 @@ const WithContexts = Component => {
       isAmp = false,
       isApp = false,
       isLite = false,
+      isCaf = false,
       pageType,
       pathname,
       previousPath = null,
@@ -48,6 +49,7 @@ const WithContexts = Component => {
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            isCaf={isCaf}
             pageType={pageType}
             service={service}
             statusCode={status}
