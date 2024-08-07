@@ -2,21 +2,35 @@
   "data": {
     "article": {
       "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
+          "contentType": "article-media-asset",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "persian.iran.media_asset.23231114.page",
+          "pageTitle": "Trump long headline",
+          "timePublished": "2019-02-15T12:47:51.000Z",
+          "timeUpdated": "2019-02-15T12:47:51.000Z",
+          "producerName": "PERSIAN",
+          "producerId": "69"
+        },
         "id": "urn:bbc:ares::asset:persian/iran-23231114",
         "locators": {
           "assetUri": "/persian/iran-23231114",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
           "assetId": "23231114",
           "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
+          "canonicalUrl": "https://www.bbc.com/persian/iran-23231114",
           "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf"
         },
         "type": "MAP",
         "createdBy": "persian-v6",
         "language": "fa",
-        "lastUpdated": 1687177431667,
         "firstPublished": 1550234871000,
         "lastPublished": 1550234871000,
-        "timestamp": 1550234871000,
         "options": {
           "isIgorSeoTagsEnabled": false,
           "includeComments": false,
@@ -31,83 +45,242 @@
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
-          "cps_asset_type": "map",
-          "counterName": "persian.iran.media_asset.23231114.page",
           "cps_asset_id": "23231114",
-          "contentId": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf"
+          "page": "persian.iran.media_asset.23231114.page",
+          "contentId": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
+          "cps_asset_type": "map"
         },
         "passport": {
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.28",
         "blockTypes": [
-          "media"
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "audio",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "campaigns": null,
-          "categoryName": null,
-          "contentId": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
-          "contentType": "article-media-asset",
-          "language": "fa",
-          "ldpThingIds": null,
-          "ldpThingLabels": null,
-          "pageIdentifier": "iran::persian.iran.media_asset.23231114.page",
-          "pageTitle": "Trump long headline",
-          "producerId": null,
-          "timePublished": "2019-02-15T12:47:51.000Z",
-          "timeUpdated": "2019-02-15T12:47:51.000Z",
-          "producerName": "PERSIAN"
-        },
         "siteUri": "/persian",
         "mediaType": "audio",
+        "allowAdvertising": true,
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
       },
       "content": {
-        "blocks": [
-          {
-            "id": "p01lmkjh",
-            "subType": "clip",
-            "format": "audio",
-            "title": "Trump short headline",
-            "synopses": {
-              "short": "Trump long headline",
-              "medium": "Trump summary text"
+        "model": {
+          "blocks": [
+            {
+              "id": "9e0bc431",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5e69caf3",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "420fb2d0",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Trump long headline",
+                            "blocks": [
+                              {
+                                "id": "da63a1ff",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Trump long headline",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
             },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
-            "embedding": true,
-            "advertising": false,
-            "caption": "Trump long headline",
-            "versions": [
-              {
-                "versionId": "p01lmkjk",
-                "types": [
-                  "Original"
-                ],
-                "duration": 26,
-                "durationISO8601": "PT26S",
-                "warnings": {},
-                "availableTerritories": {
-                  "uk": true,
-                  "nonUk": true
-                },
-                "availableFrom": 1550234248000
-              }
-            ],
-            "imageCopyright": "AFP",
-            "smpKind": "radioProgramme",
-            "type": "media"
-          }
-        ]
+            {
+              "id": "d5556f1e",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1550234871000,
+                "lastPublished": 1550234871000
+              },
+              "position": [2]
+            },
+            {
+              "id": "f60986c2",
+              "type": "audio",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01lmkjh",
+                "blocks": [
+                  {
+                    "id": "9be838f9",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "86eed418",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4c9e966f",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Trump long headline",
+                                  "blocks": [
+                                    {
+                                      "id": "d54cbc53",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Trump long headline",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "3b58e5b1",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8dfc7c7d",
+                          "blockId": "urn:bbc:ares::clip:p01lmkjh",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01lmkjh",
+                            "subType": "clip",
+                            "format": "audio",
+                            "title": "Trump short headline",
+                            "synopses": {
+                              "short": "Trump long headline",
+                              "medium": "Trump summary text"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
+                            "imageCopyright": "AFP",
+                            "embedding": true,
+                            "advertising": false,
+                            "versions": [
+                              {
+                                "versionId": "p01lmkjk",
+                                "types": ["Original"],
+                                "duration": 26,
+                                "durationISO8601": "PT26S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1550234248000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "radioProgramme"
+                          },
+                          "position": [3, 2, 1]
+                        },
+                        {
+                          "id": "865f0803",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4427dcd1",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 976,
+                                  "height": 549,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01lmkk5.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "AFP"
+                                },
+                                "position": [3, 2, 2, 1]
+                              },
+                              {
+                                "id": "e523cd29",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "730949b0",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "d6f5abe9",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Trump getting upset",
+                                              "blocks": [
+                                                {
+                                                  "id": "70e3159d",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Trump getting upset",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    3, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [3, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [3, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [3, 2]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            { "id": "5304673d", "type": "mpu", "model": {}, "position": [4] }
+          ]
+        }
       },
       "promo": {
-        "headlines": {
-          "shortHeadline": "Trump short headline",
-          "headline": "Trump long headline"
-        },
         "locators": {
           "assetUri": "/persian/iran-23231114",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
@@ -115,83 +288,500 @@
           "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
           "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf"
         },
-        "summary": "Trump summary text",
-        "timestamp": 1550234871000,
-        "language": "fa",
-        "passport": {
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-          "taggings": []
+        "headlines": {
+          "seoHeadline": "Trump long headline",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Trump short headline",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Trump short headline",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
-        "media": {
-          "id": "p01lmkjh",
-          "subType": "clip",
-          "format": "audio",
-          "title": "Trump short headline",
-          "synopses": {
-            "short": "Trump long headline",
-            "medium": "Trump summary text"
-          },
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
-          "embedding": true,
-          "advertising": false,
-          "caption": "Trump long headline",
-          "versions": [
-            {
-              "versionId": "p01lmkjk",
-              "types": [
-                "Original"
-              ],
-              "duration": 26,
-              "durationISO8601": "PT26S",
-              "warnings": {},
-              "availableTerritories": {
-                "uk": true,
-                "nonUk": true
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Trump getting upset",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Trump getting upset",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
               },
-              "availableFrom": 1550234248000
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 576,
+                  "width": 1024,
+                  "locator": "14DFC/test/_63700558_p01lmkk5.jpg",
+                  "href": "http://b.files.bbci.co.uk/14DFC/test/_63700558_p01lmkk5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "AFP",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Trump summary text",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Trump summary text",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
-          ],
-          "imageCopyright": "AFP",
-          "smpKind": "radioProgramme",
-          "type": "media"
+          ]
         },
-        "indexImage": {
-          "id": "63700558",
-          "subType": "index",
-          "href": "http://b.files.bbci.co.uk/14DFC/test/_63700558_p01lmkk5.jpg",
-          "path": "/cpsdevpb/14DFC/test/_63700558_p01lmkk5.jpg",
-          "height": 576,
-          "width": 1024,
-          "altText": "Trump getting upset",
-          "copyrightHolder": "AFP",
-          "allowSyndication": false,
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:persian/iran-23231114",
-        "type": "cps"
-      },
-      "relatedContent": {
-        "section": {
-          "subType": "index",
-          "name": "صفحه ایران",
-          "uri": "/persian/iran",
-          "urlIdentifier": "/persian/iran",
-          "type": "simple"
-        },
-        "site": {
-          "subType": "site",
-          "name": "Persian v6",
-          "uri": "/persian",
-          "urlIdentifier": "/persian",
-          "type": "simple"
-        },
-        "groups": []
+        "extrinsicPromo": {
+          "headlines": { "shortHeadline": "Trump short headline" },
+          "media": {
+            "blocks": [
+              {
+                "type": "audio",
+                "model": {
+                  "locator": "urn:bbc:pips:pid:p01lmkjh",
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Trump long headline",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Trump long headline",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresMedia",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "urn:bbc:ares::clip:p01lmkjh",
+                            "type": "aresMediaMetadata",
+                            "model": {
+                              "id": "p01lmkjh",
+                              "subType": "clip",
+                              "format": "audio",
+                              "title": "Trump short headline",
+                              "synopses": {
+                                "short": "Trump long headline",
+                                "medium": "Trump summary text"
+                              },
+                              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
+                              "imageCopyright": "AFP",
+                              "embedding": true,
+                              "advertising": false,
+                              "versions": [
+                                {
+                                  "versionId": "p01lmkjk",
+                                  "types": ["Original"],
+                                  "duration": 26,
+                                  "durationISO8601": "PT26S",
+                                  "warnings": {},
+                                  "availableTerritories": {
+                                    "uk": true,
+                                    "nonUk": true
+                                  },
+                                  "availableFrom": 1550234248000
+                                }
+                              ],
+                              "syndication": { "destinations": [] },
+                              "smpKind": "radioProgramme"
+                            }
+                          },
+                          {
+                            "type": "image",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "rawImage",
+                                  "model": {
+                                    "width": 976,
+                                    "height": 549,
+                                    "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01lmkk5.jpg",
+                                    "originCode": "mpv",
+                                    "copyrightHolder": "AFP"
+                                  }
+                                },
+                                {
+                                  "type": "altText",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "text",
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "type": "paragraph",
+                                              "model": {
+                                                "text": "Trump getting upset",
+                                                "blocks": [
+                                                  {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                      "text": "Trump getting upset",
+                                                      "attributes": []
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
-      "topStories": null,
-      "features": null,
-      "mostRead": null
+      "topStories": [
+        {
+          "headlines": { "headline": "تست تست" },
+          "locators": {
+            "assetUri": "/persian/iran-23297514",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:f51e7e4c-33e6-9749-8718-fe31de961d62",
+            "assetId": "23297514",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23297514",
+            "curie": "http://www.bbc.co.uk/asset/f51e7e4c-33e6-9749-8718-fe31de961d62"
+          },
+          "summary": "تست تست",
+          "timestamp": 1588685965000,
+          "language": "fa",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63734881",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/499B/test/_63734881_world-map-corona_nc.png",
+            "path": "/cpsdevpb/499B/test/_63734881_world-map-corona_nc.png",
+            "height": 549,
+            "width": 976,
+            "altText": "لبلب",
+            "caption": "لبلب",
+            "copyrightHolder": "fdf",
+            "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": { "isBreakingNews": true, "isFactCheck": false },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "صفحه ایران",
+            "uri": "/persian/iran",
+            "type": "simple"
+          },
+          "overtypedSummary": "نارندرا مودی، نخست‌وزیر هند با محکوم کردن حمله انتحاری به سربازان این کشور در کشمیر، به پاکستان در باره ایجاد بی‌ثباتی در کشورش هشدار داده است.",
+          "id": "urn:bbc:ares::asset:persian/iran-23297514",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "اقتصاد مقاومتی باید بر سر سفره مردم عینیت داشته باشد"
+          },
+          "locators": {
+            "assetUri": "/persian/23104781",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:8618c431-2513-c143-9998-8c7ac64de9c4",
+            "assetId": "23104781",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/23104781",
+            "curie": "http://www.bbc.co.uk/asset/8618c431-2513-c143-9998-8c7ac64de9c4"
+          },
+          "summary": "امام جمعه موقت تهران گفت: این‌همه عظمت‌هایی که در این دوران چنددهه پس از پیروزی انقلاب اسلامی رخ داده، دستاوردهایی است که در سایه ولایت فقیه از اسلام و شریعت به ما رسیده است.",
+          "timestamp": 1489144818000,
+          "language": "fa",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63530438",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/145CB/test/_63530438_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "path": "/cpsdevpb/145CB/test/_63530438_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "آیت‌الله امامی کاشانی",
+            "caption": "آیت‌الله امامی کاشانی",
+            "copyrightHolder": "Fars news",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63530440",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/1133/test/_63530440_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "path": "/cpsdevpb/1133/test/_63530440_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "آیت‌الله امامی کاشانی",
+            "caption": "آیت‌الله امامی کاشانی",
+            "copyrightHolder": "Fars news",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "صفحه اول",
+            "uri": "/persian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:persian/23104781",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 23"
+          },
+          "locators": {
+            "assetUri": "/persian/arts-23069602",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:b5b01786-560f-0e46-b4da-8c1e399ba71f",
+            "assetId": "23069602",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/arts-23069602",
+            "curie": "http://www.bbc.co.uk/asset/b5b01786-560f-0e46-b4da-8c1e399ba71f"
+          },
+          "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
+          "timestamp": 1472124774000,
+          "language": "fa",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:persian/arts-23069602",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "کشته‌شدگان حمله پهپاد آمریکا در ولایت ننگرهار افغانستان غیر نظامی بودند"
+          },
+          "locators": {
+            "assetUri": "/persian/live/afghanistan-23079936",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6f89a9bf-5494-9e41-9592-6ffea94a793b",
+            "assetId": "23079936",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/live/afghanistan-23079936",
+            "curie": "http://www.bbc.co.uk/asset/6f89a9bf-5494-9e41-9592-6ffea94a793b"
+          },
+          "summary": "هیات معاونت سازمان ملل متحد در افغانستان (یوناما) اعلام کرده که در حمله روز اول مهر پهپاد آمریکایی در ولایت ننگرهار در شرق افغانستان، ۱۵ غیرنظامی کشته شدند.",
+          "timestamp": 1475231431000,
+          "language": "fa",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63513620",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/0A47/test/_63513620_1.jpg",
+            "path": "/cpsdevpb/0A47/test/_63513620_1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "خانه",
+            "caption": "خانه",
+            "copyrightHolder": "AP",
+            "type": "image"
+          },
+          "commentary": {
+            "order": "ascending",
+            "assetUUID": "A3C63902EACB644C9BF9CDA6FCFD8012",
+            "channels": {
+              "enhancedmobile": "bbc.cps.asset.23079937_EnhancedMobile",
+              "desktop": "bbc.cps.asset.23079937_HighWeb",
+              "highweb": "bbc.cps.asset.23079937_HighWeb",
+              "mobile": "bbc.cps.asset.23079937_EnhancedMobile"
+            }
+          },
+          "isLive": true,
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "صفحه افغانستان",
+            "uri": "/persian/afghanistan",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:persian/live/afghanistan-23079936",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-07-26T09:02:04.373Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "e7e3619d-eb25-bc4a-b92d-8bd5bf856eb1",
+            "rank": 1,
+            "title": "رئیس جمهوری فیلیپین: با خوشحالی همه معتادان را می‌کشم",
+            "href": "/persian/world-23080010",
+            "timestamp": "2016-09-30T11:10:46.000Z"
+          },
+          {
+            "id": "e68afa00-59c7-d244-85a2-4b5df59d996f",
+            "rank": 2,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 11",
+            "href": "/persian/afghanistan-23069393",
+            "timestamp": "2016-08-25T08:39:33.000Z"
+          },
+          {
+            "id": "901fe486-d0f7-be44-bd59-6995479709ff",
+            "rank": 3,
+            "title": "آثممخ فاهس آثشیمهدث BBC حلم حثقسهشد عدیثق هقشد سثزفهخد - صهفا ش سحثزهشم زاشقشزفثق",
+            "href": "/persian/iran-23072988",
+            "timestamp": "2016-09-09T11:17:44.000Z"
+          },
+          {
+            "id": "8acf2e0a-5287-8744-8802-64994586b569",
+            "rank": 4,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 46",
+            "href": "/persian/media-23069776",
+            "timestamp": "2016-08-26T04:09:51.000Z"
+          },
+          {
+            "id": "f4b73de3-e2e9-864e-b261-4182824a9ff8",
+            "rank": 5,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 21",
+            "href": "/persian/iran-23069600",
+            "timestamp": "2016-08-25T11:48:55.000Z"
+          },
+          {
+            "id": "9071d9c0-b16a-7241-af91-0cdbfe45bd46",
+            "rank": 6,
+            "title": "کلینتون و ترامپ یکدیگر را مسئول حملات خشونت‌ آمیز اخیر دانستند",
+            "href": "/persian/interactivity-23075863",
+            "timestamp": "2016-09-20T11:16:28.000Z"
+          },
+          {
+            "id": "515be30d-f1dd-b146-81ea-392f10b43206",
+            "rank": 7,
+            "title": "گزارش تازه درباره قتل بیژن ابراهیمی: پلیس می‌توانست مانع قتل شود",
+            "href": "/persian/23137875",
+            "timestamp": "2020-04-23T08:34:43.000Z"
+          },
+          {
+            "id": "6efa50cf-23e4-ed43-b0d0-f16d69ec69f8",
+            "rank": 8,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 36",
+            "href": "/persian/afghan-press-review-23069767",
+            "timestamp": "2016-08-26T04:01:06.000Z"
+          },
+          {
+            "id": "4ea86f0c-d0f3-f641-8151-9358ab371f4f",
+            "rank": 9,
+            "title": "کسانی دولت را استیضاح می‌کنند که خود باید پاسخگوی اقداماتشان باشند/ اقتصاد امسال مقاومتی‌تر شد",
+            "href": "/persian/23104785",
+            "timestamp": "2020-04-23T10:07:31.000Z"
+          },
+          {
+            "id": "3897b5bf-3062-8345-b8cf-e73e77080a61",
+            "rank": 10,
+            "title": "ندهجئوس کلاوکسی مکنکگد",
+            "href": "/persian/iran-23147873",
+            "timestamp": "2017-08-11T14:30:59.000Z"
+          }
+        ]
+      },
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"

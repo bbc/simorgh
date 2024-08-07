@@ -34,7 +34,7 @@ describe('getInitialData', () => {
     expect(pageData.metadata.locators.assetUri).toEqual(
       '/pidgin/media-23256549',
     );
-    expect(pageData.content.model.blocks.length).toBeTruthy();
+    expect(pageData.content.blocks.length).toBeTruthy();
   });
 
   it('should run transformer when page type matches', async () => {
