@@ -2,21 +2,33 @@
   "data": {
     "article": {
       "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:topcat:curie:asset:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b",
+          "contentType": "article-media-asset",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+          "timePublished": "2016-09-07T09:53:39.000Z",
+          "timeUpdated": "2016-09-07T09:53:39.000Z"
+        },
         "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
         "locators": {
           "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b",
           "assetId": "17698244",
           "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
+          "canonicalUrl": "https://www.bbc.com/persian/iran/2016/09/160907_tc2_testmap1",
           "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
         },
         "type": "MAP",
         "createdBy": "persian",
         "language": "fa",
-        "lastUpdated": 1687177431633,
         "firstPublished": 1473242019000,
         "lastPublished": 1473242019000,
-        "timestamp": 1473242019000,
         "options": {
           "includeComments": false,
           "allowRightHandSide": true,
@@ -34,71 +46,111 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.28",
         "blockTypes": [
-          "legacyMedia",
-          "paragraph"
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "unknownLegacyMedia"
         ],
         "includeComments": false,
-        "atiAnalytics": {},
-        "readTime": 1,
         "siteUri": "/persian",
         "mediaType": "video",
+        "allowAdvertising": true,
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
       },
       "content": {
-        "blocks": [
-          {
-            "id": "17698244",
-            "subType": "primary",
-            "format": "video",
-            "image": {
-              "id": "17698244",
-              "subType": "thumbnail",
-              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-              "height": 360,
-              "width": 640,
-              "altText": "",
-              "copyrightHolder": "",
-              "type": "image"
+        "model": {
+          "blocks": [
+            {
+              "id": "eafb5ab0",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "86a8e36f",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "091b2255",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+                            "blocks": [
+                              {
+                                "id": "5d80b8b2",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
             },
-            "aspectRatio": "16:9",
-            "live": false,
-            "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
-            "playlist": [
-              {
-                "format": "mp4",
-                "bitrate": "168000",
-                "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_lo.mp4"
+            {
+              "id": "7bbe0c92",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1473242019000,
+                "lastPublished": 1473242019000
               },
-              {
-                "format": "mp4",
-                "bitrate": "320000",
-                "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_med.mp4"
+              "position": [2]
+            },
+            {
+              "id": "f5f52312",
+              "type": "unknownLegacyMedia",
+              "model": {
+                "content": "{\"id\":\"17698244\",\"subType\":\"primary\",\"format\":\"video\",\"image\":{\"id\":\"17698244\",\"subType\":\"thumbnail\",\"href\":\"http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg\",\"path\":\"/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg\",\"height\":360,\"width\":640,\"altText\":\"\",\"copyrightHolder\":\"\"},\"aspectRatio\":\"16:9\",\"live\":false,\"href\":\"http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml\",\"playlist\":[{\"format\":\"mp4\",\"bitrate\":\"168000\",\"url\":\"https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_lo.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"320000\",\"url\":\"https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_med.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"904000\",\"url\":\"https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_hi.mp4\"}]}"
               },
-              {
-                "format": "mp4",
-                "bitrate": "904000",
-                "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_hi.mp4"
-              }
-            ],
-            "type": "legacyMedia"
-          },
-          {
-            "text": "میسر عالی سازمان ملل در امور حقوق بشر به تندی از سیاستمدارهایی که آنها را عوام‌فریب و خیال‌پرداز خوانده، انتقاد کرده است. زید رعد حسین گفته است افرادی مثل دونالد ترامپ، نامزد ریاست جمهوری آمریکا و خرت ویلدرز، سیاستمدار راست گرای هلندی و نایجل فراژ، سیاستمدار بریتانیایی از شیوه های تبلیغاتی داعش استفاده می کنند. سعیده هاشمی گزارش می دهد.",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          }
-        ]
+              "position": [3]
+            },
+            {
+              "id": "06b491f4",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "c3ab2fc5",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "میسر عالی سازمان ملل در امور حقوق بشر به تندی از سیاستمدارهایی که آنها را عوام‌فریب و خیال‌پرداز خوانده، انتقاد کرده است. زید رعد حسین گفته است افرادی مثل دونالد ترامپ، نامزد ریاست جمهوری آمریکا و خرت ویلدرز، سیاستمدار راست گرای هلندی و نایجل فراژ، سیاستمدار بریتانیایی از شیوه های تبلیغاتی داعش استفاده می کنند. سعیده هاشمی گزارش می دهد.",
+                      "blocks": [
+                        {
+                          "id": "a2af552b",
+                          "type": "fragment",
+                          "model": {
+                            "text": "میسر عالی سازمان ملل در امور حقوق بشر به تندی از سیاستمدارهایی که آنها را عوام‌فریب و خیال‌پرداز خوانده، انتقاد کرده است. زید رعد حسین گفته است افرادی مثل دونالد ترامپ، نامزد ریاست جمهوری آمریکا و خرت ویلدرز، سیاستمدار راست گرای هلندی و نایجل فراژ، سیاستمدار بریتانیایی از شیوه های تبلیغاتی داعش استفاده می کنند. سعیده هاشمی گزارش می دهد.",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            { "id": "59ddd5b2", "type": "mpu", "model": {}, "position": [5] }
+          ]
+        }
       },
       "promo": {
-        "headlines": {
-          "shortHeadline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
-          "headline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد"
-        },
         "locators": {
           "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b",
@@ -106,86 +158,381 @@
           "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
           "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
         },
-        "summary": "دفتر جامعه جهانی بهایی در سازمان ملل متحد، با انتشار نامه ای سرگشاده خطاب به حسن روحانی رئیس جمهور ایران خواستار رسیدگی به \"بی عدالتی های اقتصادی وارده بر بهاییان\" در ایرن کشور شد.",
-        "timestamp": 1473242019000,
-        "language": "fa",
-        "passport": {
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
-          "taggings": []
+        "headlines": {
+          "seoHeadline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
-        "media": {
-          "id": "17698244",
-          "subType": "primary",
-          "format": "video",
-          "image": {
-            "id": "17698244",
-            "subType": "thumbnail",
-            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "",
-            "copyrightHolder": "",
-            "type": "image"
-          },
-          "aspectRatio": "16:9",
-          "live": false,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
-          "playlist": [
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": { "text": "", "attributes": [] }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 81,
+                  "width": 144,
+                  "locator": "worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+                  "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+                  "originCode": "amz",
+                  "copyrightHolder": "Getty",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
             {
-              "format": "mp4",
-              "bitrate": "168000",
-              "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_lo.mp4"
-            },
-            {
-              "format": "mp4",
-              "bitrate": "320000",
-              "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_med.mp4"
-            },
-            {
-              "format": "mp4",
-              "bitrate": "904000",
-              "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_hi.mp4"
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "دفتر جامعه جهانی بهایی در سازمان ملل متحد، با انتشار نامه ای سرگشاده خطاب به حسن روحانی رئیس جمهور ایران خواستار رسیدگی به \"بی عدالتی های اقتصادی وارده بر بهاییان\" در ایرن کشور شد.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "دفتر جامعه جهانی بهایی در سازمان ملل متحد، با انتشار نامه ای سرگشاده خطاب به حسن روحانی رئیس جمهور ایران خواستار رسیدگی به \"بی عدالتی های اقتصادی وارده بر بهاییان\" در ایرن کشور شد.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
-          ],
-          "type": "legacyMedia"
+          ]
         },
-        "indexImage": {
-          "id": "d5e237",
-          "subType": "index",
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-          "height": 81,
-          "width": 144,
-          "altText": "",
-          "copyrightHolder": "Getty",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
-        "type": "cps"
-      },
-      "relatedContent": {
-        "section": {
-          "subType": "index",
-          "name": "ايران",
-          "uri": "/persian/iran",
-          "urlIdentifier": "/persian/iran",
-          "type": "simple"
-        },
-        "site": {
-          "subType": "site",
-          "name": "BBCPersian.com",
-          "uri": "/persian",
-          "urlIdentifier": "/persian",
-          "type": "simple"
-        },
-        "groups": []
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد"
+          },
+          "media": {
+            "blocks": [
+              {
+                "type": "unknownLegacyMedia",
+                "model": {
+                  "content": "{\"id\":\"17698244\",\"subType\":\"primary\",\"format\":\"video\",\"image\":{\"id\":\"17698244\",\"subType\":\"thumbnail\",\"href\":\"http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg\",\"path\":\"/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg\",\"height\":360,\"width\":640,\"altText\":\"\",\"copyrightHolder\":\"\"},\"aspectRatio\":\"16:9\",\"live\":false,\"href\":\"http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml\",\"playlist\":[{\"format\":\"mp4\",\"bitrate\":\"168000\",\"url\":\"https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_lo.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"320000\",\"url\":\"https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_med.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"904000\",\"url\":\"https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_hi.mp4\"}]}"
+                }
+              }
+            ]
+          },
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
-      "topStories": null,
-      "features": null,
-      "mostRead": null
+      "topStories": [
+        {
+          "headlines": { "headline": "تست تست" },
+          "locators": {
+            "assetUri": "/persian/iran-23297514",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:f51e7e4c-33e6-9749-8718-fe31de961d62",
+            "assetId": "23297514",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23297514",
+            "curie": "http://www.bbc.co.uk/asset/f51e7e4c-33e6-9749-8718-fe31de961d62"
+          },
+          "summary": "تست تست",
+          "timestamp": 1588685965000,
+          "language": "fa",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63734881",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/499B/test/_63734881_world-map-corona_nc.png",
+            "path": "/cpsdevpb/499B/test/_63734881_world-map-corona_nc.png",
+            "height": 549,
+            "width": 976,
+            "altText": "لبلب",
+            "caption": "لبلب",
+            "copyrightHolder": "fdf",
+            "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": { "isBreakingNews": true, "isFactCheck": false },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "صفحه ایران",
+            "uri": "/persian/iran",
+            "type": "simple"
+          },
+          "overtypedSummary": "نارندرا مودی، نخست‌وزیر هند با محکوم کردن حمله انتحاری به سربازان این کشور در کشمیر، به پاکستان در باره ایجاد بی‌ثباتی در کشورش هشدار داده است.",
+          "id": "urn:bbc:ares::asset:persian/iran-23297514",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "اقتصاد مقاومتی باید بر سر سفره مردم عینیت داشته باشد"
+          },
+          "locators": {
+            "assetUri": "/persian/23104781",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:8618c431-2513-c143-9998-8c7ac64de9c4",
+            "assetId": "23104781",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/23104781",
+            "curie": "http://www.bbc.co.uk/asset/8618c431-2513-c143-9998-8c7ac64de9c4"
+          },
+          "summary": "امام جمعه موقت تهران گفت: این‌همه عظمت‌هایی که در این دوران چنددهه پس از پیروزی انقلاب اسلامی رخ داده، دستاوردهایی است که در سایه ولایت فقیه از اسلام و شریعت به ما رسیده است.",
+          "timestamp": 1489144818000,
+          "language": "fa",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63530438",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/145CB/test/_63530438_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "path": "/cpsdevpb/145CB/test/_63530438_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "آیت‌الله امامی کاشانی",
+            "caption": "آیت‌الله امامی کاشانی",
+            "copyrightHolder": "Fars news",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63530440",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/1133/test/_63530440_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "path": "/cpsdevpb/1133/test/_63530440_a07dff6d-1bd4-413c-b173-4bbbe6439a42.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "آیت‌الله امامی کاشانی",
+            "caption": "آیت‌الله امامی کاشانی",
+            "copyrightHolder": "Fars news",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "صفحه اول",
+            "uri": "/persian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:persian/23104781",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 23"
+          },
+          "locators": {
+            "assetUri": "/persian/arts-23069602",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:b5b01786-560f-0e46-b4da-8c1e399ba71f",
+            "assetId": "23069602",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/arts-23069602",
+            "curie": "http://www.bbc.co.uk/asset/b5b01786-560f-0e46-b4da-8c1e399ba71f"
+          },
+          "summary": "ستاره‌شناسان می‌گویند سیاره‌ای را در نزدیکی منظومه شمسی شناسایی کردند که تقریبا هم اندازه کره زمین است و به دور ستاره پروکسیما قنطورس می‌چرخد.",
+          "timestamp": 1472124774000,
+          "language": "fa",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:persian/arts-23069602",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "کشته‌شدگان حمله پهپاد آمریکا در ولایت ننگرهار افغانستان غیر نظامی بودند"
+          },
+          "locators": {
+            "assetUri": "/persian/live/afghanistan-23079936",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6f89a9bf-5494-9e41-9592-6ffea94a793b",
+            "assetId": "23079936",
+            "cpsUrn": "urn:bbc:content:assetUri:persian/live/afghanistan-23079936",
+            "curie": "http://www.bbc.co.uk/asset/6f89a9bf-5494-9e41-9592-6ffea94a793b"
+          },
+          "summary": "هیات معاونت سازمان ملل متحد در افغانستان (یوناما) اعلام کرده که در حمله روز اول مهر پهپاد آمریکایی در ولایت ننگرهار در شرق افغانستان، ۱۵ غیرنظامی کشته شدند.",
+          "timestamp": 1475231431000,
+          "language": "fa",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63513620",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/0A47/test/_63513620_1.jpg",
+            "path": "/cpsdevpb/0A47/test/_63513620_1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "خانه",
+            "caption": "خانه",
+            "copyrightHolder": "AP",
+            "type": "image"
+          },
+          "commentary": {
+            "order": "ascending",
+            "assetUUID": "A3C63902EACB644C9BF9CDA6FCFD8012",
+            "channels": {
+              "enhancedmobile": "bbc.cps.asset.23079937_EnhancedMobile",
+              "desktop": "bbc.cps.asset.23079937_HighWeb",
+              "highweb": "bbc.cps.asset.23079937_HighWeb",
+              "mobile": "bbc.cps.asset.23079937_EnhancedMobile"
+            }
+          },
+          "isLive": true,
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "صفحه افغانستان",
+            "uri": "/persian/afghanistan",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:persian/live/afghanistan-23079936",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-07-29T09:01:58.724Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "e7e3619d-eb25-bc4a-b92d-8bd5bf856eb1",
+            "rank": 1,
+            "title": "رئیس جمهوری فیلیپین: با خوشحالی همه معتادان را می‌کشم",
+            "href": "/persian/world-23080010",
+            "timestamp": "2016-09-30T11:10:46.000Z"
+          },
+          {
+            "id": "e68afa00-59c7-d244-85a2-4b5df59d996f",
+            "rank": 2,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 11",
+            "href": "/persian/afghanistan-23069393",
+            "timestamp": "2016-08-25T08:39:33.000Z"
+          },
+          {
+            "id": "901fe486-d0f7-be44-bd59-6995479709ff",
+            "rank": 3,
+            "title": "آثممخ فاهس آثشیمهدث BBC حلم حثقسهشد عدیثق هقشد سثزفهخد - صهفا ش سحثزهشم زاشقشزفثق",
+            "href": "/persian/iran-23072988",
+            "timestamp": "2016-09-09T11:17:44.000Z"
+          },
+          {
+            "id": "8acf2e0a-5287-8744-8802-64994586b569",
+            "rank": 4,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 46",
+            "href": "/persian/media-23069776",
+            "timestamp": "2016-08-26T04:09:51.000Z"
+          },
+          {
+            "id": "f4b73de3-e2e9-864e-b261-4182824a9ff8",
+            "rank": 5,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 21",
+            "href": "/persian/iran-23069600",
+            "timestamp": "2016-08-25T11:48:55.000Z"
+          },
+          {
+            "id": "9071d9c0-b16a-7241-af91-0cdbfe45bd46",
+            "rank": 6,
+            "title": "کلینتون و ترامپ یکدیگر را مسئول حملات خشونت‌ آمیز اخیر دانستند",
+            "href": "/persian/interactivity-23075863",
+            "timestamp": "2016-09-20T11:16:28.000Z"
+          },
+          {
+            "id": "515be30d-f1dd-b146-81ea-392f10b43206",
+            "rank": 7,
+            "title": "گزارش تازه درباره قتل بیژن ابراهیمی: پلیس می‌توانست مانع قتل شود",
+            "href": "/persian/23137875",
+            "timestamp": "2020-04-23T08:34:43.000Z"
+          },
+          {
+            "id": "6efa50cf-23e4-ed43-b0d0-f16d69ec69f8",
+            "rank": 8,
+            "title": "یک سیاره 'شبیه زمین' در نزدیکی منظومه شمسی کشف 36",
+            "href": "/persian/afghan-press-review-23069767",
+            "timestamp": "2016-08-26T04:01:06.000Z"
+          },
+          {
+            "id": "4ea86f0c-d0f3-f641-8151-9358ab371f4f",
+            "rank": 9,
+            "title": "کسانی دولت را استیضاح می‌کنند که خود باید پاسخگوی اقداماتشان باشند/ اقتصاد امسال مقاومتی‌تر شد",
+            "href": "/persian/23104785",
+            "timestamp": "2020-04-23T10:07:31.000Z"
+          },
+          {
+            "id": "3897b5bf-3062-8345-b8cf-e73e77080a61",
+            "rank": 10,
+            "title": "ندهجئوس کلاوکسی مکنکگد",
+            "href": "/persian/iran-23147873",
+            "timestamp": "2017-08-11T14:30:59.000Z"
+          }
+        ]
+      },
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"
