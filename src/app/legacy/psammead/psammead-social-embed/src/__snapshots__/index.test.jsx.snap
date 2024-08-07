@@ -1058,7 +1058,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 
 .emotion-4 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-6 {
@@ -1801,7 +1801,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 
 .emotion-4 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-6 {

@@ -5,7 +5,7 @@ import {
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default service => {
-  runCrossPlatformTests(service, 'PGL');
+  runCrossPlatformTests(service);
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
 };
