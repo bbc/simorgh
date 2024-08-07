@@ -12,7 +12,6 @@ import {
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 
-import { ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
@@ -24,10 +23,7 @@ const StyledPromoWrapper = styled.div`
   position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: ${props =>
-    props.isArticlePage
-      ? props.theme.palette.GHOST
-      : props.theme.palette.GREY_2};
+  background-color: ${props => props.theme.palette.GHOST};
 `;
 
 const ImageWrapper = styled.div`
@@ -101,12 +97,10 @@ const StyledHeadline = styled.div`
 
 const RecommendationsPromo = ({ promo, eventTrackingData = null }) => {
   const { script, service } = useContext(ServiceContext);
-  const { pageType, isLite } = useContext(RequestContext);
+  const { isLite } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const { headline, url, indexImage } = extractPromoData({ promo });
-
-  const isArticle = pageType === ARTICLE_PAGE;
 
   return (
     <Grid
@@ -120,10 +114,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData = null }) => {
       }}
       enableGelGutters
     >
-      <StyledPromoWrapper
-        data-e2e="story-promo-wrapper"
-        isArticlePage={isArticle}
-      >
+      <StyledPromoWrapper data-e2e="story-promo-wrapper">
         {!isLite && (
           <ImageWrapper>
             <RecommendationsImage indexImage={indexImage} lazyLoad />

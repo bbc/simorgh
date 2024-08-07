@@ -4,9 +4,15 @@ import {
   runTimestampTests,
 } from '../../common';
 
-export default service => {
+export default (service, pageType) => {
+  const ignoreMediaPlayerFor = ['MAP', 'PGL', 'STY'];
+
   runCommonCrossPlatformTests(service);
-  runMediaPlayerEmbedLegacyTests();
+
+  if (!ignoreMediaPlayerFor.includes(pageType)) {
+    runMediaPlayerEmbedLegacyTests();
+  }
+
   runTimestampTests();
 
   const bulletedListItem = document.querySelector('main ul[role="list"] > li');
