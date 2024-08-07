@@ -2,35 +2,21 @@
   "data": {
     "article": {
       "metadata": {
-        "atiAnalytics": {
-          "categoryName": null,
-          "contentId": "urn:bbc:cps:curie:asset:f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3",
-          "contentType": "article-media-asset",
-          "language": null,
-          "ldpThingIds": null,
-          "ldpThingLabels": null,
-          "nationsProducer": null,
-          "pageIdentifier": "yoruba.embedded_media.media_asset.23256797.page",
-          "pageTitle": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-          "timePublished": "2019-11-27T12:18:57.000Z",
-          "timeUpdated": "2019-11-27T12:18:57.000Z",
-          "producerName": "YORUBA",
-          "producerId": "107"
-        },
         "id": "urn:bbc:ares::asset:yoruba/media-23256797",
         "locators": {
           "assetUri": "/yoruba/media-23256797",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3",
           "assetId": "23256797",
           "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-23256797",
-          "canonicalUrl": "https://www.bbc.com/yoruba/media-23256797",
           "curie": "http://www.bbc.co.uk/asset/f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3"
         },
         "type": "MAP",
         "createdBy": "yoruba-v6",
         "language": "yo",
+        "lastUpdated": 1687177406509,
         "firstPublished": 1574857137000,
         "lastPublished": 1574857137000,
+        "timestamp": 1574857137000,
         "options": {
           "isIgorSeoTagsEnabled": false,
           "includeComments": false,
@@ -45,635 +31,168 @@
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "yoruba.embedded_media.media_asset.23256797.page",
           "cps_asset_id": "23256797",
-          "page": "yoruba.embedded_media.media_asset.23256797.page",
-          "contentId": "urn:bbc:cps:curie:asset:f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3",
-          "cps_asset_type": "map"
+          "contentId": "urn:bbc:cps:curie:asset:f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3"
         },
         "passport": {
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Yoruba",
           "taggings": []
         },
+        "tags": {},
+        "version": "v1.4.28",
         "blockTypes": [
-          "headline",
-          "text",
+          "media",
           "paragraph",
-          "fragment",
-          "video",
-          "caption",
-          "subheadline",
-          "orderedList",
-          "listItem",
-          "unorderedList",
-          "image",
-          "altText",
-          "rawImage",
-          "aresMedia",
-          "aresMediaMetadata"
+          "heading",
+          "list",
+          "image"
         ],
         "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "YORUBA",
+          "producerId": "107"
+        },
+        "readTime": 1,
         "siteUri": "/yoruba",
         "mediaType": "video",
-        "allowAdvertising": true,
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false,
-        "useSensitiveOnwardJourneys": false
+        "consumableOnlyOnRedButton": false
       },
       "content": {
-        "model": {
-          "blocks": [
-            {
-              "id": "c189f853",
-              "type": "headline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "028b19a6",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "21653bec",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-                            "blocks": [
-                              {
-                                "id": "dd1c6fcd",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-                                  "attributes": []
-                                },
-                                "position": [1, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [1, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [1, 1]
-                  }
-                ]
-              },
-              "position": [1]
+        "blocks": [
+          {
+            "id": "p01kx42s",
+            "subType": "clip",
+            "format": "video",
+            "title": "トランプ氏、香港人権法案に署名　中国は反発",
+            "synopses": {
+              "short": "トランプ氏、香港人権法案に署名　中国は反発",
+              "long": "トランプ氏、香港人権法案に署名　中国は反発",
+              "medium": "トランプ氏、香港人権法案に署名　中国は反発"
             },
-            {
-              "id": "262304a1",
-              "type": "video",
-              "model": {
-                "locator": "urn:bbc:pips:pid:p01kx42s",
-                "blocks": [
-                  {
-                    "id": "f39ac5db",
-                    "type": "caption",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "61cd338c",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "5f0d64b2",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "short",
-                                  "blocks": [
-                                    {
-                                      "id": "a3d70d23",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "short",
-                                        "attributes": []
-                                      },
-                                      "position": [2, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [2, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [2, 1]
-                  },
-                  {
-                    "id": "82827adc",
-                    "type": "aresMedia",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "26059a2d",
-                          "blockId": "urn:bbc:ares::clip:p01kx42s",
-                          "type": "aresMediaMetadata",
-                          "model": {
-                            "id": "p01kx42s",
-                            "subType": "clip",
-                            "format": "video",
-                            "title": "トランプ氏、香港人権法案に署名　中国は反発",
-                            "synopses": {
-                              "short": "トランプ氏、香港人権法案に署名　中国は反発",
-                              "long": "トランプ氏、香港人権法案に署名　中国は反発",
-                              "medium": "トランプ氏、香港人権法案に署名　中国は反発"
-                            },
-                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-                            "embedding": false,
-                            "advertising": true,
-                            "caption": "トランプ氏、香港人権法案に署名　中国は反発",
-                            "versions": [
-                              {
-                                "versionId": "p01kx42v",
-                                "types": ["Original"],
-                                "duration": 5,
-                                "durationISO8601": "PT5S",
-                                "warnings": {},
-                                "availableTerritories": {
-                                  "uk": true,
-                                  "nonUk": true
-                                },
-                                "availableFrom": 1545304011000
-                              }
-                            ],
-                            "syndication": { "destinations": [] },
-                            "smpKind": "programme"
-                          },
-                          "position": [2, 2, 1]
-                        },
-                        {
-                          "id": "b38212cb",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "c986051e",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 976,
-                                  "height": 549,
-                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
-                                  "originCode": "mpv"
-                                },
-                                "position": [2, 2, 2, 1]
-                              },
-                              {
-                                "id": "6872b628",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "76c65d83",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "ddb8c1b0",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "World Service Thumbnail",
-                                              "blocks": [
-                                                {
-                                                  "id": "4c3bef20",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "World Service Thumbnail",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    2, 2, 2, 2, 1, 1, 1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [2, 2, 2, 2, 1, 1]
-                                          }
-                                        ]
-                                      },
-                                      "position": [2, 2, 2, 2, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [2, 2, 2, 2]
-                              }
-                            ]
-                          },
-                          "position": [2, 2, 2]
-                        }
-                      ]
-                    },
-                    "position": [2, 2]
-                  }
-                ]
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+            "embedding": false,
+            "advertising": true,
+            "caption": "short",
+            "versions": [
+              {
+                "versionId": "p01kx42v",
+                "types": [
+                  "Original"
+                ],
+                "duration": 5,
+                "durationISO8601": "PT5S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1545304011000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "text": "Ko ko koo, &quot;lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa&quot; introduction.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (heading)",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (subheading)",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "numbered": true,
+            "items": [
+              {
+                "text": "Ǹjẹ́ o nímọ̀ nípa agogo inú ara rẹ? (numbered list)",
+                "markupType": "plain_text",
+                "type": "listItem"
               },
-              "position": [2]
-            },
-            {
-              "id": "7d920dc1",
-              "type": "timestamp",
-              "model": {
-                "firstPublished": 1574857137000,
-                "lastPublished": 1574857137000
+              {
+                "text": "nìyàn 26,000 ni àìsàn jẹjẹrẹ ń pa lóòjọ́",
+                "markupType": "plain_text",
+                "type": "listItem"
               },
-              "position": [3]
-            },
-            {
-              "id": "8ad3f174",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "24085d13",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Ko ko koo, \"lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa\" introduction.",
-                      "blocks": [
-                        {
-                          "id": "bb8ba612",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Ko ko koo, \"lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa\" introduction.",
-                            "attributes": ["bold"]
-                          },
-                          "position": [4, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [4, 1]
-                  }
-                ]
+              {
+                "text": "Wo àwọn ọtí ẹlẹ́rìndòdò tó ń fa àrùn jẹjẹrẹ...",
+                "markupType": "plain_text",
+                "type": "listItem"
               },
-              "position": [4]
-            },
-            {
-              "id": "fdf1d947",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "96646b44",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "b132de76",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (heading)",
-                            "blocks": [
-                              {
-                                "id": "a2ee6ef3",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (heading)",
-                                  "attributes": []
-                                },
-                                "position": [5, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [5, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [5, 1]
-                  }
-                ]
+              {
+                "text": "82% ọkùnrin ní kó mọ̀ pé òun ní àìsàn jẹjẹrẹ asẹtọ ní Naijiria",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "Ǹjẹ́ o nímọ̀ nípa agogo inú ara rẹ? (bulleted list)",
+                "markupType": "plain_text",
+                "type": "listItem"
               },
-              "position": [5]
-            },
-            {
-              "id": "de67d431",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "f0cd5325",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "fc4342bd",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (subheading)",
-                            "blocks": [
-                              {
-                                "id": "1ee573fc",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (subheading)",
-                                  "attributes": []
-                                },
-                                "position": [6, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [6, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [6, 1]
-                  }
-                ]
+              {
+                "text": "nìyàn 26,000 ni àìsàn jẹjẹrẹ ń pa lóòjọ́",
+                "markupType": "plain_text",
+                "type": "listItem"
               },
-              "position": [6]
-            },
-            {
-              "id": "d1446151",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "126f7308",
-                    "type": "orderedList",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "e7de3765",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "2dc7283f",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Ǹjẹ́ o nímọ̀ nípa agogo inú ara rẹ? (numbered list)",
-                                  "attributes": []
-                                },
-                                "position": [7, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [7, 1, 1]
-                        },
-                        {
-                          "id": "e2547dbb",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "7a9baa2f",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "nìyàn 26,000 ni àìsàn jẹjẹrẹ ń pa lóòjọ́",
-                                  "attributes": []
-                                },
-                                "position": [7, 1, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [7, 1, 2]
-                        },
-                        {
-                          "id": "18468bfa",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "2e7aa0d2",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Wo àwọn ọtí ẹlẹ́rìndòdò tó ń fa àrùn jẹjẹrẹ...",
-                                  "attributes": []
-                                },
-                                "position": [7, 1, 3, 1]
-                              }
-                            ]
-                          },
-                          "position": [7, 1, 3]
-                        },
-                        {
-                          "id": "9995738b",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "338cadbe",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "82% ọkùnrin ní kó mọ̀ pé òun ní àìsàn jẹjẹrẹ asẹtọ ní Naijiria",
-                                  "attributes": []
-                                },
-                                "position": [7, 1, 4, 1]
-                              }
-                            ]
-                          },
-                          "position": [7, 1, 4]
-                        }
-                      ]
-                    },
-                    "position": [7, 1]
-                  }
-                ]
+              {
+                "text": "Wo àwọn ọtí ẹlẹ́rìndòdò tó ń fa àrùn jẹjẹrẹ...",
+                "markupType": "plain_text",
+                "type": "listItem"
               },
-              "position": [7]
-            },
-            {
-              "id": "41aabd1f",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "00a566c6",
-                    "type": "unorderedList",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "b1f56bd7",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "152d7f3d",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Ǹjẹ́ o nímọ̀ nípa agogo inú ara rẹ? (bulleted list)",
-                                  "attributes": []
-                                },
-                                "position": [8, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [8, 1, 1]
-                        },
-                        {
-                          "id": "dd2afae0",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "a3beb10a",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "nìyàn 26,000 ni àìsàn jẹjẹrẹ ń pa lóòjọ́",
-                                  "attributes": []
-                                },
-                                "position": [8, 1, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [8, 1, 2]
-                        },
-                        {
-                          "id": "4a339356",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "a993d8dd",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Wo àwọn ọtí ẹlẹ́rìndòdò tó ń fa àrùn jẹjẹrẹ...",
-                                  "attributes": []
-                                },
-                                "position": [8, 1, 3, 1]
-                              }
-                            ]
-                          },
-                          "position": [8, 1, 3]
-                        },
-                        {
-                          "id": "fac2faba",
-                          "type": "listItem",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "9722ff7d",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "82% ọkùnrin ní kó mọ̀ pé òun ní àìsàn jẹjẹrẹ asẹtọ ní Naijiria",
-                                  "attributes": []
-                                },
-                                "position": [8, 1, 4, 1]
-                              }
-                            ]
-                          },
-                          "position": [8, 1, 4]
-                        }
-                      ]
-                    },
-                    "position": [8, 1]
-                  }
-                ]
-              },
-              "position": [8]
-            },
-            {
-              "id": "04349a91",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "2a90140d",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Wole Soyinka ni \"mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi\".",
-                      "blocks": [
-                        {
-                          "id": "c03268ee",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Wole Soyinka ni \"mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi\".",
-                            "attributes": ["bold"]
-                          },
-                          "position": [9, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [9, 1]
-                  },
-                  {
-                    "id": "a7773913",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Wole Soyinka ni \"mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi\".",
-                      "blocks": [
-                        {
-                          "id": "ed72efd4",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Wole Soyinka ni \"mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi\".",
-                            "attributes": ["italic"]
-                          },
-                          "position": [9, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [9, 2]
-                  }
-                ]
-              },
-              "position": [9]
-            },
-            {
-              "id": "3c6fba15",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "ae06a44e",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "6a987d2b",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "604a7706",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "test image",
-                                  "blocks": [
-                                    {
-                                      "id": "9b31ce61",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "test image",
-                                        "attributes": []
-                                      },
-                                      "position": [10, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [10, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [10, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 1]
-                  },
-                  {
-                    "id": "4b4daf99",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 360,
-                      "width": 640,
-                      "locator": "7DA2/test/_63726123_test66.jpg",
-                      "href": "http://b.files.bbci.co.uk/7DA2/test/_63726123_test66.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "BBC",
-                      "suitableForSyndication": true
-                    },
-                    "position": [10, 2]
-                  }
-                ]
-              },
-              "position": [10]
-            },
-            { "id": "2cbddff1", "type": "mpu", "model": {}, "position": [11] }
-          ]
-        }
+              {
+                "text": "82% ọkùnrin ní kó mọ̀ pé òun ní àìsàn jẹjẹrẹ asẹtọ ní Naijiria",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "text": "<bold>Wole Soyinka ni &quot;mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi&quot;.</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic>Wole Soyinka ni &quot;mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi&quot;.</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "id": "63726123",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/7DA2/test/_63726123_test66.jpg",
+            "path": "/cpsdevpb/7DA2/test/_63726123_test66.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "test image",
+            "copyrightHolder": "BBC",
+            "positionHint": "full-width",
+            "allowSyndication": true,
+            "type": "image"
+          }
+        ]
       },
       "promo": {
+        "headlines": {
+          "shortHeadline": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
+          "headline": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ"
+        },
         "locators": {
           "assetUri": "/yoruba/media-23256797",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3",
@@ -681,843 +200,165 @@
           "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-23256797",
           "curie": "http://www.bbc.co.uk/asset/f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3"
         },
-        "headlines": {
-          "seoHeadline": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-          "promoHeadline": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+        "summary": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
+        "timestamp": 1574857137000,
+        "language": "yo",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Yoruba",
+          "taggings": []
         },
-        "images": {
-          "defaultPromoImage": {
-            "blocks": [
+        "media": {
+          "id": "p01kx42s",
+          "subType": "clip",
+          "format": "video",
+          "title": "トランプ氏、香港人権法案に署名　中国は反発",
+          "synopses": {
+            "short": "トランプ氏、香港人権法案に署名　中国は反発",
+            "long": "トランプ氏、香港人権法案に署名　中国は反発",
+            "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+          "embedding": false,
+          "advertising": true,
+          "caption": "short",
+          "versions": [
+            {
+              "versionId": "p01kx42v",
+              "types": [
+                "Original"
+              ],
+              "duration": 5,
+              "durationISO8601": "PT5S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1545304011000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63726124",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/A4B2/test/_63726124_p01kx435.jpg",
+          "path": "/cpsdevpb/A4B2/test/_63726124_p01kx435.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "connectionAltText",
+          "copyrightHolder": "BBC",
+          "allowSyndication": true,
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:yoruba/media-23256797",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/yoruba/media",
+          "urlIdentifier": "/yoruba/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC News Yorùbá",
+          "uri": "/yoruba",
+          "urlIdentifier": "/yoruba",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
               {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "connectionAltText",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "connectionAltText",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                "headlines": {
+                  "shortHeadline": "tẹ̀st in prọ́ọ̀gerssẹ́ẹ̀ 1 - UpdỌ́tẸ̀d",
+                  "headline": "tẸ́st in prọ́Ọ̀gerssẹ́ẹ̀ 1"
+                },
+                "locators": {
+                  "assetUri": "/yoruba/23167372",
+                  "cpsUrn": "urn:bbc:content:assetUri:/yoruba/23167372"
+                },
+                "summary": "tẸ̀st summary, plẹ̀asẹ̀ ignỌ̀rẹ́",
+                "timestamp": 1511785444000,
+                "language": "yo",
+                "cpsType": "PGL",
+                "id": "urn:bbc:ares::asset:yoruba/23167372",
+                "type": "cps"
               },
               {
-                "type": "rawImage",
-                "model": {
+                "headlines": {
+                  "shortHeadline": "Nibo ni ajọ INEC ba iforukosilẹ fun kaadi idibo de?",
+                  "headline": "Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?"
+                },
+                "locators": {
+                  "assetUri": "/yoruba/23183994",
+                  "cpsUrn": "urn:bbc:content:assetUri:/yoruba/23183994"
+                },
+                "summary": "Ajọ INEC n tẹsiju ninu pinpin kaadi ididbo",
+                "timestamp": 1517043146000,
+                "language": "yo",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p01g40g1",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "Nibo ni ajọ INEC ba iforukosilẹ fun kaadi idibo de?",
+                  "synopses": {
+                    "short": "Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?",
+                    "medium": "Ajọ INEC n tẹsiju ninu pinpin kaadi ididbo"
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g417p.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?",
+                  "versions": [
+                    {
+                      "versionId": "p01g40g8",
+                      "types": [
+                        "Original"
+                      ],
+                      "duration": 152,
+                      "durationISO8601": "PT2M32S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1517042350000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "63653670",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/1DD3/test/_63653670_p01g417p.jpg",
+                  "path": "/cpsdevpb/1DD3/test/_63653670_p01g417p.jpg",
                   "height": 576,
                   "width": 1024,
-                  "locator": "A4B2/test/_63726124_p01kx435.jpg",
-                  "href": "http://b.files.bbci.co.uk/A4B2/test/_63726124_p01kx435.jpg",
-                  "originCode": "cpsdevpb",
+                  "altText": "Keyframe #2",
                   "copyrightHolder": "BBC",
-                  "suitableForSyndication": true
-                }
+                  "type": "image"
+                },
+                "mediaType": "Video",
+                "id": "urn:bbc:ares::asset:yoruba/23183994",
+                "type": "cps"
               }
             ]
           }
-        },
-        "summary": {
-          "blocks": [
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-                      "blocks": [
-                        {
-                          "type": "fragment",
-                          "model": {
-                            "text": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
-                            "attributes": []
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "extrinsicPromo": {
-          "headlines": {
-            "shortHeadline": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ"
-          },
-          "media": {
-            "blocks": [
-              {
-                "type": "video",
-                "model": {
-                  "locator": "urn:bbc:pips:pid:p01kx42s",
-                  "blocks": [
-                    {
-                      "type": "caption",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "text",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "paragraph",
-                                  "model": {
-                                    "text": "short",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "short",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "aresMedia",
-                      "model": {
-                        "blocks": [
-                          {
-                            "blockId": "urn:bbc:ares::clip:p01kx42s",
-                            "type": "aresMediaMetadata",
-                            "model": {
-                              "id": "p01kx42s",
-                              "subType": "clip",
-                              "format": "video",
-                              "title": "トランプ氏、香港人権法案に署名　中国は反発",
-                              "synopses": {
-                                "short": "トランプ氏、香港人権法案に署名　中国は反発",
-                                "long": "トランプ氏、香港人権法案に署名　中国は反発",
-                                "medium": "トランプ氏、香港人権法案に署名　中国は反発"
-                              },
-                              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-                              "embedding": false,
-                              "advertising": true,
-                              "caption": "トランプ氏、香港人権法案に署名　中国は反発",
-                              "versions": [
-                                {
-                                  "versionId": "p01kx42v",
-                                  "types": ["Original"],
-                                  "duration": 5,
-                                  "durationISO8601": "PT5S",
-                                  "warnings": {},
-                                  "availableTerritories": {
-                                    "uk": true,
-                                    "nonUk": true
-                                  },
-                                  "availableFrom": 1545304011000
-                                }
-                              ],
-                              "syndication": { "destinations": [] },
-                              "smpKind": "programme"
-                            }
-                          },
-                          {
-                            "type": "image",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "rawImage",
-                                  "model": {
-                                    "width": 976,
-                                    "height": 549,
-                                    "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
-                                    "originCode": "mpv"
-                                  }
-                                },
-                                {
-                                  "type": "altText",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "text",
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "type": "paragraph",
-                                              "model": {
-                                                "text": "World Service Thumbnail",
-                                                "blocks": [
-                                                  {
-                                                    "type": "fragment",
-                                                    "model": {
-                                                      "text": "World Service Thumbnail",
-                                                      "attributes": []
-                                                    }
-                                                  }
-                                                ]
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "type": "cps"
-        }
+        ]
       }
     },
     "secondaryData": {
-      "topStories": [
-        {
-          "headlines": {
-            "headline": "Lassa: Ipinlẹ Ondo ati Kogi fara kaasa",
-            "overtyped": "Overtyped headline"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23183190",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23183190",
-            "curie": "http://www.bbc.co.uk/asset/aa128189-ef3f-b948-b6fc-fa5c4adcc1c3",
-            "assetId": "23183190"
-          },
-          "summary": "Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si, nitori ọwọja arun naa ti ran de ipinlẹ Ondo ati Kogi, ti eniyan marun ti ku latipase iba naa nipinlẹ Ondo, ti Merindinlogoji min si ti wa labe ayewo nipinle Kogi.",
-          "timestamp": 1516688065000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63652975",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
-            "path": "/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg",
-            "height": 351,
-            "width": 624,
-            "altText": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
-            "caption": "Kokoro aifojuri to n fa arun iba Ọrẹrẹ",
-            "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "section": {
-            "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
-            "type": "simple"
-          },
-          "overtypedSummary": "Overtyped summary: Kaka ki ewe agbọn iba ọrẹrẹ taa mọ si Lassa Fever o dẹ nilẹ Naijiria, koko-ko lo tun n le si.",
-          "id": "urn:bbc:ares::asset:yoruba/23183190",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "CMA n iwadii Amazon ati Google lori ayederu iroyin"
-          },
-          "locators": {
-            "assetUri": "/yoruba/agbaye-23450016",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/agbaye-23450016",
-            "curie": "http://www.bbc.co.uk/asset/68eaad08-a5cc-429a-9d80-342c713bd483",
-            "assetId": "23450016"
-          },
-          "summary": "Ninu atejade ti won fi sita, CMA salaye pe yoo se iwadi finifini lati le ri wipe awon ileese mejeji yii o tapa sofin nipa gbigbe igbese ti ko to lati daabobo awọn ti won gbe ayederu iroyin jade.",
-          "timestamp": 1628510511000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63762682",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/6FD2/test/_63762682_cfd3b3ec-15d7-448f-a5a2-a4ab4db0e494.jpg",
-            "path": "/cpsdevpb/6FD2/test/_63762682_cfd3b3ec-15d7-448f-a5a2-a4ab4db0e494.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Lady receiving COVID-19 vaccination",
-            "copyrightHolder": "Getty Images",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "id": "urn:bbc:ares::asset:yoruba/agbaye-23450016",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Buhari: Asiko to lati se marosẹ Oyo si Ogbomọsọ"
-          },
-          "locators": {
-            "assetUri": "/yoruba/live/afrika-23185903",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/live/afrika-23185903",
-            "curie": "http://www.bbc.co.uk/asset/7fae1d4b-5a16-9341-b122-8b682c21140f",
-            "assetId": "23185903"
-          },
-          "summary": "test",
-          "timestamp": 1517997355000,
-          "language": "yo",
-          "cpsType": "LIV",
-          "indexImage": {
-            "id": "63655282",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/6E5F/test/_63655282_fd75770a-a02a-4dde-8433-f1240baf3f3a.jpg",
-            "path": "/cpsdevpb/6E5F/test/_63655282_fd75770a-a02a-4dde-8433-f1240baf3f3a.jpg",
-            "height": 371,
-            "width": 660,
-            "altText": "bb",
-            "caption": "dfdfdf",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "commentary": {
-            "order": "descending",
-            "assetUUID": "B85A86F0BA7A254297BDC3B54032D406",
-            "channels": {
-              "enhancedmobile": "bbc.cps.asset.23185904_EnhancedMobile",
-              "desktop": "bbc.cps.asset.23185904_HighWeb",
-              "highweb": "bbc.cps.asset.23185904_HighWeb",
-              "mobile": "bbc.cps.asset.23185904_EnhancedMobile"
-            }
-          },
-          "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "id": "urn:bbc:ares::asset:yoruba/live/afrika-23185903",
-          "type": "cps"
-        }
-      ],
-      "features": [
-        {
-          "headlines": {
-            "headline": "Nitori ki nle ri omi pọn, mo ma npadanu asiko ile ẹkọ"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23180895",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23180895",
-            "curie": "http://www.bbc.co.uk/asset/44f3842e-78ea-7649-9b8b-fbd904a10311",
-            "assetId": "23180895"
-          },
-          "summary": "Omo ọdun metalelogun ni Mario Macilau lọdun 2007 nigbati o fi ẹrọ ibanisọro alagbeka iya rẹ se pasi parọ pelu ẹro iyaworan Nikon.",
-          "timestamp": 1516032433000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63649964",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/B792/test/_63649964_mariomacillau.jpg",
-            "path": "/cpsdevpb/B792/test/_63649964_mariomacillau.jpg",
-            "height": 351,
-            "width": 624,
-            "altText": "Ọmọ igboro kan to bẹrẹ si nii lo ẹrọ ibanisọrọ iya rẹ ya awọn aworan to wu ni lori",
-            "caption": "Mario Macilau",
-            "copyrightHolder": "Mario Macilau/Water Aid",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63649966",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/105B2/test/_63649966_mariomacillau.jpg",
-            "path": "/cpsdevpb/105B2/test/_63649966_mariomacillau.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ọmọ igboro kan to bẹrẹ si nii lo ẹrọ ibanisọrọ iya rẹ ya awọn aworan to wu ni lori",
-            "caption": "Mario Macilau",
-            "copyrightHolder": "Mario Macilau/Water Aid",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "section": {
-            "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:yoruba/23180895",
-          "type": "cps"
-        },
-        {
-          "name": "Ina mọnamọna: Ijọba rawọ bẹ araalu fun ina ọba to lọ lọjọ isẹgun",
-          "summary": "Idakureku ina ọba kii se ajeji s'awọn ọmọ orilẹ-ede Naijiria, sugbọn nigba ti gbogbo ina orilẹ-ede yii ba dede ku lọwọkannaa, ko le sai fa awuyewuye laarin awọ ọmọ orilẹ-ede Naijiria",
-          "indexImage": {
-            "id": "63640284",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/BC4C/test/_63640284_babatunde-rajifasholaministafunrinamnamna.jpg",
-            "path": "/cpsdevpb/BC4C/test/_63640284_babatunde-rajifasholaministafunrinamnamna.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Babatunde Fashola",
-            "caption": "Babatunde Fashola",
-            "copyrightHolder": "Babatunde Fashola/Facebook",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.com/yoruba/afrika-23176202",
-          "aresUrl": "https://ares-api.test.api.bbci.co.uk/api/asset/yoruba/afrika-23176202",
-          "contentType": "Text",
-          "assetTypeCode": "PRO",
-          "timestamp": 1561381319000,
-          "type": "link"
-        },
-        {
-          "headlines": {
-            "headline": "Boko Haram kolu ibudo soja n'ipinle Yobe"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23175721",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175721",
-            "curie": "http://www.bbc.co.uk/asset/5235f1c4-8bb1-5441-8051-ac64d131f4fa",
-            "assetId": "23175721"
-          },
-          "summary": "Ikọ Boko Haram, ninu akọtun ikọlu min tun sekupa awọn ọmọ ogun ilẹ wa marun, nigbati ọgbọn ọmọ ogun min di awati nilu Kanama, nipinlẹ Yobe.",
-          "timestamp": 1514877200000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63638903",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/7907/test/_63638903_awonomoogun.jpg",
-            "path": "/cpsdevpb/7907/test/_63638903_awonomoogun.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Awọn ọmọ ogun ilẹ wa",
-            "caption": "O di dandan ka ri ẹyin ikọ Boko Haram",
-            "copyrightHolder": "Ileese ologun",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63638927",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/11D17/test/_63638927_ikobokoharam.jpg",
-            "path": "/cpsdevpb/11D17/test/_63638927_ikobokoharam.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ami idamọ Boko Haram",
-            "caption": "Ikọ Boko Haram tun soro",
-            "copyrightHolder": "Ileese ologun ",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "section": {
-            "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:yoruba/23175721",
-          "type": "cps"
-        },
-        {
-          "headlines": { "headline": "Iroyin Iseju kan lori BBC Yoruba" },
-          "locators": {
-            "assetUri": "/yoruba/23175823",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175823",
-            "curie": "http://www.bbc.co.uk/asset/1654f1af-9a7f-4a4d-a0e9-174e393f4074",
-            "assetId": "23175823"
-          },
-          "summary": "Iroyin Iseju kan lori BBC Yoruba",
-          "timestamp": 1515087625000,
-          "language": "yo",
-          "cpsType": "MAP",
-          "media": {
-            "id": "p01fq9rn",
-            "subType": "clip",
-            "format": "audio",
-            "title": "Iroyin Iseju kan lori BBC Yoruba",
-            "synopses": { "short": "Iroyin Iseju kan lori BBC Yoruba" },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01fq9sm.png",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Iroyin Iseju kan lori BBC Yoruba",
-            "versions": [
-              {
-                "versionId": "p01fq9rq",
-                "types": ["Original"],
-                "duration": 55,
-                "durationISO8601": "PT55S",
-                "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
-                "availableFrom": 1514911247000
-              }
-            ],
-            "smpKind": "radioProgramme",
-            "type": "media"
-          },
-          "indexImage": {
-            "id": "63639437",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/11F15/test/_63639437_bbc.jpg",
-            "path": "/cpsdevpb/11F15/test/_63639437_bbc.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Iroyin Iseju kan lori BBC Yoruba",
-            "caption": "Iroyin Iseju kan lori BBC Yoruba",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63639436",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/F805/test/_63639436_bbc.jpg",
-            "path": "/cpsdevpb/F805/test/_63639436_bbc.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Iroyin Iseju kan lori BBC Yoruba",
-            "caption": "Iroyin Iseju kan lori BBC Yoruba",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "id": "urn:bbc:ares::asset:yoruba/23175823",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Awọn janduku yabo awọn ile ijọsin kan ni Ilorin",
-            "overtyped": "Awọn janduku yabo awọn ile ijọsin ni Ilorin"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23175631",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175631",
-            "curie": "http://www.bbc.co.uk/asset/698442d7-bd16-5c40-9bc2-31c44831ed52",
-            "assetId": "23175631"
-          },
-          "summary": "Okeretan ile ijosin meta ni awon janduku ti yabo mojumo ojo odun ni Ilu Ilorin",
-          "timestamp": 1514815090000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63638666",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/1047B/test/_63638666_26166780_823460314503533_6079397051365653655_n.jpg",
-            "path": "/cpsdevpb/1047B/test/_63638666_26166780_823460314503533_6079397051365653655_n.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "iLORIN",
-            "caption": "Awon Oko Ile Ijosin ti won baje",
-            "copyrightHolder": " Ibitoye Reuben Idowu/Facebook",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63638659",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/175C3/test/_63638659_kileijosinmethodisttiawnjandukuf.jpg",
-            "path": "/cpsdevpb/175C3/test/_63638659_kileijosinmethodisttiawnjandukuf.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "iLORIN",
-            "caption": "Awon Oko Ile Ijosin ti won baje",
-            "copyrightHolder": " Ibitoye Reuben Idowu/Facebook",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "id": "urn:bbc:ares::asset:yoruba/23175631",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Israel ni ki awọn ọmọ adulawọ kuro n'ilu wọn"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23175791",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175791",
-            "curie": "http://www.bbc.co.uk/asset/ceac98fc-0ad9-d948-b0ac-d9a32ae7eb37",
-            "assetId": "23175791"
-          },
-          "summary": "Ọgọọrọ awọn ọmọ ilẹ adulawọ yii ni wọn ti pasẹ fun lati kuro ni orilẹede Isreal laarin osu mẹta tabi ki wọn fi ẹwọn gbara. Ile isẹ to nrisi ọrọ ikaniyan labẹnu ati iwọlewọde lo se bẹẹ",
-          "timestamp": 1514902438000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63639363",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/8E29/test/_63639363_awonatiponileisreli.jpg",
-            "path": "/cpsdevpb/8E29/test/_63639363_awonatiponileisreli.jpg",
-            "height": 261,
-            "width": 464,
-            "altText": "Awon arinrinajo Africa nilẹ Isrẹli to nja f'ẹtọ wọn",
-            "caption": "Awon arinrinajo Africa nilẹ Isrẹli to nja f'ẹtọ wọn",
-            "copyrightHolder": "Getty Images",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63639229",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/16885/test/_63639229_awonatiponileisreli.jpg",
-            "path": "/cpsdevpb/16885/test/_63639229_awonatiponileisreli.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Awon arinrinajo Africa nilẹ Isrẹli to nja f'ẹtọ wọn",
-            "caption": "Awon arinrinajo Africa nilẹ Isrẹli to nja f'ẹtọ wọn",
-            "copyrightHolder": "Getty Images",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "section": {
-            "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:yoruba/23175791",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Uganda: Museveni fọwọ s'ofin lati gbegba ibo lẹkẹfa"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23175853",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175853",
-            "curie": "http://www.bbc.co.uk/asset/71af3d16-9d74-484b-85f0-b3f2f31cf5e0",
-            "assetId": "23175853"
-          },
-          "summary": "Abadofin yi yọ opin ọjọ ori ọdun marundinlọgọrin fun awọn oludije fun ipo aarẹ orilẹ ede, eyi ti o tumọ si pe Museveni ti o pe mẹtaleaadọrin le tun lọ fun ipo lẹẹkansi titi di ọdun 2021",
-          "timestamp": 1514914172000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63639280",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/2065/test/_63639280_yowerimuseveni.jpg",
-            "path": "/cpsdevpb/2065/test/_63639280_yowerimuseveni.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Olori orilẹ-ede Uganda Yoweri Museveni",
-            "caption": "Olori orilẹ-ede Uganda Yoweri Museveni",
-            "copyrightHolder": "AFP/Getty Images",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "section": {
-            "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:yoruba/23175853",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Obinrin alaisan jẹjẹrẹ dagbere f'aye leyin wakati mejidinlogun to s'egbeyawo"
-          },
-          "locators": {
-            "assetUri": "/yoruba/media-23175861",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-23175861",
-            "curie": "http://www.bbc.co.uk/asset/15d1b4b9-27db-1145-9a3e-65269aee5e1c",
-            "assetId": "23175861"
-          },
-          "summary": "Itan tọkọ-taya David ati Heather Mosher ti di kale-n-kako lagbaye paapaa iwa akin ti arabinrin Heather fi han lẹyin ti awon dokita kede pe o ni aisan jẹjẹrẹ eleyi ti arabinrin ọhun ko gba laaye lati dina afojusun rẹ.",
-          "timestamp": 1514909019000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63639320",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/0959/test/_63639320_davidandheathermusher.jpg",
-            "path": "/cpsdevpb/0959/test/_63639320_davidandheathermusher.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "tọkọ-taya David ati Heather Mosher",
-            "caption": "Tokotaya Mosher se igbeyawo lainaani pe iyawo alarede ko ni pẹ ku",
-            "copyrightHolder": "Christina Lee/ facebook",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63639399",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/18441/test/_63639399_heathermosher.jpg",
-            "path": "/cpsdevpb/18441/test/_63639399_heathermosher.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "heather mosher nwọ asọ igbeyawo rẹ",
-            "caption": "Heather mosher se igbeyawo ki o to jade laye",
-            "copyrightHolder": "Christina Lee/ Facebook",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "id": "urn:bbc:ares::asset:yoruba/media-23175861",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "UNICEF: Naijiria bi ọmọ ọkẹ kan o le lọjọ ọdun"
-          },
-          "locators": {
-            "assetUri": "/yoruba/23175726",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/23175726",
-            "curie": "http://www.bbc.co.uk/asset/df759f51-85c4-5449-a8f9-5ee31be679b3",
-            "assetId": "23175726"
-          },
-          "summary": "Ni asiko yi ti ilu le, ti ọrọ aje ilẹ Naijiria ko si fara rọ, ajọ to wa fun itọju awọn ọmọ wẹwẹ labẹ ajọ isọkan agbaye (UNICEF), ti kede pe ilẹ wa lo se ipo kẹta ninu awọn orilẹede ti wọn ti bimọ julọ ni ọjọ ọdun tuntun jake jado agbaye.",
-          "timestamp": 1514896185000,
-          "language": "yo",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63639009",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/15FED/test/_63639009_omoakokoloduntuntun.jpg",
-            "path": "/cpsdevpb/15FED/test/_63639009_omoakokoloduntuntun.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Aya Gomina Ambode gbe awọ̀n ọmọ tuntun lọwọ",
-            "caption": "Awọn ọmọ tuntun jojolo akọkọ to wa saye nilu Eko",
-            "copyrightHolder": "Iwe iroyin Guardian",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63638931",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/369F/test/_63638931_makklduntuntunniilunugu.jpg",
-            "path": "/cpsdevpb/369F/test/_63638931_makklduntuntunniilunugu.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Aya Gomina Ambode gbe awọ̀n ọmọ tuntun lọwọ",
-            "caption": "Awọn ọmọ tuntun jojolo akọkọ to wa saye nilu Eko",
-            "copyrightHolder": "Iwe iroyin Guardian",
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "section": {
-            "subType": "IDX",
-            "name": "Àbáwọlé",
-            "uri": "/yoruba/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:yoruba/23175726",
-          "type": "cps"
-        }
-      ],
-      "mostRead": {
-        "generated": "2024-07-29T12:28:57.07Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
-        "items": [
-          {
-            "id": "fbf6d454-2cce-8a4e-8e8d-026981c26513",
-            "rank": 1,
-            "title": "Egbin ati Idọ̀ti lẹyin ọdun: Se agbegbe rẹ mọ?",
-            "href": "/yoruba/23175856",
-            "timestamp": "2018-01-02T20:01:00.000Z"
-          },
-          {
-            "id": "57c65489-46b9-e948-98b3-2b94570c19f5",
-            "rank": 2,
-            "title": "Afurasi adaran Fulani mẹfa foju bale-ẹjọ",
-            "href": "/yoruba/23177142",
-            "timestamp": "2018-01-05T12:36:00.000Z"
-          },
-          {
-            "id": "93865407-35df-d244-aad7-a96ec3b00f51",
-            "rank": 3,
-            "title": "Naijiria pe ile'sẹ ilẹ gẹẹsi lẹjọ fun asemase lori owo epo",
-            "href": "/yoruba/23182560",
-            "timestamp": "2018-01-19T16:45:07.000Z"
-          },
-          {
-            "id": "e9b33381-17b2-8b47-bf5b-03a3bf60670c",
-            "rank": 4,
-            "title": "Boko Haram ji asẹgita mọkanlelọgbọn gbe",
-            "href": "/yoruba/23175944",
-            "timestamp": "2018-01-04T10:58:38.000Z"
-          },
-          {
-            "id": "fc8224a4-c200-6d41-bf00-c15091d0ab12",
-            "rank": 5,
-            "title": "Libya: Ojilelẹẹdegbẹta ọmọ Naijiria pada sile",
-            "href": "/yoruba/23177473",
-            "timestamp": "2018-01-08T17:34:47.000Z"
-          },
-          {
-            "id": "b66d9cf1-9764-6a4f-a529-55b199d38298",
-            "rank": 6,
-            "title": "Ronaldinho fẹyinti ninu ere bọọlu alafẹsẹgba",
-            "href": "/yoruba/23181777",
-            "timestamp": "2018-01-17T08:42:39.000Z"
-          },
-          {
-            "id": "d6176432-761f-1042-963e-c7234f495c44",
-            "rank": 7,
-            "title": "Ẹ kede awọn darandaran bii agbesunmọmi\"-Ẹkun guusu lọgun",
-            "href": "/yoruba/23179653",
-            "timestamp": "2018-01-12T06:26:28.000Z"
-          },
-          {
-            "id": "0dbe742e-d38c-a74b-a820-ae733a37e01f",
-            "rank": 8,
-            "title": "Kwara: Ijọba Ipinlẹ tu igbimọ alakoso",
-            "href": "/yoruba/23182321",
-            "timestamp": "2018-01-18T15:32:24.000Z"
-          },
-          {
-            "id": "5235f1c4-8bb1-5441-8051-ac64d131f4fa",
-            "rank": 9,
-            "title": "Boko Haram kolu ibudo soja n'ipinle Yobe",
-            "href": "/yoruba/23175721",
-            "timestamp": "2018-01-02T07:13:20.000Z"
-          },
-          {
-            "id": "14f92e3c-edad-1b40-a576-d4b120c10cf1",
-            "rank": 10,
-            "title": "Isẹ Pasitọ lo ku funmi lẹyin oselu - Fayose",
-            "href": "/yoruba/23176702",
-            "timestamp": "2018-01-04T18:01:45.000Z"
-          }
-        ]
-      },
-      "latestMedia": null
+      "topStories": null,
+      "features": null,
+      "mostRead": null
     }
   },
   "contentType": "application/json; charset=utf-8"

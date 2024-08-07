@@ -18,6 +18,7 @@ type Props = {
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
   toggles?: Toggles;
+  isCaf?: boolean;
   isAmp?: boolean;
 };
 

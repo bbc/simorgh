@@ -7,7 +7,7 @@ import {
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default service => {
-  runCrossPlatformTests(service, 'STY');
+  runCrossPlatformTests(service);
   runAmpFooterTests();
   runCoreAmpTests();
   runAmpAnalyticsTests();
