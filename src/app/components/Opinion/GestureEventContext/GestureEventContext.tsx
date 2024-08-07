@@ -1,7 +1,5 @@
 import React, {
-  Dispatch,
   PropsWithChildren,
-  SetStateAction,
   createContext,
   useContext,
   useState,
@@ -11,13 +9,13 @@ import detectSwipeUp from './utils/detectSwipeUp';
 
 export type GestureEventContextType = {
   swipeUpCount: number;
-  setSwipeUpCount: Dispatch<SetStateAction<number>>;
+  swipeUp: () => void;
   swipeDownCount: number;
-  setSwipeDownCount: Dispatch<SetStateAction<number>>;
+  swipeDown: () => void;
   swipeLeftCount: number;
-  setSwipeLeftCount: Dispatch<SetStateAction<number>>;
+  swipeLeft: () => void;
   swipeRightCount: number;
-  setSwipeRightCount: Dispatch<SetStateAction<number>>;
+  swipeRight: () => void;
 };
 
 const Context = createContext<GestureEventContextType>(
@@ -49,17 +47,22 @@ const GestureEventContext = ({ children }: PropsWithChildren) => {
   const [swipeLeftCount, setSwipeLeftCount] = useState(0);
   const [swipeRightCount, setSwipeRightCount] = useState(0);
 
+  const swipeUp = () => setSwipeUpCount(count => count + 1);
+  const swipeDown = () => setSwipeDownCount(count => count + 1);
+  const swipeLeft = () => setSwipeLeftCount(count => count + 1);
+  const swipeRight = () => setSwipeRightCount(count => count + 1);
+
   return (
     <Context.Provider
       value={{
         swipeUpCount,
-        setSwipeUpCount,
+        swipeUp,
         swipeDownCount,
-        setSwipeDownCount,
+        swipeDown,
         swipeLeftCount,
-        setSwipeLeftCount,
+        swipeLeft,
         swipeRightCount,
-        setSwipeRightCount,
+        swipeRight,
       }}
     >
       <TouchPad>{children}</TouchPad>

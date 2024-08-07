@@ -17,13 +17,13 @@ const Components = {
 };
 
 const ShuffleButton = () => {
-  const { setSwipeLeftCount } = useGestureEventContext();
+  const { swipeLeft } = useGestureEventContext();
 
   return (
     <button
       type="button"
       css={styles.shuffleButton}
-      onClick={() => setSwipeLeftCount((swipeCount: number) => swipeCount + 1)}
+      onClick={() => swipeLeft()}
     >
       shuffle
     </button>
