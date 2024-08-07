@@ -119,7 +119,7 @@ exports[`AMP Story Page Analytics chartbeat 1`] = `
   "vars": {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
-    "sections": "Kyrgyz, Kyrgyz - STY",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY",
     "title": "Test STY for social embeds",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",

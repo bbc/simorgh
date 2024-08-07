@@ -107,8 +107,7 @@ const getBootstrapScript = () =>
     innerHTML?.includes('window.dotcom'),
   );
 
-// Skipped as this component will no longer be used.
-describe.skip('Story Page', () => {
+describe('Story Page', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';

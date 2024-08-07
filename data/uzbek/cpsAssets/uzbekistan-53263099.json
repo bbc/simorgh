@@ -12,16 +12,15 @@
           "categoryName": "Feature",
           "contentId": "urn:bbc:cps:curie:asset:1e3dc27d-86b1-4f84-b0d6-6731affbfa77",
           "contentType": "article",
-          "language": null,
+          "language": "uz-Cyrl",
           "ldpThingIds": null,
           "ldpThingLabels": null,
-          "nationsProducer": null,
-          "pageIdentifier": "uzbek.uzbekistan.story.53263099.page",
+          "pageIdentifier": "uzbekistan::uzbek.uzbekistan.story.53263099.page",
           "pageTitle": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол O'zbekiston",
+          "producerId": null,
           "timePublished": "2020-07-02T11:06:41.000Z",
           "timeUpdated": "2020-07-02T11:06:41.000Z",
-          "producerName": "UZBEK",
-          "producerId": "96"
+          "producerName": "UZBEK"
         },
         "id": "urn:bbc:ares::asset:uzbek/uzbekistan-53263099",
         "locators": {
@@ -29,14 +28,15 @@
           "curieCpsUrn": "urn:bbc:cps:curie:asset:1e3dc27d-86b1-4f84-b0d6-6731affbfa77",
           "assetId": "53263099",
           "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-53263099",
-          "canonicalUrl": "https://www.bbc.com/uzbek/uzbekistan-53263099",
           "curie": "http://www.bbc.co.uk/asset/1e3dc27d-86b1-4f84-b0d6-6731affbfa77"
         },
         "type": "STY",
         "createdBy": "uzbek-v6",
         "language": "uz-Cyrl",
+        "lastUpdated": 1711615705000,
         "firstPublished": 1593688001000,
         "lastPublished": 1593688001000,
+        "timestamp": 1593688001000,
         "options": {
           "isIgorSeoTagsEnabled": false,
           "includeComments": false,
@@ -54,10 +54,10 @@
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
+          "cps_asset_type": "sty",
+          "counterName": "uzbek.uzbekistan.story.53263099.page",
           "cps_asset_id": "53263099",
-          "page": "uzbek.uzbekistan.story.53263099.page",
-          "contentId": "urn:bbc:cps:curie:asset:1e3dc27d-86b1-4f84-b0d6-6731affbfa77",
-          "cps_asset_type": "sty"
+          "contentId": "urn:bbc:cps:curie:asset:1e3dc27d-86b1-4f84-b0d6-6731affbfa77"
         },
         "passport": {
           "category": {
@@ -73,1604 +73,366 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
           "taggings": []
         },
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment",
-          "image",
-          "altText",
-          "rawImage",
-          "urlLink",
-          "social",
-          "renditions",
-          "aresOEmbed",
-          "subheadline",
-          "links",
-          "link",
-          "caption",
-          "aresLink"
-        ],
+        "tags": {},
+        "version": "v1.4.42",
+        "blockTypes": ["image", "paragraph", "social_embed", "crosshead"],
         "includeComments": false,
+        "readTime": 3,
         "siteUri": "/uzbek",
-        "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
-        "socialProviders": ["YouTube"],
         "useSensitiveOnwardJourneys": false
       },
       "content": {
-        "model": {
-          "blocks": [
-            {
-              "id": "a751003f",
-              "type": "headline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "12f31f9b",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "5d630af3",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол O'zbekiston",
-                            "blocks": [
-                              {
-                                "id": "78d2c1f9",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол O'zbekiston",
-                                  "attributes": []
-                                },
-                                "position": [1, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [1, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [1, 1]
-                  }
-                ]
+        "blocks": [
+          {
+            "id": "113192203",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/7615/production/_113192203_photo_2020-07-01_20-14-23.jpg",
+            "path": "/cpsprodpb/7615/production/_113192203_photo_2020-07-01_20-14-23.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "BBCUZBEK.COM",
+            "copyrightHolder": "BBCUZBEK.COM",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          {
+            "text": "Риштон ўзининг асрларга татигулик кулолчилик санъати билан машҳур. Туман яшовчиси Равшанбек Тожиддинов эса анъанавий кулолчиликни замон нафаси билан уйғунлаштириб, <link><caption>йирик кулолчилик бизнесига асос солган.</caption><url href=\"https://youtu.be/WDBlYFFyLvQ\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тадбиркор ўзи ташкил этган Корон кулолчилик маркази ва сопол буюмлар ишлаб чиқараладиган цехи бўйлаб Би-би-си учун махсус сайр ташкил этди. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Биз лой қоришдан бошлаб то тайёр маҳсулотларни экспортга тайёрлашга қадар бўлган жараённи биргаликда кўздан кечирдик. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тожиддинов ўзи билан касаначалик асосида ҳамкорлик қилувчи 300 га яқин кулол ва наққошлар унинг бизнеси ёрдамида рўзғор тебратиб келишини айтади. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "href": "https://www.youtube.com/watch?v=WDBlYFFyLvQ",
+            "source": "youtube",
+            "embed": {
+              "oembed": {
+                "version": "1.0",
+                "title": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман –кулол - BBC News O'zbek",
+                "author_name": "BBC Uzbek",
+                "author_url": "https://www.youtube.com/user/bbcuzbek",
+                "provider_name": "YouTube",
+                "provider_url": "https://www.youtube.com/",
+                "thumbnail_url": "https://i.ytimg.com/vi/WDBlYFFyLvQ/hqdefault.jpg",
+                "thumbnail_width": 480,
+                "thumbnail_height": 360,
+                "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/WDBlYFFyLvQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                "width": 480,
+                "height": 270,
+                "type": "video"
               },
-              "position": [1]
+              "fallback_image": {
+                "fallback_image_width": 500,
+                "fallback_image_height": 269,
+                "alt_text": "YouTube post by BBC Uzbek: Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман –кулол - BBC News O'zbek"
+              }
             },
-            {
-              "id": "629a37f5",
-              "type": "timestamp",
-              "model": {
-                "firstPublished": 1593688001000,
-                "lastPublished": 1593688001000
-              },
-              "position": [2]
-            },
-            {
-              "id": "19c24b85",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "98e4c2b5",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "e0e07913",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "3fbabfcc",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "BBCUZBEK.COM",
-                                  "blocks": [
-                                    {
-                                      "id": "389d44fa",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "BBCUZBEK.COM",
-                                        "attributes": []
-                                      },
-                                      "position": [3, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [3, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [3, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [3, 1]
+            "id": "WDBlYFFyLvQ",
+            "type": "social_embed"
+          },
+          {
+            "text": "Бироқ бутун дунёда давом этаётган пандемия тадбиркор-кулолнинг бизнесига ҳам ўз таъсирини ўтказган. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Айни вақтда, у ишчи ходимлари ва ҳамкорларини мавжуд молиявий инқироздан асраб қолиш йўлида ҳукумат кўмаги ва эътиборига муҳтож эканини билдиради.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тирикчиликдан бизнесга қадар йўл",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "id": "113193626",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/F4AF/production/_113193626_photo_2020-07-01_20-12-02.jpg",
+            "path": "/cpsprodpb/F4AF/production/_113193626_photo_2020-07-01_20-12-02.jpg",
+            "height": 899,
+            "width": 1280,
+            "altText": "BBCUZBEK.COM",
+            "copyrightHolder": "BBCUZBEK.COM",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          {
+            "text": "Қарийб 30 йилдан буён кулолчилик билан шуғулланиб келаётган бу инсон ўз фаолиятини оддий лойчиликдан бошлаганини айтади. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;1994 йилдан буён кулолчилик билан шуғулланиб келаман. Ҳозирда етмишга яқин шогирдларим бор&quot;, сўзлайди у. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "У ўтган йиллар давомида Корон кулолчилик марказига асос солиб, бадиий кулолчилик маҳсулотларини катта кўламда хорижга экспорт қилишни йўлга қўйган. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Мен ҳунарманд-тадбиркорман. Ютуғим ҳам шунда. Ҳунарманд маҳсулотини бир марта сотади, бир марта фойда кўради. Мен ўзим ишлаб чиқарганларимни олиб бориб ўзим сотаман&quot;. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Ўзингиз сотсангиз, харидор билан юзма-юз бўласиз. Унинг хоҳишини ўзингиз кўрасиз, у нима истаётганини англайсиз. Шунинг ҳисобига бизда кенгайиш, ривожланиш бўлиб кетди&quot;, давом этади у. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тожиддинов каттакон бинода жойлашган марказда ҳам ишлаб чиқариш цехи, ҳам кўргазмалар залини ташкил этган.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Залга кирилган заҳоти сопол идишларнинг турфа-хиллиги, ранг-баранглиги кўзга ташланади. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Маҳсулотлар орасида бир-бирини такрорлайдиганини учратиш эса амри маҳол.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Замонавий кулолчилик",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "id": "113193627",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/11BBF/production/_113193627_photo_2020-07-01_20-16-12.jpg",
+            "path": "/cpsprodpb/11BBF/production/_113193627_photo_2020-07-01_20-16-12.jpg",
+            "height": 736,
+            "width": 1280,
+            "altText": "BBCUZBEK.COM",
+            "copyrightHolder": "BBCUZBEK.COM",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          {
+            "text": "Тожиддинов бино ертўласида жойлашган лой қориш цехини кўрсатишга рози бўлди. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Бу ерга олиб келинган тупроқ замонавий технология асосида тайёр, пишган лойга айлантирилади.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Агар лойни ота-боболаримиздек қўлда тайёрласак, ҳеч қанча маҳсулот тайёрлай олмаймиз. Бу ерда ҳамма жараён техника ёрдамида амалга оширилади. Одамнинг қўли деярли лойга ботмайди&quot;, тушунтиради у. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тайёр лой эса марказда меҳнат қилаётган кулоллар қўлида бетакрор идиш ва совғабоп маҳсулотларга айланади. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Равшанбек Тожиддинов харидорлар билан ўзи мунтазам мулоқотда бўлганидан ҳам анъанавий кулолчиликни замонавийлаштириш зарурлигини тушуниб етганини таъкидлайди. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "113193630",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/0E37/production/_113193630_photo_2020-07-01_20-12-24.jpg",
+            "path": "/cpsprodpb/0E37/production/_113193630_photo_2020-07-01_20-12-24.jpg",
+            "height": 746,
+            "width": 1280,
+            "altText": "BBCUZBEK.COM",
+            "copyrightHolder": "BBCUZBEK.COM",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          {
+            "text": "&quot;Ранглардан фойдаланган ҳолда маҳсулотларимизнинг жилосини янада очиб беришга муваффақ бўлдик. Бироқ, ўз навбатида, Риштонимизнинг анъанавий мовий, зангори рангларидан ҳам воз кечмадик&quot;, дейди у. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Биз инновация қилиб, янгилик яратмасак маҳсулотимизни экспорт қилишнинг имкони бўлмади. Янгилик қилиш, турли ранглардан фойдаланашимизга тўғри келди. Бозор шу нарсани биздан талаб қилди&quot;, қўшимча қилади тадбиркор. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Кўргазма залида бўйи икки метрдан зиёд икки улкан кўзага кўз тушади. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Улар Тожиддинов тилга олган янгиликлар инъикосидир.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Каттакон идишлар ясашни ўзлаштиришимизга икки йилдан кўпроқ вақт кетди. Катта идиш тайёрлашнинг ўзи бўлмас экан. Уни лойдан тиклаш бир синов бўлса, пишириб олиш янада катта муаммо&quot;, сўзлайди у. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Кулол бу идишлар эвазига катта пул таклиф қилингани, аммо у меҳнати маҳсулини сотиш ниятида эмаслигини айтади. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Даниялик эр-хотин меҳмонларимиз бу кўзаларни кўриб қолиб, қанчага бўлса ҳам, сотиб оламиз, деб туриб олишди. 21 минг доллар таклиф қилишди&quot;. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "У кўзаларни музейга совға қилмоқчи эканини маълум қилади.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Ниятимиз, ЮНEСКОнинг музейига кўзаларни Ўзбекистон номидан хадя қилиш. Кўзалар остида ишхонамиз, усталарнинг номи битилган. Буни ЮНEСКО музейида кўриш биз учун катта фахр&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Пандемия зарбаси ",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "id": "113193628",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/142CF/production/_113193628_photo_2020-07-01_20-11-54.jpg",
+            "path": "/cpsprodpb/142CF/production/_113193628_photo_2020-07-01_20-11-54.jpg",
+            "height": 735,
+            "width": 1280,
+            "altText": "BBCUZBEK.COM",
+            "copyrightHolder": "BBCUZBEK.COM",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          {
+            "text": "Коронавирус пандемияси Тожиддиновнинг гуллаб-яшнаётган бизнесига ҳам ўз таъсирини ўтказмай қолмаган. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тожиддинов ўз маҳсулотларининг асосий харидорлари хорижликлар бўлганидан, пандемия туфайли чегараларнинг ёпилиши мижозлар сонини кескин камайтириб юборган. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Буюртмалар сони тушиб кетганидан каттакон марказда камсонли ишчилар меҳнат қилаётганини кўриш мумкин. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Ишимиз кўлами тенг ярмига қисқариб кетди. Биз билан етмишдан зиёд оилада уч юзга яқин кулол ва наққош касаначилик асосида ҳамкорлик қилади. Биз ярим тайёр маҳсулотларни уларга юборамиз, улар эса идишларга безак ва жило берадилар. Ҳозирда шу инсонларнинг ярмига ҳақ тўлай олмаяпмиз&quot;, дейди у. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "113193629",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/169DF/production/_113193629_photo_2020-07-01_20-11-57.jpg",
+            "path": "/cpsprodpb/169DF/production/_113193629_photo_2020-07-01_20-11-57.jpg",
+            "height": 735,
+            "width": 1280,
+            "altText": "BBCUZBEK.COM",
+            "copyrightHolder": "BBCUZBEK.COM",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          {
+            "text": "<itemMeta>uzbek/uzbekistan-53145022</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
+                  "headline": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
+                  "overtyped": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/uzbek/uzbekistan-53145022"
+                },
+                "summary": "Фарғона вилоятининг энг чекка туманларидан бўлмиш Риштон мамлакатнинг бошқа ҳудудлари каби коронавирус пандемиясининг жиддий иқтисодий таъсирига учраган. Ўтган бир неча ой давомида маҳаллий фаоллар аҳолининг қашшоқ қатламини оғир қийинчиликлардан сақлаб қолиш йўлида бир қанча хайрия ҳаракатларини ташкил этганлар.",
+                "timestamp": 1593591035000,
+                "language": "uz-Cyrl",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
                   },
-                  {
-                    "id": "5e5db1f8",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 549,
-                      "width": 976,
-                      "locator": "7615/production/_113192203_photo_2020-07-01_20-14-23.jpg",
-                      "href": "http://c.files.bbci.co.uk/7615/production/_113192203_photo_2020-07-01_20-14-23.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBCUZBEK.COM",
-                      "suitableForSyndication": false
-                    },
-                    "position": [3, 2]
-                  }
-                ]
-              },
-              "position": [3]
-            },
-            {
-              "id": "bf32b9a3",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "7f121580",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Риштон ўзининг асрларга татигулик кулолчилик санъати билан машҳур. Туман яшовчиси Равшанбек Тожиддинов эса анъанавий кулолчиликни замон нафаси билан уйғунлаштириб, йирик кулолчилик бизнесига асос солган.",
-                      "blocks": [
-                        {
-                          "id": "3f26903c",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Риштон ўзининг асрларга татигулик кулолчилик санъати билан машҳур. Туман яшовчиси Равшанбек Тожиддинов эса анъанавий кулолчиликни замон нафаси билан уйғунлаштириб, ",
-                            "attributes": []
-                          },
-                          "position": [4, 1, 1]
-                        },
-                        {
-                          "id": "23b1045d",
-                          "type": "urlLink",
-                          "model": {
-                            "text": "йирик кулолчилик бизнесига асос солган.",
-                            "locator": "https://youtu.be/WDBlYFFyLvQ",
-                            "isExternal": true,
-                            "blocks": [
-                              {
-                                "id": "04a8f43d",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "йирик кулолчилик бизнесига асос солган.",
-                                  "attributes": []
-                                },
-                                "position": [4, 1, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [4, 1, 2]
-                        }
-                      ]
-                    },
-                    "position": [4, 1]
-                  },
-                  {
-                    "id": "a58309fd",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Тадбиркор ўзи ташкил этган Корон кулолчилик маркази ва сопол буюмлар ишлаб чиқараладиган цехи бўйлаб Би-би-си учун махсус сайр ташкил этди. ",
-                      "blocks": [
-                        {
-                          "id": "b0791fea",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Тадбиркор ўзи ташкил этган Корон кулолчилик маркази ва сопол буюмлар ишлаб чиқараладиган цехи бўйлаб Би-би-си учун махсус сайр ташкил этди. ",
-                            "attributes": []
-                          },
-                          "position": [4, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [4, 2]
-                  },
-                  {
-                    "id": "3b36e026",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Биз лой қоришдан бошлаб то тайёр маҳсулотларни экспортга тайёрлашга қадар бўлган жараённи биргаликда кўздан кечирдик. ",
-                      "blocks": [
-                        {
-                          "id": "1a573867",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Биз лой қоришдан бошлаб то тайёр маҳсулотларни экспортга тайёрлашга қадар бўлган жараённи биргаликда кўздан кечирдик. ",
-                            "attributes": []
-                          },
-                          "position": [4, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [4, 3]
-                  },
-                  {
-                    "id": "a25a10d1",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Тожиддинов ўзи билан касаначалик асосида ҳамкорлик қилувчи 300 га яқин кулол ва наққошлар унинг бизнеси ёрдамида рўзғор тебратиб келишини айтади. ",
-                      "blocks": [
-                        {
-                          "id": "1f668c30",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Тожиддинов ўзи билан касаначалик асосида ҳамкорлик қилувчи 300 га яқин кулол ва наққошлар унинг бизнеси ёрдамида рўзғор тебратиб келишини айтади. ",
-                            "attributes": []
-                          },
-                          "position": [4, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [4, 4]
-                  }
-                ]
-              },
-              "position": [4]
-            },
-            { "id": "1f8de99c", "type": "mpu", "model": {}, "position": [5] },
-            {
-              "id": "a6cbf221",
-              "type": "social",
-              "model": {
-                "source": "https://www.youtube.com/watch?v=WDBlYFFyLvQ",
-                "providerName": "YouTube",
-                "blocks": [
-                  {
-                    "id": "7566dacf",
-                    "type": "renditions",
-                    "model": {
-                      "locator": "",
-                      "blocks": [
-                        {
-                          "id": "84158098",
-                          "type": "aresOEmbed",
-                          "model": {
-                            "oembed": {
-                              "version": "1.0",
-                              "title": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман –кулол - BBC News O'zbek",
-                              "author_name": "BBC Uzbek",
-                              "author_url": "https://www.youtube.com/user/bbcuzbek",
-                              "provider_name": "YouTube",
-                              "provider_url": "https://www.youtube.com/",
-                              "thumbnail_url": "https://i.ytimg.com/vi/WDBlYFFyLvQ/hqdefault.jpg",
-                              "thumbnail_width": 480,
-                              "thumbnail_height": 360,
-                              "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/WDBlYFFyLvQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-                              "width": 480,
-                              "height": 270,
-                              "type": "video"
-                            }
-                          },
-                          "position": [6, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [6, 1]
-                  }
-                ]
-              },
-              "position": [6]
-            },
-            {
-              "id": "00914308",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "cc54df0a",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Бироқ бутун дунёда давом этаётган пандемия тадбиркор-кулолнинг бизнесига ҳам ўз таъсирини ўтказган. ",
-                      "blocks": [
-                        {
-                          "id": "9f12f5cd",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Бироқ бутун дунёда давом этаётган пандемия тадбиркор-кулолнинг бизнесига ҳам ўз таъсирини ўтказган. ",
-                            "attributes": []
-                          },
-                          "position": [7, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [7, 1]
-                  },
-                  {
-                    "id": "b482c642",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Айни вақтда, у ишчи ходимлари ва ҳамкорларини мавжуд молиявий инқироздан асраб қолиш йўлида ҳукумат кўмаги ва эътиборига муҳтож эканини билдиради.",
-                      "blocks": [
-                        {
-                          "id": "8c4cab5a",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Айни вақтда, у ишчи ходимлари ва ҳамкорларини мавжуд молиявий инқироздан асраб қолиш йўлида ҳукумат кўмаги ва эътиборига муҳтож эканини билдиради.",
-                            "attributes": []
-                          },
-                          "position": [7, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [7, 2]
-                  }
-                ]
-              },
-              "position": [7]
-            },
-            {
-              "id": "cfcbf6fc",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "a23fac7c",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "83b50199",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Тирикчиликдан бизнесга қадар йўл",
-                            "blocks": [
-                              {
-                                "id": "bc7f152d",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Тирикчиликдан бизнесга қадар йўл",
-                                  "attributes": []
-                                },
-                                "position": [8, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [8, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [8, 1]
-                  }
-                ]
-              },
-              "position": [8]
-            },
-            {
-              "id": "a00dd004",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "1180ced0",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "72b173df",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "6c8be85c",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "BBCUZBEK.COM",
-                                  "blocks": [
-                                    {
-                                      "id": "f62f6daf",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "BBCUZBEK.COM",
-                                        "attributes": []
-                                      },
-                                      "position": [9, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [9, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [9, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [9, 1]
-                  },
-                  {
-                    "id": "bcd6207f",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 899,
-                      "width": 1280,
-                      "locator": "F4AF/production/_113193626_photo_2020-07-01_20-12-02.jpg",
-                      "href": "http://c.files.bbci.co.uk/F4AF/production/_113193626_photo_2020-07-01_20-12-02.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBCUZBEK.COM",
-                      "suitableForSyndication": false
-                    },
-                    "position": [9, 2]
-                  }
-                ]
-              },
-              "position": [9]
-            },
-            {
-              "id": "28b33cbc",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "042cba1f",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Қарийб 30 йилдан буён кулолчилик билан шуғулланиб келаётган бу инсон ўз фаолиятини оддий лойчиликдан бошлаганини айтади. ",
-                      "blocks": [
-                        {
-                          "id": "1a0ec5b7",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Қарийб 30 йилдан буён кулолчилик билан шуғулланиб келаётган бу инсон ўз фаолиятини оддий лойчиликдан бошлаганини айтади. ",
-                            "attributes": []
-                          },
-                          "position": [10, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 1]
-                  },
-                  {
-                    "id": "25b58030",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"1994 йилдан буён кулолчилик билан шуғулланиб келаман. Ҳозирда етмишга яқин шогирдларим бор\", сўзлайди у. ",
-                      "blocks": [
-                        {
-                          "id": "a2174a0c",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"1994 йилдан буён кулолчилик билан шуғулланиб келаман. Ҳозирда етмишга яқин шогирдларим бор\", сўзлайди у. ",
-                            "attributes": []
-                          },
-                          "position": [10, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 2]
-                  },
-                  {
-                    "id": "2ea90ad7",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "У ўтган йиллар давомида Корон кулолчилик марказига асос солиб, бадиий кулолчилик маҳсулотларини катта кўламда хорижга экспорт қилишни йўлга қўйган. ",
-                      "blocks": [
-                        {
-                          "id": "1d110503",
-                          "type": "fragment",
-                          "model": {
-                            "text": "У ўтган йиллар давомида Корон кулолчилик марказига асос солиб, бадиий кулолчилик маҳсулотларини катта кўламда хорижга экспорт қилишни йўлга қўйган. ",
-                            "attributes": []
-                          },
-                          "position": [10, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 3]
-                  },
-                  {
-                    "id": "232ebad5",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Мен ҳунарманд-тадбиркорман. Ютуғим ҳам шунда. Ҳунарманд маҳсулотини бир марта сотади, бир марта фойда кўради. Мен ўзим ишлаб чиқарганларимни олиб бориб ўзим сотаман\". ",
-                      "blocks": [
-                        {
-                          "id": "805e63f0",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Мен ҳунарманд-тадбиркорман. Ютуғим ҳам шунда. Ҳунарманд маҳсулотини бир марта сотади, бир марта фойда кўради. Мен ўзим ишлаб чиқарганларимни олиб бориб ўзим сотаман\". ",
-                            "attributes": []
-                          },
-                          "position": [10, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 4]
-                  },
-                  {
-                    "id": "9887bc6d",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Ўзингиз сотсангиз, харидор билан юзма-юз бўласиз. Унинг хоҳишини ўзингиз кўрасиз, у нима истаётганини англайсиз. Шунинг ҳисобига бизда кенгайиш, ривожланиш бўлиб кетди\", давом этади у. ",
-                      "blocks": [
-                        {
-                          "id": "0e0bf8e5",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Ўзингиз сотсангиз, харидор билан юзма-юз бўласиз. Унинг хоҳишини ўзингиз кўрасиз, у нима истаётганини англайсиз. Шунинг ҳисобига бизда кенгайиш, ривожланиш бўлиб кетди\", давом этади у. ",
-                            "attributes": []
-                          },
-                          "position": [10, 5, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 5]
-                  },
-                  {
-                    "id": "1d23bb35",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Тожиддинов каттакон бинода жойлашган марказда ҳам ишлаб чиқариш цехи, ҳам кўргазмалар залини ташкил этган.",
-                      "blocks": [
-                        {
-                          "id": "b48f6bb9",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Тожиддинов каттакон бинода жойлашган марказда ҳам ишлаб чиқариш цехи, ҳам кўргазмалар залини ташкил этган.",
-                            "attributes": []
-                          },
-                          "position": [10, 6, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 6]
-                  },
-                  {
-                    "id": "6373efa0",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Залга кирилган заҳоти сопол идишларнинг турфа-хиллиги, ранг-баранглиги кўзга ташланади. ",
-                      "blocks": [
-                        {
-                          "id": "406ba980",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Залга кирилган заҳоти сопол идишларнинг турфа-хиллиги, ранг-баранглиги кўзга ташланади. ",
-                            "attributes": []
-                          },
-                          "position": [10, 7, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 7]
-                  },
-                  {
-                    "id": "da00cbaa",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Маҳсулотлар орасида бир-бирини такрорлайдиганини учратиш эса амри маҳол.",
-                      "blocks": [
-                        {
-                          "id": "f04692c1",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Маҳсулотлар орасида бир-бирини такрорлайдиганини учратиш эса амри маҳол.",
-                            "attributes": []
-                          },
-                          "position": [10, 8, 1]
-                        }
-                      ]
-                    },
-                    "position": [10, 8]
-                  }
-                ]
-              },
-              "position": [10]
-            },
-            {
-              "id": "0eac0f70",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "3e5cbafc",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "bda68e14",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Замонавий кулолчилик",
-                            "blocks": [
-                              {
-                                "id": "7ecf2ff5",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Замонавий кулолчилик",
-                                  "attributes": []
-                                },
-                                "position": [11, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [11, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [11, 1]
-                  }
-                ]
-              },
-              "position": [11]
-            },
-            {
-              "id": "4c7fb842",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "4abfe819",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "fdf28c13",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "66e4fae8",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "BBCUZBEK.COM",
-                                  "blocks": [
-                                    {
-                                      "id": "848430bc",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "BBCUZBEK.COM",
-                                        "attributes": []
-                                      },
-                                      "position": [12, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [12, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [12, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [12, 1]
-                  },
-                  {
-                    "id": "01a5666f",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 736,
-                      "width": 1280,
-                      "locator": "11BBF/production/_113193627_photo_2020-07-01_20-16-12.jpg",
-                      "href": "http://c.files.bbci.co.uk/11BBF/production/_113193627_photo_2020-07-01_20-16-12.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBCUZBEK.COM",
-                      "suitableForSyndication": false
-                    },
-                    "position": [12, 2]
-                  }
-                ]
-              },
-              "position": [12]
-            },
-            {
-              "id": "184126de",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "163d112a",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Тожиддинов бино ертўласида жойлашган лой қориш цехини кўрсатишга рози бўлди. ",
-                      "blocks": [
-                        {
-                          "id": "3fca0052",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Тожиддинов бино ертўласида жойлашган лой қориш цехини кўрсатишга рози бўлди. ",
-                            "attributes": []
-                          },
-                          "position": [13, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [13, 1]
-                  },
-                  {
-                    "id": "af7e0ca5",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Бу ерга олиб келинган тупроқ замонавий технология асосида тайёр, пишган лойга айлантирилади.",
-                      "blocks": [
-                        {
-                          "id": "82eaf275",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Бу ерга олиб келинган тупроқ замонавий технология асосида тайёр, пишган лойга айлантирилади.",
-                            "attributes": []
-                          },
-                          "position": [13, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [13, 2]
-                  },
-                  {
-                    "id": "d28c17b4",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Агар лойни ота-боболаримиздек қўлда тайёрласак, ҳеч қанча маҳсулот тайёрлай олмаймиз. Бу ерда ҳамма жараён техника ёрдамида амалга оширилади. Одамнинг қўли деярли лойга ботмайди\", тушунтиради у. ",
-                      "blocks": [
-                        {
-                          "id": "8fd35d23",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Агар лойни ота-боболаримиздек қўлда тайёрласак, ҳеч қанча маҳсулот тайёрлай олмаймиз. Бу ерда ҳамма жараён техника ёрдамида амалга оширилади. Одамнинг қўли деярли лойга ботмайди\", тушунтиради у. ",
-                            "attributes": []
-                          },
-                          "position": [13, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [13, 3]
-                  },
-                  {
-                    "id": "c9a37eca",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Тайёр лой эса марказда меҳнат қилаётган кулоллар қўлида бетакрор идиш ва совғабоп маҳсулотларга айланади. ",
-                      "blocks": [
-                        {
-                          "id": "7a9b83f9",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Тайёр лой эса марказда меҳнат қилаётган кулоллар қўлида бетакрор идиш ва совғабоп маҳсулотларга айланади. ",
-                            "attributes": []
-                          },
-                          "position": [13, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [13, 4]
-                  },
-                  {
-                    "id": "58b2146a",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Равшанбек Тожиддинов харидорлар билан ўзи мунтазам мулоқотда бўлганидан ҳам анъанавий кулолчиликни замонавийлаштириш зарурлигини тушуниб етганини таъкидлайди. ",
-                      "blocks": [
-                        {
-                          "id": "7bcacfd6",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Равшанбек Тожиддинов харидорлар билан ўзи мунтазам мулоқотда бўлганидан ҳам анъанавий кулолчиликни замонавийлаштириш зарурлигини тушуниб етганини таъкидлайди. ",
-                            "attributes": []
-                          },
-                          "position": [13, 5, 1]
-                        }
-                      ]
-                    },
-                    "position": [13, 5]
-                  }
-                ]
-              },
-              "position": [13]
-            },
-            {
-              "id": "f566471a",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "12d840ba",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "80741946",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "bd0a507a",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "BBCUZBEK.COM",
-                                  "blocks": [
-                                    {
-                                      "id": "aa8365a1",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "BBCUZBEK.COM",
-                                        "attributes": []
-                                      },
-                                      "position": [14, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [14, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [14, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [14, 1]
-                  },
-                  {
-                    "id": "5468b3a6",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 746,
-                      "width": 1280,
-                      "locator": "0E37/production/_113193630_photo_2020-07-01_20-12-24.jpg",
-                      "href": "http://c.files.bbci.co.uk/0E37/production/_113193630_photo_2020-07-01_20-12-24.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBCUZBEK.COM",
-                      "suitableForSyndication": false
-                    },
-                    "position": [14, 2]
-                  }
-                ]
-              },
-              "position": [14]
-            },
-            {
-              "id": "330bf1b2",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "1ac976c1",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Ранглардан фойдаланган ҳолда маҳсулотларимизнинг жилосини янада очиб беришга муваффақ бўлдик. Бироқ, ўз навбатида, Риштонимизнинг анъанавий мовий, зангори рангларидан ҳам воз кечмадик\", дейди у. ",
-                      "blocks": [
-                        {
-                          "id": "be6bfdf3",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Ранглардан фойдаланган ҳолда маҳсулотларимизнинг жилосини янада очиб беришга муваффақ бўлдик. Бироқ, ўз навбатида, Риштонимизнинг анъанавий мовий, зангори рангларидан ҳам воз кечмадик\", дейди у. ",
-                            "attributes": []
-                          },
-                          "position": [15, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 1]
-                  },
-                  {
-                    "id": "0d87c71e",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Биз инновация қилиб, янгилик яратмасак маҳсулотимизни экспорт қилишнинг имкони бўлмади. Янгилик қилиш, турли ранглардан фойдаланашимизга тўғри келди. Бозор шу нарсани биздан талаб қилди\", қўшимча қилади тадбиркор. ",
-                      "blocks": [
-                        {
-                          "id": "76028f27",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Биз инновация қилиб, янгилик яратмасак маҳсулотимизни экспорт қилишнинг имкони бўлмади. Янгилик қилиш, турли ранглардан фойдаланашимизга тўғри келди. Бозор шу нарсани биздан талаб қилди\", қўшимча қилади тадбиркор. ",
-                            "attributes": []
-                          },
-                          "position": [15, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 2]
-                  },
-                  {
-                    "id": "034030aa",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Кўргазма залида бўйи икки метрдан зиёд икки улкан кўзага кўз тушади. ",
-                      "blocks": [
-                        {
-                          "id": "8d529b18",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Кўргазма залида бўйи икки метрдан зиёд икки улкан кўзага кўз тушади. ",
-                            "attributes": []
-                          },
-                          "position": [15, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 3]
-                  },
-                  {
-                    "id": "c1ec4b02",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Улар Тожиддинов тилга олган янгиликлар инъикосидир.",
-                      "blocks": [
-                        {
-                          "id": "28783c9e",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Улар Тожиддинов тилга олган янгиликлар инъикосидир.",
-                            "attributes": []
-                          },
-                          "position": [15, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 4]
-                  },
-                  {
-                    "id": "26f032d8",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Каттакон идишлар ясашни ўзлаштиришимизга икки йилдан кўпроқ вақт кетди. Катта идиш тайёрлашнинг ўзи бўлмас экан. Уни лойдан тиклаш бир синов бўлса, пишириб олиш янада катта муаммо\", сўзлайди у. ",
-                      "blocks": [
-                        {
-                          "id": "36b31be2",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Каттакон идишлар ясашни ўзлаштиришимизга икки йилдан кўпроқ вақт кетди. Катта идиш тайёрлашнинг ўзи бўлмас экан. Уни лойдан тиклаш бир синов бўлса, пишириб олиш янада катта муаммо\", сўзлайди у. ",
-                            "attributes": []
-                          },
-                          "position": [15, 5, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 5]
-                  },
-                  {
-                    "id": "deecdeb9",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Кулол бу идишлар эвазига катта пул таклиф қилингани, аммо у меҳнати маҳсулини сотиш ниятида эмаслигини айтади. ",
-                      "blocks": [
-                        {
-                          "id": "3afb15a6",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Кулол бу идишлар эвазига катта пул таклиф қилингани, аммо у меҳнати маҳсулини сотиш ниятида эмаслигини айтади. ",
-                            "attributes": []
-                          },
-                          "position": [15, 6, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 6]
-                  },
-                  {
-                    "id": "376ac5f1",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Даниялик эр-хотин меҳмонларимиз бу кўзаларни кўриб қолиб, қанчага бўлса ҳам, сотиб оламиз, деб туриб олишди. 21 минг доллар таклиф қилишди\". ",
-                      "blocks": [
-                        {
-                          "id": "84029828",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Даниялик эр-хотин меҳмонларимиз бу кўзаларни кўриб қолиб, қанчага бўлса ҳам, сотиб оламиз, деб туриб олишди. 21 минг доллар таклиф қилишди\". ",
-                            "attributes": []
-                          },
-                          "position": [15, 7, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 7]
-                  },
-                  {
-                    "id": "c1e95d0a",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "У кўзаларни музейга совға қилмоқчи эканини маълум қилади.",
-                      "blocks": [
-                        {
-                          "id": "4f728eba",
-                          "type": "fragment",
-                          "model": {
-                            "text": "У кўзаларни музейга совға қилмоқчи эканини маълум қилади.",
-                            "attributes": []
-                          },
-                          "position": [15, 8, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 8]
-                  },
-                  {
-                    "id": "909d44b7",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Ниятимиз, ЮНEСКОнинг музейига кўзаларни Ўзбекистон номидан хадя қилиш. Кўзалар остида ишхонамиз, усталарнинг номи битилган. Буни ЮНEСКО музейида кўриш биз учун катта фахр\".",
-                      "blocks": [
-                        {
-                          "id": "d65acf3e",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Ниятимиз, ЮНEСКОнинг музейига кўзаларни Ўзбекистон номидан хадя қилиш. Кўзалар остида ишхонамиз, усталарнинг номи битилган. Буни ЮНEСКО музейида кўриш биз учун катта фахр\".",
-                            "attributes": []
-                          },
-                          "position": [15, 9, 1]
-                        }
-                      ]
-                    },
-                    "position": [15, 9]
-                  }
-                ]
-              },
-              "position": [15]
-            },
-            {
-              "id": "14c9335a",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "5dcf3df1",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "fd0c950c",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Пандемия зарбаси ",
-                            "blocks": [
-                              {
-                                "id": "a98fb915",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Пандемия зарбаси ",
-                                  "attributes": []
-                                },
-                                "position": [16, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [16, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [16, 1]
-                  }
-                ]
-              },
-              "position": [16]
-            },
-            {
-              "id": "ff955b67",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "135d3050",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "16bbde63",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "80b4cc49",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "BBCUZBEK.COM",
-                                  "blocks": [
-                                    {
-                                      "id": "3d312657",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "BBCUZBEK.COM",
-                                        "attributes": []
-                                      },
-                                      "position": [17, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [17, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [17, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [17, 1]
-                  },
-                  {
-                    "id": "b727889f",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 735,
-                      "width": 1280,
-                      "locator": "142CF/production/_113193628_photo_2020-07-01_20-11-54.jpg",
-                      "href": "http://c.files.bbci.co.uk/142CF/production/_113193628_photo_2020-07-01_20-11-54.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBCUZBEK.COM",
-                      "suitableForSyndication": false
-                    },
-                    "position": [17, 2]
-                  }
-                ]
-              },
-              "position": [17]
-            },
-            {
-              "id": "95552279",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "4b2f3cdb",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Коронавирус пандемияси Тожиддиновнинг гуллаб-яшнаётган бизнесига ҳам ўз таъсирини ўтказмай қолмаган. ",
-                      "blocks": [
-                        {
-                          "id": "9df1bee2",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Коронавирус пандемияси Тожиддиновнинг гуллаб-яшнаётган бизнесига ҳам ўз таъсирини ўтказмай қолмаган. ",
-                            "attributes": []
-                          },
-                          "position": [18, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [18, 1]
-                  },
-                  {
-                    "id": "ed124caa",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Тожиддинов ўз маҳсулотларининг асосий харидорлари хорижликлар бўлганидан, пандемия туфайли чегараларнинг ёпилиши мижозлар сонини кескин камайтириб юборган. ",
-                      "blocks": [
-                        {
-                          "id": "cf9880bf",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Тожиддинов ўз маҳсулотларининг асосий харидорлари хорижликлар бўлганидан, пандемия туфайли чегараларнинг ёпилиши мижозлар сонини кескин камайтириб юборган. ",
-                            "attributes": []
-                          },
-                          "position": [18, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [18, 2]
-                  },
-                  {
-                    "id": "d3801cb4",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Буюртмалар сони тушиб кетганидан каттакон марказда камсонли ишчилар меҳнат қилаётганини кўриш мумкин. ",
-                      "blocks": [
-                        {
-                          "id": "0c6bfcad",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Буюртмалар сони тушиб кетганидан каттакон марказда камсонли ишчилар меҳнат қилаётганини кўриш мумкин. ",
-                            "attributes": []
-                          },
-                          "position": [18, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [18, 3]
-                  },
-                  {
-                    "id": "644757e6",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Ишимиз кўлами тенг ярмига қисқариб кетди. Биз билан етмишдан зиёд оилада уч юзга яқин кулол ва наққош касаначилик асосида ҳамкорлик қилади. Биз ярим тайёр маҳсулотларни уларга юборамиз, улар эса идишларга безак ва жило берадилар. Ҳозирда шу инсонларнинг ярмига ҳақ тўлай олмаяпмиз\", дейди у. ",
-                      "blocks": [
-                        {
-                          "id": "73e8d892",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Ишимиз кўлами тенг ярмига қисқариб кетди. Биз билан етмишдан зиёд оилада уч юзга яқин кулол ва наққош касаначилик асосида ҳамкорлик қилади. Биз ярим тайёр маҳсулотларни уларга юборамиз, улар эса идишларга безак ва жило берадилар. Ҳозирда шу инсонларнинг ярмига ҳақ тўлай олмаяпмиз\", дейди у. ",
-                            "attributes": []
-                          },
-                          "position": [18, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [18, 4]
-                  }
-                ]
-              },
-              "position": [18]
-            },
-            {
-              "id": "e37d335a",
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "d9be2545",
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "7f1d8a41",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "cbdc658b",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "BBCUZBEK.COM",
-                                  "blocks": [
-                                    {
-                                      "id": "4bb74bc8",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "BBCUZBEK.COM",
-                                        "attributes": []
-                                      },
-                                      "position": [19, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [19, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [19, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [19, 1]
-                  },
-                  {
-                    "id": "d8b68cef",
-                    "type": "rawImage",
-                    "model": {
-                      "height": 735,
-                      "width": 1280,
-                      "locator": "169DF/production/_113193629_photo_2020-07-01_20-11-57.jpg",
-                      "href": "http://c.files.bbci.co.uk/169DF/production/_113193629_photo_2020-07-01_20-11-57.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "BBCUZBEK.COM",
-                      "suitableForSyndication": false
-                    },
-                    "position": [19, 2]
-                  }
-                ]
-              },
-              "position": [19]
-            },
-            {
-              "id": "0ca3458d",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "cfb252c9",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
-                      "blocks": [
-                        {
-                          "id": "33d132d1",
-                          "type": "urlLink",
-                          "model": {
-                            "text": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
-                            "locator": "https://www.bbc.com/uzbek/uzbekistan-53145022",
-                            "isExternal": false,
-                            "blocks": [
-                              {
-                                "id": "bdbda5e6",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
-                                  "attributes": []
-                                },
-                                "position": [20, 1, 1, 1]
-                              }
-                            ]
-                          },
-                          "position": [20, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [20, 1]
-                  },
-                  {
-                    "id": "510d9f35",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Лекин ҳозир касаба уюшмаси орқали фоизи кам кредит сўраганмиз. Тез орада илтимосимиз қондирилиб, бизга маблағ берилса, ишчиларимиз ва ҳамкорларимизга яна ҳақ тўлай бошлаймиз. Ҳозирда икки юзга яқин одам шу масала ҳал бўлишини кутиб, ишга тайёр бўлиб турибди\". ",
-                      "blocks": [
-                        {
-                          "id": "dc545829",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Лекин ҳозир касаба уюшмаси орқали фоизи кам кредит сўраганмиз. Тез орада илтимосимиз қондирилиб, бизга маблағ берилса, ишчиларимиз ва ҳамкорларимизга яна ҳақ тўлай бошлаймиз. Ҳозирда икки юзга яқин одам шу масала ҳал бўлишини кутиб, ишга тайёр бўлиб турибди\". ",
-                            "attributes": []
-                          },
-                          "position": [20, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [20, 2]
-                  },
-                  {
-                    "id": "dfd7cb6b",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Бундан ташқари Тожиддинов ўзбек кулолчилиги санъатини мамлакат аҳолиси ва хорижликларга янада тарғиб қилиш йўлида муаммолар юзага келаётганини ҳам билдиради ",
-                      "blocks": [
-                        {
-                          "id": "993e67d3",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Бундан ташқари Тожиддинов ўзбек кулолчилиги санъатини мамлакат аҳолиси ва хорижликларга янада тарғиб қилиш йўлида муаммолар юзага келаётганини ҳам билдиради ",
-                            "attributes": []
-                          },
-                          "position": [20, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [20, 3]
-                  },
-                  {
-                    "id": "d44a0bb3",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "\"Риштонимиз чекка ҳудудда жойлашиб қолган. Агар пойтахтимиздан кичикроқ жой ажратилса ва у ерда ҳам шундай марказ ташкил қилсак, кулолчилик санъатининг бор гўзаллигини янада кенгроқ кўрсата олар эдик\".",
-                      "blocks": [
-                        {
-                          "id": "0698c7a2",
-                          "type": "fragment",
-                          "model": {
-                            "text": "\"Риштонимиз чекка ҳудудда жойлашиб қолган. Агар пойтахтимиздан кичикроқ жой ажратилса ва у ерда ҳам шундай марказ ташкил қилсак, кулолчилик санъатининг бор гўзаллигини янада кенгроқ кўрсата олар эдик\".",
-                            "attributes": []
-                          },
-                          "position": [20, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [20, 4]
-                  },
-                  {
-                    "id": "a7c33d54",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "BBCUZBEK.COM билан Telegram орқали +44 7858860002 номери билан боғланинг.",
-                      "blocks": [
-                        {
-                          "id": "fec201f0",
-                          "type": "fragment",
-                          "model": {
-                            "text": "BBCUZBEK.COM билан Telegram орқали +44 7858860002 номери билан боғланинг.",
-                            "attributes": ["bold", "italic"]
-                          },
-                          "position": [20, 5, 1]
-                        }
-                      ]
-                    },
-                    "position": [20, 5]
-                  },
-                  {
-                    "id": "ed80917f",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Telegram каналимиз: @bbcuzbek ",
-                      "blocks": [
-                        {
-                          "id": "e41b1137",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Telegram каналимиз: @bbcuzbek",
-                            "attributes": ["bold", "italic"]
-                          },
-                          "position": [20, 6, 1]
-                        },
-                        {
-                          "id": "e946562c",
-                          "type": "fragment",
-                          "model": {
-                            "text": " ",
-                            "attributes": ["bold", "italic"]
-                          },
-                          "position": [20, 6, 2]
-                        }
-                      ]
-                    },
-                    "position": [20, 6]
-                  }
-                ]
-              },
-              "position": [20]
-            },
-            {
-              "id": "7a7cabad",
-              "type": "relatedContent",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "c3ad72b2",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:cps:curie:asset:1004c1dc-2abc-4cd7-8132-d43c50813310",
-                      "blocks": [
-                        {
-                          "id": "3fa33d6a",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "0ca478d2",
-                                "type": "caption",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "ab86d23d",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "efea0bb7",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "\"Боғдан тушган даромад рўзғоримнинг бир қисмини кўтаради\", яна бир қизи бюджет асосида таҳсил олаётганини айтган ўқитувчи аёл.",
-                                              "blocks": [
-                                                {
-                                                  "id": "577aa4c8",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "\"Боғдан тушган даромад рўзғоримнинг бир қисмини кўтаради\", яна бир қизи бюджет асосида таҳсил олаётганини айтган ўқитувчи аёл.",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    21, 1, 1, 1, 1, 1, 1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [21, 1, 1, 1, 1, 1]
-                                          }
-                                        ]
-                                      },
-                                      "position": [21, 1, 1, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [21, 1, 1, 1]
-                              },
-                              {
-                                "id": "4e66e0ac",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "c5da179b",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "d425ba6e",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "\"Боғдан тушган даромад рўзғоримнинг бир қисмини кўтаради\", яна бир қизи бюджет асосида таҳсил олаётганини айтган ўқитувчи аёл.",
-                                              "blocks": [
-                                                {
-                                                  "id": "d417de30",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "\"Боғдан тушган даромад рўзғоримнинг бир қисмини кўтаради\", яна бир қизи бюджет асосида таҳсил олаётганини айтган ўқитувчи аёл.",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    21, 1, 1, 2, 1, 1, 1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [21, 1, 1, 2, 1, 1]
-                                          }
-                                        ]
-                                      },
-                                      "position": [21, 1, 1, 2, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [21, 1, 1, 2]
-                              },
-                              {
-                                "id": "3ee9a504",
-                                "type": "rawImage",
-                                "model": {
-                                  "height": 549,
-                                  "width": 976,
-                                  "locator": "EF53/production/_113176216_photo_2020-06-30_18-16-04.jpg",
-                                  "href": "http://c.files.bbci.co.uk/EF53/production/_113176216_photo_2020-06-30_18-16-04.jpg",
-                                  "originCode": "cpsprodpb",
-                                  "copyrightHolder": "BBCUZBEK.COM",
-                                  "suitableForSyndication": false
-                                },
-                                "position": [21, 1, 1, 3]
-                              }
-                            ]
-                          },
-                          "position": [21, 1, 1]
-                        },
-                        {
-                          "id": "56cbe83e",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "5f889c03",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
-                                  "blocks": [
-                                    {
-                                      "id": "68c88882",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
-                                        "locator": "https://www.bbc.com/uzbek/uzbekistan-53145022",
-                                        "blocks": [
-                                          {
-                                            "id": "bff1f049",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
-                                              "attributes": []
-                                            },
-                                            "position": [21, 1, 2, 1, 1, 1]
-                                          }
-                                        ]
-                                      },
-                                      "position": [21, 1, 2, 1, 1]
-                                    }
-                                  ]
-                                },
-                                "position": [21, 1, 2, 1]
-                              }
-                            ]
-                          },
-                          "position": [21, 1, 2]
-                        },
-                        {
-                          "id": "5e46df48",
-                          "type": "aresLink",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "6ceefb3f",
-                                "type": "cpsLinkMetadata",
-                                "model": {
-                                  "assetType": "STY",
-                                  "timestamp": 1593591035000
-                                },
-                                "position": [21, 1, 3, 1]
-                              }
-                            ]
-                          },
-                          "position": [21, 1, 3]
-                        }
-                      ]
-                    },
-                    "position": [21, 1]
-                  }
-                ]
-              },
-              "position": [21]
-            }
-          ]
-        }
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:uzbek/uzbekistan-53145022",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Лекин ҳозир касаба уюшмаси орқали фоизи кам кредит сўраганмиз. Тез орада илтимосимиз қондирилиб, бизга маблағ берилса, ишчиларимиз ва ҳамкорларимизга яна ҳақ тўлай бошлаймиз. Ҳозирда икки юзга яқин одам шу масала ҳал бўлишини кутиб, ишга тайёр бўлиб турибди&quot;. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Бундан ташқари Тожиддинов ўзбек кулолчилиги санъатини мамлакат аҳолиси ва хорижликларга янада тарғиб қилиш йўлида муаммолар юзага келаётганини ҳам билдиради ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Риштонимиз чекка ҳудудда жойлашиб қолган. Агар пойтахтимиздан кичикроқ жой ажратилса ва у ерда ҳам шундай марказ ташкил қилсак, кулолчилик санъатининг бор гўзаллигини янада кенгроқ кўрсата олар эдик&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold><italic>BBCUZBEK.COM билан Telegram орқали +44 7858860002 номери билан боғланинг.</italic></bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold><italic>Telegram каналимиз: @bbcuzbek</italic></bold><bold><italic> </italic></bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          }
+        ]
       },
       "promo": {
+        "headlines": {
+          "shortHeadline": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол",
+          "headline": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол O'zbekiston"
+        },
         "locators": {
           "assetUri": "/uzbek/uzbekistan-53263099",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:1e3dc27d-86b1-4f84-b0d6-6731affbfa77",
@@ -1678,108 +440,9 @@
           "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-53263099",
           "curie": "http://www.bbc.co.uk/asset/1e3dc27d-86b1-4f84-b0d6-6731affbfa77"
         },
-        "headlines": {
-          "seoHeadline": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол O'zbekiston",
-          "promoHeadline": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        "images": {
-          "defaultPromoImage": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "BBCUZBEK.COM",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "BBCUZBEK.COM",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "height": 549,
-                  "width": 976,
-                  "locator": "5C57/production/_113193632_photo_2020-07-01_20-16-12.jpg",
-                  "href": "http://c.files.bbci.co.uk/5C57/production/_113193632_photo_2020-07-01_20-16-12.jpg",
-                  "originCode": "cpsprodpb",
-                  "copyrightHolder": "BBCUZBEK.COM",
-                  "suitableForSyndication": false
-                }
-              }
-            ]
-          }
-        },
-        "summary": {
-          "blocks": [
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Риштон ўзининг асрларга татигулик кулолчилик санъати билан машҳур. Туман яшовчиси Равшанбек Тожиддинов эса анъанавий кулолчиликни замон нафаси билан уйғунлаштириб, йирик кулолчилик бизнесига асос солган. Қарийб 30 йилдан буён кулолчилик билан шуғулланиб келаётган бу инсон ўз фаолиятини оддий лойчиликдан бошлаганини айтади.",
-                      "blocks": [
-                        {
-                          "type": "fragment",
-                          "model": {
-                            "text": "Риштон ўзининг асрларга татигулик кулолчилик санъати билан машҳур. Туман яшовчиси Равшанбек Тожиддинов эса анъанавий кулолчиликни замон нафаси билан уйғунлаштириб, йирик кулолчилик бизнесига асос солган. Қарийб 30 йилдан буён кулолчилик билан шуғулланиб келаётган бу инсон ўз фаолиятини оддий лойчиликдан бошлаганини айтади.",
-                            "attributes": []
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
+        "summary": "Риштон ўзининг асрларга татигулик кулолчилик санъати билан машҳур. Туман яшовчиси Равшанбек Тожиддинов эса анъанавий кулолчиликни замон нафаси билан уйғунлаштириб, йирик кулолчилик бизнесига асос солган. Қарийб 30 йилдан буён кулолчилик билан шуғулланиб келаётган бу инсон ўз фаолиятини оддий лойчиликдан бошлаганини айтади.",
+        "timestamp": 1593688001000,
+        "language": "uz-Cyrl",
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -1790,80 +453,95 @@
               "campaignId": "5a988e2139461b000e9dabf7",
               "campaignName": "WS - Inspire me"
             }
-          ]
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "113193632",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5C57/production/_113193632_photo_2020-07-01_20-16-12.jpg",
+          "path": "/cpsprodpb/5C57/production/_113193632_photo_2020-07-01_20-16-12.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "BBCUZBEK.COM",
+          "copyrightHolder": "BBCUZBEK.COM",
+          "originCode": "cpsprodpb",
+          "allowSyndication": false,
+          "type": "image"
         },
         "serviceIdentifier": "Uzbek-v6",
-        "extrinsicPromo": {
-          "headlines": {
-            "shortHeadline": "Ўзбекистон: 21 минг долларга сотмаган кўзамни музейга топширмоқчиман - риштонлик кулол"
-          },
-          "assetType": "STY",
-          "type": "cps"
-        }
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-53263099",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Ўзбекистон",
+          "uri": "/uzbek/uzbekistan",
+          "urlIdentifier": "/uzbek/uzbekistan",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Ўзбек тилидаги янгиликлар",
+          "uri": "/uzbek",
+          "urlIdentifier": "/uzbek",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "headlines": {
+                  "shortHeadline": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?",
+                  "headline": "Ўзбекистон, Риштон: Коронавирус даврида одамларнинг қора қозони қандай қайнамоқда?"
+                },
+                "locators": {
+                  "assetUri": "/uzbek/uzbekistan-53145022",
+                  "cpsUrn": "urn:bbc:content:assetUri:/uzbek/uzbekistan-53145022"
+                },
+                "summary": "Фарғона вилоятининг энг чекка туманларидан бўлмиш Риштон мамлакатнинг бошқа ҳудудлари каби коронавирус пандемиясининг жиддий иқтисодий таъсирига учраган. Ўтган бир неча ой давомида маҳаллий фаоллар аҳолининг қашшоқ қатламини оғир қийинчиликлардан сақлаб қолиш йўлида бир қанча хайрия ҳаракатларини ташкил этганлар.",
+                "timestamp": 1593591035000,
+                "language": "uz-Cyrl",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "113176216",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/EF53/production/_113176216_photo_2020-06-30_18-16-04.jpg",
+                  "path": "/cpsprodpb/EF53/production/_113176216_photo_2020-06-30_18-16-04.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "\"Боғдан тушган даромад рўзғоримнинг бир қисмини кўтаради\", яна бир қизи бюджет асосида таҳсил олаётганини айтган ўқитувчи аёл.",
+                  "caption": "\"Боғдан тушган даромад рўзғоримнинг бир қисмини кўтаради\", яна бир қизи бюджет асосида таҳсил олаётганини айтган ўқитувчи аёл.",
+                  "copyrightHolder": "BBCUZBEK.COM",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:uzbek/uzbekistan-53145022",
+                "type": "cps"
+              }
+            ]
+          }
+        ]
       }
     },
     "secondaryData": {
       "topStories": [
         {
           "headlines": {
-            "headline": "Tugʻma diktator: Aleksandr Lukashenko qanday qilib Belarusni 30 yildan beri boshqarmoqda? Video"
+            "headline": "Ўзбекистон тобора кўп одамларни президентни интернетда ҳақорат қилгани учун қамаяпти – Human Rights Watch"
           },
           "locators": {
-            "assetUri": "/uzbek/world-69215513",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:37b39817-8b21-456e-bb98-247c1cc0e957",
-            "assetId": "69215513",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-69215513",
-            "curie": "http://www.bbc.co.uk/asset/37b39817-8b21-456e-bb98-247c1cc0e957"
+            "assetUri": "/uzbek/uzbekistan-69080098",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bdd1bdb4-11ed-4cac-aa6e-cb9c23d1ce7b",
+            "assetId": "69080098",
+            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-69080098",
+            "curie": "http://www.bbc.co.uk/asset/bdd1bdb4-11ed-4cac-aa6e-cb9c23d1ce7b"
           },
-          "summary": "Aleksandr Lukashenko hayotida faqat ikkita rahbarlik lavozimini egallagan: sovxoz direktori va Belarus prezidenti.",
-          "timestamp": 1722239927000,
-          "language": "uz-Latn",
-          "byline": {
-            "name": "Alina Isachenko, Andrey Kozenko",
-            "title": "BBC",
-            "persons": [{ "name": "Alina Dizik", "function": "BBC Capital" }]
-          },
-          "passport": {
-            "campaigns": [
-              {
-                "campaignId": "5a988e3739461b000e9dabfa",
-                "campaignName": "WS - Give me perspective"
-              }
-            ],
-            "taggings": []
-          },
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "133511317",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/1168F/production/_133511317_02de2366-6c25-487f-97e6-735a8bb4d803.jpg",
-            "path": "/cpsprodpb/1168F/production/_133511317_02de2366-6c25-487f-97e6-735a8bb4d803.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "lukashenko",
-            "copyrightHolder": "SERGEI SAVOSTYANOV/TASS",
-            "originCode": "cpsprodpb",
-            "allowSyndication": false,
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "prominence": "maximum",
-          "id": "urn:bbc:ares::asset:uzbek/world-69215513",
-          "type": "cps"
-        },
-        {
-          "headlines": {
-            "headline": "Париж-2024: Ўзбекистон ҳисобида илк ва биринчи олтин медаль"
-          },
-          "locators": {
-            "assetUri": "/uzbek/world-69196932",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:c2641826-98c0-4cab-9f11-282db39cb6a2",
-            "assetId": "69196932",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-69196932",
-            "curie": "http://www.bbc.co.uk/asset/c2641826-98c0-4cab-9f11-282db39cb6a2"
-          },
-          "summary": "Диёра Келдиёрова тарихга кирди. Шавкат Мирзиёев уни шахсан табриклади. Ўзбекистон Париж Олимпиадасини олтин медаль билан бошлади.",
-          "timestamp": 1722192837000,
+          "summary": "Инсон ҳуқуқларини ҳимоя қилувчи Human Rights Watch ташкилотига кўра, Ўзбекистонда тобора кўп одамлар “президентни интернетда ҳақорат қилгани учун” қамоққа ташланмоқда.",
+          "timestamp": 1717153789000,
           "language": "uz-Cyrl",
           "passport": {
             "campaigns": [
@@ -1876,36 +554,37 @@
           },
           "cpsType": "STY",
           "indexImage": {
-            "id": "133510976",
+            "id": "133355429",
             "subType": "index",
-            "href": "http://c.files.bbci.co.uk/1093D/production/_133510976_mediaitem133510943.jpg",
-            "path": "/cpsprodpb/1093D/production/_133510976_mediaitem133510943.jpg",
+            "href": "http://c.files.bbci.co.uk/16927/production/_133355429_de0df93a-2e7c-49f3-a081-f5f944ffb0b3.jpg",
+            "path": "/cpsprodpb/16927/production/_133355429_de0df93a-2e7c-49f3-a081-f5f944ffb0b3.jpg",
             "height": 549,
             "width": 976,
-            "altText": "Shavkat Mirziyoyev",
-            "copyrightHolder": "Rasmiy",
+            "altText": "Human Rights Watch ташкилотига кўра, жамоатчилик арбобларини танқид қилишни жиноийлаштирадиган қонунлар халқаро қонунга зид ва баъзи изҳорларнинг ҳақорат дея топилиши қамоқ жазоси у ёқда турсин, жиноий иш учун ҳам етарли асос эмас.",
+            "caption": "Human Rights Watch ташкилотига кўра, жамоатчилик арбобларини танқид қилишни жиноийлаштирадиган қонунлар халқаро қонунга зид ва баъзи изҳорларнинг ҳақорат дея топилиши қамоқ жазоси у ёқда турсин, жиноий иш учун ҳам етарли асос эмас.",
+            "copyrightHolder": "President.uz",
             "originCode": "cpsprodpb",
             "allowSyndication": false,
             "type": "image"
           },
           "options": { "isBreakingNews": false, "isFactCheck": false },
           "prominence": "maximum",
-          "id": "urn:bbc:ares::asset:uzbek/world-69196932",
+          "id": "urn:bbc:ares::asset:uzbek/uzbekistan-69080098",
           "type": "cps"
         },
         {
           "headlines": {
-            "headline": "Hijob yana O‘zbek rasmiylarining jig‘iga tegayapti"
+            "headline": "Байден Украинага Россия ичидаги нуқталарни АҚШ қуроллари билан нишонга олишга рухсат берди - видео"
           },
           "locators": {
-            "assetUri": "/uzbek/uzbekistan-69220016",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:97d1abe4-8173-4e8e-a739-98e1fb397ff8",
-            "assetId": "69220016",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-69220016",
-            "curie": "http://www.bbc.co.uk/asset/97d1abe4-8173-4e8e-a739-98e1fb397ff8"
+            "assetUri": "/uzbek/world-69010005",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:689e3fd9-fc95-4ed2-bab2-41656818af32",
+            "assetId": "69010005",
+            "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-69010005",
+            "curie": "http://www.bbc.co.uk/asset/689e3fd9-fc95-4ed2-bab2-41656818af32"
           },
-          "summary": "Ana shu jumla bilan boshlanadi nufuzli The Diplomat nashrida e’lon qilingan maqola.",
-          "timestamp": 1722002950000,
+          "summary": "АҚШ расмийларининг айтишларича, Президент Жо Байден Украинага Россия ичидаги нуқталарни нишонга олишга рухсат берган, аммо бу нуқталар фақат Харкив вилояти яқинида бўлиши керак.",
+          "timestamp": 1717149879000,
           "language": "uz-Cyrl",
           "passport": {
             "campaigns": [
@@ -1918,67 +597,68 @@
           },
           "cpsType": "STY",
           "indexImage": {
-            "id": "133508469",
+            "id": "133308438",
             "subType": "index",
-            "href": "http://c.files.bbci.co.uk/178E0/production/_133508469_da190fb6-8c9c-4ac1-a4b6-c08b641e16f1.jpg",
-            "path": "/cpsprodpb/178E0/production/_133508469_da190fb6-8c9c-4ac1-a4b6-c08b641e16f1.jpg",
+            "href": "http://c.files.bbci.co.uk/14618/production/_133308438_mediaitem133308437.jpg",
+            "path": "/cpsprodpb/14618/production/_133308438_mediaitem133308437.jpg",
             "height": 549,
             "width": 976,
-            "altText": "Ўзбекистон мактабида ўранган ва калта шорт кийган қизлар",
-            "copyrightHolder": "FACEBOOK/РАСУЛ МЎМИН",
+            "altText": "Zelenskiy va Blinken",
+            "copyrightHolder": "Reuters",
             "originCode": "cpsprodpb",
-            "allowSyndication": false,
+            "allowSyndication": true,
             "type": "image"
           },
           "options": { "isBreakingNews": false, "isFactCheck": false },
           "prominence": "maximum",
-          "id": "urn:bbc:ares::asset:uzbek/uzbekistan-69220016",
+          "id": "urn:bbc:ares::asset:uzbek/world-69010005",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Бутун инсониятни тасодифан қириб юбориши мумкин бўлган ҳодисаларни биласизми?"
+          },
+          "locators": {
+            "assetUri": "/uzbek/world-69079276",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:2fb04481-1c02-4530-b61c-75190be97b65",
+            "assetId": "69079276",
+            "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-69079276",
+            "curie": "http://www.bbc.co.uk/asset/2fb04481-1c02-4530-b61c-75190be97b65"
+          },
+          "summary": "Яқин тарихда бир неча киши шундай қарорлар қабул қилдики, назарий жиҳатдан, улар қаттол келгиндиларни озод қилиб юбориши ёки Ер юзини куйдириб ташлаши мумкин эди. Бу воқеалардан бугунги кунда дуч келишимиз мумкин бўлган экзистенциал хавф-хатарлар ҳақида нималарни билиб олишимиз мумкин?",
+          "timestamp": 1717141165000,
+          "language": "uz-Cyrl",
+          "passport": {
+            "campaigns": [
+              {
+                "campaignId": "5a988e3e39461b000e9dabfb",
+                "campaignName": "WS - Keep me on trend"
+              }
+            ],
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "133355009",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/15FC7/production/_133355009_bdf5e9e3-68f9-4a6b-84cb-b3a0083a13aa.jpg",
+            "path": "/cpsprodpb/15FC7/production/_133355009_bdf5e9e3-68f9-4a6b-84cb-b3a0083a13aa.jpg",
+            "height": 900,
+            "width": 1600,
+            "altText": "Илк ядровий қурол синови янги хавфли даврни бошлаб берди.",
+            "caption": "Илк ядровий қурол синови янги хавфли даврни бошлаб берди.",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsprodpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "prominence": "maximum",
+          "id": "urn:bbc:ares::asset:uzbek/world-69079276",
           "type": "cps"
         }
       ],
       "features": [
-        {
-          "headlines": {
-            "headline": "O’zbek trans ayol Ichki ishlar bo’limida jinsiy tegajoqlik qilingani, do’pposlangani va qamalganini da’vo qilmoqda - Video"
-          },
-          "locators": {
-            "assetUri": "/uzbek/uzbekistan-69210653",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:dd58f3bf-685d-426d-868d-22085c754b3c",
-            "assetId": "69210653",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-69210653",
-            "curie": "http://www.bbc.co.uk/asset/dd58f3bf-685d-426d-868d-22085c754b3c"
-          },
-          "summary": "Kamilla Norova 25 yil avval Samarqand viloyatining Kattaqo‘rg‘on shahrida o‘g‘il bola bo‘lib tug‘ilgan. Hayotining yarmidan ko‘pini u jinsini o‘zgartirish uchun gormonlar qabul qilish va jarrohlik amaliyotlari bilan o‘tkazdi.",
-          "timestamp": 1721656752000,
-          "language": "uz-Cyrl",
-          "passport": {
-            "campaigns": [
-              {
-                "campaignId": "5a988e3e39461b000e9dabfb",
-                "campaignName": "WS - Keep me on trend"
-              }
-            ],
-            "taggings": []
-          },
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "133503128",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/140D2/production/_133503128_e68592ed-562e-4b61-af1d-c5e649266e1d.jpg",
-            "path": "/cpsprodpb/140D2/production/_133503128_e68592ed-562e-4b61-af1d-c5e649266e1d.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Kamilla Norova Rossiyada 'Kamilla Zakharova' taxallusi ostida musiqiy ijod qiladi.",
-            "caption": "Kamilla Norova Rossiyada 'Kamilla Zakharova' taxallusi ostida musiqiy ijod qiladi.",
-            "copyrightHolder": "Kamilla Norova",
-            "originCode": "cpsprodpb",
-            "allowSyndication": false,
-            "type": "image"
-          },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
-          "id": "urn:bbc:ares::asset:uzbek/uzbekistan-69210653",
-          "type": "cps"
-        },
         {
           "headlines": {
             "headline": "Путиннинг сўнгги дўстлари: Нега Марказий Осиё давлатлари Кремль таъсиридан чиқиб кета олмаяпти? Видео"
@@ -2322,86 +1002,126 @@
           "assetTypeCode": "PRO",
           "timestamp": 1700560036000,
           "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Сиёсат, дин ва лобби: Нега АҚШ Исроилни бунчалар қўллаб-қувватлайди? (видео)"
+          },
+          "locators": {
+            "assetUri": "/uzbek/world-67407082",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:f27ad3a1-07eb-4c85-b18b-36bcaf48c389",
+            "assetId": "67407082",
+            "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-67407082",
+            "curie": "http://www.bbc.co.uk/asset/f27ad3a1-07eb-4c85-b18b-36bcaf48c389"
+          },
+          "summary": "Нега Америка Қўшма Штатлари ташқи сиёсати Исроилни бунчалар қўллаб-қувватлайди? Қисқа жавоб: бу жуда мураккаб масала. Узунроғи Американинг кўп йиллик Яқин Шарқ стратегияси, АҚШдаги оммавий фикр ва сайлов сиёсати, диний омил ва Вашингтондаги Исроилпараст лоббининг қоришмасида.",
+          "timestamp": 1699954072000,
+          "language": "uz-Cyrl",
+          "passport": {
+            "campaigns": [
+              {
+                "campaignId": "5a988e4739461b000e9dabfc",
+                "campaignName": "WS - Update me"
+              }
+            ],
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "131713414",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/A1D7/production/_131713414_9.jpg",
+            "path": "/cpsprodpb/A1D7/production/_131713414_9.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "BBC",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:uzbek/world-67407082",
+          "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2024-07-29T09:58:57.621Z",
-        "lastRecordTimeStamp": "2024-07-29T09:56:00Z",
-        "firstRecordTimeStamp": "2024-07-29T07:56:00Z",
+        "generated": "2024-05-31T10:58:56.748Z",
+        "lastRecordTimeStamp": "2024-05-31T10:57:00Z",
+        "firstRecordTimeStamp": "2024-05-31T08:57:00Z",
         "items": [
           {
-            "id": "37b39817-8b21-456e-bb98-247c1cc0e957",
+            "id": "2fb04481-1c02-4530-b61c-75190be97b65",
             "rank": 1,
-            "title": "Tugʻma diktator: Aleksandr Lukashenko qanday qilib Belarusni 30 yildan beri boshqarmoqda? Video",
-            "href": "/uzbek/world-69215513",
-            "timestamp": "2024-07-29T07:58:47.000Z"
+            "title": "Бутун инсониятни тасодифан қириб юбориши мумкин бўлган ҳодисаларни биласизми?",
+            "href": "/uzbek/world-69079276",
+            "timestamp": "2024-05-31T07:39:25.000Z"
           },
           {
-            "id": "fa7e725b-eaac-4f03-a64d-b815ed42872f",
+            "id": "689e3fd9-fc95-4ed2-bab2-41656818af32",
             "rank": 2,
-            "title": "Париж-2024: Медаллар жадвали",
-            "href": "/uzbek/world-69210977",
-            "timestamp": "2024-07-27T13:42:52.000Z"
-          },
-          {
-            "id": "dd58f3bf-685d-426d-868d-22085c754b3c",
-            "rank": 3,
-            "title": "O’zbek trans ayol Ichki ishlar bo’limida jinsiy tegajoqlik qilingani, do’pposlangani va qamalganini da’vo qilmoqda - Video",
-            "href": "/uzbek/uzbekistan-69210653",
-            "timestamp": "2024-07-22T13:59:12.000Z"
-          },
-          {
-            "id": "c2641826-98c0-4cab-9f11-282db39cb6a2",
-            "rank": 4,
-            "title": "Париж-2024: Ўзбекистон ҳисобида илк ва биринчи олтин медаль",
-            "href": "/uzbek/world-69196932",
-            "timestamp": "2024-07-28T18:53:57.000Z"
+            "title": "Байден Украинага Россия ичидаги нуқталарни АҚШ қуроллари билан нишонга олишга рухсат берди - видео",
+            "href": "/uzbek/world-69010005",
+            "timestamp": "2024-05-31T10:04:39.000Z"
           },
           {
             "id": "055834e7-ac5b-cd40-9d88-f7d3659b434a",
-            "rank": 5,
+            "rank": 3,
             "title": "‘Zoʻrlanganimni, hatto, sezmagan ham edimʼ",
             "href": "/uzbek/lotin-46149793",
             "timestamp": "2018-11-14T16:57:29.000Z"
           },
           {
             "id": "e9199bdb-7ad5-444e-b826-4dba5fde3aca",
-            "rank": 6,
+            "rank": 4,
             "title": "Jinsiy zoʻrlangan 10 yashar qiz farzand koʻrdi",
             "href": "/uzbek/lotin-40964020",
             "timestamp": "2017-08-17T13:07:59.000Z"
           },
           {
-            "id": "d260bf5c-55a7-ee41-8901-ef8e3d9287f3",
+            "id": "02059b46-8c80-11e5-a566-c4893db9bd6e",
+            "rank": 5,
+            "title": "Ona qorni shakliga qarab homilaning jinsini aniqlash mumkinmi?",
+            "href": "/uzbek/lotin/2015/11/151116_latin_pregnancy_girl_boy_guessing",
+            "timestamp": "2015-11-16T16:39:46.000Z"
+          },
+          {
+            "id": "1c9d7e1c-3b98-4c10-b2d7-401d55fd3c0b",
+            "rank": 6,
+            "title": "Ўзбекистон Афғонистоннинг жон томирига айландими?",
+            "href": "/uzbek/uzbekistan-69076191",
+            "timestamp": "2024-05-30T14:36:31.000Z"
+          },
+          {
+            "id": "78f5d00f-8abb-4bb6-bce5-2a66f09ef7c3",
             "rank": 7,
-            "title": "Rio 2016: O'yinlar O'zbekiston uchun tarixiysi bo'ldi",
-            "href": "/uzbek/lotin-37156725",
-            "timestamp": "2016-08-22T11:59:23.000Z"
+            "title": "Ўзбекистон ҳукумати қандай қилиб ўз деҳқонларини ночор аҳволга солиб қўймоқда?",
+            "href": "/uzbek/uzbekistan-69057179",
+            "timestamp": "2024-05-30T09:23:08.000Z"
           },
           {
-            "id": "cf05132e-a239-11e4-801f-9dc33db9bd6e",
+            "id": "1adc57a3-2c5b-4b50-acad-d395c39382e8",
             "rank": 8,
-            "title": "Adliya vaziri O'zbekiston Senati raisi bo'ldi",
-            "href": "/uzbek/lotin/2015/01/150122_latin_new_uzbek_senate",
-            "timestamp": "2015-01-22T13:26:24.000Z"
+            "title": "Путиннинг сўнгги дўстлари: Нега Марказий Осиё давлатлари Кремль таъсиридан чиқиб кета олмаяпти? Видео",
+            "href": "/uzbek/central-asia-69066165",
+            "timestamp": "2024-05-27T14:57:33.000Z"
           },
           {
-            "id": "b48f35da-4ca7-4f77-bb00-634a6cd6675b",
+            "id": "5674014a-aef3-a34b-b937-eb29ac483daf",
             "rank": 9,
-            "title": "O'zbek olimpiadachilari Parij-2024 dan oldin medallarni qo'lga kiritdilar",
-            "href": "/uzbek/uzbekistan-69210073",
-            "timestamp": "2024-07-25T08:00:46.000Z"
+            "title": "Ўзбекистон: Фоҳишабозлик, секс ва ўзбек эркаклари, улар ечимни нимада кўришади? (18+)",
+            "href": "/uzbek/uzbekistan-47838092",
+            "timestamp": "2019-04-06T09:28:28.000Z"
           },
           {
-            "id": "3327e3bf-59f4-4d2b-9c94-3ce7938d2af2",
+            "id": "381eca5b-63de-9d43-b6cf-6877e069341f",
             "rank": 10,
-            "title": "Лола Хатамова Ислом Каримов билан муносабати, Президент Мирзиёев сиёсати ва Америкага келаётган ўзбеклар оқими ҳақида - видео",
-            "href": "/uzbek/uzbekistan-69220452",
-            "timestamp": "2024-07-26T13:05:46.000Z"
+            "title": "Видео: Жинсини ўзгартирган ўзбек ҳикояси",
+            "href": "/uzbek/uzbekistan-41241364",
+            "timestamp": "2017-09-13T17:24:15.000Z"
           }
         ]
-      },
-      "latestMedia": null
+      }
     }
   },
   "contentType": "application/json; charset=utf-8"

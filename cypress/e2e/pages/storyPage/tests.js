@@ -5,6 +5,7 @@ import paths from 'ramda/src/paths';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
+import CafEnabledServices from '../../../../src/app/lib/cafServices.const';
 
 const twoYearsAgo = new Date().getFullYear() - 2;
 
@@ -35,9 +36,13 @@ export const testsThatFollowSmokeTestConfig = ({
   isAmp,
   variant,
 }) => {
+  const pageTypeForFetch = CafEnabledServices.includes(service)
+    ? 'article'
+    : 'cpsAsset';
+
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType} `, () => {
     it('should render a description for the page', () => {
-      cy.getPageData({ service, pageType: 'article', variant }).then(
+      cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
         ({ body }) => {
           const contentBlocks = getContentBlocks(body);
           const descriptionBlock = contentBlocks.find(
@@ -57,7 +62,7 @@ export const testsThatFollowSmokeTestConfig = ({
     });
 
     it('should render paragraph text for the page', () => {
-      cy.getPageData({ service, pageType: 'article', variant }).then(
+      cy.getPageData({ service, pageType: pageTypeForFetch, variant }).then(
         ({ body }) => {
           const contentBlocks = getContentBlocks(body);
           const paragraphBlock = contentBlocks.find(

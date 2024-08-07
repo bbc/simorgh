@@ -173,7 +173,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -606,7 +606,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -941,7 +941,7 @@ min-height:55.5rem .no-js .emotion-2 {
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -1274,7 +1274,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -1707,7 +1707,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -2017,7 +2017,7 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
@@ -2450,7 +2450,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 .emotion-8 {
   margin: 0;
-  background-color: 'transparent';
+  background-color: transparent;
 }
 
 .emotion-10 {
