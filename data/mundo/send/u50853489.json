@@ -33,26 +33,19 @@
       "viewType": "submission",
       "allowSubmissionWithoutEmail": false,
       "winnerPickerEnabled": false,
-      "cta": {
-        "title": "Get in touch",
-        "buttonText": "Contact form"
-      },
+      "cta": { "title": "Get in touch", "buttonText": "Contact form" },
       "allowEditing": false,
       "signinRequired": false,
       "accountPolicy": ""
     },
     "sections": [
       {
-        "sectionText": {
-          "title": "Envíanos tus comentarios"
-        },
+        "sectionText": { "title": "Envíanos tus comentarios" },
         "fields": [
           {
             "id": "txt49018765",
             "type": "text",
-            "validation": {
-              "mandatory": true
-            },
+            "validation": { "mandatory": true },
             "htmlType": "text",
             "label": "Nombre",
             "description": "",
@@ -61,9 +54,7 @@
           {
             "id": "txt49018835",
             "type": "text",
-            "validation": {
-              "mandatory": true
-            },
+            "validation": { "mandatory": true },
             "htmlType": "email",
             "label": "Dirección de email (Obligatorio)",
             "description": "",
@@ -72,9 +63,7 @@
           {
             "id": "txt49018894",
             "type": "text",
-            "validation": {
-              "mandatory": false
-            },
+            "validation": { "mandatory": false },
             "htmlType": "text",
             "label": "Ciudad y país",
             "description": "",
@@ -83,9 +72,7 @@
           {
             "id": "txt49018963",
             "type": "text",
-            "validation": {
-              "mandatory": false
-            },
+            "validation": { "mandatory": false },
             "htmlType": "phone",
             "label": "Número de teléfono",
             "description": "",
@@ -94,9 +81,7 @@
           {
             "id": "txt49019016",
             "type": "text",
-            "validation": {
-              "mandatory": true
-            },
+            "validation": { "mandatory": true },
             "htmlType": "textarea",
             "label": "Comentario (Obligatorio)",
             "description": "",
@@ -105,9 +90,7 @@
           {
             "id": "chk49021805",
             "type": "checkbox",
-            "validation": {
-              "mandatory": false
-            },
+            "validation": { "mandatory": false },
             "htmlType": "checkbox",
             "description": "",
             "label": "Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario."
@@ -115,27 +98,14 @@
         ]
       }
     ],
-    "labels": [
-      {
-        "label": "Yes"
-      },
-      {
-        "label": "No"
-      },
-      {
-        "label": "Maybe"
-      }
-    ],
+    "labels": [{ "label": "Yes" }, { "label": "No" }, { "label": "Maybe" }],
     "secondaryLabels": [],
     "retentionPolicyMessage": "We’ll keep it for up to 270 days – and if we don’t use it we’ll then delete it and any other information you sent us.",
     "includeDataRetentionText": true,
     "includeRightToRevokeText": true,
     "includeRemovalGuidelineText": true,
     "emailAddressFields": ["txt49018835"],
-    "promo": {
-      "title": "",
-      "promos": []
-    },
+    "promo": { "title": "", "promos": [] },
     "campaignArchived": false
   },
   "contentType": "application/json; charset=utf-8"
