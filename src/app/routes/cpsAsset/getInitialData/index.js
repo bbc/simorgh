@@ -98,7 +98,14 @@ const getDerivedServiceAndPath = (service, pathname) => {
   }
 };
 
-export default async ({ path: pathname, service, variant, toggles, isAmp }) => {
+export default async ({
+  path: pathname,
+  service,
+  variant,
+  toggles,
+  isCaf,
+  isAmp,
+}) => {
   try {
     const { service: derivedService, path: derivedPath } =
       getDerivedServiceAndPath(service, pathname);
@@ -110,7 +117,7 @@ export default async ({ path: pathname, service, variant, toggles, isAmp }) => {
       path: derivedPath,
       service: derivedService,
       variant,
-      pageType: 'article',
+      pageType: isCaf ? 'article' : 'cpsAsset',
       isAmp,
       toggles,
     });
@@ -122,8 +129,9 @@ export default async ({ path: pathname, service, variant, toggles, isAmp }) => {
     const { topStories, features } = secondaryColumn;
     const { mostRead } = article;
 
-    // Skip transforming JSON when the pageType is not FIX
-    const skipTransformJson = article?.metadata?.type !== FEATURE_INDEX_PAGE;
+    // Skip transforming JSON when CAF is enabled and the pageType is not FIX
+    const skipTransformJson =
+      isCaf && article?.metadata?.type !== FEATURE_INDEX_PAGE;
 
     const response = {
       status,
