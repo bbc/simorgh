@@ -20,9 +20,9 @@ describe('UGC Page Layout', () => {
     jest.restoreAllMocks();
 
     ({ container } = await act(() => {
-      return render(
-        <UGCPageLayout pageData={mundoFixture as PageProps['pageData']} />,
-      );
+      const pageData = mundoFixture.data as PageProps['pageData'];
+
+      return render(<UGCPageLayout pageData={pageData} />);
     }));
   });
 
