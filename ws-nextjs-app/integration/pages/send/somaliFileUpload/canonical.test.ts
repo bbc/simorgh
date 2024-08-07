@@ -1,6 +1,6 @@
 /**
  * @service somali
- * @pathname /somali/send/u130092370?renderer_env=test
+ * @pathname /somali/send/u130092370
  */
 
 import runCanonicalTest from '../canonicalTests';

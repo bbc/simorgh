@@ -174,7 +174,6 @@ export type BuildConfigProps = {
   counterName: string | null;
   statsDestination: string;
   producer: string | '';
-  id: string | null;
   isAmp: boolean;
   lang: string;
   pageType: PageTypes;

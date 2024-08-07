@@ -11,7 +11,7 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
 
-export default ({ service, pageType, variant, isAmp }) => {
+export default ({ service, pageType, variant }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(
       'Video Player',
@@ -30,7 +30,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             }
 
             const language = appConfig[service][variant].lang;
-            const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
+            const embedUrl = getEmbedUrl({ body: jsonData, language });
             const isBrandPage = isBrand(jsonData);
 
             cy.get('iframe').then(iframe => {
@@ -60,6 +60,16 @@ export default ({ service, pageType, variant, isAmp }) => {
           });
         });
       },
+      describe('Chartbeat', () => {
+        if (envConfig.chartbeatEnabled) {
+          it('should have a script with src value set to chartbeat source', () => {
+            cy.hasScriptWithChartbeatSrc();
+          });
+          it('should have chartbeat config set to window object', () => {
+            cy.hasGlobalChartbeatConfig();
+          });
+        }
+      }),
     );
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
