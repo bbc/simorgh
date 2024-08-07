@@ -29,6 +29,7 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'error',
         'timeOnServer',
         'errorCode',
+        'isCaf',
         'isLite', // isLite is here as it can come from the 'save-data' header setting
       ],
       initialData,
