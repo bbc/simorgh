@@ -128,7 +128,8 @@ const mockInitialData = ({ service, assetId, pageData }) => {
   });
 };
 
-describe('Media Asset Page', () => {
+// Skipped as this component will no longer be used.
+describe.skip('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;
@@ -339,7 +340,7 @@ describe('Media Asset Page', () => {
   });
 });
 
-it('should not show the timestamp when allowDateStamp is false', async () => {
+it.skip('should not show the timestamp when allowDateStamp is false', async () => {
   const { pageData } = await mockInitialData({
     assetId: 'pidgin/a-media-asset',
     service: 'pidgin',
@@ -356,7 +357,7 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
   expect(document.querySelector('main time')).toBeNull();
 });
 
-it('should not show the iframe when available is false', async () => {
+it.skip('should not show the iframe when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
     ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
@@ -374,7 +375,7 @@ it('should not show the iframe when available is false', async () => {
   expect(document.querySelector('iframe')).toBeNull();
 });
 
-it('should show the media message when available is false', async () => {
+it.skip('should show the media message when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
     ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
@@ -396,7 +397,7 @@ it('should show the media message when available is false', async () => {
   ).toBeInTheDocument();
 });
 
-it('should show the media message when there is no media block', async () => {
+it.skip('should show the media message when there is no media block', async () => {
   const blocks = pathOr([], ['content', 'blocks'], uzbekPageData.data.article);
   const blockTypes = pathOr(
     [],
@@ -428,7 +429,7 @@ it('should show the media message when there is no media block', async () => {
   ).toBeInTheDocument();
 });
 
-it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+it.skip('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
   const { pageData } = await mockInitialData({
     assetId: 'igbo/a-media-asset',
     service: 'igbo',
