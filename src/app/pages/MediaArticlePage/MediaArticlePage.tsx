@@ -66,10 +66,12 @@ import SecondaryColumn from './SecondaryColumn';
 
 import styles from './MediaArticlePage.styles';
 import {
+  AtomicVersionProps,
   ComponentToRenderProps,
   EmbedHtmlProps,
   TimestampProps,
 } from './types';
+import convertAtomicVersionBlock from './convertAtomicVersionBlock';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
@@ -153,6 +155,26 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         <ArticleMediaPlayer {...props} />
       </div>
     ),
+    atomicVersion: (props: AtomicVersionProps) => {
+      const { blocks: atomicVersionBlocks, externalId } = props;
+
+      const atomicVersionBlock = convertAtomicVersionBlock({
+        blocks: atomicVersionBlocks,
+        externalId,
+        headline: pageData?.promo?.headlines?.headline,
+      });
+
+      return (
+        <div
+          css={({ spacings }: Theme) => [
+            `padding-top: ${spacings.TRIPLE}rem`,
+            isMap && styles.cafMediaPlayer,
+          ]}
+        >
+          <ArticleMediaPlayer blocks={atomicVersionBlock} />
+        </div>
+      );
+    },
     text,
     byline: (props: ComponentToRenderProps) =>
       hasByline ? (
