@@ -156,13 +156,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       </div>
     ),
     atomicVersion: (props: AtomicVersionProps) => {
-      const { blocks: atomicVersionBlocks, externalId } = props;
-
-      const atomicVersionBlock = convertAtomicVersionBlock({
-        blocks: atomicVersionBlocks,
-        externalId,
-        headline: pageData?.promo?.headlines?.headline,
-      });
+      const atomicVersionBlock = convertAtomicVersionBlock(props, headline);
 
       return (
         <div

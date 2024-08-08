@@ -5,9 +5,15 @@ export type ComponentToRenderProps = {
 };
 
 export type AtomicVersionProps = {
-  externalId: string;
+  available: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocks: any;
+  embedding: boolean;
+  externalId: string;
+  format: string;
+  id: string;
+  live: boolean;
+  subType: string;
 };
 
 export type TimestampProps = {
