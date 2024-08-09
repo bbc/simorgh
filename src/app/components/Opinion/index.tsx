@@ -7,9 +7,8 @@ import styles from './styles/index.styles';
 import Heading from '../Heading';
 import Title from './Title';
 import QuoteList from './QuoteList';
-import GestureEventContext, {
-  useGestureEventContext,
-} from './GestureEventContext/GestureEventContext';
+import { useTouchEventContext } from './TouchPad/TouchPadContext';
+import TouchPad from './TouchPad';
 
 const Components = {
   title: Title,
@@ -17,7 +16,7 @@ const Components = {
 };
 
 const ShuffleButton = () => {
-  const { swipeLeft } = useGestureEventContext();
+  const { swipeLeft } = useTouchEventContext();
 
   return (
     <button
@@ -32,7 +31,7 @@ const ShuffleButton = () => {
 
 const OpinionPage = ({ blocks }: OpinionPageProps) => {
   return (
-    <GestureEventContext>
+    <TouchPad>
       <Heading
         css={styles.opinionHeading}
         level={1}
@@ -49,7 +48,7 @@ const OpinionPage = ({ blocks }: OpinionPageProps) => {
         <a href="google.com">Prev</a>
         <a href="google.com">Next</a>
       </div>
-    </GestureEventContext>
+    </TouchPad>
   );
 };
 

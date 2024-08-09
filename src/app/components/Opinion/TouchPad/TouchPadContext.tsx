@@ -4,10 +4,8 @@ import React, {
   useContext,
   useState,
 } from 'react';
-import TouchPathList from './utils/TouchPathList';
-import detectSwipeUp from './utils/detectSwipeUp';
 
-export type GestureEventContextType = {
+export type TouchEventContextType = {
   swipeUpCount: number;
   swipeUp: () => void;
   swipeDownCount: number;
@@ -18,30 +16,11 @@ export type GestureEventContextType = {
   swipeRight: () => void;
 };
 
-const Context = createContext<GestureEventContextType>(
-  {} as GestureEventContextType,
+const Context = createContext<TouchEventContextType>(
+  {} as TouchEventContextType,
 );
 
-const TouchPad = ({ children }: PropsWithChildren) => {
-  const touchList = new TouchPathList();
-
-  return (
-    <div
-      onTouchStart={e => {
-        touchList.initialiseTouchPathList(e);
-      }}
-      onTouchEnd={e => {
-        touchList.updateTouchPathList(e);
-        detectSwipeUp(touchList.touchList);
-        touchList.clearTouchPathList();
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-const GestureEventContext = ({ children }: PropsWithChildren) => {
+const TouchPadContext = ({ children }: PropsWithChildren) => {
   const [swipeUpCount, setSwipeUpCount] = useState(0);
   const [swipeDownCount, setSwipeDownCount] = useState(0);
   const [swipeLeftCount, setSwipeLeftCount] = useState(0);
@@ -65,12 +44,12 @@ const GestureEventContext = ({ children }: PropsWithChildren) => {
         swipeRight,
       }}
     >
-      <TouchPad>{children}</TouchPad>
+      {children}
     </Context.Provider>
   );
 };
 
-export const useGestureEventContext = () =>
-  useContext<GestureEventContextType>(Context);
+export const useTouchEventContext = () =>
+  useContext<TouchEventContextType>(Context);
 
-export default GestureEventContext;
+export default TouchPadContext;

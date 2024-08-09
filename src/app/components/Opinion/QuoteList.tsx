@@ -4,10 +4,10 @@ import { useState } from 'react';
 import styles from './styles/index.styles';
 import { QuoteListProps } from './types';
 import Text from '../Text';
-import { useGestureEventContext } from './GestureEventContext/GestureEventContext';
+import { useTouchEventContext } from './TouchPad/TouchPadContext';
 
 const QuoteList = ({ quotes }: QuoteListProps) => {
-  const { swipeLeftCount } = useGestureEventContext();
+  const { swipeLeftCount } = useTouchEventContext();
 
   const [index, setIndex] = useState(0);
   const { text, attribution, attributionLocation } = quotes[index];

@@ -1,6 +1,11 @@
 import { css, Theme } from '@emotion/react';
 
 const style = {
+  container: () =>
+    css({
+      position: 'relative',
+      height: '100%',
+    }),
   opinionHeading: () =>
     css({
       textAlign: 'end',
