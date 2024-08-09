@@ -49,10 +49,10 @@ export default async (context: GetServerSidePropsContext) => {
     pageStatus = status;
   }
 
-  const { data: { article } = { article: null } } = pageJson ?? {};
+  const { data: { avEmbed } = { avEmbed: null } } = pageJson ?? {};
 
-  const service = article?.metadata?.service ?? 'news';
-  const variant = article?.metadata?.variant ?? null;
+  const service = avEmbed?.metadata?.service ?? 'news';
+  const variant = avEmbed?.metadata?.variant ?? null;
 
   context.res.statusCode = pageStatus;
 
@@ -61,10 +61,10 @@ export default async (context: GetServerSidePropsContext) => {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
       isNextJs: true,
       isAvEmbeds: true,
-      pageData: article
+      pageData: avEmbed
         ? {
-            ...article,
-            mediaBlock: article?.content?.model?.blocks ?? null,
+            ...avEmbed,
+            mediaBlock: avEmbed?.content?.model?.blocks ?? null,
             metadata: { type: AV_EMBEDS },
           }
         : null,
