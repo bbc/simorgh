@@ -15,7 +15,7 @@ export default async (context: GetServerSidePropsContext) => {
     req: { headers: reqHeaders },
   } = context;
 
-  let pageStatus = 200;
+  let pageStatus;
   let pageJson;
 
   const parsedRoute = parseAvRoute(resolvedUrl);
