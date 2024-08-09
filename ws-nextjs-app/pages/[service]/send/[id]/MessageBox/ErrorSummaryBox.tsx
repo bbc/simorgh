@@ -74,7 +74,7 @@ const ErrorSummaryBox = forwardRef(
       <InvalidMessageBox
         id="errorSummaryBox"
         hasArrowStyle={false}
-        messageCode={InvalidMessageCodes.ErrorSummary}
+        messageCode={isAndroid ? null : InvalidMessageCodes.ErrorSummary}
         ref={ref}
         isErrorSummary
       >
