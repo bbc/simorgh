@@ -127,16 +127,6 @@ const ArticlePage = ({ pageData }) => {
     audio: articleMediaPlayer,
     video: articleMediaPlayer,
     text,
-    byline: props =>
-      hasByline ? (
-        <Byline {...props}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-          />
-        </Byline>
-      ) : null,
     image: props => (
       <ImageWithCaption
         {...props}
@@ -145,7 +135,17 @@ const ArticlePage = ({ pageData }) => {
       />
     ),
     timestamp: props =>
-      hasByline ? null : <Timestamp {...props} popOut={false} />,
+      hasByline ? (
+        <Byline blocks={bylineContribBlocks}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+      ) : (
+        <Timestamp {...props} popOut={false} />
+      ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
     embedHtml: EmbedHtml,

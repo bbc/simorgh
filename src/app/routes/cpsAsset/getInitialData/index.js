@@ -86,29 +86,14 @@ const transformJson = async (json, pathname, toggles) => {
   }
 };
 
-const getDerivedServiceAndPath = (service, pathname) => {
-  switch (service) {
-    case 'cymrufyw':
-      return {
-        service: 'newyddion',
-        path: pathname.replace('cymrufyw', 'newyddion'),
-      };
-    default:
-      return { service, path: pathname };
-  }
-};
-
 export default async ({ path: pathname, service, variant, toggles, isAmp }) => {
   try {
-    const { service: derivedService, path: derivedPath } =
-      getDerivedServiceAndPath(service, pathname);
-
     const {
       status,
       pageData: { secondaryColumn, recommendations, ...article } = {},
     } = await getArticleInitialData({
-      path: derivedPath,
-      service: derivedService,
+      path: pathname,
+      service,
       variant,
       pageType: 'article',
       isAmp,
