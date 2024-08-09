@@ -4,6 +4,7 @@ import React, { ForwardedRef, forwardRef } from 'react';
 import { WHITE } from '#app/components/ThemeProvider/palette';
 import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
 import Text from '#app/components/Text';
+import useAndroidDetection from '#hooks/useAdroidDetection';
 import { useFormContext } from '../FormContext';
 import InvalidMessageBox from './InvalidMessageBox';
 import styles from './styles';
@@ -35,6 +36,8 @@ const ErrorLink = ({ id, labelText }: ListItemsLinkProps) => {
 const ErrorSummaryBox = forwardRef(
   ({ labelMap }: ErrorSummaryProps, ref: ForwardedRef<HTMLElement>) => {
     const { validationErrors } = useFormContext();
+    const isAndroid = useAndroidDetection();
+
     if (validationErrors.length === 0) {
       return null;
     }
@@ -54,6 +57,19 @@ const ErrorSummaryBox = forwardRef(
         </>
       );
     });
+
+    const contents = isSingleError ? (
+      <Text css={styles.singleItem}>{errorListItems}</Text>
+    ) : (
+      <BulletedList
+        bulletPointColour={WHITE}
+        bulletPointShape="hidden"
+        css={styles.list}
+      >
+        {errorListItems}
+      </BulletedList>
+    );
+
     return (
       <InvalidMessageBox
         id="errorSummaryBox"
@@ -62,17 +78,7 @@ const ErrorSummaryBox = forwardRef(
         ref={ref}
         isErrorSummary
       >
-        {isSingleError ? (
-          <Text css={styles.singleItem}>{errorListItems}</Text>
-        ) : (
-          <BulletedList
-            bulletPointColour={WHITE}
-            bulletPointShape="hidden"
-            css={styles.list}
-          >
-            {errorListItems}
-          </BulletedList>
-        )}
+        {isAndroid ? null : contents}
       </InvalidMessageBox>
     );
   },

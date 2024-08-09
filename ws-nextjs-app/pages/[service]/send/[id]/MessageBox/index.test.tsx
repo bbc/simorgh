@@ -3,6 +3,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
 import * as FormContextModule from '../FormContext';
 import { InvalidMessageCodes } from '../types';
@@ -20,7 +21,7 @@ const labelMap = {
     'Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario.',
 } as Record<string, string>;
 
-describe('ErrorSummaryBox', () => {
+describe('ErrorSummaryBox - Non Android', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
@@ -121,5 +122,41 @@ describe('ErrorSummaryBox', () => {
     );
     expect(inputWithError).toBeInTheDocument();
     expect(inputWithError?.textContent).toEqual(`Attach your file (optional)`);
+  });
+});
+
+describe('ErrorSummaryBox - Android', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('should NOT render an unordered list', async () => {
+    jest.spyOn(AndroidDetectionModule, 'default').mockReturnValue(true);
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+          {
+            id: 'txt49018835',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+          {
+            id: 'txt49019016',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+      }));
+
+    const { container } = await act(() => {
+      return render(<ErrorSummaryBox labelMap={labelMap} />);
+    });
+
+    const unorderedList = container.querySelector('ul');
+    expect(unorderedList).not.toBeInTheDocument();
   });
 });
