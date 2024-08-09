@@ -14,8 +14,12 @@ export default () => {
     const hierarchicalGrid = document.querySelector(
       '[data-testid="hierarchical-grid"]',
     );
-    // hello
 
     expect(hierarchicalGrid).toBeInTheDocument();
+  });
+
+  it('should render the main html tag with an attribute of role with the value of main', () => {
+    const mainTag = document.querySelector("main[role='main']");
+    expect(mainTag).toBeInTheDocument();
   });
 };
