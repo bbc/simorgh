@@ -6,6 +6,7 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
+import parseAvRoute from '#app/routes/utils/parseAvRoute';
 import getAgent from '../../../utilities/undiciAgent';
 
 export default async (context: GetServerSidePropsContext) => {
@@ -17,9 +18,12 @@ export default async (context: GetServerSidePropsContext) => {
   let pageStatus = 200;
   let pageJson;
 
+  const parsedRoute = parseAvRoute(resolvedUrl);
+
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: 'avEmbeds',
     pathname: resolvedUrl,
+    mediaId: parsedRoute.mediaId,
   });
 
   const env = getEnvironment(resolvedUrl);
@@ -34,7 +38,7 @@ export default async (context: GetServerSidePropsContext) => {
     const { status, json } = await fetchPageData({
       path,
       agent,
-      // optHeaders,
+      optHeaders,
     });
 
     pageStatus = status;

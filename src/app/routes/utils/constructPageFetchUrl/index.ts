@@ -27,15 +27,6 @@ import {
 } from '../pageTypes';
 import parseAvRoute from '../parseAvRoute';
 
-export interface UrlConstructParams {
-  pathname: string;
-  pageType: PageTypes;
-  service?: Services;
-  variant?: Variants;
-  page?: string;
-  isAmp?: boolean;
-}
-
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
 const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
@@ -87,14 +78,16 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
          * Legacy Front Pages are curated in CPS and fetched from the BFF using the CPS_ASSET page type
          * This functionality will be removed once all front pages migrated to the new HomePage
          *  */
-        return env !== 'local' && isFrontPage({ path, service, variant })
+        return env !== 'local' &&
+          service &&
+          isFrontPage({ path, service, variant })
           ? getFrontPageId(path)
           : getCpsId(path);
       };
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        return env !== 'local'
+        return env !== 'local' && service
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
@@ -135,6 +128,16 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   return pipe(getUrlPath, removeAmp, getIdFunction);
 };
 
+export interface UrlConstructParams {
+  pathname: string;
+  pageType: PageTypes;
+  service?: Services;
+  variant?: Variants;
+  page?: string;
+  isAmp?: boolean;
+  mediaId?: string | null;
+}
+
 const constructPageFetchUrl = ({
   pathname,
   pageType,
@@ -142,6 +145,7 @@ const constructPageFetchUrl = ({
   variant,
   page,
   isAmp,
+  mediaId,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
@@ -166,6 +170,10 @@ const constructPageFetchUrl = ({
     }),
     ...(isAmp && {
       isAmp,
+    }),
+    // MediaId can be supplied by av-embeds routes to determine which media asset to return
+    ...(mediaId && {
+      mediaId,
     }),
     ...(env && { serviceEnv: env }),
   };
