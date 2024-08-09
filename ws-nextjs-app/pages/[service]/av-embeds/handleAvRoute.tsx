@@ -5,8 +5,7 @@ import fetchPageData from '#app/routes/utils/fetchPageData';
 import certsRequired from '#app/routes/utils/certsRequired';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { FetchError } from '#app/models/types/fetch';
-import { OptimoBlock } from '#app/models/types/optimo';
-import parseAvRoute from './parseAvRoute';
+import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getAgent from '../../../utilities/undiciAgent';
 
 export default async (context: GetServerSidePropsContext) => {
@@ -18,45 +17,40 @@ export default async (context: GetServerSidePropsContext) => {
   let pageStatus = 200;
   let pageJson;
 
+  const avEmbedsUrl = constructPageFetchUrl({
+    pageType: 'avEmbeds',
+    pathname: resolvedUrl,
+  });
+
   const env = getEnvironment(resolvedUrl);
   const agent = certsRequired(resolvedUrl) ? await getAgent() : null;
 
-  const parsedRoute = parseAvRoute(resolvedUrl);
+  const path = avEmbedsUrl.toString();
 
-  const extension = `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}/${parsedRoute.assetId}`;
-
-  const { TEST_API } = process.env;
-
-  // TEMPORARY: This will be changed to the correct API path once its implemented
-  const path = `${TEST_API}/article/${extension}`;
   const optHeaders = { 'ctx-service-env': env };
 
-  if (TEST_API) {
-    try {
-      // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
-      const { status, json } = await fetchPageData({
-        path,
-        agent,
-        optHeaders,
-      });
+  try {
+    // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
+    const { status, json } = await fetchPageData({
+      path,
+      agent,
+      // optHeaders,
+    });
 
-      pageStatus = status;
-      pageJson = json;
-    } catch (error) {
-      const { status } = error as FetchError;
+    pageStatus = status;
+    pageJson = json;
+  } catch (error) {
+    const { status } = error as FetchError;
 
-      pageStatus = status;
-    }
+    pageStatus = status;
   }
 
-  const mediaBlock = pageJson?.content?.model?.blocks?.find(
-    (block: OptimoBlock) => ['video', 'audio'].includes(block.type),
-  )?.model?.blocks;
+  const {
+    data: { article },
+  } = pageJson;
 
-  // Determine actual service and variant (if applicable) from either the parsed route or the data returned from the fetch for the media data from BFF
-  // We should always have a service to be able to display a 404 page if needed
-  const service = parsedRoute?.service ?? 'news';
-  const variant = parsedRoute?.variant ?? null;
+  const service = article?.metadata?.service;
+  const variant = article?.metadata?.variant ?? null;
 
   context.res.statusCode = pageStatus;
 
@@ -65,11 +59,9 @@ export default async (context: GetServerSidePropsContext) => {
       bbcOrigin: reqHeaders['bbc-origin'] || null,
       isNextJs: true,
       isAvEmbeds: true,
-      pageData: parsedRoute
+      pageData: article
         ? {
-            input: resolvedUrl,
-            output: parsedRoute,
-            mediaBlock: mediaBlock ?? null,
+            mediaBlock: article?.content?.model?.blocks ?? null,
             metadata: { type: AV_EMBEDS },
           }
         : null,

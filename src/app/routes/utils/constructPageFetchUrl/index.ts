@@ -17,6 +17,7 @@ import {
 } from '../../topic/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
+  AV_EMBEDS,
   CPS_ASSET,
   HOME_PAGE,
   LIVE_PAGE,
@@ -24,11 +25,12 @@ import {
   TOPIC_PAGE,
   UGC_PAGE,
 } from '../pageTypes';
+import parseAvRoute from '../parseAvRoute';
 
 export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
-  service: Services;
+  service?: Services;
   variant?: Variants;
   page?: string;
   isAmp?: boolean;
@@ -59,7 +61,7 @@ const isFrontPage = ({
 
 interface GetIdProps {
   pageType: PageTypes;
-  service: Services;
+  service?: Services;
   variant?: Variants;
   env: Environments;
 }
@@ -111,6 +113,21 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case UGC_PAGE:
       getIdFunction = getUgcId;
       break;
+    case AV_EMBEDS:
+      getIdFunction = (path: string) => {
+        const parsedRoute = parseAvRoute(path);
+
+        const isShortCpsId = parsedRoute?.assetId?.length === 8;
+
+        const withServiceAndVariant = !isShortCpsId
+          ? `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          : '';
+
+        const id = `${withServiceAndVariant}/${parsedRoute.assetId}`;
+
+        return id;
+      };
+      break;
     default:
       getIdFunction = () => null;
       break;
@@ -137,8 +154,10 @@ const constructPageFetchUrl = ({
 
   const queryParameters = {
     id,
-    service,
     pageType,
+    ...(service && {
+      service,
+    }),
     ...(variant && {
       variant,
     }),

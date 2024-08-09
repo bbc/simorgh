@@ -125,7 +125,7 @@ const extractMediaId = (query: Query) => {
 };
 
 const extractLang = (query: Query) => {
-  const lang = query?.find((l: string) => LANGS_REGEX.test(l));
+  const lang = query?.find((l: string) => LANGS_REGEX.test(l?.toLowerCase()));
 
   return lang ?? null;
 };
