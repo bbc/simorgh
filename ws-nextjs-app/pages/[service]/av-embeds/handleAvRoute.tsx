@@ -49,11 +49,9 @@ export default async (context: GetServerSidePropsContext) => {
     pageStatus = status;
   }
 
-  const {
-    data: { article },
-  } = pageJson;
+  const { data: { article } = { article: null } } = pageJson ?? {};
 
-  const service = article?.metadata?.service;
+  const service = article?.metadata?.service ?? 'news';
   const variant = article?.metadata?.variant ?? null;
 
   context.res.statusCode = pageStatus;
@@ -65,6 +63,7 @@ export default async (context: GetServerSidePropsContext) => {
       isAvEmbeds: true,
       pageData: article
         ? {
+            ...article,
             mediaBlock: article?.content?.model?.blocks ?? null,
             metadata: { type: AV_EMBEDS },
           }
