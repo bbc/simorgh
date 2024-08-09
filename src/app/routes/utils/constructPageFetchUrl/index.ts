@@ -158,10 +158,10 @@ const constructPageFetchUrl = ({
 
   const queryParameters = {
     id,
-    pageType,
     ...(service && {
       service,
     }),
+    pageType,
     ...(variant && {
       variant,
     }),
