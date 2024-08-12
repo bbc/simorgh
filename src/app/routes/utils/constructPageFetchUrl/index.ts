@@ -233,7 +233,7 @@ const constructPageFetchUrl = ({
 
         if (parsedRoute.isSyndicationRoute) {
           fetchUrl = Url(
-            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}`,
+            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}`,
           );
         }
 

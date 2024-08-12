@@ -12,6 +12,8 @@ const TIPO_ID_REGEX =
 
 const MEDIA_ID_REGEX = /^p[0-9a-z]{7,}/;
 
+const MEDIA_DELIMITERS = ['vpid', 'pid'];
+
 // Language codes
 const LANGS = [
   'am',
@@ -136,6 +138,14 @@ const extractAmp = (query: Query) => {
   return amp ?? null;
 };
 
+const extractMediaDelimiter = (query: Query) => {
+  const mediaDelimiter = query?.find((id: string) =>
+    MEDIA_DELIMITERS.includes(id),
+  );
+
+  return mediaDelimiter ?? null;
+};
+
 /**
  *  Syndication route patterns:
  *  -/:service/av-embeds/:asset_id
@@ -163,6 +173,7 @@ export default function parseAvRoute(resolvedUrl: string) {
   const platform = extractPlatform(query);
   const assetId = extractAssetId(query);
   const mediaId = extractMediaId(query);
+  const mediaDelimiter = extractMediaDelimiter(query);
   const lang = extractLang(query);
   const amp = extractAmp(query);
 
@@ -173,6 +184,7 @@ export default function parseAvRoute(resolvedUrl: string) {
     platform,
     assetId,
     mediaId,
+    mediaDelimiter,
     lang,
     isAmp: amp,
   };

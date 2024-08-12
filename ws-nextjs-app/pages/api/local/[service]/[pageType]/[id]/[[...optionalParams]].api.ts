@@ -1,27 +1,22 @@
 import fs from 'node:fs/promises';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { PageTypes, Services, Variants } from '#app/models/types/global';
+import { PageTypes, Services } from '#app/models/types/global';
 
 type RequestPathParts = {
   service: Services;
   pageType: PageTypes;
   id: string;
-  variant?: Variants[];
+  optionalParams?: string[];
 };
 
 const constructDataFilePath = ({
   service,
   pageType,
   id,
-  variant,
+  optionalParams,
 }: RequestPathParts) => {
-  if (variant && variant.length > 1) {
-    throw new Error('Invalid file path.');
-  }
-
-  const [variantName] = variant || [];
-  return variantName
+  return optionalParams && optionalParams.length > 0
     ? path.join(
         process.cwd(),
         '..',
@@ -29,7 +24,7 @@ const constructDataFilePath = ({
         service,
         pageType as string,
         id,
-        `${variantName}.json`,
+        `${optionalParams.join('/')}.json`,
       )
     : path.join(
         process.cwd(),
