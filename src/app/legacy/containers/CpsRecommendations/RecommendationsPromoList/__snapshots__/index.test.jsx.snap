@@ -179,7 +179,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #F6F6F6;
+  background-color: #FDFDFD;
 }
 
 .emotion-10 {

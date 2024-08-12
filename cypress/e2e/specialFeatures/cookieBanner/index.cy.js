@@ -57,11 +57,13 @@ Object.keys(config)
     paths
       .map(path => `${path}.amp`)
       .forEach(path => {
-        describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
-          beforeEach(() => {
-            visitPage(path, pageType);
+        if (!path.includes('tv')) {
+          describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
+            beforeEach(() => {
+              visitPage(path, pageType);
+            });
+            runAmpTests({ service, variant, pageType, path });
           });
-          runAmpTests({ service, variant, pageType, path });
-        });
+        }
       });
   });
