@@ -7,11 +7,11 @@ import styles from './styles';
 const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => (
   <>
     <Global styles={styles.global} />
-    <div>
-      {pageData?.mediaBlock && pageData?.mediaBlock?.length > 0 && (
+    {pageData?.mediaBlock && pageData?.mediaBlock?.length > 0 && (
+      <div data-testid="avembeds-mediaplayer">
         <MediaLoader blocks={pageData?.mediaBlock} css={styles.mediaPlayer} />
-      )}
-    </div>
+      </div>
+    )}
   </>
 );
 
