@@ -113,6 +113,14 @@ export const service: DefaultServiceConfig = {
           callToActionLinkUrl: 'https://www.bbc.com/mundo',
         },
       },
+      byline: {
+        articleInformation: 'Información del artículo',
+        author: 'Autor',
+        listItemImage: 'Imagen del autor',
+        published: 'Fecha de publicación',
+        reportingFrom: 'Informa desde',
+        role: 'Título del autor',
+      },
       consentBanner: {
         privacy: {
           title: 'Hemos actualizado nuestra política de privacidad y cookies',
