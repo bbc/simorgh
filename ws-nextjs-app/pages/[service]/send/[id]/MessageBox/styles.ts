@@ -11,15 +11,8 @@ export default {
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
-  link: ({ palette, fontSizes, mq }: Theme) =>
+  linkHoverAndFocus: ({ palette, mq }: Theme) =>
     css({
-      ...fontSizes.minion,
-      color: palette.WHITE,
-      display: 'inline-block',
-      padding: `${pixelsToRem(6)}rem 0`,
-      [mq.FORCED_COLOURS]: {
-        textDecoration: 'none',
-      },
       '&:focus, &:hover': {
         color: palette.ERROR_CORE,
         backgroundColor: palette.WHITE,
@@ -30,6 +23,16 @@ export default {
       },
       '&:focus-visible': {
         backgroundClip: 'padding-box',
+      },
+    }),
+  plainLabel: ({ palette, fontSizes, mq }: Theme) =>
+    css({
+      ...fontSizes.minion,
+      color: palette.WHITE,
+      display: 'inline-block',
+      padding: `${pixelsToRem(6)}rem 0`,
+      [mq.FORCED_COLOURS]: {
+        textDecoration: 'none',
       },
     }),
   list: ({ spacings }: Theme) =>

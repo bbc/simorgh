@@ -3,6 +3,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
 import * as FormContextModule from '../FormContext';
 import { InvalidMessageCodes } from '../types';
@@ -96,6 +97,28 @@ describe('ErrorSummaryBox', () => {
     });
 
     const inputWithError = container.querySelector('a[href="#txt49018765"]');
+    expect(inputWithError).toBeInTheDocument();
+    expect(inputWithError?.textContent).toEqual(`Nombre`);
+  });
+
+  it('should render NO links for Android devices', async () => {
+    jest.spyOn(AndroidDetectionModule, 'default').mockReturnValueOnce(true);
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+      }));
+    const { container } = await act(() => {
+      return render(<ErrorSummaryBox labelMap={labelMap} />);
+    });
+
+    const inputWithError = container.querySelectorAll('span')[1];
     expect(inputWithError).toBeInTheDocument();
     expect(inputWithError?.textContent).toEqual(`Nombre`);
   });
