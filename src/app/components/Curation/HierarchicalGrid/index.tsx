@@ -53,7 +53,7 @@ const HiearchicalGrid = ({
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
-          const durationString = `${durationTranslation}, ${formattedDuration}`;
+          const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
           const useLargeImages = i === 0 && promoItems.length >= 3;
 

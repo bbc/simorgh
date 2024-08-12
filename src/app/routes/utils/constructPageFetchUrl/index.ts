@@ -159,11 +159,14 @@ const constructPageFetchUrl = ({
   if (isLocal) {
     switch (pageType) {
       case ARTICLE_PAGE: {
+        const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
+
         fetchUrl = Url(
-          isCpsIdCheck(id)
-            ? `/${id}`
-            : `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+          isOptimoId
+            ? `/${service}/articles/${id}${variant ? `/${variant}` : ''}`
+            : `/${id}`,
         );
+
         break;
       }
       case CPS_ASSET:
@@ -178,6 +181,21 @@ const constructPageFetchUrl = ({
       case TOPIC_PAGE: {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
+        break;
+      }
+      case LIVE_PAGE: {
+        const variantPath = variant ? `/${variant}` : '';
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
+        );
+        break;
+      }
+      case UGC_PAGE: {
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
         break;
       }
       default:
