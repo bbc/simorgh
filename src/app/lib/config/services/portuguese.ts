@@ -50,8 +50,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Que História!',
       brandTitle: 'Que História!',
-      brandDescription:
-        'Agora você pode receber as notícias da BBC News Brasil no seu celular',
+      brandDescription: 'A 3ª temporada com histórias reais incríveis',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0jfptnr.png',
         alt: 'Logo: Que História!',
@@ -413,6 +412,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Brasil',
         url: '/portuguese/topics/cz74k717pw5t',
+      },
+      {
+        title: 'Eleições EUA',
+        url: '/portuguese/topics/c30gn378n6kt',
       },
       {
         title: 'Internacional',
