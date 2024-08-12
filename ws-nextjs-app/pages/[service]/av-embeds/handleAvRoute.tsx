@@ -21,7 +21,7 @@ export default async (context: GetServerSidePropsContext) => {
   const parsedRoute = parseAvRoute(resolvedUrl);
 
   const avEmbedsUrl = constructPageFetchUrl({
-    pageType: 'avEmbeds',
+    pageType: AV_EMBEDS,
     pathname: resolvedUrl,
     mediaId: parsedRoute.mediaId,
   });
