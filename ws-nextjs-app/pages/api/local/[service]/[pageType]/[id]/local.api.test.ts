@@ -7,6 +7,7 @@ import livePageData from '../../../../../../../data/pidgin/live/c7p765ynk9qt.jso
 import dualScriptLivePageData from '../../../../../../../data/zhongwen/live/c0000000000t/simp.json';
 import ugFormData from '../../../../../../../data/mundo/send/u50853489.json';
 import russianAvEmbedData from '../../../../../../../data/russian/av-embeds/features-49881797.json';
+import russianAvEmbedDataWithPid from '../../../../../../../data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
 
 describe('API Routes', () => {
   it('should return Live Page data', async () => {
@@ -96,7 +97,9 @@ describe('API Routes', () => {
         const res = await fetch({ method: 'GET' });
 
         expect(res.status).toEqual(200);
-        await expect(res.json()).resolves.toStrictEqual(russianAvEmbedData);
+        await expect(res.json()).resolves.toStrictEqual(
+          russianAvEmbedDataWithPid,
+        );
       },
     });
   });
