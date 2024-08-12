@@ -21,7 +21,7 @@ const labelMap = {
     'Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario.',
 } as Record<string, string>;
 
-describe('ErrorSummaryBox - Non Android', () => {
+describe('ErrorSummaryBox', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
@@ -101,6 +101,28 @@ describe('ErrorSummaryBox - Non Android', () => {
     expect(inputWithError?.textContent).toEqual(`Nombre`);
   });
 
+  it('should render NO links for Android devices', async () => {
+    jest.spyOn(AndroidDetectionModule, 'default').mockReturnValueOnce(true);
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      // @ts-expect-error - partial state values
+      .mockImplementationOnce(() => ({
+        validationErrors: [
+          {
+            id: 'txt49018765',
+            messageCode: InvalidMessageCodes.FieldRequired,
+          },
+        ],
+      }));
+    const { container } = await act(() => {
+      return render(<ErrorSummaryBox labelMap={labelMap} />);
+    });
+
+    const inputWithError = container.querySelectorAll('span')[1];
+    expect(inputWithError).toBeInTheDocument();
+    expect(inputWithError?.textContent).toEqual(`Nombre`);
+  });
+
   it('should prefix fileUpload href so that focus is taken to Upload button label', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
@@ -122,41 +144,5 @@ describe('ErrorSummaryBox - Non Android', () => {
     );
     expect(inputWithError).toBeInTheDocument();
     expect(inputWithError?.textContent).toEqual(`Attach your file (optional)`);
-  });
-});
-
-describe('ErrorSummaryBox - Android', () => {
-  beforeEach(() => {
-    jest.restoreAllMocks();
-  });
-
-  it('should NOT render an unordered list', async () => {
-    jest.spyOn(AndroidDetectionModule, 'default').mockReturnValue(true);
-    jest
-      .spyOn(FormContextModule, 'useFormContext')
-      // @ts-expect-error - partial state values
-      .mockImplementationOnce(() => ({
-        validationErrors: [
-          {
-            id: 'txt49018765',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-          {
-            id: 'txt49018835',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-          {
-            id: 'txt49019016',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-        ],
-      }));
-
-    const { container } = await act(() => {
-      return render(<ErrorSummaryBox labelMap={labelMap} />);
-    });
-
-    const unorderedList = container.querySelector('ul');
-    expect(unorderedList).not.toBeInTheDocument();
   });
 });
