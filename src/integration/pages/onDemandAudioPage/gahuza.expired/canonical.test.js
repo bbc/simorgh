@@ -4,11 +4,23 @@
  */
 
 import runExpiredEpisodeTests from '../expiredEpisodeTests';
-import runCanonicalTests from '../canonicalTests';
+import {
+  runCoreCanonicalTests,
+  runCanonicalAnalyticsTests,
+  runRadioScheduleTests,
+  runCommonCrossPlatformTests,
+  runRecentEpisodesTests,
+} from '../../../common';
+import runCommonEpisodeTests from '../commonEpisodeTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runExpiredEpisodeTests();
-    runCanonicalTests();
+    runCommonCrossPlatformTests(service);
+    runCommonEpisodeTests();
+    runRecentEpisodesTests();
+    runCoreCanonicalTests();
+    runCanonicalAnalyticsTests();
+    runRadioScheduleTests({ isAmp: false });
   });
 });

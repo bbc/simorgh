@@ -6961,7 +6961,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/international-23252825'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,

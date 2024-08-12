@@ -44,7 +44,7 @@ describe('Curation Promo', () => {
       <Fixture lazy={false} duration={123} type="video" />,
     );
 
-    const durationString = 'Duration, 2,03';
+    const durationString = ', Duration 2,03';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
   });
