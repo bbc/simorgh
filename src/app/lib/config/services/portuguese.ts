@@ -414,6 +414,10 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/cz74k717pw5t',
       },
       {
+        title: 'Eleições EUA',
+        url: '/portuguese/topics/c30gn378n6kt',
+      },
+      {
         title: 'Internacional',
         url: '/portuguese/topics/cmdm4ynm24kt',
       },
