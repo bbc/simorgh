@@ -24,6 +24,7 @@ import {
   CPS_ASSET,
   STATIC_PAGE,
   UGC_PAGE,
+  AV_EMBEDS,
   DOWNLOADS_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
@@ -69,6 +70,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CPS_ASSET]: '',
     [STATIC_PAGE]: '',
     [UGC_PAGE]: '',
+    [AV_EMBEDS]: '',
     [DOWNLOADS_PAGE]: 'downloads',
   }[pageType];
 

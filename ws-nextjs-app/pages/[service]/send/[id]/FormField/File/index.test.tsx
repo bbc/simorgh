@@ -203,6 +203,38 @@ describe('File', () => {
     );
   });
 
+  it('should rename any duplicate uploaded files', async () => {
+    const mockDuplicateFile = new File([blob], 'img.png', {
+      type: 'image/png',
+    });
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockDuplicateFile,
+          messageCode: null,
+        },
+        {
+          file: mockDuplicateFile,
+          messageCode: null,
+        },
+      ],
+    };
+    await act(async () => {
+      render(
+        <FileField
+          id="foo"
+          name="bar"
+          inputState={inputState}
+          describedBy="foo"
+        />,
+      );
+    });
+
+    await waitFor(
+      () => expect(screen.queryAllByText('img.png (2)')).toBeInTheDocument,
+    );
+  });
   it('should display an image thumbnail when an image file type is added', async () => {
     await act(async () => {
       render(

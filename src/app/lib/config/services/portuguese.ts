@@ -48,17 +48,16 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'No WhatsApp',
-      brandDescription:
-        'Agora você pode receber as notícias da BBC News Brasil no seu celular',
+      title: 'Que História!',
+      brandTitle: 'Que História!',
+      brandDescription: 'A 3ª temporada com histórias reais incríveis',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0hvq254.png',
-        alt: 'Logo: WhatsApp BBC Brasil',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0jfptnr.png',
+        alt: 'Logo: Que História!',
       },
       linkLabel: {
-        text: 'Entre no canal!',
-        href: 'https://bbc.in/zap',
+        text: 'Episódios',
+        href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -417,6 +416,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Brasil',
         url: '/portuguese/topics/cz74k717pw5t',
+      },
+      {
+        title: 'Eleições EUA',
+        url: '/portuguese/topics/c30gn378n6kt',
       },
       {
         title: 'Internacional',
