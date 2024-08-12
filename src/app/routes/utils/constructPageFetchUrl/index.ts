@@ -225,6 +225,20 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
         break;
       }
+      case AV_EMBEDS: {
+        const parsedRoute = parseAvRoute(pathname);
+
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+
+        if (parsedRoute.isSyndicationRoute) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}`,
+          );
+        }
+
+        break;
+      }
       default:
         return fetchUrl;
     }
