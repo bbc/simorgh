@@ -17,4 +17,9 @@ export default () => {
 
     expect(hierarchicalGrid).toBeInTheDocument();
   });
+
+  it('should render the main html tag with an attribute of role with the value of main', () => {
+    const mainTag = document.querySelector("main[role='main']");
+    expect(mainTag).toBeInTheDocument();
+  });
 };
