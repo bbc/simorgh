@@ -11,7 +11,7 @@
   "resolutions": {
     "@babel/runtime": "7.24.8",
     "@optimizely/js-sdk-utils": "0.4.0",
-    "uuid": "3.4.0",
+    "uuid": "10.0.0",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch"
   },
   "workspaces": {
@@ -126,7 +126,7 @@
     "react-router-config": "5.1.1",
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
-    "uuid": "8.3.2",
+    "uuid": "10.0.0",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch",
     "xmldoc": "1.3.0"
   },
@@ -187,7 +187,7 @@
     "@types/react-router-dom": "5.3.3",
     "@types/testing-library__react": "10.2.0",
     "@types/url-parse": "^1.4.8",
-    "@types/uuid": "^9.0.8",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "amphtml-validator": "1.0.38",
