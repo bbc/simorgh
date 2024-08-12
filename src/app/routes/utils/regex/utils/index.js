@@ -136,17 +136,17 @@ export const getLiveRadioRegex = services => {
 
 export const getPodcastEpisodeRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/podcasts/:brandId(${mediaIdRegex})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?:lite(${liteRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/podcasts/:brandId(${mediaIdRegex})/:mediaId(${mediaIdRegex}):lite(${liteRegex})?`;
 };
 
 export const getPodcastBrandRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/podcasts/:brandId(${mediaIdRegex}):amp(${ampRegex})?:lite(${liteRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/podcasts/:brandId(${mediaIdRegex}):lite(${liteRegex})?`;
 };
 
 export const getOnDemandRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?:lite(${liteRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):lite(${liteRegex})?`;
 };
 
 export const getOnDemandTvRegex = services => {
