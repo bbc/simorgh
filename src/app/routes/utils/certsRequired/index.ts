@@ -5,7 +5,6 @@ export default (pathname: string) => {
   const isLocal = environment === 'local' || !environment;
   return (
     !isLocal &&
-    process.env.INTEGRATION_TEST_BUILD !== 'true' &&
     process.env.LIGHTHOUSE_BUILD !== 'true' &&
     process.env.CYPRESS_APP_ENV !== 'local'
   );
