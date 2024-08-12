@@ -1,18 +1,10 @@
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 const advertisingDirectives = {
-  connectSrc: [
-    'https://*.doubleclick.net',
-    'https://*.effectivemeasure.net',
-    'https://*.google.com',
-    'https://*.googlesyndication.com',
-    'https://*.gstatic.com',
-    'https://*.imrworldwide.com',
-    'https://cdn.privacy-mgmt.com',
-  ],
   frameSrc: [
     'https://*.doubleclick.net',
     'https://edigitalsurvey.com',
+    'https://*.googleadservices.com',
     'https://*.googlesyndication.com',
     'https://cdn.privacy-mgmt.com',
     'https://*.google.com',
@@ -50,50 +42,6 @@ const advertisingDirectives = {
 };
 
 const directives = {
-  connectSrc: {
-    ampLive: [
-      ...bbcDomains,
-      'https://*.akamaihd.net',
-      'https://cdn.ampproject.org', // AMP
-      'https://*.ampproject.net', // Social Embeds
-      'https://amp-error-reporting.appspot.com', // AMP
-      'https://*.twitter.com', // Social Embeds, <amp-twitter />
-      'https://connect.facebook.net', // Social Embeds, <amp-facebook />
-      ...advertisingDirectives.connectSrc,
-      "'self'",
-    ],
-    canonicalLive: [
-      ...bbcDomains,
-      'https://*.wearehearken.eu',
-      'https://*.akamaihd.net',
-      'https://*.optimizely.com',
-      'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
-      ...advertisingDirectives.connectSrc,
-      "'self'",
-    ],
-    ampNonLive: [
-      ...bbcDomains,
-      'https://*.akamaihd.net',
-      'https://cdn.ampproject.org',
-      'https://*.ampproject.net', // Social Embeds
-      'https://amp-error-reporting.appspot.com',
-      'https://logws1363.ati-host.net',
-      'https://*.twitter.com', // Social Embeds, <amp-twitter />
-      'https://connect.facebook.net', // Social Embeds, <amp-facebook />
-      ...advertisingDirectives.connectSrc,
-      "'self'",
-    ],
-    canonicalNonLive: [
-      ...bbcDomains,
-      'https://*.wearehearken.eu',
-      'https://*.akamaihd.net',
-      'https://logws1363.ati-host.net', // ATI
-      'https://*.optimizely.com',
-      'https://ws.bbc-reporting-api.app', // Web-Vitals monitoring
-      ...advertisingDirectives.connectSrc,
-      "'self'",
-    ],
-  },
   frameSrc: {
     ampLive: [
       ...bbcDomains,
@@ -310,21 +258,12 @@ const directives = {
       ...advertisingDirectives.fontSrc,
     ],
   },
-  mediaSrc: {
-    ampLive: [...bbcDomains],
-    canonicalLive: [...bbcDomains],
-    ampNonLive: [...bbcDomains],
-    canonicalNonLive: [...bbcDomains],
-  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
 
-export const generateConnectSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.connectSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive.sort();
-  if (isLive && isAmp) return directives.connectSrc.ampLive.sort();
-  return directives.connectSrc.canonicalLive.sort();
+export const generateConnectSrc = () => {
+  return ["'self' https:"];
 };
 
 export const generateDefaultSrc = () => {
@@ -352,6 +291,10 @@ export const generateImgSrc = ({ isAmp, isLive }) => {
   return directives.imgSrc.canonicalLive.sort();
 };
 
+export const generateMediaSrc = () => {
+  return ["'self' blob: https:"];
+};
+
 export const generateScriptSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive.sort();
@@ -364,13 +307,6 @@ export const generateStyleSrc = ({ isAmp, isLive }) => {
   if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.styleSrc.ampLive.sort();
   return directives.styleSrc.canonicalLive.sort();
-};
-
-export const generateMediaSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.mediaSrc.ampNonLive.sort();
-  if (!isLive && !isAmp) return directives.mediaSrc.canonicalNonLive.sort();
-  if (isLive && isAmp) return directives.mediaSrc.ampLive.sort();
-  return directives.mediaSrc.canonicalLive.sort();
 };
 
 export const generateWorkerSrc = ({ isAmp }) =>
@@ -387,26 +323,13 @@ export const cspDirectives = ({ isAmp, isLive, service }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
-    'connect-src': [
-      'afrique',
-      'arabic',
-      'hindi',
-      'japanese',
-      'mundo',
-      'portuguese',
-      'urdu',
-    ].includes(service)
-      ? "'self' https:"
-      : generateConnectSrc({ isAmp, isLive }),
+    'connect-src': generateConnectSrc(),
     'font-src': generateFontSrc({ isAmp, isLive }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
-    'media-src':
-      service === 'mundo'
-        ? "'self' blob: https:"
-        : generateMediaSrc({ isAmp, isLive }),
+    'media-src': generateMediaSrc(),
     'worker-src': generateWorkerSrc({ isAmp }),
     'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
