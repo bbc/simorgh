@@ -32,6 +32,10 @@ export interface Translations {
     summary: string;
     shareButtonText: string;
   };
+  downloads?: {
+    instructions?: string;
+    title?: string;
+  };
   gist?: string;
   error: {
     home?: string;

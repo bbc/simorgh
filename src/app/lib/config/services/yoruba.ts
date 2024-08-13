@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Ìsọníṣókí',
         shareButtonText: 'Ṣe alábàápín',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Ìsọníṣókí',
       error: {
         404: {
