@@ -111,10 +111,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat',
       },
       {
-        title: 'Pariz 2024',
-        url: '/serbian/lat/topics/cv223zl2wp7t',
-      },
-      {
         title: 'Ukrajina',
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
@@ -506,10 +502,6 @@ export const service: SerbianConfig = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
-      },
-      {
-        title: 'Париз 2024',
-        url: '/serbian/cyr/topics/cw556217lept',
       },
       {
         title: 'Украјина',
