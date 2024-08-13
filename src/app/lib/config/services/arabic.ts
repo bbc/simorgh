@@ -96,6 +96,10 @@ export const service: DefaultServiceConfig = {
         summary: 'ملخص',
         shareButtonText: 'شارك',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'ملخص',
       error: {
         404: {

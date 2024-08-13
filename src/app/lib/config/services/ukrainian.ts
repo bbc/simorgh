@@ -87,6 +87,10 @@ const baseServiceConfig = {
       summary: 'Стисло',
       shareButtonText: 'Поділитися',
     },
+    downloads: {
+      instructions: 'You can download and view today’s news.',
+      title: 'File Download',
+    },
     gist: 'Стисло',
     error: {
       404: {
