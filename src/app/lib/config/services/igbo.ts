@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Nchịkọta',
         shareButtonText: 'Kekọrịta',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Nchịkọta',
       error: {
         home: 'Akụkọ',

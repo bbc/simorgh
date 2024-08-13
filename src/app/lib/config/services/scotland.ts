@@ -64,6 +64,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Summary',
         shareButtonText: 'Share',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       error: {
         404: {
           statusCode: '404',

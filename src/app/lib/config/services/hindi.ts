@@ -95,6 +95,10 @@ export const service: DefaultServiceConfig = {
         summary: 'सारांश',
         shareButtonText: 'साझा कीजिए',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'सारांश',
       error: {
         404: {

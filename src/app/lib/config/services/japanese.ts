@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         summary: '要点',
         shareButtonText: '共有する',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: '要点',
       error: {
         404: {

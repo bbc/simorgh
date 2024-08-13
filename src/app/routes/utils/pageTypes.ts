@@ -16,3 +16,4 @@ export const CPS_ASSET = 'cpsAsset' as const;
 export const STATIC_PAGE = 'static' as const;
 export const UGC_PAGE = 'ugcForm' as const;
 export const AV_EMBEDS = 'av-embeds' as const;
+export const DOWNLOADS_PAGE = 'downloads' as const;

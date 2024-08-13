@@ -96,6 +96,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Pontos-chave',
         shareButtonText: 'Compartilhar',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Pontos-chave',
       error: {
         404: {
