@@ -19,9 +19,11 @@ import {
   OnChangeInputName,
   OnChangeInputValue,
   OnFocusOutHandler,
+  ValidationError,
 } from '../types';
 import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
+import getValidationErrors from './utils/getValidationErrors';
 
 type SubmissionError = {
   message: string;
@@ -38,7 +40,7 @@ export type ContextProps = {
   submissionError?: SubmissionError;
   submitted: boolean;
   attemptedSubmitCount: number;
-  hasValidationErrors: boolean;
+  validationErrors: ValidationError[] | [];
   progress: string;
   screen: FormScreen;
   submissionID: string | null;
@@ -66,7 +68,9 @@ const getInitialFormState = (
     {},
   );
 
-const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
+const validateFormStateOnSubmit = (
+  state: Record<OnChangeInputName, FieldData>,
+) => {
   const formEntries = new Map(Object.entries(state));
 
   formEntries.forEach((data, key, map) => {
@@ -76,16 +80,6 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
   });
 
   return Object.fromEntries(formEntries);
-};
-
-const isFormStateValid = (state: Record<OnChangeInputName, FieldData>) => {
-  const formInvalidErrors = Object.values(state).filter(
-    item => item.isValid === false,
-  ).length;
-
-  const isValid = formInvalidErrors === 0;
-
-  return isValid;
 };
 
 export const FormContextProvider = ({
@@ -104,7 +98,9 @@ export const FormContextProvider = ({
   const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
   const [attemptedSubmitCount, setAttemptedSubmitCount] = useState(0);
-  const [hasValidationErrors, setHasValidationErrors] = useState(false);
+  const [validationErrors, setValidationErrors] = useState<ValidationError[]>(
+    [],
+  );
   const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
@@ -123,8 +119,8 @@ export const FormContextProvider = ({
     setFormState(newFormState);
 
     if (currState.htmlType === 'file') {
-      const isFormValid = isFormStateValid(newFormState);
-      setHasValidationErrors(!isFormValid);
+      const validationErrorsList = getValidationErrors(newFormState);
+      setValidationErrors(validationErrorsList);
     }
   };
 
@@ -137,9 +133,9 @@ export const FormContextProvider = ({
     const updatedState = { [name]: { ...validatedData } };
     const newFormState = { ...formState, ...updatedState };
 
-    const isFormValid = isFormStateValid(newFormState);
+    const validationErrorsList = getValidationErrors(newFormState);
+    setValidationErrors(validationErrorsList);
 
-    setHasValidationErrors(!isFormValid);
     setFormState(newFormState);
   };
 
@@ -148,12 +144,12 @@ export const FormContextProvider = ({
     setAttemptedSubmitCount(prevCount => prevCount + 1);
     // Reset error state
     setSubmissionError(null);
-    const validatedFormData = validateFormState(formState);
+    const validatedFormData = validateFormStateOnSubmit(formState);
     setFormState(validatedFormData);
 
-    const isFormValid = isFormStateValid(validatedFormData);
-    if (!isFormValid) {
-      setHasValidationErrors(true);
+    const validationErrorsList = getValidationErrors(validatedFormData);
+    if (validationErrorsList.length > 0) {
+      setValidationErrors(validationErrorsList);
       return;
     }
 
@@ -244,7 +240,7 @@ export const FormContextProvider = ({
         submitted,
         progress,
         attemptedSubmitCount,
-        hasValidationErrors,
+        validationErrors,
         screen,
         submissionID,
       }}
