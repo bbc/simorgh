@@ -237,6 +237,7 @@ export type UgcTranslations = {
   submitButton: string;
 
   // Validation
+  errorSummary: string;
   validationRequired: string;
   validationInvalidEmail: string;
   validationInvalidTelephone: string;
