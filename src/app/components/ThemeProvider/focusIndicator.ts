@@ -59,6 +59,13 @@ const focusIndicator = ({ palette }: Theme) => css`
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.BLACK};
     outline-offset: ${focusIndicatorThickness};
   }
+
+  // Overrides focus indicator styles with a thinner version in inverted colours. E.g. for links on coloured backgrounds.
+  a.focusIndicatorReducedWidthInverted:focus-visible {
+    outline: ${pixelsToRem(2)}rem solid ${palette.WHITE};
+    box-shadow: 0 0 0 ${pixelsToRem(1)}rem ${palette.BLACK};
+    outline-offset: ${pixelsToRem(1)}rem;
+  }
 `;
 
 export default focusIndicator;
