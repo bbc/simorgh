@@ -11,7 +11,6 @@ import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
-import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
@@ -108,7 +107,6 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const { dir, liveRadioOverrides, lang, service, translations, serviceName } =
     useContext(ServiceContext);
@@ -124,7 +122,6 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
-    isAmp,
     queryString: location.search,
   });
 

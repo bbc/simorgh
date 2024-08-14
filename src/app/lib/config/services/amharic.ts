@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ሰበር',
         postedAt: 'የታተመዉ',
         summary: 'ጭምቅ ሃሳብ',
+        shareButtonText: 'ያጋሩ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ጭምቅ ሃሳብ',
       error: {
@@ -306,6 +311,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'መልዕክትዎ አልተጫነም',
         errorDescription: 'በድጋሚ ለመጫን ይሞክሩ',
+
+        // Closed Screen
+        closedHeading: 'ይህ አሁን ዝግ ነው',
+        closedDescription: 'ይህ የተዘጋው {{date}} ነው።',
       },
     },
     mostRead: {

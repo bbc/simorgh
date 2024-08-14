@@ -3,12 +3,13 @@ import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
-import InvalidMessageBox from './InvalidMessageBox';
+import InvalidMessageBox from '../MessageBox/InvalidMessageBox';
 
 export default ({
   id,
   name,
   handleChange,
+  handleFocusOut,
   inputState,
   label,
   hasAttemptedSubmit,
@@ -38,6 +39,7 @@ export default ({
           type="checkbox"
           checked={value as boolean}
           onChange={e => handleChange(e.target.name, e.target.checked)}
+          onBlur={e => handleFocusOut(e.target.name)}
           {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
           {...(hasAttemptedSubmit && {
             ...(wasInvalid && { 'aria-invalid': !isValid }),

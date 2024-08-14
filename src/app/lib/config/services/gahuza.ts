@@ -84,6 +84,11 @@ export const service: DefaultServiceConfig = {
         breaking: `Ivy'akakanya`,
         postedAt: 'Vyashizwe isaha',
         summary: 'Incamake',
+        shareButtonText: 'Sangira',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Incamake',
       error: {

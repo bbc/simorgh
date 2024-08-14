@@ -74,6 +74,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Tin mới nhất',
         postedAt: 'Đăng ở',
         summary: 'Tóm tắt',
+        shareButtonText: 'Chia sẻ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Tóm tắt',
       error: {

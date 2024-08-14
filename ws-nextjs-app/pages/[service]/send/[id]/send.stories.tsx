@@ -4,6 +4,7 @@ import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import somaliFormFixture from '#data/somali/send/u130092370.json';
+import hausaClosedFormFixture from '#data/hausa/send/u143732177.json';
 import UGCPage from './UGCPageLayout';
 import { FormScreen, PageProps } from './types';
 
@@ -22,16 +23,20 @@ const Component = ({
   initialScreen: FormScreen;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fixtureData: any;
-}) => (
-  <NextRouterWrapper>
-    <PageLayoutWrapper pageData={fixtureData} status={200}>
-      <UGCPage
-        initialScreen={initialScreen}
-        pageData={fixtureData as PageProps['pageData']}
-      />
-    </PageLayoutWrapper>
-  </NextRouterWrapper>
-);
+}) => {
+  const { data } = fixtureData;
+
+  return (
+    <NextRouterWrapper>
+      <PageLayoutWrapper pageData={data} status={200}>
+        <UGCPage
+          initialScreen={initialScreen}
+          pageData={data as PageProps['pageData']}
+        />
+      </PageLayoutWrapper>
+    </NextRouterWrapper>
+  );
+};
 
 export default {
   title: 'Pages/UGC Page',
@@ -55,4 +60,7 @@ export const SuccessScreen = () => (
 );
 export const ErrorScreen = () => (
   <Component initialScreen="error" fixtureData={mundoFormFixture} />
+);
+export const ClosedScreen = () => (
+  <Component initialScreen="form" fixtureData={hausaClosedFormFixture} />
 );

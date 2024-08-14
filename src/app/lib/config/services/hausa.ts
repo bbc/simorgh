@@ -85,6 +85,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
         summary: 'Taƙaitattu',
+        shareButtonText: 'Aika',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Taƙaitattu',
       error: {
@@ -339,6 +344,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Saƙonka bai je ba',
         errorDescription: 'Sake aikawa.',
+
+        // Closed Screen
+        closedHeading: 'This is now closed',
+        closedDescription: 'This closed on {{date}}.',
       },
     },
     mostRead: {

@@ -4,4 +4,5 @@ export type CallToActionLinkProps = {
   href?: string;
   className?: string;
   eventTrackingData?: EventTrackingMetadata;
+  download?: boolean;
 };

@@ -20,6 +20,7 @@ const fallbackTranslations: UgcTranslations = {
   submitButton: 'Submit',
 
   // Validation
+  errorSummary: 'There’s a problem, please check your:',
   validationRequired: `There's something missing.`,
   validationInvalidEmail: `That doesn't look right. Please enter a proper email address.`,
   validationInvalidTelephone: 'NEEDS IMPLEMENTATION',
@@ -56,6 +57,10 @@ const fallbackTranslations: UgcTranslations = {
   // Error Screen
   errorHeading: 'Sorry, your message could not be sent.',
   errorDescription: 'Please try again later.',
+
+  // Closed Screen
+  closedHeading: 'This is now closed',
+  closedDescription: 'This closed on {{date}}.',
 };
 
 export default fallbackTranslations;
