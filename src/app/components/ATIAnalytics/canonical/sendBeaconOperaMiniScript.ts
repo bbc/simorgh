@@ -9,7 +9,6 @@ const sendBeaconOperaMiniScript = (atiPageViewUrlString: string) => `
       xhr.open("GET", "${atiPageViewUrlString}", true);
       xhr.withCredentials = true;
       xhr.send();
-      console.log('window.hasOperaMinScriptRun', window.hasOperaMinScriptRun);
     }
 `;
 
