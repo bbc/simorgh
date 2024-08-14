@@ -33,7 +33,6 @@ const buildSettings = ({
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
     product: 'news',
-    superResponsive: true,
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',

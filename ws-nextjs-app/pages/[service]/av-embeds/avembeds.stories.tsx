@@ -1,16 +1,17 @@
 import React from 'react';
+import { MediaBlock } from '#app/components/MediaLoader/types';
+import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import AvEmbedsPage from './AvEmbedsPageLayout';
-import parseAvRoute from './parseAvRoute';
 
-const Component = ({ requestUrl }: { requestUrl: string }) => {
-  const parsedAvRoute = parseAvRoute(requestUrl);
-
-  const fixtureData = {
-    input: requestUrl,
-    output: parsedAvRoute,
-  };
-
-  return <AvEmbedsPage pageData={fixtureData} />;
+const Component = () => {
+  return (
+    <AvEmbedsPage
+      pageData={{
+        mediaBlock: serbianCyrCps.data.avEmbed.content.model
+          .blocks as unknown as MediaBlock[],
+      }}
+    />
+  );
 };
 
 export default {
@@ -21,6 +22,4 @@ export default {
   },
 };
 
-export const Example = () => (
-  <Component requestUrl="serbian/cyr/av-embeds/srbija-50103048/pid/p07rfhrv" />
-);
+export const Example = () => <Component />;
