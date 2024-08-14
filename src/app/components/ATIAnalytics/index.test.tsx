@@ -346,6 +346,7 @@ describe('ATI Analytics Container', () => {
         lng: '${browserLanguage}',
         x2: '[amp]',
         x3: '[news]',
+        x4: '[en-gb]',
         x5: '[${sourceUrl}]',
         x6: '[${documentReferrer}]',
         x7: '[index-home]',
