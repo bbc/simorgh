@@ -1,8 +1,7 @@
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 
 const sendBeaconOperaMiniScript = (atiPageViewUrlString: string) => `
-    const isUsingOperaProxy = ${isOperaProxy.toString()}();
-    if (isUsingOperaProxy && !Boolean(window.hasOperaMinScriptRun)) {
+    if (${isOperaProxy.toString()}() && !Boolean(window.hasOperaMinScriptRun)) {
       window.hasOperaMinScriptRun = true;
 
       var xhr = new XMLHttpRequest();
