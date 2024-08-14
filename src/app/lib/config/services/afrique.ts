@@ -334,10 +334,6 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
-        title: 'JO 2024',
-        url: '/afrique/topics/cgrjz0yz4n9t',
-      },
-      {
         title: 'Afrique',
         url: '/afrique/topics/cvqxn2k7kv7t',
       },
