@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Kókó',
         postedAt: 'Tí a fiṣọwọ́ ní',
         summary: 'Ìsọníṣókí',
+        shareButtonText: 'Ṣe alábàápín',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Ìsọníṣókí',
       error: {

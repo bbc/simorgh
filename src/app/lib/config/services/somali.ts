@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'War deg deg ah',
         postedAt: '',
         summary: 'Kooban',
+        shareButtonText: 'La wadaag',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Kooban',
       error: {

@@ -30,6 +30,11 @@ export interface Translations {
     breaking: string;
     postedAt: string;
     summary: string;
+    shareButtonText: string;
+  };
+  downloads?: {
+    instructions?: string;
+    title?: string;
   };
   gist?: string;
   error: {
@@ -232,6 +237,7 @@ export type UgcTranslations = {
   submitButton: string;
 
   // Validation
+  errorSummary: string;
   validationRequired: string;
   validationInvalidEmail: string;
   validationInvalidTelephone: string;
@@ -264,4 +270,8 @@ export type UgcTranslations = {
   // Error Screen
   errorHeading: string;
   errorDescription: string;
+
+  // Closed Screen
+  closedHeading: string;
+  closedDescription: string;
 };

@@ -35,7 +35,7 @@ const CurationPromo = ({
   const separator = ',';
 
   const formattedDuration = formatDuration({ duration, separator });
-  const durationString = `${durationTranslation}, ${formattedDuration}`;
+  const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
   const isMedia = ['video', 'audio', 'photogallery'].includes(type);

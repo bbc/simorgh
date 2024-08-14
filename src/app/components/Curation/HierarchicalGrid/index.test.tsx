@@ -63,7 +63,7 @@ describe('Hierarchical Grid Curation', () => {
       <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
     );
 
-    const durationString = 'Duration, 2,03';
+    const durationString = ', Duration 2,03';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
     expect(container.getByText('Test audio clip')).toBeInTheDocument();
@@ -74,7 +74,7 @@ describe('Hierarchical Grid Curation', () => {
       <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
     );
 
-    const durationString = 'Duration, 3,43';
+    const durationString = ', Duration 3,43';
 
     expect(container.getByText(durationString)).toBeInTheDocument();
     expect(container.getByText('Test video article')).toBeInTheDocument();

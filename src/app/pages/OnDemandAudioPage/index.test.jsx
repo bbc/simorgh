@@ -35,13 +35,12 @@ const toggles = {
   },
 };
 
-const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
+const Page = ({ pageData, service, variant, lang }) => (
   <StaticRouter>
     <ToggleContextProvider>
       <ServiceContextProvider service={service} variant={variant} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
-          isAmp={isAmp}
           pageType={MEDIA_PAGE}
           pathname="/pathname"
           service={service}
@@ -54,20 +53,13 @@ const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
   </StaticRouter>
 );
 
-const renderPage = async ({
-  pageData,
-  service,
-  isAmp = false,
-  variant,
-  lang = 'ko',
-}) => {
+const renderPage = async ({ pageData, service, variant, lang = 'ko' }) => {
   let result;
   await act(async () => {
     result = await render(
       <Page
         pageData={pageData}
         service={service}
-        isAmp={isAmp}
         variant={variant}
         lang={lang}
       />,
@@ -96,7 +88,7 @@ describe('OnDemand Radio Page ', () => {
     process.env = { ...env };
   });
 
-  it('should match snapshot for Canonical', async () => {
+  it('should match snapshot', async () => {
     const pashtoPageDataWithAvailableEpisode =
       getAvailableEpisode(pashtoPageData);
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
@@ -109,25 +101,6 @@ describe('OnDemand Radio Page ', () => {
     });
 
     const { container } = render(<Page pageData={pageData} service="pashto" />);
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should match snapshot for AMP', async () => {
-    const pashtoPageDataWithAvailableEpisode =
-      getAvailableEpisode(pashtoPageData);
-    fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-
-    const { container } = render(
-      <Page pageData={pageData} service="pashto" isAmp />,
-    );
 
     expect(container).toMatchSnapshot();
   });
@@ -281,7 +254,7 @@ describe('OnDemand Radio Page ', () => {
     ).toBeInTheDocument();
   });
 
-  it('should show the audio player on canonical', async () => {
+  it('should show the audio player', async () => {
     const koreanPageDataWithAvailableEpisode =
       getAvailableEpisode(koreanPageData);
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
@@ -300,7 +273,7 @@ describe('OnDemand Radio Page ', () => {
     );
   });
 
-  it('should show the audio player on canonical using no override on live', async () => {
+  it('should show the audio player using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     const koreanPageDataWithAvailableEpisode =
       getAvailableEpisode(koreanPageData);
@@ -317,53 +290,6 @@ describe('OnDemand Radio Page ', () => {
 
     expect(audioPlayerIframeSrc).toEqual(
       '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
-    );
-  });
-
-  it('should show the audio player on AMP', async () => {
-    const koreanPageDataWithAvailableEpisode =
-      getAvailableEpisode(koreanPageData);
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    const { container } = await renderPage({
-      pageData,
-      service: 'korean',
-      isAmp: true,
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('amp-iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      `https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko/amp?morph_env=live`,
-    );
-  });
-
-  it('should show the audio player on AMP using no override on live', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-    const koreanPageDataWithAvailableEpisode =
-      getAvailableEpisode(koreanPageData);
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    const { container } = await renderPage({
-      pageData,
-      service: 'korean',
-      isAmp: true,
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('amp-iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko/amp',
     );
   });
 
@@ -415,7 +341,7 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on canonical', async () => {
+  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio', async () => {
     const afaanPageDataWithAvailableEpisode =
       getAvailableEpisode(afaanoromooPageData);
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
@@ -434,29 +360,6 @@ describe('OnDemand Radio Page ', () => {
 
     expect(audioPlayerIframeSrc).toEqual(
       '/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
-    );
-  });
-
-  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on AMP', async () => {
-    const afaanPageDataWithAvailableEpisode =
-      getAvailableEpisode(afaanoromooPageData);
-    fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    const { container } = await renderPage({
-      pageData,
-      service: 'afaanoromoo',
-      isAmp: true,
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('amp-iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp?morph_env=live',
     );
   });
 
@@ -481,7 +384,7 @@ describe('OnDemand Radio Page ', () => {
     expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
   });
 
-  it('should show the radio schedule for the On Demand radio page on canonical', async () => {
+  it('should show the radio schedule for the On Demand radio page', async () => {
     await renderPage({
       pageData: koreanPageWithScheduleData,
       service: 'korean',
@@ -492,21 +395,6 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(scheduleWrapper).toBeInTheDocument();
-  });
-
-  it('should not show the radio schedule for the On Demand radio page on AMP', async () => {
-    renderPage({
-      pageData: koreanPageWithScheduleData,
-      service: 'korean',
-      lang: 'ko',
-      isAmp: true,
-    });
-
-    const scheduleWrapper = document.querySelector(
-      '[data-e2e="radio-schedule"]',
-    );
-
-    expect(scheduleWrapper).not.toBeInTheDocument();
   });
 
   it('should not show the radio schedule for services without schedules', async () => {

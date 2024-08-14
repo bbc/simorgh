@@ -73,6 +73,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Son dakika',
         postedAt: 'Basım saati',
         summary: 'Özet',
+        shareButtonText: 'Paylaş',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Özet',
       error: {
@@ -318,10 +323,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
-      },
-      {
-        title: 'Euro 2024',
-        url: '/turkce/topics/cd11gkz9yvxt',
       },
       {
         title: 'Rusya-Ukrayna Savaşı',

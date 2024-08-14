@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Чукул кабар',
         postedAt: 'Чыгарылган убакыт',
         summary: 'Корутунду',
+        shareButtonText: 'Бөлүшүү',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Корутунду',
       error: {

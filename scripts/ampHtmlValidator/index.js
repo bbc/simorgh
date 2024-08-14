@@ -11,7 +11,6 @@ const pageTypes = [
   'liveRadio',
   'photoGalleryPage',
   'mostReadPage',
-  'onDemandAudio',
   'onDemandTV',
   'mediaAssetPage',
   'storyPage',

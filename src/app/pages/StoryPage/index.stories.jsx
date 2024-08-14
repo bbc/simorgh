@@ -4,6 +4,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
@@ -63,7 +64,9 @@ const Component = ({ pageData, service }) => {
           bbcOrigin="https://www.test.bbc.com"
         >
           <ServiceContextProvider service={service}>
-            <Page pageData={pageData} />
+            <ThemeProvider service={service}>
+              <Page pageData={pageData} />
+            </ThemeProvider>
           </ServiceContextProvider>
         </RequestContextProvider>
       </ToggleContext.Provider>

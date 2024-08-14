@@ -83,6 +83,11 @@ const defaultCyrillicConfig = {
       breaking: 'Шошилинч',
       postedAt: '...да чоп этилган',
       summary: 'Қисқача',
+      shareButtonText: 'Баҳам кўринг',
+    },
+    downloads: {
+      instructions: 'You can download and view today’s news.',
+      title: 'File Download',
     },
     gist: 'Хулоса',
     error: {

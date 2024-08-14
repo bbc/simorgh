@@ -91,6 +91,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'بریکنگ',
         postedAt: 'پوسٹ کیا گیا',
         summary: 'خلاصہ',
+        shareButtonText: 'شیئر',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'خلاصہ',
       error: {
@@ -338,6 +343,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'آپ کا پیغام نہیں بھیجا جا سکا',
         errorDescription: 'دوبارہ بھیجنے کی کوشش کریں',
+
+        // Closed Screen
+        closedHeading: 'یہ اب بند ہو چکا ہے',
+        closedDescription: 'یہ {{date}}  کو بند ہوا',
       },
     },
     mostRead: {
