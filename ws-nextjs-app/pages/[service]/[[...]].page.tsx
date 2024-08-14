@@ -4,17 +4,18 @@ import logResponseTime from '#server/utilities/logResponseTime';
 import isLitePath from '#app/routes/utils/isLitePath';
 import extractHeaders from '#server/utilities/extractHeaders';
 // AV Embeds
+import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import AvEmbedsPageLayout from './av-embeds/AvEmbedsPageLayout';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 
 type PageProps = {
-  pageType?: 'av-embeds' | null;
+  pageType?: typeof AV_EMBEDS | null;
 } & AvEmbedsPageProps;
 
 export default function Page({ pageType, ...rest }: PageProps) {
   switch (pageType) {
-    case 'av-embeds':
+    case AV_EMBEDS:
       return <AvEmbedsPageLayout {...rest} />;
     default:
       // Return nothing, 404 is handled in _app.tsx
