@@ -73,6 +73,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Amma nu gahe',
         postedAt: '...tti maxxanfame',
         summary: 'Guduunfaa',
+        shareButtonText: 'Qoodi',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Guduunfaa',
       error: {

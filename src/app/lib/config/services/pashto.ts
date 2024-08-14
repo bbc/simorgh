@@ -74,6 +74,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'وروستی',
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
+        shareButtonText: 'شریک یې کړئ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'لنډیز',
       error: {

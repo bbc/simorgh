@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ሓድሽ ዜና',
         postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
+        shareButtonText: 'ኣባፅሑ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       error: {
         404: {

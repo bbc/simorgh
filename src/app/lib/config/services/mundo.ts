@@ -75,6 +75,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Último momento',
         postedAt: 'Publicado',
         summary: 'Puntos clave',
+        shareButtonText: 'Compartir',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Sumario',
       error: {
@@ -107,6 +112,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/mundo',
         },
+      },
+      byline: {
+        articleInformation: 'Información del artículo',
+        author: 'Autor',
+        listItemImage: 'Imagen del autor',
+        published: 'Fecha de publicación',
+        reportingFrom: 'Informa desde',
+        role: 'Título del autor',
       },
       consentBanner: {
         privacy: {
@@ -320,6 +333,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'Disculpa, hubo un problema al subir esto.',
         errorDescription: 'Por favor, regresa e inténtalo más tarde.',
+
+        // Closed Screen
+        closedHeading: 'Esto ya está cerrado.',
+        closedDescription: 'Esto cierra el {{date}}.',
       },
     },
     mostRead: {

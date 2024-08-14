@@ -18,28 +18,28 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const CanonicalExample = (_, globalArgs) => (
+export const CanonicalExample = (_, { service }) => (
   <Component
     blocks={[cpsTwitterBlock]}
     source="https://twitter.com/MileyCyrus/status/1237210910835392512"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const AmpExample = (_, globalArgs) => (
+export const AmpExample = (_, { service }) => (
   <Component
     isAmp
     blocks={[cpsTwitterBlock]}
     source="https://twitter.com/MileyCyrus/status/1237210910835392512"
-    {...globalArgs}
+    service={service}
   />
 );
 AmpExample.decorators = [AmpDecorator];
 
-export const NoEmbed = (_, globalArgs) => (
+export const NoEmbed = (_, { service }) => (
   <Component
     blocks={[cpsTwitterBlockNoEmbed]}
     source="https://twitter.com/MileyCyrus/status/1237210910835392512"
-    {...globalArgs}
+    service={service}
   />
 );

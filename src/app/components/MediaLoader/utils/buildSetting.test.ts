@@ -4,7 +4,6 @@ import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import { BuildConfigProps, MediaBlock } from '../types';
 
 const baseSettings = {
-  id: 'testID',
   pageType: 'article' as PageTypes,
   counterName: 'live_coverage.testID.page',
   isAmp: false,
@@ -42,7 +41,6 @@ describe('buildSettings', () => {
         destination: 'WS_NEWS_LANGUAGES',
         producer: 'MUNDO',
       },
-      superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
@@ -111,7 +109,6 @@ describe('buildSettings', () => {
         destination: 'WS_NEWS_LANGUAGES',
         producer: 'MUNDO',
       },
-      superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
@@ -159,7 +156,6 @@ describe('buildSettings', () => {
         destination: 'WS_NEWS_LANGUAGES',
         producer: 'MUNDO',
       },
-      superResponsive: true,
       enableToucan: true,
       appName: 'news-mundo',
       appType: 'responsive',
@@ -273,15 +269,6 @@ describe('buildSettings', () => {
     });
 
     expect(result).toBe(null);
-  });
-
-  it('Should return super responsive as true, to make the video expand to its parent container.', () => {
-    const result = buildSettings({
-      ...baseSettings,
-      blocks: aresMediaBlocks as MediaBlock[],
-    });
-
-    expect(result?.playerConfig.superResponsive).toStrictEqual(true);
   });
 
   it('Should return the statsObject with required values for tracking.', () => {

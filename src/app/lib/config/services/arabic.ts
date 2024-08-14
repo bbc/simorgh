@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'يستحق الانتباه',
-      brandTitle: 'غزة اليوم',
+      brandTitle: 'يستحق الانتباه',
       brandDescription:
-        'بودكاست يومي يتابع التطورات الميدانية والإنسانية في قطاع غزة من خلال مشاهدات الغزيين ومتابعات الصحفيين والمراسلين والخبراء في الشأن الإنساني.',
+        'شرح معمق لقصة بارزة من أخباراليوم، لمساعدتك على فهم أهم الأحداث حولك وأثرها على حياتك',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0j3qp08.jpg',
-        alt: 'غزة اليوم',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
+        alt: 'يستحق الانتباه',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p086jpqy',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -94,6 +94,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'عاجل',
         postedAt: 'توقيت النشر',
         summary: 'ملخص',
+        shareButtonText: 'شارك',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ملخص',
       error: {
@@ -337,6 +342,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'تعذر تحميل ملفاتك ',
         errorDescription: 'جرب التحميل مرة أخرى.',
+
+        // Closed Screen
+        closedHeading: 'أغلق باب المشاركة',
+        closedDescription: 'أغلق باب المشاركة يوم {{date}}.',
       },
     },
     mostRead: {

@@ -4,9 +4,19 @@
  */
 
 import runExpiredEpisodeTests from '../expiredEpisodeTests';
-import runCanonicalTests from '../canonicalTests';
+import runCommonEpisodeTests from '../commonEpisodeTests';
+import {
+  runCoreCanonicalTests,
+  runCanonicalAnalyticsTests,
+  runCommonCrossPlatformTests,
+  runRecentEpisodesTests,
+} from '../../../common';
 
 describe('Canonical Pashto On Demand TV Page', () => {
   runExpiredEpisodeTests();
-  runCanonicalTests();
+  runCoreCanonicalTests();
+  runCanonicalAnalyticsTests();
+  runCommonCrossPlatformTests(service);
+  runCommonEpisodeTests();
+  runRecentEpisodesTests();
 });

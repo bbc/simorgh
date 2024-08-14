@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'బ్రేకింగ్ న్యూస్',
         postedAt: 'పోస్ట్ చేసిన సమయం',
         summary: 'సారాంశం',
+        shareButtonText: 'షేర్ చేయండి',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'సారాంశం',
       error: {

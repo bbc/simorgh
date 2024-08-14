@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ਤਾਜ਼ਾ',
         postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
         summary: 'ਸਾਰ',
+        shareButtonText: 'ਸਾਂਝਾ ਕਰੋ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ਸਾਰ',
       error: {

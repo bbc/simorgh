@@ -111,10 +111,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat',
       },
       {
-        title: 'Euro 2024',
-        url: '/serbian/lat/topics/cl442rlk0mjt',
-      },
-      {
         title: 'Ukrajina',
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
@@ -171,6 +167,11 @@ export const service: SerbianConfig = {
         breaking: 'Vanredne',
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
+        shareButtonText: 'Deli',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Sažetak',
       error: {
@@ -420,6 +421,10 @@ export const service: SerbianConfig = {
         // Error Screen
         errorHeading: 'Vaša poruka nije otišla',
         errorDescription: 'Pokušajte da pošaljete ponovo.',
+
+        // Closed Screen
+        closedHeading: 'Unos je sada zatvoren',
+        closedDescription: 'Unos je zatvoren {{date}}',
       },
     },
   },
@@ -499,10 +504,6 @@ export const service: SerbianConfig = {
         url: '/serbian/cyr',
       },
       {
-        title: 'Еуро 2024',
-        url: '/serbian/cyr/topics/cz998753m4qt',
-      },
-      {
         title: 'Украјина',
         url: '/serbian/cyr/topics/cqwvxvvw9qrt',
       },
@@ -559,6 +560,11 @@ export const service: SerbianConfig = {
         breaking: 'Ванредне',
         postedAt: 'Објављено у',
         summary: 'Сажетак',
+        shareButtonText: 'Дели',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Сажетак',
       error: {

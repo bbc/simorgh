@@ -1,21 +1,41 @@
+import React from 'react';
 import { GetServerSideProps } from 'next';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isLitePath from '#app/routes/utils/isLitePath';
-import { Services, Variants } from '../../../src/app/models/types/global';
-import extractHeaders from '../../../src/server/utilities/extractHeaders';
+import extractHeaders from '#server/utilities/extractHeaders';
+// AV Embeds
+import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
+import AvEmbedsPageLayout from './av-embeds/AvEmbedsPageLayout';
+import handleAvRoute from './av-embeds/handleAvRoute';
+import { AvEmbedsPageProps } from './av-embeds/types';
 
-// This route does nothing other than return a 404 status code for other routes not yet supported in the Next.JS app
-export default function CatchAll() {
-  return null;
+type PageProps = {
+  pageType?: typeof AV_EMBEDS | null;
+} & AvEmbedsPageProps;
+
+export default function Page({ pageType, ...rest }: PageProps) {
+  switch (pageType) {
+    case AV_EMBEDS:
+      return <AvEmbedsPageLayout {...rest} />;
+    default:
+      // Return nothing, 404 is handled in _app.tsx
+      return null;
+  }
 }
 
-type PageDataParams = {
-  service: Services;
-  variant: Variants;
-};
-
 export const getServerSideProps: GetServerSideProps = async context => {
-  const isLite = isLitePath(context.resolvedUrl);
+  const {
+    resolvedUrl,
+    query: { service, variant },
+    req: { headers: reqHeaders },
+  } = context;
+
+  // Route to AV Embeds
+  if (resolvedUrl?.includes('av-embeds')) {
+    return handleAvRoute(context);
+  }
+
+  const isLite = isLitePath(resolvedUrl);
 
   logResponseTime(
     {
@@ -25,11 +45,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     () => null,
   );
 
-  const { service, variant } = context.query as PageDataParams;
-
-  const { headers: reqHeaders } = context.req;
-
   context.res.statusCode = 404;
+
   return {
     props: {
       bbcOrigin: reqHeaders['bbc-origin'] || null,

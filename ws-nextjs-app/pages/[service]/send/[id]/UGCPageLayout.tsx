@@ -12,27 +12,42 @@ import ErrorScreen from './ErrorScreen';
 import UploadingScreen from './UploadingScreen';
 import GenericMessage from './GenericMessage';
 import fallbackTranslations from './fallbackTranslations';
+import ClosedScreen from './ClosedScreen';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const {
     lang,
     translations: {
       ugc: {
+        closedHeading = fallbackTranslations.closedHeading,
         noJsHeading = fallbackTranslations.noJsHeading,
         noJsDescription = fallbackTranslations.noJsDescription,
       } = {},
     },
   } = useContext(ServiceContext);
-  const { title, description, sections, privacyNotice } = pageData;
+
+  const {
+    title,
+    description,
+    sections,
+    privacyNotice,
+    campaignStatus,
+    closingTime,
+    settings,
+  } = pageData;
 
   const { fields } = sections?.[0] ?? {};
   const sectionTitle = sections?.[0].sectionText?.title ?? '';
+
+  const metadataTitle =
+    campaignStatus === 'open' ? title : `${closedHeading}: ${title}`;
+
   return (
     <>
       <Metadata
-        title={title}
+        title={metadataTitle}
         lang={lang}
-        description="Test UGC Form"
+        description={description}
         openGraphType="website"
         hasAmpPage={false}
       />
@@ -46,34 +61,44 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>
-              <FormContextProvider
-                initialScreen={initialScreen}
-                fields={fields}
-              >
-                <FormContext.Consumer>
-                  {({ screen }) => {
-                    switch (screen) {
-                      case 'form':
-                        return (
-                          <FormScreen
-                            title={title}
-                            description={description}
-                            sectionTitle={sectionTitle}
-                            privacyNotice={privacyNotice?.default}
-                            fields={fields}
-                          />
-                        );
-                      case 'uploading':
-                        return <UploadingScreen title={title} />;
-                      case 'success':
-                        return <SuccessScreen title={title} />;
-                      case 'error':
-                      default:
-                        return <ErrorScreen title={title} />;
-                    }
-                  }}
-                </FormContext.Consumer>
-              </FormContextProvider>
+              {campaignStatus === 'open' ? (
+                <FormContextProvider
+                  initialScreen={initialScreen}
+                  fields={fields}
+                >
+                  <FormContext.Consumer>
+                    {({ screen }) => {
+                      switch (screen) {
+                        case 'form':
+                          return (
+                            <FormScreen
+                              title={title}
+                              description={description}
+                              sectionTitle={sectionTitle}
+                              privacyNotice={privacyNotice?.default}
+                              fields={fields}
+                            />
+                          );
+                        case 'uploading':
+                          return <UploadingScreen title={title} />;
+                        case 'success':
+                          return (
+                            <SuccessScreen
+                              title={title}
+                              replyEmailAddress={settings.replyEmailAddress}
+                              retentionPeriod={settings.retentionPeriodDays}
+                            />
+                          );
+                        case 'error':
+                        default:
+                          return <ErrorScreen title={title} />;
+                      }
+                    }}
+                  </FormContext.Consumer>
+                </FormContextProvider>
+              ) : (
+                <ClosedScreen title={title} closingTime={closingTime} />
+              )}
             </div>
           </main>
         </div>

@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Na Akpọtụ Ugbu A',
         postedAt: 'Ebisara na',
         summary: 'Nchịkọta',
+        shareButtonText: 'Kekọrịta',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Nchịkọta',
       error: {

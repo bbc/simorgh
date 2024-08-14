@@ -93,6 +93,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग न्यूज़',
         postedAt: 'पोस्ट किया गया',
         summary: 'सारांश',
+        shareButtonText: 'साझा कीजिए',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'सारांश',
       error: {
@@ -355,6 +360,10 @@ export const service: DefaultServiceConfig = {
         // Error Screen
         errorHeading: 'आपका संदेश नहीं भेजा गया है',
         errorDescription: 'कृपया फिर भेजने का प्रयास करें',
+
+        // Closed Screen
+        closedHeading: 'अब यह विकल्प बंद हो चुका है',
+        closedDescription: 'ये इस तारीख़ को बंद हो चुका है {{date}}.',
       },
     },
     mostRead: {

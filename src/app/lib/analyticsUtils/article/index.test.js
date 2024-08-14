@@ -76,6 +76,7 @@ describe('getLanguage', () => {
   it('should find value in good data', () => {
     const goodData = {
       metadata: {
+        language: 'desired value',
         passport: {
           language: 'desired value',
         },

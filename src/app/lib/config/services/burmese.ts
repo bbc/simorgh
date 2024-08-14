@@ -86,6 +86,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'သတင်းထူး',
         postedAt: 'ပို့စ် တင်တဲ့အချိန်',
         summary: 'အနှစ်ချုပ်',
+        shareButtonText: 'ဝေမျှပါ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'အနှစ်ချုပ်',
       error: {
