@@ -9,7 +9,6 @@ import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
 import styles from './styles';
 import { PageProps } from './types';
 
