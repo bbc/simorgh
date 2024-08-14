@@ -13,21 +13,6 @@ import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
 import styles from './styles';
 import { PageProps } from './types';
 
-const pageTitle = '다운로드 - BBC News 코리아';
-
-const atiAnalytics = {
-  campaigns: null,
-  categoryName: null,
-  contentType: DOWNLOADS_PAGE,
-  language: 'ko-KO',
-  ldpThingIds: null,
-  ldpThingLabels: null,
-  pageIdentifier: 'korean.downloads.page',
-  pageTitle,
-  producerId: '57',
-  producerName: 'KOREAN',
-};
-
 const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   const {
     lang,
@@ -46,8 +31,8 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   const description = `${service} Downloads`;
   return (
     <>
-      <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={pageTitle} />
+      <ATIAnalytics atiData={pageData.metadata.atiAnalytics} />
+      <ChartbeatAnalytics title={pageData.metadata.pageTitle} />
       <Metadata
         title={title}
         lang={lang}
