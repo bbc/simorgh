@@ -306,6 +306,7 @@ describe('ATI Analytics Container', () => {
         lng: 'en-US',
         x2: '[responsive]',
         x3: '[news]',
+        x4: '[en-gb]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
         x7: '[index-home]',
         x8: '[simorgh]',
