@@ -27,6 +27,6 @@ export type PageProps = {
     title: string;
     description: string;
     downloadData?: DownloadData[];
-    metadata?: Metadata[];
+    metadata?: Metadata;
   };
 };
