@@ -307,10 +307,6 @@ export const service: DefaultServiceConfig = {
         url: '/japanese',
       },
       {
-        title: 'パリ五輪',
-        url: '/japanese/topics/c136egn3g6rt',
-      },
-      {
         title: 'ガザ',
         url: '/japanese/topics/cw5wn2e9rpnt',
       },
