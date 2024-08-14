@@ -23,35 +23,11 @@ const testCases = [
     },
   },
   {
-    description: `should build an AMP url for articles in test environment`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
-    environment: 'test',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
-      mediaId,
-      type: 'articles',
-      queryString: '',
-    },
-  },
-  {
     description: `should build a CANONICAL url for articles in test environment with test override`,
     expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
-      mediaId,
-      type: 'articles',
-      queryString: testOverrideParam,
-    },
-  },
-  {
-    description: `should build an AMP url for articles in test environment with test override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
-    environment: 'test',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
       mediaId,
       type: 'articles',
       queryString: testOverrideParam,
@@ -69,35 +45,11 @@ const testCases = [
     },
   },
   {
-    description: `should build an AMP url for articles in test environment with live override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
-    environment: 'test',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
-      mediaId,
-      type: 'articles',
-      queryString: liveOverrideParam,
-    },
-  },
-  {
     description: `should build a CANONICAL url for on-demand/live radio in test environment with live override`,
     expected: `/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
-      mediaId,
-      type: 'media',
-      queryString: '',
-    },
-  },
-  {
-    description: `should build an AMP url for on-demand/live radio in test environment with live override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
-    environment: 'test',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
       mediaId,
       type: 'media',
       queryString: '',
@@ -115,35 +67,11 @@ const testCases = [
     },
   },
   {
-    description: `should build an AMP url for articles in live environment`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
-    environment: 'live',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
-      mediaId,
-      type: 'articles',
-      queryString: '',
-    },
-  },
-  {
     description: `should build a CANONICAL url for articles in live environment with test override`,
     expected: `/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
-      mediaId,
-      type: 'articles',
-      queryString: testOverrideParam,
-    },
-  },
-  {
-    description: `should build an AMP url for articles in live environment with test override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
-    environment: 'live',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
       mediaId,
       type: 'articles',
       queryString: testOverrideParam,
@@ -161,35 +89,11 @@ const testCases = [
     },
   },
   {
-    description: `should build an AMP url for articles in live environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
-    environment: 'live',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
-      mediaId,
-      type: 'articles',
-      queryString: liveOverrideParam,
-    },
-  },
-  {
     description: `should build a CANONICAL url for legacy media in live environment with live override`,
     expected: `/ws/av-embeds/legacy/${legacyId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
-      mediaId: legacyId,
-      type: 'legacy',
-      queryString: liveOverrideParam,
-    },
-  },
-  {
-    description: `should build an AMP url for legacy media in live environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
-    environment: 'live',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
       mediaId: legacyId,
       type: 'legacy',
       queryString: liveOverrideParam,
@@ -206,18 +110,6 @@ const testCases = [
       queryString: '',
     },
   },
-  {
-    description: `should build an AMP url for legacy media in test environment with no override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
-    environment: 'test',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
-      mediaId: legacyId,
-      type: 'legacy',
-      queryString: '',
-    },
-  },
   // Local environment
   {
     description: `should output test urls for canonical`,
@@ -227,17 +119,6 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-    },
-  },
-  {
-    description: `should output test polling urls for amp`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
-    environment: 'local',
-    before: setEnvironment,
-    embedObject: {
-      isAmp: true,
-      mediaId,
-      type: 'media',
     },
   },
   {
