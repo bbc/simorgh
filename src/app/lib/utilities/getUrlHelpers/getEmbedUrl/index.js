@@ -7,6 +7,10 @@ const LIVE_BASE_URL = 'https://www.bbc.com';
 const TEST_BASE_URL = 'https://www.test.bbc.com';
 const DEV_BASE_URL = TEST_BASE_URL;
 
+const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
+const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
+const DEV_AMP_URL = TEST_AMP_URL;
+
 const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) return false;
 
@@ -24,26 +28,27 @@ const shouldOverrideMorphEnv = (queryString, type) => {
 
 const isDev = () => getEnvConfig().SIMORGH_APP_ENV === 'local';
 
-const getBaseUrl = () => {
+const getBaseUrl = (queryString, isAmp) => {
   // In some scenarios, we use the same base URL as the parent
   const relativeBaseUrl = '';
   switch (true) {
     case isLive():
-      return relativeBaseUrl;
+      return isAmp ? LIVE_AMP_URL : relativeBaseUrl;
     case isDev():
-      return DEV_BASE_URL;
+      return isAmp ? DEV_AMP_URL : DEV_BASE_URL;
     default:
-      return relativeBaseUrl;
+      return isAmp ? TEST_AMP_URL : relativeBaseUrl;
   }
 };
 
-export default ({ type, mediaId, queryString }) => {
+export default ({ type, mediaId, isAmp = false, queryString }) => {
   const morphEnvOverride = shouldOverrideMorphEnv(queryString, type)
     ? '?morph_env=live'
     : '';
-  const baseUrl = getBaseUrl();
+  const ampSection = isAmp ? '/amp' : '';
+  const baseUrl = getBaseUrl(queryString, isAmp);
   const url = `${baseUrl}/${AV_ROUTE}/${type}/${mediaId}`;
-  return `${url}${morphEnvOverride}`;
+  return `${url}${ampSection}${morphEnvOverride}`;
 };
 
 export const makeAbsolute = url => {
