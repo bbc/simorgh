@@ -29,11 +29,11 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
 
   const description = `${service} Downloads`;
   const atiData = pageData?.metadata?.atiAnalytics ||| {};
-  const title = pageData?.metadata?.pageTitle || '';
+  const pageTitle = pageData?.metadata?.pageTitle || '';
   return (
     <>
       <ATIAnalytics atiData={atiData} />
-      <ChartbeatAnalytics title={title} />
+      <ChartbeatAnalytics title={pageTitle} />
       <Metadata
         title={title}
         lang={lang}
