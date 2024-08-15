@@ -16,7 +16,6 @@ import {
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
-import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getEmbedUrl, {
@@ -89,7 +88,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const { lang, timezone, datetimeLocale, service, translations, brandName } =
     useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
   const formattedTimestamp = formatUnixTimestamp({
@@ -105,7 +103,6 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
-    isAmp,
     queryString: location.search,
   });
 
