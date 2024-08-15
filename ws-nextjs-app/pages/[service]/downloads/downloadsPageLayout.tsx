@@ -28,7 +28,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   } = useContext(ServiceContext);
 
   const description = `${service} Downloads`;
-  const atiData = pageData?.metadata?.atiAnalytics ||| {};
+  const atiData = pageData?.metadata?.atiAnalytics || {};
   const pageTitle = pageData?.metadata?.pageTitle || '';
   return (
     <>
