@@ -2,6 +2,8 @@
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 
 interface WindowOperaMini extends Window {
+  hasScriptRun?: boolean;
+  hasOperaMinScriptRun?: object;
   operamini?: object;
 }
 
@@ -37,6 +39,7 @@ describe('sendBeaconOperaMiniScript', () => {
     windowSpy.mockImplementation(
       () =>
         ({
+          hasOperaMinScriptRun: new OperaMiniMock(),
           operamini: new OperaMiniMock(),
         }) as WindowOperaMini,
     );
@@ -51,6 +54,35 @@ describe('sendBeaconOperaMiniScript', () => {
       'https://foobar.com',
       true,
     );
+  });
+
+  it('should NOT send more than 1 beacon with XHR, when browser is Opera Mini', () => {
+    const check = {
+      hasScriptRun: false,
+      operamini: new OperaMiniMock(),
+      get hasOperaMinScriptRun() {
+        return this.hasScriptRun;
+      },
+
+      set hasOperaMinScriptRun(val) {
+        this.hasScriptRun = val;
+      },
+    } as WindowOperaMini;
+
+    windowSpy.mockImplementation(() => check);
+
+    XMLHttpRequestSpy.mockImplementation(
+      () => XMLHttpRequestMock as XMLHttpRequest,
+    );
+
+    const multipleCalls =
+      sendBeaconOperaMiniScript('https://foobar.com') +
+      sendBeaconOperaMiniScript('https://foobar.com') +
+      sendBeaconOperaMiniScript('https://foobar.com');
+
+    eval(multipleCalls);
+
+    expect(XMLHttpRequestMock.open).toHaveBeenCalledTimes(1);
   });
 
   it('should not send beacon with XHR, when browser is not Opera Mini', () => {
