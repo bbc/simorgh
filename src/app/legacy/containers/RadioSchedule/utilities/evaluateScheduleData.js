@@ -39,6 +39,7 @@ export const getIsProgramValid = logError => program => {
 
   const isValid = Object.keys(requiredValues).every(key => {
     if (!requiredValues[key]) {
+      console.log({ key, urn });
       logError(`${key} is missing in program for ${urn} schedule`);
       return false;
     }

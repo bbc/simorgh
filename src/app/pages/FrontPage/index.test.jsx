@@ -1,5 +1,4 @@
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -10,6 +9,8 @@ import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
+
+const fetchMock = fetch;
 
 jest.mock('../../components/ThemeProvider');
 
@@ -123,15 +124,12 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 describe('Front Page', () => {
   beforeEach(() => {
     delete process.env.SIMORGH_APP_ENV;
-    fetchMock.mock(
-      'begin:http://localhost/serbian/lat',
-      JSON.stringify(serbianFrontPageData),
-    );
+    fetchMock.mockResponse(JSON.stringify(serbianFrontPageData));
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-    fetchMock.restore();
+    fetchMock.resetMocks();
   });
 
   describe('Assertions', () => {

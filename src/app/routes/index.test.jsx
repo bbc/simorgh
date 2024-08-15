@@ -3,8 +3,6 @@ import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
-import fetchMock from 'fetch-mock';
-
 import defaultToggles from '#lib/config/toggles';
 
 // components being tested
@@ -36,7 +34,7 @@ import {
 import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
 import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
 
-fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
+const fetchMock = fetch;
 
 global.performance.getEntriesByName = jest.fn(() => []);
 
@@ -86,8 +84,7 @@ describe('Routes', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.restoreAllMocks();
-    fetchMock.restore();
-    fetch.resetMocks();
+    fetchMock.resetMocks();
     window.dotcom = undefined;
   });
 
@@ -110,10 +107,7 @@ describe('Routes', () => {
 
     it('should route to and render live radio page', async () => {
       const pathname = '/korean/bbc_korean_radio/liveradio';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        liveRadioPageJson,
-      );
+      fetchMock.mockResponseOnce(JSON.stringify(liveRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -139,10 +133,7 @@ describe('Routes', () => {
 
     it('should route to and render the podcast page', async () => {
       const pathname = '/arabic/podcasts/p02pc9qc';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        podcastPageJson,
-      );
+      fetchMock.mockResponseOnce(JSON.stringify(podcastPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -210,10 +201,7 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand Radio page', async () => {
       const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        onDemandRadioPageJson,
-      );
+      fetchMock.mockResponseOnce(JSON.stringify(onDemandRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -239,10 +227,7 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand TV Brand page', async () => {
       const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        onDemandTvPageJson,
-      );
+      fetchMock.mockResponseOnce(JSON.stringify(onDemandTvPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -365,7 +350,7 @@ describe('Routes', () => {
     it('should route to and render a photo gallery page', async () => {
       const pathname = '/indonesia/indonesia-41635759';
 
-      fetch.mockResponse(
+      fetchMock.mockResponseOnce(
         JSON.stringify({
           ...photoGalleryPageJson,
           secondaryData: null,
@@ -396,7 +381,7 @@ describe('Routes', () => {
       suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
 
       const pathname = '/mundo/noticias-internacional-51266689';
-      fetch.mockResponse(
+      fetchMock.mockResponse(
         JSON.stringify({
           ...storyPageJson,
           secondaryData: { mostRead: storyPageMostReadData },
@@ -429,11 +414,7 @@ describe('Routes', () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/afrique/48465371';
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...featureIndexPageJson,
-        }),
-      );
+      fetchMock.mockResponse(JSON.stringify(featureIndexPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -480,7 +461,7 @@ describe('Routes', () => {
 
     it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
       const pathname = '/afrique';
-      fetchMock.mock(`http://localhost${pathname}.json`, 500);
+      fetchMock.mockResponse(JSON.stringify({ status: 500 }));
 
       const { pageType, getInitialData } = getMatchingRoute(pathname);
       const { status, error } = await getInitialData({

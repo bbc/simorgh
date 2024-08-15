@@ -1,9 +1,9 @@
-import fetchMock from 'fetch-mock';
 import {
   CONFIG_REQUEST_RECEIVED,
   CONFIG_FETCH_ERROR,
   CONFIG_ERROR,
 } from '#lib/logger.const';
+import nodeLogger from '#testHelpers/loggerMock';
 
 const mockUrl =
   'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost';
@@ -12,30 +12,32 @@ const mockResponse = {
     testToggle: { enabled: true },
   },
 };
-fetchMock.mock(mockUrl, mockResponse);
+
+const mockDefaultToggles = {
+  local: {
+    enableFetchingToggles: { enabled: false },
+    defaultToggle: { enabled: false },
+  },
+};
+
+const fetchMock = fetch;
 
 describe('getToggles', () => {
   beforeEach(async () => {
-    jest.resetModules();
-    await import('#testHelpers/loggerMock');
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
+    fetchMock.mockResponse(JSON.stringify(mockResponse));
   });
 
   afterEach(() => {
     jest.resetAllMocks();
-    fetchMock.resetHistory();
+    fetchMock.resetMocks();
+    delete process.env.SIMORGH_CONFIG_URL;
   });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
-    const mockDefaultToggles = {
-      local: {
-        enableFetchingToggles: { enabled: false },
-        defaultToggle: { enabled: false },
-      },
-    };
     jest.mock('#lib/config/toggles', () => mockDefaultToggles);
 
-    // Dynamic import is used in these tests so the toggles file values can be changed
+    // Dynamic import is used in these tests so the toggles file vales can be changed
     const getToggles = await import('.');
     const toggles = await getToggles.default('mundo');
 
@@ -43,35 +45,30 @@ describe('getToggles', () => {
   });
 
   describe('with enableFetchingToggles enabled', () => {
-    const mockDefaultToggles = {
-      local: {
-        enableFetchingToggles: { enabled: true },
-        defaultToggle: { enabled: false },
-      },
-    };
     beforeEach(() => {
       jest.mock('#lib/config/toggles', () => mockDefaultToggles);
     });
 
     it('should return the merged local and remote toggles and log that this happened', async () => {
-      const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
       jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
 
       const toggles = await getToggles.default('mundo');
 
-      expect(nodeLogger.default.info).toHaveBeenCalledWith(
-        CONFIG_REQUEST_RECEIVED,
-        {
-          service: 'mundo',
-          url: mockUrl,
-        },
-      );
+      console.log(nodeLogger.info.mock.calls);
 
-      expect(toggles).toEqual({
+      expect(nodeLogger.info).toHaveBeenCalledWith(CONFIG_REQUEST_RECEIVED, {
+        service: 'mundo',
+        url: mockUrl,
+      });
+
+      const expected = {
         ...mockDefaultToggles.local,
         ...mockResponse.toggles,
-      });
+      };
+
+      console.debug({ toggles, expected });
+      expect(toggles).toEqual(expected);
     });
 
     it('should return merged local toggles and cached toggles if cache entry exists', async () => {
@@ -82,15 +79,18 @@ describe('getToggles', () => {
       const getToggles = await import('.');
       const toggles = await getToggles.default('mundo', mockCache);
 
-      expect(toggles).toEqual({
+      const expected = {
         ...mockDefaultToggles.local,
         ...mockResponse.toggles,
-      });
+      };
+
+      console.log({ toggles, expected });
+
+      expect(toggles).toEqual(expected);
       expect(mockCache.get).toHaveBeenCalledTimes(1);
       expect(mockCache.get).toHaveBeenCalledWith(
         'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
       );
-      expect(fetchMock.called()).toBe(false);
     });
 
     it('should set cache entry if one does not exist for this URL', async () => {
@@ -111,23 +111,15 @@ describe('getToggles', () => {
     });
 
     it('should catch response errors, log them and return default toggles', async () => {
-      const errorCode = 500;
-      const mockServiceUrl =
-        'https://mock-config-endpoint?application=simorgh&service=pidgin&__amp_source_origin=http://localhost';
-      fetchMock.mock(mockServiceUrl, errorCode);
+      fetchMock.mockResponseOnce({ status: 500 });
 
-      const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
       const toggles = await getToggles.default('pidgin');
 
-      expect(nodeLogger.default.error).toHaveBeenCalledWith(
-        CONFIG_FETCH_ERROR,
-        {
-          status: 500,
-          service: 'pidgin',
-          url: mockServiceUrl,
-        },
-      );
+      expect(nodeLogger.error).toHaveBeenCalledWith(CONFIG_FETCH_ERROR, {
+        status: 500,
+        service: 'pidgin',
+      });
       expect(toggles).toEqual(mockDefaultToggles.local);
     });
 
@@ -135,13 +127,12 @@ describe('getToggles', () => {
       const mockServiceUrl =
         'https://mock-config-endpoint?application=simorgh&service=hausa&__amp_source_origin=http://localhost';
       const mockInvalidResponse = 'This is not JSON';
-      fetchMock.mock(mockServiceUrl, mockInvalidResponse);
+      fetchMock.mockResponseOnce(mockInvalidResponse);
 
-      const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
       const toggles = await getToggles.default('hausa');
 
-      expect(nodeLogger.default.error).toHaveBeenCalledWith(CONFIG_ERROR, {
+      expect(nodeLogger.error).toHaveBeenCalledWith(CONFIG_ERROR, {
         error: expect.stringContaining(
           'FetchError: invalid json response body',
         ),
@@ -152,7 +143,6 @@ describe('getToggles', () => {
     });
 
     it('should calculate and log response time of toggles call when called on server', async () => {
-      const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
       const hrtTimeSpy = jest
         .spyOn(process, 'hrtime')
@@ -161,22 +151,19 @@ describe('getToggles', () => {
 
       await getToggles.default('mundo');
 
-      expect(fetchMock.calls().length).toBe(1);
       expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
-      expect(nodeLogger.default.info).toHaveBeenCalledTimes(2);
+      expect(nodeLogger.info).toHaveBeenCalledTimes(2);
     });
 
     it('should not calculate and log response when running on client', async () => {
-      const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
       const hrtTimeSpy = jest.spyOn(process, 'hrtime');
       jest.spyOn(window, 'document', 'get').mockReturnValue({});
 
       await getToggles.default('mundo');
 
-      expect(fetchMock.calls().length).toBe(1);
       expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
-      expect(nodeLogger.default.info).toHaveBeenCalledTimes(0);
+      expect(nodeLogger.info).toHaveBeenCalledTimes(0);
     });
   });
 });

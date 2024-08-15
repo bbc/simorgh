@@ -106,6 +106,8 @@ const fetchPageData = async ({
 
     const error = new Error();
 
+    console.error({ status });
+
     if (status === NOT_FOUND) {
       error.message = DATA_NOT_FOUND;
       error.status = NOT_FOUND;
