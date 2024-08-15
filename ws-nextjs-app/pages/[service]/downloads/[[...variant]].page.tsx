@@ -8,6 +8,21 @@ import dataFetch from './dataFetch';
 import downloadsPageLayout from './downloadsPageLayout';
 import extractHeaders from '../../../../src/server/utilities/extractHeaders';
 
+const pageTitle = '다운로드 - BBC News 코리아';
+
+const atiData = {
+  campaigns: null,
+  categoryName: null,
+  contentType: DOWNLOADS_PAGE,
+  language: 'ko-KO',
+  ldpThingIds: null,
+  ldpThingLabels: null,
+  pageIdentifier: 'korean.downloads.page',
+  pageTitle,
+  producerId: '57',
+  producerName: 'KOREAN',
+};
+
 export const getServerSideProps: GetServerSideProps = async context => {
   logResponseTime(
     {
@@ -35,7 +50,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageData: {
         downloadData,
         metadata: {
+          atiAnalytics: atiData,
           type: DOWNLOADS_PAGE,
+          pageTitle,
         },
       },
       pageType: DOWNLOADS_PAGE,
