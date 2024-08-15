@@ -39,7 +39,6 @@ describe('sendBeaconOperaMiniScript', () => {
     windowSpy.mockImplementation(
       () =>
         ({
-          hasOperaMinScriptRun: new OperaMiniMock(),
           operamini: new OperaMiniMock(),
         }) as WindowOperaMini,
     );
