@@ -20,9 +20,7 @@ module.exports = {
   assetPrefix: isLocal ? undefined : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
-  experimental: {
-    externalDir: true,
-  },
+  transpilePackages: ['simorgh'],
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
