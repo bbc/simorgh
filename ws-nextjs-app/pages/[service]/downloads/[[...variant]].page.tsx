@@ -31,6 +31,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     context.res,
     () => null,
   );
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=600, stale-while-revalidate=240, max-age=60',
+  );
 
   const {
     service,
