@@ -10930,7 +10930,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"history@npm:4.10.1, history@npm:^4.9.0":
+"history@npm:5.3.0":
+  version: 5.3.0
+  resolution: "history@npm:5.3.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.7.6"
+  checksum: 10/52ba685b842ca6438ff11ef459951eb13d413ae715866a8dc5f7c3b1ea0cdeb8db6aabf7254551b85f56abc205e6e2d7e1d5afb36b711b401cdaff4f2cf187e9
+  languageName: node
+  linkType: hard
+
+"history@npm:^4.9.0":
   version: 4.10.1
   resolution: "history@npm:4.10.1"
   dependencies:
@@ -16287,7 +16296,7 @@ __metadata:
     glob: "npm:10.4.1"
     helmet: "npm:7.1.0"
     helmet-csp: "npm:3.4.0"
-    history: "npm:4.10.1"
+    history: "npm:5.3.0"
     husky: "npm:9.0.11"
     inspectpack: "npm:4.7.1"
     intersection-observer: "npm:0.12.2"
