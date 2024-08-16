@@ -65,7 +65,10 @@ export default async (context: GetServerSidePropsContext) => {
         ? {
             ...avEmbed,
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
-            metadata: { type: AV_EMBEDS },
+            metadata: {
+              ...avEmbed?.metadata,
+              type: AV_EMBEDS,
+            },
           }
         : null,
       pageType: AV_EMBEDS,
