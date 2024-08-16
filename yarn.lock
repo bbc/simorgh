@@ -10930,7 +10930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"history@npm:4.10.1, history@npm:^4.9.0":
+"history@npm:^4.9.0":
   version: 4.10.1
   resolution: "history@npm:4.10.1"
   dependencies:
@@ -16287,7 +16287,6 @@ __metadata:
     glob: "npm:10.4.1"
     helmet: "npm:7.1.0"
     helmet-csp: "npm:3.4.0"
-    history: "npm:4.10.1"
     husky: "npm:9.0.11"
     inspectpack: "npm:4.7.1"
     intersection-observer: "npm:0.12.2"
