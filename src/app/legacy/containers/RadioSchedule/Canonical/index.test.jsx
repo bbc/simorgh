@@ -30,11 +30,9 @@ const RadioScheduleWithContext = ({ initialData, lang }) => (
   </RequestContextProvider>
 );
 
-const fetchMock = fetch;
-
 describe('Canonical RadioSchedule', () => {
   beforeEach(() => {
-    fetchMock.resetMocks();
+    fetch.resetMocks();
   });
 
   afterEach(() => {
@@ -84,7 +82,7 @@ describe('Canonical RadioSchedule', () => {
         Date.now(),
       );
 
-      fetchMock.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
+      fetch.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
 
       let container;
 
@@ -97,7 +95,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetchMock.mockResponseOnce(JSON.stringify([]));
+      fetch.mockResponseOnce(JSON.stringify([]));
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',
@@ -116,7 +114,7 @@ describe('Canonical RadioSchedule', () => {
 
   describe('Without initial data', () => {
     it('renders correctly for a service with a radio schedule and page frequency URL', async () => {
-      fetchMock.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
+      fetch.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
       let container;
 
       await act(async () => {
@@ -127,7 +125,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
-      fetchMock.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
+      fetch.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
       let container;
 
       await act(async () => {
@@ -137,7 +135,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('render radio schedules container with lang code', async () => {
-      fetchMock.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
+      fetch.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
       let container;
 
       await act(async () => {
@@ -154,7 +152,7 @@ describe('Canonical RadioSchedule', () => {
       radioSchedule2Programmes.schedules =
         radioSchedule2Programmes.schedules.slice(0, 2);
 
-      fetchMock.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
+      fetch.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
 
       let container;
 
@@ -165,7 +163,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetchMock.mockResponseOnce(
+      fetch.mockResponseOnce(
         JSON.stringify({
           schedules: [],
         }),
@@ -180,7 +178,7 @@ describe('Canonical RadioSchedule', () => {
 
     it('does not render when data fetched returns non-ok status code', async () => {
       global.console.error = jest.fn();
-      fetchMock.mockResponse({ status: 404 });
+      fetch.mockResponse({ status: 404 });
       let container;
 
       await act(async () => {
@@ -191,7 +189,7 @@ describe('Canonical RadioSchedule', () => {
 
     it('does not render when data fetch is rejected', async () => {
       global.console.error = jest.fn();
-      fetchMock.mockReject(Error('Server not found'));
+      fetch.mockReject(Error('Server not found'));
       let container;
 
       await act(async () => {

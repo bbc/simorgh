@@ -46,14 +46,10 @@ export default (data, service, currentTime) => {
   const schedules = initialSchedules.filter(isProgramValid);
   const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
-  console.log({ initialSchedules, schedules, latestProgramIndex });
-
   const scheduleDataIsComplete = isScheduleDataComplete({
     schedules,
     currentTime,
   });
-
-  console.log({ scheduleDataIsComplete });
 
   if (!scheduleDataIsComplete) {
     logServiceError('Incomplete program schedule');

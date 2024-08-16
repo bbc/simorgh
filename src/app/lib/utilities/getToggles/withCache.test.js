@@ -5,8 +5,6 @@ import getToggles from '.';
 jest.mock('lru-cache');
 jest.mock('.');
 
-const fetchMock = fetch;
-
 describe('withCache', () => {
   it('creates a cache, and returns a function that calls getToggles with this cache', () => {
     const mockMundoResponse = {
@@ -14,14 +12,14 @@ describe('withCache', () => {
         testToggle: { enabled: true },
       },
     };
-    fetchMock.mockResponseOnce(JSON.stringify(mockMundoResponse));
+    fetch.mockResponseOnce(JSON.stringify(mockMundoResponse));
 
     const mockPidginResponse = {
       toggles: {
         testToggle: { enabled: true },
       },
     };
-    fetchMock.mockResponseOnce(JSON.stringify(mockPidginResponse));
+    fetch.mockResponseOnce(JSON.stringify(mockPidginResponse));
 
     withCache('mundo');
     withCache('pidgin');

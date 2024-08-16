@@ -10,8 +10,6 @@ jest.mock('#app/lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => false),
 );
 
-const fetchMock = fetch;
-
 jest.mock('../../utils/getConfig', () => jest.fn());
 process.env.BFF_PATH = 'https://mock-bff-path';
 
@@ -25,12 +23,12 @@ const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 describe('Front Page - Get Initial Data', () => {
   beforeEach(() => {
     delete process.env.SIMORGH_APP_ENV;
-    fetchMock.mockResponse(JSON.stringify(frontPageJsonSerbian));
+    fetch.mockResponse(JSON.stringify(frontPageJsonSerbian));
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-    fetchMock.resetMocks();
+    fetch.resetMocks();
   });
 
   it('should request local fixture data when the app env is local', async () => {
@@ -97,7 +95,7 @@ describe('Front Page - Get Initial Data', () => {
   );
 
   it('should log a 404 to node.logger when the asset cannot be found', async () => {
-    fetchMock.mockRejectOnce({ message: 'Not found', status: 404 });
+    fetch.mockRejectOnce({ message: 'Not found', status: 404 });
 
     await getInitialData({
       path: '/serbian/lat',
@@ -115,7 +113,7 @@ describe('Front Page - Get Initial Data', () => {
   });
 
   it('should log a 500 to node.logger when the BFF response fails', async () => {
-    fetchMock.mockRejectOnce({
+    fetch.mockRejectOnce({
       message: 'Internal server error',
       status: 500,
     });
@@ -143,7 +141,7 @@ describe('Front Page - Get Initial Data', () => {
       relatedContent: {},
     };
 
-    fetchMock.mockResponseOnce(JSON.stringify(malformedBffFrontPageJson));
+    fetch.mockResponseOnce(JSON.stringify(malformedBffFrontPageJson));
 
     await getInitialData({
       path: '/serbian/lat',
@@ -183,8 +181,8 @@ describe('Front Page - Get Initial Data', () => {
     });
 
     it('should return data to render a front page with radio schedules', async () => {
-      fetchMock.mockResponseOnce(JSON.stringify(frontPageJsonSerbian));
-      fetchMock.mockResponseOnce(JSON.stringify(radioScheduleJson));
+      fetch.mockResponseOnce(JSON.stringify(frontPageJsonSerbian));
+      fetch.mockResponseOnce(JSON.stringify(radioScheduleJson));
 
       const { pageData } = await getInitialData({
         path: '/serbian/lat',
@@ -221,8 +219,8 @@ describe('Front Page - Get Initial Data', () => {
     });
 
     it('should return page data for misconfigured service without radio schedules, but with radio schedules on front page', async () => {
-      fetchMock.mockResponseOnce(JSON.stringify(frontPageJsonSerbian));
-      fetchMock.mockResponseOnce(null);
+      fetch.mockResponseOnce(JSON.stringify(frontPageJsonSerbian));
+      fetch.mockResponseOnce(null);
 
       const { pageData } = await getInitialData({
         path: '/serbian/lat',

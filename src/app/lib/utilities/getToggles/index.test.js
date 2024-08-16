@@ -20,17 +20,15 @@ const mockDefaultToggles = {
   },
 };
 
-const fetchMock = fetch;
-
 describe('getToggles', () => {
   beforeEach(async () => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
-    fetchMock.mockResponse(JSON.stringify(mockResponse));
+    fetch.mockResponse(JSON.stringify(mockResponse));
   });
 
   afterEach(() => {
     jest.resetAllMocks();
-    fetchMock.resetMocks();
+    fetch.resetMocks();
     delete process.env.SIMORGH_CONFIG_URL;
   });
 
@@ -111,7 +109,7 @@ describe('getToggles', () => {
     });
 
     it('should catch response errors, log them and return default toggles', async () => {
-      fetchMock.mockResponseOnce({ status: 500 });
+      fetch.mockResponseOnce({ status: 500 });
 
       const getToggles = await import('.');
       const toggles = await getToggles.default('pidgin');
@@ -127,7 +125,7 @@ describe('getToggles', () => {
       const mockServiceUrl =
         'https://mock-config-endpoint?application=simorgh&service=hausa&__amp_source_origin=http://localhost';
       const mockInvalidResponse = 'This is not JSON';
-      fetchMock.mockResponseOnce(mockInvalidResponse);
+      fetch.mockResponseOnce(mockInvalidResponse);
 
       const getToggles = await import('.');
       const toggles = await getToggles.default('hausa');

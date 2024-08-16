@@ -3,8 +3,6 @@ import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
 import withRadioSchedule from '.';
 
-const fetchMock = fetch;
-
 const pageDataPromise = Promise.resolve({
   json: { foo: 'bar' },
   status: 200,
@@ -20,12 +18,12 @@ describe('withRadioSchedule', () => {
 
   afterEach(() => {
     jest.resetAllMocks();
-    fetchMock.resetMocks();
+    fetch.resetMocks();
   });
 
   describe('page data and radio schedule promises resolve with data', () => {
     it('should merge radio schedule data into page data', async () => {
-      fetchMock.mockResponse(JSON.stringify(radioScheduleJson));
+      fetch.mockResponse(JSON.stringify(radioScheduleJson));
 
       const {
         json: { radioScheduleData, foo },
@@ -44,7 +42,7 @@ describe('withRadioSchedule', () => {
 
   describe('if either page data or radio schedule fetch returns non-ok status code', () => {
     it('should not merge radio schedule data into page data if radio schedule fetch returns non-ok status code', async () => {
-      fetchMock.mockResponse(JSON.stringify({ status: 404 }));
+      fetch.mockResponse(JSON.stringify({ status: 404 }));
 
       const {
         json: { radioScheduleData, foo },
@@ -57,7 +55,7 @@ describe('withRadioSchedule', () => {
     });
 
     it('should not merge radio schedule data into page data if page data fetch returns non-ok status code', async () => {
-      fetchMock.mockResponse(JSON.stringify(radioScheduleJson));
+      fetch.mockResponse(JSON.stringify(radioScheduleJson));
 
       const failedPageDataPromise = Promise.resolve({
         status: 404,
@@ -74,7 +72,7 @@ describe('withRadioSchedule', () => {
     });
 
     it('should not merge radio schedule data into page data if both page data and radio schedule return non-ok status code', async () => {
-      fetchMock.mockResponse(JSON.stringify({ status: 404 }));
+      fetch.mockResponse(JSON.stringify({ status: 404 }));
 
       const failedPageDataPromise = Promise.resolve({
         status: 404,
@@ -92,7 +90,7 @@ describe('withRadioSchedule', () => {
 
     describe('fetch API promises rejected', () => {
       it('should return page data without radio schedules if radio schedule fetch promise is rejected', async () => {
-        fetchMock.mockReject(Error('Server not found'));
+        fetch.mockReject(Error('Server not found'));
 
         const {
           json: { radioScheduleData, foo },

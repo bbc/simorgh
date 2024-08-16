@@ -10,8 +10,6 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 
-const fetchMock = fetch;
-
 jest.mock('../../components/ThemeProvider');
 
 const mockToggles = {
@@ -124,12 +122,12 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 describe('Front Page', () => {
   beforeEach(() => {
     delete process.env.SIMORGH_APP_ENV;
-    fetchMock.mockResponse(JSON.stringify(serbianFrontPageData));
+    fetch.mockResponse(JSON.stringify(serbianFrontPageData));
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-    fetchMock.resetMocks();
+    fetch.resetMocks();
   });
 
   describe('Assertions', () => {
