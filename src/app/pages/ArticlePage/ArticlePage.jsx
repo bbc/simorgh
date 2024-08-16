@@ -17,6 +17,7 @@ import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
+import MediaLoader from '#app/components/MediaLoader';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 
 import {
@@ -125,7 +126,7 @@ const ArticlePage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     audio: articleMediaPlayer,
-    video: articleMediaPlayer,
+    video: MediaLoader,
     text,
     byline: props =>
       hasByline ? (

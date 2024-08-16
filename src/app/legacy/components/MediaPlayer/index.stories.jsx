@@ -4,6 +4,7 @@ import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import ThemeProvider from '../../../components/ThemeProvider';
 import readme from './README.md';
+import { Stages } from '../../../hooks/useExperimentHook';
 
 const withDuration = {
   duration: '2:30',
@@ -14,6 +15,12 @@ const withDuration = {
 export default {
   title: 'Components/Media Player',
   component: CanonicalMediaPlayer,
+  argTypes: {
+    experimentStage: {
+      options: [Stages.DEFAULT, Stages.STAGE_1, Stages.STAGE_2, Stages.STAGE_3],
+      control: { type: 'radio' },
+    },
+  },
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
@@ -21,6 +28,19 @@ export default {
     docs: { readme },
   },
 };
+
+export const ExperimentalMediaPlayer = ({experimentStage}) => (
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      mediaInfo={{ title: 'Dog chases cat.', type: 'video', ...withDuration }}
+      title="Default Video player"
+      experimentStage={experimentStage}
+    />
+  </ThemeProvider>
+);
 
 export const ArticlesCanonical = () => (
   <ThemeProvider service="news">

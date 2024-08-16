@@ -64,6 +64,7 @@ const Placeholder = ({
   },
   noJsClassName,
   noJsMessage,
+  experimentStage,
 }) => {
   const { title, datetime, duration, durationSpoken, type, guidanceMessage } =
     mediaInfo;
@@ -74,6 +75,7 @@ const Placeholder = ({
       noJsClassName={noJsClassName}
       data-e2e="media-player__placeholder"
     >
+      <h1>HELLO {experimentStage}</h1>
       <Guidance
         service={service}
         guidanceMessage={guidanceMessage}

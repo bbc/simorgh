@@ -1,12 +1,6 @@
 import useOperaMiniDetection from '#app/hooks/useOperaMiniDetection';
 import { Services } from '#app/models/types/global';
-import React, {
-  PropsWithChildren,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 export enum Stages {

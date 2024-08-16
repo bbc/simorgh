@@ -6,6 +6,7 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
+import { Stages } from '#app/hooks/useExperimentHook';
 import Placeholder from './Placeholder';
 import Amp from './Amp';
 import Canonical from './Canonical';
@@ -61,6 +62,7 @@ const CanonicalMediaPlayerComponent = ({
     'localhost.bbc.com',
     'localhost',
   ],
+  experimentStage = Stages.DEFAULT,
 }) => {
   const [placeholderActive, setPlaceholderActive] = useState(showPlaceholder);
   const handlePlaceholderClick = () => setPlaceholderActive(false);
@@ -79,6 +81,7 @@ const CanonicalMediaPlayerComponent = ({
           mediaInfo={mediaInfo}
           noJsClassName={noJsClassName}
           noJsMessage={noJsMessage}
+          experimentStage={experimentStage}
         />
       ) : (
         <Canonical
