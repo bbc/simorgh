@@ -21,6 +21,7 @@ describe('WithVariant', () => {
       service,
     },
   });
+
   describe('services without variants', () => {
     it.each`
       service
