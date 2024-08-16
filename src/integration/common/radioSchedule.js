@@ -1,7 +1,7 @@
 const servicesWithRadioSchedule = ['indonesia'];
 const servicesWithoutRadioSchedule = ['gahuza'];
 
-export default ({ isAmp }) => {
+export default ({ isAmp = false } = {}) => {
   describe('Radio Schedule', () => {
     const scheduleWrapperEl = document.querySelector(
       '[data-e2e="radio-schedule"]',

@@ -95,6 +95,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Rangkuman',
         shareButtonText: 'Kirim',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Rangkuman',
       error: {
         404: {

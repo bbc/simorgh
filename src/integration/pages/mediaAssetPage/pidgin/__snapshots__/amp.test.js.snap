@@ -269,10 +269,6 @@ exports[`AMP Media Asset Page I can see a bulleted list item with link: <Media A
 
 exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
 
-exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"Media player"`;
-
-exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"`;
-
 exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

@@ -288,13 +288,13 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 }
 
 .emotion-10 {
+  margin-top: 0;
+  list-style-type: none;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -313,24 +313,28 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 
 .emotion-10>li {
   position: relative;
+  color: inherit;
 }
 
 .emotion-10>li::before {
   top: 0.5rem;
-  content: ' ';
+  content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-10>li::before {
   border: 0.1875rem solid #545658;
   background-color: #545658;
   border-radius: 0;
-  left: -1rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   margin-bottom: 1rem;
 }
 
-.emotion-16 {
+.emotion-13 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -338,20 +342,20 @@ exports[`Gist should render the gist with multiple list items 1`] = `
   font-weight: inherit;
 }
 
-.emotion-20 {
+.emotion-17 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-20:visited {
+.emotion-17:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.emotion-20:focus,
-.emotion-20:hover {
+.emotion-17:focus,
+.emotion-17:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -378,18 +382,17 @@ exports[`Gist should render the gist with multiple list items 1`] = `
         dir="ltr"
       >
         <ul
-          class="emotion-10 emotion-11"
-          dir="ltr"
+          class="emotion-10"
           role="list"
         >
           <li
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             role="listitem"
           >
             Here is a summary of the article
           </li>
           <li
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             role="listitem"
           >
             This component supports 
@@ -398,13 +401,13 @@ exports[`Gist should render the gist with multiple list items 1`] = `
             </b>
              
             <i
-              class="emotion-16 emotion-17"
+              class="emotion-13 emotion-14"
             >
               italic,
             </i>
              
             <i
-              class="emotion-16 emotion-17"
+              class="emotion-13 emotion-14"
             >
               <b>
                 bold-italic, 
@@ -412,7 +415,7 @@ exports[`Gist should render the gist with multiple list items 1`] = `
             </i>
             <a
               aria-label="links,, external"
-              class="focusIndicatorReducedWidth emotion-20 emotion-21"
+              class="focusIndicatorReducedWidth emotion-17 emotion-18"
               href="https://www.google.com"
             >
               links,
@@ -420,11 +423,11 @@ exports[`Gist should render the gist with multiple list items 1`] = `
              
             <a
               aria-label="and bold-italic-links,, external"
-              class="focusIndicatorReducedWidth emotion-20 emotion-21"
+              class="focusIndicatorReducedWidth emotion-17 emotion-18"
               href="https://www.google.com"
             >
               <i
-                class="emotion-16 emotion-17"
+                class="emotion-13 emotion-14"
               >
                 <b>
                   and bold-italic-links,
@@ -433,19 +436,19 @@ exports[`Gist should render the gist with multiple list items 1`] = `
             </a>
           </li>
           <li
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             role="listitem"
           >
             It can be as long as editorial desires
           </li>
           <li
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             role="listitem"
           >
             It does not support nested lists
           </li>
           <li
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             role="listitem"
           >
             If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!
@@ -745,13 +748,13 @@ exports[`Gist should render the gist with one list item 1`] = `
 }
 
 .emotion-10 {
+  margin-top: 0;
+  list-style-type: none;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -770,20 +773,24 @@ exports[`Gist should render the gist with one list item 1`] = `
 
 .emotion-10>li {
   position: relative;
+  color: inherit;
 }
 
 .emotion-10>li::before {
   top: 0.5rem;
-  content: ' ';
+  content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-10>li::before {
   border: 0.1875rem solid #545658;
   background-color: #545658;
   border-radius: 0;
-  left: -1rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   margin-bottom: 1rem;
 }
 
@@ -809,12 +816,11 @@ exports[`Gist should render the gist with one list item 1`] = `
         dir="ltr"
       >
         <ul
-          class="emotion-10 emotion-11"
-          dir="ltr"
+          class="emotion-10"
           role="list"
         >
           <li
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             role="listitem"
           >
             Level 1

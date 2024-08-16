@@ -134,6 +134,10 @@ export const mainTranslations = {
     summary: 'Коротко',
     shareButtonText: 'Поделиться',
   },
+  downloads: {
+    instructions: 'You can download and view today’s news.',
+    title: 'File Download',
+  },
   gist: 'Коротко',
   error: {
     404: {

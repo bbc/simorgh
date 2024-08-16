@@ -57,7 +57,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p086jpqy',
+        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -95,6 +95,10 @@ export const service: DefaultServiceConfig = {
         postedAt: 'توقيت النشر',
         summary: 'ملخص',
         shareButtonText: 'شارك',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ملخص',
       error: {
