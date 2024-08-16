@@ -27,7 +27,7 @@ describe('WithVariant', () => {
       service
       ${'news'}
       ${'uzbek'}
-    `('should render the $service page', ({ service }) => {
+    `('should render the /$service page', ({ service }) => {
       const match = getMatchProps(service);
 
       const { queryByText } = render(
@@ -49,19 +49,22 @@ describe('WithVariant', () => {
       ${'serbian'}  | ${'/serbian/lat'}
       ${'ukchina'}  | ${'/ukchina/simp'}
       ${'zhongwen'} | ${'/zhongwen/simp'}
-    `('should redirect from $service to $redirect', ({ service, redirect }) => {
-      const match = getMatchProps(service);
+    `(
+      'should redirect from /$service to $redirect',
+      ({ service, redirect }) => {
+        const match = getMatchProps(service);
 
-      const { queryByText } = render(
-        <MemoryRouter initialEntries={[`/${service}`]}>
-          <Route path="/:service">
-            <ComponentWithVariantRedirect match={match} service={service} />
-          </Route>
-        </MemoryRouter>,
-      );
+        const { queryByText } = render(
+          <MemoryRouter initialEntries={[`/${service}`]}>
+            <Route path="/:service">
+              <ComponentWithVariantRedirect match={match} service={service} />
+            </Route>
+          </MemoryRouter>,
+        );
 
-      expect(queryByText(`This is BBC ${service}`)).not.toBeInTheDocument();
-      expect(queryByText(`Redirected to ${redirect}`)).toBeInTheDocument();
-    });
+        expect(queryByText(`This is BBC ${service}`)).not.toBeInTheDocument();
+        expect(queryByText(`Redirected to ${redirect}`)).toBeInTheDocument();
+      },
+    );
   });
 });
