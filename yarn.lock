@@ -14576,10 +14576,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:6.2.2":
-  version: 6.2.2
-  resolution: "path-to-regexp@npm:6.2.2"
-  checksum: 10/f7d11c1a9e02576ce0294f4efdc523c11b73894947afdf7b23a0d0f7c6465d7a7772166e770ddf1495a8017cc0ee99e3e8a15ed7302b6b948b89a6dd4eea895e
+"path-to-regexp@npm:7.1.0":
+  version: 7.1.0
+  resolution: "path-to-regexp@npm:7.1.0"
+  checksum: 10/7d1714e80375354c24c9d3a0a4151cfa0f5ac98f29609bddf2dd31750b85f4cfaa4a7b6c030bab0d736d5c4cee2c3224227e610d0b48ca5c8e89778e057bcbd4
   languageName: node
   linkType: hard
 
@@ -16311,7 +16311,7 @@ __metadata:
     morgan: "npm:1.10.0"
     node-fetch: "npm:2.6.12"
     npm-run-all2: "npm:6.2.0"
-    path-to-regexp: "npm:6.2.2"
+    path-to-regexp: "npm:7.1.0"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
     ramda: "npm:0.30.1"
