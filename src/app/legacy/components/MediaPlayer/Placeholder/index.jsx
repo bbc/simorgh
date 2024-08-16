@@ -2,6 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
+import SignPost from '#app/components/TranscriptExperiment/SignPost';
+import { BUTTON_COLLAPSE_WIDTH } from '#app/components/TranscriptExperiment/SignPost/index.styles';
+import { Stages } from '#app/hooks/useExperimentHook';
 import Guidance from '../Guidance';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
@@ -18,6 +21,9 @@ const StyledPlayButton = styled(PlayButton)`
   position: absolute;
   bottom: 0;
   left: 0;
+  @media (max-width: ${BUTTON_COLLAPSE_WIDTH}rem) {
+    height: 0;
+  }
   ${({ noJsClassName }) =>
     noJsClassName &&
     `.${noJsClassName} & {
@@ -75,7 +81,9 @@ const Placeholder = ({
       noJsClassName={noJsClassName}
       data-e2e="media-player__placeholder"
     >
-      <h1>HELLO {experimentStage}</h1>
+      {experimentStage === Stages.STAGE_2 && (
+        <SignPost stage={experimentStage} />
+      )}
       <Guidance
         service={service}
         guidanceMessage={guidanceMessage}
