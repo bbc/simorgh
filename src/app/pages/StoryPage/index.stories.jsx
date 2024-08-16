@@ -78,7 +78,7 @@ export default {
   Component,
   title: 'Pages/Story Page',
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
-  paramerers: {
+  parameters: {
     chromatic: { diffThreshold: 0.2 },
   },
 };
