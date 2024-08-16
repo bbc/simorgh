@@ -27,7 +27,7 @@ describe('AmpMostRead', () => {
   // Testing is done in cypress as jest dom does not support/run web workers which run the amp-scripts.
 
   it('should render as expected', async () => {
-    fetchMock.mockOnce(JSON.stringify(mundoMostReadResponse));
+    fetchMock.mockResponseOnce(JSON.stringify(mundoMostReadResponse));
 
     const { container } = render(<MostReadAmpWithContext service="mundo" />, {
       service: 'mundo',
@@ -63,7 +63,7 @@ describe('AmpMostRead', () => {
   });
 
   it('should render fallback when items are empty', async () => {
-    fetchMock.mockOnce(
+    fetchMock.mockResponseOnce(
       JSON.stringify({
         generated: '2022-05-03T14:44:35.496Z',
         lastRecordTimeStamp: '2022-05-03T14:42:00Z',
@@ -91,7 +91,7 @@ describe('AmpMostRead', () => {
   });
 
   it('should render fallback when items are undefined', async () => {
-    fetchMock.mockOnce(
+    fetchMock.mockResponseOnce(
       JSON.stringify({
         generated: '2022-05-03T14:44:35.496Z',
         lastRecordTimeStamp: '2022-05-03T14:42:00Z',

@@ -84,7 +84,7 @@ describe('Canonical RadioSchedule', () => {
         Date.now(),
       );
 
-      fetchMock.mockOnce(JSON.stringify(radioSchedule2Programmes));
+      fetchMock.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
 
       let container;
 
@@ -97,7 +97,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetchMock.mockOnce(JSON.stringify([]));
+      fetchMock.mockResponseOnce(JSON.stringify([]));
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',
@@ -116,7 +116,7 @@ describe('Canonical RadioSchedule', () => {
 
   describe('Without initial data', () => {
     it('renders correctly for a service with a radio schedule and page frequency URL', async () => {
-      fetchMock.mockOnce(JSON.stringify(arabicRadioScheduleData));
+      fetchMock.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
       let container;
 
       await act(async () => {
@@ -127,7 +127,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
-      fetchMock.mockOnce(JSON.stringify(arabicRadioScheduleData));
+      fetchMock.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
       let container;
 
       await act(async () => {
@@ -137,7 +137,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('render radio schedules container with lang code', async () => {
-      fetchMock.mockOnce(JSON.stringify(arabicRadioScheduleData));
+      fetchMock.mockResponseOnce(JSON.stringify(arabicRadioScheduleData));
       let container;
 
       await act(async () => {
@@ -154,7 +154,7 @@ describe('Canonical RadioSchedule', () => {
       radioSchedule2Programmes.schedules =
         radioSchedule2Programmes.schedules.slice(0, 2);
 
-      fetchMock.mockOnce(JSON.stringify(radioSchedule2Programmes));
+      fetchMock.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
 
       let container;
 
@@ -165,7 +165,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetchMock.mockOnce(
+      fetchMock.mockResponseOnce(
         JSON.stringify({
           schedules: [],
         }),
