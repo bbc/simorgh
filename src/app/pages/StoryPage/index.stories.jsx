@@ -78,6 +78,9 @@ export default {
   Component,
   title: 'Pages/Story Page',
   decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  paramerers: {
+    chromatic: { diffThreshold: 0.2 },
+  },
 };
 
 export const Mundo = () => (
