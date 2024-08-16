@@ -189,7 +189,7 @@ describe('Canonical RadioSchedule', () => {
 
     it('does not render when data fetch is rejected', async () => {
       global.console.error = jest.fn();
-      fetch.mockReject(Error('Server not found'));
+      fetch.mockRejectOnce(Error('Server not found'));
       let container;
 
       await act(async () => {
