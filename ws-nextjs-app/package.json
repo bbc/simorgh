@@ -28,6 +28,8 @@
     "@babel/preset-react": "7.24.7",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
+    "@jest/environment": "^29.7.0",
+    "@jest/types": "^29.6.3",
     "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "15.0.7",
     "babel-plugin-transform-rename-import": "2.3.0",

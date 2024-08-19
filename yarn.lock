@@ -19246,6 +19246,8 @@ __metadata:
     "@babel/preset-react": "npm:7.24.7"
     "@emotion/babel-plugin": "npm:11.11.0"
     "@emotion/jest": "npm:^11.11.0"
+    "@jest/environment": "npm:^29.7.0"
+    "@jest/types": "npm:^29.6.3"
     "@testing-library/jest-dom": "npm:6.4.5"
     "@testing-library/react": "npm:15.0.7"
     babel-plugin-transform-rename-import: "npm:2.3.0"
