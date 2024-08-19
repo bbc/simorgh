@@ -56,7 +56,7 @@ describe('Most Read Page Main', () => {
     });
 
     expect(container.querySelector('h1').textContent).toEqual(
-      'De one we dem de read well well',
+      'Di one wey oda users dey read well well',
     );
     expect(container.querySelector('ol')).toBeInTheDocument();
     expect(container.querySelectorAll('li a').length).toEqual(10);
