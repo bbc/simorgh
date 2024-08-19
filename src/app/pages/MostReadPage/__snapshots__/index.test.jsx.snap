@@ -272,7 +272,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   margin: 0;
   padding: 0;
   grid-auto-flow: column;
-  grid-template-rows: repeat(10, auto);
+  grid-template-rows: repeat(5, auto);
 }
 
 @supports (display: grid) {
@@ -401,25 +401,25 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 @media (max-width: 14.9375rem) {
   .emotion-16 {
-    min-width: 2.5rem;
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
   .emotion-16 {
-    min-width: 2.5rem;
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-16 {
-    min-width: 3rem;
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-16 {
-    min-width: 4rem;
+    min-width: 2rem;
   }
 }
 
@@ -573,7 +573,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
         id="content"
         tabindex="-1"
       >
-        De one we dem de read well well
+        Di one wey oda users dey read well well
       </h1>
       <div
         class="emotion-4 emotion-5"
@@ -791,211 +791,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                         datetime="2023-06-18"
                       >
                         De one we dem update for: 18th June 2023
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-13 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-15"
-                >
-                  <div
-                    class="emotion-16"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-17"
-                    >
-                      6
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-18"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
-                      href="https://www.bbc.com/pidgin/articles/cv21n0qzvv6o"
-                    >
-                      CBN move to allow naira trade more freely against di dollar - Wetin e mean? 
-                    </a>
-                    <div
-                      class="emotion-20"
-                    >
-                      <time
-                        class="emotion-21 emotion-22"
-                        datetime="2023-06-15"
-                      >
-                        De one we dem update for: 15th June 2023
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-13 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-15"
-                >
-                  <div
-                    class="emotion-16"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-17"
-                    >
-                      7
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-18"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
-                      href="https://www.bbc.com/pidgin/articles/cd1k74e9pl1o"
-                    >
-                      'We go flush out bad eggs for passport offices' - Acting Comptroller General Immigration 
-                    </a>
-                    <div
-                      class="emotion-20"
-                    >
-                      <time
-                        class="emotion-21 emotion-22"
-                        datetime="2023-06-18"
-                      >
-                        De one we dem update for: 18th June 2023
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-13 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-15"
-                >
-                  <div
-                    class="emotion-16"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-17"
-                    >
-                      8
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-18"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
-                      href="https://www.bbc.com/pidgin/articles/cnd9g0p5p2lo"
-                    >
-                      South Africa taps don dry finish on top electricity kasala
-                    </a>
-                    <div
-                      class="emotion-20"
-                    >
-                      <time
-                        class="emotion-21 emotion-22"
-                        datetime="2023-06-19"
-                      >
-                        De one we dem update for: 19th June 2023
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-13 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-15"
-                >
-                  <div
-                    class="emotion-16"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-17"
-                    >
-                      9
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-18"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
-                      href="/pidgin/tori-65926540"
-                    >
-                      Sharp-sharp facts about President Bola Tinubu special advisers
-                    </a>
-                    <div
-                      class="emotion-20"
-                    >
-                      <time
-                        class="emotion-21 emotion-22"
-                        datetime="2023-06-16"
-                      >
-                        De one we dem update for: 16th June 2023
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="emotion-13 emotion-8"
-                dir="ltr"
-                role="listitem"
-              >
-                <div
-                  class="emotion-15"
-                >
-                  <div
-                    class="emotion-16"
-                    dir="ltr"
-                  >
-                    <span
-                      class="emotion-17"
-                    >
-                      10
-                    </span>
-                  </div>
-                  <div
-                    class="emotion-18"
-                    dir="ltr"
-                  >
-                    <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
-                      href="https://www.bbc.com/pidgin/articles/c0d81l304xdo"
-                    >
-                      Easter date, Workers day, Salah date plus oda public holidays for 2023
-                    </a>
-                    <div
-                      class="emotion-20"
-                    >
-                      <time
-                        class="emotion-21 emotion-22"
-                        datetime="2022-12-31"
-                      >
-                        De one we dem update for: 31st December 2022
                       </time>
                     </div>
                   </div>
