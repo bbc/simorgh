@@ -1,5 +1,4 @@
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
 import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
@@ -50,7 +49,6 @@ const MostReadCanonicalWithContext = ({
 describe('MostRead Canonical', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    fetchMock.restore();
   });
 
   [
