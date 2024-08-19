@@ -63,7 +63,7 @@ exports[`Script Link should render correctly 1`] = `
 
 <div>
   <a
-    class="emotion-0"
+    class="focusIndicatorRemove emotion-0"
     data-variant="cyr"
     href="/serbian/cyr"
   >
