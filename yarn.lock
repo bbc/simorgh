@@ -16122,6 +16122,7 @@ __metadata:
     next: "npm:14.2.5"
     next-test-api-route-handler: "npm:4.0.8"
     ts-node: "npm:10.9.2"
+    undici: "npm:6.19.7"
   peerDependencies:
     "@babel/core": "*"
     "@babel/plugin-proposal-export-default-from": "*"
@@ -16135,7 +16136,6 @@ __metadata:
     jest: "*"
     jest-environment-jsdom: "*"
     npm-run-all2: "*"
-    undici: "*"
   languageName: unknown
   linkType: soft
 
@@ -17562,6 +17562,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 10/0097779d94bc0fd26f0418b3a05472410408877279141ded2bd449167be1aed7ea5b76f756562cb3586a07f251b90799bab22d9019ceba49c037c76445f7cddd
+  languageName: node
+  linkType: hard
+
+"undici@npm:6.19.7":
+  version: 6.19.7
+  resolution: "undici@npm:6.19.7"
+  checksum: 10/77fb8b0377388f6dba8244b015841318d621031211b4f3c2273d809304b77ec44adeba4b89dfd6708bdc044190e18f068e5b231882ef15d057d4624e46f544e3
   languageName: node
   linkType: hard
 
