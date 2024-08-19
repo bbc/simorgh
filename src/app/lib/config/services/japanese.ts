@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         summary: '要点',
         shareButtonText: '共有する',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: '要点',
       error: {
         404: {
@@ -301,10 +305,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ホーム',
         url: '/japanese',
-      },
-      {
-        title: 'パリ五輪',
-        url: '/japanese/topics/c136egn3g6rt',
       },
       {
         title: 'ガザ',

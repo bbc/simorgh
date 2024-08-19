@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Корутунду',
         shareButtonText: 'Бөлүшүү',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Корутунду',
       error: {
         404: {
