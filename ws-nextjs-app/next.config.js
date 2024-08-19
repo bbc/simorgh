@@ -20,6 +20,7 @@ module.exports = {
   assetPrefix: isLocal ? undefined : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
+  // This references the 'name' field in the Simorgh package.json
   transpilePackages: ['simorgh'],
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
