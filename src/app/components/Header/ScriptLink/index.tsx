@@ -44,17 +44,14 @@ export const getVariantHref = ({
   }
 
   try {
-    return compile(path)(
-      {
-        ...pathParams,
-        variant: `/${variant}`,
-        amp: undefined, // we don't want to link to AMP pages directly
-        nonCanonicalArticleRenderPlatform: undefined, // we don't want to link to AMP (.amp) or APP (.app) for the Optimo article route
-      },
-      {
-        encode: (value: any) => value,
-      },
-    );
+    return compile(path, {
+      encode: value => value,
+    })({
+      ...pathParams,
+      variant: `/${variant}`,
+      amp: undefined, // we don't want to link to AMP pages directly
+      nonCanonicalArticleRenderPlatform: undefined, // we don't want to link to AMP (.amp) or APP (.app) for the Optimo article route
+    });
   } catch {
     return fallback;
   }
