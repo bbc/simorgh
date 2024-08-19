@@ -19,16 +19,8 @@ describe('Handle AV Route', () => {
 
   it('should set the cache control header correctly for a Syndication route', async () => {
     mockGetServerSidePropsContext.resolvedUrl = '/news/av-embeds/123';
-    mockGetServerSidePropsContext.query = { service: 'news' };
 
-    const { req, res, resolvedUrl, query } = mockGetServerSidePropsContext;
-
-    await handleAvRoute({
-      req,
-      res,
-      resolvedUrl,
-      query,
-    });
+    await handleAvRoute(mockGetServerSidePropsContext);
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
@@ -39,14 +31,7 @@ describe('Handle AV Route', () => {
   it('should set the cache control header correctly for a non-Syndication route', async () => {
     mockGetServerSidePropsContext.resolvedUrl = '/ws/av-embeds/123';
 
-    const { req, res, resolvedUrl, query } = mockGetServerSidePropsContext;
-
-    await handleAvRoute({
-      req,
-      res,
-      resolvedUrl,
-      query,
-    });
+    await handleAvRoute(mockGetServerSidePropsContext);
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
