@@ -4,7 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import services from '#server/utilities/serviceConfigs';
 import mundoRecommendationsData from '../../../../../data/mundo/recommendations/index.json';
-import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
+import arabicRecommendationsData from './fixtures/recommendations.rtl.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import newsMultipleItems from './newsFixture';
 import CpsRecommendations from '.';

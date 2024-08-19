@@ -1,9 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
-import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
-import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
-import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
 import { data as fixData } from '#data/afrique/cpsAssets/48465371.json';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
@@ -12,6 +9,9 @@ import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
+import styAssetData from './fixtures/storyPage.json';
+import pglAssetData from './fixtures/photoGalleryPage.json';
+import mapAssetData from './fixtures/mediaAssetPage.json';
 import { render } from '../react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
