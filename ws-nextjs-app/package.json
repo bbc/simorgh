@@ -22,7 +22,7 @@
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress -- --e2e",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@babel/core": "*",
     "@babel/plugin-proposal-export-default-from": "*",
     "@babel/preset-react": "*",
@@ -30,17 +30,19 @@
     "@emotion/jest": "*",
     "@testing-library/jest-dom": "*",
     "@testing-library/react": "*",
-    "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "*",
     "cypress-terminal-report": "*",
     "jest": "*",
     "jest-environment-jsdom": "*",
-    "next-test-api-route-handler": "4.0.8",
     "npm-run-all2": "*",
+    "undici": "*"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-rename-import": "2.3.0",
+    "next-test-api-route-handler": "4.0.8",
     "ts-node": "10.9.2"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "undici": "*"
+    "next": "14.2.5"
   }
 }
