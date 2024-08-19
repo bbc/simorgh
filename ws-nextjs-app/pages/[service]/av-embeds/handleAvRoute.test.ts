@@ -4,11 +4,13 @@ import handleAvRoute from './handleAvRoute';
 const mockGetServerSidePropsContext = {
   req: {
     headers: {},
-  },
+  } as unknown as GetServerSidePropsContext['req'],
   res: {
     setHeader: jest.fn(),
-  },
-} as unknown as GetServerSidePropsContext;
+  } as unknown as GetServerSidePropsContext['res'],
+  resolvedUrl: '',
+  query: {},
+} satisfies GetServerSidePropsContext;
 
 describe('Handle AV Route', () => {
   beforeEach(() => {
@@ -16,13 +18,16 @@ describe('Handle AV Route', () => {
   });
 
   it('should set the cache control header correctly for a Syndication route', async () => {
-    const { req, res } = mockGetServerSidePropsContext;
+    mockGetServerSidePropsContext.resolvedUrl = '/news/av-embeds/123';
+    mockGetServerSidePropsContext.query = { service: 'news' };
+
+    const { req, res, resolvedUrl, query } = mockGetServerSidePropsContext;
 
     await handleAvRoute({
       req,
       res,
-      resolvedUrl: '/news/av-embeds/123',
-      query: { service: 'news' },
+      resolvedUrl,
+      query,
     });
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
@@ -32,13 +37,15 @@ describe('Handle AV Route', () => {
   });
 
   it('should set the cache control header correctly for a non-Syndication route', async () => {
-    const { req, res } = mockGetServerSidePropsContext;
+    mockGetServerSidePropsContext.resolvedUrl = '/ws/av-embeds/123';
+
+    const { req, res, resolvedUrl, query } = mockGetServerSidePropsContext;
 
     await handleAvRoute({
       req,
       res,
-      resolvedUrl: '/ws/av-embeds/123',
-      query: {},
+      resolvedUrl,
+      query,
     });
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
