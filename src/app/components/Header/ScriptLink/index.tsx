@@ -94,6 +94,7 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
           variantCookieEnabled && setPreferredVariantCookie(service, variant)
         );
       }}
+      className="focusIndicatorRemove"
     >
       <span css={styles.container}>{text}</span>
     </a>
