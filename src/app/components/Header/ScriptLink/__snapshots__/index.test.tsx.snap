@@ -44,7 +44,7 @@ exports[`Script Link should render correctly 1`] = `
 
 @media (max-width: 37.4375rem) {
   .emotion-0 {
-    height: 2.5px;
+    height: 2.5rem;
   }
 }
 
