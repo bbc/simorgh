@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { MemoryRouter, Route } from 'react-router-dom';
-import { RequestContext } from '#contexts/RequestContext';
-import { UserContext } from '#contexts/UserContext';
+import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
+import { UserContext, UserContextProps } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import * as cookies from '#contexts/UserContext/cookies';
 import {
@@ -12,15 +12,12 @@ import {
   legacyAssetPagePath,
   topicPath,
 } from '#app/routes/utils/regex';
-import {
-  render,
-  fireEvent,
-} from '../../../../components/react-testing-library-with-providers';
-import { service as ukChinaServiceConfig } from '../../../../lib/config/services/ukchina';
-import { service as serbianServiceConfig } from '../../../../lib/config/services/serbian';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import ScriptLinkContainer, { getVariantHref } from '.';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import { render, fireEvent } from '../../react-testing-library-with-providers';
+import { service as ukChinaServiceConfig } from '../../../lib/config/services/ukchina';
+import { service as serbianServiceConfig } from '../../../lib/config/services/serbian';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import ScriptLinkContainer, { getVariantHref, Params } from '.';
+import ThemeProvider from '../../ThemeProvider';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
   cookies,
@@ -34,10 +31,15 @@ const userContextMock = {
 const requestContextMock = {
   variant: 'lat',
   env: 'test',
+  isNextJs: false,
 };
 
-const withRouter = (component, matchPath, path) => {
-  const Wrapper = ({ children }) => (
+const withRouter = (
+  component: React.ReactElement,
+  matchPath: string,
+  path: string,
+) => {
+  const Wrapper = ({ children }: PropsWithChildren) => (
     <MemoryRouter initialEntries={[path]}>
       <Route path={matchPath}>{children}</Route>
     </MemoryRouter>
@@ -73,8 +75,10 @@ const ScriptLinkContainerWithContext = ({
   <ThemeProvider service="serbian" variant="lat">
     <ToggleContext.Provider value={toggleContext}>
       <ServiceContext.Provider value={serviceContext}>
-        <UserContext.Provider value={userContextMock}>
-          <RequestContext.Provider value={requestContext}>
+        <UserContext.Provider value={userContextMock as UserContextProps}>
+          <RequestContext.Provider
+            value={requestContext as RequestContextProps}
+          >
             <ScriptLinkContainer {...props} />
           </RequestContext.Provider>
         </UserContext.Provider>
@@ -139,11 +143,15 @@ describe(`Script Link`, () => {
             matchPath,
             path,
             variantPath,
+            // @ts-expect-error type inference issue
             serviceContext = serbianServiceConfig.lat,
+            // @ts-expect-error type inference issue
             requestContext = requestContextMock,
+            // @ts-expect-error type inference issue
             toggleContext = toggleContextMock,
+            // @ts-expect-error type inference issue
             otherVariant = 'cyr',
-          } = testCases[testCase];
+          } = testCases[testCase as keyof typeof testCases];
 
           const { container } = withRouter(
             <ScriptLinkContainerWithContext
@@ -157,7 +165,7 @@ describe(`Script Link`, () => {
 
           const scriptLink = container.querySelector(
             `a[data-variant="${otherVariant}"]`,
-          );
+          ) as Element;
 
           expect(scriptLink.getAttribute('href')).toBe(variantPath);
         });
@@ -176,13 +184,14 @@ describe(`Script Link`, () => {
 
         const scriptLink = container.querySelector(
           `a[data-variant="${otherVariant}"]`,
-        );
+        ) as Element;
 
         expect(scriptLink.getAttribute('href')).toBe(variantPath);
       });
     });
 
     describe('amp', () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { errorPage, ...ampTestCases } = testCases;
       Object.keys(ampTestCases).forEach(testCase => {
         it(`Script Link should contain link to other variant when on ${testCase}`, () => {
@@ -190,11 +199,15 @@ describe(`Script Link`, () => {
             matchPath,
             path,
             variantPath,
+            // @ts-expect-error type inference issue
             serviceContext = serbianServiceConfig.lat,
+            // @ts-expect-error type inference issue
             requestContext = requestContextMock,
+            // @ts-expect-error type inference issue
             toggleContext = toggleContextMock,
+            // @ts-expect-error type inference issue
             otherVariant = 'cyr',
-          } = testCases[testCase];
+          } = testCases[testCase as keyof typeof testCases];
 
           const { container } = withRouter(
             <ScriptLinkContainerWithContext
@@ -208,7 +221,7 @@ describe(`Script Link`, () => {
 
           const scriptLink = container.querySelector(
             `a[data-variant="${otherVariant}"]`,
-          );
+          ) as Element;
 
           expect(scriptLink.getAttribute('href')).toBe(`${variantPath}`);
         });
@@ -221,7 +234,9 @@ describe(`Script Link`, () => {
         frontPagePath,
         '/serbian/lat',
       );
-      const scriptLink = container.querySelector('a[data-variant="cyr"]');
+      const scriptLink = container.querySelector(
+        'a[data-variant="cyr"]',
+      ) as Element;
       fireEvent.click(scriptLink);
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
     });
@@ -245,7 +260,9 @@ describe(`Script Link`, () => {
         frontPagePath,
         '/serbian/lat',
       );
-      const scriptLink = container.querySelector('a[data-variant="cyr"]');
+      const scriptLink = container.querySelector(
+        'a[data-variant="cyr"]',
+      ) as Element;
       fireEvent.click(scriptLink);
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(0);
     });
@@ -258,7 +275,7 @@ describe(`Script Link`, () => {
       expect(
         getVariantHref({
           path,
-          params: { foo: 'foo', bar: 'bar', variant: '/lat' },
+          params: { foo: 'foo', bar: 'bar', variant: '/lat' } as Params,
           service: 'serbian',
           variant: 'cyr',
         }),

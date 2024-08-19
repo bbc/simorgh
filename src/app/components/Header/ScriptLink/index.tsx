@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+/** @jsx jsx */
+import { useContext } from 'react';
+import { jsx } from '@emotion/react';
 import { compile } from 'path-to-regexp';
 import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
-import ScriptLink from '#psammead/psammead-script-link/src';
 import { UserContext } from '#contexts/UserContext';
 import useToggle from '#hooks/useToggle';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
+import styles from './index.styles';
+
+export type Params = Record<string, string>;
+
+interface UseRouteMatcher {
+  path: string;
+  params: Params;
+}
 
 export const getVariantHref = ({
   path,
@@ -14,6 +23,12 @@ export const getVariantHref = ({
   service,
   variant,
   scriptSwitchId,
+}: {
+  path?: string;
+  params: Params;
+  service: string;
+  variant: string | undefined;
+  scriptSwitchId?: string;
 }) => {
   const fallback = `/${service}/${variant}`;
 
@@ -37,7 +52,7 @@ export const getVariantHref = ({
         nonCanonicalArticleRenderPlatform: undefined, // we don't want to link to AMP (.amp) or APP (.app) for the Optimo article route
       },
       {
-        encode: value => value,
+        encode: (value: any) => value,
       },
     );
   } catch {
@@ -45,9 +60,9 @@ export const getVariantHref = ({
   }
 };
 
-const ScriptLinkContainer = ({ scriptSwitchId = '' }) => {
+const ScriptLink = ({ scriptSwitchId = '' }) => {
   const { setPreferredVariantCookie } = useContext(UserContext);
-  const { service, script, scriptLink } = useContext(ServiceContext);
+  const { service, scriptLink } = useContext(ServiceContext);
   const { isNextJs } = useContext(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
@@ -57,14 +72,15 @@ const ScriptLinkContainer = ({ scriptSwitchId = '' }) => {
   if (!scriptLinkEnabled || isNextJs) return null;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { path, params } = useRouteMatch();
+  const { path, params }: UseRouteMatcher = useRouteMatch();
 
-  const { text, variant } = scriptLink;
+  const { text, variant } = scriptLink || {};
+
+  if (!variant) return null;
 
   return (
-    <ScriptLink
-      script={script}
-      service={service}
+    <a
+      css={styles.link}
       href={getVariantHref({
         path,
         params,
@@ -72,16 +88,16 @@ const ScriptLinkContainer = ({ scriptSwitchId = '' }) => {
         variant,
         scriptSwitchId,
       })}
-      variant={variant}
+      data-variant={variant}
       onClick={() => {
         return (
           variantCookieEnabled && setPreferredVariantCookie(service, variant)
         );
       }}
     >
-      {text}
-    </ScriptLink>
+      <span css={styles.container}>{text}</span>
+    </a>
   );
 };
 
-export default ScriptLinkContainer;
+export default ScriptLink;

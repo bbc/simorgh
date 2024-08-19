@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScriptLink should render correctly 1`] = `
+exports[`Script Link should render correctly 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 400;
   display: inline-block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
@@ -30,6 +30,12 @@ exports[`ScriptLink should render correctly 1`] = `
   }
 }
 
+.emotion-0:focus span,
+.emotion-0:hover span {
+  margin: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
 @media (min-width: 25rem) {
   .emotion-0 {
     line-height: calc(2.25rem - 0.5rem);
@@ -38,17 +44,11 @@ exports[`ScriptLink should render correctly 1`] = `
 
 @media (max-width: 37.4375rem) {
   .emotion-0 {
-    height: 2.5rem;
+    height: 2.5px;
   }
 }
 
-.emotion-1:hover .emotion-2,
-.emotion-1:focus .emotion-2 {
-  margin: 0;
-  border: 0.1875rem solid #FFFFFF;
-}
-
-.emotion-2 {
+.emotion-1 {
   margin: 0.1875rem;
   display: inline-block;
   height: calc(100%);
@@ -56,20 +56,21 @@ exports[`ScriptLink should render correctly 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     line-height: calc(2.5rem - 0.5rem);
   }
 }
 
 <div>
   <a
-    class="focusIndicatorRemove emotion-0 emotion-1"
-    href="https://www.bbc.co.uk/news"
+    class="emotion-0"
+    data-variant="cyr"
+    href="/serbian/cyr"
   >
     <span
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
-      Lat
+      Ћир
     </span>
   </a>
 </div>

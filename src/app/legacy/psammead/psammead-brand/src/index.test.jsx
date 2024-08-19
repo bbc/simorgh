@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import ScriptLink from '#psammead/psammead-script-link/src';
+import ScriptLink from '../../../../components/Header/ScriptLink';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
