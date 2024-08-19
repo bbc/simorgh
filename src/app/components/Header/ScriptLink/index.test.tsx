@@ -35,13 +35,13 @@ const requestContextMock = {
 };
 
 const withRouter = (
-  Component: React.ReactElement,
+  component: React.ReactElement,
   matchPath: string,
   path: string,
 ) => {
   const Wrapper = (
     <MemoryRouter initialEntries={[path]}>
-      <Route path={matchPath}>{Component}</Route>
+      <Route path={matchPath}>{component}</Route>
     </MemoryRouter>
   );
 
