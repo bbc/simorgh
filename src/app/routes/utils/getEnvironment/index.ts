@@ -12,10 +12,6 @@ export default (pathname: string) => {
       return 'test';
     case 'live':
       return 'live';
-    case 'caftest':
-      return 'test';
-    case 'caflive':
-      return 'live';
     default:
       return getEnvConfig().SIMORGH_APP_ENV;
   }

@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 1`] = `"Langsung ke konten"`;
+
 exports[`Canonical On Demand Audio Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=54&amp;p=indonesian.bbc_indonesian_radio.w172x6r5000f38s.page&amp;x1=[urn%3Abbc%3Apips%3Aw172x6r5000f38s]&amp;x2=[responsive]&amp;x3=[news-indonesia]&amp;x4=[id]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Dunia%2520Pagi%2520Ini%2520-%2520BBC%2520News%2520Indonesia]"/>"`;
 
 exports[`Canonical On Demand Audio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Konten ini sudah tidak tersedia lagi."`;
@@ -13,3 +15,301 @@ exports[`Canonical On Demand Audio Page Expired Episode I can see the episode ti
 exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b4828.png.webp"`;
 
 exports[`Canonical On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Indonesia",
+  "url": "/indonesia",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Alasan Anda dapat mempercayai BBC News",
+  "url": "https://www.bbc.com/indonesia/institutional-49283175",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Peraturan Penggunaan",
+  "url": "https://www.bbc.com/indonesia/institutional-37818421",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Mengenai BBC",
+  "url": "https://www.bbc.com/indonesia/institutional-37818424",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Kebijakan tentang Privasi",
+  "url": "https://www.bbc.com/indonesia/institutional-37818425",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Hubungi BBC",
+  "url": "https://www.bbc.co.uk/indonesia/send/u50853401",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Baca tentang peraturan baru terkait link eksternal.",
+  "url": "https://www.bbc.com/indonesia/institutional/2011/02/000001_links",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+
+exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Berita",
+  "url": "/indonesia",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Indonesia",
+  "url": "/indonesia/topics/cjgn7k8yx4gt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Dunia",
+  "url": "/indonesia/topics/cyz8evpl224t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Viral",
+  "url": "/indonesia/topics/cn5w7g2nq6dt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Liputan Mendalam",
+  "url": "/indonesia/topics/cw9qgeqd18zt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Majalah",
+  "url": "/indonesia/topics/cpxrqmrkeg8t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
+
+exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`Canonical On Demand Audio Page I can see the episode title 1`] = `"5 Maret 2020"`;
+
+exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b4828.png.webp"`;
+
+exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732xfp",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732spk",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw58f",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw1j9",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/indonesia/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+
+exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;
+
+exports[`Canonical On Demand Audio Page SEO Lang attribute 1`] = `"id"`;
+
+exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "id",
+        "name": "Indonesian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s",
+        "@type": "WebPage",
+        "name": "Dunia Pagi Ini",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
+          "width": 1024,
+        },
+        "name": "BBC News Indonesia",
+        "publishingPrinciples": "https://www.bbc.com/indonesia/institutional-49283175",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
+      "url": "http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s",
+    },
+  ],
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b4828.png"`;
+
+exports[`Canonical On Demand Audio Page SEO OG image alt 1`] = `"BBC News Indonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO OG locale 1`] = `"id-ID"`;
+
+exports[`Canonical On Demand Audio Page SEO OG site name 1`] = `"BBC News Indonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+
+exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter creator 1`] = `"@bbcindonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter image alt 1`] = `"BBC News Indonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b4828.png"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter site 1`] = `"@bbcindonesia"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`Canonical On Demand Audio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Dunia Pagi Ini, 5 Maret 2020"`;

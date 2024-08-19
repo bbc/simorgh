@@ -32,6 +32,10 @@ export interface Translations {
     summary: string;
     shareButtonText: string;
   };
+  downloads?: {
+    instructions?: string;
+    title?: string;
+  };
   gist?: string;
   error: {
     home?: string;
@@ -233,6 +237,7 @@ export type UgcTranslations = {
   submitButton: string;
 
   // Validation
+  errorSummary: string;
   validationRequired: string;
   validationInvalidEmail: string;
   validationInvalidTelephone: string;

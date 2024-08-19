@@ -10,7 +10,7 @@ import { useFormContext } from '../../FormContext';
 import styles from './styles';
 import { UploadSvg } from './svgs';
 import FileList from './FileList';
-import InvalidMessageBox from '../InvalidMessageBox';
+import InvalidMessageBox from '../../MessageBox/InvalidMessageBox';
 import fallbackTranslations from '../../fallbackTranslations';
 
 export default ({
@@ -66,9 +66,35 @@ export default ({
 
     let liveRegionText = fileUploadLiveRegionText;
 
+    const duplicateFileNameCheck = (
+      file: File,
+      ogFileName: string,
+      fileNameCount = 1,
+    ): File => {
+      const newFile = new File(
+        [file],
+        fileNameCount > 1 ? `${ogFileName} (${fileNameCount})` : file.name,
+        {
+          type: file.type,
+          lastModified: file.lastModified,
+        },
+      );
+
+      if (
+        uploaded.some(uploadedFile => {
+          return newFile.name === uploadedFile.file.name;
+        })
+      ) {
+        return duplicateFileNameCheck(newFile, ogFileName, fileNameCount + 1);
+      }
+
+      return newFile;
+    };
+
     chosenFiles.forEach(file => {
-      uploaded.push({ file } as FileData);
-      liveRegionText = `${liveRegionText}${file.name}, `;
+      const checkedFile = duplicateFileNameCheck(file, file.name);
+      uploaded.push({ file: checkedFile } as FileData);
+      liveRegionText = `${liveRegionText}${checkedFile.name}, `;
     });
 
     handleChange(name, uploaded);

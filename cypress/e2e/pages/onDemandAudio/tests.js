@@ -11,8 +11,12 @@ import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
+import {
+  isScheduleDataComplete,
+  getIsProgramValid,
+} from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 
-export default ({ service, pageType, variant, isAmp }) => {
+export default ({ service, pageType, variant }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(
       'Audio Player',
@@ -30,7 +34,7 @@ export default ({ service, pageType, variant, isAmp }) => {
               );
             }
             const language = appConfig[service][variant].lang;
-            const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
+            const embedUrl = getEmbedUrl({ body: jsonData, language });
             const isBrandPage = isBrand(jsonData);
 
             cy.get('iframe').then(iframe => {
@@ -132,7 +136,6 @@ export default ({ service, pageType, variant, isAmp }) => {
                     convertTimestampsToLocaleString(processedEpisodesData);
 
                   const simorghJsonResWithLocaleStringTimestamp =
-                    !isAmp &&
                     convertTimestampsToLocaleString(
                       win.SIMORGH_DATA.pageData.recentEpisodes,
                     );
@@ -147,12 +150,12 @@ export default ({ service, pageType, variant, isAmp }) => {
                       JSON.stringify(cypressJsonResWithLocaleStringTimestamp),
                     );
                     cy.log('HTML on page - ', renderedEpisodesInnerText);
-                    if (!isAmp) {
-                      cy.log(
-                        'Simorgh json response - ',
-                        JSON.stringify(simorghJsonResWithLocaleStringTimestamp),
-                      );
-                    }
+
+                    cy.log(
+                      'Simorgh json response - ',
+                      JSON.stringify(simorghJsonResWithLocaleStringTimestamp),
+                    );
+
                     /* eslint-enable no-console */
                   }
 
@@ -200,6 +203,68 @@ export default ({ service, pageType, variant, isAmp }) => {
           });
         });
       });
+      describe('Radio Schedule', () => {
+        it('should be displayed if there is enough schedule data', function test() {
+          const currentPath = `${Cypress.env(
+            'currentPath',
+          )}.json${overrideRendererOnTest()}`;
+
+          cy.request(currentPath).then(({ body: jsonData }) => {
+            cy.fixture(`toggles/${service}.json`).then(toggles => {
+              const scheduleIsEnabled = path(
+                ['onDemandRadioSchedule', 'enabled'],
+                toggles,
+              );
+              cy.log(
+                `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+              );
+
+              if (scheduleIsEnabled) {
+                const masterBrand = jsonData.metadata.createdBy;
+
+                const schedulePath =
+                  `/${service}/${masterBrand}/schedule.json${overrideRendererOnTest()}`.replace(
+                    'bbc_afaanoromoo_radio',
+                    'bbc_oromo_radio',
+                  );
+
+                cy.request(schedulePath).then(({ body: scheduleJson }) => {
+                  const { schedules } = scheduleJson;
+                  const isProgramValid = getIsProgramValid(() => {});
+                  const validSchedules = schedules.filter(isProgramValid);
+
+                  const isRadioScheduleDataComplete = isScheduleDataComplete({
+                    schedules: validSchedules,
+                  });
+
+                  cy.log(
+                    `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+                  );
+                  if (scheduleIsEnabled && isRadioScheduleDataComplete) {
+                    cy.log('Schedule has enough data');
+                    cy.get('[data-e2e=radio-schedule]').should('exist');
+                    // cy.get('[data-e2e=live]').should('exist');
+                  } else {
+                    cy.get('[data-e2e=radio-schedule]').should('not.exist');
+                  }
+                });
+              } else {
+                cy.get('[data-e2e=radio-schedule]').should('not.exist');
+              }
+            });
+          });
+        });
+      });
+    });
+    describe('Chartbeat', () => {
+      if (envConfig.chartbeatEnabled) {
+        it('should have a script with src value set to chartbeat source', () => {
+          cy.hasScriptWithChartbeatSrc();
+        });
+        it('should have chartbeat config set to window object', () => {
+          cy.hasGlobalChartbeatConfig();
+        });
+      }
     });
   });
 };
