@@ -1,7 +1,9 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import { BuildConfigProps, MediaBlock } from '../types';
+import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 
 const baseSettings = {
   pageType: 'article' as PageTypes,
@@ -300,5 +302,60 @@ describe('buildSettings', () => {
       'title',
       'Five things ants can teach us about management',
     );
+  });
+
+  it('Should process a On Demand TV block into a valid playlist item.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: hindiTvProgramme.content.blocks as MediaBlock[],
+      pageType: MEDIA_PAGE,
+    });
+
+    expect(result?.playerConfig).toStrictEqual({
+      product: 'news',
+      enableToucan: true,
+      appName: 'news-hindi',
+      superResponsive: true,
+      insideIframe: true,
+      counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+      statsObject: {
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'HINDI',
+        episodePID: 'w172zm8920nck2z',
+      },
+      ui: {
+        locale: {
+          lang: 'hi',
+        },
+        subtitles: {
+          defaultOn: true,
+        },
+      },
+      playlistObject: {
+        title: 'दुनिया',
+        holdingImageURL:
+          'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+        items: [
+          {
+            versionID: 'w1mskyp8ybvqtc6',
+            kind: 'programme',
+            duration: 1192,
+            vpid: 'w1mskyp8ybvqtc6',
+          },
+        ],
+        summary:
+          'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+      },
+      container: {},
+      domid: 'mediaPlayer',
+    });
   });
 });
