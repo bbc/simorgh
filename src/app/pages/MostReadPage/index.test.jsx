@@ -59,6 +59,6 @@ describe('Most Read Page Main', () => {
       'Di one wey oda users dey read well well',
     );
     expect(container.querySelector('ol')).toBeInTheDocument();
-    expect(container.querySelectorAll('li a').length).toEqual(10);
+    expect(container.querySelectorAll('li a').length).toEqual(5);
   });
 });
