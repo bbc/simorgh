@@ -166,7 +166,45 @@ export type ClipMediaBlock = {
   };
 };
 
-export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
+export type TvMediaBlock = {
+  id: 'w172zm8920nck2z';
+  subType: 'episode';
+  format: 'Video';
+  title: '16/08/2024 GMT';
+  synopses: {
+    short: 'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया';
+    medium: 'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया';
+  };
+  imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png';
+  embedding: false;
+  advertising: false;
+  versions: [
+    {
+      versionId: 'w1mskyp8ybvqtc6';
+      types: ['Original'];
+      duration: 1192;
+      durationISO8601: 'PT19M52S';
+      warnings: {};
+      availableTerritories: {
+        uk: true;
+        nonUk: true;
+        world: false;
+      };
+      availableFrom: 1723826990000;
+      availabilityStatus: 'available';
+    },
+  ];
+  availability: 'available';
+  smpKind: 'programme';
+  episodeTitle: 'दुनिया';
+  type: 'media';
+};
+
+export type MediaBlock =
+  | AresMediaBlock
+  | ClipMediaBlock
+  | CaptionBlock
+  | TvMediaBlock;
 
 export type BuildConfigProps = {
   blocks: MediaBlock[];
