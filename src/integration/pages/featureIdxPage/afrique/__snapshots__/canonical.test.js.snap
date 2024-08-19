@@ -75,68 +75,61 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 2`] = `
 {
-  "text": "JO 2024",
-  "url": "/afrique/topics/cgrjz0yz4n9t",
-}
-`;
-
-exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
-{
   "text": "Afrique",
   "url": "/afrique/topics/cvqxn2k7kv7t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
 {
   "text": "Monde",
   "url": "/afrique/topics/cvqxn21vx11t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
 {
   "text": "Santé",
   "url": "/afrique/topics/c06gq9jxz3rt",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
 {
   "text": "Science et technologie",
   "url": "/afrique/topics/crezq2zk0q4t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
 {
   "text": "Economie",
   "url": "/afrique/topics/cnq687nr9v1t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
 {
   "text": "Culture",
   "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
 {
   "text": "Vidéos",
   "url": "/afrique/topics/cz4vn9gyd6rt",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
 {
   "text": "Nos émissions",
   "url": "/afrique/topics/c88nzggm8gxt",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 10`] = `
 {
   "text": "Ecoutez en direct",
   "url": "/afrique/bbc_afrique_radio/liveradio",

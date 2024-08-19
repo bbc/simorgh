@@ -77,6 +77,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Puntos clave',
         shareButtonText: 'Compartir',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Sumario',
       error: {
         404: {
@@ -108,6 +112,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/mundo',
         },
+      },
+      byline: {
+        articleInformation: 'Información del artículo',
+        author: 'Autor',
+        listItemImage: 'Imagen del autor',
+        published: 'Fecha de publicación',
+        reportingFrom: 'Informa desde',
+        role: 'Título del autor',
       },
       consentBanner: {
         privacy: {

@@ -17,6 +17,7 @@ import {
 } from '../../topic/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
+  AV_EMBEDS,
   CPS_ASSET,
   HOME_PAGE,
   LIVE_PAGE,
@@ -24,15 +25,7 @@ import {
   TOPIC_PAGE,
   UGC_PAGE,
 } from '../pageTypes';
-
-export interface UrlConstructParams {
-  pathname: string;
-  pageType: PageTypes;
-  service: Services;
-  variant?: Variants;
-  page?: string;
-  isAmp?: boolean;
-}
+import parseAvRoute from '../parseAvRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
@@ -59,7 +52,7 @@ const isFrontPage = ({
 
 interface GetIdProps {
   pageType: PageTypes;
-  service: Services;
+  service?: Services;
   variant?: Variants;
   env: Environments;
 }
@@ -85,14 +78,16 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
          * Legacy Front Pages are curated in CPS and fetched from the BFF using the CPS_ASSET page type
          * This functionality will be removed once all front pages migrated to the new HomePage
          *  */
-        return env !== 'local' && isFrontPage({ path, service, variant })
+        return env !== 'local' &&
+          service &&
+          isFrontPage({ path, service, variant })
           ? getFrontPageId(path)
           : getCpsId(path);
       };
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        return env !== 'local'
+        return env !== 'local' && service
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
@@ -111,12 +106,37 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case UGC_PAGE:
       getIdFunction = getUgcId;
       break;
+    case AV_EMBEDS:
+      getIdFunction = (path: string) => {
+        const parsedRoute = parseAvRoute(path);
+
+        const isShortCpsId = parsedRoute?.assetId?.length === 8;
+
+        const withServiceAndVariant = !isShortCpsId
+          ? `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          : '';
+
+        const id = `${withServiceAndVariant}/${parsedRoute.assetId}`;
+
+        return id;
+      };
+      break;
     default:
       getIdFunction = () => null;
       break;
   }
   return pipe(getUrlPath, removeAmp, getIdFunction);
 };
+
+export interface UrlConstructParams {
+  pathname: string;
+  pageType: PageTypes;
+  service?: Services;
+  variant?: Variants;
+  page?: string;
+  isAmp?: boolean;
+  mediaId?: string | null;
+}
 
 const constructPageFetchUrl = ({
   pathname,
@@ -125,6 +145,7 @@ const constructPageFetchUrl = ({
   variant,
   page,
   isAmp,
+  mediaId,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
@@ -137,7 +158,9 @@ const constructPageFetchUrl = ({
 
   const queryParameters = {
     id,
-    service,
+    ...(service && {
+      service,
+    }),
     pageType,
     ...(variant && {
       variant,
@@ -147,6 +170,10 @@ const constructPageFetchUrl = ({
     }),
     ...(isAmp && {
       isAmp,
+    }),
+    // MediaId can be supplied by av-embeds routes to determine which media asset to return
+    ...(mediaId && {
+      mediaId,
     }),
     ...(env && { serviceEnv: env }),
   };
@@ -196,6 +223,20 @@ const constructPageFetchUrl = ({
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
         fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
+        break;
+      }
+      case AV_EMBEDS: {
+        const parsedRoute = parseAvRoute(pathname);
+
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+
+        if (parsedRoute.isSyndicationRoute) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}`,
+          );
+        }
+
         break;
       }
       default:

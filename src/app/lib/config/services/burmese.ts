@@ -88,6 +88,10 @@ export const service: DefaultServiceConfig = {
         summary: 'အနှစ်ချုပ်',
         shareButtonText: 'ဝေမျှပါ',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'အနှစ်ချုပ်',
       error: {
         404: {

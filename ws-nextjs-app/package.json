@@ -23,7 +23,7 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.24.9",
+    "@babel/core": "7.25.2",
     "@babel/plugin-proposal-export-default-from": "7.24.7",
     "@babel/preset-react": "7.24.7",
     "@emotion/babel-plugin": "11.11.0",
@@ -40,7 +40,7 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "next": "14.2.3",
-    "undici": "6.19.2"
+    "next": "14.2.5",
+    "undici": "6.19.7"
   }
 }

@@ -11,6 +11,7 @@ const CallToActionLink = ({
   className,
   children,
   eventTrackingData,
+  download = false,
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
@@ -20,6 +21,7 @@ const CallToActionLink = ({
       className={className}
       css={styles.linkBackground}
       onClick={clickTrackerHandler}
+      download={download}
     >
       <div css={styles.linkTextWrapper}>
         <Text size="pica" fontVariant="sansBold" css={styles.linkText}>

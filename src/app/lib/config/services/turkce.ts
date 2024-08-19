@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Özet',
         shareButtonText: 'Paylaş',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Özet',
       error: {
         404: {
@@ -319,10 +323,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
-      },
-      {
-        title: '2024 Paris Olimpiyatları',
-        url: '/turkce/topics/cjrrzp9q7gwt',
       },
       {
         title: 'Rusya-Ukrayna Savaşı',
