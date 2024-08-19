@@ -21,7 +21,7 @@ const styles = {
         lineHeight: `calc(2.25rem - ${spacings.FULL}rem)`,
       },
       [mq.GROUP_2_MAX_WIDTH]: {
-        height: spacings.QUINTUPLE,
+        height: `${spacings.QUINTUPLE}rem`,
       },
     }),
   container: ({ spacings, mq }: Theme) =>
