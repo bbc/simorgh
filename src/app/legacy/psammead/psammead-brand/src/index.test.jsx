@@ -1,11 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import ScriptLink from '../../../../components/Header/ScriptLink';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Brand from '.';
-import SkipLink from './SkipLink';
 
 const svg = {
   group: (
