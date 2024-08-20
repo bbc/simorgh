@@ -11,9 +11,11 @@ exports[`Script Link should render correctly 1`] = `
   color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: 2.25rem;
+  height: 2.75rem;
   border: 0.0625rem solid #FFFFFF;
   margin: 0.5rem 0 0.5rem 0.5rem;
+  min-width: 2.75rem;
+  text-align: center;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -42,23 +44,18 @@ exports[`Script Link should render correctly 1`] = `
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width: 14.9375rem) {
   .emotion-0 {
-    height: 2.5rem;
+    margin: 0.5rem 0 0.5rem 0;
   }
 }
 
 .emotion-1 {
-  margin: 0.1875rem;
+  margin-top: 0.1875rem;
+  width: 100%;
   display: inline-block;
   height: calc(100%);
-  padding: 0 0.5rem;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-1 {
-    line-height: calc(2.5rem - 0.5rem);
-  }
+  line-height: calc(2.75rem - 0.5rem);
 }
 
 <div>
