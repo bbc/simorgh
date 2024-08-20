@@ -1,9 +1,6 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
-import { withKnobs } from '@storybook/addon-knobs';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -18,7 +15,6 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
-import { withServicesKnob } from '#app/legacy/psammead/psammead-storybook-helpers/src';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
@@ -64,24 +60,15 @@ const ComponentWithContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/news/articles/c0000000001o"
-          service={service}
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
   );
@@ -103,23 +90,15 @@ const ComponentWithServiceContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          service={service}
-        >
-          <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </MemoryRouter>
-          </UserContextProvider>
-        </RequestContextProvider>
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>
   );
@@ -128,50 +107,40 @@ const ComponentWithServiceContext = ({
 export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
-  decorators: [withKnobs, withServicesKnob()],
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = props => (
-  <ComponentWithContext {...props} data={articleData} />
-);
-export const Burmese = props => (
-  <ComponentWithServiceContext
-    {...props}
-    data={articleDataBurmese}
-    service="burmese"
-  />
+export const ArticlePage = () => <ComponentWithContext data={articleData} />;
+export const Burmese = () => (
+  <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
 
-export const ArticlePageWithRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithRelatedContent} />
+export const ArticlePageWithRelatedContent = () => (
+  <ComponentWithContext data={articleDataWithRelatedContent} />
 );
 
-export const ArticlePageWithSingleRelatedContent = props => (
-  <ComponentWithContext {...props} data={articleDataWithSingleRelatedContent} />
+export const ArticlePageWithSingleRelatedContent = () => (
+  <ComponentWithContext data={articleDataWithSingleRelatedContent} />
 );
 
-export const ArticlePageWithPodcastPromo = props => (
+export const ArticlePageWithPodcastPromo = () => (
   <ComponentWithContext
-    {...props}
     data={articleDataWithPodcastPromo}
     service="russian"
     podcastEnabled
   />
 );
 
-export const ArticlePageWithPodcastPromoRightToLeft = props => (
+export const ArticlePageWithPodcastPromoRightToLeft = () => (
   <ComponentWithContext
-    {...props}
     data={articleDataWithPodcastPromo}
     service="arabic"
     podcastEnabled
   />
 );
 
-export const ArticlePageWithPodcastNews = props => (
+export const ArticlePageWithPodcastNews = () => (
   <ComponentWithServiceContext
-    {...props}
     data={articleNewsWithPodcastPromo}
     service="news"
     podcastEnabled

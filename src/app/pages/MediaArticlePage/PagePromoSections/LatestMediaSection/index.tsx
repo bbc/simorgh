@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
@@ -79,13 +78,13 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       <SectionLabel
         columnType="secondary"
         dir={dir}
-        href={null}
+        href=""
         labelId={LABEL_ID}
-        linkText={null}
+        linkText=""
         script={script}
         service={service}
         backgroundColor="transparent"
-        overrideHeadingAs={null}
+        overrideHeadingAs=""
         visuallyHidden={false}
         css={styles.sectionTitle}
       >

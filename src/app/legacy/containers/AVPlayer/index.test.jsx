@@ -6,7 +6,6 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AVPlayer from '.';
 
-/* eslint-disable react/prop-types */
 const GenerateFixtureData = ({
   platform,
   assetId = 'w3ct0l8r',

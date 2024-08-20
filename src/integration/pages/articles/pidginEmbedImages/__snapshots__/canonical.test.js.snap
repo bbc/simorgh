@@ -6,12 +6,12 @@ exports[`Canonical Articles Embed Images should match snapshot 1`] = `
   data-e2e="embed-image"
 >
   <div
-    class="bbc-sni631"
-    style="padding-bottom:76.72%"
+    class="bbc-j1srjl"
+    style="padding-bottom:76.72%;overflow:hidden"
   >
     <img
       alt="CPS vs Optimo usage. .  ."
-      class="bbc-1uwua2r"
+      class="bbc-139onq"
       height="1252"
       src="https://ichef.bbci.co.uk/news/1632/idt2-test/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/816"
       style="aspect-ratio:1632 / 1252"

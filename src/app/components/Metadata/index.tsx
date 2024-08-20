@@ -1,4 +1,3 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
 import { useContext } from 'react';
@@ -14,7 +13,7 @@ import {
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
 
-const ENGLISH_SERVICES = ['news', 'sport'];
+const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
 const iconSizes: IconSizes = {
   'apple-touch-icon': [
@@ -75,6 +74,7 @@ const MetadataContainer = ({
     twitterCreator,
     twitterSite,
     iTunesAppId,
+    googleSiteVerification,
   } = useContext(ServiceContext);
   const {
     palette: { BRAND_BACKGROUND },
@@ -123,6 +123,12 @@ const MetadataContainer = ({
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
       <meta name="theme-color" content={BRAND_BACKGROUND} />
+      {googleSiteVerification && (
+        <meta
+          name="google-site-verification"
+          content={googleSiteVerification}
+        />
+      )}
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -144,6 +150,10 @@ const MetadataContainer = ({
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
       <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
+      <meta
+        name="facebook-domain-verification"
+        content="mydfaj4vz8t5psneihy4nm6ff52fac"
+      />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-TileColor" content={BRAND_BACKGROUND} />
       <meta

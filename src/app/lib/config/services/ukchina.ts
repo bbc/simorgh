@@ -92,11 +92,6 @@ export const service: ChineseConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: '热播',
-      numberOfItems: 5,
-      hasMostWatched: false,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -140,6 +135,11 @@ export const service: ChineseConfig = {
         breaking: '最新消息',
         postedAt: '张贴于',
         summary: '概要',
+        shareButtonText: '分享',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: '概要',
       error: {
@@ -359,11 +359,6 @@ export const service: ChineseConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: '熱播',
-      numberOfItems: 5,
-      hasMostWatched: false,
-    },
     recommendations: {
       hasStoryRecommendations: false,
     },
@@ -404,6 +399,11 @@ export const service: ChineseConfig = {
         breaking: '最新消息',
         postedAt: '張貼在',
         summary: '概要',
+        shareButtonText: '分享',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: '概要',
       error: {

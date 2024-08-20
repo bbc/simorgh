@@ -6,8 +6,8 @@ exports[`AMP Articles Embed Images should match snapshot 1`] = `
   data-e2e="embed-image"
 >
   <div
-    class="bbc-sni631"
-    style="padding-bottom:82.34%"
+    class="bbc-j1srjl"
+    style="padding-bottom:82.34%;overflow:hidden"
   >
     <amp-img
       alt="CPS vs Optimo usage. .  ."

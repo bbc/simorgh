@@ -73,6 +73,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Son dakika',
         postedAt: 'Basım saati',
         summary: 'Özet',
+        shareButtonText: 'Paylaş',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Özet',
       error: {
@@ -262,11 +267,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Son güncelleme:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'En fazla izlenen içerik',
-      numberOfItems: 5,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

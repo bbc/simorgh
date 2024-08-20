@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';
@@ -11,8 +11,7 @@ import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 
 jest.mock('./ThemeProvider');
 
-interface Props {
-  children: JSX.Element | JSX.Element[];
+interface Props extends PropsWithChildren {
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
@@ -30,6 +29,7 @@ interface Props {
   service?: Services;
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
+  showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   variant?: Variants;
   isNextJs?: boolean;
@@ -53,6 +53,7 @@ const AllTheProviders: FC<Props> = ({
   variant = 'default',
   pageLang = undefined,
   showAdsBasedOnLocation = false,
+  showCookieBannerBasedOnCountry = true,
   statusCode = null,
   isNextJs = false,
   isUK = null,
@@ -75,6 +76,7 @@ const AllTheProviders: FC<Props> = ({
           pathname={pathname}
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           statusCode={statusCode}
           isUK={isUK}
         >
@@ -109,6 +111,7 @@ const customRender = (
     toggles,
     variant,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry,
     statusCode,
     isNextJs,
     pageLang,
@@ -131,6 +134,7 @@ const customRender = (
         toggles={toggles}
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
+        showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
         statusCode={statusCode}
         isNextJs={isNextJs}
         pageLang={pageLang}

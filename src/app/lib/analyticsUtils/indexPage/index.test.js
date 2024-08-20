@@ -1,8 +1,4 @@
-import {
-  ARTICLE_PAGE,
-  FRONT_PAGE,
-  INDEX_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import {
   getContentId,
   getLanguage,
@@ -161,12 +157,6 @@ describe('getContentType', () => {
     const contentType = getContentType(FRONT_PAGE);
 
     expect(contentType).toEqual('index-home');
-  });
-
-  it('should return index-section when pageType is IDX', () => {
-    const contentType = getContentType(INDEX_PAGE);
-
-    expect(contentType).toEqual('index-section');
   });
 
   it('should return null when pageType is not frontPage or IDX', () => {

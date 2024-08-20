@@ -19,7 +19,6 @@ interface FetchDataFromBffParams {
   service: Services;
   variant?: Variants;
   isAmp?: boolean;
-  isCaf?: boolean;
   page?: string;
 }
 
@@ -36,7 +35,6 @@ export default async ({
   service,
   variant,
   isAmp,
-  isCaf,
   page,
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
@@ -48,21 +46,19 @@ export default async ({
     service,
     variant,
     isAmp,
-    isCaf,
     page,
   });
 
-  const agent = isLocal ? undefined : await getAgent();
-  const timeout = isLocal && BFF_IS_LOCAL ? 60000 : null;
-  const optHeaders: OptHeaders =
-    isLocal && !BFF_IS_LOCAL
-      ? undefined
-      : {
-          'ctx-service-env': getEnvironment(pathname),
-        };
+  const agent = isLocal || BFF_IS_LOCAL ? undefined : await getAgent();
+  const timeout = isLocal || BFF_IS_LOCAL ? 60000 : null;
+
+  const optHeaders: OptHeaders = isLocal
+    ? undefined
+    : {
+        'ctx-service-env': environment,
+      };
 
   if (BFF_IS_LOCAL && optHeaders) {
-    optHeaders['ctx-service-env'] = process.env.BFF_ENV || 'live';
     optHeaders.Accept = 'text/html,application/xhtml+xml,application/xml';
   }
 

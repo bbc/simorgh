@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
-import { shape, string, number, bool, func, node } from 'prop-types';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -12,7 +11,6 @@ import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
-import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
@@ -26,6 +24,7 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -34,7 +33,9 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
-const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+const staticAssetsPath = `${
+  getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
+}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
@@ -80,10 +81,6 @@ const PageGrid = ({ children }) => (
   </GelPageGrid>
 );
 
-PageGrid.propTypes = {
-  children: node.isRequired,
-};
-
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -110,7 +107,6 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const { dir, liveRadioOverrides, lang, service, translations, serviceName } =
     useContext(ServiceContext);
@@ -126,7 +122,6 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
-    isAmp,
     queryString: location.search,
   });
 
@@ -265,22 +260,6 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       )}
     </>
   );
-};
-
-OnDemandAudioPage.propTypes = {
-  MediaError: func.isRequired,
-  mediaIsAvailable: bool.isRequired,
-  pageData: shape({
-    isPodcast: bool,
-    brandTitle: string,
-    headline: string,
-    summary: string,
-    language: string,
-    releaseDateTimeStamp: number,
-    imageUrl: string,
-    imageAltText: string,
-    episodeTitle: string,
-  }).isRequired,
 };
 
 export default OnDemandAudioPage;

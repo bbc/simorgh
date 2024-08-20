@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   render,
   screen,
@@ -14,8 +14,9 @@ interface FixtureProps {
 }
 
 const Fixture = ({ duration, mediaType }: FixtureProps) => {
+  const memoizedValue = useMemo(() => ({ mediaType }), [mediaType]);
   return (
-    <PromoContext.Provider value={{ mediaType }}>
+    <PromoContext.Provider value={memoizedValue}>
       <LatestMediaIndicator duration={duration} />
     </PromoContext.Provider>
   );

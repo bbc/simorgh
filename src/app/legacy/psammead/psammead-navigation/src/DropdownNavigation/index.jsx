@@ -1,6 +1,5 @@
 import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
-import { shape, string, bool, func, oneOf, node } from 'prop-types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
   GEL_SPACING_HLF,
@@ -13,7 +12,6 @@ import {
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getPica } from '#psammead/gel-foundations/src/typography';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
@@ -62,11 +60,6 @@ export const CanonicalDropdown = ({ isOpen, children }) => {
       {children}
     </StyledDropdown>
   );
-};
-
-CanonicalDropdown.propTypes = {
-  isOpen: bool.isRequired,
-  children: node.isRequired,
 };
 
 export const AmpDropdown = styled.div`
@@ -126,23 +119,26 @@ StyledCurrentLink.defaultProps = {
 export const DropdownLi = ({
   children,
   script,
-  currentPageText,
-  active,
+  clickTrackerHandler = null,
+  currentPageText = null,
+  active = false,
   service,
   url,
-  dir,
+  dir = 'ltr',
+  viewRef = null,
 }) => {
   const ariaId = `dropdownNavigation-${children
     .replace(/\s+/g, '-')
     .toLowerCase()}`;
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    <StyledDropdownLi role="listitem">
+    <StyledDropdownLi role="listitem" ref={viewRef}>
       <StyledDropdownLink
         script={script}
         service={service}
         href={url}
         aria-labelledby={ariaId}
+        onClick={clickTrackerHandler}
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -157,22 +153,6 @@ export const DropdownLi = ({
       </StyledDropdownLink>
     </StyledDropdownLi>
   );
-};
-
-DropdownLi.propTypes = {
-  children: string.isRequired,
-  url: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  active: bool,
-  currentPageText: string,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-DropdownLi.defaultProps = {
-  active: false,
-  currentPageText: null,
-  dir: 'ltr',
 };
 
 const iconBorderPosition = `
@@ -193,7 +173,6 @@ const getButtonDimensions = lineHeight =>
   `height: ${calculateButtonSide(lineHeight)}rem;
   width: ${calculateButtonSide(lineHeight)}rem;`;
 
-// eslint-disable-next-line react/prop-types
 const Button = ({ script, ...props }) => <button type="button" {...props} />;
 
 const MenuButton = styled(Button)`
@@ -236,7 +215,7 @@ export const CanonicalMenuButton = ({
   announcedText,
   isOpen,
   onClick,
-  dir,
+  dir = 'ltr',
   script,
 }) => (
   <MenuButton
@@ -250,18 +229,6 @@ export const CanonicalMenuButton = ({
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
   </MenuButton>
 );
-
-CanonicalMenuButton.propTypes = {
-  announcedText: string.isRequired,
-  onClick: func.isRequired,
-  isOpen: bool.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  script: shape(scriptPropType).isRequired,
-};
-
-CanonicalMenuButton.defaultProps = {
-  dir: 'ltr',
-};
 
 const AmpHead = () => (
   <Helmet>
@@ -278,7 +245,12 @@ const expandedHandler =
 
 const initialState = { expanded: false };
 
-export const AmpMenuButton = ({ announcedText, onToggle, dir, script }) => (
+export const AmpMenuButton = ({
+  announcedText,
+  onToggle,
+  dir = 'ltr',
+  script,
+}) => (
   <>
     <AmpHead />
     <amp-state id="menuState">
@@ -307,14 +279,3 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir, script }) => (
     </MenuButton>
   </>
 );
-
-AmpMenuButton.propTypes = {
-  announcedText: string.isRequired,
-  onToggle: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  script: shape(scriptPropType).isRequired,
-};
-
-AmpMenuButton.defaultProps = {
-  dir: 'ltr',
-};

@@ -15,6 +15,23 @@ export interface AMPAnalyticsData {
   triggers: { trackPageview: { on: string; request: string } };
 }
 
+export interface ATIData {
+  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
+  categoryName?: string | null;
+  contentId?: string | null;
+  contentType?: string;
+  language?: string | null;
+  ldpThingIds?: string | null;
+  ldpThingLabels?: string | null;
+  nationsProducer?: string | null;
+  pageIdentifier?: string;
+  pageTitle?: string | null;
+  producerId?: string | null;
+  producerName?: string | null;
+  timePublished?: string | null;
+  timeUpdated?: string | null;
+}
+
 export interface PageData {
   metadata?: {
     analyticsLabels?: {
@@ -26,10 +43,7 @@ export interface PageData {
       pageTitle?: string;
       producer?: string;
     };
-    atiAnalytics?: {
-      producerId?: string;
-      chapter?: string;
-    };
+    atiAnalytics?: ATIData;
     locators?: { optimoUrn?: string; curie?: string };
     passport?: {
       category?: { categoryId?: string; categoryName?: string };
@@ -64,23 +78,6 @@ export interface PageData {
   title?: string;
 }
 
-export interface ATIData {
-  campaigns?: { campaignId?: string; campaignName?: string }[] | null;
-  categoryName?: string | null;
-  contentId?: string | null;
-  contentType?: string;
-  language?: string | null;
-  ldpThingIds?: string | null;
-  ldpThingLabels?: string | null;
-  nationsProducer?: string | null;
-  pageIdentifier?: string;
-  pageTitle?: string | null;
-  producerId?: string | null;
-  producerName?: string | null;
-  timePublished?: string | null;
-  timeUpdated?: string | null;
-}
-
 export interface ATIDataWithContexts {
   requestContext: RequestContextProps;
   serviceContext: ServiceConfig;
@@ -111,6 +108,7 @@ export interface ATIEventTrackingProps {
   type?: string;
   advertiserID?: string;
   url?: string;
+  detailedPlacement?: string;
 }
 
 export interface ATIPageTrackingProps {

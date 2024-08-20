@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { LiveRadioPage } from '..';
@@ -10,6 +8,7 @@ import korean from './fixtureData/korean';
 import tigrinya from './fixtureData/tigrinya';
 import afaanoromoo from './fixtureData/afaanoromoo';
 import amharic from './fixtureData/amharic';
+import withServicesDecorator from '#storybook/withServicesDecorator';
 
 const liveRadioFixtures = {
   indonesia,
@@ -32,38 +31,34 @@ const matchFixtures = service => ({
   },
 });
 
-// eslint-disable-next-line react/prop-types
-const Component = ({ service }) => (
-  <BrowserRouter>
-    <LiveRadioPage
-      match={matchFixtures(service)}
-      pageData={liveRadioFixtures[service]}
-      status={200}
-      service={service}
-      isAmp={false}
-      loading={false}
-      error=""
-      pageType={MEDIA_PAGE}
-    />
-  </BrowserRouter>
-);
+const Component = (_, { service }) => {
+  return (
+    <BrowserRouter>
+      <LiveRadioPage
+        match={matchFixtures(service)}
+        pageData={liveRadioFixtures[service]}
+        status={200}
+        service={service}
+        loading={false}
+        error=""
+        pageType={MEDIA_PAGE}
+      />
+    </BrowserRouter>
+  );
+};
 
 export default {
   Component,
   title: 'Pages/Radio Page',
-  decorators: [
-    withKnobs,
-    withServicesKnob({
-      defaultService: 'indonesia',
-      services: Object.keys(liveRadioFixtures),
-    }),
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-  ],
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
+      delay: 8000,
+      pauseAnimationAtEnd: false,
     },
   },
+  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
 };
 
 export const Page = Component;

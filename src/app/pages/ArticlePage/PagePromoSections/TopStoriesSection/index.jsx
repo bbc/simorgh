@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
-import { arrayOf, shape } from 'prop-types';
-import { storyItem } from '#models/propTypes/storyItem';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
@@ -43,7 +41,7 @@ const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   );
 };
 
-const TopStoriesSection = ({ content }) => {
+const TopStoriesSection = ({ content = [] }) => {
   const { translations, script, service } = useContext(ServiceContext);
   const eventTrackingData = {
     block: {
@@ -106,9 +104,5 @@ const TopStoriesSection = ({ content }) => {
     </StyledTopStoriesSection>
   );
 };
-
-TopStoriesSection.propTypes = { content: arrayOf(shape(storyItem)) };
-
-TopStoriesSection.defaultProps = { content: [] };
 
 export default TopStoriesSection;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { string, oneOf, func } from 'prop-types';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -55,11 +55,11 @@ const TimeDuration = styled.time`
 `;
 
 const PlayButton = ({
-  className,
+  className = '',
   datetime,
   duration,
   durationSpoken,
-  type,
+  type = 'video',
   service,
   title,
   onClick,
@@ -72,7 +72,11 @@ const PlayButton = ({
   } `.trim();
 
   return (
-    <Button className={className} service={service} onClick={onClick}>
+    <Button
+      service={service}
+      onClick={onClick}
+      {...(className && { className })}
+    >
       <VisuallyHiddenText>{hiddenText}</VisuallyHiddenText>
       <IconWrapper
         datetime={datetime}
@@ -93,27 +97,6 @@ const PlayButton = ({
       )}
     </Button>
   );
-};
-
-PlayButton.propTypes = {
-  datetime: string,
-  duration: string,
-  durationSpoken: string,
-  type: oneOf(['video', 'audio']),
-  title: string.isRequired,
-  service: string.isRequired,
-  onClick: func.isRequired,
-  className: string,
-  guidanceMessage: string,
-};
-
-PlayButton.defaultProps = {
-  datetime: null,
-  duration: null,
-  durationSpoken: null,
-  type: 'video',
-  className: null,
-  guidanceMessage: null,
 };
 
 export default PlayButton;

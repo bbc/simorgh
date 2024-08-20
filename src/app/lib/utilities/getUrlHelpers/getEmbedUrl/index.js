@@ -1,4 +1,5 @@
 import isLive from '../../isLive';
+import { getEnvConfig } from '../../getEnvConfig';
 
 const AV_ROUTE = 'ws/av-embeds';
 
@@ -25,18 +26,12 @@ const shouldOverrideMorphEnv = (queryString, type) => {
   return isMediaType;
 };
 
-const isDev = () => process.env.SIMORGH_APP_ENV === 'local';
+const isDev = () => getEnvConfig().SIMORGH_APP_ENV === 'local';
 
 const getBaseUrl = (queryString, isAmp) => {
   // In some scenarios, we use the same base URL as the parent
   const relativeBaseUrl = '';
   switch (true) {
-    // TODO: Remove after testing with CAF is complete
-    case queryString && queryString.includes('renderer_env=caftest'):
-      return isAmp ? TEST_AMP_URL : TEST_BASE_URL;
-    // TODO: Remove after testing with CAF is complete
-    case queryString && queryString.includes('renderer_env=caflive'):
-      return isAmp ? LIVE_AMP_URL : LIVE_BASE_URL;
     case isLive():
       return isAmp ? LIVE_AMP_URL : relativeBaseUrl;
     case isDev():
@@ -53,7 +48,6 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
   const ampSection = isAmp ? '/amp' : '';
   const baseUrl = getBaseUrl(queryString, isAmp);
   const url = `${baseUrl}/${AV_ROUTE}/${type}/${mediaId}`;
-
   return `${url}${ampSection}${morphEnvOverride}`;
 };
 

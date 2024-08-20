@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       pagination: {
         page: 'পৃষ্ঠা',
@@ -70,10 +71,15 @@ export const service: DefaultServiceConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'লাইভ',
-        liveCoverage: 'সরাসির কভারেজ',
+        liveCoverage: 'সরাসরি কভারেজ',
         breaking: 'ব্রেকিং',
         postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',
+        shareButtonText: 'শেয়ার করুন',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'সার সংক্ষেপ',
       error: {
@@ -263,11 +269,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'সবচেয়ে বেশি দেখা হয়েছে',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'রেডিও অনুষ্ঠান',
@@ -327,8 +328,12 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'সংসদ নির্বাচন ২০২৪',
-        url: '/bengali/topics/c90xlq1n7llt',
+        title: 'কোটা আন্দোলন',
+        url: '/bengali/topics/cz47p4p81qdt',
+      },
+      {
+        title: 'রাজনীতি',
+        url: '/bengali/topics/cqywj91rkg6t',
       },
       {
         title: 'সর্বাধিক পঠিত',
@@ -353,10 +358,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'প্রযুক্তি',
         url: '/bengali/topics/c8y94k95v52t',
-      },
-      {
-        title: 'রাজনীতি',
-        url: '/bengali/topics/cqywj91rkg6t',
       },
       {
         title: 'ভিডিও',

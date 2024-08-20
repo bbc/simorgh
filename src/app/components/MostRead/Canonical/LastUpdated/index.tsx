@@ -8,7 +8,7 @@ interface LastUpdatedProps {
   prefix: string;
   script: TypographyScript;
   service: Services;
-  timestamp: number;
+  timestamp: number | string;
   timezone: string;
 }
 
@@ -30,6 +30,7 @@ const LastUpdated = ({
     locale={locale}
     timezone={timezone}
     padding={false}
+    altCalendar={null}
   />
 );
 

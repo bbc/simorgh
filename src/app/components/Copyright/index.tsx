@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';

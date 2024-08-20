@@ -140,12 +140,18 @@ export const themes = {
     () => import(/* webpackChunkName: "themes-ukrainian" */ './ukrainian'),
   ),
   urdu: loadable(() => import(/* webpackChunkName: "themes-urdu" */ './urdu')),
-  uzbek: loadable(
-    () => import(/* webpackChunkName: "themes-uzbek" */ './uzbek'),
-  ),
+  uzbek: {
+    cyr: loadable(
+      () => import(/* webpackChunkName: "themes-uzbek-cyr" */ './uzbek/cyr'),
+    ),
+    lat: loadable(
+      () => import(/* webpackChunkName: "themes-uzbek-lat" */ './uzbek/lat'),
+    ),
+  },
   vietnamese: loadable(
     () => import(/* webpackChunkName: "themes-vietnamese" */ './vietnamese'),
   ),
+  ws: loadable(() => import(/* webpackChunkName: "themes-ws" */ './ws')),
   yoruba: loadable(
     () => import(/* webpackChunkName: "themes-yoruba" */ './yoruba'),
   ),

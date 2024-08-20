@@ -75,6 +75,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Último momento',
         postedAt: 'Publicado',
         summary: 'Puntos clave',
+        shareButtonText: 'Compartir',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Sumario',
       error: {
@@ -107,6 +112,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/mundo',
         },
+      },
+      byline: {
+        articleInformation: 'Información del artículo',
+        author: 'Autor',
+        listItemImage: 'Imagen del autor',
+        published: 'Fecha de publicación',
+        reportingFrom: 'Informa desde',
+        role: 'Título del autor',
       },
       consentBanner: {
         privacy: {
@@ -256,17 +269,81 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
+      latestMediaTitle: 'Más videos',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'opcional',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'Esto es lo que estás subiendo:',
+        fileUploadButton: 'Seleccionar un archivo',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Enviar',
+
+        // Validation
+        validationRequired: 'Algo está faltando.',
+        validationInvalidEmail:
+          'Algo no luce bien. Por favor, introduce una dirección de correo electrónico correcta.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'No hay suficientes archivos. Por favor añade al menos {{minFiles}}.',
+        validationFilesTooMany:
+          'Hay demasiados archivos. Puedes añadir {{maxFiles}}. ',
+        validationFilesInvalidType:
+          'Disculpa, no podemos utilizar este tipo de archivo. Por favor, utiliza {{fileTypes}}.',
+        validationFilesTooSmall:
+          'Este archivo no es correcto. Intenta seleccionar otro.',
+        validationFilesSizeExceeded:
+          'Disculpa, estos archivos son muy pesados. Solo puedes cargar hasta 1,2 GB a la vez.',
+        validationWordLimit: 'Máximo {{wordLimit}} palabras.',
+
+        // Messaging
+        removalGuidelineText: undefined,
+        retentionPeriodDays: undefined,
+        referenceNumber: 'Número de referencia',
+        submissionInfoSignedOutMessage:
+          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+        privacyInfoHtml:
+          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+        emailToHtml:
+          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'Subiendo tus archivos...',
+        uploadingDescription:
+          'Por favor, espera mientras hasta que haya finalizado.',
+
+        // Success Screen
+        successHeading: 'Mensaje enviado',
+        successDescription: 'Gracias por contactarnos.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'Disculpa, hubo un problema al subir esto.',
+        errorDescription: 'Por favor, regresa e inténtalo más tarde.',
+
+        // Closed Screen
+        closedHeading: 'Esto ya está cerrado.',
+        closedDescription: 'Esto cierra el {{date}}.',
+      },
     },
     mostRead: {
       header: 'Más leídas',
       lastUpdated: 'Última actualización:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Más vistos',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -334,7 +411,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
+        url: '/mundo/topics/cr50y7p7qyqt',
       },
       {
         title: 'Economía',
@@ -358,11 +435,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Centroamérica Cuenta',
-        url: '/mundo/noticias-43826245',
-      },
-      {
-        title: 'BBC Extra',
-        url: '/mundo/noticias-48908206',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

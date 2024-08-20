@@ -42,10 +42,51 @@ describe('Live Page Header', () => {
     });
 
     it('should not render if the liveLabel flag is false', async () => {
-      render(<Header title="I am a title" showLiveLabel={false} />);
+      await act(async () => {
+        render(<Header title="I am a title" showLiveLabel={false} />);
+      });
+
+      expect(screen.queryByTestId('live-label')).not.toBeInTheDocument();
+    });
+  });
+  describe('image', () => {
+    it('should render if a header image if provided', async () => {
+      await act(async () => {
+        render(
+          <Header
+            title="I am a title"
+            showLiveLabel
+            imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+            imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
+            imageWidth={660}
+          />,
+        );
+      });
 
       await waitFor(() => {
-        expect(document.querySelectorAll('span').length).toBe(2);
+        const headerImage = screen.getByRole('presentation');
+        expect(headerImage.getAttribute('src')).toEqual(
+          'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
+        );
+      });
+    });
+
+    it('should not render if a header image if not provided', async () => {
+      await act(async () => {
+        render(
+          <Header
+            title="I am a title"
+            showLiveLabel
+            imageUrl={undefined}
+            imageUrlTemplate={undefined}
+            imageWidth={undefined}
+          />,
+        );
+      });
+
+      await waitFor(() => {
+        const headerImage = screen.queryByRole('img');
+        expect(headerImage).toBeNull();
       });
     });
   });

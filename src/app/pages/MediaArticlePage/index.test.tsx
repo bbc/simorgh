@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -71,7 +70,13 @@ const fetchMock = fetch as FetchMock;
 
 describe('MediaArticlePage', () => {
   beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
     fetchMock.resetMocks();
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
   });
 
   it('should render a news article correctly', async () => {
@@ -102,5 +107,35 @@ describe('MediaArticlePage', () => {
     await waitFor(() => {
       expect(adElements.length).toBe(0);
     });
+  });
+
+  it('should render image with the .webp image extension', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const imageBlock = pidginPageData.content.model.blocks[6] as any;
+    const imageAltText =
+      imageBlock.model.blocks[0].model.blocks[0].model.blocks[0].model.text;
+    const imageLocator = imageBlock.model.blocks[1].model.locator;
+    const imageOriginCode = imageBlock.model.blocks[1].model.originCode;
+    const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640/${imageOriginCode}/${imageLocator}.webp`;
+    const expectedSrcSetURLs = [
+      `https://ichef.test.bbci.co.uk/ace/ws/240/${imageOriginCode}/${imageLocator}.webp 240w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/320/${imageOriginCode}/${imageLocator}.webp 320w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/480/${imageOriginCode}/${imageLocator}.webp 480w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/624/${imageOriginCode}/${imageLocator}.webp 624w`,
+      `https://ichef.test.bbci.co.uk/ace/ws/800/${imageOriginCode}/${imageLocator}.webp 800w`,
+    ].join(', ');
+
+    render(
+      <Context service="news" adsToggledOn showAdsBasedOnLocation>
+        <MediaArticlePage pageData={pidginPageData} />
+      </Context>,
+    );
+
+    const { src, srcset } = screen.getByAltText(
+      imageAltText,
+    ) as HTMLImageElement;
+
+    expect(src).toEqual(imageURL);
+    expect(srcset).toEqual(expectedSrcSetURLs);
   });
 });

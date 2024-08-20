@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Captions should render caption text with example Farsi offscreen text 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #545658;
+  margin-top: 0.5rem;
+  margin-inline: 0.5rem 0;
+  padding-inline: 0.5rem;
+  width: calc(100% - 0.5rem);
+  border-inline-start: 0.0625rem solid #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    width: calc(100% - 1rem);
+    margin-inline: 1rem 0;
+    padding-inline: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding-inline: 0.5rem 0;
+  }
+}
+
+.emotion-0>span>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-0>span>p:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <figcaption
+    class="emotion-0"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="emotion-1"
+      >
+         ، عنوان
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        Some caption text...
+      </span>
+    </span>
+  </figcaption>
+</div>
+`;
+
+exports[`Captions should render caption text with example News offscreen text 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #545658;
+  margin-top: 0.5rem;
+  margin-inline: 0.5rem 0;
+  padding-inline: 0.5rem;
+  width: calc(100% - 0.5rem);
+  border-inline-start: 0.0625rem solid #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    width: calc(100% - 1rem);
+    margin-inline: 1rem 0;
+    padding-inline: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding-inline: 0.5rem 0;
+  }
+}
+
+.emotion-0>span>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-0>span>p:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <figcaption
+    class="emotion-0"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="emotion-1"
+      >
+        Caption, 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        Some caption text...
+      </span>
+    </span>
+  </figcaption>
+</div>
+`;
+
+exports[`Captions should render caption with multiple paragraphs 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #545658;
+  margin-top: 0.5rem;
+  margin-inline: 0.5rem 0;
+  padding-inline: 0.5rem;
+  width: calc(100% - 0.5rem);
+  border-inline-start: 0.0625rem solid #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    width: calc(100% - 1rem);
+    margin-inline: 1rem 0;
+    padding-inline: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding-inline: 0.5rem 0;
+  }
+}
+
+.emotion-0>span>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-0>span>p:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <figcaption
+    class="emotion-0"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="emotion-1"
+      >
+        Caption, 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        This is paragraph 1
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        This is paragraph 2
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        Paragraph 3
+      </span>
+    </span>
+  </figcaption>
+</div>
+`;
+
+exports[`Captions should render correctly with inline block 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #545658;
+  margin-top: 0.5rem;
+  margin-inline: 0.5rem 0;
+  padding-inline: 0.5rem;
+  width: calc(100% - 0.5rem);
+  border-inline-start: 0.0625rem solid #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    width: calc(100% - 1rem);
+    margin-inline: 1rem 0;
+    padding-inline: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding-inline: 0.5rem 0;
+  }
+}
+
+.emotion-0>span>p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-0>span>p:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-2 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-3 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+<div>
+  <figcaption
+    class="emotion-0"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="emotion-1"
+      >
+        Caption, 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        <b>
+          This is some text. 
+        </b>
+        <span
+          class="emotion-2"
+          lang="fa"
+        >
+          <a
+            aria-label="چیسربرگرundefined"
+            class="focusIndicatorReducedWidth emotion-3"
+            href="https://google.com"
+          >
+            چیسربرگر
+          </a>
+        </span>
+      </span>
+    </span>
+  </figcaption>
+</div>
+`;

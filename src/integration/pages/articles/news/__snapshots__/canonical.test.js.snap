@@ -69,7 +69,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
 
@@ -155,11 +155,11 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="360"
   sizes="(min-width: 1008px) 760px, 100vw"
-  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg.webp 640w"
   style="aspect-ratio:640 / 360"
   width="640"
 />
@@ -169,71 +169,71 @@ exports[`Canonical Articles Main heading should match text 1`] = `"Royal wedding
 
 exports[`Canonical Articles Most Read has item with rank 1`] = `
 {
-  "text": "Why the oxygen timeline on sub may not be so fixed",
-  "url": "/news/world-us-canada-65981277",
+  "text": "The rise of the priority queue",
+  "url": "/news/magazine-19712847",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 2`] = `
 {
-  "text": "MasterChef contestant jailed for child abuse images",
-  "url": "/news/uk-wales-65986742",
+  "text": "Laura Trott sees off challenge!",
+  "url": "/sport/cycling/23039307",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 3`] = `
 {
-  "text": "Musk and Zuckerberg agree to hold cage fight",
-  "url": "/news/business-65981876",
+  "text": "Japan MP drinks Fukushima water",
+  "url": "/news/world-asia-pacific-15533018",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 4`] = `
 {
-  "text": "Cindy Beale returns to EastEnders after 25 years",
-  "url": "/news/entertainment-arts-65986136",
+  "text": "Inside the 21st floor of Grenfell Tower",
+  "url": "/news/uk-23154961",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 5`] = `
 {
-  "text": "Mosquito-borne diseases risk increasing in Europe",
-  "url": "/news/health-65985838",
+  "text": "Ai Weiwei served with tax demand",
+  "url": "/news/world-asia-pacific-15533014",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 6`] = `
 {
-  "text": "Teenager guilty of murdering boy at train station",
-  "url": "/news/uk-scotland-65987986",
+  "text": "Two die in Israel hotel shootings",
+  "url": "/news/world-middle-east-19841596",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 7`] = `
 {
-  "text": "At least 30 migrants feared dead off Canary Islands",
-  "url": "/news/world-65983001",
+  "text": "Soong enters Taiwan election race",
+  "url": "/news/world-asia-pacific-15538239",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 8`] = `
 {
-  "text": "Bank boss warns interest rate hike hard for many",
-  "url": "/news/business-65982981",
+  "text": "Welcome to the UKs peaceful place",
+  "url": "/news/business-20070473",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 9`] = `
 {
-  "text": "Ukraine strikes bridge to Crimea, says Russia",
-  "url": "/news/world-europe-65982817",
+  "text": "Budget 2018: Everything you need to know",
+  "url": "/news/uk-23220380",
 }
 `;
 
 exports[`Canonical Articles Most Read has item with rank 10`] = `
 {
-  "text": "The woman who wants to end abortion in America",
-  "url": "/news/world-us-canada-65923956",
+  "text": "Anger grows over Bangkok floods new",
+  "url": "/news/world-asia-pacific-15533579",
 }
 `;
 
@@ -357,11 +357,12 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-05-28T13:38:19.412Z",
       "datePublished": "2019-05-28T13:38:19.412Z",
+      "description": "Royal wedding flowers given to Hackney hospice",
       "headline": "Royal wedding flowers given to Hackney hospice",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
         "width": 1024,
       },
       "inLanguage": {
@@ -385,7 +386,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "name": "BBC News",
         "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
       },
-      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg",
       "url": "http://localhost:7080/news/articles/c0g992jmmkko",
     },
   ],
@@ -394,9 +395,9 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 
 exports[`Canonical Articles SEO OG description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`Canonical Articles SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png"`;
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
-exports[`Canonical Articles SEO OG image alt 1`] = `"BBC News"`;
+exports[`Canonical Articles SEO OG image alt 1`] = `"Pauline Clayton"`;
 
 exports[`Canonical Articles SEO OG locale 1`] = `"en_GB"`;
 
@@ -418,9 +419,9 @@ exports[`Canonical Articles SEO Twitter creator 1`] = `"@BBCNews"`;
 
 exports[`Canonical Articles SEO Twitter description 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
-exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News"`;
+exports[`Canonical Articles SEO Twitter image alt 1`] = `"Pauline Clayton"`;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_news/e8d3/test/98b75f50-814d-11e9-b0be-cb6d2b512d8b.jpg"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 

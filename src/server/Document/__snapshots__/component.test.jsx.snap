@@ -5,21 +5,16 @@ exports[`Document Component should render AMP version correctly 1`] = `
   lang="test"
 >
   <head>
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      data-react-helmet="true"
-      name="viewport"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
     <title
       data-react-helmet="true"
     >
       Test title
     </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
@@ -87,21 +82,16 @@ exports[`Document Component should render APP version correctly 1`] = `
       content="noindex"
       name="robots"
     />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      data-react-helmet="true"
-      name="viewport"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
     <title
       data-react-helmet="true"
     >
       Test title
     </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
@@ -112,6 +102,9 @@ exports[`Document Component should render APP version correctly 1`] = `
     >
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
+    <script>
+      window.SIMORGH_ENV_VARS={"SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/"}
+    </script>
   </head>
   <body>
     <div
@@ -169,27 +162,60 @@ exports[`Document Component should render APP version correctly 1`] = `
 </html>
 `;
 
-exports[`Document Component should render correctly 1`] = `
+exports[`Document Component should render LITE version correctly 1`] = `
 <html
-  class="no-js"
   lang="test"
 >
   <head>
     <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      data-react-helmet="true"
-      name="viewport"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
+      content="noindex"
+      name="robots"
     />
     <title
       data-react-helmet="true"
     >
       Test title
     </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
+    <style>
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>
+        App!
+      </h1>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Document Component should render correctly 1`] = `
+<html
+  class="no-js"
+  lang="test"
+>
+  <head>
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      data-react-helmet="true"
+      name="viewport"
+    />
     <link
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
@@ -200,6 +226,9 @@ exports[`Document Component should render correctly 1`] = `
     >
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
+    <script>
+      window.SIMORGH_ENV_VARS={"SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/"}
+    </script>
   </head>
   <body>
     <div

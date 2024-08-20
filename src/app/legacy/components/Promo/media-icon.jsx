@@ -1,8 +1,6 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
-import { shape, string, number, oneOf } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
@@ -41,7 +39,7 @@ const formatChildren = children => {
   );
 };
 
-const MediaIcon = ({ script, service, children, type }) => {
+const MediaIcon = ({ script, service, children = null, type = null }) => {
   if (!type || !mediaIcons[type]) return null;
   return (
     <Wrapper script={script} service={service} aria-hidden="true">
@@ -49,18 +47,6 @@ const MediaIcon = ({ script, service, children, type }) => {
       {formatChildren(children)}
     </Wrapper>
   );
-};
-
-MediaIcon.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  type: oneOf(Object.values(TYPES)),
-  children: number,
-};
-
-MediaIcon.defaultProps = {
-  children: null,
-  type: null,
 };
 
 export default MediaIcon;

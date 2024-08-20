@@ -28,7 +28,7 @@ const blocksWithHeadlineTexAndByline = blockValues => {
 const articleDataBuilder = (
   id,
   createdBy,
-  passportLanguage,
+  language,
   home,
   blockValues,
   seoHeadline,
@@ -38,6 +38,7 @@ const articleDataBuilder = (
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
+  type = 'article',
 ) => ({
   metadata: {
     id: `urn:bbc:ares::article:${id}`,
@@ -48,14 +49,15 @@ const articleDataBuilder = (
     analyticsLabels: {
       contentId: 'urn:bbc:optimo:c0000000001o',
     },
-    type: 'article',
+    type,
     createdBy,
     created: 1514808060000,
     firstPublished: 1514808060000,
     lastPublished: 1514811600000,
     lastUpdated: 1514815200000,
+    language,
     passport: {
-      language: passportLanguage,
+      language,
       home,
       category: 'news',
       genre: null,
@@ -168,6 +170,65 @@ export const articleDataNews = articleDataBuilder(
         },
       },
       position: [5],
+    },
+    {
+      id: 'ec2cc789',
+      type: 'image',
+      model: {
+        blocks: [
+          {
+            id: '2b420fde',
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  id: '845446c2',
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        id: '65e99201',
+                        type: 'paragraph',
+                        model: {
+                          text: 'Shiroo buddeen waliin',
+                          blocks: [
+                            {
+                              id: 'b58767fc',
+                              type: 'fragment',
+                              model: {
+                                text: 'Shiroo buddeen waliin',
+                                attributes: [],
+                              },
+                              position: [11, 1, 1, 1, 1],
+                            },
+                          ],
+                        },
+                        position: [11, 1, 1, 1],
+                      },
+                    ],
+                  },
+                  position: [11, 1, 1],
+                },
+              ],
+            },
+            position: [11, 1],
+          },
+          {
+            id: '8d3a8c2c',
+            type: 'rawImage',
+            model: {
+              width: 951,
+              height: 535,
+              locator: '157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'BBC',
+              suitableForSyndication: true,
+            },
+            position: [11, 2],
+          },
+        ],
+      },
+      position: [11],
     },
   ],
   'Article Headline for SEO',
@@ -672,6 +733,60 @@ export const articleDataPidginWithByline = articleDataBuilder(
   emptyThings,
   undefined,
   blocksWithHeadlineTexAndByline,
+);
+
+export const articlePglDataPidgin = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
+  'Article PGL Headline for SEO in Pidgin',
+  'Article PGL Headline for Promo in Pidgin',
+  'Article PGL summary in Pidgin',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'pcm',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+    pageTitle: 'Article Headline for SEO in Pidgin',
+  },
+  'PGL',
+);
+
+export const articleStyDataPidgin = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.'],
+  'Article PGL Headline for SEO in Pidgin',
+  'Article PGL Headline for Promo in Pidgin',
+  'Article PGL summary in Pidgin',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    language: 'pcm',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+    pageTitle: 'Article Headline for SEO in Pidgin',
+  },
+  'STY',
 );
 
 export const bylineWithNoRole = [

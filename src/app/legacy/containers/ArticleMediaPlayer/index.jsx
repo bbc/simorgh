@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMediumNoMargin } from '#components/Grid';
+
 import {
-  mediaPlayerPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '#models/propTypes';
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
 const formatAssetId = assetUri => {
@@ -16,14 +20,25 @@ const formatAssetId = assetUri => {
 };
 
 const pageTypeMap = {
-  article: 'articles',
-  mediaArticle: 'articles',
-  STY: 'cps',
-  CSP: 'cps',
+  [ARTICLE_PAGE]: 'articles',
+  [MEDIA_ARTICLE_PAGE]: 'articles',
+  [STORY_PAGE]: 'cps',
+  [MEDIA_ASSET_PAGE]: 'cps',
+  [CORRESPONDENT_STORY_PAGE]: 'cps',
 };
 
-const ArticleMediaPlayerContainer = ({ blocks }) => {
-  const { id, pageType } = useContext(RequestContext);
+const ArticleMediaPlayerContainer = ({
+  blocks = [
+    {
+      model: {},
+    },
+  ],
+}) => {
+  const { id, isLite, pageType } = useContext(RequestContext);
+  const ignorePlaceholderFor = [MEDIA_ARTICLE_PAGE, MEDIA_ASSET_PAGE];
+  const hasPlaceholder = !ignorePlaceholderFor.includes(pageType);
+
+  if (isLite) return null;
 
   return (
     <GridItemMediumNoMargin>
@@ -31,15 +46,10 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
         blocks={blocks}
         assetId={formatAssetId(id)}
         assetType={pageTypeMap[pageType]}
-        showPlaceholder
+        showPlaceholder={hasPlaceholder}
       />
     </GridItemMediumNoMargin>
   );
-};
-
-ArticleMediaPlayerContainer.propTypes = mediaPlayerPropTypes;
-ArticleMediaPlayerContainer.defaultProps = {
-  ...emptyBlockArrayDefaultProps,
 };
 
 export default ArticleMediaPlayerContainer;

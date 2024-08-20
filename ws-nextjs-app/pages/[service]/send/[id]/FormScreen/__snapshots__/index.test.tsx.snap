@@ -1,0 +1,721 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should render and match snapshot 1`] = `
+.emotion-0 {
+  color: #141414;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-1 {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  margin-bottom: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-1 p {
+  color: #000000;
+}
+
+.emotion-1 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-1 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-1 a:focus,
+.emotion-1 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
+.emotion-2 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-3 {
+  margin-top: 1rem;
+}
+
+.emotion-3:nth-child(5) {
+  border-bottom: 0.0625rem solid #8A8C8E;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-3:nth-child(5) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-4 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.375rem;
+  color: #141414;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-4 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-4 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
+.emotion-5 {
+  scroll-margin-top: 2.75rem;
+  border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
+.emotion-5:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
+.emotion-17 {
+  scroll-margin-top: 2.75rem;
+  border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  resize: none;
+  display: block;
+  overflow: clip;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-17 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
+.emotion-17:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
+.emotion-19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-20 {
+  scroll-margin-top: 0.5rem;
+  display: inline-block;
+  -webkit-flex: initial;
+  -ms-flex: initial;
+  flex: initial;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: solid 0.0625rem #141414;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-20:checked::after {
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 117.65 98.87'%3E%3Cpath d='M96.64 0L46.11 60.23 17.63 36.34 0 57.35l28.47 23.89 21.01 17.63 17.63-21.01 50.54-60.22L96.64 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  -webkit-background-position: 50%;
+  background-position: 50%;
+  -webkit-background-size: 0.889rem;
+  background-size: 0.889rem;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20 {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    -ms-appearance: auto;
+    appearance: auto;
+  }
+
+  .emotion-20:checked::after {
+    content: none;
+  }
+}
+
+.emotion-20:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
+.emotion-21 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 0.375rem;
+  color: #141414;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-margin-start: 1rem;
+  margin-inline-start: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-21 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.emotion-21 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-21 a:focus,
+.emotion-21 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
+.emotion-22 {
+  margin-top: 1rem;
+}
+
+.emotion-23 {
+  color: #000000;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-23 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-24 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-24 p {
+  color: #000000;
+}
+
+.emotion-24 a {
+  color: #222222;
+  border-bottom: 0.0625rem solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-24 a:visited {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+.emotion-24 a:focus,
+.emotion-24 a:hover {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
+.emotion-25 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  background-color: #0071F1;
+  color: #FFFFFF;
+  width: 100%;
+  border: none;
+  outline: solid 0.0625rem transparent;
+  padding: 0.75rem 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-25:hover,
+.emotion-25:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  background-color: #0051AD;
+}
+
+.emotion-26 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    id="content"
+    tabindex="-1"
+  >
+    Escríbenos
+  </h1>
+  <div
+    class="emotion-1"
+  >
+    <p>
+      <strong>
+        En BBC Mundo nos importa tu punto de vista.
+      </strong>
+    </p>
+    
+      
+    <p>
+      Tus opiniones, comentarios y sugerencias son bienvenidos.
+    </p>
+    
+      
+    <p>
+      A partir de ellos, podremos ofrecerte un mejor servicio.
+    </p>
+    
+      
+    <p>
+      Por favor, utiliza el formulario para enviarnos un mensaje. Procuraremos responder a la mayor brevedad.
+    </p>
+    
+      
+    <p>
+      Para enviar una queja, 
+      <a
+        href="https://www.bbc.com/mundo/send/u50853472"
+        target="_blank"
+      >
+        haz clic aquí
+      </a>
+      .
+    </p>
+  </div>
+  <h2
+    class="emotion-2"
+  >
+    Envíanos tus comentarios
+  </h2>
+  <form
+    novalidate=""
+  >
+    <div
+      class="emotion-3"
+    >
+      <label
+        class="emotion-4"
+        for="txt49018765"
+        id="label-txt49018765"
+      >
+        Nombre (optional)
+      </label>
+      <div>
+        <input
+          aria-invalid="false"
+          class="emotion-5"
+          id="txt49018765"
+          name="txt49018765"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      <label
+        class="emotion-4"
+        for="txt49018835"
+        id="label-txt49018835"
+      >
+        Dirección de email (optional)
+      </label>
+      <div>
+        <input
+          aria-invalid="false"
+          class="emotion-5"
+          id="txt49018835"
+          name="txt49018835"
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      <label
+        class="emotion-4"
+        for="txt49018894"
+        id="label-txt49018894"
+      >
+        Ciudad y país (optional)
+      </label>
+      <div>
+        <input
+          aria-invalid="false"
+          class="emotion-5"
+          id="txt49018894"
+          name="txt49018894"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      <label
+        class="emotion-4"
+        for="txt49018963"
+        id="label-txt49018963"
+      >
+        Número de teléfono (optional)
+      </label>
+      <div>
+        <input
+          aria-invalid="false"
+          class="emotion-5"
+          id="txt49018963"
+          name="txt49018963"
+          type="tel"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-3"
+    >
+      <label
+        class="emotion-4"
+        for="txt49019016"
+        id="label-txt49019016"
+      >
+        Comentario (optional)
+      </label>
+      <textarea
+        aria-invalid="false"
+        class="emotion-17"
+        id="txt49019016"
+        name="txt49019016"
+        rows="4"
+      />
+    </div>
+    <div
+      class="emotion-3"
+    >
+      <div
+        class="emotion-19"
+      >
+        <input
+          aria-invalid="false"
+          class="emotion-20"
+          id="chk49021805"
+          name="chk49021805"
+          type="checkbox"
+        />
+        <label
+          class="emotion-21"
+          for="chk49021805"
+          id="label-chk49021805"
+        >
+          Estoy dispuesto/a a que la BBC me contacte en referencia a este comentario. (optional)
+        </label>
+      </div>
+    </div>
+    <div
+      class="emotion-22"
+    >
+      <strong
+        class="emotion-23"
+      >
+        Our data policy
+      </strong>
+      <div
+        class="emotion-24"
+      >
+        Si bien leemos lo mensajes que recibimos, no podemos garantizar que responderemos a todos.
+        <p />
+        
+      
+        <p>
+          Los datos personales que proporcione serán procesados por la BBC y cualquier proveedor de servicios relevante del que dependamos para respaldar nuestros sistemas de quejas y de participación de la audiencia con el fin manejar sus comentarios. La BBC y nuestros proveedores de servicios retendrán sus datos de acuerdo con nuestra política de retención y el Reglamento General de Protección de Datos.
+        </p>
+        
+      
+        <p>
+          La BBC procesa sus datos sobre la base de sus intereses legítimos como organización de medios para responder a los comentarios y preocupaciones de la audiencia. Visite la 
+          <a
+            href="https://www.bbc.com/mundo/institucional-36400009"
+          >
+            Cláusula de privacidad
+          </a>
+           y 
+          <a
+            href="http://www.bbc.co.uk/usingthebbc/cookies/"
+          >
+            Cookies
+          </a>
+           de la BBC para obtener más información sobre cómo la BBC maneja sus datos. Si presenta una queja ante la BBC sobre cómo manejamos sus datos personales y usted no está satisfecho con nuestra respuesta, puede presentar una queja ante la Oficina del Comisionado de Información de Reino Unido.
+        </p>
+      </div>
+    </div>
+    <button
+      class="emotion-25"
+      type="submit"
+    >
+      Submit
+    </button>
+    <span
+      aria-live="polite"
+      class="emotion-26"
+    />
+  </form>
+</div>
+`;

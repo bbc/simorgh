@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, bool, number } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
 import EmbedError from '#psammead/psammead-embed-error/src';
@@ -26,9 +25,11 @@ const componentsToRender = {
 };
 
 const IncludeContainer = props => {
-  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { isAmp, isLite, canonicalLink } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const { enabled } = useToggle('include');
+
+  if (isLite) return null;
 
   const errorMessage = pathOr(
     'Sorry, we can’t display this part of the story on this lightweight mobile page.',
@@ -43,7 +44,7 @@ const IncludeContainer = props => {
   );
 
   if (!enabled) return null;
-  const { isAmpSupported, type, index } = props;
+  const { isAmpSupported = false, type, index = null } = props;
 
   if (!isAmpSupported && isAmp) {
     return (
@@ -64,17 +65,6 @@ const IncludeContainer = props => {
   return componentsToRender[platform][type]
     ? componentsToRender[platform][type](props)
     : null;
-};
-
-IncludeContainer.propTypes = {
-  isAmpSupported: bool,
-  type: string.isRequired,
-  index: number,
-};
-
-IncludeContainer.defaultProps = {
-  isAmpSupported: false,
-  index: null,
 };
 
 export default IncludeContainer;

@@ -2,6 +2,8 @@ import services from '../../../../../server/utilities/serviceConfigs';
 import expectedFormats from './expectedFormats.json';
 import { format, timestampsFixtures } from './testUtils';
 
+delete services.ws;
+
 describe('Timestamp Formats', () => {
   Object.keys(services).forEach(service => {
     describe(`for ${service}`, () => {

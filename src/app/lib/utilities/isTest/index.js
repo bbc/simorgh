@@ -1,1 +1,3 @@
-export default () => process.env.SIMORGH_APP_ENV === 'test';
+import { getEnvConfig } from '../getEnvConfig';
+
+export default () => getEnvConfig().SIMORGH_APP_ENV === 'test';

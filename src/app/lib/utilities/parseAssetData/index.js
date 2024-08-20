@@ -33,4 +33,4 @@ export const getArticleSection = path(['metadata', 'passport', 'genre']);
 
 export const getMentions = path(['metadata', 'tags', 'mentions']);
 
-export const getLang = path(['metadata', 'passport', 'language']);
+export const getLang = path(['metadata', 'language']);

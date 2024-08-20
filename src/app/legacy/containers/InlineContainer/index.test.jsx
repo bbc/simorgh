@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
@@ -33,15 +33,23 @@ const persianLink = inlineLinkBlock(
 );
 
 // text is passed here just to satisfy the prop type warnings but the top level text prop is currently not used
-const InlineContainerWithContext = blocks => (
-  <ServiceContext.Provider value={{ script: latin, externalLinkText: '' }}>
-    <InlineContainer blocks={blocks} language="fa" text="text" />
-  </ServiceContext.Provider>
-);
+const InlineContainerWithContext = ({ blocks }) => {
+  const memoizedServiceContextValue = useMemo(
+    () => ({ script: latin, externalLinkText: '' }),
+    [],
+  );
+  return (
+    <ServiceContext.Provider value={memoizedServiceContextValue}>
+      <InlineContainer blocks={blocks} language="fa" text="text" />
+    </ServiceContext.Provider>
+  );
+};
 
 describe('InlineContainer', () => {
   it('should render correctly', () => {
-    const { container } = render(InlineContainerWithContext([persianLink]));
+    const { container } = render(
+      <InlineContainerWithContext blocks={[persianLink]} />,
+    );
     expect(container).toMatchSnapshot();
   });
 });

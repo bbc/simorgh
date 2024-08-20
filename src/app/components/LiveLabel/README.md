@@ -1,6 +1,6 @@
 ## Description
 
-The `LiveLabel` component implements a span for use on live content.
+The `LiveLabel` applied compound component implements a span for use on live content based on the `LiveLabel` compound component.
 
 ## Props
 

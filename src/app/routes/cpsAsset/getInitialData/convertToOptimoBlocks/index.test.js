@@ -293,7 +293,7 @@ describe('convertToOptimoBlocks', () => {
     });
   });
 
-  it('should log info if block type is unsupported', async () => {
+  it('should log debug if block type is unsupported', async () => {
     const url = '/service/path/to/asset';
     const type = 'unsupported-type-name-here';
     const assetType = MEDIA_ASSET_PAGE;
@@ -312,7 +312,7 @@ describe('convertToOptimoBlocks', () => {
     };
 
     await convertToOptimoBlocks(input);
-    expect(loggerMock.info).toHaveBeenCalledWith(UNSUPPORTED_BLOCK_TYPE, {
+    expect(loggerMock.debug).toHaveBeenCalledWith(UNSUPPORTED_BLOCK_TYPE, {
       url,
       type,
       assetType,

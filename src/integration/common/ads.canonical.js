@@ -18,7 +18,7 @@ export default () => {
       expect(adScript).toBeInTheDocument();
     });
 
-    it.only('dotcom config should be loaded', () => {
+    it('dotcom config should be loaded', () => {
       const scripts = document.querySelectorAll(
         "script[type='text/javascript']",
       );

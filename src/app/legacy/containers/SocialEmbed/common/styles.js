@@ -4,11 +4,8 @@ import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 /**
  * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
  *                  at 500px, which is why this is set to 31.25rem.)
- * LAZYLOAD_OFFSET  The distance in pixels above or below the viewport before
- *                  an embed is allowed to load.
  */
 const MAX_WIDTH = '31.25rem';
-export const LAZYLOAD_OFFSET = 250;
 
 const getWrapperHeightStyles = oEmbed => {
   /**
@@ -27,8 +24,14 @@ const getWrapperHeightStyles = oEmbed => {
   return '';
 };
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
   ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
+
+  .no-js & {
+    min-height: 0;
+  }
 `;
+
+export default Wrapper;

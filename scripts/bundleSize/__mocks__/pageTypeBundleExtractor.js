@@ -38,17 +38,6 @@ export default {
         'modern.shared-1111.js',
       ];
     }
-    if (pageType === 'IdxPage') {
-      return [
-        'modern.IdxPage-31ecd969.68b77555.js',
-        'modern.commons-1111.js',
-        'modern.commons-2222.js',
-        'modern.1111-lib-1111.js',
-        'modern.shared-1111.js',
-        'modern.shared-2222.js',
-        'modern.shared-3333.js',
-      ];
-    }
     if (pageType === 'LiveRadioPage') {
       return [
         'modern.LiveRadioPage-31ecd969.64772a90.js',
@@ -73,17 +62,6 @@ export default {
     if (pageType === 'MostReadPage') {
       return [
         'modern.MostReadPage-31ecd969.7484ff05.js',
-        'modern.commons-1111.js',
-        'modern.commons-2222.js',
-        'modern.1111-lib-1111.js',
-        'modern.shared-1111.js',
-        'modern.shared-2222.js',
-        'modern.shared-3333.js',
-      ];
-    }
-    if (pageType === 'MostWatchedPage') {
-      return [
-        'modern.MostWatchedPage-31ecd969.7484ff05.js',
         'modern.commons-1111.js',
         'modern.commons-2222.js',
         'modern.1111-lib-1111.js',
@@ -132,16 +110,6 @@ export default {
         'modern.shared-3333.js',
       ];
     }
-    if (pageType === 'IdxPage') {
-      return [
-        'modern.IdxPage-31ecd969.31473c35.js',
-        'modern.commons-1111.js',
-        'modern.commons-2222.js',
-        'modern.1111-lib-1111.js',
-        'modern.3333-lib-2222.js',
-        'modern.shared-1111.js',
-      ];
-    }
     if (pageType === 'FeatureIdxPage') {
       return [
         'modern.FeatureIdxPage-31ecd969.31473c35.js',
@@ -155,4 +123,4 @@ export default {
 
     throw Error(`page type ${pageType} not mocked`);
   },
-}
+};

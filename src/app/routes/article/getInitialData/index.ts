@@ -18,7 +18,6 @@ type Props = {
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
   toggles?: Toggles;
-  isCaf?: boolean;
   isAmp?: boolean;
 };
 
@@ -28,7 +27,6 @@ export default async ({
   path: pathname,
   variant,
   toggles,
-  isCaf,
   isAmp,
 }: Props) => {
   try {
@@ -37,7 +35,6 @@ export default async ({
       pageType,
       service,
       variant,
-      isCaf,
       isAmp,
     });
 
@@ -73,8 +70,7 @@ export default async ({
       }
     }
 
-    const { topStories, features, latestMedia, mostRead, mostWatched } =
-      secondaryData;
+    const { topStories, features, latestMedia, mostRead } = secondaryData;
 
     const response = {
       status,
@@ -86,7 +82,6 @@ export default async ({
           latestMedia,
         },
         mostRead,
-        mostWatched,
         ...(wsojData && wsojData),
       },
     };

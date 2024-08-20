@@ -2,14 +2,14 @@ import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import { getUrlPath } from '../../../lib/utilities/urlParser';
-import handleError from '../handleError';
+import { getUrlPath } from '#lib/utilities/urlParser';
 import {
   Services,
   Variants,
   Environments,
   PageTypes,
-} from '../../../models/types/global';
+} from '#models/types/global';
+import handleError from '../handleError';
 import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
 import {
   TOPIC_PAGE_CONFIG,
@@ -17,28 +17,28 @@ import {
 } from '../../topic/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
+  AV_EMBEDS,
   CPS_ASSET,
   HOME_PAGE,
   LIVE_PAGE,
   MOST_READ_PAGE,
   TOPIC_PAGE,
+  UGC_PAGE,
 } from '../pageTypes';
+import parseAvRoute from '../parseAvRoute';
 
-interface UrlConstructParams {
-  pathname: string;
-  pageType: PageTypes;
-  service: Services;
-  variant?: Variants;
-  page?: string;
-  isAmp?: boolean;
-  isCaf?: boolean;
-}
-
+const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 const removeAmp = (path: string) => path.split('.')[0];
-const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-const getCpsId = (path: string) => path;
-const getFrontPageId = (path: string) => `${path}/front_page`;
-const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}t)/)?.[1];
+const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
+const getCpsId = (path: string) => removeLeadingSlash(path);
+const getFrontPageId = (path: string) =>
+  `${removeLeadingSlash(path)}/front_page`;
+const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
+const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
+const isOptimoIdCheck = (path: string) =>
+  /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
+const isCpsIdCheck = (path: string) =>
+  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 
 const isFrontPage = ({
   path,
@@ -52,17 +52,25 @@ const isFrontPage = ({
 
 interface GetIdProps {
   pageType: PageTypes;
-  service: Services;
+  service?: Services;
   variant?: Variants;
   env: Environments;
-  isCaf?: boolean;
 }
 
-const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
+const getId = ({ pageType, service, variant, env }: GetIdProps) => {
   let getIdFunction;
+
   switch (pageType) {
     case ARTICLE_PAGE:
-      getIdFunction = isCaf ? getCpsId : getArticleId;
+      getIdFunction = (path: string) => {
+        const isOptimoId = isOptimoIdCheck(path);
+        const isCpsId = isCpsIdCheck(path);
+
+        if (isOptimoId) return getArticleId(path);
+        if (isCpsId) return getCpsId(path);
+
+        return removeLeadingSlash(path);
+      };
       break;
     case CPS_ASSET:
       getIdFunction = (path: string) => {
@@ -70,14 +78,16 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
          * Legacy Front Pages are curated in CPS and fetched from the BFF using the CPS_ASSET page type
          * This functionality will be removed once all front pages migrated to the new HomePage
          *  */
-        return env !== 'local' && isFrontPage({ path, service, variant })
+        return env !== 'local' &&
+          service &&
+          isFrontPage({ path, service, variant })
           ? getFrontPageId(path)
           : getCpsId(path);
       };
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        return env !== 'local'
+        return env !== 'local' && service
           ? HOME_PAGE_CONFIG?.[service]?.[env]
           : 'tipohome';
       };
@@ -101,12 +111,40 @@ const getId = ({ pageType, service, variant, env, isCaf }: GetIdProps) => {
         );
       };
       break;
+    case UGC_PAGE:
+      getIdFunction = getUgcId;
+      break;
+    case AV_EMBEDS:
+      getIdFunction = (path: string) => {
+        const parsedRoute = parseAvRoute(path);
+
+        const isShortCpsId = parsedRoute?.assetId?.length === 8;
+
+        const withServiceAndVariant = !isShortCpsId
+          ? `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          : '';
+
+        const id = `${withServiceAndVariant}/${parsedRoute.assetId}`;
+
+        return id;
+      };
+      break;
     default:
       getIdFunction = () => null;
       break;
   }
   return pipe(getUrlPath, removeAmp, getIdFunction);
 };
+
+export interface UrlConstructParams {
+  pathname: string;
+  pageType: PageTypes;
+  service?: Services;
+  variant?: Variants;
+  page?: string;
+  isAmp?: boolean;
+  mediaId?: string | null;
+}
 
 const constructPageFetchUrl = ({
   pathname,
@@ -115,12 +153,12 @@ const constructPageFetchUrl = ({
   variant,
   page,
   isAmp,
-  isCaf,
+  mediaId,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
 
-  const id = getId({ pageType, service, env, variant, isCaf })(pathname);
+  const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -128,7 +166,9 @@ const constructPageFetchUrl = ({
 
   const queryParameters = {
     id,
-    service,
+    ...(service && {
+      service,
+    }),
     pageType,
     ...(variant && {
       variant,
@@ -139,6 +179,10 @@ const constructPageFetchUrl = ({
     ...(isAmp && {
       isAmp,
     }),
+    // MediaId can be supplied by av-embeds routes to determine which media asset to return
+    ...(mediaId && {
+      mediaId,
+    }),
     ...(env && { serviceEnv: env }),
   };
 
@@ -147,15 +191,21 @@ const constructPageFetchUrl = ({
     queryParameters,
   );
 
-  if (isLocal && !process?.env?.BFF_PATH?.includes('localhost')) {
+  if (isLocal) {
     switch (pageType) {
-      case ARTICLE_PAGE:
+      case ARTICLE_PAGE: {
+        const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
+
         fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+          isOptimoId
+            ? `/${service}/articles/${id}${variant ? `/${variant}` : ''}`
+            : `/${id}`,
         );
+
         break;
+      }
       case CPS_ASSET:
-        fetchUrl = Url(id);
+        fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE:
         fetchUrl = Url(`/${service}/${id}`);
@@ -166,6 +216,35 @@ const constructPageFetchUrl = ({
       case TOPIC_PAGE: {
         const variantPath = variant ? `/${variant}` : '';
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
+        break;
+      }
+      case LIVE_PAGE: {
+        const variantPath = variant ? `/${variant}` : '';
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
+        );
+        break;
+      }
+      case UGC_PAGE: {
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
+        break;
+      }
+      case AV_EMBEDS: {
+        const parsedRoute = parseAvRoute(pathname);
+
+        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+
+        if (parsedRoute.isSyndicationRoute) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}`,
+          );
+        }
+
         break;
       }
       default:

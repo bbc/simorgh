@@ -1,12 +1,5 @@
 export default () => {
   describe('Footer', () => {
-    it('I can see the footer copyright and external linking text', () => {
-      const footerCopyrightEl = document.querySelector('footer div p');
-      expect(footerCopyrightEl).toBeInTheDocument();
-      expect(footerCopyrightEl.textContent).toBeTruthy();
-      expect(footerCopyrightEl.textContent).toMatchSnapshot();
-    });
-
     it('I can see the BBC branding', () => {
       const brandingEl = document.querySelector('footer svg');
 
@@ -43,6 +36,24 @@ export default () => {
             text: anchorText,
             url: anchorUrl,
           }).toMatchSnapshot();
+        });
+      });
+    });
+
+    describe('Paragraphs', () => {
+      const footerParagraphs = document.querySelectorAll('footer div p');
+
+      footerParagraphs.forEach(footerParagraph => {
+        it('should be in the document', () => {
+          expect(footerParagraph).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(footerParagraph.textContent).toBeTruthy();
+        });
+
+        it('should match text', () => {
+          expect(footerParagraph.textContent).toMatchSnapshot();
         });
       });
     });

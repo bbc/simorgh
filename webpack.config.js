@@ -35,11 +35,6 @@ const getBaseConfig = BUNDLE_TYPE => ({
     extensions: ['.ts', '.tsx', '.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
     alias: {
       ...webpackDirAlias,
-      /*
-         This is needed to avoid multiple versions of isarray in multiple chunks.
-         It tells it to use a single version, in a single location.
-      */
-      isarray: path.resolve(__dirname, 'node_modules/isarray'),
       ...(IS_PROD_PROFILE && {
         'react-dom$': 'react-dom/profiling',
         'scheduler/tracing': 'scheduler/tracing-profiling',
@@ -109,15 +104,7 @@ const getBaseConfig = BUNDLE_TYPE => ({
                 loader: 'babel-loader',
                 options: {
                   presets: [],
-                  plugins: [
-                    [
-                      'transform-react-remove-prop-types',
-                      {
-                        mode: 'remove',
-                        removeImport: true,
-                      },
-                    ],
-                  ],
+                  plugins: [],
                 },
               },
             ],

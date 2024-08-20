@@ -1,5 +1,8 @@
 /* eslint-disable global-require */
-import { renderHook, act } from '@testing-library/react-hooks';
+import {
+  renderHook,
+  act,
+} from '#app/components/react-testing-library-with-providers';
 import Cookies from 'js-cookie';
 
 import useConsentBanners from '.';

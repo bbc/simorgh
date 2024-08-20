@@ -1,10 +1,9 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
-import notes from './README.mdx';
 import ThemeProvider from '../../../components/ThemeProvider';
+import readme from './README.md';
 
 const withDuration = {
   duration: '2:30',
@@ -19,16 +18,15 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
     },
-    docs: { page: notes },
+    docs: { readme },
   },
-  decorators: [withKnobs({ escapeHTML: false })],
 };
 
 export const ArticlesCanonical = () => (
   <ThemeProvider service="news">
     <CanonicalMediaPlayer
       src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      placeholderSrc="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
       service="news"
       mediaInfo={{ title: 'Dog chases cat.', type: 'video', ...withDuration }}
       title="Default Video player"
@@ -47,8 +45,8 @@ export const MAPCanonical = () => (
         type: 'video',
         ...withDuration,
       }}
-      showLoadingImage={boolean('Show loading image', true)}
-      darkPlaceholder={boolean('Dark placeholder', false)}
+      showLoadingImage
+      darkPlaceholder
       title="Media player"
       noJsMessage="Dem no support media player for your device"
       noJsClassName="no-js"
@@ -60,7 +58,7 @@ export const Guidance = () => (
   <ThemeProvider service="news">
     <CanonicalMediaPlayer
       src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      placeholderSrc="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
       service="news"
       title="Video player"
       mediaInfo={{
@@ -78,7 +76,7 @@ export const Audio = () => (
   <ThemeProvider service="news">
     <CanonicalMediaPlayer
       src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      placeholderSrc="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
       service="news"
       mediaInfo={{
         type: 'audio',
@@ -126,7 +124,7 @@ export const AMP = () => (
     <AmpMediaPlayer
       isAmp
       src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en/amp"
-      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      placeholderSrc="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
       service="news"
       mediaInfo={{
         type: 'audio',

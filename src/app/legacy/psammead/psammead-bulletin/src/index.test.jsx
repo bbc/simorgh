@@ -6,7 +6,6 @@ import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Bulletin from '.';
 
-/* eslint-disable react/prop-types */
 const BulletinComponent = ({
   script,
   service,
@@ -23,7 +22,7 @@ const BulletinComponent = ({
   const ctaLink = 'https://bbc.co.uk';
   const imageSizes = [300, 450, 600, 1024];
   const imageSrc =
-    'https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg';
+    'https://ichef.bbci.co.uk/ace/ws/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg';
 
   const playCtaText = isLive ? `${ctaText} Live` : ctaText;
   const offScreenText = isLive ? `${ctaText} LIVE` : ctaText;

@@ -37,7 +37,7 @@ describe('ImageWithPlaceholder', () => {
       expect(preloadLink).toBeInTheDocument();
       expect(preloadLink.rel).toEqual('preload');
       expect(preloadLink.href).toEqual(
-        'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
+        'https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
       );
     });
   });

@@ -34,7 +34,7 @@ type Platform = 'canonical' | 'amp';
 const getArticleMetadataProps = (data: PageDataProps) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: getSummary(data),
+  description: getSummary(data) as string,
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,
@@ -131,7 +131,7 @@ const CanonicalNewsInternationalOrigin = (
 const CanonicalMapInternationalOrigin = () => (
   <MetadataWithContext
     service="pidgin"
-    image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    image="http://ichef.test.bbci.co.uk/ace/ws/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
     imageAltText="connectionAltText"
     imageWidth={100}
     imageHeight={200}
@@ -454,6 +454,20 @@ it('should render the facebook metatags', async () => {
   });
 });
 
+it('should render the facebook domain verification', async () => {
+  render(<CanonicalNewsInternationalOrigin />);
+
+  await waitFor(() => {
+    const FacebookDomainVerification = document
+      .querySelector('head > meta[name="facebook-domain-verification"]')
+      ?.getAttribute('content');
+
+    expect(FacebookDomainVerification).toEqual(
+      'mydfaj4vz8t5psneihy4nm6ff52fac',
+    );
+  });
+});
+
 it('should render the mobile-web-app-capable meta tag', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
@@ -759,7 +773,7 @@ it('should render the open graph image if provided', async () => {
     {
       property: 'og:image',
       content:
-        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+        'http://ichef.test.bbci.co.uk/ace/ws/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { property: 'og:image:alt', content: 'connectionAltText' },
     { property: 'og:image:width', content: '100' },
@@ -768,7 +782,7 @@ it('should render the open graph image if provided', async () => {
     {
       name: 'twitter:image:src',
       content:
-        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+        'http://ichef.test.bbci.co.uk/ace/ws/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
   ];
 

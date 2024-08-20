@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'අලුත්ම පුවතක්',
         postedAt: 'යාවත්කාලීන කළේ',
         summary: 'සාරාංශය',
+        shareButtonText: 'යවන්න',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'සාරාංශය',
       error: {
@@ -260,11 +265,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'වැඩියෙන්ම නැරඹූ',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

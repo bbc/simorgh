@@ -491,6 +491,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  position: relative;
 }
 
 .emotion-30 {
@@ -559,8 +560,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   background-color: #222222;
 }
 
@@ -578,7 +579,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   }
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 37.4375rem) {
   .emotion-42 {
     padding: 0 0.5rem;
   }
@@ -590,13 +591,13 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   }
 }
 
-.emotion-44 {
+.emotion-43 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-46 {
+.emotion-44 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -606,14 +607,14 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-46 {
+  .emotion-44 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-46 {
+  .emotion-44 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -621,58 +622,42 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-46 {
+  .emotion-44 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(
-          5,
-          auto
-        );
     -webkit-column-count: 2;
     column-count: 2;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-46 {
+  .emotion-44 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(
-          4,
-          auto
-        );
     -webkit-column-count: 3;
     column-count: 3;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-46 {
+  .emotion-44 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(
-          3,
-          auto
-        );
     -webkit-column-count: 4;
     column-count: 4;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-46 {
+  .emotion-44 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(
-          3,
-          auto
-        );
     -webkit-column-count: 5;
     column-count: 5;
   }
 }
 
-.emotion-46>li:first-of-type {
+.emotion-44>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -682,53 +667,77 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   column-span: all;
 }
 
-.emotion-48 {
+@media (min-width: 15rem) and (max-width: 37.4375rem) {
+  .emotion-44 {
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-44 {
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-44 {
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-44 {
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.emotion-45 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-50 {
+.emotion-46 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #FFFFFF;
-  display: block;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: block;
 }
 
-.emotion-50:hover,
-.emotion-50:focus {
+.emotion-46:hover,
+.emotion-46:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-78 {
+.emotion-53 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-78 a {
+.emotion-53 a {
   padding: 0;
 }
 
-.emotion-80 {
+.emotion-54 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #FFFFFF;
-  display: inline;
   padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline;
 }
 
-.emotion-80:hover,
-.emotion-80:focus {
+.emotion-54:hover,
+.emotion-54:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -904,98 +913,91 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
         </div>
       </div>
       <div
-        class="emotion-42 emotion-43"
+        class="emotion-42"
       >
         <div
-          class="emotion-44 emotion-45"
+          class="emotion-43"
         >
           <ul
-            class="emotion-46 emotion-47"
+            class="emotion-44"
             role="list"
           >
             <li
-              class="emotion-48 emotion-49"
+              class="emotion-45"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.com/news/help-41670342"
               >
                 Why you can trust the BBC
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.com/terms"
               >
                 Terms of Use
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.co.uk/aboutthebbc/"
               >
                 About the BBC
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.com/privacy/"
               >
                 Privacy Policy
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.com/usingthebbc/cookies/"
               >
                 Cookies
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.com/accessibility/"
               >
                 Accessibility Help
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             >
               <a
-                class="focusIndicatorInvert emotion-50 emotion-51"
+                class="focusIndicatorInvert emotion-46"
                 href="https://www.bbc.com/contact/"
               >
                 Contact the BBC
               </a>
             </li>
             <li
-              class="emotion-48 emotion-49"
               role="listitem"
             />
           </ul>
           <p
-            class="emotion-78 emotion-79"
+            class="emotion-53"
           >
             <span
               lang="en-GB"
@@ -1003,10 +1005,10 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
               ©
                
             </span>
-            2023 BBC. The BBC is not responsible for the content of external sites.
+            2024 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="focusIndicatorInvert emotion-80 emotion-51"
+              class="focusIndicatorInvert emotion-54"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.

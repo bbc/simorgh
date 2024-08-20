@@ -4,7 +4,6 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   MEDIA_PAGE,
-  INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ARTICLE_PAGE,
@@ -150,22 +149,6 @@ const cpsPGLPageAnalyticsData: ATIData = {
   timeUpdated: '2016-08-07T09:21:02.000Z',
 };
 
-const idxPageAnalyticsData: ATIData = {
-  campaigns: null,
-  categoryName: null,
-  contentId: 'urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e',
-  contentType: 'index-section',
-  language: 'sr-Cyrl',
-  ldpThingIds: null,
-  ldpThingLabels: null,
-  pageIdentifier: 'serbiancyr.page',
-  pageTitle: 'Почетна страна - BBC News на српском',
-  producerId: null,
-  timePublished: '2018-01-19T14:09:41.000Z',
-  timeUpdated: '2023-08-31T16:48:38.000Z',
-  producerName: 'SERBIAN',
-};
-
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
     it('should return the correct article url', () => {
@@ -274,40 +257,6 @@ describe('ATIAnalytics params', () => {
         x9: '[title%20-%20brandName]',
         x11: '[1970-01-01T00:00:00.000Z]',
         x12: '[1970-01-01T00:00:00.000Z]',
-      });
-    });
-
-    it('should return the correct IDX page url', () => {
-      const url = buildATIUrl({
-        requestContext: { ...requestContext, pageType: INDEX_PAGE },
-        atiData: idxPageAnalyticsData,
-        serviceContext,
-      });
-
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'serbiancyr.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e]',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[sr-Cyrl]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[originhttp%3A%2F%2Fwww.example.com]',
-        x7: '[index-section]',
-        x8: '[simorgh]',
-        x9: '[Почетна%20страна%20-%20BBC%20News%20на%20српском]',
-        x11: '[2018-01-19T14:09:41.000Z]',
-        x12: '[2023-08-31T16:48:38.000Z]',
-        ref: 'originhttp://www.example.com',
       });
     });
 
@@ -630,37 +579,6 @@ describe('ATIAnalytics params', () => {
         statsDestination: 'statsDestination',
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
-      });
-    });
-
-    it('should return the correct IDX page params', () => {
-      const params = buildATIEventTrackingParams({
-        requestContext: { ...requestContext, pageType: INDEX_PAGE },
-        atiData: idxPageAnalyticsData,
-        serviceContext,
-      });
-      expect(params).toEqual({
-        appName: 'atiAnalyticsAppName',
-        campaigns: null,
-        categoryName: null,
-        contentId: 'urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e',
-        contentType: 'index-section',
-        isUK: false,
-        language: 'sr-Cyrl',
-        ldpThingIds: null,
-        ldpThingLabels: null,
-        libraryVersion: 'simorgh',
-        nationsProducer: undefined,
-        origin: 'origin',
-        pageIdentifier: 'serbiancyr.page',
-        pageTitle: 'Почетна страна - BBC News на српском',
-        platform: 'canonical',
-        previousPath: 'http://www.example.com',
-        producerId: 'atiAnalyticsProducerId',
-        service: 'pidgin',
-        statsDestination: 'statsDestination',
-        timePublished: '2018-01-19T14:09:41.000Z',
-        timeUpdated: '2023-08-31T16:48:38.000Z',
       });
     });
 

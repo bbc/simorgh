@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ਤਾਜ਼ਾ',
         postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
         summary: 'ਸਾਰ',
+        shareButtonText: 'ਸਾਂਝਾ ਕਰੋ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ਸਾਰ',
       error: {
@@ -262,11 +267,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'ਸਭ ਤੋਂ ਵੱਧ ਦੇਖਿਆ',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -333,6 +333,7 @@ export const service: DefaultServiceConfig = {
         },
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
+      collectiveNewsroomText: 'ਬੀਬੀਸੀ ਲਈ ਕਲੈਕਟਿਵ ਨਿਊਜ਼ਰੂਮ ਪ੍ਰਕਾਸ਼ਨ',
     },
     timezone: 'Asia/Kolkata',
   },

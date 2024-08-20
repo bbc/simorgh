@@ -21,7 +21,6 @@ const promos = path(
   pidginPageData.data.article,
 );
 
-// eslint-disable-next-line react/prop-types
 const renderRelatedContent = ({
   content = promos,
   bbcOrigin = 'https://www.test.bbc.co.uk',

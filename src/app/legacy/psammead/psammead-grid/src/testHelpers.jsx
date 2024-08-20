@@ -1,5 +1,4 @@
 import React from 'react';
-import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import Image from '#psammead/psammead-image/src';
@@ -10,7 +9,7 @@ import {
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 
-export const ExampleParagraph = ({ identifier }) => (
+export const ExampleParagraph = ({ identifier = '1' }) => (
   <Paragraph script={latin} service="news">
     {identifier}This is a long paragraph that will wrap for several lines. This
     is a long paragraph that will wrap for several lines. This is a long
@@ -35,7 +34,7 @@ const ImageSpacing = styled.div`
 export const ExampleImage = () => {
   const imageSizes = [300, 450, 600, 1024];
   const imageSrc =
-    'https://ichef.bbci.co.uk/news/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg';
+    'https://ichef.bbci.co.uk/ace/ws/[WIDTH]/cpsprodpb/11897/production/_106613817_999_al_.jpg';
 
   return (
     <ImageSpacing>
@@ -61,10 +60,3 @@ export const ExampleMediaIndicator = MediaIndicator;
 export const ExampleTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
-
-ExampleParagraph.propTypes = {
-  identifier: string,
-};
-ExampleParagraph.defaultProps = {
-  identifier: '1',
-};

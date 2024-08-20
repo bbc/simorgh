@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Təcili xəbər',
         postedAt: 'Xəbərin vaxtı',
         summary: 'Xülasə',
+        shareButtonText: 'Paylaş',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Xülasə',
       error: {
@@ -260,11 +265,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Ən çox baxılanlar',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

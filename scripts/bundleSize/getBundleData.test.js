@@ -1,8 +1,11 @@
-import { pages } from './pages.js';
 import { jest } from '@jest/globals';
+import { pages } from './pages.js';
 import pageTypeBundleExtractor from './__mocks__/pageTypeBundleExtractor.js';
 
-jest.unstable_mockModule('./pageTypeBundleExtractor', () => (pageTypeBundleExtractor));
+jest.unstable_mockModule(
+  './pageTypeBundleExtractor',
+  () => pageTypeBundleExtractor,
+);
 
 jest.unstable_mockModule('fs', () => ({
   default: {
@@ -14,7 +17,6 @@ jest.unstable_mockModule('fs', () => ({
       'modern.LiveRadioPage-31ecd969.64772a90.js',
       'modern.MediaAssetPage-88a3c260.b7ec8c9c.js',
       'modern.MostReadPage-31ecd969.7484ff05.js',
-      'modern.MostWatchedPage-31ecd969.7484rr05.js',
       'modern.OnDemandAudioPage-31ecd969.ec6af2d0.js',
       'modern.OnDemandTvPage-31ecd969.de41ab7f.js',
       'modern.PhotoGalleryPage-e94df663.a733283a.js',
@@ -79,8 +81,7 @@ jest.unstable_mockModule('fs', () => ({
     ],
 
     statSync: () => ({ size: 10000 }),
-  }
-
+  },
 }));
 
 describe('getPageBundleData', () => {

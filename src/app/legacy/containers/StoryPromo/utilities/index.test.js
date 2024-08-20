@@ -1,5 +1,4 @@
 import {
-  MOST_WATCHED_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
@@ -52,17 +51,6 @@ describe('isPgl', () => {
 });
 
 describe('getHeadingTagOverride', () => {
-  it('should return h2 if page type is mostWatched', () => {
-    const pageType = MOST_WATCHED_PAGE;
-    const isContentTypeGuide = false;
-    expect(
-      getHeadingTagOverride({
-        pageType,
-        isContentTypeGuide,
-      }),
-    ).toEqual('h2');
-  });
-
   it('should return div if isContentTypeGuide is true', () => {
     const pageType = PHOTO_GALLERY_PAGE;
     const isContentTypeGuide = true;

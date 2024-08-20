@@ -2,120 +2,6 @@
   "data": {
     "article": {
       "metadata": {
-        "id": "urn:bbc:ares::asset:pidgin/23248703",
-        "locators": {
-          "assetUri": "/pidgin/23248703",
-          "curieCpsUrn": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
-          "assetId": "23248703",
-          "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
-          "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
-        },
-        "type": "MAP",
-        "createdBy": "pidgin-v6",
-        "language": "pcm",
-        "lastUpdated": 1687177422000,
-        "firstPublished": 1568388704000,
-        "lastPublished": 1591799047000,
-        "timestamp": 1591799047000,
-        "options": {
-          "isIgorSeoTagsEnabled": false,
-          "includeComments": false,
-          "allowRightHandSide": true,
-          "isFactCheck": false,
-          "allowDateStamp": true,
-          "hasNewsTracker": false,
-          "allowRelatedStoriesBox": true,
-          "isKeyContent": false,
-          "allowHeadline": false,
-          "isBreakingNews": false,
-          "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-          "cps_asset_type": "map",
-          "counterName": "pidgin.media_asset.23248703.page",
-          "cps_asset_id": "23248703",
-          "contentId": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-            "categoryName": "Opinion"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5ad8625ac93a9f000eecb253",
-              "campaignName": "Inspire me"
-            },
-            {
-              "campaignId": "5ad86285c93a9f000eecb256",
-              "campaignName": "Give me perspective"
-            },
-            {
-              "campaignId": "5ad86291c93a9f000eecb257",
-              "campaignName": "Keep me on trend"
-            }
-          ],
-          "language": "pcm",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-              "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
-            }
-          ],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "formats": [
-              {
-                "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
-                "thingLabel": "Opinion",
-                "thingUri": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
-                "thingId": "654e1609-7a9f-470a-bd87-fb8e8144c374",
-                "thingType": [
-                  "core:Theme",
-                  "core:Thing",
-                  "tagging:TagConcept",
-                  "tagging:AmbiguousTerm",
-                  "tagging:Format"
-                ],
-                "thingSameAs": [
-                  "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-                  "http://www.wikidata.org/entity/Q3962655",
-                  "http://dbpedia.org/resource/Opinion"
-                ],
-                "thingEnglishLabel": "Opinion",
-                "thingPreferredLabel": "Opinion",
-                "thingLabelLanguage": "pcm",
-                "type": "formats"
-              }
-            ],
-            "primaryMediaType": [
-              {
-                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
-                "type": "primaryMediaType"
-              }
-            ]
-          }
-        },
-        "tags": {},
-        "version": "v1.4.28",
-        "blockTypes": [
-          "media",
-          "heading",
-          "paragraph",
-          "subheading",
-          "crosshead",
-          "list",
-          "image"
-        ],
-        "includeComments": false,
         "atiAnalytics": {
           "campaigns": [
             {
@@ -137,336 +23,47 @@
           "language": "pcm",
           "ldpThingIds": null,
           "ldpThingLabels": null,
+          "nationsProducer": null,
           "pageIdentifier": "pidgin.media_asset.23248703.page",
           "pageTitle": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
-          "producerId": null,
           "timePublished": "2019-09-13T15:31:44.000Z",
           "timeUpdated": "2020-06-10T14:24:07.000Z",
-          "producerName": "PIDGIN"
+          "producerName": "PIDGIN",
+          "producerId": "70"
         },
-        "readTime": 1,
-        "siteUri": "/pidgin",
-        "mediaType": "video",
-        "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
-      },
-      "content": {
-        "blocks": [
-          {
-            "id": "p01kx42s",
-            "subType": "clip",
-            "format": "video",
-            "title": "トランプ氏、香港人権法案に署名　中国は反発",
-            "synopses": {
-              "short": "トランプ氏、香港人権法案に署名　中国は反発",
-              "long": "トランプ氏、香港人権法案に署名　中国は反発",
-              "medium": "トランプ氏、香港人権法案に署名　中国は反発"
-            },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-            "embedding": false,
-            "advertising": true,
-            "caption": "this is the caption",
-            "versions": [
-              {
-                "versionId": "p01kx42v",
-                "types": [
-                  "Original"
-                ],
-                "duration": 5,
-                "durationISO8601": "PT5S",
-                "warnings": {},
-                "availableTerritories": {
-                  "uk": true,
-                  "nonUk": true
-                },
-                "availableFrom": 1545304011000
-              }
-            ],
-            "smpKind": "programme",
-            "type": "media"
-          },
-          {
-            "text": "DO NOT UPDATE THIS PAGE - IT IS AN AUTOMATED TEST  ",
-            "markupType": "plain_text",
-            "type": "heading"
-          },
-          {
-            "text": "This is an introduction with special characters &lt; &gt;",
-            "role": "introduction",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          },
-          {
-            "text": "This is an introduction with <bold>BOLD THINGS!!! </bold>okay",
-            "role": "introduction",
-            "markupType": "candy_xml",
-            "type": "paragraph"
-          },
-          {
-            "text": "This is a heading ",
-            "markupType": "plain_text",
-            "type": "heading"
-          },
-          {
-            "text": "This is a subheading ",
-            "markupType": "plain_text",
-            "type": "subheading"
-          },
-          {
-            "text": "This is a crosshead ",
-            "markupType": "plain_text",
-            "type": "crosshead"
-          },
-          {
-            "text": "<itemMeta>afrique/23248423</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                  "headline": "Lorem ipsum dolor sit amet, consectetur",
-                  "overtyped": "<Media Asset Page>"
-                },
-                "locators": {
-                  "href": "https://www.bbc.com/afrique/23248423"
-                },
-                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "timestamp": 1568218735000,
-                "language": "fr",
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:afrique/23248423",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "paragraph"
-          },
-          {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <itemMeta>afrique/23248423</itemMeta> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                  "headline": "Lorem ipsum dolor sit amet, consectetur",
-                  "overtyped": "<Media Asset Page>"
-                },
-                "locators": {
-                  "href": "https://www.bbc.com/afrique/23248423"
-                },
-                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "timestamp": 1568218735000,
-                "language": "fr",
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:afrique/23248423",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "paragraph"
-          },
-          {
-            "numbered": false,
-            "items": [
-              {
-                "text": "<itemMeta>afrique/23248423</itemMeta>",
-                "meta": [
-                  {
-                    "headlines": {
-                      "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                      "headline": "Lorem ipsum dolor sit amet, consectetur",
-                      "overtyped": "<Media Asset Page>"
-                    },
-                    "locators": {
-                      "href": "https://www.bbc.com/afrique/23248423"
-                    },
-                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                    "timestamp": 1568218735000,
-                    "language": "fr",
-                    "passport": {
-                      "category": {
-                        "categoryId": "",
-                        "categoryName": ""
-                      },
-                      "taggings": []
-                    },
-                    "id": "urn:bbc:ares::asset:afrique/23248423",
-                    "type": "cps"
-                  }
-                ],
-                "markupType": "candy_xml",
-                "type": "listItem"
-              },
-              {
-                "text": "<itemMeta>afrique/23248423</itemMeta>",
-                "meta": [
-                  {
-                    "headlines": {
-                      "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                      "headline": "Lorem ipsum dolor sit amet, consectetur",
-                      "overtyped": "<Media Asset Page>"
-                    },
-                    "locators": {
-                      "href": "https://www.bbc.com/afrique/23248423"
-                    },
-                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                    "timestamp": 1568218735000,
-                    "language": "fr",
-                    "passport": {
-                      "category": {
-                        "categoryId": "",
-                        "categoryName": ""
-                      },
-                      "taggings": []
-                    },
-                    "id": "urn:bbc:ares::asset:afrique/23248423",
-                    "type": "cps"
-                  }
-                ],
-                "markupType": "candy_xml",
-                "type": "listItem"
-              },
-              {
-                "text": "<itemMeta>afrique/23248423</itemMeta>",
-                "meta": [
-                  {
-                    "headlines": {
-                      "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                      "headline": "Lorem ipsum dolor sit amet, consectetur",
-                      "overtyped": "<Media Asset Page>"
-                    },
-                    "locators": {
-                      "href": "https://www.bbc.com/afrique/23248423"
-                    },
-                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                    "timestamp": 1568218735000,
-                    "language": "fr",
-                    "passport": {
-                      "category": {
-                        "categoryId": "",
-                        "categoryName": ""
-                      },
-                      "taggings": []
-                    },
-                    "id": "urn:bbc:ares::asset:afrique/23248423",
-                    "type": "cps"
-                  }
-                ],
-                "markupType": "candy_xml",
-                "type": "listItem"
-              },
-              {
-                "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
-                "markupType": "candy_xml",
-                "type": "listItem"
-              },
-              {
-                "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
-                "markupType": "candy_xml",
-                "type": "listItem"
-              },
-              {
-                "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
-                "markupType": "candy_xml",
-                "type": "listItem"
-              }
-            ],
-            "type": "list"
-          },
-          {
-            "text": " Lorem !!! ipsum dolor sit &lt;test&gt; amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "role": "transmission-info",
-            "markupType": "candy_xml",
-            "type": "paragraph"
-          },
-          {
-            "id": "63724501",
-            "subType": "body",
-            "href": "http://b.files.bbci.co.uk/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
-            "path": "/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "butterfly",
-            "caption": "A pretty little butterfly & < >",
-            "copyrightHolder": "Butterfly person",
-            "positionHint": "full-width",
-            "allowSyndication": false,
-            "type": "image"
-          },
-          {
-            "id": "63724512",
-            "subType": "body",
-            "href": "http://b.files.bbci.co.uk/5426/test/_63724512_psammead-closeup.jpg",
-            "path": "/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "psammead",
-            "caption": "Psammead was named after the mythical sand creature",
-            "copyrightHolder": "Google",
-            "positionHint": "full-width",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "numbered": false,
-            "items": [
-              {
-                "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
-                "markupType": "plain_text",
-                "type": "listItem"
-              },
-              {
-                "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
-                "markupType": "plain_text",
-                "type": "listItem"
-              },
-              {
-                "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
-                "markupType": "plain_text",
-                "type": "listItem"
-              }
-            ],
-            "type": "list"
-          },
-          {
-            "text": "This is transmission info ",
-            "role": "transmission-info",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          },
-          {
-            "text": "This is the footer ",
-            "role": "footer",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          }
-        ]
-      },
-      "promo": {
-        "headlines": {
-          "shortHeadline": "DO NOT EDIT THIS IS AN AUTOMATED TEST - Lorem ipsum dolor sit amet, þ ¼",
-          "headline": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"
-        },
+        "id": "urn:bbc:ares::asset:pidgin/23248703",
         "locators": {
           "assetUri": "/pidgin/23248703",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
           "assetId": "23248703",
           "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
+          "canonicalUrl": "https://www.bbc.com/pidgin/23248703",
           "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
         },
-        "summary": "Lorem ipsum dolor sit amet, consectetur this is a change",
-        "timestamp": 1591799047000,
+        "type": "MAP",
+        "createdBy": "pidgin-v6",
         "language": "pcm",
+        "firstPublished": 1568388704000,
+        "lastPublished": 1591799047000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_id": "23248703",
+          "page": "pidgin.media_asset.23248703.page",
+          "contentId": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
+          "cps_asset_type": "map"
+        },
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
@@ -488,8 +85,6 @@
           ],
           "language": "pcm",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
@@ -500,8 +95,6 @@
               "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
             }
           ],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "formats": [
               {
@@ -535,270 +128,2067 @@
             ]
           }
         },
-        "media": {
-          "id": "p01kx42s",
-          "subType": "clip",
-          "format": "video",
-          "title": "トランプ氏、香港人権法案に署名　中国は反発",
-          "synopses": {
-            "short": "トランプ氏、香港人権法案に署名　中国は反発",
-            "long": "トランプ氏、香港人権法案に署名　中国は反発",
-            "medium": "トランプ氏、香港人権法案に署名　中国は反発"
-          },
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-          "embedding": false,
-          "advertising": true,
-          "caption": "this is the caption",
-          "versions": [
-            {
-              "versionId": "p01kx42v",
-              "types": [
-                "Original"
-              ],
-              "duration": 5,
-              "durationISO8601": "PT5S",
-              "warnings": {},
-              "availableTerritories": {
-                "uk": true,
-                "nonUk": true
-              },
-              "availableFrom": 1545304011000
-            }
-          ],
-          "smpKind": "programme",
-          "type": "media"
-        },
-        "indexImage": {
-          "id": "63721682",
-          "subType": "index",
-          "href": "http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg",
-          "path": "/cpsdevpb/6FC4/test/_63721682_p01kx435.jpg",
-          "height": 360,
-          "width": 640,
-          "altText": "connectionAltText",
-          "copyrightHolder": "BBC",
-          "allowSyndication": true,
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:pidgin/23248703",
-        "type": "cps"
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "subheadline",
+          "urlLink",
+          "unorderedList",
+          "listItem",
+          "image",
+          "altText",
+          "rawImage",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "siteUri": "/pidgin",
+        "mediaType": "video",
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
       },
-      "relatedContent": {
-        "section": {
-          "subType": "index",
-          "name": "Domot",
-          "uri": "/pidgin/front_page",
-          "urlIdentifier": "/pidgin/front_page",
-          "type": "simple"
-        },
-        "site": {
-          "subType": "site",
-          "name": "BBC Pidgin",
-          "uri": "/pidgin",
-          "urlIdentifier": "/pidgin",
-          "type": "simple"
-        },
-        "groups": [
-          {
-            "type": "see-alsos",
-            "promos": [
-              {
-                "headlines": {
-                  "shortHeadline": "Anambra Church: Police Arrest 3",
-                  "headline": "Police Arrest 3 ontop Anambra Church Attack"
-                },
-                "locators": {
-                  "assetUri": "/pidgin/tori-23145776",
-                  "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-23145776"
-                },
-                "summary": "Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp",
-                "timestamp": 1502217403000,
-                "language": "pcm",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "63585532",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
-                  "path": "/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
-                  "height": 351,
-                  "width": 624,
-                  "altText": "One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others",
-                  "caption": "Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
-                "type": "cps"
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "739cf103",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b495d75e",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "dcb46891",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+                            "blocks": [
+                              {
+                                "id": "7d6aadba",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
               },
-              {
-                "headlines": {
-                  "shortHeadline": "Kenya Decides 2017 in Pictures",
-                  "headline": "Kenya Elections Pictures: 8 August 2017"
-                },
-                "locators": {
-                  "assetUri": "/pidgin/23146654",
-                  "cpsUrn": "urn:bbc:content:assetUri:/pidgin/23146654"
-                },
-                "summary": "This na some of the picture wey our eye see as Kenya people go vote for election today",
-                "timestamp": 1502222360000,
-                "language": "pcm",
-                "cpsType": "PGL",
-                "id": "urn:bbc:ares::asset:pidgin/23146654",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "shortHeadline": "BBC News Pidgin One Minute News",
-                  "headline": "BBC News Pidgin One Minute News"
-                },
-                "locators": {
-                  "assetUri": "/pidgin/media-23147054",
-                  "cpsUrn": "urn:bbc:content:assetUri:/pidgin/media-23147054"
-                },
-                "summary": "All di local and world tori wey you suppose know in 60 seconds!",
-                "timestamp": 1502963087000,
-                "language": "pcm",
-                "cpsType": "MAP",
-                "media": {
-                  "id": "p01cqycr",
-                  "subType": "clip",
-                  "format": "audio",
-                  "title": "BBC News Piding One Minute News",
-                  "synopses": {
-                    "short": "The Wold's most interesting stories",
-                    "medium": "The Wold's most interesting stories",
-                    "long": "The Wold's most interesting stories"
+              "position": [1]
+            },
+            {
+              "id": "c8742992",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01kx42s",
+                "blocks": [
+                  {
+                    "id": "4f7b5e92",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "21c87bc0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d97dfae4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "this is the caption",
+                                  "blocks": [
+                                    {
+                                      "id": "9b77cfb4",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "this is the caption",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
                   },
-                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
-                  "embedding": false,
-                  "advertising": true,
-                  "caption": "The Wold's most interesting stories",
-                  "versions": [
+                  {
+                    "id": "d97514ba",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d6ab7393",
+                          "blockId": "urn:bbc:ares::clip:p01kx42s",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01kx42s",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "トランプ氏、香港人権法案に署名　中国は反発",
+                            "synopses": {
+                              "short": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "long": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "caption": "トランプ氏、香港人権法案に署名　中国は反発",
+                            "versions": [
+                              {
+                                "versionId": "p01kx42v",
+                                "types": ["Original"],
+                                "duration": 5,
+                                "durationISO8601": "PT5S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1545304011000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme"
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "87fafdaa",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0855bb61",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 976,
+                                  "height": 549,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "dfc3ed4c",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "a708a0d4",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "0f0e2445",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "World Service Thumbnail",
+                                              "blocks": [
+                                                {
+                                                  "id": "6a7b4099",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "World Service Thumbnail",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "1f6b79c0",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1568388704000,
+                "lastPublished": 1591799047000
+              },
+              "position": [3]
+            },
+            {
+              "id": "79378c0e",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "343763ed",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5ed4717c",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "DO NOT UPDATE THIS PAGE - IT IS AN AUTOMATED TEST  ",
+                            "blocks": [
+                              {
+                                "id": "4be07042",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "DO NOT UPDATE THIS PAGE - IT IS AN AUTOMATED TEST  ",
+                                  "attributes": []
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "f57fcdad",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d83ddcc1",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is an introduction with special characters < >",
+                      "blocks": [
+                        {
+                          "id": "108811e0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is an introduction with special characters < >",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "a2ae7ca8",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is an introduction with BOLD THINGS!!! okay",
+                      "blocks": [
+                        {
+                          "id": "768d36e1",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is an introduction with ",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        },
+                        {
+                          "id": "23c539b6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "BOLD THINGS!!! ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 2, 2]
+                        },
+                        {
+                          "id": "dea98a3b",
+                          "type": "fragment",
+                          "model": { "text": "okay", "attributes": [] },
+                          "position": [5, 2, 3]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "3369c813",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "92d259ba",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "77b37646",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is a heading ",
+                            "blocks": [
+                              {
+                                "id": "58e40e00",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is a heading ",
+                                  "attributes": []
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "21862236",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ada488ec",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a0026b28",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is a subheading ",
+                            "blocks": [
+                              {
+                                "id": "1ddc9f53",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is a subheading ",
+                                  "attributes": []
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "4290d27f",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f63e4321",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "92fba2da",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is a crosshead ",
+                            "blocks": [
+                              {
+                                "id": "8d923357",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is a crosshead ",
+                                  "attributes": []
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "546799c7",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1d295a08",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "<Media Asset Page>",
+                      "blocks": [
+                        {
+                          "id": "39389943",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "<Media Asset Page>",
+                            "locator": "https://www.bbc.com/afrique/23248423",
+                            "isExternal": false,
+                            "blocks": [
+                              {
+                                "id": "cd77777c",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "<Media Asset Page>",
+                                  "attributes": []
+                                },
+                                "position": [9, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  },
+                  {
+                    "id": "f3e4bccd",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <Media Asset Page> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                      "blocks": [
+                        {
+                          "id": "d18bbf3d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ",
+                            "attributes": []
+                          },
+                          "position": [9, 2, 1]
+                        },
+                        {
+                          "id": "31afd4e8",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "<Media Asset Page>",
+                            "locator": "https://www.bbc.com/afrique/23248423",
+                            "isExternal": false,
+                            "blocks": [
+                              {
+                                "id": "470842d7",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "<Media Asset Page>",
+                                  "attributes": []
+                                },
+                                "position": [9, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 2, 2]
+                        },
+                        {
+                          "id": "09af9322",
+                          "type": "fragment",
+                          "model": {
+                            "text": " fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                            "attributes": []
+                          },
+                          "position": [9, 2, 3]
+                        }
+                      ]
+                    },
+                    "position": [9, 2]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            { "id": "431eb813", "type": "mpu", "model": {}, "position": [10] },
+            {
+              "id": "689f82f9",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "77f8cbb4",
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "80f4cbe9",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a3f11ce1",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "<Media Asset Page>",
+                                  "blocks": [
+                                    {
+                                      "id": "4bae1c5e",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "<Media Asset Page>",
+                                        "locator": "https://www.bbc.com/afrique/23248423",
+                                        "isExternal": false,
+                                        "blocks": [
+                                          {
+                                            "id": "c664f26a",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "<Media Asset Page>",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 1]
+                        },
+                        {
+                          "id": "feb563ed",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a9c18792",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "<Media Asset Page>",
+                                  "blocks": [
+                                    {
+                                      "id": "e13c6fbe",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "<Media Asset Page>",
+                                        "locator": "https://www.bbc.com/afrique/23248423",
+                                        "isExternal": false,
+                                        "blocks": [
+                                          {
+                                            "id": "f56eef19",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "<Media Asset Page>",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 2]
+                        },
+                        {
+                          "id": "a7f89497",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "16a7d717",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "<Media Asset Page>",
+                                  "blocks": [
+                                    {
+                                      "id": "5161bf1a",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "<Media Asset Page>",
+                                        "locator": "https://www.bbc.com/afrique/23248423",
+                                        "isExternal": false,
+                                        "blocks": [
+                                          {
+                                            "id": "4c7d7c23",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "<Media Asset Page>",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 3, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 3, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 3]
+                        },
+                        {
+                          "id": "b2cb52f8",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e910bb62",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "this is the link text",
+                                  "blocks": [
+                                    {
+                                      "id": "3f53c8d4",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "this is the link text",
+                                        "locator": "https://bbc.com/pidgin",
+                                        "isExternal": true,
+                                        "blocks": [
+                                          {
+                                            "id": "0525f953",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "this is the link text",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 4, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 4, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 4, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 4]
+                        },
+                        {
+                          "id": "066e1ef3",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a7c836c5",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "this is the link text",
+                                  "blocks": [
+                                    {
+                                      "id": "62af39f4",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "this is the link text",
+                                        "locator": "https://bbc.com/pidgin",
+                                        "isExternal": true,
+                                        "blocks": [
+                                          {
+                                            "id": "75e3dbbd",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "this is the link text",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 5, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 5, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 5, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 5]
+                        },
+                        {
+                          "id": "38ff619a",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "66f3c803",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "this is the link text",
+                                  "blocks": [
+                                    {
+                                      "id": "73011dee",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "this is the link text",
+                                        "locator": "https://bbc.com/pidgin",
+                                        "isExternal": true,
+                                        "blocks": [
+                                          {
+                                            "id": "6174bac6",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "this is the link text",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 6, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 6, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 6, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 6]
+                        }
+                      ]
+                    },
+                    "position": [11, 1]
+                  }
+                ]
+              },
+              "position": [11],
+              "blockGroupType": "edOjLinks",
+              "blockGroupIndex": 1
+            },
+            {
+              "id": "9d3609b6",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "958716de",
+                    "type": "paragraph",
+                    "model": {
+                      "text": " Lorem !!! ipsum dolor sit <test> amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore \"eu fugiat nulla\" pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                      "blocks": [
+                        {
+                          "id": "4f3ed2bd",
+                          "type": "fragment",
+                          "model": {
+                            "text": " Lorem !!! ipsum dolor sit <test> amet, ",
+                            "attributes": []
+                          },
+                          "position": [12, 1, 1]
+                        },
+                        {
+                          "id": "c73d98db",
+                          "type": "fragment",
+                          "model": {
+                            "text": "consectetur",
+                            "attributes": ["bold"]
+                          },
+                          "position": [12, 1, 2]
+                        },
+                        {
+                          "id": "2bf593ea",
+                          "type": "fragment",
+                          "model": {
+                            "text": " adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+                            "attributes": []
+                          },
+                          "position": [12, 1, 3]
+                        },
+                        {
+                          "id": "d7e85ee2",
+                          "type": "fragment",
+                          "model": {
+                            "text": " ullamco laboris nisi ut aliquip ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [12, 1, 4]
+                        },
+                        {
+                          "id": "208c3d84",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+                            "attributes": []
+                          },
+                          "position": [12, 1, 5]
+                        },
+                        {
+                          "id": "7b8d70bd",
+                          "type": "fragment",
+                          "model": {
+                            "text": " in voluptate velit esse cillum ",
+                            "attributes": ["italic"]
+                          },
+                          "position": [12, 1, 6]
+                        },
+                        {
+                          "id": "b83b2f77",
+                          "type": "fragment",
+                          "model": {
+                            "text": "dolore \"eu fugiat nulla\" pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                            "attributes": []
+                          },
+                          "position": [12, 1, 7]
+                        }
+                      ]
+                    },
+                    "position": [12, 1]
+                  }
+                ]
+              },
+              "position": [12]
+            },
+            {
+              "id": "7cdd49b7",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "89c390bc",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d93440b0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7ec4d87d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "A pretty little butterfly & < >",
+                                  "blocks": [
+                                    {
+                                      "id": "22e21620",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "A pretty little butterfly & < >",
+                                        "attributes": []
+                                      },
+                                      "position": [13, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [13, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [13, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 1]
+                  },
+                  {
+                    "id": "b016d0a1",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d6ac513a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3723b3bc",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "butterfly",
+                                  "blocks": [
+                                    {
+                                      "id": "4fa84d92",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "butterfly",
+                                        "attributes": []
+                                      },
+                                      "position": [13, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [13, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [13, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 2]
+                  },
+                  {
+                    "id": "d7080772",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 360,
+                      "width": 640,
+                      "locator": "292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
+                      "href": "http://b.files.bbci.co.uk/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Butterfly person",
+                      "suitableForSyndication": false
+                    },
+                    "position": [13, 3]
+                  }
+                ]
+              },
+              "position": [13]
+            },
+            {
+              "id": "9098c26f",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6a5afeab",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1d64bcdd",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5b37a4b5",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Psammead was named after the mythical sand creature",
+                                  "blocks": [
+                                    {
+                                      "id": "b6809906",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Psammead was named after the mythical sand creature",
+                                        "attributes": []
+                                      },
+                                      "position": [14, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [14, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [14, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [14, 1]
+                  },
+                  {
+                    "id": "6a4fbb88",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "089a67aa",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "935652b3",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "psammead",
+                                  "blocks": [
+                                    {
+                                      "id": "c6f1d3a4",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "psammead",
+                                        "attributes": []
+                                      },
+                                      "position": [14, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [14, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [14, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [14, 2]
+                  },
+                  {
+                    "id": "556b060f",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 576,
+                      "width": 1024,
+                      "locator": "5426/test/_63724512_psammead-closeup.jpg",
+                      "href": "http://b.files.bbci.co.uk/5426/test/_63724512_psammead-closeup.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Google",
+                      "suitableForSyndication": true
+                    },
+                    "position": [14, 3]
+                  }
+                ]
+              },
+              "position": [14]
+            },
+            {
+              "id": "49e5c2d6",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4286a0de",
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5c669d9e",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9aa1945e",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                                  "attributes": []
+                                },
+                                "position": [15, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [15, 1, 1]
+                        },
+                        {
+                          "id": "f6a7bd9e",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "fc38199c",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                                  "attributes": []
+                                },
+                                "position": [15, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [15, 1, 2]
+                        },
+                        {
+                          "id": "1c6acce3",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "63149f0f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                                  "attributes": []
+                                },
+                                "position": [15, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [15, 1, 3]
+                        }
+                      ]
+                    },
+                    "position": [15, 1]
+                  }
+                ]
+              },
+              "position": [15]
+            },
+            {
+              "id": "7a64ff18",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e66e5439",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is transmission info ",
+                      "blocks": [
+                        {
+                          "id": "bfe4940d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is transmission info ",
+                            "attributes": []
+                          },
+                          "position": [16, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [16, 1]
+                  },
+                  {
+                    "id": "16ccca48",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is the footer ",
+                      "blocks": [
+                        {
+                          "id": "920f5c17",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is the footer ",
+                            "attributes": []
+                          },
+                          "position": [16, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [16, 2]
+                  }
+                ]
+              },
+              "position": [16]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "locators": {
+          "assetUri": "/pidgin/23248703",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
+          "assetId": "23248703",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
+          "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
+        },
+        "headlines": {
+          "seoHeadline": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
                     {
-                      "versionId": "p01cqyct",
-                      "types": [
-                        "Original"
-                      ],
-                      "duration": 15,
-                      "durationISO8601": "PT15S",
-                      "warnings": {},
-                      "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                      },
-                      "availableFrom": 1502288512000
+                      "type": "paragraph",
+                      "model": {
+                        "text": "DO NOT EDIT THIS IS AN AUTOMATED TEST - Lorem ipsum dolor sit amet, þ ¼",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "DO NOT EDIT THIS IS AN AUTOMATED TEST - Lorem ipsum dolor sit amet, þ ¼",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
                     }
-                  ],
-                  "smpKind": "radioProgramme",
-                  "type": "media"
-                },
-                "indexImage": {
-                  "id": "63708074",
-                  "subType": "index",
-                  "href": "http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png",
-                  "path": "/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png",
-                  "height": 576,
-                  "width": 1024,
-                  "altText": "BBC MInute",
-                  "caption": "BBC Pidgin minute",
-                  "copyrightHolder": "BBC",
-                  "type": "image"
-                },
-                "mediaType": "Audio",
-                "id": "urn:bbc:ares::asset:pidgin/media-23147054",
-                "type": "cps"
+                  ]
+                }
               }
             ]
           }
-        ]
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "connectionAltText",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "connectionAltText",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 360,
+                  "width": 640,
+                  "locator": "6FC4/test/_63721682_p01kx435.jpg",
+                  "href": "http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur this is a change",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur this is a change",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5ad8625ac93a9f000eecb253",
+              "campaignName": "Inspire me"
+            },
+            {
+              "campaignId": "5ad86285c93a9f000eecb256",
+              "campaignName": "Give me perspective"
+            },
+            {
+              "campaignId": "5ad86291c93a9f000eecb257",
+              "campaignName": "Keep me on trend"
+            }
+          ]
+        },
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "DO NOT EDIT THIS IS AN AUTOMATED TEST - Lorem ipsum dolor sit amet, þ ¼"
+          },
+          "media": {
+            "blocks": [
+              {
+                "type": "video",
+                "model": {
+                  "locator": "urn:bbc:pips:pid:p01kx42s",
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "this is the caption",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the caption",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "aresMedia",
+                      "model": {
+                        "blocks": [
+                          {
+                            "blockId": "urn:bbc:ares::clip:p01kx42s",
+                            "type": "aresMediaMetadata",
+                            "model": {
+                              "id": "p01kx42s",
+                              "subType": "clip",
+                              "format": "video",
+                              "title": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "synopses": {
+                                "short": "トランプ氏、香港人権法案に署名　中国は反発",
+                                "long": "トランプ氏、香港人権法案に署名　中国は反発",
+                                "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+                              },
+                              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+                              "embedding": false,
+                              "advertising": true,
+                              "caption": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "versions": [
+                                {
+                                  "versionId": "p01kx42v",
+                                  "types": ["Original"],
+                                  "duration": 5,
+                                  "durationISO8601": "PT5S",
+                                  "warnings": {},
+                                  "availableTerritories": {
+                                    "uk": true,
+                                    "nonUk": true
+                                  },
+                                  "availableFrom": 1545304011000
+                                }
+                              ],
+                              "syndication": { "destinations": [] },
+                              "smpKind": "programme"
+                            }
+                          },
+                          {
+                            "type": "image",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "rawImage",
+                                  "model": {
+                                    "width": 976,
+                                    "height": 549,
+                                    "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
+                                    "originCode": "mpv"
+                                  }
+                                },
+                                {
+                                  "type": "altText",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "text",
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "type": "paragraph",
+                                              "model": {
+                                                "text": "World Service Thumbnail",
+                                                "blocks": [
+                                                  {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                      "text": "World Service Thumbnail",
+                                                      "attributes": []
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
-      "topStories": null,
-      "features": null,
-      "mostRead": null,
-      "mostWatched": {
-        "generated": "2023-06-20T14:35:04.305Z",
-        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
-        "totalRecords": 1,
-        "records": [
-          {
-            "id": "53dce379-a0bd-554e-a3f3-cc2bc3353043",
-            "rank": 1,
-            "count": 9326,
-            "urn": "urn:bbc:curie:asset:53dce379-a0bd-554e-a3f3-cc2bc3353043",
-            "promo": {
-              "headlines": {
-                "shortHeadline": "Ivory Coast's hair sculptor",
-                "headline": "Ivory Coast's hair sculptor Laetitia Ky"
+      "topStories": [
+        {
+          "headlines": {
+            "shortHeadline": "ATMs across the country",
+            "headline": "ATMs across the country"
+          },
+          "locators": {
+            "assetUri": "/pidgin/23248287",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248287",
+            "curie": "http://www.bbc.co.uk/asset/cda3bf00-2939-1a46-b6c1-f4376b944663",
+            "assetId": "23248287"
+          },
+          "summary": "Here we have an article about a particular topic",
+          "timestamp": 1568109680000,
+          "language": "pcm",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "campaigns": [
+              {
+                "campaignId": "5ad8624cc93a9f000eecb252",
+                "campaignName": "DigiHub"
+              }
+            ],
+            "language": "pcm",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "locator": "urn:bbc:cps:curie:asset:cda3bf00-2939-1a46-b6c1-f4376b944663",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
               },
-              "locators": {
-                "assetUri": "/igbo/23170911",
-                "curieCpsUrn": "urn:bbc:cps:curie:asset:53dce379-a0bd-554e-a3f3-cc2bc3353043",
-                "assetId": "23170911",
-                "cpsUrn": "urn:bbc:content:assetUri:igbo/23170911",
-                "curie": "http://www.bbc.co.uk/asset/53dce379-a0bd-554e-a3f3-cc2bc3353043"
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
               },
-              "summary": "Ivory Coast artist Laetitia Ky has a unique way of styling her hair.",
-              "timestamp": 1512731788000,
-              "language": "ig",
-              "passport": {
-                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
-                "taggings": []
-              },
-              "media": {
-                "id": "p01fcrpx",
-                "subType": "clip",
-                "format": "video",
-                "title": "Ivory Coast's hair sculptor",
-                "synopses": {
-                  "short": "Ivory Coast's hair sculptor Laetitia Ky",
-                  "medium": "Ivory Coast artist Laetitia Ky has a unique way of styling her hair.",
-                  "long": "Ivory Coast artist Laetitia Ky has a unique way of styling her hair. She uses it to create art, piled up high on top of her head. Sometimes it’s political, sometimes it’s beautiful and sometimes it’s simply bizarre."
-                },
-                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01fcsfg.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Ivory Coast's hair sculptor Laetitia Ky",
-                "versions": [
-                  {
-                    "versionId": "p01fcrpz",
-                    "types": [
-                      "Original"
-                    ],
-                    "duration": 105,
-                    "durationISO8601": "PT1M45S",
-                    "warnings": {},
-                    "availableTerritories": {
-                      "uk": true,
-                      "nonUk": true
-                    },
-                    "availableFrom": 1512485360000
-                  }
-                ],
-                "smpKind": "programme",
-                "type": "media"
-              },
-              "indexImage": {
-                "id": "63661933",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/847C/test/_63661933_hi008224031.jpg",
-                "path": "/cpsdevpb/847C/test/_63661933_hi008224031.jpg",
-                "height": 1152,
-                "width": 2048,
-                "altText": "hh",
-                "caption": "hh",
-                "copyrightHolder": "Hh",
-                "allowSyndication": false,
-                "type": "image"
-              },
-              "id": "urn:bbc:ares::asset:igbo/23170911",
-              "type": "cps"
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              }
+            ],
+            "schemaVersion": "1.2.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "pcm",
+                  "type": "formats"
+                }
+              ],
+              "contributor": [
+                {
+                  "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                  "type": "contributor"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ]
             }
+          },
+          "indexImage": {
+            "id": "63721223",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+            "path": "/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "-",
+            "copyrightHolder": "-",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/23248287",
+          "type": "cps"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c0ny73k281vo",
+            "canonicalUrl": "https://www.bbc.com/mundo/articles/c0ny73k281vo"
+          },
+          "timestamp": 1692108721110,
+          "suitableForSyndication": true,
+          "language": "es",
+          "headlines": {
+            "seoHeadline": "Template article headline",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Template article 4",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Template article 4",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": { "text": "", "attributes": [] }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Bird",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Bird",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 819,
+                    "height": 461,
+                    "locator": "4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg",
+                    "originCode": "cpsdevpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "es",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "locator": "urn:bbc:optimo:asset:c0ny73k281vo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:c0ny73k281vo",
+          "type": "optimo"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+            "headline": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78"
+          },
+          "locators": {
+            "assetUri": "/pidgin/23267825",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:877b3c91-b210-a84c-bf03-ab64f54bff8a",
+            "assetId": "23267825",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267825",
+            "curie": "http://www.bbc.co.uk/asset/877b3c91-b210-a84c-bf03-ab64f54bff8a"
+          },
+          "summary": "Joseph Shabalala: Ladysmith Black Mambazo founder don die for di age of 78",
+          "timestamp": 1581940630000,
+          "language": "pcm",
+          "passport": {
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "taggings": []
+          },
+          "indexImage": {
+            "id": "63731484",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
+            "path": "/cpsdevpb/BD1D/test/_63731484__110849831_075aed13-3e2a-416e-ba96-7dc77f6150b3.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Joseph shabalala",
+            "caption": "Joseph shabalala",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/23267825",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cvl1jnp2nrqo",
+            "canonicalUrl": "https://www.bbc.com/pidgin/articles/cvl1jnp2nrqo"
+          },
+          "timestamp": 1666888370346,
+          "suitableForSyndication": true,
+          "language": "pcm",
+          "headlines": {
+            "seoHeadline": "Video",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Video Test",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Video Test",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {},
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "pcm",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "locator": "urn:bbc:optimo:asset:cvl1jnp2nrqo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                  "type": "primaryMediaType"
+                }
+              ]
+            }
+          },
+          "id": "urn:bbc:ares::article:cvl1jnp2nrqo",
+          "type": "optimo"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "How Lagos Dey Fight Lassa Fever",
+            "headline": "Lassa Fever: 100 LUTH Workers Dey Under Observation"
+          },
+          "locators": {
+            "assetUri": "/pidgin/tori-23146625",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146625",
+            "curie": "http://www.bbc.co.uk/asset/fd1307eb-2887-1b40-b64c-d95841bdfebd",
+            "assetId": "23146625"
+          },
+          "summary": "100 workers for LUTH dey under observation after two people die from Lassa Fever.",
+          "timestamp": 1502300525000,
+          "language": "pcm",
+          "indexImage": {
+            "id": "63586234",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/A904/test/_63586234_lassalagos.jpg",
+            "path": "/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Nurses for LUTH isolation Center",
+            "caption": "Lassa Fever don show again for Nigeria",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/tori-23146625",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson",
+            "headline": "Voters take to the polls in the Canadian election"
+          },
+          "locators": {
+            "assetUri": "/pidgin/media-23267821",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
+            "assetId": "23267821",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23267821",
+            "curie": "http://www.bbc.co.uk/asset/0f35c912-afc7-1a4b-9518-7853401c1149"
+          },
+          "summary": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+          "timestamp": 1581940273000,
+          "language": "pcm",
+          "passport": {
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "taggings": []
+          },
+          "media": {
+            "id": "p01p5qfc",
+            "subType": "clip",
+            "format": "video",
+            "title": "Justin Trudeau wins Canadian election with minority government",
+            "synopses": {
+              "short": "Voters take to the polls in the Canadian election",
+              "long": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+              "medium": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote."
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Canada's general election took place on Monday 22 October",
+            "versions": [
+              {
+                "versionId": "p01p5qff",
+                "types": ["Original"],
+                "duration": 67,
+                "durationISO8601": "PT1M7S",
+                "warnings": {},
+                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableFrom": 1571751302000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "63731474",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/B935/test/_63731474_p01p5ql9.jpg",
+            "path": "/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "Keyframe #2",
+            "copyrightHolder": "AFP",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/media-23267821",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "shortHeadline": "Kojey Radical: Why gigs feel like football matches",
+            "headline": "Kojey Radical and guests discuss how to write about something you’ve not experienced."
+          },
+          "locators": {
+            "assetUri": "/pidgin/23267823",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:5649a73b-773b-5b45-9f3e-cb0ed14efb5b",
+            "assetId": "23267823",
+            "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267823",
+            "curie": "http://www.bbc.co.uk/asset/5649a73b-773b-5b45-9f3e-cb0ed14efb5b"
+          },
+          "summary": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+          "timestamp": 1581940421000,
+          "language": "pcm",
+          "passport": {
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+            "taggings": []
+          },
+          "media": {
+            "id": "23267824",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "w3csz54v",
+            "entityType": "Episode",
+            "caption": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+            "statusCode": 410,
+            "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+            "type": "external_vpid"
+          },
+          "indexImage": {
+            "id": "63721223",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+            "path": "/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "-",
+            "copyrightHolder": "-",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "id": "urn:bbc:ares::asset:pidgin/23267823",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-04-19T08:35:01.267Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "items": [
+          {
+            "id": "8fd89a41-e39d-754b-aaa1-062f4d6595a0",
+            "rank": 1,
+            "title": "Fin - the secret Facebook group of Nigerian women 4",
+            "href": "/pidgin/tori-23135359",
+            "timestamp": "2017-06-21T13:47:09.000Z"
+          },
+          {
+            "id": "bcd1e840-1734-8e4c-a191-94a759296fa2",
+            "rank": 2,
+            "title": "Live Update: Voting Day for Kenya",
+            "href": "/pidgin/tori-23146452",
+            "timestamp": "2017-08-08T18:32:36.000Z"
+          },
+          {
+            "id": "b582d74a-439a-1741-befd-c7af2c57b9b2",
+            "rank": 3,
+            "title": "South Africa no Get Money for Army",
+            "href": "/pidgin/tori-23139944",
+            "timestamp": "2017-08-08T19:17:33.000Z"
+          },
+          {
+            "id": "a0d223d4-4142-a74e-941d-5821ca4a0330",
+            "rank": 4,
+            "title": "Kenya: Raila Odinga Don Reject Result",
+            "href": "/pidgin/tori-23146754",
+            "timestamp": "2017-08-09T12:08:56.000Z"
+          },
+          {
+            "id": "9f2e9c73-d22b-b14c-a557-bfdca715dd51",
+            "rank": 5,
+            "title": "Kaduna: Government Order More Police",
+            "href": "/pidgin/23141241",
+            "timestamp": "2017-08-08T20:08:29.000Z"
+          },
+          {
+            "id": "81faf17c-88dd-4047-801f-f218bc24d504",
+            "rank": 6,
+            "title": "Holi festival photos",
+            "href": "/pidgin/23203390",
+            "timestamp": "2018-06-07T13:30:44.000Z"
+          },
+          {
+            "id": "5dd7b90a-91aa-3149-81b0-fc33c5ece5fe",
+            "rank": 7,
+            "title": "Fin - the secret Facebook group of Nigerian women 18",
+            "href": "/pidgin/sport-23135581",
+            "timestamp": "2017-06-22T08:20:52.000Z"
+          },
+          {
+            "id": "4b211768-f9da-6b49-8677-5a5236153afe",
+            "rank": 8,
+            "title": "Water Solutions for traffic gridlock in Lagos",
+            "href": "/igbo/23170719",
+            "timestamp": "2017-12-08T08:39:21.000Z"
+          },
+          {
+            "id": "fbef465c-35ef-1c42-9286-39c895315d74",
+            "rank": 9,
+            "title": "Fin - the secret Facebook group of Nigerian women 17",
+            "href": "/pidgin/sport-23135580",
+            "timestamp": "2017-06-22T08:20:46.000Z"
+          },
+          {
+            "id": "bb173109-f21a-ee4f-a783-64b04cca43f7",
+            "rank": 10,
+            "title": "Fin - the secret Facebook group of Nigerian women 3",
+            "href": "/pidgin/tori-23135358",
+            "timestamp": "2017-06-21T13:47:03.000Z"
           }
         ]
-      }
+      },
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"

@@ -31,7 +31,7 @@ export const createSrcsets = ({
   imageResolutions = DEFAULT_RESOLUTIONS,
 }) => {
   if (originCode === 'pips') {
-    return { primarySrcset: null, fallbackSrcset: null };
+    return { primarySrcset: undefined, fallbackSrcset: undefined };
   }
 
   const requiredResolutions = imageResolutions.filter(
@@ -45,7 +45,8 @@ export const createSrcsets = ({
     requiredResolutions.push(originalImageWidth);
   }
 
-  const [primarySrcset, fallbackSrcset] = [true, false].map(isWebP =>
+  // eslint-disable-next-line prefer-const
+  let [primarySrcset, fallbackSrcset] = [true, false].map(isWebP =>
     requiredResolutions
       .map(
         resolution =>
@@ -58,6 +59,7 @@ export const createSrcsets = ({
       )
       .join(', '),
   );
+  fallbackSrcset = fallbackSrcset.replaceAll('.webp', '');
 
   return {
     primarySrcset,

@@ -50,11 +50,17 @@ export type UkrainianService = {
   variant: 'default' | 'ru-UA';
 };
 
+export type UzbekService = {
+  service: 'uzbek';
+  variant: 'default' | 'cyr' | 'lat';
+};
+
 export type ServicesWithVariants =
   | SerbianService
   | ChineseService
   | ZhongwenService
-  | UkrainianService;
+  | UkrainianService
+  | UzbekService;
 
 export type ServicesWithNoVariants = {
   service:
@@ -99,8 +105,8 @@ export type ServicesWithNoVariants = {
     | 'tigrinya'
     | 'turkce'
     | 'urdu'
-    | 'uzbek'
     | 'vietnamese'
+    | 'ws'
     | 'yoruba';
   variant: 'default';
 };

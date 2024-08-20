@@ -5,6 +5,7 @@ import {
   HOME_PAGE,
   LIVE_PAGE,
   TOPIC_PAGE,
+  UGC_PAGE,
 } from '../pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
@@ -101,6 +102,7 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'local'}  | ${'/persian/topics/c0000000000t'}     | ${'http://localhost/persian/topics/c0000000000t'}
     ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'test'}   | ${'/persian/topics/c0000000000t'}     | ${'https://mock-bff-path/?id=c0000000000t&service=persian&pageType=topic&serviceEnv=test'}
     ${TOPIC_PAGE}   | ${'persian'}    | ${null}    | ${'live'}   | ${'/persian/topics/c0000000000t'}     | ${'https://mock-bff-path/?id=c0000000000t&service=persian&pageType=topic&serviceEnv=live'}
+    ${UGC_PAGE}     | ${'mundo'}      | ${null}    | ${'local'}  | ${'/u50853489'}                                       | ${'http://localhost/api/local/mundo/send/u50853489'}
   `(
     `on $environment environment, should return $expected when path is $pathname, pageType is $pageType, service is $serviceOverride and variant is $variant`,
     ({
@@ -126,12 +128,12 @@ describe('constructPageFetchUrl', () => {
   );
 
   it.each`
-    pageType        | service        | pathname                            | expected
-    ${ARTICLE_PAGE} | ${'ukrainian'} | ${'/ukrainian/articles/foo'}        | ${'Article ID is invalid'}
-    ${HOME_PAGE}    | ${'foo'}       | ${'/foo/c0000000000t'}              | ${'Home ID is invalid'}
-    ${LIVE_PAGE}    | ${'ukrainian'} | ${'foo'}                            | ${'Live ID is invalid'}
-    ${TOPIC_PAGE}   | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
-    ${'foo'}        | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
+    pageType      | service        | pathname                            | expected
+    ${HOME_PAGE}  | ${'foo'}       | ${'/foo/c0000000000t'}              | ${'Home ID is invalid'}
+    ${LIVE_PAGE}  | ${'ukrainian'} | ${'foo'}                            | ${'Live ID is invalid'}
+    ${TOPIC_PAGE} | ${'ukrainian'} | ${'/ukrainian/topics/foo'}          | ${'Topic ID is invalid'}
+    ${TOPIC_PAGE} | ${'ukrainian'} | ${'/ukrainian/topics/c000000000t'}  | ${'Topic ID is invalid'}
+    ${'foo'}      | ${'ukrainian'} | ${'/ukrainian/topics/c0000000000t'} | ${'Foo ID is invalid'}
   `(
     `should throw a 500 with message $expected, when pageType $pageType asset ID is incorrect with service of $service`,
     ({ pageType, service, pathname, expected }) => {

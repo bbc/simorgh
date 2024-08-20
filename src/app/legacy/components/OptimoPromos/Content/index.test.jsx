@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useMemo } from 'react';
 import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import LinkContents from '.';
@@ -17,18 +16,27 @@ const ContentFixture = ({
   headline,
   isPhotoGallery,
   ariaLabelledBy,
-}) => (
-  <ServiceContextProvider service="news">
-    <PromoContext.Provider value={{ mediaType, ariaLabelledBy }}>
-      <LinkContents
-        id={id}
-        headline={headline}
-        mediaDuration={mediaDuration}
-        isPhotoGallery={isPhotoGallery}
-      />
-    </PromoContext.Provider>
-  </ServiceContextProvider>
-);
+}) => {
+  const contentFixtureValue = useMemo(
+    () => ({
+      mediaType,
+      ariaLabelledBy,
+    }),
+    [ariaLabelledBy, mediaType],
+  );
+  return (
+    <ServiceContextProvider service="news">
+      <PromoContext.Provider value={contentFixtureValue}>
+        <LinkContents
+          id={id}
+          headline={headline}
+          mediaDuration={mediaDuration}
+          isPhotoGallery={isPhotoGallery}
+        />
+      </PromoContext.Provider>
+    </ServiceContextProvider>
+  );
+};
 
 describe('Promo Content', () => {
   it("should render a story's headline", () => {

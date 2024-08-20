@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { string, shape, arrayOf, oneOf, element } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 
 import { EpisodeContext } from './helpers';
 import Episode from './Episode';
@@ -33,13 +31,24 @@ const StyledEpisodeListItem = styled.li`
   }
 `;
 
-const EpisodeList = ({ children, script, service, dir, ulProps, liProps }) => {
+const EpisodeList = ({
+  children = [],
+  script,
+  service,
+  dir = 'ltr',
+  ulProps = {},
+  liProps = {},
+}) => {
+  const episodeListContextValue = useMemo(
+    () => ({ script, service, dir }),
+    [script, service, dir],
+  );
   if (!children.length) return null;
 
   const hasMultipleChildren = children.length > 1;
 
   return (
-    <EpisodeContext.Provider value={{ script, service, dir }}>
+    <EpisodeContext.Provider value={episodeListContextValue}>
       {hasMultipleChildren ? (
         <StyledEpisodeList role="list" {...ulProps}>
           {children.map(child => (
@@ -53,22 +62,6 @@ const EpisodeList = ({ children, script, service, dir, ulProps, liProps }) => {
       )}
     </EpisodeContext.Provider>
   );
-};
-
-EpisodeList.propTypes = {
-  children: arrayOf(element),
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  ulProps: shape({}),
-  liProps: shape({}),
-};
-
-EpisodeList.defaultProps = {
-  children: [],
-  dir: 'ltr',
-  ulProps: {},
-  liProps: {},
 };
 
 EpisodeList.Episode = Episode;

@@ -13,8 +13,8 @@ export type OEmbedData = Partial<{
   html: string;
   url: string;
   source: string;
-  width: number;
-  height: number;
+  width: number | string;
+  height: number | string;
   type: string;
   iFrameSrc: string;
   iFrameId: string;
@@ -25,6 +25,5 @@ export type OEmbedData = Partial<{
 }>;
 
 export type OEmbedProps = {
-  type: string;
   oembed: OEmbedData;
 };

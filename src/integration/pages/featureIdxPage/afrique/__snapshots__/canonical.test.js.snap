@@ -62,7 +62,7 @@ exports[`Canonical Feature Index page Footer Anchors should match text and url 8
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`Canonical Feature Index page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 
@@ -96,47 +96,40 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
 {
-  "text": "Bien-être",
-  "url": "/afrique/topics/c0vmyy90q8zt",
-}
-`;
-
-exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
-{
   "text": "Science et technologie",
   "url": "/afrique/topics/crezq2zk0q4t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
 {
   "text": "Economie",
   "url": "/afrique/topics/cnq687nr9v1t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
 {
   "text": "Culture",
   "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
 {
   "text": "Vidéos",
   "url": "/afrique/topics/cz4vn9gyd6rt",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
 {
   "text": "Nos émissions",
-  "url": "/afrique/media-54074891",
+  "url": "/afrique/topics/c88nzggm8gxt",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 10`] = `
 {
   "text": "Ecoutez en direct",
   "url": "/afrique/bbc_afrique_radio/liveradio",
@@ -306,11 +299,11 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="CAN 2019 : le Sénégal en huitième de finale"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="549"
   sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
+  src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg.webp 660w"
   style="aspect-ratio:976 / 549"
   width="976"
 />

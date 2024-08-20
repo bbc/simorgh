@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, shape } from 'prop-types';
 import { Headline } from '#psammead/psammead-headings/src';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '#psammead/psammead-paragraph/src';
@@ -8,17 +7,19 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import useLocation from '#hooks/useLocation';
 import AVPlayer from '#containers/AVPlayer';
-import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 
-const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+const staticAssetsPath = `${
+  getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
+}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
@@ -34,7 +35,6 @@ const LiveRadioPage = ({ pageData }) => {
   } = pageData;
   const { script, service, lang, liveRadioOverrides, translations } =
     useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
@@ -46,7 +46,6 @@ const LiveRadioPage = ({ pageData }) => {
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
-    isAmp,
     queryString: location.search,
   });
   const iframeTitle = pathOr(
@@ -134,20 +133,6 @@ const LiveRadioPage = ({ pageData }) => {
       )}
     </>
   );
-};
-
-LiveRadioPage.propTypes = {
-  pageData: shape({
-    metadata: shape({
-      type: string,
-    }),
-    language: string,
-    name: string,
-    summary: string,
-    heading: string,
-    bodySummary: string,
-    masterBrand: string,
-  }).isRequired,
 };
 
 export default LiveRadioPage;

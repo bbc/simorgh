@@ -2,11 +2,14 @@
 import React, { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { UserContext } from '#contexts/UserContext';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const CanonicalComscoreAnalytics = () => {
   const { personalisationEnabled } = useContext(UserContext);
 
-  const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+  const staticAssetsPath = `${
+    getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
+  }${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
   const comscoreScript = 'static/js/comscore/main-1.0.js';
 
   useEffect(() => {

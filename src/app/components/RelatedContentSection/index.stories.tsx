@@ -1,10 +1,6 @@
 import React from 'react';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../ThemeProvider';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { Services } from '../../models/types/global';
 import { OptimoBlock } from '../../models/types/optimo';
 
@@ -15,7 +11,7 @@ import {
   RelatedContentSingleItemRtl,
   RelatedContentListRtl,
 } from './fixture';
-import md from './README.md';
+import readme from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -29,27 +25,20 @@ type Props = {
   service?: Services;
 };
 
-// eslint-disable-next-line react/prop-types
 const RelatedContentComponent = ({ content, service = 'news' }: Props) => (
-  <ThemeProvider service={service} variant="default">
-    <ToggleContextProvider>
-      <BackGround>
-        <ServiceContextProvider service={service}>
-          <RelatedContentSection content={content} />
-        </ServiceContextProvider>
-      </BackGround>
-    </ToggleContextProvider>
-  </ThemeProvider>
+  <BackGround>
+    <ServiceContextProvider service={service}>
+      <RelatedContentSection content={content} />
+    </ServiceContextProvider>
+  </BackGround>
 );
 
 export default {
   title: 'components/OptimoPromos/OptimoRelatedContent',
   RelatedContentComponent,
-  decorators: [withKnobs, withServicesKnob()],
   parameters: {
-    docs: {
-      page: md,
-    },
+    docs: { readme },
+    chromatic: { diffThreshold: 0.2 },
   },
 };
 

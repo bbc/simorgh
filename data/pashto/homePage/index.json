@@ -8,41 +8,44 @@
         "summaries": [
           {
             "type": "article",
-            "title": "روسیه: د طالبانو حکومت په رسمیت نه پېژنو، خو خبرې ورسره ضرور دي  ",
-            "firstPublished": "2023-04-26T12:33:45.566Z",
-            "link": "https://www.bbc.com/pashto/articles/crg3rkrl39ko",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e7ff/live/d2d85e90-e42d-11ed-bfcf-0f0f6a84ee61.jpg",
-            "description": "د روسیې د بهرنیو چارو وزیر وايي، مسکو به تر هغې په افغانستان کې د طالبانو حکومت په رسمیت ونه پېژني چې \"نړیوال مسوولیتونه\"  پر ځای نه کړي.\nد روسیې د تاس خبري‌ ژانس په وینا،‌ سرګیې لاوروف دغه‌ څرګندونې په نیویارک کې خبریالانو ته کړې دي. \nښاغلي ‌لاوروف ویلي‌ \"فکر کوو طالبان یو حقیقت دی،‌ له هغوی سره خبرې ضرور دي.\"",
-            "imageAlt": "لاوروف ",
-            "id": "crg3rkrl39ko"
+            "title": "الولايات المتحدة تسعى لتجميد أصول زعيم كوريا الشمالية",
+            "firstPublished": "2017-09-07T11:10:33.000Z",
+            "lastPublished": "2017-09-07T11:10:33.000Z",
+            "link": "https://www.bbc.com/arabic/23151862",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3D5D/test/_63590751_000097641-1.jpg",
+            "description": "صاغت الولايات المتحدة مشروع قرار جديدا في الأمم المتحدة، ردا على أحدث التجارب النووية لكوريا الشمالية، والتي من المقرر أن يناقشها أعضاء مجلس الأمن الدولي التابع للمنظمة الدولية.",
+            "imageAlt": "عبم كةرؤي",
+            "id": "9afd3015-a484-6e4e-8703-836764820757"
           },
           {
             "type": "article",
-            "title": "طالبان په نشه روږدو راغونډو کړو کسانو ته حرفوي زدکړې ورکوي ",
-            "firstPublished": "2023-04-26T05:24:07.646Z",
-            "link": "https://www.bbc.com/pashto/articles/c190emd732wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/19b1/live/73a5f2e0-e3b3-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "",
-            "imageAlt": "کابل",
-            "id": "c190emd732wo"
+            "title": "د هرات وسله وال برید کې شپږ کسان وژل شوي 2",
+            "firstPublished": "2016-09-21T12:09:14.000Z",
+            "lastPublished": "2016-09-21T12:09:14.000Z",
+            "link": "https://www.bbc.com/pashto/23076396",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "description": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+            "imageAlt": "مرستندویه",
+            "id": "73dae247-47c7-0e44-93d0-3f5439d4520e"
           },
           {
             "type": "article",
-            "title": "سوډان؛ د مخکیني ولسمشر عمر البشیر حکومتي چارواکي له زندانه بهر شوي",
-            "firstPublished": "2023-04-26T08:07:02.000Z",
-            "link": "https://www.bbc.com/pashto/world-65397681",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/E9B6/production/_129503895_harun.jpg",
-            "description": "د سوډان یو شمېر مخکیني حکومتي چارواکي چې په جنګي جرمونو تورن دي د خرطوم له زندانه بهر شوي دي.",
-            "imageAlt": "Harun (left) in 2010 when he was governor of the South Kordofan region",
-            "id": "d19245eb-97c4-44d8-b7da-0906dd510e38"
+            "title": "کډوال،‌ له هغو افغانانو سره به څه کېږي چې پاکستاني ښځو او نارینه وو سره یې ودونه کړي",
+            "firstPublished": "2016-09-21T16:28:48.000Z",
+            "lastPublished": "2016-09-21T16:28:48.000Z",
+            "link": "https://www.bbc.com/pashto/pokhtonkhwa-23076614",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3071/test/_63510421_160801092531_cn_rio2016_preps_01_640x360_bbcchinese_nocredit.jpg",
+            "description": "د افغان کډوالو د هستوګنې په اړه د پاکستان لخوا اعلان شوې وروستۍ نېټې هغو افغانانو او پاکستانیانو ترمنځ د کورنیو اړیکو پرې کېدو اندېښنې راولاړې کړې دي چې سره خپلوۍ لري.",
+            "imageAlt": "تېره اونۍ پاکستاني مېرمنو د یوه اعتراضي لاریون په ترڅ کې د پاکستان له حکومت نه وغوښتل چې ددوی بچيانو او مېړونو ته ددې هېواد تابعیت ورکړي.",
+            "id": "a0b98909-2ea7-2948-86e8-831d12d94397"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:e74e8e47-caa7-44f8-b744-4afb53c236b6",
+        "curationId": "urn:bbc:tipo:list:3441939b-5dcd-4b28-acc6-48a24ec68ce5",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
+        "title": "ځانګړي مطالب",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
       },
@@ -50,44 +53,71 @@
         "summaries": [
           {
             "type": "article",
-            "title": "امریکایۍ پوځي کورنۍ کې د یتیمې افغانې نجلۍ لورولي باطله اعلان شوه",
-            "firstPublished": "2023-04-01T23:31:44.475Z",
-            "link": "https://www.bbc.com/pashto/articles/cz90g7pe616o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/8154/live/5aa507d0-d0e0-11ed-b565-c9e23c8c2ac8.png",
-            "description": "",
-            "imageAlt": "نجلۍ",
-            "id": "cz90g7pe616o"
-          },
-          {
-            "type": "article",
-            "title": "د پېښور لوړې محکمې لومړنۍ ښځينه قاضۍ؛ 'مسرت هلالي د حق خبرې کولو جرات لري'",
-            "firstPublished": "2023-04-01T17:11:34.000Z",
-            "link": "https://www.bbc.com/pashto/pakhtunkhwa-65145491",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9D34/production/_129244204_90e097db-8ec7-42e1-a382-4e3aa463206f.jpg",
-            "description": "د خيبر پښتونخوا په قضایي تاريخ کې لومړی ځل يوه ښځینه چې مسرت هلالي نومېږي د پېښور های کورټ يا لوړې محکمي مشره قاضۍ نومول شوې ده. د پېښور د های کورټ له خوا خپرې شوې اعلاميې له مخې نوموړې نن شنبې (د اپرېل لومړۍ) د مشرې قاضۍ په توګه کار پيل کړ. له دې وړاندې روح الامين د يوې ورځې لپاره مشر قاضي غوره شوی و.",
-            "imageAlt": "مسرت هلالي",
-            "id": "2533b486-b40a-4674-b8d6-65cc63432a3a"
-          },
-          {
-            "type": "video",
-            "duration": "PT11M56S",
-            "title": "مېرمن: د دودونو پالل د ښځو ژوند کې څه منفي او مثبت رول لري؟",
-            "firstPublished": "2023-04-01T23:43:08.000Z",
-            "link": "https://www.bbc.com/pashto/afghanistan-65145496",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1220E/production/_129245247_p0fdc8gs.jpg",
-            "description": "د مېرمن د دې اوونۍ خپرونه کې په دې بحث شوی چې د دودونو پالل د ښځو ژوند کې څه منفي او مثبت رول لري؟",
-            "imageAlt": "شازيه مېرمن خپرونه",
-            "id": "28a60bd9-d107-43cc-8b26-8e8eb1a28d38"
+            "title": "Template article 4",
+            "firstPublished": "2023-08-15T14:12:01.110Z",
+            "lastPublished": "2023-08-15T14:12:01.110Z",
+            "link": "https://www.bbc.com/mundo/articles/c0ny73k281vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/4414/test/146c2c30-3b75-11ee-93b4-83c41441672b.jpg",
+            "description": "Probo lorem partem pro ex, unum prima expetenda eos ne. Melius viderer quaestio nec te.",
+            "imageAlt": "Bird",
+            "id": "c0ny73k281vo"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:827e2294-1a58-46bd-ac84-8f8f8540b60a",
-        "curationType": "tipo-curation",
+        "link": "https://www.bbc.com/pashto/67334438",
+        "curationId": "urn:bbc:optimo:asset:c0ny73k281vo",
+        "curationType": "optimo",
         "position": 1,
-        "title": "ځانګړي مطالب",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
+        "title": "کابل کې چاودنې اووه کسان وژلي، ۲۰ نور ټپیان دي",
+        "visualProminence": "NORMAL",
+        "intent": "overview"
+      },
+      {
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_pashto_radio",
+        "curationType": "available-episodes",
+        "position": 2,
+        "title": "Radio Schedule",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "radioSchedule": [
+          {
+            "id": "p0h6p3dy",
+            "state": "next",
+            "startTime": "2024-02-27T15:00:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/w3ct6293",
+            "brandTitle": "ماښامنۍ خپرونه",
+            "summary": "له بي‌ بي سي دا خپرونه اورئ",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0h6nbwn",
+            "state": "live",
+            "startTime": "2024-02-27T13:30:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/liveradio",
+            "brandTitle": "پښتو تلویزیون",
+            "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+            "duration": "PT28M"
+          },
+          {
+            "id": "p0h6mywd",
+            "state": "onDemand",
+            "startTime": "2024-02-27T12:00:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/w3ct62gq",
+            "brandTitle": "ځانگړې مرکه او عيني شاهد خپرونه ",
+            "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+            "duration": "PT1H"
+          },
+          {
+            "id": "p0h6kmy4",
+            "state": "onDemand",
+            "startTime": "2024-02-27T05:00:00.000Z",
+            "link": "/pashto/bbc_pashto_radio/w172zj2wgcvqnf9",
+            "brandTitle": "د نن خبرې",
+            "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+            "duration": "PT29M30S"
+          }
+        ]
       }
     ],
     "metadata": {
@@ -99,6 +129,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from Live tipo"
+  "contentType": "application/json; charset=utf-8"
 }

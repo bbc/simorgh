@@ -23,6 +23,7 @@ jobs:
       LOG_LEVEL: 'error'
       CYPRESS_SKIP_EU: true
       CYPRESS_SMOKE: true
+      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
       CYPRESS_APP_ENV: 'local'
 
     steps:
@@ -34,15 +35,17 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Add bbc.com domain
+        run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
+
       - name: Run Simorgh E2Es
-        uses: cypress-io/github-action@v3
+        uses: cypress-io/github-action@v6
         with:
-          config-file: cypress-simorgh.json
           build: yarn build
           start: yarn start
 
       - name: Run Simorgh NextJS E2Es
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           working-directory: ws-nextjs-app
           build: yarn build

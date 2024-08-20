@@ -1,0 +1,1822 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:142c7232-ebaf-2d4e-8e70-6b68dda2f199",
+          "contentType": "article",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "hausa.news.story.23246985.page",
+          "pageTitle": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+          "timePublished": "2019-08-20T12:21:00.000Z",
+          "timeUpdated": "2019-08-20T12:21:00.000Z",
+          "producerName": "HAUSA",
+          "producerId": "51"
+        },
+        "id": "urn:bbc:ares::asset:hausa/labarai-23246985",
+        "locators": {
+          "assetUri": "/hausa/labarai-23246985",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:142c7232-ebaf-2d4e-8e70-6b68dda2f199",
+          "assetId": "23246985",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-23246985",
+          "canonicalUrl": "https://www.bbc.com/hausa/labarai-23246985",
+          "curie": "http://www.bbc.co.uk/asset/142c7232-ebaf-2d4e-8e70-6b68dda2f199"
+        },
+        "type": "STY",
+        "createdBy": "hausa-v6",
+        "language": "ha",
+        "firstPublished": 1566303660000,
+        "lastPublished": 1566303660000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_id": "23246985",
+          "page": "hausa.news.story.23246985.page",
+          "contentId": "urn:bbc:cps:curie:asset:142c7232-ebaf-2d4e-8e70-6b68dda2f199",
+          "cps_asset_type": "sty"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": []
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "byline",
+          "contributor",
+          "name",
+          "role",
+          "audio",
+          "caption",
+          "unorderedList",
+          "listItem",
+          "urlLink",
+          "image",
+          "altText",
+          "rawImage",
+          "subheadline",
+          "links",
+          "link",
+          "aresLink",
+          "aresMedia",
+          "aresMediaMetadata"
+        ],
+        "includeComments": false,
+        "siteUri": "/hausa",
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "d1edacd9",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1e958a85",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "acc70c18",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+                            "blocks": [
+                              {
+                                "id": "1fe52836",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "e4e0e61a",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1566303660000,
+                "lastPublished": 1566303660000
+              },
+              "position": [2]
+            },
+            {
+              "id": "cb63d2ac",
+              "type": "audio",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01b7w2r",
+                "blocks": [
+                  {
+                    "id": "98aa5a4a",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "10c33705",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "dd546175",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+                                  "blocks": [
+                                    {
+                                      "id": "35c55b76",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "a931c744",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "17c92db3",
+                          "blockId": "urn:bbc:ares::clip:p01b7w2r",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01b7w2r",
+                            "subType": "clip",
+                            "format": "audio",
+                            "title": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
+                            "synopses": {
+                              "short": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w9z.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01b7w2z",
+                                "types": ["Original"],
+                                "duration": 16,
+                                "durationISO8601": "PT16S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1495467503000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "radioProgramme"
+                          },
+                          "position": [3, 2, 1]
+                        },
+                        {
+                          "id": "92d02f03",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f31d287a",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01b7w9z.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [3, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [3, 2]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "15750902",
+              "type": "byline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e3219126",
+                    "type": "contributor",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2d2f5940",
+                          "type": "name",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "55185e90",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "4a31f7fb",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Kalkidan Yibeltal",
+                                        "blocks": [
+                                          {
+                                            "id": "7e584d03",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Kalkidan Yibeltal",
+                                              "attributes": []
+                                            },
+                                            "position": [4, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [4, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 1]
+                        },
+                        {
+                          "id": "80788f0f",
+                          "type": "role",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6fd6798e",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "b2f463c5",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "BBC Amharic",
+                                        "blocks": [
+                                          {
+                                            "id": "b2e7f862",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "BBC Amharic",
+                                              "attributes": []
+                                            },
+                                            "position": [4, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [4, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 2]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "8e3d96ef",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "78d1c706",
+                    "type": "paragraph",
+                    "model": {
+                      "text": " ",
+                      "blocks": [
+                        {
+                          "id": "61e1aa06",
+                          "type": "fragment",
+                          "model": { "text": " ", "attributes": [] },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "068a297e",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ɓ ɓ ɗ Ɗ ƙ Ƙ French football fans sang God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+                      "blocks": [
+                        {
+                          "id": "cd38a9a2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ɓ ɓ ɗ Ɗ ƙ Ƙ French football fans sang God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "e491deeb",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "After the Paris attacks in 2015, England fans sang La Marseillaise at the game against France at Wembley.",
+                      "blocks": [
+                        {
+                          "id": "f80f8193",
+                          "type": "fragment",
+                          "model": {
+                            "text": "After the Paris attacks in 2015, England fans sang La Marseillaise at the game against France at Wembley.",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  },
+                  {
+                    "id": "61d1ea7c",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Prime Minister Theresa May and French President Emmanuel Macron attended the match in Paris after holding talks.",
+                      "blocks": [
+                        {
+                          "id": "bd44d84b",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Prime Minister Theresa May and French President Emmanuel Macron attended the match in Paris after holding talks.",
+                            "attributes": []
+                          },
+                          "position": [5, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 4]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            { "id": "e1e5203a", "type": "mpu", "model": {}, "position": [6] },
+            {
+              "id": "04735fba",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "633ce0b4",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "The Oasis track Don't Look Back In Anger was played by the Republican Guard at the Stade de France.",
+                      "blocks": [
+                        {
+                          "id": "a0a41461",
+                          "type": "fragment",
+                          "model": {
+                            "text": "The Oasis track Don't Look Back In Anger was played by the Republican Guard at the Stade de France.",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "e3d7ba1f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Fans held up red and white placards to recreate the Flag of St George, and a minute's silence was held with players from both sides lining up together.",
+                      "blocks": [
+                        {
+                          "id": "5d0876f5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Fans held up red and white placards to recreate the Flag of St George, and a minute's silence was held with players from both sides lining up together.",
+                            "attributes": []
+                          },
+                          "position": [7, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 2]
+                  },
+                  {
+                    "id": "2d56f476",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "The British national anthem was played second - the anthem of th e home team is normally second in international fixtures.",
+                      "blocks": [
+                        {
+                          "id": "0f5fb220",
+                          "type": "fragment",
+                          "model": {
+                            "text": "The British national anthem was played second - the anthem of th e home team is normally second in international fixtures.",
+                            "attributes": []
+                          },
+                          "position": [7, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 3]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "783404b3",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "934d01c1",
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5ace416f",
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "74187b9d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "France v England at the Stade de France",
+                                  "blocks": [
+                                    {
+                                      "id": "7e0f7889",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "France v England at the Stade de France",
+                                        "locator": "http://www.bbc.co.uk/sport/live/football/38396481",
+                                        "isExternal": false,
+                                        "blocks": [
+                                          {
+                                            "id": "b820cb63",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "France v England at the Stade de France",
+                                              "attributes": []
+                                            },
+                                            "position": [8, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8],
+              "blockGroupType": "edOjLinks",
+              "blockGroupIndex": 1
+            },
+            {
+              "id": "7552ef68",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "835a7781",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "England manager Gareth Southgate said: \"We are very grateful to the French for offering this tribute to England as a country.",
+                      "blocks": [
+                        {
+                          "id": "2fd9d72f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "England manager Gareth Southgate said: \"We are very grateful to the French for offering this tribute to England as a country.",
+                            "attributes": []
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            {
+              "id": "513e857a",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9af924c2",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5dd6fcb7",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9a7b6e44",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "France beat England 3-2 in a friendly match",
+                                  "blocks": [
+                                    {
+                                      "id": "3cccc73e",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "France beat England 3-2 in a friendly match",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "2931bc02",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "416f7e03",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "48676538",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "England striker Danny Welbeck sitting neck bent",
+                                  "blocks": [
+                                    {
+                                      "id": "dd1f8f71",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "England striker Danny Welbeck sitting neck bent",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  },
+                  {
+                    "id": "14e5271b",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "86DC/test/_63542543_81893bb4-261f-4789-b544-88355ed173e2.jpg",
+                      "href": "http://b.files.bbci.co.uk/86DC/test/_63542543_81893bb4-261f-4789-b544-88355ed173e2.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Google",
+                      "suitableForSyndication": false
+                    },
+                    "position": [10, 3]
+                  }
+                ]
+              },
+              "position": [10]
+            },
+            {
+              "id": "287abe1d",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "740275e9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "\"It's nice that the history between us doesn't come between us at those moments.\"",
+                      "blocks": [
+                        {
+                          "id": "4c42e0e5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "\"It's nice that the history between us doesn't come between us at those moments.\"",
+                            "attributes": []
+                          },
+                          "position": [11, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [11, 1]
+                  },
+                  {
+                    "id": "97206eb5",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Similar tributes took place when England played France at Wembley in October 2015 just days after the terror attacks in Paris.",
+                      "blocks": [
+                        {
+                          "id": "96c04d90",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Similar tributes took place when England played France at Wembley in October 2015 just days after the terror attacks in Paris.",
+                            "attributes": []
+                          },
+                          "position": [11, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [11, 2]
+                  }
+                ]
+              },
+              "position": [11]
+            },
+            {
+              "id": "474ad7b8",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7c7f9995",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7e486829",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "May Meets Macron",
+                            "blocks": [
+                              {
+                                "id": "fa170cc0",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "May Meets Macron",
+                                  "attributes": []
+                                },
+                                "position": [12, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [12, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [12, 1]
+                  }
+                ]
+              },
+              "position": [12]
+            },
+            {
+              "id": "dc9b43d2",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8e3530fa",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Discussions between Mrs May and Mr Macron were expected to centre on counter-terrorism.",
+                      "blocks": [
+                        {
+                          "id": "b040de93",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Discussions between Mrs May and Mr Macron were expected to centre on counter-terrorism.",
+                            "attributes": []
+                          },
+                          "position": [13, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 1]
+                  },
+                  {
+                    "id": "53dd74ba",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Eight people were killed and 48 injured when three attackers drove a van into pedestrians on London Bridge then stabbed people in Borough Market on 3 June.",
+                      "blocks": [
+                        {
+                          "id": "30700d9f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Eight people were killed and 48 injured when three attackers drove a van into pedestrians on London Bridge then stabbed people in Borough Market on 3 June.",
+                            "attributes": []
+                          },
+                          "position": [13, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 2]
+                  },
+                  {
+                    "id": "733f3d06",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "The attackers were shot dead by police.",
+                      "blocks": [
+                        {
+                          "id": "63239374",
+                          "type": "fragment",
+                          "model": {
+                            "text": "The attackers were shot dead by police.",
+                            "attributes": []
+                          },
+                          "position": [13, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [13, 3]
+                  }
+                ]
+              },
+              "position": [13]
+            },
+            {
+              "id": "ccc5e02f",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ffd5c3af",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d7be12f2",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3dca22ed",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "President Obama speaks in London",
+                                  "blocks": [
+                                    {
+                                      "id": "fc3a6825",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "President Obama speaks in London",
+                                        "attributes": []
+                                      },
+                                      "position": [14, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [14, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [14, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [14, 1]
+                  },
+                  {
+                    "id": "47e3ce22",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ab7ab7d3",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6f93eeb8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Obama stands with a microphone",
+                                  "blocks": [
+                                    {
+                                      "id": "3aab25e7",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Obama stands with a microphone",
+                                        "attributes": []
+                                      },
+                                      "position": [14, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [14, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [14, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [14, 2]
+                  },
+                  {
+                    "id": "ec7570e2",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "FF2C/test/_63542356_hi032598775.jpg",
+                      "href": "http://b.files.bbci.co.uk/FF2C/test/_63542356_hi032598775.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "JUSTIN TALLIS",
+                      "suitableForSyndication": false
+                    },
+                    "position": [14, 3]
+                  }
+                ]
+              },
+              "position": [14]
+            },
+            {
+              "id": "cf1dc2da",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5bd6981d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Twenty-four people were killed and 116 injured by a suicide bomber at an Ariana Grande concert at Manchester Arena on 22 May.",
+                      "blocks": [
+                        {
+                          "id": "3cb7b014",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Twenty-four people were killed and 116 injured by a suicide bomber at an Ariana Grande concert at Manchester Arena on 22 May.",
+                            "attributes": []
+                          },
+                          "position": [15, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [15, 1]
+                  }
+                ]
+              },
+              "position": [15]
+            },
+            {
+              "id": "cafdeb1c",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "55d06c47",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:4e953a43-730d-e443-91d5-6c241b3ea294",
+                      "blocks": [
+                        {
+                          "id": "af975297",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "00a17eac",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "e20869c5",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "ee194b97",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "A man in a supermarket in Doha",
+                                              "blocks": [
+                                                {
+                                                  "id": "f5327000",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "A man in a supermarket in Doha",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    16, 1, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [16, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [16, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [16, 1, 1, 1]
+                              },
+                              {
+                                "id": "bff58704",
+                                "type": "rawImage",
+                                "model": {
+                                  "height": 1152,
+                                  "width": 2048,
+                                  "locator": "2458/test/_63540390_mediaitem63540389.jpg",
+                                  "href": "http://b.files.bbci.co.uk/2458/test/_63540390_mediaitem63540389.jpg",
+                                  "originCode": "cpsdevpb",
+                                  "copyrightHolder": "AFP",
+                                  "suitableForSyndication": true
+                                },
+                                "position": [16, 1, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [16, 1, 1]
+                        },
+                        {
+                          "id": "d06a294d",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "cb826899",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Police hid 200 in cellar during attack",
+                                  "blocks": [
+                                    {
+                                      "id": "08ad3820",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Police hid 200 in cellar during attack",
+                                        "locator": "https://www.bbc.com/news/uk-23131204",
+                                        "blocks": [
+                                          {
+                                            "id": "5a0dbeea",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Police hid 200 in cellar during attack",
+                                              "attributes": []
+                                            },
+                                            "position": [16, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [16, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [16, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [16, 1, 2]
+                        },
+                        {
+                          "id": "6cb7c152",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "c415860e",
+                                "type": "cpsLinkMetadata",
+                                "model": {
+                                  "assetType": "STY",
+                                  "timestamp": 1497262633000
+                                },
+                                "position": [16, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [16, 1, 3]
+                        }
+                      ]
+                    },
+                    "position": [16, 1]
+                  },
+                  {
+                    "id": "ad6e87cd",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:70233c05-22c4-4c4d-bf78-ec14592bdb1d",
+                      "blocks": [
+                        {
+                          "id": "0a9a5a33",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "72e2dc55",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Manchester attack facewall - Test",
+                                  "blocks": [
+                                    {
+                                      "id": "9a7b2bf8",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Manchester attack facewall - Test",
+                                        "locator": "https://www.bbc.com/news/uk-23127712",
+                                        "blocks": [
+                                          {
+                                            "id": "32c1741d",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Manchester attack facewall - Test",
+                                              "attributes": []
+                                            },
+                                            "position": [16, 2, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [16, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [16, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [16, 2, 1]
+                        },
+                        {
+                          "id": "59484fc5",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ac4dee56",
+                                "type": "cpsLinkMetadata",
+                                "model": {
+                                  "assetType": "STY",
+                                  "timestamp": 1495623672000
+                                },
+                                "position": [16, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [16, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [16, 2]
+                  }
+                ]
+              },
+              "position": [16]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "locators": {
+          "assetUri": "/hausa/labarai-23246985",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:142c7232-ebaf-2d4e-8e70-6b68dda2f199",
+          "assetId": "23246985",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-23246985",
+          "curie": "http://www.bbc.co.uk/asset/142c7232-ebaf-2d4e-8e70-6b68dda2f199"
+        },
+        "headlines": {
+          "seoHeadline": "Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ɗanɗano: Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ɗanɗano: Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "hai;le",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "hai;le",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 1152,
+                  "width": 2048,
+                  "locator": "1745C/test/_63542359_hi035712328.jpg",
+                  "href": "http://b.files.bbci.co.uk/1745C/test/_63542359_hi035712328.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "ZACHARIAS ABUBEKER",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "French football fans sing God Save The Queen ahead of the match between France and England in tribute to the victims of attacks in London and Manchester.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Hausa-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "Ɗanɗano: Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"
+          },
+          "assetType": "STY",
+          "byline": {
+            "name": "Kalkidan Yibeltal",
+            "title": "BBC Amharic",
+            "persons": [
+              { "name": "Kalkidan Yibeltal", "function": "BBC Amharic" }
+            ]
+          },
+          "type": "cps"
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Arrest made after Lesotho Prime Minister's wife shot dead"
+          },
+          "locators": {
+            "assetUri": "/hausa/23133668",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23133668",
+            "curie": "http://www.bbc.co.uk/asset/7d0f2b47-b1b0-3649-8ecb-c87b75e0e064",
+            "assetId": "23133668"
+          },
+          "summary": "Police are investigating the murder of Lesotho prime minister Thomas Thaban'e wife on Thursday night.",
+          "timestamp": 1497612381000,
+          "language": "ha",
+          "byline": {
+            "name": "Trevor McDonald",
+            "title": "TV News Reader in Lesotho",
+            "persons": [
+              { "name": "Trevor McDonald", "function": "TV News Reader" }
+            ]
+          },
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63551449",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/170CF/test/_63551449_mediaitem63551448.jpg",
+            "path": "/cpsdevpb/170CF/test/_63551449_mediaitem63551448.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "David Beckham in Lesotho",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63551451",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/3C37/test/_63551451_mediaitem63551448.jpg",
+            "path": "/cpsdevpb/3C37/test/_63551451_mediaitem63551448.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "David Beckham in Lesotho",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23133668",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 24"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055838",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055838",
+            "curie": "http://www.bbc.co.uk/asset/7a7c603a-2c2c-ad4a-81d6-c45c1d899a67",
+            "assetId": "23055838"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466777533000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055838",
+          "type": "cps"
+        },
+        {
+          "headlines": { "headline": "Buhari zai ziyarci Chadi" },
+          "locators": {
+            "assetUri": "/hausa/23066033",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23066033",
+            "curie": "http://www.bbc.co.uk/asset/1398a8dd-3020-9840-b56d-8cf987d96e4f",
+            "assetId": "23066033"
+          },
+          "summary": "Shugaba Muhammadu Buhari na Najeriya, zai halarci taron rantsar da shugaban kasar Chadi, Paul Biya a karo na biyar.",
+          "timestamp": 1470654674000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63502231",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/33A4/test/_63502231_034222410-1.jpg",
+            "path": "/cpsdevpb/33A4/test/_63502231_034222410-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "caption": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63502233",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/81C4/test/_63502233_034222410-1.jpg",
+            "path": "/cpsdevpb/81C4/test/_63502233_034222410-1.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "caption": "Shugaba Buhari na Najeriya a harabar karbar baki na fadar Aso Rock",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23066033",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 25"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055840",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055840",
+            "curie": "http://www.bbc.co.uk/asset/fc36e3ee-7ad2-d949-8efd-1e21ddfa7a45",
+            "assetId": "23055840"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466777561000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055840",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 14"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055802",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055802",
+            "curie": "http://www.bbc.co.uk/asset/544f2c67-3e5f-c84d-9236-01c5c8ad2290",
+            "assetId": "23055802"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466775797000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055802",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 15"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055824",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055824",
+            "curie": "http://www.bbc.co.uk/asset/48dbd911-7bc3-454f-83c5-b0630efbf4d2",
+            "assetId": "23055824"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466775863000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055824",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 16"
+          },
+          "locators": {
+            "assetUri": "/hausa/23055825",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23055825",
+            "curie": "http://www.bbc.co.uk/asset/830c2186-ba2e-4246-8daa-bfd7f8ce80e9",
+            "assetId": "23055825"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1466775892000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23055825",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 36"
+          },
+          "locators": {
+            "assetUri": "/hausa/23057308",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23057308",
+            "curie": "http://www.bbc.co.uk/asset/e04ad7fd-3304-5c40-b5cf-71d9cd5db2dd",
+            "assetId": "23057308"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1467623284000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23057308",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Zuma ya fuskanci koma baya kan cin hanci 37"
+          },
+          "locators": {
+            "assetUri": "/hausa/23057309",
+            "cpsUrn": "urn:bbc:content:assetUri:hausa/23057309",
+            "curie": "http://www.bbc.co.uk/asset/ebae53c5-1884-f344-b695-f27397e83fdf",
+            "assetId": "23057309"
+          },
+          "summary": "Zuma ya fuskanci koma baya kan cin hanci",
+          "timestamp": 1467623298000,
+          "language": "ha",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63492735",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/D1E1/test/_63492735_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63492737",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "path": "/cpsdevpb/12001/test/_63492737_160429093140_jacob_zuma_640x360_reuters.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "caption": "Wannan shi ne koma baya ta fannin shari'a na baya-bayan nan da Jacob Zuma ke fuskanta",
+            "copyrightHolder": "Reuters",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Labaran Duniya",
+            "uri": "/hausa/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:hausa/23057309",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-04-22T12:54:01.523Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "609e0c04-3b12-aa49-8341-c0a40af7c97f",
+            "rank": 1,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 32",
+            "href": "/hausa/23057301",
+            "timestamp": "2016-07-04T09:03:07.000Z"
+          },
+          {
+            "id": "be832240-623c-4141-a0ca-ec9fce2b4827",
+            "rank": 2,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 3",
+            "href": "/hausa/23055778",
+            "timestamp": "2016-06-24T13:35:04.000Z"
+          },
+          {
+            "id": "1d4e6959-33e2-ad4c-9bbf-ad56af227e48",
+            "rank": 3,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 11",
+            "href": "/hausa/23055796",
+            "timestamp": "2016-06-24T13:39:19.000Z"
+          },
+          {
+            "id": "27da7040-d7ad-544b-97c1-8ea6f1077fda",
+            "rank": 4,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 23",
+            "href": "/hausa/23055836",
+            "timestamp": "2016-06-24T14:08:41.000Z"
+          },
+          {
+            "id": "cf206d30-48fc-e342-a859-dcc7ab932d77",
+            "rank": 5,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 34",
+            "href": "/hausa/23057304",
+            "timestamp": "2016-07-04T09:06:21.000Z"
+          },
+          {
+            "id": "3308e28e-8f8f-794b-a4a8-459fa6873703",
+            "rank": 6,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 18",
+            "href": "/hausa/23055828",
+            "timestamp": "2016-06-24T13:46:36.000Z"
+          },
+          {
+            "id": "ac80d260-1659-d44a-a06d-f2bcbcf9e30b",
+            "rank": 7,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 22",
+            "href": "/hausa/23055833",
+            "timestamp": "2016-06-24T14:07:21.000Z"
+          },
+          {
+            "id": "f5ab07f7-9f21-c341-b979-c1b942f610f3",
+            "rank": 8,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 31",
+            "href": "/hausa/23055848",
+            "timestamp": "2016-06-24T14:16:32.000Z"
+          },
+          {
+            "id": "23051fa1-ee6f-ce45-a83e-cda1ad49efbb",
+            "rank": 9,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 19",
+            "href": "/hausa/23055829",
+            "timestamp": "2016-06-24T13:54:13.000Z"
+          },
+          {
+            "id": "ee0f6cc9-5c73-c54e-934b-a1ab5a82e5d9",
+            "rank": 10,
+            "title": "Zuma ya fuskanci koma baya kan cin hanci 10",
+            "href": "/hausa/23055795",
+            "timestamp": "2016-06-24T13:38:59.000Z"
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

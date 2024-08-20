@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical Live Header I can see the branding 1`] = `".css-1jefi8v{box-sizing:content-box;color:#FFFFFF;fill:currentColor;height:1.25rem;}@media (min-width: 25rem){.css-1jefi8v{height:1.5rem;}}@media (min-width: 37.5rem){.css-1jefi8v{height:1.875rem;}}@media screen and (-ms-high-contrast: active),print{.css-1jefi8v{fill:windowText;}}.css-m04vo2{-webkit-clip-path:inset(100%);clip-path:inset(100%);clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}BBC News, Pidgin"`;
+exports[`Canonical Live Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
 exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 {
@@ -56,4 +56,267 @@ exports[`Canonical Live Header Navigation link should match text and url 8`] = `
   "text": "Most popular",
   "url": "/pidgin/popular/read",
 }
+`;
+
+exports[`Canonical Live Media Loader a11y assistive technology can read the media player title 1`] = `"Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34"`;
+
+exports[`Canonical Live Media Loader renders a figure caption 1`] = `
+<div
+  class="css-1jvsvcw"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="css-w22u5j edwq9ck2"
+    data-e2e="media-player__guidance"
+  >
+    <strong
+      aria-hidden="true"
+      class="guidance-message css-1l7spgt edwq9ck1"
+    >
+      Contains strong language and some upsetting scenes.
+    </strong>
+    <noscript
+      class="css-17whsh0 edwq9ck0"
+    >
+      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove css-g64ss1 e1ita3o32"
+  >
+    <span
+      class="css-m04vo2"
+    >
+      Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
+    </span>
+    <div
+      aria-hidden="true"
+      class="css-1apn3of e1ita3o31"
+    >
+      <svg
+        aria-hidden="true"
+        class="css-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="css-11ia5vc e1ita3o30"
+      datetime="PT34S"
+    >
+      00:34
+    </time>
+  </button>
+  <div
+    class="css-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="css-1uq6tv3"
+      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
+      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical Live Media Loader renders a placeholder 1`] = `
+<div
+  class="css-1jvsvcw"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="css-w22u5j edwq9ck2"
+    data-e2e="media-player__guidance"
+  >
+    <strong
+      aria-hidden="true"
+      class="guidance-message css-1l7spgt edwq9ck1"
+    >
+      Contains strong language and some upsetting scenes.
+    </strong>
+    <noscript
+      class="css-17whsh0 edwq9ck0"
+    >
+      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove css-g64ss1 e1ita3o32"
+  >
+    <span
+      class="css-m04vo2"
+    >
+      Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
+    </span>
+    <div
+      aria-hidden="true"
+      class="css-1apn3of e1ita3o31"
+    >
+      <svg
+        aria-hidden="true"
+        class="css-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="css-11ia5vc e1ita3o30"
+      datetime="PT34S"
+    >
+      00:34
+    </time>
+  </button>
+  <div
+    class="css-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="css-1uq6tv3"
+      src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
+      srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical Live Media Loader renders a valid container 1`] = `
+<figure
+  class="css-17euut"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="css-1jvsvcw"
+    data-e2e="media-loader__placeholder"
+  >
+    <div
+      class="css-w22u5j edwq9ck2"
+      data-e2e="media-player__guidance"
+    >
+      <strong
+        aria-hidden="true"
+        class="guidance-message css-1l7spgt edwq9ck1"
+      >
+        Contains strong language and some upsetting scenes.
+      </strong>
+      <noscript
+        class="css-17whsh0 edwq9ck0"
+      >
+        &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      </noscript>
+    </div>
+    <button
+      class="focusIndicatorRemove css-g64ss1 e1ita3o32"
+    >
+      <span
+        class="css-m04vo2"
+      >
+        Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
+      </span>
+      <div
+        aria-hidden="true"
+        class="css-1apn3of e1ita3o31"
+      >
+        <svg
+          aria-hidden="true"
+          class="css-vja2s5 e1s2dgdk5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="css-11ia5vc e1ita3o30"
+        datetime="PT34S"
+      >
+        00:34
+      </time>
+    </button>
+    <div
+      class="css-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
+    >
+      <img
+        alt=""
+        class="css-1uq6tv3"
+        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
+        srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
+        style="aspect-ratio:auto"
+      />
+    </div>
+  </div>
+  <figcaption
+    class="css-1562tom"
+    dir="ltr"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="css-m04vo2"
+      >
+        Wetin we call dis Video, 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        Gary Lineker talks Messi
+      </span>
+    </span>
+  </figcaption>
+</figure>
 `;

@@ -73,6 +73,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ด่วน',
         postedAt: 'โพสต์ทาง',
         summary: 'สรุป',
+        shareButtonText: 'แชร์"',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'สรุป',
       error: {
@@ -254,11 +259,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'มียอดชมมากที่สุด',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -273,10 +273,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'หน้าแรก',
         url: '/thai',
-      },
-      {
-        title: 'เลือกตั้ง 2566',
-        url: '/thai/topics/cmlj9jxgg69t ',
       },
       {
         title: 'ประเทศไทย',

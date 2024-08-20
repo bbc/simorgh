@@ -1,6 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { withKnobs } from '@storybook/addon-knobs';
+import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -17,7 +18,7 @@ const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 // @ts-expect-error - passing in partial data
-const ComponentWithContext = ({ data: { data } }) => {
+const ComponentWithContext = ({ data: { data }, isLite }) => {
   return (
     <ToggleContextProvider
       toggles={{
@@ -29,20 +30,23 @@ const ComponentWithContext = ({ data: { data } }) => {
         <RequestContextProvider
           isAmp={false}
           isApp={false}
+          isLite={isLite}
           pageType={MEDIA_ARTICLE_PAGE}
           service="news"
           pathname="/news/articles/c000000000o"
           isUK
         >
           <UserContextProvider>
-            <MemoryRouter>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                }}
-              />
-            </MemoryRouter>
+            <ThemeProvider service="news">
+              <MemoryRouter>
+                <Page
+                  pageData={{
+                    ...data.article,
+                    secondaryColumn: data.secondaryData,
+                  }}
+                />
+              </MemoryRouter>
+            </ThemeProvider>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -53,18 +57,19 @@ const ComponentWithContext = ({ data: { data } }) => {
 export default {
   Component: ComponentWithContext,
   title: 'Pages/Media Article Page',
-  decorators: [withKnobs],
   parameters: { layout: 'fullscreen' },
 };
 
-export const MediaArticlePage = () => (
-  <ComponentWithContext data={articleData} />
+export const MediaArticlePage = (_: StoryArgs, { isLite }: StoryProps) => (
+  <ComponentWithContext data={articleData} isLite={isLite} />
 );
 
-export const MediaArticlePageWithLatestMediaImages = () => (
-  <ComponentWithContext data={pidginArticle} />
-);
+export const MediaArticlePageWithLatestMediaImages = (
+  _: StoryArgs,
+  { isLite }: StoryProps,
+) => <ComponentWithContext data={pidginArticle} isLite={isLite} />;
 
-export const MediaArticlePageWithSingleLatestMedia = () => (
-  <ComponentWithContext data={tamilArticle} />
-);
+export const MediaArticlePageWithSingleLatestMedia = (
+  _: StoryArgs,
+  { isLite }: StoryProps,
+) => <ComponentWithContext data={tamilArticle} isLite={isLite} />;

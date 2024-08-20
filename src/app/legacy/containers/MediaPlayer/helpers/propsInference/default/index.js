@@ -29,7 +29,12 @@ export default ({
     path(['model', 'blocks'], aresMediaBlock),
     'caption',
   );
+  const { webcastVersions = [] } =
+    aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
 
+  const hasWebcastItems = webcastVersions.length > 0;
+
+  const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
   const captionBlock = articleCaptionBlock || cpsCaptionBlock;
 
   const { originCode, locator } = pathOr(
@@ -38,9 +43,10 @@ export default ({
     aresMediaBlock,
   );
   const versionId = path(
-    ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
+    ['model', 'blocks', 0, 'model', versionParameter, 0, 'versionId'],
     aresMediaBlock,
   );
+
   const blockId = path(
     ['model', 'blocks', 0, 'model', 'blockId'],
     aresMediaBlock,
@@ -51,7 +57,7 @@ export default ({
     aresMediaBlock,
   );
   const rawDuration = path(
-    ['model', 'blocks', 0, 'model', 'versions', 0, 'duration'],
+    ['model', 'blocks', 0, 'model', versionParameter, 0, 'duration'],
     aresMediaBlock,
   );
   const duration = moment.duration(rawDuration, 'seconds');
@@ -64,18 +70,24 @@ export default ({
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
+    kind: pathOr(
+      'programme',
+      ['model', 'blocks', 0, 'model', 'smpKind'],
+      aresMediaBlock,
+    ),
     duration: formatDuration({ duration, padMinutes: true }),
     durationSpoken: `${durationSpokenPrefix} ${formatDuration({
       duration,
       separator,
     })}`,
+    rawDuration,
     datetime: path(
-      ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
+      ['model', 'blocks', 0, 'model', versionParameter, 0, 'durationISO8601'],
       aresMediaBlock,
     ),
     type: format === 'audio' ? 'audio' : 'video',
     guidanceMessage: path(
-      ['model', 'blocks', 0, 'model', 'versions', 0, 'warnings', 'short'],
+      ['model', 'blocks', 0, 'model', versionParameter, 0, 'warnings', 'short'],
       aresMediaBlock,
     ),
   };

@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
@@ -16,7 +15,7 @@ type Props = {
   blocks: object[];
 };
 
-const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
+const Byline = ({ blocks, children = null }: PropsWithChildren<Props>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -171,10 +170,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       </ul>
     </section>
   );
-};
-
-Byline.defaultProps = {
-  children: null,
 };
 
 export default Byline;

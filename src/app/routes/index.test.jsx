@@ -3,8 +3,6 @@ import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
 // test helpers
-import fetchMock from 'fetch-mock';
-
 import defaultToggles from '#lib/config/toggles';
 
 // components being tested
@@ -14,18 +12,12 @@ import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
 import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
-import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
-import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
-import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
-import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
-import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
-import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
 import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
@@ -37,8 +29,6 @@ import {
 } from '../components/react-testing-library-with-providers';
 import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
 import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
-
-fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
 global.performance.getEntriesByName = jest.fn(() => []);
 
@@ -88,7 +78,6 @@ describe('Routes', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.restoreAllMocks();
-    fetchMock.restore();
     fetch.resetMocks();
     window.dotcom = undefined;
   });
@@ -112,10 +101,7 @@ describe('Routes', () => {
 
     it('should route to and render live radio page', async () => {
       const pathname = '/korean/bbc_korean_radio/liveradio';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        liveRadioPageJson,
-      );
+      fetch.mockResponseOnce(JSON.stringify(liveRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -141,10 +127,7 @@ describe('Routes', () => {
 
     it('should route to and render the podcast page', async () => {
       const pathname = '/arabic/podcasts/p02pc9qc';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        podcastPageJson,
-      );
+      fetch.mockResponseOnce(JSON.stringify(podcastPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -212,10 +195,7 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand Radio page', async () => {
       const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        onDemandRadioPageJson,
-      );
+      fetch.mockResponseOnce(JSON.stringify(onDemandRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -241,10 +221,7 @@ describe('Routes', () => {
 
     it('should route to and render the onDemand TV Brand page', async () => {
       const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
-      fetchMock.mock(
-        `http://localhost${pathname}.json?renderer_env=live`,
-        onDemandTvPageJson,
-      );
+      fetch.mockResponseOnce(JSON.stringify(onDemandTvPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -302,33 +279,6 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it('should route to and render a most watched page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/pidgin/media/video';
-      fetchMock.mock(
-        'http://localhost/pidgin/mostwatched.json',
-        mostWatchedData,
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'pidgin',
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'pidgin',
-      });
-      const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
-
-      expect(
-        await screen.findByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a media asset page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/yoruba/media-23256797';
@@ -336,7 +286,6 @@ describe('Routes', () => {
       fetch.mockResponse(
         JSON.stringify({
           ...mediaAssetPageJson,
-          secondaryData: { mostWatched: mostWatchedData },
         }),
       );
 
@@ -367,7 +316,6 @@ describe('Routes', () => {
       fetch.mockResponse(
         JSON.stringify({
           ...legacyMediaAssetPage,
-          secondaryData: { mostWatched: mostWatchedData },
         }),
       );
 
@@ -393,106 +341,11 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it('should route to and render a photo gallery page', async () => {
-      const pathname = '/indonesia/indonesia-41635759';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...photoGalleryPageJson,
-          secondaryData: null,
-          recommendations: storyPageRecommendationsData,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'indonesia',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
-    it('should route to and render a story page', async () => {
-      suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-
-      const pathname = '/mundo/noticias-internacional-51266689';
-      fetch.mockResponse(
-        JSON.stringify({
-          ...storyPageJson,
-          secondaryData: { mostRead: storyPageMostReadData },
-          recommendations: storyPageRecommendationsData,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'mundo',
-        pageType: 'cpsAsset',
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'mundo',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    }, 15000);
-
-    it('should route to and render an index page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/ukrainian/ukraine_in_russian';
-      fetch.mockResponse(
-        JSON.stringify({
-          ...indexPageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'ukrainian',
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'ukrainian',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'В Украине введено военное положение, во многих городах, в том числе Киеве, слышны взрывы.';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a feature index page', async () => {
       process.env.SIMORGH_APP_ENV = 'local';
       const pathname = '/afrique/48465371';
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...featureIndexPageJson,
-        }),
-      );
+      fetch.mockResponse(JSON.stringify(featureIndexPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -539,7 +392,7 @@ describe('Routes', () => {
 
     it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
       const pathname = '/afrique';
-      fetchMock.mock(`http://localhost${pathname}.json`, 500);
+      fetch.mockResponse(JSON.stringify({ status: 500 }));
 
       const { pageType, getInitialData } = getMatchingRoute(pathname);
       const { status, error } = await getInitialData({

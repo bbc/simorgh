@@ -1,12 +1,12 @@
-/** @jsxRuntime classic */
 /** @jsx jsx */
 
 import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { jsx, useTheme } from '@emotion/react';
-
+import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { Tag } from '#app/components/LinkedData/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -43,7 +43,7 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import { OptimoBlock } from '../../models/types/optimo';
+import { Article, OptimoBlock } from '../../models/types/optimo';
 import {
   MetadataFormats,
   MetadataTaggings,
@@ -68,24 +68,27 @@ import styles from './MediaArticlePage.styles';
 import {
   ComponentToRenderProps,
   EmbedHtmlProps,
-  MediaArticlePageProps,
   TimestampProps,
 } from './types';
 
-const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) as string;
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
+  const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
   const blocks = pathOr<OptimoBlock[]>(
     [],
@@ -113,18 +116,40 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     pageData,
   );
 
+  // ATI
+  const {
+    metadata: { atiAnalytics, type },
+  } = pageData;
+
+  const isMap = type === MEDIA_ASSET_PAGE;
+
+  const atiData = {
+    ...atiAnalytics,
+    ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
     audio: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isMap && styles.cafMediaPlayer,
+        ]}
+      >
         <ArticleMediaPlayer {...props} />
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isMap && styles.cafMediaPlayer,
+        ]}
+      >
         <ArticleMediaPlayer {...props} />
       </div>
     ),
@@ -172,14 +197,9 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  // ATI
-  const {
-    metadata: { atiAnalytics },
-  } = pageData;
-
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
@@ -189,15 +209,15 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
-        articleId={getArticleId(pageData)}
+        articleId={getArticleId(pageData) as string | undefined}
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
+        section={getArticleSection(pageData) as string | undefined}
         aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
+        mentionsTags={getMentions(pageData) as string[] | undefined}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}
@@ -206,7 +226,11 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          isMap
+            ? 'Article'
+            : categoryName(isTrustProjectParticipant, taggings, formats)
+        }
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
@@ -215,7 +239,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={isMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -223,14 +247,13 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
-              mobileDivider={false}
               backgroundColour={GREY_2}
               tagBackgroundColour={WHITE}
             />
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        <SecondaryColumn pageData={pageData} />
+        {!isMap && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );

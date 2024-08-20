@@ -5,21 +5,21 @@ import CurationPromo from '../CurationPromo';
 import { CurationGridProps } from '../types';
 
 const CurationGrid = ({
-  promos,
-  headingLevel,
+  summaries,
   isFirstCuration,
+  headingLevel,
 }: CurationGridProps) => {
-  const hasMultiplePromos = promos.length > 1;
-  const firstPromo = promos[0];
+  const hasMultiplePromos = summaries.length > 1;
+  const firstPromo = summaries[0];
 
-  if (promos.length === 0) {
+  if (summaries.length === 0) {
     return null;
   }
   return (
     <div data-testid="curation-grid-normal">
       {hasMultiplePromos ? (
         <ul css={styles.list} role="list" data-testid="topic-promos">
-          {promos.map((promo, index) => {
+          {summaries.map((promo, index) => {
             const isFirstPromo = index === 0;
             const lazyLoadImages = !(isFirstPromo && isFirstCuration);
 
@@ -27,8 +27,8 @@ const CurationGrid = ({
               <li css={styles.item} key={promo.id}>
                 <CurationPromo
                   {...promo}
-                  headingLevel={headingLevel}
                   lazy={lazyLoadImages}
+                  headingLevel={headingLevel}
                 />
               </li>
             );
@@ -36,7 +36,11 @@ const CurationGrid = ({
         </ul>
       ) : (
         <div css={styles.item}>
-          <CurationPromo {...firstPromo} headingLevel={headingLevel} />
+          <CurationPromo
+            {...firstPromo}
+            lazy={!isFirstCuration}
+            headingLevel={headingLevel}
+          />
         </div>
       )}
     </div>

@@ -4,14 +4,13 @@ const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezon
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config();
-const clientEnvVars = getClientEnvVars(DOT_ENV_CONFIG, { stringify: false });
 
 const assetPrefix =
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
 const isLocal =
-  clientEnvVars.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN.includes('localhost');
+  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -24,9 +23,10 @@ module.exports = {
   experimental: {
     externalDir: true,
   },
-  env: { ...clientEnvVars, LOG_TO_CONSOLE: 'true', NEXTJS: 'true' },
-  compiler: {
-    emotion: true,
+  env: {
+    ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
+    LOG_TO_CONSOLE: 'true',
+    NEXTJS: 'true',
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -36,7 +36,7 @@ module.exports = {
    which allows for co-locating components within the pages directory, e.g. styles.ts
    - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
   */
-  pageExtensions: ['page.tsx', 'page.ts'],
+  pageExtensions: ['page.tsx', 'page.ts', 'api.ts'],
   webpack: (config, { webpack, isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
