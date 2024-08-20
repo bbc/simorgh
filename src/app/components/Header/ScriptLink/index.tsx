@@ -11,7 +11,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';
 
-export type Params = Record<string, string>;
+type Params = Record<string, string>;
 
 interface UseRouteMatcher {
   path: string;
@@ -64,13 +64,11 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
   const { isNextJs } = useContext(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
+  const { path, params }: UseRouteMatcher = useRouteMatch();
 
   // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
   // revisit this to support both Express and Next.JS in the future.
   if (!scriptLinkEnabled || isNextJs) return null;
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { path, params }: UseRouteMatcher = useRouteMatch();
 
   const { text, variant } = scriptLink || {};
 
