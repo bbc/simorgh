@@ -6,6 +6,7 @@ import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
 import { UserContext } from '#contexts/UserContext';
 import useToggle from '#hooks/useToggle';
+import { Services, Variants } from '#app/models/types/global';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';
@@ -26,8 +27,8 @@ export const getVariantHref = ({
 }: {
   path?: string;
   params: Params;
-  service: string;
-  variant: string | undefined;
+  service: Services;
+  variant?: Variants;
   scriptSwitchId?: string;
 }) => {
   const fallback = `/${service}/${variant}`;
