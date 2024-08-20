@@ -57,6 +57,7 @@ export type ConfigBuilderProps = {
 };
 
 export type ConfigBuilderReturnProps = {
+  product?: string;
   mediaType: string;
   playerConfig: PlayerConfig;
   placeholderConfig: {
