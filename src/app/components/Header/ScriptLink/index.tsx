@@ -45,7 +45,7 @@ export const getVariantHref = ({
   }
 
   try {
-    const compilePath = compile(path, {encode: value => value});
+    const compilePath = compile(path, { encode: value => value });
 
     return compilePath({
       ...pathParams,
