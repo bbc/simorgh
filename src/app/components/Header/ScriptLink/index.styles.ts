@@ -8,9 +8,11 @@ const styles = {
       display: 'inline-block',
       color: palette.WHITE,
       textDecoration: 'none',
-      height: '2.25rem',
+      height: '2.75rem',
       border: `0.0625rem solid ${palette.WHITE}`,
       margin: `${spacings.FULL}rem 0 ${spacings.FULL}rem ${spacings.FULL}rem`,
+      minWidth: '2.75rem',
+      textAlign: 'center',
       '&:focus, &:hover': {
         span: {
           margin: '0',
@@ -20,19 +22,17 @@ const styles = {
       [mq.GROUP_2_MIN_WIDTH]: {
         lineHeight: `calc(2.25rem - ${spacings.FULL}rem)`,
       },
-      [mq.GROUP_2_MAX_WIDTH]: {
-        height: `${spacings.QUINTUPLE}rem`,
+      [mq.GROUP_0_MAX_WIDTH]: {
+        margin: `${spacings.FULL}rem 0 ${spacings.FULL}rem 0`,
       },
     }),
-  container: ({ spacings, mq }: Theme) =>
+  container: ({ spacings }: Theme) =>
     css({
-      margin: '0.1875rem',
+      marginTop: '0.1875rem',
+      width: '100%',
       display: 'inline-block',
       height: 'calc(100%)',
-      padding: `0 ${spacings.FULL}rem`,
-      [mq.GROUP_2_MAX_WIDTH]: {
-        lineHeight: `calc(${spacings.QUINTUPLE}rem - ${spacings.FULL}rem)`,
-      },
+      lineHeight: `calc(2.75rem - ${spacings.FULL}rem)`,
     }),
 };
 export default styles;
