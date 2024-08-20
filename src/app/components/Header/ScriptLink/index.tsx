@@ -45,9 +45,9 @@ export const getVariantHref = ({
   }
 
   try {
-    return compile(path, {
-      encode: value => value,
-    })({
+    const compilePath = compile(path, {encode: value => value});
+
+    return compilePath({
       ...pathParams,
       variant: `/${variant}`,
       amp: undefined, // we don't want to link to AMP pages directly
