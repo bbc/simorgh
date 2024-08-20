@@ -75,7 +75,7 @@ describe('extractHeader', () => {
     });
   });
 
-  it(`sets bbcOrigin to 'news' when 'bbc-origin' is set to 'news'`, () => {
+  it(`sets bbcOrigin when 'bbc-origin' header is set`, () => {
     const actual = extractHeaders({
       'bbc-origin': 'https://www.bbc.co.uk/news',
     });
