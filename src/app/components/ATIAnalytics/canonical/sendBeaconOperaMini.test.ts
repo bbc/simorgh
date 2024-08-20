@@ -2,7 +2,7 @@
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 
 interface WindowOperaMini extends Window {
-  hasOperaMinScriptRun?: boolean;
+  hasOperaMiniScriptRan?: boolean;
   operamini?: object;
 }
 
@@ -56,7 +56,7 @@ describe('sendBeaconOperaMiniScript', () => {
 
   it('should NOT send more than 1 beacon with XHR, when browser is Opera Mini', () => {
     const check = {
-      hasOperaMinScriptRun: false,
+      hasOperaMiniScriptRan: false,
       operamini: new OperaMiniMock(),
     } as WindowOperaMini;
 
