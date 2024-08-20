@@ -11153,12 +11153,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:9.0.11":
-  version: 9.0.11
-  resolution: "husky@npm:9.0.11"
+"husky@npm:9.1.4":
+  version: 9.1.4
+  resolution: "husky@npm:9.1.4"
   bin:
-    husky: bin.mjs
-  checksum: 10/8a9b7cb9dc8494b470b3b47b386e65d579608c6206da80d3cc8b71d10e37947264af3dfe00092368dad9673b51d2a5ee87afb4b2291e77ba9e7ec1ac36e56cd1
+    husky: bin.js
+  checksum: 10/c43aa7cbf98246d4f347bc3da807049555b5003af7c6e1658c5cea44a9743b4d0683c72973a4fe02a4ccceb81031a664ecaa7a1a86efe4d37a80a0af17c988ea
   languageName: node
   linkType: hard
 
@@ -16078,7 +16078,7 @@ __metadata:
     glob: "npm:10.4.1"
     helmet: "npm:7.1.0"
     helmet-csp: "npm:3.4.0"
-    husky: "npm:9.0.11"
+    husky: "npm:9.1.4"
     inspectpack: "npm:4.7.1"
     intersection-observer: "npm:0.12.2"
     isomorphic-fetch: "npm:3.0.0"
