@@ -9,6 +9,7 @@ import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import MediaLoader from '#app/components/MediaLoader';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { MediaBlock } from '#app/components/MediaLoader/types';
+import { Tag } from '#app/components/LinkedData/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -87,11 +88,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) as string;
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
+  const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
   const blocks = pathOr<OptimoBlock[]>(
     [],
@@ -220,15 +221,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
-        articleId={getArticleId(pageData)}
+        articleId={getArticleId(pageData) as string | undefined}
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
+        section={getArticleSection(pageData) as string | undefined}
         aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
+        mentionsTags={getMentions(pageData) as string[] | undefined}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}

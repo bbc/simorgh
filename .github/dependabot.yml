@@ -14,10 +14,8 @@ updates:
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
       - dependency-name: 'winston'
-      # TODO - Remove this ignore once the Ramda dependency update has been merged: https://github.com/bbc/simorgh/pull/11744
-      - dependency-name: 'ramda'
     labels:
-      - "dependencies"
+      - 'dependencies'
     groups:
       babel:
         patterns:

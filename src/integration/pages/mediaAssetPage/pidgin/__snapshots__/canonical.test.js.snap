@@ -128,37 +128,6 @@ exports[`Canonical Media Asset Page I can see a bulleted list item with link: <M
 
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
 
-exports[`Canonical Media Asset Page Media Loader renders a valid container 1`] = `
-<figure
-  class="bbc-1qn0xuy"
-  data-e2e="media-loader__container"
->
-  <div
-    class="bbc-1w19284"
-    data-e2e="media-player"
-  />
-  <figcaption
-    class="bbc-1562tom"
-    dir="ltr"
-  >
-    <span
-      role="text"
-    >
-      <span
-        class="bbc-m04vo2"
-      >
-        Wetin we call dis Video, 
-      </span>
-      <span
-        data-testid="caption-paragraph"
-      >
-        this is the caption
-      </span>
-    </span>
-  </figcaption>
-</figure>
-`;
-
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

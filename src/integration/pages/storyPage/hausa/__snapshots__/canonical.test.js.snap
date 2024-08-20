@@ -335,7 +335,7 @@ exports[`Canonical Story Page SEO Twitter title 1`] = `"Ɗanɗano: Kuskure a Hau
 
 exports[`Canonical Story Page Timestamp should match text and date 1`] = `
 {
-  "date": "PT16S",
-  "text": "00:16",
+  "date": "2019-08-20",
+  "text": "20 Agusta 2019",
 }
 `;

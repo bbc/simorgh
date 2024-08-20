@@ -5,8 +5,15 @@ import {
   runTimestampTests,
 } from '../../common';
 
-export default service => {
+export default (service, pageType) => {
+  const ignoreMediaPlayerFor = ['MAP', 'PGL', 'STY'];
+
   runCommonCrossPlatformTests(service);
+
+  if (!ignoreMediaPlayerFor.includes(pageType)) {
+    runMediaPlayerEmbedLegacyTests();
+  }
+
   runTimestampTests();
 
   if (!cafServicesConst.includes(service)) {

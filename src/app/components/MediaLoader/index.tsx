@@ -167,7 +167,6 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
-    id,
     pageType,
     counterName,
     statsDestination,
@@ -189,7 +188,6 @@ const MediaLoader = ({ blocks, className }: Props) => {
     counterName,
     statsDestination,
     producer,
-    id,
     isAmp,
     lang,
     pageType,

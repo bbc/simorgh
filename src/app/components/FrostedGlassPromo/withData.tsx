@@ -170,7 +170,10 @@ const validate = (props: FormattedPromo) => {
 };
 
 const withData =
-  (Component: React.ElementType, propsToPassThrough: string[] = []) =>
+  (
+    Component: React.ElementType,
+    propsToPassThrough: (keyof PromoProps | 'children')[] = [],
+  ) =>
   (props: PropsWithChildren<PromoProps>) => {
     const data = normalise(props);
     const additionalProps = pick(propsToPassThrough, props);

@@ -89,7 +89,8 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 
 const pageType = 'cpsAsset';
 
-describe('Photo Gallery Page', () => {
+// Skipped as this component will no longer be used.
+describe.skip('Photo Gallery Page', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
   });

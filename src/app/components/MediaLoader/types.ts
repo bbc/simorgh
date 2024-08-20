@@ -7,7 +7,6 @@ export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
   product?: string;
-  superResponsive: boolean;
   enableToucan: boolean;
   counterName?: string;
   appType: 'amp' | 'responsive';
@@ -178,7 +177,6 @@ export type BuildConfigProps = {
   counterName: string | null;
   statsDestination: string;
   producer: string | '';
-  id: string | null;
   isAmp: boolean;
   lang: string;
   pageType: PageTypes;

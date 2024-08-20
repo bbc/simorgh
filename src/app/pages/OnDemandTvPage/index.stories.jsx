@@ -29,7 +29,6 @@ const Component = (_, { service }) => {
         pageData={onDemandTvFixtures[service]}
         status={200}
         service={service}
-        isAmp={false}
         loading={false}
         error=""
         pageType={MEDIA_PAGE}

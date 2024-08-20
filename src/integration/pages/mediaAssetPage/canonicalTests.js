@@ -1,17 +1,11 @@
-import cafServicesConst from '../../../app/lib/cafServices.const';
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
-  runMediaPlayerEmbedTests,
 } from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
 
-export default (service, pageType) => {
-  runCrossPlatformTests(service);
+export default service => {
+  runCrossPlatformTests(service, 'MAP');
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
-
-  if (cafServicesConst.includes(service)) {
-    runMediaPlayerEmbedTests(pageType);
-  }
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -69,13 +70,15 @@ const ComponentWithContext = ({
           id="c000000000o"
           isUK
         >
-          <Page
-            pageData={{
-              ...data.article,
-              secondaryColumn: data.secondaryData,
-              mostRead: data.secondaryData.mostRead,
-            }}
-          />
+          <ThemeProvider service={service}>
+            <Page
+              pageData={{
+                ...data.article,
+                secondaryColumn: data.secondaryData,
+                mostRead: data.secondaryData.mostRead,
+              }}
+            />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
@@ -107,13 +110,15 @@ const ComponentWithServiceContext = ({
           id="c000000000o"
           isUK
         >
-          <Page
-            pageData={{
-              ...data.article,
-              secondaryColumn: data.secondaryData,
-              mostRead: data.secondaryData.mostRead,
-            }}
-          />
+          <ThemeProvider service={service}>
+            <Page
+              pageData={{
+                ...data.article,
+                secondaryColumn: data.secondaryData,
+                mostRead: data.secondaryData.mostRead,
+              }}
+            />
+          </ThemeProvider>
         </RequestContextProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>
