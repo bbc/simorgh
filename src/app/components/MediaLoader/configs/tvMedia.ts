@@ -19,7 +19,7 @@ export default ({
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const TvMediaBlock: TvMediaBlock = filterForBlockType(blocks, 'clipMedia');
 
-  // const { images, video, type } = clipMediaBlock?.model;
+  const { images, video, type } = clipMediaBlock?.model;
 
   const { source, urlTemplate: locator } = images?.[1] ?? {};
 
