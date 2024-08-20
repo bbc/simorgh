@@ -13831,9 +13831,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:6.2.0":
-  version: 6.2.0
-  resolution: "npm-run-all2@npm:6.2.0"
+"npm-run-all2@npm:6.2.2":
+  version: 6.2.2
+  resolution: "npm-run-all2@npm:6.2.2"
   dependencies:
     ansi-styles: "npm:^6.2.1"
     cross-spawn: "npm:^7.0.3"
@@ -13847,7 +13847,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10/917937b6280a4f7af168b784fba10f0c441d58d86ab5595c88e4aa4b9f69f7eaa0af62ddc8a12fed705debcfc5f77bf80bad48936a3384f3a0b527111b7ff4ec
+  checksum: 10/79995322365ab1189bf00cd531b3b2c410334a8e0d54bf1045fed3b59117873e8a0aeafdc1f543f0cef295bdca1fe5cfea5613e7ed4cc65f396b72db587257f5
   languageName: node
   linkType: hard
 
@@ -15964,7 +15964,7 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     next: "npm:14.2.5"
     next-test-api-route-handler: "npm:^4.0.8"
-    npm-run-all2: "npm:6.2.0"
+    npm-run-all2: "npm:6.2.2"
     ts-node: "npm:^10.9.2"
     undici: "npm:6.19.7"
   languageName: unknown
@@ -16099,7 +16099,7 @@ __metadata:
     moment-timezone: "npm:0.5.45"
     morgan: "npm:1.10.0"
     node-fetch: "npm:2.6.12"
-    npm-run-all2: "npm:6.2.0"
+    npm-run-all2: "npm:6.2.2"
     path-to-regexp: "npm:6.2.2"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
