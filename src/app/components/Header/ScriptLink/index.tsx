@@ -6,10 +6,10 @@ import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
 import { UserContext } from '#contexts/UserContext';
 import useToggle from '#hooks/useToggle';
+import { Services, Variants } from '#app/models/types/global';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';
-import { Services, Variants } from '#app/models/types/global';
 
 export type Params = Record<string, string>;
 
