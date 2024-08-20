@@ -9,6 +9,7 @@ import useToggle from '#hooks/useToggle';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';
+import { Services, Variants } from '#app/models/types/global';
 
 export type Params = Record<string, string>;
 
@@ -26,8 +27,8 @@ export const getVariantHref = ({
 }: {
   path?: string;
   params: Params;
-  service: string;
-  variant: string | undefined;
+  service: Services;
+  variant?: Variants;
   scriptSwitchId?: string;
 }) => {
   const fallback = `/${service}/${variant}`;
