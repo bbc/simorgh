@@ -5,18 +5,23 @@ import tvMedia from './tvMedia';
 import { MediaBlock } from '../types';
 
 const blockTypeMapping = {
-  aresMedia: aresMedia,
-  clipMedia: clipMedia,
-  tvMedia: tvMedia,
+  aresMedia,
+  clipMedia,
+  media: tvMedia,
 };
 
 export default (blocks: MediaBlock[]) => {
-  ['aresMedia', 'clipMedia', 'tvMedia'].forEach(blockType => {
+  let config;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const blockType of ['aresMedia', 'clipMedia', 'media']) {
     const mediaBlock = filterForBlockType(blocks, blockType);
-    if (!!mediaBlock) {
+    if (mediaBlock) {
       // @ts-expect-error wip, we will fix this!
-      const config = blockTypeMapping[blockType];
-      return config;
+      config = blockTypeMapping[blockType];
+      if (config) {
+        break;
+      }
     }
-  });
+  }
+  return config;
 };

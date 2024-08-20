@@ -1,9 +1,9 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import { BuildConfigProps, MediaBlock } from '../types';
-import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 
 const baseSettings = {
   pageType: 'article' as PageTypes,
@@ -342,7 +342,7 @@ describe('buildSettings', () => {
         pageType: MEDIA_PAGE,
       });
 
-      expect(result?.playerConfig).toStrictEqual({
+      expect(result).toStrictEqual({
         product: 'news',
         enableToucan: true,
         appName: 'news-hindi',
