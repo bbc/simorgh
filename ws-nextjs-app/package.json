@@ -32,12 +32,12 @@
     "@testing-library/react": "*",
     "cypress": "*",
     "cypress-terminal-report": "*",
-    "jest": "*",
     "jest-environment-jsdom": "*",
     "npm-run-all2": "*"
   },
   "devDependencies": {
     "babel-plugin-transform-rename-import": "2.3.0",
+    "jest": "*",
     "next-test-api-route-handler": "4.0.8",
     "ts-node": "10.9.2"
   },

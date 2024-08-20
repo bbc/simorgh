@@ -12575,7 +12575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:29.7.0":
+"jest@npm:*, jest@npm:29.7.0":
   version: 29.7.0
   resolution: "jest@npm:29.7.0"
   dependencies:
@@ -16119,6 +16119,7 @@ __metadata:
   resolution: "simorgh-nextjs@workspace:ws-nextjs-app"
   dependencies:
     babel-plugin-transform-rename-import: "npm:2.3.0"
+    jest: "npm:*"
     next: "npm:14.2.5"
     next-test-api-route-handler: "npm:4.0.8"
     ts-node: "npm:10.9.2"
@@ -16133,7 +16134,6 @@ __metadata:
     "@testing-library/react": "*"
     cypress: "*"
     cypress-terminal-report: "*"
-    jest: "*"
     jest-environment-jsdom: "*"
     npm-run-all2: "*"
   languageName: unknown
