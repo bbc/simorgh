@@ -53,10 +53,10 @@ describe('MostRead Canonical', () => {
 
   [
     {
-      description: 'should render 10 list items for pidgin from fetched data',
-      service: 'pidgin',
+      description: 'should render 10 list items for arabic from fetched data',
+      service: 'arabic',
       numberOfItems: 10,
-      mostReadData: pidginMostReadData,
+      mostReadData: arabicMostReadData,
     },
     {
       description: 'should render 5 list items for kyrgyz from fetched data',
