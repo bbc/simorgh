@@ -39,7 +39,6 @@ const Component = (_, { service }) => {
         pageData={liveRadioFixtures[service]}
         status={200}
         service={service}
-        isAmp={false}
         loading={false}
         error=""
         pageType={MEDIA_PAGE}
@@ -56,7 +55,7 @@ export default {
     chromatic: {
       diffThreshold: 0.2,
       delay: 8000,
-      pauseAnimationAtEnd: false
+      pauseAnimationAtEnd: false,
     },
   },
   decorators: [withServicesDecorator({ defaultService: 'indonesia' })],

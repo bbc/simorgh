@@ -1,5 +1,4 @@
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
 import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
@@ -50,15 +49,14 @@ const MostReadCanonicalWithContext = ({
 describe('MostRead Canonical', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    fetchMock.restore();
   });
 
   [
     {
-      description: 'should render 10 list items for pidgin from fetched data',
-      service: 'pidgin',
+      description: 'should render 10 list items for arabic from fetched data',
+      service: 'arabic',
       numberOfItems: 10,
-      mostReadData: pidginMostReadData,
+      mostReadData: arabicMostReadData,
     },
     {
       description: 'should render 5 list items for kyrgyz from fetched data',
