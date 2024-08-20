@@ -12,7 +12,7 @@ import {
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
-import { BumpType, MediaBlock, Orientation, PlayerConfig } from './types';
+import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -88,16 +88,11 @@ const AdvertTagLoader = () => {
 };
 
 type MediaContainerProps = {
-  orientation: Orientation;
   playerConfig: PlayerConfig;
   showAds: boolean;
 };
 
-const MediaContainer = ({
-  orientation = 'landscape',
-  playerConfig,
-  showAds,
-}: MediaContainerProps) => {
+const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -148,11 +143,7 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        orientation === 'landscape'
-          ? styles.mediaContainerLandscape
-          : styles.mediaContainerPortrait
-      }
+      css={styles.mediaContainer}
     />
   );
 };
@@ -199,8 +190,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
 
   if (!config) return null;
 
-  const { mediaType, orientation, playerConfig, placeholderConfig, showAds } =
-    config;
+  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
   const {
     mediaInfo,
@@ -221,7 +211,6 @@ const MediaLoader = ({ blocks, className }: Props) => {
       <BumpLoader />
       {isPlaceholder ? (
         <Placeholder
-          orientation={orientation}
           src={placeholderSrc}
           srcSet={placeholderSrcset}
           noJsMessage={translatedNoJSMessage}
@@ -229,11 +218,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
           onClick={() => setIsPlaceholder(false)}
         />
       ) : (
-        <MediaContainer
-          orientation={orientation}
-          playerConfig={playerConfig}
-          showAds={showAds}
-        />
+        <MediaContainer playerConfig={playerConfig} showAds={showAds} />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaType} />}
     </figure>

@@ -3,16 +3,9 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 
 const styles = {
-  placeholderLandscape: () =>
-    css({
-      aspectRatio: '16 / 9',
-    }),
-  placeholderPortrait: () =>
-    css({
-      aspectRatio: '9 / 16',
-    }),
   placeholder: ({ palette }: Theme) =>
     css({
+      aspectRatio: '16 / 9',
       position: 'relative',
       cursor: 'pointer',
       [`.${NO_JS_CLASSNAME} &`]: {
