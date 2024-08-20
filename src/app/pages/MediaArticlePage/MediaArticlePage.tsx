@@ -70,6 +70,7 @@ import {
   EmbedHtmlProps,
   TimestampProps,
 } from './types';
+import MediaLoader from '#app/components/MediaLoader';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
@@ -150,7 +151,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        <MediaLoader blocks={props.blocks} />
       </div>
     ),
     text,
