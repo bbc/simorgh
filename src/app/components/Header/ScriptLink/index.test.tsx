@@ -16,7 +16,7 @@ import { render, fireEvent } from '../../react-testing-library-with-providers';
 import { service as ukChinaServiceConfig } from '../../../lib/config/services/ukchina';
 import { service as serbianServiceConfig } from '../../../lib/config/services/serbian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import ScriptLinkContainer, { getVariantHref, Params } from '.';
+import ScriptLinkContainer, { getVariantHref } from '.';
 import ThemeProvider from '../../ThemeProvider';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
@@ -275,7 +275,10 @@ describe(`Script Link`, () => {
       expect(
         getVariantHref({
           path,
-          params: { foo: 'foo', bar: 'bar', variant: '/lat' } as Params,
+          params: { foo: 'foo', bar: 'bar', variant: '/lat' } as Record<
+            string,
+            string
+          >,
           service: 'serbian',
           variant: 'cyr',
         }),

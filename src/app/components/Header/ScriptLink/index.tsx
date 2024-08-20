@@ -11,11 +11,9 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import styles from './index.styles';
 
-type Params = Record<string, string>;
-
 interface UseRouteMatcher {
   path: string;
-  params: Params;
+  params: Record<string, string>;
 }
 
 export const getVariantHref = ({
@@ -26,7 +24,7 @@ export const getVariantHref = ({
   scriptSwitchId,
 }: {
   path?: string;
-  params: Params;
+  params: Record<string, string>;
   service: Services;
   variant?: Variants;
   scriptSwitchId?: string;
