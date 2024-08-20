@@ -6,7 +6,7 @@ import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 
@@ -70,6 +70,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     status: 200,
     pageType: 'staticPage',
   });
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+  );
 
   context.res.statusCode = 200;
   return {
@@ -79,8 +83,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       page: null,
-      pageData: null,
-      pageType: 'staticPage',
+      pageData: {
+        metadata: {
+          type: STATIC_PAGE,
+        },
+      },
+      pageType: STATIC_PAGE,
       pathname: context.resolvedUrl,
       service,
       showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
@@ -94,20 +102,23 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
 
 const pageLayout = () => {
-    const { locale } = useContext(ServiceContext);
+    const { datetimeLocale, locale } = useContext(ServiceContext);
 
     useEffect(() => {
       let wsWrapped;
       const MINUTES_IN_HOURS = 60;
       const HOURS_IN_DAYS = 24;
       // Get the value from local storage if it exists
-      wsWrapped = localStorage.getItem("ws_bbc_wrapped") || "{}";
+      // wsWrapped = localStorage.getItem("ws_bbc_wrapped") || "{}";
+      wsWrapped = '{"2024":{"byMonth":{"5":35,"6":45,"7":32,"8":28},"pageTypeCounts":{"home":55,"live":9,"STY":8,"undefined":6,"Topic":20,"article":34,"MAP":5,"OnDemandRadio":2,"Podcast":1},"serviceCounts":{"mundo":68,"burmese":5,"turkce":4,"russian":14,"arabic":19,"tigrinya":3,"pashto":1,"urdu":5,"bengali":7,"telugu":1,"portuguese":10,"persian":3},"topicCounts":{"НАТО":3,"Джо Байден":3,"Война России с Украиной":4,"Россия - НАТО":3,"США":3,"Pandora Papers":1,"Negocios":1,"Empleo":1,"Qatar":1,"Mundo árabe":1,"Arabia Saudita":1,"Derechos humanos":3,"Mujeres":1,"Política":9,"Guerra":2,"Joe Biden":1,"Estados Unidos":8,"Conflicto palestino-israelí":1,"Egipto":1,"Israel":1,"Territorios Palestinos":1,"Crisis en Venezuela":2,"Nicolás Maduro":2,"América Latina":8,"Venezuela":2,"ሰሜን ኣሜሪካ ":1,"ኲናት":1,"ፖለቲካ":1,"ኢትዮጵያ":1,"ህወሓት":1,"Elecciones presidenciales en Estados Unidos 2024":3,"Elecciones presidenciales en Estados Unidos 2016":3,"Donald Trump":3,"Derechos de la mujer":1,"México":7,"Claudia Sheinbaum":1,"Elecciones federales de México de 2024":1,"Andrés Manuel López Obrador":1,"سائنس":2,"ٹیکنالوجی":2,"کاروں کی صنعت":1,"ভারত":1,"ভারত লোকসভা নির্বাচন ২০২৪":1,"রাজনীতি":1,"নরেন্দ্র মোদী":1,"Serbia":1,"100 Mujeres":1,"Europa":1,"Economía":1,"Argentina":1,"Javier Milei":1,"المسلمون":1,"الاردن":1,"السعودية":1,"الإسلام":1,"مكة":1,"مصر":1,"شؤون دينية":1,"الحج":1,"المپیک پاریس ۲۰۲۴":1,"Sociedad":4,"Violencia en México":4,"Drogas":4,"Narcotráfico":4,"Британия":1,"Искусство":1,"Музыка":1,"ہوائی سفر":1,"سفر":1,"پاکستان":1,"فضائی حادثے":1,"کراچی":1,"ماحولیاتی تبدیلی":1,"کینیا":1,"Израиль и ПА":1,"Иран":1,"Ближний Восток":1,"Война Израиля с ХАМАС":1,"Россия":1,"Украина":1,"الصراع الفلسطيني الإسرائيلي":1,"إسرائيل":1,"حرب غزة":1,"حركة حماس":1,"البيئة":2,"التلوث":2,"أمراض":2,"الحيوانات":2,"Sociedad y Cultura":3,"Religión":3,"Violencia sexual":3,"Abuso infantil":3,"Reino Unido":3},"duration":31219166,"wordCount":41301}}';
       wsWrapped = JSON.parse(wsWrapped);
       const thisYear = new Date().getFullYear();
       console.log('wsWrapped', wsWrapped);
+
       const totalTime = wsWrapped[thisYear].duration;
       const timespent = document.getElementById('timespent');
       const timespentMinutes = Math.round(totalTime / (1000 * 60));
+
       const timespentMinutesText = new Intl.NumberFormat(locale).format(timespentMinutes);
       let timespentText = `${timespentMinutesText} minutes`;
       if (timespentMinutes > MINUTES_IN_HOURS) {
@@ -117,7 +128,14 @@ const pageLayout = () => {
             timespentText = `${timespentText} or ${Math.round(timespentMinutes / (MINUTES_IN_HOURS * HOURS_IN_DAYS))} days`;
           }
       }
-      timespent.innerText = timespentText;
+      
+      const duration = {
+        hours: Math.floor(timespentMinutes / MINUTES_IN_HOURS),
+        minutes: timespentMinutes % MINUTES_IN_HOURS,
+      };
+      const durationInternationalized = new Intl.DurationFormat(datetimeLocale, { style: "long" }).format(duration);
+
+      timespent.innerText = durationInternationalized;
       const totalWords = wsWrapped[thisYear].wordCount;
       const words = document.getElementById('words');
       words.innerText = new Intl.NumberFormat(locale).format(totalWords);
@@ -127,7 +145,7 @@ const pageLayout = () => {
       const article = document.getElementById('article');
       article.innerText = new Intl.NumberFormat(locale).format(pageTypeCounts);
       const average = document.getElementById('average');
-      average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
+      /// average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
       const topics = Object.keys(wsWrapped[thisYear].topicCounts).sort((a, b) => {
         return wsWrapped[thisYear].topicCounts[a] < wsWrapped[thisYear].topicCounts[b];
       }).slice(0, 5);
@@ -138,32 +156,60 @@ const pageLayout = () => {
         listitem.innerText = topic;
         topiclist.appendChild(listitem);
       });
-      const graph = document.getElementById('graph'); 
-      graph.innerHTML = '';
-      graph.style.height = "200px";
-      graph.style.position = "relative";
-      graph.style.margin = "20px 0";
+
       const monthValues = [];
       const graphMonths = wsWrapped[thisYear].byMonth;
-      for(let i = 1; i <= 12; i++) {
+      const tempMonths = [];
+      const blah = new Intl.DateTimeFormat()
+      for(let i = 0; i <= 11; i++) {
+        const date = new Date(`2024-${String(i + 1).padStart(2, '0')}-01`);
+        tempMonths.push(new Intl.DateTimeFormat(datetimeLocale, { month: 'short' }).format(date));
         monthValues[i] = 0;
-        if (graphMonths[i]) {
-            monthValues[i] = graphMonths[i];
+        if (graphMonths[i + 1]) {
+            monthValues[i] = graphMonths[i + 1];
         }
       }
       const graphMax = Math.max(...Object.values(monthValues));
-      monthValues.forEach((month, index) => {
-        const div = document.createElement('div');
-        div.style.height = `${200 * (month / graphMax)}px`;
-        div.style.width = "8%";
-        div.style.float = "left";
-        div.style.marginRight = "2px";
-        div.style.backgroundColor = "#B80000";
-        div.style.position = "absolute";
-        div.style.bottom = "0";
-        div.style.left = `calc(${(index - 1) * 8}% + ${(index - 1) * 2}px)`;
-        graph.appendChild(div);
-      });
+      
+      const my_canvas = document.getElementById("my_canvas");
+      const gctx = my_canvas.getContext("2d");
+
+      var bar_width = 50;
+      var y_gap = 30;  // Gap below the graph 
+      var bar_gap = 60; // Gap between Bars including width of the bar
+      var x = 20; // Margin of graph from left  
+      var y, i, y1, x1; 
+
+      y = my_canvas.height - y_gap ;
+
+      my_canvas.width = monthValues.length * (bar_gap) + x;
+      gctx.moveTo(x - 5, y);
+      gctx.lineTo(my_canvas.width, y); // Base line of graph 
+      gctx.stroke();
+      
+      const getGraphYValue = (initialValue) => !initialValue ? initialValue : ((initialValue / graphMax) * y) - y_gap;
+
+      for (i = 0; i < monthValues.length; i++){
+          gctx.font = '11px "BBC Reith Sans", ReithSerif, Helvetica, sans-serif'; // font for base label showing classes 
+          gctx.textAlign = 'left';
+          gctx.textBaseline ='top';
+          gctx.fillStyle = '#666';
+          gctx.fillText(tempMonths[i].toUpperCase(), x + (bar_width / 2) - 17, y + 5); // Write base text for classes 
+
+          gctx.beginPath();
+          gctx.lineWidth = 2;
+          y1 = y - getGraphYValue(monthValues[i]); // Coordinate for top of the Bar 
+          x1 = x;    
+          gctx.font = '12px  "BBC Reith Sans", ReithSerif, Helvetica, sans-serif'; // font at top of the bar 
+          gctx.fillStyle= '#000000';
+          gctx.fillText(monthValues[i] ? monthValues[i] : '', x1 + (bar_width / 2) - 10, y1 - 20); // text at top of the bar 
+
+          gctx.fillStyle= '#B80000'; 
+          gctx.fillRect(x1, y1, bar_width, getGraphYValue(monthValues[i]));// Filled bar 
+
+          x = x + bar_gap
+
+      }
     }, [])
     return (
       <>
@@ -172,15 +218,17 @@ const pageLayout = () => {
             <div css={styles.wideSection}>
               <h1>WS Wrapped</h1>
               <div>
-                <h2>Time on BBC</h2>
-                <p>So far this year you have spent <span id="timespent"></span> on the BBC.com site and read <span id="words"></span> words on <span id="article"></span> articles, at an average of <span id="average"></span> words per article.</p>
-                <p>Your most popular article topics were: </p>
-                <ol id="topiclist"></ol>
-                <h2>Over time</h2>
-                <p>This is how many articles you read per month</p>
-                <div id="graph" style={{ width: "100%" }}>
-            
-                </div>
+                <h2>Time</h2>
+                <h3><span id="timespent"></span></h3>
+                <h2>Reading</h2>
+                    <ul>
+                        <li><span id="words"></span> words</li>
+                        <li><span id="article"></span> articles</li>
+                    </ul>
+                <h2>Topics</h2>
+                    <ol id="topiclist"></ol>
+                <h2>Per month</h2>
+                <canvas id="my_canvas" width="100%" height="230"  style={{border: "2px solid #000000"}}></canvas>
               </div>
             </div>
           </div>
