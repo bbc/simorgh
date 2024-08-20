@@ -16,6 +16,11 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const headline = promo.headlines.seoHeadline;
   const { language } = metadata;
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const aresMediaMetadata = filterForBlockType(
+    aresMediaBlock.model.blocks,
+    'aresMediaMetadata',
+  );
+  const { imageUrl } = aresMediaMetadata.model;
 
   return (
     <>
@@ -50,7 +55,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
         <meta property="og:url" content="{{{requestInfo.embedUrl}}}" />
       {{/promo.locators.assetUri}} */}
 
-      <meta property="og:image" content="{{{video.imageUrl}}}" />
+      <meta property="og:image" content={imageUrl} />
       <meta property="og:image:alt" content="{{video.caption}}" />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +63,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       <meta name="twitter:title" content={headline} />
       <meta name="twitter:description" content={promoSummary} />
       <meta name="twitter:creator" content="@bbcnews" />
-      <meta name="twitter:image:src" content="{{{video.imageUrl}}}" />
+      <meta name="twitter:image:src" content={imageUrl} />
       <meta name="twitter:image:alt" content="{{video.caption}}" />
       <meta name="twitter:domain" content="www.bbc.com" />
 
