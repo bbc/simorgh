@@ -49,7 +49,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       isLite,
       isNextJs: true,
       service,
