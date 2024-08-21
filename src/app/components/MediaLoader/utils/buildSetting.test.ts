@@ -1,6 +1,10 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import buildSettings from './buildSettings';
-import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
+import {
+  aresMediaBlocks,
+  aresMediaLiveStreamBlocks,
+  clipMediaBlocks,
+} from '../fixture';
 import { BuildConfigProps, MediaBlock } from '../types';
 
 const baseSettings = {
@@ -122,6 +126,56 @@ describe('buildSettings', () => {
         items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
         guidance: 'Contains strong language and adult humour.',
         embedRights: 'allowed',
+      },
+      ui: {
+        controls: { enabled: true },
+        locale: { lang: 'es' },
+        subtitles: { enabled: true, defaultOn: true },
+        fullscreen: { enabled: true },
+      },
+    });
+  });
+
+  it('Should process an AresMediaLiveStream block into a valid playlist item for an "live stream" MAP page.', () => {
+    const mockWindowObj = {
+      location: {
+        hostname: 'https://www.bbc.com/',
+      },
+    } as Window & typeof globalThis;
+
+    jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
+
+    const result = buildSettings({
+      ...baseSettings,
+      blocks: aresMediaLiveStreamBlocks as MediaBlock[],
+    });
+
+    expect(result?.playerConfig).toStrictEqual({
+      autoplay: true,
+      product: 'news',
+      statsObject: {
+        clipPID: 'bbc_arabic_tv',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+      },
+      enableToucan: true,
+      appName: 'news-mundo',
+      appType: 'responsive',
+      counterName: 'live_coverage.testID.page',
+      externalEmbedUrl: '',
+      playlistObject: {
+        title: 'مباشر: تلفزيون بي بي سي عربي',
+        summary: 'This is a caption!',
+        holdingImageURL: 'https://ichef.bbci.co.uk/ace/ws/512',
+        items: [
+          {
+            duration: undefined,
+            kind: 'programme',
+            live: true,
+            versionID: 'bbc_arabic_tv',
+          },
+        ],
+        simulcast: true,
       },
       ui: {
         controls: { enabled: true },

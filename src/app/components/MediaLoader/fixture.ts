@@ -272,3 +272,44 @@ export const livePageClipMediaBlock = {
 
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+
+export const aresMediaLiveStreamBlocks = [
+  {
+    id: '3e29a5f5',
+    type: 'aresMedia',
+    model: {
+      blocks: [
+        {
+          id: 'd67fb17d',
+          type: 'aresMediaMetadata',
+          blockId: 'urn:bbc:ares::primary:108540166',
+          model: {
+            live: true,
+            embedding: false,
+            subType: 'primary',
+            id: '108540166',
+            available: true,
+            format: 'audio_video',
+            title: 'مباشر: تلفزيون بي بي سي عربي',
+            imageCopyright: 'BBC',
+            imageUrl:
+              'http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png',
+            synopses: {
+              short: 'مباشر: تلفزيون بي بي سي عربي',
+              medium: 'مباشر: تلفزيون بي بي سي عربي',
+              long: 'مباشر: تلفزيون بي بي سي عربي',
+            },
+            versions: [
+              {
+                kind: 'programme',
+                live: true,
+                versionId: 'bbc_arabic_tv',
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  aresMediaCaptionBlock,
+];
