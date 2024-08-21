@@ -37,6 +37,18 @@ export default ({
   const { originCode, locator } =
     aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model ?? {};
 
+  const placeholderSrc = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_WIDTH,
+  });
+
+  const placeholderSrcset = getPlaceholderSrcSet({
+    originCode,
+    locator,
+    isWebP: true,
+  });
+
   const versionID =
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
       ?.versionId;
@@ -65,6 +77,8 @@ export default ({
     aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
       ?.short;
 
+  const isLive = aresMediaBlock?.model?.blocks?.[0]?.model?.live ?? false;
+
   const mediaInfo = {
     title,
     kind,
@@ -91,21 +105,12 @@ export default ({
   const embeddingAllowed =
     aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
 
-  const placeholderSrc = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
-
-  const placeholderSrcset = getPlaceholderSrcSet({
-    originCode,
-    locator,
-    isWebP: true,
-  });
-
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
-  const items = [{ versionID, kind, duration: rawDuration }];
+  const items = [
+    { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
+  ];
+
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
 
   return {
@@ -120,6 +125,7 @@ export default ({
         items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
+        ...(isLive && { simulcast: true }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {

@@ -23,6 +23,8 @@ export type PlayerConfig = {
     holdingImageURL: string;
     items: PlaylistItem[];
     guidance?: string;
+    embedRights?: 'allowed';
+    simulcast?: boolean;
   };
 };
 
@@ -120,6 +122,7 @@ export type CaptionBlock = {
 export type AresMediaBlock = {
   type: 'aresMedia';
   model: {
+    live?: boolean;
     locator: string;
     originCode: string;
     text: string;
