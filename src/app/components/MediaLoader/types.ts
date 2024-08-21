@@ -58,7 +58,40 @@ export type ConfigBuilderProps = {
 
 export type ConfigBuilderReturnProps = {
   product?: string;
+  enableToucan: boolean;
+  appName: string;
   mediaType: string;
+  superResponsive: boolean;
+  insideIframe: boolean;
+  counterName: string;
+  statsObject: {
+    destination: string;
+    producer: string;
+    episodePID: string;
+  };
+  ui: {
+    locale: {
+      lang: string;
+    };
+    subtitles: {
+      defaultOn: boolean;
+    };
+  };
+  playlistObject: {
+    title: string;
+    holdingImageURL: string;
+    items: [
+      {
+        versionID: string;
+        kind: string;
+        duration: number;
+        vpid: string;
+      },
+    ];
+    summary: string;
+  };
+  container: {};
+  domid: string;
   playerConfig: PlayerConfig;
   placeholderConfig: {
     mediaInfo: MediaInfo;
@@ -182,7 +215,7 @@ export type TvMediaBlock = {
   versions: [
     {
       versionId: string;
-      types: [string];
+      types: string[];
       duration: number;
       durationISO8601: string;
       warnings: {};
