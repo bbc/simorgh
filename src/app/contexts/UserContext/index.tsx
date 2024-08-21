@@ -13,7 +13,7 @@ import {
 } from './cookies';
 import Chartbeat from './Chartbeat';
 
-type UserContextProps = {
+export type UserContextProps = {
   cookiePolicy: string;
   sendCanonicalChartbeatBeacon: Dispatch<SetStateAction<null>>;
   updateCookiePolicy: Dispatch<SetStateAction<null>>;
