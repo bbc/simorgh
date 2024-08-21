@@ -6,11 +6,7 @@ import { AvEmbedsPageProps } from './types';
 
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error: Unreachable code error
-    content: {
-      model: { blocks },
-    },
+    mediaBlock,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error: Unreachable code error
     metadata,
@@ -22,7 +18,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
     promo.summary.blocks[0].model.blocks[0].model.blocks[0].model.text;
   const headline = promo.headlines.seoHeadline;
   const { language } = metadata;
-  const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const aresMediaBlock = filterForBlockType(mediaBlock, 'aresMedia');
   const aresMediaMetadata = filterForBlockType(
     aresMediaBlock.model.blocks,
     'aresMediaMetadata',
