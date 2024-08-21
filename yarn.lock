@@ -15986,7 +15986,7 @@ __metadata:
     next-test-api-route-handler: "npm:^4.0.8"
     npm-run-all2: "npm:6.2.2"
     ts-node: "npm:^10.9.2"
-    undici: "npm:6.19.7"
+    undici: "npm:6.19.8"
   languageName: unknown
   linkType: soft
 
@@ -17426,10 +17426,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.19.7":
-  version: 6.19.7
-  resolution: "undici@npm:6.19.7"
-  checksum: 10/77fb8b0377388f6dba8244b015841318d621031211b4f3c2273d809304b77ec44adeba4b89dfd6708bdc044190e18f068e5b231882ef15d057d4624e46f544e3
+"undici@npm:6.19.8":
+  version: 6.19.8
+  resolution: "undici@npm:6.19.8"
+  checksum: 10/19ae4ba38b029a664d99fd330935ef59136cf99edb04ed821042f27b5a9e84777265fb744c8a7abc83f2059afb019446c69a4ebef07bbc0ed6b2de8d67ef4090
   languageName: node
   linkType: hard
 
