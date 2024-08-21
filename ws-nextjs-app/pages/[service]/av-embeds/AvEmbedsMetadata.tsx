@@ -1,14 +1,21 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import { Helmet } from 'react-helmet';
 import filterForBlockType from '../../../../src/app/lib/utilities/blockHandlers';
 import { AvEmbedsPageProps } from './types';
 
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error: Unreachable code error
     content: {
       model: { blocks },
     },
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error: Unreachable code error
     metadata,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error: Unreachable code error
     promo,
   } = pageData;
   const promoSummary =
@@ -20,10 +27,15 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
     aresMediaBlock.model.blocks,
     'aresMediaMetadata',
   );
+  const captionBlock = filterForBlockType(
+    aresMediaBlock.model.blocks,
+    'captionText',
+  );
   const { imageUrl } = aresMediaMetadata.model;
+  const { caption } = captionBlock.model;
 
   return (
-    <>
+    <Helmet>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, user-scalable=1"
@@ -56,7 +68,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       {{/promo.locators.assetUri}} */}
 
       <meta property="og:image" content={imageUrl} />
-      <meta property="og:image:alt" content="{{video.caption}}" />
+      <meta property="og:image:alt" content={caption} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@bbcnews" />
@@ -64,7 +76,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       <meta name="twitter:description" content={promoSummary} />
       <meta name="twitter:creator" content="@bbcnews" />
       <meta name="twitter:image:src" content={imageUrl} />
-      <meta name="twitter:image:alt" content="{{video.caption}}" />
+      <meta name="twitter:image:alt" content={caption} />
       <meta name="twitter:domain" content="www.bbc.com" />
 
       <meta name="apple-mobile-web-app-title" content="BBC News" />
@@ -73,8 +85,8 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       <meta name="msapplication-TileImage" content="BBC News" />
       <meta name="msapplication-TileColor" content="#bb1919" />
       <meta name="mobile-web-app-capable" content="yes" />
-    </>
+    </Helmet>
   );
-}
+};
 
 export default AvEmbedsMetadata;
