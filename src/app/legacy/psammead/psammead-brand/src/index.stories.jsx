@@ -14,7 +14,7 @@ import {
   withServicesKnob,
   buildRTLSubstories,
 } from '#psammead/psammead-storybook-helpers/src';
-import ScriptLink from '#psammead/psammead-script-link/src';
+import ScriptLink from '../../../../components/Header/ScriptLink';
 import Brand from './index';
 import SkipLink from './SkipLink';
 import notes from '../README.md';

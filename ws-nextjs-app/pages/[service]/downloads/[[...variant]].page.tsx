@@ -8,6 +8,21 @@ import dataFetch from './dataFetch';
 import downloadsPageLayout from './downloadsPageLayout';
 import extractHeaders from '../../../../src/server/utilities/extractHeaders';
 
+const pageTitle = '다운로드 - BBC News 코리아';
+
+const atiData = {
+  campaigns: null,
+  categoryName: null,
+  contentType: DOWNLOADS_PAGE,
+  language: 'ko-KO',
+  ldpThingIds: null,
+  ldpThingLabels: null,
+  pageIdentifier: 'korean.downloads.page',
+  pageTitle,
+  producerId: '57',
+  producerName: 'KOREAN',
+};
+
 export const getServerSideProps: GetServerSideProps = async context => {
   logResponseTime(
     {
@@ -16,11 +31,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
     context.res,
     () => null,
   );
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=600, stale-while-revalidate=240, max-age=60',
+  );
 
-  const {
-    service,
-    variant,
-  } = context.query as PageDataParams;
+  const { service, variant } = context.query as PageDataParams;
 
   const downloadData = await dataFetch(service);
 
@@ -28,20 +44,20 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       error: null,
       isAmp: false,
       isNextJs: true,
       pageData: {
         downloadData,
         metadata: {
+          atiAnalytics: atiData,
           type: DOWNLOADS_PAGE,
+          pageTitle,
         },
       },
       pageType: DOWNLOADS_PAGE,
       pathname: `${service}/downloads`,
       service,
-      showAdsBasedOnLocation: false,
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
       variant: variant?.[0] || null,

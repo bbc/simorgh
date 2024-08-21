@@ -258,9 +258,9 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'New things',
     },
     mostRead: {
-      header: 'De one we dem de read well well',
+      header: 'Di one wey oda users dey read well well',
       lastUpdated: 'De one we dem update for:',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {

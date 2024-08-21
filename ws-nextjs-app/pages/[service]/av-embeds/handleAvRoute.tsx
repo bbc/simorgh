@@ -58,7 +58,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
@@ -73,8 +72,8 @@ export default async (context: GetServerSidePropsContext) => {
         : null,
       pageType: AV_EMBEDS,
       service,
-      variant,
       status: pageStatus,
+      variant,
       ...extractHeaders(reqHeaders),
     },
   };

@@ -27,7 +27,7 @@ const getFormattedMessage = (message, rest) => {
   let theMessage = message;
 
   if (typeof message === 'object') {
-    theMessage = message.toString();
+    theMessage = JSON.stringify(message);
   }
 
   return theMessage.replace('%s', rest);
