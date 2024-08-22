@@ -101,7 +101,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = (path: string) => {
         const isTipoId = isTipoIdCheck(path);
         const id = isTipoId ? getTipoId(path) : getCpsId(path);
-        return isTipoId ? `${id}` : `${service}/live/${id}`; // HERE we add /${service}/live to cps id which is then used in the BFF URL for valid fetchUrl
+        return isTipoId ? `${id}` : `/${service}/live/${id}`; // HERE we add /${service}/live to cps id which is then used in the BFF URL for valid fetchUrl
       };
       break;
 
