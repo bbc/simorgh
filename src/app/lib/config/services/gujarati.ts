@@ -73,6 +73,10 @@ export const service: DefaultServiceConfig = {
         summary: 'સારાંશ',
         shareButtonText: 'શેર કરો',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'સારાંશ',
       error: {
         404: {

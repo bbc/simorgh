@@ -111,10 +111,6 @@ export const service: SerbianConfig = {
         url: '/serbian/lat',
       },
       {
-        title: 'Pariz 2024',
-        url: '/serbian/lat/topics/cv223zl2wp7t',
-      },
-      {
         title: 'Ukrajina',
         url: '/serbian/lat/topics/c5wzvzzz5vrt',
       },
@@ -172,6 +168,10 @@ export const service: SerbianConfig = {
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
         shareButtonText: 'Deli',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Sažetak',
       error: {
@@ -504,10 +504,6 @@ export const service: SerbianConfig = {
         url: '/serbian/cyr',
       },
       {
-        title: 'Париз 2024',
-        url: '/serbian/cyr/topics/cw556217lept',
-      },
-      {
         title: 'Украјина',
         url: '/serbian/cyr/topics/cqwvxvvw9qrt',
       },
@@ -565,6 +561,10 @@ export const service: SerbianConfig = {
         postedAt: 'Објављено у',
         summary: 'Сажетак',
         shareButtonText: 'Дели',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Сажетак',
       error: {

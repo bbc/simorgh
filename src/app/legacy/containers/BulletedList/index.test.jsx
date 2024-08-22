@@ -1,12 +1,9 @@
 import React, { useMemo } from 'react';
-import { render } from '@testing-library/react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -32,21 +29,31 @@ const BulletsWithContext = ({ blocks, blockGroupIndex }) => {
 describe('BulletedListContainer', () => {
   suppressPropWarnings(['blocks', 'supplied']);
 
-  shouldMatchSnapshot(
-    'should render ltr correctly',
-    <BulletsWithContext
-      blocks={orderedList.model.blocks}
-      blockGroupIndex={1}
-    />,
-  );
+  it('should render ltr correctly', () => {
+    const { container } = render(
+      <BulletsWithContext
+        blocks={orderedList.model.blocks}
+        blockGroupIndex={1}
+      />,
+      {
+        service: 'arabic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render rtl correctly',
-    <BulletsWithContext
-      blocks={orderedList.model.blocks}
-      blockGroupIndex={2}
-    />,
-  );
+  it('should render rtl correctly', () => {
+    const { container } = render(
+      <BulletsWithContext
+        blocks={orderedList.model.blocks}
+        blockGroupIndex={2}
+      />,
+      {
+        service: 'arabic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   describe('getEventTrackingData', () => {
     afterEach(() => {

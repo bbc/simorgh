@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState, Fragment } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
+import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -31,18 +34,34 @@ const renderNoScriptTrackingPixel = (
   );
 };
 
+const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
+  const script = sendBeaconOperaMiniScript(atiPageViewUrlString);
+
+  return (
+    <Helmet>
+      <script type="text/javascript">{script}</script>
+    </Helmet>
+  );
+};
+
 const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   const { isLite } = useContext(RequestContext);
 
-  const [atiPageViewUrl] = useState(
-    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams,
-  );
+  const atiPageViewUrlString =
+    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
+
+  const [atiPageViewUrl] = useState(atiPageViewUrlString);
 
   useEffect(() => {
-    sendBeacon(atiPageViewUrl);
+    if (!isOperaProxy()) sendBeacon(atiPageViewUrl);
   }, [atiPageViewUrl]);
 
-  return renderNoScriptTrackingPixel(atiPageViewUrl, isLite);
+  return (
+    <>
+      {addOperaMiniExtremeScript(atiPageViewUrlString)}
+      {renderNoScriptTrackingPixel(atiPageViewUrl, isLite)}
+    </>
+  );
 };
 
 export default CanonicalATIAnalytics;

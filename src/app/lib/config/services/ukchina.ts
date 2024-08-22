@@ -137,6 +137,10 @@ export const service: ChineseConfig = {
         summary: '概要',
         shareButtonText: '分享',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: '概要',
       error: {
         404: {
@@ -396,6 +400,10 @@ export const service: ChineseConfig = {
         postedAt: '張貼在',
         summary: '概要',
         shareButtonText: '分享',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: '概要',
       error: {

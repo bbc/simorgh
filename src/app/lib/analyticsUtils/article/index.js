@@ -20,7 +20,7 @@ export const getPageIdentifier = (service, articleData) => {
 };
 
 export const getLanguage = articleData =>
-  pathOr(null, ['metadata', 'passport', 'language'], articleData);
+  pathOr(null, ['metadata', 'language'], articleData);
 
 export const getPromoHeadline = articleData =>
   pathOr(null, ['promo', 'headlines', 'seoHeadline'], articleData);

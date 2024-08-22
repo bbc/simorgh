@@ -1,35 +1,16 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { Global, jsx } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { AvEmbedsPageProps } from './types';
+import styles from './styles';
 
-const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => {
-  return (
-    <div style={{ maxWidth: 600 }}>
-      <h1>
-        AV Embeds -{' '}
-        {pageData?.output?.isSyndicationRoute
-          ? 'Syndication'
-          : 'Non-Syndication'}
-      </h1>
-      <p>Input:</p>
-      <pre>{JSON.stringify(pageData?.input, null, 2)}</pre>
-      <p>Output:</p>
-      <pre>{JSON.stringify(pageData?.output, null, 2)}</pre>
-      {pageData?.mediaBlock && pageData?.mediaBlock?.length > 0 && (
-        <>
-          <p>Video Block:</p>
-          <MediaLoader
-            blocks={pageData?.mediaBlock}
-            css={{
-              paddingBottom: 0,
-              '> div': { aspectRatio: 'auto' },
-            }}
-          />
-        </>
-      )}
+const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => (
+  <>
+    <Global styles={styles.global} />
+    <div data-testid="avembeds-mediaplayer">
+      <MediaLoader blocks={pageData?.mediaBlock} css={styles.mediaPlayer} />
     </div>
-  );
-};
+  </>
+);
 
 export default AvEmbedsPageLayout;

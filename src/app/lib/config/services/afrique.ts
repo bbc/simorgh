@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Points clés',
         shareButtonText: 'Partager',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Points clés',
       error: {
         404: {
@@ -328,10 +332,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Accueil',
         url: '/afrique',
-      },
-      {
-        title: 'JO 2024',
-        url: '/afrique/topics/cgrjz0yz4n9t',
       },
       {
         title: 'Afrique',
