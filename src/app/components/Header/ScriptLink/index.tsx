@@ -1,12 +1,20 @@
-import React, { useContext } from 'react';
+/** @jsx jsx */
+import { useContext } from 'react';
+import { jsx } from '@emotion/react';
 import { compile } from 'path-to-regexp';
 import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
-import ScriptLink from '#psammead/psammead-script-link/src';
 import { UserContext } from '#contexts/UserContext';
 import useToggle from '#hooks/useToggle';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { RequestContext } from '../../../../contexts/RequestContext';
+import { Services, Variants } from '#app/models/types/global';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
+import styles from './index.styles';
+
+interface UseRouteMatcher {
+  path: string;
+  params: Record<string, string>;
+}
 
 export const getVariantHref = ({
   path,
@@ -14,6 +22,12 @@ export const getVariantHref = ({
   service,
   variant,
   scriptSwitchId,
+}: {
+  path?: string;
+  params: Record<string, string>;
+  service: Services;
+  variant?: Variants;
+  scriptSwitchId?: string;
 }) => {
   const fallback = `/${service}/${variant}`;
 
@@ -29,42 +43,38 @@ export const getVariantHref = ({
   }
 
   try {
-    return compile(path)(
-      {
-        ...pathParams,
-        variant: `/${variant}`,
-        amp: undefined, // we don't want to link to AMP pages directly
-        nonCanonicalArticleRenderPlatform: undefined, // we don't want to link to AMP (.amp) or APP (.app) for the Optimo article route
-      },
-      {
-        encode: value => value,
-      },
-    );
+    const compilePath = compile(path, { encode: value => value });
+
+    return compilePath({
+      ...pathParams,
+      variant: `/${variant}`,
+      amp: undefined, // we don't want to link to AMP pages directly
+      nonCanonicalArticleRenderPlatform: undefined, // we don't want to link to AMP (.amp) or APP (.app) for the Optimo article route
+    });
   } catch {
     return fallback;
   }
 };
 
-const ScriptLinkContainer = ({ scriptSwitchId = '' }) => {
+const ScriptLink = ({ scriptSwitchId = '' }) => {
   const { setPreferredVariantCookie } = useContext(UserContext);
-  const { service, script, scriptLink } = useContext(ServiceContext);
+  const { service, scriptLink } = useContext(ServiceContext);
   const { isNextJs } = useContext(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
+  const { path, params }: UseRouteMatcher = useRouteMatch();
 
   // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
   // revisit this to support both Express and Next.JS in the future.
   if (!scriptLinkEnabled || isNextJs) return null;
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { path, params } = useRouteMatch();
+  const { text, variant } = scriptLink || {};
 
-  const { text, variant } = scriptLink;
+  if (!variant) return null;
 
   return (
-    <ScriptLink
-      script={script}
-      service={service}
+    <a
+      css={styles.link}
       href={getVariantHref({
         path,
         params,
@@ -72,16 +82,17 @@ const ScriptLinkContainer = ({ scriptSwitchId = '' }) => {
         variant,
         scriptSwitchId,
       })}
-      variant={variant}
+      data-variant={variant}
       onClick={() => {
         return (
           variantCookieEnabled && setPreferredVariantCookie(service, variant)
         );
       }}
+      className="focusIndicatorRemove"
     >
-      {text}
-    </ScriptLink>
+      <span css={styles.container}>{text}</span>
+    </a>
   );
 };
 
-export default ScriptLinkContainer;
+export default ScriptLink;
