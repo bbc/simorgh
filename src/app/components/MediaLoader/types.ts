@@ -62,7 +62,6 @@ export type ConfigBuilderReturnProps = {
   appName: string;
   mediaType: string;
   superResponsive: boolean;
-  insideIframe: boolean;
   counterName: string;
   statsObject: {
     destination: string;
@@ -90,8 +89,6 @@ export type ConfigBuilderReturnProps = {
     ];
     summary: string;
   };
-  container: {};
-  domid: string;
   playerConfig: PlayerConfig;
   placeholderConfig: {
     mediaInfo: MediaInfo;

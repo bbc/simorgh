@@ -12,7 +12,6 @@ export default ({
     enableToucan: true,
     appName: 'news-hindi',
     superResponsive: true,
-    insideIframe: true,
     counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
     statsObject: {
       destination: 'WS_NEWS_LANGUAGES',
@@ -42,7 +41,5 @@ export default ({
       summary:
         'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
     },
-    container: {},
-    domid: 'mediaPlayer',
   };
 };

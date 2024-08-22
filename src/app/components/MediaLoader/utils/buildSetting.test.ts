@@ -326,16 +326,6 @@ describe('buildSettings', () => {
 
   describe('OnDemandTv', () => {
     it('Should process a On Demand TV block into a valid playlist item.', () => {
-      const mockWindowObj = {
-        location: {
-          hostname: 'https://www.bbc.com/',
-        },
-      } as Window & typeof globalThis;
-
-      jest
-        .spyOn(window, 'window', 'get')
-        .mockImplementation(() => mockWindowObj);
-
       const result = buildSettings({
         ...baseSettings,
         blocks: hindiTvProgramme.content.blocks as MediaBlock[],
@@ -347,7 +337,6 @@ describe('buildSettings', () => {
         enableToucan: true,
         appName: 'news-hindi',
         superResponsive: true,
-        insideIframe: true,
         counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
         statsObject: {
           destination: 'WS_NEWS_LANGUAGES',
@@ -377,8 +366,6 @@ describe('buildSettings', () => {
           summary:
             'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
         },
-        container: {},
-        domid: 'mediaPlayer',
       });
     });
   });
