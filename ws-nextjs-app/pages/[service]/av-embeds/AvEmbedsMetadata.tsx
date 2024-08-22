@@ -49,7 +49,11 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta name="description" content={promoSummary} />
 
-      {/* <link href="//ichef.bbci.co.uk" rel="preconnect" crossOrigin /> */}
+      <link
+        href="//ichef.bbci.co.uk"
+        rel="preconnect"
+        crossOrigin="anonymous"
+      />
 
       <link rel="dns-prefetch" href="//static.bbci.co.uk" />
       <link rel="dns-prefetch" href="//static.bbc.co.uk" />
