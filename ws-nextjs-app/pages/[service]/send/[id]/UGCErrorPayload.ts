@@ -12,7 +12,9 @@ const UGCErrorPayload = {
 
     const { response, status } = req;
     const { message, code } =
-      response && !isHTML ? JSON.parse(response) : UNKNOWN_SUBMISSION_ERROR;
+      response && typeof response === 'object' && !isHTML
+        ? response
+        : UNKNOWN_SUBMISSION_ERROR;
     return { code, message, status };
   },
 };

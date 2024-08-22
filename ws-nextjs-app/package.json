@@ -38,11 +38,12 @@
   "devDependencies": {
     "babel-plugin-transform-rename-import": "2.3.0",
     "jest": "*",
-    "next-test-api-route-handler": "4.0.8",
-    "ts-node": "10.9.2"
+    "next-test-api-route-handler": "^4.0.8",
+    "npm-run-all2": "6.2.2",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "next": "14.2.5",
-    "undici": "6.19.7"
+    "undici": "6.19.8"
   }
 }
