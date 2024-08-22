@@ -4,6 +4,26 @@ import { Helmet } from 'react-helmet';
 import filterForBlockType from '../../../../src/app/lib/utilities/blockHandlers';
 import { AvEmbedsPageProps } from './types';
 
+const buildEmbedURL = ({
+  assetId,
+  mediaDelimiter,
+  mediaId,
+  service,
+  variant,
+}: {
+  assetId: string;
+  mediaDelimiter: string;
+  mediaId: string;
+  service: string;
+  variant: string;
+}) => {
+  const siteUri = `${service}${variant ? `/${variant}` : ''}`;
+  const mediaPath =
+    mediaDelimiter && mediaId ? `/${mediaDelimiter}/${mediaId}` : '';
+
+  return `https://www.bbc.com/${siteUri}/av-embeds/${assetId}${mediaPath}`;
+};
+
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const {
     mediaBlock,
@@ -17,7 +37,8 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const promoSummary =
     promo.summary.blocks[0].model.blocks[0].model.blocks[0].model.text;
   const headline = promo.headlines.seoHeadline;
-  const { language } = metadata;
+  const { assetId, language, mediaDelimiter, mediaId, service, variant } =
+    metadata;
   const aresMediaBlock = filterForBlockType(mediaBlock, 'aresMedia');
   const aresMediaMetadata = filterForBlockType(
     aresMediaBlock.model.blocks,
@@ -29,6 +50,13 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   );
   const { imageUrl } = aresMediaMetadata.model;
   const { caption } = captionBlock.model;
+  const mediaURL = buildEmbedURL({
+    assetId,
+    mediaDelimiter,
+    mediaId,
+    service,
+    variant,
+  });
 
   return (
     <Helmet>
@@ -56,12 +84,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
         content="https://www.facebook.com/bbcnews"
       />
 
-      {/* {{#promo.locators.assetUri}}
-        <meta property="og:url" content="https://www.bbc.com{{{promo.locators.assetUri}}}/embed" />
-      {{/promo.locators.assetUri}}
-      {{^promo.locators.assetUri}}
-        <meta property="og:url" content="{{{requestInfo.embedUrl}}}" />
-      {{/promo.locators.assetUri}} */}
+      <meta property="og:url" content={mediaURL} />
 
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:alt" content={caption} />
