@@ -169,7 +169,7 @@
     "@storybook/react": "8.2.9",
     "@storybook/react-webpack5": "8.2.9",
     "@storybook/theming": "8.2.9",
-    "@testing-library/dom": "10.1.0",
+    "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "15.0.7",
     "@testing-library/react-hooks": "8.0.1",
