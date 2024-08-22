@@ -14,9 +14,11 @@ updates:
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
       - dependency-name: 'winston'
+      - dependency-name: eslint
+        update-types: ['version-update:semver-major']
       # Opera Mini unsupported packages
-      - dependency-name: 'uuid'
-      - dependency-name: '@types/uuid'
+      - dependency-name: 'uuid' # https://github.com/bbc/simorgh/pull/11840
+      - dependency-name: '@types/uuid' # https://github.com/bbc/simorgh/pull/11840
     labels:
       - 'dependencies'
     groups:
