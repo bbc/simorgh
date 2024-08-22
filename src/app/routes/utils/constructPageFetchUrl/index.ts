@@ -39,6 +39,7 @@ const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
 const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
+const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
 const isFrontPage = ({
   path,
@@ -96,16 +97,15 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = () => pageType;
       break;
     case LIVE_PAGE:
+      getIdFunction = (path: string) => {
+        const isTipoId = isTipoIdCheck(path);
+        const id = isTipoId ? getTipoId(path) : getCpsId(path);
+        return isTipoId ? `${id}` : `/${id}`;
+      };
+      break;
+
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        if (
-          !path.match(/(c[a-zA-Z0-9]{10}t)/) &&
-          !path.match(/afghanistan/) &&
-          path.match(/([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})/)
-        ) {
-          const cpsId = getCpsId(path);
-          return `/${service}/live/${cpsId}`;
-        }
         return (
           TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
         );
@@ -219,6 +219,7 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_PAGE: {
+        // reconstruct the id instead instead of invoking the getId function
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
