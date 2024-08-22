@@ -3,7 +3,6 @@ updates:
   - package-ecosystem: 'npm'
     directories:
       - '/'
-      - '/ws-nextjs-app'
     schedule:
       interval: 'daily'
     ignore:
