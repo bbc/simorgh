@@ -2,27 +2,8 @@
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '../../../../src/app/lib/utilities/blockHandlers';
+import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 import { AvEmbedsPageProps } from './types';
-
-const buildEmbedURL = ({
-  assetId,
-  mediaDelimiter,
-  mediaId,
-  service,
-  variant,
-}: {
-  assetId: string;
-  mediaDelimiter: string;
-  mediaId: string;
-  service: string;
-  variant: string;
-}) => {
-  const siteUri = `${service}${variant ? `/${variant}` : ''}`;
-  const mediaPath =
-    mediaDelimiter && mediaId ? `/${mediaDelimiter}/${mediaId}` : '';
-
-  return `https://www.bbc.com/${siteUri}/av-embeds/${assetId}${mediaPath}`;
-};
 
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const {
@@ -50,7 +31,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   );
   const { imageUrl } = aresMediaMetadata.model;
   const { caption } = captionBlock.model;
-  const mediaURL = buildEmbedURL({
+  const mediaURL = buildAvEmbedURL({
     assetId,
     mediaDelimiter,
     mediaId,

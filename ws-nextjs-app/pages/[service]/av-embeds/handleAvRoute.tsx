@@ -20,6 +20,12 @@ export default async (context: GetServerSidePropsContext) => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
+  console.log('\n\n');
+  console.log('###########################');
+  console.log(JSON.stringify(parsedRoute));
+  console.log('###########################');
+  console.log('\n\n');
+
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,
     pathname: resolvedUrl,
