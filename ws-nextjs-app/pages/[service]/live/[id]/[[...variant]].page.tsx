@@ -17,7 +17,6 @@ import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
-import isLocal from '#app/lib/utilities/isLocal';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
