@@ -46,10 +46,13 @@ const HeaderContainer = ({
   scriptSwitchId = '',
   renderScriptSwitch = true,
 }) => {
-  const { pageType, isAmp, isApp } = useContext(RequestContext);
+  const { pageType, isAmp, isApp, pathname } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
+
+  const isOptimoId =
+    /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(pathname);
 
   // The article page toggles the nav bar based on environment
   const showNavOnArticles = useToggle('navOnArticles').enabled;
@@ -76,7 +79,8 @@ const HeaderContainer = ({
     </SkipLink>
   );
 
-  const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+  const shouldRenderScriptSwitch =
+    scriptLink && isOptimoId && renderScriptSwitch;
 
   if (isApp) return null;
 
