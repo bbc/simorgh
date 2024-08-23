@@ -6,15 +6,7 @@ import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 import { AvEmbedsPageProps } from './types';
 
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
-  const {
-    mediaBlock,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error: Unreachable code error
-    metadata,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error: Unreachable code error
-    promo,
-  } = pageData;
+  const { mediaBlock, metadata, promo } = pageData;
   const promoSummary =
     promo.summary.blocks[0].model.blocks[0].model.blocks[0].model.text;
   const headline = promo.headlines.seoHeadline;

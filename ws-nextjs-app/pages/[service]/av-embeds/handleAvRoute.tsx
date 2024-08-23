@@ -66,10 +66,12 @@ export default async (context: GetServerSidePropsContext) => {
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
             metadata: {
               ...avEmbed?.metadata,
-              type: AV_EMBEDS,
               assetId: parsedRoute.assetId,
               mediaId: parsedRoute.mediaId,
               mediaDelimiter: parsedRoute.mediaDelimiter,
+              service,
+              type: AV_EMBEDS,
+              variant,
             },
           }
         : null,
