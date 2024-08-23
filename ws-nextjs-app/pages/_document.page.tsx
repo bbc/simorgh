@@ -92,6 +92,7 @@ export default class AppDocument extends Document<DocProps> {
     const isLite = isLitePath(url);
 
     const cache = createCache({ key: 'css' });
+    // @ts-expect-error Type error: Argument of type 'import("/home/runner/work/simorgh/simorgh/node_modules/@emotion/utils/dist/declarations/src/types").EmotionCache' is not assignable to parameter of type 'import("/home/runner/work/simorgh/simorgh/node_modules/@emotion/server/node_modules/@emotion/utils/types/index").EmotionCache'.
     const { extractCritical } = createEmotionServer(cache);
 
     const originalRenderPage = ctx.renderPage;
