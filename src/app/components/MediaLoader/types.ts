@@ -60,6 +60,7 @@ export type ConfigBuilderReturnProps = {
   product?: string;
   enableToucan: boolean;
   appName: string;
+  appType?: string;
   mediaType: string;
   superResponsive: boolean;
   counterName: string;
@@ -97,6 +98,8 @@ export type ConfigBuilderReturnProps = {
     translatedNoJSMessage: string;
   };
   showAds: boolean;
+  adsEnabled: boolean;
+  showAdsBasedOnLocation: boolean;
 };
 
 export type MediaInfo = {

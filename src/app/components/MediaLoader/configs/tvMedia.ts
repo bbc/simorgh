@@ -1,4 +1,8 @@
-import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import {
+  ConfigBuilderProps,
+  ConfigBuilderReturnProps,
+  TvMediaBlock,
+} from '../types';
 
 export default ({
   blocks,
@@ -7,39 +11,31 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
+  // console.log(tvMediaBlock.imageUrl);
+
+  const [tvMediaBlock] = blocks;
+  console.log(tvMediaBlock);
+
   return {
-    product: 'news',
-    enableToucan: true,
-    appName: 'news-hindi',
+    ...basePlayerConfig,
     superResponsive: true,
-    counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
     statsObject: {
-      destination: 'WS_NEWS_LANGUAGES',
-      producer: 'HINDI',
-      episodePID: 'w172zm8920nck2z',
-    },
-    ui: {
-      locale: {
-        lang: 'hi',
-      },
-      subtitles: {
-        defaultOn: true,
-      },
+      ...basePlayerConfig.statsObject,
+      // showing up as mundo instead of hindi? could this be because of the base settings in the test file?
+      episodePID: tvMediaBlock.id,
     },
     playlistObject: {
-      title: 'दुनिया',
-      holdingImageURL:
-        'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+      title: tvMediaBlock.episodeTitle,
+      holdingImageURL: `https://${tvMediaBlock.imageUrl}`,
       items: [
         {
-          versionID: 'w1mskyp8ybvqtc6',
-          kind: 'programme',
-          duration: 1192,
-          vpid: 'w1mskyp8ybvqtc6',
+          versionID: tvMediaBlock.versions[0].versionId,
+          kind: tvMediaBlock.smpKind,
+          duration: tvMediaBlock.versions[0].duration,
+          vpid: tvMediaBlock.versions[0].versionId,
         },
       ],
-      summary:
-        'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+      summary: tvMediaBlock.synopses.short,
     },
   };
 };

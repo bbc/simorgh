@@ -325,9 +325,16 @@ describe('buildSettings', () => {
   });
 
   describe('OnDemandTv', () => {
+    const hindiTvBaseSettings = {
+      counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+      lang: 'hi',
+      service: 'hindi' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'HINDI',
+    } as BuildConfigProps;
     it('Should process a On Demand TV block into a valid playlist item.', () => {
       const result = buildSettings({
-        ...baseSettings,
+        ...hindiTvBaseSettings,
         blocks: hindiTvProgramme.content.blocks as MediaBlock[],
         pageType: MEDIA_PAGE,
       });
@@ -335,6 +342,10 @@ describe('buildSettings', () => {
       expect(result).toStrictEqual({
         product: 'news',
         enableToucan: true,
+        appType: 'responsive',
+        autoplay: true,
+        externalEmbedUrl: '',
+        mediator: { host: 'open.test.bbc.co.uk' },
         appName: 'news-hindi',
         superResponsive: true,
         counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
@@ -344,11 +355,14 @@ describe('buildSettings', () => {
           episodePID: 'w172zm8920nck2z',
         },
         ui: {
+          controls: { enabled: true },
+          fullscreen: { enabled: true },
           locale: {
             lang: 'hi',
           },
           subtitles: {
             defaultOn: true,
+            enabled: true,
           },
         },
         playlistObject: {
