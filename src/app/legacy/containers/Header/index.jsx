@@ -76,7 +76,7 @@ const HeaderContainer = ({
     </SkipLink>
   );
 
-  let shouldRenderScriptSwitch;
+  let shouldRenderScriptSwitch = false;
 
   if (scriptLink && renderScriptSwitch) {
     if (service === 'uzbek' && pageType !== ARTICLE_PAGE) {
