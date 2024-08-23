@@ -20,6 +20,18 @@ export default async (context: GetServerSidePropsContext) => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
+  if (parsedRoute.isSyndicationRoute) {
+    context.res.setHeader(
+      'Cache-Control',
+      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
+    );
+  } else {
+    context.res.setHeader(
+      'Cache-Control',
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+    );
+  }
+
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,
     pathname: resolvedUrl,
@@ -58,7 +70,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
@@ -70,8 +81,8 @@ export default async (context: GetServerSidePropsContext) => {
         : null,
       pageType: AV_EMBEDS,
       service,
-      variant,
       status: pageStatus,
+      variant,
       ...extractHeaders(reqHeaders),
     },
   };
