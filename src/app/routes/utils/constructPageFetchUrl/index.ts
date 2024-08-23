@@ -97,16 +97,23 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = () => pageType;
       break;
     case LIVE_PAGE:
-      // at this point the cps id is just the numbers not including /${service}/live
       getIdFunction = (path: string) => {
         const isTipoId = isTipoIdCheck(path);
+        const isCpsId = isCpsIdCheck(path);
         const id = isTipoId ? getTipoId(path) : getCpsId(path);
-        return isTipoId ? `${id}` : `/${service}/live/${id}`; // HERE we add /${service}/live to cps id which is then used in the BFF URL for valid fetchUrl
+        if (isTipoId) {
+          return `${id}`;
+        }
+        if (isCpsId) {
+          return `/${service}/live/${id}`;
+        }
+        return null;
       };
       break;
 
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
+        // Do we need some ID validation here?
         return (
           TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
         );
@@ -158,9 +165,6 @@ const constructPageFetchUrl = ({
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
-  console.log('pathname**', pathname); // leaving this here for explaining tomorrow
-  // at this point the cps id is just the numbers not including /${service}/live
-
   const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
@@ -222,14 +226,16 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_PAGE: {
-        // reconstruct the id instead instead of invoking the getId function
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
-
-        fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
-        );
+        let constructedUrl = `${host}${port}/api/local/${service}/live/${id}${variantPath}`;
+        const serviceLivePath = `${service}/live/`;
+        if (id.includes(`${service}`) && id.includes('live')) {
+          constructedUrl = constructedUrl.replace(serviceLivePath, '');
+        }
+        constructedUrl = constructedUrl.replace(/\/{2,}/g, '/');
+        fetchUrl = Url(constructedUrl);
         break;
       }
       case UGC_PAGE: {
