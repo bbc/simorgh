@@ -165,9 +165,6 @@ const constructPageFetchUrl = ({
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
-  console.log('pathname**', pathname); // leaving this here for explaining tomorrow
-  // at this point the cps id is just the numbers not including /${service}/live
-
   const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
@@ -233,10 +230,13 @@ const constructPageFetchUrl = ({
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
-
-        fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
-        );
+        let constructedUrl = `${host}${port}/api/local/${service}/live/${id}${variantPath}`;
+        const serviceLivePath = `${service}/live/`;
+        if (id.includes(service) && id.includes('live')) {
+          constructedUrl = constructedUrl.replace(serviceLivePath, '');
+        }
+        constructedUrl = constructedUrl.replace(/\/{2,}/g, '/');
+        fetchUrl = Url(constructedUrl);
         break;
       }
       case UGC_PAGE: {
