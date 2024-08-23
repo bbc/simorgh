@@ -226,13 +226,12 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_PAGE: {
-        // reconstruct the id instead instead of invoking the getId function
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
         let constructedUrl = `${host}${port}/api/local/${service}/live/${id}${variantPath}`;
         const serviceLivePath = `${service}/live/`;
-        if (id.includes(service) && id.includes('live')) {
+        if (id.includes(`${service}`) && id.includes('live')) {
           constructedUrl = constructedUrl.replace(serviceLivePath, '');
         }
         constructedUrl = constructedUrl.replace(/\/{2,}/g, '/');
