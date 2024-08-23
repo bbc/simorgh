@@ -33,11 +33,12 @@ const getPageData = async ({
   rendererEnv,
   resolvedUrl,
 }: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
+  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`; // at this point the cps id is just the numbers not including /${service}/live
+
   const livePageUrl = constructPageFetchUrl({
     page,
     pageType: 'live',
-    pathname,
+    pathname, // at this point the cps id is just the numbers not including /${service}/live
     service,
     variant,
   });
@@ -52,11 +53,13 @@ const getPageData = async ({
   let errorMessage;
 
   const path = livePageUrl.toString();
+  // here the path has cps id WITH /${service}/live before it
+  console.log('path ***', path);
 
   try {
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
     const { status, json } = await fetchPageData({
-      path,
+      path, // here the path has cps id WITH /${service}/live before it
       agent,
       optHeaders,
     });

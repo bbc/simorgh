@@ -97,10 +97,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = () => pageType;
       break;
     case LIVE_PAGE:
+      // at this point the cps id is just the numbers not including /${service}/live
       getIdFunction = (path: string) => {
         const isTipoId = isTipoIdCheck(path);
         const id = isTipoId ? getTipoId(path) : getCpsId(path);
-        return isTipoId ? `${id}` : `/${id}`;
+        return isTipoId ? `${id}` : `/${service}/live/${id}`; // HERE we add /${service}/live to cps id which is then used in the BFF URL for valid fetchUrl
       };
       break;
 
@@ -157,6 +158,8 @@ const constructPageFetchUrl = ({
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
+  console.log('pathname**', pathname); // leaving this here for explaining tomorrow
+  // at this point the cps id is just the numbers not including /${service}/live
 
   const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
@@ -223,6 +226,7 @@ const constructPageFetchUrl = ({
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
+
         fetchUrl = Url(
           `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
         );
