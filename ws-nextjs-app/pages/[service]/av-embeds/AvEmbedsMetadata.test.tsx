@@ -103,7 +103,28 @@ describe('AV Embeds Page', () => {
     });
   });
 
-  it('should render the OG metatags', async () => {
+  it('should render the dns-prefetch link tags for the target domains', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    const expected = [
+      '//static.bbci.co.uk',
+      '//static.bbc.co.uk',
+      '//nav.files.bbci.co.uk',
+    ];
+
+    await waitFor(() => {
+      const actual = Array.from(
+        document.querySelectorAll('head > link[rel="dns-prefetch"]'),
+      ).map(tag => tag.getAttribute('href'));
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  it('should render the OG meta tags', async () => {
     render(
       // @ts-expect-error object schema mismatch
       <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
@@ -150,7 +171,22 @@ describe('AV Embeds Page', () => {
     });
   });
 
-  it('should render the twitter metatags', async () => {
+  it('should render the article:author meta tag', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[property="article:author"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('https://www.facebook.com/bbcnews');
+    });
+  });
+
+  it('should render the twitter meta tags', async () => {
     render(
       // @ts-expect-error object schema mismatch
       <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
@@ -194,10 +230,86 @@ describe('AV Embeds Page', () => {
     });
   });
 
+  it('should render the apple-mobile-web-app-title meta tag', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[name="apple-mobile-web-app-title"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('BBC News');
+    });
+  });
+
+  it('should render the application-name meta tag', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[name="application-name"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('BBC News');
+    });
+  });
+
+  it('should render the msapplication-TileImage meta tag', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[name="msapplication-TileImage"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('BBC News');
+    });
+  });
+
+  it('should render the msapplication-TileColor meta tag', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[name="msapplication-TileColor"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('#bb1919');
+    });
+  });
+
+  it('should render the mobile-web-app-capable meta tag', async () => {
+    render(
+      // @ts-expect-error object schema mismatch
+      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+    );
+
+    await waitFor(() => {
+      const actual = document
+        .querySelector('head > meta[name="mobile-web-app-capable"]')
+        ?.getAttribute('content');
+
+      expect(actual).toEqual('yes');
+    });
+  });
+
   // it('should render metadata tags for the AV Embeds page', async () => {
   //   const { container } = render(
   //     // @ts-expect-error object schema mismatch
   //     <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
+  //     { service: 'serbian' },
   //   );
 
   //   expect(container).toMatchSnapshot();
