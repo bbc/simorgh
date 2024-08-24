@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   render,
+  screen,
   waitFor,
 } from '../../../../src/app/components/react-testing-library-with-providers';
 import serbianCyrCps from '../../../../data/serbian/av-embeds/cyr/srbija-68707945.json';
@@ -304,14 +305,4 @@ describe('AV Embeds Page', () => {
       expect(actual).toEqual('yes');
     });
   });
-
-  // it('should render metadata tags for the AV Embeds page', async () => {
-  //   const { container } = render(
-  //     // @ts-expect-error object schema mismatch
-  //     <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-  //     { service: 'serbian' },
-  //   );
-
-  //   expect(container).toMatchSnapshot();
-  // });
 });
