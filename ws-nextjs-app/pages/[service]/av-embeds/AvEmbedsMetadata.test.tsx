@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   render,
-  screen,
   waitFor,
 } from '../../../../src/app/components/react-testing-library-with-providers';
 import serbianCyrCps from '../../../../data/serbian/av-embeds/cyr/srbija-68707945.json';
