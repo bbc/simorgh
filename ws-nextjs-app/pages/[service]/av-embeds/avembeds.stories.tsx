@@ -9,6 +9,16 @@ const Component = () => {
       pageData={{
         mediaBlock: serbianCyrCps.data.avEmbed.content.model
           .blocks as unknown as MediaBlock[],
+        metadata: {
+          assetId: 'srbija-68707945',
+          language: serbianCyrCps.data.avEmbed.metadata.language,
+          mediaId: null,
+          mediaDelimiter: null,
+          service: 'serbian',
+          type: 'avEmbeds',
+          variant: 'cyr',
+        },
+        promo: serbianCyrCps.data.avEmbed.promo,
       }}
     />
   );

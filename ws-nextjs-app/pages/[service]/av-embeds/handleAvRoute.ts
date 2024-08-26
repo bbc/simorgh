@@ -65,6 +65,8 @@ export default async (context: GetServerSidePropsContext) => {
 
   const service = avEmbed?.metadata?.service ?? 'news';
   const variant = avEmbed?.metadata?.variant ?? null;
+  const language = avEmbed?.metadata?.language ?? 'en-GB';
+  const promo = avEmbed?.promo ?? null;
 
   context.res.statusCode = pageStatus;
 
@@ -74,17 +76,17 @@ export default async (context: GetServerSidePropsContext) => {
       isAvEmbeds: true,
       pageData: avEmbed
         ? {
-            ...avEmbed,
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
             metadata: {
-              ...avEmbed?.metadata,
               assetId: parsedRoute.assetId,
+              language,
               mediaId: parsedRoute.mediaId,
               mediaDelimiter: parsedRoute.mediaDelimiter,
               service,
               type: AV_EMBEDS,
               variant,
             },
+            promo,
           }
         : null,
       pageType: AV_EMBEDS,

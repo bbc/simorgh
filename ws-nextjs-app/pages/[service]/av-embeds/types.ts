@@ -2,7 +2,7 @@ import { MediaBlock } from '#app/components/MediaLoader/types';
 import { Article } from '#app/models/types/optimo';
 
 export type AvEmbedsPageProps = {
-  pageData: Article & {
+  pageData: Pick<Article, 'promo'> & {
     mediaBlock: MediaBlock[];
     metadata: {
       assetId: string;
@@ -12,6 +12,11 @@ export type AvEmbedsPageProps = {
       service: string;
       type: string;
       variant: string;
+    };
+    content: {
+      model: {
+        blocks: MediaBlock[];
+      };
     };
   };
 };
