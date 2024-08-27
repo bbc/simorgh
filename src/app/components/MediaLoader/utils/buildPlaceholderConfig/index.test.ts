@@ -26,7 +26,7 @@ describe('BuildPlaceholderConfig', () => {
         title: 'Media Title',
         datetime: durationISO8601,
         duration: '01:40',
-        durationSpoken: 'Duration 1,01',
+        durationSpoken: 'Duration 1,40',
         guidanceMessage: undefined,
         type: 'video',
       },
@@ -52,7 +52,7 @@ describe('BuildPlaceholderConfig', () => {
     expect(placeholderConfig.mediaInfo.duration).toBe('01:01');
   });
 
-  it('returns a translated spoken duration ', () => {
+  it('returns a translated spoken duration', () => {
     const placeholderConfig = buildPlaceholderConfig({
       title,
       duration,
@@ -71,6 +71,22 @@ describe('BuildPlaceholderConfig', () => {
 
     expect(placeholderConfig.mediaInfo.durationSpoken).toBe(
       'Translated_Duration 1,40',
+    );
+  });
+
+  it('uses media type in the translated No JS Message', () => {
+    const placeholderConfig = buildPlaceholderConfig({
+      title,
+      duration,
+      durationISO8601,
+      type: 'audio',
+      holdingImageURL,
+      placeholderImageLocator,
+      placeholderImageOriginCode,
+    });
+
+    expect(placeholderConfig.translatedNoJSMessage).toBe(
+      'This audio cannot play in your browser. Please enable JavaScript or try a different browser.',
     );
   });
 });
