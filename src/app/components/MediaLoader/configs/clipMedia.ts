@@ -2,8 +2,6 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import formatDuration from '#lib/utilities/formatDuration';
-import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
 import {
   ClipMediaBlock,
   ConfigBuilderProps,
@@ -11,9 +9,10 @@ import {
   PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
+import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
+import shouldDisplayAds from '../utils/shouldDisplayAds';
 
 const DEFAULT_WIDTH = 512;
-const MIN_DURATION_FOR_PREROLLS = 30;
 
 export default ({
   blocks,
@@ -38,7 +37,6 @@ export default ({
   const clipISO8601Duration = video?.version?.duration;
 
   const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
-  const duration = moment.duration(rawDuration, 'seconds');
 
   const title = video?.title;
 
@@ -51,44 +49,31 @@ export default ({
 
   const guidanceMessage = video?.version?.guidance;
 
-  const durationSpokenPrefix = translations?.media?.duration || 'Duration';
-
-  const mediaInfo = {
-    title,
-    kind,
-    duration: formatDuration({ duration, padMinutes: true }),
-    rawDuration,
-    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
-      duration,
-      separator: ',',
-    })}`,
-    datetime: clipISO8601Duration,
-    type: type || 'video',
-    guidanceMessage,
-  };
-
-  const allowAdsForVideoDuration = rawDuration >= MIN_DURATION_FOR_PREROLLS;
-  const showAds = [
+  const showAds = shouldDisplayAds({
     adsEnabled,
     showAdsBasedOnLocation,
-    allowAdsForVideoDuration,
-  ].every(Boolean);
+    duration: rawDuration,
+  });
 
   const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
 
-  const placeholderSrc = buildIChefURL({
+  const holdingImageURL = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
 
-  const placeholderSrcset = getPlaceholderSrcSet({
-    originCode,
-    locator,
-    isWebP: true,
+  const placeholderConfig = buildPlaceholderConfig({
+    title,
+    duration: rawDuration,
+    durationISO8601: clipISO8601Duration,
+    type: type || 'video',
+    holdingImageURL,
+    placeholderImageLocator: locator,
+    placeholderImageOriginCode: originCode,
+    translations,
+    guidanceMessage,
   });
-
-  const noJsMessage = `This ${type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
   const audioUi = {
     skin: 'audio',
@@ -110,7 +95,7 @@ export default ({
       playlistObject: {
         title,
         summary: caption || '',
-        holdingImageURL: placeholderSrc,
+        holdingImageURL,
         items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
@@ -124,12 +109,7 @@ export default ({
         clipPID: versionID,
       },
     },
-    placeholderConfig: {
-      mediaInfo,
-      placeholderSrc,
-      placeholderSrcset,
-      translatedNoJSMessage: noJsMessage,
-    },
+    placeholderConfig,
     showAds,
   };
 };
