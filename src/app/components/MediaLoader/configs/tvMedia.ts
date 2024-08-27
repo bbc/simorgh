@@ -1,29 +1,29 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import {
-  ConfigBuilderProps,
-  ConfigBuilderReturnProps,
-  TvMediaBlock,
-} from '../types';
+import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 
 export default ({
   blocks,
   basePlayerConfig,
   translations,
-  adsEnabled = false,
-  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const [mediaBlock] = blocks as TvMediaBlock[];
-  const { model: tvMediaBlock } = mediaBlock;
+  const { model: tvMediaBlock } = filterForBlockType(blocks, 'tvMedia');
 
-  const tvMedia: TvMediaBlock = filterForBlockType(blocks, 'tvMedia');
-
-  const { type } = tvMedia?.model;
-
-  console.log(translations);
+  const placeholderConfig = buildPlaceholderConfig({
+    title: tvMediaBlock.episodeTitle,
+    duration: tvMediaBlock.versions[0].duration,
+    durationISO8601: tvMediaBlock.versions[0].durationISO8601,
+    type: 'video',
+    holdingImageURL: `https://${tvMediaBlock.imageUrl}`,
+    placeholderImageLocator: `https://${tvMediaBlock.imageUrl}`,
+    placeholderImageOriginCode: 'pips',
+    translations,
+  });
 
   return {
     playerConfig: {
       ...basePlayerConfig,
+      autoplay: false,
       statsObject: {
         ...basePlayerConfig.statsObject,
         episodePID: tvMediaBlock.id,
@@ -43,19 +43,7 @@ export default ({
       },
     },
     mediaType: 'video',
-    placeholderConfig: {
-      mediaInfo: {
-        title: 'दुनिया',
-        datetime: undefined,
-        duration: undefined,
-        durationSpoken: undefined, // refer to clipMedia
-        type: type || 'video',
-        guidanceMessage: null,
-      },
-      placeholderSrc: '', // refer to clipMedia
-      placeholderSrcset: '',
-      translatedNoJSMessage: '',
-    },
-    showAds: adsEnabled && showAdsBasedOnLocation,
+    placeholderConfig,
+    showAds: false,
   };
 };
