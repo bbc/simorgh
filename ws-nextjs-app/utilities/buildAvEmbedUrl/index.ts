@@ -2,10 +2,10 @@ import { Services, Variants } from '#app/models/types/global';
 
 type EmbedUrlParts = {
   assetId: string | null;
-  mediaDelimiter: string | null;
-  mediaId: string | null;
+  mediaDelimiter?: string | null;
+  mediaId?: string | null;
   service: Services;
-  variant: Variants;
+  variant?: Variants;
 };
 
 export default function buildAvEmbedURL({
