@@ -1,3 +1,4 @@
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
@@ -13,6 +14,11 @@ export default ({
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const [mediaBlock] = blocks as TvMediaBlock[];
   const { model: tvMediaBlock } = mediaBlock;
+
+  const tvMedia: TvMediaBlock = filterForBlockType(blocks, 'tvMedia');
+
+  const { type } = tvMedia?.model;
+  const clipISO8601Duration = versions[0]?.duration;
 
   console.log(translations);
 
