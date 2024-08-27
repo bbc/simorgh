@@ -44,11 +44,9 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
 
       {mediaURL && <meta property="og:url" content={mediaURL} />}
 
-      {imageUrl && (
-        <Helmet>
-          <meta property="og:image" content={imageUrl} />
-          {caption && <meta property="og:image:alt" content={caption} />}
-        </Helmet>
+      {imageUrl && <meta property="og:image" content={imageUrl} />}
+      {imageUrl && caption && (
+        <meta property="og:image:alt" content={caption} />
       )}
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -59,7 +57,9 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       )}
       <meta name="twitter:creator" content="@bbcnews" />
       {imageUrl && <meta name="twitter:image:src" content={imageUrl} />}
-      {caption && <meta name="twitter:image:alt" content={caption} />}
+      {imageUrl && caption && (
+        <meta name="twitter:image:alt" content={caption} />
+      )}
       <meta name="twitter:domain" content="www.bbc.com" />
 
       <meta name="apple-mobile-web-app-title" content="BBC News" />

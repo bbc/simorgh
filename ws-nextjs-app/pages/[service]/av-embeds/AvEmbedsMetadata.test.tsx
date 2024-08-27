@@ -269,4 +269,22 @@ describe('AV Embeds Page', () => {
       expect(actual).toEqual('yes');
     });
   });
+
+  describe('missing metadata', () => {
+    it('should not render the og:image meta tag', async () => {
+      const pageDataWithMissingPromo = { ...avEmbedsMetadataProps };
+
+      delete pageDataWithMissingPromo.pageData.metadata.imageUrl;
+
+      render(<AvEmbedsMetadata {...pageDataWithMissingPromo} />);
+
+      await waitFor(() => {
+        const actual = document.querySelector(
+          'head > meta[property="og:image"]',
+        );
+
+        expect(actual).toBeNull();
+      });
+    });
+  });
 });
