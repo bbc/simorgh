@@ -52,13 +52,11 @@ const getPageData = async ({
   let errorMessage;
 
   const path = livePageUrl.toString();
-  // here the path has cps id WITH /${service}/live before it
-  console.log('path ***', path);
 
   try {
     // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
     const { status, json } = await fetchPageData({
-      path, // here the path has cps id WITH /${service}/live before it
+      path,
       agent,
       optHeaders,
     });
