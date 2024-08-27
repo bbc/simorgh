@@ -3,10 +3,10 @@
  * @pathname /arabic/live/67574192
  */
 
-import runCanonicalTest from '../canonicalTests';
+import { runHeaderTests } from '../../../../../src/integration/common';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCanonicalTest();
+    runHeaderTests();
   });
 });
