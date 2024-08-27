@@ -2,8 +2,8 @@
 
 exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-0 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
@@ -236,8 +236,8 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 
 exports[`Media Player: Placeholder should render a video placeholder with guidance 1`] = `
 .emotion-0 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
@@ -502,8 +502,8 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 
 exports[`Media Player: Placeholder should render a video placeholder without duration 1`] = `
 .emotion-0 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
@@ -723,8 +723,8 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 
 exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-0 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
@@ -950,8 +950,8 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 
 exports[`Media Player: Placeholder should render an audio placeholder without duration 1`] = `
 .emotion-0 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
@@ -1164,8 +1164,8 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 
 exports[`Media Player: Placeholder should render no-js styles when noJsClassName prop is used 1`] = `
 .emotion-0 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
