@@ -5,13 +5,20 @@ import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const VALID_ENV = ['test', 'local'];
 
-const testsForPage = {
+const testDetails = {
   pageType: 'live',
-  tests: [testsThatAlwaysRunForAllPages, pageVisit, mediaPlayerTests],
+  testSuites: [
+    {
+      path: '/pidgin/live/c7p765ynk9qt',
+      id: 'c7p765ynk9qt',
+      service: 'pidgin',
+      tests: [testsThatAlwaysRunForAllPages, pageVisit, mediaPlayerTests],
+    },
+  ],
 };
 
 describe('Live Page Spec', () => {
   if (VALID_ENV.includes(Cypress.env('APP_ENV'))) {
-    runTestsForPage(testsForPage);
+    runTestsForPage(testDetails);
   }
 });

@@ -1,25 +1,18 @@
-import settings from '../config/settings';
+export default ({ pageType, testSuites }) => {
+  testSuites.forEach(testData => {
+    const { path, id, service, tests } = testData;
 
-export default ({ pageType, tests }) => {
-  const settingsMap = new Map(Object.entries(settings));
+    const params = {
+      pageType,
+      path,
+      id,
+      service,
+    };
 
-  settingsMap.forEach((config, service) => {
-    const pageTypeSettings = config.pageTypes[pageType];
-    if (pageTypeSettings != null) {
-      const { path, id } = pageTypeSettings;
+    before(() => {
+      cy.visit(path);
+    });
 
-      const testArgs = {
-        service,
-        pageType,
-        path,
-        id,
-      };
-
-      before(() => {
-        cy.visit(path);
-      });
-
-      tests.forEach(test => test(testArgs));
-    }
+    tests.forEach(test => test(params));
   });
 };

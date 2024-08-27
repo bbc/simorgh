@@ -1,6 +1,6 @@
 import { getBlockData } from './helpers';
 
-export default ({ service, pageType, id }) => {
+export default ({ service, id, pageType }) => {
   describe('Media Player', () => {
     let livePageData;
     before(() => {
