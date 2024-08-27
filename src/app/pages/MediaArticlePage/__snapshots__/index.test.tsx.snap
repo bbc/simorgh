@@ -57,8 +57,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-7 {
-  aspect-ratio: 16/9;
   position: relative;
+  aspect-ratio: 16/9;
   cursor: pointer;
 }
 
