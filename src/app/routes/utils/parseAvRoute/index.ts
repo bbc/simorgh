@@ -164,8 +164,7 @@ export default function parseAvRoute(resolvedUrl: string) {
 
   const query = resolvedUrlWithoutQuery.split(/[/.]/).filter(Boolean);
 
-  // Assumes /ws/ routes are purely for Simorgh AMP pages
-  const isSyndicationRoute = !query.includes('ws');
+  const isWsRoute = query.includes('ws');
 
   const service = extractService(query);
   const variant = extractVariant(query);
@@ -177,7 +176,7 @@ export default function parseAvRoute(resolvedUrl: string) {
   const amp = extractAmp(query);
 
   return {
-    isSyndicationRoute,
+    isWsRoute,
     service,
     variant,
     platform,
