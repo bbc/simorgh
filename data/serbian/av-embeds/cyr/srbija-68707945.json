@@ -426,10 +426,7 @@
           "aresMediaMetadata"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "producerName": "SERBIAN",
-          "producerId": "81"
-        },
+        "atiAnalytics": { "producerName": "SERBIAN", "producerId": "81" },
         "readTime": 5,
         "siteUri": "/serbian/cyr",
         "topics": [
@@ -576,9 +573,7 @@
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
         "useSensitiveOnwardJourneys": false,
-        "stats": {
-          "readTime": 5
-        },
+        "stats": { "readTime": 5 },
         "service": "serbian",
         "variant": "cyr"
       },
@@ -611,16 +606,11 @@
                           "duration": 274,
                           "durationISO8601": "PT4M34S",
                           "warnings": {},
-                          "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                          },
+                          "availableTerritories": { "uk": true, "nonUk": true },
                           "availableFrom": 1655477240000
                         }
                       ],
-                      "syndication": {
-                        "destinations": []
-                      },
+                      "syndication": { "destinations": [] },
                       "smpKind": "programme"
                     }
                   },
@@ -668,6 +658,12 @@
                           }
                         }
                       ]
+                    }
+                  },
+                  {
+                    "type": "captionText",
+                    "model": {
+                      "caption": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље"
                     }
                   }
                 ]
@@ -897,10 +893,7 @@
             "name": "Дејана Вукадиновић",
             "title": "ББЦ новинарка ",
             "persons": [
-              {
-                "name": "Дејана Вукадиновић",
-                "function": "ББЦ новинарка"
-              }
+              { "name": "Дејана Вукадиновић", "function": "ББЦ новинарка" }
             ]
           },
           "type": "cps"
@@ -1500,9 +1493,7 @@
                                           "availableFrom": 1655477240000
                                         }
                                       ],
-                                      "syndication": {
-                                        "destinations": []
-                                      },
+                                      "syndication": { "destinations": [] },
                                       "smpKind": "programme"
                                     }
                                   },
