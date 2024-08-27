@@ -8093,7 +8093,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-axe@npm:1.5.0":
+"cypress-axe@npm:1.5.0, cypress-axe@npm:^1.5.0":
   version: 1.5.0
   resolution: "cypress-axe@npm:1.5.0"
   peerDependencies:
@@ -15964,6 +15964,7 @@ __metadata:
     "@testing-library/react": "npm:15.0.7"
     babel-plugin-transform-rename-import: "npm:2.3.0"
     cypress: "npm:13.10.0"
+    cypress-axe: "npm:^1.5.0"
     cypress-terminal-report: "npm:6.1.2"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"

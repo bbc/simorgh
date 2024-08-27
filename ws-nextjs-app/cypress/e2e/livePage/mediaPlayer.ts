@@ -12,7 +12,7 @@ export default () => {
         livePageData = body;
       });
 
-      cy.visit('/pidgin/live/c7p765ynk9qt?renderer_env=test');
+      cy.visit('/pidgin/live/c7p765ynk9qt');
     });
 
     it('should render a visible placeholder image', () => {
