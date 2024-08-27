@@ -167,70 +167,68 @@ export type ClipMediaBlock = {
   };
 };
 
-export type SyndicationAresMediaBlock = [
-  {
-    type: 'aresMedia';
-    model: {
-      blocks: (
-        | {
+export type SyndicationAresMediaBlock = {
+  type: 'aresMedia';
+  model: {
+    blocks: (
+      | {
+          type: 'aresMediaMetadata';
+          model: {
             type: 'aresMediaMetadata';
+            blockId?: string;
             model: {
-              type: 'aresMediaMetadata';
-              blockId?: string;
-              model: {
-                id: string;
-                subType: 'clip' | 'episode';
-                format?: 'audio_video' | 'video' | 'audio';
-                title: string;
-                synopses: {
+              id: string;
+              subType: 'clip' | 'episode';
+              format?: 'audio_video' | 'video' | 'audio';
+              title: string;
+              synopses: {
+                short?: string;
+                medium?: string;
+                long?: string;
+              };
+              imageUrl: string;
+              imageCopyright?: string;
+              embedding: boolean;
+              advertising: boolean;
+              versions: {
+                versionId: string;
+                types: string[];
+                duration: number;
+                durationISO8601: string;
+                warnings: {
                   short?: string;
                   medium?: string;
                   long?: string;
                 };
-                imageUrl: string;
-                imageCopyright?: string;
-                embedding: boolean;
-                advertising: boolean;
-                versions: {
-                  versionId: string;
-                  types: string[];
-                  duration: number;
-                  durationISO8601: string;
-                  warnings: {
-                    short?: string;
-                    medium?: string;
-                    long?: string;
-                  };
-                  availableTerritories: {
-                    uk: boolean;
-                    nonUk: boolean;
-                  };
-                  availableUntil?: number;
-                  availableFrom?: number;
-                }[];
-                syndication: {
-                  destinations: string[];
+                availableTerritories: {
+                  uk: boolean;
+                  nonUk: boolean;
                 };
-                smpKind?: 'radioProgramme' | 'programme';
+                availableUntil?: number;
+                availableFrom?: number;
+              }[];
+              syndication: {
+                destinations: string[];
               };
+              smpKind?: 'radioProgramme' | 'programme';
             };
-          }
-        | {
-            type: 'image';
-            model: {
-              blocks: OptimoBlock[];
-            };
-          }
-        | {
-            type: 'captionText';
-            model: {
-              caption: string;
-            };
-          }
-      )[];
-    };
-  },
-];
+          };
+        }
+      | {
+          type: 'image';
+          model: {
+            blocks: OptimoBlock[];
+          };
+        }
+      | {
+          type: 'captionText';
+          model: {
+            caption: string;
+          };
+        }
+    )[];
+  };
+};
 
 export type MediaBlock =
   | AresMediaBlock
