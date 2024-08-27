@@ -2,17 +2,19 @@ import React, {
   PropsWithChildren,
   createContext,
   useContext,
+  useEffect,
   useState,
 } from 'react';
 
+type FunctionStack = (() => void)[];
 export type TouchEventContextType = {
-  swipeUpCount: number;
+  swipeUpStack: FunctionStack;
   swipeUp: () => void;
-  swipeDownCount: number;
+  swipeDownStack: FunctionStack;
   swipeDown: () => void;
-  swipeLeftCount: number;
+  swipeLeftStack: FunctionStack;
   swipeLeft: () => void;
-  swipeRightCount: number;
+  swipeRightStack: FunctionStack;
   swipeRight: () => void;
 };
 
@@ -31,16 +33,34 @@ const TouchPadContext = ({ children }: PropsWithChildren) => {
   const swipeLeft = () => setSwipeLeftCount(count => count + 1);
   const swipeRight = () => setSwipeRightCount(count => count + 1);
 
+  const swipeUpStack: FunctionStack = [];
+  const swipeDownStack: FunctionStack = [];
+  const swipeLeftStack: FunctionStack = [];
+  const swipeRightStack: FunctionStack = [];
+
+  useEffect(() => {
+    console.log('HANDLE UP');
+  }, [swipeUpCount]);
+  useEffect(() => {
+    console.log('HANDLE Down');
+  }, [swipeDownCount]);
+  useEffect(() => {
+    console.log('HANDLE Left');
+  }, [swipeLeftCount]);
+  useEffect(() => {
+    console.log('HANDLE Right');
+  }, [swipeRightCount]);
+
   return (
     <Context.Provider
       value={{
-        swipeUpCount,
+        swipeUpStack,
         swipeUp,
-        swipeDownCount,
+        swipeDownStack,
         swipeDown,
-        swipeLeftCount,
+        swipeLeftStack,
         swipeLeft,
-        swipeRightCount,
+        swipeRightStack,
         swipeRight,
       }}
     >

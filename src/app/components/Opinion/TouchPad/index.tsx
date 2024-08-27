@@ -1,7 +1,9 @@
-import React, { PropsWithChildren } from 'react';
+/** @jsx jsx */
+import { PropsWithChildren } from 'react';
+import { jsx } from '@emotion/react';
 import TouchPathList from './utils/TouchPathList';
-import detectSwipeUp from './utils/detectSwipeUp';
 import TouchPadContext from './TouchPadContext';
+import styles from './index.style';
 
 const TouchPad = ({ children }: PropsWithChildren) => {
   const touchList = new TouchPathList();
@@ -14,14 +16,10 @@ const TouchPad = ({ children }: PropsWithChildren) => {
         }}
         onTouchEnd={e => {
           touchList.updateTouchPathList(e);
-          detectSwipeUp(touchList.touchList);
+          touchList.processTouches();
           touchList.clearTouchPathList();
         }}
-        style={{
-          border: 'cyan solid 10px',
-          height: '100%',
-          position: 'absolute',
-        }}
+        css={styles.touchPadArea}
       >
         {children}
       </div>

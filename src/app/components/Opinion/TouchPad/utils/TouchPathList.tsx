@@ -1,3 +1,8 @@
+import detectSwipeDown from './detectSwipeDown';
+import detectSwipeLeft from './detectSwipeLeft';
+import detectSwipeRight from './detectSwipeRight';
+import detectSwipeUp from './detectSwipeUp';
+
 export type TouchPathType = {
   xpath: number[];
   ypath: number[];
@@ -31,6 +36,24 @@ class TouchPathList {
       pathList.xpath.push(touches[i].screenX);
       pathList.ypath.push(touches[i].screenY);
     }
+  };
+
+  processTouches = () => {
+    detectSwipeUp(this.touchList, () => {
+      console.log('UP DETECTED');
+    });
+
+    detectSwipeDown(this.touchList, () => {
+      console.log('DOWN DETECTED');
+    });
+
+    detectSwipeLeft(this.touchList, () => {
+      console.log('LEFT DETECTED');
+    });
+
+    detectSwipeRight(this.touchList, () => {
+      console.log('RIGHT DETECTED');
+    });
   };
 
   clearTouchPathList = () => {
