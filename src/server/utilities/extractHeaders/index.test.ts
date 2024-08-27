@@ -6,7 +6,9 @@ describe('extractHeader', () => {
       'x-bbc-edge-isuk': 'yes',
     });
     expect(actual).toStrictEqual({
+      bbcOrigin: null,
       isUK: true,
+      showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
     });
   });
@@ -16,7 +18,9 @@ describe('extractHeader', () => {
       'x-country': 'gb',
     });
     expect(actual).toStrictEqual({
+      bbcOrigin: null,
       isUK: true,
+      showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
     });
   });
@@ -27,7 +31,9 @@ describe('extractHeader', () => {
       'x-bbc-edge-isuk': 'no',
     });
     expect(actual).toStrictEqual({
+      bbcOrigin: null,
       isUK: false,
+      showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
     });
   });
@@ -38,7 +44,9 @@ describe('extractHeader', () => {
       'x-bbc-edge-isuk': 'yes',
     });
     expect(actual).toStrictEqual({
+      bbcOrigin: null,
       isUK: true,
+      showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
     });
   });
@@ -48,8 +56,34 @@ describe('extractHeader', () => {
       'x-bbc-edge-country': 'za',
     });
     expect(actual).toStrictEqual({
+      bbcOrigin: null,
       isUK: null,
+      showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
+    });
+  });
+
+  it(`sets showAdsBasedOnLocation to true when 'bbc-adverts' header is set to 'true'`, () => {
+    const actual = extractHeaders({
+      'bbc-adverts': 'true',
+    });
+    expect(actual).toStrictEqual({
+      bbcOrigin: null,
+      isUK: null,
+      showAdsBasedOnLocation: true,
+      showCookieBannerBasedOnCountry: true,
+    });
+  });
+
+  it(`sets bbcOrigin when 'bbc-origin' header is set`, () => {
+    const actual = extractHeaders({
+      'bbc-origin': 'https://www.bbc.co.uk/news',
+    });
+    expect(actual).toStrictEqual({
+      bbcOrigin: 'https://www.bbc.co.uk/news',
+      isUK: null,
+      showAdsBasedOnLocation: false,
+      showCookieBannerBasedOnCountry: true,
     });
   });
 });

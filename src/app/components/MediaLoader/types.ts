@@ -14,6 +14,7 @@ export type PlayerConfig = {
     clipPID?: string;
     destination: string;
     producer: string | '';
+    episodePID?: string;
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
@@ -45,6 +46,7 @@ export type PlaylistItem = {
   duration: number;
   live?: boolean;
   embedRights?: 'allowed';
+  vpid?: string;
 };
 
 export type ConfigBuilderProps = {
@@ -57,7 +59,6 @@ export type ConfigBuilderProps = {
 };
 
 export type ConfigBuilderReturnProps = {
-  product?: string;
   mediaType: string;
   playerConfig: PlayerConfig;
   placeholderConfig: {
@@ -168,37 +169,40 @@ export type ClipMediaBlock = {
 };
 
 export type TvMediaBlock = {
-  id: string;
-  subType: 'episode';
-  format: 'Video';
-  title: string;
-  synopses: {
-    short: string;
-    medium: string;
+  type: 'tvMedia';
+  model: {
+    id: string;
+    subType: 'episode';
+    format: 'Video';
+    title: string;
+    synopses: {
+      short: string;
+      medium: string;
+    };
+    imageUrl: string;
+    embedding: boolean;
+    advertising: boolean;
+    versions: [
+      {
+        versionId: string;
+        types: string[];
+        duration: number;
+        durationISO8601: string;
+        warnings: Record<string, string>;
+        availableTerritories: {
+          uk: boolean;
+          nonUk: boolean;
+          world: boolean;
+        };
+        availableFrom: number;
+        availabilityStatus: string;
+      },
+    ];
+    availability: string;
+    smpKind: string;
+    episodeTitle: string;
+    type: 'audio' | 'video';
   };
-  imageUrl: string;
-  embedding: boolean;
-  advertising: boolean;
-  versions: [
-    {
-      versionId: string;
-      types: [string];
-      duration: number;
-      durationISO8601: string;
-      warnings: {};
-      availableTerritories: {
-        uk: boolean;
-        nonUk: boolean;
-        world: boolean;
-      };
-      availableFrom: number;
-      availabilityStatus: string;
-    },
-  ];
-  availability: string;
-  smpKind: string;
-  episodeTitle: string;
-  type: string;
 };
 
 export type MediaBlock =

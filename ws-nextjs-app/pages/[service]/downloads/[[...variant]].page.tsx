@@ -36,10 +36,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, stale-if-error=600, stale-while-revalidate=240, max-age=60',
   );
 
-  const {
-    service,
-    variant,
-  } = context.query as PageDataParams;
+  const { service, variant } = context.query as PageDataParams;
 
   const downloadData = await dataFetch(service);
 
@@ -47,7 +44,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       error: null,
       isAmp: false,
       isNextJs: true,
@@ -62,7 +58,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageType: DOWNLOADS_PAGE,
       pathname: `${service}/downloads`,
       service,
-      showAdsBasedOnLocation: false,
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
       variant: variant?.[0] || null,
