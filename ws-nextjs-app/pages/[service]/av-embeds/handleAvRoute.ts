@@ -22,15 +22,15 @@ export default async (context: GetServerSidePropsContext) => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
-  if (parsedRoute.isSyndicationRoute) {
+  if (parsedRoute.isWsRoute) {
     context.res.setHeader(
       'Cache-Control',
-      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   } else {
     context.res.setHeader(
       'Cache-Control',
-      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
     );
   }
 
