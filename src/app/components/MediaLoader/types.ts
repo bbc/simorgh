@@ -277,7 +277,7 @@ export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
   | CaptionBlock
-  | SyndicationAresMediaBlock;
+  | SyndicationAresMediaBlock
   | TvMediaBlock;
 
 
