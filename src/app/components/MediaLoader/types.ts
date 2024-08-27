@@ -46,7 +46,6 @@ export type PlaylistItem = {
   kind: string;
   duration: number;
   live?: boolean;
-  embedRights?: 'allowed';
 };
 
 export type ConfigBuilderProps = {
@@ -58,24 +57,28 @@ export type ConfigBuilderProps = {
   showAdsBasedOnLocation?: boolean;
 };
 
+export type PlaceholderConfig = {
+  mediaInfo: MediaInfo;
+  placeholderSrc: string;
+  placeholderSrcset: string;
+  translatedNoJSMessage: string;
+};
+
 export type ConfigBuilderReturnProps = {
   mediaType: string;
   playerConfig: PlayerConfig;
-  placeholderConfig: {
-    mediaInfo: MediaInfo;
-    placeholderSrc: string;
-    placeholderSrcset: string;
-    translatedNoJSMessage: string;
-  };
+  placeholderConfig: PlaceholderConfig;
   showAds: boolean;
 };
+
+export type MediaType = 'audio_video' | 'audio' | 'video';
 
 export type MediaInfo = {
   title: string;
   datetime?: string;
   duration?: string;
   durationSpoken?: string;
-  type?: 'audio' | 'video';
+  type?: MediaType;
   guidanceMessage?: string | null;
 };
 
