@@ -18,7 +18,6 @@ export default ({
   const tvMedia: TvMediaBlock = filterForBlockType(blocks, 'tvMedia');
 
   const { type } = tvMedia?.model;
-  const clipISO8601Duration = versions[0]?.duration;
 
   console.log(translations);
 
