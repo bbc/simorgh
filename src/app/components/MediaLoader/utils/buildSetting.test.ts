@@ -332,54 +332,81 @@ describe('buildSettings', () => {
       statsDestination: 'WS_NEWS_LANGUAGES',
       producer: 'HINDI',
     } as BuildConfigProps;
+
+    const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
+      tvMediaBlock => {
+        return {
+          type: 'tvMedia',
+          model: {
+            ...tvMediaBlock,
+          },
+        };
+      },
+    );
     it('Should process a On Demand TV block into a valid playlist item.', () => {
       const result = buildSettings({
         ...hindiTvBaseSettings,
-        blocks: hindiTvProgramme.content.blocks as MediaBlock[],
+        blocks: hindiTvMediaBlocks as MediaBlock[],
         pageType: MEDIA_PAGE,
       });
 
       expect(result).toStrictEqual({
-        product: 'news',
-        enableToucan: true,
-        appType: 'responsive',
-        autoplay: true,
-        externalEmbedUrl: '',
-        mediator: { host: 'open.test.bbc.co.uk' },
-        appName: 'news-hindi',
-        superResponsive: true,
-        counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
-        statsObject: {
-          destination: 'WS_NEWS_LANGUAGES',
-          producer: 'HINDI',
-          episodePID: 'w172zm8920nck2z',
-        },
-        ui: {
-          controls: { enabled: true },
-          fullscreen: { enabled: true },
-          locale: {
-            lang: 'hi',
+        playerConfig: {
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          autoplay: true,
+          externalEmbedUrl: '',
+          mediator: { host: 'open.test.bbc.co.uk' },
+          appName: 'news-hindi',
+          counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'HINDI',
+            episodePID: 'w172zm8920nck2z',
           },
-          subtitles: {
-            defaultOn: true,
-            enabled: true,
-          },
-        },
-        playlistObject: {
-          title: 'दुनिया',
-          holdingImageURL:
-            'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
-          items: [
-            {
-              versionID: 'w1mskyp8ybvqtc6',
-              kind: 'programme',
-              duration: 1192,
-              vpid: 'w1mskyp8ybvqtc6',
+          ui: {
+            controls: { enabled: true },
+            fullscreen: { enabled: true },
+            locale: {
+              lang: 'hi',
             },
-          ],
-          summary:
-            'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+          playlistObject: {
+            title: 'दुनिया',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+            items: [
+              {
+                versionID: 'w1mskyp8ybvqtc6',
+                kind: 'programme',
+                duration: 1192,
+                vpid: 'w1mskyp8ybvqtc6',
+              },
+            ],
+            summary:
+              'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+          },
         },
+        mediaType: 'video',
+        placeholderConfig: {
+          mediaInfo: {
+            title: 'दुनिया',
+            datetime: 1192,
+            duration: undefined,
+            durationSpoken: undefined,
+            type: 'media',
+            guidanceMessage: undefined,
+          },
+          placeholderSrc: '',
+          placeholderSrcset: '',
+          translatedNoJSMessage: '',
+        },
+        showAds: false,
       });
     });
   });

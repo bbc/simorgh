@@ -11,31 +11,46 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  // console.log(tvMediaBlock.imageUrl);
+  const [mediaBlock] = blocks as TvMediaBlock[];
+  const { model: tvMediaBlock } = mediaBlock;
 
-  const [tvMediaBlock] = blocks;
-  console.log(tvMediaBlock);
+  console.log(translations);
 
   return {
-    ...basePlayerConfig,
-    superResponsive: true,
-    statsObject: {
-      ...basePlayerConfig.statsObject,
-      // showing up as mundo instead of hindi? could this be because of the base settings in the test file?
-      episodePID: tvMediaBlock.id,
+    playerConfig: {
+      ...basePlayerConfig,
+      statsObject: {
+        ...basePlayerConfig.statsObject,
+        episodePID: tvMediaBlock.id,
+      },
+      playlistObject: {
+        title: tvMediaBlock.episodeTitle,
+        holdingImageURL: `https://${tvMediaBlock.imageUrl}`,
+        items: [
+          {
+            versionID: tvMediaBlock.versions[0].versionId,
+            kind: tvMediaBlock.smpKind,
+            duration: tvMediaBlock.versions[0].duration,
+            vpid: tvMediaBlock.versions[0].versionId,
+          },
+        ],
+        summary: tvMediaBlock.synopses.short,
+      },
     },
-    playlistObject: {
-      title: tvMediaBlock.episodeTitle,
-      holdingImageURL: `https://${tvMediaBlock.imageUrl}`,
-      items: [
-        {
-          versionID: tvMediaBlock.versions[0].versionId,
-          kind: tvMediaBlock.smpKind,
-          duration: tvMediaBlock.versions[0].duration,
-          vpid: tvMediaBlock.versions[0].versionId,
-        },
-      ],
-      summary: tvMediaBlock.synopses.short,
+    mediaType: 'video',
+    placeholderConfig: {
+      mediaInfo: {
+        title: 'दुनिया',
+        datetime: undefined,
+        duration: undefined,
+        durationSpoken: undefined, // refer to clipMedia
+        type: type || 'video',
+        guidanceMessage: null,
+      },
+      placeholderSrc: '', // refer to clipMedia
+      placeholderSrcset: '',
+      translatedNoJSMessage: '',
     },
+    showAds: adsEnabled && showAdsBasedOnLocation,
   };
 };

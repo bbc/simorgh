@@ -7,13 +7,13 @@ import { MediaBlock } from '../types';
 const blockTypeMapping = {
   aresMedia,
   clipMedia,
-  media: tvMedia,
+  tvMedia,
 };
 
 export default (blocks: MediaBlock[]) => {
   let config;
   // eslint-disable-next-line no-restricted-syntax
-  for (const blockType of ['aresMedia', 'clipMedia', 'media']) {
+  for (const blockType of ['aresMedia', 'clipMedia', 'tvMedia']) {
     const mediaBlock = filterForBlockType(blocks, blockType);
     if (mediaBlock) {
       // @ts-expect-error wip, we will fix this!
