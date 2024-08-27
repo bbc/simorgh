@@ -13,10 +13,5 @@ export type AvEmbedsPageProps = {
       type: string;
       variant: string;
     };
-    content: {
-      model: {
-        blocks: MediaBlock[];
-      };
-    };
   };
 };

@@ -6,29 +6,28 @@ import {
 import serbianCyrCps from '../../../../data/serbian/av-embeds/cyr/srbija-68707945.json';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
 import { AV_EMBEDS } from '../../../../src/app/routes/utils/pageTypes';
+import { MediaBlock } from '../../../../src/app/components/MediaLoader/types';
 
 const avEmbedsMetadataProps = {
   pageData: {
-    ...serbianCyrCps.data.avEmbed,
-    mediaBlock: serbianCyrCps.data.avEmbed.content.model.blocks,
+    mediaBlock: serbianCyrCps.data.avEmbed.content.model
+      .blocks as unknown as MediaBlock[],
     metadata: {
-      ...serbianCyrCps.data.avEmbed.metadata,
       assetId: 'srbija-68707945',
+      language: serbianCyrCps.data.avEmbed.metadata.language,
       mediaId: null,
       mediaDelimiter: null,
       service: serbianCyrCps.data.avEmbed.metadata.service,
       type: AV_EMBEDS,
       variant: serbianCyrCps.data.avEmbed.metadata.variant,
     },
+    promo: serbianCyrCps.data.avEmbed.promo,
   },
 };
 
 describe('AV Embeds Page', () => {
   it('should render the viewport meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -42,10 +41,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the charset meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -57,10 +53,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the http-equiv meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -72,10 +65,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the description meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -89,10 +79,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the iChef preconnect link tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -104,10 +91,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the dns-prefetch link tags for the target domains', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     const expected = [
       '//static.bbci.co.uk',
@@ -125,10 +109,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the OG meta tags', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     const expected = [
       {
@@ -172,10 +153,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the article:author meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -187,10 +165,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the twitter meta tags', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     const expected = [
       { content: 'summary_large_image', name: 'twitter:card' },
@@ -231,10 +206,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the apple-mobile-web-app-title meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -246,10 +218,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the application-name meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -261,10 +230,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the msapplication-TileImage meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -276,10 +242,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the msapplication-TileColor meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document
@@ -291,10 +254,7 @@ describe('AV Embeds Page', () => {
   });
 
   it('should render the mobile-web-app-capable meta tag', async () => {
-    render(
-      // @ts-expect-error object schema mismatch
-      <AvEmbedsMetadata {...avEmbedsMetadataProps} />,
-    );
+    render(<AvEmbedsMetadata {...avEmbedsMetadataProps} />);
 
     await waitFor(() => {
       const actual = document

@@ -1,4 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { OptimoBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
@@ -166,7 +167,76 @@ export type ClipMediaBlock = {
   };
 };
 
-export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
+export type SyndicationAresMediaBlock = [
+  {
+    type: 'aresMedia';
+    model: {
+      blocks: (
+        | {
+            type: 'aresMediaMetadata';
+            model: {
+              type: 'aresMediaMetadata';
+              blockId?: string;
+              model: {
+                id: string;
+                subType: 'clip' | 'episode';
+                format?: 'audio_video' | 'video' | 'audio';
+                title: string;
+                synopses: {
+                  short?: string;
+                  medium?: string;
+                  long?: string;
+                };
+                imageUrl: string;
+                imageCopyright?: string;
+                embedding: boolean;
+                advertising: boolean;
+                versions: {
+                  versionId: string;
+                  types: string[];
+                  duration: number;
+                  durationISO8601: string;
+                  warnings: {
+                    short?: string;
+                    medium?: string;
+                    long?: string;
+                  };
+                  availableTerritories: {
+                    uk: boolean;
+                    nonUk: boolean;
+                  };
+                  availableUntil?: number;
+                  availableFrom?: number;
+                }[];
+                syndication: {
+                  destinations: string[];
+                };
+                smpKind?: 'radioProgramme' | 'programme';
+              };
+            };
+          }
+        | {
+            type: 'image';
+            model: {
+              blocks: OptimoBlock[];
+            };
+          }
+        | {
+            type: 'captionText';
+            model: {
+              caption: string;
+            };
+          }
+      )[];
+    };
+  },
+];
+
+export type MediaBlock =
+  | AresMediaBlock
+  | ClipMediaBlock
+  | CaptionBlock
+  | SyndicationAresMediaBlock;
 
 export type BuildConfigProps = {
   blocks: MediaBlock[];

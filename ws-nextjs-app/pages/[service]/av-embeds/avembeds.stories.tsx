@@ -14,9 +14,9 @@ const Component = () => {
           language: serbianCyrCps.data.avEmbed.metadata.language,
           mediaId: null,
           mediaDelimiter: null,
-          service: 'serbian',
+          service: serbianCyrCps.data.avEmbed.metadata.service,
           type: 'avEmbeds',
-          variant: 'cyr',
+          variant: serbianCyrCps.data.avEmbed.metadata.variant,
         },
         promo: serbianCyrCps.data.avEmbed.promo,
       }}
