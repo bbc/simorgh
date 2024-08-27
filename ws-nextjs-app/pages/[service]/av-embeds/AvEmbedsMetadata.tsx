@@ -16,7 +16,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       />
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-      <meta name="description" content={promoSummary} />
+      {promoSummary && <meta name="description" content={promoSummary} />}
 
       <link
         href="//ichef.bbci.co.uk"
@@ -28,10 +28,13 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       <link rel="dns-prefetch" href="//static.bbc.co.uk" />
       <link rel="dns-prefetch" href="//nav.files.bbci.co.uk" />
 
-      <title>{headline}</title>
-      <meta property="og:title" content={headline} />
+      {headline && <title>{headline}</title>}
+
+      {headline && <meta property="og:title" content={headline} />}
       <meta property="og:type" content="video" />
-      <meta property="og:description" content={promoSummary} />
+      {promoSummary && (
+        <meta property="og:description" content={promoSummary} />
+      )}
       <meta property="og:site_name" content="BBC News" />
       <meta property="og:locale" content={language} />
       <meta
@@ -39,18 +42,24 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
         content="https://www.facebook.com/bbcnews"
       />
 
-      <meta property="og:url" content={mediaURL} />
+      {mediaURL && <meta property="og:url" content={mediaURL} />}
 
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:image:alt" content={caption} />
+      {imageUrl && (
+        <Helmet>
+          <meta property="og:image" content={imageUrl} />
+          {caption && <meta property="og:image:alt" content={caption} />}
+        </Helmet>
+      )}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@bbcnews" />
-      <meta name="twitter:title" content={headline} />
-      <meta name="twitter:description" content={promoSummary} />
+      {headline && <meta name="twitter:title" content={headline} />}
+      {promoSummary && (
+        <meta name="twitter:description" content={promoSummary} />
+      )}
       <meta name="twitter:creator" content="@bbcnews" />
-      <meta name="twitter:image:src" content={imageUrl} />
-      <meta name="twitter:image:alt" content={caption} />
+      {imageUrl && <meta name="twitter:image:src" content={imageUrl} />}
+      {caption && <meta name="twitter:image:alt" content={caption} />}
       <meta name="twitter:domain" content="www.bbc.com" />
 
       <meta name="apple-mobile-web-app-title" content="BBC News" />
