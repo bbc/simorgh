@@ -17,7 +17,6 @@ import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
-import isLocal from '#app/lib/utilities/isLocal';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
@@ -35,13 +34,6 @@ const getPageData = async ({
   resolvedUrl,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`; // at this point the cps id is just the numbers not including /${service}/live
-  const env = getEnvironment(pathname);
-
-  if (isLocal() && (!rendererEnv || rendererEnv === 'local')) {
-    const localEndpoint = `./data/${service}/live/${
-      variant === 'default' ? 'index' : variant
-    }/${pathname}.json`;
-  }
 
   const livePageUrl = constructPageFetchUrl({
     page,
@@ -50,7 +42,7 @@ const getPageData = async ({
     service,
     variant,
   });
-
+  const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 
   const agent = certsRequired(pathname) ? await getAgent() : null;

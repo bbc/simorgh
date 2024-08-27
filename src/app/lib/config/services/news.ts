@@ -207,6 +207,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
       },
       socialEmbed: {},
+      featuresAnalysisTitle: 'More to explore',
     },
     mostRead: {
       header: 'Most read',
