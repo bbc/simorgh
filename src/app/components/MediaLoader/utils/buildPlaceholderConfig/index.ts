@@ -4,6 +4,18 @@ import { Translations } from '#app/models/types/translations';
 import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
 import { PlaceholderConfig, MediaType } from '../../types';
 
+type BuildPlaceholderConfigParams = {
+  title: string;
+  duration: number;
+  holdingImageURL: string;
+  placeholderImageOriginCode: string;
+  placeholderImageLocator: string;
+  type: MediaType;
+  durationISO8601?: string;
+  translations?: Translations;
+  guidanceMessage?: string | null;
+};
+
 export default ({
   title,
   duration,
@@ -14,17 +26,7 @@ export default ({
   translations,
   guidanceMessage,
   type,
-}: {
-  title: string;
-  duration: number;
-  holdingImageURL: string;
-  placeholderImageOriginCode: string;
-  placeholderImageLocator: string;
-  type: MediaType;
-  durationISO8601?: string;
-  translations?: Translations;
-  guidanceMessage?: string | null;
-}): PlaceholderConfig => {
+}: BuildPlaceholderConfigParams): PlaceholderConfig => {
   const momentDuration = moment.duration(duration, 'seconds');
 
   const durationTranslation = translations?.media?.duration || 'Duration';
