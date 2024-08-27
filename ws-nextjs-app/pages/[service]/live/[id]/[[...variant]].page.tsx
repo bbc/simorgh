@@ -33,12 +33,12 @@ const getPageData = async ({
   rendererEnv,
   resolvedUrl,
 }: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`; // at this point the cps id is just the numbers not including /${service}/live
+  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
 
   const livePageUrl = constructPageFetchUrl({
     page,
     pageType: 'live',
-    pathname, // at this point the cps id is just the numbers not including /${service}/live
+    pathname,
     service,
     variant,
   });
