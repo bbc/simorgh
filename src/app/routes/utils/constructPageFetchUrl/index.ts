@@ -231,13 +231,9 @@ const constructPageFetchUrl = ({
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
-        let constructedUrl = `${host}${port}/api/local/${service}/live/${id}${variantPath}`;
-        const serviceLivePath = `${service}/live/`;
-        if (id.includes(`${service}`) && id.includes('live')) {
-          constructedUrl = constructedUrl.replace(serviceLivePath, '');
-        }
-        constructedUrl = constructedUrl.replace(/\/{2,}/g, '/');
-        fetchUrl = Url(constructedUrl);
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/live/${pathname}${variantPath}`,
+        );
         break;
       }
       case UGC_PAGE: {
