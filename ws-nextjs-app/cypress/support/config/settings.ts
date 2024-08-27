@@ -1,4 +1,4 @@
-export default () => ({
+export default {
   pidgin: {
     name: 'pidgin',
     pageTypes: {
@@ -17,10 +17,10 @@ export default () => ({
   russian: {
     name: 'russian',
     pageTypes: {
-      avEmbeds: {
+      avEmbed: {
         id: 'media-38886884',
         path: '/russian/av-embeds/media-38886884',
       },
     },
   },
-});
+};

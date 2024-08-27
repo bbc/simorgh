@@ -2,7 +2,7 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-import checkA11y from '../support/checkA11y';
+import checkA11y from '../support/helpers/checkA11y';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {

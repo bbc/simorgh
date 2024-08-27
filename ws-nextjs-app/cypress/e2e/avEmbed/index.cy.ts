@@ -1,16 +1,14 @@
-import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
-import { testsThatAlwaysRunForAllPages } from '../testsForAllPages';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const VALID_ENV = ['test', 'local'];
 
 const testsForPage = {
-  pageType: 'live',
-  tests: [testsThatAlwaysRunForAllPages, pageVisit, mediaPlayerTests],
+  pageType: 'avEmbed',
+  tests: [pageVisit],
 };
 
-describe('Live Page Spec', () => {
+describe('AVEmbed Page Spec', () => {
   if (VALID_ENV.includes(Cypress.env('APP_ENV'))) {
     runTestsForPage(testsForPage);
   }
