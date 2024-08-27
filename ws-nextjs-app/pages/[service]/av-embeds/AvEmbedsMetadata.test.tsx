@@ -13,15 +13,20 @@ const avEmbedsMetadataProps = {
     mediaBlock: serbianCyrCps.data.avEmbed.content.model
       .blocks as unknown as MediaBlock[],
     metadata: {
-      assetId: 'srbija-68707945',
+      caption:
+        serbianCyrCps.data.avEmbed.content.model.blocks[0].model.blocks[2].model
+          .caption,
+      headline: serbianCyrCps.data.avEmbed.promo.headlines.seoHeadline,
+      imageUrl:
+        serbianCyrCps.data.avEmbed.content.model.blocks[0].model.blocks[0].model
+          .imageUrl,
       language: serbianCyrCps.data.avEmbed.metadata.language,
-      mediaId: null,
-      mediaDelimiter: null,
-      service: serbianCyrCps.data.avEmbed.metadata.service,
+      mediaURL: 'https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
+      promoSummary:
+        serbianCyrCps.data.avEmbed.promo.summary.blocks[0].model.blocks[0].model
+          .text,
       type: AV_EMBEDS,
-      variant: serbianCyrCps.data.avEmbed.metadata.variant,
     },
-    promo: serbianCyrCps.data.avEmbed.promo,
   },
 };
 

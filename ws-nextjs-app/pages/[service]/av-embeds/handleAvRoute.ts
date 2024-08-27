@@ -7,6 +7,8 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 import getAgent from '../../../utilities/undiciAgent';
 
 export default async (context: GetServerSidePropsContext) => {
@@ -61,6 +63,8 @@ export default async (context: GetServerSidePropsContext) => {
     pageStatus = status;
   }
 
+  context.res.statusCode = pageStatus;
+
   const { data: { avEmbed } = { avEmbed: null } } = pageJson ?? {};
 
   const service = avEmbed?.metadata?.service ?? 'news';
@@ -68,7 +72,39 @@ export default async (context: GetServerSidePropsContext) => {
   const language = avEmbed?.metadata?.language ?? 'en-GB';
   const promo = avEmbed?.promo ?? null;
 
-  context.res.statusCode = pageStatus;
+  const promoSummary =
+    promo?.summary?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model
+      ?.text ?? null;
+
+  const headline = promo?.headlines?.seoHeadline ?? null;
+
+  const aresMediaBlock = filterForBlockType(
+    avEmbed?.content?.model?.blocks,
+    'aresMedia',
+  );
+
+  const aresMediaMetadata = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'aresMediaMetadata',
+  );
+
+  const captionBlock = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'captionText',
+  );
+
+  const { imageUrl = null } = aresMediaMetadata?.model ?? {};
+
+  const { caption = null } = captionBlock?.model ?? {};
+
+  const mediaURL =
+    buildAvEmbedURL({
+      assetId: parsedRoute.assetId,
+      mediaDelimiter: parsedRoute.mediaDelimiter,
+      mediaId: parsedRoute.mediaId,
+      service,
+      variant,
+    }) ?? null;
 
   return {
     props: {
@@ -78,15 +114,14 @@ export default async (context: GetServerSidePropsContext) => {
         ? {
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
             metadata: {
-              assetId: parsedRoute.assetId,
+              caption,
+              headline,
+              imageUrl,
               language,
-              mediaId: parsedRoute.mediaId,
-              mediaDelimiter: parsedRoute.mediaDelimiter,
-              service,
+              mediaURL,
+              promoSummary,
               type: AV_EMBEDS,
-              variant,
             },
-            promo,
           }
         : null,
       pageType: AV_EMBEDS,

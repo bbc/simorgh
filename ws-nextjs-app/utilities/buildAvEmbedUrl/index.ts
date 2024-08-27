@@ -1,9 +1,11 @@
+import { Services, Variants } from '#app/models/types/global';
+
 type EmbedUrlParts = {
-  assetId: string;
+  assetId: string | null;
   mediaDelimiter: string | null;
   mediaId: string | null;
-  service: string;
-  variant: string;
+  service: Services;
+  variant: Variants;
 };
 
 export default function buildAvEmbedURL({

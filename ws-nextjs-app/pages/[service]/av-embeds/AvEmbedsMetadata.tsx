@@ -1,35 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import filterForBlockType from '../../../../src/app/lib/utilities/blockHandlers';
-import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 import { AvEmbedsPageProps } from './types';
 
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
-  const { mediaBlock, metadata, promo } = pageData;
-  const promoSummary =
-    promo.summary.blocks[0].model.blocks[0].model.blocks[0].model.text;
-  const headline = promo.headlines.seoHeadline;
-  const { assetId, language, mediaDelimiter, mediaId, service, variant } =
-    metadata;
-  const aresMediaBlock = filterForBlockType(mediaBlock, 'aresMedia');
-  const aresMediaMetadata = filterForBlockType(
-    aresMediaBlock.model.blocks,
-    'aresMediaMetadata',
-  );
-  const captionBlock = filterForBlockType(
-    aresMediaBlock.model.blocks,
-    'captionText',
-  );
-  const { imageUrl } = aresMediaMetadata.model;
-  const { caption } = captionBlock.model;
-  const mediaURL = buildAvEmbedURL({
-    assetId,
-    mediaDelimiter,
-    mediaId,
-    service,
-    variant,
-  });
+  const {
+    metadata: { language, promoSummary, headline, imageUrl, caption, mediaURL },
+  } = pageData;
 
   return (
     <Helmet>
@@ -51,6 +28,7 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
       <link rel="dns-prefetch" href="//static.bbc.co.uk" />
       <link rel="dns-prefetch" href="//nav.files.bbci.co.uk" />
 
+      <title>{headline}</title>
       <meta property="og:title" content={headline} />
       <meta property="og:type" content="video" />
       <meta property="og:description" content={promoSummary} />

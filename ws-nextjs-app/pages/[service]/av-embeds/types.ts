@@ -1,17 +1,17 @@
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { Article } from '#app/models/types/optimo';
+import { PageTypes } from '#app/models/types/global';
 
 export type AvEmbedsPageProps = {
-  pageData: Pick<Article, 'promo'> & {
+  pageData: {
     mediaBlock: MediaBlock[];
     metadata: {
-      assetId: string;
-      language: string;
-      mediaId: string | null;
-      mediaDelimiter: string | null;
-      service: string;
-      type: string;
-      variant: string;
+      language?: string;
+      promoSummary?: string;
+      headline?: string;
+      imageUrl?: string;
+      caption?: string;
+      mediaURL?: string;
+      type: PageTypes;
     };
   };
 };
