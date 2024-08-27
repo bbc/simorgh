@@ -9,6 +9,7 @@ import {
   MediaBlock,
   PlaceholderConfig,
 } from '../types';
+import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 
 const baseSettings = {
   pageType: 'article' as PageTypes,
@@ -407,6 +408,7 @@ describe('buildSettings', () => {
       service: 'hindi' as Services,
       statsDestination: 'WS_NEWS_LANGUAGES',
       producer: 'HINDI',
+      translations: hindiServiceConfig.default.translations,
     } as BuildConfigProps;
 
     const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
@@ -431,7 +433,7 @@ describe('buildSettings', () => {
           product: 'news',
           enableToucan: true,
           appType: 'responsive',
-          autoplay: true,
+          autoplay: false,
           externalEmbedUrl: '',
           mediator: { host: 'open.test.bbc.co.uk' },
           appName: 'news-hindi',
@@ -472,15 +474,18 @@ describe('buildSettings', () => {
         placeholderConfig: {
           mediaInfo: {
             title: 'दुनिया',
-            datetime: 1192,
-            duration: undefined,
-            durationSpoken: undefined,
-            type: 'media',
+            datetime: 'PT19M52S',
+            duration: '19:52',
+            durationSpoken: 'अवधि 19,52',
+            type: 'video',
             guidanceMessage: undefined,
           },
-          placeholderSrc: '',
-          placeholderSrcset: '',
-          translatedNoJSMessage: '',
+          placeholderSrc:
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+          placeholderSrcset:
+            'https://ichef.bbci.co.uk/images/ic/240xn/p0hfjjfk.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0hfjjfk.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0hfjjfk.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0hfjjfk.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0hfjjfk.png.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
         showAds: false,
       });
