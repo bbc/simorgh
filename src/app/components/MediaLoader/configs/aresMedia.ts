@@ -85,7 +85,7 @@ export default ({
 
   const placeholderConfig = buildPlaceholderConfig({
     title,
-    type: format || 'video',
+    type: actualFormat || 'video',
     duration: rawDuration,
     durationISO8601:
       aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
