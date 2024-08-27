@@ -17,7 +17,7 @@ describe('Handle AV Route', () => {
     jest.clearAllMocks();
   });
 
-  it('should set the cache control header correctly for a Syndication route', async () => {
+  it('should set the cache control header correctly for a non-WS route', async () => {
     mockGetServerSidePropsContext.resolvedUrl = '/news/av-embeds/123';
 
     await handleAvRoute(mockGetServerSidePropsContext);
@@ -28,7 +28,7 @@ describe('Handle AV Route', () => {
     );
   });
 
-  it('should set the cache control header correctly for a non-Syndication route', async () => {
+  it('should set the cache control header correctly for a WS route', async () => {
     mockGetServerSidePropsContext.resolvedUrl = '/ws/av-embeds/123';
 
     await handleAvRoute(mockGetServerSidePropsContext);
