@@ -4,8 +4,6 @@
 // We recommend using inline conditional logic to limit tests to services which differ.
 import * as checkA11y from '../../../cypress/support/helpers/checkA11y';
 
-// /Users/ahchos01/Desktop/WORLD NEWS/simorgh/cypress/support/helpers/checkA11y.js
-
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should have no detectable a11y violations on page load', () => {
