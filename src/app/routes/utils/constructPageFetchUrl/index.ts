@@ -102,7 +102,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
         const isCpsId = isCpsIdCheck(path);
         const id = isTipoId ? getTipoId(path) : getCpsId(path);
         if (isTipoId) {
-          return `${id}`;
+          return id;
         }
         if (isCpsId) {
           return `/${service}/live/${id}`;
