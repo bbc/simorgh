@@ -113,7 +113,6 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
 
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        // Do we need some ID validation here?
         return (
           TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
         );
