@@ -3,7 +3,12 @@ import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
-import { BuildConfigProps, MediaBlock } from '../types';
+import {
+  BuildConfigProps,
+  ConfigBuilderReturnProps,
+  MediaBlock,
+  PlaceholderConfig,
+} from '../types';
 
 const baseSettings = {
   pageType: 'article' as PageTypes,
@@ -20,7 +25,7 @@ describe('buildSettings', () => {
     jest.restoreAllMocks();
   });
 
-  describe('ClipMedia', () => {
+  describe('Clip Media', () => {
     it('Should process a ClipMedia block into a valid playlist item for a "Live" page.', () => {
       const mockWindowObj = {
         location: {
@@ -38,36 +43,63 @@ describe('buildSettings', () => {
         pageType: 'live',
       });
 
-      expect(result?.playerConfig).toStrictEqual({
-        autoplay: true,
-        product: 'news',
-        statsObject: {
-          clipPID: 'p01thw22',
-          destination: 'WS_NEWS_LANGUAGES',
-          producer: 'MUNDO',
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01thw22',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'MUNDO',
+          },
+          enableToucan: true,
+          appName: 'news-mundo',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          externalEmbedUrl: '',
+          playlistObject: {
+            title:
+              "BBC launch trailer for We Know Our Place women's sport campaign",
+            summary:
+              'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+            items: [
+              {
+                duration: 54,
+                kind: 'programme',
+                versionID: 'p01thw22',
+              },
+            ],
+            embedRights: 'allowed',
+          },
+          ui: {
+            controls: { enabled: true },
+            locale: { lang: 'es' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
         },
-        enableToucan: true,
-        appName: 'news-mundo',
-        appType: 'responsive',
-        counterName: 'live_coverage.testID.page',
-        externalEmbedUrl: '',
-        playlistObject: {
-          title:
-            "BBC launch trailer for We Know Our Place women's sport campaign",
-          summary:
-            'BBC launch trailer for We Know Our Place women\'s sport campaign"',
-          holdingImageURL:
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: 'PT54S',
+            duration: '00:54',
+            durationSpoken: 'Duration 0,54',
+            guidanceMessage: null,
+            title:
+              "BBC launch trailer for We Know Our Place women's sport campaign",
+            type: 'video',
+          },
+          placeholderSrc:
             'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
-          items: [{ duration: 54, kind: 'programme', versionID: 'p01thw22' }],
-          embedRights: 'allowed',
+          placeholderSrcset:
+            'https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
-        ui: {
-          controls: { enabled: true },
-          locale: { lang: 'es' },
-          subtitles: { enabled: true, defaultOn: true },
-          fullscreen: { enabled: true },
-        },
-      });
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
     });
 
     it('Should add an advert item for a "Live" page when showAds is set to true.', () => {
@@ -112,35 +144,57 @@ describe('buildSettings', () => {
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
-      expect(result?.playerConfig).toStrictEqual({
-        autoplay: true,
-        product: 'news',
-        statsObject: {
-          clipPID: 'p01k6msp',
-          destination: 'WS_NEWS_LANGUAGES',
-          producer: 'MUNDO',
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01k6msp',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'MUNDO',
+          },
+          enableToucan: true,
+          appName: 'news-mundo',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          externalEmbedUrl: '',
+          playlistObject: {
+            title: 'Five things ants can teach us about management',
+            summary: 'This is a caption!',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+            items: [
+              { duration: 191, kind: 'programme', versionID: 'p01k6msp' },
+            ],
+            guidance: 'Contains strong language and adult humour.',
+            embedRights: 'allowed',
+          },
+          ui: {
+            controls: { enabled: true },
+            locale: { lang: 'es' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
         },
-        enableToucan: true,
-        appName: 'news-mundo',
-        appType: 'responsive',
-        counterName: 'live_coverage.testID.page',
-        externalEmbedUrl: '',
-        playlistObject: {
-          title: 'Five things ants can teach us about management',
-          summary: 'This is a caption!',
-          holdingImageURL:
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: 'PT3M11S',
+            duration: '03:11',
+            durationSpoken: 'Duration 3,11',
+            guidanceMessage: 'Contains strong language and adult humour.',
+            title: 'Five things ants can teach us about management',
+            type: 'video',
+          },
+          placeholderSrc:
             'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
-          items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
-          guidance: 'Contains strong language and adult humour.',
-          embedRights: 'allowed',
-        },
-        ui: {
-          controls: { enabled: true },
-          locale: { lang: 'es' },
-          subtitles: { enabled: true, defaultOn: true },
-          fullscreen: { enabled: true },
-        },
-      });
+          placeholderSrcset:
+            'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        } satisfies PlaceholderConfig,
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
     });
 
     it('Should process an AresMedia block into a valid playlist item for a "mediaArticle" page.', () => {
@@ -160,36 +214,58 @@ describe('buildSettings', () => {
         pageType: 'mediaArticle',
       });
 
-      expect(result?.playerConfig).toStrictEqual({
-        autoplay: false,
-        preload: 'high',
-        product: 'news',
-        statsObject: {
-          clipPID: 'p01k6msp',
-          destination: 'WS_NEWS_LANGUAGES',
-          producer: 'MUNDO',
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: false,
+          preload: 'high',
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01k6msp',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'MUNDO',
+          },
+          enableToucan: true,
+          appName: 'news-mundo',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          externalEmbedUrl: '',
+          playlistObject: {
+            title: 'Five things ants can teach us about management',
+            summary: 'This is a caption!',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+            items: [
+              { duration: 191, kind: 'programme', versionID: 'p01k6msp' },
+            ],
+            guidance: 'Contains strong language and adult humour.',
+            embedRights: 'allowed',
+          },
+          ui: {
+            controls: { enabled: true },
+            locale: { lang: 'es' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
         },
-        enableToucan: true,
-        appName: 'news-mundo',
-        appType: 'responsive',
-        counterName: 'live_coverage.testID.page',
-        externalEmbedUrl: '',
-        playlistObject: {
-          title: 'Five things ants can teach us about management',
-          summary: 'This is a caption!',
-          holdingImageURL:
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: 'PT3M11S',
+            duration: '03:11',
+            durationSpoken: 'Duration 3,11',
+            guidanceMessage: 'Contains strong language and adult humour.',
+            title: 'Five things ants can teach us about management',
+            type: 'video',
+          },
+          placeholderSrc:
             'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
-          items: [{ duration: 191, kind: 'programme', versionID: 'p01k6msp' }],
-          guidance: 'Contains strong language and adult humour.',
-          embedRights: 'allowed',
+          placeholderSrcset:
+            'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
-        ui: {
-          controls: { enabled: true },
-          locale: { lang: 'es' },
-          subtitles: { enabled: true, defaultOn: true },
-          fullscreen: { enabled: true },
-        },
-      });
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
     });
 
     it('Should include the mediator parameter if we are on a test url.', () => {
