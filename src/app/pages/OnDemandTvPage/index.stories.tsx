@@ -4,10 +4,10 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import { OnDemandTvPage } from '..';
-import afrique from './fixtureData/afrique';
-import pashto from './fixtureData/pashto';
+import afrique from './fixtureData/afrique.json';
+import pashto from './fixtureData/pashto.json';
 
-const onDemandTvFixtures = {
+const onDemandTvFixtures: { pashto: unknown; afrique: unknown } = {
   pashto,
   afrique,
 };
@@ -21,7 +21,7 @@ const matchFixtures = service => ({
   },
 });
 
-const Component = (_, { service }) => {
+const Component = (_, { service }): {} => {
   return (
     <BrowserRouter>
       <OnDemandTvPage
@@ -42,7 +42,10 @@ export default {
   title: 'Pages/OnDemand TV Page',
   decorators: [
     withServicesDecorator({ defaultService: 'pashto' }),
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+    (story: () => unknown) => (
+      // @ts-expect-error use default params
+      <WithTimeMachine>{story()}</WithTimeMachine>
+    ),
   ],
 };
 
