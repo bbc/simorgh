@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import Promo from '#components/Promo';
+import Promo from '#legacy/components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '#contexts/ServiceContext';

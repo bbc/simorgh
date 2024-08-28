@@ -5,7 +5,7 @@ import {
 } from '#psammead/psammead-social-embed/src';
 
 import { RequestContext } from '#contexts/RequestContext';
-import { GridItemMedium } from '#components/Grid';
+import { GridItemMedium } from '#legacy/components/Grid';
 import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import createTranslations from './common/translations';

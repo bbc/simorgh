@@ -5,7 +5,7 @@ import {
   CanonicalSocialEmbed,
 } from '#psammead/psammead-social-embed/src';
 import { RequestContext } from '#contexts/RequestContext';
-import { GridItemMedium } from '#components/Grid';
+import { GridItemMedium } from '#legacy/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import createTranslations from '../common/translations';
 import Wrapper from '../common/styles';

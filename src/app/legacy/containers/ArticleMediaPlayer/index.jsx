@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import { GridItemMediumNoMargin } from '#components/Grid';
+import { GridItemMediumNoMargin } from '#legacy/components/Grid';
 
 import {
   ARTICLE_PAGE,

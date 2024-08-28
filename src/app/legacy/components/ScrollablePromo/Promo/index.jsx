@@ -18,7 +18,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import PromoTimestamp from '#components/Promo/timestamp';
+import PromoTimestamp from '#legacy/components/Promo/timestamp';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledLink = styled(Link)`

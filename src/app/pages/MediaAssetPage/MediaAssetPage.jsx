@@ -30,7 +30,7 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
+import { GelPageGrid, GridItemLarge } from '#legacy/components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import ATIAnalytics from '../../components/ATIAnalytics';

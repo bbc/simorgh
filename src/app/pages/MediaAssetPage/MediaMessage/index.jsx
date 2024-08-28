@@ -13,8 +13,8 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 
-import { MediaMessage } from '#components/MediaPlayer';
-import { GridItemLarge } from '#components/Grid';
+import { MediaMessage } from '#legacy/components/MediaPlayer';
+import { GridItemLarge } from '#legacy/components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
 import { ServiceContext } from '#contexts/ServiceContext';

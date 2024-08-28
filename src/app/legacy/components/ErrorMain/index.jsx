@@ -9,7 +9,7 @@ import {
   GEL_FF_REITH_SANS,
 } from '#psammead/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')}

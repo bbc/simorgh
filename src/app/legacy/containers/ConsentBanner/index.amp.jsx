@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import AmpGeo from '#components/AmpGeo';
+import AmpGeo from '#legacy/components/AmpGeo';
 import Banner from './Banner/index.amp';
 
 const ampConsentData = {

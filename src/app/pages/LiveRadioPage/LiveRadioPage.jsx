@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 import useLocation from '#hooks/useLocation';
 import AVPlayer from '#containers/AVPlayer';
 import getMediaId from '#lib/utilities/getMediaId';

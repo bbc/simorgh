@@ -89,7 +89,7 @@ The `placeholderSrc` prop is required for AMP, as in order to have the component
 ### CanonicalMediaPlayer
 
 ```js
-import { CanonicalMediaPlayer } from '#components/MediaPlayer';
+import { CanonicalMediaPlayer } from '#legacy/components/MediaPlayer';
 
 const Container = ({
   src,
@@ -123,7 +123,7 @@ const Container = ({
 ### AmpMediaPlayer
 
 ```js
-import { AmpMediaPlayer } from '#components/MediaPlayer';
+import { AmpMediaPlayer } from '#legacy/components/MediaPlayer';
 
 const Container = ({
   src,

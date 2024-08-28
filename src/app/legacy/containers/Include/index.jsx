@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import EmbedError from '#psammead/psammead-embed-error/src';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { GridItemMedium } from '#components/Grid';
+import { GridItemMedium } from '#legacy/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import Canonical from './canonical';

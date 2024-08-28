@@ -12,9 +12,9 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 import IndexHeading from '#containers/IndexHeading';
-import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#legacy/components/PageLayout/IndexPageContainer';
 import MostRead from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';

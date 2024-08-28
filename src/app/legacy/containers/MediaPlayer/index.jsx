@@ -12,7 +12,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
   MediaMessage,
-} from '#components/MediaPlayer';
+} from '#legacy/components/MediaPlayer';
 import getEmbedUrl, {
   makeAbsolute,
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';

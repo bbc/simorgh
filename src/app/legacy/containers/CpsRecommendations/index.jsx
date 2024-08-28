@@ -14,9 +14,9 @@ import {
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import SkipLinkWrapper from '#components/SkipLinkWrapper';
+import SkipLinkWrapper from '#legacy/components/SkipLinkWrapper';
 import useToggle from '#hooks/useToggle';
-import { GridItemMediumNoMargin } from '#components/Grid';
+import { GridItemMediumNoMargin } from '#legacy/components/Grid';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import RecommendationsPromoList from './RecommendationsPromoList';

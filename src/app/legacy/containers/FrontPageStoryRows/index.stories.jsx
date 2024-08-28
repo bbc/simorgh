@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '#components/Grid';
+import Grid from '#legacy/components/Grid';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';

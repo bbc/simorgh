@@ -1,6 +1,6 @@
 import React from 'react';
 import { AmpImg } from '#psammead/psammead-image/src';
-import { GridItemMedium } from '#components/Grid';
+import { GridItemMedium } from '#legacy/components/Grid';
 
 const Idt2Amp = ({ imageBlock }) =>
   imageBlock ? (

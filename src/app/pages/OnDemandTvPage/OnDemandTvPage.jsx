@@ -15,7 +15,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getEmbedUrl, {

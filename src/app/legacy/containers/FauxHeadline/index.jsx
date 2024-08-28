@@ -12,7 +12,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { Headline } from '#psammead/psammead-headings/src';
-import { GridItemLarge } from '#components/Grid';
+import { GridItemLarge } from '#legacy/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';

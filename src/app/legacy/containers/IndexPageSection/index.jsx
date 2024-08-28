@@ -15,7 +15,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { StoryPromoUl } from '#psammead/psammead-story-promo-list/src';
-import Grid from '#components/Grid';
+import Grid from '#legacy/components/Grid';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { ServiceContext } from '#contexts/ServiceContext';
 import UsefulLinksComponent from './UsefulLinks';

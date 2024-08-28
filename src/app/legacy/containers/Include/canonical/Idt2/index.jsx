@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 import { Img } from '#psammead/psammead-image/src';
 import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
-import { GridItemMedium } from '#components/Grid';
+import { GridItemMedium } from '#legacy/components/Grid';
 
 const Include = styled.div`
   max-width: 100%;
