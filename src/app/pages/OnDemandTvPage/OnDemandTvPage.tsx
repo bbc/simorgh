@@ -1,18 +1,7 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
 import pathOr from 'ramda/src/pathOr';
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#legacy/components/Grid';
@@ -25,6 +14,7 @@ import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
+import { PageTypes } from '#app/models/types/global';
 import ATIAnalytics from '#components/ATIAnalytics';
 import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
 import LinkedData from '#components/LinkedData';
@@ -32,12 +22,16 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#components/Metadata';
 import getPlaceholderImageUrl from '#routes/utils/getPlaceholderImageUrl';
 import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import styles from './index.styles';
 
-const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.palette.GREY_10};
-`;
-
-const getGroups = (zero, one, two, three, four, five) => ({
+const getGroups = (
+  zero: number | boolean,
+  one: number | boolean,
+  two: number | boolean,
+  three: number | boolean,
+  four: number | boolean,
+  five: number | boolean,
+) => ({
   group0: zero,
   group1: one,
   group2: two,
@@ -46,29 +40,36 @@ const getGroups = (zero, one, two, three, four, five) => ({
   group5: five,
 });
 
-const StyledGelPageGrid = styled(GelPageGrid)`
-  padding-bottom: ${GEL_SPACING_QUAD};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 100%;
-  }
-`;
+export interface OnDemandTVProps {
+  pageData: {
+    metadata: {
+      type: PageTypes;
+    };
+    language: string;
+    headline: string;
+    shortSynopsis: string;
+    brandTitle?: string;
+    releaseDateTimeStamp: number;
+    masterBrand?: string;
+    episodeId: string;
+    imageUrl: string;
+    promoBrandTitle: string;
+    thumbnailImageUrl: string;
+    durationISO8601: string;
+    recentEpisodes?: string[];
+    episodeTitle: string;
+    mediumSynopsis?: string;
+    contentType: 'player-episode' | string;
+  };
+  mediaIsAvailable?: boolean;
+  MediaError: React.Component;
+}
 
-const StyledVideoPlayer = styled(AVPlayer)`
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUIN} 0 0;
-  }
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    margin: ${GEL_SPACING_DBL} -${GEL_SPACING_DBL} 0;
-  }
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: ${GEL_SPACING} -${GEL_SPACING} 0;
-  }
-`;
-
-const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
+const OnDemandTvPage = ({
+  pageData,
+  mediaIsAvailable,
+  MediaError,
+}: OnDemandTVProps) => {
   const {
     language,
     headline,
@@ -84,6 +85,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     recentEpisodes,
     episodeTitle,
     mediumSynopsis,
+    contentType,
   } = pageData;
 
   const { lang, timezone, datetimeLocale, service, translations, brandName } =
@@ -118,11 +120,11 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     : headline;
 
   return (
-    <Wrapper>
+    <div css={styles.wrapper}>
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
-        contentType={pageData?.contentType}
+        contentType={contentType as 'player-episode'}
       />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -152,24 +154,27 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             : []
         }
       />
-      <StyledGelPageGrid
+      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
+      <GelPageGrid
         as="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
+        css={styles.pageGrid}
       >
+        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
+          <VisuallyHiddenText as="h1" tabIndex={-1} id="content">
             {/* these must be concatenated for screen reader UX - #7062 */}
             {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
-            <StyledVideoPlayer
+            <AVPlayer
               embedUrl={embedUrl}
               assetId={episodeId}
               placeholderSrc={getPlaceholderImageUrl(imageUrl)}
@@ -180,8 +185,10 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               skin="classic"
               showLoadingImage
               darkPlaceholder
+              css={styles.mediaPlayer}
             />
           ) : (
+            //  @ts-expect-error allow rendering of MediaError component when media is not available
             <MediaError skin="video" />
           )}
 
@@ -192,6 +199,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             ariaHidden
           />
         </Grid>
+        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           columns={getGroups(6, 6, 6, 6, 5, 10)}
@@ -205,13 +213,16 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
           )}
         </Grid>
-      </StyledGelPageGrid>
+      </GelPageGrid>
 
       {hasRecentEpisodes && (
-        <StyledGelPageGrid
+        // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
+        <GelPageGrid
           columns={getGroups(6, 6, 6, 6, 8, 20)}
           enableGelGutters
+          css={styles.pageGrid}
         >
+          {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
           <Grid
             item
             startOffset={getGroups(1, 1, 1, 1, 2, 5)}
@@ -223,9 +234,9 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               episodes={recentEpisodes}
             />
           </Grid>
-        </StyledGelPageGrid>
+        </GelPageGrid>
       )}
-    </Wrapper>
+    </div>
   );
 };
 

@@ -53,7 +53,7 @@ type RequestProviderProps = {
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
-  isAmp: boolean;
+  isAmp?: boolean;
   isApp?: boolean;
   isLite?: boolean;
   isNextJs?: boolean;
@@ -76,7 +76,7 @@ export const RequestContextProvider = ({
   derivedPageType = null,
   children,
   id = null,
-  isAmp,
+  isAmp = false,
   isApp = false,
   isLite = false,
   isNextJs = false,
