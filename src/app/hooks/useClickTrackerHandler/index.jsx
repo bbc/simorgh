@@ -4,10 +4,10 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 import { EventTrackingContext } from '#contexts/EventTrackingContext';
-import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { sendEventBeacon } from '#components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useTrackingToggle from '../useTrackingToggle';
 import { isValidClick } from './clickTypes';
 
 const EVENT_TYPE = 'click';

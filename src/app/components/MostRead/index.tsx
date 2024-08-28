@@ -4,11 +4,6 @@ import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Canonical from './Canonical';
-import Amp from './Amp';
-import { ColumnLayout, Size, MostReadData } from './types';
-import MostReadSection from './Section';
-import MostReadSectionLabel from './Label';
 import { WHITE } from '#components/ThemeProvider/palette';
 import isLocal from '#lib/utilities/isLocal';
 import {
@@ -17,6 +12,11 @@ import {
   ARTICLE_PAGE,
 } from '#routes/utils/pageTypes';
 import { PageTypes } from '#models/types/global';
+import Canonical from './Canonical';
+import Amp from './Amp';
+import { ColumnLayout, Size, MostReadData } from './types';
+import MostReadSection from './Section';
+import MostReadSectionLabel from './Label';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',

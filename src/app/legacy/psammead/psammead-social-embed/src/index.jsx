@@ -4,6 +4,12 @@ import {
   EmbedConsentBannerCanonical,
   EmbedConsentBannerAmp,
 } from '#components/EmbedConsentBanner';
+import {
+  ARTICLE_PAGE,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  LIVE_PAGE,
+} from '#routes/utils/pageTypes';
 import SkipLinkWrapper from './SkipLinkWrapper';
 import CaptionWrapper from './CaptionWrapper';
 import Notice from './Notice';
@@ -11,12 +17,6 @@ import Notice from './Notice';
 import CanonicalEmbed from './Canonical';
 import AmpElements from './Amp';
 import { getCaptionText } from './utilities';
-import {
-  ARTICLE_PAGE,
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  LIVE_PAGE,
-} from '#routes/utils/pageTypes';
 
 const checkIsSupportedProvider = (provider, pageType) => {
   // Optimo Articles support all social media providers

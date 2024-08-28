@@ -2,12 +2,12 @@
  * @jest-environment node
  */
 import { testApiHandler } from 'next-test-api-route-handler';
-import * as pagesHandler from './[[...optionalParams]].api';
 import livePageData from '#data/pidgin/live/c7p765ynk9qt.json';
 import dualScriptLivePageData from '#data/zhongwen/live/c0000000000t/simp.json';
 import ugFormData from '#data/mundo/send/u50853489.json';
 import russianAvEmbedData from '#data/russian/av-embeds/features-49881797.json';
 import russianAvEmbedDataWithPid from '#data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
+import * as pagesHandler from './[[...optionalParams]].api';
 
 describe('API Routes', () => {
   it('should return Live Page data', async () => {

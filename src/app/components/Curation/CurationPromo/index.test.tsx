@@ -1,6 +1,9 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render, screen } from '#components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 
 import CurationPromo from '.';
 

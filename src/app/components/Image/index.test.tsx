@@ -6,10 +6,9 @@ import {
   screen,
   waitFor,
 } from '#components/react-testing-library-with-providers';
+import { SHADOW } from '#components/ThemeProvider/palette';
 import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
-
-import { SHADOW } from '#components/ThemeProvider/palette';
 
 const removeStyles = (el: HTMLElement) => {
   const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));

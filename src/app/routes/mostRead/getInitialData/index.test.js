@@ -1,6 +1,6 @@
 import { MOST_READ_PAGE } from '#routes/utils/pageTypes';
-import * as fetchPageData from '../../utils/fetchPageData';
 import mostReadJson from '#data/pidgin/mostRead/index.json';
+import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';

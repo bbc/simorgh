@@ -58,10 +58,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import RelatedContentSection from '#components/RelatedContentSection';
 import Disclaimer from '#components/Disclaimer';
 
+import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
-import { getPromoHeadline } from '#lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
   const { isApp } = useContext(RequestContext);

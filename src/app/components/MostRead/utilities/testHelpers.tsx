@@ -4,10 +4,10 @@ import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '#legacy/psammead/psammead-timestamp/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import latin from '#components/ThemeProvider/fontScripts/latin';
-import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
-import MostReadRank from '../Canonical/Rank';
 import { Services, Direction } from '#models/types/global';
 import { TypographyScript } from '#models/types/theming';
+import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
+import MostReadRank from '../Canonical/Rank';
 import { MostReadBaseProps, MostReadData, Size } from '../types';
 
 const lastUpdated = ({

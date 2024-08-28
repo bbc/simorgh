@@ -4,8 +4,11 @@ import {
   ThemeProvider as EmotionThemeProvider,
   Theme,
 } from '@emotion/react';
-import focusIndicator from './focusIndicator';
 import { RequestContext } from '#contexts/RequestContext';
+import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '#routes/utils/pageTypes';
+import { BrandPalette, Typography, BrandSVG } from '#models/types/theming';
+import { PageTypes } from '#models/types/global';
+import focusIndicator from './focusIndicator';
 
 import {
   ARCHIVE_BLUE,
@@ -129,10 +132,6 @@ import {
 } from './fontMediaQueries';
 
 import gridWidths from './gridWidths';
-
-import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '#routes/utils/pageTypes';
-import { BrandPalette, Typography, BrandSVG } from '#models/types/theming';
-import { PageTypes } from '#models/types/global';
 
 const isDarkUiPage = (pageType: PageTypes, derivedPageType: string | null) =>
   pageType === MEDIA_ARTICLE_PAGE ||

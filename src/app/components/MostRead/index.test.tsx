@@ -12,12 +12,12 @@ import {
 } from '#routes/utils/pageTypes';
 import { render, act } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import MostRead from '.';
 import { PageTypes, Services, Variants } from '#models/types/global';
+import isLocal from '#lib/utilities/isLocal';
+import MostRead from '.';
 import Canonical from './Canonical';
 import Amp from './Amp';
 import { MostReadData } from './types';
-import isLocal from '#lib/utilities/isLocal';
 
 jest.mock('./Canonical');
 jest.mock('./Amp');

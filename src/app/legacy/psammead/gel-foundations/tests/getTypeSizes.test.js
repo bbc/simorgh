@@ -1,4 +1,3 @@
-import getTypeSizes from '../src/getTypeSizes';
 import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import bengali from '#components/ThemeProvider/fontScripts/bengali';
 import burmese from '#components/ThemeProvider/fontScripts/burmese';
@@ -11,6 +10,7 @@ import noAscOrDesc from '#components/ThemeProvider/fontScripts/noAscOrDesc';
 import sinhalese from '#components/ThemeProvider/fontScripts/sinhalese';
 import tamil from '#components/ThemeProvider/fontScripts/tamil';
 import thai from '#components/ThemeProvider/fontScripts/thai';
+import getTypeSizes from '../src/getTypeSizes';
 
 const scripts = {
   arabic,

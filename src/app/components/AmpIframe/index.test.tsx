@@ -1,5 +1,8 @@
 import React from 'react';
-import { render, waitFor } from '#components/react-testing-library-with-providers';
+import {
+  render,
+  waitFor,
+} from '#components/react-testing-library-with-providers';
 import AmpIframe from './index';
 
 const vjProps = {

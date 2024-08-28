@@ -1,9 +1,9 @@
 import frontPageJsonSerbian from '#data/serbian/frontpage/lat.json';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import { CPS_ASSET as pageType } from '../../utils/pageTypes';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
-import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import getInitialData from '.';
 
 jest.mock('#app/lib/utilities/onClient', () =>

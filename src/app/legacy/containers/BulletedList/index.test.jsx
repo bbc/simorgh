@@ -4,10 +4,10 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '#components/react-testing-library-with-providers';
-import BulletedListContainer from './index';
-import { listItemD, listItemE, orderedList } from './fixtures';
 import { ServiceContext } from '#contexts/ServiceContext';
 import arabic from '#components/ThemeProvider/fontScripts/arabic';
+import BulletedListContainer from './index';
+import { listItemD, listItemE, orderedList } from './fixtures';
 
 const BulletsWithContext = ({ blocks, blockGroupIndex }) => {
   const memoizedToggleContextValue = useMemo(

@@ -6,7 +6,6 @@ import kyrgyzHomePage from '#data/kyrgyz/homePage/index.json';
 import { data as kyrgyzMostRead } from '#data/kyrgyz/mostRead/index.json';
 import afriqueHomePage from '#data/afrique/homePage/index.json';
 import { render } from '#components/react-testing-library-with-providers';
-import Curation from '.';
 import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
@@ -14,8 +13,9 @@ import {
   VisualProminence,
   Summary,
 } from '#models/types/curationData';
-import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '#models/types/radioSchedule';
+import Curation from '.';
+import { MostReadData } from '../MostRead/types';
 
 jest.mock('../ThemeProvider');
 

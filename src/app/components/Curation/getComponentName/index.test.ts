@@ -2,9 +2,9 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import getComponentName, { COMPONENT_NAMES } from '.';
 import afriqueHomePage from '#data/afrique/homePage/index.json';
 import hindiHomepage from '#data/hindi/homePage/index.json';
+import getComponentName, { COMPONENT_NAMES } from '.';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;

@@ -13,6 +13,7 @@ import {
   MEDIA_ARTICLE_PAGE,
   LIVE_PAGE,
 } from '#routes/utils/pageTypes';
+import { PageTypes, Services } from '#models/types/global';
 import {
   chartbeatUID,
   useCanonical,
@@ -23,7 +24,6 @@ import {
   getConfig,
   GetConfigProps,
 } from '.';
-import { PageTypes, Services } from '#models/types/global';
 
 let isOnClient = false;
 

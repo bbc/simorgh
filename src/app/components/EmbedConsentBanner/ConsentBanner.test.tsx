@@ -4,9 +4,8 @@ import {
   screen,
   fireEvent,
 } from '#components/react-testing-library-with-providers';
-import ConsentBanner from './ConsentBanner';
-
 import * as viewTracking from '#hooks/useViewTracker';
+import ConsentBanner from './ConsentBanner';
 
 const mockCanonicalClickHandler = {
   onClick: jest.fn(() => null),

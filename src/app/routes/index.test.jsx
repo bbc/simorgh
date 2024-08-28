@@ -21,13 +21,13 @@ import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
 import { ERROR_PAGE, FRONT_PAGE } from '#routes/utils/pageTypes';
-import routes from '.';
 import {
   act,
   render,
   screen,
 } from '#components/react-testing-library-with-providers';
 import { suppressPropWarnings } from '#legacy/psammead/psammead-test-helpers/src';
+import routes from '.';
 import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
 
 global.performance.getEntriesByName = jest.fn(() => []);

@@ -2,10 +2,10 @@ import React from 'react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
-import CaptionContainer from '.';
 import latin from '#components/ThemeProvider/fontScripts/latin';
 import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import { render } from '#components/react-testing-library-with-providers';
+import CaptionContainer from '.';
 import captionBlock, {
   captionBlock3Paragraphs,
   blocksWithInline,

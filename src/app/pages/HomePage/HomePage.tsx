@@ -14,11 +14,11 @@ import HomeCuration from '#components/Curation';
 import Ad from '#components/Ad';
 import MPU from '#components/Ad/MPU';
 import { ServiceContext } from '#contexts/ServiceContext';
-import styles from './index.styles';
 import MetadataContainer from '#components/Metadata';
 import LinkedData from '#components/LinkedData';
 import getItemList from '#lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import styles from './index.styles';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 

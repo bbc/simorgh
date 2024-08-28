@@ -5,9 +5,8 @@ import {
   fireEvent,
 } from '#components/react-testing-library-with-providers';
 
-import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
-
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
 describe('Embed Consent Banner', () => {
   it('should render correct elements for the banner', () => {

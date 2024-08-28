@@ -4,8 +4,8 @@ import {
   screen,
 } from '#components/react-testing-library-with-providers';
 
-import LatestMediaIndicator from '.';
 import PromoContext from '#legacy/components/OptimoPromos/PromoContext';
+import LatestMediaIndicator from '.';
 import { Media } from '../types';
 
 interface FixtureProps {

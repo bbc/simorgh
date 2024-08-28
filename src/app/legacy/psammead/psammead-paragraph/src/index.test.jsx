@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '#components/react-testing-library-with-providers';
 import latin from '#components/ThemeProvider/fontScripts/latin';
 import arabic from '#components/ThemeProvider/fontScripts/arabic';
-import Paragraph from './index';
 import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
+import Paragraph from './index';
 
 describe('Paragraph', () => {
   it('should render correctly', () => {

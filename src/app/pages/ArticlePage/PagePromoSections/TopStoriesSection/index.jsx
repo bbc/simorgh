@@ -5,6 +5,7 @@ import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#contexts/ServiceContext';
+import generatePromoId from '#lib/utilities/generatePromoId';
 import {
   StyledSectionLabel,
   StyledTopStoriesSection,
@@ -12,7 +13,6 @@ import {
   StyledPromoList,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
-import generatePromoId from '#lib/utilities/generatePromoId';
 
 const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);

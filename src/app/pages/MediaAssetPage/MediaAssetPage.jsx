@@ -37,8 +37,8 @@ import ATIAnalytics from '#components/ATIAnalytics';
 import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
 import LinkedData from '#components/LinkedData';
 import { ServiceContext } from '#contexts/ServiceContext';
-import MediaMessage from './MediaMessage';
 import Disclaimer from '#components/Disclaimer';
+import MediaMessage from './MediaMessage';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

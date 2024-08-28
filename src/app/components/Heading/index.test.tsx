@@ -1,7 +1,10 @@
 import React from 'react';
 
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 import Heading from '.';
-import { render, screen } from '#components/react-testing-library-with-providers';
 
 describe('Heading', () => {
   it('should render the heading text in an h1 element', async () => {

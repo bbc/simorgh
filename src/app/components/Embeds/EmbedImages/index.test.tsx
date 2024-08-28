@@ -1,5 +1,8 @@
 import React from 'react';
-import { render, screen } from '#components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 import { chartEmbedImages, createEmbedImagesFixture } from './fixtures';
 import EmbedImages from '.';
 

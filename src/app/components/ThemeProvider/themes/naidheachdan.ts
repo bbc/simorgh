@@ -1,3 +1,4 @@
+import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/naidheachdan';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {
@@ -7,7 +8,6 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/naidheachdan';
 
 const naidheachdanTheme = {
   palette: {

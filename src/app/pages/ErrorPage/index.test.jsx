@@ -1,6 +1,6 @@
 import React from 'react';
-import ErrorPage from './ErrorPage';
 import { render } from '#components/react-testing-library-with-providers';
+import ErrorPage from './ErrorPage';
 
 describe('ErrorPage', () => {
   it('should correctly render for 404', () => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '#components/react-testing-library-with-providers';
-import LivePageMediaPlayer from '.';
 import { validLivePageVideoWithCaptionBlock } from '#legacy/containers/MediaPlayer/fixtureData';
 import { LIVE_PAGE } from '#routes/utils/pageTypes';
+import LivePageMediaPlayer from '.';
 import { MediaBlock } from '../MediaLoader/types';
 
 const GenerateMediaPlayer = ({ blocks }: { blocks: MediaBlock[] }) => (

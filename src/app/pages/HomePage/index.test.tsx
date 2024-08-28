@@ -5,8 +5,8 @@ import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
 import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.json';
 import { render } from '#components/react-testing-library-with-providers';
-import HomePage from './HomePage';
 import { suppressPropWarnings } from '#legacy/psammead/psammead-test-helpers/src';
+import HomePage from './HomePage';
 
 jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;

@@ -1,7 +1,9 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
-import { render, screen } from '#components/react-testing-library-with-providers';
-import Byline from '.';
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 import ArticleTimestamp from '#legacy/containers/ArticleTimestamp';
 import {
   bylineWithNoRole,
@@ -12,6 +14,7 @@ import {
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
 } from '#pages/ArticlePage/fixtureData';
+import Byline from '.';
 
 describe('Byline', () => {
   it('Should render Byline correctly when only required data is passed', () => {

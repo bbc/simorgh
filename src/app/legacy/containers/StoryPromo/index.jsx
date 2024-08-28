@@ -25,11 +25,11 @@ import { MEDIA_MISSING } from '#lib/logger.const';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
 import PromoTimestamp from '#legacy/components/Promo/timestamp';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Image from '#components/Image';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
-import Image from '#components/Image';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);

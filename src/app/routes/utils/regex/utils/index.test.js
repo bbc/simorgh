@@ -1,5 +1,5 @@
-import * as regexGenerators from '.';
 import serviceConfig from '#lib/config/services/loadableConfig';
+import * as regexGenerators from '.';
 
 describe('regex utils snapshots', () => {
   const services = Object.keys(serviceConfig);

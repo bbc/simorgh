@@ -5,14 +5,14 @@ import AdContainer from '#components/Ad';
 import ATIAnalytics from '#components/ATIAnalytics';
 import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
 import LinkedData from '#components/LinkedData';
-import styles from './index.styles';
 import MetadataContainer from '#components/Metadata';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Pagination from '#components/Pagination';
+import getItemList from '#lib/seoUtils/getItemList';
+import styles from './index.styles';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
-import Pagination from '#components/Pagination';
-import getItemList from '#lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {

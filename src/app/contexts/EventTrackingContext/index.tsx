@@ -5,7 +5,6 @@ import React, {
   useMemo,
 } from 'react';
 
-import { RequestContext } from '../RequestContext';
 import useToggle from '#hooks/useToggle';
 import {
   ARTICLE_PAGE,
@@ -29,12 +28,13 @@ import {
 } from '#routes/utils/pageTypes';
 import { PageTypes, Platforms } from '#models/types/global';
 import { buildATIEventTrackingParams } from '#components/ATIAnalytics/params';
-import { ServiceContext } from '../ServiceContext';
 import {
   ATIData,
   ATIEventTrackingProps,
   PageData,
 } from '#components/ATIAnalytics/types';
+import { ServiceContext } from '../ServiceContext';
+import { RequestContext } from '../RequestContext';
 
 type EventTrackingContextProps =
   | {

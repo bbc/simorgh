@@ -1,9 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
-import {
-  MetadataFormats,
-  MetadataTaggings,
-} from '#models/types/metadata';
+import { MetadataFormats, MetadataTaggings } from '#models/types/metadata';
 
 export default (
   isTrustProjectParticipant: boolean,

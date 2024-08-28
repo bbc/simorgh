@@ -15,8 +15,8 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 
 import { MediaMessage } from '#legacy/components/MediaPlayer';
-import { EPISODE_STATUS } from '..';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { EPISODE_STATUS } from '..';
 
 const AudioErrorWrapper = styled.div`
   position: relative;

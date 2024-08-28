@@ -1,6 +1,6 @@
 import React from 'react';
-import Fragment from '.';
 import { render } from '#components/react-testing-library-with-providers';
+import Fragment from '.';
 
 describe('Fragment', () => {
   it('with no attributes', () => {

@@ -1,5 +1,15 @@
 import { css, Theme } from '@emotion/react';
 import {
+  GROUP_0_MAX_WIDTH,
+  GROUP_1_ONLY,
+  GROUP_2_ONLY,
+  GROUP_3_MIN_WIDTH,
+  GROUP_5_MIN_WIDTH,
+} from '#components/ThemeProvider/mediaQueries';
+import { Services } from '#models/types/global';
+import { grid } from '#legacy/psammead/psammead-styles/src/detection';
+import { Size } from '../../types';
+import {
   singleDigitDefault,
   singleDigitMedium,
   singleDigitSmall,
@@ -9,16 +19,6 @@ import {
   smallFontServices,
   mediumFontServices,
 } from '../../utilities/rankMinWidth';
-import {
-  GROUP_0_MAX_WIDTH,
-  GROUP_1_ONLY,
-  GROUP_2_ONLY,
-  GROUP_3_MIN_WIDTH,
-  GROUP_5_MIN_WIDTH,
-} from '#components/ThemeProvider/mediaQueries';
-import { Services } from '#models/types/global';
-import { Size } from '../../types';
-import { grid } from '#legacy/psammead/psammead-styles/src/detection';
 
 /**
  * Interface Definitions

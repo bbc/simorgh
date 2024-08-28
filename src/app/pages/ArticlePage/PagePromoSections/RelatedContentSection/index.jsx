@@ -13,13 +13,13 @@ import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '#contexts/ServiceContext';
+import generatePromoId from '#lib/utilities/generatePromoId';
 import {
   RelatedContentGrid,
   StyledRelatedContentSection,
   StyledPromoItem,
   SingleItemWrapper,
 } from './index.styles';
-import generatePromoId from '#lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];

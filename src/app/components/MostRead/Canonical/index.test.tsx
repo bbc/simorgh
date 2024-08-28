@@ -8,8 +8,8 @@ import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import CanonicalMostRead from '.';
 import { Services } from '#models/types/global';
+import CanonicalMostRead from '.';
 import { MostReadData } from '../types';
 import {
   setFreshPromoTimestamp,

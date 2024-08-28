@@ -6,7 +6,7 @@ import isLitePath from '#app/routes/utils/isLitePath';
 import isAppPath from '#app/routes/utils/isAppPath';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 import UGCPageLayout from './UGCPageLayout';
-import extractHeaders from '#src/server/utilities/extractHeaders';
+import extractHeaders from '#server/utilities/extractHeaders';
 
 const logger = nodeLogger(__filename);
 

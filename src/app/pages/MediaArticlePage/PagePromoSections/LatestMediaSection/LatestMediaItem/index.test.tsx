@@ -4,9 +4,9 @@ import {
   screen,
 } from '#components/react-testing-library-with-providers';
 
-import LatestMediaItem from '.';
 import PromoContext from '#legacy/components/OptimoPromos/PromoContext';
 import { EventTrackingBlock } from '#models/types/eventTracking';
+import LatestMediaItem from '.';
 import { LatestMedia, Media } from '../types';
 
 interface FixtureProps {

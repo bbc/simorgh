@@ -13,9 +13,9 @@ import buildIChefURL from '#lib/utilities/ichefURL';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import { RequestContext } from '#contexts/RequestContext';
 
+import { OptimoBlock } from '#models/types/optimo';
 import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
-import { OptimoBlock } from '#models/types/optimo';
 
 const defaultImageProps = {
   height: null,

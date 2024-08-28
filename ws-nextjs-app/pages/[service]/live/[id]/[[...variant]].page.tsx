@@ -20,7 +20,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
-import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import extractHeaders from '#server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
 
 const logger = nodeLogger(__filename);

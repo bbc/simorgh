@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContext } from '#contexts/ServiceContext';
-import CopyrightContainer from './index';
 import { ServiceConfig } from '#models/types/serviceConfig';
+import CopyrightContainer from './index';
 
 const CopyrightWithContext = (
   copyrightText: string,

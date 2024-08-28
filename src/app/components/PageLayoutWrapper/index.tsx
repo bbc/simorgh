@@ -12,10 +12,10 @@ import WebVitals from '#legacy/containers/WebVitals';
 import HeaderContainer from '#legacy/containers/Header';
 import FooterContainer from '#legacy/containers/Footer';
 import ManifestContainer from '#legacy/containers/Manifest';
-import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import fontFacesLazy from '#components/ThemeProvider/fontFacesLazy';
+import ServiceWorker from '../ServiceWorker';
 
 import styles from './index.styles';
 

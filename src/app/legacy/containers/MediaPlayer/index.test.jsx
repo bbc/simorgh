@@ -1,3 +1,4 @@
+import { render } from '#components/react-testing-library-with-providers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
@@ -10,7 +11,6 @@ import {
   UnavailableVideoCanonical,
   UnavailableVideoAmp,
 } from './fixtureData';
-import { render } from '#components/react-testing-library-with-providers';
 import logMissingMediaId from './helpers/logMissingMediaId';
 
 jest.mock('./helpers/logMissingMediaId');

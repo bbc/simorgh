@@ -2,6 +2,7 @@ import React from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { render } from '#components/react-testing-library-with-providers';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import {
   threeLinks,
   oneLinkOnly,
@@ -10,7 +11,6 @@ import {
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
-import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {

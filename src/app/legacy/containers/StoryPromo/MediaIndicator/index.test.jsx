@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  MEDIA_ASSET_PAGE,
-  PHOTO_GALLERY_PAGE,
-} from '#routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, PHOTO_GALLERY_PAGE } from '#routes/utils/pageTypes';
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import { render } from '#components/react-testing-library-with-providers';
 import latin from '#components/ThemeProvider/fontScripts/latin';

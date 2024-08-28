@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  act,
-  render,
-} from '#components/react-testing-library-with-providers';
+import { act, render } from '#components/react-testing-library-with-providers';
 import ErrorScreen from '.';
 
 const MOCK_TITLE = 'Submit your suggestions';

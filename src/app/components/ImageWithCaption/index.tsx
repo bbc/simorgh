@@ -7,11 +7,11 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { Services } from '#models/types/global';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Copyright from '../Copyright';
 import Caption from '#legacy/containers/Caption';
+import { RequestContext } from '#contexts/RequestContext';
+import Copyright from '../Copyright';
 import Image from '../Image';
 import styles from './index.styles';
-import { RequestContext } from '#contexts/RequestContext';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;

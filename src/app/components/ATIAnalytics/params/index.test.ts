@@ -11,10 +11,10 @@ import {
   ERROR_PAGE,
   LIVE_PAGE,
 } from '#routes/utils/pageTypes';
-import { buildATIUrl, buildATIEventTrackingParams } from '.';
-import * as buildPageATIFunctionImports from './genericPage/buildParams';
 import { RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#models/types/serviceConfig';
+import { buildATIUrl, buildATIEventTrackingParams } from '.';
+import * as buildPageATIFunctionImports from './genericPage/buildParams';
 import { ATIData, PageData } from '../types';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

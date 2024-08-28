@@ -11,9 +11,9 @@ import {
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { Direction, PageTypes, Services } from '#models/types/global';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
-import { Direction, PageTypes, Services } from '#models/types/global';
 import styles from './index.styles';
 import adStyles from '../utilities/adSlot.styles';
 import { AdProps, SLOT_TYPES, SlotType } from '../types';

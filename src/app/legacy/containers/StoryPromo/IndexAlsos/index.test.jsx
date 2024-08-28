@@ -5,11 +5,11 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '#components/react-testing-library-with-providers';
-import relatedItems from './relatedItems';
 import latin from '#components/ThemeProvider/fontScripts/latin';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import IndexAlsosContainer from '.';
 import ThemeProvider from '#components/ThemeProvider';
+import IndexAlsosContainer from '.';
+import relatedItems from './relatedItems';
 
 const withServiceContext = component => (
   <ThemeProvider service="hausa">

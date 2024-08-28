@@ -4,12 +4,12 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
+import idSanitiser from '#lib/utilities/idSanitiser';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
 import CallToActionLink from '../../CallToActionLink';
-import idSanitiser from '#lib/utilities/idSanitiser';
 
 interface UploaderProps {
   blocks?: object[];

@@ -4,7 +4,7 @@ import { OK } from '#app/lib/statusCodes.const';
 const retrieveDownloads = async (service: Services) => {
   const fetchURl = `https://ws-downloads.files.bbci.co.uk/downloads-data-${service}.json`;
   try {
-    const retrieveDownloads = async () => {
+    const fetchDownloads = async () => {
       const response = await fetch(fetchURl);
 
       if (response.status !== OK) return null;
@@ -12,7 +12,7 @@ const retrieveDownloads = async (service: Services) => {
       const downloads = await response.json();
       return downloads;
     };
-    return retrieveDownloads().then(data => {
+    return fetchDownloads().then(data => {
       return data;
     });
   } catch (e) {

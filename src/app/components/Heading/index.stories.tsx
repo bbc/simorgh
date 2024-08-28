@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { FontVariant, GelFontSize } from '#app/models/types/theming';
+import { StoryProps } from '#models/types/storybook';
 import Heading from '.';
 import readme from './README.md';
-import { StoryProps } from '#models/types/storybook';
 
 interface Props extends StoryProps {
   text: string;

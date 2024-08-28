@@ -1,7 +1,10 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { render, screen } from '#components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 import DisclaimerComponent from '.';
 
 const DISCLAIMER_FIXTURE = {

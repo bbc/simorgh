@@ -10,10 +10,7 @@ import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
-import {
-  act,
-  render,
-} from '#components/react-testing-library-with-providers';
+import { act, render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
 

@@ -19,8 +19,8 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 import idSanitiser from '#app/lib/utilities/idSanitiser';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Link from './Link';
 import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import Link from './Link';
 
 const EN_GB_LANG = 'en-GB';
 

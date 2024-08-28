@@ -1,7 +1,4 @@
-import {
-  PHOTO_GALLERY_PAGE,
-  MEDIA_ASSET_PAGE,
-} from '#routes/utils/pageTypes';
+import { PHOTO_GALLERY_PAGE, MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import { isMap, isPgl, getHeadingTagOverride, buildUniquePromoId } from '.';
 import {
   completeItem,

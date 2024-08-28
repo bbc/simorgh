@@ -3,12 +3,12 @@ import { useContext, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../icons';
-import { ServiceContext } from '#contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {

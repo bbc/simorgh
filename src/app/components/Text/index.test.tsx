@@ -1,7 +1,10 @@
 import React from 'react';
 
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 import Text from '.';
-import { render, screen } from '#components/react-testing-library-with-providers';
 
 describe('Text', () => {
   it('should render the text in a span element by default', () => {

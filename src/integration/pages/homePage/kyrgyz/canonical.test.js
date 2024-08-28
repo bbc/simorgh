@@ -3,8 +3,8 @@
  * @pathname /kyrgyz
  */
 
-import runCanonicalTests from '../canonicalTests';
 import { data as pageData } from '#data/kyrgyz/homePage/index.json';
+import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {

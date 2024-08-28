@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  act,
-  render,
-} from '#components/react-testing-library-with-providers';
+import { act, render } from '#components/react-testing-library-with-providers';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
 import * as FormContextModule from '../FormContext';

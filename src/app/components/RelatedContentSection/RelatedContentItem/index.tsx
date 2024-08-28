@@ -8,8 +8,8 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#legacy/components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import styles from './index.styles';
 import { EventTrackingBlock } from '#models/types/eventTracking';
+import styles from './index.styles';
 
 type RelatedContentItemProps = {
   item: object;

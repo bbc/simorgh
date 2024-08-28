@@ -5,12 +5,12 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
+import { data as frontPageData } from '#data/news/frontpage/index.json';
+import { PageTypes, Platforms } from '#models/types/global';
 import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
 import { localBaseUrl } from '../../../testHelpers/config';
-import { data as frontPageData } from '#data/news/frontpage/index.json';
-import { PageTypes, Platforms } from '#models/types/global';
 
 const defaultToggleState = {
   chartbeatAnalytics: {
