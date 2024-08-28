@@ -162,11 +162,9 @@ const constructPageFetchUrl = ({
   isAmp,
   mediaId,
 }: UrlConstructParams) => {
-  console.log('pathname in constructPageFetchUrl', pathname);
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
   const id = getId({ pageType, service, env, variant })(pathname);
-  console.log('id after getId in constructPageUrl file', id);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -198,7 +196,7 @@ const constructPageFetchUrl = ({
     'query',
     queryParameters,
   );
-  console.log('fetchUrl in constructPageFetchUrl', fetchUrl);
+
   if (isLocal) {
     switch (pageType) {
       case ARTICLE_PAGE: {
