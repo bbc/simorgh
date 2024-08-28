@@ -6,7 +6,7 @@ import {
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Grid from '../../../components/Grid';
+import Grid from '#legacy/components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
 import getEventTrackingData from './getEventTrackingData';
 

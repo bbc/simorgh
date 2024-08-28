@@ -6,7 +6,7 @@ import {
   METAL,
   LIVE_DARK,
   POSTBOX,
-} from '../../../../components/ThemeProvider/palette';
+} from '#components/ThemeProvider/palette';
 
 export const programStateConfig = {
   live: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import InlineLink from '#psammead/psammead-inline-link/src';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import {
   withServicesKnob,
   buildRTLSubstories,

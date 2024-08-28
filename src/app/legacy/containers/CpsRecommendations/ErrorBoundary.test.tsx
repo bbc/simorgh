@@ -3,7 +3,7 @@ import React from 'react';
 
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
 import recommendationsData from '../../../../../data/mundo/recommendations/index.json';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { RECOMMENDATIONS_MISSING_DATA } from '#lib/logger.const';
 

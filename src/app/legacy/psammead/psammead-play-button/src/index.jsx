@@ -8,7 +8,7 @@ import {
 import { GEL_MINION } from '#psammead/gel-foundations/src/typography';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const GEL_SPACING_DEC = '5rem';
 const BGC_TRANSITION_DURATION = '300ms';

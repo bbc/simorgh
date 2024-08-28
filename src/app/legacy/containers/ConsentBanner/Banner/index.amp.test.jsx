@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import Banner from './index.amp';
 
 describe('Amp Consent Banner Container', () => {

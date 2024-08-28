@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import useViewTracker from '#hooks/useViewTracker';
-import Grid from '../../../components/Grid';
+import Grid from '#legacy/components/Grid';
 import StoryPromo from '../../StoryPromo';
 
 const MediaStoryPromoLi = styled(StoryPromoLi)`

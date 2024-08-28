@@ -1,5 +1,5 @@
 import React from 'react';
-import { BulletedListItem } from '../../../components/BulletedList';
+import { BulletedListItem } from '#components/BulletedList';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';

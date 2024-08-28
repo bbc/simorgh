@@ -19,7 +19,7 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
+import { focusIndicatorThickness } from '#components/ThemeProvider/focusIndicator';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';

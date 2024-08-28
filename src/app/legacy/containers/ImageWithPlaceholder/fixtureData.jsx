@@ -3,7 +3,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FigureContainer from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',

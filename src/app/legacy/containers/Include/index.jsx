@@ -10,7 +10,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
-import VjAmp from '../../../components/AmpIframe';
+import VjAmp from '#components/AmpIframe';
 
 const componentsToRender = {
   amp: {

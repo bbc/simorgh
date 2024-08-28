@@ -3,7 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import {
   EmbedConsentBannerCanonical,
   EmbedConsentBannerAmp,
-} from '../../../../components/EmbedConsentBanner';
+} from '#components/EmbedConsentBanner';
 import SkipLinkWrapper from './SkipLinkWrapper';
 import CaptionWrapper from './CaptionWrapper';
 import Notice from './Notice';

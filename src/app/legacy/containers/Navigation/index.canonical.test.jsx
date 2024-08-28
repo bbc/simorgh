@@ -1,5 +1,5 @@
 import React from 'react';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {
   dropdownTestId,
@@ -10,7 +10,7 @@ import {
 import {
   render,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 const navigation = (
   <CanonicalNavigation

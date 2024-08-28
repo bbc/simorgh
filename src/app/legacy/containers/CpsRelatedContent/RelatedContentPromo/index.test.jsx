@@ -4,10 +4,10 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import RelatedContentPromo from '.';
 
-jest.mock('../../../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const promos = path(
   ['relatedContent', 'groups', 0, 'promos'],

@@ -7,7 +7,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const StyledIndexAlsos = styled.div`
   position: relative;

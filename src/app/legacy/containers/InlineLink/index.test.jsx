@@ -3,7 +3,7 @@ import { StaticRouter } from 'react-router-dom';
 import {
   render,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import InlineLinkContainer from './index';
 
 const fragmentBlock = (text, attributes = []) => ({

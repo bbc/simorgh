@@ -6,7 +6,7 @@ import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import {
   screen,
   fireEvent,
-} from '../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 describe('CpsSocialEmbedContainer', () => {
   afterEach(() => {

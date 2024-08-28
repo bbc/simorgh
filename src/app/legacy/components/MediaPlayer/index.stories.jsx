@@ -2,7 +2,7 @@
 import React from 'react';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import readme from './README.md';
 
 const withDuration = {

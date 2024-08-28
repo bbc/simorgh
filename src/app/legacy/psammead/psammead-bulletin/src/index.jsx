@@ -20,7 +20,7 @@ import {
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import LiveLabel from '#components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 

@@ -16,7 +16,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import FrostedGlassPromo from '../../../components/FrostedGlassPromo/lazy';
+import FrostedGlassPromo from '#components/FrostedGlassPromo/lazy';
 
 const eventTrackingData = {
   block: {

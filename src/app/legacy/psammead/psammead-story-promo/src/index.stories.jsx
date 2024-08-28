@@ -4,7 +4,7 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import Image from '#psammead/psammead-image/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import Grid from '#psammead/psammead-grid/src';
 import styled from '@emotion/styled';

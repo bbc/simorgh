@@ -1,6 +1,6 @@
 import React from 'react';
 import useViewTracker from '#hooks/useViewTracker';
-import Grid from '../../../components/Grid';
+import Grid from '#legacy/components/Grid';
 import StoryPromo from '../../StoryPromo';
 
 const RelatedContentPromo = ({ promo, dir, eventTrackingData = null }) => {

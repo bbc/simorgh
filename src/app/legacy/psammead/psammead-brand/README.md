@@ -62,9 +62,9 @@ When using `Brand` in the header, you should ensure that `borderBottom` prop is 
 import Brand from '#psammead/psammead-brand/src';
 import SkipLink from '#psammead/psammead-brand/src/skip-link';
 import { igbo } from '#psammead/psammead-assets/src/svgs';
-import ScriptLink from '../../../components/Header/ScriptLink';
-import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import ScriptLink from '#components/Header/ScriptLink';
+import { POSTBOX, WHITE } from '#components/ThemeProvider/palette';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const scriptLink = (
   <ScriptLink

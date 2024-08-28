@@ -9,7 +9,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { LUNAR } from '../../../../components/ThemeProvider/palette';
+import { LUNAR } from '#components/ThemeProvider/palette';
 
 const promoListDefaultProps = {
   border: true,

@@ -25,7 +25,7 @@ npm install #legacy/psammead-topic-tags/src --save
 
 ```jsx
 import { TopicTags, TopicTag } from '#psammead/psammead-topic-tags/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <TopicTags script={latin} service="news" dir="ltr">

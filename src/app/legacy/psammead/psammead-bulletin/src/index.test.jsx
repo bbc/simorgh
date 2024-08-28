@@ -1,9 +1,9 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import Image from '#psammead/psammead-image/src';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import Bulletin from '.';
 
 const BulletinComponent = ({

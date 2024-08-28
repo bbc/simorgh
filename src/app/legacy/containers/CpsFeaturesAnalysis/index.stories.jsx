@@ -7,7 +7,7 @@ import featuresRtl from './fixturesRtl.json';
 import features from './fixtures.json';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const Component = ({
   isAmp = false,

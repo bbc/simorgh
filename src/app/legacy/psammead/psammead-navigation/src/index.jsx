@@ -13,8 +13,8 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
-import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import { focusIndicatorThickness } from '#components/ThemeProvider/focusIndicator';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px

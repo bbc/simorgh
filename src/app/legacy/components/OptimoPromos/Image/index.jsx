@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import IMAGE from '../../../../components/Image';
+import IMAGE from '#components/Image';
 
 const Image = ({
   src,

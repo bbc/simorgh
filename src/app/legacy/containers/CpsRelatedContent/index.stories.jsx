@@ -9,7 +9,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import CpsRelatedContent from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const newsRelatedContentData = newsData.relatedContent?.groups?.[0].promos;
 const pidginRelatedContentData = pidginData.relatedContent?.groups?.[0].promos;

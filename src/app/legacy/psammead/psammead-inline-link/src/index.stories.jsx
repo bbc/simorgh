@@ -15,7 +15,7 @@ import {
 } from '#psammead/psammead-styles/src/font-styles';
 import notes from '../README.md';
 import InlineLink from './index';
-import { POSTBOX } from '../../../../components/ThemeProvider/palette';
+import { POSTBOX } from '#components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
   ${({ script }) => getBodyCopy(script)};

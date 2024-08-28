@@ -11,7 +11,7 @@ import {
   render,
   act,
   waitFor,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import features from './fixtures.json';
 import FeaturesAnalysis from '.';
 

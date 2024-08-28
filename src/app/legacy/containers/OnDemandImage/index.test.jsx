@@ -1,7 +1,7 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_PAGE } from '#routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandImage from '.';
 

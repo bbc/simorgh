@@ -8,7 +8,7 @@ import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import MediaMessage from './Message';
 import { ampDecorator } from '../../../../../../.storybook/preview';
 import notes from '../README.md';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const withDuration = {
   duration: '2:30',

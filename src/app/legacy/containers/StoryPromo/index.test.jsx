@@ -11,7 +11,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -31,7 +31,7 @@ import {
 import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
 
-jest.mock('../../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,

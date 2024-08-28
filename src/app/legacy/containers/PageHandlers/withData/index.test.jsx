@@ -5,7 +5,7 @@ import {
 } from '#pages/ArticlePage/fixtureData';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import WithData from '.';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 
 jest.mock('#pages/ErrorPage/ErrorPage', () => ({ errorCode }) => (
   <h1>This is a {errorCode} error.</h1>

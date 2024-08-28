@@ -6,7 +6,7 @@ import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import {
   render,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import ConsentBanner from './index';

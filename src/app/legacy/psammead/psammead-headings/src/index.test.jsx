@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import { Headline, SubHeading } from './index';
 import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 

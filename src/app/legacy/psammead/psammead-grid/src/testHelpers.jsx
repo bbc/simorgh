@@ -7,7 +7,7 @@ import {
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 export const ExampleParagraph = ({ identifier = '1' }) => (
   <Paragraph script={latin} service="news">

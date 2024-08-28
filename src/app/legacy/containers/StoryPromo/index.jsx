@@ -29,7 +29,7 @@ import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
-import Image from '../../../components/Image';
+import Image from '#components/Image';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);

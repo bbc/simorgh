@@ -1,6 +1,6 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 
 describe('Media Player: AMP Entry', () => {

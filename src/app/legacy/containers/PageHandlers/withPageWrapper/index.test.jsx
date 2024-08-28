@@ -14,7 +14,7 @@ const dataProps = {
   route: { pageType: ARTICLE_PAGE },
 };
 
-jest.mock('../../../../components/PageLayoutWrapper', () => ({ children }) => (
+jest.mock('#components/PageLayoutWrapper', () => ({ children }) => (
   <div id="defaultPageWrapper">{children}</div>
 ));
 

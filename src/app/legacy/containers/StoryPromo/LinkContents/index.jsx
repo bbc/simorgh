@@ -5,7 +5,7 @@ import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const LinkContents = ({ item, isInline = false, id }) => {
   const {

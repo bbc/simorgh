@@ -1,5 +1,5 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
 describe('ProgramCard', () => {

@@ -6,7 +6,7 @@ import {
   render,
   screen,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 import {
   twitterBlock,

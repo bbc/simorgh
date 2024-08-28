@@ -7,7 +7,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import TopStories from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const Component = ({ isAmp = false, service, dir = 'ltr', data }) => (
   <div dir={dir}>

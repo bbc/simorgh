@@ -14,7 +14,7 @@ import { getPica } from '#psammead/gel-foundations/src/typography';
 
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Grid from '../../../components/Grid';
+import Grid from '#legacy/components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 import extractPromoData from './utility';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { cpsRecommendation, optimoRecommendation } from './fixture';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import RecommendationsPromo from '.';
 

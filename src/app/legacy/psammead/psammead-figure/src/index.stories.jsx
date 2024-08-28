@@ -5,7 +5,7 @@ import Caption from '#psammead/psammead-caption/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import notes from '../README.md';
 import Figure from '.';

@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 
 let AmpContainer;
 let container;

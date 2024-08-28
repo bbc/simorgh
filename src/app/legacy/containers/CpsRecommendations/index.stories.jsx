@@ -8,7 +8,7 @@ import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendati
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import newsMultipleItems from './newsFixture';
 import CpsRecommendations from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const Component = ({ items, service, dir }) => {
   const toggleState = {

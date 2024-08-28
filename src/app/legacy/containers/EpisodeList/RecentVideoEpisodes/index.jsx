@@ -19,7 +19,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`

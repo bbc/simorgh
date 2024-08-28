@@ -6,7 +6,7 @@ import {
   screen,
   waitFor,
   fireEvent,
-} from '../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
   STORY_PAGE,

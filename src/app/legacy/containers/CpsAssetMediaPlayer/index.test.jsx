@@ -6,7 +6,7 @@ import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';

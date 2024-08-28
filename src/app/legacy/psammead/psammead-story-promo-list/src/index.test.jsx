@@ -3,8 +3,8 @@ import StoryPromo, {
   Headline,
   Summary,
 } from '#psammead/psammead-story-promo/src';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;

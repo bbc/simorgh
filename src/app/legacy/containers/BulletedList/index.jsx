@@ -5,7 +5,7 @@ import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import { GridItemMedium } from '#legacy/components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import { BulletedList } from '../../../components/BulletedList';
+import { BulletedList } from '#components/BulletedList';
 import Blocks from '../Blocks';
 import listItem from '../BulletedListItem';
 

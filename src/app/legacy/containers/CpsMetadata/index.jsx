@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Metadata from '../../../components/Metadata';
+import Metadata from '#components/Metadata';
 
 const CpsMetadata = ({
   title,

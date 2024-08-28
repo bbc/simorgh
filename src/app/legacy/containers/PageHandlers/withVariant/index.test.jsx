@@ -1,7 +1,7 @@
 import React from 'react';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { frontPagePath } from '#routes/utils/regex';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import WithVariant from '.';
 
 jest.mock('react-router-dom', () => {

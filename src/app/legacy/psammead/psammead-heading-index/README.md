@@ -21,7 +21,7 @@ The `HeadingIndex` uses a `h1` HTML element and is used on index pages, such as 
 
 ```jsx
 import HeadingIndex from '#psammead/psammead-heading-index/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const Wrapper = () => (
   <Fragment>

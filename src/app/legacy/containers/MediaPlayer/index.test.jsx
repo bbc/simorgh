@@ -10,7 +10,7 @@ import {
   UnavailableVideoCanonical,
   UnavailableVideoAmp,
 } from './fixtureData';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import logMissingMediaId from './helpers/logMissingMediaId';
 
 jest.mock('./helpers/logMissingMediaId');

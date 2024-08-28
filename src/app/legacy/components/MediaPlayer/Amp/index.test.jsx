@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import Amp from '.';
 
 describe('Media Player: Amp', () => {

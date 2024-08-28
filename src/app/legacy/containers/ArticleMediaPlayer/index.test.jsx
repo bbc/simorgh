@@ -7,7 +7,7 @@ import {
 import {
   render,
   screen,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import ArticleMediaPlayerContainer from '.';
 import { validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
 

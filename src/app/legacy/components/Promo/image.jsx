@@ -5,7 +5,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import IMAGE from '../../../components/Image';
+import IMAGE from '#components/Image';
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
