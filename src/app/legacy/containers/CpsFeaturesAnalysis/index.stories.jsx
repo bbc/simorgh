@@ -5,7 +5,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import featuresRtl from './fixturesRtl.json';
 import features from './fixtures.json';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
 import ThemeProvider from '#components/ThemeProvider';
 

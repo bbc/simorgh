@@ -6,7 +6,7 @@ import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
 
 const mediaFixture = type =>

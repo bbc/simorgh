@@ -2,7 +2,7 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import BulletinContainer from '.';
-import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import ampDecorator from '#storybook/helpers/ampDecorator';
 import {
   tvBulletinItem,
   liveTvBulletinItem,

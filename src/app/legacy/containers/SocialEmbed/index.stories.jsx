@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { GREY_2 } from '#components/ThemeProvider/palette';
 
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import {
   twitterBlock,
   twitterBlockNoEmbed,

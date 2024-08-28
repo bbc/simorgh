@@ -4,7 +4,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { data as serbianData } from '#data/serbian/frontpage/lat.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import IndexPageSection from '.';
 
 const Component = ({ service, data, isAmp = false }) => (

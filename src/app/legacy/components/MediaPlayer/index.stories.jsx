@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
-import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import ampDecorator from '#storybook/helpers/ampDecorator';
 import ThemeProvider from '#components/ThemeProvider';
 import readme from './README.md';
 

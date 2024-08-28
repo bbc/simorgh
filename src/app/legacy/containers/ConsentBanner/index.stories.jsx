@@ -3,7 +3,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import ConsentBanner from '.';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import ThemeProvider from '#components/ThemeProvider';
 import metadata from './metadata.json';
 

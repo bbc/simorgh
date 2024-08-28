@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import MediaMessage from './Message';
-import { ampDecorator } from '../../../../../../.storybook/preview';
+import { ampDecorator } from '#storybook/preview';
 import notes from '../README.md';
 import ThemeProvider from '#components/ThemeProvider';
 

@@ -5,7 +5,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { validVideoWithCaptionBlock } from './fixtureData';
 import MediaPlayerContainer from '.';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 
 const Component = ({ service, isAmp = false }) => {
   return (
