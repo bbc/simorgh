@@ -3250,9 +3250,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/webpack-preprocessor@npm:6.0.1":
-  version: 6.0.1
-  resolution: "@cypress/webpack-preprocessor@npm:6.0.1"
+"@cypress/webpack-preprocessor@npm:6.0.2":
+  version: 6.0.2
+  resolution: "@cypress/webpack-preprocessor@npm:6.0.2"
   dependencies:
     bluebird: "npm:3.7.1"
     debug: "npm:^4.3.4"
@@ -3262,7 +3262,7 @@ __metadata:
     "@babel/preset-env": ^7.0.0
     babel-loader: ^8.3 || ^9
     webpack: ^4 || ^5
-  checksum: 10/2c8423c7b0808a04c1b12d4f26fbac55ba488d22f55396822d3ad76735c1f60573e31935c4250afe87150260d592f88e2678a0a34ae569cc8e4bb7af1ab65aaa
+  checksum: 10/da98d36a4f4ee106b13c03e3e86d2345c4c909fc73913897117477e2b690ab4be838d655c95aa8175f52434dca6c12ff4f7357702bd93616634b57cb354429b4
   languageName: node
   linkType: hard
 
@@ -4186,16 +4186,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/env@npm:14.2.5"
-  checksum: 10/0462db6a82120220ad518eabbe85144b75cf741cf96f520b1b3dd5978c51c5e7a92ad4bff2b8157f029cdc87ba0f8eeed9f3a30711822fae5195fa5db4e40280
+"@next/env@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/env@npm:14.2.6"
+  checksum: 10/ee0efd5ee521c73f968f9f4a13bfe4298c3b28180182960e37e88eb6c081c1883abf8a9463ee2ea2219c8ddd19ddf232ebbae6af169222ceb7c5a7a7f0ca48f2
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-darwin-arm64@npm:14.2.5"
+"@next/swc-darwin-arm64@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-darwin-arm64@npm:14.2.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -4208,9 +4208,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-darwin-x64@npm:14.2.5"
+"@next/swc-darwin-x64@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-darwin-x64@npm:14.2.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -4223,9 +4223,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.5"
+"@next/swc-linux-arm64-gnu@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -4238,16 +4238,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-linux-arm64-musl@npm:14.2.5"
+"@next/swc-linux-arm64-musl@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-linux-arm64-musl@npm:14.2.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-linux-x64-gnu@npm:14.2.5"
+"@next/swc-linux-x64-gnu@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-linux-x64-gnu@npm:14.2.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -4260,30 +4260,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-linux-x64-musl@npm:14.2.5"
+"@next/swc-linux-x64-musl@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-linux-x64-musl@npm:14.2.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.5"
+"@next/swc-win32-arm64-msvc@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.5"
+"@next/swc-win32-ia32-msvc@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.6"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/swc-win32-x64-msvc@npm:14.2.5"
+"@next/swc-win32-x64-msvc@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@next/swc-win32-x64-msvc@npm:14.2.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -8115,9 +8115,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress-terminal-report@npm:6.0.2":
-  version: 6.0.2
-  resolution: "cypress-terminal-report@npm:6.0.2"
+"cypress-terminal-report@npm:6.1.2":
+  version: 6.1.2
+  resolution: "cypress-terminal-report@npm:6.1.2"
   dependencies:
     chalk: "npm:^4.0.0"
     fs-extra: "npm:^10.1.0"
@@ -8126,7 +8126,7 @@ __metadata:
     tv4: "npm:^1.3.0"
   peerDependencies:
     cypress: ">=10.0.0"
-  checksum: 10/3a9495ff108d1198bb1cef9e884b9492cbd95d3d0f963bd6f70baea3f8ad7e03404f373b88e3d1ccc8c08b21ce0aa5758cb4a92331d8fb47afbd4bff5c757935
+  checksum: 10/d8eaaecad36051e757c79208fb291f2929e4a36ebc7b5135d6ff49d574fe637d74c8b1447dce5b93cdecc9af32f9b6df06ae853bb745d5ebac36b44c073ee95f
   languageName: node
   linkType: hard
 
@@ -10514,18 +10514,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:10.4.1":
-  version: 10.4.1
-  resolution: "glob@npm:10.4.1"
+"glob@npm:11.0.0":
+  version: 11.0.0
+  resolution: "glob@npm:11.0.0"
   dependencies:
     foreground-child: "npm:^3.1.0"
-    jackspeak: "npm:^3.1.2"
-    minimatch: "npm:^9.0.4"
+    jackspeak: "npm:^4.0.1"
+    minimatch: "npm:^10.0.0"
     minipass: "npm:^7.1.2"
-    path-scurry: "npm:^1.11.1"
+    package-json-from-dist: "npm:^1.0.0"
+    path-scurry: "npm:^2.0.0"
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 10/d7bb49d2b413f77bdd59fea4ca86dcc12450deee221af0ca93e09534b81b9ef68fe341345751d8ff0c5b54bad422307e0e44266ff8ad7fbbd0c200e8ec258b16
+  checksum: 10/e66939201d11ae30fe97e3364ac2be5c59d6c9bfce18ac633edfad473eb6b46a7553f6f73658f67caaf6cccc1df1ae336298a45e9021fa5695fd78754cc1603e
   languageName: node
   linkType: hard
 
@@ -11918,16 +11919,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jackspeak@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "jackspeak@npm:3.1.2"
+"jackspeak@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "jackspeak@npm:4.0.1"
   dependencies:
     "@isaacs/cliui": "npm:^8.0.2"
     "@pkgjs/parseargs": "npm:^0.11.0"
   dependenciesMeta:
     "@pkgjs/parseargs":
       optional: true
-  checksum: 10/7e6b94103e5fea5e6311aacf45fe80e98583df55c39b9d8478dd0ce02f1f8f0a11fc419311c277aca959b95635ec9a6be97445a31794254946c679dd0a19f007
+  checksum: 10/b20dc0df0dbb2903e4d540ae68308ec7d1dd60944b130e867e218c98b5d77481d65ea734b6c81c812d481500076e8b3fdfccfb38fc81cb1acf165e853da3e26c
   languageName: node
   linkType: hard
 
@@ -13041,6 +13042,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "lru-cache@npm:11.0.0"
+  checksum: 10/41f36fbff8b6f199cce3e9cb2b625714f97a535dfd7f16d0988c2627f9ed4c38b6dc8f9ea7fdba19262a7c917ba41c89cad15ca3e3791fc9a2068af472b5bc8d
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -13322,6 +13330,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "minimatch@npm:10.0.1"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: 10/082e7ccbc090d5f8c4e4e029255d5a1d1e3af37bda837da2b8b0085b1503a1210c91ac90d9ebfe741d8a5f286ece820a1abb4f61dc1f82ce602a055d461d93f3
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.2, minimatch@npm:^3.0.4, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -13349,7 +13366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.0, minimatch@npm:^9.0.1, minimatch@npm:^9.0.4":
+"minimatch@npm:^9.0.0, minimatch@npm:^9.0.1":
   version: 9.0.4
   resolution: "minimatch@npm:9.0.4"
   dependencies:
@@ -13638,20 +13655,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.2.5":
-  version: 14.2.5
-  resolution: "next@npm:14.2.5"
+"next@npm:14.2.6":
+  version: 14.2.6
+  resolution: "next@npm:14.2.6"
   dependencies:
-    "@next/env": "npm:14.2.5"
-    "@next/swc-darwin-arm64": "npm:14.2.5"
-    "@next/swc-darwin-x64": "npm:14.2.5"
-    "@next/swc-linux-arm64-gnu": "npm:14.2.5"
-    "@next/swc-linux-arm64-musl": "npm:14.2.5"
-    "@next/swc-linux-x64-gnu": "npm:14.2.5"
-    "@next/swc-linux-x64-musl": "npm:14.2.5"
-    "@next/swc-win32-arm64-msvc": "npm:14.2.5"
-    "@next/swc-win32-ia32-msvc": "npm:14.2.5"
-    "@next/swc-win32-x64-msvc": "npm:14.2.5"
+    "@next/env": "npm:14.2.6"
+    "@next/swc-darwin-arm64": "npm:14.2.6"
+    "@next/swc-darwin-x64": "npm:14.2.6"
+    "@next/swc-linux-arm64-gnu": "npm:14.2.6"
+    "@next/swc-linux-arm64-musl": "npm:14.2.6"
+    "@next/swc-linux-x64-gnu": "npm:14.2.6"
+    "@next/swc-linux-x64-musl": "npm:14.2.6"
+    "@next/swc-win32-arm64-msvc": "npm:14.2.6"
+    "@next/swc-win32-ia32-msvc": "npm:14.2.6"
+    "@next/swc-win32-x64-msvc": "npm:14.2.6"
     "@swc/helpers": "npm:0.5.5"
     busboy: "npm:1.6.0"
     caniuse-lite: "npm:^1.0.30001579"
@@ -13692,7 +13709,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10/c107b45ffe7b75649618d8b5fc0bfe4936317daf12384d2546603b250ceb4e24aca9862cb062c6302a6bafafe5e682bb83f25f2f30ab7533bf0c4a30b3be6875
+  checksum: 10/fe883537393cce2538c15d9d43e2234be731dd369059f8e513a06b93c4fc0b9348ae92788a90b9f6cbc91c438983119a041fdded3eaf79afa2317b31c2e4fb60
   languageName: node
   linkType: hard
 
@@ -14225,6 +14242,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"package-json-from-dist@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "package-json-from-dist@npm:1.0.0"
+  checksum: 10/ac706ec856a5a03f5261e4e48fa974f24feb044d51f84f8332e2af0af04fbdbdd5bbbfb9cbbe354190409bc8307c83a9e38c6672c3c8855f709afb0006a009ea
+  languageName: node
+  linkType: hard
+
 "param-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "param-case@npm:3.0.4"
@@ -14355,13 +14379,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-scurry@npm:^1.11.1":
-  version: 1.11.1
-  resolution: "path-scurry@npm:1.11.1"
+"path-scurry@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "path-scurry@npm:2.0.0"
   dependencies:
-    lru-cache: "npm:^10.2.0"
-    minipass: "npm:^5.0.0 || ^6.0.2 || ^7.0.0"
-  checksum: 10/5e8845c159261adda6f09814d7725683257fcc85a18f329880ab4d7cc1d12830967eae5d5894e453f341710d5484b8fdbbd4d75181b4d6e1eb2f4dc7aeadc434
+    lru-cache: "npm:^11.0.0"
+    minipass: "npm:^7.1.2"
+  checksum: 10/285ae0c2d6c34ae91dc1d5378ede21981c9a2f6de1ea9ca5a88b5a270ce9763b83dbadc7a324d512211d8d36b0c540427d3d0817030849d97a60fa840a2c59ec
   languageName: node
   linkType: hard
 
@@ -15940,10 +15964,10 @@ __metadata:
     "@testing-library/react": "npm:15.0.7"
     babel-plugin-transform-rename-import: "npm:2.3.0"
     cypress: "npm:13.10.0"
-    cypress-terminal-report: "npm:6.0.2"
+    cypress-terminal-report: "npm:6.1.2"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
-    next: "npm:14.2.5"
+    next: "npm:14.2.6"
     next-test-api-route-handler: "npm:^4.0.8"
     npm-run-all2: "npm:6.2.2"
     ts-node: "npm:^10.9.2"
@@ -15968,7 +15992,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.24.7"
     "@babel/runtime": "npm:7.25.0"
     "@bbc/web-vitals": "npm:1.2.0"
-    "@cypress/webpack-preprocessor": "npm:6.0.1"
+    "@cypress/webpack-preprocessor": "npm:6.0.2"
     "@emotion/babel-plugin": "npm:11.11.0"
     "@emotion/babel-preset-css-prop": "npm:11.11.0"
     "@emotion/cache": "npm:11.11.0"
@@ -16039,7 +16063,7 @@ __metadata:
     cypress: "npm:13.10.0"
     cypress-axe: "npm:1.5.0"
     cypress-multi-reporters: "npm:1.6.4"
-    cypress-terminal-report: "npm:6.0.2"
+    cypress-terminal-report: "npm:6.1.2"
     depcheck: "npm:1.4.7"
     dotenv: "npm:16.4.5"
     eslint: "npm:7.32.0"
@@ -16056,7 +16080,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.6.2"
     express: "npm:4.19.2"
     express-static-gzip: "npm:2.1.7"
-    glob: "npm:10.4.1"
+    glob: "npm:11.0.0"
     helmet: "npm:7.1.0"
     helmet-csp: "npm:3.4.0"
     husky: "npm:9.1.4"
