@@ -221,8 +221,7 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`/${service}${variantPath}/topics/${id}`);
         break;
       }
-      // in LIVE_PAGE case pathname is the ID of the Live page
-      // without /service/live/, and supports both Tipo & CPS IDs
+      // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
       case LIVE_PAGE: {
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
