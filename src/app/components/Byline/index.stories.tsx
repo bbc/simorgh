@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import Timestamp from '../../legacy/containers/ArticleTimestamp';
+import Timestamp from '#legacy/containers/ArticleTimestamp';
 import {
   bylineWithNameAndRole,
   bylineWithLink,

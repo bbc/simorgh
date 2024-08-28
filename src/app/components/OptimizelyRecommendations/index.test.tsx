@@ -13,7 +13,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { Services } from '#models/types/global';
 import OptimizelyRecommendations from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
-import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#legacy/psammead/psammead-test-helpers/src';
 
 // 005_brasil_recommendations_experiment
 const optimizely = {

@@ -5,7 +5,7 @@ import {
 } from '../../../../../components/react-testing-library-with-providers';
 
 import LatestMediaItem from '.';
-import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
+import PromoContext from '#legacy/components/OptimoPromos/PromoContext';
 import { EventTrackingBlock } from '#models/types/eventTracking';
 import { LatestMedia, Media } from '../types';
 

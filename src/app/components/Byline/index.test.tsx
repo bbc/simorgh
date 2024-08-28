@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, screen } from '../react-testing-library-with-providers';
 import Byline from '.';
-import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
+import ArticleTimestamp from '#legacy/containers/ArticleTimestamp';
 import {
   bylineWithNoRole,
   bylineWithNoAuthor,

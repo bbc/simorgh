@@ -5,7 +5,7 @@ import {
 } from '../../../../../components/react-testing-library-with-providers';
 
 import LatestMediaIndicator from '.';
-import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
+import PromoContext from '#legacy/components/OptimoPromos/PromoContext';
 import { Media } from '../types';
 
 interface FixtureProps {

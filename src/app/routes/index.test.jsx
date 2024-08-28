@@ -27,7 +27,7 @@ import {
   render,
   screen,
 } from '../components/react-testing-library-with-providers';
-import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#legacy/psammead/psammead-test-helpers/src';
 import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
 
 global.performance.getEntriesByName = jest.fn(() => []);
