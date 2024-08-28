@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import * as analyticsUtils from '../../../lib/analyticsUtils';
+import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,

@@ -3,7 +3,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
+import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import BylineContainer from './index';
 
 const BylineContainerWithContext = ({

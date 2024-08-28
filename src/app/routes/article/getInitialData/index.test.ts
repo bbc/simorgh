@@ -2,7 +2,7 @@ import { Agent } from 'https';
 import * as getOnwardsPageData from '../utils/getOnwardsData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import getInitialData from '.';
 import pidginArticleWithLatestMedia from '../../../../../data/pidgin/articles/cw0x29n2pvqo.json';
 import { ARTICLE_PAGE } from '../../utils/pageTypes';

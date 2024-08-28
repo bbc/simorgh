@@ -17,7 +17,7 @@ import {
   getCampaignType,
   getATIMarketingString,
   getRSSMarketingString,
-} from '../../../lib/analyticsUtils';
+} from '#lib/analyticsUtils';
 import { ATIEventTrackingProps, ATIPageTrackingProps } from '../types';
 
 /*

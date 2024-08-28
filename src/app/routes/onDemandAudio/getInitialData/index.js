@@ -10,7 +10,7 @@ import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import pathWithLogging, {
   LOG_LEVELS,
-} from '../../../lib/utilities/logging/pathWithLogging';
+} from '#lib/utilities/logging/pathWithLogging';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import getRadioService from '../../utils/getRadioService';
 import processRecentEpisodes from '../../utils/processRecentEpisodes';

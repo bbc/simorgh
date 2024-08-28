@@ -1,4 +1,4 @@
-import services from '../../../lib/config/services/loadableConfig';
+import services from '#lib/config/services/loadableConfig';
 import {
   getArticleRegex,
   getArticleSwRegex,

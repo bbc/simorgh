@@ -77,7 +77,7 @@ This is how to render a responsive webp image with a jpeg fallback:
 />
 ```
 
-You can generate the `srcSet`, `mediaType`, `fallbackSrcSet`, and `fallbackMediaType` props using the [`createSrcsets`](../../lib/utilities/srcSet/index.js) function. For example:
+You can generate the `srcSet`, `mediaType`, `fallbackSrcSet`, and `fallbackMediaType` props using the [`createSrcsets`](#lib/utilities/srcSet/index.js) function. For example:
 
 ```tsx
 const src =

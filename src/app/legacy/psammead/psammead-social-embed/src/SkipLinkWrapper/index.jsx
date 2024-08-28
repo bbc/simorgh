@@ -5,7 +5,7 @@ import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 
 import { detokenise, dictionaryFactory } from '../utilities';
 
-import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
+import { visuallyHiddenStyle } from '#lib/styles.const';
 
 const BORDER_WEIGHT = '0.125rem';
 const GEL_SPACING_THREE_QRTS = `0.75rem`;

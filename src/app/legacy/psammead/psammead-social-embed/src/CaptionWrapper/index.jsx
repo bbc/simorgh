@@ -5,7 +5,7 @@ import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { LIVE_PAGE } from '#routes/utils/pageTypes';
-import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
+import { visuallyHiddenStyle } from '#lib/styles.const';
 import { GREY_6 } from '../../../../../components/ThemeProvider/palette';
 
 const Container = styled.div`

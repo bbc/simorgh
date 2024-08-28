@@ -8,7 +8,7 @@ import {
   fireEvent,
 } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
+import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import ConsentBanner from './index';
 
 const defaultToggleState = {

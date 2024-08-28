@@ -17,7 +17,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
-import getItemList from '../../lib/seoUtils/getItemList';
+import getItemList from '#lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';

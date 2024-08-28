@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -27,7 +27,7 @@ import { PageTypes, Services } from '#models/types/global';
 
 let isOnClient = false;
 
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 (onClient as jest.Mock).mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {

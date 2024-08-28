@@ -10,8 +10,8 @@ import handleError from '#routes/utils/handleError';
 import fetchDataFromBFF from '#routes/utils/fetchDataFromBFF';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import { CPS_ASSET } from '../../utils/pageTypes';
-import nodeLogger from '../../../lib/logger.node';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import nodeLogger from '#lib/logger.node';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 

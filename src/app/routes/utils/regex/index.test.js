@@ -24,7 +24,7 @@ import {
   tipoHomePath,
 } from './index';
 
-import serviceConfig from '../../../lib/config/services/loadableConfig';
+import serviceConfig from '#lib/config/services/loadableConfig';
 import { getFrontPageRegex, getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({

@@ -9,7 +9,7 @@ import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
-import nodeLogger from '../../lib/logger.node';
+import nodeLogger from '#lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';

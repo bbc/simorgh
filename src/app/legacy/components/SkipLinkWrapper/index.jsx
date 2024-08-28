@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
-import { visuallyHiddenStyle } from '../../../lib/styles.const';
+import { visuallyHiddenStyle } from '#lib/styles.const';
 
 const BORDER_WIDTH = '0.125rem';
 const GEL_SPACING_PLUS_HALF = `0.75rem`;

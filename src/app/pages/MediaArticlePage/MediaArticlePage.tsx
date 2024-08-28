@@ -18,8 +18,8 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from '../../lib/utilities/parseAssetData';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
+} from '#lib/utilities/parseAssetData';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 
 import ScrollablePromo from '#legacy/components/ScrollablePromo';
 

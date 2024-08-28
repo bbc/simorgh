@@ -1,4 +1,4 @@
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import sendBeacon from '#lib/analyticsUtils/sendBeacon';
 import { buildATIEventTrackUrl } from '../atiUrl';
 import { ATIEventTrackingProps } from '../types';
 

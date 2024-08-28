@@ -1,4 +1,4 @@
-import nodeLogger from '../../../lib/logger.node';
+import nodeLogger from '#lib/logger.node';
 import { Services, Toggles, Variants } from '#models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import addDisclaimer from '../utils/addDisclaimer';
@@ -7,7 +7,7 @@ import { FetchError } from '#models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import getAgent from '#server/utilities/getAgent';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
 
 const logger = nodeLogger(__filename);

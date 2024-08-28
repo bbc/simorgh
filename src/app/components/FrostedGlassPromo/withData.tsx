@@ -6,11 +6,11 @@ import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 
 import PromoTimestamp from '#legacy/components/Promo/timestamp';
-import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
-import buildIChefURL from '../../lib/utilities/ichefURL';
+import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import buildIChefURL from '#lib/utilities/ichefURL';
 
-import { createSrcsets } from '../../lib/utilities/srcSet';
+import { createSrcsets } from '#lib/utilities/srcSet';
 import { RequestContext } from '#contexts/RequestContext';
 
 import styles from './styles';

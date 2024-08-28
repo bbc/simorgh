@@ -10,7 +10,7 @@ import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
-import isLocal from '../../lib/utilities/isLocal';
+import isLocal from '#lib/utilities/isLocal';
 import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,

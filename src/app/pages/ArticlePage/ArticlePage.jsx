@@ -61,7 +61,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
-import { getPromoHeadline } from '../../lib/analyticsUtils/article';
+import { getPromoHeadline } from '#lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
   const { isApp } = useContext(RequestContext);

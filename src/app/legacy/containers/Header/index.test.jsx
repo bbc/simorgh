@@ -13,7 +13,7 @@ import {
   screen,
   fireEvent,
 } from '../../../components/react-testing-library-with-providers';
-import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
+import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import HeaderContainer from './index';
 
 const defaultToggleState = {

@@ -12,7 +12,7 @@ import {
   StyledPromoList,
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
-import generatePromoId from '../../../../lib/utilities/generatePromoId';
+import generatePromoId from '#lib/utilities/generatePromoId';
 
 const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);

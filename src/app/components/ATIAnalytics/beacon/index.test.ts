@@ -1,5 +1,5 @@
-import * as sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import * as analyticsUtils from '../../../lib/analyticsUtils';
+import * as sendBeacon from '#lib/analyticsUtils/sendBeacon';
+import * as analyticsUtils from '#lib/analyticsUtils';
 import { sendEventBeacon } from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');

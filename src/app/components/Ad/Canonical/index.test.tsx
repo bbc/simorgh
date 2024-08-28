@@ -56,7 +56,7 @@ describe('CanonicalAds Ads', () => {
   });
 });
 
-jest.mock('../../../lib/utilities/isLive', () =>
+jest.mock('#lib/utilities/isLive', () =>
   jest.fn().mockImplementation(() => false),
 );
 

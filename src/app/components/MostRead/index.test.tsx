@@ -17,11 +17,11 @@ import { PageTypes, Services, Variants } from '#models/types/global';
 import Canonical from './Canonical';
 import Amp from './Amp';
 import { MostReadData } from './types';
-import isLocal from '../../lib/utilities/isLocal';
+import isLocal from '#lib/utilities/isLocal';
 
 jest.mock('./Canonical');
 jest.mock('./Amp');
-jest.mock('../../lib/utilities/isLocal', () =>
+jest.mock('#lib/utilities/isLocal', () =>
   jest.fn().mockImplementation(() => true),
 );
 

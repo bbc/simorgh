@@ -2,8 +2,8 @@ import Cookie from 'js-cookie';
 import find from 'ramda/src/find';
 import propSatisfies from 'ramda/src/propSatisfies';
 import includes from 'ramda/src/includes';
-import onClient from '../../../lib/utilities/onClient';
-import { getReferrer } from '../../../lib/analyticsUtils';
+import onClient from '#lib/utilities/onClient';
+import { getReferrer } from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,

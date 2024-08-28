@@ -9,7 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#legacy/components/OptimoPromos/PromoList';
 import useViewTracker from '../../../../hooks/useViewTracker';
-import generatePromoId from '../../../../lib/utilities/generatePromoId';
+import generatePromoId from '#lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
