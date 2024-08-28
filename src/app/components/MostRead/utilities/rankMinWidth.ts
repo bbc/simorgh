@@ -4,7 +4,7 @@ import {
   QUINTUPLE,
   SEXTUPLE,
   TRIPLE,
-} from '../../ThemeProvider/spacings';
+} from '#components/ThemeProvider/spacings';
 import { Size } from '../types';
 
 // Services with fonts that have glyphs thinner than the majority of other fonts.

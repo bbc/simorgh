@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
+import { focusIndicatorThickness } from '#components/ThemeProvider/focusIndicator';
 
 const styles = {
   placeholder: ({ palette }: Theme) =>

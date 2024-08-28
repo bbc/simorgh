@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import {
   GROUP_3_MIN_WIDTH,
   GROUP_5_MIN_WIDTH,
-} from '../../../ThemeProvider/mediaQueries';
+} from '#components/ThemeProvider/mediaQueries';
 
 export const oneColumn = css({
   listStyleType: 'none',

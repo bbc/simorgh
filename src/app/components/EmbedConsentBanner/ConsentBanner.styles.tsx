@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
-import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
+import { focusIndicatorThickness } from '#components/ThemeProvider/focusIndicator';
 
 export default {
   parent: ({ palette, isDarkUi }: Theme) =>

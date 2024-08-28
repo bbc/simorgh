@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react';
 import {
   MARGIN_ABOVE_400PX,
   MARGIN_BELOW_400PX,
-} from '../ThemeProvider/spacings';
+} from '#components/ThemeProvider/spacings';
 
 export default {
   captionStyles: ({ mq, isDarkUi, palette, spacings }: Theme) =>

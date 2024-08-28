@@ -13,7 +13,7 @@ import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 import MostRead from '../MostRead';
-import { GHOST } from '../ThemeProvider/palette';
+import { GHOST } from '#components/ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
 import styles from './index.styles';

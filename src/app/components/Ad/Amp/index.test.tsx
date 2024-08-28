@@ -4,7 +4,7 @@ import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContext } from '#contexts/ServiceContext';
-import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
+import latinDiacritics from '#components/ThemeProvider/fontScripts/latinWithDiacritics';
 import { SlotType } from '../types';
 
 const adJsonAttributes = (slotType: SlotType) => ({

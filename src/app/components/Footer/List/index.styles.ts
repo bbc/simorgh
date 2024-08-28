@@ -6,7 +6,7 @@ import {
   GROUP_3_ONLY,
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
-} from '../../ThemeProvider/mediaQueries';
+} from '#components/ThemeProvider/mediaQueries';
 
 // Gets the number of grid rows, taking into account the
 // trustProjectLink in the grid being separate, on its own row.

@@ -6,7 +6,7 @@ import { SlotType } from '../../types';
 import {
   GROUP_3_MAX_WIDTH_BP,
   GROUP_4_MIN_WIDTH_BP,
-} from '../../../ThemeProvider/mediaQueries';
+} from '#components/ThemeProvider/mediaQueries';
 
 const publicServiceList = ['news', 'sport', 'ws'];
 

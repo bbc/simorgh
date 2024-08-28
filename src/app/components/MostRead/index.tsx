@@ -9,7 +9,7 @@ import Amp from './Amp';
 import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
-import { WHITE } from '../ThemeProvider/palette';
+import { WHITE } from '#components/ThemeProvider/palette';
 import isLocal from '#lib/utilities/isLocal';
 import {
   STORY_PAGE,
