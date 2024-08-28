@@ -1,6 +1,6 @@
 /**
  * @service serbian
- * @pathname /serbian/lat/live/media-23179005
+ * @pathname /serbian/live/media-23179005/lat
  */
 
 import { runHeaderTests } from '../../../../../src/integration/common';
