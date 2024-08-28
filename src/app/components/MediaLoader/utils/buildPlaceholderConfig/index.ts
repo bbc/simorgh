@@ -8,12 +8,11 @@ type BuildPlaceholderConfigParams = {
   title: string;
   duration: number;
   holdingImageURL: string;
-  placeholderImageOriginCode?: string;
+  placeholderImageOriginCode: string;
   placeholderImageLocator: string;
   type: MediaType;
   durationISO8601?: string;
   translations?: Translations;
-  guidanceMessage?: string | null;
 };
 
 export default ({
@@ -24,7 +23,6 @@ export default ({
   placeholderImageOriginCode,
   placeholderImageLocator,
   translations,
-  guidanceMessage,
   type,
 }: BuildPlaceholderConfigParams): PlaceholderConfig => {
   const momentDuration = moment.duration(duration, 'seconds');
@@ -51,7 +49,6 @@ export default ({
         padMinutes: true,
       }),
       durationSpoken: `${durationTranslation} ${formatDuration({ duration: momentDuration, separator: ',' })}`,
-      guidanceMessage,
       type,
     },
   };
