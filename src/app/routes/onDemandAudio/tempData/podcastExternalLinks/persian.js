@@ -55,7 +55,7 @@ const externalLinks = {
         linkUrl:
           'https://castbox.fm/channel/%D9%85%D8%B3%D8%AA%D9%86%D8%AF-id2007735?country=gb',
         linkType: 'castbox',
-      }
+      },
     ],
     p02pc9mc: [
       {
