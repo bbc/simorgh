@@ -26,7 +26,7 @@ import {
   UGC_PAGE,
   AV_EMBEDS,
   DOWNLOADS_PAGE,
-} from '../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import { PageTypes, Platforms } from '#models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';

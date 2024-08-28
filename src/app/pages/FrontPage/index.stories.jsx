@@ -9,7 +9,7 @@ import { service as urduConfig } from '../../lib/config/services/urdu';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as serbianConfig } from '../../lib/config/services/serbian';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 

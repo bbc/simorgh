@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import { TOPIC_PAGE } from '#routes/utils/pageTypes';
 import defaultTopic from '#data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzTopicWithMessageBanners from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import persianTopicWithMessageBanners from '#data/persian/topics/cyy2zqnqn67t.json';

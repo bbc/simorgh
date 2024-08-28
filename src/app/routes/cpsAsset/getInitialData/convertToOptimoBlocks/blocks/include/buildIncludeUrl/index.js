@@ -1,6 +1,6 @@
 import Url from 'url-parse';
 
-import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
+import { addOverrideQuery } from '#routes/utils/overrideRendererOnTest';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export default (href, type, pathname) => {

@@ -14,7 +14,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
-import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
+import { getImageParts } from '#routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';

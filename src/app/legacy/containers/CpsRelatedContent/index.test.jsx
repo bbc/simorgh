@@ -7,7 +7,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859.json';
 
-import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';

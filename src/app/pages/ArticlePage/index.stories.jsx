@@ -3,7 +3,7 @@ import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';

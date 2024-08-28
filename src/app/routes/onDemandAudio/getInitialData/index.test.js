@@ -4,7 +4,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import podcastJson from '#data/arabic/podcasts/p02pc9qc/p08wtg4d';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import arabicExternalLinks from '../tempData/podcastExternalLinks/arabic';
 import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';

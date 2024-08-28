@@ -2,7 +2,7 @@ import React, { createRef, useMemo } from 'react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import {
   render,
   fireEvent,

@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import { insertBlockAfterHeadline } from '../helpers';
 import deepClone from '../../../utils/jsonClone';
 

@@ -1,4 +1,4 @@
-import isAppPath from '#app/routes/utils/isAppPath';
+import isAppPath from '#routes/utils/isAppPath';
 
 describe('isAppPath', () => {
   [

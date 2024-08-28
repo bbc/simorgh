@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { render } from '@testing-library/react';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import * as getStatsDestination from './getStatsDestination';
 import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';

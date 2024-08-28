@@ -18,7 +18,7 @@ import {
   liveRadioDataPath,
   podcastEpisodeDataPath,
   podcastBrandDataPath,
-} from '#app/routes/utils/regex';
+} from '#routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import constructDataFilePath from './constructDataFilePath';

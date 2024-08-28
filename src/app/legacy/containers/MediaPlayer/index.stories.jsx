@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { validVideoWithCaptionBlock } from './fixtureData';
 import MediaPlayerContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';

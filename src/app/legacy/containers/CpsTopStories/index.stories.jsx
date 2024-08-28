@@ -4,7 +4,7 @@ import newsTopStories from '#pages/StoryPage/newsTopStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import TopStories from '.';
 import ThemeProvider from '../../../components/ThemeProvider';

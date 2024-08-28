@@ -24,7 +24,7 @@ import {
   blockContainingText,
   singleTextBlock,
 } from '#models/blocks/index';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import {
   render,

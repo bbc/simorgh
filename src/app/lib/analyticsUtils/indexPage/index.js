@@ -3,7 +3,7 @@ import {
   FRONT_PAGE,
   FEATURE_INDEX_PAGE,
   HOME_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 
 export const getPageIdentifier = (indexPageData, service) => {
   return pathOr(

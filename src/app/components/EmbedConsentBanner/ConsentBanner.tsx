@@ -4,7 +4,7 @@ import { useContext, MouseEvent } from 'react';
 import pathOr from 'ramda/src/pathOr';
 
 import { RequestContext } from '#app/contexts/RequestContext';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';

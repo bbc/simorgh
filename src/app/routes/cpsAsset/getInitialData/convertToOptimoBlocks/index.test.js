@@ -1,6 +1,6 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertToOptimoBlocks
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import { CPSVersionBlock, optimoVersionBlock } from './blocks/version/fixtures';
 import {

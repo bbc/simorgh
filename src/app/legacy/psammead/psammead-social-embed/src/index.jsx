@@ -16,7 +16,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   LIVE_PAGE,
-} from '../../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 
 const checkIsSupportedProvider = (provider, pageType) => {
   // Optimo Articles support all social media providers

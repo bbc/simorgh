@@ -130,7 +130,7 @@ import {
 
 import gridWidths from './gridWidths';
 
-import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '#routes/utils/pageTypes';
 import { BrandPalette, Typography, BrandSVG } from '#models/types/theming';
 import { PageTypes } from '#models/types/global';
 

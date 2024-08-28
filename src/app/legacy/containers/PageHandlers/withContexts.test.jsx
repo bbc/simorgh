@@ -10,7 +10,7 @@ import {
   ARTICLE_PAGE,
   FRONT_PAGE,
   HOME_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import * as serviceContextImports from '../../../contexts/ServiceContext';
 import * as requestContextImports from '../../../contexts/RequestContext';
 import * as eventTrackingContextImports from '../../../contexts/EventTrackingContext';

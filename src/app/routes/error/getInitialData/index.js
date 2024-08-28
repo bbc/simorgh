@@ -1,4 +1,4 @@
-import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { ERROR_PAGE } from '#routes/utils/pageTypes';
 import { matchRoutes } from 'react-router-config';
 
 export default pathRegex =>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import { OnDemandAudioPage } from '..';
 import indonesia from './fixtureData/indonesia';

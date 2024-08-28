@@ -1,7 +1,7 @@
 import React from 'react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import {
   render,
   act,

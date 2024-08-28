@@ -1,4 +1,4 @@
-import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { MOST_READ_PAGE } from '#routes/utils/pageTypes';
 import * as fetchPageData from '../../utils/fetchPageData';
 import mostReadJson from '../../../../../data/pidgin/mostRead/index.json';
 import getInitialData from '.';

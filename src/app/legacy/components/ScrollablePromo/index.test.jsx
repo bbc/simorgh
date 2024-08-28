@@ -10,7 +10,7 @@ import {
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
-import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {

@@ -1,4 +1,4 @@
-import isAmpPath from '#app/routes/utils/isAmpPath';
+import isAmpPath from '#routes/utils/isAmpPath';
 
 describe('isAmpPath', () => {
   [

@@ -6,7 +6,7 @@ import {
   OptimizelyProvider,
   ReactSDKClient,
 } from '@optimizely/react-sdk';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import { Article } from '#app/models/types/optimo';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';

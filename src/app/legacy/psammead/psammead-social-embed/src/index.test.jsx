@@ -11,7 +11,7 @@ import {
   ARTICLE_PAGE,
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
-} from '../../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 
 import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
 import fixtures from './fixtures';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import BulletinContainer from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import {

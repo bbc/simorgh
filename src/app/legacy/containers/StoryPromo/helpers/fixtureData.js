@@ -1,4 +1,4 @@
-import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
 import relItems from '../IndexAlsos/relatedItems';
 
 export const completeItem = {

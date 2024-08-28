@@ -4,7 +4,7 @@ import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import { visuallyHiddenStyle } from '../../../../../lib/styles.const';
 import { GREY_6 } from '../../../../../components/ThemeProvider/palette';
 

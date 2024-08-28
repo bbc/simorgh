@@ -30,7 +30,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
-import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
+import getPlaceholderImageUrl from '#routes/utils/getPlaceholderImageUrl';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 
 const Wrapper = styled.div`

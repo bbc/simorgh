@@ -1,6 +1,6 @@
 import React from 'react';
 import loggerMock from '#testHelpers/loggerMock';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import SocialEmbedContainer from '.';
 import {
   render,

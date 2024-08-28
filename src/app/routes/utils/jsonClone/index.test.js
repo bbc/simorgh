@@ -1,4 +1,4 @@
-import jsonClone from '#app/routes/utils/jsonClone';
+import jsonClone from '#routes/utils/jsonClone';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 
 describe('jsonClone', () => {

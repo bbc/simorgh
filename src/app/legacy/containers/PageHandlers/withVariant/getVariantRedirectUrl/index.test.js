@@ -4,7 +4,7 @@ import {
   servicesWithVariants,
   getVariantCookieName,
 } from '#lib/utilities/variantHandler';
-import { articlePath, frontPagePath } from '#app/routes/utils/regex';
+import { articlePath, frontPagePath } from '#routes/utils/regex';
 import getVariantRedirectUrl from './index';
 
 const serviceNames = ['serbian', 'ukchina', 'zhongwen']; // omits uzbek

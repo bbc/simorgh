@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { StoryArgs } from '#app/models/types/storybook';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import { Services } from '#models/types/global';

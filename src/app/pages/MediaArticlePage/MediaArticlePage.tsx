@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
 import useToggle from '../../hooks/useToggle';
 import {

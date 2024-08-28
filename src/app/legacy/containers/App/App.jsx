@@ -2,7 +2,7 @@ import { renderRoutes } from 'react-router-config';
 import pick from 'ramda/src/pick';
 import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
-import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
 
 const mapToState = ({ pathname, initialData, routeProps, toggles }) => {

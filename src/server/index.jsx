@@ -7,7 +7,7 @@ import omit from 'ramda/src/omit';
 import helmet from 'helmet';
 import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
-import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#routes/utils/fetchPageData/utils/getRouteProps';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,

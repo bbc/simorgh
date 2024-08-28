@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '#components/Grid';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import getNumberPromoFixtures from './testHelpers';

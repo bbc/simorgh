@@ -1,6 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import deepClone from '../../../utils/jsonClone';
 import {
   getVisuallyHiddenHeadlineBlock,

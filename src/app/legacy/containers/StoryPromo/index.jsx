@@ -22,7 +22,7 @@ import {
 } from '#lib/utilities/getStoryPromoInfo';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
-import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import LinkContents from './LinkContents';

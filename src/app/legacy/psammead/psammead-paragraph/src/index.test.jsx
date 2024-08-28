@@ -3,7 +3,7 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import Paragraph from './index';
-import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 
 describe('Paragraph', () => {
   it('should render correctly', () => {

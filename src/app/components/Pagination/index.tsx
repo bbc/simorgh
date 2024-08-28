@@ -9,7 +9,7 @@ import {
   GROUP_4_MIN_WIDTH_BP,
 } from '#app/components/ThemeProvider/mediaQueries';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import { Direction } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';

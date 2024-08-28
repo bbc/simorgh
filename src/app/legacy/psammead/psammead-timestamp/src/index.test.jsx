@@ -3,7 +3,7 @@ import { getPica } from '#psammead/gel-foundations/src/typography';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Timestamp from '.';
-import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 
 describe('Timestamp', () => {
   it('should render Timestamp correctly', () => {

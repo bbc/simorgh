@@ -7,7 +7,7 @@ import {
   STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   articleDataNews,
   articleDataPersian,

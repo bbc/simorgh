@@ -2,7 +2,7 @@ import React from 'react';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import featuresRtl from './fixturesRtl.json';
 import features from './fixtures.json';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';

@@ -12,7 +12,7 @@ import {
   TOPIC_PAGE,
   MEDIA_ARTICLE_PAGE,
   LIVE_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   chartbeatUID,
   useCanonical,

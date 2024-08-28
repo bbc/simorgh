@@ -9,7 +9,7 @@ import {
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
   HOME_PAGE,
-} from '../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import { render, act } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MostRead from '.';

@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';

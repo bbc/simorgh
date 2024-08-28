@@ -1,6 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { render } from '../../react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';

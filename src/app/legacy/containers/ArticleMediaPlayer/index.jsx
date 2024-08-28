@@ -8,7 +8,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
 const formatAssetId = assetUri => {

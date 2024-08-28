@@ -2,7 +2,7 @@ import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';

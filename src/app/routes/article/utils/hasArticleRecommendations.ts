@@ -1,4 +1,4 @@
-import getConfig from '#app/routes/utils/getConfig';
+import getConfig from '#routes/utils/getConfig';
 import path from 'ramda/src/path';
 
 const hasArticleRecommendations = async (

@@ -1,12 +1,12 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages';
-import { articlePath } from '#app/routes/utils/regex';
+import { articlePath } from '#routes/utils/regex';
 import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
   ERROR_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 const ArticleVariation = props => {

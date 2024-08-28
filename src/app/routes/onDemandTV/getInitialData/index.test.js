@@ -4,7 +4,7 @@ import map from 'ramda/src/map';
 import loggerMock from '#testHelpers/loggerMock';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import { TV_MISSING_FIELD } from '#lib/logger.const';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
 

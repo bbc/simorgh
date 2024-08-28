@@ -6,7 +6,7 @@ import { TV_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
-import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
+import processRecentEpisodes from '#routes/utils/processRecentEpisodes';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';

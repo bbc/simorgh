@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';

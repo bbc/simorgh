@@ -11,7 +11,7 @@ import {
   frontPagePath,
   legacyAssetPagePath,
   topicPath,
-} from '#app/routes/utils/regex';
+} from '#routes/utils/regex';
 import { render, fireEvent } from '../../react-testing-library-with-providers';
 import { service as ukChinaServiceConfig } from '../../../lib/config/services/ukchina';
 import { service as serbianServiceConfig } from '../../../lib/config/services/serbian';

@@ -5,7 +5,7 @@ import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
-import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import articleData from '../../../../data/hausa/articles/cw43vy8zdjvo.json';
 import tamilArticle from '../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';

@@ -1,6 +1,6 @@
 import { FrontPage } from '#pages';
-import { frontPagePath } from '#app/routes/utils/regex';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { frontPagePath } from '#routes/utils/regex';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {

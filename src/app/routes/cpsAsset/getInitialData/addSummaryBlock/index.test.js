@@ -2,7 +2,7 @@ import deepClone from 'ramda/src/clone';
 import {
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import addSummaryBlock from '.';
 
 const pglInput = {

@@ -3,7 +3,7 @@ import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   render,
   screen,

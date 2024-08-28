@@ -6,7 +6,7 @@ import {
   RequestContext,
   RequestContextProps,
 } from '../../../contexts/RequestContext';
-import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { Services } from '#models/types/global';
 import {
   sampleRiddleProps,
