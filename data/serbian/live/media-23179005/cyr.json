@@ -1,0 +1,333 @@
+{
+  "data": {
+    "title": "Live test page",
+    "description": "Live test page",
+    "language": "sr-Cyrl",
+    "headerImage": null,
+    "promoImage": null,
+    "home": "serbian",
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/serbian/cyr/media",
+      "urlIdentifier": "/serbian/cyr/media",
+      "type": "simple"
+    },
+    "sportDataEvent": {
+      "id": null
+    },
+    "eavisEvent": {
+      "id": null
+    },
+    "article": {
+      "id": null
+    },
+    "mediaCollections": [],
+    "keyHighlight": {
+      "id": null
+    },
+    "electionBanner": {
+      "id": null
+    },
+    "supportingLinks": {
+      "id": null
+    },
+    "seo": {
+      "seoTitle": "Live test page",
+      "seoDescription": "Live test page",
+      "datePublished": "2018-01-10T15:00:00.000Z",
+      "dateModified": "2018-01-10T15:40:55.000Z"
+    },
+    "endDateTime": "2018-01-10T22:00:00.000Z",
+    "startDateTime": "2018-01-10T15:00:00.000Z",
+    "firstPublishedDateTime": "2018-01-10T15:39:37.000Z",
+    "type": "live-coverage",
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": true
+    },
+    "dataSource": "ARES",
+    "isLive": false,
+    "summaryPoints": {
+      "id": null,
+      "content": null
+    },
+    "liveTextStream": {
+      "id": "CA389631A6F1FA49841763024D90DAFC",
+      "contributors": null,
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "97ce27f2",
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5021619c",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "8daaaf50",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Test",
+                                    "blocks": [
+                                      {
+                                        "id": "fb6e9c0e",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Test",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "389a0c22",
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "33b6f13d",
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "id": "5a182752",
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Test",
+                                    "blocks": [
+                                      {
+                                        "id": "61e9549a",
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Test",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "493dd6c8",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Test",
+                        "blocks": [
+                          {
+                            "id": "7b393f9a",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Test",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:4e37236a-b1eb-4e07-a69e-d5034a0c1e6a",
+              "type": "POST",
+              "options": {
+                "isBreakingNews": false
+              },
+              "dates": {
+                "firstPublished": "2018-01-10T15:40:55.000Z",
+                "lastPublished": "2018-01-10T15:40:55.000Z",
+                "time": null,
+                "curated": "2018-01-10T15:40:56.498Z"
+              },
+              "titles": [
+                {
+                  "title": null,
+                  "source": "primary"
+                }
+              ],
+              "descriptions": [
+                {
+                  "text": null,
+                  "source": "summary"
+                }
+              ],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": {
+            "index": 1,
+            "total": 1
+          }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:cps:curie:asset:b3ee2819-0ee3-304a-ad87-a7d533fc22e4",
+        "contentType": "live-coverage",
+        "pageIdentifier": "serbiancyr.embedded_media.live_coverage.23179005.page",
+        "pageTitle": "Live test page",
+        "timePublished": "2018-01-10T15:00:00.000Z",
+        "timeUpdated": "2018-01-10T15:40:55.000Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.0.2",
+        "runtimeVersion": "6.0.0",
+        "standardLibraryVersion": "4.9.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.1",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/ca4ca93ee693ac76ff11a1c81be8dbe31d4639f4/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/319",
+        "buildTime": "2024-08-27T08:40:17.212Z",
+        "traceId": "Root=1-66cf0311-9ea1cbca489813fdb1b9ad15;Parent=328adcfd8f47f73b;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v18.20.4"
+      },
+      "systemContext": {
+        "debug": "1",
+        "service-env": "test",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false
+      }
+    },
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 28 Aug 2024 10:59:29 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "x-shared-cache": "MISS",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Wed, 28 Aug 2024 10:59:34 GMT",
+            "content-encoding": "gzip",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 31
+        },
+        "request": {
+          "module": "live-experience",
+          "params": {
+            "id": "/serbian/cyr/live/media-23179005"
+          },
+          "url": "https://fabl.api.bbci.co.uk/module/live-experience?id=%2Fserbian%2Fcyr%2Flive%2Fmedia-23179005"
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 28 Aug 2024 10:59:30 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "x-shared-cache": "MISS",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Wed, 28 Aug 2024 10:59:34 GMT",
+            "content-encoding": "gzip",
+            "x-local-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 251
+        },
+        "request": {
+          "module": "stream",
+          "params": {
+            "about": "CA389631A6F1FA49841763024D90DAFC",
+            "liveTextStreamId": "CA389631A6F1FA49841763024D90DAFC",
+            "page": 1,
+            "pageSize": 20,
+            "type": "curated"
+          },
+          "url": "https://fabl.api.bbci.co.uk/module/stream?about=CA389631A6F1FA49841763024D90DAFC&liveTextStreamId=CA389631A6F1FA49841763024D90DAFC&page=1&pageSize=20&type=curated"
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Wed, 28 Aug 2024 10:59:30 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "x-shared-cache": "MISS",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Wed, 28 Aug 2024 10:59:34 GMT",
+            "content-encoding": "gzip",
+            "x-local-cache": "HIT"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "module": "stream",
+          "params": {
+            "about": "CA389631A6F1FA49841763024D90DAFC",
+            "liveTextStreamId": "CA389631A6F1FA49841763024D90DAFC",
+            "page": 1,
+            "pageSize": 20,
+            "type": "curated"
+          },
+          "url": "https://fabl.api.bbci.co.uk/module/stream?about=CA389631A6F1FA49841763024D90DAFC&liveTextStreamId=CA389631A6F1FA49841763024D90DAFC&page=1&pageSize=20&type=curated"
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "service": "serbian",
+      "variant": "cyr",
+      "id": "/serbian/cyr/live/media-23179005",
+      "pageType": "live"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": []
+  }
+}
