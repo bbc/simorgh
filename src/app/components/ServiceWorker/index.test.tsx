@@ -1,7 +1,7 @@
 import React from 'react';
 import onClient from '#app/lib/utilities/onClient';
 import isLocal from '#app/lib/utilities/isLocal';
-import { render } from '../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ServiceWorkerContainer from './index';
 

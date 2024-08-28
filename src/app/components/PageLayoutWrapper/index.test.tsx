@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from '../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
 
 global.performance.getEntriesByName = jest.fn(() => []);

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Paragraph from '.';
-import { render, screen } from '../react-testing-library-with-providers';
+import { render, screen } from '#components/react-testing-library-with-providers';
 
 describe('Paragraph', () => {
   it('should render the paragraph text in a p element', async () => {

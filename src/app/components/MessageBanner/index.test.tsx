@@ -3,7 +3,7 @@ import {
   fireEvent,
   render,
   screen,
-} from '../react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import MessageBanner from '.';
 import { kyrgyzMessageBannerOnePromo } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';

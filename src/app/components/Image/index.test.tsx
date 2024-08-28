@@ -5,7 +5,7 @@ import {
   render,
   screen,
   waitFor,
-} from '../react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import Image from '.';
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 

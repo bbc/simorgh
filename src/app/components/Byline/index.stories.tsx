@@ -6,7 +6,7 @@ import {
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
-} from '../../pages/ArticlePage/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 import Byline from '.';
 import readme from './README.md';
 

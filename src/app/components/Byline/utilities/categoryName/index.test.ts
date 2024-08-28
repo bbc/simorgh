@@ -3,7 +3,7 @@ import categoryName from '.';
 import {
   passportTaggings,
   passportPredicatesFormats,
-} from '../../../../pages/ArticlePage/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 
 describe('categoryName', () => {
   it('should return NewsArticle when a service is not a Trust Project participant', () => {

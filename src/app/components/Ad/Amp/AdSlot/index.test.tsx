@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import AdSlot, { getDataSlot, getAssetType } from '.';
 
 describe('getAssetType', () => {

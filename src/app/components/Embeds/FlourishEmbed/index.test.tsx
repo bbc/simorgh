@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import FlourishEmbed from '.';
-import { render } from '../../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { OEmbedData } from '../types';
 
 describe('EmbedIFrame', () => {

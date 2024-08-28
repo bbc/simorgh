@@ -12,7 +12,7 @@ import {
   legacyAssetPagePath,
   topicPath,
 } from '#routes/utils/regex';
-import { render, fireEvent } from '../../react-testing-library-with-providers';
+import { render, fireEvent } from '#components/react-testing-library-with-providers';
 import { service as ukChinaServiceConfig } from '#lib/config/services/ukchina';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { ServiceContext } from '#contexts/ServiceContext';

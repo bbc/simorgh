@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
 

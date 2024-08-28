@@ -12,7 +12,7 @@ import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
-import { render } from '../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,

@@ -1,6 +1,6 @@
 import React from 'react';
 import InlineLink from './index';
-import { fireEvent, render } from '../react-testing-library-with-providers';
+import { fireEvent, render } from '#components/react-testing-library-with-providers';
 
 const fragmentBlock = (text: string, attributes?: string[]) => ({
   id: '91238901',

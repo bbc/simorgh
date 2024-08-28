@@ -6,7 +6,7 @@ import {
   bylineWithLink,
   bylineWithNonPngPhoto,
   bylineWithAllData,
-} from '../../../../pages/ArticlePage/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 
 describe('bylineExtractor', () => {
   it('should return null when authorName is not present', () => {
