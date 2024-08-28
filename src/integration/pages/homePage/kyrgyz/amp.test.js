@@ -3,7 +3,7 @@
  * @pathname /kyrgyz
  */
 
-import { data as pageData } from '#data/kyrgyz/homePage/index.json';
+import { data as pageData } from '../../../../../data/kyrgyz/homePage/index.json';
 import runAmpTests from '../ampTests';
 
 describe('AMP', () => {

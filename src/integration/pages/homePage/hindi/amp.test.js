@@ -3,7 +3,7 @@
  * @pathname /hindi
  */
 
-import { data as pageData } from '#data/hindi/homePage/index.json';
+import { data as pageData } from '../../../../../data/hindi/homePage/index.json';
 import runAmpTests from '../ampTests';
 
 describe('AMP', () => {
