@@ -20,6 +20,9 @@ export default async (context: GetServerSidePropsContext) => {
   let pageStatus;
   let pageJson;
 
+  // Remove x-frame-options header to allow embedding
+  context.res.removeHeader('x-frame-options');
+
   const parsedRoute = parseAvRoute(resolvedUrl);
 
   if (parsedRoute.isWsRoute) {
