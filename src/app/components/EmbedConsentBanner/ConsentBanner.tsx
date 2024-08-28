@@ -9,7 +9,7 @@ import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Translations } from '#models/types/translations';
-import useViewTracker from '../../hooks/useViewTracker';
+import useViewTracker from '#hooks/useViewTracker';
 
 import consentBannerCss from './ConsentBanner.styles';
 import { ConsentBannerProviders, getEventTrackingData } from '.';

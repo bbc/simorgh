@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useViewTracker from '../../../hooks/useViewTracker';
+import useViewTracker from '#hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
 import MostReadRank from './Rank';

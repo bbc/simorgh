@@ -6,8 +6,8 @@ import {
 } from '#components/react-testing-library-with-providers';
 import Billboard from '.';
 import { kyrgyzBillboard } from './fixtures';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];

@@ -7,7 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { render } from '#components/react-testing-library-with-providers';
 import { Services, Variants } from '#models/types/global';
 

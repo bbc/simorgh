@@ -5,7 +5,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import { GridItemLarge } from '#legacy/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '../../hooks/useToggle';
+import useToggle from '#hooks/useToggle';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import Text from '../Text';
 import InlineLink from '../InlineLink';

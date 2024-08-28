@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
 import isLive from '#lib/utilities/isLive';
-import useOperaMiniDetection from '../../../hooks/useOperaMiniDetection';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import adStyles from '../utilities/adSlot.styles';

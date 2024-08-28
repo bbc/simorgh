@@ -7,7 +7,7 @@ import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import { Tag } from '#components/LinkedData/types';
-import useToggle from '../../hooks/useToggle';
+import useToggle from '#hooks/useToggle';
 import {
   getArticleId,
   getHeadline,

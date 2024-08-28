@@ -7,7 +7,7 @@ import {
 
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 describe('Embed Consent Banner', () => {
   it('should render correct elements for the banner', () => {

@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 
 import { RequestContext } from '../RequestContext';
-import useToggle from '../../hooks/useToggle';
+import useToggle from '#hooks/useToggle';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,

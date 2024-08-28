@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import useToggle from '../../hooks/useToggle';
+import useToggle from '#hooks/useToggle';
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';

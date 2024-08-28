@@ -6,8 +6,8 @@ import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { service as newsConfig } from '#lib/config/services/news';
 import Navigation from './index';
-import * as viewTracking from '../../../hooks/useViewTracker';
-import * as clickTracking from '../../../hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 describe('Navigation Container', () => {
   it('should correctly render amp navigation', () => {
