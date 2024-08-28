@@ -14,6 +14,7 @@ import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
+import { PageTypes } from '#app/models/types/global';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -41,24 +42,27 @@ const getGroups = (
 
 export interface OnDemandTVProps {
   pageData: {
+    metadata: {
+      type: PageTypes | string;
+    };
     language: string;
     headline: string;
     shortSynopsis: string;
     brandTitle: string;
-    releaseDateTimeStamp: string;
+    releaseDateTimeStamp: number;
     masterBrand?: string;
     episodeId: string;
     imageUrl: string;
     promoBrandTitle: string;
     thumbnailImageUrl: string;
     durationISO8601: string;
-    recentEpisodes: string[];
+    recentEpisodes?: string[];
     episodeTitle: string;
-    mediumSynopsis: string;
-    contentType: 'player-episode';
+    mediumSynopsis?: string;
+    contentType: 'player-episode' | string;
   };
   mediaIsAvailable?: boolean;
-  MediaError?: React.ElementType;
+  MediaError?: React.Component;
 }
 
 const OnDemandTvPage = ({

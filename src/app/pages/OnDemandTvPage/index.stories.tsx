@@ -6,13 +6,17 @@ import withServicesDecorator from '#storybook/withServicesDecorator';
 import { OnDemandTvPage } from '..';
 import afrique from './fixtureData/afrique.json';
 import pashto from './fixtureData/pashto.json';
+import { OnDemandTVProps } from './OnDemandTvPage';
 
-const onDemandTvFixtures: { pashto: unknown; afrique: unknown } = {
+const onDemandTvFixtures: {
+  pashto: OnDemandTVProps['pageData'];
+  afrique: OnDemandTVProps['pageData'];
+} = {
   pashto,
   afrique,
 };
 
-const matchFixtures = service => ({
+const matchFixtures = (service: 'afrique' | 'pashto') => ({
   params: {
     serviceId: {
       afrique: 'bbc_afrique_tv',
@@ -21,7 +25,10 @@ const matchFixtures = service => ({
   },
 });
 
-const Component = (_, { service }): {} => {
+const Component = (
+  _: unknown,
+  { service }: { service: 'afrique' | 'pashto' },
+) => {
   return (
     <BrowserRouter>
       <OnDemandTvPage
