@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
-import Paragraph from '#app/components/Paragraph';
-import Text from '#app/components/Text';
+import Heading from '#components/Heading';
+import Paragraph from '#components/Paragraph';
+import Text from '#components/Text';
 import { useContext, useEffect, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';

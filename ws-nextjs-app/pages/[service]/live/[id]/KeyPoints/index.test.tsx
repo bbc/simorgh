@@ -3,7 +3,7 @@ import {
   render,
   screen,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import KeyPoints from '.';
 import { singleKeyPoint, multipleKeyPoints, emptyKeyPoints } from './fixture';
 

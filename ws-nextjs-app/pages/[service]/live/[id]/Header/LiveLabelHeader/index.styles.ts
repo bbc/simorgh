@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { HALF, QUADRUPLE } from '#app/components/ThemeProvider/spacings';
+import { HALF, QUADRUPLE } from '#components/ThemeProvider/spacings';
 
 const PULSE_END_MARGIN = HALF;
 const PULSE_SIZE_3_4 = QUADRUPLE;

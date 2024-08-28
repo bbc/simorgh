@@ -1,4 +1,4 @@
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import { MediaBlock } from '#components/MediaLoader/types';
 import { PageTypes } from '#app/models/types/global';
 
 export type AvEmbedsPageProps = {

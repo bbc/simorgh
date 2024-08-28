@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
+import Heading from '#components/Heading';
+import Text from '#components/Text';
 
-import MaskedImage from '#app/components/MaskedImage';
+import MaskedImage from '#components/MaskedImage';
 import LiveLabelHeader from './LiveLabelHeader';
 import styles from './styles';
 

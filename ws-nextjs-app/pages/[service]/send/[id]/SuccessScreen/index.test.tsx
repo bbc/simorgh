@@ -2,7 +2,7 @@ import React from 'react';
 import {
   act,
   render,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import SuccessScreen from '.';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';

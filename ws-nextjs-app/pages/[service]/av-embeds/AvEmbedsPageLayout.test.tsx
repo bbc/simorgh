@@ -2,9 +2,9 @@ import React from 'react';
 import {
   act,
   render,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import { MediaBlock } from '#components/MediaLoader/types';
 import AvEmbedsPage from './AvEmbedsPageLayout';
 
 // @ts-expect-error Mocking require to prevent race condition.

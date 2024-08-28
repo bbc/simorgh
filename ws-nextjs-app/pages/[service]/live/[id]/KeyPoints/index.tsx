@@ -2,7 +2,7 @@
 
 import { useContext } from 'react';
 import { jsx, useTheme } from '@emotion/react';
-import Heading from '#app/components/Heading';
+import Heading from '#components/Heading';
 import LegacyText from '#app/legacy/containers/Text';
 import LegacyParagraph from '#app/legacy/containers/Paragraph';
 import BulletedList from '#app/legacy/containers/BulletedList';

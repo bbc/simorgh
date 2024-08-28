@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
-import Paragraph from '#app/components/Paragraph';
+import Heading from '#components/Heading';
+import Paragraph from '#components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';

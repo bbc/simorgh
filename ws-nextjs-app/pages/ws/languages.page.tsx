@@ -2,9 +2,9 @@ import Head from 'next/head';
 import * as React from 'react';
 import { GetServerSideProps } from 'next';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
-import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-import ATIAnalytics from '#app/components/ATIAnalytics';
-import MetadataContainer from '#app/components/Metadata';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import ATIAnalytics from '#components/ATIAnalytics';
+import MetadataContainer from '#components/Metadata';
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(

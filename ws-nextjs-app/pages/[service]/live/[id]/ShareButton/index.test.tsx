@@ -3,7 +3,7 @@ import {
   render,
   screen,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import userEvent from '@testing-library/user-event';
 import ShareButton from '.';
 

@@ -5,7 +5,7 @@ import {
   render,
   screen,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import { GetServerSidePropsContext } from 'next';

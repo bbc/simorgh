@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import SubmitButtonComponent from '.';
 
 const Component = () => (

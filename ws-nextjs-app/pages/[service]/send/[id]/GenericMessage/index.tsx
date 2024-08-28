@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import React, { forwardRef, ReactNode } from 'react';
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
-import Paragraph from '#app/components/Paragraph';
+import Heading from '#components/Heading';
+import Paragraph from '#components/Paragraph';
 import styles from './styles';
 
 interface Props {
