@@ -165,7 +165,6 @@ const OnDemandTvPage = ({
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          {/* @ts-expect-error: Allow children to be passed as props */}
           <VisuallyHiddenText as="h1" tabIndex={-1} id="content">
             {/* these must be concatenated for screen reader UX - #7062 */}
             {`${brandTitle}, ${formattedTimestamp}`}
