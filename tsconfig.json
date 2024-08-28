@@ -24,18 +24,19 @@
     "paths": {
       "#app/*": ["src/app/*"],
       "#contexts/*": ["src/app/contexts/*"],
-      "#components/*": ["src/app/legacy/components/*"],
+      "#components/*": ["src/app/components/*"],
       "#containers/*": ["src/app/legacy/containers/*"],
       "#data/*": ["data/*"],
       "#hooks/*": ["src/app/hooks/*"],
+      "#legacy/*": ["src/app/legacy/*"],
       "#lib/*": ["src/app/lib/*"],
-      "#psammead/*": ["src/app/legacy/psammead/*"],
       "#models/*": ["src/app/models/*"],
-      "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
+      "#psammead/*": ["src/app/legacy/psammead/*"],
+      "react": ["./node_modules/@types/react"],
       "#server/*": ["src/server/*"],
       "#storybook/*": [".storybook/*"],
-      "react": ["./node_modules/@types/react"]
+      "#testHelpers/*": ["src/testHelpers/*"]
     }
   },
   "include": ["src/**/*"],
