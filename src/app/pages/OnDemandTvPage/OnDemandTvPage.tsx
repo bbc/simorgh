@@ -43,12 +43,12 @@ const getGroups = (
 export interface OnDemandTVProps {
   pageData: {
     metadata: {
-      type: PageTypes | string;
+      type: PageTypes;
     };
     language: string;
     headline: string;
     shortSynopsis: string;
-    brandTitle: string;
+    brandTitle?: string;
     releaseDateTimeStamp: number;
     masterBrand?: string;
     episodeId: string;
@@ -62,7 +62,7 @@ export interface OnDemandTVProps {
     contentType: 'player-episode' | string;
   };
   mediaIsAvailable?: boolean;
-  MediaError?: React.Component;
+  MediaError: React.Component;
 }
 
 const OnDemandTvPage = ({
@@ -124,7 +124,7 @@ const OnDemandTvPage = ({
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
-        contentType={contentType}
+        contentType={contentType as 'player-episode'}
       />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -188,6 +188,7 @@ const OnDemandTvPage = ({
               css={styles.mediaPlayer}
             />
           ) : (
+            //  @ts-expect-error allow rendering of MediaError component when media is not available
             <MediaError skin="video" />
           )}
 
