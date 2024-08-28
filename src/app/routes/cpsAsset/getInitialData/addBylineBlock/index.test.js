@@ -1,4 +1,4 @@
-import deepClone from '../../../utils/jsonClone';
+import deepClone from '#routes/utils/jsonClone';
 import addBylineBlock from '.';
 
 const styInput = {

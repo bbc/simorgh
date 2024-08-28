@@ -1,5 +1,5 @@
 import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
-import deepClone from '../../../utils/jsonClone';
+import deepClone from '#routes/utils/jsonClone';
 import addHeadlineBlock from '.';
 import {
   getVisuallyHiddenHeadlineBlock,

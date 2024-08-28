@@ -5,7 +5,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
 } from '#routes/utils/pageTypes';
 import { insertBlockAfterHeadline } from '../helpers';
-import deepClone from '../../../utils/jsonClone';
+import deepClone from '#routes/utils/jsonClone';
 
 const getBylineBlock = json => {
   const byline = pathOr(null, ['promo', 'byline'], json);

@@ -2,7 +2,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { singleTextBlock } from '#app/models/blocks';
 import { PHOTO_GALLERY_PAGE } from '#routes/utils/pageTypes';
-import deepClone from '../../../utils/jsonClone';
+import deepClone from '#routes/utils/jsonClone';
 import { insertBlockAfterHeadline } from '../helpers';
 
 const getSummary = json => {
