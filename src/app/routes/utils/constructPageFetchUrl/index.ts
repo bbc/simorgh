@@ -98,14 +98,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case LIVE_PAGE:
       getIdFunction = (path: string) => {
-        const isTipoId = isTipoIdCheck(path);
-        const isCpsId = isCpsIdCheck(path);
-        const id = isTipoId ? getTipoId(path) : getCpsId(path);
-        if (isTipoId) {
-          return id;
+        if (isTipoIdCheck(path)) {
+          return getTipoId(path);
         }
-        if (isCpsId) {
-          return `/${service}/live/${id}`;
+        if (isCpsIdCheck(path)) {
+          return `/${service}/live/${getCpsId(path)}`;
         }
         return null;
       };
