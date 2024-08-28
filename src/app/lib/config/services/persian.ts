@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'صفحه ۲',
+      brandTitle: 'اسطوره تختی',
       brandDescription:
-        'در این برنامه با صاحب‌نظران درباره مسائل سیاسی و اجتماعی روز گفت‌ و‌ گو می‌کنیم.',
+        'در مجموعه چهار قسمتی «اسطوره تختی» از زندگی شخصی، ورزشی و اجتماعی غلامرضا تختی می‌شنویم. رعنا رحیم‌پور، روزنامه‌نگار آزاد، در این مجموعه نگاهی کرده به آنچه از تختی اسطوره ساخت.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p069d2yl.jpg',
-        alt: 'صفحه ۲',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jkc7rj.jpg',
+        alt: 'اسطوره تختی',
       },
       linkLabel: {
         text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p05gyy09',
+        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
