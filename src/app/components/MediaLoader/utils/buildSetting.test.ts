@@ -478,6 +478,7 @@ describe('buildSettings', () => {
             duration: '19:52',
             durationSpoken: 'अवधि 19,52',
             type: 'video',
+            guidanceMessage: undefined,
           },
           placeholderSrc:
             'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
