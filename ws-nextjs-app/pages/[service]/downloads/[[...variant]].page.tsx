@@ -7,7 +7,7 @@ import getToggles from '#app/lib/utilities/getToggles/withCache';
 import dataFetch from './dataFetch';
 
 import downloadsPageLayout from './downloadsPageLayout';
-import extractHeaders from '../../../../src/server/utilities/extractHeaders';
+import extractHeaders from '#server/utilities/extractHeaders';
 
 const pageTitle = '다운로드 - BBC News 코리아';
 
