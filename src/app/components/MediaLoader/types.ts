@@ -58,6 +58,7 @@ export type ConfigBuilderProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedUrl?: string;
+  isAmp: boolean;
 };
 
 export type PlaceholderConfig = {
@@ -163,6 +164,7 @@ export type ClipMediaBlock = {
       urlTemplate: string;
     }[];
     video: {
+      id: string;
       title: string;
       version: {
         id: string;

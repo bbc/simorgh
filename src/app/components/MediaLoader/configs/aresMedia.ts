@@ -20,6 +20,7 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
   embedUrl,
+  isAmp,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
@@ -71,7 +72,7 @@ export default ({
 
   const subType = aresMediaBlock?.model?.blocks?.[0]?.model?.subType;
 
-  const id = aresMediaBlock?.model?.blocks?.[0]?.model?.id;
+  const videoId = aresMediaBlock?.model?.blocks?.[0]?.model?.id;
 
   const holdingImageURL = buildIChefURL({
     originCode,
@@ -101,8 +102,8 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
-      insideIframe: true, // add conditional so this only applies to syndicated and amp videos?
-      ...(embeddingAllowed && { externalEmbedUrl: embedUrl }),
+      ...(isAmp && { insideIframe: true }), // TO DO? - Extend to cover syndication
+      ...(embeddingAllowed && embedUrl && { externalEmbedUrl: embedUrl }),
       playlistObject: {
         title,
         summary: caption || '',
@@ -114,10 +115,8 @@ export default ({
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        // clipPID: versionID, // think this shouldn't be Version ID
-        clipPID: subType === 'clip' ? id : null,
-        episodePID: subType === 'episode' ? id : null,
-        // check stats object
+        clipPID: subType === 'clip' ? videoId : null,
+        episodePID: subType === 'episode' ? videoId : null,
       },
     },
     placeholderConfig,

@@ -60,6 +60,7 @@ const buildSettings = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedUrl,
+    isAmp,
   });
 
   if (!config) return null;

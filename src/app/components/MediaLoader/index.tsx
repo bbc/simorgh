@@ -150,8 +150,6 @@ const MediaLoader = ({ blocks, embedUrl, className }: Props) => {
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
-  console.log(blocks);
-
   const {
     pageType,
     counterName,
