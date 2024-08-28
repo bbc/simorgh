@@ -141,13 +141,16 @@ const MediaContainer = ({
 
 type Props = {
   className?: string;
+  embedUrl?: string;
   blocks: MediaBlock[];
 };
 
-const MediaLoader = ({ blocks, className }: Props) => {
+const MediaLoader = ({ blocks, embedUrl, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
+
+  console.log(blocks);
 
   const {
     pageType,
@@ -175,6 +178,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
     translations,
     adsEnabled,
     showAdsBasedOnLocation,
+    embedUrl,
   });
 
   if (!config) return null;

@@ -13,7 +13,8 @@ export type PlayerConfig = {
   insideIframe?: boolean;
   externalEmbedUrl?: string;
   statsObject: {
-    clipPID?: string;
+    clipPID?: string | null;
+    episodePID?: string | null;
     destination: string;
     producer: string | '';
   };
@@ -56,6 +57,7 @@ export type ConfigBuilderProps = {
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedUrl?: string;
 };
 
 export type PlaceholderConfig = {
@@ -133,7 +135,9 @@ export type AresMediaBlock = {
     blocks: AresMediaBlock[];
     imageUrl: string;
     format: 'audio' | 'video';
+    id: string;
     embedding: boolean;
+    subType: string;
     versions: {
       versionId: string;
       duration: number;
@@ -252,4 +256,5 @@ export type BuildConfigProps = {
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedUrl?: string;
 };

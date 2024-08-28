@@ -19,6 +19,7 @@ export default ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedUrl,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
@@ -68,6 +69,10 @@ export default ({
   const embeddingAllowed =
     aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
 
+  const subType = aresMediaBlock?.model?.blocks?.[0]?.model?.subType;
+
+  const id = aresMediaBlock?.model?.blocks?.[0]?.model?.id;
+
   const holdingImageURL = buildIChefURL({
     originCode,
     locator,
@@ -96,10 +101,8 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
-      // add conditional?
-      insideIframe: true, // might need to change for Optimo
-      // if embeddingAllowed
-      // externalEmbedUrl: metadata.mediaURL // see changes in https://github.com/bbc/simorgh/pull/11878/files#diff-5cbcc084bd11c11d6c1fa572d2ef7953415d40f56c7832c4908663b77438f31d
+      insideIframe: true, // add conditional so this only applies to syndicated and amp videos?
+      ...(embeddingAllowed && { externalEmbedUrl: embedUrl }),
       playlistObject: {
         title,
         summary: caption || '',
@@ -111,10 +114,9 @@ export default ({
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        // is this the same as mediaId?
-        // get episodePID
-        // subType back in the response, so clipPID or episodePID can be set in the statsObject
-        clipPID: versionID,
+        // clipPID: versionID, // think this shouldn't be Version ID
+        clipPID: subType === 'clip' ? id : null,
+        episodePID: subType === 'episode' ? id : null,
         // check stats object
       },
     },

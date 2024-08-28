@@ -28,6 +28,7 @@ const buildSettings = ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedUrl,
 }: BuildConfigProps) => {
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
@@ -36,8 +37,6 @@ const buildSettings = ({
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
-    // check here or in AresMediaPlayer
-    externalEmbedUrl: '', // TODO: Check requirements on this, will need added in future when media player has dedicated page for AMP support
     ui: {
       controls: { enabled: true },
       locale: { lang: lang || 'en' },
@@ -60,6 +59,7 @@ const buildSettings = ({
     translations,
     adsEnabled,
     showAdsBasedOnLocation,
+    embedUrl,
   });
 
   if (!config) return null;
