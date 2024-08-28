@@ -13,7 +13,7 @@ import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';

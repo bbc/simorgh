@@ -1,6 +1,6 @@
 import React from 'react';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ProgramCard from '../ProgramCard';

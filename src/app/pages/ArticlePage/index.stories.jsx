@@ -1,7 +1,7 @@
 import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';

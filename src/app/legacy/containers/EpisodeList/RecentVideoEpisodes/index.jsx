@@ -20,7 +20,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
   color: ${props => props.theme.palette.WHITE};

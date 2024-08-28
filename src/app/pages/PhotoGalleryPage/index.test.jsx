@@ -10,7 +10,7 @@ import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.jso
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768.json';
 import getInitialData from '#routes/cpsAsset/getInitialData';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import PhotoGalleryPage from '.';
 

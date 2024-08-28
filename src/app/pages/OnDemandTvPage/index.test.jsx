@@ -10,7 +10,7 @@ import getInitialData from '#routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import _OnDemandTvPage from './OnDemandTvPage';
 
 const pageType = MEDIA_PAGE;

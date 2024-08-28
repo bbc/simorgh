@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ThemeProvider from '../../ThemeProvider';
 import RelatedContentItem from '.';
 import { RelatedContentData, RelatedContentItemWithCaption } from '../fixture';

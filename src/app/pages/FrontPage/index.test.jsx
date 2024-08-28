@@ -6,7 +6,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
 import getInitialData from '#routes/frontPage/getInitialData';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FrontPage from '.';
 

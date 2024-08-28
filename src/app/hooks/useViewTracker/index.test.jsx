@@ -11,7 +11,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import useViewTracker from '.';
 
 import fixtureData from './fixtureData.json';

@@ -6,7 +6,7 @@ import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 
 const BulletsWithContext = ({ blocks, blockGroupIndex }) => {

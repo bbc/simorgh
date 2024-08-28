@@ -12,7 +12,7 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
   RelatedContentGrid,
   StyledRelatedContentSection,

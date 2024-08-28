@@ -32,7 +32,7 @@ import {
   waitFor,
   act,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import ATIAnalytics from '../../components/ATIAnalytics';

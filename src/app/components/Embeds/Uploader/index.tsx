@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
 import styles from './index.styles';

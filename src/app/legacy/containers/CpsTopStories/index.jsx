@@ -7,7 +7,7 @@ import {
 } from '#psammead/psammead-story-promo-list/src';
 
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 

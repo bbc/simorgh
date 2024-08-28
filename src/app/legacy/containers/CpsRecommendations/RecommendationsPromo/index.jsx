@@ -12,8 +12,8 @@ import {
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 
-import { RequestContext } from '../../../../contexts/RequestContext';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';

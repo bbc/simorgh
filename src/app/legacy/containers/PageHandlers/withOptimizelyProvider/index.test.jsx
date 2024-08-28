@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import withOptimizelyProvider from '.';
 
 const optimizelyProviderSpy = jest.spyOn(

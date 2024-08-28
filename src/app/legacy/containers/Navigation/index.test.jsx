@@ -3,7 +3,7 @@ import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { service as newsConfig } from '../../../lib/config/services/news';
 import Navigation from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';

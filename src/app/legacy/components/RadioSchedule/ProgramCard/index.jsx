@@ -15,7 +15,7 @@ import {
   getPica,
 } from '#psammead/gel-foundations/src/typography';
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';
 

@@ -59,7 +59,7 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';

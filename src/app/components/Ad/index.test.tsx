@@ -9,7 +9,7 @@ import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
-} from '../../contexts/ServiceContext';
+} from '#contexts/ServiceContext';
 import AdContainer from './index';
 
 const context = {

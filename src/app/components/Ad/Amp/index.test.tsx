@@ -3,7 +3,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { render } from '../../react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
 import { SlotType } from '../types';
 

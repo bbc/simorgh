@@ -1,7 +1,7 @@
 import { useContext, PropsWithChildren } from 'react';
 import nodeLogger from '../../../lib/logger.node';
 import { RECOMMENDATIONS_MISSING_DATA } from '../../../lib/logger.const';
-import { RequestContext } from '../../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 const logger = nodeLogger(__filename);
 

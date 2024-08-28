@@ -8,7 +8,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import Footer from '#app/components/Footer';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import BrandContainer from '../Brand';
 
 const StyledFooter = styled.footer`

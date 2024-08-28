@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import MediaPlayerContainer from '#legacy/containers/MediaPlayer';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { MediaBlock } from '../MediaLoader/types';
 import { GridItemMediumNoMargin } from '#legacy/components/Grid';
 

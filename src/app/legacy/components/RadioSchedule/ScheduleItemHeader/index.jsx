@@ -13,7 +13,7 @@ import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 
 const TitleWrapper = styled.span`

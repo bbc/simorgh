@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { render } from '../../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Subhead from '.';
 
 import { Services } from '#models/types/global';

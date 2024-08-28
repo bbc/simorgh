@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { OEmbedProps } from '../types';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   RequestContext,
   RequestContextProps,
-} from '../../../contexts/RequestContext';
+} from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { Services } from '#models/types/global';
 import {

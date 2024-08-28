@@ -2,7 +2,7 @@ import React from 'react';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import FooterTimestamp from '.';
 
 const RenderTimestamp = ({ releaseDateTimeStamp }) => (

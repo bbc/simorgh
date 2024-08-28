@@ -13,7 +13,7 @@ import {
 } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandTitle = styled.span`
   display: block;

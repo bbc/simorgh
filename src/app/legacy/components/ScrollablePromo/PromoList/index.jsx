@@ -10,7 +10,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Promo from '../Promo';
 
 const StandardScrollPromo = styled.ul`

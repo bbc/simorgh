@@ -4,7 +4,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useLocation from '#hooks/useLocation';
 import useToggle from '#hooks/useToggle';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Canonical from './Canonical';
 
 const RadioSchedule = ({

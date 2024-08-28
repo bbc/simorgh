@@ -16,7 +16,7 @@ import {
 
 import { MediaMessage } from '#components/MediaPlayer';
 import { EPISODE_STATUS } from '..';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const AudioErrorWrapper = styled.div`
   position: relative;

@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import RadioScheduleContainer from '..';
 
 const getToggleState = enabled => ({

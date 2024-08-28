@@ -1,7 +1,7 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
-import withContext from '../../../contexts/utils/withContext';
+import withContext from '#contexts/utils/withContext';
 import { ChineseConfig } from '#models/types/serviceConfig';
 import { Direction, Services } from '#models/types/global';
 

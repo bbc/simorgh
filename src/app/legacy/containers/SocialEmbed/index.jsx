@@ -7,7 +7,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
 import { LIVE_PAGE } from '#routes/utils/pageTypes';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import createTranslations from './common/translations';
 import Wrapper from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';

@@ -6,7 +6,7 @@ import styles from './index.styles';
 
 import { LeftChevron, RightChevron } from '../../icons';
 
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 interface Props {
   link?: string;

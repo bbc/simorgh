@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import AVPlayer from '.';
 
 const GenerateFixtureData = ({

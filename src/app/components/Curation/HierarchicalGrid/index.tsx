@@ -9,9 +9,9 @@ import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '#legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { CurationGridProps } from '../types';
-import { RequestContext } from '../../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {

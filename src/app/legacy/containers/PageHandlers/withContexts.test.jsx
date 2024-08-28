@@ -11,9 +11,9 @@ import {
   FRONT_PAGE,
   HOME_PAGE,
 } from '#routes/utils/pageTypes';
-import * as serviceContextImports from '../../../contexts/ServiceContext';
-import * as requestContextImports from '../../../contexts/RequestContext';
-import * as eventTrackingContextImports from '../../../contexts/EventTrackingContext';
+import * as serviceContextImports from '#contexts/ServiceContext';
+import * as requestContextImports from '#contexts/RequestContext';
+import * as eventTrackingContextImports from '#contexts/EventTrackingContext';
 import WithContexts from './withContexts';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());

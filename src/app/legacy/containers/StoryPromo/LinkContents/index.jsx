@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 

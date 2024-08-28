@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as SectionLabel from '#psammead/psammead-section-label/src';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ThemeProvider from '../../../components/ThemeProvider';
 
 import IndexPageSection from '.';

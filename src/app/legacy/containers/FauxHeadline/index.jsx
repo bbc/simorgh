@@ -13,7 +13,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { Headline } from '#psammead/psammead-headings/src';
 import { GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 

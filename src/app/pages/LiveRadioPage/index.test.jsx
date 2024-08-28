@@ -5,7 +5,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
 import afriquePageData from './fixtureData/afrique';
 import indonesianPageData from './fixtureData/indonesia';

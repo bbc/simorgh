@@ -2,11 +2,11 @@ import React from 'react';
 
 // context providers
 import { ThemeProvider } from '../../../components/ThemeProvider';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../../contexts/ToggleContext';
-import { UserContextProvider } from '../../../contexts/UserContext';
-import { EventTrackingContextProvider } from '../../../contexts/EventTrackingContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {

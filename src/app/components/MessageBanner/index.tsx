@@ -8,7 +8,7 @@ import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../icons';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {

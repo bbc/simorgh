@@ -11,7 +11,7 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import { Direction } from '#app/models/types/global';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import buildBlocks, { VISIBILITY } from './buildBlocks';
 import { Ellipsis, LeftChevron, RightChevron } from '../icons';
 import VisuallyHiddenText from '../VisuallyHiddenText';

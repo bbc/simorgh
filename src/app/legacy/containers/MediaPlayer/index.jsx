@@ -17,7 +17,7 @@ import getEmbedUrl, {
   makeAbsolute,
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Metadata from './Metadata';
 import Caption from '../Caption';
 import logMissingMediaId from './helpers/logMissingMediaId';

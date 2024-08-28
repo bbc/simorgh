@@ -6,7 +6,7 @@ import {
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 

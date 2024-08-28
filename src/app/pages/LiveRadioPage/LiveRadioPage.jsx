@@ -14,7 +14,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 
 const staticAssetsPath = `${

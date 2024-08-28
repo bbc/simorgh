@@ -9,7 +9,7 @@ import {
   getPageIdentifier,
   getPageTitle,
 } from '../../../../lib/analyticsUtils/indexPage';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { PageData } from '../../types';

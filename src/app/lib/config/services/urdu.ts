@@ -1,7 +1,7 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
 import '#psammead/psammead-locales/moment/ur';
-import withContext from '../../../contexts/utils/withContext';
+import withContext from '#contexts/utils/withContext';
 import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {

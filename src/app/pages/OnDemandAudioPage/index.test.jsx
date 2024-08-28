@@ -18,7 +18,7 @@ import {
   act,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage from './OnDemandAudioPage';
 

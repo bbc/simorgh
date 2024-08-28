@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
   StyledSectionLabel,
   StyledTopStoriesSection,

@@ -11,7 +11,7 @@ import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 
 import { createSrcsets } from '../../lib/utilities/srcSet';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';

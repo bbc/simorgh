@@ -7,7 +7,7 @@ import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
 import getInitialData from '#routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FeatureIdxPage from '.';
 

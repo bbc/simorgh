@@ -6,7 +6,7 @@ import {
   render,
   act,
 } from '../../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CanonicalRadioSchedule from '.';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 

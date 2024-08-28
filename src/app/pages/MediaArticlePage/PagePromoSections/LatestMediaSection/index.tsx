@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 
 import SectionLabel from '#psammead/psammead-section-label/src';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#legacy/components/OptimoPromos/PromoList';
 import useViewTracker from '../../../../hooks/useViewTracker';

@@ -16,7 +16,7 @@ import {
 import { GridItemLargeNoMargin } from '#components/Grid';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import MediaPlayerContainer from '../MediaPlayer';
 import getAssetUri from './utils/getAssetUri';
 

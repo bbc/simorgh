@@ -5,7 +5,7 @@ import useToggle from '#hooks/useToggle';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import ScriptLink from '#app/components/Header/ScriptLink';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';

@@ -8,7 +8,7 @@ import {
   AMP_SCRIPT_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCSPHash';

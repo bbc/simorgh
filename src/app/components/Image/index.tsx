@@ -9,7 +9,7 @@ import React, {
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { FRONT_PAGE, HOME_PAGE } from '#routes/utils/pageTypes';
 
 type Props = {

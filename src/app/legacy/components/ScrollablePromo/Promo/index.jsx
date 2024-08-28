@@ -19,7 +19,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledLink = styled(Link)`
   ${({ script }) => script && getPica(script)}

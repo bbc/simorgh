@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import { LinkedDataProps } from './types';
 

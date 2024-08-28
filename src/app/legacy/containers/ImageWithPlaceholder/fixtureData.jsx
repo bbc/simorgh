@@ -1,7 +1,7 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#routes/utils/pageTypes';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import FigureContainer from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 

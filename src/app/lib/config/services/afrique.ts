@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/GMT';
-import withContext from '../../../contexts/utils/withContext';
+import withContext from '#contexts/utils/withContext';
 import 'moment/locale/fr';
 import { DefaultServiceConfig } from '#models/types/serviceConfig';
 

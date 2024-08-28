@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { v4 as uuid } from 'uuid';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import ParagraphContainer from '.';
 

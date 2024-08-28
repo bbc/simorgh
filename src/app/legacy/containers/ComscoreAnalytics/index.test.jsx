@@ -5,7 +5,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ComscoreAnalytics from '.';
 
 const mockToggleDispatch = jest.fn();

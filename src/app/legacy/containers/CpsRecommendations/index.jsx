@@ -18,7 +18,7 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
 
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';

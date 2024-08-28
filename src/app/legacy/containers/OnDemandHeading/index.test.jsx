@@ -5,7 +5,7 @@ import {
   getByText,
   getByRole,
 } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandHeadingContainer from '.';
 
 const releaseDateTimeStamp = 1587945600000;

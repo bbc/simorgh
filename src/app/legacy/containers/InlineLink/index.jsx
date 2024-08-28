@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import pathOr from 'ramda/src/pathOr';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 

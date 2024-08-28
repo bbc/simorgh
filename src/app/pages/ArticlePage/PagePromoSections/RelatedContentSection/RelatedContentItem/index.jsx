@@ -4,7 +4,7 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { TitleWithContent, StyledRelatedContentWrapper } from './index.styles';
 
 const RelatedContentItem = forwardRef(

@@ -7,7 +7,7 @@ import {
 import { render } from '../../../../components/react-testing-library-with-providers';
 import relatedItems from './relatedItems';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import IndexAlsosContainer from '.';
 import ThemeProvider from '../../../../components/ThemeProvider';
 

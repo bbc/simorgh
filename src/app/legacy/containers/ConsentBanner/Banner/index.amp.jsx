@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { navigationIcons } from '#app/legacy/psammead/psammead-assets/src/svgs';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import AmpCookieBanner from './cookie.amp';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';

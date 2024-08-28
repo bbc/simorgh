@@ -1,10 +1,10 @@
 import React, { PropsWithChildren, useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContext } from '../../contexts/ToggleContext';
-import { UserContext } from '../../contexts/UserContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContext } from '#contexts/UserContext';
 import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Gist from '.';
 import fixtureData, { fixtureDataOneItem } from './fixtures';
 

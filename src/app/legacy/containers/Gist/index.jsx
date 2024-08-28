@@ -21,7 +21,7 @@ import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/brea
 import Blocks from '#containers/Blocks';
 import Text from '#containers/Text';
 import { GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import UnorderedList from '../BulletedList';
 
 const GistWrapper = styled.div`

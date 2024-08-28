@@ -9,7 +9,7 @@ import {
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 import { Article } from '#app/models/types/optimo';
 import { render } from '../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { Services } from '#models/types/global';
 import OptimizelyRecommendations from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';

@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
-import withContext from '../../../contexts/utils/withContext';
+import withContext from '#contexts/utils/withContext';
 import 'moment/locale/tr';
 import { DefaultServiceConfig } from '#models/types/serviceConfig';
 

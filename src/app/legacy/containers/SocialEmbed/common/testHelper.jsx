@@ -2,8 +2,8 @@ import React from 'react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import { ToggleContextProvider } from '../../../../contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import ThemeProvider from '../../../../components/ThemeProvider';
 
 /**

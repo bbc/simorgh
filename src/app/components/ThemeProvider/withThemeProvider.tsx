@@ -5,7 +5,7 @@ import {
   Theme,
 } from '@emotion/react';
 import focusIndicator from './focusIndicator';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 import {
   ARCHIVE_BLUE,

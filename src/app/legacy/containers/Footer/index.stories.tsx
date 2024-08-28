@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from '.';
 import { StoryArgs, StoryProps } from '#models/types/storybook';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import metadata from './metadata.json';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ThemeProvider from '../../../components/ThemeProvider';
 
 interface Props extends StoryProps {

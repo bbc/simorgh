@@ -5,7 +5,7 @@ import { render } from '../../../components/react-testing-library-with-providers
 import {
   ServiceContextProvider,
   ServiceContext,
-} from '../../../contexts/ServiceContext';
+} from '#contexts/ServiceContext';
 import MediaMessage from '.';
 
 const GenerateMediaMessage = () =>

@@ -8,7 +8,7 @@ import {
 import { grid } from '#psammead/psammead-styles/src/detection';
 import Grid from '#psammead/psammead-grid/src';
 import useViewTracker from '#app/hooks/useViewTracker';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
 import StartTime from './StartTime';
 

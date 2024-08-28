@@ -6,8 +6,8 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
 const CurationPromo = ({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import IndexHeading from '.';
 
 const IndexHeadingWithContext = (service, pageType) => (

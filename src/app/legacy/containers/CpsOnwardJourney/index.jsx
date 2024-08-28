@@ -15,7 +15,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 
 import { GridWrapper, GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GHOST } from '../../../components/ThemeProvider/palette';
 

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import Text from '../Text';
 import styles from './index.styles';

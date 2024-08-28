@@ -22,7 +22,7 @@ import { Services, PageTypes } from '#app/models/types/global';
 import { render, waitFor } from '../react-testing-library-with-providers';
 import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MetadataContainer from './index';
 import { MetadataProps, PageDataProps } from './types';
 

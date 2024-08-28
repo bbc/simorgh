@@ -14,7 +14,7 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';

@@ -10,7 +10,7 @@ import {
   AMP_ADS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { Direction, PageTypes, Services } from '#models/types/global';

@@ -5,7 +5,7 @@ import Grid from '#legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 import * as styles from './index.styles';
 import { MostReadBaseProps } from '../../types';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const MostReadList = ({
   numberOfItems,

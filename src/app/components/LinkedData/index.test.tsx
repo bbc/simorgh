@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { render } from '../react-testing-library-with-providers';
 import { Services } from '#models/types/global';
 import LinkedData from '.';

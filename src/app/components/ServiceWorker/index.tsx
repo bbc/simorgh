@@ -7,7 +7,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { jsx } from '@emotion/react';
 import isLocal from '#app/lib/utilities/isLocal';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 interface AmpServiceWorkerProps {
   canonicalLink?: string;

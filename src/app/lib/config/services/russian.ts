@@ -1,7 +1,7 @@
 import cyrillic from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
-import withContext from '../../../contexts/utils/withContext';
+import withContext from '#contexts/utils/withContext';
 import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 // Translations used in the header and footer elements of the page

@@ -5,7 +5,7 @@ import { getMinion } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';
 import TimestampContainer from '#psammead/psammead-timestamp-container/src';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const Wrapper = styled.div`
   display: flex;

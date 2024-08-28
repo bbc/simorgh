@@ -1,6 +1,6 @@
 import { TOPIC_PAGE } from '#routes/utils/pageTypes';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#models/types/serviceConfig';
 import { buildPageATIParams, buildPageATIUrl } from './buildParams';
 

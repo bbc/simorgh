@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GridItemMedium, GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';

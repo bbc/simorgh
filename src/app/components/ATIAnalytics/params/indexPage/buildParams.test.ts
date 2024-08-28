@@ -1,7 +1,7 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { FRONT_PAGE, FEATURE_INDEX_PAGE } from '#routes/utils/pageTypes';
 import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
+import { RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#models/types/serviceConfig';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

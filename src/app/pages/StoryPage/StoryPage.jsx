@@ -48,7 +48,7 @@ import MostRead from '../../components/MostRead';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import Disclaimer from '../../components/Disclaimer';
 import ImageWithCaption from '../../components/ImageWithCaption';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import StartTime from '.';
 
 const storiesUnixTimestamp = 1566914061212;

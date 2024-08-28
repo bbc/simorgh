@@ -8,7 +8,7 @@ import Lazyload from 'react-lazyload';
 import IMAGE from '../Image';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
-import { RequestContext } from '../../contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';

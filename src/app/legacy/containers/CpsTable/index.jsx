@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { GEL_BODY_COPY } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import CpsTableRow from './CpsTableRow';
 

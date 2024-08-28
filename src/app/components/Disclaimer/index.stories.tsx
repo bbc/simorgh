@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { StoryProps } from '#models/types/storybook';
 
 import metadata from './metadata.json';
