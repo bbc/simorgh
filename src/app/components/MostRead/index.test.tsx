@@ -10,7 +10,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   HOME_PAGE,
 } from '#routes/utils/pageTypes';
-import { render, act } from '../react-testing-library-with-providers';
+import { render, act } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MostRead from '.';
 import { PageTypes, Services, Variants } from '#models/types/global';

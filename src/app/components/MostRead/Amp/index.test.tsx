@@ -1,7 +1,7 @@
 import { FetchMock } from 'jest-fetch-mock';
 
 import React from 'react';
-import { render, act } from '../../react-testing-library-with-providers';
+import { render, act } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import AmpMostRead from '.';
 import { Services } from '#models/types/global';
