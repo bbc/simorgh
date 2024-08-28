@@ -1,9 +1,9 @@
 /**
  * @service serbian
- * @pathname /serbian/cyr/live/media-23179005
+ * @pathname /serbian/lat/live/media-23179005
  */
 
-import { runHeaderTests } from '../../../../../../src/integration/common';
+import { runHeaderTests } from '../../../../../src/integration/common';
 
 describe('Canonical', () => {
   describe(pageType, () => {
