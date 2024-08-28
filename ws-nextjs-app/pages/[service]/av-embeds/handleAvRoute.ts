@@ -7,6 +7,8 @@ import getEnvironment from '#app/routes/utils/getEnvironment';
 import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 import getAgent from '../../../utilities/undiciAgent';
 
 export default async (context: GetServerSidePropsContext) => {
@@ -20,15 +22,15 @@ export default async (context: GetServerSidePropsContext) => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
-  if (parsedRoute.isSyndicationRoute) {
+  if (parsedRoute.isWsRoute) {
     context.res.setHeader(
       'Cache-Control',
-      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   } else {
     context.res.setHeader(
       'Cache-Control',
-      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
     );
   }
 
@@ -61,12 +63,48 @@ export default async (context: GetServerSidePropsContext) => {
     pageStatus = status;
   }
 
+  context.res.statusCode = pageStatus;
+
   const { data: { avEmbed } = { avEmbed: null } } = pageJson ?? {};
 
   const service = avEmbed?.metadata?.service ?? 'news';
   const variant = avEmbed?.metadata?.variant ?? null;
+  const language = avEmbed?.metadata?.language ?? 'en-GB';
+  const promo = avEmbed?.promo ?? null;
 
-  context.res.statusCode = pageStatus;
+  const promoSummary =
+    promo?.summary?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model
+      ?.text ?? null;
+
+  const headline = promo?.headlines?.seoHeadline ?? null;
+
+  const aresMediaBlock = filterForBlockType(
+    avEmbed?.content?.model?.blocks,
+    'aresMedia',
+  );
+
+  const aresMediaMetadata = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'aresMediaMetadata',
+  );
+
+  const captionBlock = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'captionText',
+  );
+
+  const { imageUrl = null } = aresMediaMetadata?.model ?? {};
+
+  const { caption = null } = captionBlock?.model ?? {};
+
+  const mediaURL =
+    buildAvEmbedURL({
+      assetId: parsedRoute.assetId,
+      mediaDelimiter: parsedRoute.mediaDelimiter,
+      mediaId: parsedRoute.mediaId,
+      service,
+      variant,
+    }) ?? null;
 
   return {
     props: {
@@ -74,9 +112,16 @@ export default async (context: GetServerSidePropsContext) => {
       isAvEmbeds: true,
       pageData: avEmbed
         ? {
-            ...avEmbed,
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
-            metadata: { type: AV_EMBEDS },
+            metadata: {
+              caption,
+              headline,
+              imageUrl,
+              language,
+              mediaURL,
+              promoSummary,
+              type: AV_EMBEDS,
+            },
           }
         : null,
       pageType: AV_EMBEDS,
