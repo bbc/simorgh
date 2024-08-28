@@ -2,7 +2,7 @@ import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

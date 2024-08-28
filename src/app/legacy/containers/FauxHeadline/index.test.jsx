@@ -4,7 +4,7 @@ import {
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { textBlock } from '../../../models/blocks';
+import { textBlock } from '#models/blocks';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import FauxHeadlineContainer from '.';

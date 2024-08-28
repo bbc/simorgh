@@ -8,7 +8,7 @@ import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { Translations } from '../../models/types/translations';
+import { Translations } from '#models/types/translations';
 import useViewTracker from '../../hooks/useViewTracker';
 
 import consentBannerCss from './ConsentBanner.styles';

@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import withServicesDecorator from '#storybook/withServicesDecorator';
-import { StoryArgs, StoryProps } from '../../models/types/storybook';
+import { StoryArgs, StoryProps } from '#models/types/storybook';
 import HomePage from '.';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;

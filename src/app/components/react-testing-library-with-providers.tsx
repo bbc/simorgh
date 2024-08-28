@@ -7,7 +7,7 @@ import { ToggleContextProvider } from '../contexts/ToggleContext';
 import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import ThemeProvider from './ThemeProvider';
-import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
+import { PageTypes, Services, Toggles, Variants } from '#models/types/global';
 
 jest.mock('./ThemeProvider');
 

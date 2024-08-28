@@ -23,7 +23,7 @@ import {
   getConfig,
   GetConfigProps,
 } from '.';
-import { PageTypes, Services } from '../../../models/types/global';
+import { PageTypes, Services } from '#models/types/global';
 
 let isOnClient = false;
 

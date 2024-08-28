@@ -16,7 +16,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
+import { PageTypes } from '#models/types/global';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',

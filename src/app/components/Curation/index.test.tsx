@@ -13,9 +13,9 @@ import {
   VisualStyle,
   VisualProminence,
   Summary,
-} from '../../models/types/curationData';
+} from '#models/types/curationData';
 import { MostReadData } from '../MostRead/types';
-import { RadioScheduleData } from '../../models/types/radioSchedule';
+import { RadioScheduleData } from '#models/types/radioSchedule';
 
 jest.mock('../ThemeProvider');
 

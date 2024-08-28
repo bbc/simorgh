@@ -2,7 +2,7 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

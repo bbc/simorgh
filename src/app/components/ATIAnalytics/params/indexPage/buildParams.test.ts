@@ -2,7 +2,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { FRONT_PAGE, FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../../models/types/serviceConfig';
+import { ServiceConfig } from '#models/types/serviceConfig';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest

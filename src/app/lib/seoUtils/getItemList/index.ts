@@ -1,4 +1,4 @@
-import { Curation } from '../../../models/types/curationData';
+import { Curation } from '#models/types/curationData';
 
 export default ({
   curations,

@@ -1,4 +1,4 @@
-import { VISUAL_PROMINENCE } from '../../models/types/curationData';
+import { VISUAL_PROMINENCE } from '#models/types/curationData';
 
 export const baseCurations = [
   {

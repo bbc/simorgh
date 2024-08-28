@@ -2,7 +2,7 @@ import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

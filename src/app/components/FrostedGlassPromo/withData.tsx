@@ -15,7 +15,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 
 import styles from './styles';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
-import { OptimoBlock } from '../../models/types/optimo';
+import { OptimoBlock } from '#models/types/optimo';
 
 const defaultImageProps = {
   height: null,

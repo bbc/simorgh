@@ -13,7 +13,7 @@ import {
   MostReadLinkProps,
   Size,
 } from '../../types';
-import { Direction } from '../../../../models/types/global';
+import { Direction } from '#models/types/global';
 import Grid from '#legacy/components/Grid';
 
 export const getParentColumns = (columnLayout: ColumnLayout) => {

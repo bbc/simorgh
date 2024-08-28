@@ -5,7 +5,7 @@ import services from '../../../../server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
-import { StoryProps, StoryArgs } from '../../../models/types/storybook';
+import { StoryProps, StoryArgs } from '#models/types/storybook';
 
 const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (

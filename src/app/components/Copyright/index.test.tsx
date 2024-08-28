@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CopyrightContainer from './index';
-import { ServiceConfig } from '../../models/types/serviceConfig';
+import { ServiceConfig } from '#models/types/serviceConfig';
 
 const CopyrightWithContext = (
   copyrightText: string,

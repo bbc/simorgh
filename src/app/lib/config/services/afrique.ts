@@ -2,7 +2,7 @@ import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/l
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/fr';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

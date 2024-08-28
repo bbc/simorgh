@@ -2,8 +2,8 @@ import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScrip
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
-import { ZhongwenConfig } from '../../../models/types/serviceConfig';
-import { Direction, Services } from '../../../models/types/global';
+import { ZhongwenConfig } from '#models/types/serviceConfig';
+import { Direction, Services } from '#models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,

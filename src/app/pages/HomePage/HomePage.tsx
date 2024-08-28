@@ -8,7 +8,7 @@ import {
   Curation,
   VisualProminence,
   VisualStyle,
-} from '../../models/types/curationData';
+} from '#models/types/curationData';
 import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';

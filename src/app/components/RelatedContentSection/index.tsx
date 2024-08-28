@@ -20,8 +20,8 @@ import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '#legacy/components/OptimoPromos/PromoList';
 import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
-import { EventTrackingBlock } from '../../models/types/eventTracking';
-import { OptimoBlock } from '../../models/types/optimo';
+import { EventTrackingBlock } from '#models/types/eventTracking';
+import { OptimoBlock } from '#models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 

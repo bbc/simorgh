@@ -22,8 +22,8 @@ import {
   PageTypes,
   Platforms,
   Services,
-} from '../../../models/types/global';
-import { MetadataTaggings } from '../../../models/types/metadata';
+} from '#models/types/global';
+import { MetadataTaggings } from '#models/types/metadata';
 
 const ID_COOKIE = 'ckns_sylphid';
 

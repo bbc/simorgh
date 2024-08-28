@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ThemeProvider from '../../ThemeProvider';
 import RelatedContentItem from '.';
 import { RelatedContentData, RelatedContentItemWithCaption } from '../fixture';
-import { Services } from '../../../models/types/global';
+import { Services } from '#models/types/global';
 
 jest.mock('../../ThemeProvider');
 

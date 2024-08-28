@@ -4,7 +4,7 @@ import { useContext, FC, HTMLAttributes } from 'react';
 import { jsx, Theme } from '@emotion/react';
 import Url from 'url-parse';
 
-import { FontVariant, GelFontSize } from '../../models/types/theming';
+import { FontVariant, GelFontSize } from '#models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { styles } from './index.styles';
 

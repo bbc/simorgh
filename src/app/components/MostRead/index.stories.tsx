@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
 import readme from './README.md';
 import MostRead from '.';
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
+import { StoryProps, StoryArgs } from '#models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {

@@ -1,7 +1,7 @@
 import React, { useState, PropsWithChildren } from 'react';
 import ConsentBanner from './ConsentBanner';
 
-import { SocialEmbedProviders } from '../../models/types/global';
+import { SocialEmbedProviders } from '#models/types/global';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 
 export type ConsentBannerProviders = Extract<

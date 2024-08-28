@@ -5,7 +5,7 @@ import getLocator from '../../../../../lib/utilities/imageSrcHelpers/locator';
 import {
   OptimoRecommendation,
   Recommendation,
-} from '../../../../../models/types/onwardJourney';
+} from '#models/types/onwardJourney';
 
 const extractPromoData = ({ promo }: { promo: Recommendation | null }) => {
   if (!promo) return null;

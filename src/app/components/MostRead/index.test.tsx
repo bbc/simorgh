@@ -13,7 +13,7 @@ import {
 import { render, act } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MostRead from '.';
-import { PageTypes, Services, Variants } from '../../models/types/global';
+import { PageTypes, Services, Variants } from '#models/types/global';
 import Canonical from './Canonical';
 import Amp from './Amp';
 import { MostReadData } from './types';

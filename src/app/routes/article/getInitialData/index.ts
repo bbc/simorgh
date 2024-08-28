@@ -1,9 +1,9 @@
 import nodeLogger from '../../../lib/logger.node';
-import { Services, Toggles, Variants } from '../../../models/types/global';
+import { Services, Toggles, Variants } from '#models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 import addDisclaimer from '../utils/addDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
-import { FetchError } from '../../../models/types/fetch';
+import { FetchError } from '#models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import getAgent from '../../../../server/utilities/getAgent';

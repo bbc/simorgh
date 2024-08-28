@@ -16,7 +16,7 @@ import {
   GROUP_3_MIN_WIDTH,
   GROUP_5_MIN_WIDTH,
 } from '../../../ThemeProvider/mediaQueries';
-import { Services } from '../../../../models/types/global';
+import { Services } from '#models/types/global';
 import { Size } from '../../types';
 import { grid } from '#legacy/psammead/psammead-styles/src/detection';
 

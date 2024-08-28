@@ -13,8 +13,8 @@ import {
   RelatedContentListWithMPU,
   RelatedContentListWithWSOJ,
 } from './fixture';
-import { Services } from '../../models/types/global';
-import { OptimoBlock } from '../../models/types/optimo';
+import { Services } from '#models/types/global';
+import { OptimoBlock } from '#models/types/optimo';
 
 jest.mock('../ThemeProvider');
 

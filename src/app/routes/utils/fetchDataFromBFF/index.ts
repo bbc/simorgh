@@ -1,11 +1,11 @@
 import getAgent from '../../../../server/utilities/getAgent';
 import constructPageFetchUrl from '../constructPageFetchUrl';
 import getEnvironment from '../getEnvironment';
-import { Services, Variants, PageTypes } from '../../../models/types/global';
+import { Services, Variants, PageTypes } from '#models/types/global';
 import fetchPageData from '../fetchPageData';
 import getErrorStatusCode from '../fetchPageData/utils/getErrorStatusCode';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import { FetchError } from '../../../models/types/fetch';
+import { FetchError } from '#models/types/fetch';
 import nodeLogger from '../../../lib/logger.node';
 
 const logger = nodeLogger(__filename);

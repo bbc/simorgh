@@ -1,4 +1,4 @@
-import { Services } from '../../../../models/types/global';
+import { Services } from '#models/types/global';
 import { serviceNumerals } from '../../Canonical/Rank';
 
 export const transformData = () => {

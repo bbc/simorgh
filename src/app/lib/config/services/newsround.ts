@@ -2,8 +2,8 @@ import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
-import { Services } from '../../../models/types/global';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
+import { Services } from '#models/types/global';
 
 export const service: DefaultServiceConfig = {
   default: {

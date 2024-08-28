@@ -9,7 +9,7 @@ import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 import { render } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CanonicalMostRead from '.';
-import { Services } from '../../../models/types/global';
+import { Services } from '#models/types/global';
 import { MostReadData } from '../types';
 import {
   setFreshPromoTimestamp,

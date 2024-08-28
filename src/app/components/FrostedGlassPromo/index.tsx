@@ -14,7 +14,7 @@ import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
 import styles from './styles';
-import { EventTrackingBlock } from '../../models/types/eventTracking';
+import { EventTrackingBlock } from '#models/types/eventTracking';
 import { PromoProps } from './types';
 
 const PANEL_OFFSET = 250;

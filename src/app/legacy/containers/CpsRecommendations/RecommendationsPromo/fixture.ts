@@ -1,7 +1,7 @@
 import {
   CpsRecommendation,
   OptimoRecommendation,
-} from '../../../../models/types/onwardJourney';
+} from '#models/types/onwardJourney';
 
 export const cpsRecommendation: CpsRecommendation = {
   headlines: {

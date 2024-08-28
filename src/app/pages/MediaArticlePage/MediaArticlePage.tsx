@@ -43,12 +43,12 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import { Article, OptimoBlock } from '../../models/types/optimo';
+import { Article, OptimoBlock } from '#models/types/optimo';
 import {
   MetadataFormats,
   MetadataTaggings,
   MetadataTopics,
-} from '../../models/types/metadata';
+} from '#models/types/metadata';
 
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';

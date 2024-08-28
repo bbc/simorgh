@@ -2,7 +2,7 @@ import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScrip
 import '#psammead/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

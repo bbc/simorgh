@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrandSVG } from '../../../models/types/theming';
+import { BrandSVG } from '#models/types/theming';
 
 // Chameleon logos have an additional margin on their viewbox
 const buildLogo = ({ width, height, group, viewbox }: BrandSVG) => {

@@ -2,7 +2,7 @@ import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/te';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

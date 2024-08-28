@@ -14,7 +14,7 @@ import {
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as buildPageATIFunctionImports from './genericPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../models/types/serviceConfig';
+import { ServiceConfig } from '#models/types/serviceConfig';
 import { ATIData, PageData } from '../types';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

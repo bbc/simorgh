@@ -1,4 +1,4 @@
-import { Direction } from '../../../../models/types/global';
+import { Direction } from '#models/types/global';
 import { SLOT_TYPES, SlotType } from '../../types';
 
 interface AdsAriaLabelProps {

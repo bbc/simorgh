@@ -8,7 +8,7 @@ import {
 } from 'react';
 import { jsx, Theme } from '@emotion/react';
 
-import { GelFontSize, FontVariant } from '../../models/types/theming';
+import { GelFontSize, FontVariant } from '#models/types/theming';
 
 interface Props<T extends React.ElementType> {
   as?: T;
