@@ -236,11 +236,9 @@ describe('frontPageManifestPath', () => {
 describe('onDemandRadioPath', () => {
   const validRoutes = [
     '/indonesia/bbc_indonesian_radio/w34rfd4k', // onDemand radio any media id
-    '/hausa/bbc_hausa_radio/abcd1234.amp', // onDemand radio amp w/ any media id
     '/persian/bbc_abcdefg_radio/hijklmn', // onDemand radio with a-z inside service id and for media id
     '/arabic/bbc_arabic_radio/radioschedule', // default radio schedule route
     '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k', // onDemand radio brand any media id
-    '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k.amp', // onDemand radio brand amp any media id
     '/zhongwen/simp/bbc_cantonese_radio/w5192pdkg', // onDemand radio with valid variant
   ];
   shouldMatchValidRoutes(validRoutes, onDemandRadioPath);
@@ -253,6 +251,8 @@ describe('onDemandRadioPath', () => {
     '/persian/foobar/abcd1234.amp',
     '/indonesia/bbc_indonesian_radio/programmes/',
     '/zhongwen/troll/bbc_cantonese_radio/w5192pdkg', // onDemand radio with invalid variant
+    '/hausa/bbc_hausa_radio/abcd1234.amp', // onDemand radio amp w/ any media id
+    '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k.amp', // onDemand radio brand amp any media id
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, onDemandRadioPath);
 });
@@ -261,7 +261,6 @@ describe('liveRadioPath', () => {
   const validRoutes = [
     '/hausa/bbc_hausa_radio/liveradio', // default live radio
     '/persian/bbc_dari_radio/liveradio', // live radio other service
-    '/hausa/bbc_hausa_radio/liveradio.amp', // live radio amp
     '/hausa/bbc_persian_radio/liveradio', // service with non matching live radio service id
   ];
   shouldMatchValidRoutes(validRoutes, liveRadioPath);
@@ -269,6 +268,7 @@ describe('liveRadioPath', () => {
   const invalidRoutes = [
     '/hausa/bbc_hausa_radio/', // live radio with no media id
     '/hausa/bbc_hausa_radio/.amp', // live radio with no media id amp
+    '/hausa/bbc_hausa_radio/liveradio.amp', // live radio amp
     '/foobar/bbc_hausa_radio/liveradio', // live radio w/ unknown service
     '/persian/foobar/liveradio', // live radio w/ non-formatted service id
     '/persian/foobar/liveradio.amp', // live radio w/ non-formatted service id amp
@@ -278,17 +278,15 @@ describe('liveRadioPath', () => {
 });
 
 describe('podcastEpisodePath', () => {
-  const validRoutes = [
-    '/arabic/podcasts/654joro456/j0r0r0j',
-    '/burmese/podcasts/987ger/ald321.amp',
-    '/zhongwen/trad/podcasts/938495544/jf84hgf0sa.amp',
-  ];
+  const validRoutes = ['/arabic/podcasts/654joro456/j0r0r0j'];
   shouldMatchValidRoutes(validRoutes, podcastEpisodePath);
 
   const invalidRoutes = [
     '/burmese/podcast/98fjf9302/294fjfms', // podcast brand page
     '/burmese/98fjf9302/294fjfms', // podcast missing
     '/zhongwen/trad/39ddjd8d9/39djdwwiw.amp', // variant without podcast
+    '/burmese/podcasts/987ger/ald321.amp',
+    '/zhongwen/trad/podcasts/938495544/jf84hgf0sa.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, podcastEpisodePath);
 });
@@ -296,9 +294,7 @@ describe('podcastEpisodePath', () => {
 describe('podcastBrandPath', () => {
   const validRoutes = [
     '/arabic/podcasts/432rpk234',
-    '/burmese/podcasts/657mnayr.amp',
     '/zhongwen/trad/podcasts/457mcg155',
-    '/zhongwen/trad/podcasts/938495544.amp',
   ];
   shouldMatchValidRoutes(validRoutes, podcastBrandPath);
 
@@ -307,6 +303,8 @@ describe('podcastBrandPath', () => {
     '/arabic/bbc_arabic_radio/podcasts/6865933', // includes masterbrand
     '/zhongwen/trad/94jf92oe', // variant without podcast
     '/zhongwen/trad/39ddjd8d9amp', // variant without podcast
+    '/zhongwen/trad/podcasts/938495544.amp',
+    '/burmese/podcasts/657mnayr.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, podcastBrandPath);
 });
@@ -362,10 +360,6 @@ describe('onDemandTvPath', () => {
   const validRoutes = [
     '/indonesia/bbc_indonesian_tv/tv/w34rfd4k',
     '/indonesia/bbc_indonesian_tv/tv_programmes/w4321',
-    '/indonesia/bbc_indonesian_tv/tv/w34rfd4k.amp',
-    '/indonesia/bbc_indonesian_tv/tv_programmes/w4321.amp',
-    '/persian/bbc_persian_tv/tv_programmes/abcd1234.amp',
-    '/persian/bbc_persian_tv/tv/abcd4321.amp',
   ];
   shouldMatchValidRoutes(validRoutes, onDemandTvPath);
 
@@ -380,6 +374,10 @@ describe('onDemandTvPath', () => {
     '/persian/foobar/abcd1234.amp',
     '/indonesia/bbc_indonesian_tv/tv_programmes/',
     '/indonesia/bbc_indonesian_tv/tv/',
+    '/indonesia/bbc_indonesian_tv/tv/w34rfd4k.amp',
+    '/indonesia/bbc_indonesian_tv/tv_programmes/w4321.amp',
+    '/persian/bbc_persian_tv/tv_programmes/abcd1234.amp',
+    '/persian/bbc_persian_tv/tv/abcd4321.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, onDemandTvPath);
 });

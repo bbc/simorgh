@@ -132,6 +132,11 @@ export const mainTranslations = {
     breaking: 'Срочно',
     postedAt: 'Отправлено в',
     summary: 'Коротко',
+    shareButtonText: 'Поделиться',
+  },
+  downloads: {
+    instructions: 'You can download and view today’s news.',
+    title: 'File Download',
   },
   gist: 'Коротко',
   error: {
@@ -171,7 +176,7 @@ export const mainTranslations = {
     listItemImage: 'Добавить фото',
     published: 'Опубликовано',
     reportingFrom: 'Место сообщения',
-    role: 'Должность',
+    role: 'Место работы',
   },
   media: {
     noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
@@ -238,6 +243,70 @@ export const mainTranslations = {
   featuresAnalysisTitle: 'Не пропустите',
   latestMediaTitle: 'Актуальное',
   infoBannerLabel: 'Информация',
+  ugc: {
+    // No JavaScript
+    noJsHeading: undefined,
+    noJsDescription: undefined,
+
+    // Optional
+    optional: 'Дополнительное поле',
+
+    // File upload
+    fileUploadLiveRegionText: undefined,
+    fileUploadLiveRegionUpdateText: undefined,
+    fileUploadListHeading: 'Вы загружаете:',
+    fileUploadButton: 'Выбрать файл',
+    fileUploadRemoveButton: undefined,
+
+    // Submit button
+    submitButton: 'Отправить',
+
+    // Validation
+    validationRequired: 'Чего-то не хватает.',
+    validationInvalidEmail: 'Что-то не так. Пожалуйста, впишите верный адрес.',
+    validationInvalidTelephone: undefined,
+    validationFilesNotEnough:
+      'Файлов недостаточно. Минимальное число файлов: {{minFiles}}.',
+    validationFilesTooMany:
+      'Слишком много файлов. Максимальное число файлов: {{maxFiles}}.',
+    validationFilesInvalidType:
+      'Извините, мы не можем использовать файлы такого типа. Выберите из списка {{fileTypes}}.',
+    validationFilesTooSmall: 'Файл сломан. Выберите другой файл.',
+    validationFilesSizeExceeded:
+      'Извините, но ваши файлы слишком большие. Файлы не должны превышать 1,2 гигабайта.',
+    validationWordLimit: 'Максимум {{wordLimit}} слов',
+
+    // Messaging
+    retentionPeriodDays: undefined,
+    referenceNumber: 'Запишите этот номер',
+    submissionInfoSignedOutMessage: 'Запишите эти детали для вашего сведения.',
+    privacyInfoHtml: undefined,
+    emailToHtml:
+      'Если вы передумали и не хотите, чтобы мы это использовали, просто отправьте нам сообщение на {{emailLink}}. Не забудьте регистрационный номер отправления.',
+    removalGuidelineText:
+      'Если вы прислали что-то для передачи или онлайн-страницы, мы не сможем удалить ваш материал после того, как он был использован.',
+
+    // Form Screen
+    dataPolicyHeading: undefined,
+
+    // Uploading Screen
+    uploadingHeading: 'Файлы загружаются...',
+    uploadingDescription: 'Пожалуйста, подождите.',
+
+    // Success Screen
+    successHeading: 'Письмо отправлено',
+    successDescription: 'Спасибо за контакт!',
+    privacyPolicyLinkHref: undefined,
+    privacyPolicyLinkText: undefined,
+
+    // Error Screen
+    errorHeading: 'Ваше сообщение не отправлено',
+    errorDescription: 'Попробуйте отправить еще раз',
+
+    // Closed Screen
+    closedHeading: 'Прием закрыт',
+    closedDescription: 'Прием закрылся {{date}}.',
+  },
 };
 
 export const service: DefaultServiceConfig = {

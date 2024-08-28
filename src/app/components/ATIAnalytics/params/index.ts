@@ -16,6 +16,8 @@ import {
   CPS_ASSET,
   STATIC_PAGE,
   UGC_PAGE,
+  AV_EMBEDS,
+  DOWNLOADS_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   buildTvRadioATIParams,
@@ -48,6 +50,7 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   FEATURE_INDEX_PAGE,
   LIVE_PAGE,
   STATIC_PAGE,
+  DOWNLOADS_PAGE,
 ];
 
 const noOp = () => {
@@ -72,6 +75,8 @@ const pageTypeUrlBuilders = {
   [CPS_ASSET]: noOp,
   [STATIC_PAGE]: noOp,
   [UGC_PAGE]: noOp,
+  [AV_EMBEDS]: noOp,
+  [DOWNLOADS_PAGE]: noOp,
 };
 
 const pageTypeParamBuilders = {
@@ -92,6 +97,8 @@ const pageTypeParamBuilders = {
   [CPS_ASSET]: noOp,
   [STATIC_PAGE]: noOp,
   [UGC_PAGE]: noOp,
+  [AV_EMBEDS]: noOp,
+  [DOWNLOADS_PAGE]: noOp,
 };
 
 type BuilderFunction = {

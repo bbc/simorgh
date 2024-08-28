@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: '속보',
         postedAt: '작성',
         summary: '요약',
+        shareButtonText: '공유',
+      },
+      downloads: {
+        instructions: '오늘의 뉴스를 다운받아 보실 수 있습니다',
+        title: '파일 다운로드',
       },
       gist: '요약',
       error: {

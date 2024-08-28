@@ -1,9 +1,14 @@
 /** @jsx jsx */
-import { SetStateAction, useEffect, useState } from 'react';
+import { SetStateAction, useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
-import { FileData, InvalidMessageCodes } from '../../../types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import {
+  FileData,
+  InvalidMessageCodes,
+  ValidationConditions,
+} from '../../../types';
 import { useFormContext } from '../../../FormContext';
 import styles from '../styles';
 import {
@@ -12,12 +17,14 @@ import {
   DeleteSvg,
   VIDEO_SVG_DATA_URI,
 } from '../svgs';
-import InvalidMessageBox from '../../InvalidMessageBox';
+import InvalidMessageBox from '../../../MessageBox/InvalidMessageBox';
+import fallbackTranslations from '../../../fallbackTranslations';
 
 interface FileListProps {
   files: FileData[];
   name: string;
   hasAttemptedSubmit: boolean;
+  validation?: ValidationConditions;
 }
 
 interface handleFileDeletionParams {
@@ -25,7 +32,21 @@ interface handleFileDeletionParams {
   fileName: string;
 }
 
-export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
+export default ({
+  files,
+  name,
+  hasAttemptedSubmit,
+  validation,
+}: FileListProps) => {
+  const {
+    translations: {
+      ugc: {
+        fileUploadLiveRegionUpdateText = fallbackTranslations.fileUploadLiveRegionUpdateText,
+        fileUploadRemoveButton = fallbackTranslations.fileUploadRemoveButton,
+      } = {},
+    },
+  } = useContext(ServiceContext);
+
   const { handleChange } = useFormContext();
   const [thumbnailState, setThumbnailState] = useState<string[]>([]);
   const { replaceLiveRegionWith } = useLiveRegionContext();
@@ -45,8 +66,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
       return thumbnailClone;
     });
 
-    // Needs translation
-    replaceLiveRegionWith(`Update, removed ${fileName}`);
+    replaceLiveRegionWith(`${fileUploadLiveRegionUpdateText} ${fileName}`);
   };
 
   useEffect(() => {
@@ -114,7 +134,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
             {file.name}
           </span>
           <button
-            css={styles.focusIndicator}
+            css={styles.focusIndicatorInput}
             type="button"
             aria-describedby={ariaDescribedById}
             onClick={() =>
@@ -122,8 +142,7 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
             }
           >
             <DeleteSvg />
-            {/* Needs translation */}
-            <VisuallyHiddenText>Remove</VisuallyHiddenText>
+            <VisuallyHiddenText>{fileUploadRemoveButton}</VisuallyHiddenText>
           </button>
         </div>
 
@@ -132,16 +151,16 @@ export default ({ files, name, hasAttemptedSubmit }: FileListProps) => {
             id={errorBoxAriaDescribedById}
             messageCode={fileData.messageCode as InvalidMessageCodes}
             suffix={file.name}
+            validationCriteria={validation}
           />
         )}
       </li>
     );
   });
+
   return (
-    <>
-      <ul role="list" css={styles.fileList}>
-        {listItems}
-      </ul>
-    </>
+    <ul role="list" css={styles.fileList}>
+      {listItems}
+    </ul>
   );
 };

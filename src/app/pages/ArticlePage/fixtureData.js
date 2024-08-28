@@ -28,7 +28,7 @@ const blocksWithHeadlineTexAndByline = blockValues => {
 const articleDataBuilder = (
   id,
   createdBy,
-  passportLanguage,
+  language,
   home,
   blockValues,
   seoHeadline,
@@ -55,8 +55,9 @@ const articleDataBuilder = (
     firstPublished: 1514808060000,
     lastPublished: 1514811600000,
     lastUpdated: 1514815200000,
+    language,
     passport: {
-      language: passportLanguage,
+      language,
       home,
       category: 'news',
       genre: null,

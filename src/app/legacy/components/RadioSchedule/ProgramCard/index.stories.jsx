@@ -6,12 +6,6 @@ export default {
   Component,
 };
 
-export const OnDemand = (_, globalArgs) => (
-  <Component {...globalArgs} state="onDemand" />
-);
-export const Live = (_, globalArgs) => (
-  <Component {...globalArgs} state="live" />
-);
-export const Next = (_, globalArgs) => (
-  <Component {...globalArgs} state="next" />
-);
+export const OnDemand = () => <Component state="onDemand" />;
+export const Live = () => <Component state="live" />;
+export const Next = () => <Component state="next" />;

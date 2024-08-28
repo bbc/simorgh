@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
-import BulletedList from '#psammead/psammead-bulleted-list/src';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import { GridItemMedium } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { BulletedList } from '../../../components/BulletedList';
 import Blocks from '../Blocks';
 import listItem from '../BulletedListItem';
 
@@ -30,16 +29,12 @@ const BulletedListContainer = ({
     format: 'CHD=bullet',
   };
   const viewRef = useViewTracker(eventTrackingData);
-  const { script, service, dir } = useContext(ServiceContext);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   return (
     <StyledGridItemMedium {...(className && { className })}>
       <BulletedList
         {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
-        script={script}
-        service={service}
-        dir={dir}
         ref={blockGroupType === 'listWithLink' ? viewRef : null}
       >
         <Blocks

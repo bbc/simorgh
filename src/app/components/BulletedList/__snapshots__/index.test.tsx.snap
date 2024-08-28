@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulletedList should render correctly from ltr 1`] = `
+.emotion-0 {
+  margin-top: 0;
+  list-style-type: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-0>li {
+  position: relative;
+  color: inherit;
+}
+
+.emotion-0>li::before {
+  top: 0.5rem;
+  content: "";
+  position: absolute;
+  border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-0>li::before {
+  border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
+  border-radius: 50%;
+}
+
+.emotion-1 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <ul
+    class="emotion-0"
+    role="list"
+  >
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      First item on the list
+    </li>
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      Second item on the list
+    </li>
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      Final list item
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`BulletedList should render correctly from rtl 1`] = `
+.emotion-0 {
+  margin-top: 0;
+  list-style-type: none;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+.emotion-0>li {
+  position: relative;
+  color: inherit;
+}
+
+.emotion-0>li::before {
+  top: 0.5rem;
+  content: "";
+  position: absolute;
+  border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-0>li::before {
+  border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
+  border-radius: 50%;
+}
+
+.emotion-1 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <ul
+    class="emotion-0"
+    role="list"
+  >
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      العنصر الأول في القائمة
+    </li>
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      البند الثاني في القائمة
+    </li>
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      عنصر القائمة النهائية
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`BulletedList should render correctly with custom bulletPointShape and bulletPointColour 1`] = `
+.emotion-0 {
+  margin-top: 0;
+  list-style-type: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-0>li {
+  position: relative;
+  color: inherit;
+}
+
+.emotion-0>li::before {
+  top: 0.5rem;
+  content: "";
+  position: absolute;
+  border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-0>li::before {
+  border: 0.1875rem solid #f00;
+  background-color: #f00;
+  border-radius: 0;
+}
+
+.emotion-1 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <ul
+    class="emotion-0"
+    role="list"
+  >
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      First item on the list
+    </li>
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      Second item on the list
+    </li>
+    <li
+      class="emotion-1"
+      role="listitem"
+    >
+      Final list item
+    </li>
+  </ul>
+</div>
+`;

@@ -106,13 +106,13 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
 }
 
 .emotion-3 {
+  margin-top: 0;
+  list-style-type: none;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -131,20 +131,24 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
 
 .emotion-3>li {
   position: relative;
+  color: inherit;
 }
 
 .emotion-3>li::before {
   top: 0.5rem;
-  content: ' ';
+  content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-3>li::before {
   border: 0.1875rem solid #3F3F42;
   background-color: #3F3F42;
   border-radius: 50%;
-  right: -1rem;
 }
 
-.emotion-5 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
@@ -154,18 +158,17 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
     dir="rtl"
   >
     <ul
-      class="emotion-3 emotion-4"
-      dir="rtl"
+      class="emotion-3"
       role="list"
     >
       <li
-        class="emotion-5 emotion-6"
+        class="emotion-4"
         role="listitem"
       >
         It is unordered
       </li>
       <li
-        class="emotion-5 emotion-6"
+        class="emotion-4"
         role="listitem"
       >
         It has three list items
@@ -281,13 +284,13 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
 }
 
 .emotion-3 {
+  margin-top: 0;
+  list-style-type: none;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -306,20 +309,24 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
 
 .emotion-3>li {
   position: relative;
+  color: inherit;
 }
 
 .emotion-3>li::before {
   top: 0.5rem;
-  content: ' ';
+  content: "";
   position: absolute;
   border-width: 1rem;
+  inset-inline-start: -1rem;
+}
+
+.emotion-3>li::before {
   border: 0.1875rem solid #3F3F42;
   background-color: #3F3F42;
   border-radius: 50%;
-  right: -1rem;
 }
 
-.emotion-5 {
+.emotion-4 {
   margin-bottom: 1rem;
 }
 
@@ -329,18 +336,17 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
     dir="rtl"
   >
     <ul
-      class="emotion-3 emotion-4"
-      dir="rtl"
+      class="emotion-3"
       role="list"
     >
       <li
-        class="emotion-5 emotion-6"
+        class="emotion-4"
         role="listitem"
       >
         It is unordered
       </li>
       <li
-        class="emotion-5 emotion-6"
+        class="emotion-4"
         role="listitem"
       >
         It has three list items

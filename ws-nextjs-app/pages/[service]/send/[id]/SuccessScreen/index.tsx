@@ -8,51 +8,37 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import TickSvg from './svgs';
 import { useFormContext } from '../FormContext';
-
-const DEFAULT_RETENTION_POLICY_DAY = '270';
-const DEFAULT_EMAIL = 'CannotFindEmail@bbc.co.uk';
-
-const defaultTranslations = {
-  confirmationStepTitle: 'Message sent',
-  confirmationStepDescriptionHtml: 'Thanks for getting in touch.',
-  referenceNumber: 'Reference number',
-  submissionInfoSignedOutMessage:
-    'You may wish to make a note of these details for your reference.',
-  retentionPeriodDays:
-    "We'll keep your submission for up to {{days}} days – and if we don't use it we'll then delete it and any other information you sent us.",
-  privacyInfoHtml:
-    "Don't worry, we protect your information — read the {{privacyInfoLink}} for more details.",
-  emailToHtml:
-    "If you change your mind and don't want us to use it, just email us at {{emailLink}}. Don't forget the reference number.",
-  removalGuidelineText:
-    'If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
-  privacyPolicyLinkHref: 'https://www.bbc.com/privacy/',
-  privacyPolicyLinkText: 'Privacy Policy',
-};
+import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
   title: string;
+  replyEmailAddress: string;
+  retentionPeriod: string;
 };
 
-const SuccessScreen = ({ title }: Props) => {
+const SuccessScreen = ({
+  title,
+  replyEmailAddress,
+  retentionPeriod,
+}: Props) => {
   const {
-    translations: { ugc = defaultTranslations },
+    translations: {
+      ugc: {
+        successHeading = fallbackTranslations.successHeading,
+        successDescription = fallbackTranslations.successDescription,
+        submissionInfoSignedOutMessage = fallbackTranslations.submissionInfoSignedOutMessage,
+        referenceNumber = fallbackTranslations.referenceNumber,
+        retentionPeriodDays = fallbackTranslations.retentionPeriodDays,
+        privacyInfoHtml = fallbackTranslations.privacyInfoHtml,
+        emailToHtml = fallbackTranslations.emailToHtml,
+        removalGuidelineText = fallbackTranslations.removalGuidelineText,
+        privacyPolicyLinkHref = fallbackTranslations.privacyPolicyLinkHref,
+        privacyPolicyLinkText = fallbackTranslations.privacyPolicyLinkText,
+      } = {},
+    },
   } = useContext(ServiceContext);
 
   const { submissionID } = useFormContext();
-
-  const {
-    confirmationStepTitle,
-    confirmationStepDescriptionHtml,
-    submissionInfoSignedOutMessage,
-    referenceNumber,
-    retentionPeriodDays,
-    privacyInfoHtml,
-    emailToHtml,
-    removalGuidelineText,
-    privacyPolicyLinkHref,
-    privacyPolicyLinkText,
-  } = ugc;
 
   const ref = useRef<HTMLHeadingElement>(null);
 
@@ -61,16 +47,16 @@ const SuccessScreen = ({ title }: Props) => {
   }, []);
 
   useEffect(() => {
-    document.title = `${confirmationStepTitle}: ${title}`;
-  }, [confirmationStepTitle, title]);
+    document.title = `${successHeading}: ${title}`;
+  }, [successHeading, title]);
 
-  const retentionPolicy = retentionPeriodDays.replace(
+  const retentionPolicy = retentionPeriodDays?.replace(
     '{{days}}',
-    DEFAULT_RETENTION_POLICY_DAY,
+    retentionPeriod,
   );
 
-  const privacyClauses = privacyInfoHtml.split('{{privacyInfoLink}}');
-  const emailGuidelineClauses = emailToHtml.split('{{emailLink}}');
+  const privacyClauses = privacyInfoHtml?.split('{{privacyInfoLink}}');
+  const emailGuidelineClauses = emailToHtml?.split('{{emailLink}}');
 
   return (
     <div css={styles.outerContainer}>
@@ -86,9 +72,9 @@ const SuccessScreen = ({ title }: Props) => {
               css={styles.heading}
               {...(ref && { ref })}
             >
-              {confirmationStepTitle}
+              {successHeading}
             </Heading>
-            <Paragraph>{confirmationStepDescriptionHtml}</Paragraph>
+            <Paragraph>{successDescription}</Paragraph>
           </div>
         </div>
       </div>
@@ -100,17 +86,19 @@ const SuccessScreen = ({ title }: Props) => {
           </Text>
           <Paragraph>{submissionID}</Paragraph>
         </div>
-        <Paragraph>{retentionPolicy}</Paragraph>
-        <Paragraph>
-          {emailGuidelineClauses?.[0]}
-          <a
-            href={`mailto:${DEFAULT_EMAIL}`}
-            className="focusIndicatorReducedWidth"
-          >
-            {DEFAULT_EMAIL}
-          </a>
-          {emailGuidelineClauses?.[1]} {removalGuidelineText}
-        </Paragraph>
+        {retentionPeriod && <Paragraph>{retentionPolicy}</Paragraph>}
+        {replyEmailAddress && (
+          <Paragraph>
+            {replyEmailAddress && emailGuidelineClauses?.[0]}
+            <a
+              href={`mailto:${replyEmailAddress}`}
+              className="focusIndicatorReducedWidth"
+            >
+              {replyEmailAddress}
+            </a>
+            {emailGuidelineClauses?.[1]} {removalGuidelineText}
+          </Paragraph>
+        )}
         <Paragraph>
           {privacyClauses?.[0]}
           <a

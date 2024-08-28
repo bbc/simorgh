@@ -19,9 +19,11 @@ import {
   OnChangeInputName,
   OnChangeInputValue,
   OnFocusOutHandler,
+  ValidationError,
 } from '../types';
 import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
+import getValidationErrors from './utils/getValidationErrors';
 
 type SubmissionError = {
   message: string;
@@ -37,7 +39,8 @@ export type ContextProps = {
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
-  hasAttemptedSubmit: boolean;
+  attemptedSubmitCount: number;
+  validationErrors: ValidationError[] | [];
   progress: string;
   screen: FormScreen;
   submissionID: string | null;
@@ -65,7 +68,9 @@ const getInitialFormState = (
     {},
   );
 
-const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
+const validateFormStateOnSubmit = (
+  state: Record<OnChangeInputName, FieldData>,
+) => {
   const formEntries = new Map(Object.entries(state));
 
   formEntries.forEach((data, key, map) => {
@@ -92,23 +97,31 @@ export const FormContextProvider = ({
   const [progress, setProgress] = useState('0');
   const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
-  const [hasAttemptedSubmit, setAttemptedSubmit] = useState(false);
+  const [attemptedSubmitCount, setAttemptedSubmitCount] = useState(0);
+  const [validationErrors, setValidationErrors] = useState<ValidationError[]>(
+    [],
+  );
   const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
     const prevState = formState[name];
     const currState = { ...prevState, value };
     let validatedData = currState;
+
     if (currState.htmlType === 'file') {
       const validateFunction = validateFunctions.file;
       validatedData = validateFunction
         ? validateFunction(currState)
         : currState;
     }
-    setFormState(prevFormState => {
-      const updatedState = { [name]: { ...validatedData } };
-      return { ...prevFormState, ...updatedState };
-    });
+    const updatedState = { [name]: { ...validatedData } };
+    const newFormState = { ...formState, ...updatedState };
+    setFormState(newFormState);
+
+    if (currState.htmlType === 'file') {
+      const validationErrorsList = getValidationErrors(newFormState);
+      setValidationErrors(validationErrorsList);
+    }
   };
 
   const handleFocusOut = (name: OnChangeInputName) => {
@@ -117,26 +130,28 @@ export const FormContextProvider = ({
     const validatedData = validateFunction
       ? validateFunction(currState)
       : currState;
+    const updatedState = { [name]: { ...validatedData } };
+    const newFormState = { ...formState, ...updatedState };
 
-    setFormState(prevFormState => {
-      const updatedState = { [name]: { ...validatedData } };
-      return { ...prevFormState, ...updatedState };
-    });
+    const validationErrorsList = getValidationErrors(newFormState);
+    setValidationErrors(validationErrorsList);
+
+    setFormState(newFormState);
   };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setAttemptedSubmit(true);
+    setAttemptedSubmitCount(prevCount => prevCount + 1);
     // Reset error state
     setSubmissionError(null);
-    const validatedFormData = validateFormState(formState);
+    const validatedFormData = validateFormStateOnSubmit(formState);
     setFormState(validatedFormData);
 
-    const formInvalidErrors = Object.values(validatedFormData).filter(
-      item => item.isValid === false,
-    ).length;
-
-    if (formInvalidErrors > 0) return;
+    const validationErrorsList = getValidationErrors(validatedFormData);
+    if (validationErrorsList.length > 0) {
+      setValidationErrors(validationErrorsList);
+      return;
+    }
 
     setSubmitted(true);
 
@@ -224,7 +239,8 @@ export const FormContextProvider = ({
         submissionError,
         submitted,
         progress,
-        hasAttemptedSubmit,
+        attemptedSubmitCount,
+        validationErrors,
         screen,
         submissionID,
       }}

@@ -2,21 +2,33 @@
   "data": {
     "article": {
       "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+          "contentType": "article-media-asset",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+          "timePublished": "2015-11-20T10:09:33.000Z",
+          "timeUpdated": "2015-11-20T10:09:33.000Z"
+        },
         "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
         "locators": {
           "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
           "assetId": "17694217",
           "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
+          "canonicalUrl": "https://www.bbc.com/arabic/worldnews/2015/11/151120_t_arabic_av",
           "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
         },
         "type": "MAP",
         "createdBy": "arabic_1024",
         "language": "ar",
-        "lastUpdated": 1687177431318,
         "firstPublished": 1448014173000,
         "lastPublished": 1448014173000,
-        "timestamp": 1448014173000,
         "options": {
           "includeComments": false,
           "allowRightHandSide": true,
@@ -28,101 +40,155 @@
         "analyticsLabels": {
           "cps_asset_type": "map",
           "cps_asset_id": "17694217",
-          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
-          "page": "arabic.worldnews.2015.11.151120_t_arabic_av.page"
+          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
         },
         "passport": {
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.28",
         "blockTypes": [
-          "legacyMedia",
-          "paragraph"
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "unknownLegacyMedia"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "campaigns": null,
-          "categoryName": null,
-          "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
-          "contentType": "article-media-asset",
-          "language": "ar",
-          "ldpThingIds": null,
-          "ldpThingLabels": null,
-          "pageIdentifier": "worldnews::arabic.worldnews.2015.11.151120_t_arabic_av.page",
-          "pageTitle": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-          "producerId": null,
-          "timePublished": "2015-11-20T10:09:33.000Z",
-          "timeUpdated": "2015-11-20T10:09:33.000Z"
-        },
-        "readTime": 1,
         "siteUri": "/arabic",
         "mediaType": "video",
+        "allowAdvertising": true,
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
       },
       "content": {
-        "blocks": [
-          {
-            "id": "17694217",
-            "subType": "primary",
-            "format": "video",
-            "image": {
-              "id": "17694217",
-              "subType": "thumbnail",
-              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-              "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-              "height": 360,
-              "width": 640,
-              "altText": "",
-              "copyrightHolder": "",
-              "type": "image"
+        "model": {
+          "blocks": [
+            {
+              "id": "d67366ae",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "0a65ecd3",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c4ac161a",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+                            "blocks": [
+                              {
+                                "id": "f5d4da13",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
             },
-            "aspectRatio": "16:9",
-            "live": false,
-            "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
-            "playlist": [
-              {
-                "format": "mp4",
-                "bitrate": "168000",
-                "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
+            {
+              "id": "e35d11ea",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1448014173000,
+                "lastPublished": 1448014173000
               },
-              {
-                "format": "mp4",
-                "bitrate": "320000",
-                "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
+              "position": [2]
+            },
+            {
+              "id": "460298e6",
+              "type": "unknownLegacyMedia",
+              "model": {
+                "content": "{\"id\":\"17694217\",\"subType\":\"primary\",\"format\":\"video\",\"image\":{\"id\":\"17694217\",\"subType\":\"thumbnail\",\"href\":\"http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg\",\"path\":\"/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg\",\"height\":360,\"width\":640,\"altText\":\"\",\"copyrightHolder\":\"\"},\"aspectRatio\":\"16:9\",\"live\":false,\"href\":\"http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml\",\"playlist\":[{\"format\":\"mp4\",\"bitrate\":\"168000\",\"url\":\"https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"320000\",\"url\":\"https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"904000\",\"url\":\"https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4\"}]}"
               },
-              {
-                "format": "mp4",
-                "bitrate": "904000",
-                "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
-              }
-            ],
-            "type": "legacyMedia"
-          },
-          {
-            "text": "قال المرصد السوري لحقوق الانسان المعارض ومقره بريطانيا إن أكثر من 1300 شخص، نحو ثلثيهم من المسلحين، قتلوا في سوريا منذ انطلاق الحملة الجوية الروسية في الـ 30 من أيلول / سبتمبر الماضي.",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          },
-          {
-            "text": "ويبلغ الرقم الذي نشره المرصد اليوم ضعف الرقم الذي اعلن عنه في آخر تقرير نشره منذ 3 اسابيع.",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          },
-          {
-            "text": "وقال المرصد إنه وثّق 1331 حالة وفاة نتيجة الغارات الجوية الروسية، معظمها لمسلحين من التنظيم الذي يطلق على نفسه اسم &quot;الدولة الاسلامية&quot; (داعش) وغيره من التنظيمات الجهادية.",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          }
-        ]
+              "position": [3]
+            },
+            {
+              "id": "a45f22d1",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "cf8afd73",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "قال المرصد السوري لحقوق الانسان المعارض ومقره بريطانيا إن أكثر من 1300 شخص، نحو ثلثيهم من المسلحين، قتلوا في سوريا منذ انطلاق الحملة الجوية الروسية في الـ 30 من أيلول / سبتمبر الماضي.",
+                      "blocks": [
+                        {
+                          "id": "fb71c9bd",
+                          "type": "fragment",
+                          "model": {
+                            "text": "قال المرصد السوري لحقوق الانسان المعارض ومقره بريطانيا إن أكثر من 1300 شخص، نحو ثلثيهم من المسلحين، قتلوا في سوريا منذ انطلاق الحملة الجوية الروسية في الـ 30 من أيلول / سبتمبر الماضي.",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "baf99b2f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ويبلغ الرقم الذي نشره المرصد اليوم ضعف الرقم الذي اعلن عنه في آخر تقرير نشره منذ 3 اسابيع.",
+                      "blocks": [
+                        {
+                          "id": "67cd61e4",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ويبلغ الرقم الذي نشره المرصد اليوم ضعف الرقم الذي اعلن عنه في آخر تقرير نشره منذ 3 اسابيع.",
+                            "attributes": []
+                          },
+                          "position": [4, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 2]
+                  },
+                  {
+                    "id": "54abd1fd",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "وقال المرصد إنه وثّق 1331 حالة وفاة نتيجة الغارات الجوية الروسية، معظمها لمسلحين من التنظيم الذي يطلق على نفسه اسم \"الدولة الاسلامية\" (داعش) وغيره من التنظيمات الجهادية.",
+                      "blocks": [
+                        {
+                          "id": "d1fcb7a0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "وقال المرصد إنه وثّق 1331 حالة وفاة نتيجة الغارات الجوية الروسية، معظمها لمسلحين من التنظيم الذي يطلق على نفسه اسم \"الدولة الاسلامية\" (داعش) وغيره من التنظيمات الجهادية.",
+                            "attributes": []
+                          },
+                          "position": [4, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 3]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            { "id": "0dd40d57", "type": "mpu", "model": {}, "position": [5] }
+          ]
+        }
       },
       "promo": {
-        "headlines": {
-          "shortHeadline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-          "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"
-        },
         "locators": {
           "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
@@ -130,86 +196,463 @@
           "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
           "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
         },
-        "summary": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-        "timestamp": 1448014173000,
-        "language": "ar",
-        "passport": {
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
-          "taggings": []
+        "headlines": {
+          "seoHeadline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
-        "media": {
-          "id": "17694217",
-          "subType": "primary",
-          "format": "video",
-          "image": {
-            "id": "17694217",
-            "subType": "thumbnail",
-            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-            "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "",
-            "copyrightHolder": "",
-            "type": "image"
-          },
-          "aspectRatio": "16:9",
-          "live": false,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
-          "playlist": [
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": { "text": "", "attributes": [] }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 81,
+                  "width": 144,
+                  "locator": "worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+                  "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+                  "originCode": "amz",
+                  "copyrightHolder": "BBC World Service",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
             {
-              "format": "mp4",
-              "bitrate": "168000",
-              "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
-            },
-            {
-              "format": "mp4",
-              "bitrate": "320000",
-              "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
-            },
-            {
-              "format": "mp4",
-              "bitrate": "904000",
-              "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
-          ],
-          "type": "legacyMedia"
+          ]
         },
-        "indexImage": {
-          "id": "d5e228",
-          "subType": "index",
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
-          "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
-          "height": 81,
-          "width": 144,
-          "altText": "",
-          "copyrightHolder": "BBC World Service",
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
-        "type": "cps"
-      },
-      "relatedContent": {
-        "section": {
-          "subType": "index",
-          "name": "العالم",
-          "uri": "/arabic/worldnews",
-          "urlIdentifier": "/arabic/worldnews",
-          "type": "simple"
-        },
-        "site": {
-          "subType": "site",
-          "name": "BBCArabic.com",
-          "uri": "/arabic",
-          "urlIdentifier": "/arabic",
-          "type": "simple"
-        },
-        "groups": []
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"
+          },
+          "media": {
+            "blocks": [
+              {
+                "type": "unknownLegacyMedia",
+                "model": {
+                  "content": "{\"id\":\"17694217\",\"subType\":\"primary\",\"format\":\"video\",\"image\":{\"id\":\"17694217\",\"subType\":\"thumbnail\",\"href\":\"http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg\",\"path\":\"/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg\",\"height\":360,\"width\":640,\"altText\":\"\",\"copyrightHolder\":\"\"},\"aspectRatio\":\"16:9\",\"live\":false,\"href\":\"http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml\",\"playlist\":[{\"format\":\"mp4\",\"bitrate\":\"168000\",\"url\":\"https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"320000\",\"url\":\"https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4\"},{\"format\":\"mp4\",\"bitrate\":\"904000\",\"url\":\"https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4\"}]}"
+                }
+              }
+            ]
+          },
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
-      "topStories": null,
-      "features": null,
-      "mostRead": null
+      "topStories": [
+        {
+          "headlines": { "headline": "مرأة الخارقة \"" },
+          "locators": {
+            "assetUri": "/arabic/tv-and-radio-23233470",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6bc4c1da-8b0d-544f-8e7f-a02d969e4236",
+            "assetId": "23233470",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/tv-and-radio-23233470",
+            "curie": "http://www.bbc.co.uk/asset/6bc4c1da-8b0d-544f-8e7f-a02d969e4236"
+          },
+          "summary": "الممثلة الإسرائيلية",
+          "timestamp": 1552491110000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63702041",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/36C4/test/_63702041_tv000117434.jpg",
+            "path": "/cpsdevpb/36C4/test/_63702041_tv000117434.jpg",
+            "height": 432,
+            "width": 768,
+            "altText": "الرياضه",
+            "caption": "الخم",
+            "copyrightHolder": "BBC ",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63702046",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/FA14/test/_63702046_penguins.jpg",
+            "path": "/cpsdevpb/FA14/test/_63702046_penguins.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "بسسس",
+            "caption": "البز",
+            "copyrightHolder": "Corbis",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "prominence": "standard",
+          "id": "urn:bbc:ares::asset:arabic/tv-and-radio-23233470",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Small Island and Long Song author dies aged 62"
+          },
+          "locators": {
+            "assetUri": "/swahili/23231091",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6f02f033-e855-784e-b408-b997eb03809e",
+            "assetId": "23231091",
+            "cpsUrn": "urn:bbc:content:assetUri:swahili/23231091",
+            "curie": "http://www.bbc.co.uk/asset/6f02f033-e855-784e-b408-b997eb03809e"
+          },
+          "summary": "British author Andrea Levy, whose award-winning novels captured the black British experience in the years after Windrush, has died at the age of 62.",
+          "timestamp": 1550232273000,
+          "language": "sw",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "campaigns": [
+              {
+                "campaignId": "5ad86285c93a9f000eecb256",
+                "campaignName": "Give me perspective"
+              }
+            ],
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63700520",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/09C4/test/_63700520_000964414-1.jpg",
+            "path": "/cpsdevpb/09C4/test/_63700520_000964414-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Andrea Levy black and white picture",
+            "caption": "Andrea Levy",
+            "copyrightHolder": "Publicity Photo",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "section": {
+            "subType": "IDX",
+            "name": "Swahili",
+            "uri": "/swahili/front_page",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC Swahili",
+            "uri": "/swahili",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:swahili/23231091",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 108",
+            "overtyped": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض  1 features 08"
+          },
+          "locators": {
+            "assetUri": "/arabic/trending-23083197",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:897c1da8-656c-c743-88e4-ef5901fbfb50",
+            "assetId": "23083197",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/trending-23083197",
+            "curie": "http://www.bbc.co.uk/asset/897c1da8-656c-c743-88e4-ef5901fbfb50"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454252000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/trending-23083197",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 103"
+          },
+          "locators": {
+            "assetUri": "/arabic/business-23083189",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:036ad2c9-654b-e74a-a832-f39bb3576a53",
+            "assetId": "23083189",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/business-23083189",
+            "curie": "http://www.bbc.co.uk/asset/036ad2c9-654b-e74a-a832-f39bb3576a53"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454070000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/business-23083189",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 102"
+          },
+          "locators": {
+            "assetUri": "/arabic/world-23083188",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bf46474e-b56f-e14c-8abc-dde124d3b110",
+            "assetId": "23083188",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/world-23083188",
+            "curie": "http://www.bbc.co.uk/asset/bf46474e-b56f-e14c-8abc-dde124d3b110"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454080000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/world-23083188",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 108"
+          },
+          "locators": {
+            "assetUri": "/arabic/inthepress-23083196",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:976839bb-e56b-c548-a9a7-52a089b252a2",
+            "assetId": "23083196",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/inthepress-23083196",
+            "curie": "http://www.bbc.co.uk/asset/976839bb-e56b-c548-a9a7-52a089b252a2"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454225000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/inthepress-23083196",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 107",
+            "overtyped": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض  press review 107"
+          },
+          "locators": {
+            "assetUri": "/arabic/vert-cap-23083193",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:3101fca0-e0d0-e14f-84ed-a72d903fde77",
+            "assetId": "23083193",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-23083193",
+            "curie": "http://www.bbc.co.uk/asset/3101fca0-e0d0-e14f-84ed-a72d903fde77"
+          },
+          "summary": "ثمة بقعة في المحيط الهادئ تبعد أكثر من غيرها عن اليابسة، وهي على نحو ما ذات طابع غريب وخاص.",
+          "timestamp": 1476454188000,
+          "language": "ar",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63504578",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "path": "/cpsdevpb/155F4/test/_63504578_e7d39065-cb22-4df2-999b-a64196b6f685.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "planet",
+            "copyrightHolder": "ESA",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "id": "urn:bbc:ares::asset:arabic/vert-cap-23083193",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2024-07-30T13:03:58.53Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "items": [
+          {
+            "id": "bf46474e-b56f-e14c-8abc-dde124d3b110",
+            "rank": 1,
+            "title": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 102",
+            "href": "/arabic/world-23083188",
+            "timestamp": "2016-10-14T14:08:00.000Z"
+          },
+          {
+            "id": "41a45995-cbf8-4545-b410-8a59a521306d",
+            "rank": 2,
+            "title": "أربعة أسباب وراء غزو قناديل البحر للشواطئ المصرية 02",
+            "href": "/arabic/science-and-tech-23137405",
+            "timestamp": "2017-07-03T15:06:12.000Z"
+          },
+          {
+            "id": "085c72f7-df70-cf44-868a-8c7ca7dfb7d2",
+            "rank": 3,
+            "title": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات12",
+            "href": "/arabic/23078421",
+            "timestamp": "2016-09-26T14:11:37.000Z"
+          },
+          {
+            "id": "37156084-498d-044b-adbd-af7dc893e49a",
+            "rank": 4,
+            "title": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات25",
+            "href": "/arabic/23078434",
+            "timestamp": "2016-09-26T14:14:29.000Z"
+          },
+          {
+            "id": "23d65e86-75ba-2341-92f9-3f379a53d93f",
+            "rank": 5,
+            "title": "\"نقطة نيمو\": أبعد بقعة عن اليابسة على كوكب الأرض 106",
+            "href": "/arabic/sports-23083192",
+            "timestamp": "2016-10-14T14:09:23.000Z"
+          },
+          {
+            "id": "8770f476-b542-b242-bd6a-eb597eb62473",
+            "rank": 6,
+            "title": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات45",
+            "href": "/arabic/23078477",
+            "timestamp": "2016-09-26T14:31:03.000Z"
+          },
+          {
+            "id": "4e29969d-1dcb-2046-811d-a916dc7a1c06",
+            "rank": 7,
+            "title": "الأمن التونسي يفرق متظاهرين يطالبون بتوفير فرص عمل",
+            "href": "/arabic/23127131",
+            "timestamp": "2017-05-22T13:19:00.000Z"
+          },
+          {
+            "id": "971f7b87-c4b2-8848-9908-8fdb52f0026c",
+            "rank": 8,
+            "title": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات29",
+            "href": "/arabic/23078438",
+            "timestamp": "2016-09-26T14:15:31.000Z"
+          },
+          {
+            "id": "b70b73eb-d1dd-d244-95b7-259895001ca8",
+            "rank": 9,
+            "title": "التدخين \"يسبب مئات التحورات في الحامض النووي\"",
+            "href": "/arabic/science-and-tech-23089566",
+            "timestamp": "2016-11-07T11:30:10.000Z"
+          },
+          {
+            "id": "14fc93a8-c93c-b743-9a49-39b0c90fc129",
+            "rank": 10,
+            "title": "تشديد القوانين الخاصة بشراء واستخدام الطائرات المسيرة الصغيرة في الامارات24",
+            "href": "/arabic/23078433",
+            "timestamp": "2016-09-26T14:14:18.000Z"
+          }
+        ]
+      },
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"
