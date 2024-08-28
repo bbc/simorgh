@@ -463,7 +463,6 @@ describe('buildSettings', () => {
                 versionID: 'w1mskyp8ybvqtc6',
                 kind: 'programme',
                 duration: 1192,
-                vpid: 'w1mskyp8ybvqtc6',
               },
             ],
             summary:
