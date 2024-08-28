@@ -9,6 +9,7 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  insideIframe?: boolean;
   externalEmbedUrl?: string;
   statsObject: {
     clipPID?: string;
