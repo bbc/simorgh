@@ -3,6 +3,7 @@ import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
 import logResponseTime from '#server/utilities/logResponseTime';
 
 import PageDataParams from '#app/models/types/pageDataParams';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import dataFetch from './dataFetch';
 
 import downloadsPageLayout from './downloadsPageLayout';
@@ -39,6 +40,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { service, variant } = context.query as PageDataParams;
 
   const downloadData = await dataFetch(service);
+  const toggles = await getToggles(service);
 
   const { headers: reqHeaders } = context.req;
 
@@ -60,6 +62,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
+      toggles,
       variant: variant?.[0] || null,
       ...extractHeaders(reqHeaders),
     },
