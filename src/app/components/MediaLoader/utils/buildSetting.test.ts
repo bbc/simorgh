@@ -441,7 +441,7 @@ describe('buildSettings', () => {
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'HINDI',
-            episodePID: 'w172zm8920nck2z',
+            episodePID: 'w172zm89sk8n4lc',
           },
           ui: {
             controls: { enabled: true },
@@ -457,10 +457,10 @@ describe('buildSettings', () => {
           playlistObject: {
             title: 'दुनिया',
             holdingImageURL:
-              'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
             items: [
               {
-                versionID: 'w1mskyp8ybvqtc6',
+                versionID: 'w1mskyp9nwh0dvl',
                 kind: 'programme',
                 duration: 1192,
               },
@@ -480,9 +480,9 @@ describe('buildSettings', () => {
             guidanceMessage: undefined,
           },
           placeholderSrc:
-            'https://ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
           placeholderSrcset:
-            'https://ichef.bbci.co.uk/images/ic/240xn/p0hfjjfk.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0hfjjfk.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0hfjjfk.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0hfjjfk.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0hfjjfk.png.webp 800w',
+            'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
           translatedNoJSMessage:
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
