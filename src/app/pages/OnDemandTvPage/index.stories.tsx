@@ -12,7 +12,9 @@ const onDemandTvFixtures: {
   pashto: OnDemandTVProps['pageData'];
   afrique: OnDemandTVProps['pageData'];
 } = {
+  // @ts-expect-error ignore metadata.type error in Storybook
   pashto,
+  // @ts-expect-error ignore metadata.type error in Storybook
   afrique,
 };
 

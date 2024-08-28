@@ -1,3 +1,4 @@
+import { FetchMock } from 'jest-fetch-mock';
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
 import { StaticRouter } from 'react-router-dom';
@@ -65,6 +66,8 @@ const renderPage = async ({ pageData, service }: Props) => {
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
+const fetchMock = fetch as FetchMock;
+
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
@@ -78,7 +81,7 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('a11y - should render a visually hidden headline', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
@@ -86,6 +89,7 @@ describe('OnDemand TV Brand Page ', () => {
       toggles,
     });
     await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -99,14 +103,16 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('should show the brand title for OnDemand TV Pages', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -115,14 +121,16 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('a11y - should aria-hide the title', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -134,14 +142,16 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('a11y - should have a "content" id on the h1', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -150,14 +160,16 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('Dark Mode Design - should match snapshot', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -166,14 +178,16 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -182,14 +196,16 @@ describe('OnDemand TV Brand Page ', () => {
   });
 
   it('should show the summary for OnDemand TV Pages', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -203,13 +219,15 @@ describe('OnDemand TV Brand Page ', () => {
 
   it('should show the video player on canonical with no live override', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -224,13 +242,15 @@ describe('OnDemand TV Brand Page ', () => {
 
   it('should show the video player on canonical with live override', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -249,13 +269,15 @@ describe('OnDemand TV Brand Page ', () => {
       'notAvailable',
       pashtoPageData,
     );
-    fetch.mockResponse(JSON.stringify(pageDataWithExpiredEpisode));
+    fetchMock.mockResponse(JSON.stringify(pageDataWithExpiredEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required queries
     const { container, getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -273,13 +295,15 @@ describe('OnDemand TV Brand Page ', () => {
       'future',
       pashtoPageData,
     );
-    fetch.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
+    fetchMock.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required queries
     const { container, getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -299,13 +323,15 @@ describe('OnDemand TV Brand Page ', () => {
       'pending',
       pashtoPageData,
     );
-    fetch.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
+    fetchMock.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required queries
     const { container, getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
