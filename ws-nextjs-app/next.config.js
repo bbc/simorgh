@@ -14,6 +14,19 @@ const isLocal =
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'x-frame-options',
+            value: 'DENY',
+          },
+        ],
+      },
+    ];
+  },
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
