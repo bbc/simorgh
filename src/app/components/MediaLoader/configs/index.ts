@@ -17,6 +17,7 @@ const blockTypeMapping: Record<
   tvMedia,
 };
 
+// eslint-disable-next-line no-use-before-define
 export default (blocks: MediaBlock[]) => {
   for (const blockType of ['aresMedia', 'clipMedia', 'tvMedia']) {
     const mediaBlock = filterForBlockType(blocks, blockType);
