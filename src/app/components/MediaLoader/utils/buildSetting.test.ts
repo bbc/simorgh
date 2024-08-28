@@ -1,6 +1,11 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import buildSettings from './buildSettings';
-import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
+import {
+  aresMediaBlocks,
+  clipMediaBlocks,
+  aresMediaPlayerBlock,
+  aresMediaBlock,
+} from '../fixture';
 import {
   BuildConfigProps,
   ConfigBuilderReturnProps,
@@ -47,7 +52,7 @@ describe('buildSettings', () => {
           autoplay: true,
           product: 'news',
           statsObject: {
-            clipPID: 'p01thw22',
+            clipPID: 'p01thw20',
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'MUNDO',
           },
@@ -55,7 +60,6 @@ describe('buildSettings', () => {
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          externalEmbedUrl: '',
           playlistObject: {
             title:
               "BBC launch trailer for We Know Our Place women's sport campaign",
@@ -148,15 +152,15 @@ describe('buildSettings', () => {
           autoplay: true,
           product: 'news',
           statsObject: {
-            clipPID: 'p01k6msp',
+            clipPID: 'p01k6msm',
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'MUNDO',
+            episodePID: null,
           },
           enableToucan: true,
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          externalEmbedUrl: '',
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -219,7 +223,8 @@ describe('buildSettings', () => {
           preload: 'high',
           product: 'news',
           statsObject: {
-            clipPID: 'p01k6msp',
+            clipPID: 'p01k6msm',
+            episodePID: null,
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'MUNDO',
           },
@@ -227,7 +232,6 @@ describe('buildSettings', () => {
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          externalEmbedUrl: '',
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -373,9 +377,10 @@ describe('buildSettings', () => {
       });
 
       expect(result?.playerConfig.statsObject).toStrictEqual({
-        clipPID: 'p01k6msp',
+        clipPID: 'p01k6msm',
         destination: 'WS_NEWS_LANGUAGES',
         producer: 'MUNDO',
+        episodePID: null,
       });
     });
 
@@ -395,6 +400,109 @@ describe('buildSettings', () => {
         'title',
         'Five things ants can teach us about management',
       );
+    });
+
+    it('Should have a `statsObject.clipPID` when subType is "clip"', async () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+      expect(result?.playerConfig.statsObject).toStrictEqual({
+        clipPID: 'p01k6msm',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+        episodePID: null,
+      });
+    });
+
+    it('Should have a `statsObject.episodePID` when subType is "episode"', async () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...aresMediaPlayerBlock,
+                model: {
+                  id: 'p01k6msm',
+                  subType: 'episode',
+                },
+              },
+            ],
+          },
+        },
+      ];
+      const result = buildSettings({
+        ...baseSettings,
+        // @ts-expect-error partial data used for testing purposes
+        blocks: myFixture as MediaBlock[],
+      });
+      expect(result?.playerConfig.statsObject).toStrictEqual({
+        clipPID: null,
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+        episodePID: 'p01k6msm',
+      });
+    });
+
+    it('Should have insideIframe property with value `true` for amp', async () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+        isAmp: true,
+      });
+
+      expect(result?.playerConfig).toHaveProperty('insideIframe', true);
+    });
+
+    it('Should have insideIframe property with value `false` for canonical', async () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+
+      expect(result?.playerConfig).not.toHaveProperty('insideIframe', true);
+    });
+
+    it('Should set the embed rights and externalEmbedURL when embedding is allowed', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+        embedUrl: 'testEmbedUrl',
+      });
+      expect(result?.playerConfig).toHaveProperty('playlistObject.embedRights');
+      expect(result?.playerConfig).toHaveProperty(
+        'externalEmbedUrl',
+        'testEmbedUrl',
+      );
+    });
+
+    it('Should exclude the embed rights and externalEmbedURL when embedding is prohibited', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...aresMediaPlayerBlock,
+                model: {
+                  id: 'p01k6msm',
+                  embedding: false,
+                },
+              },
+            ],
+          },
+        },
+      ];
+      const result = buildSettings({
+        ...baseSettings,
+        // @ts-expect-error partial data used for testing purposes
+        blocks: myFixture as MediaBlock[],
+      });
+      expect(result?.playerConfig).not.toHaveProperty(
+        'playlistObject.embedRights',
+      );
+      expect(result?.playerConfig).not.toHaveProperty('externalEmbedUrl');
     });
   });
 });
