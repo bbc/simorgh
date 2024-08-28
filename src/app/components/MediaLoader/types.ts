@@ -280,7 +280,6 @@ export type MediaBlock =
   | SyndicationAresMediaBlock
   | TvMediaBlock;
 
-
 export type BuildConfigProps = {
   blocks: MediaBlock[];
   counterName: string | null;
