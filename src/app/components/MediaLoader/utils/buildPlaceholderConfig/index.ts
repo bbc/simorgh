@@ -8,7 +8,7 @@ type BuildPlaceholderConfigParams = {
   title: string;
   duration: number;
   holdingImageURL: string;
-  placeholderImageOriginCode?: string;
+  placeholderImageOriginCode: string;
   placeholderImageLocator: string;
   type: MediaType;
   durationISO8601?: string;

@@ -1,6 +1,7 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import buildSettings from './buildSettings';
 import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
 import {
@@ -9,7 +10,6 @@ import {
   MediaBlock,
   PlaceholderConfig,
 } from '../types';
-import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 
 const baseSettings = {
   pageType: 'article' as PageTypes,
@@ -463,7 +463,6 @@ describe('buildSettings', () => {
                 versionID: 'w1mskyp8ybvqtc6',
                 kind: 'programme',
                 duration: 1192,
-                vpid: 'w1mskyp8ybvqtc6',
               },
             ],
             summary:
