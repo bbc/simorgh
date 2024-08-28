@@ -1,4 +1,4 @@
-import thai from '../../../components/ThemeProvider/fontScripts/thai';
+import thai from '#components/ThemeProvider/fontScripts/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
 import '#psammead/psammead-locales/moment/th';
 import withContext from '#contexts/utils/withContext';

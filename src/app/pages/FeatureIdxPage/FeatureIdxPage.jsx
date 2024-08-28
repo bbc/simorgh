@@ -5,13 +5,13 @@ import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#legacy/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import AdContainer from '../../components/Ad';
-import MPUContainer from '../../components/Ad/MPU';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
+import AdContainer from '#components/Ad';
+import MPUContainer from '#components/Ad/MPU';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import MetadataContainer from '#components/Metadata';
 import { ServiceContext } from '#contexts/ServiceContext';
-import LinkedData from '../../components/LinkedData';
+import LinkedData from '#components/LinkedData';
 import flattenGroups from './flattenGroups';
 
 const FeatureIdxPage = ({ pageData }) => {

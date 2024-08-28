@@ -17,7 +17,7 @@ import {
   render,
   act,
   waitFor,
-} from '../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage from './OnDemandAudioPage';
@@ -71,7 +71,7 @@ const renderPage = async ({ pageData, service, variant, lang = 'ko' }) => {
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

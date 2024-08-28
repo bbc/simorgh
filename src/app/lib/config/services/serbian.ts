@@ -1,5 +1,5 @@
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
+import latinWithDiacritics from '#components/ThemeProvider/fontScripts/latinWithDiacritics';
+import cyrillic from '#components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';
 import '#psammead/psammead-locales/moment/sr';

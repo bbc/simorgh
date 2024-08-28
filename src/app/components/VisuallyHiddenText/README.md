@@ -4,7 +4,7 @@ Adds non-visible text to the page, to be utilised by screen-readers and other as
 
 ## Installation
 
-`npm install #app/components/simorgh-visually-hidden-text/src`
+`npm install #components/simorgh-visually-hidden-text/src`
 
 ## Props
 

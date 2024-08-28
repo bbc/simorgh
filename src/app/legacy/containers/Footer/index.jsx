@@ -7,7 +7,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
-import Footer from '#app/components/Footer';
+import Footer from '#components/Footer';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BrandContainer from '../Brand';
 

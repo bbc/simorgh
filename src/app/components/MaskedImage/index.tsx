@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
-import Image from '#app/components/Image';
+import Image from '#components/Image';
 import { createSrcsets } from '#app/lib/utilities/srcSet';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';

@@ -25,13 +25,13 @@ import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
 import { ServiceContext } from '#contexts/ServiceContext';
-import MetadataContainer from '../../components/Metadata';
+import MetadataContainer from '#components/Metadata';
 import getPlaceholderImageUrl from '#routes/utils/getPlaceholderImageUrl';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.palette.GREY_10};

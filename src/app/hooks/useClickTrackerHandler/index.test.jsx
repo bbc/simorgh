@@ -12,7 +12,7 @@ import {
   renderHook,
   act,
   fireEvent,
-} from '../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 

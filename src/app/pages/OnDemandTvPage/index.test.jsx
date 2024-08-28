@@ -9,7 +9,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#routes/utils/pageTypes';
-import { render } from '../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import _OnDemandTvPage from './OnDemandTvPage';
 
@@ -57,7 +57,7 @@ const renderPage = async ({ pageData, service }) => {
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

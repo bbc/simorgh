@@ -1,4 +1,4 @@
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import latinWithDiacritics from '#components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
 import withContext from '#contexts/utils/withContext';

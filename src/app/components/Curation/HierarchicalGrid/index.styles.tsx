@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
+import { GROUP_1_MAX_WIDTH } from '#components/ThemeProvider/mediaQueries';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>

@@ -30,7 +30,7 @@ import SkipLinkWrapper from '#legacy/components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { FORCED_COLOURS } from '#app/components/ThemeProvider/mediaQueries';
+import { FORCED_COLOURS } from '#components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '#contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';

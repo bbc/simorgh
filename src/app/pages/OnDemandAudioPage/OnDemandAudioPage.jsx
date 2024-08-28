@@ -25,10 +25,10 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
-import LinkedData from '../../components/LinkedData';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import MetadataContainer from '#components/Metadata';
+import LinkedData from '#components/LinkedData';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';

@@ -1,4 +1,4 @@
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '#legacy/psammead/psammead-calendars/src';

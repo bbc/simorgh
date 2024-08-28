@@ -2,23 +2,23 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import ATIAnalytics from '#components/ATIAnalytics';
 import {
   Curation,
   VisualProminence,
   VisualStyle,
 } from '#models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
-import HomeCuration from '../../components/Curation';
-import Ad from '../../components/Ad';
-import MPU from '../../components/Ad/MPU';
+import { ATIData } from '#components/ATIAnalytics/types';
+import HomeCuration from '#components/Curation';
+import Ad from '#components/Ad';
+import MPU from '#components/Ad/MPU';
 import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './index.styles';
-import MetadataContainer from '../../components/Metadata';
-import LinkedData from '../../components/LinkedData';
+import MetadataContainer from '#components/Metadata';
+import LinkedData from '#components/LinkedData';
 import getItemList from '#lib/seoUtils/getItemList';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 

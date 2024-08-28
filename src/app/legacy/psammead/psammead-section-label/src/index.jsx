@@ -8,7 +8,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { GHOST } from '#app/components/ThemeProvider/palette';
+import { GHOST } from '#components/ThemeProvider/palette';
 import { PlainTitle, LinkTitle } from './titles';
 
 const SectionLabelWrapper = styled.div`

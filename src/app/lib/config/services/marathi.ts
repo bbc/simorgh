@@ -1,4 +1,4 @@
-import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
+import devanagari from '#components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/mr';
 import withContext from '#contexts/utils/withContext';

@@ -4,7 +4,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 import { STORY_PAGE } from '#routes/utils/pageTypes';
 
-import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';

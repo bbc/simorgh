@@ -11,10 +11,10 @@ import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768.json';
 import getInitialData from '#routes/cpsAsset/getInitialData';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import PhotoGalleryPage from '.';
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -24,7 +24,7 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const Page = ({ pageData, service }) => (
   <StaticRouter>

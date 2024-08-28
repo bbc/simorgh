@@ -31,20 +31,20 @@ import {
   screen,
   waitFor,
   act,
-} from '../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
-import ThemeProvider from '../../components/ThemeProvider';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import ThemeProvider from '#components/ThemeProvider';
+import ATIAnalytics from '#components/ATIAnalytics';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
-jest.mock('../../components/ATIAnalytics');
+jest.mock('#components/ATIAnalytics');
 
 const recommendationSettings = {
   hasStoryRecommendations: true,
@@ -115,7 +115,7 @@ beforeEach(() => {
 
   fetch.resetMocks();
   ATIAnalytics.mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
+    jest.requireActual('#components/ATIAnalytics').default,
   );
 });
 

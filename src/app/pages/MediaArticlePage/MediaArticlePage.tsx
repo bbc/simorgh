@@ -4,9 +4,9 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
-import { OEmbedProps } from '#app/components/Embeds/types';
+import { OEmbedProps } from '#components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
-import { Tag } from '#app/components/LinkedData/types';
+import { Tag } from '#components/LinkedData/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -27,11 +27,11 @@ import headings from '#legacy/containers/Headings';
 import visuallyHiddenHeadline from '#legacy/containers/VisuallyHiddenHeadline';
 import gist from '#legacy/containers/Gist';
 import text from '#legacy/containers/Text';
-import ImageWithCaption from '../../components/ImageWithCaption';
+import ImageWithCaption from '#components/ImageWithCaption';
 import Blocks from '#legacy/containers/Blocks';
 import Timestamp from '#legacy/containers/ArticleTimestamp';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
 import ComscoreAnalytics from '#legacy/containers/ComscoreAnalytics';
 import ArticleMediaPlayer from '#legacy/containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#legacy/containers/SocialEmbed';
@@ -39,9 +39,9 @@ import fauxHeadline from '#legacy/containers/FauxHeadline';
 import RelatedTopics from '#legacy/containers/RelatedTopics';
 import NielsenAnalytics from '#legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '#legacy/containers/ArticleMetadata';
-import EmbedImages from '../../components/Embeds/EmbedImages';
-import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import OEmbedLoader from '../../components/Embeds/OEmbed';
+import EmbedImages from '#components/Embeds/EmbedImages';
+import EmbedHtml from '#components/Embeds/EmbedHtml';
+import OEmbedLoader from '#components/Embeds/OEmbed';
 
 import { Article, OptimoBlock } from '#models/types/optimo';
 import {
@@ -50,17 +50,17 @@ import {
   MetadataTopics,
 } from '#models/types/metadata';
 
-import LinkedData from '../../components/LinkedData';
-import Byline from '../../components/Byline';
+import LinkedData from '#components/LinkedData';
+import Byline from '#components/Byline';
 
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
-} from '../../components/Byline/utilities';
+} from '#components/Byline/utilities';
 
 import { ServiceContext } from '#contexts/ServiceContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
+import RelatedContentSection from '#components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 

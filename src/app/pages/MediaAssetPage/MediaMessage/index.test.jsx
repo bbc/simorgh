@@ -1,7 +1,7 @@
 import React from 'react';
 import loggerMock from '#testHelpers/loggerMock';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import {
   ServiceContextProvider,
   ServiceContext,

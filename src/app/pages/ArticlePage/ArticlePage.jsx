@@ -37,26 +37,26 @@ import ScrollablePromo from '#legacy/components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import AdContainer from '../../components/Ad';
-import EmbedImages from '../../components/Embeds/EmbedImages';
-import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import MostRead from '../../components/MostRead';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import Byline from '../../components/Byline';
-import OEmbedLoader from '../../components/Embeds/OEmbed';
-import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
-import Uploader from '../../components/Embeds/Uploader';
+import ImageWithCaption from '#components/ImageWithCaption';
+import AdContainer from '#components/Ad';
+import EmbedImages from '#components/Embeds/EmbedImages';
+import EmbedHtml from '#components/Embeds/EmbedHtml';
+import MostRead from '#components/MostRead';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
+import Byline from '#components/Byline';
+import OEmbedLoader from '#components/Embeds/OEmbed';
+import UnsupportedEmbed from '#components/Embeds/UnsupportedEmbed';
+import Uploader from '#components/Embeds/Uploader';
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
-} from '../../components/Byline/utilities';
+} from '#components/Byline/utilities';
 import { ServiceContext } from '#contexts/ServiceContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
-import Disclaimer from '../../components/Disclaimer';
+import RelatedContentSection from '#components/RelatedContentSection';
+import Disclaimer from '#components/Disclaimer';
 
 import SecondaryColumn from './SecondaryColumn';
 

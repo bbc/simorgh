@@ -4,13 +4,13 @@ import {
   GROUP_1_MAX_WIDTH,
   GROUP_2_MIN_WIDTH,
   GROUP_3_MIN_WIDTH,
-} from '../../components/ThemeProvider/mediaQueries';
+} from '#components/ThemeProvider/mediaQueries';
 import {
   MARGIN_ABOVE_400PX,
   MARGIN_BELOW_400PX,
   QUADRUPLE,
   TRIPLE,
-} from '../../components/ThemeProvider/spacings';
+} from '#components/ThemeProvider/spacings';
 
 export const NEGATIVE_MARGIN = `${GROUP_1_MAX_WIDTH} {
     /* To remove GEL Margins */

@@ -32,13 +32,13 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#legacy/components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
+import ImageWithCaption from '#components/ImageWithCaption';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MediaMessage from './MediaMessage';
-import Disclaimer from '../../components/Disclaimer';
+import Disclaimer from '#components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

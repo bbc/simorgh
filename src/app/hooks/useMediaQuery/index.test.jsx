@@ -1,7 +1,7 @@
 import {
   renderHook,
   cleanup,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 import useMediaQuery from '.';
 

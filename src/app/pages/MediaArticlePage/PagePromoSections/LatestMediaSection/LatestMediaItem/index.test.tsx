@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import {
   render,
   screen,
-} from '../../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 import LatestMediaItem from '.';
 import PromoContext from '#legacy/components/OptimoPromos/PromoContext';

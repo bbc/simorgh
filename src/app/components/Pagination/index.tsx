@@ -7,7 +7,7 @@ import {
   GROUP_3_MIN_WIDTH_BP,
   GROUP_3_MAX_WIDTH_BP,
   GROUP_4_MIN_WIDTH_BP,
-} from '#app/components/ThemeProvider/mediaQueries';
+} from '#components/ThemeProvider/mediaQueries';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import { Direction } from '#app/models/types/global';

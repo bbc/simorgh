@@ -14,7 +14,7 @@ import {
   getDoublePica,
 } from '#psammead/gel-foundations/src/typography';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
-import { GHOST } from '#app/components/ThemeProvider/palette';
+import { GHOST } from '#components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
 const minClickableHeightRem = minClickableHeightPx / 16;

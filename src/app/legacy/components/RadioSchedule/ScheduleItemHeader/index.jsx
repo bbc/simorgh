@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import LiveLabel from '#app/components/LiveLabel';
+import LiveLabel from '#components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   getSansBold,

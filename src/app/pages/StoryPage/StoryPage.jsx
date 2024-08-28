@@ -42,16 +42,16 @@ import Include from '#containers/Include';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import AdContainer from '../../components/Ad';
-import { GHOST } from '../../components/ThemeProvider/palette';
-import MostRead from '../../components/MostRead';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
+import AdContainer from '#components/Ad';
+import { GHOST } from '#components/ThemeProvider/palette';
+import MostRead from '#components/MostRead';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
 import { ServiceContext } from '#contexts/ServiceContext';
 import categoryType from './categoryMap/index';
-import Disclaimer from '../../components/Disclaimer';
-import ImageWithCaption from '../../components/ImageWithCaption';
+import Disclaimer from '#components/Disclaimer';
+import ImageWithCaption from '#components/ImageWithCaption';
 
 import styles from './StoryPage.styles';
 

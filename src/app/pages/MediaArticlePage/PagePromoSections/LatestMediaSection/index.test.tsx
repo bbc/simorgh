@@ -2,7 +2,7 @@ import React from 'react';
 import {
   render,
   screen,
-} from '../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 import LatestMediaSection from '.';
 import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';

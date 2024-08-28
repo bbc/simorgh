@@ -17,7 +17,7 @@ import persianAfghanistan from '#data/persian/topics/crezq2dg9zwt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import Page from './TopicPage';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const TopicPage = withPageWrapper(Page);
 

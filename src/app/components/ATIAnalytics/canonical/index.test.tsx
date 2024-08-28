@@ -2,7 +2,7 @@ import React from 'react';
 import {
   render,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';

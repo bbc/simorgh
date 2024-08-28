@@ -1,4 +1,4 @@
-import bengali from '../../../components/ThemeProvider/fontScripts/bengali';
+import bengali from '#components/ThemeProvider/fontScripts/bengali';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
 import withContext from '#contexts/utils/withContext';

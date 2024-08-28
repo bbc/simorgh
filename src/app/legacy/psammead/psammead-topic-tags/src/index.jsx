@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { LUNAR } from '#app/components/ThemeProvider/palette';
+import { LUNAR } from '#components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

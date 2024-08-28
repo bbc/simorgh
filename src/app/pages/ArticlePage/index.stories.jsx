@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -14,7 +14,7 @@ import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);

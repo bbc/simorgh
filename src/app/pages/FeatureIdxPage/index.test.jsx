@@ -8,10 +8,10 @@ import getInitialData from '#routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import FeatureIdxPage from '.';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const mockToggles = {
   comscoreAnalytics: {
@@ -62,11 +62,11 @@ jest.mock('uuid', () => {
     },
   };
 });
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('../../components/ATIAnalytics/amp', () => {
+jest.mock('#components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 

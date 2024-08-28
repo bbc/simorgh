@@ -1,4 +1,4 @@
-import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
+import cyrillic from '#components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
 import withContext from '#contexts/utils/withContext';

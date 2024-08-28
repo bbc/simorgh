@@ -1,4 +1,4 @@
-import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
+import noAscendersOrDescenders from '#components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Tokyo';
 import 'moment/locale/ja';
 import withContext from '#contexts/utils/withContext';

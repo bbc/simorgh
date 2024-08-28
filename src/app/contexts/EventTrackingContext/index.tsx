@@ -28,13 +28,13 @@ import {
   DOWNLOADS_PAGE,
 } from '#routes/utils/pageTypes';
 import { PageTypes, Platforms } from '#models/types/global';
-import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
+import { buildATIEventTrackingParams } from '#components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
 import {
   ATIData,
   ATIEventTrackingProps,
   PageData,
-} from '../../components/ATIAnalytics/types';
+} from '#components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
   | {
