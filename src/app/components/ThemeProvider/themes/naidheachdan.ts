@@ -7,7 +7,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/naidheachdan';
+import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/naidheachdan';
 
 const naidheachdanTheme = {
   palette: {

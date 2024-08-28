@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 
-import PromoTimestamp from '../../legacy/components/Promo/timestamp';
+import PromoTimestamp from '#legacy/components/Promo/timestamp';
 import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
 import buildIChefURL from '../../lib/utilities/ichefURL';

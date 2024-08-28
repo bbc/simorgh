@@ -6,8 +6,8 @@ import isEmpty from 'ramda/src/isEmpty';
 
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
+import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#legacy/components/OptimoPromos/PromoList';
 import useViewTracker from '../../../../hooks/useViewTracker';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';

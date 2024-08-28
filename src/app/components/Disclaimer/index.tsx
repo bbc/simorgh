@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import { useContext, PropsWithChildren } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
-import { GridItemLarge } from '../../legacy/components/Grid';
+import { GridItemLarge } from '#legacy/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';

@@ -18,8 +18,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
-import PromoList from '../../legacy/components/OptimoPromos/PromoList';
-import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#legacy/components/OptimoPromos/PromoList';
+import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { OptimoBlock } from '../../models/types/optimo';
 

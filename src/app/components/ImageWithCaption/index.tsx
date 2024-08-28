@@ -8,7 +8,7 @@ import filterForBlockType from '../../lib/utilities/blockHandlers';
 import { Services } from '../../models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Copyright from '../Copyright';
-import Caption from '../../legacy/containers/Caption';
+import Caption from '#legacy/containers/Caption';
 import Image from '../Image';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';

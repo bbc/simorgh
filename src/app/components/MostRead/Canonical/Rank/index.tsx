@@ -6,7 +6,7 @@ import {
   EasternArabic,
   Nepali,
   WesternArabic,
-} from '../../../../legacy/psammead/psammead-locales/src/numerals';
+} from '#legacy/psammead/psammead-locales/src/numerals';
 import { Services } from '../../../../models/types/global';
 import { ColumnLayout, MostReadRankProps, Size } from '../../types';
 import styles, {

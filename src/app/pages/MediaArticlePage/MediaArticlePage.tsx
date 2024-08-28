@@ -21,24 +21,24 @@ import {
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
-import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+import ScrollablePromo from '#legacy/components/ScrollablePromo';
 
-import headings from '../../legacy/containers/Headings';
-import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
-import gist from '../../legacy/containers/Gist';
-import text from '../../legacy/containers/Text';
+import headings from '#legacy/containers/Headings';
+import visuallyHiddenHeadline from '#legacy/containers/VisuallyHiddenHeadline';
+import gist from '#legacy/containers/Gist';
+import text from '#legacy/containers/Text';
 import ImageWithCaption from '../../components/ImageWithCaption';
-import Blocks from '../../legacy/containers/Blocks';
-import Timestamp from '../../legacy/containers/ArticleTimestamp';
+import Blocks from '#legacy/containers/Blocks';
+import Timestamp from '#legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
-import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
-import fauxHeadline from '../../legacy/containers/FauxHeadline';
-import RelatedTopics from '../../legacy/containers/RelatedTopics';
-import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
-import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
+import ComscoreAnalytics from '#legacy/containers/ComscoreAnalytics';
+import ArticleMediaPlayer from '#legacy/containers/ArticleMediaPlayer';
+import SocialEmbedContainer from '#legacy/containers/SocialEmbed';
+import fauxHeadline from '#legacy/containers/FauxHeadline';
+import RelatedTopics from '#legacy/containers/RelatedTopics';
+import NielsenAnalytics from '#legacy/containers/NielsenAnalytics';
+import ArticleMetadata from '#legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';

@@ -14,7 +14,7 @@ import {
   Size,
 } from '../../types';
 import { Direction } from '../../../../models/types/global';
-import Grid from '../../../../legacy/components/Grid';
+import Grid from '#legacy/components/Grid';
 
 export const getParentColumns = (columnLayout: ColumnLayout) => {
   return columnLayout !== 'oneColumn'

@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import isEmpty from 'ramda/src/isEmpty';
 
-import Promo from '../../../../../legacy/components/OptimoPromos';
+import Promo from '#legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';
 import LatestMediaIndicator from '../LatestMediaIndicator';
 import styles from './index.styles';

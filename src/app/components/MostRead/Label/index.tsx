@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './index.styles';
-import SectionLabel from '../../../legacy/psammead/psammead-section-label/src';
+import SectionLabel from '#legacy/psammead/psammead-section-label/src';
 import { GREY_2 } from '../../ThemeProvider/palette';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 

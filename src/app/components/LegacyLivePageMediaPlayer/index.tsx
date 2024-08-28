@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import MediaPlayerContainer from '../../legacy/containers/MediaPlayer';
+import MediaPlayerContainer from '#legacy/containers/MediaPlayer';
 import { RequestContext } from '../../contexts/RequestContext';
 import { MediaBlock } from '../MediaLoader/types';
-import { GridItemMediumNoMargin } from '../../legacy/components/Grid';
+import { GridItemMediumNoMargin } from '#legacy/components/Grid';
 
 const LegacyLivePageMediaPlayer = ({ blocks, className }: Props) => {
   const { id, isLite } = useContext(RequestContext);
