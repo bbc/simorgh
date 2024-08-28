@@ -34,6 +34,7 @@
       "#pages/*": ["src/app/pages/*"],
       "#psammead/*": ["src/app/legacy/psammead/*"],
       "react": ["./node_modules/@types/react"],
+      "#routes/*": ["src/app/routes/*"],
       "#server/*": ["src/server/*"],
       "#storybook/*": [".storybook/*"],
       "#testHelpers/*": ["src/testHelpers/*"]
