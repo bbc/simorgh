@@ -1,4 +1,4 @@
-import getAgent from '../../../../server/utilities/getAgent';
+import getAgent from '#server/utilities/getAgent';
 import constructPageFetchUrl from '../constructPageFetchUrl';
 import getEnvironment from '../getEnvironment';
 import { Services, Variants, PageTypes } from '#models/types/global';

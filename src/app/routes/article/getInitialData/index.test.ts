@@ -11,7 +11,7 @@ process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
 
-jest.mock('../../../../server/utilities/getAgent', () =>
+jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent as unknown as Agent)),
 );
 

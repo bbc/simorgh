@@ -1,7 +1,7 @@
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-import services from '../../../../server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';

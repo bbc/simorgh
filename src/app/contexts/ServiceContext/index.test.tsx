@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { cleanup, render, act } from '@testing-library/react';
 import { ServiceContext, ServiceContextProvider } from '.';
-import services from '../../../server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 import { Services, Variants } from '#models/types/global';
 import { Translations } from '#models/types/translations';
 

@@ -6,7 +6,7 @@ import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '#models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
-import getAgent from '../../../../server/utilities/getAgent';
+import getAgent from '#server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
 

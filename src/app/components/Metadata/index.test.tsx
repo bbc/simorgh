@@ -20,7 +20,7 @@ import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
 import { render, waitFor } from '../react-testing-library-with-providers';
-import services from '../../../server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MetadataContainer from './index';
