@@ -18,7 +18,7 @@ describe('getMostReadEndpoint', () => {
 describe('getLocalMostReadEndpoint', () => {
   it('should return endpoint when passed service', () => {
     expect(getLocalMostReadEndpoint({ service: 'hausa' })).toBe(
-      './data/hausa/mostRead/index.json',
+      '#data/hausa/mostRead/index.json',
     );
   });
   it('should return endpoint when passed service & variant', () => {
@@ -27,6 +27,6 @@ describe('getLocalMostReadEndpoint', () => {
         service: 'serbian',
         variant: 'lat',
       }),
-    ).toBe('./data/serbian/mostRead/lat.json');
+    ).toBe('#data/serbian/mostRead/lat.json');
   });
 });

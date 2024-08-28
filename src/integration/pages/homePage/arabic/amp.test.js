@@ -5,7 +5,7 @@
  */
 
 import runAmpTests from '../ampTests';
-import { data as pageData } from '../../../../../data/arabic/homePage/index.json';
+import { data as pageData } from '#data/arabic/homePage/index.json';
 
 describe('AMP', () => {
   describe(pageType, () => {

@@ -60,7 +60,7 @@ describe('getRadioScheduleEndpoint', () => {
 describe('getLocalRadioScheduleEndpoint', () => {
   it('should return endpoint when passed service', () => {
     expect(getLocalRadioScheduleEndpoint({ service: 'hausa' })).toBe(
-      './data/hausa/bbc_hausa_radio/schedule.json',
+      '#data/hausa/bbc_hausa_radio/schedule.json',
     );
   });
   it('should return endpoint when passed service & radioService', () => {
@@ -69,6 +69,6 @@ describe('getLocalRadioScheduleEndpoint', () => {
         service: 'persian',
         radioService: 'dari',
       }),
-    ).toBe('./data/persian/bbc_dari_radio/schedule.json');
+    ).toBe('#data/persian/bbc_dari_radio/schedule.json');
   });
 });

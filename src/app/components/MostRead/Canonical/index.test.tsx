@@ -1,8 +1,8 @@
 import React from 'react';
-import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
-import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
-import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
-import { data as ukrainianMostReadData } from '../../../../../data/ukrainian/mostRead/index.json';
+import { data as arabicMostReadData } from '#data/arabic/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import { data as kyrgyzMostReadData } from '#data/kyrgyz/mostRead/index.json';
+import { data as ukrainianMostReadData } from '#data/ukrainian/mostRead/index.json';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';

@@ -13,4 +13,4 @@ export const getRadioScheduleEndpoint = ({
 export const getLocalRadioScheduleEndpoint = ({
   service,
   radioService = service,
-}) => `./data/${service}/bbc_${radioService}_radio/schedule.json`;
+}) => `#data/${service}/bbc_${radioService}_radio/schedule.json`;

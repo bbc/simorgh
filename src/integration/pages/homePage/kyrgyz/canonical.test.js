@@ -4,7 +4,7 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
-import { data as pageData } from '../../../../../data/kyrgyz/homePage/index.json';
+import { data as pageData } from '#data/kyrgyz/homePage/index.json';
 
 describe('Canonical', () => {
   describe(pageType, () => {

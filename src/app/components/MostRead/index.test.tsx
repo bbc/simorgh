@@ -1,8 +1,8 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
-import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import serbianLatMostReadData from '#data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
   STORY_PAGE,

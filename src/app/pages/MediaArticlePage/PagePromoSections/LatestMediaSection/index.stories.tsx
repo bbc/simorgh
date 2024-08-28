@@ -8,9 +8,9 @@ import ThemeProvider from '#components/ThemeProvider';
 import { Services } from '#models/types/global';
 
 import LatestMediaSection from '.';
-import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';
-import tamilArticle from '../../../../../../data/tamil/articles/c84m2jl4dpzo.json';
-import pidginArticle from '../../../../../../data/pidgin/articles/cw0x29n2pvqo.json';
+import hausaArticle from '#data/hausa/articles/cxr0765kxlzo.json';
+import tamilArticle from '#data/tamil/articles/c84m2jl4dpzo.json';
+import pidginArticle from '#data/pidgin/articles/cw0x29n2pvqo.json';
 import { LatestMedia } from './types';
 import metadata from './metadata.json';
 

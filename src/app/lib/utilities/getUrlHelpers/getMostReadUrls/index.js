@@ -11,6 +11,6 @@ export const getMostReadEndpoint = ({ service, variant, isBff = false }) => {
 };
 
 export const getLocalMostReadEndpoint = ({ service, variant = 'default' }) =>
-  `./data/${service}/mostRead/${
+  `#data/${service}/mostRead/${
     variant === 'default' ? 'index' : variant
   }.json`;
