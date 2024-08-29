@@ -13,6 +13,6 @@ export type AvEmbedsPageProps = {
       mediaURL?: string;
       type: PageTypes;
     };
-    embedded: boolean;
+    embedded?: boolean;
   };
 };
