@@ -98,6 +98,7 @@ describe('constructPageFetchUrl', () => {
     ${LIVE_PAGE}    | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live&serviceEnv=live'}
     ${LIVE_PAGE}    | ${'arabic'}     | ${null}    | ${'local'}  | ${'67574192'}                                         | ${'http://localhost/api/local/arabic/live/67574192'}
     ${LIVE_PAGE}    | ${'arabic'}     | ${null}    | ${'test'}   | ${'67574192'}                                         | ${'https://mock-bff-path/?id=%2Farabic%2Flive%2F67574192&service=arabic&pageType=live&serviceEnv=test'}
+    ${LIVE_PAGE}    | ${'serbian'}    | ${'lat'}   | ${'test'}   | ${'media-23179005'}                                   | ${'https://mock-bff-path/?id=%2Fserbian%2Flive%2Fmedia-23179005&service=serbian&pageType=live&variant=lat&serviceEnv=test'}
     ${LIVE_PAGE}    | ${'arabic'}     | ${null}    | ${'live'}   | ${'67574192'}                                         | ${'https://mock-bff-path/?id=%2Farabic%2Flive%2F67574192&service=arabic&pageType=live&serviceEnv=live'}
     ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}                   | ${'http://localhost/ukrainian/topics/c0000000000t'}
     ${TOPIC_PAGE}   | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}                   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&serviceEnv=test'}
