@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Live Header I can see the branding 1`] = `"BBC News, na srpskom"`;
+
+exports[`Canonical Live Header Navigation link should match text and url 1`] = `
+{
+  "text": "Početna strana",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 2`] = `
+{
+  "text": "Ukrajina",
+  "url": "/serbian/lat/topics/c5wzvzzz5vrt",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 3`] = `
+{
+  "text": "Srbija",
+  "url": "/serbian/lat/topics/cr50vdy9q6wt",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 4`] = `
+{
+  "text": "Balkan",
+  "url": "/serbian/lat/topics/c06g87137jgt",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 5`] = `
+{
+  "text": "Svet",
+  "url": "/serbian/lat/topics/c2lej05e1eqt",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 6`] = `
+{
+  "text": "Video",
+  "url": "/serbian/lat/topics/c44vyp5g049t",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 7`] = `
+{
+  "text": "Najpopularnije",
+  "url": "/serbian/lat/popular/read",
+}
+`;

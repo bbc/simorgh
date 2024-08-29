@@ -34,7 +34,6 @@ const getPageData = async ({
   resolvedUrl,
 }: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  console.log('pathname in [[...variant]].page.tsx', pathname);
   const livePageUrl = constructPageFetchUrl({
     page,
     pageType: 'live',

@@ -98,14 +98,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case LIVE_PAGE:
       getIdFunction = (path: string) => {
-        const isTipoId = isTipoIdCheck(path);
-        const isCpsId = isCpsIdCheck(path);
-        const id = isTipoId ? getTipoId(path) : getCpsId(path);
-        if (isTipoId) {
-          return id;
+        if (isTipoIdCheck(path)) {
+          return getTipoId(path);
         }
-        if (isCpsId) {
-          return `/${service}/live/${id}`;
+        if (isCpsIdCheck(path)) {
+          return `/${service}/live/${getCpsId(path)}`;
         }
         return null;
       };
@@ -162,11 +159,9 @@ const constructPageFetchUrl = ({
   isAmp,
   mediaId,
 }: UrlConstructParams) => {
-  console.log('pathname in constructPageFetchUrl', pathname);
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
   const id = getId({ pageType, service, env, variant })(pathname);
-  console.log('id after getId in constructPageUrl file', id);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -198,7 +193,7 @@ const constructPageFetchUrl = ({
     'query',
     queryParameters,
   );
-  console.log('fetchUrl in constructPageFetchUrl', fetchUrl);
+
   if (isLocal) {
     switch (pageType) {
       case ARTICLE_PAGE: {
@@ -230,6 +225,7 @@ const constructPageFetchUrl = ({
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
           `${host}${port}/api/local/${service}/live/${pathname}${variantPath}`,
         );
