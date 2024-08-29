@@ -21,11 +21,20 @@ const style = {
     css({
       color: 'red',
     }),
-  articleLink: () =>
+  articleLink: ({ palette }: Theme) =>
     css({
       textDecoration: 'none',
       display: 'flex',
       flexWrap: 'nowrap',
+
+      '&:hover > div': {
+        borderLeft: `solid ${palette.POSTBOX} 1rem`,
+      },
+
+      '& > div': {
+        borderLeft: 'solid red 0.2rem',
+        transition: ' 0.2s ease-out',
+      },
     }),
   title: ({ fontVariants, fontSizes, palette }: Theme) =>
     css({

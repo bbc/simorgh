@@ -3,12 +3,11 @@
 import { jsx } from '@emotion/react';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OpinionPageProps } from './types';
-import styles from './styles/index.styles';
+import styles from './index.styles';
 import Heading from '../Heading';
 import Title from './Title';
 import QuoteList from './QuoteList';
-import { useTouchEventContext } from './TouchPad/TouchPadContext';
-import TouchPad from './TouchPad';
+import TouchPad, { useTouchEventContext } from './TouchPad';
 
 const Components = {
   title: Title,

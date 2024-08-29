@@ -38,22 +38,21 @@ class TouchPathList {
     }
   };
 
-  processTouches = () => {
-    detectSwipeUp(this.touchList, () => {
-      console.log('UP DETECTED');
-    });
-
-    detectSwipeDown(this.touchList, () => {
-      console.log('DOWN DETECTED');
-    });
-
-    detectSwipeLeft(this.touchList, () => {
-      console.log('LEFT DETECTED');
-    });
-
-    detectSwipeRight(this.touchList, () => {
-      console.log('RIGHT DETECTED');
-    });
+  processTouches = ({
+    swipeUp,
+    swipeDown,
+    swipeLeft,
+    swipeRight,
+  }: {
+    swipeUp: () => void;
+    swipeDown: () => void;
+    swipeLeft: () => void;
+    swipeRight: () => void;
+  }) => {
+    detectSwipeUp(this.touchList, swipeUp);
+    detectSwipeDown(this.touchList, swipeDown);
+    detectSwipeLeft(this.touchList, swipeLeft);
+    detectSwipeRight(this.touchList, swipeRight);
   };
 
   clearTouchPathList = () => {

@@ -1,18 +1,22 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import { useRef } from 'react';
 import { TitleProps } from './types';
-import useOnHovering from './utils/useHovering';
-import styles from './styles/index.styles';
-import doubleEdgeAnimation from './styles/doubleEdge.animations';
-import { useTouchEventContext } from './TouchPad/TouchPadContext';
+import styles from './index.styles';
+import { useTouchEventContext } from './TouchPad';
 
 const Title = ({ text, canonicalUrl }: TitleProps) => {
-  const { hovering, listeners } = useOnHovering();
   const { swipeRightStack } = useTouchEventContext();
+  const anchorRef = useRef<HTMLAnchorElement>(null);
+
+  swipeRightStack.push(() => {
+    const anchorElement = anchorRef.current;
+    (anchorElement as HTMLAnchorElement).click();
+  });
 
   return (
-    <a href={canonicalUrl} css={styles.articleLink} {...listeners}>
-      <div css={doubleEdgeAnimation(hovering)} />
+    <a href={canonicalUrl} css={styles.articleLink} ref={anchorRef}>
+      <div />
       <span css={styles.title}>{text}</span>
     </a>
   );

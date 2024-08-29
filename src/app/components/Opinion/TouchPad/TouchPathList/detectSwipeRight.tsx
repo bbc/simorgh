@@ -1,14 +1,13 @@
-import { TouchPathType } from './TouchPathList';
+import { TouchPathType } from '.';
 
-const detectSwipeLeft = (touchList: TouchPathType[], callback: () => void) => {
-  const xDiffThreshold = 80;
+const detectSwipeRight = (touchList: TouchPathType[], callback: () => void) => {
+  const xDiffThreshold = -80;
   for (let i = 0; i < touchList.length; i += 1) {
     const { xpath } = touchList[i];
-
     if (xpath.length > 0) {
       const change = xpath[0] - xpath[xpath.length - 1];
 
-      if (change >= xDiffThreshold) {
+      if (change <= xDiffThreshold) {
         callback();
         return true;
       }
@@ -18,4 +17,4 @@ const detectSwipeLeft = (touchList: TouchPathType[], callback: () => void) => {
   return false;
 };
 
-export default detectSwipeLeft;
+export default detectSwipeRight;
