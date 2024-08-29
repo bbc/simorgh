@@ -17,8 +17,6 @@ const blockTypeMapping: Record<
   tvMedia,
 };
 
-/* eslint-disable no-console */
-/* eslint-disable no-restricted-syntax */
 export default (blocks: MediaBlock[]) => {
   const availableMediaType =
     ['aresMedia', 'clipMedia', 'tvMedia'].find(mediaType =>
