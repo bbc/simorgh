@@ -1,4 +1,6 @@
 import onClient from '#app/lib/utilities/onClient';
+import parseAvRoute from '../../../routes/utils/parseAvRoute';
+import buildAvEmbedURL from '../../../routes/utils/buildAvEmbedUrl';
 import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
 
@@ -25,12 +27,22 @@ const buildSettings = ({
   lang,
   pageType,
   service,
+  variant = null,
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
-  embedUrl,
+  embedded,
+  pathname,
 }: BuildConfigProps) => {
   // Base configuration that all media players should have
+  const parsedRoute = parseAvRoute(pathname);
+  const embedUrl = buildAvEmbedURL({
+    assetId: parsedRoute.assetId,
+    mediaDelimiter: parsedRoute.mediaDelimiter,
+    mediaId: parsedRoute.mediaId,
+    service,
+    variant,
+  });
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
     product: 'news',
@@ -45,6 +57,9 @@ const buildSettings = ({
     },
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    ...(embedded && {
+      externalEmbedUrl: embedUrl,
+    }),
     statsObject: {
       destination: statsDestination,
       producer,
@@ -59,8 +74,7 @@ const buildSettings = ({
     translations,
     adsEnabled,
     showAdsBasedOnLocation,
-    embedUrl,
-    isAmp,
+    embedded,
   });
 
   if (!config) return null;
