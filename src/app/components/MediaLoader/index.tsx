@@ -1,6 +1,8 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
+
 import { jsx } from '@emotion/react';
-import { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -21,6 +23,7 @@ import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
+import Metadata from './Metadata';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -202,26 +205,29 @@ const MediaLoader = ({ blocks, className }: Props) => {
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
-    <figure
-      data-e2e="media-loader__container"
-      css={styles.figure}
-      className={className}
-    >
-      {showAds && <AdvertTagLoader />}
-      <BumpLoader />
-      {isPlaceholder ? (
-        <Placeholder
-          src={placeholderSrc}
-          srcSet={placeholderSrcset}
-          noJsMessage={translatedNoJSMessage}
-          mediaInfo={mediaInfo}
-          onClick={() => setIsPlaceholder(false)}
-        />
-      ) : (
-        <MediaContainer playerConfig={playerConfig} showAds={showAds} />
-      )}
-      {captionBlock && <Caption block={captionBlock} type={mediaType} />}
-    </figure>
+    <>
+      <Metadata blocks={blocks} />
+      <figure
+        data-e2e="media-loader__container"
+        css={styles.figure}
+        className={className}
+      >
+        {showAds && <AdvertTagLoader />}
+        <BumpLoader />
+        {isPlaceholder ? (
+          <Placeholder
+            src={placeholderSrc}
+            srcSet={placeholderSrcset}
+            noJsMessage={translatedNoJSMessage}
+            mediaInfo={mediaInfo}
+            onClick={() => setIsPlaceholder(false)}
+          />
+        ) : (
+          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+        )}
+        {captionBlock && <Caption block={captionBlock} type={mediaType} />}
+      </figure>
+    </>
   );
 };
 
