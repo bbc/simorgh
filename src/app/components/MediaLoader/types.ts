@@ -1,5 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
-import { OptimoBlock } from '#app/models/types/optimo';
+import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
@@ -25,7 +25,6 @@ export type PlayerConfig = {
     items: PlaylistItem[];
     guidance?: string;
     embedRights?: 'allowed';
-    simulcast?: boolean;
   };
 };
 
@@ -72,7 +71,7 @@ export type ConfigBuilderReturnProps = {
   showAds: boolean;
 };
 
-export type MediaType = 'audio_video' | 'audio' | 'video';
+export type MediaType = 'audio' | 'video';
 
 export type MediaInfo = {
   title: string;
@@ -126,16 +125,27 @@ export type CaptionBlock = {
 export type AresMediaBlock = {
   type: 'aresMedia';
   model: {
+    blocks: [AresMediaMetadataBlock | OptimoImageBlock];
+  };
+};
+
+export type AresMediaMetadataBlock = {
+  type: 'aresMediaMetadata';
+  model: {
+    firstPublished?: string;
     live?: boolean;
     locator: string;
     originCode: string;
     text: string;
     title: string;
-    blocks: AresMediaBlock[];
+    synopses: {
+      short: string;
+    };
     imageUrl: string;
-    format: 'audio' | 'video' | 'audio_video';
+    format: 'audio_video' | 'audio' | 'video';
     embedding: boolean;
     versions: {
+      availableFrom?: string;
       versionId: string;
       duration: number;
       durationISO8601?: string;
@@ -172,74 +182,7 @@ export type ClipMediaBlock = {
   };
 };
 
-export type SyndicationAresMediaBlock = {
-  type: 'aresMedia';
-  model: {
-    blocks: (
-      | {
-          type: 'aresMediaMetadata';
-          model: {
-            type: 'aresMediaMetadata';
-            blockId?: string;
-            model: {
-              id: string;
-              subType: 'clip' | 'episode';
-              format?: 'audio_video' | 'video' | 'audio';
-              title: string;
-              synopses: {
-                short?: string;
-                medium?: string;
-                long?: string;
-              };
-              imageUrl: string;
-              imageCopyright?: string;
-              embedding: boolean;
-              advertising: boolean;
-              versions: {
-                versionId: string;
-                types: string[];
-                duration: number;
-                durationISO8601: string;
-                warnings: {
-                  short?: string;
-                  medium?: string;
-                  long?: string;
-                };
-                availableTerritories: {
-                  uk: boolean;
-                  nonUk: boolean;
-                };
-                availableUntil?: number;
-                availableFrom?: number;
-              }[];
-              syndication: {
-                destinations: string[];
-              };
-              smpKind?: 'radioProgramme' | 'programme';
-            };
-          };
-        }
-      | {
-          type: 'image';
-          model: {
-            blocks: OptimoBlock[];
-          };
-        }
-      | {
-          type: 'captionText';
-          model: {
-            caption: string;
-          };
-        }
-    )[];
-  };
-};
-
-export type MediaBlock =
-  | AresMediaBlock
-  | ClipMediaBlock
-  | CaptionBlock
-  | SyndicationAresMediaBlock;
+export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
 
 export type BuildConfigProps = {
   blocks: MediaBlock[];

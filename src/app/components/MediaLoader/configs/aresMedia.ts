@@ -1,7 +1,12 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
+  OptimoImageBlock,
+  OptimoRawImageBlock,
+} from '#app/models/types/optimo';
+import {
   AresMediaBlock,
+  AresMediaMetadataBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
@@ -25,41 +30,46 @@ export default ({
     'aresMedia',
   );
 
-  const { webcastVersions = [] } =
-    aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
+  const { model: aresMediaMetadata }: AresMediaMetadataBlock =
+    filterForBlockType(aresMediaBlock?.model?.blocks, 'aresMediaMetadata') ??
+    {};
+
+  const aresMediaImageBlock: OptimoImageBlock = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'image',
+  );
+
+  const { model: rawImage }: OptimoRawImageBlock =
+    filterForBlockType(aresMediaImageBlock?.model?.blocks, 'rawImage') ?? {};
+
+  const { originCode = '', locator = '' } = rawImage ?? {};
+
+  const { webcastVersions = [] } = aresMediaMetadata ?? {};
 
   const hasWebcastItems = webcastVersions.length > 0;
 
   const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
 
-  const { originCode, locator } =
-    aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model ?? {};
+  const versionsBlock = aresMediaMetadata?.[versionParameter]?.[0];
 
-  const versionID =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
-      ?.versionId;
+  const versionID = versionsBlock?.versionId ?? '';
 
-  const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
+  const format = aresMediaMetadata?.format;
 
   const actualFormat = format === 'audio_video' ? 'video' : format;
 
-  const rawDuration =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
-      ?.duration;
+  const rawDuration = versionsBlock?.duration ?? 0;
 
-  const title = aresMediaBlock?.model?.blocks?.[0]?.model?.title;
+  const title = aresMediaMetadata?.title ?? '';
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   const caption =
     captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const kind =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.smpKind || 'programme';
+  const kind = aresMediaMetadata?.smpKind ?? 'programme';
 
-  const guidanceMessage =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
-      ?.short;
+  const guidanceMessage = versionsBlock?.warnings?.short;
 
   const showAds = shouldDisplayAds({
     adsEnabled,
@@ -67,8 +77,7 @@ export default ({
     duration: rawDuration,
   });
 
-  const embeddingAllowed =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
+  const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
   const holdingImageURL = buildIChefURL({
     originCode,
@@ -76,7 +85,7 @@ export default ({
     resolution: DEFAULT_WIDTH,
   });
 
-  const isLive = aresMediaBlock?.model?.blocks?.[0]?.model?.live ?? false;
+  const isLive = aresMediaMetadata?.live ?? false;
 
   const items = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
@@ -87,9 +96,7 @@ export default ({
     title,
     type: actualFormat || 'video',
     duration: rawDuration,
-    durationISO8601:
-      aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
-        ?.durationISO8601,
+    durationISO8601: versionsBlock?.durationISO8601,
     guidanceMessage,
     holdingImageURL,
     translations,
