@@ -64,7 +64,6 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
 
   if (!scriptLinkEnabled || isNextJs) return null;
-        
   // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
   // revisit this to support both Express and Next.JS in the future.
 
