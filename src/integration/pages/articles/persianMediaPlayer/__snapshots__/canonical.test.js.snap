@@ -625,6 +625,19 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
 }
 `;
 
+exports[`Canonical Articles SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù",
+  "duration": "PT16S",
+  "embedURL": "",
+  "name": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kf9s0.jpg",
+  "uploadDate": "2018-11-12T15:00:22.000Z",
+}
+`;
+
 exports[`Canonical Articles SEO OG description 1`] = `"این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg"`;

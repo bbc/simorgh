@@ -334,6 +334,19 @@ exports[`Canonical Media Article Page SEO Linked data should match text 1`] = `
 }
 `;
 
+exports[`Canonical Media Article Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "INEC boss interview",
+  "duration": "PT6M17S",
+  "embedURL": "",
+  "name": "INEC",
+  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0dxnxnv.jpg",
+  "uploadDate": "2023-01-20T09:07:40.000Z",
+}
+`;
+
 exports[`Canonical Media Article Page SEO OG description 1`] = `"Professor Mahmood Yakubu speak wit BBC on Inec plans to conduct free and fair elections."`;
 
 exports[`Canonical Media Article Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/1a8b/live/c4ce3eb0-98a5-11ed-86bf-4b2f5da2cf01.jpg"`;

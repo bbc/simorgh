@@ -262,6 +262,19 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
 }
 `;
 
+exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "トランプ氏、香港人権法案に署名　中国は反発",
+  "duration": "PT5S",
+  "embedURL": "",
+  "name": "トランプ氏、香港人権法案に署名　中国は反発",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg",
+  "uploadDate": "2018-12-20T11:06:51.000Z",
+}
+`;
+
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"Lorem ipsum dolor sit amet, consectetur this is a change"`;
 
 exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;

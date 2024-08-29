@@ -293,6 +293,19 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
 }
 `;
 
+exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "Trump long headline",
+  "duration": "PT26S",
+  "embedURL": "",
+  "name": "Trump short headline",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
+  "uploadDate": "2019-02-15T12:37:28.000Z",
+}
+`;
+
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
 
 exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;

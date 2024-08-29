@@ -305,7 +305,7 @@ describe('buildSettings', () => {
           holdingImageURL: 'https://ichef.bbci.co.uk/ace/ws/512',
           items: [
             {
-              duration: undefined,
+              duration: 0,
               kind: 'programme',
               live: true,
               versionID: 'bbc_arabic_tv',
