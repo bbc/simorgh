@@ -30,45 +30,42 @@ export default ({
     'aresMedia',
   );
 
-  const aresMediaMetadataBlock: AresMediaMetadataBlock = filterForBlockType(
-    aresMediaBlock?.model?.blocks,
-    'aresMediaMetadata',
-  );
+  const { model: aresMediaMetadata }: AresMediaMetadataBlock =
+    filterForBlockType(aresMediaBlock?.model?.blocks, 'aresMediaMetadata') ??
+    {};
 
   const aresMediaImageBlock: OptimoImageBlock = filterForBlockType(
     aresMediaBlock?.model?.blocks,
     'image',
   );
 
-  const rawImageBlock: OptimoRawImageBlock = filterForBlockType(
-    aresMediaImageBlock?.model?.blocks,
-    'rawImage',
-  );
+  const { model: rawImage }: OptimoRawImageBlock =
+    filterForBlockType(aresMediaImageBlock?.model?.blocks, 'rawImage') ?? {};
 
-  const { originCode = '', locator = '' } = rawImageBlock?.model ?? {};
+  const { originCode = '', locator = '' } = rawImage ?? {};
 
-  const { webcastVersions = [] } = aresMediaMetadataBlock?.model ?? {};
+  const { webcastVersions = [] } = aresMediaMetadata ?? {};
 
   const hasWebcastItems = webcastVersions.length > 0;
 
   const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
 
-  const versionsBlock = aresMediaMetadataBlock?.model?.[versionParameter]?.[0];
+  const versionsBlock = aresMediaMetadata?.[versionParameter]?.[0];
 
   const versionID = versionsBlock?.versionId ?? '';
 
-  const format = aresMediaMetadataBlock?.model?.format;
+  const format = aresMediaMetadata?.format;
 
   const rawDuration = versionsBlock?.duration ?? 0;
 
-  const title = aresMediaMetadataBlock?.model?.title ?? '';
+  const title = aresMediaMetadata?.title ?? '';
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   const caption =
     captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const kind = aresMediaMetadataBlock?.model?.smpKind ?? 'programme';
+  const kind = aresMediaMetadata?.smpKind ?? 'programme';
 
   const guidanceMessage = versionsBlock?.warnings?.short;
 
@@ -78,7 +75,7 @@ export default ({
     duration: rawDuration,
   });
 
-  const embeddingAllowed = aresMediaMetadataBlock?.model?.embedding ?? false;
+  const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
   const holdingImageURL = buildIChefURL({
     originCode,
