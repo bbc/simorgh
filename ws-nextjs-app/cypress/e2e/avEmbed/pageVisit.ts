@@ -1,5 +1,5 @@
 export default ({ path }) => {
-  describe('Live page visit', () => {
+  describe('AVEmbed page visit', () => {
     it('visits page and passes', () => {
       cy.visit(path);
     });
