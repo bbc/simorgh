@@ -9,13 +9,14 @@ export default ({
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: tvMediaBlock } = filterForBlockType(blocks, 'tvMedia');
   const video = tvMediaBlock?.versions?.[0] || {};
+  const holdingImageURL = `https://${tvMediaBlock.imageUrl}`;
 
   const placeholderConfig = buildPlaceholderConfig({
     title: tvMediaBlock.episodeTitle,
     duration: video?.duration,
     durationISO8601: video?.durationISO8601,
     type: 'video',
-    holdingImageURL: `https://${tvMediaBlock.imageUrl}`,
+    holdingImageURL,
     placeholderImageLocator: `https://${tvMediaBlock.imageUrl}`,
     placeholderImageOriginCode: 'pips',
     translations,
@@ -31,7 +32,7 @@ export default ({
       },
       playlistObject: {
         title: tvMediaBlock.episodeTitle,
-        holdingImageURL: `https://${tvMediaBlock.imageUrl}`,
+        holdingImageURL,
         items: [
           {
             versionID: video?.versionId,
