@@ -18,6 +18,16 @@ describe('AV Embeds Page', () => {
           pageData={{
             mediaBlock: serbianCyrCps.data.avEmbed.content.model
               .blocks as unknown as MediaBlock[],
+            metadata: {
+              assetId: 'srbija-68707945',
+              language: serbianCyrCps.data.avEmbed.metadata.language,
+              mediaId: null,
+              mediaDelimiter: null,
+              service: serbianCyrCps.data.avEmbed.metadata.service,
+              type: 'avEmbeds',
+              variant: serbianCyrCps.data.avEmbed.metadata.variant,
+            },
+            promo: serbianCyrCps.data.avEmbed.promo,
           }}
         />,
       );

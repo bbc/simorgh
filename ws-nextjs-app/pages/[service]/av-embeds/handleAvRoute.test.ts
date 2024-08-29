@@ -3,10 +3,13 @@ import handleAvRoute from './handleAvRoute';
 
 const mockGetServerSidePropsContext = {
   req: {
-    headers: {},
+    headers: {
+      'x-frame-options': 'DENY',
+    },
   } as unknown as GetServerSidePropsContext['req'],
   res: {
     setHeader: jest.fn(),
+    removeHeader: jest.fn(),
   } as unknown as GetServerSidePropsContext['res'],
   resolvedUrl: '',
   query: {},
@@ -17,7 +20,15 @@ describe('Handle AV Route', () => {
     jest.clearAllMocks();
   });
 
-  it('should set the cache control header correctly for a Syndication route', async () => {
+  it('should remove the x-frame-options header', async () => {
+    await handleAvRoute(mockGetServerSidePropsContext);
+
+    expect(mockGetServerSidePropsContext.res.removeHeader).toHaveBeenCalledWith(
+      'x-frame-options',
+    );
+  });
+
+  it('should set the cache control header correctly for a non-WS route', async () => {
     mockGetServerSidePropsContext.resolvedUrl = '/news/av-embeds/123';
 
     await handleAvRoute(mockGetServerSidePropsContext);
@@ -28,7 +39,7 @@ describe('Handle AV Route', () => {
     );
   });
 
-  it('should set the cache control header correctly for a non-Syndication route', async () => {
+  it('should set the cache control header correctly for a WS route', async () => {
     mockGetServerSidePropsContext.resolvedUrl = '/ws/av-embeds/123';
 
     await handleAvRoute(mockGetServerSidePropsContext);
