@@ -34,15 +34,18 @@ const buildSettings = ({
   embedded,
   pathname,
 }: BuildConfigProps) => {
+  const parsedRoute = pathname ? parseAvRoute(pathname) : null;
+  const embedUrl = parsedRoute
+    ? buildAvEmbedURL({
+        assetId: parsedRoute.assetId,
+        mediaDelimiter: parsedRoute.mediaDelimiter,
+        mediaId: parsedRoute.mediaId,
+        service,
+        variant,
+      })
+    : '';
+
   // Base configuration that all media players should have
-  const parsedRoute = parseAvRoute(pathname);
-  const embedUrl = buildAvEmbedURL({
-    assetId: parsedRoute.assetId,
-    mediaDelimiter: parsedRoute.mediaDelimiter,
-    mediaId: parsedRoute.mediaId,
-    service,
-    variant,
-  });
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
     product: 'news',
