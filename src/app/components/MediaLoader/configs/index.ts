@@ -18,9 +18,11 @@ const blockTypeMapping: Record<
 };
 
 export default (blocks: MediaBlock[]) => {
-  const availableMediaType =
-    ['aresMedia', 'clipMedia', 'tvMedia'].find(mediaType =>
-      filterForBlockType(blocks, mediaType),
-    ) || '';
+  const availableMediaType = ['aresMedia', 'clipMedia', 'tvMedia'].find(
+    mediaType => filterForBlockType(blocks, mediaType),
+  );
+  if (!availableMediaType) {
+    return null;
+  }
   return blockTypeMapping[availableMediaType];
 };
