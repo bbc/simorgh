@@ -269,7 +269,7 @@ export type TvMediaBlock = {
     availability: string;
     smpKind: string;
     episodeTitle: string;
-    type: 'audio' | 'video';
+    type: MediaType;
   };
 };
 
