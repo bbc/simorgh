@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -10,7 +9,6 @@ import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getEmbedUrl, {
   makeAbsolute,
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';
-import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
@@ -20,9 +18,10 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
-import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 import styles from './index.styles';
+import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 
 const getGroups = (
   zero: number | boolean,
@@ -42,6 +41,7 @@ const getGroups = (
 
 export interface OnDemandTVProps {
   pageData: {
+    mediaBlock: MediaBlock[];
     metadata: {
       type: PageTypes;
     };
@@ -78,7 +78,6 @@ const OnDemandTvPage = ({
     releaseDateTimeStamp,
     masterBrand,
     episodeId,
-    imageUrl,
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
@@ -88,7 +87,7 @@ const OnDemandTvPage = ({
     contentType,
   } = pageData;
 
-  const { lang, timezone, datetimeLocale, service, translations, brandName } =
+  const { lang, timezone, datetimeLocale, service, brandName } =
     useContext(ServiceContext);
   const location = useLocation();
 
@@ -107,12 +106,6 @@ const OnDemandTvPage = ({
     type: 'media',
     queryString: location.search,
   });
-
-  const iframeTitle = pathOr(
-    'Video player',
-    ['mediaAssetPage', 'videoPlayer'],
-    translations,
-  );
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
@@ -174,17 +167,8 @@ const OnDemandTvPage = ({
             {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
-            <AVPlayer
-              embedUrl={embedUrl}
-              assetId={episodeId}
-              placeholderSrc={getPlaceholderImageUrl(imageUrl)}
-              type="video"
-              title="On-demand TV"
-              iframeTitle={iframeTitle}
-              hasBottomPadding={false}
-              skin="classic"
-              showLoadingImage
-              darkPlaceholder
+            <MediaLoader
+              blocks={pageData?.mediaBlock}
               css={styles.mediaPlayer}
             />
           ) : (
