@@ -17,7 +17,7 @@ export default ({
     durationISO8601: video?.durationISO8601,
     type: 'video',
     holdingImageURL,
-    placeholderImageLocator: `https://${tvMediaBlock.imageUrl}`,
+    placeholderImageLocator: holdingImageURL,
     placeholderImageOriginCode: 'pips',
     translations,
   });
