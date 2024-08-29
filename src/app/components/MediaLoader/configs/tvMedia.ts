@@ -10,8 +10,8 @@ export default ({
   const { model: tvMediaBlock } = filterForBlockType(blocks, 'tvMedia');
 
   const placeholderConfig = buildPlaceholderConfig({
-    title: tvMediaBlock.episodeTitle,
-    duration: tvMediaBlock.versions[0].duration,
+    title: tvMediaBlock?.episodeTitle,
+    duration: tvMediaBlock?.versions[0].duration,
     durationISO8601: tvMediaBlock.versions[0].durationISO8601,
     type: 'video',
     holdingImageURL: `https://${tvMediaBlock.imageUrl}`,

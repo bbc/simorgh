@@ -3,10 +3,13 @@ import handleAvRoute from './handleAvRoute';
 
 const mockGetServerSidePropsContext = {
   req: {
-    headers: {},
+    headers: {
+      'x-frame-options': 'DENY',
+    },
   } as unknown as GetServerSidePropsContext['req'],
   res: {
     setHeader: jest.fn(),
+    removeHeader: jest.fn(),
   } as unknown as GetServerSidePropsContext['res'],
   resolvedUrl: '',
   query: {},
@@ -15,6 +18,14 @@ const mockGetServerSidePropsContext = {
 describe('Handle AV Route', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('should remove the x-frame-options header', async () => {
+    await handleAvRoute(mockGetServerSidePropsContext);
+
+    expect(mockGetServerSidePropsContext.res.removeHeader).toHaveBeenCalledWith(
+      'x-frame-options',
+    );
   });
 
   it('should set the cache control header correctly for a non-WS route', async () => {
