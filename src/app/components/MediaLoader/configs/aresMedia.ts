@@ -53,13 +53,13 @@ export default ({
 
   const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
 
-  const versionID =
-    aresMediaMetadataBlock?.model?.[versionParameter]?.[0]?.versionId ?? '';
+  const versionsBlock = aresMediaMetadataBlock?.model?.[versionParameter]?.[0];
+
+  const versionID = versionsBlock?.versionId ?? '';
 
   const format = aresMediaMetadataBlock?.model?.format;
 
-  const rawDuration =
-    aresMediaMetadataBlock?.model?.[versionParameter]?.[0]?.duration ?? 0;
+  const rawDuration = versionsBlock?.duration ?? 0;
 
   const title = aresMediaMetadataBlock?.model?.title ?? '';
 
@@ -70,8 +70,7 @@ export default ({
 
   const kind = aresMediaMetadataBlock?.model?.smpKind ?? 'programme';
 
-  const guidanceMessage =
-    aresMediaMetadataBlock?.model?.[versionParameter]?.[0]?.warnings?.short;
+  const guidanceMessage = versionsBlock?.warnings?.short;
 
   const showAds = shouldDisplayAds({
     adsEnabled,
@@ -94,8 +93,7 @@ export default ({
     title,
     type: format || 'video',
     duration: rawDuration,
-    durationISO8601:
-      aresMediaMetadataBlock?.model?.[versionParameter]?.[0]?.durationISO8601,
+    durationISO8601: versionsBlock?.durationISO8601,
     guidanceMessage,
     holdingImageURL,
     translations,
