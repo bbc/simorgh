@@ -130,6 +130,30 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
+    it('should not render script link for uzbek when it is not an article page ', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: FRONT_PAGE,
+          service: 'uzbek',
+          variant: 'cyr',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+    });
+
+    it('should render script link for uzbek when it is an article page ', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: ARTICLE_PAGE,
+          service: 'uzbek',
+          variant: 'cyr',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
     it('should not render script link on Topic page when missing variant topic ID', () => {
       const { container } = HeaderContainerWithContext({
         renderScriptSwitch: false,
