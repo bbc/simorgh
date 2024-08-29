@@ -21,6 +21,7 @@ const baseSettings = {
   service: 'mundo' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'MUNDO',
+  pathname: 'mundo/av-embeds/srbija-68707945',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -143,6 +144,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -158,6 +160,9 @@ describe('buildSettings', () => {
             episodePID: null,
           },
           enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
+          insideIframe: true,
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -212,6 +217,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
         pageType: 'mediaArticle',
       });
@@ -229,6 +235,9 @@ describe('buildSettings', () => {
             producer: 'MUNDO',
           },
           enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
+          insideIframe: true,
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -284,6 +293,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -308,6 +318,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -330,6 +341,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -349,6 +361,7 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -363,6 +376,7 @@ describe('buildSettings', () => {
       ];
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         // @ts-expect-error - we are testing an invalid block
         blocks: sampleBlock,
       });
@@ -373,6 +387,7 @@ describe('buildSettings', () => {
     it('Should return the statsObject with required values for tracking.', () => {
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -387,6 +402,7 @@ describe('buildSettings', () => {
     it('Should return required settings for tracking.', () => {
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
 
@@ -405,6 +421,7 @@ describe('buildSettings', () => {
     it('Should have a `statsObject.clipPID` when subType is "clip"', async () => {
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
       expect(result?.playerConfig.statsObject).toStrictEqual({
@@ -434,6 +451,7 @@ describe('buildSettings', () => {
       ];
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         // @ts-expect-error partial data used for testing purposes
         blocks: myFixture as MediaBlock[],
       });
@@ -445,35 +463,26 @@ describe('buildSettings', () => {
       });
     });
 
-    it('Should have insideIframe property with value `true` for amp', async () => {
+    it('Should have insideIframe property with value `true` to support syndicated and amp routes', async () => {
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
-        isAmp: true,
       });
 
       expect(result?.playerConfig).toHaveProperty('insideIframe', true);
     });
 
-    it('Should have insideIframe property with value `false` for canonical', async () => {
-      const result = buildSettings({
-        ...baseSettings,
-        blocks: aresMediaBlocks as MediaBlock[],
-      });
-
-      expect(result?.playerConfig).not.toHaveProperty('insideIframe', true);
-    });
-
     it('Should set the embed rights and externalEmbedURL when embedding is allowed', () => {
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
-        embedUrl: 'testEmbedUrl',
       });
       expect(result?.playerConfig).toHaveProperty('playlistObject.embedRights');
       expect(result?.playerConfig).toHaveProperty(
         'externalEmbedUrl',
-        'testEmbedUrl',
+        'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
       );
     });
 
@@ -496,13 +505,14 @@ describe('buildSettings', () => {
       ];
       const result = buildSettings({
         ...baseSettings,
+        embedded: true,
         // @ts-expect-error partial data used for testing purposes
         blocks: myFixture as MediaBlock[],
       });
       expect(result?.playerConfig).not.toHaveProperty(
         'playlistObject.embedRights',
       );
-      expect(result?.playerConfig).not.toHaveProperty('externalEmbedUrl');
+      expect(result?.playerConfig).toHaveProperty('externalEmbedUrl', '');
     });
   });
 });
