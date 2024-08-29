@@ -8,7 +8,7 @@ import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
+import buildAvEmbedURL from '#app/routes/utils/buildAvEmbedUrl';
 import getAgent from '../../../utilities/undiciAgent';
 
 export default async (context: GetServerSidePropsContext) => {
@@ -125,9 +125,11 @@ export default async (context: GetServerSidePropsContext) => {
               promoSummary,
               type: AV_EMBEDS,
             },
+            embedded: true,
           }
         : null,
       pageType: AV_EMBEDS,
+      pathname: resolvedUrl,
       service,
       status: pageStatus,
       variant,

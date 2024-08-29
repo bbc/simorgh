@@ -12,8 +12,8 @@ const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => (
     <div data-testid="avembeds-mediaplayer">
       <MediaLoader
         blocks={pageData?.mediaBlock}
-        embedUrl={pageData?.metadata.mediaURL}
         css={styles.mediaPlayer}
+        embedded
       />
     </div>
   </>

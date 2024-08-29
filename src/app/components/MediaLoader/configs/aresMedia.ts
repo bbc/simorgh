@@ -19,8 +19,7 @@ export default ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
-  embedUrl,
-  isAmp,
+  embedded,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
@@ -102,8 +101,8 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
-      ...(isAmp && { insideIframe: true }), // TO DO? - Extend to cover syndication
-      ...(embeddingAllowed && embedUrl && { externalEmbedUrl: embedUrl }),
+      ...(embedded && { insideIframe: true }),
+      ...(!embeddingAllowed && { externalEmbedUrl: '' }),
       playlistObject: {
         title,
         summary: caption || '',

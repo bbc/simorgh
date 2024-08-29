@@ -1,4 +1,4 @@
-import { PageTypes, Services } from '#app/models/types/global';
+import { PageTypes, Services, Variants } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
@@ -58,7 +58,7 @@ export type ConfigBuilderProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedUrl?: string;
-  isAmp: boolean;
+  embedded?: boolean;
 };
 
 export type PlaceholderConfig = {
@@ -255,8 +255,10 @@ export type BuildConfigProps = {
   lang: string;
   pageType: PageTypes;
   service: Services;
+  variant: Variants | null;
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
-  embedUrl?: string;
+  embedded?: boolean;
+  pathname: string;
 };
