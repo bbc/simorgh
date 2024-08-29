@@ -20,10 +20,9 @@ const blockTypeMapping: Record<
 /* eslint-disable no-console */
 /* eslint-disable no-restricted-syntax */
 export default (blocks: MediaBlock[]) => {
-  for (const blockType of ['aresMedia', 'clipMedia', 'tvMedia']) {
-    const mediaBlock = filterForBlockType(blocks, blockType);
-    if (mediaBlock) {
-      return blockTypeMapping[blockType];
-    }
-  }
+  const availableMediaType =
+    ['aresMedia', 'clipMedia', 'tvMedia'].find(mediaType =>
+      filterForBlockType(blocks, mediaType),
+    ) || '';
+  return blockTypeMapping[availableMediaType];
 };
