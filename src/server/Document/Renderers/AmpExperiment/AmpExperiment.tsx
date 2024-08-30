@@ -4,8 +4,9 @@ import { jsx } from '@emotion/react';
 const data = {
   someExperiment: {
     variants: {
-      variant_1: 50,
-      variant_2: 50,
+      control: 33,
+      variant_1: 33,
+      variant_2: 33,
     },
   },
 };

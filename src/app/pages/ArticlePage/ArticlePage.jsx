@@ -37,6 +37,7 @@ import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -86,7 +87,35 @@ const ArticlePage = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  let blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+
+  // start top stories spike
+  // q: there is currently no consideration of isAmp and so this is running on all routes using the ArticlePage page.
+  // again, is there a place where isAmp could be mapped to a prop to vary on higher up the chain? maybe the `getInitialData` function?
+  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
+  // q: is there any concept of transformers/transformation in Simorgh. We could create an experimentalTopStories block instead of copying the code from the secondary column
+  // we might want to experiment on more than the position such as the title of the block, number of top stories shown
+  const topStoriesBlock = {
+    type: 'topStories',
+    model: topStoriesContent,
+    id: 'topStories',
+    position: 0,
+    blockGroupType: 'topStories',
+    blockGroupIndex: 0,
+  }; // these should be made more programatically
+  const halfway = parseInt(blocks.length / 2, 10) + 1;
+
+  // stolen from the articles transformer as we have done this kind of messing with block order there.
+  // There might be a more Simorgh way of doing this?
+  const blocksBeforeInsertIndex = blocks.slice(0, halfway);
+  const blocksAfterInsertIndex = blocks.slice(halfway, blocks.length);
+  blocks = [
+    ...blocksBeforeInsertIndex,
+    topStoriesBlock,
+    ...blocksAfterInsertIndex,
+  ];
+  // end top stories spike
+
   const startsWithHeading = propEq('headline', 'type')(blocks[0] || {});
 
   const bylineBlock = blocks.find(block => block.type === 'byline');
@@ -163,6 +192,15 @@ const ArticlePage = ({ pageData }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
+    topStories: () =>
+      topStoriesContent ? (
+        <div
+          css={styles.experimentTopStoriesAndFeaturesSection}
+          data-testid="experiment-top-stories"
+        >
+          <TopStoriesSection content={topStoriesContent} />
+        </div>
+      ) : null,
   };
 
   const visuallyHiddenBlock = {

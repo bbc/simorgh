@@ -84,10 +84,31 @@ export default {
 
   topStoriesAndFeaturesSection: ({ spacings, mq }: Theme) =>
     css({
+      display: 'none',
       marginBottom: `${spacings.TRIPLE}rem`,
 
-      '[amp-x-someexperiment="variant-2"] &': {
-        backgroundColor: 'blue',
+      '[amp-x-someexperiment="control"] &': {
+        display: 'block',
+      },
+
+      '[amp-x-someexperiment="variant_1"] &': {
+        display: 'block',
+        backgroundColor: 'red',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginBottom: `${spacings.FULL}rem`,
+        padding: `${spacings.DOUBLE}rem`,
+      },
+    }),
+
+  experimentTopStoriesAndFeaturesSection: ({ spacings, mq }: Theme) =>
+    css({
+      display: 'none',
+      marginBottom: `${spacings.TRIPLE}rem`,
+
+      '[amp-x-someexperiment="variant_2"] &': {
+        display: 'block',
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
