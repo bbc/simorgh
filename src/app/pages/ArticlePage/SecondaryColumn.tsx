@@ -32,7 +32,7 @@ const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
         <div css={styles.topStoriesAndFeaturesSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
-            parentColumns={null}
+            parentColumns={{}}
             sectionLabelBackground={GREY_2}
           />
         </div>
