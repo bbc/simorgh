@@ -162,7 +162,11 @@ const MediaPlayerContainer = ({
         <MediaPlayerWrapper>{mediaPlayer}</MediaPlayerWrapper>
       )}
       {transcriptBlock && (
-        <Transcript transcript={transcriptBlock} title={mediaTitle} />
+        <Transcript
+          transcript={transcriptBlock}
+          title={mediaTitle}
+          hideDisclaimer
+        />
       )}
     </>
   );

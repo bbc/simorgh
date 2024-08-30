@@ -3,16 +3,26 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 export default {
-  transcript: ({ spacings, palette, isDarkUi }: Theme) =>
+  details: ({ spacings, palette, isDarkUi }: Theme) =>
     css({
       backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
       display: 'block',
       marginBottom: `${spacings.TRIPLE}rem`,
       border: `solid ${pixelsToRem(3)}rem transparent`,
+      'summary svg': {
+        fill: 'currentcolor',
+        width: `${spacings.DOUBLE}rem`,
+        height: `${spacings.DOUBLE}rem`,
+        verticalAlign: 'middle',
+      },
+      '&[open] summary svg': {
+        transform: 'rotate(90deg)',
+      },
     }),
 
   summary: ({ spacings, palette }: Theme) =>
     css({
+      listStyle: 'none',
       padding: `${spacings.DOUBLE}rem`,
       '&:hover, &:focus': {
         cursor: 'pointer',

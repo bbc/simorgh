@@ -36,3 +36,33 @@ export const RightChevron = ({ className }: { className?: string }) => (
     <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
   </svg>
 );
+
+export const DownArrow = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    focusable="false"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <g>
+      <path d="M26.7,12.6L16,23.2L5.3,12.6V8.8h21.4V12.6z" />
+    </g>
+  </svg>
+);
+
+export const RightArrow = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    focusable="false"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <g>
+      <path d="M12.6,26.7L23.2,16L12.6,5.3H8.8v21.4H12.6z" />
+    </g>
+  </svg>
+);
