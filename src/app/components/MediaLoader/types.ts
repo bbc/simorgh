@@ -183,7 +183,7 @@ export type ClipMediaBlock = {
 export type OnDemandMediaModel = {
   id: string;
   subType: 'episode';
-  format: 'Video';
+  format: 'Video' | 'Audio';
   title: string;
   synopses: {
     short: string;
