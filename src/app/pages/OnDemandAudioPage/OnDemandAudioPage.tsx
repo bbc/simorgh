@@ -22,6 +22,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { PageTypes } from '#app/models/types/global';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import styles from './index.styles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -94,6 +95,7 @@ export interface OnDemandAudioProps {
     episodeTitle: string;
     externalLinks: string[];
     contentType: ContentType;
+    mediaBlocks?: MediaBlock[];
   };
   mediaIsAvailable?: boolean;
   MediaError: React.Component;

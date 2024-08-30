@@ -82,7 +82,7 @@ export default async ({
           path: pathname,
           radioService: getRadioService({ service, pathname }),
         })
-      : await pageDataPromise;
+      : pageDataPromise;
 
     const withLogging = pathWithLogging(getUrl(json), missingFieldCode, json);
     const get = (fieldPath: (string | number)[], logLevel?: string) =>
@@ -161,6 +161,7 @@ export default async ({
         radioScheduleData: getRadioScheduleData(json),
         recentEpisodes,
         externalLinks,
+        mediaBlocks: get(['content', 'blocks']),
       },
     };
   } catch ({
