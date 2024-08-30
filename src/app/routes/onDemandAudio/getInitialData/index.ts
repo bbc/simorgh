@@ -19,7 +19,7 @@ import { getPodcastExternalLinks } from '../tempData/podcastExternalLinks';
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
 
-const getConfig = pathname => {
+const getConfig = (pathname: string | string[]) => {
   const detailPageType = pathname.includes('podcast')
     ? 'Podcast'
     : 'On Demand Radio';
@@ -43,7 +43,7 @@ const getConfig = pathname => {
   };
 };
 
-const getPodcastPageIdentifier = pageIdentifier => {
+const getPodcastPageIdentifier = (pageIdentifier: string) => {
   const [service, masterbrand, ...rest] = pageIdentifier.split('.');
   return [service, masterbrand, 'podcasts', ...rest].join('.');
 };
@@ -83,7 +83,7 @@ export default async ({
       : await pageDataPromise;
 
     const withLogging = pathWithLogging(getUrl(json), missingFieldCode, json);
-    const get = (fieldPath, logLevel) =>
+    const get = (fieldPath: (string | number)[], logLevel?: string) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
