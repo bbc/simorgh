@@ -6,8 +6,6 @@ import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
@@ -76,25 +74,15 @@ const ComponentWithContext = ({
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
-          service={service}
-          pathname="/news/articles/c000000000o"
-          id="c000000000o"
-          isUK
-        >
-          <ThemeProvider service={service}>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-            />
-          </ThemeProvider>
-        </RequestContextProvider>
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
   );
@@ -115,30 +103,19 @@ const ComponentWithServiceContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-
       <ServiceContext.Provider
         // @ts-expect-error - passing partial service context
         value={{ ...serviceContextMock, service }}
       >
-        <RequestContextProvider
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
-          service={service}
-          pathname="/news/articles/c000000000o"
-          id="c000000000o"
-          isUK
-        >
-          <ThemeProvider service={service}>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-            />
-          </ThemeProvider>
-        </RequestContextProvider>
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>
   );
