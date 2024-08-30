@@ -10,6 +10,21 @@ export type OptimoBlock = {
   blockGroupIndex?: number;
 };
 
+export type OptimoRawImageBlock = {
+  type: 'rawImage';
+  model: {
+    locator: string;
+    originCode: string;
+  };
+};
+
+export type OptimoImageBlock = {
+  type: 'image';
+  model: {
+    blocks: [OptimoRawImageBlock];
+  };
+};
+
 export type ArticleMetadata = {
   passport: {
     language: string;
