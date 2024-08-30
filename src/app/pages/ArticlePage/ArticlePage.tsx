@@ -60,7 +60,6 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
-import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
@@ -80,7 +79,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
@@ -198,7 +197,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
-        title={getPromoHeadline(pageData)}
+        title={headline}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
