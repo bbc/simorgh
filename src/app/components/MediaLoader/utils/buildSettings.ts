@@ -32,11 +32,14 @@ const buildSettings = ({
   embedded,
   pathname,
 }: BuildConfigProps) => {
-  const embedUrl = getEmbedURL({
-    type: 'avEmbed',
-    mediaId: pathname,
-    queryString: '',
-  });
+  // To do - check whether this should be conditional
+  const embedUrl = pathname
+    ? getEmbedURL({
+        type: 'avEmbed',
+        mediaId: pathname,
+        queryString: '',
+      })
+    : '';
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
