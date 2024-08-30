@@ -11,7 +11,9 @@ export default {
       position: 'relative',
       height: `${pixelsToRem(12)}rem`,
       '&::before': {
-        borderLeft: `${pixelsToRem(6)}rem  solid currentColor`,
+        borderLeft: isDarkUi
+          ? `${pixelsToRem(6)}rem solid ${palette.WHITE}`
+          : `${pixelsToRem(6)}rem solid ${palette.GREY_10}`,
         borderTop: `${pixelsToRem(6)}rem solid transparent`,
         borderBottom: `${pixelsToRem(6)}rem solid transparent`,
         content: '""',
@@ -64,17 +66,6 @@ export default {
       paddingLeft: `${spacings.HALF}rem`,
     }),
 
-  disclaimer: ({ palette, isDarkUi, spacings, mq }: Theme) =>
-    css({
-      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
-      display: 'block',
-      paddingBottom: `${spacings.DOUBLE}rem`,
-      paddingInlineStart: `${spacings.DOUBLE}rem`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        paddingInlineStart: `${spacings.TRIPLE}rem`,
-      },
-    }),
-
   ul: ({ spacings, mq }: Theme) =>
     css({
       padding: `0 ${spacings.DOUBLE}rem`,
@@ -114,6 +105,17 @@ export default {
         content: '""',
         display: 'block',
         clear: 'both',
+      },
+    }),
+
+  disclaimer: ({ palette, isDarkUi, spacings, mq }: Theme) =>
+    css({
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+      display: 'block',
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingInlineStart: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        paddingInlineStart: `${spacings.TRIPLE}rem`,
       },
     }),
 };
