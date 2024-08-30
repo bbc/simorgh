@@ -1,4 +1,7 @@
 import { css, Theme } from '@emotion/react';
+import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+
+export const GROUP_1_FROM_360PX_AND_GROUP_2 = `@media (min-width: 22.5rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
 
 export default {
   wrapper: ({ mq, spacings }: Theme) =>
@@ -7,16 +10,16 @@ export default {
         paddingTop: `${spacings.TRIPLE}rem`,
       },
     }),
-  paragraph: ({ mq }: Theme) =>
+  paragraph: () =>
     css({
-      [mq.GROUP_1_AND_GROUP_2]: {
+      [GROUP_1_FROM_360PX_AND_GROUP_2]: {
         gridTemplateColumns: 'repeat(4, 1fr)',
         gridColumnEnd: 'span 4',
       },
     }),
-  image: ({ mq }: Theme) =>
+  image: () =>
     css({
-      [mq.GROUP_1_AND_GROUP_2]: {
+      [GROUP_1_FROM_360PX_AND_GROUP_2]: {
         gridTemplateColumns: 'repeat(2, 1fr)',
         gridColumnEnd: 'span 2',
       },
