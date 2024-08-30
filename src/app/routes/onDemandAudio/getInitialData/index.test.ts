@@ -19,6 +19,7 @@ describe('Get initial data for on demand radio', () => {
   afterEach(() => {
     process.env = { ...env };
     jest.clearAllMocks();
+    fetchMock.resetMocks();
   });
 
   it('should return essential data for an on demand page to render', async () => {
@@ -50,7 +51,6 @@ describe('Get initial data for on demand radio', () => {
 
   it('should return essential data for a podcast page to render', async () => {
     fetchMock.mockResponse(JSON.stringify(podcastJson));
-    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
@@ -113,11 +113,11 @@ describe('Get initial data for on demand radio', () => {
 
   it('should return essential data for a page to render when the episode toggle is null', async () => {
     fetchMock.mockResponse(JSON.stringify(onDemandRadioJson));
-    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
       pageType: MEDIA_PAGE,
       toggles: {
+        // @ts-expect-error partial data required for testing purposes
         recentAudioEpisodes: null,
       },
     });
@@ -289,5 +289,19 @@ describe('Get initial data for on demand radio', () => {
     expect(countMissingFieldCalls(loggerMock.info)).toBe(7);
     expect(countMissingFieldCalls(loggerMock.warn)).toBe(2);
     expect(countMissingFieldCalls(loggerMock.error)).toBe(2);
+  });
+
+  it('should return media blocks in preparation for adding the media loader component', async () => {
+    fetchMock.mockResponse(JSON.stringify(onDemandRadioJson));
+    // @ts-expect-error partial data required for testing purposes
+    const { pageData } = await getInitialData({
+      path: 'mock-live-radio-path',
+      pageType: MEDIA_PAGE,
+    });
+
+    expect(pageData).toHaveProperty('mediaBlocks');
+    expect(pageData?.mediaBlocks).toStrictEqual(
+      onDemandRadioJson.content.blocks,
+    );
   });
 });
