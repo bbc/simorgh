@@ -10,7 +10,7 @@ import {
   getLang,
   getSummary,
 } from '.';
-import { ArticlePageProps } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 
 describe('ArticleMain utils', () => {
   it('getHeadline › it should return the correct value', () => {
@@ -21,18 +21,14 @@ describe('ArticleMain utils', () => {
   });
 
   it('getFirstPublished › it should return the correct value', () => {
-    const actual = getFirstPublished(
-      articleDataNews as unknown as ArticlePageProps,
-    );
+    const actual = getFirstPublished(articleDataNews as unknown as Article);
     const expected = '2018-01-01T12:01:00.000Z';
 
     expect(actual).toEqual(expected);
   });
 
   it('getLastPublished › it should return the correct value', () => {
-    const actual = getLastPublished(
-      articleDataNews as unknown as ArticlePageProps,
-    );
+    const actual = getLastPublished(articleDataNews as unknown as Article);
     const expected = '2018-01-01T13:00:00.000Z';
 
     expect(actual).toEqual(expected);

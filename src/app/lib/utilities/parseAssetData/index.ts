@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { ArticlePageProps } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 import path from 'ramda/src/path';
 
 const getISOStringDate = (date: number) => new Date(date).toISOString();
@@ -23,10 +23,10 @@ export const getSummary = path<string>([
   'text',
 ]);
 
-export const getFirstPublished = (articleData: ArticlePageProps) =>
+export const getFirstPublished = (articleData: Article) =>
   getISOStringDate(path<number>(['metadata', 'firstPublished'], articleData)!);
 
-export const getLastPublished = (articleData: ArticlePageProps) =>
+export const getLastPublished = (articleData: Article) =>
   getISOStringDate(path<number>(['metadata', 'lastPublished'], articleData)!);
 
 export const getAboutTags = path<object[]>(['metadata', 'tags', 'about']);

@@ -3,12 +3,12 @@
 import { jsx, useTheme } from '@emotion/react';
 
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import { ArticlePageProps } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 import styles from './ArticlePage.styles';
 
-const SecondaryColumn = ({ pageData }: { pageData: ArticlePageProps }) => {
+const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
 

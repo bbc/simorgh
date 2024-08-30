@@ -1,4 +1,4 @@
-import { ArticlePageProps } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 import {
   getContentId,
   getPageIdentifier,
@@ -25,19 +25,13 @@ describe('getPageIdentifier', () => {
   };
 
   it('should construct page identifier', () => {
-    const optimoUrn = getPageIdentifier(
-      'news',
-      goodData as unknown as ArticlePageProps,
-    );
+    const optimoUrn = getPageIdentifier('news', goodData as unknown as Article);
 
     expect(optimoUrn).toEqual('news.articles.desiredValue.page');
   });
 
   it('should use "unknown" if optimo id is unknown', () => {
-    const optimoUrn = getPageIdentifier(
-      'news',
-      badData as unknown as ArticlePageProps,
-    );
+    const optimoUrn = getPageIdentifier('news', badData as unknown as Article);
 
     expect(optimoUrn).toEqual('news.articles.unknown.page');
   });
@@ -89,7 +83,7 @@ describe('getLanguage', () => {
           language: 'desired value',
         },
       },
-    } as unknown as ArticlePageProps;
+    } as unknown as Article;
 
     const language = getLanguage(goodData);
 
@@ -103,7 +97,7 @@ describe('getLanguage', () => {
           unknown: 'missed value',
         },
       },
-    } as unknown as ArticlePageProps;
+    } as unknown as Article;
 
     const language = getLanguage(badData);
 
@@ -119,7 +113,7 @@ describe('getPromoHeadline', () => {
           seoHeadline: 'desired value',
         },
       },
-    } as unknown as ArticlePageProps;
+    } as unknown as Article;
 
     const promoHeadline = getPromoHeadline(goodData);
 
@@ -133,7 +127,7 @@ describe('getPromoHeadline', () => {
           unknown: 'missed value',
         },
       },
-    } as unknown as ArticlePageProps;
+    } as unknown as Article;
 
     const promoHeadline = getPromoHeadline(badData);
 
@@ -149,7 +143,7 @@ describe('getNationsProducer', () => {
           nations_producer: 'england',
         },
       },
-    } as unknown as ArticlePageProps;
+    } as unknown as Article;
 
     const nationsProducer = getNationsProducer(hasNationsProducer);
 
@@ -161,7 +155,7 @@ describe('getNationsProducer', () => {
       metadata: {
         analyticsLabels: {},
       },
-    } as unknown as ArticlePageProps;
+    } as unknown as Article;
 
     const nationsProducer = getNationsProducer(noNationsProducer);
 

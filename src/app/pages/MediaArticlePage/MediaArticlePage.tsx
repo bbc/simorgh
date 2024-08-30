@@ -5,7 +5,7 @@ import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
-import { ArticlePageProps, OptimoBylineBlock } from '#app/models/types/optimo';
+import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -63,7 +63,7 @@ import {
   TimestampProps,
 } from './types';
 
-const MediaArticlePage = ({ pageData }: { pageData: ArticlePageProps }) => {
+const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     articleAuthor,
     isTrustProjectParticipant,

@@ -34,51 +34,63 @@ export type OptimoBylineBlock = {
   };
 };
 
-export type ArticlePageProps = {
-  content: {
-    model: {
-      blocks: OptimoBlock[];
+export type ArticleMetadata = {
+  adCampaignKeyword: string;
+  allowAdvertising: boolean;
+  analyticsLabels?: {
+    producer: string;
+  };
+  atiAnalytics: ATIData;
+  passport?: {
+    language: string;
+    home: string;
+    category: {
+      categoryName: string;
+    };
+    predicates: {
+      infoClass: { value: string; type: string }[];
+      primaryMediaType: { value: string; type: string }[];
+      formats: MetadataFormats;
+    };
+    taggings: MetadataTaggings;
+  };
+  topics: MetadataTopics;
+  type: PageTypes;
+};
+
+export type ArticleContent = {
+  model: {
+    blocks: OptimoBlock[];
+  };
+};
+
+export type ArticlePromo = {
+  images: {
+    defaultPromoImage: {
+      blocks: OptimoRawImageBlock[];
     };
   };
-  metadata: {
-    adCampaignKeyword: string;
-    allowAdvertising: boolean;
-    analyticsLabels?: {
-      producer: string;
-    };
-    atiAnalytics: ATIData;
-    passport?: {
-      language: string;
-      home: string;
-      category: {
-        categoryName: string;
-      };
-      predicates: {
-        infoClass: { value: string; type: string }[];
-        primaryMediaType: { value: string; type: string }[];
-        formats: MetadataFormats;
-      };
-      taggings: MetadataTaggings;
-    };
-    topics: MetadataTopics;
-    type: PageTypes;
+};
+
+export type SecondaryColumn = {
+  topStories: [];
+  features: [];
+};
+
+export type Recommendation = object;
+
+export type RelatedContent = {
+  section: {
+    name: string;
   };
+};
+
+export type Article = {
+  content: ArticleContent;
+  metadata: ArticleMetadata;
   mostRead: MostReadData;
-  promo?: {
-    images: {
-      defaultPromoImage: {
-        blocks: [];
-      };
-    };
-  };
-  secondaryColumn?: {
-    topStories: [];
-    features: [];
-  };
-  recommendations?: [];
-  relatedContent?: {
-    section?: {
-      name: string;
-    };
-  };
+  promo?: ArticlePromo;
+  secondaryColumn?: SecondaryColumn;
+  recommendations?: Recommendation[];
+  relatedContent?: RelatedContent;
 };

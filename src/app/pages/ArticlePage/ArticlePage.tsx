@@ -60,9 +60,9 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import { ArticlePageProps, OptimoBylineBlock } from '#app/models/types/optimo';
+import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 
-const ArticlePage = ({ pageData }: { pageData: ArticlePageProps }) => {
+const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp } = useContext(RequestContext);
   const {
     articleAuthor,

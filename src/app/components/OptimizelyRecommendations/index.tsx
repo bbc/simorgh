@@ -3,14 +3,14 @@ import CpsRecommendations from '#containers/CpsRecommendations';
 import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import pathOr from 'ramda/src/pathOr';
-import { ArticlePageProps } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 
 // 005_brasil_recommendations_experiment
 const OptimizelyRecommendation = ({
   pageData,
   ...props
 }: {
-  pageData: ArticlePageProps;
+  pageData: Article;
 }) => {
   const recommendationsData = pathOr(
     [] as null[],

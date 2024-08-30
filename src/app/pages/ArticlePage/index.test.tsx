@@ -37,7 +37,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import ATIAnalytics from '../../components/ATIAnalytics';
-import { ArticlePageProps } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -131,7 +131,7 @@ describe('Article Page', () => {
         },
       },
       articleDataNews,
-    ) as unknown as ArticlePageProps;
+    ) as unknown as Article;
 
     render(
       <Context service="news">
@@ -152,7 +152,7 @@ describe('Article Page', () => {
     render(
       <Context service="pidgin">
         <ArticlePage
-          pageData={articleDataPidginWithByline as unknown as ArticlePageProps}
+          pageData={articleDataPidginWithByline as unknown as Article}
         />
       </Context>,
       { service: 'pidgin' },
@@ -170,9 +170,7 @@ describe('Article Page', () => {
   it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
     render(
       <Context service="persian">
-        <ArticlePage
-          pageData={articleDataPersian as unknown as ArticlePageProps}
-        />
+        <ArticlePage pageData={articleDataPersian as unknown as Article} />
       </Context>,
       { service: 'persian' },
     );
@@ -200,9 +198,7 @@ describe('Article Page', () => {
     it('should use default images for opengraph if promo image does not exist', async () => {
       render(
         <Context service="news">
-          <ArticlePage
-            pageData={articleDataNews as unknown as ArticlePageProps}
-          />
+          <ArticlePage pageData={articleDataNews as unknown as Article} />
         </Context>,
       );
 
@@ -276,9 +272,7 @@ describe('Article Page', () => {
       render(
         <Context service="news">
           <ArticlePage
-            pageData={
-              articleDataNewsWithPromoImage as unknown as ArticlePageProps
-            }
+            pageData={articleDataNewsWithPromoImage as unknown as Article}
           />
         </Context>,
       );
@@ -300,7 +294,7 @@ describe('Article Page', () => {
       <Context service="news">
         <ArticlePage
           pageData={{
-            ...(articleDataNews as unknown as ArticlePageProps),
+            ...(articleDataNews as unknown as Article),
             mostRead: newsMostReadData,
           }}
         />
@@ -317,7 +311,7 @@ describe('Article Page', () => {
       <Context service="persian">
         <ArticlePage
           pageData={{
-            ...(articleDataPersian as unknown as ArticlePageProps),
+            ...(articleDataPersian as unknown as Article),
             mostRead: persianMostReadData,
           }}
         />
@@ -338,7 +332,7 @@ describe('Article Page', () => {
       <Context service="pidgin">
         <ArticlePage
           pageData={{
-            ...(articleDataPidgin as unknown as ArticlePageProps),
+            ...(articleDataPidgin as unknown as Article),
             mostRead: pidginMostReadData,
           }}
         />
@@ -400,9 +394,7 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="news">
         <ArticlePage
-          pageData={
-            articleWithSummaryHeadlineInTheMiddle as unknown as ArticlePageProps
-          }
+          pageData={articleWithSummaryHeadlineInTheMiddle as unknown as Article}
         />
       </Context>,
     );
@@ -439,9 +431,7 @@ describe('Article Page', () => {
 
     const { container } = render(
       <Context service="news">
-        <ArticlePage
-          pageData={articleWithoutHeadline as unknown as ArticlePageProps}
-        />
+        <ArticlePage pageData={articleWithoutHeadline as unknown as Article} />
       </Context>,
     );
 
@@ -461,7 +451,7 @@ describe('Article Page', () => {
     const { getByTestId } = render(
       <Context service="news">
         <ArticlePage
-          pageData={pageDataWithSecondaryColumn as unknown as ArticlePageProps}
+          pageData={pageDataWithSecondaryColumn as unknown as Article}
         />
       </Context>,
     );
@@ -489,7 +479,7 @@ describe('Article Page', () => {
       <Context service="news">
         <ArticlePage
           pageData={{
-            ...(articleDataNews as unknown as ArticlePageProps),
+            ...(articleDataNews as unknown as Article),
             mostRead: newsMostReadData,
           }}
         />
@@ -560,9 +550,7 @@ describe('Article Page', () => {
       render(
         <Context service="news">
           <ArticlePage
-            pageData={
-              pageDataWithSecondaryColumn as unknown as ArticlePageProps
-            }
+            pageData={pageDataWithSecondaryColumn as unknown as Article}
           />
         </Context>,
       );
@@ -586,9 +574,7 @@ describe('Article Page', () => {
       const { container } = render(
         <Context service="news" isApp>
           <ArticlePage
-            pageData={
-              pageDataWithSecondaryColumn as unknown as ArticlePageProps
-            }
+            pageData={pageDataWithSecondaryColumn as unknown as Article}
           />
         </Context>,
       );
@@ -602,9 +588,7 @@ describe('Article Page', () => {
     it('should remove the most read section', async () => {
       const { container } = render(
         <Context service="pidgin" isApp>
-          <ArticlePage
-            pageData={articleDataPidgin as unknown as ArticlePageProps}
-          />
+          <ArticlePage pageData={articleDataPidgin as unknown as Article} />
         </Context>,
         { service: 'pidgin' },
       );
@@ -630,7 +614,7 @@ describe('Article Page', () => {
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
           <ArticlePage
-            pageData={articleDataPidginWithAds as unknown as ArticlePageProps}
+            pageData={articleDataPidginWithAds as unknown as Article}
           />
         </Context>,
         { service: 'pidgin' },
@@ -655,7 +639,7 @@ describe('Article Page', () => {
     const { getByText } = render(
       <Context service="turkce">
         <ArticlePage
-          pageData={pageDataWithSecondaryColumn as unknown as ArticlePageProps}
+          pageData={pageDataWithSecondaryColumn as unknown as Article}
         />
       </Context>,
       { service: 'turkce' },
@@ -674,7 +658,7 @@ describe('Article Page', () => {
     const { getByText } = render(
       <Context service="russian" promo>
         <ArticlePage
-          pageData={pageDataWithSecondaryColumn as unknown as ArticlePageProps}
+          pageData={pageDataWithSecondaryColumn as unknown as Article}
         />
       </Context>,
       { service: 'russian' },
@@ -688,9 +672,7 @@ describe('Article Page', () => {
     };
     const { container } = render(
       <Context service="russian">
-        <ArticlePage
-          pageData={pageDataWithRiddle as unknown as ArticlePageProps}
-        />
+        <ArticlePage pageData={pageDataWithRiddle as unknown as Article} />
       </Context>,
     );
     const actual = container.querySelector(
@@ -705,9 +687,7 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="russian">
-        <ArticlePage
-          pageData={pageDataWithEmbedHtml as unknown as ArticlePageProps}
-        />
+        <ArticlePage pageData={pageDataWithEmbedHtml as unknown as Article} />
       </Context>,
     );
     expect(getByText('Embed HTML Component')).toBeInTheDocument();
@@ -719,9 +699,7 @@ describe('Article Page', () => {
     };
     const { container } = render(
       <Context service="russian">
-        <ArticlePage
-          pageData={pageDataWithEmbedImages as unknown as ArticlePageProps}
-        />
+        <ArticlePage pageData={pageDataWithEmbedImages as unknown as Article} />
       </Context>,
     );
     const actual = container.querySelector(`div[data-e2e="embed-image"]`);
@@ -735,7 +713,7 @@ describe('Article Page', () => {
     const { getByText } = render(
       <Context service="news">
         <ArticlePage
-          pageData={pageDataWithUploaderEmbed as unknown as ArticlePageProps}
+          pageData={pageDataWithUploaderEmbed as unknown as Article}
         />
       </Context>,
     );
@@ -755,9 +733,7 @@ describe('Article Page', () => {
       const { queryByTestId } = render(
         <Context service="pidgin">
           <ArticlePage
-            pageData={
-              pageDataWithSecondaryColumn as unknown as ArticlePageProps
-            }
+            pageData={pageDataWithSecondaryColumn as unknown as Article}
           />
         </Context>,
       );
@@ -774,9 +750,7 @@ describe('Article Page', () => {
 
       const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage
-            pageData={pageDataWithMostRead as unknown as ArticlePageProps}
-          />
+          <ArticlePage pageData={pageDataWithMostRead as unknown as Article} />
         </Context>,
       );
 
@@ -788,9 +762,7 @@ describe('Article Page', () => {
 
       render(
         <Context service="pidgin">
-          <ArticlePage
-            pageData={articlePglDataPidgin as unknown as ArticlePageProps}
-          />
+          <ArticlePage pageData={articlePglDataPidgin as unknown as Article} />
         </Context>,
       );
 
@@ -816,9 +788,7 @@ describe('Article Page', () => {
     it('should have schema metadata @type as Article', async () => {
       render(
         <Context service="pidgin">
-          <ArticlePage
-            pageData={articlePglDataPidgin as unknown as ArticlePageProps}
-          />
+          <ArticlePage pageData={articlePglDataPidgin as unknown as Article} />
         </Context>,
       );
 
@@ -836,9 +806,7 @@ describe('Article Page', () => {
 
       render(
         <Context service="pidgin">
-          <ArticlePage
-            pageData={articleStyDataPidgin as unknown as ArticlePageProps}
-          />
+          <ArticlePage pageData={articleStyDataPidgin as unknown as Article} />
         </Context>,
       );
 
