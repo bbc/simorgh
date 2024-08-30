@@ -19,7 +19,7 @@ const JsonInlinedScript = () => (
 );
 
 const AmpATIAnalytics = () => {
-  return <amp-analytics>{JsonInlinedScript()}</amp-analytics>;
+  return <amp-experiment>{JsonInlinedScript()}</amp-experiment>;
 };
 
 export default AmpATIAnalytics;

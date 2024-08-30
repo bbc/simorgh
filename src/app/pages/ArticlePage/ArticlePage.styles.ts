@@ -86,6 +86,10 @@ export default {
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
 
+      '[amp-x-someexperiment="variant-2"] &': {
+        backgroundColor: 'blue',
+      },
+
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.FULL}rem`,
         padding: `${spacings.DOUBLE}rem`,
