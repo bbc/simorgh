@@ -1,17 +1,46 @@
 import React from 'react';
+import ThemeProvider from '#app/components/ThemeProvider';
+import { PageTypes } from '#app/models/types/global';
 import Transcript from '.';
 import transcriptFixture from './fixture.json';
-// import { StoryProps, StoryArgs } from '../../models/types/storybook';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import { MEDIA_ARTICLE_PAGE, ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 
-const Component = () => {
+type Props = {
+  pageType: PageTypes;
+};
+
+const ComponentWithContext = ({ pageType }: Props) => {
   return (
-    <Transcript transcript={transcriptFixture} title="Title of my video" />
+    <RequestContextProvider
+      isAmp={false}
+      isApp={false}
+      pageType={pageType}
+      service="news"
+      pathname=""
+    >
+      <ThemeProvider service="news">
+        <Transcript transcript={transcriptFixture} title="Title of my video" />
+      </ThemeProvider>
+    </RequestContextProvider>
   );
 };
 
 export default {
   title: 'Components/Transcript',
-  Component,
+  ComponentWithContext,
+  parameters: {
+    // metadata, // TO DO - add A11y docs
+    backgrounds: {
+      default: 'Optimo',
+    },
+  },
 };
 
-export const Example = Component;
+export const ArticlePageTranscript = () => (
+  <ComponentWithContext pageType={ARTICLE_PAGE} />
+);
+
+export const MediaArticlePageTranscript = () => (
+  <ComponentWithContext pageType={MEDIA_ARTICLE_PAGE} />
+);
