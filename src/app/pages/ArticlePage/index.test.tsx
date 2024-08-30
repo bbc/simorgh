@@ -27,6 +27,8 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
+import { Article } from '#app/models/types/optimo';
+
 import {
   render,
   screen,
@@ -37,7 +39,6 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import ATIAnalytics from '../../components/ATIAnalytics';
-import { Article } from '#app/models/types/optimo';
 
 jest.mock('../../components/ThemeProvider');
 

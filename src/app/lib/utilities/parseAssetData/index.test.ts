@@ -1,5 +1,6 @@
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import { Article } from '#app/models/types/optimo';
 import {
   getHeadline,
   getFirstPublished,
@@ -10,7 +11,6 @@ import {
   getLang,
   getSummary,
 } from '.';
-import { Article } from '#app/models/types/optimo';
 
 describe('ArticleMain utils', () => {
   it('getHeadline › it should return the correct value', () => {
