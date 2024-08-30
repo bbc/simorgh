@@ -1,6 +1,5 @@
 import onClient from '#app/lib/utilities/onClient';
-import parseAvRoute from '../../../routes/utils/parseAvRoute';
-import buildAvEmbedURL from '../../../routes/utils/buildAvEmbedUrl';
+import getEmbedURL from '../../../lib/utilities/getUrlHelpers/getEmbedUrl';
 import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
 
@@ -27,24 +26,17 @@ const buildSettings = ({
   lang,
   pageType,
   service,
-  variant = null,
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
   embedded,
   pathname,
 }: BuildConfigProps) => {
-  const parsedRoute = pathname ? parseAvRoute(pathname) : null;
-  const embedUrl = parsedRoute
-    ? buildAvEmbedURL({
-        assetId: parsedRoute.assetId,
-        mediaDelimiter: parsedRoute.mediaDelimiter,
-        mediaId: parsedRoute.mediaId,
-        service,
-        variant,
-      })
-    : '';
-
+  const embedUrl = getEmbedURL({
+    type: 'avEmbed',
+    mediaId: pathname,
+    queryString: '',
+  });
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,

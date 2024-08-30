@@ -283,3 +283,78 @@ describe('makeAbsolute makes a relative URL absolute', () => {
     delete process.env.SIMORGH_APP_ENV;
   });
 });
+
+// TO DO - check these are valid pathnames.
+describe('buildAvEmbedURL', () => {
+  describe('service with variant', () => {
+    it('should build an embed URL for the page', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/serbian/cyr/av-embeds/srbija-68707945',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual('https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945');
+    });
+
+    it('should build an embed with a vpid URL for the page', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwj',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual(
+        'https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwj',
+      );
+    });
+
+    it('should build an embed with a pid URL for the page', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/serbian/cyr/av-embeds/srbija-68707945/pid/p0cfmdwn',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual(
+        'https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945/pid/p0cfmdwn',
+      );
+    });
+  });
+
+  describe('service without variant', () => {
+    it('should build an embed URL for the page', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/mundo/av-embeds/srbija-68707945',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual('https://www.bbc.com/mundo/av-embeds/srbija-68707945');
+    });
+
+    it('should build an embed with a vpid URL for the page', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/mundo/av-embeds/srbija-68707945/vpid/p0cfmdwj',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual(
+        'https://www.bbc.com/mundo/av-embeds/srbija-68707945/vpid/p0cfmdwj',
+      );
+    });
+
+    it('should build an embed with a pid URL for the page', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/mundo/av-embeds/srbija-68707945/pid/p0cfmdwn',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual(
+        'https://www.bbc.com/mundo/av-embeds/srbija-68707945/pid/p0cfmdwn',
+      );
+    });
+  });
+});

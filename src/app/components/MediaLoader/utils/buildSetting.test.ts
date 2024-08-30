@@ -21,7 +21,7 @@ const baseSettings = {
   service: 'mundo' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'MUNDO',
-  pathname: 'mundo/av-embeds/srbija-68707945',
+  pathname: '/mundo/av-embeds/srbija-68707945',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {

@@ -1,5 +1,6 @@
 import isLive from '../../isLive';
 import { getEnvConfig } from '../../getEnvConfig';
+import parseAvRoute from '../../../../routes/utils/parseAvRoute';
 
 const AV_ROUTE = 'ws/av-embeds';
 
@@ -41,7 +42,21 @@ const getBaseUrl = (queryString, isAmp) => {
   }
 };
 
-export default ({ type, mediaId, isAmp = false, queryString }) => {
+const handleAvEmbed = ({ mediaPathname }) => {
+  // To do - is it possible to remove parsed route
+  // all it seems to handle is cleaning up extra slashes and removing renderer env
+  // would have to pass in service and variant
+  const parsedRoute = parseAvRoute(mediaPathname);
+  const { service, variant, mediaDelimiter, mediaId, assetId } = parsedRoute;
+  const siteUri = `${service}${variant ? `/${variant}` : ''}`;
+  const mediaPath =
+    mediaDelimiter && mediaId ? `/${mediaDelimiter}/${mediaId}` : '';
+
+  return `https://www.bbc.com/${siteUri}/av-embeds/${assetId}${mediaPath}`;
+};
+
+// To do - check var names
+const handleMorphEmbed = ({ type, mediaId, isAmp, queryString }) => {
   const morphEnvOverride = shouldOverrideMorphEnv(queryString, type)
     ? '?morph_env=live'
     : '';
@@ -49,6 +64,14 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
   const baseUrl = getBaseUrl(queryString, isAmp);
   const url = `${baseUrl}/${AV_ROUTE}/${type}/${mediaId}`;
   return `${url}${ampSection}${morphEnvOverride}`;
+};
+
+export default ({ type, mediaId, isAmp = false, queryString }) => {
+  const morphAsset = type !== 'avEmbed';
+  const embedUrl = morphAsset
+    ? handleMorphEmbed({ type, mediaId, isAmp, queryString })
+    : handleAvEmbed({ mediaPathname: mediaId });
+  return embedUrl;
 };
 
 export const makeAbsolute = url => {

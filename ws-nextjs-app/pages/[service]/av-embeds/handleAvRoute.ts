@@ -8,7 +8,8 @@ import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import buildAvEmbedURL from '#app/routes/utils/buildAvEmbedUrl';
+// import buildAvEmbedURL from '#app/lib/utilities/buildAvEmbedUrl'; // remove?
+import getEmbedURL from '#app/lib/utilities/getUrlHelpers/getEmbedUrl';
 import getAgent from '../../../utilities/undiciAgent';
 
 export default async (context: GetServerSidePropsContext) => {
@@ -100,14 +101,25 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { caption = null } = captionBlock?.model ?? {};
 
-  const mediaURL =
-    buildAvEmbedURL({
-      assetId: parsedRoute.assetId,
-      mediaDelimiter: parsedRoute.mediaDelimiter,
-      mediaId: parsedRoute.mediaId,
-      service,
-      variant,
-    }) ?? null;
+  // const myVarForComparison =
+  //   buildAvEmbedURL({
+  //     assetId: parsedRoute.assetId,
+  //     mediaDelimiter: parsedRoute.mediaDelimiter,
+  //     mediaId: parsedRoute.mediaId,
+  //     service,
+  //     variant,
+  //   }) ?? null;
+
+  // console.log('myVarForComparison', myVarForComparison);
+
+  // TO DO - check refactor. Remove logs
+  const mediaURL = getEmbedURL({
+    type: 'avEmbed',
+    mediaId: context.resolvedUrl,
+    queryString: '',
+  });
+
+  // console.log('mediaURL', mediaURL);
 
   return {
     props: {
@@ -129,7 +141,7 @@ export default async (context: GetServerSidePropsContext) => {
           }
         : null,
       pageType: AV_EMBEDS,
-      pathname: resolvedUrl,
+      pathname: context.resolvedUrl,
       service,
       status: pageStatus,
       variant,

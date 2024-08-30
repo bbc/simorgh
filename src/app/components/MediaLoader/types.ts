@@ -1,4 +1,4 @@
-import { PageTypes, Services, Variants } from '#app/models/types/global';
+import { PageTypes, Services } from '#app/models/types/global';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
@@ -255,7 +255,6 @@ export type BuildConfigProps = {
   lang: string;
   pageType: PageTypes;
   service: Services;
-  variant: Variants | null;
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
