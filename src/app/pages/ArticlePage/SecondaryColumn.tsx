@@ -1,16 +1,16 @@
 /** @jsx jsx */
 
-import path from 'ramda/src/path';
 import { jsx, useTheme } from '@emotion/react';
 
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
+import { ArticlePageProps } from '#app/models/types/optimo';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 
 import styles from './ArticlePage.styles';
 
-const SecondaryColumn = ({ pageData }) => {
-  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
-  const featuresContent = path(['secondaryColumn', 'features'], pageData);
+const SecondaryColumn = ({ pageData }: { pageData: ArticlePageProps }) => {
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
 
   const {
     palette: { GREY_2 },
@@ -32,7 +32,7 @@ const SecondaryColumn = ({ pageData }) => {
         <div css={styles.topStoriesAndFeaturesSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
-            parentColumns={{}}
+            parentColumns={null}
             sectionLabelBackground={GREY_2}
           />
         </div>

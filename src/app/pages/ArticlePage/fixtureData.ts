@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   blockContainingText,
   bylineBlock,
@@ -5,36 +6,39 @@ import {
   textBlock,
 } from '#models/blocks';
 
-const blocksWithHeadlineAndText = blockValues => {
+const blocksWithHeadlineAndText = (blockValues: any[]) => {
   const [headlineText, paragraphText, ...additional] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
+    // @ts-expect-error - type checking not added for block helpers
     singleTextBlock(paragraphText, 2),
     ...additional,
   ];
 };
 
-const blocksWithHeadlineTexAndByline = blockValues => {
+const blocksWithHeadlineTexAndByline = (blockValues: any[]) => {
   const [headlineText, paragraphText, twitterHandle] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
+    // @ts-expect-error - type checking not added for block helpers
     bylineBlock(twitterHandle, 2),
+    // @ts-expect-error - type checking not added for block helpers
     singleTextBlock(paragraphText, 3),
   ];
 };
 
 const articleDataBuilder = (
-  id,
-  createdBy,
-  language,
-  home,
-  blockValues,
-  seoHeadline,
-  promoHeadline,
-  summary,
-  things,
+  id: string,
+  createdBy: string,
+  language: string,
+  home: string,
+  blockValues: any[],
+  seoHeadline: string,
+  promoHeadline: string,
+  summary: string,
+  things: any,
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},

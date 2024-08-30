@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
@@ -26,6 +26,7 @@ import {
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
+import { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -36,6 +37,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import ATIAnalytics from '../../components/ATIAnalytics';
+import { ArticlePageProps } from '#app/models/types/optimo';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -46,14 +48,6 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 
 jest.mock('../../components/ATIAnalytics');
 
-const recommendationSettings = {
-  hasStoryRecommendations: true,
-  skipLink: {
-    text: 'Skip recommendations and continue reading',
-    endTextVisuallyHidden: 'End of recommendations',
-  },
-};
-
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
   id: 'c0000000000o',
@@ -61,6 +55,15 @@ const input = {
   pageType: ARTICLE_PAGE,
   pathname: '/pathname',
   statusCode: 200,
+};
+
+type Props = {
+  service?: Services;
+  adsToggledOn?: boolean;
+  mostReadToggledOn?: boolean;
+  showAdsBasedOnLocation?: boolean;
+  isApp?: boolean;
+  promo?: boolean | null;
 };
 
 const Context = ({
@@ -71,7 +74,7 @@ const Context = ({
   showAdsBasedOnLocation = false,
   isApp = false,
   promo = null,
-} = {}) => {
+}: PropsWithChildren<Props> = {}) => {
   const appInput = {
     ...input,
     service,
@@ -97,10 +100,7 @@ const Context = ({
           }}
         >
           <RequestContextProvider {...appInput}>
-            <ServiceContextProvider
-              service={service}
-              recommendations={recommendationSettings}
-            >
+            <ServiceContextProvider service={service}>
               {children}
             </ServiceContextProvider>
           </RequestContextProvider>
@@ -113,8 +113,7 @@ const Context = ({
 beforeEach(() => {
   process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
 
-  fetch.resetMocks();
-  ATIAnalytics.mockImplementation(
+  (ATIAnalytics as jest.Mock).mockImplementation(
     jest.requireActual('../../components/ATIAnalytics').default,
   );
 });
@@ -132,7 +131,7 @@ describe('Article Page', () => {
         },
       },
       articleDataNews,
-    );
+    ) as unknown as ArticlePageProps;
 
     render(
       <Context service="news">
@@ -144,7 +143,7 @@ describe('Article Page', () => {
       expect(
         document
           .querySelector('meta[name="description"]')
-          .getAttribute('content'),
+          ?.getAttribute('content'),
       ).toEqual('Article Headline for SEO');
     });
   });
@@ -152,7 +151,9 @@ describe('Article Page', () => {
   it('should use the twitter handle where present in the byline block', async () => {
     render(
       <Context service="pidgin">
-        <ArticlePage pageData={articleDataPidginWithByline} />
+        <ArticlePage
+          pageData={articleDataPidginWithByline as unknown as ArticlePageProps}
+        />
       </Context>,
       { service: 'pidgin' },
     );
@@ -161,7 +162,7 @@ describe('Article Page', () => {
       expect(
         document
           .querySelector('meta[name="twitter:creator"]')
-          .getAttribute('content'),
+          ?.getAttribute('content'),
       ).toEqual('@mary_harper');
     });
   });
@@ -169,7 +170,9 @@ describe('Article Page', () => {
   it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
     render(
       <Context service="persian">
-        <ArticlePage pageData={articleDataPersian} />
+        <ArticlePage
+          pageData={articleDataPersian as unknown as ArticlePageProps}
+        />
       </Context>,
       { service: 'persian' },
     );
@@ -178,7 +181,7 @@ describe('Article Page', () => {
       expect(
         document
           .querySelector('meta[name="twitter:creator"]')
-          .getAttribute('content'),
+          ?.getAttribute('content'),
       ).toEqual('@bbcpersian');
     });
   });
@@ -197,7 +200,9 @@ describe('Article Page', () => {
     it('should use default images for opengraph if promo image does not exist', async () => {
       render(
         <Context service="news">
-          <ArticlePage pageData={articleDataNews} />
+          <ArticlePage
+            pageData={articleDataNews as unknown as ArticlePageProps}
+          />
         </Context>,
       );
 
@@ -205,7 +210,7 @@ describe('Article Page', () => {
         expect(
           document
             .querySelector('meta[property="og:image"]')
-            .getAttribute('content'),
+            ?.getAttribute('content'),
         ).toEqual(
           'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
         );
@@ -270,7 +275,11 @@ describe('Article Page', () => {
 
       render(
         <Context service="news">
-          <ArticlePage pageData={articleDataNewsWithPromoImage} />
+          <ArticlePage
+            pageData={
+              articleDataNewsWithPromoImage as unknown as ArticlePageProps
+            }
+          />
         </Context>,
       );
 
@@ -278,7 +287,7 @@ describe('Article Page', () => {
         expect(
           document
             .querySelector('meta[property="og:image"]')
-            .getAttribute('content'),
+            ?.getAttribute('content'),
         ).toEqual(
           'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
         );
@@ -290,7 +299,10 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="news">
         <ArticlePage
-          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+          pageData={{
+            ...(articleDataNews as unknown as ArticlePageProps),
+            mostRead: newsMostReadData,
+          }}
         />
       </Context>,
     );
@@ -304,7 +316,10 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="persian">
         <ArticlePage
-          pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
+          pageData={{
+            ...(articleDataPersian as unknown as ArticlePageProps),
+            mostRead: persianMostReadData,
+          }}
         />
       </Context>,
       { service: 'persian' },
@@ -322,7 +337,10 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="pidgin">
         <ArticlePage
-          pageData={{ ...articleDataPidgin, mostRead: pidginMostReadData }}
+          pageData={{
+            ...(articleDataPidgin as unknown as ArticlePageProps),
+            mostRead: pidginMostReadData,
+          }}
         />
       </Context>,
       { service: 'pidgin' },
@@ -351,6 +369,7 @@ describe('Article Page', () => {
       content: {
         model: {
           blocks: [
+            // @ts-expect-error - type checking not added for block helpers
             singleTextBlock('Paragraph above headline', 2),
             {
               ...headline,
@@ -364,6 +383,7 @@ describe('Article Page', () => {
                 ],
               },
             },
+            // @ts-expect-error - type checking not added for block helpers
             singleTextBlock('Paragraph below headline', 3),
           ],
         },
@@ -379,7 +399,11 @@ describe('Article Page', () => {
 
     const { container } = render(
       <Context service="news">
-        <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
+        <ArticlePage
+          pageData={
+            articleWithSummaryHeadlineInTheMiddle as unknown as ArticlePageProps
+          }
+        />
       </Context>,
     );
 
@@ -400,6 +424,7 @@ describe('Article Page', () => {
       },
       content: {
         model: {
+          // @ts-expect-error - type checking not added for block helpers
           blocks: [singleTextBlock('Paragraph 1', 2)],
         },
       },
@@ -414,7 +439,9 @@ describe('Article Page', () => {
 
     const { container } = render(
       <Context service="news">
-        <ArticlePage pageData={articleWithoutHeadline} />
+        <ArticlePage
+          pageData={articleWithoutHeadline as unknown as ArticlePageProps}
+        />
       </Context>,
     );
 
@@ -433,7 +460,9 @@ describe('Article Page', () => {
     };
     const { getByTestId } = render(
       <Context service="news">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        <ArticlePage
+          pageData={pageDataWithSecondaryColumn as unknown as ArticlePageProps}
+        />
       </Context>,
     );
 
@@ -459,12 +488,17 @@ describe('Article Page', () => {
     render(
       <Context service="news">
         <ArticlePage
-          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+          pageData={{
+            ...(articleDataNews as unknown as ArticlePageProps),
+            mostRead: newsMostReadData,
+          }}
         />
       </Context>,
     );
 
-    const { src, srcset } = screen.getByAltText(imageAltText);
+    const { src, srcset } = screen.getByAltText(
+      imageAltText,
+    ) as HTMLImageElement;
 
     expect(src).toEqual(imageURL);
     expect(srcset).toEqual(expectedSrcSetURLs);
@@ -525,12 +559,16 @@ describe('Article Page', () => {
     await act(async () => {
       render(
         <Context service="news">
-          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+          <ArticlePage
+            pageData={
+              pageDataWithSecondaryColumn as unknown as ArticlePageProps
+            }
+          />
         </Context>,
       );
     });
 
-    const { src } = screen.getByAltText(imageAltText);
+    const { src } = screen.getByAltText(imageAltText) as HTMLImageElement;
 
     expect(src).toEqual(imageURL);
   });
@@ -547,7 +585,11 @@ describe('Article Page', () => {
 
       const { container } = render(
         <Context service="news" isApp>
-          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+          <ArticlePage
+            pageData={
+              pageDataWithSecondaryColumn as unknown as ArticlePageProps
+            }
+          />
         </Context>,
       );
 
@@ -560,7 +602,9 @@ describe('Article Page', () => {
     it('should remove the most read section', async () => {
       const { container } = render(
         <Context service="pidgin" isApp>
-          <ArticlePage pageData={articleDataPidgin} />
+          <ArticlePage
+            pageData={articleDataPidgin as unknown as ArticlePageProps}
+          />
         </Context>,
         { service: 'pidgin' },
       );
@@ -585,7 +629,9 @@ describe('Article Page', () => {
           adsToggledOn={adsToggledOn}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <ArticlePage pageData={articleDataPidginWithAds} />
+          <ArticlePage
+            pageData={articleDataPidginWithAds as unknown as ArticlePageProps}
+          />
         </Context>,
         { service: 'pidgin' },
       );
@@ -608,7 +654,9 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="turkce">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        <ArticlePage
+          pageData={pageDataWithSecondaryColumn as unknown as ArticlePageProps}
+        />
       </Context>,
       { service: 'turkce' },
     );
@@ -625,7 +673,9 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="russian" promo>
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        <ArticlePage
+          pageData={pageDataWithSecondaryColumn as unknown as ArticlePageProps}
+        />
       </Context>,
       { service: 'russian' },
     );
@@ -638,7 +688,9 @@ describe('Article Page', () => {
     };
     const { container } = render(
       <Context service="russian">
-        <ArticlePage pageData={pageDataWithRiddle} />
+        <ArticlePage
+          pageData={pageDataWithRiddle as unknown as ArticlePageProps}
+        />
       </Context>,
     );
     const actual = container.querySelector(
@@ -653,7 +705,9 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="russian">
-        <ArticlePage pageData={pageDataWithEmbedHtml} />
+        <ArticlePage
+          pageData={pageDataWithEmbedHtml as unknown as ArticlePageProps}
+        />
       </Context>,
     );
     expect(getByText('Embed HTML Component')).toBeInTheDocument();
@@ -665,7 +719,9 @@ describe('Article Page', () => {
     };
     const { container } = render(
       <Context service="russian">
-        <ArticlePage pageData={pageDataWithEmbedImages} />
+        <ArticlePage
+          pageData={pageDataWithEmbedImages as unknown as ArticlePageProps}
+        />
       </Context>,
     );
     const actual = container.querySelector(`div[data-e2e="embed-image"]`);
@@ -678,7 +734,9 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="news">
-        <ArticlePage pageData={pageDataWithUploaderEmbed} />
+        <ArticlePage
+          pageData={pageDataWithUploaderEmbed as unknown as ArticlePageProps}
+        />
       </Context>,
     );
     expect(getByText('Get involved')).toBeInTheDocument();
@@ -696,7 +754,11 @@ describe('Article Page', () => {
 
       const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+          <ArticlePage
+            pageData={
+              pageDataWithSecondaryColumn as unknown as ArticlePageProps
+            }
+          />
         </Context>,
       );
 
@@ -712,7 +774,9 @@ describe('Article Page', () => {
 
       const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage pageData={pageDataWithMostRead} />
+          <ArticlePage
+            pageData={pageDataWithMostRead as unknown as ArticlePageProps}
+          />
         </Context>,
       );
 
@@ -720,11 +784,13 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      ATIAnalytics.mockImplementation(() => <div />);
+      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
 
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articlePglDataPidgin} />
+          <ArticlePage
+            pageData={articlePglDataPidgin as unknown as ArticlePageProps}
+          />
         </Context>,
       );
 
@@ -750,7 +816,9 @@ describe('Article Page', () => {
     it('should have schema metadata @type as Article', async () => {
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articlePglDataPidgin} />
+          <ArticlePage
+            pageData={articlePglDataPidgin as unknown as ArticlePageProps}
+          />
         </Context>,
       );
 
@@ -764,11 +832,13 @@ describe('Article Page', () => {
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      ATIAnalytics.mockImplementation(() => <div />);
+      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
 
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articleStyDataPidgin} />
+          <ArticlePage
+            pageData={articleStyDataPidgin as unknown as ArticlePageProps}
+          />
         </Context>,
       );
 

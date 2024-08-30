@@ -1,12 +1,11 @@
 /** @jsx jsx */
 
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
+import { ArticlePageProps, OptimoBylineBlock } from '#app/models/types/optimo';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -43,13 +42,6 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import { Article, OptimoBlock } from '../../models/types/optimo';
-import {
-  MetadataFormats,
-  MetadataTaggings,
-  MetadataTopics,
-} from '../../models/types/metadata';
-
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 
@@ -71,7 +63,7 @@ import {
   TimestampProps,
 } from './types';
 
-const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+const MediaArticlePage = ({ pageData }: { pageData: ArticlePageProps }) => {
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -89,15 +81,14 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData) as Tag[];
-  const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
-  const blocks = pathOr<OptimoBlock[]>(
-    [],
-    ['content', 'model', 'blocks'],
-    pageData,
-  );
+  const topics = pageData?.metadata?.topics ?? [];
+  const blocks = pageData?.content?.model?.blocks ?? [];
 
-  const bylineBlock = blocks.find(block => block.type === 'byline');
-  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+  const bylineBlock = blocks.find(
+    block => block.type === 'byline',
+  ) as OptimoBylineBlock;
+
+  const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
@@ -107,14 +98,9 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
-  const taggings = path<MetadataTaggings>(
-    ['metadata', 'passport', 'taggings'],
-    pageData,
-  );
-  const formats = path<MetadataFormats>(
-    ['metadata', 'passport', 'predicates', 'formats'],
-    pageData,
-  );
+  const taggings = pageData?.metadata?.passport?.taggings ?? [];
+
+  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   // ATI
   const {
@@ -181,21 +167,20 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
 
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const promoImageAltTextBlock = filterForBlockType(
+    promoImageBlocks,
+    'altText',
   );
 
-  const promoImageAltText = path<string>(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
+  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
 
-  const promoImage = path<string>(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
-  );
+  const promoImageAltText =
+    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const promoImage = promoImageRawBlock?.model?.locator;
 
   return (
     <div css={styles.pageWrapper}>
@@ -209,15 +194,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
-        articleId={getArticleId(pageData) as string | undefined}
+        articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(pageData) as string | undefined}
+        section={getArticleSection(pageData)}
         aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData) as string[] | undefined}
+        mentionsTags={getMentions(pageData)}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}

@@ -1,5 +1,7 @@
 import { ATIData } from '#app/components/ATIAnalytics/types';
-import { MetadataTaggings } from './metadata';
+import { MostReadData } from '#app/components/MostRead/types';
+import { PageTypes } from './global';
+import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
 
 export type OptimoBlock = {
   type: string;
@@ -25,38 +27,58 @@ export type OptimoImageBlock = {
   };
 };
 
-export type ArticleMetadata = {
-  passport: {
-    language: string;
-    home: string;
-    taggings: MetadataTaggings;
-    predicates: {
-      infoClass: { value: string; type: string }[];
-      primaryMediaType: { value: string; type: string }[];
-    };
-    category?: {
-      categoryName: string;
-    };
-  };
-  analyticsLabels?: {
-    producer: string;
-  };
-  atiAnalytics: ATIData;
-  type: string;
-  allowAdvertising?: boolean;
-};
-
-export type ArticleContent = {
+export type OptimoBylineBlock = {
+  type: 'name' | 'role' | 'link' | 'location' | 'images';
   model: {
-    blocks: OptimoBlock[];
+    blocks: object[];
   };
 };
 
-export type Article = {
-  metadata: ArticleMetadata;
-  content: ArticleContent;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  promo?: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  relatedContent?: any;
+export type ArticlePageProps = {
+  content: {
+    model: {
+      blocks: OptimoBlock[];
+    };
+  };
+  metadata: {
+    adCampaignKeyword: string;
+    allowAdvertising: boolean;
+    analyticsLabels?: {
+      producer: string;
+    };
+    atiAnalytics: ATIData;
+    passport?: {
+      language: string;
+      home: string;
+      category: {
+        categoryName: string;
+      };
+      predicates: {
+        infoClass: { value: string; type: string }[];
+        primaryMediaType: { value: string; type: string }[];
+        formats: MetadataFormats;
+      };
+      taggings: MetadataTaggings;
+    };
+    topics: MetadataTopics;
+    type: PageTypes;
+  };
+  mostRead: MostReadData;
+  promo?: {
+    images: {
+      defaultPromoImage: {
+        blocks: [];
+      };
+    };
+  };
+  secondaryColumn?: {
+    topStories: [];
+    features: [];
+  };
+  recommendations?: [];
+  relatedContent?: {
+    section?: {
+      name: string;
+    };
+  };
 };

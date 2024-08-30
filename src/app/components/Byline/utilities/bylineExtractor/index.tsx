@@ -1,17 +1,11 @@
 import pathOr from 'ramda/src/pathOr';
+import { OptimoBylineBlock } from '#app/models/types/optimo';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
-
-type BylineBlock = {
-  type: 'name' | 'role' | 'link' | 'location' | 'images';
-  model: {
-    blocks: object[];
-  };
-};
 
 const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
   endModelType: string,
-  block: BylineBlock | undefined,
+  block: OptimoBylineBlock | undefined,
 ) => {
   const zeroIndexModelBlock = ['model', 'blocks', '0'];
   const endModel = ['model', endModelType];
@@ -27,7 +21,7 @@ const pathOrZeroIndexModelBlocks = (
 };
 
 const bylineExtractor = (blocks: object[]) => {
-  const bylineBlocks = pathOr<BylineBlock[]>(
+  const bylineBlocks = pathOr<OptimoBylineBlock[]>(
     [],
     [0, 'model', 'blocks'],
     blocks,

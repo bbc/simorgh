@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
+import { ArticlePageProps } from '#app/models/types/optimo';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -84,7 +85,9 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news">
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage
+          pageData={pidginPageData as unknown as ArticlePageProps}
+        />
       </Context>,
     );
 
@@ -98,7 +101,9 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage
+          pageData={pidginPageData as unknown as ArticlePageProps}
+        />
       </Context>,
     );
 
@@ -127,7 +132,9 @@ describe('MediaArticlePage', () => {
 
     render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage
+          pageData={pidginPageData as unknown as ArticlePageProps}
+        />
       </Context>,
     );
 

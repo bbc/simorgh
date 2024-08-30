@@ -23,7 +23,7 @@ interface BylineLinkedData {
 export interface LinkedDataProps {
   showAuthor?: boolean;
   type: string;
-  seoTitle: string;
+  seoTitle?: string;
   headline?: string;
   promoImage?: string;
   description?: string;

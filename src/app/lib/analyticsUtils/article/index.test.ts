@@ -1,10 +1,11 @@
-const {
+import { ArticlePageProps } from '#app/models/types/optimo';
+import {
   getContentId,
   getPageIdentifier,
   getLanguage,
   getPromoHeadline,
   getNationsProducer,
-} = require('.');
+} from '.';
 
 describe('getPageIdentifier', () => {
   const goodData = {
@@ -24,18 +25,25 @@ describe('getPageIdentifier', () => {
   };
 
   it('should construct page identifier', () => {
-    const optimoUrn = getPageIdentifier('service', goodData);
+    const optimoUrn = getPageIdentifier(
+      'news',
+      goodData as unknown as ArticlePageProps,
+    );
 
-    expect(optimoUrn).toEqual('service.articles.desiredValue.page');
+    expect(optimoUrn).toEqual('news.articles.desiredValue.page');
   });
 
   it('should use "unknown" if optimo id is unknown', () => {
-    const optimoUrn = getPageIdentifier('service', badData);
+    const optimoUrn = getPageIdentifier(
+      'news',
+      badData as unknown as ArticlePageProps,
+    );
 
-    expect(optimoUrn).toEqual('service.articles.unknown.page');
+    expect(optimoUrn).toEqual('news.articles.unknown.page');
   });
 
   it('should use null if service is null', () => {
+    // @ts-expect-error - testing null service
     const optimoUrn = getPageIdentifier(null, goodData);
 
     expect(optimoUrn).toEqual('null.articles.desiredValue.page');
@@ -81,7 +89,7 @@ describe('getLanguage', () => {
           language: 'desired value',
         },
       },
-    };
+    } as unknown as ArticlePageProps;
 
     const language = getLanguage(goodData);
 
@@ -95,7 +103,7 @@ describe('getLanguage', () => {
           unknown: 'missed value',
         },
       },
-    };
+    } as unknown as ArticlePageProps;
 
     const language = getLanguage(badData);
 
@@ -111,25 +119,25 @@ describe('getPromoHeadline', () => {
           seoHeadline: 'desired value',
         },
       },
-    };
+    } as unknown as ArticlePageProps;
 
     const promoHeadline = getPromoHeadline(goodData);
 
     expect(promoHeadline).toEqual('desired value');
   });
 
-  it('should return null in bad data', () => {
+  it('should return empty string in bad data', () => {
     const badData = {
       promo: {
         headlines: {
           unknown: 'missed value',
         },
       },
-    };
+    } as unknown as ArticlePageProps;
 
     const promoHeadline = getPromoHeadline(badData);
 
-    expect(promoHeadline).toEqual(null);
+    expect(promoHeadline).toEqual('');
   });
 });
 
@@ -141,7 +149,7 @@ describe('getNationsProducer', () => {
           nations_producer: 'england',
         },
       },
-    };
+    } as unknown as ArticlePageProps;
 
     const nationsProducer = getNationsProducer(hasNationsProducer);
 
@@ -153,7 +161,7 @@ describe('getNationsProducer', () => {
       metadata: {
         analyticsLabels: {},
       },
-    };
+    } as unknown as ArticlePageProps;
 
     const nationsProducer = getNationsProducer(noNationsProducer);
 

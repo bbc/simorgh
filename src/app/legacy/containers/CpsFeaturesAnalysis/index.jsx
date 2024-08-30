@@ -113,7 +113,7 @@ const PromoComponent = ({ promo, dir = 'ltr' }) => {
 const FeaturesAnalysis = ({
   content = [],
   parentColumns = null,
-  sectionLabelBackground = undefined,
+  sectionLabelBackground = '',
 }) => {
   const { translations } = useContext(ServiceContext);
 
