@@ -1,12 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
-import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -25,6 +19,10 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { PageTypes } from '#app/models/types/global';
+import { RadioScheduleData } from '#app/models/types/radioSchedule';
+import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import styles from './index.styles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -39,7 +37,14 @@ const staticAssetsPath = `${
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const getGroups = (zero, one, two, three, four, five) => ({
+const getGroups = (
+  zero: number | boolean,
+  one: number | boolean,
+  two: number | boolean,
+  three: number | boolean,
+  four: number | boolean,
+  five: number | boolean,
+) => ({
   group0: zero,
   group1: one,
   group2: two,
@@ -48,28 +53,11 @@ const getGroups = (zero, one, two, three, four, five) => ({
   group5: five,
 });
 
-const StyledGelWrapperGrid = styled(GelPageGrid)`
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_TRPL};
-  }
-`;
-
-const StyledGridItemParagraph = styled(Grid)`
-  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-end: span 4;
-  }
-`;
-
-const StyledGridItemImage = styled(Grid)`
-  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-end: span 2;
-  }
-`;
-
-const PageGrid = ({ children }) => (
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const PageGrid = ({ children }: any) => (
+  // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
   <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
+    {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
     <Grid
       item
       startOffset={getGroups(1, 1, 1, 1, 2, 5)}
@@ -81,7 +69,41 @@ const PageGrid = ({ children }) => (
   </GelPageGrid>
 );
 
-const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
+export interface OnDemandAudioProps {
+  pageData: {
+    metadata: {
+      type: PageTypes;
+    };
+    isPodcast: boolean;
+    language: string;
+    brandTitle: string;
+    headline: string;
+    summary?: string;
+    shortSynopsis: string;
+    masterBrand: string;
+    episodeId: string;
+    releaseDateTimeStamp: number;
+    imageUrl: string;
+    imageAltText: string;
+    promoBrandTitle: string;
+    durationISO8601: string;
+    thumbnailImageUrl: string;
+    radioScheduleData?: RadioScheduleData[];
+    recentEpisodes: [];
+    brandId: string;
+    episodeTitle: string;
+    externalLinks: string[];
+    contentType: ContentType;
+  };
+  mediaIsAvailable?: boolean;
+  MediaError: React.Component;
+}
+
+const OnDemandAudioPage = ({
+  pageData,
+  mediaIsAvailable,
+  MediaError,
+}: OnDemandAudioProps) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
     isPodcast,
@@ -161,31 +183,37 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         {...metadataImageProps}
         hasAmpPage={false}
       />
-
+      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
       <GelPageGrid
         as="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
+        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <StyledGelWrapperGrid
+          {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
+          <GelPageGrid
             dir={oppDir}
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
+            css={styles.wrapper}
           >
-            <StyledGridItemParagraph
+            {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
+            <Grid
               item
               columns={getGroups(6, 6, 4, 4, 4, 4)}
               parentColumns={getGroups(6, 6, 6, 6, 6, 6)}
               parentEnableGelGutters
+              css={styles.paragraph}
             >
               <StyledRadioHeadingContainer
+                // @ts-expect-error idAttr is a string
                 idAttr={idAttr}
                 brandTitle={brandTitle}
                 episodeTitle={episodeTitle}
@@ -195,16 +223,18 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               {episodeTitle && (
                 <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
               )}
-            </StyledGridItemParagraph>
-            <StyledGridItemImage
+            </Grid>
+            {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
+            <Grid
               item
               columns={getGroups(0, 0, 2, 2, 2, 2)}
               parentColumns={getGroups(6, 6, 6, 6, 6, 6)}
               parentEnableGelGutters
+              css={styles.image}
             >
               <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
-            </StyledGridItemImage>
-          </StyledGelWrapperGrid>
+            </Grid>
+          </GelPageGrid>
           {mediaIsAvailable ? (
             <AVPlayer
               assetId={episodeId}
@@ -216,6 +246,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
+            //  @ts-expect-error allow rendering of MediaError component when media is not available
             <MediaError skin="audio" />
           )}
 

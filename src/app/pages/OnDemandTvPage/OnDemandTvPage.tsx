@@ -15,6 +15,7 @@ import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
 import { PageTypes } from '#app/models/types/global';
+import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -59,7 +60,7 @@ export interface OnDemandTVProps {
     recentEpisodes?: string[];
     episodeTitle: string;
     mediumSynopsis?: string;
-    contentType: 'player-episode' | string;
+    contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
   MediaError: React.Component;
@@ -124,7 +125,7 @@ const OnDemandTvPage = ({
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
-        contentType={contentType as 'player-episode'}
+        contentType={contentType}
       />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
