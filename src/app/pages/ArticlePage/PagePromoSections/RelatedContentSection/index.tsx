@@ -1,5 +1,7 @@
-import React, { useContext } from 'react';
-import { useTheme } from '@emotion/react';
+/** @jsx jsx */
+
+import { useContext } from 'react';
+import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -12,24 +14,34 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 
 import useViewTracker from '#hooks/useViewTracker';
+import PromoList from '#components/OptimoPromos/PromoList';
+import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
+import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import {
-  RelatedContentGrid,
-  StyledRelatedContentSection,
-  StyledPromoItem,
-  SingleItemWrapper,
-} from './index.styles';
+import styles from './index.styles';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
 const removeCustomBlocks = pipe(
-  filter(block => !BLOCKS_TO_IGNORE.includes(block.type)),
+  filter((block: OptimoBlock) => !BLOCKS_TO_IGNORE.includes(block.type)),
   last,
 );
 
-const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
+type ListProps = {
+  item: OptimoBlock[];
+  index: number;
+  eventTrackingData: object;
+  viewRef: (element: unknown) => Promise<void>;
+};
+
+const renderRelatedContentList = ({
+  item,
+  index,
+  eventTrackingData,
+  viewRef,
+}: ListProps) => {
   const assetUri = pathOr(
     '',
     [
@@ -55,18 +67,18 @@ const renderRelatedContentList = (item, index, eventTrackingData, viewRef) => {
   });
 
   return (
-    <StyledPromoItem key={ariaLabelledBy}>
+    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
         ref={viewRef}
         eventTrackingData={eventTrackingData}
       />
-    </StyledPromoItem>
+    </PromoItem>
   );
 };
 
-const RelatedContentSection = ({ content }) => {
+const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const { translations, script, service } = useContext(ServiceContext);
 
   const {
@@ -132,7 +144,8 @@ const RelatedContentSection = ({ content }) => {
   });
 
   return (
-    <StyledRelatedContentSection
+    <section
+      css={styles.relatedContentSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
@@ -146,22 +159,27 @@ const RelatedContentSection = ({ content }) => {
         {title}
       </SectionLabel>
       {hasSingleContent ? (
-        <SingleItemWrapper>
+        <div css={styles.singleItemWrapper}>
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
             ref={viewRef}
             eventTrackingData={eventTrackingData}
           />
-        </SingleItemWrapper>
+        </div>
       ) : (
-        <RelatedContentGrid>
+        <PromoList css={styles.relatedContentGrid}>
           {reducedStoryPromoItems.map((item, index) =>
-            renderRelatedContentList(item, index, eventTrackingData, viewRef),
+            renderRelatedContentList({
+              item,
+              index,
+              eventTrackingData,
+              viewRef,
+            }),
           )}
-        </RelatedContentGrid>
+        </PromoList>
       )}
-    </StyledRelatedContentSection>
+    </section>
   );
 };
 

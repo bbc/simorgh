@@ -1,22 +1,30 @@
-import React, { useContext, forwardRef } from 'react';
+/** @jsx jsx */
+
+import { jsx } from '@emotion/react';
+import { forwardRef } from 'react';
 import path from 'ramda/src/path';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
-import { TitleWithContent, StyledRelatedContentWrapper } from './index.styles';
+import { OptimoBlock } from '#app/models/types/optimo';
+import styles from './index.styles';
+
+type Props = {
+  item: OptimoBlock[];
+  ariaLabelledBy: string;
+  eventTrackingData: object | null;
+};
 
 const RelatedContentItem = forwardRef(
-  ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
-    const { script } = useContext(ServiceContext);
+  ({ item, ariaLabelledBy, eventTrackingData = null }: Props, viewRef) => {
     if (!item || isEmpty(item)) return null;
 
     const headline = path(
       ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
       item,
     );
-    const assetUri = path(
+    const assetUri = path<string>(
       [
         'model',
         'blocks',
@@ -96,10 +104,8 @@ const RelatedContentItem = forwardRef(
 
     const titleHasContent = titleTag === 'h3';
 
-    const Title = titleHasContent ? TitleWithContent : Promo.Title;
-
     return (
-      <StyledRelatedContentWrapper ref={viewRef}>
+      <div css={styles.relatedContentWrapper} ref={viewRef}>
         <Promo
           to={assetUri}
           ariaLabelledBy={ariaLabelledBy}
@@ -114,15 +120,18 @@ const RelatedContentItem = forwardRef(
             height={height}
           />
           <Promo.ContentWrapper>
-            <Title as={titleTag} script={script}>
+            <Promo.Title
+              css={titleHasContent ? styles.titleWithContent : ''}
+              as={titleTag}
+            >
               <Promo.Link>
                 <Promo.Content headline={headline} />
               </Promo.Link>
-            </Title>
+            </Promo.Title>
             <Promo.Timestamp>{timestamp}</Promo.Timestamp>
           </Promo.ContentWrapper>
         </Promo>
-      </StyledRelatedContentWrapper>
+      </div>
     );
   },
 );
