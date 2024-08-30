@@ -25,22 +25,17 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const aresMediaBlock: AresMediaBlock = filterForBlockType(
-    blocks,
-    'aresMedia',
-  );
+  const { model: aresMedia }: AresMediaBlock =
+    filterForBlockType(blocks, 'aresMedia') ?? {};
 
   const { model: aresMediaMetadata }: AresMediaMetadataBlock =
-    filterForBlockType(aresMediaBlock?.model?.blocks, 'aresMediaMetadata') ??
-    {};
+    filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
 
-  const aresMediaImageBlock: OptimoImageBlock = filterForBlockType(
-    aresMediaBlock?.model?.blocks,
-    'image',
-  );
+  const { model: aresMediaImage }: OptimoImageBlock =
+    filterForBlockType(aresMedia?.blocks, 'image') ?? {};
 
   const { model: rawImage }: OptimoRawImageBlock =
-    filterForBlockType(aresMediaImageBlock?.model?.blocks, 'rawImage') ?? {};
+    filterForBlockType(aresMediaImage?.blocks, 'rawImage') ?? {};
 
   const { originCode = '', locator = '' } = rawImage ?? {};
 
