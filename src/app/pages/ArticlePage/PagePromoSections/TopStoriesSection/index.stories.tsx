@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { Services } from '#app/models/types/global';
 import TopStoriesSection from '.';
 import {
   topStoriesList,
@@ -22,7 +24,12 @@ const BackGround = styled.div`
   padding: 2rem;
 `;
 
-const RelatedContentComponent = ({ content, service }) => (
+type Props = {
+  content: any;
+  service: Services;
+};
+
+const RelatedContentComponent = ({ content, service }: Props) => (
   <BackGround>
     <ServiceContextProvider service={service}>
       <TopStoriesSection content={content} />

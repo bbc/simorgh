@@ -1,18 +1,17 @@
-import React, { useContext, forwardRef } from 'react';
+/** @jsx jsx */
+
+import { jsx } from '@emotion/react';
+import { forwardRef } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
-import { ServiceContext } from '../../../../../contexts/ServiceContext';
+import { EventTrackingBlock } from '#app/models/types/eventTracking';
 
-import {
-  StyledTitle,
-  StyledTimestamp,
-  TitleWithContent,
-  StyledTopStoriesWrapper,
-} from './index.styles';
+import styles from './index.styles';
+import { Item } from '../types';
 
-const getArticleTopStoryItem = item => {
+const getArticleTopStoryItem = (item: Item) => {
   const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
   const headline =
     overtypedHeadline ||
@@ -34,8 +33,8 @@ const getArticleTopStoryItem = item => {
     ) ||
     pathOr('', ['name'], item);
 
-  const mediaType = pathOr(null, ['media', 'format'], item);
-  const mediaDuration = pathOr(null, ['media', 'duration'], item);
+  const mediaType = pathOr<string>('', ['media', 'format'], item);
+  const mediaDuration = pathOr<string>('', ['media', 'duration'], item);
   const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
 
   const timestamp = pathOr(null, ['timestamp'], item);
@@ -59,18 +58,35 @@ const getArticleTopStoryItem = item => {
   };
 };
 
-const getLiveTopStoryItem = item => {
+const getLiveTopStoryItem = (item: Item) => {
   const headline = item?.headline || '';
   const uri = item?.destinationUrl || '';
   const isLive = item?.isLive || false;
 
-  return { headline, isLive, uri };
+  return {
+    headline,
+    isLive,
+    uri,
+    assetUri: undefined,
+    canonicalUrl: undefined,
+    mediaType: undefined,
+    mediaDuration: undefined,
+    timestamp: undefined,
+    isPhotoGallery: false,
+  };
+};
+
+type TopStoriesItemProps = {
+  item: Item;
+  ariaLabelledBy: string;
+  eventTrackingData?: EventTrackingBlock | null;
 };
 
 const TopStoriesItem = forwardRef(
-  ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
-    const { script } = useContext(ServiceContext);
-
+  (
+    { item, ariaLabelledBy, eventTrackingData = null }: TopStoriesItemProps,
+    viewRef,
+  ) => {
     if (!item || isEmpty(item)) return null;
 
     const itemExtractor = {
@@ -86,20 +102,19 @@ const TopStoriesItem = forwardRef(
       assetUri,
       canonicalUrl,
       headline,
-      isLive = false,
-      isPhotoGallery = false,
-      mediaType = null,
-      mediaDuration = null,
-      timestamp = null,
+      isLive,
+      isPhotoGallery,
+      mediaType,
+      mediaDuration,
+      timestamp,
       uri,
     } = itemExtractor(item);
 
     const titleTag = timestamp || isLive ? 'h3' : 'div';
     const titleHasContent = titleTag === 'h3';
-    const Title = titleHasContent ? TitleWithContent : StyledTitle;
 
     return (
-      <StyledTopStoriesWrapper ref={viewRef}>
+      <div css={styles.topStoriesWrapper} ref={viewRef}>
         <Promo
           to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
@@ -107,7 +122,10 @@ const TopStoriesItem = forwardRef(
           eventTrackingData={eventTrackingData}
         >
           <Promo.ContentWrapper>
-            <Title as={titleTag} script={script}>
+            <Promo.Title
+              css={titleHasContent ? styles.titleWithContent : styles.title}
+              as={titleTag}
+            >
               <Promo.Link>
                 {mediaType && <Promo.MediaIndicator />}
                 {isLive ? (
@@ -127,11 +145,15 @@ const TopStoriesItem = forwardRef(
                   />
                 )}
               </Promo.Link>
-            </Title>
-            {timestamp && <StyledTimestamp>{timestamp}</StyledTimestamp>}
+            </Promo.Title>
+            {timestamp && (
+              <Promo.Timestamp css={styles.timestamp}>
+                {timestamp}
+              </Promo.Timestamp>
+            )}
           </Promo.ContentWrapper>
         </Promo>
-      </StyledTopStoriesWrapper>
+      </div>
     );
   },
 );

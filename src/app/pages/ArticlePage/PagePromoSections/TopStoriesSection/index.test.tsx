@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -18,7 +20,15 @@ import {
   topStoriesLiveLabelItem,
 } from './fixture';
 
-const TopStoriesSectionFixture = ({ fixtureData, service = 'mundo' }) => (
+type Props = {
+  fixtureData: any;
+  service?: Services;
+};
+
+const TopStoriesSectionFixture = ({
+  fixtureData,
+  service = 'mundo',
+}: Props) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
       <TopStoriesSection content={fixtureData} />

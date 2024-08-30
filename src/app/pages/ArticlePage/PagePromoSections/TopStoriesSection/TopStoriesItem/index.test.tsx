@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -14,15 +15,17 @@ import {
   tipoFormattedTopStoriesItem,
   tipoLivePageTopStoriesItem,
 } from '../fixture';
+import { Item } from '../types';
 
-const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
+type Props = {
+  fixtureData: Item;
+  service?: Services;
+};
+
+const TopStoriesItemFixture = ({ fixtureData, service = 'news' }: Props) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
-      <TopStoriesItem
-        item={fixtureData}
-        ariaLabelledBy="topStories"
-        index={0}
-      />
+      <TopStoriesItem item={fixtureData} ariaLabelledBy="topStories" />
     </ToggleContextProvider>
   </ServiceContextProvider>
 );
@@ -31,7 +34,9 @@ describe('Optimo Top Stories Promo Item', () => {
   suppressPropWarnings(['service', 'LiveLabel', 'undefined']);
 
   it('should render Related Content when given appropriate data', () => {
-    render(<TopStoriesItemFixture fixtureData={topStoriesItem} />);
+    render(
+      <TopStoriesItemFixture fixtureData={topStoriesItem as unknown as Item} />,
+    );
 
     const heading = screen.getByText(
       'Covid antibodies in 1 in 10 people in December',
@@ -52,7 +57,7 @@ describe('Optimo Top Stories Promo Item', () => {
     render(
       <TopStoriesItemFixture
         service="kyrgyz"
-        fixtureData={tipoFormattedTopStoriesItem}
+        fixtureData={tipoFormattedTopStoriesItem as unknown as Item}
       />,
     );
 
@@ -83,12 +88,17 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should return null if no data is passed', () => {
+    // @ts-expect-error - testing null data
     const { container } = render(<TopStoriesItemFixture fixtureData={{}} />);
     expect(container).toBeEmptyDOMElement();
   });
 
   it('should render Live Label if linked page is live', () => {
-    render(<TopStoriesItemFixture fixtureData={topStoriesLiveLabelItem} />);
+    render(
+      <TopStoriesItemFixture
+        fixtureData={topStoriesLiveLabelItem as unknown as Item}
+      />,
+    );
     const liveLabel = screen.getByText('LIVE');
     expect(liveLabel).toBeInTheDocument();
   });
@@ -96,7 +106,7 @@ describe('Optimo Top Stories Promo Item', () => {
   it('should render Live Label with correct translations', () => {
     render(
       <TopStoriesItemFixture
-        fixtureData={topStoriesLiveLabelItem}
+        fixtureData={topStoriesLiveLabelItem as unknown as Item}
         service="mundo"
       />,
     );
@@ -105,7 +115,11 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should render media Label if linked page has media type', () => {
-    render(<TopStoriesItemFixture fixtureData={topStoriesMediaContentItem} />);
+    render(
+      <TopStoriesItemFixture
+        fixtureData={topStoriesMediaContentItem as unknown as Item}
+      />,
+    );
     const mediaLabel = screen.getByText('Listen,');
     expect(mediaLabel).toBeInTheDocument();
   });
@@ -113,7 +127,7 @@ describe('Optimo Top Stories Promo Item', () => {
   it('should render media Label with correct translations ', () => {
     render(
       <TopStoriesItemFixture
-        fixtureData={topStoriesMediaContentItem}
+        fixtureData={topStoriesMediaContentItem as unknown as Item}
         service="mundo"
       />,
     );

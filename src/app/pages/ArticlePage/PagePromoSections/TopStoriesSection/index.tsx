@@ -1,20 +1,34 @@
+/** @jsx jsx */
+
+import { jsx, useTheme } from '@emotion/react';
 import React, { useContext } from 'react';
-import { useTheme } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
+import { EventTrackingBlock } from '#app/models/types/eventTracking';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#components/OptimoPromos/PromoList';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import {
-  StyledSectionLabel,
-  StyledTopStoriesSection,
-  StyledPromoItem,
-  StyledPromoList,
-} from './index.styles';
+import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
+import { Item } from './types';
 
-const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
+type TopStoriesListProps = {
+  item: Item;
+  index: number;
+  eventTrackingData: EventTrackingBlock;
+  viewRef: React.Ref<HTMLDivElement>;
+};
+
+const renderTopStoriesList = ({
+  item,
+  index,
+  eventTrackingData,
+  viewRef,
+}: TopStoriesListProps) => {
   const contentType = pathOr('', ['contentType'], item);
   const assetUri = pathOr('', ['locators', 'assetUri'], item);
   const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
@@ -30,14 +44,14 @@ const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   });
 
   return (
-    <StyledPromoItem key={ariaLabelledBy}>
+    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
         ref={viewRef}
         eventTrackingData={eventTrackingData}
       />
-    </StyledPromoItem>
+    </PromoItem>
   );
 };
 
@@ -72,12 +86,14 @@ const TopStoriesSection = ({ content = [] }) => {
   });
 
   return (
-    <StyledTopStoriesSection
+    <section
+      css={styles.topStoriesSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
     >
-      <StyledSectionLabel
+      <SectionLabel
+        css={styles.sectionLabel}
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={GREY_2}
@@ -85,7 +101,7 @@ const TopStoriesSection = ({ content = [] }) => {
         service={service}
       >
         {title}
-      </StyledSectionLabel>
+      </SectionLabel>
 
       {hasSingleContent ? (
         <TopStoriesItem
@@ -95,13 +111,13 @@ const TopStoriesSection = ({ content = [] }) => {
           eventTrackingData={eventTrackingData}
         />
       ) : (
-        <StyledPromoList>
+        <PromoList css={styles.promoList}>
           {content.map((item, index) =>
-            renderTopStoriesList(item, index, eventTrackingData, viewRef),
+            renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
           )}
-        </StyledPromoList>
+        </PromoList>
       )}
-    </StyledTopStoriesSection>
+    </section>
   );
 };
 
