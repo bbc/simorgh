@@ -5,6 +5,7 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import { InitialDataProps } from '#app/models/types/initialData';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
@@ -54,7 +55,7 @@ export default async ({
   service,
   toggles,
   variant,
-}) => {
+}: InitialDataProps) => {
   try {
     const {
       isPodcast,
@@ -64,6 +65,7 @@ export default async ({
     } = getConfig(pathname);
 
     const radioPodcastDataPath = overrideRendererOnTest(pathname);
+    // @ts-expect-error - Ignore fetchPageData argument types
     const pageDataPromise = await fetchPageData({
       path: radioPodcastDataPath,
       pageType,
@@ -161,7 +163,11 @@ export default async ({
         externalLinks,
       },
     };
-  } catch ({ message, status = getErrorStatusCode() }) {
+  } catch ({
+    message,
+    status = getErrorStatusCode(),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  }: any | { message: string; status: number }) {
     return { error: message, status };
   }
 };
