@@ -2,7 +2,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const WIDTH = 250;
-export const BUTTON_COLLAPSE_WIDTH = pixelsToRem(300);
+const BUTTON_COLLAPSE_WIDTH = pixelsToRem(300);
 
 const styles = {
   container: ({ palette, spacings, mq }: Theme) =>
