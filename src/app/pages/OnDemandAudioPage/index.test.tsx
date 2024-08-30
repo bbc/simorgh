@@ -182,7 +182,6 @@ describe('OnDemand Radio Page ', () => {
   it('should show the external links for podcast pages', async () => {
     fetchMock.mockResponse(JSON.stringify(arabicPodcastPageData));
 
-    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-podcast-path',
       service: 'arabic',
