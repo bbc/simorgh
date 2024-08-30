@@ -421,7 +421,7 @@ describe('getDefaultProps', () => {
         'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
-      transcript: validVideoWithCaptionAndTranscriptBlock[2],
+      transcriptBlock: validVideoWithCaptionAndTranscriptBlock[2],
     });
   });
 });
