@@ -214,8 +214,13 @@ export type OnDemandMediaModel = {
   type: MediaType;
 };
 
-export type TvMediaBlock = {
-  type: 'tvMedia';
+export type OnDemandTVBlock = {
+  type: 'onDemandTV';
+  model: OnDemandMediaModel;
+};
+
+export type OnDemandAudioBlock = {
+  type: 'onDemandAudio';
   model: OnDemandMediaModel;
 };
 
@@ -223,7 +228,8 @@ export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
   | CaptionBlock
-  | TvMediaBlock;
+  | OnDemandTVBlock
+  | OnDemandAudioBlock;
 
 export type BuildConfigProps = {
   blocks: MediaBlock[];
