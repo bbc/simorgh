@@ -85,6 +85,10 @@ const defaultCyrillicConfig = {
       summary: 'Қисқача',
       shareButtonText: 'Баҳам кўринг',
     },
+    downloads: {
+      instructions: 'You can download and view today’s news.',
+      title: 'File Download',
+    },
     gist: 'Хулоса',
     error: {
       404: {
@@ -359,22 +363,20 @@ export const service: UzbekConfig = {
     ...baseServiceConfig,
     ...defaultCyrillicConfig,
     script: cyrillic,
-    // scriptLink needs translation
-    // scriptLink: {
-    //   text: '',
-    //   variant: 'lat',
-    // },
+    scriptLink: {
+      text: 'O‘zb',
+      variant: 'lat',
+    },
   },
-  // TODO: Add Lat Translations and remove ...defaultCyrillicConfig
+  // TODO: remove ...defaultCyrillicConfig
   lat: {
     ...baseServiceConfig,
     ...defaultCyrillicConfig,
     script: latinWithDiacritics,
-    // scriptLink needs translation
-    // scriptLink: {
-    //   text: '',
-    //   variant: 'cyr',
-    // },
+    scriptLink: {
+      text: 'Ўзб',
+      variant: 'cyr',
+    },
   },
 };
 

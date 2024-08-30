@@ -7,7 +7,6 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import useLocation from '#hooks/useLocation';
 import AVPlayer from '#containers/AVPlayer';
-import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
@@ -36,7 +35,6 @@ const LiveRadioPage = ({ pageData }) => {
   } = pageData;
   const { script, service, lang, liveRadioOverrides, translations } =
     useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
@@ -48,7 +46,6 @@ const LiveRadioPage = ({ pageData }) => {
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
-    isAmp,
     queryString: location.search,
   });
   const iframeTitle = pathOr(

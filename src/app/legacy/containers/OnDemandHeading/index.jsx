@@ -52,7 +52,7 @@ const OnDemandHeadingContainer = ({
   idAttr = null,
   brandTitle,
   releaseDateTimeStamp,
-  episodeTitle = null,
+  episodeTitle = '',
   ariaHidden = false,
   className = '',
 }) => {

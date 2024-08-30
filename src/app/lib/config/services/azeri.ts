@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Xülasə',
         shareButtonText: 'Paylaş',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Xülasə',
       error: {
         404: {

@@ -1,11 +1,11 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
   product?: string;
-  superResponsive: boolean;
   enableToucan: boolean;
   counterName?: string;
   appType: 'amp' | 'responsive';
@@ -24,6 +24,7 @@ export type PlayerConfig = {
     holdingImageURL: string;
     items: PlaylistItem[];
     guidance?: string;
+    embedRights?: 'allowed';
   };
 };
 
@@ -45,7 +46,6 @@ export type PlaylistItem = {
   kind: string;
   duration: number;
   live?: boolean;
-  embedRights?: 'allowed';
 };
 
 export type ConfigBuilderProps = {
@@ -57,24 +57,28 @@ export type ConfigBuilderProps = {
   showAdsBasedOnLocation?: boolean;
 };
 
+export type PlaceholderConfig = {
+  mediaInfo: MediaInfo;
+  placeholderSrc: string;
+  placeholderSrcset: string;
+  translatedNoJSMessage: string;
+};
+
 export type ConfigBuilderReturnProps = {
   mediaType: string;
   playerConfig: PlayerConfig;
-  placeholderConfig: {
-    mediaInfo: MediaInfo;
-    placeholderSrc: string;
-    placeholderSrcset: string;
-    translatedNoJSMessage: string;
-  };
+  placeholderConfig: PlaceholderConfig;
   showAds: boolean;
 };
+
+export type MediaType = 'audio' | 'video';
 
 export type MediaInfo = {
   title: string;
   datetime?: string;
   duration?: string;
   durationSpoken?: string;
-  type?: 'audio' | 'video';
+  type?: MediaType;
   guidanceMessage?: string | null;
 };
 
@@ -121,11 +125,18 @@ export type CaptionBlock = {
 export type AresMediaBlock = {
   type: 'aresMedia';
   model: {
+    blocks: [AresMediaMetadataBlock | OptimoImageBlock];
+  };
+};
+
+export type AresMediaMetadataBlock = {
+  type: 'aresMediaMetadata';
+  model: {
+    live?: boolean;
     locator: string;
     originCode: string;
     text: string;
     title: string;
-    blocks: AresMediaBlock[];
     imageUrl: string;
     format: 'audio' | 'video';
     embedding: boolean;
@@ -133,7 +144,6 @@ export type AresMediaBlock = {
       versionId: string;
       duration: number;
       durationISO8601?: string;
-
       warnings?: { [key: string]: string };
     }[];
     webcastVersions: {
@@ -174,7 +184,6 @@ export type BuildConfigProps = {
   counterName: string | null;
   statsDestination: string;
   producer: string | '';
-  id: string | null;
   isAmp: boolean;
   lang: string;
   pageType: PageTypes;

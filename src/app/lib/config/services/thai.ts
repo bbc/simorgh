@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         summary: 'สรุป',
         shareButtonText: 'แชร์"',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'สรุป',
       error: {
         404: {

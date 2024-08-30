@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
         summary: 'لنډیز',
         shareButtonText: 'شریک یې کړئ',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'لنډیز',
       error: {
         404: {

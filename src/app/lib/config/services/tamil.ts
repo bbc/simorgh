@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         summary: 'முக்கிய சாராம்சம்',
         shareButtonText: 'பகிர்க',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'முக்கிய சாராம்சம்',
       error: {
         404: {

@@ -4,6 +4,7 @@ import { Services, Variants } from '#app/models/types/global';
 // Disabled due to known bug in ts-lint: https://github.com/typescript-eslint/tslint-to-eslint-config/issues/856
 // eslint-disable-next-line no-shadow
 export enum InvalidMessageCodes {
+  ErrorSummary = 'errorSummary',
   FieldRequired = 'validationRequired',
   WrongEmailFormat = 'validationInvalidEmail',
   WrongTelFormat = 'validationInvalidTelephone',
@@ -115,6 +116,10 @@ export type PageProps = {
   pageData: {
     title: string;
     description: string;
+    settings: {
+      replyEmailAddress: string;
+      retentionPeriodDays: string;
+    };
     sections: Section[];
     privacyNotice: {
       default: string;
@@ -131,4 +136,9 @@ export type UGCSendErrorResponse = {
   message: string;
   code: string;
   status: number;
+};
+
+export type ValidationError = {
+  id: string;
+  messageCode: InvalidMessageCodes | null;
 };

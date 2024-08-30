@@ -65,6 +65,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Geàrr-chunntas',
         shareButtonText: 'Sgaoil',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Geàrr-shealladh',
       error: {
         404: {

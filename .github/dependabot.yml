@@ -1,12 +1,9 @@
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directories:
-      - '/'
-      - '/ws-nextjs-app'
+    directory: '/'
     schedule:
-      interval: 'daily'
-    open-pull-requests-limit: 2
+      interval: 'weekly'
     ignore:
       - dependency-name: '@bbc/*'
         update-types: ['version-update:semver-major']
@@ -14,6 +11,14 @@ updates:
         update-types: ['version-update:semver-major']
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
+      - dependency-name: 'winston'
+      - dependency-name: eslint
+        update-types: ['version-update:semver-major']
+      # Opera Mini unsupported packages
+      - dependency-name: 'uuid' # https://github.com/bbc/simorgh/pull/11840
+      - dependency-name: '@types/uuid' # https://github.com/bbc/simorgh/pull/11840
+    labels:
+      - 'dependencies'
     groups:
       babel:
         patterns:
