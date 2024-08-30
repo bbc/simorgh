@@ -46,7 +46,9 @@ const Transcript = ({ transcript, title, hideDisclaimer = true }: any) => {
   return (
     <details css={styles.details}>
       <summary css={styles.summary}>
-        <ArrowSvg />
+        <span css={styles.arrowContainer} id="arrowContainer">
+          <span css={styles.arrowShape} id="arrowShape" />
+        </span>
         <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
           Read transcript
         </Text>
