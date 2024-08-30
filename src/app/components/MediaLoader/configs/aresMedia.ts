@@ -78,9 +78,9 @@ export default ({
 
   const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
-  const subType = aresMediaBlock?.model?.blocks?.[0]?.model?.subType;
+  const subType = aresMediaMetadata?.subType;
 
-  const videoId = aresMediaBlock?.model?.blocks?.[0]?.model?.id;
+  const videoId = aresMediaMetadata?.id;
 
   const holdingImageURL = buildIChefURL({
     originCode,
