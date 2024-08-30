@@ -20,7 +20,7 @@ import { getPodcastExternalLinks } from '../tempData/podcastExternalLinks';
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
 
-const getConfig = (pathname: string | string[]) => {
+const getConfig = (pathname: string) => {
   const detailPageType = pathname.includes('podcast')
     ? 'Podcast'
     : 'On Demand Radio';
@@ -119,6 +119,14 @@ export default async ({
       ? await getPodcastExternalLinks(service, brandId, variant, versionId)
       : [];
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const mediaBlocks = get(['content', 'blocks']).map((block: any) => {
+      return {
+        type: 'onDemandAudio',
+        model: { ...block },
+      };
+    });
+
     return {
       status,
       pageData: {
@@ -161,7 +169,7 @@ export default async ({
         radioScheduleData: getRadioScheduleData(json),
         recentEpisodes,
         externalLinks,
-        mediaBlocks: get(['content', 'blocks']),
+        mediaBlocks,
       },
     };
   } catch ({

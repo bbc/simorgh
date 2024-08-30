@@ -301,7 +301,11 @@ describe('Get initial data for on demand radio', () => {
 
     expect(pageData).toHaveProperty('mediaBlocks');
     expect(pageData?.mediaBlocks).toStrictEqual(
-      onDemandRadioJson.content.blocks,
+      expect.arrayContaining(
+        onDemandRadioJson.content.blocks.map(block => {
+          return { type: 'onDemandAudio', model: block };
+        }),
+      ),
     );
   });
 });
