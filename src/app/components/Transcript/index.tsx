@@ -6,7 +6,6 @@ import styles from './index.styles';
 import Text from '../Text';
 import TranscriptTimestamp from './TranscriptTimestamp';
 import VisuallyHiddenText from '../VisuallyHiddenText';
-import { RightArrow as ArrowSvg } from '../icons';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderTranscriptItems = (transcriptBlocks: any) =>

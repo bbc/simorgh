@@ -34,6 +34,7 @@ export default {
       marginBottom: `${spacings.TRIPLE}rem`,
       border: `solid ${pixelsToRem(3)}rem transparent`,
       // rotates and overrides spacing when details is open
+      // To Do - review small gap that appears in triangle. Might need to replace rotation with another css triangle
       '&[open] summary #arrowContainer': {
         transform: 'rotate(90deg)',
         marginInlineEnd: `${spacings.FULL}rem`,
