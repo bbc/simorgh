@@ -8,8 +8,7 @@ export default {
     }),
   title: ({ fontSizes }: Theme) =>
     css({ display: 'inline', ...fontSizes.pica }),
-  titleWithContent: ({ spacings }: Theme) =>
-    css({ paddingBottom: `${spacings.FULL}rem` }),
+  titleWithContent: ({ fontSizes }: Theme) => css({ ...fontSizes.pica }),
   topStoriesWrapper: () =>
     css({
       border: `${BORDER_SPACING} solid transparent`,
