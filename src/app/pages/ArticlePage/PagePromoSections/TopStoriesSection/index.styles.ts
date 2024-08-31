@@ -13,7 +13,7 @@ export default {
   topStoriesSection: ({ spacings, mq }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {
-        padding: `0 ${spacings.HALF}rem`,
+        padding: `0 ${spacings.FULL}rem`,
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {

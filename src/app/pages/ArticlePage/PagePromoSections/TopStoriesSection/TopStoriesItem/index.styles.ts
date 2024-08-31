@@ -4,12 +4,12 @@ import { BORDER_SPACING } from '../../constants';
 export default {
   timestamp: ({ spacings }: Theme) =>
     css({
-      paddingTop: `${spacings.HALF}rem`,
+      paddingTop: `${spacings.FULL}rem`,
     }),
   title: ({ fontSizes }: Theme) =>
     css({ display: 'inline', ...fontSizes.pica }),
   titleWithContent: ({ spacings }: Theme) =>
-    css({ paddingBottom: `${spacings.HALF}rem` }),
+    css({ paddingBottom: `${spacings.FULL}rem` }),
   topStoriesWrapper: () =>
     css({
       border: `${BORDER_SPACING} solid transparent`,
