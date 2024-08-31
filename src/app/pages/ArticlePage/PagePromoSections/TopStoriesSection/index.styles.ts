@@ -17,7 +17,9 @@ export default {
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `0 ${spacings.DOUBLE}rem`,
+        [mq.GROUP_3_MAX_WIDTH]: {
+          padding: `0 ${spacings.DOUBLE}rem`,
+        },
       },
     }),
   promoList: ({ spacings, mq }: Theme) =>
