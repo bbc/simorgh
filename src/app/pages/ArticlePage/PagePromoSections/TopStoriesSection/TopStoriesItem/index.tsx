@@ -2,46 +2,34 @@
 
 import { jsx } from '@emotion/react';
 import { forwardRef } from 'react';
-import pathOr from 'ramda/src/pathOr';
-import isEmpty from 'ramda/src/isEmpty';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 
 import styles from './index.styles';
-import { Item } from '../types';
+import { TopStoryItem } from '../types';
 
-const getArticleTopStoryItem = (item: Item) => {
-  const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
+const getArticleTopStoryItem = (item: TopStoryItem) => {
+  const overtypedHeadline = item?.headlines?.overtyped ?? '';
+  const mainHeadline = item?.headlines?.headline ?? '';
+  const headlineBlockText =
+    // @ts-expect-error - nested block structure
+    item?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
+      ?.text ?? '';
+
+  const name = item?.name ?? '';
+
   const headline =
-    overtypedHeadline ||
-    pathOr('', ['headlines', 'headline'], item) ||
-    pathOr(
-      '',
-      [
-        'headlines',
-        'promoHeadline',
-        'blocks',
-        0,
-        'model',
-        'blocks',
-        0,
-        'model',
-        'text',
-      ],
-      item,
-    ) ||
-    pathOr('', ['name'], item);
+    overtypedHeadline || mainHeadline || headlineBlockText || name;
 
-  const mediaType = pathOr<string>('', ['media', 'format'], item);
-  const mediaDuration = pathOr<string>('', ['media', 'duration'], item);
-  const isPhotoGallery = pathOr(null, ['cpsType'], item) === 'PGL';
+  const mediaType = item?.media?.format ?? '';
+  const mediaDuration = item?.media?.duration ?? '';
+  const isPhotoGallery = item?.cpsType === 'PGL' ?? null;
+  const timestamp = item?.timestamp ?? null;
 
-  const timestamp = pathOr(null, ['timestamp'], item);
-
-  const assetUri = pathOr('', ['locators', 'assetUri'], item);
-  const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
-  const uri = pathOr('', ['uri'], item);
+  const assetUri = item?.locators?.assetUri ?? '';
+  const canonicalUrl = item?.locators?.canonicalUrl ?? '';
+  const uri = item?.uri ?? '';
 
   const isLive = getIsLive(item);
 
@@ -58,7 +46,7 @@ const getArticleTopStoryItem = (item: Item) => {
   };
 };
 
-const getLiveTopStoryItem = (item: Item) => {
+const getLiveTopStoryItem = (item: TopStoryItem) => {
   const headline = item?.headline || '';
   const uri = item?.destinationUrl || '';
   const isLive = item?.isLive || false;
@@ -77,7 +65,7 @@ const getLiveTopStoryItem = (item: Item) => {
 };
 
 type TopStoriesItemProps = {
-  item: Item;
+  item: TopStoryItem;
   ariaLabelledBy: string;
   eventTrackingData?: EventTrackingBlock | null;
 };
@@ -87,7 +75,7 @@ const TopStoriesItem = forwardRef(
     { item, ariaLabelledBy, eventTrackingData = null }: TopStoriesItemProps,
     viewRef,
   ) => {
-    if (!item || isEmpty(item)) return null;
+    if (!item || Object.keys(item).length === 0) return null;
 
     const itemExtractor = {
       optimo: getArticleTopStoryItem,
