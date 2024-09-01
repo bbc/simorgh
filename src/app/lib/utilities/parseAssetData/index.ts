@@ -1,42 +1,31 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Article } from '#app/models/types/optimo';
-import path from 'ramda/src/path';
 
 const getISOStringDate = (date: number) => new Date(date).toISOString();
 
-export const getArticleId = path<string>(['metadata', 'id']);
+export const getArticleId = (articleData: Article) => articleData?.metadata?.id;
 
-export const getHeadline = path<string>(['promo', 'headlines', 'seoHeadline']);
+export const getHeadline = (articleData: Article) =>
+  articleData?.promo?.headlines?.seoHeadline;
 
-export const getSummary = path<string>([
-  'promo',
-  'summary',
-  'blocks',
-  '0',
-  'model',
-  'blocks',
-  '0',
-  'model',
-  'blocks',
-  '0',
-  'model',
-  'text',
-]);
+export const getSummary = (articleData: Article) =>
+  // @ts-expect-error - nested block structure
+  articleData?.promo?.summary?.blocks?.[0]?.model?.blocks?.[0]?.model
+    ?.blocks?.[0]?.model?.text;
 
 export const getFirstPublished = (articleData: Article) =>
-  getISOStringDate(path<number>(['metadata', 'firstPublished'], articleData)!);
+  getISOStringDate(articleData?.metadata?.firstPublished);
 
 export const getLastPublished = (articleData: Article) =>
-  getISOStringDate(path<number>(['metadata', 'lastPublished'], articleData)!);
+  getISOStringDate(articleData?.metadata?.lastPublished);
 
-export const getAboutTags = path<object[]>(['metadata', 'tags', 'about']);
+export const getAboutTags = (articleData: Article) =>
+  articleData?.metadata?.tags?.about;
 
-export const getArticleSection = path<string>([
-  'metadata',
-  'passport',
-  'genre',
-]);
+export const getArticleSection = (articleData: Article) =>
+  articleData?.metadata?.passport?.genre;
 
-export const getMentions = path<object[]>(['metadata', 'tags', 'mentions']);
+export const getMentions = (articleData: Article) =>
+  articleData?.metadata?.tags?.mentions;
 
-export const getLang = path<string>(['metadata', 'language']);
+export const getLang = (articleData: Article) =>
+  articleData?.metadata?.language;

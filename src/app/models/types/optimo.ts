@@ -15,7 +15,7 @@ export type OptimoBlock = {
 };
 
 export type OptimoRawImageBlock = {
-  type: string;
+  type: 'rawImage';
   model: {
     locator: string;
     originCode: string;
@@ -54,9 +54,15 @@ export type ArticleMetadata = {
     producer: string;
   };
   atiAnalytics: ATIData;
+  consumableAsSFV: boolean;
+  firstPublished: number;
+  lastPublished: number;
+  id: string;
+  language: string;
   passport: {
     language: string;
     home: string;
+    genre: string;
     category: {
       categoryName: string;
     };
@@ -91,9 +97,11 @@ export type ArticlePromo = {
       blocks: [OptimoRawImageBlock | OptimoAltTextBlock];
     };
   };
-  summary?: {
-    blocks: OptimoBlock[];
-  };
+  summary?:
+    | string
+    | {
+        blocks: OptimoBlock[];
+      };
 };
 
 export type SecondaryColumn = {
@@ -101,7 +109,10 @@ export type SecondaryColumn = {
   features: object[];
 };
 
-export type Recommendation = object;
+export type Recommendation = {
+  headlines: object;
+  locators: object;
+};
 
 export type RelatedContent = {
   section: {
