@@ -2,6 +2,7 @@ import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Tag } from '#app/components/Metadata/types';
 import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
 
@@ -107,6 +108,7 @@ export type ArticlePromo = {
 export type SecondaryColumn = {
   topStories: TopStoryItem[];
   features: object[];
+  latestMedia?: LatestMedia[];
 };
 
 export type Recommendation = {
