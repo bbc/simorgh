@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Article } from '#app/models/types/optimo';
 import {
   blockContainingText,
@@ -7,7 +6,7 @@ import {
   textBlock,
 } from '#models/blocks';
 
-const blocksWithHeadlineAndText = (blockValues: any[]) => {
+const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, ...additional] = blockValues;
 
   return [
@@ -18,7 +17,7 @@ const blocksWithHeadlineAndText = (blockValues: any[]) => {
   ];
 };
 
-const blocksWithHeadlineTexAndByline = (blockValues: any[]) => {
+const blocksWithHeadlineTexAndByline = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, twitterHandle] = blockValues;
 
   return [
@@ -35,11 +34,11 @@ const articleDataBuilder = (
   createdBy: string,
   language: string,
   home: string,
-  blockValues: any[],
+  blockValues: (object | string)[],
   seoHeadline: string,
   promoHeadline: string,
   summary: string,
-  things: any,
+  things: object,
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
