@@ -34,11 +34,7 @@ describe('Optimo Top Stories Promo Item', () => {
   suppressPropWarnings(['service', 'LiveLabel', 'undefined']);
 
   it('should render Related Content when given appropriate data', () => {
-    render(
-      <TopStoriesItemFixture
-        fixtureData={topStoriesItem as unknown as TopStoryItem}
-      />,
-    );
+    render(<TopStoriesItemFixture fixtureData={topStoriesItem} />);
 
     const heading = screen.getByText(
       'Covid antibodies in 1 in 10 people in December',
@@ -59,7 +55,7 @@ describe('Optimo Top Stories Promo Item', () => {
     render(
       <TopStoriesItemFixture
         service="kyrgyz"
-        fixtureData={tipoFormattedTopStoriesItem as unknown as TopStoryItem}
+        fixtureData={tipoFormattedTopStoriesItem}
       />,
     );
 
@@ -76,7 +72,7 @@ describe('Optimo Top Stories Promo Item', () => {
     render(
       <TopStoriesItemFixture
         service="hindi"
-        fixtureData={tipoLivePageTopStoriesItem as unknown as TopStoryItem}
+        fixtureData={tipoLivePageTopStoriesItem}
       />,
     );
 
@@ -96,11 +92,7 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should render Live Label if linked page is live', () => {
-    render(
-      <TopStoriesItemFixture
-        fixtureData={topStoriesLiveLabelItem as unknown as TopStoryItem}
-      />,
-    );
+    render(<TopStoriesItemFixture fixtureData={topStoriesLiveLabelItem} />);
     const liveLabel = screen.getByText('LIVE');
     expect(liveLabel).toBeInTheDocument();
   });
@@ -108,7 +100,7 @@ describe('Optimo Top Stories Promo Item', () => {
   it('should render Live Label with correct translations', () => {
     render(
       <TopStoriesItemFixture
-        fixtureData={topStoriesLiveLabelItem as unknown as TopStoryItem}
+        fixtureData={topStoriesLiveLabelItem}
         service="mundo"
       />,
     );
@@ -117,11 +109,7 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should render media Label if linked page has media type', () => {
-    render(
-      <TopStoriesItemFixture
-        fixtureData={topStoriesMediaContentItem as unknown as TopStoryItem}
-      />,
-    );
+    render(<TopStoriesItemFixture fixtureData={topStoriesMediaContentItem} />);
     const mediaLabel = screen.getByText('Listen,');
     expect(mediaLabel).toBeInTheDocument();
   });
@@ -129,7 +117,7 @@ describe('Optimo Top Stories Promo Item', () => {
   it('should render media Label with correct translations ', () => {
     render(
       <TopStoriesItemFixture
-        fixtureData={topStoriesMediaContentItem as unknown as TopStoryItem}
+        fixtureData={topStoriesMediaContentItem}
         service="mundo"
       />,
     );

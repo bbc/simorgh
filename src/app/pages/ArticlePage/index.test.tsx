@@ -27,8 +27,8 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-import { Article } from '#app/models/types/optimo';
 
+import { Article } from '#app/models/types/optimo';
 import {
   render,
   screen,
@@ -132,7 +132,7 @@ describe('Article Page', () => {
         },
       },
       articleDataNews,
-    ) as Article;
+    );
 
     render(
       <Context service="news">
@@ -422,7 +422,7 @@ describe('Article Page', () => {
           promoHeadline: 'Promo Headline',
         },
       },
-    } as Article;
+    };
 
     const { container } = render(
       <Context service="news">
@@ -442,7 +442,7 @@ describe('Article Page', () => {
         topStories: [],
         features: [],
       },
-    } as Article;
+    };
     const { getByTestId } = render(
       <Context service="news">
         <ArticlePage pageData={pageDataWithSecondaryColumn} />
@@ -545,7 +545,7 @@ describe('Article Page', () => {
     await act(async () => {
       render(
         <Context service="news">
-          <ArticlePage pageData={pageDataWithSecondaryColumn as Article} />
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
         </Context>,
       );
     });
@@ -563,7 +563,7 @@ describe('Article Page', () => {
           topStories: [],
           features: [],
         },
-      } as Article;
+      };
 
       const { container } = render(
         <Context service="news" isApp>
@@ -645,9 +645,7 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="russian" promo>
-        <ArticlePage
-          pageData={pageDataWithSecondaryColumn as unknown as Article}
-        />
+        <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
       { service: 'russian' },
     );
@@ -714,7 +712,7 @@ describe('Article Page', () => {
           topStories: [],
           features: [],
         },
-      } as Article;
+      };
 
       const { queryByTestId } = render(
         <Context service="pidgin">

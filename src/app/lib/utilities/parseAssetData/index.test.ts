@@ -1,6 +1,5 @@
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
-import { Article } from '#app/models/types/optimo';
 import {
   getHeadline,
   getFirstPublished,
@@ -21,14 +20,14 @@ describe('ArticleMain utils', () => {
   });
 
   it('getFirstPublished › it should return the correct value', () => {
-    const actual = getFirstPublished(articleDataNews as unknown as Article);
+    const actual = getFirstPublished(articleDataNews);
     const expected = '2018-01-01T12:01:00.000Z';
 
     expect(actual).toEqual(expected);
   });
 
   it('getLastPublished › it should return the correct value', () => {
-    const actual = getLastPublished(articleDataNews as unknown as Article);
+    const actual = getLastPublished(articleDataNews);
     const expected = '2018-01-01T13:00:00.000Z';
 
     expect(actual).toEqual(expected);

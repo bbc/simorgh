@@ -1,6 +1,7 @@
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Tag } from '#app/components/Metadata/types';
 import { MostReadData } from '#app/components/MostRead/types';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
 
@@ -14,10 +15,14 @@ export type OptimoBlock = {
 };
 
 export type OptimoRawImageBlock = {
-  type: 'rawImage';
+  type: string;
   model: {
     locator: string;
     originCode: string;
+    width: number;
+    height: number;
+    copyrightHolder: string;
+    suitableForSyndication: boolean;
   };
 };
 
@@ -28,10 +33,17 @@ export type OptimoImageBlock = {
   };
 };
 
+export type OptimoAltTextBlock = {
+  type: 'altText';
+  model: {
+    blocks: OptimoBlock[];
+  };
+};
+
 export type OptimoBylineBlock = {
   type: 'name' | 'role' | 'link' | 'location' | 'images';
   model: {
-    blocks: object[];
+    blocks: OptimoBlock[];
   };
 };
 
@@ -74,16 +86,19 @@ export type ArticlePromo = {
     headline?: string;
     seoHeadline: string;
   };
-  images: {
+  images?: {
     defaultPromoImage: {
-      blocks: OptimoRawImageBlock[];
+      blocks: [OptimoRawImageBlock | OptimoAltTextBlock];
     };
+  };
+  summary?: {
+    blocks: OptimoBlock[];
   };
 };
 
 export type SecondaryColumn = {
-  topStories: [];
-  features: [];
+  topStories: TopStoryItem[];
+  features: object[];
 };
 
 export type Recommendation = object;
