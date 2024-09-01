@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -16,6 +15,7 @@ import {
 } from './fixture';
 import metadata from './metadata.json';
 import readme from './README.md';
+import { TopStoryItem } from './types';
 
 const BackGround = styled.div`
   width: 100%;
@@ -25,7 +25,7 @@ const BackGround = styled.div`
 `;
 
 type Props = {
-  content: any;
+  content: TopStoryItem[];
   service: Services;
 };
 

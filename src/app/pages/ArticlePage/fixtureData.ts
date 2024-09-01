@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Article } from '#app/models/types/optimo';
 import {
   blockContainingText,
   bylineBlock,
@@ -255,7 +256,7 @@ export const articleDataNews = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataNewsWithEmbeds = articleDataBuilder(
   'c0000000001o',
@@ -657,7 +658,7 @@ export const articleDataNewsWithEmbeds = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataPersian = articleDataBuilder(
   'c4vlle3q337o',
@@ -684,7 +685,7 @@ export const articleDataPersian = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
@@ -710,7 +711,7 @@ export const articleDataPidgin = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataPidginWithAds = articleDataBuilder(
   'cwl08rd38l6o',
@@ -723,7 +724,7 @@ export const articleDataPidginWithAds = articleDataBuilder(
   'Article summary in Pidgin',
   emptyThings,
   true,
-);
+) as unknown as Article;
 
 export const articleDataPidginWithByline = articleDataBuilder(
   'cwl08rd38l6o',
@@ -737,7 +738,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   emptyThings,
   undefined,
   blocksWithHeadlineTexAndByline,
-);
+) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
@@ -764,7 +765,7 @@ export const articlePglDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'PGL',
-);
+) as unknown as Article;
 
 export const articleStyDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
@@ -791,7 +792,7 @@ export const articleStyDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'STY',
-);
+) as unknown as Article;
 
 export const bylineWithNoRole = [
   {

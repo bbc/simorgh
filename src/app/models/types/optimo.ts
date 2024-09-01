@@ -1,4 +1,5 @@
 import { ATIData } from '#app/components/ATIAnalytics/types';
+import { Tag } from '#app/components/Metadata/types';
 import { MostReadData } from '#app/components/MostRead/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
@@ -41,7 +42,7 @@ export type ArticleMetadata = {
     producer: string;
   };
   atiAnalytics: ATIData;
-  passport?: {
+  passport: {
     language: string;
     home: string;
     category: {
@@ -54,6 +55,10 @@ export type ArticleMetadata = {
     };
     taggings: MetadataTaggings;
   };
+  tags: {
+    about: Tag[];
+    mentions: Tag[];
+  };
   topics: MetadataTopics;
   type: PageTypes;
 };
@@ -65,6 +70,10 @@ export type ArticleContent = {
 };
 
 export type ArticlePromo = {
+  headlines: {
+    headline?: string;
+    seoHeadline: string;
+  };
   images: {
     defaultPromoImage: {
       blocks: OptimoRawImageBlock[];
@@ -89,7 +98,7 @@ export type Article = {
   content: ArticleContent;
   metadata: ArticleMetadata;
   mostRead: MostReadData;
-  promo?: ArticlePromo;
+  promo: ArticlePromo;
   secondaryColumn?: SecondaryColumn;
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;

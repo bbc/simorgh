@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -19,9 +18,10 @@ import {
   tipoLivePageTopStoriesItem,
   topStoriesLiveLabelItem,
 } from './fixture';
+import { TopStoryItem } from './types';
 
 type Props = {
-  fixtureData: any;
+  fixtureData: TopStoryItem[];
   service?: Services;
 };
 

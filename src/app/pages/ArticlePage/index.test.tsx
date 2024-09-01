@@ -132,7 +132,7 @@ describe('Article Page', () => {
         },
       },
       articleDataNews,
-    ) as unknown as Article;
+    ) as Article;
 
     render(
       <Context service="news">
@@ -152,9 +152,7 @@ describe('Article Page', () => {
   it('should use the twitter handle where present in the byline block', async () => {
     render(
       <Context service="pidgin">
-        <ArticlePage
-          pageData={articleDataPidginWithByline as unknown as Article}
-        />
+        <ArticlePage pageData={articleDataPidginWithByline} />
       </Context>,
       { service: 'pidgin' },
     );
@@ -171,7 +169,7 @@ describe('Article Page', () => {
   it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
     render(
       <Context service="persian">
-        <ArticlePage pageData={articleDataPersian as unknown as Article} />
+        <ArticlePage pageData={articleDataPersian} />
       </Context>,
       { service: 'persian' },
     );
@@ -199,7 +197,7 @@ describe('Article Page', () => {
     it('should use default images for opengraph if promo image does not exist', async () => {
       render(
         <Context service="news">
-          <ArticlePage pageData={articleDataNews as unknown as Article} />
+          <ArticlePage pageData={articleDataNews} />
         </Context>,
       );
 
@@ -268,13 +266,11 @@ describe('Article Page', () => {
           },
         },
         articleDataNews,
-      );
+      ) as Article;
 
       render(
         <Context service="news">
-          <ArticlePage
-            pageData={articleDataNewsWithPromoImage as unknown as Article}
-          />
+          <ArticlePage pageData={articleDataNewsWithPromoImage} />
         </Context>,
       );
 
@@ -295,7 +291,7 @@ describe('Article Page', () => {
       <Context service="news">
         <ArticlePage
           pageData={{
-            ...(articleDataNews as unknown as Article),
+            ...articleDataNews,
             mostRead: newsMostReadData,
           }}
         />
@@ -312,7 +308,7 @@ describe('Article Page', () => {
       <Context service="persian">
         <ArticlePage
           pageData={{
-            ...(articleDataPersian as unknown as Article),
+            ...articleDataPersian,
             mostRead: persianMostReadData,
           }}
         />
@@ -333,7 +329,7 @@ describe('Article Page', () => {
       <Context service="pidgin">
         <ArticlePage
           pageData={{
-            ...(articleDataPidgin as unknown as Article),
+            ...articleDataPidgin,
             mostRead: pidginMostReadData,
           }}
         />
@@ -394,9 +390,7 @@ describe('Article Page', () => {
 
     const { container } = render(
       <Context service="news">
-        <ArticlePage
-          pageData={articleWithSummaryHeadlineInTheMiddle as unknown as Article}
-        />
+        <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
       </Context>,
     );
 
@@ -428,11 +422,11 @@ describe('Article Page', () => {
           promoHeadline: 'Promo Headline',
         },
       },
-    };
+    } as Article;
 
     const { container } = render(
       <Context service="news">
-        <ArticlePage pageData={articleWithoutHeadline as unknown as Article} />
+        <ArticlePage pageData={articleWithoutHeadline} />
       </Context>,
     );
 
@@ -448,12 +442,10 @@ describe('Article Page', () => {
         topStories: [],
         features: [],
       },
-    };
+    } as Article;
     const { getByTestId } = render(
       <Context service="news">
-        <ArticlePage
-          pageData={pageDataWithSecondaryColumn as unknown as Article}
-        />
+        <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
     );
 
@@ -464,8 +456,11 @@ describe('Article Page', () => {
   it('should render image with the .webp image extension', () => {
     const imageBlock = articleDataNews.content.model.blocks[5];
     const imageAltText =
+      // @ts-expect-error - nested block structure
       imageBlock.model.blocks[0].model.blocks[0].model.blocks[0].model.text;
+    // @ts-expect-error - nested block structure
     const imageLocator = imageBlock.model.blocks[1].model.locator;
+    // @ts-expect-error - nested block structure
     const imageOriginCode = imageBlock.model.blocks[1].model.originCode;
     const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640/${imageOriginCode}/${imageLocator}.webp`;
     const expectedSrcSetURLs = [
@@ -480,7 +475,7 @@ describe('Article Page', () => {
       <Context service="news">
         <ArticlePage
           pageData={{
-            ...(articleDataNews as unknown as Article),
+            ...articleDataNews,
             mostRead: newsMostReadData,
           }}
         />
@@ -550,9 +545,7 @@ describe('Article Page', () => {
     await act(async () => {
       render(
         <Context service="news">
-          <ArticlePage
-            pageData={pageDataWithSecondaryColumn as unknown as Article}
-          />
+          <ArticlePage pageData={pageDataWithSecondaryColumn as Article} />
         </Context>,
       );
     });
@@ -570,13 +563,11 @@ describe('Article Page', () => {
           topStories: [],
           features: [],
         },
-      };
+      } as Article;
 
       const { container } = render(
         <Context service="news" isApp>
-          <ArticlePage
-            pageData={pageDataWithSecondaryColumn as unknown as Article}
-          />
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
         </Context>,
       );
 
@@ -589,7 +580,7 @@ describe('Article Page', () => {
     it('should remove the most read section', async () => {
       const { container } = render(
         <Context service="pidgin" isApp>
-          <ArticlePage pageData={articleDataPidgin as unknown as Article} />
+          <ArticlePage pageData={articleDataPidgin} />
         </Context>,
         { service: 'pidgin' },
       );
@@ -614,9 +605,7 @@ describe('Article Page', () => {
           adsToggledOn={adsToggledOn}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <ArticlePage
-            pageData={articleDataPidginWithAds as unknown as Article}
-          />
+          <ArticlePage pageData={articleDataPidginWithAds} />
         </Context>,
         { service: 'pidgin' },
       );
@@ -639,9 +628,7 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="turkce">
-        <ArticlePage
-          pageData={pageDataWithSecondaryColumn as unknown as Article}
-        />
+        <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
       { service: 'turkce' },
     );
@@ -673,7 +660,7 @@ describe('Article Page', () => {
     };
     const { container } = render(
       <Context service="russian">
-        <ArticlePage pageData={pageDataWithRiddle as unknown as Article} />
+        <ArticlePage pageData={pageDataWithRiddle} />
       </Context>,
     );
     const actual = container.querySelector(
@@ -688,7 +675,7 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="russian">
-        <ArticlePage pageData={pageDataWithEmbedHtml as unknown as Article} />
+        <ArticlePage pageData={pageDataWithEmbedHtml} />
       </Context>,
     );
     expect(getByText('Embed HTML Component')).toBeInTheDocument();
@@ -700,7 +687,7 @@ describe('Article Page', () => {
     };
     const { container } = render(
       <Context service="russian">
-        <ArticlePage pageData={pageDataWithEmbedImages as unknown as Article} />
+        <ArticlePage pageData={pageDataWithEmbedImages} />
       </Context>,
     );
     const actual = container.querySelector(`div[data-e2e="embed-image"]`);
@@ -713,9 +700,7 @@ describe('Article Page', () => {
     };
     const { getByText } = render(
       <Context service="news">
-        <ArticlePage
-          pageData={pageDataWithUploaderEmbed as unknown as Article}
-        />
+        <ArticlePage pageData={pageDataWithUploaderEmbed} />
       </Context>,
     );
     expect(getByText('Get involved')).toBeInTheDocument();
@@ -729,13 +714,11 @@ describe('Article Page', () => {
           topStories: [],
           features: [],
         },
-      };
+      } as Article;
 
       const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage
-            pageData={pageDataWithSecondaryColumn as unknown as Article}
-          />
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
         </Context>,
       );
 
@@ -751,7 +734,7 @@ describe('Article Page', () => {
 
       const { queryByTestId } = render(
         <Context service="pidgin">
-          <ArticlePage pageData={pageDataWithMostRead as unknown as Article} />
+          <ArticlePage pageData={pageDataWithMostRead} />
         </Context>,
       );
 
@@ -763,7 +746,7 @@ describe('Article Page', () => {
 
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articlePglDataPidgin as unknown as Article} />
+          <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
       );
 
@@ -789,7 +772,7 @@ describe('Article Page', () => {
     it('should have schema metadata @type as Article', async () => {
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articlePglDataPidgin as unknown as Article} />
+          <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
       );
 
@@ -807,7 +790,7 @@ describe('Article Page', () => {
 
       render(
         <Context service="pidgin">
-          <ArticlePage pageData={articleStyDataPidgin as unknown as Article} />
+          <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
       );
 
