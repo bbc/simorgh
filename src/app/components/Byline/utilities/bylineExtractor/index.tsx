@@ -1,8 +1,8 @@
-import pathOr from 'ramda/src/pathOr';
 import {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
+import pathOr from 'ramda/src/pathOr';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (
@@ -10,6 +10,8 @@ const pathOrZeroIndexModelBlocks = (
   endModelType: string,
   block: OptimoBylineContributorMetadataBlock | undefined,
 ) => {
+  if (!block) return '';
+
   const zeroIndexModelBlock = ['model', 'blocks', '0'];
   const endModel = ['model', endModelType];
   let givenPath: string[] = [];
@@ -53,8 +55,8 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
 
   if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
-  const contributorBlock = pathOr([], [0], blocks);
-  const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
+  const contributorBlock = blocks?.[0] ?? [];
+  const authorTopicUrl = contributorBlock?.model?.topicUrl ?? '';
 
   return {
     authorName,
