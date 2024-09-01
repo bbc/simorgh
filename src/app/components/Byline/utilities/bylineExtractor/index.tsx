@@ -1,11 +1,14 @@
 import pathOr from 'ramda/src/pathOr';
-import { OptimoBylineBlock } from '#app/models/types/optimo';
+import {
+  OptimoBylineContributorBlock,
+  OptimoBylineContributorMetadataBlock,
+} from '#app/models/types/optimo';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
   endModelType: string,
-  block: OptimoBylineBlock | undefined,
+  block: OptimoBylineContributorMetadataBlock | undefined,
 ) => {
   const zeroIndexModelBlock = ['model', 'blocks', '0'];
   const endModel = ['model', endModelType];
@@ -20,12 +23,9 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const bylineExtractor = (blocks: object[]) => {
-  const bylineBlocks = pathOr<OptimoBylineBlock[]>(
-    [],
-    [0, 'model', 'blocks'],
-    blocks,
-  );
+const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
+  const bylineBlocks = blocks?.[0]?.model?.blocks || [];
+
   const authorBlock = bylineBlocks.find(block => block.type === 'name');
   const jobRoleBlock = bylineBlocks.find(block => block.type === 'role');
   const twitterBlock = bylineBlocks.find(block => block.type === 'link');

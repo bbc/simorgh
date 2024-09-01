@@ -1,4 +1,7 @@
-import { Article } from '#app/models/types/optimo';
+import {
+  Article,
+  OptimoBylineContributorBlock,
+} from '#app/models/types/optimo';
 import {
   blockContainingText,
   bylineBlock,
@@ -924,7 +927,7 @@ export const bylineWithNoRole = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNoAuthor = [
   {
@@ -1057,7 +1060,7 @@ export const bylineWithNoAuthor = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNoAuthorAndRole = [
   {
@@ -1161,7 +1164,7 @@ export const bylineWithNoAuthorAndRole = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNameAndRole = [
   {
@@ -1231,7 +1234,7 @@ export const bylineWithNameAndRole = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithLink = [
   {
@@ -1340,7 +1343,7 @@ export const bylineWithLink = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithLinkAndLocation = [
   {
@@ -1478,7 +1481,7 @@ export const bylineWithLinkAndLocation = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNonPngPhoto = [
   {
@@ -1640,7 +1643,7 @@ export const bylineWithNonPngPhoto = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithPngPhoto = [
   {
@@ -1800,7 +1803,7 @@ export const bylineWithPngPhoto = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithAllData = [
   {
@@ -1962,7 +1965,7 @@ export const bylineWithAllData = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const sampleRecommendations = [
   {

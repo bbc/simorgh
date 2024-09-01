@@ -140,9 +140,9 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       </div>
     ),
     text,
-    byline: (props: ComponentToRenderProps) =>
+    byline: () =>
       hasByline ? (
-        <Byline {...props}>
+        <Byline blocks={bylineContribBlocks}>
           <Timestamp
             firstPublished={new Date(firstPublished).getTime()}
             lastPublished={new Date(lastPublished).getTime()}

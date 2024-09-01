@@ -41,10 +41,26 @@ export type OptimoAltTextBlock = {
   };
 };
 
-export type OptimoBylineBlock = {
+export type OptimoBylineContributorMetadataBlock = {
   type: 'name' | 'role' | 'link' | 'location' | 'images';
   model: {
     blocks: OptimoBlock[];
+  };
+};
+
+export type OptimoBylineContributorBlock = {
+  type: 'contributor';
+  model: {
+    topicId?: string;
+    topicUrl?: string;
+    blocks: OptimoBylineContributorMetadataBlock[];
+  };
+};
+
+export type OptimoBylineBlock = {
+  type: 'byline';
+  model: {
+    blocks: OptimoBylineContributorBlock[];
   };
 };
 
