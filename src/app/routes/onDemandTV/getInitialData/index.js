@@ -39,6 +39,13 @@ export default async ({ path: pathname, pageType, toggles }) => {
         })
       : [];
 
+    const mediaBlocks = get(['content', 'blocks']).map(block => {
+      return {
+        type: 'tvMedia',
+        model: { ...block },
+      };
+    });
+
     return {
       status,
       pageData: {
@@ -73,6 +80,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         episodeAvailability: getEpisodeAvailability(json),
         episodeTitle: get(['content', 'blocks', 0, 'episodeTitle']),
         recentEpisodes,
+        mediaBlocks,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

@@ -41,7 +41,7 @@ const getGroups = (
 
 export interface OnDemandTVProps {
   pageData: {
-    mediaBlock: MediaBlock[];
+    mediaBlocks: MediaBlock[];
     metadata: {
       type: PageTypes;
     };
@@ -168,7 +168,7 @@ const OnDemandTvPage = ({
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
             <MediaLoader
-              blocks={pageData?.mediaBlock}
+              blocks={pageData?.mediaBlocks}
               css={styles.mediaPlayer}
             />
           ) : (
