@@ -284,7 +284,6 @@ describe('makeAbsolute makes a relative URL absolute', () => {
   });
 });
 
-// TO DO - check these are valid pathnames.
 describe('buildAvEmbedURL', () => {
   describe('service with variant', () => {
     it('should build an embed URL for the page', () => {
@@ -295,6 +294,16 @@ describe('buildAvEmbedURL', () => {
           queryString: '',
         }),
       ).toEqual('https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945');
+    });
+
+    it('should build an embed URL for the page omitting renderer env', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/russian/av-embeds/features-49881797?renderer_env=live',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual('https://www.bbc.com/russian/av-embeds/features-49881797');
     });
 
     it('should build an embed with a vpid URL for the page', () => {

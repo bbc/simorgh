@@ -43,9 +43,6 @@ const getBaseUrl = (queryString, isAmp) => {
 };
 
 const handleAvEmbed = ({ mediaPathname }) => {
-  // To do - is it possible to remove parsed route
-  // all it seems to handle is cleaning up extra slashes and removing renderer env
-  // would have to pass in service and variant
   const parsedRoute = parseAvRoute(mediaPathname);
   const { service, variant, mediaDelimiter, mediaId, assetId } = parsedRoute;
   const siteUri = `${service}${variant ? `/${variant}` : ''}`;
@@ -55,7 +52,6 @@ const handleAvEmbed = ({ mediaPathname }) => {
   return `https://www.bbc.com/${siteUri}/av-embeds/${assetId}${mediaPath}`;
 };
 
-// To do - check var names
 const handleMorphEmbed = ({ type, mediaId, isAmp, queryString }) => {
   const morphEnvOverride = shouldOverrideMorphEnv(queryString, type)
     ? '?morph_env=live'

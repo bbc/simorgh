@@ -32,7 +32,6 @@ const buildSettings = ({
   embedded,
   pathname,
 }: BuildConfigProps) => {
-  // To do - check whether this should be conditional
   const embedUrl = pathname
     ? getEmbedURL({
         type: 'avEmbed',
