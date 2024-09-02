@@ -1,9 +1,12 @@
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
+import { createRequire } from 'module';
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
+
+global.require = createRequire(__dirname);
 
 /*
  * Mock to avoid async behaviour in tests
