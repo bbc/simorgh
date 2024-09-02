@@ -3,6 +3,11 @@ import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import russianFixtureData from '#data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
 import handleAvRoute from './handleAvRoute';
 
+const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+jest.mock('../../../utilities/undiciAgent', () =>
+  jest.fn(() => Promise.resolve(agent)),
+);
+
 const mockGetServerSidePropsContext = {
   req: {
     headers: {
