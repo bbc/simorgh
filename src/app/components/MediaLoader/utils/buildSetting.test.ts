@@ -390,9 +390,10 @@ describe('buildSettings', () => {
 
       describe('should be set', () => {
         it.each`
-          hostname               | rendererEnv | reason
-          ${'localhost.bbc.com'} | ${'test'}   | ${'host is local and renderer_env is test'}
-          ${'test.bbc.com'}      | ${'test'}   | ${'host is test and renderer_env is test'}
+          hostname                           | rendererEnv | reason
+          ${'http://localhost.bbc.com:7080'} | ${'test'}   | ${'host is local and renderer_env is test'}
+          ${'http://www.test.bbc.com'}       | ${'test'}   | ${'host is test and renderer_env is test'}
+          ${'http://test.bbc.com'}           | ${'test'}   | ${'host is test and renderer_env is test'}
         `(
           'when hostname is $hostname and renderer_env is $rendererEnv because $reason',
           ({ hostname, rendererEnv }) => {
@@ -425,11 +426,13 @@ describe('buildSettings', () => {
       });
       describe('should not be set', () => {
         it.each`
-          hostname               | rendererEnv | reason
-          ${'localhost.bbc.com'} | ${'live'}   | ${'host is local and renderer_env is live'}
-          ${'localhost.bbc.com'} | ${null}     | ${'host is local and renderer_env is not set, therefore defaulted to live'}
-          ${'test.bbc.com'}      | ${'live'}   | ${'host is test and renderer_env is live'}
-          ${'test.bbc.com'}      | ${null}     | ${'host is local and renderer_env is not set, therefore defaulted to live'}
+          hostname                           | rendererEnv | reason
+          ${'http://localhost.bbc.com:7080'} | ${'live'}   | ${'host is local and renderer_env is live'}
+          ${'http://localhost.bbc.com:7080'} | ${null}     | ${'host is local and renderer_env is not set, therefore defaulted to live'}
+          ${'https://test.bbc.com'}          | ${'live'}   | ${'host is test and renderer_env is live'}
+          ${'https://test.bbc.com'}          | ${null}     | ${'host is local and renderer_env is not set, therefore defaulted to live'}
+          ${'https://www.test.bbc.com'}      | ${'live'}   | ${'host is test and renderer_env is live'}
+          ${'https://www.test.bbc.com'}      | ${null}     | ${'host is local and renderer_env is not set, therefore defaulted to live'}
         `(
           'when hostname is $hostname and renderer_env is $rendererEnv because $reason',
           ({ hostname, rendererEnv }) => {
