@@ -296,16 +296,6 @@ describe('buildAvEmbedURL', () => {
       ).toEqual('https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945');
     });
 
-    it('should build an embed URL for the page omitting renderer env', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: '/russian/av-embeds/features-49881797?renderer_env=live',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('https://www.bbc.com/russian/av-embeds/features-49881797');
-    });
-
     it('should build an embed with a vpid URL for the page', () => {
       expect(
         getEmbedUrl({
@@ -332,37 +322,45 @@ describe('buildAvEmbedURL', () => {
   });
 
   describe('service without variant', () => {
-    it('should build an embed URL for the page', () => {
+    it('should build a media embed URL', () => {
       expect(
         getEmbedUrl({
-          mediaId: '/mundo/av-embeds/srbija-68707945',
+          mediaId: '/russian/av-embeds/media-38886884',
           type: 'avEmbed',
           queryString: '',
         }),
-      ).toEqual('https://www.bbc.com/mundo/av-embeds/srbija-68707945');
+      ).toEqual('https://www.bbc.com/russian/av-embeds/media-38886884');
     });
 
-    it('should build an embed with a vpid URL for the page', () => {
+    it('should build a media embed URL omitting renderer env', () => {
       expect(
         getEmbedUrl({
-          mediaId: '/mundo/av-embeds/srbija-68707945/vpid/p0cfmdwj',
+          mediaId: '/russian/av-embeds/features-49881797?renderer_env=live',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual('https://www.bbc.com/russian/av-embeds/features-49881797');
+    });
+
+    it('should build a media embed with a vpid URL', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/russian/av-embeds/49843970/vpid/p07pd78q',
+          type: 'avEmbed',
+          queryString: '',
+        }),
+      ).toEqual('https://www.bbc.com/russian/av-embeds/49843970/vpid/p07pd78q');
+    });
+
+    it('should build a media embed with a pid URL', () => {
+      expect(
+        getEmbedUrl({
+          mediaId: '/russian/av-embeds/features-49881797/pid/p07q3wwl',
           type: 'avEmbed',
           queryString: '',
         }),
       ).toEqual(
-        'https://www.bbc.com/mundo/av-embeds/srbija-68707945/vpid/p0cfmdwj',
-      );
-    });
-
-    it('should build an embed with a pid URL for the page', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: '/mundo/av-embeds/srbija-68707945/pid/p0cfmdwn',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual(
-        'https://www.bbc.com/mundo/av-embeds/srbija-68707945/pid/p0cfmdwn',
+        'https://www.bbc.com/russian/av-embeds/features-49881797/pid/p07q3wwl',
       );
     });
   });
