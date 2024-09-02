@@ -17,7 +17,6 @@ export type PlayerConfig = {
     episodePID?: string | null;
     destination: string;
     producer: string | '';
-    episodePID?: string;
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
