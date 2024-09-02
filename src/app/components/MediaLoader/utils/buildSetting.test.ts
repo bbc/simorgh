@@ -424,6 +424,7 @@ describe('buildSettings', () => {
           },
         );
       });
+
       describe('should not be set', () => {
         it.each`
           hostname                           | rendererEnv | reason
