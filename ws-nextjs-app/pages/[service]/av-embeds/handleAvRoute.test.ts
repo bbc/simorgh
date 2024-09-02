@@ -1,9 +1,7 @@
 import { GetServerSidePropsContext } from 'next';
-import fetchPageData from '#app/routes/utils/fetchPageData';
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import russianFixtureData from '#data/russian/av-embeds/features-49881797/pid/p07q3wwl.json';
 import handleAvRoute from './handleAvRoute';
-
-jest.mock('#app/routes/utils/fetchPageData');
 
 const mockGetServerSidePropsContext = {
   req: {
@@ -22,7 +20,7 @@ const mockGetServerSidePropsContext = {
 describe('Handle AV Route', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    (fetchPageData as jest.Mock).mockImplementation(() => ({
+    jest.spyOn(fetchPageData, 'default').mockResolvedValue({
       status: 200,
       json: {
         data: {
@@ -34,7 +32,7 @@ describe('Handle AV Route', () => {
           },
         },
       },
-    }));
+    });
   });
 
   it('should remove the x-frame-options header', async () => {
