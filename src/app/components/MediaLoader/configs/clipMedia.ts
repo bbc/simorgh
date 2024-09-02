@@ -94,7 +94,6 @@ export default ({
     mediaType: type || 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(!embeddingAllowed && { externalEmbedUrl: '' }),
       playlistObject: {
         title,
         summary: caption || '',

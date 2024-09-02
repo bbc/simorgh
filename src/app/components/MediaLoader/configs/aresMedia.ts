@@ -109,7 +109,6 @@ export default ({
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
-      ...(!embeddingAllowed && { externalEmbedUrl: '' }),
       playlistObject: {
         title,
         summary: caption || '',

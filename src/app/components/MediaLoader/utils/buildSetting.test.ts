@@ -549,20 +549,16 @@ describe('buildSettings', () => {
       expect(result?.playerConfig).toHaveProperty('insideIframe', true);
     });
 
-    it('Should set the embed rights and externalEmbedURL when embedding is allowed', () => {
+    it('Should set the embed rights  when embedding is allowed', () => {
       const result = buildSettings({
         ...baseSettings,
         embedded: true,
         blocks: aresMediaBlocks as MediaBlock[],
       });
       expect(result?.playerConfig).toHaveProperty('playlistObject.embedRights');
-      expect(result?.playerConfig).toHaveProperty(
-        'externalEmbedUrl',
-        'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
-      );
     });
 
-    it('Should exclude the embed rights and externalEmbedURL when embedding is prohibited', () => {
+    it('Should exclude the embed rights when embedding is prohibited', () => {
       const myFixture = [
         {
           ...aresMediaBlock,
@@ -588,7 +584,6 @@ describe('buildSettings', () => {
       expect(result?.playerConfig).not.toHaveProperty(
         'playlistObject.embedRights',
       );
-      expect(result?.playerConfig).toHaveProperty('externalEmbedUrl', '');
     });
   });
 
