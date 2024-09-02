@@ -10,7 +10,6 @@ const PSEUDO_CLASS_NTH_CHILD = 'The pseudo class ":nth-child"';
 const UNMATCHED_GET = 'Unmatched GET to /undefined';
 const REACT_UNMOUNTED = 'React state update on an unmounted component';
 const TAG_HUNDEFINED = 'The tag <hundefined';
-const REQUIRE_IS_NOT_DEFINED = 'ReferenceError: require is not defined';
 
 const SUPPRESSED_WARNINGS = [
   PSEUDO_CLASS_FIRST_CHILD,
@@ -18,7 +17,6 @@ const SUPPRESSED_WARNINGS = [
   UNMATCHED_GET,
   REACT_UNMOUNTED,
   TAG_HUNDEFINED,
-  REQUIRE_IS_NOT_DEFINED,
 ];
 
 const SUPPRESSED_REGEX = new RegExp(SUPPRESSED_WARNINGS.join('|'));
