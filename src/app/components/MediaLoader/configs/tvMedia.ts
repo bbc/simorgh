@@ -25,6 +25,7 @@ export default ({
   return {
     playerConfig: {
       ...basePlayerConfig,
+      ...(!tvMediaBlock.embedding && { externalEmbedUrl: '' }),
       autoplay: false,
       statsObject: {
         ...basePlayerConfig.statsObject,

@@ -11,6 +11,7 @@ export type PlayerConfig = {
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
   insideIframe?: boolean;
+  embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
   statsObject: {
     clipPID?: string | null;

@@ -46,6 +46,7 @@ const buildSettings = ({
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
+    externalEmbedUrl: embedUrl,
     ui: {
       controls: { enabled: true },
       locale: { lang: lang || 'en' },
@@ -54,9 +55,6 @@ const buildSettings = ({
     },
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
-    ...(embedded && {
-      externalEmbedUrl: embedUrl,
-    }),
     statsObject: {
       destination: statsDestination,
       producer,
