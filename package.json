@@ -107,7 +107,7 @@
     "express": "4.19.2",
     "express-static-gzip": "2.1.7",
     "helmet": "7.1.0",
-    "helmet-csp": "3.4.0",
+    "helmet-csp": "4.0.0",
     "intersection-observer": "0.12.2",
     "isomorphic-fetch": "3.0.0",
     "jalaali-js": "1.2.7",
