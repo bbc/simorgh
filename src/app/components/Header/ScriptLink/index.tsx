@@ -66,10 +66,8 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
   // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
   // revisit this to support both Express and Next.JS in the future.
   if (!scriptLinkEnabled || isNextJs) return null;
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { path, params }: UseRouteMatcher = useRouteMatch();
-
   const { text, variant } = scriptLink || {};
 
   if (!variant) return null;
