@@ -6,6 +6,10 @@ import getEpisodeAvailability, {
 } from '#lib/utilities/episodeAvailability';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import { InitialDataProps } from '#app/models/types/initialData';
+import {
+  OnDemandAudioBlock,
+  OnDemandMediaModel,
+} from '#app/models/types/media';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
@@ -119,13 +123,14 @@ export default async ({
       ? await getPodcastExternalLinks(service, brandId, variant, versionId)
       : [];
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mediaBlocks = get(['content', 'blocks']).map((block: any) => {
-      return {
-        type: 'onDemandAudio',
-        model: { ...block },
-      };
-    });
+    const mediaBlocks: OnDemandAudioBlock[] = get(['content', 'blocks']).map(
+      (block: OnDemandMediaModel) => {
+        return {
+          type: 'onDemandAudio',
+          model: { ...block },
+        };
+      },
+    );
 
     return {
       status,
