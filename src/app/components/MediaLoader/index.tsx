@@ -7,7 +7,6 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
-import { createRequire } from 'node:module';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
@@ -17,8 +16,6 @@ import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
-
-createRequire(__dirname);
 
 const logger = nodeLogger(__filename);
 
