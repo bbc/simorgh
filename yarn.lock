@@ -10919,10 +10919,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"helmet-csp@npm:3.4.0":
-  version: 3.4.0
-  resolution: "helmet-csp@npm:3.4.0"
-  checksum: 10/114fba6bbdd72960f1220ced9912a52375aa4beb76c58c8a2ace9acde1a52f5d5bf2840e61477306cc542115405e8a99462e329f7322b7be8d0faf980a83b809
+"helmet-csp@npm:4.0.0":
+  version: 4.0.0
+  resolution: "helmet-csp@npm:4.0.0"
+  checksum: 10/855034bb528574944da1a47ea398ca5c86e7024218c27129e04af5899909ab5267bc54b5e94d60958f7afc3440ce4e7e0f22a6c4e16d3ea4629c22dbcffbb0c9
   languageName: node
   linkType: hard
 
@@ -16227,7 +16227,7 @@ __metadata:
     express-static-gzip: "npm:2.1.7"
     glob: "npm:11.0.0"
     helmet: "npm:7.1.0"
-    helmet-csp: "npm:3.4.0"
+    helmet-csp: "npm:4.0.0"
     husky: "npm:9.1.4"
     inspectpack: "npm:4.7.1"
     intersection-observer: "npm:0.12.2"
