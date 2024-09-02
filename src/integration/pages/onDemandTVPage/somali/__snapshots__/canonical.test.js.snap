@@ -109,9 +109,231 @@ exports[`Canonical On Demand T V Page I can see the episode title 1`] = `"8 Dise
 
 exports[`Canonical On Demand T V Page Main heading should match text 1`] = `"Caawa Iyo Caalamka, 8 Disembar 2020"`;
 
-exports[`Canonical On Demand T V Page Media Player a11y assistive technology can read the media player title 1`] = `"Ciyaaridda Muuqaalka"`;
+exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, "undefined", Muddada 26,30"`;
 
-exports[`Canonical On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmygv61j1y/so?morph_env=live"`;
+exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
+<div
+  class="bbc-1jvsvcw"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-hdjghg edwq9ck2"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-17whsh0 edwq9ck0"
+    >
+      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-g64ss1 e1ita3o32"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, "undefined", Muddada 26,30
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-1apn3of e1ita3o31"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-11ia5vc e1ita3o30"
+      datetime="PT26M30S"
+    >
+      26:30
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p06hm27g.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p06hm27g.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p06hm27g.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p06hm27g.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p06hm27g.png.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
+<div
+  class="bbc-1jvsvcw"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-hdjghg edwq9ck2"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-17whsh0 edwq9ck0"
+    >
+      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-g64ss1 e1ita3o32"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, "undefined", Muddada 26,30
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-1apn3of e1ita3o31"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-11ia5vc e1ita3o30"
+      datetime="PT26M30S"
+    >
+      26:30
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p06hm27g.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p06hm27g.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p06hm27g.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p06hm27g.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p06hm27g.png.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
+<figure
+  class="bbc-epqi9g"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="bbc-1jvsvcw"
+    data-e2e="media-loader__placeholder"
+  >
+    <div
+      class="bbc-hdjghg edwq9ck2"
+      data-e2e="media-player__guidance"
+    >
+      <noscript
+        class="bbc-17whsh0 edwq9ck0"
+      >
+        &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      </noscript>
+    </div>
+    <button
+      class="focusIndicatorRemove bbc-g64ss1 e1ita3o32"
+    >
+      <span
+        class="bbc-m04vo2"
+      >
+        Play video, "undefined", Muddada 26,30
+      </span>
+      <div
+        aria-hidden="true"
+        class="bbc-1apn3of e1ita3o31"
+      >
+        <svg
+          aria-hidden="true"
+          class="bbc-vja2s5 e1s2dgdk5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="bbc-11ia5vc e1ita3o30"
+        datetime="PT26M30S"
+      >
+        26:30
+      </time>
+    </button>
+    <div
+      class="bbc-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
+    >
+      <img
+        alt=""
+        class="bbc-ipdj63"
+        src="https://ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png"
+        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p06hm27g.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p06hm27g.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p06hm27g.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p06hm27g.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p06hm27g.png.webp 800w"
+        style="aspect-ratio:auto"
+      />
+    </div>
+  </div>
+</figure>
+`;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
 {
