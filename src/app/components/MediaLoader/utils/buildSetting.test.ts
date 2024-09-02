@@ -1,4 +1,7 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import buildSettings from './buildSettings';
 import {
   aresMediaBlocks,
@@ -451,6 +454,96 @@ describe('buildSettings', () => {
         'title',
         'Five things ants can teach us about management',
       );
+    });
+  });
+
+  describe('OnDemandTv', () => {
+    const hindiTvBaseSettings = {
+      counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+      lang: 'hi',
+      service: 'hindi' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'HINDI',
+      translations: hindiServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
+      tvMediaBlock => {
+        return {
+          type: 'tvMedia',
+          model: {
+            ...tvMediaBlock,
+          },
+        };
+      },
+    );
+    it('Should process a On Demand TV block into a valid playlist item.', () => {
+      const result = buildSettings({
+        ...hindiTvBaseSettings,
+        blocks: hindiTvMediaBlocks as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        playerConfig: {
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          autoplay: false,
+          externalEmbedUrl: '',
+          mediator: { host: 'open.test.bbc.co.uk' },
+          appName: 'news-hindi',
+          counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'HINDI',
+            episodePID: 'w172zm89sk8n4lc',
+          },
+          ui: {
+            controls: { enabled: true },
+            fullscreen: { enabled: true },
+            locale: {
+              lang: 'hi',
+            },
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+          playlistObject: {
+            title: 'दुनिया',
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
+            items: [
+              {
+                versionID: 'w1mskyp9nwh0dvl',
+                kind: 'programme',
+                duration: 1192,
+              },
+            ],
+            summary:
+              'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+          },
+        },
+        mediaType: 'video',
+        placeholderConfig: {
+          mediaInfo: {
+            title: 'दुनिया',
+            datetime: 'PT19M52S',
+            duration: '19:52',
+            durationSpoken: 'अवधि 19,52',
+            type: 'video',
+            guidanceMessage: undefined,
+          },
+          placeholderSrc:
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
+          placeholderSrcset:
+            'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        },
+        showAds: false,
+      });
     });
   });
 });
