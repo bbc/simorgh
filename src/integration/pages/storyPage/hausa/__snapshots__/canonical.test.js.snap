@@ -305,7 +305,7 @@ exports[`Canonical Story Page SEO Linked data should match text 2`] = `
   "@type": "AudioObject",
   "description": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
   "duration": "PT16S",
-  "embedURL": "",
+  "embedURL": "https://www.bbc.com/hausa/av-embeds/labarai-23246985",
   "name": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w9z.jpg",
   "uploadDate": "2017-05-22T15:38:23.000Z",
