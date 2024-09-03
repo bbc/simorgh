@@ -24,6 +24,7 @@ export default ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedded,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
@@ -77,6 +78,10 @@ export default ({
 
   const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
+  const subType = aresMediaMetadata?.subType;
+
+  const videoId = aresMediaMetadata?.id;
+
   const holdingImageURL = buildIChefURL({
     originCode,
     locator,
@@ -103,6 +108,7 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
+      ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       playlistObject: {
         title,
         summary: caption || '',
@@ -114,7 +120,8 @@ export default ({
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID,
+        clipPID: subType === 'clip' ? videoId : null,
+        episodePID: subType === 'episode' ? videoId : null,
       },
     },
     placeholderConfig,

@@ -40,6 +40,8 @@ export default ({
 
   const title = video?.title;
 
+  const videoId = video?.id;
+
   const captionBlock = getCaptionBlock(blocks, 'live');
 
   const caption =
@@ -106,7 +108,7 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID,
+        clipPID: videoId,
       },
     },
     placeholderConfig,
