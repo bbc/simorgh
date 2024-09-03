@@ -21,7 +21,6 @@ const avEmbedsMetadataProps = {
         serbianCyrCps.data.avEmbed.content.model.blocks[0].model.blocks[0].model
           .imageUrl,
       language: serbianCyrCps.data.avEmbed.metadata.language,
-      mediaURL: 'https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
       promoSummary:
         serbianCyrCps.data.avEmbed.promo.summary.blocks[0].model.blocks[0].model
           .text,
