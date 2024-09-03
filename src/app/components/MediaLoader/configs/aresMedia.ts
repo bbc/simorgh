@@ -4,6 +4,7 @@ import {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
+import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   AresMediaBlock,
   AresMediaMetadataBlock,
@@ -18,6 +19,7 @@ import shouldDisplayAds from '../utils/shouldDisplayAds';
 const DEFAULT_WIDTH = 512;
 
 export default ({
+  id,
   pageType,
   blocks,
   basePlayerConfig,
@@ -25,6 +27,8 @@ export default ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
   embedded,
+  lang,
+  isAmp,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: aresMedia }: AresMediaBlock =
     filterForBlockType(blocks, 'aresMedia') ?? {};
@@ -90,6 +94,7 @@ export default ({
   const items = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
   ];
+
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
 
   const placeholderConfig = buildPlaceholderConfig({
@@ -104,12 +109,20 @@ export default ({
     placeholderImageLocator: locator,
   });
 
+  const embedUrl = getEmbedURL({
+    mediaId: `${id}/${versionID}/${lang}`,
+    type: 'avEmbed',
+    isAmp,
+    queryString: '',
+  });
+
   return {
     mediaType: actualFormat || 'video',
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
+      ...(embedUrl && { externalEmbedUrl: embedUrl }),
       playlistObject: {
         title,
         summary: caption || '',

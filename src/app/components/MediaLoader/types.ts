@@ -54,6 +54,7 @@ export type PlaylistItem = {
 };
 
 export type ConfigBuilderProps = {
+  id: string | null;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
@@ -62,6 +63,8 @@ export type ConfigBuilderProps = {
   showAdsBasedOnLocation?: boolean;
   embedUrl?: string;
   embedded?: boolean;
+  lang: string;
+  isAmp?: boolean;
 };
 
 export type PlaceholderConfig = {
@@ -236,6 +239,7 @@ export type MediaBlock =
   | TvMediaBlock;
 
 export type BuildConfigProps = {
+  id: string | null;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
@@ -248,5 +252,4 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
-  pathname: string;
 };

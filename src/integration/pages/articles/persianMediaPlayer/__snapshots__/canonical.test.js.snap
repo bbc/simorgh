@@ -631,7 +631,7 @@ exports[`Canonical Articles SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù",
   "duration": "PT16S",
-  "embedURL": "https://www.bbc.com/persian/av-embeds/cej3lzd5e0go",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cej3lzd5e0go/p01kf9q6/fa",
   "name": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kf9s0.jpg",
   "uploadDate": "2018-11-12T15:00:22.000Z",

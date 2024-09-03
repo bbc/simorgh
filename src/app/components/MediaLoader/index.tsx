@@ -162,6 +162,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
+    id,
     pageType,
     counterName,
     statsDestination,
@@ -169,7 +170,6 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-    pathname,
   } = useContext(RequestContext);
 
   const showPlaceholder = !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
@@ -180,6 +180,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
+    id,
     blocks,
     counterName,
     statsDestination,
@@ -192,7 +193,6 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
-    pathname,
   });
 
   if (!config) return null;
@@ -210,7 +210,11 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   return (
     <>
-      <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+      <Metadata
+        blocks={blocks}
+        embedURL={playerConfig?.externalEmbedUrl}
+        embedded={embedded}
+      />
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}

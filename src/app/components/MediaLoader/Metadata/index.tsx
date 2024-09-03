@@ -26,9 +26,10 @@ const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
 type Props = {
   blocks: MediaBlock[];
   embedURL?: string;
+  embedded?: boolean;
 };
 
-const Metadata = ({ blocks, embedURL }: Props) => {
+const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -39,6 +40,8 @@ const Metadata = ({ blocks, embedURL }: Props) => {
   const { model: metadata }: AresMediaMetadataBlock =
     filterForBlockType(aresMediaBlock?.model?.blocks, 'aresMediaMetadata') ??
     {};
+
+  if (!metadata) return null;
 
   const metadataJson = {
     '@context': 'http://schema.org',
@@ -56,11 +59,8 @@ const Metadata = ({ blocks, embedURL }: Props) => {
 
   return (
     <Helmet>
-      {metadata && (
-        <script type="application/ld+json">
-          {JSON.stringify(metadataJson)}
-        </script>
-      )}
+      {embedded && embedURL && <meta property="og:url" content={embedURL} />}
+      <script type="application/ld+json">{JSON.stringify(metadataJson)}</script>
     </Helmet>
   );
 };
