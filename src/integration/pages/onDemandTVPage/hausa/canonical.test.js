@@ -1,6 +1,6 @@
 /**
- * @service somali
- * @pathname /somali/bbc_somali_tv/tv_programmes/w13xttqt
+ * @service hausa
+ * @pathname /hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8
  */
 
 import runCanonicalTests from '../canonicalTests';
