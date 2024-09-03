@@ -46,10 +46,21 @@ export default async ({ path: pathname, pageType, toggles }) => {
       };
     });
 
+    const pageIdentifier = get([
+      'metadata',
+      'analyticsLabels',
+      'pageIdentifier',
+    ]);
+
     return {
       status,
       pageData: {
-        metadata: { type: 'On Demand TV' },
+        metadata: {
+          type: 'On Demand TV',
+          atiAnalytics: {
+            pageIdentifier,
+          },
+        },
         language: get(['metadata', 'language']),
         brandTitle: get(['metadata', 'title']),
         id: get(['metadata', 'id'], LOG_LEVELS.ERROR),
@@ -58,7 +69,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         mediumSynopsis: get(['promo', 'media', 'synopses', 'medium']),
         contentType: get(['metadata', 'analyticsLabels', 'contentType']),
         pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
-        pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
+        pageIdentifier,
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],
           LOG_LEVELS.WARN,
