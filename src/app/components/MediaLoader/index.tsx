@@ -154,9 +154,10 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
 type Props = {
   blocks: MediaBlock[];
   className?: string;
+  embedded?: boolean;
 };
 
-const MediaLoader = ({ blocks, className }: Props) => {
+const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -168,6 +169,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    pathname,
   } = useContext(RequestContext);
 
   const showPlaceholder = !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
@@ -189,6 +191,8 @@ const MediaLoader = ({ blocks, className }: Props) => {
     translations,
     adsEnabled,
     showAdsBasedOnLocation,
+    embedded,
+    pathname,
   });
 
   if (!config) return null;
