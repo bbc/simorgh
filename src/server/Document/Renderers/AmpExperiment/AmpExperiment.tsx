@@ -19,8 +19,8 @@ const JsonInlinedScript = () => (
   />
 );
 
-const AmpATIAnalytics = () => {
+const AmpExperiment = () => {
   return <amp-experiment>{JsonInlinedScript()}</amp-experiment>;
 };
 
-export default AmpATIAnalytics;
+export default AmpExperiment;

@@ -102,18 +102,13 @@ export default {
       },
     }),
 
-  experimentTopStoriesAndFeaturesSection: ({ spacings, mq }: Theme) =>
+  experimentTopStoriesAndFeaturesSection: ({ spacings }: Theme) =>
     css({
       display: 'none',
       marginBottom: `${spacings.TRIPLE}rem`,
 
       '[amp-x-someexperiment="variant_2"] &': {
         display: 'block',
-      },
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginBottom: `${spacings.FULL}rem`,
-        padding: `${spacings.DOUBLE}rem`,
       },
     }),
 };
