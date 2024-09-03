@@ -60,6 +60,7 @@ const WithContexts = Component => {
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
+            counterName={atiAnalytics?.pageIdentifier ?? null}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}
