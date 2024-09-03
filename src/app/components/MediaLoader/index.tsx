@@ -141,10 +141,11 @@ const MediaContainer = ({
 
 type Props = {
   className?: string;
+  embedded?: boolean;
   blocks: MediaBlock[];
 };
 
-const MediaLoader = ({ blocks, className }: Props) => {
+const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
@@ -157,6 +158,7 @@ const MediaLoader = ({ blocks, className }: Props) => {
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    pathname,
   } = useContext(RequestContext);
 
   if (isLite) return null;
@@ -175,6 +177,8 @@ const MediaLoader = ({ blocks, className }: Props) => {
     translations,
     adsEnabled,
     showAdsBasedOnLocation,
+    embedded,
+    pathname,
   });
 
   if (!config) return null;
