@@ -6,9 +6,7 @@ import { createRequire } from 'module';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-if (__dirname) {
-  global.require = createRequire(__dirname);
-}
+global.require = createRequire(__dirname);
 
 /*
  * Mock to avoid async behaviour in tests
