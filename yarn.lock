@@ -3643,25 +3643,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-arm64@npm:@esbuild/darwin-arm64@npm:0.20.2":
-  version: 0.20.2
-  resolution: "@esbuild/darwin-arm64@npm:0.20.2"
-  checksum: 10/8690d0d57be67a74801a1ca287abd5f0951abae832aaa3a938fa0286e86048122b1ce8b37fba6aa2ae4a0019cc426682dfbdcbae17f77495daeeea4230a6f5e0
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@esbuild/darwin-x64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/darwin-x64@npm:0.21.5"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/darwin-x64@npm:@esbuild/darwin-x64@npm:0.20.2":
-  version: 0.20.2
-  resolution: "@esbuild/darwin-x64@npm:0.20.2"
-  checksum: 10/795678e41136a9b7e0f834508f7f03d32d6b2dc97220cdeeb3733faa07884baebffff3560cb386489252afbfc66d793ee70a2572a73320930c2e86f8dd485bda
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -3739,14 +3723,6 @@ __metadata:
 "@esbuild/linux-x64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/linux-x64@npm:0.21.5"
-  conditions: os=linux & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/linux-x64@npm:@esbuild/linux-x64@npm:0.20.2":
-  version: 0.20.2
-  resolution: "@esbuild/linux-x64@npm:0.20.2"
-  checksum: 10/4f9c4eb838a08cf6506f71f38bcb537de5c6812ab7360f19bec91fed8cd8c30cf2e012cc432146d8e5a8f9cdbf2616b08c6a9e87743fde4c6da83b67da53301d
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -4288,14 +4264,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:@next/swc-darwin-arm64@14.2.3":
-  version: 14.2.3
-  resolution: "@next/swc-darwin-arm64@npm:14.2.3"
-  checksum: 10/380d964ea223e450764281799fc4d7f9d6e3cdf48fc87ca937e46c031445e154c522c5925ff8e18c64f87eaff88b3e7145fa3a6a44b2e228b143536360c9996e
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@next/swc-darwin-x64@npm:14.2.6":
   version: 14.2.6
   resolution: "@next/swc-darwin-x64@npm:14.2.6"
@@ -4303,25 +4271,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:@next/swc-darwin-x64@14.2.3":
-  version: 14.2.3
-  resolution: "@next/swc-darwin-x64@npm:14.2.3"
-  checksum: 10/14003b8901a445a43a6553962dad881be1a975e46741ec6d098fb05feec68ce74e59d518dd289cbe40b2c9a0502530086472a82451930c8293c892a1eecf414d
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@next/swc-linux-arm64-gnu@npm:14.2.6":
   version: 14.2.6
   resolution: "@next/swc-linux-arm64-gnu@npm:14.2.6"
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@next/swc-linux-arm64-gnu@npm:@next/swc-linux-arm64-gnu@14.2.3":
-  version: 14.2.3
-  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.3"
-  checksum: 10/a49bba50785bb24becda6da9656ef5ac77bd324831388ee973e510c1c0e5dd91feec9cb7749be0027e754d930f36d79b5dabc73b284f83a7ab2e5ff6bd72c967
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -4336,14 +4288,6 @@ __metadata:
 "@next/swc-linux-x64-gnu@npm:14.2.6":
   version: 14.2.6
   resolution: "@next/swc-linux-x64-gnu@npm:14.2.6"
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@next/swc-linux-x64-gnu@npm:@next/swc-linux-x64-gnu@14.2.3":
-  version: 14.2.3
-  resolution: "@next/swc-linux-x64-gnu@npm:14.2.3"
-  checksum: 10/d7695dafd5f240435bf5c2c0e0a993955226c2e6c233788794ae8b65731ef227c106a492de3e24e0a96017739725fd2f240f44b91106599fcdeb89745a436fe0
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -5031,9 +4975,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:10.1.0":
-  version: 10.1.0
-  resolution: "@testing-library/dom@npm:10.1.0"
+"@testing-library/dom@npm:10.4.0":
+  version: 10.4.0
+  resolution: "@testing-library/dom@npm:10.4.0"
   dependencies:
     "@babel/code-frame": "npm:^7.10.4"
     "@babel/runtime": "npm:^7.12.5"
@@ -5043,7 +4987,7 @@ __metadata:
     dom-accessibility-api: "npm:^0.5.9"
     lz-string: "npm:^1.5.0"
     pretty-format: "npm:^27.0.2"
-  checksum: 10/6d6ef942deedf547180c76d4cc2c43fe8e52a98ef68be6ba7382a43d3b1e1e5696d9c32ae0b2df12c92ea50023187d132ad2542fc118ba4b900f149e97d019e0
+  checksum: 10/05825ee9a15b88cbdae12c137db7111c34069ed3c7a1bd03b6696cb1b37b29f6f2d2de581ebf03033e7df1ab7ebf08399310293f440a4845d95c02c0a9ecc899
   languageName: node
   linkType: hard
 
@@ -9541,19 +9485,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-no-only-tests@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "eslint-plugin-no-only-tests@npm:3.1.0"
-  checksum: 10/2a5de82f3a732dbd46792661dd0f8546cf819f76d8828968166dee35741e8039904ba473dafe1eed585f401a496d260c2c38354bb887c94bd4ced0ddca00fb62
+"eslint-plugin-no-only-tests@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "eslint-plugin-no-only-tests@npm:3.3.0"
+  checksum: 10/1b3a88e392113240758405966047ef40dd742fbd828f3c8d02a207125edaa5303ef9a0319a778551bd88789110423221fff4e9db02896c20836389b13c27b32e
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:5.1.3":
-  version: 5.1.3
-  resolution: "eslint-plugin-prettier@npm:5.1.3"
+"eslint-plugin-prettier@npm:5.2.1":
+  version: 5.2.1
+  resolution: "eslint-plugin-prettier@npm:5.2.1"
   dependencies:
     prettier-linter-helpers: "npm:^1.0.0"
-    synckit: "npm:^0.8.6"
+    synckit: "npm:^0.9.1"
   peerDependencies:
     "@types/eslint": ">=8.0.0"
     eslint: ">=8.0.0"
@@ -9564,7 +9508,7 @@ __metadata:
       optional: true
     eslint-config-prettier:
       optional: true
-  checksum: 10/4f26a30444adc61ed692cdb5a9f7e8d9f5794f0917151051e66755ce032a08c3cc72c8b5d56101412e90f6d77035bd8194ea8731e9c16aacdd5ae345a8dae188
+  checksum: 10/10ddf68215237e327af09a47adab4c63f3885fda4fb28c4c42d1fc5f47d8a0cc45df6484799360ff1417a0aa3c77c3aaac49d7e9dfd145557b17e2d7ecc2a27c
   languageName: node
   linkType: hard
 
@@ -16145,17 +16089,10 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.11.5"
-    "@esbuild/darwin-arm64": "npm:@esbuild/darwin-arm64@npm:0.20.2"
-    "@esbuild/darwin-x64": "npm:@esbuild/darwin-x64@npm:0.20.2"
-    "@esbuild/linux-x64": "npm:@esbuild/linux-x64@npm:0.20.2"
     "@loadable/babel-plugin": "npm:5.16.1"
     "@loadable/component": "npm:5.16.4"
     "@loadable/server": "npm:5.16.5"
     "@loadable/webpack-plugin": "npm:5.15.2"
-    "@next/swc-darwin-arm64": "npm:@next/swc-darwin-arm64@14.2.3"
-    "@next/swc-darwin-x64": "npm:@next/swc-darwin-x64@14.2.3"
-    "@next/swc-linux-arm64-gnu": "npm:@next/swc-linux-arm64-gnu@14.2.3"
-    "@next/swc-linux-x64-gnu": "npm:@next/swc-linux-x64-gnu@14.2.3"
     "@optimizely/react-sdk": "npm:2.9.2"
     "@storybook/addon-a11y": "npm:8.2.9"
     "@storybook/addon-backgrounds": "npm:8.2.9"
@@ -16170,7 +16107,7 @@ __metadata:
     "@storybook/react": "npm:8.2.9"
     "@storybook/react-webpack5": "npm:8.2.9"
     "@storybook/theming": "npm:8.2.9"
-    "@testing-library/dom": "npm:10.1.0"
+    "@testing-library/dom": "npm:10.4.0"
     "@testing-library/jest-dom": "npm:6.4.8"
     "@testing-library/react": "npm:15.0.7"
     "@testing-library/react-hooks": "npm:8.0.1"
@@ -16219,8 +16156,8 @@ __metadata:
     eslint-plugin-import: "npm:2.29.1"
     eslint-plugin-json: "npm:4.0.0"
     eslint-plugin-jsx-a11y: "npm:6.9.0"
-    eslint-plugin-no-only-tests: "npm:^3.1.0"
-    eslint-plugin-prettier: "npm:5.1.3"
+    eslint-plugin-no-only-tests: "npm:^3.3.0"
+    eslint-plugin-prettier: "npm:5.2.1"
     eslint-plugin-react: "npm:7.35.0"
     eslint-plugin-react-hooks: "npm:4.6.2"
     express: "npm:4.19.2"
@@ -16928,13 +16865,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"synckit@npm:^0.8.6":
-  version: 0.8.8
-  resolution: "synckit@npm:0.8.8"
+"synckit@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "synckit@npm:0.9.1"
   dependencies:
     "@pkgr/core": "npm:^0.1.0"
     tslib: "npm:^2.6.2"
-  checksum: 10/2864a5c3e689ad5b991bebbd8a583c5682c4fa08a4f39986b510b6b5d160c08fc3672444069f8f96ed6a9d12772879c674c1f61e728573eadfa90af40a765b74
+  checksum: 10/bff3903976baf8b699b5483228116d70223781a93b17c70e685c277ee960cdfd1a09cb5a741e6a9ec35e2428f14f4664baec41ccc99a598f267608b2a54f529b
   languageName: node
   linkType: hard
 
