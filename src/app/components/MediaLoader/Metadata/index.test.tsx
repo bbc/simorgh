@@ -4,6 +4,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import { ARTICLE_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Metadata from '.';
 import { aresMediaBlocks } from '../fixture';
 import { MediaBlock } from '../types';
@@ -16,7 +17,9 @@ describe('Media Loader - Metadata', () => {
     let container;
 
     await act(async () => {
-      ({ container } = render(<Metadata blocks={[]} embedURL={embedSource} />));
+      ({ container } = render(<Metadata blocks={[]} embedURL={embedSource} />, {
+        pageType: ARTICLE_PAGE,
+      }));
     });
 
     expect(container).toBeEmptyDOMElement();
@@ -29,10 +32,42 @@ describe('Media Loader - Metadata', () => {
           blocks={aresMediaBlocks as MediaBlock[]}
           embedURL={embedSource}
         />,
+        {
+          pageType: ARTICLE_PAGE,
+        },
       );
     });
 
     const container = Helmet.peek();
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render meta og:url tag if the Metadata is on an "embedded" page', async () => {
+    await act(async () => {
+      render(
+        <Metadata
+          blocks={aresMediaBlocks as MediaBlock[]}
+          embedURL={embedSource}
+        />,
+        {
+          pageType: ARTICLE_PAGE,
+        },
+      );
+    });
+
+    const container = Helmet.peek();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should not render metadata component when pageType is not supported', async () => {
+    let container;
+
+    await act(async () => {
+      ({ container } = render(<Metadata blocks={[]} />, {
+        pageType: MEDIA_PAGE,
+      }));
+    });
+
+    expect(container).toBeEmptyDOMElement();
   });
 });

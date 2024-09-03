@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import { RequestContext } from '#app/contexts/RequestContext';
+import {
+  ARTICLE_PAGE,
+  AV_EMBEDS,
+  CPS_ASSET,
+  MEDIA_ASSET_PAGE,
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
+import { PageTypes } from '#app/models/types/global';
 import { AresMediaBlock, AresMediaMetadataBlock, MediaBlock } from '../types';
+
+const SUPPORTED_PAGE_TYPES = [
+  AV_EMBEDS,
+  ARTICLE_PAGE,
+  CPS_ASSET,
+  MEDIA_ASSET_PAGE,
+  MEDIA_ARTICLE_PAGE,
+] as PageTypes[];
 
 const getThumbnailUri = (url?: string) => {
   if (!url) return null;
@@ -26,9 +43,14 @@ const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
 type Props = {
   blocks: MediaBlock[];
   embedURL?: string;
+  embedded?: boolean;
 };
 
-const Metadata = ({ blocks, embedURL }: Props) => {
+const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
+  const { pageType } = useContext(RequestContext);
+
+  if (!SUPPORTED_PAGE_TYPES.includes(pageType)) return null;
+
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -58,7 +80,7 @@ const Metadata = ({ blocks, embedURL }: Props) => {
 
   return (
     <Helmet>
-      {embedURL && <meta property="og:url" content={embedURL} />}
+      {embedded && embedURL && <meta property="og:url" content={embedURL} />}
       <script type="application/ld+json">{JSON.stringify(metadataJson)}</script>
     </Helmet>
   );
