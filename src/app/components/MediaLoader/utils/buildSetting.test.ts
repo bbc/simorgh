@@ -3,7 +3,12 @@ import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import buildSettings from './buildSettings';
-import { aresMediaBlocks, clipMediaBlocks } from '../fixture';
+import {
+  aresMediaBlocks,
+  clipMediaBlocks,
+  aresMediaPlayerBlock,
+  aresMediaBlock,
+} from '../fixture';
 import {
   BuildConfigProps,
   ConfigBuilderReturnProps,
@@ -19,6 +24,7 @@ const baseSettings = {
   service: 'mundo' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'MUNDO',
+  pathname: '/mundo/av-embeds/srbija-68707945',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -50,15 +56,16 @@ describe('buildSettings', () => {
           autoplay: true,
           product: 'news',
           statsObject: {
-            clipPID: 'p01thw22',
+            clipPID: 'p01thw20',
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'MUNDO',
           },
           enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          externalEmbedUrl: '',
           playlistObject: {
             title:
               "BBC launch trailer for We Know Our Place women's sport campaign",
@@ -151,15 +158,17 @@ describe('buildSettings', () => {
           autoplay: true,
           product: 'news',
           statsObject: {
-            clipPID: 'p01k6msp',
+            clipPID: 'p01k6msm',
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'MUNDO',
+            episodePID: null,
           },
           enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          externalEmbedUrl: '',
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -222,15 +231,17 @@ describe('buildSettings', () => {
           preload: 'high',
           product: 'news',
           statsObject: {
-            clipPID: 'p01k6msp',
+            clipPID: 'p01k6msm',
+            episodePID: null,
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'MUNDO',
           },
           enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
           appName: 'news-mundo',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
-          externalEmbedUrl: '',
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -265,6 +276,80 @@ describe('buildSettings', () => {
           translatedNoJSMessage:
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
+    });
+
+    it('Should process an AresMedia block into a valid playlist item for syndication.', () => {
+      const mockWindowObj = {
+        location: {
+          hostname: 'https://www.bbc.com/',
+        },
+      } as Window & typeof globalThis;
+
+      jest
+        .spyOn(window, 'window', 'get')
+        .mockImplementation(() => mockWindowObj);
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+        embedded: true,
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01k6msm',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'MUNDO',
+            episodePID: null,
+          },
+          enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
+          insideIframe: true,
+          embeddedOffsite: true,
+          appName: 'news-mundo',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          playlistObject: {
+            title: 'Five things ants can teach us about management',
+            summary: 'This is a caption!',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+            items: [
+              { duration: 191, kind: 'programme', versionID: 'p01k6msp' },
+            ],
+            guidance: 'Contains strong language and adult humour.',
+            embedRights: 'allowed',
+          },
+          ui: {
+            controls: { enabled: true },
+            locale: { lang: 'es' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: 'PT3M11S',
+            duration: '03:11',
+            durationSpoken: 'Duration 3,11',
+            guidanceMessage: 'Contains strong language and adult humour.',
+            title: 'Five things ants can teach us about management',
+            type: 'video',
+          },
+          placeholderSrc:
+            'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+          placeholderSrcset:
+            'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        } satisfies PlaceholderConfig,
         showAds: false,
       } satisfies ConfigBuilderReturnProps);
     });
@@ -376,9 +461,10 @@ describe('buildSettings', () => {
       });
 
       expect(result?.playerConfig.statsObject).toStrictEqual({
-        clipPID: 'p01k6msp',
+        clipPID: 'p01k6msm',
         destination: 'WS_NEWS_LANGUAGES',
         producer: 'MUNDO',
+        episodePID: null,
       });
     });
 
@@ -397,6 +483,106 @@ describe('buildSettings', () => {
       expect(result?.playerConfig.playlistObject).toHaveProperty(
         'title',
         'Five things ants can teach us about management',
+      );
+    });
+
+    it('Should have a `statsObject.clipPID` when subType is "clip"', async () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+      expect(result?.playerConfig.statsObject).toStrictEqual({
+        clipPID: 'p01k6msm',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+        episodePID: null,
+      });
+    });
+
+    it('Should have a `statsObject.episodePID` when subType is "episode"', async () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...aresMediaPlayerBlock,
+                model: {
+                  id: 'p01k6msm',
+                  subType: 'episode',
+                },
+              },
+            ],
+          },
+        },
+      ];
+      const result = buildSettings({
+        ...baseSettings,
+        // @ts-expect-error partial data used for testing purposes
+        blocks: myFixture as MediaBlock[],
+      });
+      expect(result?.playerConfig.statsObject).toStrictEqual({
+        clipPID: null,
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'MUNDO',
+        episodePID: 'p01k6msm',
+      });
+    });
+
+    it('Should have embeddedOffsite property with value `true` to support syndicated routes', async () => {
+      const result = buildSettings({
+        ...baseSettings,
+        embedded: true,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+
+      expect(result?.playerConfig).toHaveProperty('embeddedOffsite', true);
+    });
+
+    it('Should have insideIframe property with value `true` to support syndicated and amp routes', async () => {
+      const result = buildSettings({
+        ...baseSettings,
+        embedded: true,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+
+      expect(result?.playerConfig).toHaveProperty('insideIframe', true);
+    });
+
+    it('Should set the embed rights  when embedding is allowed', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        embedded: true,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+      expect(result?.playerConfig).toHaveProperty('playlistObject.embedRights');
+    });
+
+    it('Should exclude the embed rights when embedding is prohibited', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...aresMediaPlayerBlock,
+                model: {
+                  id: 'p01k6msm',
+                  embedding: false,
+                },
+              },
+            ],
+          },
+        },
+      ];
+      const result = buildSettings({
+        ...baseSettings,
+        embedded: true,
+        // @ts-expect-error partial data used for testing purposes
+        blocks: myFixture as MediaBlock[],
+      });
+      expect(result?.playerConfig).not.toHaveProperty(
+        'playlistObject.embedRights',
       );
     });
   });

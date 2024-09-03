@@ -15,12 +15,14 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  insideIframe?: boolean;
+  embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
   statsObject: {
-    clipPID?: string;
+    clipPID?: string | null;
+    episodePID?: string | null;
     destination: string;
     producer: string | '';
-    episodePID?: string;
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
@@ -63,6 +65,8 @@ export type ConfigBuilderProps = {
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedUrl?: string;
+  embedded?: boolean;
 };
 
 export type PlaceholderConfig = {
@@ -145,7 +149,9 @@ export type AresMediaMetadataBlock = {
     title: string;
     imageUrl: string;
     format: MediaType;
+    id: string;
     embedding: boolean;
+    subType: string;
     versions: {
       versionId: string;
       duration: number;
@@ -171,6 +177,7 @@ export type ClipMediaBlock = {
       urlTemplate: string;
     }[];
     video: {
+      id: string;
       title: string;
       version: {
         id: string;
@@ -202,4 +209,6 @@ export type BuildConfigProps = {
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedded?: boolean;
+  pathname: string;
 };
