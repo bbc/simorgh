@@ -23,7 +23,12 @@ const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
   return new Date(uploadDate).toISOString();
 };
 
-const Metadata = ({ blocks }: { blocks: MediaBlock[] }) => {
+type Props = {
+  blocks: MediaBlock[];
+  embedURL?: string;
+};
+
+const Metadata = ({ blocks, embedURL }: Props) => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -46,7 +51,7 @@ const Metadata = ({ blocks }: { blocks: MediaBlock[] }) => {
       metadata?.versions?.[0]?.availableFrom,
       metadata?.firstPublished,
     ),
-    embedURL: '', // TODO: Get this from config settings
+    embedURL,
   };
 
   return (
