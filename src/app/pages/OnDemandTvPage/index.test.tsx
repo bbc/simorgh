@@ -217,7 +217,7 @@ describe('OnDemand TV Brand Page ', () => {
     ).toBeInTheDocument();
   });
 
-  it('should show the video player on canonical with no live override', async () => {
+  it('should show the video player', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     fetchMock.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData } = await getInitialData({
@@ -231,36 +231,12 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const videoPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
 
-    expect(videoPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
+    const videoPlayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
     );
-  });
 
-  it('should show the video player on canonical with live override', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      pageType,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'pashto',
-    });
-    const videoPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(videoPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
-    );
+    expect(videoPlayer).toBeInTheDocument();
   });
 
   it('should show the expired content message if episode is expired', async () => {
