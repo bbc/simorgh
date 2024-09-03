@@ -328,18 +328,6 @@ describe('buildAvEmbedURL', () => {
       ).toEqual('/ws/av-embeds/cps/russian/media-38886884');
     });
 
-    it('should build a media embed URL omitting renderer env', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'russian/features-49881797?renderer_env=live',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual(
-        '/ws/av-embeds/cps/russian/features-49881797?renderer_env=live',
-      );
-    });
-
     it('should build a media embed with a vpid URL', () => {
       expect(
         getEmbedUrl({

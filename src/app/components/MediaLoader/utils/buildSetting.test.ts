@@ -24,7 +24,7 @@ const baseSettings = {
   service: 'serbian' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'SERBIAN',
-  id: 'serbian/cyr/srbija-68707945',
+  id: 'serbian/lat/srbija-68707945',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -62,7 +62,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p01thw22/sr-latn',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01thw22/sr-latn',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -164,7 +164,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p01k6msp/sr-latn',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -236,7 +236,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p01k6msp/sr-latn',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -307,7 +307,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p01k6msp/sr-latn',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
           insideIframe: true,
           embeddedOffsite: true,
           appName: 'news-serbian',

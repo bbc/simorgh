@@ -35,19 +35,4 @@ describe('Media Loader - Metadata', () => {
     const container = Helmet.peek();
     expect(container).toMatchSnapshot();
   });
-
-  it('should render meta og:url tag if the Metadata is on an "embedded" page', async () => {
-    await act(async () => {
-      render(
-        <Metadata
-          blocks={aresMediaBlocks as MediaBlock[]}
-          embedURL={embedSource}
-          embedded
-        />,
-      );
-    });
-
-    const container = Helmet.peek();
-    expect(container).toMatchSnapshot();
-  });
 });

@@ -197,11 +197,9 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   return (
     <>
-      <Metadata
-        blocks={blocks}
-        embedURL={playerConfig?.externalEmbedUrl}
-        embedded={embedded}
-      />
+      {embedded && (
+        <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+      )}
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}

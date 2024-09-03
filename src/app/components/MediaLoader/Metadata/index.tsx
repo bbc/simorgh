@@ -26,10 +26,9 @@ const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
 type Props = {
   blocks: MediaBlock[];
   embedURL?: string;
-  embedded?: boolean;
 };
 
-const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
+const Metadata = ({ blocks, embedURL }: Props) => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -59,7 +58,7 @@ const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
 
   return (
     <Helmet>
-      {embedded && embedURL && <meta property="og:url" content={embedURL} />}
+      {embedURL && <meta property="og:url" content={embedURL} />}
       <script type="application/ld+json">{JSON.stringify(metadataJson)}</script>
     </Helmet>
   );
