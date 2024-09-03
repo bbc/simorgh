@@ -108,7 +108,7 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: videoId,
+        ...(videoId && { clipPID: videoId }),
       },
     },
     placeholderConfig,

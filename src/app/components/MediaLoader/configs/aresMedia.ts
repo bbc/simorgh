@@ -122,8 +122,8 @@ export default ({
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: subType === 'clip' ? videoId : null,
-        episodePID: subType === 'episode' ? videoId : null,
+        ...(subType === 'clip' && { clipPID: videoId }),
+        ...(subType === 'episode' && { episodePID: videoId }),
       },
     },
     placeholderConfig,
