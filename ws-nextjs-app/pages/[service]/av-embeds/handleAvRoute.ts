@@ -8,13 +8,13 @@ import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import getEmbedURL from '#app/lib/utilities/getUrlHelpers/getEmbedUrl';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import getAgent from '../../../utilities/undiciAgent';
-import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 
 const logger = nodeLogger(__filename);
 
@@ -118,12 +118,10 @@ export default async (context: GetServerSidePropsContext) => {
   const { caption = null } = captionBlock?.model ?? {};
 
   const mediaURL =
-    buildAvEmbedURL({
-      assetId: parsedRoute.assetId,
-      mediaDelimiter: parsedRoute.mediaDelimiter,
-      mediaId: parsedRoute.mediaId,
-      service,
-      variant,
+    getEmbedURL({
+      type: 'avEmbed',
+      mediaId: resolvedUrl,
+      queryString: '',
     }) ?? null;
 
   let routingInfoLogger = logger.debug;
@@ -154,9 +152,11 @@ export default async (context: GetServerSidePropsContext) => {
               promoSummary,
               type: AV_EMBEDS,
             },
+            embedded: true,
           }
         : null,
       pageType: AV_EMBEDS,
+      pathname: resolvedUrl,
       service,
       status: pageStatus,
       variant,
