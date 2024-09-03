@@ -81,7 +81,7 @@ const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
   const metadataJson = Object.fromEntries(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     Object.entries(schema).filter(([_, v]) => v != null),
-  );
+  ) as typeof schema;
 
   return (
     <Helmet>
