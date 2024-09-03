@@ -2,7 +2,7 @@ import services from '#lib/config/services/loadableConfig';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
-type Platform = 'cps' | 'optimo' | 'tipo';
+type Platform = 'cps' | 'articles' | 'tipo';
 
 // Asset ID regexes
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
@@ -96,7 +96,7 @@ const extractPlatform = (query: Query): Platform | null => {
       break;
     }
     if (OPTIMO_ID_REGEX.test(id)) {
-      platform = 'optimo';
+      platform = 'articles';
       break;
     }
     if (TIPO_ID_REGEX.test(id)) {

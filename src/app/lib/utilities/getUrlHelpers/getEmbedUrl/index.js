@@ -42,14 +42,14 @@ const getBaseUrl = (queryString, isAmp) => {
   }
 };
 
-const handleAvEmbed = ({ mediaPathname }) => {
-  const parsedRoute = parseAvRoute(mediaPathname);
-  const { service, variant, mediaDelimiter, mediaId, assetId } = parsedRoute;
-  const siteUri = `${service}${variant ? `/${variant}` : ''}`;
-  const mediaPath =
-    mediaDelimiter && mediaId ? `/${mediaDelimiter}/${mediaId}` : '';
+const handleAvEmbed = ({ mediaId, isAmp, queryString }) => {
+  const parsedRoute = parseAvRoute(mediaId);
+  const { platform } = parsedRoute;
 
-  return `https://www.bbc.com/${siteUri}/av-embeds/${assetId}${mediaPath}`;
+  const baseUrl = getBaseUrl(queryString, isAmp);
+  const url = `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}`;
+
+  return url;
 };
 
 const handleMorphEmbed = ({ type, mediaId, isAmp, queryString }) => {
@@ -66,7 +66,7 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
   const morphAsset = type !== 'avEmbed';
   const embedUrl = morphAsset
     ? handleMorphEmbed({ type, mediaId, isAmp, queryString })
-    : handleAvEmbed({ mediaPathname: mediaId });
+    : handleAvEmbed({ mediaId, isAmp, queryString });
   return embedUrl;
 };
 
