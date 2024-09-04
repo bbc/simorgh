@@ -8,7 +8,7 @@ export type MediaTypes =
   | 'cps'
   | 'articles'
   | 'live'
-  | 'legacyMedia';
+  | 'legacy';
 
 const AV_ROUTE = 'ws/av-embeds';
 
