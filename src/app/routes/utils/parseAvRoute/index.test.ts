@@ -42,7 +42,7 @@ const EXAMPLE_ROUTES = [
     route: '/ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig',
     expectedOutput: {
       service: null,
-      platform: 'optimo',
+      platform: 'articles',
       assetId: 'cd1rmn075d1o',
       mediaId: 'p0jd37n8',
       lang: 'ig',

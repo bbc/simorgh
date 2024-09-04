@@ -2,6 +2,7 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   ClipMediaBlock,
   ConfigBuilderProps,
@@ -15,6 +16,9 @@ import shouldDisplayAds from '../utils/shouldDisplayAds';
 const DEFAULT_WIDTH = 512;
 
 export default ({
+  id,
+  lang,
+  isAmp,
   blocks,
   basePlayerConfig,
   translations,
@@ -39,6 +43,8 @@ export default ({
   const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
 
   const title = video?.title;
+
+  const videoId = video?.id;
 
   const captionBlock = getCaptionBlock(blocks, 'live');
 
@@ -86,12 +92,20 @@ export default ({
   };
 
   const items = [{ versionID, kind, duration: rawDuration }];
+
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+
+  const embedUrl = getEmbedURL({
+    mediaId: `${id}/${versionID}/${lang}`,
+    type: 'avEmbed',
+    isAmp,
+  });
 
   return {
     mediaType: type || 'video',
     playerConfig: {
       ...basePlayerConfig,
+      ...(embedUrl && { externalEmbedUrl: embedUrl }),
       playlistObject: {
         title,
         summary: caption || '',
@@ -106,7 +120,7 @@ export default ({
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID,
+        ...(videoId && { clipPID: videoId }),
       },
     },
     placeholderConfig,

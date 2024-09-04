@@ -32,52 +32,54 @@ export const aresMediaCaptionBlock = {
   },
 };
 
+export const aresMediaPlayerBlock = {
+  id: 'c77c0598',
+  blockId: 'urn:bbc:ares::clip:p01k6msm',
+  type: 'aresMediaMetadata',
+  model: {
+    id: 'p01k6msm',
+    subType: 'clip',
+    format: 'video',
+    title: 'Five things ants can teach us about management',
+    synopses: {
+      short:
+        'They may be tiny, but us humans could learn a thing or two from ants.',
+    },
+    imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+    imageCopyright: 'BBC',
+    embedding: true,
+    advertising: true,
+    versions: [
+      {
+        versionId: 'p01k6msp',
+        types: ['Original'],
+        duration: 191,
+        durationISO8601: 'PT3M11S',
+        warnings: {
+          short: 'Contains strong language and adult humour.',
+          long: 'Contains strong language and adult humour.',
+        },
+        availableTerritories: {
+          uk: true,
+          nonUk: true,
+        },
+        availableFrom: 1540218932000,
+      },
+    ],
+    syndication: {
+      destinations: [],
+    },
+    smpKind: 'programme',
+  },
+  position: [5, 2, 1],
+};
+
 export const aresMediaBlock = {
   id: '80e150c0',
   type: 'aresMedia',
   model: {
     blocks: [
-      {
-        id: 'c77c0598',
-        blockId: 'urn:bbc:ares::clip:p01k6msm',
-        type: 'aresMediaMetadata',
-        model: {
-          id: 'p01k6msm',
-          subType: 'clip',
-          format: 'video',
-          title: 'Five things ants can teach us about management',
-          synopses: {
-            short:
-              'They may be tiny, but us humans could learn a thing or two from ants.',
-          },
-          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-          imageCopyright: 'BBC',
-          embedding: true,
-          advertising: true,
-          versions: [
-            {
-              versionId: 'p01k6msp',
-              types: ['Original'],
-              duration: 191,
-              durationISO8601: 'PT3M11S',
-              warnings: {
-                short: 'Contains strong language and adult humour.',
-                long: 'Contains strong language and adult humour.',
-              },
-              availableTerritories: {
-                uk: true,
-                nonUk: true,
-              },
-              availableFrom: 1540218932000,
-            },
-          ],
-          syndication: {
-            destinations: [],
-          },
-          smpKind: 'programme',
-        },
-        position: [5, 2, 1],
-      },
+      aresMediaPlayerBlock,
       {
         id: 'd8f26383',
         type: 'image',

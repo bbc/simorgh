@@ -4,6 +4,7 @@ import {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
+import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   AresMediaBlock,
   AresMediaMetadataBlock,
@@ -18,29 +19,28 @@ import shouldDisplayAds from '../utils/shouldDisplayAds';
 const DEFAULT_WIDTH = 512;
 
 export default ({
+  id,
   pageType,
   blocks,
   basePlayerConfig,
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedded,
+  lang,
+  isAmp,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const aresMediaBlock: AresMediaBlock = filterForBlockType(
-    blocks,
-    'aresMedia',
-  );
+  const { model: aresMedia }: AresMediaBlock =
+    filterForBlockType(blocks, 'aresMedia') ?? {};
 
   const { model: aresMediaMetadata }: AresMediaMetadataBlock =
-    filterForBlockType(aresMediaBlock?.model?.blocks, 'aresMediaMetadata') ??
-    {};
+    filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
 
-  const aresMediaImageBlock: OptimoImageBlock = filterForBlockType(
-    aresMediaBlock?.model?.blocks,
-    'image',
-  );
+  const { model: aresMediaImage }: OptimoImageBlock =
+    filterForBlockType(aresMedia?.blocks, 'image') ?? {};
 
   const { model: rawImage }: OptimoRawImageBlock =
-    filterForBlockType(aresMediaImageBlock?.model?.blocks, 'rawImage') ?? {};
+    filterForBlockType(aresMediaImage?.blocks, 'rawImage') ?? {};
 
   const { originCode = '', locator = '' } = rawImage ?? {};
 
@@ -55,6 +55,8 @@ export default ({
   const versionID = versionsBlock?.versionId ?? '';
 
   const format = aresMediaMetadata?.format;
+
+  const actualFormat = format === 'audio_video' ? 'video' : format;
 
   const rawDuration = versionsBlock?.duration ?? 0;
 
@@ -77,18 +79,27 @@ export default ({
 
   const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
+  const subType = aresMediaMetadata?.subType;
+
+  const videoId = aresMediaMetadata?.id;
+
   const holdingImageURL = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
 
-  const items = [{ versionID, kind, duration: rawDuration }];
+  const isLive = aresMediaMetadata?.live ?? false;
+
+  const items = [
+    { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
+  ];
+
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
 
   const placeholderConfig = buildPlaceholderConfig({
     title,
-    type: format || 'video',
+    type: actualFormat || 'video',
     duration: rawDuration,
     durationISO8601: versionsBlock?.durationISO8601,
     guidanceMessage,
@@ -98,11 +109,19 @@ export default ({
     placeholderImageLocator: locator,
   });
 
+  const embedUrl = getEmbedURL({
+    mediaId: `${id}/${versionID}/${lang}`,
+    type: 'avEmbed',
+    isAmp,
+  });
+
   return {
-    mediaType: format || 'video',
+    mediaType: actualFormat || 'video',
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
+      ...(embedded && { insideIframe: true, embeddedOffsite: true }),
+      ...(embedUrl && { externalEmbedUrl: embedUrl }),
       playlistObject: {
         title,
         summary: caption || '',
@@ -110,11 +129,13 @@ export default ({
         items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
+        ...(isLive && { simulcast: true }),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID,
+        ...(subType === 'clip' && { clipPID: videoId }),
+        ...(subType === 'episode' && { episodePID: videoId }),
       },
     },
     placeholderConfig,

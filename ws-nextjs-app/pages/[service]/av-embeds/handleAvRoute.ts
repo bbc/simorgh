@@ -14,7 +14,6 @@ import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import getAgent from '../../../utilities/undiciAgent';
-import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
 
 const logger = nodeLogger(__filename);
 
@@ -117,14 +116,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { caption = null } = captionBlock?.model ?? {};
 
-  const mediaURL =
-    buildAvEmbedURL({
-      assetId: parsedRoute.assetId,
-      mediaDelimiter: parsedRoute.mediaDelimiter,
-      mediaId: parsedRoute.mediaId,
-      service,
-      variant,
-    }) ?? null;
+  const assetId = avEmbed?.metadata?.id?.split(':')?.pop() ?? null;
 
   let routingInfoLogger = logger.debug;
 
@@ -140,6 +132,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
+      id: assetId,
       isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
@@ -150,13 +143,14 @@ export default async (context: GetServerSidePropsContext) => {
               headline,
               imageUrl,
               language,
-              mediaURL,
               promoSummary,
               type: AV_EMBEDS,
             },
+            embedded: true,
           }
         : null,
       pageType: AV_EMBEDS,
+      pathname: resolvedUrl,
       service,
       status: pageStatus,
       variant,
