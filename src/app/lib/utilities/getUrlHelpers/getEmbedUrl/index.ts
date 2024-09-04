@@ -63,14 +63,14 @@ const handleAvEmbed = ({ mediaId, isAmp, embedded = false }: AvEmbedProps) => {
 
   // 'embedded' is "true" for media players rendered by the av-embeds route: AMP, Syndication
   if (embedded) {
-    const isAmpRoute = isAmp ? '/amp' : '';
+    if (isAmp) return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}/amp`;
 
     if (platform === 'cps') {
-      return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${mediaDelimiter ? `/${mediaDelimiter}/${parsedMediaId}` : ''}${isAmpRoute}`;
+      return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${mediaDelimiter ? `/${mediaDelimiter}/${parsedMediaId}` : ''}`;
     }
 
     if (platform === 'articles') {
-      return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}${isAmpRoute}`;
+      return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}`;
     }
   }
 

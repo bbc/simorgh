@@ -293,7 +293,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/serbian/cyr/av-embeds/srbija-68707945/amp',
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -338,7 +338,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwj/amp',
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/vpid/p0cfmdwj/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -383,7 +383,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/serbian/cyr/av-embeds/srbija-68707945/pid/p0cfmdwn/amp',
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/pid/p0cfmdwn/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -428,7 +428,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/russian/av-embeds/media-38886884/amp',
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/media-38886884/amp',
       },
       {
         description: 'CPS - not embedded',

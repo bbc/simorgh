@@ -116,8 +116,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { caption = null } = captionBlock?.model ?? {};
 
-  const assetId = avEmbed?.metadata?.id?.split(':')?.pop() ?? null;
-
   let routingInfoLogger = logger.debug;
 
   if (pageStatus !== OK) {
@@ -132,7 +130,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
-      id: assetId,
+      id: resolvedUrl,
       isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
