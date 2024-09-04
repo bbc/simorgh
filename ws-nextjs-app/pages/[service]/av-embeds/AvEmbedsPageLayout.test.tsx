@@ -58,8 +58,6 @@ describe('AV Embeds Page', () => {
     const actual = helmetMetaTags.filter(tag => tag.property === 'og:url')[0]
       .content;
 
-    expect(actual).toEqual(
-      '/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p0cfmdwn/sr-cyrl',
-    );
+    expect(actual).toEqual('/serbian/cyr/av-embeds/srbija-68707945');
   });
 });
