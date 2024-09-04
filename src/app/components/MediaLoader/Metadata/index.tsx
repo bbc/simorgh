@@ -5,7 +5,8 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import {
   ARTICLE_PAGE,
   AV_EMBEDS,
-  CPS_ASSET,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
@@ -15,7 +16,8 @@ import { AresMediaBlock, AresMediaMetadataBlock, MediaBlock } from '../types';
 const SUPPORTED_PAGE_TYPES = [
   AV_EMBEDS,
   ARTICLE_PAGE,
-  CPS_ASSET,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
   MEDIA_ARTICLE_PAGE,
 ] as PageTypes[];
