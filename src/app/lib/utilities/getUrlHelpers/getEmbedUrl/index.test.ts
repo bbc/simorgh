@@ -1,4 +1,4 @@
-import getEmbedUrl, { makeAbsolute } from '.';
+import getEmbedUrl, { makeAbsolute, MediaTypes } from '.';
 
 const mediaId = 'foo/bar';
 const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
@@ -6,7 +6,7 @@ const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 const embedUrlLiveOverride = '?morph_env=live';
 
-const setEnvironment = environment => {
+const setEnvironment = (environment: string) => {
   process.env.SIMORGH_APP_ENV = environment;
 };
 
@@ -18,8 +18,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
-      queryString: '',
+      type: 'articles' as MediaTypes,
     },
   },
   {
@@ -30,8 +29,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'articles',
-      queryString: '',
+      type: 'articles' as MediaTypes,
     },
   },
   {
@@ -41,7 +39,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: testOverrideParam,
     },
   },
@@ -53,7 +51,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: testOverrideParam,
     },
   },
@@ -64,7 +62,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -76,7 +74,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -87,8 +85,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'media',
-      queryString: '',
+      type: 'media' as MediaTypes,
     },
   },
   {
@@ -98,8 +95,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
-      queryString: '',
+      type: 'articles' as MediaTypes,
     },
   },
   {
@@ -110,8 +106,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'articles',
-      queryString: '',
+      type: 'articles' as MediaTypes,
     },
   },
   {
@@ -121,7 +116,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: testOverrideParam,
     },
   },
@@ -133,7 +128,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: testOverrideParam,
     },
   },
@@ -144,7 +139,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -156,7 +151,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -167,7 +162,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId: legacyId,
-      type: 'legacy',
+      type: 'legacy' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -179,7 +174,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId: legacyId,
-      type: 'legacy',
+      type: 'legacy' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -190,8 +185,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId: legacyId,
-      type: 'legacy',
-      queryString: '',
+      type: 'legacy' as MediaTypes,
     },
   },
   {
@@ -202,8 +196,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId: legacyId,
-      type: 'legacy',
-      queryString: '',
+      type: 'legacy' as MediaTypes,
     },
   },
   // Local environment
@@ -214,7 +207,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'articles',
+      type: 'articles' as MediaTypes,
     },
   },
   {
@@ -225,7 +218,7 @@ const testCases = [
     embedObject: {
       isAmp: true,
       mediaId,
-      type: 'media',
+      type: 'media' as MediaTypes,
     },
   },
   {
@@ -235,7 +228,7 @@ const testCases = [
     before: setEnvironment,
     embedObject: {
       mediaId,
-      type: 'media',
+      type: 'media' as MediaTypes,
       queryString: liveOverrideParam,
     },
   },
@@ -285,79 +278,149 @@ describe('makeAbsolute makes a relative URL absolute', () => {
 });
 
 describe('buildAvEmbedURL', () => {
-  describe('service with variant', () => {
-    it('should build an embed URL for the page', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'serbian/cyr/srbija-68707945',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('/ws/av-embeds/cps/serbian/cyr/srbija-68707945');
+  describe('CPS assets', () => {
+    describe('service with variant', () => {
+      it('should build an embed URL for the page', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'serbian/cyr/srbija-68707945',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/serbian/cyr/av-embeds/srbija-68707945');
+      });
+
+      it('should build an embed with a vpid URL for the page', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'serbian/cyr/srbija-68707945/vpid/p0cfmdwj',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwj');
+      });
+
+      it('should build an embed with a pid URL for the page', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'serbian/cyr/srbija-68707945/pid/p0cfmdwn',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/serbian/cyr/av-embeds/srbija-68707945/pid/p0cfmdwn');
+      });
     });
 
-    it('should build an embed with a vpid URL for the page', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'serbian/cyr/srbija-68707945/vpid/p0cfmdwj',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('/ws/av-embeds/cps/serbian/cyr/srbija-68707945/vpid/p0cfmdwj');
+    describe('service without variant', () => {
+      it('should build a media embed URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'russian/media-38886884',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/russian/av-embeds/media-38886884');
+      });
+
+      it('should build a media embed with a vpid URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'russian/49843970/vpid/p07pd78q',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/russian/av-embeds/49843970/vpid/p07pd78q');
+      });
+
+      it('should build a media embed with a pid URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'russian/features-49881797/pid/p07q3wwl',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/russian/av-embeds/features-49881797/pid/p07q3wwl');
+      });
     });
 
-    it('should build an embed with a pid URL for the page', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'serbian/cyr/srbija-68707945/pid/p0cfmdwn',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('/ws/av-embeds/cps/serbian/cyr/srbija-68707945/pid/p0cfmdwn');
+    describe('AMP routes', () => {
+      it('should build an AMP embed URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'serbian/cyr/srbija-68707945/sr-cyrl',
+            type: 'avEmbed',
+            isAmp: true,
+          }),
+        ).toEqual(
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/sr-cyrl/amp',
+        );
+      });
+
+      it('should build an AMP embed with a vpid URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'serbian/cyr/srbija-68707945/p0cfmdwn/sr-cyrl',
+            type: 'avEmbed',
+            isAmp: true,
+          }),
+        ).toEqual(
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p0cfmdwn/sr-cyrl/amp',
+        );
+      });
+
+      it('should build an AMP embed with a pid URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'russian/features-49881797/pid/p07q3wwl',
+            type: 'avEmbed',
+            isAmp: true,
+          }),
+        ).toEqual(
+          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/features-49881797/pid/p07q3wwl/amp',
+        );
+      });
     });
   });
 
-  describe('service without variant', () => {
-    it('should build a media embed URL', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'russian/media-38886884',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('/ws/av-embeds/cps/russian/media-38886884');
+  describe('Optimo assets', () => {
+    describe('service without variant', () => {
+      it('should build an embed URL for the page', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'c805k05kr73o',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/ws/av-embeds/articles/c805k05kr73o');
+      });
+
+      it('should build an embed with a vpid URL for the page', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'c805k05kr73o/pXXXXXo',
+            type: 'avEmbed',
+          }),
+        ).toEqual('/ws/av-embeds/articles/c805k05kr73o/pXXXXXo');
+      });
     });
 
-    it('should build a media embed URL omitting renderer env', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'russian/features-49881797?renderer_env=live',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual(
-        '/ws/av-embeds/cps/russian/features-49881797?renderer_env=live',
-      );
-    });
+    describe('AMP routes', () => {
+      it('should build an AMP embed URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'c805k05kr73o',
+            type: 'avEmbed',
+            isAmp: true,
+          }),
+        ).toEqual(
+          'https://polling.test.bbc.co.uk/ws/av-embeds/articles/c805k05kr73o/amp',
+        );
+      });
 
-    it('should build a media embed with a vpid URL', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'russian/49843970/vpid/p07pd78q',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('/ws/av-embeds/cps/russian/49843970/vpid/p07pd78q');
-    });
-
-    it('should build a media embed with a pid URL', () => {
-      expect(
-        getEmbedUrl({
-          mediaId: 'russian/features-49881797/pid/p07q3wwl',
-          type: 'avEmbed',
-          queryString: '',
-        }),
-      ).toEqual('/ws/av-embeds/cps/russian/features-49881797/pid/p07q3wwl');
+      it('should build an AMP embed with a vpid URL', () => {
+        expect(
+          getEmbedUrl({
+            mediaId: 'c805k05kr73o/pXXXXXo',
+            type: 'avEmbed',
+            isAmp: true,
+          }),
+        ).toEqual(
+          'https://polling.test.bbc.co.uk/ws/av-embeds/articles/c805k05kr73o/pXXXXXo/amp',
+        );
+      });
     });
   });
 });

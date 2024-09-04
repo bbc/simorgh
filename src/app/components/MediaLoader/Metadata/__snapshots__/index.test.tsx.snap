@@ -31,12 +31,7 @@ exports[`Media Loader - Metadata should render meta og:url tag if the Metadata i
   "encode": true,
   "htmlAttributes": {},
   "linkTags": [],
-  "metaTags": [
-    {
-      "content": "https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB",
-      "property": "og:url",
-    },
-  ],
+  "metaTags": [],
   "noscriptTags": [],
   "onChangeClientState": [Function],
   "scriptTags": [

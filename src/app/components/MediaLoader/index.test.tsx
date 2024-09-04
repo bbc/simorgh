@@ -148,4 +148,24 @@ describe('MediaLoader', () => {
       expect(caption[3]?.textContent).toBe('This is a caption!');
     });
   });
+
+  describe('Metadata', () => {
+    it('should render metadata tags when media player is embedded', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded />,
+          {
+            id: 'cn8jgj8rjppo',
+          },
+        );
+      });
+
+      const helmetMetaTags = Helmet.peek().metaTags;
+
+      expect(helmetMetaTags[0]).toEqual({
+        property: 'og:url',
+        content: '/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB',
+      });
+    });
+  });
 });

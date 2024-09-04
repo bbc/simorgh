@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import { RequestContext } from '#app/contexts/RequestContext';
+import {
+  ARTICLE_PAGE,
+  AV_EMBEDS,
+  CPS_ASSET,
+  MEDIA_ASSET_PAGE,
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
+import { PageTypes } from '#app/models/types/global';
 import { AresMediaBlock, AresMediaMetadataBlock, MediaBlock } from '../types';
+
+const SUPPORTED_PAGE_TYPES = [
+  AV_EMBEDS,
+  ARTICLE_PAGE,
+  CPS_ASSET,
+  MEDIA_ASSET_PAGE,
+  MEDIA_ARTICLE_PAGE,
+] as PageTypes[];
 
 const getThumbnailUri = (url?: string) => {
   if (!url) return null;
@@ -30,6 +47,10 @@ type Props = {
 };
 
 const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
+  const { pageType } = useContext(RequestContext);
+
+  if (!SUPPORTED_PAGE_TYPES.includes(pageType)) return null;
+
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
@@ -43,19 +64,24 @@ const Metadata = ({ blocks, embedURL, embedded = false }: Props) => {
 
   if (!metadata) return null;
 
-  const metadataJson = {
+  const schema = {
     '@context': 'http://schema.org',
     '@type': metadata?.format === 'audio' ? 'AudioObject' : 'VideoObject',
-    name: metadata?.title,
-    description: metadata?.synopses?.short,
+    name: metadata?.title ?? null,
+    description: metadata?.synopses?.short ?? null,
     duration: metadata?.versions?.[0]?.durationISO8601 ?? null,
     thumbnailUrl: getThumbnailUri(metadata?.imageUrl),
     uploadDate: getUploadDate(
       metadata?.versions?.[0]?.availableFrom,
       metadata?.firstPublished,
     ),
-    embedURL,
+    embedURL: embedURL ?? null,
   };
+
+  const metadataJson = Object.fromEntries(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    Object.entries(schema).filter(([_, v]) => v != null),
+  ) as typeof schema;
 
   return (
     <Helmet>
