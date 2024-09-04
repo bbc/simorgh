@@ -1,25 +1,28 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import clipMedia from './clipMedia';
 import aresMedia from './aresMedia';
-import { AresMediaBlock, ClipMediaBlock, MediaBlock } from '../types';
+import tvMedia from './tvMedia';
+import {
+  ConfigBuilderReturnProps,
+  MediaBlock,
+  ConfigBuilderProps,
+} from '../types';
+
+const blockTypeMapping: Record<
+  string,
+  (arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
+> = {
+  aresMedia,
+  clipMedia,
+  tvMedia,
+};
 
 export default (blocks: MediaBlock[]) => {
-  const aresMediaBlock: AresMediaBlock = filterForBlockType(
-    blocks,
-    'aresMedia',
+  const availableMediaType = ['aresMedia', 'clipMedia', 'tvMedia'].find(
+    mediaType => filterForBlockType(blocks, mediaType),
   );
-
-  const clipMediaBlock: ClipMediaBlock = filterForBlockType(
-    blocks,
-    'clipMedia',
-  );
-
-  switch (true) {
-    case !!aresMediaBlock:
-      return aresMedia;
-    case !!clipMediaBlock:
-      return clipMedia;
-    default:
-      return null;
+  if (!availableMediaType) {
+    return null;
   }
+  return blockTypeMapping[availableMediaType];
 };

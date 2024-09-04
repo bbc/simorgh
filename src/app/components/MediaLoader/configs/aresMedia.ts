@@ -1,18 +1,21 @@
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
-import formatDuration from '#app/lib/utilities/formatDuration';
-import moment from 'moment';
+import {
+  OptimoImageBlock,
+  OptimoRawImageBlock,
+} from '#app/models/types/optimo';
 import {
   AresMediaBlock,
+  AresMediaMetadataBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
+import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
+import shouldDisplayAds from '../utils/shouldDisplayAds';
 
 const DEFAULT_WIDTH = 512;
-const MIN_DURATION_FOR_PREROLLS = 30;
 
 export default ({
   pageType,
@@ -21,100 +24,95 @@ export default ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedded,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const aresMediaBlock: AresMediaBlock = filterForBlockType(
     blocks,
     'aresMedia',
   );
 
-  const { webcastVersions = [] } =
-    aresMediaBlock?.model?.blocks?.[0]?.model ?? [];
+  const { model: aresMediaMetadata }: AresMediaMetadataBlock =
+    filterForBlockType(aresMediaBlock?.model?.blocks, 'aresMediaMetadata') ??
+    {};
+
+  const aresMediaImageBlock: OptimoImageBlock = filterForBlockType(
+    aresMediaBlock?.model?.blocks,
+    'image',
+  );
+
+  const { model: rawImage }: OptimoRawImageBlock =
+    filterForBlockType(aresMediaImageBlock?.model?.blocks, 'rawImage') ?? {};
+
+  const { originCode = '', locator = '' } = rawImage ?? {};
+
+  const { webcastVersions = [] } = aresMediaMetadata ?? {};
 
   const hasWebcastItems = webcastVersions.length > 0;
 
   const versionParameter = hasWebcastItems ? 'webcastVersions' : 'versions';
 
-  const { originCode, locator } =
-    aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model ?? {};
+  const versionsBlock = aresMediaMetadata?.[versionParameter]?.[0];
 
-  const versionID =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
-      ?.versionId;
+  const versionID = versionsBlock?.versionId ?? '';
 
-  const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
+  const format = aresMediaMetadata?.format;
 
-  const rawDuration =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
-      ?.duration;
-  const duration = moment.duration(rawDuration, 'seconds');
-  const durationSpokenPrefix = translations?.media?.duration || 'Duration';
+  const rawDuration = versionsBlock?.duration ?? 0;
 
-  const title = aresMediaBlock?.model?.blocks?.[0]?.model?.title;
+  const title = aresMediaMetadata?.title ?? '';
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   const caption =
     captionBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const kind =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.smpKind || 'programme';
+  const kind = aresMediaMetadata?.smpKind ?? 'programme';
 
-  const guidanceMessage =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]?.warnings
-      ?.short;
+  const guidanceMessage = versionsBlock?.warnings?.short;
 
-  const mediaInfo = {
-    title,
-    kind,
-    duration: formatDuration({ duration, padMinutes: true }),
-    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
-      duration,
-      separator: ',',
-    })}`,
-    rawDuration,
-    datetime:
-      aresMediaBlock?.model?.blocks?.[0]?.model?.[versionParameter]?.[0]
-        ?.durationISO8601,
-    type: format || 'video',
-    guidanceMessage,
-  };
-
-  const allowAdsForVideoDuration = rawDuration >= MIN_DURATION_FOR_PREROLLS;
-  const showAds = [
+  const showAds = shouldDisplayAds({
     adsEnabled,
     showAdsBasedOnLocation,
-    allowAdsForVideoDuration,
-  ].every(Boolean);
+    duration: rawDuration,
+  });
 
-  const embeddingAllowed =
-    aresMediaBlock?.model?.blocks?.[0]?.model?.embedding ?? false;
+  const embeddingAllowed = aresMediaMetadata?.embedding ?? false;
 
-  const placeholderSrc = buildIChefURL({
+  const subType = aresMediaMetadata?.subType;
+
+  const videoId = aresMediaMetadata?.id;
+
+  const holdingImageURL = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
 
-  const placeholderSrcset = getPlaceholderSrcSet({
-    originCode,
-    locator,
-    isWebP: true,
-  });
-
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
-
   const items = [{ versionID, kind, duration: rawDuration }];
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+
+  const placeholderConfig = buildPlaceholderConfig({
+    title,
+    type: format || 'video',
+    duration: rawDuration,
+    durationISO8601: versionsBlock?.durationISO8601,
+    guidanceMessage,
+    holdingImageURL,
+    translations,
+    placeholderImageOriginCode: originCode,
+    placeholderImageLocator: locator,
+  });
 
   return {
     mediaType: format || 'video',
     playerConfig: {
       ...basePlayerConfig,
       autoplay: pageType !== 'mediaArticle',
+      ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       playlistObject: {
         title,
         summary: caption || '',
-        holdingImageURL: placeholderSrc,
+        holdingImageURL,
         items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
@@ -122,15 +120,11 @@ export default ({
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID,
+        clipPID: subType === 'clip' ? videoId : null,
+        episodePID: subType === 'episode' ? videoId : null,
       },
     },
-    placeholderConfig: {
-      mediaInfo,
-      placeholderSrc,
-      placeholderSrcset,
-      translatedNoJSMessage: noJsMessage,
-    },
+    placeholderConfig,
     showAds,
   };
 };
