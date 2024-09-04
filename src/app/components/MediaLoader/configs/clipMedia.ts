@@ -24,6 +24,7 @@ export default ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedded,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -99,6 +100,7 @@ export default ({
     mediaId: `${id}/${versionID}/${lang}`,
     type: 'avEmbed',
     isAmp,
+    embedded,
   });
 
   return {

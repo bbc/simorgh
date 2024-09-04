@@ -113,6 +113,7 @@ export default ({
     mediaId: `${id}/${versionID}/${lang}`,
     type: 'avEmbed',
     isAmp,
+    embedded,
   });
 
   return {

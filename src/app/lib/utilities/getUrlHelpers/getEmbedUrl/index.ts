@@ -2,13 +2,7 @@ import isLive from '../../isLive';
 import { getEnvConfig } from '../../getEnvConfig';
 import parseAvRoute from '../../../../routes/utils/parseAvRoute';
 
-export type MediaTypes =
-  | 'media'
-  | 'avEmbed'
-  | 'cps'
-  | 'articles'
-  | 'live'
-  | 'legacy';
+type MediaTypes = 'media' | 'avEmbed' | 'cps' | 'articles' | 'live' | 'legacy';
 
 const AV_ROUTE = 'ws/av-embeds';
 
@@ -51,9 +45,10 @@ const getBaseUrl = (isAmp: boolean) => {
 type AvEmbedProps = {
   mediaId: string;
   isAmp: boolean;
+  embedded?: boolean;
 };
 
-const handleAvEmbed = ({ mediaId, isAmp }: AvEmbedProps) => {
+const handleAvEmbed = ({ mediaId, isAmp, embedded = false }: AvEmbedProps) => {
   const parsedRoute = parseAvRoute(mediaId);
   const {
     platform,
@@ -66,22 +61,21 @@ const handleAvEmbed = ({ mediaId, isAmp }: AvEmbedProps) => {
 
   const baseUrl = getBaseUrl(isAmp);
 
-  // AMP routes should always return /ws/av-embeds
-  if (isAmp) {
-    return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}/amp`;
+  // 'embedded' is "true" for media players rendered by the av-embeds route: AMP, Syndication
+  if (embedded) {
+    if (isAmp) return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}/amp`;
+
+    if (platform === 'cps') {
+      return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${mediaDelimiter ? `/${mediaDelimiter}/${parsedMediaId}` : ''}`;
+    }
+
+    if (platform === 'articles') {
+      return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}`;
+    }
   }
 
-  let url = '';
-
-  if (platform === 'cps') {
-    url = `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${mediaDelimiter ? `/${mediaDelimiter}/${parsedMediaId}` : ''}`;
-  }
-
-  if (platform === 'articles') {
-    url = `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}`;
-  }
-
-  return url;
+  // This is the default URL for media players rendered by canonical pages
+  return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}`;
 };
 
 type MorphEmbedProps = {
@@ -106,18 +100,25 @@ const handleMorphEmbed = ({
   return `${url}${ampSection}${morphEnvOverride}`;
 };
 
-type Props = {
+export type GetEmbedUrlProps = {
   type: MediaTypes;
   mediaId: string;
   isAmp?: boolean;
   queryString?: string;
+  embedded?: boolean;
 };
 
-export default ({ type, mediaId, isAmp = false, queryString }: Props) => {
+export default ({
+  type,
+  mediaId,
+  isAmp = false,
+  queryString,
+  embedded = false,
+}: GetEmbedUrlProps) => {
   const morphAsset = type !== 'avEmbed';
   const embedUrl = morphAsset
     ? handleMorphEmbed({ type, mediaId, isAmp, queryString })
-    : handleAvEmbed({ mediaId, isAmp });
+    : handleAvEmbed({ mediaId, isAmp, embedded });
   return embedUrl;
 };
 
