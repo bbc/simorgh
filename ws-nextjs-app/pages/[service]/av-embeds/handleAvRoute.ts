@@ -8,7 +8,6 @@ import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import getEmbedURL from '#app/lib/utilities/getUrlHelpers/getEmbedUrl';
 import nodeLogger from '#lib/logger.node';
 import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
@@ -117,13 +116,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { caption = null } = captionBlock?.model ?? {};
 
-  const mediaURL =
-    getEmbedURL({
-      type: 'avEmbed',
-      mediaId: resolvedUrl,
-      queryString: '',
-    }) ?? null;
-
   let routingInfoLogger = logger.debug;
 
   if (pageStatus !== OK) {
@@ -138,6 +130,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
+      id: resolvedUrl,
       isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
@@ -148,7 +141,6 @@ export default async (context: GetServerSidePropsContext) => {
               headline,
               imageUrl,
               language,
-              mediaURL,
               promoSummary,
               type: AV_EMBEDS,
             },

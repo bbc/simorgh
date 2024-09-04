@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   act,
   render,
@@ -19,20 +20,44 @@ describe('AV Embeds Page', () => {
             mediaBlock: serbianCyrCps.data.avEmbed.content.model
               .blocks as unknown as MediaBlock[],
             metadata: {
-              assetId: 'srbija-68707945',
               language: serbianCyrCps.data.avEmbed.metadata.language,
-              mediaId: null,
-              mediaDelimiter: null,
-              service: serbianCyrCps.data.avEmbed.metadata.service,
               type: 'avEmbeds',
-              variant: serbianCyrCps.data.avEmbed.metadata.variant,
             },
-            promo: serbianCyrCps.data.avEmbed.promo,
           }}
         />,
       );
     });
 
     expect(getByTestId('avembeds-mediaplayer')).toBeInTheDocument();
+  });
+
+  it('should render og:url meta tag on AV Embeds page', async () => {
+    await act(async () => {
+      return render(
+        <AvEmbedsPage
+          pageData={{
+            mediaBlock: serbianCyrCps.data.avEmbed.content.model
+              .blocks as unknown as MediaBlock[],
+            metadata: {
+              language: serbianCyrCps.data.avEmbed.metadata.language,
+              type: 'avEmbeds',
+            },
+          }}
+        />,
+        {
+          id: 'serbian/cyr/srbija-68707945',
+          service: 'serbian',
+          variant: 'cyr',
+        },
+      );
+    });
+
+    const helmetMetaTags = Helmet.peek()?.metaTags;
+
+    // @ts-expect-error - 'property' does not exist on type 'MetaTag'.
+    const actual = helmetMetaTags.filter(tag => tag.property === 'og:url')[0]
+      .content;
+
+    expect(actual).toEqual('/serbian/cyr/av-embeds/srbija-68707945');
   });
 });
