@@ -61,7 +61,8 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
+          externalEmbedUrl:
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01thw22/sr-latn',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -162,7 +163,8 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
+          externalEmbedUrl:
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -233,7 +235,8 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
+          externalEmbedUrl:
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
