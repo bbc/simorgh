@@ -137,6 +137,7 @@ export default async (context: GetServerSidePropsContext) => {
         ? {
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
             metadata: {
+              atiAnalytics: avEmbed?.metadata?.atiAnalytics ?? null,
               caption,
               headline,
               imageUrl,
