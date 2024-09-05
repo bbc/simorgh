@@ -197,6 +197,7 @@ const ArticlePage = ({ pageData }) => {
         <div
           css={styles.experimentTopStoriesAndFeaturesSection}
           data-testid="experiment-top-stories"
+          data-vars-top-stories-position="experiment"
         >
           <TopStoriesSection content={topStoriesContent} />
         </div>

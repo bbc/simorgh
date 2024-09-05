@@ -5,16 +5,27 @@
 import { ATIAnalyticsProps } from '../types';
 
 const ampAnalyticsJson = ({ baseUrl, pageviewParams }: ATIAnalyticsProps) => ({
-  transport: {
-    beacon: false,
-    xhrpost: false,
-    image: true,
-  },
   requests: {
     base: baseUrl,
     pageview: '${base}' + pageviewParams,
+    elementview: baseUrl,
   },
-  triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
+  triggers: {
+    trackPageview: { on: 'visible', request: 'pageview' },
+    trackTopStories: {
+      on: 'visible',
+      request: 'elementview',
+      visibilitySpec: {
+        selector: `[class*='experimentTopStoriesAndFeaturesSection']`,
+        visiblePercentageMin: 20,
+        totalTimeMin: 500,
+        continuousTimeMin: 200,
+      },
+      vars: {
+        eventId: 'topStoriesPosition',
+      },
+    },
+  },
 });
 
 export default ampAnalyticsJson;

@@ -14,7 +14,7 @@ const JsonInlinedScript = (data: AMPAnalyticsData) => (
 
 const AmpATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
   return (
-    <amp-analytics>
+    <amp-analytics type="piano">
       {JsonInlinedScript(
         getAmpAnalyticsJson({
           baseUrl: getEnvConfig().SIMORGH_ATI_BASE_URL,
