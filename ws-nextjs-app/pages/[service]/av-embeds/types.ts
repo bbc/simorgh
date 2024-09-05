@@ -6,7 +6,7 @@ export type AvEmbedsPageProps = {
   pageData: {
     mediaBlock: MediaBlock[];
     metadata: {
-      atiAnalytics: ATIData;
+      atiAnalytics: ATIData | null;
       language?: string;
       promoSummary?: string;
       headline?: string;
