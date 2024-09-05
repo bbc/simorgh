@@ -16,7 +16,7 @@ class TouchPathList {
   }
 
   initialiseTouchPathList = (event: React.TouchEvent<HTMLDivElement>) => {
-    const startingTouchList = [];
+    const startingTouchList: TouchPathType[] = [];
     const touches = event.changedTouches;
 
     for (let i = 0; i < touches.length; i += 1) {
