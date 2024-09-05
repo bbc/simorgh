@@ -10,8 +10,8 @@ export type AvEmbedsPageProps = {
       headline?: string;
       imageUrl?: string;
       caption?: string;
-      mediaURL?: string;
       type: PageTypes;
     };
+    embedded?: boolean;
   };
 };

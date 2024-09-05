@@ -17,6 +17,7 @@ const isTestRequested = () => {
 };
 
 const buildSettings = ({
+  id,
   blocks,
   counterName,
   statsDestination,
@@ -28,6 +29,7 @@ const buildSettings = ({
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
+  embedded,
 }: BuildConfigProps) => {
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
@@ -36,7 +38,6 @@ const buildSettings = ({
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
-    externalEmbedUrl: '', // TODO: Check requirements on this, will need added in future when media player has dedicated page for AMP support
     ui: {
       controls: { enabled: true },
       locale: { lang: lang || 'en' },
@@ -53,12 +54,16 @@ const buildSettings = ({
 
   // Augment base configuration with settings that are specific to the media type
   const config = configForMediaBlockType(blocks)?.({
+    id,
     basePlayerConfig,
     blocks,
     pageType,
     translations,
     adsEnabled,
     showAdsBasedOnLocation,
+    embedded,
+    lang,
+    isAmp,
   });
 
   if (!config) return null;
