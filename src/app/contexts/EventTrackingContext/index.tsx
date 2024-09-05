@@ -70,7 +70,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CPS_ASSET]: '',
     [STATIC_PAGE]: '',
     [UGC_PAGE]: '',
-    [AV_EMBEDS]: '',
+    [AV_EMBEDS]: 'av-embeds',
     [DOWNLOADS_PAGE]: 'downloads',
   }[pageType];
 
