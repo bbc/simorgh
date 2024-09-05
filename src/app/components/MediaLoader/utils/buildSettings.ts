@@ -1,6 +1,5 @@
 import onClient from '#app/lib/utilities/onClient';
 import isLive from '#app/lib/utilities/isLive';
-import getEmbedURL from '../../../lib/utilities/getUrlHelpers/getEmbedUrl';
 import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
 
@@ -23,6 +22,7 @@ const isTestRequested = () => {
 };
 
 const buildSettings = ({
+  id,
   blocks,
   counterName,
   statsDestination,
@@ -35,15 +35,7 @@ const buildSettings = ({
   adsEnabled = false,
   showAdsBasedOnLocation = false,
   embedded,
-  pathname,
 }: BuildConfigProps) => {
-  const embedUrl = pathname
-    ? getEmbedURL({
-        type: 'avEmbed',
-        mediaId: pathname,
-        queryString: '',
-      })
-    : '';
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
@@ -51,7 +43,6 @@ const buildSettings = ({
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
-    externalEmbedUrl: embedUrl,
     ui: {
       controls: { enabled: true },
       locale: { lang: lang || 'en' },
@@ -68,6 +59,7 @@ const buildSettings = ({
 
   // Augment base configuration with settings that are specific to the media type
   const config = configForMediaBlockType(blocks)?.({
+    id,
     basePlayerConfig,
     blocks,
     pageType,
@@ -75,6 +67,8 @@ const buildSettings = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
+    lang,
+    isAmp,
   });
 
   if (!config) return null;
