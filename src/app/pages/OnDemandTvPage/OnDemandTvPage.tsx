@@ -112,6 +112,8 @@ const OnDemandTvPage = ({
     ? `${brandTitle} - ${episodeTitle} - ${brandName}`
     : headline;
 
+  const episodePageIdentifier = `${service}.bbc_${service}_tv.tv.${episodeId}.page`;
+
   return (
     <div css={styles.wrapper}>
       <ChartbeatAnalytics
@@ -170,6 +172,7 @@ const OnDemandTvPage = ({
             <MediaLoader
               blocks={pageData?.mediaBlocks}
               css={styles.mediaPlayer}
+              episodePageIdentifier={episodePageIdentifier}
             />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available
