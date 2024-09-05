@@ -145,7 +145,7 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
-  episodePageIdentifier: string;
+  counterNameOverride?: string;
 };
 
 const MediaLoader = ({ blocks, embedded, className }: Props) => {
