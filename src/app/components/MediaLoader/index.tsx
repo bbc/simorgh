@@ -144,11 +144,16 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
 type Props = {
   blocks: MediaBlock[];
   className?: string;
-  embedded?: boolean;
   counterNameOverride?: string;
+  embedded?: boolean;
 };
 
-const MediaLoader = ({ blocks, embedded, className }: Props) => {
+const MediaLoader = ({
+  blocks,
+  className,
+  counterNameOverride,
+  embedded,
+}: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
@@ -170,7 +175,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const config = buildConfig({
     id,
     blocks,
-    counterName,
+    counterName: counterNameOverride || counterName,
     statsDestination,
     producer,
     isAmp,
