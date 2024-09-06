@@ -1,7 +1,6 @@
 import parseAvRoute from '.';
 
 const EXAMPLE_ROUTES = [
-  // Syndication routes
   {
     route: '/news/av-embeds/67303123',
     expectedOutput: {
@@ -37,7 +36,24 @@ const EXAMPLE_ROUTES = [
       mediaId: 'p09s9t1j',
     },
   },
-  // Non-syndication routes
+  {
+    route: '/portuguese/av-embeds/brasil-54911845/pid/w172zm8b4tlm30d',
+    expectedOutput: {
+      service: 'portuguese',
+      platform: 'cps',
+      assetId: 'brasil-54911845',
+      mediaId: 'w172zm8b4tlm30d',
+    },
+  },
+  {
+    route: '/portuguese/av-embeds/brasil-54911845/vpid/p09s9t1j',
+    expectedOutput: {
+      service: 'portuguese',
+      platform: 'cps',
+      assetId: 'brasil-54911845',
+      mediaId: 'p09s9t1j',
+    },
+  },
   {
     route: '/ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig',
     expectedOutput: {
