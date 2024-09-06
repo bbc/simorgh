@@ -732,7 +732,7 @@ describe('Article Page', () => {
             'urn:bbc:topcat:curie:asset:7b51390e-c5c3-11e3-a6ee-819a3db9bd6e',
         },
       },
-    };
+    } as Article;
 
     render(
       <Context service="pidgin">
