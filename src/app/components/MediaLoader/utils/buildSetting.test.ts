@@ -20,11 +20,11 @@ const baseSettings = {
   pageType: 'article' as PageTypes,
   counterName: 'live_coverage.testID.page',
   isAmp: false,
-  lang: 'es',
-  service: 'mundo' as Services,
+  lang: 'sr-latn',
+  service: 'serbian' as Services,
   statsDestination: 'WS_NEWS_LANGUAGES',
-  producer: 'MUNDO',
-  pathname: '/mundo/av-embeds/srbija-68707945',
+  producer: 'SERBIAN',
+  id: 'serbian/lat/srbija-68707945',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -58,12 +58,12 @@ describe('buildSettings', () => {
           statsObject: {
             clipPID: 'p01thw20',
             destination: 'WS_NEWS_LANGUAGES',
-            producer: 'MUNDO',
+            producer: 'SERBIAN',
           },
           enableToucan: true,
           externalEmbedUrl:
-            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
-          appName: 'news-mundo',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01thw22/sr-latn',
+          appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
           playlistObject: {
@@ -84,7 +84,7 @@ describe('buildSettings', () => {
           },
           ui: {
             controls: { enabled: true },
-            locale: { lang: 'es' },
+            locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
             fullscreen: { enabled: true },
           },
@@ -160,13 +160,12 @@ describe('buildSettings', () => {
           statsObject: {
             clipPID: 'p01k6msm',
             destination: 'WS_NEWS_LANGUAGES',
-            producer: 'MUNDO',
-            episodePID: null,
+            producer: 'SERBIAN',
           },
           enableToucan: true,
           externalEmbedUrl:
-            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
-          appName: 'news-mundo',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+          appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
           playlistObject: {
@@ -182,7 +181,7 @@ describe('buildSettings', () => {
           },
           ui: {
             controls: { enabled: true },
-            locale: { lang: 'es' },
+            locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
             fullscreen: { enabled: true },
           },
@@ -232,14 +231,13 @@ describe('buildSettings', () => {
           product: 'news',
           statsObject: {
             clipPID: 'p01k6msm',
-            episodePID: null,
             destination: 'WS_NEWS_LANGUAGES',
-            producer: 'MUNDO',
+            producer: 'SERBIAN',
           },
           enableToucan: true,
           externalEmbedUrl:
-            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
-          appName: 'news-mundo',
+            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+          appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
           playlistObject: {
@@ -255,7 +253,7 @@ describe('buildSettings', () => {
           },
           ui: {
             controls: { enabled: true },
-            locale: { lang: 'es' },
+            locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
             fullscreen: { enabled: true },
           },
@@ -305,15 +303,13 @@ describe('buildSettings', () => {
           statsObject: {
             clipPID: 'p01k6msm',
             destination: 'WS_NEWS_LANGUAGES',
-            producer: 'MUNDO',
-            episodePID: null,
+            producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl:
-            'https://www.bbc.com/mundo/av-embeds/srbija-68707945',
+          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
           insideIframe: true,
           embeddedOffsite: true,
-          appName: 'news-mundo',
+          appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
           playlistObject: {
@@ -329,7 +325,7 @@ describe('buildSettings', () => {
           },
           ui: {
             controls: { enabled: true },
-            locale: { lang: 'es' },
+            locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
             fullscreen: { enabled: true },
           },
@@ -463,8 +459,7 @@ describe('buildSettings', () => {
       expect(result?.playerConfig.statsObject).toStrictEqual({
         clipPID: 'p01k6msm',
         destination: 'WS_NEWS_LANGUAGES',
-        producer: 'MUNDO',
-        episodePID: null,
+        producer: 'SERBIAN',
       });
     });
 
@@ -478,7 +473,7 @@ describe('buildSettings', () => {
         'counterName',
         'live_coverage.testID.page',
       );
-      expect(result?.playerConfig).toHaveProperty('appName', 'news-mundo');
+      expect(result?.playerConfig).toHaveProperty('appName', 'news-serbian');
       expect(result?.playerConfig).toHaveProperty('appType', 'responsive');
       expect(result?.playerConfig.playlistObject).toHaveProperty(
         'title',
@@ -494,8 +489,7 @@ describe('buildSettings', () => {
       expect(result?.playerConfig.statsObject).toStrictEqual({
         clipPID: 'p01k6msm',
         destination: 'WS_NEWS_LANGUAGES',
-        producer: 'MUNDO',
-        episodePID: null,
+        producer: 'SERBIAN',
       });
     });
 
@@ -515,16 +509,15 @@ describe('buildSettings', () => {
             ],
           },
         },
-      ];
+      ] as unknown as MediaBlock[];
+
       const result = buildSettings({
         ...baseSettings,
-        // @ts-expect-error partial data used for testing purposes
-        blocks: myFixture as MediaBlock[],
+        blocks: myFixture,
       });
       expect(result?.playerConfig.statsObject).toStrictEqual({
-        clipPID: null,
         destination: 'WS_NEWS_LANGUAGES',
-        producer: 'MUNDO',
+        producer: 'SERBIAN',
         episodePID: 'p01k6msm',
       });
     });
@@ -620,7 +613,6 @@ describe('buildSettings', () => {
           enableToucan: true,
           appType: 'responsive',
           autoplay: false,
-          externalEmbedUrl: '',
           mediator: { host: 'open.test.bbc.co.uk' },
           appName: 'news-hindi',
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
