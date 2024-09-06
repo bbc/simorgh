@@ -126,6 +126,9 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const isMap = type === MEDIA_ASSET_PAGE;
+  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+    ?.split(':')
+    ?.includes('topcat');
 
   const atiData = {
     ...atiAnalytics,
@@ -234,6 +237,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         description={description}
         imageLocator={promoImage}
         imageAltText={promoImageAltText}
+        hasAmpPage={!isTC2Asset}
       />
       <LinkedData
         showAuthor
