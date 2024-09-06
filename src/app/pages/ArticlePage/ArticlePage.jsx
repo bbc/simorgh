@@ -106,9 +106,13 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
+
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
   const isCPS = isPGL || isSTY;
+  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+    ?.split(':')
+    ?.includes('topcat');
 
   const {
     metadata: { atiAnalytics },
@@ -214,6 +218,7 @@ const ArticlePage = ({ pageData }) => {
         description={description}
         imageLocator={promoImage}
         imageAltText={promoImageAltText}
+        hasAmpPage={!isTC2Asset}
       />
       <LinkedData
         showAuthor
