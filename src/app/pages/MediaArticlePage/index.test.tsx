@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
+import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -91,6 +92,47 @@ describe('MediaArticlePage', () => {
     await waitFor(() => {
       expect(container).toMatchSnapshot();
     });
+  });
+
+  it('should set "amphtml" link tag for asset', async () => {
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pidginPageData} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toEqual({
+      href: 'https://www.test.bbc.co.uk/pathname.amp',
+      rel: 'amphtml',
+    });
+  });
+
+  it('should not set "amphtml" link tag for TC2 asset', async () => {
+    const pageDataAsTC2Asset = {
+      ...pidginPageData,
+      metadata: {
+        ...pidginPageData.metadata,
+        analyticsLabels: {
+          ...pidginPageData.metadata.analyticsLabels,
+          contentId:
+            'urn:bbc:topcat:curie:asset:7b51390e-c5c3-11e3-a6ee-819a3db9bd6e',
+        },
+      },
+    };
+
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pageDataAsTC2Asset} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toBeUndefined();
   });
 
   it('should NOT render mpu or advert leaderboard', async () => {
