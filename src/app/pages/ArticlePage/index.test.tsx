@@ -704,6 +704,48 @@ describe('Article Page', () => {
     expect(getByText('Get involved')).toBeInTheDocument();
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
   });
+
+  it('should set "amphtml" link tag for asset', async () => {
+    render(
+      <Context service="pidgin">
+        <ArticlePage pageData={articleDataNews} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toEqual({
+      href: 'https://www.test.bbc.co.uk/pathname.amp',
+      rel: 'amphtml',
+    });
+  });
+
+  it('should not set "amphtml" link tag for TC2 asset', async () => {
+    const pageDataAsTC2Asset = {
+      ...articleDataNews,
+      metadata: {
+        ...articleDataNews.metadata,
+        analyticsLabels: {
+          ...articleDataNews.metadata.analyticsLabels,
+          contentId:
+            'urn:bbc:topcat:curie:asset:7b51390e-c5c3-11e3-a6ee-819a3db9bd6e',
+        },
+      },
+    };
+
+    render(
+      <Context service="pidgin">
+        <ArticlePage pageData={pageDataAsTC2Asset} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toBeUndefined();
+  });
+
   describe('when rendering a PGL page', () => {
     it('should not render secondary column', async () => {
       const pageDataWithSecondaryColumn = {

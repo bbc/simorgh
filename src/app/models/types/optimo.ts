@@ -69,6 +69,7 @@ export type ArticleMetadata = {
   allowAdvertising: boolean;
   analyticsLabels?: {
     producer: string;
+    contentId: string;
   };
   atiAnalytics: ATIData;
   consumableAsSFV: boolean;
