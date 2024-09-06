@@ -37,15 +37,6 @@ const EXAMPLE_ROUTES = [
     },
   },
   {
-    route: '/portuguese/av-embeds/brasil-54911845/pid/w172zm8b4tlm30d',
-    expectedOutput: {
-      service: 'portuguese',
-      platform: 'cps',
-      assetId: 'brasil-54911845',
-      mediaId: 'w172zm8b4tlm30d',
-    },
-  },
-  {
     route: '/portuguese/av-embeds/brasil-54911845/vpid/p09s9t1j',
     expectedOutput: {
       service: 'portuguese',

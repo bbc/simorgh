@@ -10,7 +10,7 @@ const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
-const MEDIA_ID_REGEX = /^((?!portuguese)p[a-z0-9]{7,}|w[a-z0-9]{13,})$/;
+const MEDIA_ID_REGEX = /^((?!portuguese)p[a-z0-9]{7,})$/;
 
 const MEDIA_DELIMITERS = ['vpid', 'pid'];
 
