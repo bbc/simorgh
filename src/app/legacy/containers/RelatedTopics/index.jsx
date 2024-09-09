@@ -55,6 +55,7 @@ const RelatedTopics = ({
     topics &&
     topics.length !== 0 && (
       <StyledTopicsWrapper
+        data-testid="related-topics"
         aria-labelledby="related-topics"
         role="complementary"
         {...(className && { className })}

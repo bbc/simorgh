@@ -5,11 +5,11 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import MediaLoader from '#app/components/MediaLoader';
-import { RequestContext } from '#app/contexts/RequestContext';
 import { MediaBlock } from '#app/components/MediaLoader/types';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -75,7 +75,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -134,6 +134,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     ...atiAnalytics,
     ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
+
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === ARTICLE_PAGE;
 
   const componentsToRender = {
     fauxHeadline,
@@ -259,7 +263,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          {showRelatedTopics && topics && (
+          {showRelatedTopics && topics && !isTransliterated && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
