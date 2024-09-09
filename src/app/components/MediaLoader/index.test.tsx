@@ -5,11 +5,11 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaPlayer from '.';
 import { aresMediaBlocks, onDemandTvBlocks } from './fixture';
 import { MediaBlock } from './types';
 import * as buildConfig from './utils/buildSettings';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -195,10 +195,10 @@ describe('MediaLoader', () => {
       await act(async () => {
         render(
           <RequestContextProvider
-            pageType={'media'}
-            pathname={'/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}
-            service={'hindi'}
-            counterName={'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page'}
+            pageType="media"
+            pathname="/hindi/bbc_hindi_tv/tv_programmes/w13xttlw"
+            service="hindi"
+            counterName="hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page"
           >
             <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />
           </RequestContextProvider>,
