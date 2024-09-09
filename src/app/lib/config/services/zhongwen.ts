@@ -49,7 +49,7 @@ const baseServiceConfig = {
     },
   },
   showAdPlaceholder: true,
-  showRelatedTopics: false,
+  showRelatedTopics: true,
   fonts: [],
   timezone: 'GMT',
 };

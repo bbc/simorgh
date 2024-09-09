@@ -64,7 +64,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -77,6 +77,9 @@ const ArticlePage = ({ pageData }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === 'article';
   const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
@@ -247,7 +250,7 @@ const ArticlePage = ({ pageData }) => {
               componentsToRender={componentsToRender}
             />
           </main>
-          {showRelatedTopics && topics && (
+          {showRelatedTopics && topics && !isTransliterated && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
