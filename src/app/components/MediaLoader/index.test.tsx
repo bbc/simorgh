@@ -177,7 +177,7 @@ describe('MediaLoader', () => {
         render(
           <MediaPlayer
             blocks={onDemandTvBlocks as MediaBlock[]}
-            counterNameOverride={'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page'}
+            pageIdenifierOverride={'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page'}
             embedded
           />,
           { service: 'hindi' },

@@ -144,14 +144,14 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
 type Props = {
   blocks: MediaBlock[];
   className?: string;
-  counterNameOverride?: string;
+  pageIdenifierOverride?: string;
   embedded?: boolean;
 };
 
 const MediaLoader = ({
   blocks,
   className,
-  counterNameOverride,
+  pageIdenifierOverride,
   embedded,
 }: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
@@ -175,7 +175,7 @@ const MediaLoader = ({
   const config = buildConfig({
     id,
     blocks,
-    counterName: counterNameOverride || counterName,
+    counterName: pageIdenifierOverride || counterName,
     statsDestination,
     producer,
     isAmp,
