@@ -172,7 +172,7 @@ const OnDemandTvPage = ({
             <MediaLoader
               blocks={pageData?.mediaBlocks}
               css={styles.mediaPlayer}
-              pageIdenifierOverride={episodePageIdentifier}
+              pageIdentifierOverride={episodePageIdentifier}
             />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available
