@@ -6,8 +6,9 @@ import {
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
-import { aresMediaBlocks } from './fixture';
+import { aresMediaBlocks, onDemandTvBlocks } from './fixture';
 import { MediaBlock } from './types';
+import * as buildConfig from './utils/buildSettings';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -166,6 +167,27 @@ describe('MediaLoader', () => {
         property: 'og:url',
         content: '/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB',
       });
+    });
+  });
+
+  describe('Config', () => {
+    it('should use the counterNameOverride when rendering On Demand TV', async () => {
+      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={onDemandTvBlocks as MediaBlock[]}
+            counterNameOverride={'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page'}
+            embedded
+          />,
+          { service: 'hindi' },
+        );
+      });
+      expect(buildConfigSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          counterName: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+        }),
+      );
     });
   });
 });
