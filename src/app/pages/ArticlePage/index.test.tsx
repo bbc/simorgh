@@ -746,6 +746,19 @@ describe('Article Page', () => {
     expect(ampHtmlLink).toBeUndefined();
   });
 
+  const services = ['serbian', 'uzbek', 'zhongwen'];
+
+  services.forEach(service => {
+    it(`should not render a relatedTopics onward journey for a ${service} optimo article`, async () => {
+      const { queryByTestId } = render(
+        <Context service={service}>
+          <ArticlePage pageData={articleDataNews} />
+        </Context>,
+      );
+      const relatedTopics = queryByTestId('related-topics');
+      expect(relatedTopics).toBeNull();
+    });
+  });
   describe('when rendering a PGL page', () => {
     it('should not render secondary column', async () => {
       const pageDataWithSecondaryColumn = {

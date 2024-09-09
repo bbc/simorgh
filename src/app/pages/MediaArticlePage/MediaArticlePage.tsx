@@ -3,9 +3,10 @@
 import { useContext } from 'react';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -64,6 +65,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -116,6 +118,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     ...atiAnalytics,
     ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
+
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === ARTICLE_PAGE;
 
   const componentsToRender = {
     fauxHeadline,
@@ -185,6 +191,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !isTransliterated,
+  );
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -232,7 +242,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          {showRelatedTopics && topics && (
+          {showTopics && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
