@@ -14,6 +14,7 @@ import {
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
@@ -159,12 +160,12 @@ type Props = {
 
 const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const { lang, translations } = useContext(ServiceContext);
+  const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     id,
     pageType,
-    counterName,
     statsDestination,
     service,
     isAmp,
@@ -182,7 +183,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const config = buildConfig({
     id,
     blocks,
-    counterName,
+    counterName: pageIdentifier,
     statsDestination,
     producer,
     isAmp,
@@ -198,7 +199,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   if (!config) return null;
 
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
-
+  console.log(config.playerConfig);
   const {
     mediaInfo,
     placeholderSrc,
