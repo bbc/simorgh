@@ -273,7 +273,8 @@ export const service: DefaultServiceConfig = {
       ugc: {
         // No JavaScript
         noJsHeading: 'Disculpa, página no encontrada',
-        noJsDescription: 'Para cargar esta página, por favor habilita JavaScript o intenta con otro navegador',
+        noJsDescription:
+          'Para cargar esta página, por favor habilita JavaScript o intenta con otro navegador',
 
         // Optional
         optional: 'opcional',
@@ -306,8 +307,10 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Máximo {{wordLimit}} palabras.',
 
         // Messaging
-        removalGuidelineText: 'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
-        retentionPeriodDays: 'Mantendremos tu envío durante {{days}} y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+        removalGuidelineText:
+          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+        retentionPeriodDays:
+          'Mantendremos tu envío durante {{days}} y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
@@ -327,7 +330,8 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
-        privacyPolicyLinkHref: 'https://www.bbc.com/mundo/institucional-36400009',
+        privacyPolicyLinkHref:
+          'https://www.bbc.com/mundo/institucional-36400009',
         privacyPolicyLinkText: 'Política de privacidad',
 
         // Error Screen
