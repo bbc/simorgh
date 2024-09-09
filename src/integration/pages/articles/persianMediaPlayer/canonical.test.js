@@ -5,12 +5,12 @@
 
 import runCanonicalTests from '../canonicalTests';
 import runInlineLinkTests from '../inlineLink';
-import runMediaPlayerEmbedTests from '../../../common/mediaPlayerEmbed';
+import runMediaPlayerTests from '../../../common/mediaPlayer';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests(service);
-    runMediaPlayerEmbedTests(pageType);
+    runMediaPlayerTests(pageType);
     runInlineLinkTests();
   });
 });

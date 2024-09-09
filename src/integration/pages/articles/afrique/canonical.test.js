@@ -5,12 +5,12 @@
 
 import runGistTests from '../gistTests';
 import runImageCopyrightBBC from '../imageCopyrightBBC';
-import runMediaPlayerEmbedTests from '../../../common/mediaPlayerEmbed';
+import runMediaPlayerTests from '../../../common/mediaPlayer';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runGistTests();
-    runMediaPlayerEmbedTests(pageType);
+    runMediaPlayerTests(pageType);
     runImageCopyrightBBC();
   });
 });
