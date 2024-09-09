@@ -328,7 +328,7 @@ export const service: DefaultServiceConfig = {
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
         privacyPolicyLinkHref: 'https://www.bbc.com/mundo/institucional-36400009',
-        privacyPolicyLinkText: 'Política de privacida',
+        privacyPolicyLinkText: 'Política de privacidad',
 
         // Error Screen
         errorHeading: 'Disculpa, hubo un problema al subir esto.',
