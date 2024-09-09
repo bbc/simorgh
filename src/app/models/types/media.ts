@@ -1,4 +1,4 @@
-export type MediaType = 'audio' | 'video';
+export type MediaType = 'audio_video' | 'audio' | 'video';
 
 export type OnDemandMediaModel = {
   id: string;
