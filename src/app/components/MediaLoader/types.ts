@@ -59,6 +59,7 @@ export type PlaylistItem = {
 };
 
 export type ConfigBuilderProps = {
+  id: string | null;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
@@ -67,6 +68,8 @@ export type ConfigBuilderProps = {
   showAdsBasedOnLocation?: boolean;
   embedUrl?: string;
   embedded?: boolean;
+  lang: string;
+  isAmp?: boolean;
 };
 
 export type PlaceholderConfig = {
@@ -142,17 +145,22 @@ export type AresMediaBlock = {
 export type AresMediaMetadataBlock = {
   type: 'aresMediaMetadata';
   model: {
+    firstPublished?: string;
     live?: boolean;
     locator: string;
     originCode: string;
     text: string;
     title: string;
+    synopses: {
+      short: string;
+    };
     imageUrl: string;
     format: MediaType;
     id: string;
     embedding: boolean;
     subType: string;
     versions: {
+      availableFrom?: string;
       versionId: string;
       duration: number;
       durationISO8601?: string;
@@ -198,6 +206,7 @@ export type MediaBlock =
   | OnDemandAudioBlock;
 
 export type BuildConfigProps = {
+  id: string | null;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
@@ -210,5 +219,4 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
-  pathname: string;
 };

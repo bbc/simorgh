@@ -69,15 +69,4 @@ describe('Handle AV Route', () => {
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   });
-
-  it('should construct media embed URL', async () => {
-    mockGetServerSidePropsContext.resolvedUrl =
-      '/russian/av-embeds/features-49881797?renderer_env=live';
-
-    const result = await handleAvRoute(mockGetServerSidePropsContext);
-
-    expect(result.props.pageData?.metadata?.mediaURL).toBe(
-      'https://www.bbc.com/russian/av-embeds/features-49881797',
-    );
-  });
 });

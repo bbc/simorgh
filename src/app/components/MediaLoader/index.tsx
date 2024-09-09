@@ -1,6 +1,8 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
+
 import { jsx } from '@emotion/react';
-import { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -16,6 +18,7 @@ import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
+import Metadata from './Metadata';
 
 const logger = nodeLogger(__filename);
 
@@ -77,13 +80,12 @@ const AdvertTagLoader = () => {
   );
 };
 
-const MediaContainer = ({
-  playerConfig,
-  showAds,
-}: {
+type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
-}) => {
+};
+
+const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -140,17 +142,24 @@ const MediaContainer = ({
 };
 
 type Props = {
-  className?: string;
-  embedded?: boolean;
   blocks: MediaBlock[];
+  className?: string;
+  pageIdentifierOverride?: string;
+  embedded?: boolean;
 };
 
-const MediaLoader = ({ blocks, embedded, className }: Props) => {
+const MediaLoader = ({
+  blocks,
+  className,
+  pageIdentifierOverride,
+  embedded,
+}: Props) => {
   const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
+    id,
     pageType,
     counterName,
     statsDestination,
@@ -158,16 +167,15 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-    pathname,
   } = useContext(RequestContext);
 
   if (isLite) return null;
 
   const producer = getProducerFromServiceName(service);
-
   const config = buildConfig({
+    id,
     blocks,
-    counterName,
+    counterName: pageIdentifierOverride || counterName,
     statsDestination,
     producer,
     isAmp,
@@ -178,7 +186,6 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
-    pathname,
   });
 
   if (!config) return null;
@@ -195,26 +202,33 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   const captionBlock = getCaptionBlock(blocks, pageType);
 
   return (
-    <figure
-      data-e2e="media-loader__container"
-      css={styles.figure}
-      className={className}
-    >
-      {showAds && <AdvertTagLoader />}
-      <BumpLoader />
-      {isPlaceholder ? (
-        <Placeholder
-          src={placeholderSrc}
-          srcSet={placeholderSrcset}
-          noJsMessage={translatedNoJSMessage}
-          mediaInfo={mediaInfo}
-          onClick={() => setIsPlaceholder(false)}
-        />
-      ) : (
-        <MediaContainer playerConfig={playerConfig} showAds={showAds} />
-      )}
-      {captionBlock && <Caption block={captionBlock} type={mediaType} />}
-    </figure>
+    <>
+      <Metadata
+        blocks={blocks}
+        embedURL={playerConfig?.externalEmbedUrl}
+        embedded={embedded}
+      />
+      <figure
+        data-e2e="media-loader__container"
+        css={styles.figure}
+        className={className}
+      >
+        {showAds && <AdvertTagLoader />}
+        <BumpLoader />
+        {isPlaceholder ? (
+          <Placeholder
+            src={placeholderSrc}
+            srcSet={placeholderSrcset}
+            noJsMessage={translatedNoJSMessage}
+            mediaInfo={mediaInfo}
+            onClick={() => setIsPlaceholder(false)}
+          />
+        ) : (
+          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+        )}
+        {captionBlock && <Caption block={captionBlock} type={mediaType} />}
+      </figure>
+    </>
   );
 };
 
