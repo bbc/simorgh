@@ -199,7 +199,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   if (!config) return null;
 
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
-  console.log(config.playerConfig);
+
   const {
     mediaInfo,
     placeholderSrc,
