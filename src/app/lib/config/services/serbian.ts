@@ -29,7 +29,7 @@ const baseServiceConfig = {
     hasStoryRecommendations: false,
   },
   showAdPlaceholder: false,
-  showRelatedTopics: true,
+  showRelatedTopics: false,
   timezone: 'GMT',
 };
 
