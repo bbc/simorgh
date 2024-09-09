@@ -102,7 +102,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
           return getTipoId(path);
         }
         if (isCpsIdCheck(path)) {
-          return `/${service}/live/${getCpsId(path)}`;
+          return `/${service}${variant ? `/${variant}` : ''}/live/${getCpsId(path)}`;
         }
         return null;
       };
