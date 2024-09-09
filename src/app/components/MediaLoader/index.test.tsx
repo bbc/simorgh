@@ -9,6 +9,7 @@ import MediaPlayer from '.';
 import { aresMediaBlocks, onDemandTvBlocks } from './fixture';
 import { MediaBlock } from './types';
 import * as buildConfig from './utils/buildSettings';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -18,14 +19,14 @@ jest.mock('react', () => ({
 jest.mock('#app/hooks/useLocation');
 
 describe('MediaLoader', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+
+    (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
+    (useState as jest.Mock).mockImplementation(() => [false, () => false]);
+  });
+
   describe('BUMP Loader', () => {
-    beforeEach(() => {
-      jest.restoreAllMocks();
-
-      (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
-      (useState as jest.Mock).mockImplementation(() => [false, () => false]);
-    });
-
     it('Loads Ads, requireJS and Bump4 when Ads are enabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
@@ -180,6 +181,27 @@ describe('MediaLoader', () => {
             pageIdentifierOverride="hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page"
             embedded
           />,
+          { service: 'hindi' },
+        );
+      });
+      expect(buildConfigSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          counterName: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+        }),
+      );
+    });
+    it('should use the counterName from the RequestContext', async () => {
+      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+      await act(async () => {
+        render(
+          <RequestContextProvider
+            pageType={'media'}
+            pathname={'/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}
+            service={'hindi'}
+            counterName={'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page'}
+          >
+            <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />
+          </RequestContextProvider>,
           { service: 'hindi' },
         );
       });
