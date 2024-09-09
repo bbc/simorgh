@@ -18,6 +18,11 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+import {
+  ARTICLE_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 import {
   getArticleId,
@@ -36,7 +41,6 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
-import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -79,7 +83,7 @@ const ArticlePage = ({ pageData }) => {
 
   const isTransliterated =
     ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
-    pageType === 'article';
+    pageType === ARTICLE_PAGE;
   const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
