@@ -3,7 +3,7 @@ import {
   runCanonicalAnalyticsTests,
   runRadioScheduleTests,
   runCommonCrossPlatformTests,
-  runMediaPlayerEmbedLegacyTests,
+  runMediaPlayerEmbedTests,
 } from '../../common';
 
 export default service => {
@@ -11,7 +11,7 @@ export default service => {
   runCanonicalAnalyticsTests();
   runRadioScheduleTests({ isAmp: false });
   runCommonCrossPlatformTests(service);
-  runMediaPlayerEmbedLegacyTests();
+  runMediaPlayerEmbedTests();
 
   describe('Summary', () => {
     const summaryEl = document.querySelector('main p');
