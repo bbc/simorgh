@@ -483,7 +483,6 @@ describe('buildSettings', () => {
           enableToucan: true,
           appType: 'responsive',
           autoplay: false,
-          externalEmbedUrl: '',
           appName: 'news-hindi',
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
           statsObject: {

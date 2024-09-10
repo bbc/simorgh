@@ -43,7 +43,6 @@ const buildSettings = ({
     enableToucan: true,
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
-    externalEmbedUrl: '',
     ui: {
       controls: { enabled: true },
       locale: { lang: lang || 'en' },
