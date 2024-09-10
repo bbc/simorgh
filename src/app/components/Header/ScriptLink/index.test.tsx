@@ -1,7 +1,6 @@
 import React from 'react';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
-import { UserContext, UserContextProps } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import {
   articlePath,
@@ -65,13 +64,9 @@ const ScriptLinkContainerWithContext = ({
   <ThemeProvider service="serbian" variant="lat">
     <ToggleContext.Provider value={toggleContext}>
       <ServiceContext.Provider value={serviceContext}>
-        <UserContext.Provider value={userContextMock as UserContextProps}>
-          <RequestContext.Provider
-            value={requestContext as RequestContextProps}
-          >
-            <ScriptLinkContainer {...props} />
-          </RequestContext.Provider>
-        </UserContext.Provider>
+        <RequestContext.Provider value={requestContext as RequestContextProps}>
+          <ScriptLinkContainer {...props} />
+        </RequestContext.Provider>
       </ServiceContext.Provider>
     </ToggleContext.Provider>
   </ThemeProvider>
