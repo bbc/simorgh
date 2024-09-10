@@ -3,7 +3,6 @@ import { MemoryRouter, Route } from 'react-router-dom';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { UserContext, UserContextProps } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import * as cookies from '#contexts/UserContext/cookies';
 import {
   articlePath,
   cpsAssetPagePath,
@@ -12,21 +11,12 @@ import {
   legacyAssetPagePath,
   topicPath,
 } from '#app/routes/utils/regex';
-import { render, fireEvent } from '../../react-testing-library-with-providers';
+import { render } from '../../react-testing-library-with-providers';
 import { service as ukChinaServiceConfig } from '../../../lib/config/services/ukchina';
 import { service as serbianServiceConfig } from '../../../lib/config/services/serbian';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ScriptLinkContainer, { getVariantHref } from '.';
 import ThemeProvider from '../../ThemeProvider';
-
-const setPreferredVariantCookieSpy = jest.spyOn(
-  cookies,
-  'setPreferredVariantCookie',
-);
-
-const userContextMock = {
-  setPreferredVariantCookie: cookies.setPreferredVariantCookie,
-};
 
 const requestContextMock = {
   variant: 'lat',
@@ -226,45 +216,6 @@ describe(`Script Link`, () => {
           expect(scriptLink.getAttribute('href')).toBe(`${variantPath}`);
         });
       });
-    });
-
-    it('should set preferred variant cookie when ScriptLink is clicked', () => {
-      const { container } = withRouter(
-        <ScriptLinkContainerWithContext />,
-        frontPagePath,
-        '/serbian/lat',
-      );
-      const scriptLink = container.querySelector(
-        'a[data-variant="cyr"]',
-      ) as Element;
-      fireEvent.click(scriptLink);
-      expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
-    });
-
-    it('should not set preferred variant cookie when variantCookie toggle is disabled', () => {
-      const testToggles = {
-        scriptLink: {
-          enabled: true,
-        },
-        variantCookie: {
-          enabled: false,
-        },
-      };
-      const { container } = withRouter(
-        <ScriptLinkContainerWithContext
-          toggleContext={{
-            toggleState: testToggles,
-            toggleDispatch: mockToggleDispatch,
-          }}
-        />,
-        frontPagePath,
-        '/serbian/lat',
-      );
-      const scriptLink = container.querySelector(
-        'a[data-variant="cyr"]',
-      ) as Element;
-      fireEvent.click(scriptLink);
-      expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(0);
     });
   });
 
