@@ -1,8 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import { LiveRadioPage } from '..';
@@ -39,7 +36,10 @@ const matchFixtures = (service: ValidServices) => ({
 });
 
 const Component = (_: StoryArgs, { service }: StoryProps) => {
-  const fixtureData = liveRadioFixtures[service as ValidServices];
+  const serviceToUse =
+    service === 'news' ? 'indonesia' : (service as ValidServices);
+
+  const fixtureData = liveRadioFixtures[serviceToUse];
 
   const formattedFixtureData = {
     ...fixtureData,
@@ -48,19 +48,18 @@ const Component = (_: StoryArgs, { service }: StoryProps) => {
         type: 'liveRadio',
         model: [
           {
-            text: 'BBC Hausa Rediyo',
-            markupType: 'plain_text',
+            text: fixtureData?.heading,
             type: 'heading',
           },
           {
-            text: "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+            text: fixtureData?.summary,
             type: 'paragraph',
           },
           {
             id: 'liveradio',
             subType: 'primary',
             format: 'audio',
-            externalId: 'bbc_hausa_radio',
+            externalId: fixtureData?.masterBrand,
             duration: 'PT0S',
             caption: '',
             embedding: false,
@@ -74,28 +73,21 @@ const Component = (_: StoryArgs, { service }: StoryProps) => {
   };
 
   return (
-    <BrowserRouter>
-      <LiveRadioPage
-        match={matchFixtures(service as ValidServices)}
-        pageData={formattedFixtureData}
-        status={200}
-        service={service}
-        loading={false}
-        error=""
-        pageType={MEDIA_PAGE}
-      />
-    </BrowserRouter>
+    <LiveRadioPage
+      match={matchFixtures(serviceToUse)}
+      pageData={formattedFixtureData}
+      status={200}
+      service={serviceToUse}
+      loading={false}
+      error=""
+      pageType={MEDIA_PAGE}
+    />
   );
 };
 
 export default {
   Component,
   title: 'Pages/Radio Page',
-  decorators: [
-    // @ts-expect-error - WithTimeMachine not typed
-    story => <WithTimeMachine>{story()}</WithTimeMachine>,
-    withServicesDecorator({ defaultService: 'indonesia' }),
-  ],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
