@@ -39,11 +39,45 @@ const matchFixtures = (service: ValidServices) => ({
 });
 
 const Component = (_: StoryArgs, { service }: StoryProps) => {
+  const fixtureData = liveRadioFixtures[service as ValidServices];
+
+  const formattedFixtureData = {
+    ...fixtureData,
+    mediaLoaderBlock: [
+      {
+        type: 'liveRadio',
+        model: [
+          {
+            text: 'BBC Hausa Rediyo',
+            markupType: 'plain_text',
+            type: 'heading',
+          },
+          {
+            text: "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+            type: 'paragraph',
+          },
+          {
+            id: 'liveradio',
+            subType: 'primary',
+            format: 'audio',
+            externalId: 'bbc_hausa_radio',
+            duration: 'PT0S',
+            caption: '',
+            embedding: false,
+            available: true,
+            live: true,
+            type: 'version',
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <BrowserRouter>
       <LiveRadioPage
         match={matchFixtures(service as ValidServices)}
-        pageData={liveRadioFixtures[service as ValidServices]}
+        pageData={formattedFixtureData}
         status={200}
         service={service}
         loading={false}
