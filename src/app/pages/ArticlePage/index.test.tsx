@@ -746,7 +746,7 @@ describe('Article Page', () => {
     expect(ampHtmlLink).toBeUndefined();
   });
 
-  const services = ['serbian', 'uzbek', 'zhongwen'];
+  const services = ['serbian', 'uzbek', 'zhongwen'] satisfies Services[];
 
   services.forEach(service => {
     it(`should not render a relatedTopics onward journey for a ${service} optimo article`, async () => {
