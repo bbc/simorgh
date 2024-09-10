@@ -310,7 +310,7 @@ export const service: DefaultServiceConfig = {
         removalGuidelineText:
           'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
-          'Mantendremos tu envío durante {{days}} y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
@@ -324,9 +324,7 @@ export const service: DefaultServiceConfig = {
 
         // Uploading Screen
         uploadingHeading: 'Subiendo tus archivos...',
-        uploadingDescription:
-          'Por favor, espera mientras hasta que haya finalizado.',
-
+        uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
