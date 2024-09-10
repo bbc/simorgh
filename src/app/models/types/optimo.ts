@@ -40,6 +40,7 @@ export type ArticleMetadata = {
   };
   analyticsLabels?: {
     producer: string;
+    contentId: string;
   };
   atiAnalytics: ATIData;
   type: string;

@@ -2,6 +2,21 @@
   "data": {
     "avEmbed": {
       "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:402fc943-0b94-3942-89fc-223be3586ab5",
+          "contentType": "article-media-asset",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "russian.media.media_asset.38886884.page",
+          "pageTitle": "Тайвань отказывается от АЭС и переходит на энергию Солнца",
+          "timePublished": "2017-02-08T17:41:41.000Z",
+          "timeUpdated": "2017-02-08T17:41:41.000Z",
+          "producerName": "RUSSIAN",
+          "producerId": "75"
+        },
         "id": "urn:bbc:ares::asset:russian/media-38886884",
         "locators": {
           "assetUri": "/russian/media-38886884",
@@ -61,10 +76,6 @@
           "aresMediaMetadata"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "producerName": "RUSSIAN",
-          "producerId": "75"
-        },
         "readTime": 1,
         "siteUri": "/russian",
         "mediaType": "video",
@@ -129,6 +140,12 @@
                           }
                         }
                       ]
+                    }
+                  },
+                  {
+                    "type": "captionText",
+                    "model": {
+                      "caption": "Тайвань переходит на энергию Солнца"
                     }
                   }
                 ]

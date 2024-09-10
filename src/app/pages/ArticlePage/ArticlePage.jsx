@@ -18,6 +18,11 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+import {
+  ARTICLE_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 import {
   getArticleId,
@@ -36,7 +41,6 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
-import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -64,7 +68,7 @@ import styles from './ArticlePage.styles';
 import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -77,6 +81,9 @@ const ArticlePage = ({ pageData }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === ARTICLE_PAGE;
   const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
@@ -106,9 +113,13 @@ const ArticlePage = ({ pageData }) => {
     pageData,
   );
   const recommendationsData = pathOr([], ['recommendations'], pageData);
+
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
   const isCPS = isPGL || isSTY;
+  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+    ?.split(':')
+    ?.includes('topcat');
 
   const {
     metadata: { atiAnalytics },
@@ -214,6 +225,7 @@ const ArticlePage = ({ pageData }) => {
         description={description}
         imageLocator={promoImage}
         imageAltText={promoImageAltText}
+        hasAmpPage={!isTC2Asset}
       />
       <LinkedData
         showAuthor
@@ -242,7 +254,7 @@ const ArticlePage = ({ pageData }) => {
               componentsToRender={componentsToRender}
             />
           </main>
-          {showRelatedTopics && topics && (
+          {showRelatedTopics && topics && !isTransliterated && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}

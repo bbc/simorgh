@@ -10,8 +10,8 @@ const LIVE_BASE_URL = 'https://www.bbc.com';
 const TEST_BASE_URL = 'https://www.test.bbc.com';
 const DEV_BASE_URL = TEST_BASE_URL;
 
-const LIVE_AMP_URL = 'https://polling.bbc.co.uk';
-const TEST_AMP_URL = 'https://polling.test.bbc.co.uk';
+const LIVE_AMP_URL = 'https://web-cdn.api.bbci.co.uk';
+const TEST_AMP_URL = 'https://web-cdn.test.api.bbci.co.uk';
 const DEV_AMP_URL = TEST_AMP_URL;
 
 const shouldOverrideMorphEnv = (type: MediaTypes, queryString?: string) => {

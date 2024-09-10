@@ -40,6 +40,37 @@ describe('Handle AV Route', () => {
     });
   });
 
+  it('should return atiAnalytics in metadata object', async () => {
+    const result = await handleAvRoute(mockGetServerSidePropsContext);
+
+    expect(result?.props?.pageData?.metadata?.atiAnalytics).toEqual({
+      campaigns: [
+        {
+          campaignId: '5a988e3739461b000e9dabfa',
+          campaignName: 'WS - Give me perspective',
+        },
+        {
+          campaignId: '5a988e4739461b000e9dabfc',
+          campaignName: 'WS - Update me',
+        },
+      ],
+      categoryName: 'News',
+      contentId: 'urn:bbc:cps:curie:asset:6ea0060d-2cb6-9b45-b4d9-08876ea24283',
+      contentType: 'article',
+      language: 'ru',
+      ldpThingIds: null,
+      ldpThingLabels: null,
+      nationsProducer: null,
+      pageIdentifier: 'russian.features.story.49881797.page',
+      pageTitle:
+        '"Невыносимые условия". Как живут деревни возле новой полосы Шереметьево',
+      timePublished: '2019-10-04T15:36:44.000Z',
+      timeUpdated: '2019-10-04T15:36:44.000Z',
+      producerName: 'RUSSIAN',
+      producerId: '75',
+    });
+  });
+
   it('should remove the x-frame-options header', async () => {
     await handleAvRoute(mockGetServerSidePropsContext);
 
