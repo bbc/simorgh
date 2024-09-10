@@ -235,11 +235,43 @@ export type TvMediaBlock = {
   };
 };
 
+type LiveRadioHeadingBlock = {
+  type: 'heading';
+  text: string;
+};
+
+type LiveRadioParagraphBlock = {
+  type: 'paragraph';
+  text: string;
+};
+
+type LiveRadioVersionBlock = {
+  type: 'version';
+  subType: string;
+  format: string;
+  externalId: string;
+  duration: string;
+  caption: string;
+  embedding: boolean;
+  available: boolean;
+  live: boolean;
+};
+
+export type LiveRadioBlock = {
+  type: 'liveRadio';
+  model: [
+    LiveRadioHeadingBlock,
+    LiveRadioParagraphBlock,
+    LiveRadioVersionBlock,
+  ];
+};
+
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
   | CaptionBlock
-  | TvMediaBlock;
+  | TvMediaBlock
+  | LiveRadioBlock;
 
 export type BuildConfigProps = {
   id: string | null;

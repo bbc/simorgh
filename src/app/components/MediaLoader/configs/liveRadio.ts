@@ -1,11 +1,12 @@
-import filterForBlockType from '#lib/utilities/blockHandlers';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
   blocks,
   basePlayerConfig,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const liveRadioBlocks = blocks?.[0]?.model;
+  const liveRadioBlocks = blocks?.find(
+    block => block.type === 'liveRadio',
+  )?.model;
 
   const headingBlock = liveRadioBlocks?.find(block => block.type === 'heading');
 
@@ -22,7 +23,7 @@ export default ({
       ...basePlayerConfig,
       autoplay: false,
       playlistObject: {
-        title: headingBlock?.text,
+        title: headingBlock?.text ?? '',
         holdingImageURL: '',
         items: [
           {
