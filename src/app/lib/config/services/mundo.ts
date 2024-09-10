@@ -324,9 +324,7 @@ export const service: DefaultServiceConfig = {
 
         // Uploading Screen
         uploadingHeading: 'Subiendo tus archivos...',
-        uploadingDescription:
-          'Por favor, espera hasta que haya finalizado.',
-
+        uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
