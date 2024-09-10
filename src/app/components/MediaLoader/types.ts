@@ -28,6 +28,8 @@ export type PlayerConfig = {
     items: PlaylistItem[];
     guidance?: string;
     embedRights?: 'allowed';
+    liveRewind?: boolean;
+    simulcast?: boolean;
   };
 };
 
@@ -38,19 +40,20 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean };
+  controls: { enabled: boolean; volumeSlider?: boolean };
   locale: { lang: string };
   subtitles: { enabled: boolean; defaultOn: boolean };
   fullscreen: { enabled: boolean };
 };
 
 export type PlaylistItem = {
-  versionID: string;
+  versionID?: string;
   kind: string;
-  duration: number;
+  duration?: number;
   live?: boolean;
   embedRights?: 'allowed';
   vpid?: string;
+  serviceID?: string;
 };
 
 export type ConfigBuilderProps = {
@@ -77,7 +80,7 @@ export type PlaceholderConfig = {
 export type ConfigBuilderReturnProps = {
   mediaType: string;
   playerConfig: PlayerConfig;
-  placeholderConfig: PlaceholderConfig;
+  placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
 };
 

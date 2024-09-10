@@ -183,7 +183,6 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   });
 
   if (!config) return null;
-
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
   const {
