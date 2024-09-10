@@ -4,10 +4,7 @@ import envConfig from '../../../support/config/envs';
 import {
   isAvailable,
   overrideRendererOnTest,
-  getEmbedUrl,
-  isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
 
@@ -19,7 +16,7 @@ export default ({ service, pageType, variant }) => {
         retries: 3,
       },
       () => {
-        it('should render an iframe with a valid URL', () => {
+        it('should render a valid media player', () => {
           cy.request(
             `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
           ).then(({ body: jsonData }) => {
@@ -29,34 +26,15 @@ export default ({ service, pageType, variant }) => {
               );
             }
 
-            const language = appConfig[service][variant].lang;
-            const embedUrl = getEmbedUrl({ body: jsonData, language });
-            const isBrandPage = isBrand(jsonData);
-
-            cy.get('iframe').then(iframe => {
-              let iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
-              iframeURL = iframeURL.split('.com').pop();
-              cy.log(`cy.get('iframe') assertion has already happened`);
-              cy.log(
-                `used for Brand - iframe.prop('src') = ${iframe.prop('src')}`,
-              );
-              cy.log(`used for Episode - embedURL = ${embedUrl}`);
-              cy.log(`selector for iframe = iframe[src*="${iframeURL}"]`);
-              const pathTested = embedUrl.replace(
-                /^\//,
-                `${envConfig.baseUrl}/`,
-              );
-              cy.log(`path that will have response tested is ${pathTested}`);
-
-              cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
-              cy.testResponseCodeAndTypeRetry({
-                // embedUrl may be relative - making it absolute to test the response
-                path: embedUrl.replace(/^\//, `${envConfig.baseUrl}/`),
-                responseCode: 200,
-                type: 'text/html',
-                allowFallback: true,
+            cy.get('[data-e2e="media-loader__container"]').should('be.visible');
+            cy.get('[data-e2e="media-loader__placeholder"] div')
+              .eq(1)
+              .within(() => {
+                cy.get('img')
+                  .should('be.visible')
+                  .should('have.attr', 'src')
+                  .should('not.be.empty');
               });
-            });
           });
         });
       },
