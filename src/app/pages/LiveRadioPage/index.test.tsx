@@ -70,16 +70,50 @@ describe('Radio Page Main', () => {
   });
 
   it('should show the audio player on canonical', () => {
-    const { container } = render(
-      <Page pageData={afriquePageData} service="afrique" lang="fr" />,
-    );
-    const audioPlayerIframeSrc = container
-      ?.querySelector('iframe')
-      ?.getAttribute('src');
+    const mockMediaBlock = [
+      {
+        type: 'liveRadio',
+        model: [
+          {
+            text: 'BBC Hausa Rediyo',
+            markupType: 'plain_text',
+            type: 'heading',
+          },
+          {
+            text: "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+            type: 'paragraph',
+          },
+          {
+            id: 'liveradio',
+            subType: 'primary',
+            format: 'audio',
+            externalId: 'bbc_hausa_radio',
+            duration: 'PT0S',
+            caption: '',
+            embedding: false,
+            available: true,
+            live: true,
+            type: 'version',
+          },
+        ],
+      },
+    ];
 
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
+    render(
+      <Page
+        pageData={{
+          ...afriquePageData,
+          mediaLoaderBlock: mockMediaBlock,
+        }}
+        service="afrique"
+        lang="fr"
+      />,
     );
+    const audioPlayerElement = document.querySelector(
+      '[data-e2e="media-player"]',
+    );
+
+    expect(audioPlayerElement).toBeInTheDocument();
   });
 
   it('should show the radio schedule for the Live Radio page on canonical', () => {
