@@ -93,9 +93,9 @@ export default ({
 
   const items = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
-  ];
+  ] as PlaylistItem[];
 
-  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+  if (showAds) items.unshift({ kind: 'advert' });
 
   const placeholderConfig = buildPlaceholderConfig({
     title,

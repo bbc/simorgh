@@ -1,21 +1,35 @@
-import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import filterForBlockType from '#lib/utilities/blockHandlers';
+import {
+  ConfigBuilderProps,
+  ConfigBuilderReturnProps,
+  LiveRadioBlock,
+  LiveRadioHeadingBlock,
+  LiveRadioParagraphBlock,
+  LiveRadioVersionBlock,
+} from '../types';
 
 export default ({
   blocks,
   basePlayerConfig,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const liveRadioBlocks = blocks?.find(
-    block => block.type === 'liveRadio',
-  )?.model;
-
-  const headingBlock = liveRadioBlocks?.find(block => block.type === 'heading');
-
-  const paragraphBlock = liveRadioBlocks?.find(
-    block => block.type === 'paragraph',
+  const { model: liveRadioBlocks }: LiveRadioBlock = filterForBlockType(
+    blocks,
+    'liveRadio',
   );
 
-  const liveRadioMetadataBlock = liveRadioBlocks?.find(
-    block => block.type === 'version',
+  const headingBlock: LiveRadioHeadingBlock = filterForBlockType(
+    liveRadioBlocks,
+    'heading',
+  );
+
+  const paragraphBlock: LiveRadioParagraphBlock = filterForBlockType(
+    liveRadioBlocks,
+    'paragraph',
+  );
+
+  const liveRadioMetadataBlock: LiveRadioVersionBlock = filterForBlockType(
+    liveRadioBlocks,
+    'version',
   );
 
   return {

@@ -235,17 +235,17 @@ export type TvMediaBlock = {
   };
 };
 
-type LiveRadioHeadingBlock = {
+export type LiveRadioHeadingBlock = {
   type: 'heading';
   text: string;
 };
 
-type LiveRadioParagraphBlock = {
+export type LiveRadioParagraphBlock = {
   type: 'paragraph';
   text: string;
 };
 
-type LiveRadioVersionBlock = {
+export type LiveRadioVersionBlock = {
   type: 'version';
   subType: string;
   format: string;

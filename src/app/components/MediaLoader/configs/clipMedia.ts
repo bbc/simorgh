@@ -92,9 +92,9 @@ export default ({
     controls: { enabled: true, volumeSlider: true },
   };
 
-  const items = [{ versionID, kind, duration: rawDuration }];
+  const items = [{ versionID, kind, duration: rawDuration }] as PlaylistItem[];
 
-  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+  if (showAds) items.unshift({ kind: 'advert' });
 
   const embedUrl = getEmbedURL({
     mediaId: `${id}/${versionID}/${lang}`,

@@ -195,14 +195,9 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
-  const {
-    mediaInfo,
-    placeholderSrc,
-    placeholderSrcset,
-    translatedNoJSMessage,
-  } = placeholderConfig ?? {};
-
   const captionBlock = getCaptionBlock(blocks, pageType);
+
+  const showPlaceholder = isPlaceholder && placeholderConfig;
 
   return (
     <>
@@ -218,12 +213,12 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
       >
         {showAds && <AdvertTagLoader />}
         <BumpLoader />
-        {isPlaceholder ? (
+        {showPlaceholder ? (
           <Placeholder
-            src={placeholderSrc}
-            srcSet={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
-            mediaInfo={mediaInfo}
+            src={placeholderConfig?.placeholderSrc}
+            srcSet={placeholderConfig?.placeholderSrcset}
+            noJsMessage={placeholderConfig?.translatedNoJSMessage}
+            mediaInfo={placeholderConfig?.mediaInfo}
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
