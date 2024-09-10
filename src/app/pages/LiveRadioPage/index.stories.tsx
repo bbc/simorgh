@@ -2,13 +2,15 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
-import { LiveRadioPage } from '..';
-import indonesia from './fixtureData/indonesia';
-import korean from './fixtureData/korean';
-import tigrinya from './fixtureData/tigrinya';
-import afaanoromoo from './fixtureData/afaanoromoo';
-import amharic from './fixtureData/amharic';
 import withServicesDecorator from '#storybook/withServicesDecorator';
+import { Services } from '#app/models/types/global';
+import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import { LiveRadioPage } from '..';
+import indonesia from './fixtureData/indonesia.json';
+import korean from './fixtureData/korean.json';
+import tigrinya from './fixtureData/tigrinya.json';
+import afaanoromoo from './fixtureData/afaanoromoo.json';
+import amharic from './fixtureData/amharic.json';
 
 const liveRadioFixtures = {
   indonesia,
@@ -18,7 +20,12 @@ const liveRadioFixtures = {
   amharic,
 };
 
-const matchFixtures = service => ({
+type ValidServices = Extract<
+  Services,
+  'indonesia' | 'korean' | 'tigrinya' | 'afaanoromoo' | 'amharic'
+>;
+
+const matchFixtures = (service: ValidServices) => ({
   params: {
     mediaId: 'liveradio',
     serviceId: {
@@ -31,12 +38,12 @@ const matchFixtures = service => ({
   },
 });
 
-const Component = (_, { service }) => {
+const Component = (_: StoryArgs, { service }: StoryProps) => {
   return (
     <BrowserRouter>
       <LiveRadioPage
-        match={matchFixtures(service)}
-        pageData={liveRadioFixtures[service]}
+        match={matchFixtures(service as ValidServices)}
+        pageData={liveRadioFixtures[service as ValidServices]}
         status={200}
         service={service}
         loading={false}
@@ -50,7 +57,11 @@ const Component = (_, { service }) => {
 export default {
   Component,
   title: 'Pages/Radio Page',
-  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+  decorators: [
+    // @ts-expect-error - WithTimeMachine not typed
+    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+    withServicesDecorator({ defaultService: 'indonesia' }),
+  ],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
@@ -58,7 +69,6 @@ export default {
       pauseAnimationAtEnd: false,
     },
   },
-  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
 };
 
 export const Page = Component;

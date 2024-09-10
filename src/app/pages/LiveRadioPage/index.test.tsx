@@ -4,17 +4,25 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { Services } from '#app/models/types/global';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
-import afriquePageData from './fixtureData/afrique';
-import indonesianPageData from './fixtureData/indonesia';
-import gahuzaPageData from './fixtureData/gahuza';
+import afriquePageData from './fixtureData/afrique.json';
+import indonesianPageData from './fixtureData/indonesia.json';
+import gahuzaPageData from './fixtureData/gahuza.json';
 
-const Page = ({ pageData, service, lang }) => (
+type Props = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pageData: any;
+  service: Services;
+  lang: string;
+};
+
+const Page = ({ pageData, service, lang }: Props) => (
   <BrowserRouter>
     <ToggleContextProvider>
-      <ServiceContextProvider service={service} lang={lang}>
+      <ServiceContextProvider service={service} pageLang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           pageType={MEDIA_PAGE}
@@ -29,7 +37,7 @@ const Page = ({ pageData, service, lang }) => (
   </BrowserRouter>
 );
 
-analyticsUtils.getAtUserId = jest.fn();
+(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -66,8 +74,8 @@ describe('Radio Page Main', () => {
       <Page pageData={afriquePageData} service="afrique" lang="fr" />,
     );
     const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
+      ?.querySelector('iframe')
+      ?.getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
       '/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
