@@ -311,7 +311,8 @@ describe('buildSettings', () => {
         playlistObject: {
           title: 'مباشر: تلفزيون بي بي سي عربي',
           summary: 'This is a caption!',
-          holdingImageURL: 'https://ichef.bbci.co.uk/ace/ws/512',
+          holdingImageURL:
+            'http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png',
           items: [
             {
               duration: 0,
