@@ -470,7 +470,7 @@ describe('buildSettings', () => {
         };
       },
     );
-    it('Should process a On Demand TV block into a valid playlist item.', () => {
+    it('Should process an On Demand TV block into a valid playlist item.', () => {
       const result = buildSettings({
         ...hindiTvBaseSettings,
         blocks: hindiTvMediaBlocks as MediaBlock[],
