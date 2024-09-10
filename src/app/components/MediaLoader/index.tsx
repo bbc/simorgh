@@ -157,7 +157,7 @@ type Props = {
 };
 
 const MediaLoader = ({ blocks, embedded, className }: Props) => {
-  const [isPlaceholder, setIsPlaceholder] = useState(false);
+  const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
