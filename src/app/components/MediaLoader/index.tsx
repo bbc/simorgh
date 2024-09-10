@@ -83,9 +83,14 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
+  mediaType?: string;
 };
 
-const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+  mediaType,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -136,7 +141,11 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={styles.mediaContainer}
+      css={
+        mediaType === 'liveRadio'
+          ? styles.liveRadioMediaContainer
+          : styles.mediaContainer
+      }
     />
   );
 };
@@ -218,7 +227,11 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
-          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+          <MediaContainer
+            playerConfig={playerConfig}
+            showAds={showAds}
+            mediaType={mediaType}
+          />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaType} />}
       </figure>

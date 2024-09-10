@@ -1,28 +1,15 @@
 import React, { useContext } from 'react';
 import { Headline } from '#psammead/psammead-headings/src';
-import pathOr from 'ramda/src/pathOr';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
-import useLocation from '#hooks/useLocation';
-import AVPlayer from '#containers/AVPlayer';
-import getMediaId from '#lib/utilities/getMediaId';
-import getMasterbrand from '#lib/utilities/getMasterbrand';
-import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import MediaLoader from '#app/components/MediaLoader';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
-
-const staticAssetsPath = `${
-  getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
-}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-
-const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const LiveRadioPage = ({ pageData }) => {
   const {
@@ -31,30 +18,11 @@ const LiveRadioPage = ({ pageData }) => {
     summary,
     heading,
     bodySummary,
-    masterBrand,
     radioScheduleData,
     mediaLoaderBlock,
   } = pageData;
-  const { script, service, lang, liveRadioOverrides, translations } =
-    useContext(ServiceContext);
-  const location = useLocation();
-  const assetId = 'liveradio';
-  const mediaId = getMediaId({
-    assetId,
-    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
-    lang,
-    service,
-  });
-  const embedUrl = getEmbedUrl({
-    mediaId,
-    type: 'media',
-    queryString: location.search,
-  });
-  const iframeTitle = pathOr(
-    'Audio player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
+  const { script, service } = useContext(ServiceContext);
+
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
   return (
@@ -120,15 +88,6 @@ const LiveRadioPage = ({ pageData }) => {
             {bodySummary}
           </Paragraph>
           <MediaLoader blocks={mediaLoaderBlock} />
-          <AVPlayer
-            assetId={assetId}
-            embedUrl={embedUrl}
-            iframeTitle={iframeTitle}
-            title="Live radio"
-            type="audio"
-            skin="audio"
-            placeholderSrc={audioPlaceholderImageSrc}
-          />
         </Grid>
       </GelPageGrid>
       {hasRadioScheduleData && (

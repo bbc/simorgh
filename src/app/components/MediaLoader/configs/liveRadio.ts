@@ -47,7 +47,7 @@ export default ({
         controls: { enabled: true, volumeSlider: true },
       },
     },
-    mediaType: 'video',
+    mediaType: 'liveRadio',
     showAds: false,
   };
 };
