@@ -148,7 +148,7 @@ type Props = {
 };
 
 const MediaLoader = ({ blocks, embedded, className }: Props) => {
-  const [isPlaceholder, setIsPlaceholder] = useState(true);
+  const [isPlaceholder, setIsPlaceholder] = useState(false);
   const { lang, translations } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -183,6 +183,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
   });
 
   if (!config) return null;
+
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
   const {
@@ -190,7 +191,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     placeholderSrc,
     placeholderSrcset,
     translatedNoJSMessage,
-  } = placeholderConfig;
+  } = placeholderConfig ?? {};
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
