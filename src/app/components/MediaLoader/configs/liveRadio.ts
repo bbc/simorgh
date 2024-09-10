@@ -12,25 +12,17 @@ export default ({
   blocks,
   basePlayerConfig,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { model: liveRadioBlocks }: LiveRadioBlock = filterForBlockType(
-    blocks,
-    'liveRadio',
-  );
+  const { model: liveRadioBlocks }: LiveRadioBlock =
+    filterForBlockType(blocks, 'liveRadio') ?? {};
 
-  const headingBlock: LiveRadioHeadingBlock = filterForBlockType(
-    liveRadioBlocks,
-    'heading',
-  );
+  const headingBlock: LiveRadioHeadingBlock =
+    filterForBlockType(liveRadioBlocks, 'heading') ?? {};
 
-  const paragraphBlock: LiveRadioParagraphBlock = filterForBlockType(
-    liveRadioBlocks,
-    'paragraph',
-  );
+  const paragraphBlock: LiveRadioParagraphBlock =
+    filterForBlockType(liveRadioBlocks, 'paragraph') ?? {};
 
-  const liveRadioMetadataBlock: LiveRadioVersionBlock = filterForBlockType(
-    liveRadioBlocks,
-    'version',
-  );
+  const liveRadioMetadataBlock: LiveRadioVersionBlock =
+    filterForBlockType(liveRadioBlocks, 'version') ?? {};
 
   return {
     playerConfig: {
@@ -48,7 +40,7 @@ export default ({
         ],
         liveRewind: true,
         simulcast: true,
-        summary: paragraphBlock?.text,
+        summary: paragraphBlock?.text ?? '',
       },
       ui: {
         ...basePlayerConfig.ui,
