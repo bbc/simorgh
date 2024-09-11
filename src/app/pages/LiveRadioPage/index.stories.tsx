@@ -43,7 +43,7 @@ const Component = (_: StoryArgs, { service }: StoryProps) => {
 
   const formattedFixtureData = {
     ...fixtureData,
-    mediaLoaderBlock: [
+    mediaBlock: [
       {
         type: 'liveRadio',
         model: [

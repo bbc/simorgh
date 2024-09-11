@@ -44,7 +44,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
 
     const getRadioScheduleData = path(['radioScheduleData']);
 
-    const mediaLoaderBlock = [
+    const mediaBlock = [
       {
         type: 'liveRadio',
         model: json?.content?.blocks,
@@ -66,7 +66,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         masterBrand: getMasterBrand(json),
         radioScheduleData: getRadioScheduleData(json),
         metadata: { type: 'Live Radio' },
-        mediaLoaderBlock,
+        mediaBlock,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

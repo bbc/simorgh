@@ -21,7 +21,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
     bodySummary,
     contentType,
     radioScheduleData,
-    mediaLoaderBlock,
+    mediaBlock,
   } = pageData;
   const { script, service } = useContext(ServiceContext);
 
@@ -95,7 +95,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
           >
             {bodySummary}
           </Paragraph>
-          <MediaLoader blocks={mediaLoaderBlock} />
+          <MediaLoader blocks={mediaBlock} />
         </Grid>
       </GelPageGrid>
       {hasRadioScheduleData && (

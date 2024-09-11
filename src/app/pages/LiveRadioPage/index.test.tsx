@@ -116,7 +116,7 @@ describe('Radio Page Main', () => {
         pageData={
           {
             ...afriquePageData,
-            mediaLoaderBlock: mockMediaBlock,
+            mediaBlock: mockMediaBlock,
           } as unknown as LiveRadioPageData
         }
         service="afrique"

@@ -9,5 +9,5 @@ export type LiveRadioPageData = {
   bodySummary: string;
   contentType: ChartbeatProps['contentType'];
   radioScheduleData: [];
-  mediaLoaderBlock: LiveRadioBlock[];
+  mediaBlock: LiveRadioBlock[];
 };
