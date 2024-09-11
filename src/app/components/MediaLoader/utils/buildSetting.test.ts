@@ -470,7 +470,7 @@ describe('buildSettings', () => {
         };
       },
     );
-    it('Should process a On Demand TV block into a valid playlist item.', () => {
+    it('Should process an On Demand TV block into a valid playlist item.', () => {
       const result = buildSettings({
         ...hindiTvBaseSettings,
         blocks: hindiTvMediaBlocks as MediaBlock[],
@@ -483,7 +483,6 @@ describe('buildSettings', () => {
           enableToucan: true,
           appType: 'responsive',
           autoplay: false,
-          externalEmbedUrl: '',
           appName: 'news-hindi',
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
           statsObject: {

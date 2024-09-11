@@ -23,7 +23,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -45,7 +45,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment with test override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -68,7 +68,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment with live override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
+    expected: `https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -100,7 +100,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in live environment`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://web-cdn.api.bbci.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -122,7 +122,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in live environment with test override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://web-cdn.api.bbci.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -145,7 +145,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in live environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://web-cdn.api.bbci.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -168,7 +168,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for legacy media in live environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
+    expected: `https://web-cdn.api.bbci.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -190,7 +190,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for legacy media in test environment with no override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
+    expected: `https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -212,7 +212,7 @@ const testCases = [
   },
   {
     description: `should output test polling urls for amp`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
+    expected: `https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
     environment: 'local',
     before: setEnvironment,
     embedObject: {
@@ -293,7 +293,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -313,7 +313,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/articles/c805k05kr73o/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/c805k05kr73o/amp',
       },
       {
         description: 'Optimo - not embedded',
@@ -338,7 +338,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/vpid/p0cfmdwj/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/vpid/p0cfmdwj/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -358,7 +358,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/articles/c805k05kr73o/pXXXXXo/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/c805k05kr73o/pXXXXXo/amp',
       },
       {
         description: 'Optimo - not embedded',
@@ -383,7 +383,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/pid/p0cfmdwn/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/pid/p0cfmdwn/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -403,7 +403,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/articles/c805k05kr73o/pXXXXXo/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/c805k05kr73o/pXXXXXo/amp',
       },
       {
         description: 'Optimo - not embedded',
@@ -428,7 +428,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/media-38886884/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/russian/media-38886884/amp',
       },
       {
         description: 'CPS - not embedded',
@@ -448,7 +448,7 @@ const buildAvEmbedUrlTestCases = [
         embedded: true,
         isAmp: true,
         expected:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/articles/c805k05kr73o/amp',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/c805k05kr73o/amp',
       },
       {
         description: 'Optimo - not embedded',

@@ -10,7 +10,7 @@ const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
-const MEDIA_ID_REGEX = /^p[0-9a-z]{7,}/;
+const MEDIA_ID_REGEX = /^((?!portuguese)p[a-z0-9]{7,})$/;
 
 const MEDIA_DELIMITERS = ['vpid', 'pid'];
 
@@ -165,6 +165,7 @@ export default function parseAvRoute(resolvedUrl: string) {
   const query = resolvedUrlWithoutQuery.split(/[/.]/).filter(Boolean);
 
   const isWsRoute = query.includes('ws');
+  const isAmp = extractAmp(query);
 
   const service = extractService(query);
   const variant = extractVariant(query);
@@ -173,10 +174,10 @@ export default function parseAvRoute(resolvedUrl: string) {
   const mediaId = extractMediaId(query);
   const mediaDelimiter = extractMediaDelimiter(query);
   const lang = extractLang(query);
-  const amp = extractAmp(query);
 
   return {
     isWsRoute,
+    isAmp,
     service,
     variant,
     platform,
@@ -184,6 +185,5 @@ export default function parseAvRoute(resolvedUrl: string) {
     mediaId,
     mediaDelimiter,
     lang,
-    isAmp: amp,
   };
 }

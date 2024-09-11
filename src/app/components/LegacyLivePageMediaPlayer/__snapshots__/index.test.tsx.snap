@@ -224,7 +224,7 @@ exports[`LegacyLiveMediaPlayer Calls the amp media player 1`] = `
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
           scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/live/c7p765ynk9qt/p01thw20/pcm/amp"
+          src="https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/live/c7p765ynk9qt/p01thw20/pcm/amp"
           title="Media player"
         >
           <div
