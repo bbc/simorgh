@@ -35,7 +35,7 @@ export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
 
   const baseUrl = getBaseUrl();
 
-  return `${baseUrl}/${AV_ROUTE}/${platform}/${id}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
+  return `${baseUrl}/${AV_ROUTE}/${platform}/${id}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}/amp`;
 };
 
 export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {

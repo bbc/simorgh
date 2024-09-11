@@ -260,7 +260,7 @@ exports[`AMP Story Page Image Caption should match text 1`] = `"Bayanan sautiम
 
 exports[`AMP Story Page Image should match snapshot 1`] = `
 <noscript>
-  &lt;div class="bbc-1b4920d e1cpbhy72"&gt;&lt;img alt="" src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01b7w9z.jpg.webp" srcSet="https://ichef.test.bbci.co.uk/images/ic/240xn/p01b7w9z.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01b7w9z.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01b7w9z.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01b7w9z.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01b7w9z.jpg.webp 800w" aria-hidden="true"/&gt;&lt;div class="bbc-18lih19 e1cpbhy71"&gt;&lt;strong class="bbc-1k5stce e1cpbhy70"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="bbc-1b4920d e1cpbhy72"&gt;&lt;img alt="" src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01b7w9z.jpg.webp" srcSet="" aria-hidden="true"/&gt;&lt;div class="bbc-18lih19 e1cpbhy71"&gt;&lt;strong class="bbc-1k5stce e1cpbhy70"&gt;This audio cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
 </noscript>
 `;
 
@@ -400,7 +400,7 @@ exports[`AMP Story Page SEO Linked data should match text 2`] = `
   "@type": "AudioObject",
   "description": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
   "duration": "PT16S",
-  "embedURL": "https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/hausa/labarai-23246985/p01b7w2z/ha/amp",
+  "embedURL": "https://www.test.bbc.com/hausa/av-embeds/labarai-23246985/vpid/p01b7w2z",
   "name": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w9z.jpg",
   "uploadDate": "2017-05-22T15:38:23.000Z",
