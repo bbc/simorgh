@@ -2,8 +2,8 @@
 import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
 import {
-  isAvailable,
-  overrideRendererOnTest,
+  getEpisodeAvailability,
+  videoPlaceholderImageUrl,
 } from '../../../support/helpers/onDemandRadioTv';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
@@ -17,10 +17,8 @@ export default ({ service, pageType, variant }) => {
       },
       () => {
         it('should render a valid media player', () => {
-          cy.request(
-            `${Cypress.env('currentPath')}.json${overrideRendererOnTest()}`,
-          ).then(({ body: jsonData }) => {
-            if (!isAvailable(jsonData)) {
+          cy.getPageDataFromWindow().then(({ pageData }) => {
+            if (!getEpisodeAvailability(pageData)) {
               return cy.log(
                 `Episode is not available: ${Cypress.env('currentPath')}`,
               );
@@ -31,7 +29,8 @@ export default ({ service, pageType, variant }) => {
               cy.get('div img')
                 .should('be.visible')
                 .should('have.attr', 'src')
-                .should('not.be.empty');
+                .should('not.be.empty')
+                .and('equal', videoPlaceholderImageUrl(pageData));
             });
           });
         });
