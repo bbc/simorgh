@@ -6,7 +6,6 @@ const AV_ROUTE = 'ws/av-embeds';
 
 const LIVE_BASE_URL = 'https://www.bbc.com';
 const TEST_BASE_URL = 'https://www.test.bbc.com';
-const DEV_BASE_URL = TEST_BASE_URL;
 
 const LIVE_AMP_URL = 'https://web-cdn.api.bbci.co.uk';
 const TEST_AMP_URL = 'https://web-cdn.test.api.bbci.co.uk';
@@ -14,47 +13,43 @@ const DEV_AMP_URL = TEST_AMP_URL;
 
 const isDev = () => getEnvConfig().SIMORGH_APP_ENV === 'local';
 
-const getBaseUrl = (isAmp: boolean) => {
-  // In some scenarios, we use the same base URL as the parent
-  const relativeBaseUrl = '';
+const getBaseUrl = () => {
   switch (true) {
     case isLive():
-      return isAmp ? LIVE_AMP_URL : relativeBaseUrl;
+      return LIVE_AMP_URL;
     case isDev():
-      return isAmp ? DEV_AMP_URL : DEV_BASE_URL;
+      return DEV_AMP_URL;
     default:
-      return isAmp ? TEST_AMP_URL : relativeBaseUrl;
+      return TEST_AMP_URL;
   }
 };
 
-type FunProps = {
+type FuncProps = {
   id: string;
   versionID?: string;
   lang?: string;
 };
 
-export const getAmpIframeUrl = ({ id, versionID, lang }: FunProps) => {
+export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
   const { platform } = parseAvRoute(id);
 
-  const baseUrl = getBaseUrl(true);
+  const baseUrl = getBaseUrl();
 
   return `${baseUrl}/${AV_ROUTE}/${platform}/${id}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
 };
 
-export const getExternalEmbedUrl = ({ id, versionID, lang }: FunProps) => {
+export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
   const { platform, service, variant, assetId } = parseAvRoute(id);
 
   const baseUrl = isLive() ? LIVE_BASE_URL : TEST_BASE_URL;
 
-  let url = '';
-
   if (platform === 'cps') {
-    url = `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${versionID ? `/vpid/${versionID}` : ''}`;
+    return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${versionID ? `/vpid/${versionID}` : ''}`;
   }
 
   if (platform === 'articles') {
-    url = `${baseUrl}/ws/av-embeds/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
+    return `${baseUrl}/${AV_ROUTE}/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
   }
 
-  return url;
+  return null;
 };
