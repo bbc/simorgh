@@ -171,7 +171,7 @@ describe('MediaLoader', () => {
   });
 
   describe('Config', () => {
-    it('should use the counterNameOverride when rendering On Demand TV', async () => {
+    it('should use the pageIdentifierOverride when rendering On Demand TV', async () => {
       const buildConfigSpy = jest.spyOn(buildConfig, 'default');
       await act(async () => {
         render(
