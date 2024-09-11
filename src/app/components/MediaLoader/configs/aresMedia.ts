@@ -83,11 +83,13 @@ export default ({
 
   const videoId = aresMediaMetadata?.id;
 
-  const holdingImageURL = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
+  const holdingImageURL = rawImage
+    ? buildIChefURL({
+        originCode,
+        locator,
+        resolution: DEFAULT_WIDTH,
+      })
+    : aresMediaMetadata?.imageUrl;
 
   const isLive = aresMediaMetadata?.live ?? false;
 
@@ -120,9 +122,9 @@ export default ({
     mediaType: actualFormat || 'video',
     playerConfig: {
       ...basePlayerConfig,
-      autoplay: pageType !== 'mediaArticle',
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       ...(embedUrl && { externalEmbedUrl: embedUrl }),
+      autoplay: pageType !== 'mediaArticle',
       playlistObject: {
         title,
         summary: caption || '',
