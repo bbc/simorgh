@@ -51,6 +51,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-6 {
+  position: relative;
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -597,6 +598,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   }
 }
 
+.emotion-42 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
 .emotion-43 {
   position: relative;
   height: 0;
@@ -831,7 +838,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             </p>
           </div>
           <figure
-            class="emotion-6"
+            class="emotion-42"
           >
             <div
               class="emotion-43"

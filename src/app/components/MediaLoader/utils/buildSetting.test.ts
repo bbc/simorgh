@@ -205,7 +205,7 @@ describe('buildSettings', () => {
         } satisfies PlaceholderConfig,
         showAds: false,
         ampIframeUrl:
-          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -279,7 +279,7 @@ describe('buildSettings', () => {
         },
         showAds: false,
         ampIframeUrl:
-          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -407,7 +407,7 @@ describe('buildSettings', () => {
         } satisfies PlaceholderConfig,
         showAds: false,
         ampIframeUrl:
-          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
