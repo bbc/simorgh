@@ -27,14 +27,12 @@ export default ({ service, pageType, variant }) => {
             }
 
             cy.get('[data-e2e="media-loader__container"]').should('be.visible');
-            cy.get('[data-e2e="media-loader__placeholder"] div')
-              .eq(1)
-              .within(() => {
-                cy.get('img')
-                  .should('be.visible')
-                  .should('have.attr', 'src')
-                  .should('not.be.empty');
-              });
+            cy.get('[data-e2e="media-loader__placeholder"]').within(() => {
+              cy.get('div img')
+                .should('be.visible')
+                .should('have.attr', 'src')
+                .should('not.be.empty');
+            });
           });
         });
       },
