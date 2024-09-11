@@ -30,7 +30,6 @@ export default ({
       autoplay: false,
       playlistObject: {
         title: headingBlock?.text ?? '',
-        holdingImageURL: '',
         items: [
           {
             kind: 'radioProgramme',

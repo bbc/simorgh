@@ -92,7 +92,7 @@ export default ({
     controls: { enabled: true, volumeSlider: true },
   };
 
-  const items = [{ versionID, kind, duration: rawDuration }] as PlaylistItem[];
+  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
 
   if (showAds) items.unshift({ kind: 'advert' });
 

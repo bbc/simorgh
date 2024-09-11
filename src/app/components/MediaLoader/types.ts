@@ -24,7 +24,7 @@ export type PlayerConfig = {
   playlistObject?: {
     title: string;
     summary?: string;
-    holdingImageURL: string;
+    holdingImageURL?: string;
     items: PlaylistItem[];
     guidance?: string;
     embedRights?: 'allowed';
