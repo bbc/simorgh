@@ -9,7 +9,7 @@ import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
 import runMediaPlaceholderTests from './mediaPlaceholder';
 import runMediaPlayerAudioTests from './mediaPlayerAudio';
-import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
+import runMediaPlayerTests from './mediaPlayer';
 import runMediaPlayerEmbedLegacyTests from './mediaPlayerEmbedLegacy';
 import runRadioScheduleTests from './radioSchedule';
 import runRecentEpisodesTests from './recentEpisodes';
@@ -51,7 +51,7 @@ export {
   runMainHeadingTests,
   runMediaPlaceholderTests,
   runMediaPlayerAudioTests,
-  runMediaPlayerEmbedTests,
+  runMediaPlayerTests,
   runMediaPlayerEmbedLegacyTests,
   runMostReadTests,
   runRadioScheduleTests,

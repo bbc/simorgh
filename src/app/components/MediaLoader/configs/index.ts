@@ -9,8 +9,10 @@ import {
   ConfigBuilderProps,
 } from '../types';
 
+const BLOCK_TYPES = ['aresMedia', 'clipMedia', 'tvMedia', 'liveRadio'] as const;
+
 const blockTypeMapping: Record<
-  string,
+  (typeof BLOCK_TYPES)[number],
   (arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
 > = {
   aresMedia,
@@ -20,14 +22,9 @@ const blockTypeMapping: Record<
 };
 
 export default (blocks: MediaBlock[]) => {
-  const availableMediaType = [
-    'aresMedia',
-    'clipMedia',
-    'tvMedia',
-    'liveRadio',
-  ].find(mediaType => filterForBlockType(blocks, mediaType));
-  if (!availableMediaType) {
-    return null;
-  }
-  return blockTypeMapping[availableMediaType];
+  const blockType = BLOCK_TYPES.find(type => filterForBlockType(blocks, type));
+
+  if (!blockType) return null;
+
+  return blockTypeMapping[blockType];
 };
