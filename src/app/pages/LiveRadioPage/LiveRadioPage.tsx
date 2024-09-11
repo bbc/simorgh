@@ -5,24 +5,12 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
-import { ChartbeatProps } from '#app/components/ChartbeatAnalytics/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
-
-type LiveRadioPageData = {
-  language: string;
-  name: string;
-  summary: string;
-  heading: string;
-  bodySummary: string;
-  contentType: ChartbeatProps['contentType'];
-  radioScheduleData: [];
-  mediaLoaderBlock: MediaBlock[];
-};
+import { LiveRadioPageData } from './types';
 
 const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
   const {

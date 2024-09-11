@@ -5,16 +5,17 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
+import { LiveRadioBlock } from '#app/components/MediaLoader/types';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
 import afriquePageData from './fixtureData/afrique.json';
 import indonesianPageData from './fixtureData/indonesia.json';
 import gahuzaPageData from './fixtureData/gahuza.json';
+import { LiveRadioPageData } from './types';
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pageData: any;
+  pageData: LiveRadioPageData;
   service: Services;
   lang: string;
 };
@@ -47,7 +48,11 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', () => {
     const { container } = render(
-      <Page pageData={afriquePageData} service="afrique" lang="fr" />,
+      <Page
+        pageData={afriquePageData as unknown as LiveRadioPageData}
+        service="afrique"
+        lang="fr"
+      />,
     );
 
     expect(container).toMatchSnapshot();
@@ -55,7 +60,11 @@ describe('Radio Page Main', () => {
 
   it('should show the title for the Live Radio page', () => {
     const { getByText } = render(
-      <Page pageData={afriquePageData} service="afrique" lang="fr" />,
+      <Page
+        pageData={afriquePageData as unknown as LiveRadioPageData}
+        service="afrique"
+        lang="fr"
+      />,
     );
 
     expect(getByText('BBC Afrique Radio')).toBeInTheDocument();
@@ -63,7 +72,11 @@ describe('Radio Page Main', () => {
 
   it('should show the summary for the Live Radio page', () => {
     const { getByText } = render(
-      <Page pageData={afriquePageData} service="afrique" lang="fr" />,
+      <Page
+        pageData={afriquePageData as unknown as LiveRadioPageData}
+        service="afrique"
+        lang="fr"
+      />,
     );
 
     expect(getByText('Infos, musique et sports')).toBeInTheDocument();
@@ -76,7 +89,6 @@ describe('Radio Page Main', () => {
         model: [
           {
             text: 'BBC Hausa Rediyo',
-            markupType: 'plain_text',
             type: 'heading',
           },
           {
@@ -97,14 +109,16 @@ describe('Radio Page Main', () => {
           },
         ],
       },
-    ];
+    ] as LiveRadioBlock[];
 
     render(
       <Page
-        pageData={{
-          ...afriquePageData,
-          mediaLoaderBlock: mockMediaBlock,
-        }}
+        pageData={
+          {
+            ...afriquePageData,
+            mediaLoaderBlock: mockMediaBlock,
+          } as unknown as LiveRadioPageData
+        }
         service="afrique"
         lang="fr"
       />,
@@ -118,7 +132,11 @@ describe('Radio Page Main', () => {
 
   it('should show the radio schedule for the Live Radio page on canonical', () => {
     const { getByText } = render(
-      <Page pageData={indonesianPageData} service="indonesia" lang="id" />,
+      <Page
+        pageData={indonesianPageData as unknown as LiveRadioPageData}
+        service="indonesia"
+        lang="id"
+      />,
     );
     const radioScheduleTitle = getByText('Siaran radio');
     const scheduleWrapper = document.querySelector(
@@ -131,7 +149,11 @@ describe('Radio Page Main', () => {
 
   it('should not show the radio schedule for services without a schedule', async () => {
     const { container } = render(
-      <Page pageData={gahuzaPageData} service="gahuza" lang="rw" />,
+      <Page
+        pageData={gahuzaPageData as unknown as LiveRadioPageData}
+        service="gahuza"
+        lang="rw"
+      />,
     );
 
     const scheduleWrapper = container.querySelector(

@@ -9,7 +9,7 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -83,7 +83,7 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
-  mediaType?: string;
+  mediaType?: MediaType;
 };
 
 const MediaContainer = ({

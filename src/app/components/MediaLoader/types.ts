@@ -77,14 +77,14 @@ export type PlaceholderConfig = {
   translatedNoJSMessage: string;
 };
 
+export type MediaType = 'audio' | 'video' | 'liveRadio';
+
 export type ConfigBuilderReturnProps = {
-  mediaType: string;
+  mediaType: MediaType;
   playerConfig: PlayerConfig;
   placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
 };
-
-export type MediaType = 'audio' | 'video';
 
 export type MediaInfo = {
   title: string;
@@ -246,6 +246,7 @@ export type LiveRadioParagraphBlock = {
 };
 
 export type LiveRadioVersionBlock = {
+  id: string;
   type: 'version';
   subType: string;
   format: string;
