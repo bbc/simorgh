@@ -143,7 +143,7 @@ const extractMediaDelimiter = (query: Query) => {
     MEDIA_DELIMITERS.includes(id),
   );
 
-  return mediaDelimiter ?? null;
+  return mediaDelimiter ?? 'vpid';
 };
 
 /**

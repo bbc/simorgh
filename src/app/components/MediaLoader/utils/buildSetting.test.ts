@@ -360,7 +360,8 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
+          externalEmbedUrl:
+            '/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           insideIframe: true,
           embeddedOffsite: true,
           appName: 'news-serbian',

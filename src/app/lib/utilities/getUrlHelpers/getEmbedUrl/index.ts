@@ -57,20 +57,19 @@ const handleAvEmbed = ({ mediaId, isAmp, embedded = false }: AvEmbedProps) => {
     mediaId: parsedMediaId,
     service,
     variant,
+    lang,
   } = parsedRoute;
 
   const baseUrl = getBaseUrl(isAmp);
 
   // 'embedded' is "true" for media players rendered by the av-embeds route: AMP, Syndication
   if (embedded) {
-    if (isAmp) return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}/amp`;
-
     if (platform === 'cps') {
-      return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${mediaDelimiter ? `/${mediaDelimiter}/${parsedMediaId}` : ''}`;
+      return `${baseUrl}/${service}${variant ? `/${variant}` : ''}/av-embeds/${assetId}${parsedMediaId ? `/${mediaDelimiter}/${parsedMediaId}` : ''}`;
     }
 
     if (platform === 'articles') {
-      return `${baseUrl}/${AV_ROUTE}/${platform}/${mediaId}`;
+      return `${baseUrl}/${AV_ROUTE}/${platform}/${assetId}/${parsedMediaId}/${lang}`;
     }
   }
 
