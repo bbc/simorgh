@@ -136,8 +136,8 @@ const ArticlePage = ({ pageData }) => {
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: isAmp ? articleMediaPlayer : MediaLoader,
-    video: isAmp ? articleMediaPlayer : MediaLoader,
+    audio: MediaLoader,
+    video: MediaLoader,
     text,
     image: props => (
       <ImageWithCaption

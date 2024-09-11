@@ -2,7 +2,6 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   ClipMediaBlock,
   ConfigBuilderProps,
@@ -12,19 +11,18 @@ import {
 import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
+import { getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
 
 export default ({
   id,
   lang,
-  isAmp,
   blocks,
   basePlayerConfig,
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
-  embedded,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -96,18 +94,17 @@ export default ({
 
   if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
 
-  const embedUrl = getEmbedURL({
-    mediaId: `${id}/${versionID}/${lang}`,
-    type: 'avEmbed',
-    isAmp,
-    embedded,
+  const externalEmbedUrl = getExternalEmbedUrl({
+    id,
+    versionID,
+    lang,
   });
 
   return {
     mediaType: type || 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(embedUrl && { externalEmbedUrl: embedUrl }),
+      ...(externalEmbedUrl && { externalEmbedUrl }),
       playlistObject: {
         title,
         summary: caption || '',

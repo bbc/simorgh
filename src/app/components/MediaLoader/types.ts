@@ -54,7 +54,7 @@ export type PlaylistItem = {
 };
 
 export type ConfigBuilderProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
@@ -64,7 +64,6 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
-  isAmp?: boolean;
 };
 
 export type PlaceholderConfig = {
@@ -79,6 +78,7 @@ export type ConfigBuilderReturnProps = {
   playerConfig: PlayerConfig;
   placeholderConfig: PlaceholderConfig;
   showAds: boolean;
+  ampIframeUrl?: string;
 };
 
 export type MediaType = 'audio' | 'video';
@@ -239,7 +239,7 @@ export type MediaBlock =
   | TvMediaBlock;
 
 export type BuildConfigProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;

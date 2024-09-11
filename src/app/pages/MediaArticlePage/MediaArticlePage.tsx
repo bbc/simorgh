@@ -36,7 +36,6 @@ import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../legacy/containers/RelatedTopics';
@@ -75,7 +74,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isAmp, pageType, service } = useContext(RequestContext);
+  const { pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -151,11 +150,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        {isAmp ? (
-          <ArticleMediaPlayer {...props} />
-        ) : (
-          <MediaLoader blocks={props.blocks as MediaBlock[]} />
-        )}
+        <MediaLoader blocks={props.blocks as MediaBlock[]} />
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
@@ -165,11 +160,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        {isAmp ? (
-          <ArticleMediaPlayer {...props} />
-        ) : (
-          <MediaLoader blocks={props.blocks as MediaBlock[]} />
-        )}
+        <MediaLoader blocks={props.blocks as MediaBlock[]} />
       </div>
     ),
     text,

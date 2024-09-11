@@ -164,7 +164,8 @@ describe('MediaLoader', () => {
 
       expect(helmetMetaTags[0]).toEqual({
         property: 'og:url',
-        content: '/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB',
+        content:
+          'https://www.test.bbc.com/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB',
       });
     });
   });

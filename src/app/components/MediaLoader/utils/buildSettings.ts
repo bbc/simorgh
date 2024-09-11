@@ -63,7 +63,6 @@ const buildSettings = ({
     showAdsBasedOnLocation,
     embedded,
     lang,
-    isAmp,
   });
 
   if (!config) return null;

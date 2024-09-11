@@ -25,6 +25,7 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
+import Amp from './amp';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -181,7 +182,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
-    id,
+    id: id || '',
     blocks,
     counterName: pageIdentifier,
     statsDestination,
@@ -198,7 +199,8 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
+  const { mediaType, playerConfig, placeholderConfig, showAds, ampIframeUrl } =
+    config;
 
   const {
     mediaInfo,
@@ -221,18 +223,32 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
         css={styles.figure}
         className={className}
       >
-        {showAds && <AdvertTagLoader />}
-        <BumpLoader />
-        {isPlaceholder ? (
-          <Placeholder
-            src={placeholderSrc}
-            srcSet={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
-            mediaInfo={mediaInfo}
-            onClick={() => setIsPlaceholder(false)}
-          />
+        {!isAmp ? (
+          <>
+            {showAds && <AdvertTagLoader />}
+            <BumpLoader />
+            {isPlaceholder ? (
+              <Placeholder
+                src={placeholderSrc}
+                srcSet={placeholderSrcset}
+                noJsMessage={translatedNoJSMessage}
+                mediaInfo={mediaInfo}
+                onClick={() => setIsPlaceholder(false)}
+              />
+            ) : (
+              <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+            )}
+          </>
         ) : (
-          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+          <div css={styles.mediaContainer}>
+            <Amp
+              noJsMessage={translatedNoJSMessage}
+              service={service}
+              src={ampIframeUrl}
+              placeholderSrc={placeholderSrc}
+              title={mediaInfo.title}
+            />
+          </div>
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaType} />}
       </figure>
