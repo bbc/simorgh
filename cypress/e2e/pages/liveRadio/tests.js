@@ -3,7 +3,6 @@
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
-import getDataUrl from '../../../support/helpers/getDataUrl';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -26,9 +25,7 @@ export default ({ service, pageType }) =>
       },
       () => {
         it('should render a valid media player', () => {
-          cy.request(getDataUrl(Cypress.env('currentPath'))).then(() => {
-            cy.get('[data-e2e="media-loader__container"]').should('exist');
-          });
+          cy.get('[data-e2e="media-loader__container"]').should('exist');
         });
       },
     );
