@@ -9,6 +9,12 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
+import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
@@ -19,6 +25,11 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
+
+const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+];
 
 const logger = nodeLogger(__filename);
 
@@ -154,14 +165,13 @@ const MediaLoader = ({
   pageIdentifierOverride,
   embedded,
 }: Props) => {
-  const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
+  const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     id,
     pageType,
-    counterName,
     statsDestination,
     service,
     isAmp,
@@ -169,13 +179,17 @@ const MediaLoader = ({
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
+  const showPlaceholder = !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
+
+  const [isPlaceholder, setIsPlaceholder] = useState(showPlaceholder);
+
   if (isLite) return null;
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
     id,
     blocks,
-    counterName: pageIdentifierOverride || counterName,
+    counterName: pageIdentifierOverride || pageIdentifier,
     statsDestination,
     producer,
     isAmp,

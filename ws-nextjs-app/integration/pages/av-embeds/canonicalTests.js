@@ -1,5 +1,5 @@
-import { runMediaPlayerEmbedTests } from '../../../../src/integration/common';
+import { runMediaPlayerTests } from '../../../../src/integration/common';
 
 export default () => {
-  runMediaPlayerEmbedTests();
+  runMediaPlayerTests();
 };

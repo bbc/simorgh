@@ -128,7 +128,7 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
   class="bbc-17whsh0 edwq9ck0"
 >
-  &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+  &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This audio cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
 </noscript>
 `;
 

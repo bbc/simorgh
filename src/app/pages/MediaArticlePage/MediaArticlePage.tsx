@@ -5,6 +5,8 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
+import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -73,7 +75,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { pageType, service } = useContext(RequestContext);
+  const { isAmp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -149,7 +151,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
@@ -159,7 +165,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     text,
