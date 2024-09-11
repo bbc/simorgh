@@ -5,7 +5,6 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaPlayer from '.';
 import { aresMediaBlocks, onDemandTvBlocks } from './fixture';
 import { MediaBlock } from './types';
@@ -172,7 +171,7 @@ describe('MediaLoader', () => {
   });
 
   describe('Config', () => {
-    it('should use the counterNameOverride when rendering On Demand TV', async () => {
+    it('should use the pageIdentifierOverride when rendering On Demand TV', async () => {
       const buildConfigSpy = jest.spyOn(buildConfig, 'default');
       await act(async () => {
         render(
@@ -184,30 +183,35 @@ describe('MediaLoader', () => {
           { service: 'hindi' },
         );
       });
+
       expect(buildConfigSpy).toHaveBeenCalledWith(
         expect.objectContaining({
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
         }),
       );
     });
-    it('should use the counterName from the RequestContext', async () => {
+
+    it('should use the pageIdentifier from the EventTrackingContext', async () => {
       const buildConfigSpy = jest.spyOn(buildConfig, 'default');
       await act(async () => {
         render(
-          <RequestContextProvider
-            pageType="media"
-            pathname="/hindi/bbc_hindi_tv/tv_programmes/w13xttlw"
-            service="hindi"
-            counterName="hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page"
-          >
-            <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />
-          </RequestContextProvider>,
-          { service: 'hindi' },
+          <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />,
+          {
+            service: 'hindi',
+            pageData: {
+              mediaBlocks: onDemandTvBlocks,
+              pageIdentifier: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+            },
+            pageType: 'media',
+            pathname: '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',
+            toggles: { eventTracking: { enabled: true } },
+          },
         );
       });
+
       expect(buildConfigSpy).toHaveBeenCalledWith(
         expect.objectContaining({
-          counterName: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+          counterName: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
         }),
       );
     });
