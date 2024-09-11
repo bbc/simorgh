@@ -25,9 +25,6 @@ exports[`Toggles Config when application environment is live should contain corr
   "mostRead": {
     "enabled": true,
   },
-  "navOnArticles": {
-    "enabled": true,
-  },
   "nielsenAnalytics": {
     "enabled": true,
   },
@@ -80,9 +77,6 @@ exports[`Toggles Config when application environment is local should contain cor
   "mostRead": {
     "enabled": true,
   },
-  "navOnArticles": {
-    "enabled": true,
-  },
   "nielsenAnalytics": {
     "enabled": true,
   },
@@ -130,9 +124,6 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
   },
   "mostRead": {
-    "enabled": true,
-  },
-  "navOnArticles": {
     "enabled": true,
   },
   "nielsenAnalytics": {
