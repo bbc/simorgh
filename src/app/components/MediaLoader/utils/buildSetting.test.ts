@@ -8,6 +8,7 @@ import {
   clipMediaBlocks,
   aresMediaPlayerBlock,
   aresMediaBlock,
+  aresMediaLiveStreamBlocks,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -276,6 +277,59 @@ describe('buildSettings', () => {
         },
         showAds: false,
       } satisfies ConfigBuilderReturnProps);
+    });
+
+    it('Should process an AresMediaLiveStream block into a valid playlist item for an "live stream" MAP page.', () => {
+      const mockWindowObj = {
+        location: {
+          hostname: 'https://www.bbc.com/',
+        },
+      } as Window & typeof globalThis;
+
+      jest
+        .spyOn(window, 'window', 'get')
+        .mockImplementation(() => mockWindowObj);
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaLiveStreamBlocks as MediaBlock[],
+      });
+
+      expect(result?.playerConfig).toStrictEqual({
+        autoplay: true,
+        product: 'news',
+        statsObject: {
+          destination: 'WS_NEWS_LANGUAGES',
+          producer: 'SERBIAN',
+        },
+        enableToucan: true,
+        appName: 'news-serbian',
+        appType: 'responsive',
+        counterName: 'live_coverage.testID.page',
+        externalEmbedUrl:
+          '/ws/av-embeds/cps/serbian/lat/srbija-68707945/bbc_arabic_tv/sr-latn',
+        playlistObject: {
+          title: 'مباشر: تلفزيون بي بي سي عربي',
+          summary: 'This is a caption!',
+          holdingImageURL:
+            'http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png',
+          items: [
+            {
+              duration: 0,
+              kind: 'programme',
+              live: true,
+              versionID: 'bbc_arabic_tv',
+            },
+          ],
+          simulcast: true,
+        },
+        ui: {
+          controls: { enabled: true },
+          locale: { lang: 'sr-latn' },
+          subtitles: { enabled: true, defaultOn: true },
+          fullscreen: { enabled: true },
+        },
+      });
     });
 
     it('Should process an AresMedia block into a valid playlist item for syndication.', () => {
