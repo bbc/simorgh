@@ -8,7 +8,7 @@ import {
   ConfigBuilderProps,
 } from '../types';
 
-const BLOCK_TYPES = ['aresMedia', 'clipMedia', 'onDemandTV'] as const;
+const BLOCK_TYPES = ['aresMedia', 'clipMedia', 'tv'] as const;
 
 const blockTypeMapping: Record<
   (typeof BLOCK_TYPES)[number],
@@ -16,7 +16,7 @@ const blockTypeMapping: Record<
 > = {
   aresMedia,
   clipMedia,
-  onDemandTV: tv,
+  tv,
 };
 
 export default (blocks: MediaBlock[]) => {

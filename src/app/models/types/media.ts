@@ -35,11 +35,11 @@ export type OnDemandMediaModel = {
 };
 
 export type OnDemandTVBlock = {
-  type: 'onDemandTV';
+  type: 'tv';
   model: OnDemandMediaModel;
 };
 
 export type OnDemandAudioBlock = {
-  type: 'onDemandAudio';
+  type: 'audio';
   model: OnDemandMediaModel;
 };

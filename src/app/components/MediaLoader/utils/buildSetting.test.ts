@@ -517,7 +517,7 @@ describe('buildSettings', () => {
     const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
       tvMediaBlock => {
         return {
-          type: 'onDemandTV',
+          type: 'tv',
           model: {
             ...tvMediaBlock,
           },

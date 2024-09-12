@@ -7,7 +7,7 @@ export default ({
   basePlayerConfig,
   translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { model: tvMediaBlock } = filterForBlockType(blocks, 'onDemandTV');
+  const { model: tvMediaBlock } = filterForBlockType(blocks, 'tv');
   const video = tvMediaBlock?.versions?.[0] || {};
   const holdingImageURL = `https://${tvMediaBlock.imageUrl}`;
 

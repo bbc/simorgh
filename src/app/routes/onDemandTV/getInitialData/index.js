@@ -41,7 +41,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
 
     const mediaBlocks = get(['content', 'blocks']).map(block => {
       return {
-        type: 'onDemandTV',
+        type: 'tv',
         model: { ...block },
       };
     });
