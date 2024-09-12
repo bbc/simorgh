@@ -1,11 +1,8 @@
 import { FetchMock } from 'jest-fetch-mock';
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { StaticRouter } from 'react-router-dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
@@ -14,7 +11,7 @@ import {
   act,
   render,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import * as MediaLoader from '../../components/MediaLoader';
 import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
 
 const pageType = MEDIA_PAGE;
@@ -33,31 +30,16 @@ interface Props {
   service: Services;
 }
 
-const Page = ({ pageData, service }: Props) => (
-  <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={pageType}
-          derivedPageType="On Demand TV"
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <OnDemandTvPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </StaticRouter>
-);
-
 const renderPage = async ({ pageData, service }: Props) => {
   let result;
   await act(async () => {
-    result = render(<Page pageData={pageData} service={service} />, {
-      pageType,
+    result = render(<OnDemandTvPage service={service} pageData={pageData} />, {
+      bbcOrigin: 'https://www.test.bbc.com',
       derivedPageType: 'On Demand TV',
+      pageType,
+      pathname: '/pathname',
+      service,
+      statusCode: 200,
     });
   });
 
@@ -237,6 +219,32 @@ describe('OnDemand TV Brand Page ', () => {
     );
 
     expect(videoPlayer).toBeInTheDocument();
+  });
+
+  it('should use the derived page identifier to render the video player', async () => {
+    const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+    process.env.SIMORGH_APP_ENV = 'live';
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+      toggles,
+    });
+
+    await renderPage({
+      // @ts-expect-error partial data required for testing purposes
+      pageData,
+      service: 'pashto',
+    });
+
+    const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+    const { pageIdentifierOverride } = mediaLoaderProps;
+
+    expect(mediaLoaderSpy).toHaveBeenCalled();
+    expect(pageIdentifierOverride).toEqual(
+      'pashto.bbc_pashto_tv.tv.w172xcldhhrdqgb.page',
+    );
   });
 
   it('should show the expired content message if episode is expired', async () => {
