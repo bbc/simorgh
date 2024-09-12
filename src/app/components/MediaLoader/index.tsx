@@ -181,7 +181,7 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
-    id,
+    id: id || '',
     blocks,
     counterName: pageIdentifier,
     statsDestination,

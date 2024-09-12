@@ -239,7 +239,7 @@ export type MediaBlock =
   | TvMediaBlock;
 
 export type BuildConfigProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
