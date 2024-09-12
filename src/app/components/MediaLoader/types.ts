@@ -54,7 +54,7 @@ export type PlaylistItem = {
 };
 
 export type ConfigBuilderProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
