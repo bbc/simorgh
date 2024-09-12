@@ -25,7 +25,7 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
-import Amp from './amp';
+import Amp from './Amp';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -243,7 +243,6 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
           <div css={styles.mediaContainer}>
             <Amp
               noJsMessage={translatedNoJSMessage}
-              service={service}
               src={ampIframeUrl}
               placeholderSrc={placeholderSrc}
               title={mediaInfo.title}

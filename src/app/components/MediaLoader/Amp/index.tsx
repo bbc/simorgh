@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import Message from '#app/legacy/components/MediaPlayer/Message';
-import { Services } from '#app/models/types/global';
+import Message from './Message';
 
 const AmpHead = () => (
   <Helmet>
@@ -20,16 +19,14 @@ type Props = {
   placeholderSrcset?: string;
   title: string;
   noJsMessage: string;
-  service: Services;
 };
 
-const AmpMediaPlayer = ({
+const AmpMediaLoader = ({
   src,
   placeholderSrc,
   placeholderSrcset,
   title,
   noJsMessage,
-  service,
 }: Props) => {
   return (
     <>
@@ -48,7 +45,6 @@ const AmpMediaPlayer = ({
         <ImagePlaceholder ratio={56.25} placeholder="" />
         <noscript>
           <Message
-            service={service}
             message={noJsMessage}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
@@ -59,4 +55,4 @@ const AmpMediaPlayer = ({
   );
 };
 
-export default AmpMediaPlayer;
+export default AmpMediaLoader;
