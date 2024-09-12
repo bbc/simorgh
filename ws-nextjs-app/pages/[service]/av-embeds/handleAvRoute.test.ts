@@ -100,4 +100,14 @@ describe('Handle AV Route', () => {
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   });
+
+  it('should return 200 with empty pageData if isLegacyRoute is true', async () => {
+    mockGetServerSidePropsContext.resolvedUrl =
+      '/ws/av-embeds/legacy/arabic/multimedia/2013/12/131208_iraq_blast_/28780250/ar';
+
+    const result = await handleAvRoute(mockGetServerSidePropsContext);
+
+    expect(result?.props?.status).toEqual(200);
+    expect(result?.props?.pageData).toBeNull();
+  });
 });

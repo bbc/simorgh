@@ -29,9 +29,9 @@ export default async (context: GetServerSidePropsContext) => {
   // Remove x-frame-options header to allow embedding
   context.res.removeHeader('x-frame-options');
 
-  const parsedRoute = parseAvRoute(resolvedUrl);
+  const { isWsRoute, isLegacyRoute, mediaId } = parseAvRoute(resolvedUrl);
 
-  if (parsedRoute.isWsRoute) {
+  if (isWsRoute) {
     context.res.setHeader(
       'Cache-Control',
       'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
@@ -43,10 +43,27 @@ export default async (context: GetServerSidePropsContext) => {
     );
   }
 
+  if (isLegacyRoute) {
+    context.res.statusCode = 200;
+
+    return {
+      props: {
+        id: resolvedUrl,
+        isNextJs: true,
+        isAvEmbeds: true,
+        pageData: null,
+        pageType: AV_EMBEDS,
+        pathname: resolvedUrl,
+        status: context.res.statusCode,
+        ...extractHeaders(reqHeaders),
+      },
+    };
+  }
+
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,
     pathname: resolvedUrl,
-    mediaId: parsedRoute.mediaId,
+    mediaId,
   });
 
   const env = getEnvironment(resolvedUrl);

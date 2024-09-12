@@ -165,6 +165,7 @@ export default function parseAvRoute(resolvedUrl: string) {
   const query = resolvedUrlWithoutQuery.split(/[/.]/).filter(Boolean);
 
   const isWsRoute = query.includes('ws');
+  const isLegacyRoute = query.includes('legacy');
   const isAmp = extractAmp(query);
 
   const service = extractService(query);
@@ -177,6 +178,7 @@ export default function parseAvRoute(resolvedUrl: string) {
 
   return {
     isWsRoute,
+    isLegacyRoute,
     isAmp,
     service,
     variant,
