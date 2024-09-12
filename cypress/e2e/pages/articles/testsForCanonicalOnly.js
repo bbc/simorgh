@@ -82,8 +82,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           const media = getBlockData('video', win.SIMORGH_DATA.pageData);
 
           if (media) {
-            cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('[data-e2e="media-player__placeholder"] img')
+            cy.get('[data-e2e="media-loader__container"]').within(() => {
+              cy.get('[data-e2e="media-loader__placeholder"] img')
                 .should('be.visible')
                 .should('have.attr', 'src')
                 .should('not.be.empty');
@@ -101,12 +101,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               media.model.blocks[1].model.blocks[0].model.versions[0].warnings
                 .long;
 
-            cy.get('[data-e2e="media-player"]')
+            cy.get('[data-e2e="media-loader__container"]')
               .eq(0)
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('[data-e2e="media-player__placeholder"] strong')
+                  cy.get('[data-e2e="media-player__guidance"] strong')
                     .should('be.visible')
                     .and('contain', longGuidanceWarning);
                   // Check for video with no guidance message
@@ -127,7 +127,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
             const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
-            cy.get('[data-e2e="media-player"]').within(() => {
+            cy.get('[data-e2e="media-loader__container"]').within(() => {
               cy.get('button')
                 .should('be.visible')
                 .within(() => {
@@ -149,8 +149,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             if (media && media.type === 'video') {
               const { lang } = appConfig[service][variant];
               const embedUrl = getVideoEmbedUrl(body, lang);
-              cy.get('[data-e2e="media-player"] button').first().click();
-              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+              cy.get('[data-e2e="media-loader__container"] button')
+                .first()
+                .click();
+              cy.get('[data-e2e="media-player"]').should('be.visible');
 
               cy.testResponseCodeAndTypeRetry({
                 path: embedUrl,

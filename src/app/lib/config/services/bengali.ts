@@ -328,10 +328,6 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'কোটা আন্দোলন',
-        url: '/bengali/topics/cz47p4p81qdt',
-      },
-      {
         title: 'রাজনীতি',
         url: '/bengali/topics/cqywj91rkg6t',
       },

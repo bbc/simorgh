@@ -53,9 +53,9 @@ const CanonicalMediaPlayerComponent = ({
   onMediaError = noop,
   acceptableEventOrigins = [
     'www.test.bbc.com',
-    'polling.test.bbc.com',
+    'web-cdn.test.api.bbci.co.uk',
     'www.bbc.com',
-    'polling.bbc.com',
+    'web-cdn.api.bbci.co.uk',
     'localhost.bbc.com',
     'localhost',
   ],
