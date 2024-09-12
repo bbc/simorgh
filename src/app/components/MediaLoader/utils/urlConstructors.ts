@@ -2,8 +2,6 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
 
-const AV_ROUTE = 'ws/av-embeds';
-
 const LIVE_BASE_URL = 'https://www.bbc.com';
 const TEST_BASE_URL = 'https://www.test.bbc.com';
 
@@ -13,7 +11,7 @@ const DEV_AMP_URL = TEST_AMP_URL;
 
 const isDev = () => getEnvConfig().SIMORGH_APP_ENV === 'local';
 
-const getBaseUrl = () => {
+const getAmpBaseUrl = () => {
   switch (true) {
     case isLive():
       return LIVE_AMP_URL;
@@ -31,11 +29,19 @@ type FuncProps = {
 };
 
 export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
-  const { platform } = parseAvRoute(id);
+  const { platform, service, variant, assetId } = parseAvRoute(id);
 
-  const baseUrl = getBaseUrl();
+  const ampBaseUrl = getAmpBaseUrl();
 
-  return `${baseUrl}/${AV_ROUTE}/${platform}/${id}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}/amp`;
+  if (platform === 'cps') {
+    return `${ampBaseUrl}/ws/av-embeds/cps/${service}${variant ? `/${variant}` : ''}/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}/amp`;
+  }
+
+  if (platform === 'articles') {
+    return `${ampBaseUrl}/ws/av-embeds/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}/amp`;
+  }
+
+  return null;
 };
 
 export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
@@ -48,7 +54,7 @@ export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
   }
 
   if (platform === 'articles') {
-    return `${baseUrl}/${AV_ROUTE}/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
+    return `${baseUrl}/ws/av-embeds/articles/${assetId}${versionID ? `/${versionID}` : ''}${lang ? `/${lang}` : ''}`;
   }
 
   return null;

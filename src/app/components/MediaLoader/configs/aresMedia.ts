@@ -139,6 +139,6 @@ export default ({
     },
     placeholderConfig,
     showAds,
-    ampIframeUrl,
+    ...(ampIframeUrl && { ampIframeUrl }),
   };
 };
