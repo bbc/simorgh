@@ -58,6 +58,8 @@ describe('AV Embeds Page', () => {
     const actual = helmetMetaTags.filter(tag => tag.property === 'og:url')[0]
       .content;
 
-    expect(actual).toEqual('/serbian/cyr/av-embeds/srbija-68707945');
+    expect(actual).toEqual(
+      'https://www.test.bbc.com/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwn',
+    );
   });
 });
