@@ -5,12 +5,19 @@ const ampIframeTestCases = [
     description: 'should build an AMP iframe URL for the page',
     cases: [
       {
-        description: 'CPS',
+        description: 'CPS without variant',
         id: 'thai/international-55160422',
         versionID: 'p0908t9z',
         lang: 'th',
         expected:
           'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/thai/international-55160422/p0908t9z/th/amp',
+      },
+      {
+        description: 'CPS without variant (no versionID)',
+        id: 'thai/international-55160422',
+        lang: 'th',
+        expected:
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/thai/international-55160422/th/amp',
       },
       {
         description: 'CPS with variant',
@@ -19,6 +26,13 @@ const ampIframeTestCases = [
         lang: 'sr-cyrl',
         expected:
           'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/p0cfmdwn/sr-cyrl/amp',
+      },
+      {
+        description: 'CPS with variant (no versionID)',
+        id: 'serbian/cyr/srbija-68707945',
+        lang: 'sr-cyrl',
+        expected:
+          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/cyr/srbija-68707945/sr-cyrl/amp',
       },
       {
         description: 'Optimo',
@@ -37,12 +51,19 @@ const externalEmbedUrlTestCases = [
     description: 'should build an external embed URL for the page',
     cases: [
       {
-        description: 'CPS',
+        description: 'CPS without variant',
         id: 'thai/international-55160422',
         versionID: 'p0908t9z',
         lang: 'th',
         expected:
           'https://www.test.bbc.com/thai/av-embeds/international-55160422/vpid/p0908t9z',
+      },
+      {
+        description: 'CPS without variant (no versionID)',
+        id: 'thai/international-55160422',
+        lang: 'th',
+        expected:
+          'https://www.test.bbc.com/thai/av-embeds/international-55160422',
       },
       {
         description: 'CPS with variant',
@@ -51,6 +72,13 @@ const externalEmbedUrlTestCases = [
         lang: 'sr-cyrl',
         expected:
           'https://www.test.bbc.com/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwn',
+      },
+      {
+        description: 'CPS with variant (no versionID)',
+        id: 'serbian/cyr/srbija-68707945',
+        lang: 'sr-cyrl',
+        expected:
+          'https://www.test.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
       },
       {
         description: 'Optimo',
