@@ -86,6 +86,13 @@ const EXAMPLE_ROUTES = [
       lang: 'pcm',
     },
   },
+  {
+    route:
+      '/ws/av-embeds/legacy/arabic/multimedia/2013/12/131208_iraq_blast_/28780250/ar',
+    expectedOutput: {
+      isLegacyRoute: true,
+    },
+  },
 ];
 
 describe('parseAvRoute', () => {
