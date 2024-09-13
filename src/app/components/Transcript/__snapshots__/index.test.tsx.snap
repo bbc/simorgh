@@ -28,6 +28,10 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
   padding: 1rem;
 }
 
+.emotion-1::-webkit-details-marker {
+  display: none;
+}
+
 .emotion-1:hover,
 .emotion-1:focus {
   cursor: pointer;
@@ -52,7 +56,8 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
   font-style: normal;
   font-weight: 700;
   color: #141414;
-  padding-left: 0.25rem;
+  -webkit-padding-start: 0.25rem;
+  padding-inline-start: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -138,7 +143,7 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
 }
 
 .emotion-9 {
-  float: left;
+  float: inline-start;
   width: 100%;
 }
 

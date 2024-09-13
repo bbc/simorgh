@@ -24,6 +24,10 @@ export default {
   summary: ({ spacings, palette }: Theme) =>
     css({
       listStyle: 'none',
+      // hides on safari
+      '&::-webkit-details-marker': {
+        display: 'none',
+      },
       padding: `${spacings.DOUBLE}rem`,
       '&:hover, &:focus': {
         cursor: 'pointer',
@@ -40,7 +44,7 @@ export default {
   summaryTitle: ({ palette, isDarkUi, spacings }: Theme) =>
     css({
       color: isDarkUi ? palette.WHITE : palette.GREY_10,
-      paddingLeft: `${spacings.HALF}rem`,
+      paddingInlineStart: `${spacings.HALF}rem`,
     }),
 
   ul: ({ spacings, mq }: Theme) =>
@@ -60,7 +64,7 @@ export default {
 
   itemText: ({ spacings, mq }: Theme) =>
     css({
-      float: 'left',
+      float: 'inline-start',
       width: `100%`,
       [mq.GROUP_1_MIN_WIDTH]: {
         paddingInlineStart: `${spacings.FULL}rem`,

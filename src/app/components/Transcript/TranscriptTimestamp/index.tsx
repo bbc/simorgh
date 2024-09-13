@@ -2,11 +2,7 @@
 import { jsx } from '@emotion/react';
 import styles from './index.styles';
 
-type myProps = {
-  timestamp: string;
-};
-
-const TranscriptTimestamp = ({ timestamp }: myProps) => {
+const TranscriptTimestamp = ({ timestamp }: { timestamp: string }) => {
   return <time css={styles.time}>{timestamp}</time>;
 };
 
