@@ -217,11 +217,12 @@ const MediaLoader = ({
 
   return (
     <>
-      <Metadata
-        blocks={blocks}
-        embedURL={playerConfig?.externalEmbedUrl}
-        embedded={embedded}
-      />
+      {
+        // Prevents the av-embeds route itself rendering the Metadata component
+        !embedded && (
+          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+        )
+      }
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}

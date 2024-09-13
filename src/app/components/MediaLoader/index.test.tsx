@@ -151,7 +151,25 @@ describe('MediaLoader', () => {
   });
 
   describe('Metadata', () => {
-    it('should render metadata tags when media player is embedded', async () => {
+    it('should render metadata tags when media player is not embedded', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            embedded={false}
+          />,
+          {
+            id: 'cn8jgj8rjppo',
+          },
+        );
+      });
+
+      const helmetMetaTags = Helmet.peek().metaTags;
+
+      expect(helmetMetaTags).not.toBeNull();
+    });
+
+    it('should not render metadata tags when media player is embedded', async () => {
       await act(async () => {
         render(
           <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded />,
@@ -163,10 +181,7 @@ describe('MediaLoader', () => {
 
       const helmetMetaTags = Helmet.peek().metaTags;
 
-      expect(helmetMetaTags[0]).toEqual({
-        property: 'og:url',
-        content: '/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB',
-      });
+      expect(helmetMetaTags).toEqual([]);
     });
   });
 
