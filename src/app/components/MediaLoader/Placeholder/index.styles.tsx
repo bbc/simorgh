@@ -15,6 +15,13 @@ const styles = {
         '.focusIndicatorRemove': {
           backgroundColor: palette.POSTBOX,
         },
+        '.experimentButtonFocus': {
+          backgroundColor: palette.POSTBOX,
+          color: palette.WHITE,
+          svg: {
+            color: palette.WHITE,
+          },
+        },
       },
     }),
   playButton: ({ palette }: Theme) =>

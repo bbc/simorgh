@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign Post should render a 'Help reduce your power consumption' message 1`] = `
+.emotion-0 {
+  position: absolute;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background: rgba(25, 163, 55, 0.6);
+  height: 100%;
+}
+
+@media (min-width: 15rem) {
+  .emotion-0 {
+    background: rgba(0, 0, 55, 0.6);
+    width: 100%;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    background: rgba(139, 139, 0, 0.6);
+    left: calc(100% - 13rem);
+    width: 13rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    background: rgba(139, 0, 0, 0.6);
+    left: calc(100% - 15.625rem);
+    width: 15.625rem;
+    height: unset;
+  }
+}
+
+.emotion-1 {
+  margin: 0 0.5rem 0 0;
+  width: 0;
+  fill: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-1 path {
+    fill: currentColor;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 {
+    width: 90px;
+  }
+}
+
+.emotion-2 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-3 {
+  all: unset;
+  margin: 1rem 0 0 0;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <svg
+      aria-hidden="true"
+      class="emotion-1"
+      focusable="false"
+      height="4rem"
+      viewBox="0 0 239 239"
+      width="4rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M151.74 74.17l-43.93 52.36-24.76-20.77-15.33 18.27 24.75 20.76 18.27 15.33 15.33-18.27L170 89.5l-18.26-15.33z"
+      />
+      <path
+        d="M120.5 30A90.5 90.5 0 1 1 30 120.5 90.6 90.6 0 0 1 120.5 30m0-29A119.5 119.5 0 1 0 240 120.5 119.5 119.5 0 0 0 120.5 1z"
+        transform="translate(-1 -1)"
+      />
+    </svg>
+    <div>
+      <div>
+        <p
+          class="emotion-2"
+        >
+          Help reduce your power and data usage by not playing video content.
+        </p>
+      </div>
+      <button
+        class="emotion-3"
+        type="button"
+      >
+        <p
+          class="emotion-2"
+        >
+          + 
+          Load Video
+        </p>
+      </button>
+    </div>
+  </div>
+</div>
+`;

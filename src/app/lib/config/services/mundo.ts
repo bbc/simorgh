@@ -218,6 +218,9 @@ export const service: DefaultServiceConfig = {
         },
       },
       media: {
+        signPost:
+          'Ayude a reducir su uso de energía y datos al no reproducir contenido de video.',
+        loadVideo: 'Cargar vídeo',
         noJs: 'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
         contentExpired: 'Este contenido ya no está disponible.',
         contentNotYetAvailable: 'Este programa todavía no está disponible.',
