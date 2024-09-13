@@ -16,6 +16,17 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   background-color: #B80000;
 }
 
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 .emotion-1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -248,6 +259,17 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-0:hover .focusIndicatorRemove,
 .emotion-0:focus .focusIndicatorRemove {
   background-color: #B80000;
+}
+
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
 }
 
 .emotion-1 {
@@ -516,6 +538,17 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   background-color: #B80000;
 }
 
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 .emotion-1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -735,6 +768,17 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-0:hover .focusIndicatorRemove,
 .emotion-0:focus .focusIndicatorRemove {
   background-color: #B80000;
+}
+
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
 }
 
 .emotion-1 {
@@ -964,6 +1008,17 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   background-color: #B80000;
 }
 
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 .emotion-1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1176,6 +1231,17 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-0:hover .focusIndicatorRemove,
 .emotion-0:focus .focusIndicatorRemove {
   background-color: #B80000;
+}
+
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
 }
 
 .emotion-1 {

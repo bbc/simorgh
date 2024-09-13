@@ -71,6 +71,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   background-color: #B80000;
 }
 
+.emotion-7:hover .experimentButtonFocus,
+.emotion-7:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-7:hover .experimentButtonFocus svg,
+.emotion-7:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 .emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;

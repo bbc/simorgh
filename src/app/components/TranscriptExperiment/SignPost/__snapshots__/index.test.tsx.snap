@@ -15,26 +15,12 @@ exports[`Sign Post should render a 'Help reduce your power consumption' message 
   flex-wrap: nowrap;
   background: rgba(25, 163, 55, 0.6);
   height: 100%;
-}
-
-@media (min-width: 15rem) {
-  .emotion-0 {
-    background: rgba(0, 0, 55, 0.6);
-    width: 100%;
-  }
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-0 {
-    background: rgba(139, 139, 0, 0.6);
-    left: calc(100% - 13rem);
-    width: 13rem;
-  }
+  width: 100%;
+  z-index: 1;
 }
 
 @media (min-width: 25rem) {
   .emotion-0 {
-    background: rgba(139, 0, 0, 0.6);
     left: calc(100% - 15.625rem);
     width: 15.625rem;
     height: unset;
@@ -43,8 +29,9 @@ exports[`Sign Post should render a 'Help reduce your power consumption' message 
 
 .emotion-1 {
   margin: 0 0.5rem 0 0;
-  width: 0;
   fill: #FFFFFF;
+  width: 100px;
+  height: 35px;
 }
 
 @media screen and (forced-colors: active) {
@@ -53,9 +40,9 @@ exports[`Sign Post should render a 'Help reduce your power consumption' message 
   }
 }
 
-@media (min-width: 25rem) {
+@media (max-width: 18.75rem) {
   .emotion-1 {
-    width: 90px;
+    width: 0;
   }
 }
 
@@ -66,6 +53,7 @@ exports[`Sign Post should render a 'Help reduce your power consumption' message 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  margin: 0;
   color: #FFFFFF;
 }
 
