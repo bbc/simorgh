@@ -5,7 +5,7 @@ import { AvEmbedsPageProps } from './types';
 
 const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
   const {
-    metadata: { language, promoSummary, headline, imageUrl, caption, mediaURL },
+    metadata: { language, promoSummary, headline, imageUrl, caption },
   } = pageData;
 
   return (
@@ -41,8 +41,6 @@ const AvEmbedsMetadata = ({ pageData }: AvEmbedsPageProps) => {
         property="article:author"
         content="https://www.facebook.com/bbcnews"
       />
-
-      {mediaURL && <meta property="og:url" content={mediaURL} />}
 
       {imageUrl && <meta property="og:image" content={imageUrl} />}
       {imageUrl && caption && (

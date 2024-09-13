@@ -23,6 +23,9 @@ window.matchMedia = jest.fn().mockImplementation(query => {
   };
 });
 
+// Mock RequireJS globally and let individual tests mock it as needed
+window.require = jest.fn();
+
 global.fetch = fetch;
 global.document.domain = 'www.bbc.com';
 

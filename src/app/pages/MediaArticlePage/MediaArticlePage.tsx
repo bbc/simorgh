@@ -5,8 +5,11 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -72,6 +75,7 @@ import {
 } from './types';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { isAmp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -122,11 +126,18 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const isMap = type === MEDIA_ASSET_PAGE;
+  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+    ?.split(':')
+    ?.includes('topcat');
 
   const atiData = {
     ...atiAnalytics,
     ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
+
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === ARTICLE_PAGE;
 
   const componentsToRender = {
     fauxHeadline,
@@ -140,7 +151,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
@@ -150,7 +165,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     text,
@@ -222,6 +241,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         description={description}
         imageLocator={promoImage}
         imageAltText={promoImageAltText}
+        hasAmpPage={!isTC2Asset}
       />
       <LinkedData
         showAuthor
@@ -243,7 +263,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          {showRelatedTopics && topics && (
+          {showRelatedTopics && topics && !isTransliterated && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}

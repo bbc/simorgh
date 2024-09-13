@@ -2,6 +2,31 @@
   "data": {
     "avEmbed": {
       "metadata": {
+        "atiAnalytics": {
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "categoryName": "News",
+          "contentId": "urn:bbc:cps:curie:asset:6ea0060d-2cb6-9b45-b4d9-08876ea24283",
+          "contentType": "article",
+          "language": "ru",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "russian.features.story.49881797.page",
+          "pageTitle": "\"Невыносимые условия\". Как живут деревни возле новой полосы Шереметьево",
+          "timePublished": "2019-10-04T15:36:44.000Z",
+          "timeUpdated": "2019-10-04T15:36:44.000Z",
+          "producerName": "RUSSIAN",
+          "producerId": "75"
+        },
         "id": "urn:bbc:ares::asset:russian/features-49881797",
         "locators": {
           "assetUri": "/russian/features-49881797",
@@ -85,10 +110,6 @@
           "aresMediaMetadata"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "producerName": "RUSSIAN",
-          "producerId": "75"
-        },
         "readTime": 4,
         "siteUri": "/russian",
         "allowAdvertising": true,
