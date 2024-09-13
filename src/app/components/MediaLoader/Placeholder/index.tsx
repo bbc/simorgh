@@ -27,7 +27,7 @@ const MediaPlayerPlaceholder = ({
   srcSet,
   mediaInfo,
   noJsMessage,
-  experimentStage = Stages.STAGE_2,
+  experimentStage = Stages.DEFAULT,
 }: Props) => {
   const {
     title,
@@ -40,7 +40,7 @@ const MediaPlayerPlaceholder = ({
 
   const { service } = useContext(ServiceContext);
 
-  const normalButton = (
+  const playButton = (
     <PlayButton
       css={styles.playButton}
       // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -56,7 +56,7 @@ const MediaPlayerPlaceholder = ({
     />
   );
 
-  const experimentMiniButton = (
+  const experimentPlayButton = (
     <MiniPlayButton
       title={title}
       datetime={datetime}
@@ -68,6 +68,18 @@ const MediaPlayerPlaceholder = ({
     />
   );
 
+  const guideComponent = (
+    <Guidance
+      css={styles.guidance}
+      service={service}
+      guidanceMessage={guidanceMessage}
+      noJsClassName={NO_JS_CLASSNAME}
+      noJsMessage={noJsMessage}
+    />
+  );
+
+  const experimentSignPost = <SignPost />;
+
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
@@ -75,15 +87,8 @@ const MediaPlayerPlaceholder = ({
       css={styles.placeholder}
       data-e2e="media-loader__placeholder"
     >
-      <Guidance
-        css={styles.guidance}
-        service={service}
-        guidanceMessage={guidanceMessage}
-        noJsClassName={NO_JS_CLASSNAME}
-        noJsMessage={noJsMessage}
-      />
-      {experimentStage === Stages.STAGE_2 && <SignPost />}
-      {experimentStage === Stages.STAGE_2 ? experimentMiniButton : normalButton}
+      {experimentStage === Stages.STAGE_2 ? experimentSignPost : guideComponent}
+      {experimentStage === Stages.STAGE_2 ? experimentPlayButton : playButton}
       <Image alt="" src={src} srcSet={srcSet} />
     </div>
   );

@@ -15,6 +15,7 @@ const styles = {
       background: `rgba(25, 163, 55, 0.6)`,
       height: '100%',
       width: '100%',
+      zIndex: '1',
       [mq.GROUP_2_MIN_WIDTH]: {
         left: `calc(100% - ${pixelsToRem(WIDTH)}rem)`,
         width: `${pixelsToRem(WIDTH)}rem`,
@@ -45,10 +46,6 @@ const styles = {
     css({
       all: 'unset',
       margin: `${spacings.DOUBLE}rem 0 0 0`,
-    }),
-  guidance: () =>
-    css({
-      zIndex: '1',
     }),
 };
 
