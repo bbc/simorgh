@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+// Disabled due to bug in ts lint
+// eslint-disable-next-line no-shadow
 export enum ScreenGroup {
   GROUP_0 = 0,
   GROUP_1_SMALL = 0.5,

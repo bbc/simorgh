@@ -3,6 +3,8 @@ import { Services } from '#app/models/types/global';
 import { useContext, useEffect, useState } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
+// Disabled due to bug in ts lint
+// eslint-disable-next-line no-shadow
 export enum Stages {
   STAGE_1 = 'stage_1',
   STAGE_2 = 'stage_2',
