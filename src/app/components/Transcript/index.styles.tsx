@@ -3,44 +3,21 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 export default {
-  arrowShape: ({ palette, isDarkUi }: Theme) =>
-    css({
-      background: isDarkUi ? palette.WHITE : palette.GREY_10,
-      display: 'inline-block',
-      width: `${pixelsToRem(3)}rem `,
-      position: 'relative',
-      height: `${pixelsToRem(12)}rem`,
-      '&::before': {
-        borderLeft: isDarkUi
-          ? `${pixelsToRem(6)}rem solid ${palette.WHITE}`
-          : `${pixelsToRem(6)}rem solid ${palette.GREY_10}`,
-        borderTop: `${pixelsToRem(6)}rem solid transparent`,
-        borderBottom: `${pixelsToRem(6)}rem solid transparent`,
-        content: '""',
-        height: 0,
-        position: 'absolute',
-        right: `-${pixelsToRem(6)}rem `,
-      },
-    }),
-
-  arrowContainer: ({ spacings }: Theme) =>
-    css({
-      display: 'inline-block',
-      marginInlineEnd: `${spacings.DOUBLE}rem`,
-    }),
-
   details: ({ spacings, palette, isDarkUi }: Theme) =>
     css({
       backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
       display: 'block',
       marginBottom: `${spacings.TRIPLE}rem`,
       border: `solid ${pixelsToRem(3)}rem transparent`,
-      // rotates and overrides spacing when details is open
-      // To Do - review small gap that appears in triangle. Might need to replace rotation with another css triangle
-      '&[open] summary #arrowContainer': {
+      'summary svg': {
+        color: isDarkUi ? palette.WHITE : palette.GREY_10,
+        fill: 'currentcolor',
+        width: `${spacings.DOUBLE}rem`,
+        height: `${spacings.DOUBLE}rem`,
+        verticalAlign: 'middle',
+      },
+      '&[open] summary svg': {
         transform: 'rotate(90deg)',
-        marginInlineEnd: `${spacings.FULL}rem`,
-        paddingRight: `${spacings.FULL}rem`,
       },
     }),
 

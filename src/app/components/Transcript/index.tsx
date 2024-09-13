@@ -6,6 +6,7 @@ import styles from './index.styles';
 import Text from '../Text';
 import TranscriptTimestamp from './TranscriptTimestamp';
 import VisuallyHiddenText from '../VisuallyHiddenText';
+import { RightArrow as ArrowSvg } from '../icons';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderTranscriptItems = (transcriptBlocks: any) =>
@@ -45,9 +46,7 @@ const Transcript = ({ transcript, title, hideDisclaimer = true }: any) => {
   return (
     <details css={styles.details}>
       <summary css={styles.summary}>
-        <span css={styles.arrowContainer} id="arrowContainer">
-          <span css={styles.arrowShape} id="arrowShape" />
-        </span>
+        <ArrowSvg />
         <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
           Read transcript
         </Text>
