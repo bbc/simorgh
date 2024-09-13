@@ -23,12 +23,14 @@ const getAmpBaseUrl = () => {
 };
 
 type FuncProps = {
-  id: string;
+  id: string | null;
   versionID?: string;
   lang?: string;
 };
 
 export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
+  if (!id) return null;
+
   const { platform, service, variant, assetId } = parseAvRoute(id);
 
   const ampBaseUrl = getAmpBaseUrl();
@@ -45,6 +47,8 @@ export const getAmpIframeUrl = ({ id, versionID, lang }: FuncProps) => {
 };
 
 export const getExternalEmbedUrl = ({ id, versionID, lang }: FuncProps) => {
+  if (!id) return null;
+
   const { platform, service, variant, assetId } = parseAvRoute(id);
 
   const baseUrl = isLive() ? LIVE_BASE_URL : TEST_BASE_URL;

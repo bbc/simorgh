@@ -54,7 +54,7 @@ export type PlaylistItem = {
 };
 
 export type ConfigBuilderProps = {
-  id: string;
+  id: string | null;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
@@ -239,7 +239,7 @@ export type MediaBlock =
   | TvMediaBlock;
 
 export type BuildConfigProps = {
-  id: string;
+  id: string | null;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
