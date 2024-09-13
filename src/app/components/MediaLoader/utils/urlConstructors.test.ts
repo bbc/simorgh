@@ -1,5 +1,11 @@
 import { getAmpIframeUrl, getExternalEmbedUrl } from './urlConstructors';
 
+/* 
+  Note: 
+  The 'id' field is the ID of the page being visited, so for AMP it would be something like: 'bbc.com/thai/international-55160422.amp'.
+  For Syndicated routes, it would be something like https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945
+*/
+
 const ampIframeTestCases = [
   {
     description: 'should build an AMP iframe URL for the page',
@@ -81,12 +87,63 @@ const externalEmbedUrlTestCases = [
           'https://www.test.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
       },
       {
+        description: 'CPS Syndicated route without variant',
+        id: 'news/av-embeds/58869966/vpid/p07r2y68',
+        versionID: 'p07r2y68',
+        lang: 'en-gb',
+        expected:
+          'https://www.test.bbc.com/news/av-embeds/58869966/vpid/p07r2y68',
+      },
+      {
+        description: 'CPS Syndicated route without variant (no versionID)',
+        id: 'news/av-embeds/58869966',
+        lang: 'en-gb',
+        expected: 'https://www.test.bbc.com/news/av-embeds/58869966',
+      },
+      {
+        description: 'CPS Syndicated route with variant',
+        id: 'serbian/cyr/av-embeds/srbija-68707945/pid/p0cfmdwn',
+        versionID: 'p0cfmdwn',
+        lang: 'sr-cyrl',
+        expected:
+          'https://www.test.bbc.com/serbian/cyr/av-embeds/srbija-68707945/vpid/p0cfmdwn',
+      },
+      {
+        description: 'CPS Syndicated route with variant (no versionID)',
+        id: 'serbian/cyr/av-embeds/srbija-68707945',
+        lang: 'sr-cyrl',
+        expected:
+          'https://www.test.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
+      },
+      {
         description: 'Optimo',
         id: 'mundo/articles/c805k05kr73o',
         versionID: 'p0cfmdwn',
         lang: 'es',
         expected:
           'https://www.test.bbc.com/ws/av-embeds/articles/c805k05kr73o/p0cfmdwn/es',
+      },
+      {
+        description: 'Optimo (no versionID)',
+        id: 'mundo/articles/c805k05kr73o',
+        lang: 'es',
+        expected:
+          'https://www.test.bbc.com/ws/av-embeds/articles/c805k05kr73o/es',
+      },
+      {
+        description: 'Optimo Syndicated route',
+        id: 'ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig',
+        versionID: 'p0jd37n8',
+        lang: 'ig',
+        expected:
+          'https://www.test.bbc.com/ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig',
+      },
+      {
+        description: 'Optimo Syndicated route (no versionID)',
+        id: 'ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig',
+        lang: 'ig',
+        expected:
+          'https://www.test.bbc.com/ws/av-embeds/articles/cd1rmn075d1o/ig',
       },
     ],
   },
