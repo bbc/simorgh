@@ -64,7 +64,7 @@ const renderFeaturesAnalysisNoTitle = ({
   bbcOrigin = 'https://www.test.bbc.co.uk',
 } = {}) => {
   return render(
-    <ServiceContextProvider service="news">
+    <ServiceContextProvider service="ws">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}

@@ -20,7 +20,6 @@ export type RequestContextProps = {
   canonicalLink: string;
   canonicalUkLink: string;
   canonicalNonUkLink: string;
-  counterName: string | null;
   env: Environments;
   id: string | null;
   isAmp: boolean;
@@ -53,7 +52,7 @@ type RequestProviderProps = {
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
-  isAmp: boolean;
+  isAmp?: boolean;
   isApp?: boolean;
   isLite?: boolean;
   isNextJs?: boolean;
@@ -68,7 +67,6 @@ type RequestProviderProps = {
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
-  counterName?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -76,7 +74,7 @@ export const RequestContextProvider = ({
   derivedPageType = null,
   children,
   id = null,
-  isAmp,
+  isAmp = false,
   isApp = false,
   isLite = false,
   isNextJs = false,
@@ -91,7 +89,6 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
-  counterName = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -143,12 +140,10 @@ export const RequestContextProvider = ({
       showCookieBannerBasedOnCountry,
       service,
       pathname,
-      counterName,
       ...getMetaUrls(origin, pathname),
       mvtExperiments,
     }),
     [
-      counterName,
       derivedPageType,
       env,
       formattedIsUK,

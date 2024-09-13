@@ -1,4 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
 export type PlayerConfig = {
@@ -9,9 +10,12 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  insideIframe?: boolean;
+  embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
   statsObject: {
-    clipPID?: string;
+    clipPID?: string | null;
+    episodePID?: string | null;
     destination: string;
     producer: string | '';
   };
@@ -23,6 +27,7 @@ export type PlayerConfig = {
     holdingImageURL: string;
     items: PlaylistItem[];
     guidance?: string;
+    embedRights?: 'allowed';
   };
 };
 
@@ -45,35 +50,45 @@ export type PlaylistItem = {
   duration: number;
   live?: boolean;
   embedRights?: 'allowed';
+  vpid?: string;
 };
 
 export type ConfigBuilderProps = {
+  id: string | null;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedUrl?: string;
+  embedded?: boolean;
+  lang: string;
+  isAmp?: boolean;
+};
+
+export type PlaceholderConfig = {
+  mediaInfo: MediaInfo;
+  placeholderSrc: string;
+  placeholderSrcset: string;
+  translatedNoJSMessage: string;
 };
 
 export type ConfigBuilderReturnProps = {
   mediaType: string;
   playerConfig: PlayerConfig;
-  placeholderConfig: {
-    mediaInfo: MediaInfo;
-    placeholderSrc: string;
-    placeholderSrcset: string;
-    translatedNoJSMessage: string;
-  };
+  placeholderConfig: PlaceholderConfig;
   showAds: boolean;
 };
+
+export type MediaType = 'audio' | 'video';
 
 export type MediaInfo = {
   title: string;
   datetime?: string;
   duration?: string;
   durationSpoken?: string;
-  type?: 'audio' | 'video';
+  type?: MediaType;
   guidanceMessage?: string | null;
 };
 
@@ -120,19 +135,32 @@ export type CaptionBlock = {
 export type AresMediaBlock = {
   type: 'aresMedia';
   model: {
+    blocks: [AresMediaMetadataBlock | OptimoImageBlock];
+  };
+};
+
+export type AresMediaMetadataBlock = {
+  type: 'aresMediaMetadata';
+  model: {
+    firstPublished?: string;
+    live?: boolean;
     locator: string;
     originCode: string;
     text: string;
     title: string;
-    blocks: AresMediaBlock[];
+    synopses: {
+      short: string;
+    };
     imageUrl: string;
-    format: 'audio' | 'video';
+    format: 'audio_video' | 'audio' | 'video';
+    id: string;
     embedding: boolean;
+    subType: string;
     versions: {
+      availableFrom?: string;
       versionId: string;
       duration: number;
       durationISO8601?: string;
-
       warnings?: { [key: string]: string };
     }[];
     webcastVersions: {
@@ -154,6 +182,7 @@ export type ClipMediaBlock = {
       urlTemplate: string;
     }[];
     video: {
+      id: string;
       title: string;
       version: {
         id: string;
@@ -166,9 +195,51 @@ export type ClipMediaBlock = {
   };
 };
 
-export type MediaBlock = AresMediaBlock | ClipMediaBlock | CaptionBlock;
+export type TvMediaBlock = {
+  type: 'tvMedia';
+  model: {
+    id: string;
+    subType: 'episode';
+    format: 'Video';
+    title: string;
+    synopses: {
+      short: string;
+      medium: string;
+    };
+    imageUrl: string;
+    embedding: boolean;
+    advertising: boolean;
+    versions: [
+      {
+        versionId: string;
+        types: string[];
+        duration: number;
+        durationISO8601: string;
+        warnings: Record<string, string>;
+        availableTerritories: {
+          uk: boolean;
+          nonUk: boolean;
+          world: boolean;
+        };
+        availableFrom: number;
+        availabilityStatus: string;
+      },
+    ];
+    availability: string;
+    smpKind: string;
+    episodeTitle: string;
+    type: MediaType;
+  };
+};
+
+export type MediaBlock =
+  | AresMediaBlock
+  | ClipMediaBlock
+  | CaptionBlock
+  | TvMediaBlock;
 
 export type BuildConfigProps = {
+  id: string | null;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;
@@ -180,4 +251,5 @@ export type BuildConfigProps = {
   translations?: Translations;
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
+  embedded?: boolean;
 };
