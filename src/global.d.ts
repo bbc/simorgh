@@ -13,6 +13,11 @@ declare global {
       cmd: { push: () => void };
     };
   }
+
+  interface Navigator {
+    connection: { saveData: boolean };
+    getBattery: () => Promise;
+  }
 }
 
 export {};
