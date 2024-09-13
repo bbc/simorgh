@@ -25,6 +25,8 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
+import getTranscriptBlock from './utils/getTranscriptBlock';
+import Transcript from '../Transcript';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -209,6 +211,8 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
+  const transcriptBlock = getTranscriptBlock(blocks);
+
   return (
     <>
       {
@@ -236,6 +240,13 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
           <MediaContainer playerConfig={playerConfig} showAds={showAds} />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaType} />}
+        {transcriptBlock && (
+          <Transcript
+            transcript={transcriptBlock}
+            title={mediaInfo.title}
+            hideDisclaimer
+          />
+        )}
       </figure>
     </>
   );

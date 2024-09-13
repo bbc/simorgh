@@ -6,7 +6,7 @@ import {
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
-import { aresMediaBlocks } from './fixture';
+import { aresMediaBlocks, aresMediaBlockWithTranscript } from './fixture';
 import { MediaBlock } from './types';
 
 jest.mock('react', () => ({
@@ -146,6 +146,24 @@ describe('MediaLoader', () => {
         'span',
       );
       expect(caption[3]?.textContent).toBe('This is a caption!');
+    });
+
+    it('Displays a transcript when provided ', async () => {
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer blocks={aresMediaBlockWithTranscript as MediaBlock[]} />,
+          {
+            id: 'testId',
+          },
+        ));
+      });
+
+      const details = (container as unknown as HTMLElement).querySelector(
+        'summary',
+      );
+      expect(details?.textContent).toContain('Read transcripts');
     });
   });
 

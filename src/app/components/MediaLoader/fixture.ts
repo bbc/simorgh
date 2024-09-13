@@ -1,3 +1,5 @@
+import TranscriptBlock from '../Transcript/fixture.json';
+
 export const aresMediaCaptionBlock = {
   id: '31318aec',
   type: 'caption',
@@ -314,4 +316,10 @@ export const aresMediaLiveStreamBlocks = [
     },
   },
   aresMediaCaptionBlock,
+];
+
+export const aresMediaBlockWithTranscript = [
+  aresMediaBlock,
+  aresMediaCaptionBlock,
+  TranscriptBlock,
 ];
