@@ -2,8 +2,8 @@ import { getAmpIframeUrl, getExternalEmbedUrl } from './urlConstructors';
 
 /* 
   Note: 
-  The 'id' field is the ID of the page being visited, so for AMP it would be something like: 'bbc.com/thai/international-55160422.amp'.
-  For Syndicated routes, it would be something like https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945
+  The 'id' field is the ID of the page being visited, so for canonical article pages it would be something like: '/thai/international-55160422'.
+  For Syndicated routes, it would be something like /serbian/cyr/av-embeds/srbija-68707945 or /ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig
 */
 
 const ampIframeTestCases = [
