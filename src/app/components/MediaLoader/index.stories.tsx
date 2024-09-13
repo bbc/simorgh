@@ -20,7 +20,6 @@ const Component = ({ service, pageType, blocks }: Props) => (
     pageType={pageType}
     pathname=""
     service={service}
-    counterName="testCounterName"
   >
     <MediaLoaderComponent blocks={blocks} />
   </RequestContextProvider>
