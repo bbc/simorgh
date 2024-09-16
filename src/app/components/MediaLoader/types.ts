@@ -92,6 +92,14 @@ export type MediaInfo = {
   guidanceMessage?: string | null;
 };
 
+export type MediaOverrides = {
+  model: {
+    pageIdentifierOverride: string;
+    pageTitleOverride: string;
+  };
+  type: 'mediaOverrides';
+};
+
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
@@ -236,7 +244,8 @@ export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
   | CaptionBlock
-  | TvMediaBlock;
+  | TvMediaBlock
+  | MediaOverrides;
 
 export type BuildConfigProps = {
   id: string | null;

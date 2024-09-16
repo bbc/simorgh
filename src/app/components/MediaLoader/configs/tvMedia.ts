@@ -8,6 +8,9 @@ export default ({
   translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: tvMediaBlock } = filterForBlockType(blocks, 'tvMedia');
+  const {
+    model: { pageTitleOverride },
+  } = filterForBlockType(blocks, 'mediaOverrides');
   const video = tvMediaBlock?.versions?.[0] || {};
   const holdingImageURL = `https://${tvMediaBlock.imageUrl}`;
 
@@ -31,7 +34,7 @@ export default ({
         episodePID: tvMediaBlock.id,
       },
       playlistObject: {
-        title: tvMediaBlock.episodeTitle,
+        title: pageTitleOverride,
         holdingImageURL,
         items: [
           {
