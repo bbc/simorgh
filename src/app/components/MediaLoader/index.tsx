@@ -15,9 +15,9 @@ import {
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#contexts/EventTrackingContext';
+import nodeLogger from '#lib/logger.node';
 import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
 import Caption from '../Caption';
-import nodeLogger from '#lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
