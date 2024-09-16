@@ -17,10 +17,10 @@ import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
+import extractHeaders from '#server/utilities/extractHeaders';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
-import extractHeaders from '#server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
 
 const logger = nodeLogger(__filename);

@@ -4,10 +4,10 @@ import logResponseTime from '#server/utilities/logResponseTime';
 
 import PageDataParams from '#app/models/types/pageDataParams';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
+import extractHeaders from '#server/utilities/extractHeaders';
 import dataFetch from './dataFetch';
 
 import downloadsPageLayout from './downloadsPageLayout';
-import extractHeaders from '#server/utilities/extractHeaders';
 
 const pageTitle = '다운로드 - BBC News 코리아';
 

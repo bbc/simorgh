@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import {
-  act,
-  render,
-} from '#components/react-testing-library-with-providers';
+import { act, render } from '#components/react-testing-library-with-providers';
 import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import { MediaBlock } from '#components/MediaLoader/types';
 import AvEmbedsPage from './AvEmbedsPageLayout';
