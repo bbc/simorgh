@@ -1,4 +1,4 @@
-import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/cymrufyw';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/cymrufyw';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {

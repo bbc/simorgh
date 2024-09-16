@@ -1,4 +1,4 @@
-import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/archive';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
 import { ARCHIVE_BLUE, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {

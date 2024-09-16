@@ -1,4 +1,4 @@
-import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/newsround';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {

@@ -1,4 +1,4 @@
-import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/naidheachdan';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/naidheachdan';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {

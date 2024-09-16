@@ -1,4 +1,4 @@
-import brandSVG from '#legacy/psammead/psammead-assets/src/svgs/scotland';
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/scotland';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
