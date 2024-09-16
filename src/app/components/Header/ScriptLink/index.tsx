@@ -4,7 +4,6 @@ import { jsx } from '@emotion/react';
 import { compile } from 'path-to-regexp';
 import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
-import { UserContext } from '#contexts/UserContext';
 import useToggle from '#hooks/useToggle';
 import { Services, Variants } from '#app/models/types/global';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -57,11 +56,9 @@ export const getVariantHref = ({
 };
 
 const ScriptLink = ({ scriptSwitchId = '' }) => {
-  const { setPreferredVariantCookie } = useContext(UserContext);
   const { service, scriptLink } = useContext(ServiceContext);
   const { isNextJs } = useContext(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
-  const { enabled: variantCookieEnabled } = useToggle('variantCookie');
 
   // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
   // revisit this to support both Express and Next.JS in the future.
@@ -69,7 +66,6 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { path, params }: UseRouteMatcher = useRouteMatch();
   const { text, variant } = scriptLink || {};
-
   if (!variant) return null;
 
   return (
@@ -83,11 +79,6 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
         scriptSwitchId,
       })}
       data-variant={variant}
-      onClick={() => {
-        return (
-          variantCookieEnabled && setPreferredVariantCookie(service, variant)
-        );
-      }}
       className="focusIndicatorRemove"
     >
       <span css={styles.container}>{text}</span>

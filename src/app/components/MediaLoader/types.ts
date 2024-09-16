@@ -3,6 +3,7 @@ import {
   MediaType,
   OnDemandAudioBlock,
   OnDemandTVBlock,
+  LiveRadioBlock,
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
@@ -29,10 +30,12 @@ export type PlayerConfig = {
   playlistObject?: {
     title: string;
     summary?: string;
-    holdingImageURL: string;
+    holdingImageURL?: string;
     items: PlaylistItem[];
     guidance?: string;
     embedRights?: 'allowed';
+    liveRewind?: boolean;
+    simulcast?: boolean;
   };
 };
 
@@ -43,19 +46,20 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean };
+  controls: { enabled: boolean; volumeSlider?: boolean };
   locale: { lang: string };
   subtitles: { enabled: boolean; defaultOn: boolean };
   fullscreen: { enabled: boolean };
 };
 
 export type PlaylistItem = {
-  versionID: string;
+  versionID?: string;
   kind: string;
-  duration: number;
+  duration?: number;
   live?: boolean;
   embedRights?: 'allowed';
   vpid?: string;
+  serviceID?: string;
 };
 
 export type ConfigBuilderProps = {
@@ -80,9 +84,9 @@ export type PlaceholderConfig = {
 };
 
 export type ConfigBuilderReturnProps = {
-  mediaType: string;
+  mediaType: MediaType;
   playerConfig: PlayerConfig;
-  placeholderConfig: PlaceholderConfig;
+  placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
 };
 
@@ -203,7 +207,8 @@ export type MediaBlock =
   | ClipMediaBlock
   | CaptionBlock
   | OnDemandTVBlock
-  | OnDemandAudioBlock;
+  | OnDemandAudioBlock
+  | LiveRadioBlock;
 
 export type BuildConfigProps = {
   id: string | null;
