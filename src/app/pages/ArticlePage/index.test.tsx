@@ -650,7 +650,7 @@ describe('Article Page', () => {
       { service: 'russian' },
     );
 
-    expect(getByText('Что это было?')).toBeInTheDocument();
+    expect(getByText('Канал Би-би-си в WhatsApp')).toBeInTheDocument();
   });
   it('should render oEmbed component when passed', async () => {
     const pageDataWithRiddle = {
