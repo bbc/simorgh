@@ -94,6 +94,7 @@ export type MediaInfo = {
 
 export type MediaOverrides = {
   model: {
+    language: string;
     pageIdentifierOverride: string;
     pageTitleOverride: string;
   };

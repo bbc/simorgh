@@ -114,6 +114,7 @@ const OnDemandTvPage = ({
 
   const mediaOverrides: MediaOverrides = {
     model: {
+      language,
       pageIdentifierOverride: `${service}.bbc_${service}_tv.tv.${episodeId}.page`,
       pageTitleOverride: promoBrandTitle,
     },
