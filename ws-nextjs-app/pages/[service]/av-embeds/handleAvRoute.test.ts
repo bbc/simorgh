@@ -86,7 +86,7 @@ describe('Handle AV Route', () => {
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
+      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
     );
   });
 
