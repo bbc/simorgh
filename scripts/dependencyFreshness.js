@@ -86,7 +86,7 @@ const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
   });
 };
 
-Object.keys(allDependencies).forEach(dep => {
+Object.keys(allDependencies).forEach((dep, index) => {
   console.log(`Checking ${dep} for last modified date`);
   exec(`npm view ${dep} time --json`, (err, stdout) => {
     if (err) {
@@ -100,10 +100,12 @@ Object.keys(allDependencies).forEach(dep => {
     );
     const dateOfOurVersion = new Date(stdoutJson[ourVersion]);
     const ourFreshness = datediff(dateOfOurVersion.getTime(), dateNow);
-    collectResults({
-      dep,
-      modifiedDate,
-      ourFreshness,
-    });
+    const mything = +setTimeout(() => {
+        collectResults({
+          dep,
+          modifiedDate,
+          ourFreshness,
+        })
+    }, index * 100);
   });
 });
