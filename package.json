@@ -116,7 +116,7 @@
     "moment": "2.30.1",
     "moment-timezone": "0.5.45",
     "morgan": "1.10.0",
-    "path-to-regexp": "6.2.2",
+    "path-to-regexp": "6.3.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "0.30.1",
     "react": "18.3.1",
