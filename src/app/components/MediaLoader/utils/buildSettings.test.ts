@@ -594,7 +594,7 @@ describe('buildSettings', () => {
     });
   });
 
-    describe('mediator', () => {
+  describe('mediator', () => {
     it('should not be set on live environment', () => {
       (isLive as jest.Mock).mockImplementationOnce(() => true);
 
