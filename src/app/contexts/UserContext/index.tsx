@@ -5,12 +5,7 @@ import React, {
   SetStateAction,
   useMemo,
 } from 'react';
-import { Services, Variants } from '#app/models/types/global';
-import {
-  getCookiePolicy,
-  personalisationEnabled,
-  setPreferredVariantCookie,
-} from './cookies';
+import { getCookiePolicy, personalisationEnabled } from './cookies';
 import Chartbeat from './Chartbeat';
 
 export type UserContextProps = {
@@ -18,7 +13,6 @@ export type UserContextProps = {
   sendCanonicalChartbeatBeacon: Dispatch<SetStateAction<null>>;
   updateCookiePolicy: Dispatch<SetStateAction<null>>;
   personalisationEnabled: boolean;
-  setPreferredVariantCookie: (service: Services, variant: Variants) => void;
 };
 
 export const UserContext = React.createContext<UserContextProps>(
@@ -35,7 +29,6 @@ export const UserContextProvider = ({ children }: PropsWithChildren) => {
       sendCanonicalChartbeatBeacon,
       updateCookiePolicy: () => setCookiePolicy(getCookiePolicy()),
       personalisationEnabled: personalisationEnabled(cookiePolicy),
-      setPreferredVariantCookie,
     }),
     [cookiePolicy],
   );
