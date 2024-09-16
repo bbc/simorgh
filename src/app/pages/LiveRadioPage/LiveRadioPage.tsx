@@ -9,7 +9,7 @@ import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
 import MetadataContainer from '#components/Metadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import LinkedData from '#components/LinkedData';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 import { LiveRadioPageData } from './types';
 
 const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {

@@ -66,7 +66,7 @@ import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
-import ScrollablePromo from '#components/ScrollablePromo';
+import ScrollablePromo from '#legacy/components/ScrollablePromo';
 
 const ArticlePage = ({ pageData }) => {
   const { isApp, isAmp, pageType, service } = useContext(RequestContext);
