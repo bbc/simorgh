@@ -7,6 +7,11 @@ export default {
       paddingBottom: `${spacings.TRIPLE}rem`,
       width: '100%',
     }),
+  liveRadioMediaContainer: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.WHITE,
+      height: '165px',
+    }),
   mediaContainer: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.BLACK,

@@ -2,12 +2,9 @@
 
 import path from 'ramda/src/path';
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
-import getDataUrl from '../../../support/helpers/getDataUrl';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export default ({ service, pageType, variant }) =>
+export default ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
       cy.getToggles(service);
@@ -27,24 +24,8 @@ export default ({ service, pageType, variant }) =>
         retries: 3,
       },
       () => {
-        const { lang } = appConfig[service][variant];
-        let embedUrl;
-
-        beforeEach(() => {
-          cy.request(getDataUrl(Cypress.env('currentPath'))).then(
-            ({ body }) => {
-              embedUrl = getEmbedUrl(body, lang);
-            },
-          );
-        });
-
-        it('embed URL should be reachable', () => {
-          cy.testResponseCodeAndTypeRetry({
-            path: embedUrl,
-            responseCode: 200,
-            type: 'text/html',
-            allowFallback: true,
-          });
+        it('should render a valid media player', () => {
+          cy.get('[data-e2e="media-loader__container"]').should('exist');
         });
       },
     );

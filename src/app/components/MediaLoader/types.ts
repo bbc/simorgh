@@ -24,10 +24,12 @@ export type PlayerConfig = {
   playlistObject?: {
     title: string;
     summary?: string;
-    holdingImageURL: string;
+    holdingImageURL?: string;
     items: PlaylistItem[];
     guidance?: string;
     embedRights?: 'allowed';
+    liveRewind?: boolean;
+    simulcast?: boolean;
   };
 };
 
@@ -38,19 +40,20 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean };
+  controls: { enabled: boolean; volumeSlider?: boolean };
   locale: { lang: string };
   subtitles: { enabled: boolean; defaultOn: boolean };
   fullscreen: { enabled: boolean };
 };
 
 export type PlaylistItem = {
-  versionID: string;
+  versionID?: string;
   kind: string;
-  duration: number;
+  duration?: number;
   live?: boolean;
   embedRights?: 'allowed';
   vpid?: string;
+  serviceID?: string;
 };
 
 export type ConfigBuilderProps = {
@@ -74,14 +77,14 @@ export type PlaceholderConfig = {
   translatedNoJSMessage: string;
 };
 
+export type MediaType = 'audio' | 'video' | 'liveRadio';
+
 export type ConfigBuilderReturnProps = {
-  mediaType: string;
+  mediaType: MediaType;
   playerConfig: PlayerConfig;
-  placeholderConfig: PlaceholderConfig;
+  placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
 };
-
-export type MediaType = 'audio' | 'video';
 
 export type MediaInfo = {
   title: string;
@@ -232,11 +235,44 @@ export type TvMediaBlock = {
   };
 };
 
+export type LiveRadioHeadingBlock = {
+  type: 'heading';
+  text: string;
+};
+
+export type LiveRadioParagraphBlock = {
+  type: 'paragraph';
+  text: string;
+};
+
+export type LiveRadioVersionBlock = {
+  id: string;
+  type: 'version';
+  subType: string;
+  format: string;
+  externalId: string;
+  duration: string;
+  caption: string;
+  embedding: boolean;
+  available: boolean;
+  live: boolean;
+};
+
+export type LiveRadioBlock = {
+  type: 'liveRadio';
+  model: [
+    LiveRadioHeadingBlock,
+    LiveRadioParagraphBlock,
+    LiveRadioVersionBlock,
+  ];
+};
+
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
   | CaptionBlock
-  | TvMediaBlock;
+  | TvMediaBlock
+  | LiveRadioBlock;
 
 export type BuildConfigProps = {
   id: string | null;
