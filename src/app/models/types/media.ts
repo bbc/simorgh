@@ -1,4 +1,4 @@
-export type MediaType = 'audio_video' | 'audio' | 'video';
+export type MediaType = 'audio_video' | 'audio' | 'video' | 'liveRadio';
 
 export type OnDemandMediaModel = {
   id: string;
@@ -42,4 +42,36 @@ export type OnDemandTVBlock = {
 export type OnDemandAudioBlock = {
   type: 'audio';
   model: OnDemandMediaModel;
+};
+
+export type LiveRadioHeadingBlock = {
+  type: 'heading';
+  text: string;
+};
+
+export type LiveRadioParagraphBlock = {
+  type: 'paragraph';
+  text: string;
+};
+
+export type LiveRadioVersionBlock = {
+  id: string;
+  type: 'version';
+  subType: string;
+  format: string;
+  externalId: string;
+  duration: string;
+  caption: string;
+  embedding: boolean;
+  available: boolean;
+  live: boolean;
+};
+
+export type LiveRadioBlock = {
+  type: 'radio';
+  model: [
+    LiveRadioHeadingBlock,
+    LiveRadioParagraphBlock,
+    LiveRadioVersionBlock,
+  ];
 };
