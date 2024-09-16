@@ -1,6 +1,8 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
+import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import buildSettings from './buildSettings';
 import {
@@ -718,6 +720,83 @@ describe('buildSettings', () => {
           translatedNoJSMessage:
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
+        showAds: false,
+      });
+    });
+  });
+
+  describe('Live Radio', () => {
+    const hausaLiveRadioBaseSettings = {
+      counterName: 'hausa.bbc_hausa_radio.liveradio.page',
+      lang: 'ha',
+      service: 'hausa' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'HAUSA',
+      translations: hausaServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    it('Should process a Live Radio block into a valid playlist item.', () => {
+      const hausaLiveRadioBlocks = [
+        {
+          type: 'liveRadio',
+          model: hausaLiveRadio?.content?.blocks,
+        },
+      ];
+
+      const result = buildSettings({
+        ...hausaLiveRadioBaseSettings,
+        blocks: hausaLiveRadioBlocks as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        playerConfig: {
+          product: 'news',
+          appName: 'news-hausa',
+          enableToucan: true,
+          appType: 'responsive',
+          autoplay: false,
+          mediator: { host: 'open.test.bbc.co.uk' },
+          counterName: 'hausa.bbc_hausa_radio.liveradio.page',
+          playlistObject: {
+            items: [
+              {
+                kind: 'radioProgramme',
+                live: true,
+                serviceID: 'bbc_hausa_radio',
+              },
+            ],
+            liveRewind: true,
+            simulcast: true,
+            title: 'BBC Hausa Rediyo',
+            summary:
+              "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+          },
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'HAUSA',
+          },
+          ui: {
+            skin: 'audio',
+            colour: '#b80000',
+            foreColour: '#222222',
+            baseColour: '#222222',
+            colourOnBaseColour: '#ffffff',
+            fallbackBackgroundColour: '#ffffff',
+            controls: { enabled: true, volumeSlider: true },
+            fullscreen: {
+              enabled: true,
+            },
+            locale: {
+              lang: 'ha',
+            },
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+        },
+        mediaType: 'liveRadio',
         showAds: false,
       });
     });
