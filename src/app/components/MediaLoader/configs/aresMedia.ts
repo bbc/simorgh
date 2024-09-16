@@ -92,11 +92,11 @@ export default ({
 
   const isLive = aresMediaMetadata?.live ?? false;
 
-  const items = [
+  const items: PlaylistItem[] = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
   ];
 
-  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+  if (showAds) items.unshift({ kind: 'advert' });
 
   const placeholderConfig = buildPlaceholderConfig({
     title,

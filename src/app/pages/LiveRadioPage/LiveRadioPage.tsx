@@ -1,58 +1,30 @@
 import React, { useContext } from 'react';
 import { Headline } from '#psammead/psammead-headings/src';
-import pathOr from 'ramda/src/pathOr';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
-import useLocation from '#hooks/useLocation';
-import AVPlayer from '#containers/AVPlayer';
-import getMediaId from '#lib/utilities/getMediaId';
-import getMasterbrand from '#lib/utilities/getMasterbrand';
-import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import MediaLoader from '#app/components/MediaLoader';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
+import { LiveRadioPageData } from './types';
 
-const staticAssetsPath = `${
-  getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
-}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-
-const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
-
-const LiveRadioPage = ({ pageData }) => {
+const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
   const {
     language,
     name,
     summary,
     heading,
     bodySummary,
-    masterBrand,
+    contentType,
     radioScheduleData,
+    mediaBlock,
   } = pageData;
-  const { script, service, lang, liveRadioOverrides, translations } =
-    useContext(ServiceContext);
-  const location = useLocation();
-  const assetId = 'liveradio';
-  const mediaId = getMediaId({
-    assetId,
-    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
-    lang,
-    service,
-  });
-  const embedUrl = getEmbedUrl({
-    mediaId,
-    type: 'media',
-    queryString: location.search,
-  });
-  const iframeTitle = pathOr(
-    'Audio player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
+  const { script, service } = useContext(ServiceContext);
+
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
   return (
@@ -61,7 +33,7 @@ const LiveRadioPage = ({ pageData }) => {
       <ChartbeatAnalytics
         mediaPageType="Radio"
         title={name}
-        contentType={pageData?.contentType}
+        contentType={contentType}
       />
       <ComscoreAnalytics />
       <MetadataContainer
@@ -72,7 +44,7 @@ const LiveRadioPage = ({ pageData }) => {
         hasAmpPage={false}
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
-
+      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
       <GelPageGrid
         as="main"
         role="main"
@@ -86,6 +58,7 @@ const LiveRadioPage = ({ pageData }) => {
         }}
         enableGelGutters
       >
+        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           startOffset={{
@@ -107,25 +80,22 @@ const LiveRadioPage = ({ pageData }) => {
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
           <Headline
+            // @ts-expect-error script is an object
             script={script}
             service={service}
             id="content"
-            tabIndex="-1"
+            tabIndex={-1}
           >
             {heading}
           </Headline>
-          <Paragraph script={script} service={service}>
+          <Paragraph
+            // @ts-expect-error script is an object
+            script={script}
+            service={service}
+          >
             {bodySummary}
           </Paragraph>
-          <AVPlayer
-            assetId={assetId}
-            embedUrl={embedUrl}
-            iframeTitle={iframeTitle}
-            title="Live radio"
-            type="audio"
-            skin="audio"
-            placeholderSrc={audioPlaceholderImageSrc}
-          />
+          <MediaLoader blocks={mediaBlock} />
         </Grid>
       </GelPageGrid>
       {hasRadioScheduleData && (
