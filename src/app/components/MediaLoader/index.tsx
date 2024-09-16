@@ -15,7 +15,8 @@ import {
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
+import { MediaType } from '#app/models/types/media';
+import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';

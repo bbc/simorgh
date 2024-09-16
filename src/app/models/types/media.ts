@@ -68,7 +68,7 @@ export type LiveRadioVersionBlock = {
 };
 
 export type LiveRadioBlock = {
-  type: 'radio';
+  type: 'liveRadio';
   model: [
     LiveRadioHeadingBlock,
     LiveRadioParagraphBlock,
