@@ -17,9 +17,6 @@ import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import HeaderContainer from './index';
 
 const defaultToggleState = {
-  navOnArticles: {
-    enabled: true,
-  },
   scriptLink: {
     enabled: true,
   },

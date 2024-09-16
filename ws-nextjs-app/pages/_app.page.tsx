@@ -104,7 +104,6 @@ export default function App({ Component, pageProps }: Props) {
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
-          counterName={atiAnalytics?.pageIdentifier ?? null}
         >
           <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
             {isAvEmbeds ? (

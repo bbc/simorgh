@@ -10,6 +10,21 @@ export type OptimoBlock = {
   blockGroupIndex?: number;
 };
 
+export type OptimoRawImageBlock = {
+  type: 'rawImage';
+  model: {
+    locator: string;
+    originCode: string;
+  };
+};
+
+export type OptimoImageBlock = {
+  type: 'image';
+  model: {
+    blocks: [OptimoRawImageBlock];
+  };
+};
+
 export type ArticleMetadata = {
   passport: {
     language: string;
@@ -25,6 +40,7 @@ export type ArticleMetadata = {
   };
   analyticsLabels?: {
     producer: string;
+    contentId: string;
   };
   atiAnalytics: ATIData;
   type: string;

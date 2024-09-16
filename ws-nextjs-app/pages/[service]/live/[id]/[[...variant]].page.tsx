@@ -41,7 +41,6 @@ const getPageData = async ({
     service,
     variant,
   });
-
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 

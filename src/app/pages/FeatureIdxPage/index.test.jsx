@@ -70,14 +70,6 @@ jest.mock('#components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 
-jest.mock('#containers/PageHandlers/withVariant', () => Component => {
-  return props => (
-    <div id="VariantContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
 jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return props => (
     <div id="ContextsContainer">

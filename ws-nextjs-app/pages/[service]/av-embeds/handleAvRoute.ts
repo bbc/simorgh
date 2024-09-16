@@ -8,8 +8,14 @@ import { FetchError } from '#app/models/types/fetch';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import parseAvRoute from '#app/routes/utils/parseAvRoute';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import buildAvEmbedURL from '../../../utilities/buildAvEmbedUrl';
+import nodeLogger from '#lib/logger.node';
+import { OK } from '#app/lib/statusCodes.const';
+import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
+import sendCustomMetric from '#server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import getAgent from '../../../utilities/undiciAgent';
+
+const logger = nodeLogger(__filename);
 
 export default async (context: GetServerSidePropsContext) => {
   const {
@@ -25,17 +31,10 @@ export default async (context: GetServerSidePropsContext) => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
-  if (parsedRoute.isWsRoute) {
-    context.res.setHeader(
-      'Cache-Control',
-      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
-    );
-  } else {
-    context.res.setHeader(
-      'Cache-Control',
-      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
-    );
-  }
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+  );
 
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,
@@ -61,13 +60,23 @@ export default async (context: GetServerSidePropsContext) => {
     pageStatus = status;
     pageJson = json;
   } catch (error) {
-    const { status } = error as FetchError;
+    const { message, status } = error as FetchError;
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: status,
+      pageType: AV_EMBEDS,
+      requestUrl: resolvedUrl,
+    });
 
+    logger.error(BFF_FETCH_ERROR, {
+      status,
+      message,
+      pathname: path,
+    });
     pageStatus = status;
   }
 
   context.res.statusCode = pageStatus;
-
   const { data: { avEmbed } = { avEmbed: null } } = pageJson ?? {};
 
   const service = avEmbed?.metadata?.service ?? 'news';
@@ -100,34 +109,40 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { caption = null } = captionBlock?.model ?? {};
 
-  const mediaURL =
-    buildAvEmbedURL({
-      assetId: parsedRoute.assetId,
-      mediaDelimiter: parsedRoute.mediaDelimiter,
-      mediaId: parsedRoute.mediaId,
-      service,
-      variant,
-    }) ?? null;
+  let routingInfoLogger = logger.debug;
+
+  if (pageStatus !== OK) {
+    routingInfoLogger = logger.error;
+  }
+
+  routingInfoLogger(ROUTING_INFORMATION, {
+    url: context.resolvedUrl,
+    status: pageStatus,
+    pageType: AV_EMBEDS,
+  });
 
   return {
     props: {
+      id: resolvedUrl,
       isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
         ? {
             mediaBlock: avEmbed?.content?.model?.blocks ?? null,
             metadata: {
+              atiAnalytics: avEmbed?.metadata?.atiAnalytics ?? null,
               caption,
               headline,
               imageUrl,
               language,
-              mediaURL,
               promoSummary,
               type: AV_EMBEDS,
             },
+            embedded: true,
           }
         : null,
       pageType: AV_EMBEDS,
+      pathname: resolvedUrl,
       service,
       status: pageStatus,
       variant,

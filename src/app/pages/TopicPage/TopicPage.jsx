@@ -48,7 +48,7 @@ const TopicPage = ({ pageData }) => {
   return (
     <>
       <AdContainer slotType="leaderboard" />
-      <main css={styles.main}>
+      <main css={styles.main} role="main">
         <div css={styles.inner}>
           <ATIAnalytics atiData={atiAnalytics} />
           <ChartbeatAnalytics title={title} />

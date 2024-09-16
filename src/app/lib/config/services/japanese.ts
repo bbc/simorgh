@@ -315,6 +315,10 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/topics/c50vpymk750t',
       },
       {
+        title: '米大統領選',
+        url: '/japanese/topics/c5qx4zgm86et',
+      },
+      {
         title: '気候変動',
         url: '/japanese/topics/c2dwqjr27zjt',
       },
