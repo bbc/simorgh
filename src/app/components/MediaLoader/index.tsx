@@ -180,15 +180,14 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   if (isLite) return null;
 
-  const {
-    model: { pageIdentifierOverride },
-  } = filterForBlockType(blocks, 'mediaOverrides');
+  const { model: mediaOverrides } =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
     id,
     blocks,
-    counterName: pageIdentifierOverride || pageIdentifier,
+    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
     statsDestination,
     producer,
     isAmp,

@@ -6,7 +6,11 @@ import {
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
-import { aresMediaBlocks, onDemandTvBlocks } from './fixture';
+import {
+  aresMediaBlocks,
+  onDemandTvBlocks,
+  onDemandTvBlocksWithOverrides,
+} from './fixture';
 import { MediaBlock } from './types';
 import * as buildConfig from './utils/buildSettings';
 
@@ -191,18 +195,30 @@ describe('MediaLoader', () => {
       await act(async () => {
         render(
           <MediaPlayer
-            blocks={onDemandTvBlocks as MediaBlock[]}
-            pageIdentifierOverride="hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page"
+            blocks={onDemandTvBlocksWithOverrides as MediaBlock[]}
             embedded
           />,
           { service: 'hindi' },
         );
       });
 
-      expect(buildConfigSpy).toHaveBeenCalledWith(
+      expect(buildConfigSpy.mock.calls[0][0]).toEqual(
         expect.objectContaining({
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
         }),
+      );
+      expect(buildConfigSpy.mock.calls[0][0].blocks).toEqual(
+        expect.arrayContaining([
+          {
+            model: {
+              language: 'hi',
+              pageIdentifierOverride:
+                'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+              pageTitleOverride: 'दुनिया',
+            },
+            type: 'mediaOverrides',
+          },
+        ]),
       );
     });
 
@@ -214,8 +230,11 @@ describe('MediaLoader', () => {
           {
             service: 'hindi',
             pageData: {
-              mediaBlocks: onDemandTvBlocks,
+              id: 'urn:bbc:ares:ws_media:brand:bbc_hindi_tv/w13xttlw',
+              language: 'hi',
+              pageTitle: 'दुनिया - BBC News हिंदी',
               pageIdentifier: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+              contentType: 'player-episode',
             },
             pageType: 'media',
             pathname: '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',

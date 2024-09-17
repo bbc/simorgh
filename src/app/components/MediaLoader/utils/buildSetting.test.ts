@@ -524,10 +524,20 @@ describe('buildSettings', () => {
         };
       },
     );
+
     it('Should process an On Demand TV block into a valid playlist item.', () => {
+      const hindiTvMediaOverrides = {
+        model: {
+          language: 'hi',
+          pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          pageTitleOverride: 'दुनिया',
+        },
+        type: 'mediaOverrides',
+      };
+
       const result = buildSettings({
         ...hindiTvBaseSettings,
-        blocks: hindiTvMediaBlocks as MediaBlock[],
+        blocks: [...hindiTvMediaBlocks, hindiTvMediaOverrides] as MediaBlock[],
         pageType: MEDIA_PAGE,
       });
 
@@ -589,6 +599,48 @@ describe('buildSettings', () => {
         },
         showAds: false,
       });
+    });
+
+    it('Should use the language override to build the On Demand TV SMP configuration', () => {
+      const hindiTvMediaOverrides = {
+        model: {
+          language: 'languageOverride',
+          pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          pageTitleOverride: 'दुनिया',
+        },
+        type: 'mediaOverrides',
+      };
+
+      const result = buildSettings({
+        ...hindiTvBaseSettings,
+        blocks: [...hindiTvMediaBlocks, hindiTvMediaOverrides] as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result?.playerConfig?.ui?.locale).toEqual({
+        lang: 'languageOverride',
+      });
+    });
+
+    it('Should use the page title override to build the On Demand TV SMP configuration', () => {
+      const hindiTvMediaOverrides = {
+        model: {
+          language: 'hi',
+          pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          pageTitleOverride: 'pageTitleOverride',
+        },
+        type: 'mediaOverrides',
+      };
+
+      const result = buildSettings({
+        ...hindiTvBaseSettings,
+        blocks: [...hindiTvMediaBlocks, hindiTvMediaOverrides] as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result?.playerConfig?.playlistObject?.title).toEqual(
+        'pageTitleOverride',
+      );
     });
   });
 

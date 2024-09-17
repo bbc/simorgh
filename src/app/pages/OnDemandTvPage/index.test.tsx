@@ -13,6 +13,7 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import * as MediaLoader from '../../components/MediaLoader';
 import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
+import { MediaOverrides } from '#app/components/MediaLoader/types';
 
 const pageType = MEDIA_PAGE;
 
@@ -231,6 +232,14 @@ describe('OnDemand TV Brand Page ', () => {
       pageType,
       toggles,
     });
+    const expectedMediaOverrides = {
+      model: {
+        language: 'ps',
+        pageIdentifierOverride: 'pashto.bbc_pashto_tv.tv.w172xcldhhrdqgb.page',
+        pageTitleOverride: 'نړۍ دا وخت',
+      },
+      type: 'mediaOverrides',
+    };
 
     await renderPage({
       // @ts-expect-error partial data required for testing purposes
@@ -239,12 +248,10 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-    const { pageIdentifierOverride } = mediaLoaderProps;
+    const { blocks } = mediaLoaderProps;
 
     expect(mediaLoaderSpy).toHaveBeenCalled();
-    expect(pageIdentifierOverride).toEqual(
-      'pashto.bbc_pashto_tv.tv.w172xcldhhrdqgb.page',
-    );
+    expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
   });
 
   it('should show the expired content message if episode is expired', async () => {

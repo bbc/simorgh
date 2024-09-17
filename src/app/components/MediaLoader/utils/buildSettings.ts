@@ -37,9 +37,8 @@ const buildSettings = ({
   showAdsBasedOnLocation = false,
   embedded,
 }: BuildConfigProps) => {
-  const {
-    model: { language },
-  } = filterForBlockType(blocks, 'mediaOverrides');
+  const { model: mediaOverrides } =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
 
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
@@ -50,7 +49,7 @@ const buildSettings = ({
     appName: service !== 'news' ? `news-${service}` : 'news',
     ui: {
       controls: { enabled: true },
-      locale: { lang: language || lang || 'en' },
+      locale: { lang: mediaOverrides?.language || lang || 'en' },
       subtitles: { enabled: true, defaultOn: true },
       fullscreen: { enabled: true },
     },
