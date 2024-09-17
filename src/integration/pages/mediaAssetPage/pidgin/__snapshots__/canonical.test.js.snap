@@ -268,7 +268,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "トランプ氏、香港人権法案に署名　中国は反発",
   "duration": "PT5S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm",
+  "embedURL": "https://www.test.bbc.com/pidgin/av-embeds/23248703/vpid/p01kx42v",
   "name": "トランプ氏、香港人権法案に署名　中国は反発",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg",
   "uploadDate": "2018-12-20T11:06:51.000Z",
