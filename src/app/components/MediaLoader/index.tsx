@@ -15,7 +15,7 @@ import {
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -94,9 +94,14 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
+  mediaType?: MediaType;
 };
 
-const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+  mediaType,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -147,7 +152,13 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={styles.mediaContainer}
+      css={
+        mediaType === 'liveRadio'
+          ? styles.liveRadioMediaContainer
+          : styles.mediaContainer
+      }
+      // Temporary fix for live radio players not displaying correctly in RTL languages
+      {...(mediaType === 'liveRadio' && { dir: 'ltr' })}
     />
   );
 };
@@ -173,9 +184,12 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
-  const showPlaceholder = !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
+  const PAGETYPE_SUPPORTS_PLACEHOLDER =
+    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
 
-  const [isPlaceholder, setIsPlaceholder] = useState(showPlaceholder);
+  const [isPlaceholder, setIsPlaceholder] = useState(
+    PAGETYPE_SUPPORTS_PLACEHOLDER,
+  );
 
   if (isLite) return null;
 
@@ -200,22 +214,18 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
-  const {
-    mediaInfo,
-    placeholderSrc,
-    placeholderSrcset,
-    translatedNoJSMessage,
-  } = placeholderConfig;
-
   const captionBlock = getCaptionBlock(blocks, pageType);
+
+  const showPlaceholder = isPlaceholder && placeholderConfig;
 
   return (
     <>
-      <Metadata
-        blocks={blocks}
-        embedURL={playerConfig?.externalEmbedUrl}
-        embedded={embedded}
-      />
+      {
+        // Prevents the av-embeds route itself rendering the Metadata component
+        !embedded && (
+          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+        )
+      }
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}
@@ -223,16 +233,20 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
       >
         {showAds && <AdvertTagLoader />}
         <BumpLoader />
-        {isPlaceholder ? (
+        {showPlaceholder ? (
           <Placeholder
-            src={placeholderSrc}
-            srcSet={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
-            mediaInfo={mediaInfo}
+            src={placeholderConfig?.placeholderSrc}
+            srcSet={placeholderConfig?.placeholderSrcset}
+            noJsMessage={placeholderConfig?.translatedNoJSMessage}
+            mediaInfo={placeholderConfig?.mediaInfo}
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
-          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+          <MediaContainer
+            playerConfig={playerConfig}
+            showAds={showAds}
+            mediaType={mediaType}
+          />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaType} />}
       </figure>
