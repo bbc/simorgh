@@ -123,9 +123,9 @@ import StoryPromo, {
   IndexAlsosLi,
 } from '#psammead/psammead-story-promo/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '#psammead/psammead-live-label/src';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 

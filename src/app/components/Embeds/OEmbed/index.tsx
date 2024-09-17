@@ -3,8 +3,8 @@
 import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { RequestContext } from '../../../contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import EmbedHtml from '../EmbedHtml';
 import EmbedError from '../EmbedError';
 import FlourishEmbed from '../FlourishEmbed';

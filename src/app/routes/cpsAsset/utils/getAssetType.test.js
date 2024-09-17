@@ -4,7 +4,7 @@
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
 
-import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 
 describe('getAssetType', () => {

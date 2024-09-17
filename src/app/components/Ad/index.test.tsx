@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
-import { render } from '../react-testing-library-with-providers';
-import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
+import { render } from '#components/react-testing-library-with-providers';
+import latinDiacritics from '#components/ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
-} from '../../contexts/ServiceContext';
+} from '#contexts/ServiceContext';
 import AdContainer from './index';
 
 const context = {

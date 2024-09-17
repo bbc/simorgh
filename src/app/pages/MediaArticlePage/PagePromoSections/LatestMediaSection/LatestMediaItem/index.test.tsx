@@ -2,11 +2,11 @@ import React, { useMemo } from 'react';
 import {
   render,
   screen,
-} from '../../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
+import PromoContext from '#legacy/components/OptimoPromos/PromoContext';
+import { EventTrackingBlock } from '#models/types/eventTracking';
 import LatestMediaItem from '.';
-import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
-import { EventTrackingBlock } from '../../../../../models/types/eventTracking';
 import { LatestMedia, Media } from '../types';
 
 interface FixtureProps {

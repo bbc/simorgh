@@ -1,7 +1,7 @@
 /* eslint-disable no-eval */
+import { WesternArabic } from '#legacy/psammead/psammead-locales/src/numerals';
+import { data as pidginMostRead } from '#data/pidgin/mostRead/index.json';
 import { transformData } from '.';
-import { WesternArabic } from '../../../../legacy/psammead/psammead-locales/src/numerals';
-import { data as pidginMostRead } from '../../../../../../data/pidgin/mostRead/index.json';
 
 describe('getRemoteDataScript', () => {
   it('transformData should append rankTranslation to each item', async () => {

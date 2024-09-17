@@ -1,5 +1,5 @@
 import { resetWindowValue } from '#psammead/psammead-test-helpers/src';
-import * as genericLabelHelpers from '../../../lib/analyticsUtils';
+import * as genericLabelHelpers from '#lib/analyticsUtils';
 import { buildATIPageTrackPath, buildATIEventTrackUrl } from '.';
 
 // @ts-expect-error required for testing purposes

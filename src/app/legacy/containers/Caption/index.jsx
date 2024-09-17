@@ -2,8 +2,8 @@
 import React, { useContext } from 'react';
 import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
+import { ServiceContext } from '#contexts/ServiceContext';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';

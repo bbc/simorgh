@@ -18,9 +18,9 @@ The `LiveLabel` applied compound component implements a span for use on live con
 This example shows the default usage of the `LiveLabel` component, passing in the headline of the live promo as `children`
 
 ```jsx
-import LiveLabel from '#app/components/LiveLabel';
+import LiveLabel from '#components/LiveLabel';
 import { Headline, Link } from '#psammead/psammead-story-promo/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 <Headline script={latin} service="pidgin">
   <Link href="https://www.bbc.com/pidgin/live/1234567890">

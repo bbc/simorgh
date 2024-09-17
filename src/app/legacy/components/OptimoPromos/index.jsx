@@ -1,8 +1,8 @@
 import React, { useContext, useMemo } from 'react';
 
-import Timestamp from '#components/Promo/timestamp';
-import LiveLabel from '#app/components/LiveLabel';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import Timestamp from '#legacy/components/Promo/timestamp';
+import LiveLabel from '#components/LiveLabel';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 import Title from './Title';
 import Link from './Link';

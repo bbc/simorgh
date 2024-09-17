@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import RadioScheduleContainer from '..';
 
 const getToggleState = enabled => ({

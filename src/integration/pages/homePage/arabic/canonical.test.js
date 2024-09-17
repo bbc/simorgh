@@ -4,8 +4,8 @@
  * @displayAds true
  */
 
-import runCanonicalTests from '../canonicalTests';
 import { data as pageData } from '../../../../../data/arabic/homePage/index.json';
+import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {

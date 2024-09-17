@@ -9,8 +9,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import PromoList from '#components/OptimoPromos/PromoList';
-import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#legacy/components/OptimoPromos/PromoList';
+import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
 import { BORDER_SPACING } from '../constants';
 
 export const StyledRelatedContentSection = styled.section`

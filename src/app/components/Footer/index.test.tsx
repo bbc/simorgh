@@ -1,6 +1,9 @@
 import React from 'react';
-import Footer from '#app/components/Footer';
-import { render, screen } from '../react-testing-library-with-providers';
+import Footer from '#components/Footer';
+import {
+  render,
+  screen,
+} from '#components/react-testing-library-with-providers';
 
 describe('Footer', () => {
   describe('AMP', () => {

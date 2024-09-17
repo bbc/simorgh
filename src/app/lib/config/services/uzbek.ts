@@ -1,10 +1,10 @@
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
+import latinWithDiacritics from '#components/ThemeProvider/fontScripts/latinWithDiacritics';
+import cyrillic from '#components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uz';
-import withContext from '../../../contexts/utils/withContext';
-import { UzbekConfig } from '../../../models/types/serviceConfig';
-import { Direction, Services } from '../../../models/types/global';
+import withContext from '#contexts/utils/withContext';
+import { UzbekConfig } from '#models/types/serviceConfig';
+import { Direction, Services } from '#models/types/global';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcnews`,

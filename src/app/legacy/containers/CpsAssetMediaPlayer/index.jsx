@@ -13,10 +13,10 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
-import { GridItemLargeNoMargin } from '#components/Grid';
+import { GridItemLargeNoMargin } from '#legacy/components/Grid';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import MediaPlayerContainer from '../MediaPlayer';
 import getAssetUri from './utils/getAssetUri';
 

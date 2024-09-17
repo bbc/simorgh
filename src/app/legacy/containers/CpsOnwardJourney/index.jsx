@@ -14,10 +14,10 @@ import {
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 
-import { GridWrapper, GridItemLarge } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import SkipLinkWrapper from '../../components/SkipLinkWrapper';
-import { GHOST } from '../../../components/ThemeProvider/palette';
+import { GridWrapper, GridItemLarge } from '#legacy/components/Grid';
+import { ServiceContext } from '#contexts/ServiceContext';
+import SkipLinkWrapper from '#legacy/components/SkipLinkWrapper';
+import { GHOST } from '#components/ThemeProvider/palette';
 
 const Wrapper = styled.div`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {

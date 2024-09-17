@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import React, { useEffect, useRef, useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
-import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
-import LiveRegion from '#app/components/LiveRegion';
+import Heading from '#components/Heading';
+import { LiveRegionContextProvider } from '#components/LiveRegion/LiveRegionContext';
+import LiveRegion from '#components/LiveRegion';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useFormContext } from '../FormContext';
 import { Field } from '../types';

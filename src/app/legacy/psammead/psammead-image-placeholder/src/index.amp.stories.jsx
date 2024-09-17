@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import notes from '../README.md';
 import ImagePlaceholderAmp from './index.amp';
-import { ampDecorator } from '../../../../../../.storybook/preview';
+import { ampDecorator } from '#storybook/preview';
 
 storiesOf('Components/Images/ImagePlaceholderAmp', module)
   .addDecorator(ampDecorator)

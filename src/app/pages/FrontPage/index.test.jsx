@@ -4,13 +4,13 @@ import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
-import getInitialData from '#app/routes/frontPage/getInitialData';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../../components/ThemeProvider';
+import getInitialData from '#routes/frontPage/getInitialData';
+import { FRONT_PAGE } from '#routes/utils/pageTypes';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import ThemeProvider from '#components/ThemeProvider';
 import FrontPage from '.';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const mockToggles = {
   ads: {
@@ -63,11 +63,11 @@ jest.mock('uuid', () => {
   };
 });
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('../../components/ATIAnalytics/amp', () => {
+jest.mock('#components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 

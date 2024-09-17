@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react';
-import useToggle from '../../hooks/useToggle';
-import { UserContext } from '../../contexts/UserContext';
-import { RequestContext } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import useToggle from '#hooks/useToggle';
+import { UserContext } from '#contexts/UserContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
 import { GetConfigProps, getConfig } from './utils';
 import { ChartbeatProps } from './types';

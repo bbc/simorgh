@@ -49,7 +49,7 @@ const topicJSON = {
 const optHeaders = { 'ctx-service-env': 'live' };
 
 const agent = { ca: 'ca', key: 'key' };
-jest.mock('../../../../server/utilities/getAgent', () =>
+jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
 

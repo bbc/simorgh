@@ -1,5 +1,5 @@
 import { Article } from '#app/models/types/optimo';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { advertisingAllowed, isSfv } from './paramChecks';
 
 describe('advertisingAllowed', () => {

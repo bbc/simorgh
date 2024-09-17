@@ -20,7 +20,7 @@ jest.mock('../fetchPageData', () =>
 
 const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
 
-jest.mock('../../../../server/utilities/getAgent', () =>
+jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(mockAgent as unknown as Agent)),
 );
 

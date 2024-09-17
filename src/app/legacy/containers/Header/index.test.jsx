@@ -6,14 +6,14 @@ import {
   MEDIA_PAGE,
   MEDIA_ASSET_PAGE,
   TOPIC_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
-import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
+} from '#components/react-testing-library-with-providers';
+import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import HeaderContainer from './index';
 
 const defaultToggleState = {

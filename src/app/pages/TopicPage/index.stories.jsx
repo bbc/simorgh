@@ -2,11 +2,11 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
-import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
+import { TOPIC_PAGE } from '#routes/utils/pageTypes';
 import defaultTopic from '#data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzTopicWithMessageBanners from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import persianTopicWithMessageBanners from '#data/persian/topics/cyy2zqnqn67t.json';
@@ -17,7 +17,7 @@ import persianAfghanistan from '#data/persian/topics/crezq2dg9zwt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import Page from './TopicPage';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const TopicPage = withPageWrapper(Page);
 

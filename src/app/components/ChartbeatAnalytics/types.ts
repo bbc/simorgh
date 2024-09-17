@@ -1,5 +1,5 @@
-import { Services } from '../../models/types/global';
-import { MetadataTaggings } from '../../models/types/metadata';
+import { Services } from '#models/types/global';
+import { MetadataTaggings } from '#models/types/metadata';
 
 type ChartbeatConfig = {
   domain: string;

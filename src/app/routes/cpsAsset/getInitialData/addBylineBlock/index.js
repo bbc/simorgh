@@ -1,11 +1,8 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import {
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { STORY_PAGE, CORRESPONDENT_STORY_PAGE } from '#routes/utils/pageTypes';
+import deepClone from '#routes/utils/jsonClone';
 import { insertBlockAfterHeadline } from '../helpers';
-import deepClone from '../../../utils/jsonClone';
 
 const getBylineBlock = json => {
   const byline = pathOr(null, ['promo', 'byline'], json);

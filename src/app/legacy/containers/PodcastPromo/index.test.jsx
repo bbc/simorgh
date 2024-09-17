@@ -7,9 +7,9 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
-import { render } from '../../../components/react-testing-library-with-providers';
-import { service as russianServiceConfig } from '../../../lib/config/services/russian';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { render } from '#components/react-testing-library-with-providers';
+import { service as russianServiceConfig } from '#lib/config/services/russian';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 const PromoWithContext = ({

@@ -4,14 +4,14 @@ import { render, act, screen } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
-import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import getInitialData from '#routes/cpsAsset/getInitialData';
+import { FEATURE_INDEX_PAGE } from '#routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ThemeProvider from '../../components/ThemeProvider';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import ThemeProvider from '#components/ThemeProvider';
 import FeatureIdxPage from '.';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const mockToggles = {
   comscoreAnalytics: {
@@ -62,11 +62,11 @@ jest.mock('uuid', () => {
     },
   };
 });
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
-jest.mock('../../components/ATIAnalytics/amp', () => {
+jest.mock('#components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 

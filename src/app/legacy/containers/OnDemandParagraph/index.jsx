@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import ParagraphComponent from '#psammead/psammead-paragraph/src';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledParagraphComponent = styled(ParagraphComponent)`
   padding-bottom: 16px;

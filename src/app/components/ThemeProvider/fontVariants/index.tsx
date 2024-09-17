@@ -1,4 +1,4 @@
-import { FontVariants } from '../../../models/types/theming';
+import { FontVariants } from '#models/types/theming';
 
 export const getSansRegular = (fontVariants: FontVariants) =>
   fontVariants.sans.regular;

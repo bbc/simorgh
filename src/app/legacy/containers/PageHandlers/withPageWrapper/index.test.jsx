@@ -2,9 +2,9 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import WithPageWrapper from '.';
 
 const dataProps = {
@@ -14,7 +14,7 @@ const dataProps = {
   route: { pageType: ARTICLE_PAGE },
 };
 
-jest.mock('../../../../components/PageLayoutWrapper', () => ({ children }) => (
+jest.mock('#components/PageLayoutWrapper', () => ({ children }) => (
   <div id="defaultPageWrapper">{children}</div>
 ));
 

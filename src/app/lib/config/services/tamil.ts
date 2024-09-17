@@ -1,8 +1,8 @@
-import tamil from '../../../components/ThemeProvider/fontScripts/tamil';
+import tamil from '#components/ThemeProvider/fontScripts/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
-import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import withContext from '#contexts/utils/withContext';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

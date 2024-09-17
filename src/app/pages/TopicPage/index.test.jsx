@@ -9,8 +9,8 @@ import {
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { data as persianAfghanistan } from '#data/persian/topics/crezq2dg9zwt.json';
-import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
-import { render } from '../../components/react-testing-library-with-providers';
+import { TOPIC_PAGE } from '#routes/utils/pageTypes';
+import { render } from '#components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
   pidginMultipleItems,
@@ -22,8 +22,8 @@ import {
   pidginSingleCurationEmptyStringSubheading,
 } from './fixtures';
 
-jest.mock('../../components/ThemeProvider');
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ThemeProvider');
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
 });

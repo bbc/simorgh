@@ -1,12 +1,12 @@
 import React from 'react';
 import loggerMock from '#testHelpers/loggerMock';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import SocialEmbedContainer from '.';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import {
   render,
   screen,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
+import SocialEmbedContainer from '.';
 
 import {
   twitterBlock,

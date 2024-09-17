@@ -20,10 +20,10 @@ import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { RequestContext } from '#contexts/RequestContext';
-import RadioSchedule from '#components/RadioSchedule';
+import RadioSchedule from '#legacy/components/RadioSchedule';
 import webLogger from '#lib/logger.web';
 import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 
 const logger = webLogger();

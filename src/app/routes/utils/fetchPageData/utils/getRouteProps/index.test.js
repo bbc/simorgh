@@ -1,7 +1,7 @@
 import reactRouterConfig from 'react-router-config';
-import isAmpPath from '#app/routes/utils/isAmpPath';
-import isAppPath from '#app/routes/utils/isAppPath';
-import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import isAmpPath from '#routes/utils/isAmpPath';
+import isAppPath from '#routes/utils/isAppPath';
+import { ERROR_PAGE } from '#routes/utils/pageTypes';
 import getRouteProps from '.';
 import fallbackServiceParam from './fallbackServiceParam';
 
@@ -11,15 +11,15 @@ jest.mock('./fallbackServiceParam', () =>
   jest.fn().mockImplementation(() => 'fallbackService'),
 );
 
-jest.mock('#app/routes/utils/isAmpPath', () =>
+jest.mock('#routes/utils/isAmpPath', () =>
   jest.fn().mockImplementation(() => true),
 );
 
-jest.mock('#app/routes/utils/isAppPath', () =>
+jest.mock('#routes/utils/isAppPath', () =>
   jest.fn().mockImplementation(() => true),
 );
 
-jest.mock('#app/routes/utils/isLitePath', () =>
+jest.mock('#routes/utils/isLitePath', () =>
   jest.fn().mockImplementation(() => true),
 );
 

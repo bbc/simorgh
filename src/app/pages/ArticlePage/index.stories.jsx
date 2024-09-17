@@ -1,10 +1,10 @@
 import React from 'react';
-import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
 import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
@@ -15,7 +15,7 @@ import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ArticlePageComponent from './ArticlePage';
 import { service } from '#app/lib/config/services/news';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);

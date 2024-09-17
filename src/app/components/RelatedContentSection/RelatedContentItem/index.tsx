@@ -6,10 +6,10 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import Promo from '#components/OptimoPromos';
+import Promo from '#legacy/components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
+import { EventTrackingBlock } from '#models/types/eventTracking';
 import styles from './index.styles';
-import { EventTrackingBlock } from '../../../models/types/eventTracking';
 
 type RelatedContentItemProps = {
   item: object;

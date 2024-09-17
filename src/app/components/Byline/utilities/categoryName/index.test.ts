@@ -1,9 +1,9 @@
 import clone from 'ramda/src/clone';
-import categoryName from '.';
 import {
   passportTaggings,
   passportPredicatesFormats,
-} from '../../../../pages/ArticlePage/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
+import categoryName from '.';
 
 describe('categoryName', () => {
   it('should return NewsArticle when a service is not a Trust Project participant', () => {

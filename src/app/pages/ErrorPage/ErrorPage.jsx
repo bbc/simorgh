@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import ErrorMain from '#components/ErrorMain';
+import ErrorMain from '#legacy/components/ErrorMain';
 import { useTheme } from '@emotion/react';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 /*
  * MVP Metadata for the error

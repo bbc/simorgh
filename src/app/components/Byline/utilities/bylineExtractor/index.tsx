@@ -1,5 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
-import buildIChefURL from '../../../../lib/utilities/ichefURL';
+import buildIChefURL from '#lib/utilities/ichefURL';
 
 type BylineBlock = {
   type: 'name' | 'role' | 'link' | 'location' | 'images';

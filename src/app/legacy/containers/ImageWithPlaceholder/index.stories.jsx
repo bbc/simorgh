@@ -3,7 +3,7 @@ import {
   AmpImageWithPlaceholder,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import Component from '.';
 
 export default {

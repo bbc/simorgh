@@ -2,8 +2,8 @@ import Cookie from 'js-cookie';
 import find from 'ramda/src/find';
 import propSatisfies from 'ramda/src/propSatisfies';
 import includes from 'ramda/src/includes';
-import onClient from '../../../lib/utilities/onClient';
-import { getReferrer } from '../../../lib/analyticsUtils';
+import onClient from '#lib/utilities/onClient';
+import { getReferrer } from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -16,14 +16,14 @@ import {
   TOPIC_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   Environments,
   PageTypes,
   Platforms,
   Services,
-} from '../../../models/types/global';
-import { MetadataTaggings } from '../../../models/types/metadata';
+} from '#models/types/global';
+import { MetadataTaggings } from '#models/types/metadata';
 
 const ID_COOKIE = 'ckns_sylphid';
 

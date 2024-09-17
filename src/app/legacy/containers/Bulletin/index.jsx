@@ -5,7 +5,7 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const BulletinImage = ({

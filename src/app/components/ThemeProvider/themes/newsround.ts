@@ -1,3 +1,4 @@
+import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 import { NEWSROUND_PURPLE, NEWSROUND_PURPLE_30, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
@@ -8,7 +9,6 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/newsround';
 
 const newsroundTheme = {
   palette: {

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
-import LiveLabel from '#app/components/LiveLabel';
+import LiveLabel from '#components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   getSansBold,
@@ -12,8 +12,8 @@ import {
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import { ServiceContext } from '#contexts/ServiceContext';
 import durationDictionary, { programStateConfig } from '../utilities';
 
 const TitleWrapper = styled.span`

@@ -18,7 +18,10 @@ import {
   UGC_PAGE,
   AV_EMBEDS,
   DOWNLOADS_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
+import { RequestContextProps } from '#contexts/RequestContext';
+import { ServiceConfig } from '#models/types/serviceConfig';
+import { PageTypes } from '#models/types/global';
 import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
@@ -28,14 +31,11 @@ import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
-import { RequestContextProps } from '../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../models/types/serviceConfig';
 import {
   PageData,
   ATIPageTrackingProps,
   ATIConfigurationDetailsProviders,
 } from '../types';
-import { PageTypes } from '../../../models/types/global';
 
 const MIGRATED_PAGE_TYPES: PageTypes[] = [
   HOME_PAGE,

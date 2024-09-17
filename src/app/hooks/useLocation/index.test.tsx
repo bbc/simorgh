@@ -1,4 +1,4 @@
-import { renderHook } from '#app/components/react-testing-library-with-providers';
+import { renderHook } from '#components/react-testing-library-with-providers';
 import { fireEvent } from '@testing-library/react';
 import { useState } from 'react';
 import useLocation, * as useLocationObj from '.';

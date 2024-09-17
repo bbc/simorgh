@@ -7,7 +7,7 @@ import {
   ForwardedRef,
   forwardRef,
 } from 'react';
-import { SHADOW } from '../ThemeProvider/palette';
+import { SHADOW } from '#components/ThemeProvider/palette';
 import styles from './index.styles';
 
 interface ListItemProps {

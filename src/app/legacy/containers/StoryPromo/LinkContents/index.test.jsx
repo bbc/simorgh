@@ -5,12 +5,12 @@ import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import LinkContents from '.';
 
 const defaultProps = {

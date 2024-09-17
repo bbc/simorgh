@@ -1,4 +1,4 @@
-import isLitePath from '#app/routes/utils/isLitePath';
+import isLitePath from '#routes/utils/isLitePath';
 
 describe('isLitePath', () => {
   [

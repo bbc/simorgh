@@ -1,4 +1,4 @@
-import htmlUnescape from '#app/routes/utils/htmlUnescape';
+import htmlUnescape from '#routes/utils/htmlUnescape';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const getImageBlock = (type, blockData, isAmp) => {

@@ -4,14 +4,14 @@ import { useContext } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
+import formatDuration from '#lib/utilities/formatDuration';
+import Promo from '#legacy/components/Promo';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
-import formatDuration from '../../../lib/utilities/formatDuration';
-import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
-import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
 const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {

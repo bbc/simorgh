@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-e
 import { text, select, boolean, withKnobs } from '@storybook/addon-knobs';
 import * as typography from '#psammead/gel-foundations/src/typography';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import notes from '../README.md';
 import Timestamp from '.';
 

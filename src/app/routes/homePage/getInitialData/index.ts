@@ -1,7 +1,7 @@
-import nodeLogger from '../../../lib/logger.node';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import { PageTypes, Services, Variants } from '../../../models/types/global';
-import { FetchError } from '../../../models/types/fetch';
+import nodeLogger from '#lib/logger.node';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
+import { PageTypes, Services, Variants } from '#models/types/global';
+import { FetchError } from '#models/types/fetch';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
 import { HOME_PAGE } from '../../utils/pageTypes';
 

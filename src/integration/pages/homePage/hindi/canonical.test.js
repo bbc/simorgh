@@ -3,8 +3,8 @@
  * @pathname /hindi
  */
 
-import runCanonicalTests from '../canonicalTests';
 import { data as pageData } from '../../../../../data/hindi/homePage/index.json';
+import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {

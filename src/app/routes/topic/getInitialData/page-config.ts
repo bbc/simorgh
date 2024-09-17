@@ -1,4 +1,4 @@
-import { Environments } from '../../../models/types/global';
+import { Environments } from '#models/types/global';
 
 export type TopicPagePaths = '/persian/afghanistan';
 

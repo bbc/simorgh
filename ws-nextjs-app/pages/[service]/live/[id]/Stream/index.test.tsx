@@ -3,7 +3,7 @@ import {
   render,
   screen,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';

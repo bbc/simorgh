@@ -2,11 +2,11 @@
 
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Heading from '#app/components/Heading';
-import ATIAnalytics from '#app/components/ATIAnalytics';
-import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-import Metadata from '#app/components/Metadata';
-import CallToActionLink from '#app/components/CallToActionLink';
+import Heading from '#components/Heading';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import Metadata from '#components/Metadata';
+import CallToActionLink from '#components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import styles from './styles';
@@ -62,7 +62,16 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     padding={false}
                     isRelative={false}
                   />
-                  <CallToActionLink css={styles.cta} href={item.files[0].fileLink} download={true} eventTrackingData={{ componentName: 'koreanDownloads', campaignID: 'korean_downloads', advertiserID: index }}>
+                  <CallToActionLink
+                    css={styles.cta}
+                    href={item.files[0].fileLink}
+                    download
+                    eventTrackingData={{
+                      componentName: 'koreanDownloads',
+                      campaignID: 'korean_downloads',
+                      advertiserID: index,
+                    }}
+                  >
                     <svg
                       className="ws-o-download-icon"
                       viewBox="0 0 32 32"

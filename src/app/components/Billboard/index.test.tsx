@@ -3,11 +3,11 @@ import {
   fireEvent,
   render,
   screen,
-} from '../react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 import Billboard from '.';
 import { kyrgyzBillboard } from './fixtures';
-import * as viewTracking from '../../hooks/useViewTracker';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];

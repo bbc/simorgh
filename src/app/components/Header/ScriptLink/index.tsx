@@ -6,8 +6,8 @@ import clone from 'ramda/src/clone';
 import { useRouteMatch } from 'react-router-dom';
 import useToggle from '#hooks/useToggle';
 import { Services, Variants } from '#app/models/types/global';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import { RequestContext } from '../../../contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import styles from './index.styles';
 
 interface UseRouteMatcher {

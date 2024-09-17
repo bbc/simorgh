@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { StoryArgs } from '#models/types/storybook';
 import Billboard from '.';
-import { StoryArgs } from '../../models/types/storybook';
 import metadata from './metadata.json';
 import readme from './README.md';
 

@@ -3,7 +3,7 @@ import {
   act,
   render,
   fireEvent,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import {
   title,
   description,

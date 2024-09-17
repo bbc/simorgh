@@ -6,14 +6,14 @@ import {
   OptimizelyProvider,
   ReactSDKClient,
 } from '@optimizely/react-sdk';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import { Article } from '#app/models/types/optimo';
-import { render } from '../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { Services } from '../../models/types/global';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { Services } from '#models/types/global';
+import { suppressPropWarnings } from '#legacy/psammead/psammead-test-helpers/src';
 import OptimizelyRecommendations from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
-import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 // 005_brasil_recommendations_experiment
 const optimizely = {

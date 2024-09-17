@@ -2,7 +2,7 @@ import React from 'react';
 import {
   render,
   screen,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
 import BrandContainer from '.';
 

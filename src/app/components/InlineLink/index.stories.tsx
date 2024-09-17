@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
+import { StoryProps, StoryArgs } from '#models/types/storybook';
 import InlineLink from '.';
 import Text from '../Text';
 import readme from './README.md';

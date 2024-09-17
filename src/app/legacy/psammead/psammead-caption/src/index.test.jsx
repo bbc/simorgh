@@ -1,8 +1,8 @@
 import React from 'react';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import Caption from '.';
 
 describe('Caption', () => {

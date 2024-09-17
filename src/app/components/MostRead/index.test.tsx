@@ -1,27 +1,27 @@
 import React from 'react';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { data as pidginMostReadData } from '../../../../data/pidgin/mostRead/index.json';
-import serbianLatMostReadData from '../../../../data/serbian/mostRead/lat.json';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import serbianLatMostReadData from '#data/serbian/mostRead/lat.json';
 import {
   FRONT_PAGE,
   STORY_PAGE,
   ARTICLE_PAGE,
   CORRESPONDENT_STORY_PAGE,
   HOME_PAGE,
-} from '../../routes/utils/pageTypes';
-import { render, act } from '../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+} from '#routes/utils/pageTypes';
+import { render, act } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { PageTypes, Services, Variants } from '#models/types/global';
+import isLocal from '#lib/utilities/isLocal';
 import MostRead from '.';
-import { PageTypes, Services, Variants } from '../../models/types/global';
 import Canonical from './Canonical';
 import Amp from './Amp';
 import { MostReadData } from './types';
-import isLocal from '../../lib/utilities/isLocal';
 
 jest.mock('./Canonical');
 jest.mock('./Amp');
-jest.mock('../../lib/utilities/isLocal', () =>
+jest.mock('#lib/utilities/isLocal', () =>
   jest.fn().mockImplementation(() => true),
 );
 

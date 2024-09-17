@@ -1,14 +1,14 @@
 import React from 'react';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import services from '#server/utilities/serviceConfigs';
-import mundoRecommendationsData from '../../../../../data/mundo/recommendations/index.json';
+import mundoRecommendationsData from '#data/mundo/recommendations/index.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import newsMultipleItems from './newsFixture';
 import CpsRecommendations from '.';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const Component = ({ items, service, dir }) => {
   const toggleState = {

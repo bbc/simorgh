@@ -11,7 +11,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledIndexHeading = styled(IndexHeading)`
   padding-bottom: ${GEL_SPACING_TRPL};

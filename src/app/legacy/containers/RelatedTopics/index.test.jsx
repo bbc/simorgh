@@ -5,9 +5,9 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 beforeEach(() => {
   jest.resetModules();

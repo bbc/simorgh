@@ -28,7 +28,7 @@ import Caption from '#psammead/psammead-caption/src';
 import Figure from '#psammead/psammead-figure/src';
 import Image from '#psammead/psammead-image/src';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
-import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const Wrapper = ({ alt, captionText, ratio, src, width }) => (
   <Figure>

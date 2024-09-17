@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import fetch from 'node-fetch';
 import Url from 'url-parse';
 import { BrowserRouter } from 'react-router-dom';
-import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { MOST_READ_PAGE } from '#routes/utils/pageTypes';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import MostReadPage from '.';
 

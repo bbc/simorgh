@@ -1,9 +1,9 @@
 import React from 'react';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
+import { Services } from '#models/types/global';
 import AmpIframeEmbed from '.';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
-import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
-import { Services } from '../../../models/types/global';
 import { ampParams } from '../types';
 
 const Component = ({

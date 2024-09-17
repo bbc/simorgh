@@ -1,5 +1,5 @@
+import { Toggles } from '#models/types/global';
 import augmentWithDisclaimer from '../../cpsAsset/getInitialData/augmentWithDisclaimer';
-import { Toggles } from '../../../models/types/global';
 
 const addDisclaimer = async (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

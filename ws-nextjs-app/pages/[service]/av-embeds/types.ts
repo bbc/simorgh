@@ -1,5 +1,5 @@
-import { ATIData } from '#app/components/ATIAnalytics/types';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import { ATIData } from '#components/ATIAnalytics/types';
+import { MediaBlock } from '#components/MediaLoader/types';
 import { PageTypes } from '#app/models/types/global';
 
 export type AvEmbedsPageProps = {

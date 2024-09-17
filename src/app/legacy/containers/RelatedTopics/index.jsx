@@ -12,7 +12,7 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const eventTrackingData = {
   componentName: 'topics',

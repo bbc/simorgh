@@ -74,7 +74,7 @@ const articleDataWithKeySummaryPointsTagging = {
   status: 200,
 };
 
-jest.mock('../../../../../contexts/ServiceContext', () => {
+jest.mock('#contexts/ServiceContext', () => {
   const mockReact = jest.requireActual('react');
   return jest.fn().mockImplementation(
     mockReact.createContext({

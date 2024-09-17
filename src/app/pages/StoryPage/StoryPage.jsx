@@ -13,8 +13,8 @@ import {
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
-import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
-import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
+import Grid, { GelPageGrid, GridItemLarge } from '#legacy/components/Grid';
+import { getImageParts } from '#routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -42,16 +42,16 @@ import Include from '#containers/Include';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import AdContainer from '../../components/Ad';
-import { GHOST } from '../../components/ThemeProvider/palette';
-import MostRead from '../../components/MostRead';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import AdContainer from '#components/Ad';
+import { GHOST } from '#components/ThemeProvider/palette';
+import MostRead from '#components/MostRead';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
+import { ServiceContext } from '#contexts/ServiceContext';
+import Disclaimer from '#components/Disclaimer';
+import ImageWithCaption from '#components/ImageWithCaption';
 import categoryType from './categoryMap/index';
-import Disclaimer from '../../components/Disclaimer';
-import ImageWithCaption from '../../components/ImageWithCaption';
 
 import styles from './StoryPage.styles';
 

@@ -2,10 +2,10 @@ import React, { useMemo } from 'react';
 import {
   render,
   screen,
-} from '../../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
+import PromoContext from '#legacy/components/OptimoPromos/PromoContext';
 import LatestMediaIndicator from '.';
-import PromoContext from '../../../../../legacy/components/OptimoPromos/PromoContext';
 import { Media } from '../types';
 
 interface FixtureProps {

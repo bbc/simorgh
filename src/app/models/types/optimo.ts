@@ -1,4 +1,4 @@
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import { ATIData } from '#components/ATIAnalytics/types';
 import { MetadataTaggings } from './metadata';
 
 export type OptimoBlock = {

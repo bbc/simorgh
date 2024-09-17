@@ -1,5 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 
 // MAP is now either a Media Asset Page or a Media Article Page
 export const isMap = item => {

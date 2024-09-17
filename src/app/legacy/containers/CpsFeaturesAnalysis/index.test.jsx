@@ -3,15 +3,15 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   render,
   act,
   waitFor,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import features from './fixtures.json';
 import FeaturesAnalysis from '.';
 

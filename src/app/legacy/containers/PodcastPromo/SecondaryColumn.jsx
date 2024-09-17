@@ -10,7 +10,7 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import PromoComponent from './components';
 import getPromo from './shared';
 

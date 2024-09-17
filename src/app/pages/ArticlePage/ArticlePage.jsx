@@ -18,7 +18,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-import MediaLoader from '#app/components/MediaLoader';
+import MediaLoader from '#components/MediaLoader';
 import {
   ARTICLE_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -39,34 +39,34 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import AdContainer from '../../components/Ad';
-import EmbedImages from '../../components/Embeds/EmbedImages';
-import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import MostRead from '../../components/MostRead';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import Byline from '../../components/Byline';
-import OEmbedLoader from '../../components/Embeds/OEmbed';
-import UnsupportedEmbed from '../../components/Embeds/UnsupportedEmbed';
-import Uploader from '../../components/Embeds/Uploader';
+import ImageWithCaption from '#components/ImageWithCaption';
+import AdContainer from '#components/Ad';
+import EmbedImages from '#components/Embeds/EmbedImages';
+import EmbedHtml from '#components/Embeds/EmbedHtml';
+import MostRead from '#components/MostRead';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
+import Byline from '#components/Byline';
+import OEmbedLoader from '#components/Embeds/OEmbed';
+import UnsupportedEmbed from '#components/Embeds/UnsupportedEmbed';
+import Uploader from '#components/Embeds/Uploader';
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
-} from '../../components/Byline/utilities';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
-import Disclaimer from '../../components/Disclaimer';
+} from '#components/Byline/utilities';
+import { ServiceContext } from '#contexts/ServiceContext';
+import RelatedContentSection from '#components/RelatedContentSection';
+import Disclaimer from '#components/Disclaimer';
 
+import { getPromoHeadline } from '#lib/analyticsUtils/article';
+import ScrollablePromo from '#legacy/components/ScrollablePromo';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
-import { getPromoHeadline } from '../../lib/analyticsUtils/article';
 
 const ArticlePage = ({ pageData }) => {
   const { isApp, isAmp, pageType, service } = useContext(RequestContext);

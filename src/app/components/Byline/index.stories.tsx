@@ -1,12 +1,12 @@
 import React, { PropsWithChildren } from 'react';
-import Timestamp from '../../legacy/containers/ArticleTimestamp';
+import Timestamp from '#legacy/containers/ArticleTimestamp';
 import {
   bylineWithNameAndRole,
   bylineWithLink,
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
-} from '../../pages/ArticlePage/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 import Byline from '.';
 import readme from './README.md';
 

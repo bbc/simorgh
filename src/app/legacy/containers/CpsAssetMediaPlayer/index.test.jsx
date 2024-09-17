@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import {
   isNull,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
 

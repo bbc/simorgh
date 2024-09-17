@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import pick from 'ramda/src/pick';
 import identity from 'ramda/src/identity';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
-import clone from '../../../utils/jsonClone';
+import clone from '#routes/utils/jsonClone';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
 import legacyMedia from './blocks/legacyMedia';

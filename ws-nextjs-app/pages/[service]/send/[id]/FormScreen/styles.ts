@@ -1,6 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
-import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
+import { getInlineLinkStyles } from '#components/InlineLink/index.styles';
 
 export default {
   submissionError: () =>

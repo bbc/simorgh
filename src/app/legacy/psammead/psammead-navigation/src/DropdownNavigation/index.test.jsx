@@ -3,9 +3,9 @@ import {
   render,
   fireEvent,
   getByRole,
-} from '../../../../../components/react-testing-library-with-providers';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
+} from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import {
   CanonicalDropdown,
   DropdownUl,

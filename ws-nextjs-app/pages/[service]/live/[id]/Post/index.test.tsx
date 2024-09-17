@@ -3,9 +3,9 @@ import {
   render,
   screen,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
-import { LIVE_PAGE } from '../../../../../../src/app/routes/utils/pageTypes';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import Post from '.';
 import { samplePost, twitterSamplePost, videoSamplePost } from './fixture';
 

@@ -6,12 +6,12 @@ import {
   screen,
   waitFor,
   fireEvent,
-} from '../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
-} from '../../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 
 import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
 import fixtures from './fixtures';

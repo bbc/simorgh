@@ -14,9 +14,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 
-import { MediaMessage } from '#components/MediaPlayer';
+import { MediaMessage } from '#legacy/components/MediaPlayer';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { EPISODE_STATUS } from '..';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const AudioErrorWrapper = styled.div`
   position: relative;

@@ -1,8 +1,8 @@
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
-import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import withContext from '#contexts/utils/withContext';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

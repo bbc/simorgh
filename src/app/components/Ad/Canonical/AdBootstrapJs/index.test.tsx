@@ -4,7 +4,7 @@ import {
   render,
   act,
   waitFor,
-} from '../../../react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import AdBootstrapJs from '.';
 
 describe('AdBootstrapJs', () => {

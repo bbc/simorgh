@@ -3,7 +3,7 @@ import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import {
   render,
   waitFor,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import CpsMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

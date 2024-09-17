@@ -12,8 +12,8 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
-import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
+import { GelPageGrid, GridItemLarge } from '#legacy/components/Grid';
+import { getImageParts } from '#routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -31,12 +31,12 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import Disclaimer from '../../components/Disclaimer';
+import ImageWithCaption from '#components/ImageWithCaption';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
+import { ServiceContext } from '#contexts/ServiceContext';
+import Disclaimer from '#components/Disclaimer';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid

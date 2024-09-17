@@ -4,13 +4,13 @@ import pathOr from 'ramda/src/pathOr';
 import EmbedError from '#psammead/psammead-embed-error/src';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { GridItemMedium } from '#components/Grid';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { GridItemMedium } from '#legacy/components/Grid';
+import { ServiceContext } from '#contexts/ServiceContext';
 
+import VjAmp from '#components/AmpIframe';
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
-import VjAmp from '../../../components/AmpIframe';
 
 const componentsToRender = {
   amp: {

@@ -1,5 +1,5 @@
 import csp from 'helmet-csp';
-import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#routes/utils/fetchPageData/utils/getRouteProps';
 import isLiveEnv from '#lib/utilities/isLive';
 import { cspDirectives } from './directives';
 

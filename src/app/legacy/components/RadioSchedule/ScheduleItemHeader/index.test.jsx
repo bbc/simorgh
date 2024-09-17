@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import ScheduleItemHeader from '.';
 
 const service = 'arabic';

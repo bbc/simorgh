@@ -7,7 +7,7 @@ import {
   STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   articleDataNews,
   articleDataPersian,
@@ -19,10 +19,13 @@ import { data as urduFrontPageData } from '#data/urdu/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
-import { render, waitFor } from '../react-testing-library-with-providers';
-import services from '../../../server/utilities/serviceConfigs';
+import {
+  render,
+  waitFor,
+} from '#components/react-testing-library-with-providers';
+import services from '#server/utilities/serviceConfigs';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
 import { MetadataProps, PageDataProps } from './types';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import Image from '.';
 import md from './README.md';
 

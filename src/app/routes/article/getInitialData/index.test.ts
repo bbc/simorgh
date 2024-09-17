@@ -1,17 +1,17 @@
 import { Agent } from 'https';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
+import pidginArticleWithLatestMedia from '#data/pidgin/articles/cw0x29n2pvqo.json';
 import * as getOnwardsPageData from '../utils/getOnwardsData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import getInitialData from '.';
-import pidginArticleWithLatestMedia from '../../../../../data/pidgin/articles/cw0x29n2pvqo.json';
 import { ARTICLE_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
 
-jest.mock('../../../../server/utilities/getAgent', () =>
+jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent as unknown as Agent)),
 );
 

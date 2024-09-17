@@ -3,7 +3,7 @@ import { jsx, useTheme } from '@emotion/react';
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
   getIconAssetUrl,
   getIconLinks,

@@ -8,9 +8,9 @@ import React, {
 } from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
+import { RequestContext } from '#contexts/RequestContext';
+import { FRONT_PAGE, HOME_PAGE } from '#routes/utils/pageTypes';
 import styles from './index.styles';
-import { RequestContext } from '../../contexts/RequestContext';
-import { FRONT_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
 
 type Props = {
   alt: string;

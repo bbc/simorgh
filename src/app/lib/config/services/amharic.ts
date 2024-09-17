@@ -1,8 +1,8 @@
-import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
+import noAscendersOrDescenders from '#components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/am';
-import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import withContext from '#contexts/utils/withContext';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

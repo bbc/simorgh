@@ -1,16 +1,13 @@
-import {
-  LIBRARY_VERSION,
-  getPublishedDatetime,
-} from '../../../../lib/analyticsUtils';
+import { LIBRARY_VERSION, getPublishedDatetime } from '#lib/analyticsUtils';
 import {
   getContentId,
   getContentType,
   getLanguage,
   getPageIdentifier,
   getPageTitle,
-} from '../../../../lib/analyticsUtils/indexPage';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../../models/types/serviceConfig';
+} from '#lib/analyticsUtils/indexPage';
+import { RequestContextProps } from '#contexts/RequestContext';
+import { ServiceConfig } from '#models/types/serviceConfig';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { PageData } from '../../types';
 

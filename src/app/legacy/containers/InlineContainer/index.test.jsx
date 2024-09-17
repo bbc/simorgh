@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContext } from '#contexts/ServiceContext';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import InlineContainer from '.';
 
 const fragmentBlock = (text, attributes = []) => ({

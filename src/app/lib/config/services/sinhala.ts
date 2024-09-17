@@ -1,8 +1,8 @@
-import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
+import sinhalese from '#components/ThemeProvider/fontScripts/sinhalese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/si';
-import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import withContext from '#contexts/utils/withContext';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

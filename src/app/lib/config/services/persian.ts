@@ -1,9 +1,9 @@
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
-import jalaali from '../../../legacy/psammead/psammead-calendars/src';
-import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import jalaali from '#legacy/psammead/psammead-calendars/src';
+import withContext from '#contexts/utils/withContext';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

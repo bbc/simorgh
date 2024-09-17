@@ -3,7 +3,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import sendBeacon from '#lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 

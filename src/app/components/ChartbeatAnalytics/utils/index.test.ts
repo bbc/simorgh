@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import onClient from '../../../lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -12,7 +12,8 @@ import {
   TOPIC_PAGE,
   MEDIA_ARTICLE_PAGE,
   LIVE_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
+import { PageTypes, Services } from '#models/types/global';
 import {
   chartbeatUID,
   useCanonical,
@@ -23,11 +24,10 @@ import {
   getConfig,
   GetConfigProps,
 } from '.';
-import { PageTypes, Services } from '../../../models/types/global';
 
 let isOnClient = false;
 
-jest.mock('../../../lib/utilities/onClient', () => jest.fn());
+jest.mock('#lib/utilities/onClient', () => jest.fn());
 (onClient as jest.Mock).mockImplementation(() => isOnClient);
 
 describe('Chartbeat utilities', () => {

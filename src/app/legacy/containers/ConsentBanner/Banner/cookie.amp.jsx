@@ -22,7 +22,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
+import { focusIndicatorThickness } from '#components/ThemeProvider/focusIndicator';
 
 const BANNER_MAX_HEIGHT = '75vh';
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px

@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import {
-  act,
-  render,
-} from '#app/components/react-testing-library-with-providers';
+import { act, render } from '#components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';

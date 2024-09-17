@@ -4,7 +4,7 @@ import {
   screen,
   act,
   waitFor,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import MaskedImage from './index';
 
 describe('Masked Image', () => {

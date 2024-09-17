@@ -5,8 +5,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import RecommendationsPromoList from './index';
 
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';

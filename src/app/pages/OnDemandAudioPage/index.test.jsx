@@ -10,15 +10,15 @@ import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttn
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import getInitialData from '#app/routes/onDemandAudio/getInitialData';
+import getInitialData from '#routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_PAGE } from '#routes/utils/pageTypes';
 import {
   render,
   act,
   waitFor,
-} from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+} from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage from './OnDemandAudioPage';
 
@@ -71,7 +71,7 @@ const renderPage = async ({ pageData, service, variant, lang = 'ko' }) => {
 
 analyticsUtils.getAtUserId = jest.fn();
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

@@ -3,7 +3,7 @@
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
 import getInitialData, { only } from '.';
 
 describe('getInitialData', () => {

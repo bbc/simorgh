@@ -3,12 +3,12 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import topStories from '#pages/StoryPage/topStories.json';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import {
   render,
   screen,
-} from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+} from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import TopStories from '.';
 
 const renderTopStories = ({

@@ -1,4 +1,4 @@
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#routes/utils/pageTypes';
 import {
   getContentId,
   getLanguage,

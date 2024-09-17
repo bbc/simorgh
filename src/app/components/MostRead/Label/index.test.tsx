@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '../../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MostReadSectionLabel from '.';
 
 describe('MostReadSectionLabel assertion', () => {

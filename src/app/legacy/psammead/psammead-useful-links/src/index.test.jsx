@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import { UsefulLink, UsefulLinksLi, UsefulLinksUl } from './index';
 
 const usefulCaptions = [

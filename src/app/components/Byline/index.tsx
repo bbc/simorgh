@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import BylineCss from './index.styles';
 import { RightChevron, LeftChevron } from '../icons';

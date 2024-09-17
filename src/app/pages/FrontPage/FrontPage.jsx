@@ -4,20 +4,20 @@ import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#legacy/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';
-import AdContainer from '../../components/Ad';
-import MPUContainer from '../../components/Ad/MPU';
-import MostRead from '../../components/MostRead';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import { GHOST } from '../../components/ThemeProvider/palette';
-import LinkedData from '../../components/LinkedData';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import AdContainer from '#components/Ad';
+import MPUContainer from '#components/Ad/MPU';
+import MostRead from '#components/MostRead';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import MetadataContainer from '#components/Metadata';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { GHOST } from '#components/ThemeProvider/palette';
+import LinkedData from '#components/LinkedData';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 
 const FrontPageMostReadSection = styled.div`
   /* To centre page layout for Group 4+ */

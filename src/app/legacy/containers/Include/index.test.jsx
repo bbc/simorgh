@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
+import { render } from '#components/react-testing-library-with-providers';
+import * as vjAmp from '#components/AmpIframe';
 import IncludeContainer from '.';
 import * as idt2Amp from './amp/Idt2Amp';
-import * as vjAmp from '../../../components/AmpIframe';
 import * as canonical from './canonical';
 
 const defaultToggleState = {

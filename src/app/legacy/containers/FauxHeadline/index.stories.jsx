@@ -1,8 +1,8 @@
 import React from 'react';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const headline = blocksSingleFragment('This is a headline.', []);
 

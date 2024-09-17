@@ -3,19 +3,19 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
 import { Helmet } from 'react-helmet';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import newsMostReadData from '../../../../data/news/mostRead/index.json';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import newsMostReadData from '#data/news/mostRead/index.json';
+import ThemeProvider from '#components/ThemeProvider';
+import { Services } from '#models/types/global';
 import MediaArticlePage from './MediaArticlePage';
-import ThemeProvider from '../../components/ThemeProvider';
 import pidginPageData from './fixtureData';
-import { Services } from '../../models/types/global';
 
-jest.mock('../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
-jest.mock('../../components/ChartbeatAnalytics', () => {
+jest.mock('#components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });

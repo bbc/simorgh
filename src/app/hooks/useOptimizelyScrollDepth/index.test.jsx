@@ -3,11 +3,11 @@ import {
   renderHook,
   act,
   cleanup,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import useOptimizelyScrollDepth from '.';
 

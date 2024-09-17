@@ -3,8 +3,8 @@ import React from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
 const Component = ({ links, service = 'russian', variant = null }) => (

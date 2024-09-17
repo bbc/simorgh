@@ -1,12 +1,12 @@
-import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import { MOST_READ_PAGE } from '#routes/utils/pageTypes';
+import mostReadJson from '#data/pidgin/mostRead/index.json';
 import * as fetchPageData from '../../utils/fetchPageData';
-import mostReadJson from '../../../../../data/pidgin/mostRead/index.json';
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('../../../../server/utilities/getAgent', () =>
+jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
 

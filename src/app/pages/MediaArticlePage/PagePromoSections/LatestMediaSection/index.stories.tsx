@@ -2,15 +2,15 @@ import React, { PropsWithChildren } from 'react';
 
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { StoryArgs } from '#app/models/types/storybook';
-import ThemeProvider from '../../../../components/ThemeProvider';
-import { Services } from '../../../../models/types/global';
+import ThemeProvider from '#components/ThemeProvider';
+import { Services } from '#models/types/global';
 
+import hausaArticle from '#data/hausa/articles/cxr0765kxlzo.json';
+import tamilArticle from '#data/tamil/articles/c84m2jl4dpzo.json';
+import pidginArticle from '#data/pidgin/articles/cw0x29n2pvqo.json';
 import LatestMediaSection from '.';
-import hausaArticle from '../../../../../../data/hausa/articles/cxr0765kxlzo.json';
-import tamilArticle from '../../../../../../data/tamil/articles/c84m2jl4dpzo.json';
-import pidginArticle from '../../../../../../data/pidgin/articles/cw0x29n2pvqo.json';
 import { LatestMedia } from './types';
 import metadata from './metadata.json';
 

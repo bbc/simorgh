@@ -4,13 +4,13 @@ import { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
-import { OEmbedProps } from '#app/components/Embeds/types';
-import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
-import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { Tag } from '#app/components/LinkedData/types';
+import { OEmbedProps } from '#components/Embeds/types';
+import MediaLoader from '#components/MediaLoader';
+import { MediaBlock } from '#components/MediaLoader/types';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
+import { Tag } from '#components/LinkedData/types';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useToggle from '../../hooks/useToggle';
+import useToggle from '#hooks/useToggle';
 import {
   getArticleId,
   getHeadline,
@@ -21,49 +21,49 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from '../../lib/utilities/parseAssetData';
-import filterForBlockType from '../../lib/utilities/blockHandlers';
+} from '#lib/utilities/parseAssetData';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 
-import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+import ScrollablePromo from '#legacy/components/ScrollablePromo';
 
-import headings from '../../legacy/containers/Headings';
-import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
-import gist from '../../legacy/containers/Gist';
-import text from '../../legacy/containers/Text';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import Blocks from '../../legacy/containers/Blocks';
-import Timestamp from '../../legacy/containers/ArticleTimestamp';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
-import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
-import fauxHeadline from '../../legacy/containers/FauxHeadline';
-import RelatedTopics from '../../legacy/containers/RelatedTopics';
-import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
-import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
-import EmbedImages from '../../components/Embeds/EmbedImages';
-import EmbedHtml from '../../components/Embeds/EmbedHtml';
-import OEmbedLoader from '../../components/Embeds/OEmbed';
+import headings from '#legacy/containers/Headings';
+import visuallyHiddenHeadline from '#legacy/containers/VisuallyHiddenHeadline';
+import gist from '#legacy/containers/Gist';
+import text from '#legacy/containers/Text';
+import ImageWithCaption from '#components/ImageWithCaption';
+import Blocks from '#legacy/containers/Blocks';
+import Timestamp from '#legacy/containers/ArticleTimestamp';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import ComscoreAnalytics from '#legacy/containers/ComscoreAnalytics';
+import ArticleMediaPlayer from '#legacy/containers/ArticleMediaPlayer';
+import SocialEmbedContainer from '#legacy/containers/SocialEmbed';
+import fauxHeadline from '#legacy/containers/FauxHeadline';
+import RelatedTopics from '#legacy/containers/RelatedTopics';
+import NielsenAnalytics from '#legacy/containers/NielsenAnalytics';
+import ArticleMetadata from '#legacy/containers/ArticleMetadata';
+import EmbedImages from '#components/Embeds/EmbedImages';
+import EmbedHtml from '#components/Embeds/EmbedHtml';
+import OEmbedLoader from '#components/Embeds/OEmbed';
 
-import { Article, OptimoBlock } from '../../models/types/optimo';
+import { Article, OptimoBlock } from '#models/types/optimo';
 import {
   MetadataFormats,
   MetadataTaggings,
   MetadataTopics,
-} from '../../models/types/metadata';
+} from '#models/types/metadata';
 
-import LinkedData from '../../components/LinkedData';
-import Byline from '../../components/Byline';
+import LinkedData from '#components/LinkedData';
+import Byline from '#components/Byline';
 
 import {
   bylineExtractor,
   categoryName,
   getAuthorTwitterHandle,
-} from '../../components/Byline/utilities';
+} from '#components/Byline/utilities';
 
-import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
+import { ServiceContext } from '#contexts/ServiceContext';
+import RelatedContentSection from '#components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 

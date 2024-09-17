@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import CpsTable from '.';
 import fixtures from './fixtures';
 

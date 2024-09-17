@@ -1,8 +1,8 @@
 import path from 'ramda/src/path';
 import splitAt from 'ramda/src/splitAt';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
+import deepClone from '#routes/utils/jsonClone';
 import { getNthCpsParagraphIndex } from '../helpers';
-import deepClone from '../../../utils/jsonClone';
 
 const insertRecommendationsBlock = (recommendationBlock, blocks) => {
   const fifthParagraphIndex = getNthCpsParagraphIndex(blocks, 5);

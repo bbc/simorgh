@@ -2,7 +2,7 @@ import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
-import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#routes/utils/fetchPageData/utils/getRouteProps';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
 import {
@@ -10,7 +10,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
-import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE, MEDIA_PAGE } from '#routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
 import * as renderDocument from './Document';
@@ -64,7 +64,7 @@ jest.mock('@loadable/server', () => {
   };
 });
 
-jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
+jest.mock('#routes/utils/fetchPageData/utils/getRouteProps');
 jest.mock('#app/lib/utilities/getToggles/withCache');
 
 getToggles.mockImplementation(() => defaultToggles.local);

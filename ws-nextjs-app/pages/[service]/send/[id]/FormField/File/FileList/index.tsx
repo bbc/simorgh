@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { SetStateAction, useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import { useLiveRegionContext } from '#components/LiveRegion/LiveRegionContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import {
   FileData,

@@ -1,6 +1,6 @@
 import { HomePage } from '#pages';
-import { homePagePath, tipoHomePath } from '#app/routes/utils/regex';
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { homePagePath, tipoHomePath } from '#routes/utils/regex';
+import { HOME_PAGE } from '#routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {

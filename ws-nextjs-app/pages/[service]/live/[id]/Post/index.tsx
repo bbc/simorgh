@@ -3,19 +3,19 @@ import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
-import Heading from '#app/components/Heading';
-import Text from '#app/components/Text';
+import Heading from '#components/Heading';
+import Text from '#components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import MediaLoader from '#app/components/MediaLoader';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ImageWithCaption from '#app/components/ImageWithCaption';
+import MediaLoader from '#components/MediaLoader';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
+import ImageWithCaption from '#components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import { MediaBlock } from '#components/MediaLoader/types';
 import styles from './styles';
 import {
   Post as PostType,

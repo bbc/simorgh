@@ -5,8 +5,8 @@ import {
 } from '#psammead/psammead-story-promo-list/src';
 import useViewTracker from '#hooks/useViewTracker';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import Grid from '../../../components/Grid';
+import { ServiceContext } from '#contexts/ServiceContext';
+import Grid from '#legacy/components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
 import getEventTrackingData from './getEventTrackingData';
 

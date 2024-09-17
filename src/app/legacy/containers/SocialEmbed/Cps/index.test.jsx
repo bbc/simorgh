@@ -1,12 +1,12 @@
 import { render, act } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
-import CpsSocialEmbedContainer from '.';
-import withContexts from '../common/testHelper';
-import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import {
   screen,
   fireEvent,
-} from '../../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
+import CpsSocialEmbedContainer from '.';
+import withContexts from '../common/testHelper';
+import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 
 describe('CpsSocialEmbedContainer', () => {
   afterEach(() => {

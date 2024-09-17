@@ -1,4 +1,4 @@
-import { getEnvConfig } from '../../../lib/utilities/getEnvConfig';
+import { getEnvConfig } from '#lib/utilities/getEnvConfig';
 
 const getOriginContext = (bbcOrigin: string | null) => {
   let origin = 'https://www.bbc.co.uk';

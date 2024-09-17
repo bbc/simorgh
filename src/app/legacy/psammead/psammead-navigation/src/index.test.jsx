@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import igboNavData from '../testHelpers/igbo';

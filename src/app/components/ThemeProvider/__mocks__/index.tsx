@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryProps } from '../../../models/types/storybook';
+import { StoryProps } from '#models/types/storybook';
 import defaultServiceVariants from '../defaultServiceVariants';
 
 import afaanoromoo from '../themes/afaanoromoo';

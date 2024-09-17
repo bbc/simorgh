@@ -5,13 +5,13 @@ import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import ThemeProvider from '../../../components/ThemeProvider';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import ThemeProvider from '#components/ThemeProvider';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -31,7 +31,7 @@ import {
 import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
 
-jest.mock('../../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,

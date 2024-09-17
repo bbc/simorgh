@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { ForwardedRef, forwardRef } from 'react';
-import { WHITE } from '#app/components/ThemeProvider/palette';
-import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
-import Text from '#app/components/Text';
+import { WHITE } from '#components/ThemeProvider/palette';
+import { BulletedList, BulletedListItem } from '#components/BulletedList';
+import Text from '#components/Text';
 import useAndroidDetection from '#app/hooks/useAdroidDetection';
 import { useFormContext } from '../FormContext';
 import InvalidMessageBox from './InvalidMessageBox';

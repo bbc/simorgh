@@ -1,9 +1,9 @@
 import React from 'react';
-import { GHOST } from '../../../components/ThemeProvider/palette';
+import { GHOST } from '#components/ThemeProvider/palette';
 import {
   render,
   waitFor,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,

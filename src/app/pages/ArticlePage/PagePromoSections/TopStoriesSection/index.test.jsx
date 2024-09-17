@@ -6,8 +6,8 @@ import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import {
   render,
   screen,
-} from '../../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
+} from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import TopStoriesSection from '.';
 import {
   topStoriesList,

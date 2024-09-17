@@ -1,5 +1,5 @@
-import { buildTableRow } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/table/fixtures';
-import addIdsToBlocks from '#app/routes/utils/sharedDataTransformers/addIdsToBlocks';
+import { buildTableRow } from '#routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/table/fixtures';
+import addIdsToBlocks from '#routes/utils/sharedDataTransformers/addIdsToBlocks';
 
 const table = {
   type: 'table',

@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import burmeseTypography from '../../../../components/ThemeProvider/fontScripts/burmese';
-import arabicTypography from '../../../../components/ThemeProvider/fontScripts/arabic';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import burmeseTypography from '#components/ThemeProvider/fontScripts/burmese';
+import arabicTypography from '#components/ThemeProvider/fontScripts/arabic';
 import { TopicTags, TopicTag } from './index';
 
 describe('TopicTags', () => {

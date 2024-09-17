@@ -4,7 +4,7 @@ import { useContext, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
 

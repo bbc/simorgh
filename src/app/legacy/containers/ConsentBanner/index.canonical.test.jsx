@@ -10,8 +10,8 @@ import {
   render,
   screen,
   fireEvent,
-} from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+} from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ConsentBanner from '.';
 
 const PRIVACY_COOKIE = 'ckns_privacy';

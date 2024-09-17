@@ -1,5 +1,9 @@
 import React from 'react';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import {
+  render,
+  fireEvent,
+} from '#components/react-testing-library-with-providers';
 import CanonicalNavigation from './index.canonical';
 import {
   dropdownTestId,
@@ -7,10 +11,6 @@ import {
   dropdownListItems,
   scrollableListItems,
 } from './testHelpers';
-import {
-  render,
-  fireEvent,
-} from '../../../components/react-testing-library-with-providers';
 
 const navigation = (
   <CanonicalNavigation

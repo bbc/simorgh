@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import {
   render,
   screen,
-} from '../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 
-import { STORY_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
+import { STORY_PAGE, HOME_PAGE } from '#routes/utils/pageTypes';
 import { EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
 

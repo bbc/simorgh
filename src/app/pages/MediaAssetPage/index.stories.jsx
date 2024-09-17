@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { MEDIA_ASSET_PAGE } from '#routes/utils/pageTypes';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import MediaAssetPage from '.';
 import pageData from './fixtureData';
 

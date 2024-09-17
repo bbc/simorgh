@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import { ATIProps } from './types';

@@ -2,7 +2,7 @@
 import React, { memo, useContext, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_PAGE } from '#routes/utils/pageTypes';
 import useScript from './useScript';
 
 const LANDSCAPE_RATIO = '56.25%';

@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
-import Grid from '../../../../legacy/psammead/psammead-grid/src';
+import Grid from '#legacy/psammead/psammead-grid/src';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 import * as styles from './index.styles';
 import { MostReadBaseProps } from '../../types';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const MostReadList = ({
   numberOfItems,

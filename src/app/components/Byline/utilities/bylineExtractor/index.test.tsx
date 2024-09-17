@@ -1,4 +1,3 @@
-import bylineExtractor from '.';
 import {
   bylineWithNoRole,
   bylineWithNoAuthor,
@@ -6,7 +5,8 @@ import {
   bylineWithLink,
   bylineWithNonPngPhoto,
   bylineWithAllData,
-} from '../../../../pages/ArticlePage/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
+import bylineExtractor from '.';
 
 describe('bylineExtractor', () => {
   it('should return null when authorName is not present', () => {

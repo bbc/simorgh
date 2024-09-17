@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Image from '#psammead/psammead-image/src';
 import PlayButton from '#psammead/psammead-play-button/src';
+import { focusIndicatorThickness } from '#components/ThemeProvider/focusIndicator';
 import Guidance from '../Guidance';
-import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const placeholderOutline = `
   content: '';

@@ -1,5 +1,6 @@
 import React from 'react';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
 import AmpNavigation from './index.amp';
 import {
   dropdownTestId,
@@ -7,7 +8,6 @@ import {
   dropdownListItems,
   scrollableListItems,
 } from './testHelpers';
-import { render } from '../../../components/react-testing-library-with-providers';
 
 const navigation = (
   <AmpNavigation

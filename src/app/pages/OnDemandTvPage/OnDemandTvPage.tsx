@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getEmbedUrl, {
@@ -15,13 +15,13 @@ import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
 import { PageTypes } from '#app/models/types/global';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
-import MetadataContainer from '../../components/Metadata';
-import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
-import VisuallyHiddenText from '../../components/VisuallyHiddenText';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
+import { ServiceContext } from '#contexts/ServiceContext';
+import MetadataContainer from '#components/Metadata';
+import getPlaceholderImageUrl from '#routes/utils/getPlaceholderImageUrl';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import styles from './index.styles';
 
 const getGroups = (

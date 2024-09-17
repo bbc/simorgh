@@ -2,8 +2,8 @@ import { css, Theme } from '@emotion/react';
 import {
   MARGIN_ABOVE_400PX,
   MARGIN_BELOW_400PX,
-} from '../ThemeProvider/spacings';
-import { GROUP_4_MIN_WIDTH_BP } from '../ThemeProvider/mediaQueries';
+} from '#components/ThemeProvider/spacings';
+import { GROUP_4_MIN_WIDTH_BP } from '#components/ThemeProvider/mediaQueries';
 
 const styles = {
   paragraph: ({ palette, spacings }: Theme) =>

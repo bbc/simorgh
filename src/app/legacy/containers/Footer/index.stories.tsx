@@ -1,10 +1,10 @@
 import React from 'react';
-import Footer from '.';
-import { StoryArgs, StoryProps } from '../../../models/types/storybook';
-import { RequestContextProvider } from '../../../contexts/RequestContext';
+import { StoryArgs, StoryProps } from '#models/types/storybook';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import ThemeProvider from '#components/ThemeProvider';
 import metadata from './metadata.json';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import ThemeProvider from '../../../components/ThemeProvider';
+import Footer from '.';
 
 interface Props extends StoryProps {
   isAmp?: boolean;

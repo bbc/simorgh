@@ -2,6 +2,8 @@
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import { Direction } from '#models/types/global';
+import Grid from '#legacy/components/Grid';
 import styles from './index.styles';
 import {
   mostReadListGridProps,
@@ -13,8 +15,6 @@ import {
   MostReadLinkProps,
   Size,
 } from '../../types';
-import { Direction } from '../../../../models/types/global';
-import Grid from '../../../../legacy/components/Grid';
 
 export const getParentColumns = (columnLayout: ColumnLayout) => {
   return columnLayout !== 'oneColumn'

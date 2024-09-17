@@ -12,7 +12,7 @@ import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
-import { render } from '../react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -22,7 +22,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ARTICLE_PAGE,
-} from '../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';

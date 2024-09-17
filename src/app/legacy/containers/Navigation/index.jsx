@@ -7,7 +7,7 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 

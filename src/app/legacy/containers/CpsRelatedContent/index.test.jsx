@@ -7,14 +7,14 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859.json';
 
-import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#routes/utils/pageTypes';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import ThemeProvider from '../../../components/ThemeProvider';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import ThemeProvider from '#components/ThemeProvider';
 import CpsRelatedContent from '.';
 
-jest.mock('../../../components/ThemeProvider');
+jest.mock('#components/ThemeProvider');
 
 const promos = path(
   ['relatedContent', 'groups', 0, 'promos'],

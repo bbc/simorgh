@@ -1,6 +1,6 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { RequestContextProps } from '../../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../../models/types/serviceConfig';
+import { RequestContextProps } from '#contexts/RequestContext';
+import { ServiceConfig } from '#models/types/serviceConfig';
 import { buildTopicPageATIParams, buildTopicPageATIUrl } from './buildParams';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

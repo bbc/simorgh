@@ -1,11 +1,11 @@
 import React from 'react';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-import services from '../../../../server/utilities/serviceConfigs';
+import services from '#server/utilities/serviceConfigs';
+import { StoryProps, StoryArgs } from '#models/types/storybook';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
-import { StoryProps, StoryArgs } from '../../../models/types/storybook';
 
 const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (

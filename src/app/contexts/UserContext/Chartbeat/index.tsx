@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import useToggle from '../../../hooks/useToggle';
-import CanonicalChartbeatBeacon from '../../../components/ChartbeatAnalytics/canonical';
+import useToggle from '#hooks/useToggle';
+import CanonicalChartbeatBeacon from '#components/ChartbeatAnalytics/canonical';
+import { CanonicalChartbeatConfig } from '#components/ChartbeatAnalytics/types';
 import { RequestContext } from '../../RequestContext';
-import { CanonicalChartbeatConfig } from '../../../components/ChartbeatAnalytics/types';
 
 const Chartbeat = ({
   config = null,

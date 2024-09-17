@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { StoryProps, StoryArgs } from '#models/types/storybook';
 import metadata from './metadata.json';
 import readme from './README.md';
 import MostRead from '.';
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {

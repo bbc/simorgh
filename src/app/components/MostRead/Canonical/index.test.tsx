@@ -1,15 +1,15 @@
 import React from 'react';
-import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
-import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';
-import { data as kyrgyzMostReadData } from '../../../../../data/kyrgyz/mostRead/index.json';
-import { data as ukrainianMostReadData } from '../../../../../data/ukrainian/mostRead/index.json';
-import { ToggleContextProvider } from '../../../contexts/ToggleContext';
-import * as viewTracking from '../../../hooks/useViewTracker';
-import * as clickTracking from '../../../hooks/useClickTrackerHandler';
-import { render } from '../../react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { data as arabicMostReadData } from '#data/arabic/mostRead/index.json';
+import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import { data as kyrgyzMostReadData } from '#data/kyrgyz/mostRead/index.json';
+import { data as ukrainianMostReadData } from '#data/ukrainian/mostRead/index.json';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { render } from '#components/react-testing-library-with-providers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { Services } from '#models/types/global';
 import CanonicalMostRead from '.';
-import { Services } from '../../../models/types/global';
 import { MostReadData } from '../types';
 import {
   setFreshPromoTimestamp,

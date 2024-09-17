@@ -5,7 +5,7 @@ import {
   HOME_PAGE,
   FRONT_PAGE,
   MOST_READ_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import routes from './index';
 
 const MOCK_PATH = 'mock-path';

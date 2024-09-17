@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledBrand = styled(Brand)`
   position: relative;

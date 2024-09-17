@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { StoryProps, StoryArgs } from '#models/types/storybook';
 import MessageBanner from '.';
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import readme from './README.md';
 
 interface Props extends StoryProps {

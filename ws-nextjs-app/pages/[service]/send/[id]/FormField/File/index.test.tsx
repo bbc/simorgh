@@ -5,9 +5,9 @@ import {
   render,
   screen,
   waitFor,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import userEvent from '@testing-library/user-event';
-import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
+import { LiveRegionContextProvider } from '#components/LiveRegion/LiveRegionContext';
 
 import FileField from '.';
 import {

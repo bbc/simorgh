@@ -5,15 +5,15 @@ import path from 'ramda/src/path';
 import isEmpty from 'ramda/src/isEmpty';
 
 import SectionLabel from '#psammead/psammead-section-label/src';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
-import useViewTracker from '../../../../hooks/useViewTracker';
-import generatePromoId from '../../../../lib/utilities/generatePromoId';
+import { ServiceContext } from '#contexts/ServiceContext';
+import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#legacy/components/OptimoPromos/PromoList';
+import useViewTracker from '#hooks/useViewTracker';
+import generatePromoId from '#lib/utilities/generatePromoId';
+import { EventTrackingBlock } from '#models/types/eventTracking';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
-import { EventTrackingBlock } from '../../../../models/types/eventTracking';
 
 const renderLatestMediaList = (
   item: LatestMedia,

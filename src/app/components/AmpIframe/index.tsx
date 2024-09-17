@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/react';
 import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
-import { GridItemMedium } from '#components/Grid';
+import { GridItemMedium } from '#legacy/components/Grid';
 import styles from './index.styles';
 
 type Props = {

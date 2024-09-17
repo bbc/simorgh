@@ -3,8 +3,8 @@
  * @pathname /kyrgyz
  */
 
-import runAmpTests from '../ampTests';
 import { data as pageData } from '../../../../../data/kyrgyz/homePage/index.json';
+import runAmpTests from '../ampTests';
 
 describe('AMP', () => {
   describe(pageType, () => {

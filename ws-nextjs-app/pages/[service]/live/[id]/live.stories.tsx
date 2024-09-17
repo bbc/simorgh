@@ -1,5 +1,5 @@
 import React from 'react';
-import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import PageLayoutWrapper from '#components/PageLayoutWrapper';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import Live from './LivePageLayout';

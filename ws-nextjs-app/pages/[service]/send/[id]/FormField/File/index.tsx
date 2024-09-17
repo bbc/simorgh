@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { ChangeEvent, useContext, useEffect, useRef } from 'react';
 import { jsx } from '@emotion/react';
-import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
-import Text from '#app/components/Text';
+import { useLiveRegionContext } from '#components/LiveRegion/LiveRegionContext';
+import Text from '#components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Label from '../FieldLabel';
 import { InputProps, FileData } from '../../types';

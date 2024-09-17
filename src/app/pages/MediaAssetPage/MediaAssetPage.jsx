@@ -13,7 +13,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
-import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
+import { getImageParts } from '#routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -30,15 +30,15 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
+import { GelPageGrid, GridItemLarge } from '#legacy/components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import ImageWithCaption from '#components/ImageWithCaption';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import LinkedData from '#components/LinkedData';
+import { ServiceContext } from '#contexts/ServiceContext';
+import Disclaimer from '#components/Disclaimer';
 import MediaMessage from './MediaMessage';
-import Disclaimer from '../../components/Disclaimer';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

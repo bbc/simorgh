@@ -2,11 +2,10 @@
 import { jsx } from '@emotion/react';
 import { Fragment, PropsWithChildren, useContext } from 'react';
 
+import { ServiceContext } from '#contexts/ServiceContext';
 import styles from './index.styles';
 
 import { LeftChevron, RightChevron } from '../../icons';
-
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 interface Props {
   link?: string;

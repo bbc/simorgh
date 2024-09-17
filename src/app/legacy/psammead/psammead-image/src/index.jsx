@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
-import { RequestContext } from '../../../../contexts/RequestContext';
-import { FRONT_PAGE, HOME_PAGE } from '../../../../routes/utils/pageTypes';
+import { RequestContext } from '#contexts/RequestContext';
+import { FRONT_PAGE, HOME_PAGE } from '#routes/utils/pageTypes';
 
 export { default as AmpImg } from './index.amp';
 

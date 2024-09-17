@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import services from '#server/utilities/serviceConfigs';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { StoryProps, StoryArgs } from '#models/types/storybook';
+import { ServiceConfig } from '#models/types/serviceConfig';
 import CopyrightContainer from '.';
-import { StoryProps, StoryArgs } from '../../models/types/storybook';
-import { ServiceConfig } from '../../models/types/serviceConfig';
 
 const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   const imageCaptionText =

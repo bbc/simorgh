@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import * as analyticsUtils from '../../../lib/analyticsUtils';
+import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -10,11 +10,11 @@ import {
   HOME_PAGE,
   ERROR_PAGE,
   LIVE_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
+import { RequestContextProps } from '#contexts/RequestContext';
+import { ServiceConfig } from '#models/types/serviceConfig';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as buildPageATIFunctionImports from './genericPage/buildParams';
-import { RequestContextProps } from '../../../contexts/RequestContext';
-import { ServiceConfig } from '../../../models/types/serviceConfig';
 import { ATIData, PageData } from '../types';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

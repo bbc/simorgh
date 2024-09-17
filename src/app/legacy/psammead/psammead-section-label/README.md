@@ -35,7 +35,7 @@ The only provided child should be the title for the section, provided as a _stri
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -55,7 +55,7 @@ Or, without a horizontal bar:
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -76,7 +76,7 @@ On mobile, this component places a dividing line above the title. This can be di
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -97,7 +97,7 @@ You can also visually hide the SectionLabel for all breakpoints by adding the `v
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -119,7 +119,7 @@ NB. when doing this **both** the `href` **and** the `linkText` must be supplied.
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">
@@ -141,7 +141,7 @@ You can override the header(`h2`) to any custom HTML element that fits your acce
 
 ```jsx
 import SectionLabel from '#psammead/psammead-section-label/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 
 const WrappingComponent = () => (
   <div aria-labelledby="example-section-label">

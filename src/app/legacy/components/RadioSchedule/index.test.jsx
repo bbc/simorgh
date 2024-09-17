@@ -1,9 +1,9 @@
-import { render } from '../../../components/react-testing-library-with-providers';
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import { render } from '#components/react-testing-library-with-providers';
+import arabic from '#components/ThemeProvider/fontScripts/arabic';
+import latin from '#components/ThemeProvider/fontScripts/latin';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { renderRadioSchedule } from './testHelpers/helper';
-import * as viewTracking from '../../../hooks/useViewTracker';
-import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
 describe('RadioSchedule', () => {
   it('should render ltr radio schedules correctly', () => {

@@ -12,11 +12,14 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 
-import AudioLoader from '#components/MediaPlayer/AudioLoader';
+import AudioLoader from '#legacy/components/MediaPlayer/AudioLoader';
 
-import { CanonicalMediaPlayer, AmpMediaPlayer } from '#components/MediaPlayer';
+import {
+  CanonicalMediaPlayer,
+  AmpMediaPlayer,
+} from '#legacy/components/MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const Wrapper = styled.div`
   ${props => !props.hasBottomPadding && `padding-bottom: ${GEL_SPACING_DBL};`}

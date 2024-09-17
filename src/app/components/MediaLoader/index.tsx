@@ -5,8 +5,8 @@ import { jsx } from '@emotion/react';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { MEDIA_PLAYER_STATUS } from '#lib/logger.const';
+import { ServiceContext } from '#contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
 import {
@@ -14,10 +14,10 @@ import {
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { EventTrackingContext } from '#contexts/EventTrackingContext';
+import nodeLogger from '#lib/logger.node';
 import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
 import Caption from '../Caption';
-import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
 import Placeholder from './Placeholder';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';

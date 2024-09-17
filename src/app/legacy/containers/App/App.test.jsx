@@ -3,7 +3,7 @@ import reactRouterConfig from 'react-router-config';
 import { render, act } from '@testing-library/react';
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 import { App } from './App';
 
 jest.mock('react-router-config');

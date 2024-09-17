@@ -3,7 +3,7 @@
 import { FC, HTMLAttributes } from 'react';
 import { jsx } from '@emotion/react';
 
-import { FontVariant, GelFontSize } from '../../models/types/theming';
+import { FontVariant, GelFontSize } from '#models/types/theming';
 import Text from '../Text';
 
 interface Props extends HTMLAttributes<HTMLElement> {

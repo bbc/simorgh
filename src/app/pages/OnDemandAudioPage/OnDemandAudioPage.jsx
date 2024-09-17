@@ -10,7 +10,7 @@ import {
 import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#components/Grid';
+import Grid, { GelPageGrid } from '#legacy/components/Grid';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
@@ -25,11 +25,11 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import ATIAnalytics from '../../components/ATIAnalytics';
-import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
-import MetadataContainer from '../../components/Metadata';
-import LinkedData from '../../components/LinkedData';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import ATIAnalytics from '#components/ATIAnalytics';
+import ChartbeatAnalytics from '#components/ChartbeatAnalytics';
+import MetadataContainer from '#components/Metadata';
+import LinkedData from '#components/LinkedData';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 

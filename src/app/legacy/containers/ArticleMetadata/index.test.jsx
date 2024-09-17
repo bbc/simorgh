@@ -4,11 +4,11 @@ import {
   articleDataPersian,
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
-import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
+import { getAuthorTwitterHandle } from '#components/Byline/utilities';
 import {
   render,
   waitFor,
-} from '../../../components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();

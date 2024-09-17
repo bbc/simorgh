@@ -9,7 +9,7 @@ import {
   GEL_FF_REITH_SANS,
   getBodyCopy,
 } from '#psammead/gel-foundations/src/typography';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src/withServicesKnob';
 import {

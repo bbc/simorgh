@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '../../../../../components/react-testing-library-with-providers';
+import { render } from '#components/react-testing-library-with-providers';
+import latin from '#components/ThemeProvider/fontScripts/latin';
 import relatedItems from '../../testHelpers/relatedItems';
 import IndexAlsosContainer from '../../testHelpers/IndexAlsosContainer';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
 
 describe('Index Alsos', () => {
   it('should render multiple correctly', () => {

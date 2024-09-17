@@ -1,8 +1,8 @@
-import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
+import noAscendersOrDescenders from '#components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Seoul';
-import withContext from '../../../contexts/utils/withContext';
+import withContext from '#contexts/utils/withContext';
 import 'moment/locale/ko';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

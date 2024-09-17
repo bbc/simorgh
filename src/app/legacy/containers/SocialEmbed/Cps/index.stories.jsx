@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AmpDecorator from '../../../../../../.storybook/helpers/ampDecorator';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../common/testHelper';

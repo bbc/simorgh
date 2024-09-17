@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoryPromoLi } from '#psammead/psammead-story-promo-list/src';
-import Grid from '#components/Grid';
+import Grid from '#legacy/components/Grid';
 import {
   topStoryColumns,
   leadingStoryColumns,

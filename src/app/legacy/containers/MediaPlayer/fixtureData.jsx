@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#routes/utils/pageTypes';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MediaPlayerContainer from '.';
 
 const captionBlock = {

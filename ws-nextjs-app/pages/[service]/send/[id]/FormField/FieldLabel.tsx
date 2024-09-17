@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import Text from '#app/components/Text';
+import Text from '#components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
 import { InputProps } from '../types';

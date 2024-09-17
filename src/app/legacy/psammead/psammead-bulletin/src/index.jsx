@@ -18,9 +18,9 @@ import {
   getLongPrimer,
 } from '#psammead/gel-foundations/src/typography';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import LiveLabel from '#app/components/LiveLabel';
+import LiveLabel from '#components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import VisuallyHiddenText from '#components/VisuallyHiddenText';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 

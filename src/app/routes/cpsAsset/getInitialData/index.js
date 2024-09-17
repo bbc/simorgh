@@ -5,7 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
   FEATURE_INDEX_PAGE,
-} from '#app/routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import handleError from '../../utils/handleError';
 import {
   augmentWithTimestamp,

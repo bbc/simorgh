@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  act,
-  render,
-} from '#app/components/react-testing-library-with-providers';
+import { act, render } from '#components/react-testing-library-with-providers';
 import * as FormContext from '../FormContext';
 import FormField, { FormComponentProps } from '.';
 import { Field } from '../types';

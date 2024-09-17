@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import PageLayoutWrapper from '#components/PageLayoutWrapper';
 import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';

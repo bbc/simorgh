@@ -1,6 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import BylineContainer from '.';
 
 const Component = (_, { service }) => {

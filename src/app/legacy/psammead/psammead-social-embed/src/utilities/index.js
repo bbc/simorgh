@@ -1,4 +1,4 @@
-import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, LIVE_PAGE } from '#routes/utils/pageTypes';
 
 /**
  * Returns a string of a known provider name.

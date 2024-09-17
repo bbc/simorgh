@@ -1,8 +1,8 @@
-import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
+import latinWithDiacritics from '#components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
-import withContext from '../../../contexts/utils/withContext';
-import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
+import withContext from '#contexts/utils/withContext';
+import { DefaultServiceConfig } from '#models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {

@@ -1,4 +1,4 @@
-import { Services } from '../../../models/types/global';
+import { Services } from '#models/types/global';
 
 type Envs = 'test' | 'live';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '#components/ThemeProvider';
 
 const Component = ({ service = 'news', status = 404 } = {}) => (
   <ThemeProvider service={service}>

@@ -2,7 +2,7 @@
 import {
   renderHook,
   act,
-} from '#app/components/react-testing-library-with-providers';
+} from '#components/react-testing-library-with-providers';
 import Cookies from 'js-cookie';
 
 import useConsentBanners from '.';

@@ -1,4 +1,4 @@
-import { GridWidths } from '../../models/types/theming';
+import { GridWidths } from '#models/types/theming';
 
 const gridWidths: GridWidths = {
   240: 240,

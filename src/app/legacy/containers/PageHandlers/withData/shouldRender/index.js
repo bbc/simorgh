@@ -5,7 +5,7 @@ import {
   matchesCanonicalUrl,
 } from '#lib/utilities/passport';
 import { OK, NOT_FOUND } from '#lib/statusCodes.const';
-import { ARTICLE_PAGE } from '../../../../../routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#routes/utils/pageTypes';
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
 const shouldRender = (
