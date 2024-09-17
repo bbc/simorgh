@@ -47,19 +47,23 @@ export default (overrideProps?: { defaultService?: Services }) =>
     story: (storyProps: any) => JSX.Element,
     {
       globals: {
-        service: { service: selectedService },
+        service: { service: selectedService, variant: selectedVariant },
         isLite,
       },
-    } = { globals: { service: { service: DEFAULT_SERVICE }, isLite: false } },
+    } = { globals: { service: { service: DEFAULT_SERVICE, variant: 'default' }, isLite: false } },
   ) => {
     const defaultServiceOverride = overrideProps?.defaultService;
-    const serviceToUse = defaultServiceOverride || selectedService;
+    let serviceToUse = defaultServiceOverride || selectedService;
 
     const variant = getVariant(serviceToUse as Services)(TEXT_VARIANTS);
 
     const service = variant
       ? getService(serviceToUse as Services)(TEXT_VARIANTS)
       : serviceToUse;
+
+    if (selectedVariant !== 'default') {
+      serviceToUse = `${service}${selectedVariant[0].toUpperCase()}${selectedVariant.substring(1).toLowerCase()}`;
+    }
 
     const {
       text,
