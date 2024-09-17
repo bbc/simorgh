@@ -175,7 +175,7 @@ const Brand = forwardRef((props, ref) => {
     linkId = null,
     ...rest
   } = props;
-
+  console.log('final?', scriptLink);
   return (
     <Banner
       svgHeight={svgHeight}
@@ -200,7 +200,7 @@ const Brand = forwardRef((props, ref) => {
           <StyledBrand {...props} />
         )}
         {skipLink}
-        {scriptLink && <div>{scriptLink}</div>}
+        {scriptLink && <div> {scriptLink}</div>}
       </SvgWrapper>
     </Banner>
   );
