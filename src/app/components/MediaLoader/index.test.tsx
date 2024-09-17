@@ -222,7 +222,7 @@ describe('MediaLoader', () => {
       );
     });
 
-    it('should use the pageIdentifier from the EventTrackingContext', async () => {
+    it('should use the pageIdentifier from the EventTrackingContext when overrides are not present', async () => {
       const buildConfigSpy = jest.spyOn(buildConfig, 'default');
       await act(async () => {
         render(
