@@ -118,6 +118,7 @@ exports[`Canonical Live Radio Media Loader renders a valid container 1`] = `
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
+    dir="ltr"
   />
 </figure>
 `;

@@ -104,6 +104,7 @@ exports[`Canonical Sinhala Live Radio Page Media Loader renders a valid containe
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
+    dir="ltr"
   />
 </figure>
 `;
