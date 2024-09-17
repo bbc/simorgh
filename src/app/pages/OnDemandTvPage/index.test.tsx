@@ -13,7 +13,6 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import * as MediaLoader from '../../components/MediaLoader';
 import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
-import { MediaOverrides } from '#app/components/MediaLoader/types';
 
 const pageType = MEDIA_PAGE;
 
