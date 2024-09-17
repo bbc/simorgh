@@ -891,6 +891,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   font-style: normal;
   font-weight: 400;
   background-color: #222222;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -904,18 +905,6 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   .emotion-149 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-149 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-149 {
-    padding: 0 1rem;
   }
 }
 
