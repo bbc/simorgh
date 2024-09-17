@@ -50,7 +50,12 @@ export default (overrideProps?: { defaultService?: Services }) =>
         service: { service: selectedService, variant: selectedVariant },
         isLite,
       },
-    } = { globals: { service: { service: DEFAULT_SERVICE, variant: 'default' }, isLite: false } },
+    } = {
+      globals: {
+        service: { service: DEFAULT_SERVICE, variant: 'default' },
+        isLite: false,
+      },
+    },
   ) => {
     const defaultServiceOverride = overrideProps?.defaultService;
     let serviceToUse = defaultServiceOverride || selectedService;
