@@ -167,7 +167,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+            'https://www.test.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -239,7 +239,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+            'https://www.test.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -309,7 +309,7 @@ describe('buildSettings', () => {
         appType: 'responsive',
         counterName: 'live_coverage.testID.page',
         externalEmbedUrl:
-          '/ws/av-embeds/cps/serbian/lat/srbija-68707945/bbc_arabic_tv/sr-latn',
+          'https://www.test.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/bbc_arabic_tv',
         playlistObject: {
           title: 'مباشر: تلفزيون بي بي سي عربي',
           summary: 'This is a caption!',
@@ -362,7 +362,8 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
+          externalEmbedUrl:
+            'https://www.test.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           insideIframe: true,
           embeddedOffsite: true,
           appName: 'news-serbian',
