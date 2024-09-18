@@ -158,8 +158,6 @@ const MediaContainer = ({
           ? styles.liveRadioMediaContainer
           : styles.mediaContainer
       }
-      // Temporary fix for live radio players not displaying correctly in RTL languages
-      {...(mediaType === 'liveRadio' && { dir: 'ltr' })}
     />
   );
 };
