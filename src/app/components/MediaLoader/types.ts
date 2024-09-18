@@ -4,6 +4,7 @@ import {
   OnDemandAudioBlock,
   OnDemandTVBlock,
   LiveRadioBlock,
+  MediaOverrides,
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
@@ -97,15 +98,6 @@ export type MediaInfo = {
   durationSpoken?: string;
   type?: MediaType;
   guidanceMessage?: string | null;
-};
-
-export type MediaOverrides = {
-  model: {
-    language: string;
-    pageIdentifierOverride: string;
-    pageTitleOverride: string;
-  };
-  type: 'mediaOverrides';
 };
 
 export type Player = {
