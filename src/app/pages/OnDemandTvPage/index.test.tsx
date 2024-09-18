@@ -81,7 +81,9 @@ describe('OnDemand TV Brand Page ', () => {
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();
-    expect(visuallyHiddenHeadline?.innerHTML).toEqual('نړۍ دا وخت, ۲۷ می ۲۰۲۰');
+    expect(visuallyHiddenHeadline?.innerHTML).toEqual(
+      ' د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴',
+    );
   });
 
   it('should show the brand title for OnDemand TV Pages', async () => {
