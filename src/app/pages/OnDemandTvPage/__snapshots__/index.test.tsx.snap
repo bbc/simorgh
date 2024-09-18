@@ -1297,6 +1297,30 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 }
 
+.emotion-27 {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #AEAEB5;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
@@ -1319,7 +1343,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
           id="content"
           tabindex="-1"
         >
-          نړۍ دا وخت, ۲۷ می ۲۰۲۰
+           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
         </h1>
         <div
           class="emotion-7 emotion-8"
@@ -1344,8 +1368,9 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
         >
           <span
             class="emotion-18 emotion-19"
+            data-testid="brand-title"
           >
-            نړۍ دا وخت
+             د بي بي سي خبرونه 
           </span>
           <span
             class="emotion-6"
@@ -1354,8 +1379,9 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
           </span>
           <span
             class="emotion-21 emotion-22"
+            data-testid="sub-heading"
           >
-            ۲۷ می ۲۰۲۰
+             د بي بي سي خبرونه 
           </span>
         </strong>
       </div>
@@ -1366,8 +1392,14 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
         <p
           class="emotion-25 emotion-26"
         >
-          د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+          نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
+        <time
+          class="emotion-27 emotion-28"
+          datetime="۲۰۲۴-۰۹-۱۷"
+        >
+          ۱۷ سپتمبر ۲۰۲۴
+        </time>
       </div>
     </main>
   </div>
@@ -1890,6 +1922,30 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 }
 
+.emotion-27 {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #AEAEB5;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
@@ -1912,7 +1968,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
           id="content"
           tabindex="-1"
         >
-          نړۍ دا وخت, ۲۷ می ۲۰۲۰
+           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
         </h1>
         <div
           class="emotion-7 emotion-8"
@@ -1937,8 +1993,9 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         >
           <span
             class="emotion-18 emotion-19"
+            data-testid="brand-title"
           >
-            نړۍ دا وخت
+             د بي بي سي خبرونه 
           </span>
           <span
             class="emotion-6"
@@ -1947,8 +2004,9 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
           </span>
           <span
             class="emotion-21 emotion-22"
+            data-testid="sub-heading"
           >
-            ۲۷ می ۲۰۲۰
+             د بي بي سي خبرونه 
           </span>
         </strong>
       </div>
@@ -1959,8 +2017,14 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         <p
           class="emotion-25 emotion-26"
         >
-          د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+          نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
+        <time
+          class="emotion-27 emotion-28"
+          datetime="۲۰۲۴-۰۹-۱۷"
+        >
+          ۱۷ سپتمبر ۲۰۲۴
+        </time>
       </div>
     </main>
   </div>
@@ -2483,6 +2547,30 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 }
 
+.emotion-27 {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #AEAEB5;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
@@ -2505,7 +2593,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
           id="content"
           tabindex="-1"
         >
-          نړۍ دا وخت, ۲۷ می ۲۰۲۰
+           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
         </h1>
         <div
           class="emotion-7 emotion-8"
@@ -2530,8 +2618,9 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         >
           <span
             class="emotion-18 emotion-19"
+            data-testid="brand-title"
           >
-            نړۍ دا وخت
+             د بي بي سي خبرونه 
           </span>
           <span
             class="emotion-6"
@@ -2540,8 +2629,9 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
           </span>
           <span
             class="emotion-21 emotion-22"
+            data-testid="sub-heading"
           >
-            ۲۷ می ۲۰۲۰
+             د بي بي سي خبرونه 
           </span>
         </strong>
       </div>
@@ -2552,8 +2642,14 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         <p
           class="emotion-25 emotion-26"
         >
-          د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+          نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
+        <time
+          class="emotion-27 emotion-28"
+          datetime="۲۰۲۴-۰۹-۱۷"
+        >
+          ۱۷ سپتمبر ۲۰۲۴
+        </time>
       </div>
     </main>
   </div>
