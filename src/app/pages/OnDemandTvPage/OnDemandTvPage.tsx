@@ -14,7 +14,7 @@ import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
 import { PageTypes } from '#app/models/types/global';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import { MediaBlock, MediaOverrides } from '#app/components/MediaLoader/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -112,7 +112,16 @@ const OnDemandTvPage = ({
     ? `${brandTitle} - ${episodeTitle} - ${brandName}`
     : headline;
 
-  const episodePageIdentifier = `${service}.bbc_${service}_tv.tv.${episodeId}.page`;
+  const mediaOverrides: MediaOverrides = {
+    model: {
+      language,
+      pageIdentifierOverride: `${service}.bbc_${service}_tv.tv.${episodeId}.page`,
+      pageTitleOverride: promoBrandTitle,
+    },
+    type: 'mediaOverrides',
+  };
+
+  const mediaBlocksWithOverrides = [...pageData?.mediaBlocks, mediaOverrides];
 
   return (
     <div css={styles.wrapper}>
@@ -170,9 +179,8 @@ const OnDemandTvPage = ({
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
             <MediaLoader
-              blocks={pageData?.mediaBlocks}
+              blocks={mediaBlocksWithOverrides}
               css={styles.mediaPlayer}
-              pageIdentifierOverride={episodePageIdentifier}
             />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available

@@ -13,6 +13,7 @@ import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
@@ -164,16 +165,10 @@ const MediaContainer = ({
 type Props = {
   blocks: MediaBlock[];
   className?: string;
-  pageIdentifierOverride?: string;
   embedded?: boolean;
 };
 
-const MediaLoader = ({
-  blocks,
-  className,
-  pageIdentifierOverride,
-  embedded,
-}: Props) => {
+const MediaLoader = ({ blocks, className, embedded }: Props) => {
   const { lang, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
@@ -197,11 +192,14 @@ const MediaLoader = ({
 
   if (isLite) return null;
 
+  const { model: mediaOverrides } =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
+
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
     id,
     blocks,
-    counterName: pageIdentifierOverride || pageIdentifier,
+    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
     statsDestination,
     producer,
     isAmp,

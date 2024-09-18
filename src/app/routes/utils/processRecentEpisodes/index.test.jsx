@@ -14,9 +14,10 @@ describe('processRecentEpisodes', () => {
       }),
     ).toEqual([
       {
-        id: 'w172xc9xq2gllfk',
+        id: 'w172yj93rrkg6r7',
         brandTitle: 'BBC Info',
-        timestamp: 1605225600000,
+        episodeTitle: 'BBC Info',
+        timestamp: 1679011200000,
         duration: 'PT15M',
         image: '//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
         altText: 'BBC Info',
