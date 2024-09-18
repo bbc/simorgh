@@ -125,7 +125,7 @@ describe('OnDemand TV Brand Page ', () => {
     const hiddenHeadline = container.querySelector('strong[aria-hidden=true]');
 
     expect(hiddenHeadline).toBeDefined();
-    expect(hiddenHeadline).toContainHTML('نړۍ دا وخت');
+    expect(hiddenHeadline).toContainHTML('د بي بي سي خبرونه');
   });
 
   it('a11y - should have a "content" id on the h1', async () => {
@@ -179,7 +179,7 @@ describe('OnDemand TV Brand Page ', () => {
       service: 'pashto',
     });
 
-    expect(getByText('۲۷ می ۲۰۲۰')).toBeInTheDocument();
+    expect(getByText('۱۷ سپتمبر ۲۰۲۴')).toBeInTheDocument();
   });
 
   it('should show the summary for OnDemand TV Pages', async () => {
@@ -198,9 +198,7 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     expect(
-      getByText(
-        'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
-      ),
+      getByText('نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي'),
     ).toBeInTheDocument();
   });
 
@@ -239,8 +237,8 @@ describe('OnDemand TV Brand Page ', () => {
     const expectedMediaOverrides = {
       model: {
         language: 'ps',
-        pageIdentifierOverride: 'pashto.bbc_pashto_tv.tv.w172xcldhhrdqgb.page',
-        pageTitleOverride: 'نړۍ دا وخت',
+        pageIdentifierOverride: 'pashto.bbc_pashto_tv.tv.w172zmsln64zg23.page',
+        pageTitleOverride: ' د بي بي سي خبرونه ',
       },
       type: 'mediaOverrides',
     };

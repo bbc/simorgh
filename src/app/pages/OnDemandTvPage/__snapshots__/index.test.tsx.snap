@@ -617,6 +617,30 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 }
 
+.emotion-36 {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #AEAEB5;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-36 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-36 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div>
   <div
     class="emotion-0"
@@ -639,7 +663,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           id="content"
           tabindex="-1"
         >
-          نړۍ دا وخت, ۲۷ می ۲۰۲۰
+           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
         </h1>
         <figure
           class="emotion-7"
@@ -663,7 +687,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
               <span
                 class="emotion-6"
               >
-                Play video, "undefined", موده 24,00
+                Play video, " د بي بي سي خبرونه ", موده 28,00
               </span>
               <div
                 aria-hidden="true"
@@ -695,9 +719,9 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
               <time
                 aria-hidden="true"
                 class="emotion-20 emotion-21"
-                datetime="PT24M"
+                datetime="PT28M"
               >
-                24:00
+                28:00
               </time>
             </button>
             <div
@@ -719,8 +743,9 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         >
           <span
             class="emotion-27 emotion-28"
+            data-testid="brand-title"
           >
-            نړۍ دا وخت
+             د بي بي سي خبرونه 
           </span>
           <span
             class="emotion-6"
@@ -729,8 +754,9 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           </span>
           <span
             class="emotion-30 emotion-31"
+            data-testid="sub-heading"
           >
-            ۲۷ می ۲۰۲۰
+             د بي بي سي خبرونه 
           </span>
         </strong>
       </div>
@@ -741,8 +767,14 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         <p
           class="emotion-34 emotion-35"
         >
-          د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+          نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
+        <time
+          class="emotion-36 emotion-37"
+          datetime="۲۰۲۴-۰۹-۱۷"
+        >
+          ۱۷ سپتمبر ۲۰۲۴
+        </time>
       </div>
     </main>
   </div>
