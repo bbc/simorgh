@@ -1613,7 +1613,7 @@ module.exports = () => ({
               '/gahuza/amakuru-23257470', // CPS MAP with video clip
               '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -2026,7 +2026,7 @@ module.exports = () => ({
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
