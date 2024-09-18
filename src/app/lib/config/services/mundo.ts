@@ -337,7 +337,7 @@ export const service: DefaultServiceConfig = {
         errorDescription: 'Por favor, regresa e inténtalo más tarde.',
 
         // Closed Screen
-        closedHeading: 'Esto ya está cerrado.',
+        closedHeading: 'Esta convocatoria ya está cerrada.',
         closedDescription: 'Esto cierra el {{date}}.',
       },
     },
