@@ -296,7 +296,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
 @media (min-width: 15rem) {
   .emotion-17 {
     height: 3.75rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 }
 
@@ -1578,7 +1578,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 @media (min-width: 15rem) {
   .emotion-17 {
     height: 3.75rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 }
 
@@ -2860,7 +2860,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 @media (min-width: 15rem) {
   .emotion-17 {
     height: 3.75rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 }
 
