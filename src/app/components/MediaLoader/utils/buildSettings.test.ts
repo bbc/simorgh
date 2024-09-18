@@ -773,7 +773,6 @@ describe('buildSettings', () => {
           enableToucan: true,
           appType: 'responsive',
           autoplay: false,
-          mediator: { host: 'open.test.bbc.co.uk' },
           counterName: 'hausa.bbc_hausa_radio.liveradio.page',
           playlistObject: {
             items: [
