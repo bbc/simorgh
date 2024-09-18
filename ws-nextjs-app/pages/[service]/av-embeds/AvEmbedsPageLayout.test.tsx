@@ -31,7 +31,7 @@ describe('AV Embeds Page', () => {
     expect(getByTestId('avembeds-mediaplayer')).toBeInTheDocument();
   });
 
-  it('should render og:url meta tag on AV Embeds page', async () => {
+  it('should render meta tags on AV Embeds page', async () => {
     await act(async () => {
       return render(
         <AvEmbedsPage
@@ -54,10 +54,29 @@ describe('AV Embeds Page', () => {
 
     const helmetMetaTags = Helmet.peek()?.metaTags;
 
-    // @ts-expect-error - 'property' does not exist on type 'MetaTag'.
-    const actual = helmetMetaTags.filter(tag => tag.property === 'og:url')[0]
-      .content;
-
-    expect(actual).toEqual('/serbian/cyr/av-embeds/srbija-68707945');
+    expect(helmetMetaTags).toEqual([
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, user-scalable=1',
+      },
+      { charset: 'utf-8' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' },
+      { property: 'og:type', content: 'video' },
+      { property: 'og:site_name', content: 'BBC News' },
+      { property: 'og:locale', content: 'sr-Cyrl' },
+      {
+        property: 'article:author',
+        content: 'https://www.facebook.com/bbcnews',
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@bbcnews' },
+      { name: 'twitter:creator', content: '@bbcnews' },
+      { name: 'twitter:domain', content: 'www.bbc.com' },
+      { name: 'apple-mobile-web-app-title', content: 'BBC News' },
+      { name: 'application-name', content: 'BBC News' },
+      { name: 'msapplication-TileImage', content: 'BBC News' },
+      { name: 'msapplication-TileColor', content: '#bb1919' },
+      { name: 'mobile-web-app-capable', content: 'yes' },
+    ]);
   });
 });
