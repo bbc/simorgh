@@ -4,7 +4,6 @@ import {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
-import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   AresMediaBlock,
   AresMediaMetadataBlock,
@@ -15,6 +14,7 @@ import {
 import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
+import { getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
 
@@ -28,7 +28,6 @@ export default ({
   showAdsBasedOnLocation = false,
   embedded,
   lang,
-  isAmp,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: aresMedia }: AresMediaBlock =
     filterForBlockType(blocks, 'aresMedia') ?? {};
@@ -83,19 +82,21 @@ export default ({
 
   const videoId = aresMediaMetadata?.id;
 
-  const holdingImageURL = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
+  const holdingImageURL = rawImage
+    ? buildIChefURL({
+        originCode,
+        locator,
+        resolution: DEFAULT_WIDTH,
+      })
+    : aresMediaMetadata?.imageUrl;
 
   const isLive = aresMediaMetadata?.live ?? false;
 
-  const items = [
+  const items: PlaylistItem[] = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
   ];
 
-  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+  if (showAds) items.unshift({ kind: 'advert' });
 
   const placeholderConfig = buildPlaceholderConfig({
     title,
@@ -109,20 +110,15 @@ export default ({
     placeholderImageLocator: locator,
   });
 
-  const embedUrl = getEmbedURL({
-    mediaId: `${id}/${versionID}/${lang}`,
-    type: 'avEmbed',
-    isAmp,
-    embedded,
-  });
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
   return {
     mediaType: actualFormat || 'video',
     playerConfig: {
       ...basePlayerConfig,
-      autoplay: pageType !== 'mediaArticle',
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
-      ...(embedUrl && { externalEmbedUrl: embedUrl }),
+      ...(externalEmbedUrl && { externalEmbedUrl }),
+      autoplay: pageType !== 'mediaArticle',
       playlistObject: {
         title,
         summary: caption || '',

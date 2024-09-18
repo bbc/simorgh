@@ -22,7 +22,7 @@ const styles = {
       [mq.GROUP_2_MIN_WIDTH]: {
         lineHeight: `calc(2.25rem - ${spacings.FULL}rem)`,
       },
-      [mq.GROUP_0_MAX_WIDTH]: {
+      [mq.GROUP_1_MAX_WIDTH]: {
         margin: `${spacings.FULL}rem 0 ${spacings.FULL}rem 0`,
       },
     }),

@@ -23,9 +23,6 @@ export default {
   mostRead: {
     enabled: true,
   },
-  navOnArticles: {
-    enabled: true,
-  },
   nielsenAnalytics: {
     enabled: true,
   },

@@ -9,7 +9,13 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
+import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { BumpType, MediaBlock, MediaType, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -19,6 +25,11 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
+
+const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+];
 
 const logger = nodeLogger(__filename);
 
@@ -83,9 +94,14 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
+  mediaType?: MediaType;
 };
 
-const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+  mediaType,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -136,7 +152,11 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={styles.mediaContainer}
+      css={
+        mediaType === 'liveRadio'
+          ? styles.liveRadioMediaContainer
+          : styles.mediaContainer
+      }
     />
   );
 };
@@ -148,14 +168,13 @@ type Props = {
 };
 
 const MediaLoader = ({ blocks, embedded, className }: Props) => {
-  const [isPlaceholder, setIsPlaceholder] = useState(true);
   const { lang, translations } = useContext(ServiceContext);
+  const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     id,
     pageType,
-    counterName,
     statsDestination,
     service,
     isAmp,
@@ -163,13 +182,20 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
+  const PAGETYPE_SUPPORTS_PLACEHOLDER =
+    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
+
+  const [isPlaceholder, setIsPlaceholder] = useState(
+    PAGETYPE_SUPPORTS_PLACEHOLDER,
+  );
+
   if (isLite) return null;
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
     id,
     blocks,
-    counterName,
+    counterName: pageIdentifier,
     statsDestination,
     producer,
     isAmp,
@@ -186,22 +212,18 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   const { mediaType, playerConfig, placeholderConfig, showAds } = config;
 
-  const {
-    mediaInfo,
-    placeholderSrc,
-    placeholderSrcset,
-    translatedNoJSMessage,
-  } = placeholderConfig;
-
   const captionBlock = getCaptionBlock(blocks, pageType);
+
+  const showPlaceholder = isPlaceholder && placeholderConfig;
 
   return (
     <>
-      <Metadata
-        blocks={blocks}
-        embedURL={playerConfig?.externalEmbedUrl}
-        embedded={embedded}
-      />
+      {
+        // Prevents the av-embeds route itself rendering the Metadata component
+        !embedded && (
+          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+        )
+      }
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}
@@ -209,16 +231,20 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
       >
         {showAds && <AdvertTagLoader />}
         <BumpLoader />
-        {isPlaceholder ? (
+        {showPlaceholder ? (
           <Placeholder
-            src={placeholderSrc}
-            srcSet={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
-            mediaInfo={mediaInfo}
+            src={placeholderConfig?.placeholderSrc}
+            srcSet={placeholderConfig?.placeholderSrcset}
+            noJsMessage={placeholderConfig?.translatedNoJSMessage}
+            mediaInfo={placeholderConfig?.mediaInfo}
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
-          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+          <MediaContainer
+            playerConfig={playerConfig}
+            showAds={showAds}
+            mediaType={mediaType}
+          />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaType} />}
       </figure>
