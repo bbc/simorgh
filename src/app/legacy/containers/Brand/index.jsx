@@ -28,7 +28,6 @@ const BrandContainer = ({
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-
   return (
     <StyledBrand
       product={product}
@@ -40,6 +39,7 @@ const BrandContainer = ({
       url={`/${service}`}
       skipLink={skipLink}
       scriptLink={scriptLink}
+      longBrandWithVariant={service === 'serbian'}
       ref={brandRef}
       {...props}
     />
