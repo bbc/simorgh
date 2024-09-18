@@ -55,7 +55,7 @@ export default (overrideProps?: { defaultService?: Services }) =>
   ) => {
     const defaultServiceOverride = overrideProps?.defaultService;
     const serviceToUse = defaultServiceOverride || service;
-    
+
     let serviceLookup = serviceToUse;
 
     if (variant !== DEFAULT_VARIANT) {
