@@ -99,6 +99,15 @@ export type MediaInfo = {
   guidanceMessage?: string | null;
 };
 
+export type MediaOverrides = {
+  model: {
+    language: string;
+    pageIdentifierOverride: string;
+    pageTitleOverride: string;
+  };
+  type: 'mediaOverrides';
+};
+
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
@@ -208,6 +217,7 @@ export type MediaBlock =
   | CaptionBlock
   | OnDemandTVBlock
   | OnDemandAudioBlock
+  | MediaOverrides
   | LiveRadioBlock;
 
 export type BuildConfigProps = {

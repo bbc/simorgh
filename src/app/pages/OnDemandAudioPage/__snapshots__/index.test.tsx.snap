@@ -816,6 +816,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
             >
               <span
                 class="emotion-13 emotion-14"
+                data-testid="brand-title"
               >
                 ماښامنۍ خپرونه
               </span>
@@ -826,6 +827,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
               </span>
               <span
                 class="emotion-16 emotion-17"
+                data-testid="sub-heading"
               >
                 ۱ می ۲۰۲۰
               </span>
@@ -1709,6 +1711,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
             >
               <span
                 class="emotion-13 emotion-14"
+                data-testid="brand-title"
               >
                 BBC 코리아 라디오
               </span>
@@ -1718,7 +1721,8 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                 , 
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="emotion-17 emotion-18"
+                data-testid="sub-heading"
               >
                 2020년 5월 4일
               </span>
@@ -2563,6 +2567,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
             >
               <span
                 class="emotion-13 emotion-14"
+                data-testid="brand-title"
               >
                 BBC 코리아 라디오
               </span>
@@ -2573,6 +2578,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
               </span>
               <span
                 class="emotion-16 emotion-17"
+                data-testid="sub-heading"
               >
                 2020년 5월 4일
               </span>
