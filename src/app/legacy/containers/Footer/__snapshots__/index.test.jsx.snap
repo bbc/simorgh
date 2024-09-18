@@ -43,7 +43,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 @media (min-width: 15rem) {
   .emotion-3 {
     height: 3.75rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 }
 
@@ -168,6 +168,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   font-style: normal;
   font-weight: 400;
   background-color: #222222;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -181,18 +182,6 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   .emotion-12 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-12 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-12 {
-    padding: 0 1rem;
   }
 }
 
