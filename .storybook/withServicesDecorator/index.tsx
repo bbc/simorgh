@@ -1,5 +1,4 @@
 import React from 'react';
-import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
 import TEXT_VARIANTS from './text-variants';
 import arabic from '../../src/app/components/ThemeProvider/fontScripts/arabic';
@@ -16,10 +15,7 @@ import thai from '../../src/app/components/ThemeProvider/fontScripts/thai';
 import { Services } from '../../src/app/models/types/global';
 
 const DEFAULT_SERVICE = 'news';
-const getVariant = (selectedService: Services) =>
-  path([selectedService, 'variant']);
-const getService = (selectedService: Services) =>
-  path([selectedService, 'service']);
+const DEFAULT_VARIANT = 'default';
 
 const scripts = {
   arabic,
@@ -47,27 +43,23 @@ export default (overrideProps?: { defaultService?: Services }) =>
     story: (storyProps: any) => JSX.Element,
     {
       globals: {
-        service: { service: selectedService, variant: selectedVariant },
+        service: { service, variant },
         isLite,
       },
     } = {
       globals: {
-        service: { service: DEFAULT_SERVICE, variant: 'default' },
+        service: { service: DEFAULT_SERVICE, variant: DEFAULT_VARIANT },
         isLite: false,
       },
     },
   ) => {
     const defaultServiceOverride = overrideProps?.defaultService;
-    let serviceToUse = defaultServiceOverride || selectedService;
+    const serviceToUse = defaultServiceOverride || service;
+    
+    let serviceLookup = serviceToUse;
 
-    const variant = getVariant(serviceToUse as Services)(TEXT_VARIANTS);
-
-    const service = variant
-      ? getService(serviceToUse as Services)(TEXT_VARIANTS)
-      : serviceToUse;
-
-    if (selectedVariant !== 'default') {
-      serviceToUse = `${service}${selectedVariant[0].toUpperCase()}${selectedVariant.substring(1).toLowerCase()}`;
+    if (variant !== DEFAULT_VARIANT) {
+      serviceLookup = `${service}-${variant}`;
     }
 
     const {
@@ -78,7 +70,7 @@ export default (overrideProps?: { defaultService?: Services }) =>
       locale,
       dir = 'ltr',
       timezone = 'GMT',
-    } = TEXT_VARIANTS[serviceToUse];
+    } = TEXT_VARIANTS[serviceLookup];
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
@@ -89,8 +81,8 @@ export default (overrideProps?: { defaultService?: Services }) =>
       locale,
       dir,
       service,
-      variant: variant || 'default',
-      selectedService: serviceToUse,
+      variant: variant || DEFAULT_VARIANT,
+      selectedService: service,
       timezone,
       isLite,
     };
