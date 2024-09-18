@@ -95,13 +95,16 @@ describe('OnDemand TV Brand Page ', () => {
       toggles,
     });
     // @ts-expect-error react testing library returns the required query
-    const { getByText } = await renderPage({
+    const { getByTestId } = await renderPage({
       // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
 
-    expect(getByText('نړۍ دا وخت')).toBeInTheDocument();
+    const brandTitle = getByTestId('brand-title');
+
+    expect(brandTitle).toBeInTheDocument();
+    expect(brandTitle).toHaveTextContent('د بي بي سي خبرونه');
   });
 
   it('a11y - should aria-hide the title', async () => {
