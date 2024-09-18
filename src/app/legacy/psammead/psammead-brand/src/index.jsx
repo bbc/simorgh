@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
-  GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -29,7 +29,10 @@ const SvgWrapper = styled.div`
   max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
   margin: 0 auto;
 
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${({ longBrandWithVariant }) =>
+      longBrandWithVariant
+        ? GEL_GROUP_1_SCREEN_WIDTH_MAX
+        : GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     display: block;
   }
 `;
@@ -42,14 +45,14 @@ const Banner = styled.div`
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     height: ${60 / 16}rem;
-    padding: 0 ${GEL_SPACING_DBL};
+    padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     height: ${64 / 16}rem;
   }
 
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     ${({ scriptLink }) => scriptLink && 'height: 100%'}
   }
 
@@ -89,7 +92,7 @@ const StyledLink = styled.a`
       props.theme.palette.BRAND_LOGO};
     outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
   }
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     ${({ scriptLink }) =>
       scriptLink && `height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX}`}
   }
@@ -171,6 +174,7 @@ const Brand = forwardRef((props, ref) => {
     borderTop = false,
     borderBottom = false,
     scriptLink = null,
+    longBrandWithVariant = false,
     skipLink = null,
     linkId = null,
     ...rest
@@ -184,7 +188,7 @@ const Brand = forwardRef((props, ref) => {
       scriptLink={scriptLink}
       {...rest}
     >
-      <SvgWrapper ref={ref}>
+      <SvgWrapper ref={ref} longBrandWithVariant={longBrandWithVariant}>
         {url ? (
           <StyledLink
             href={url}
