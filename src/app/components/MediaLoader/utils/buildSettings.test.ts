@@ -603,8 +603,7 @@ describe('buildSettings', () => {
             'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
           placeholderSrcset:
             'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
-          translatedNoJSMessage:
-            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+          translatedNoJSMessage: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         },
         showAds: false,
       });

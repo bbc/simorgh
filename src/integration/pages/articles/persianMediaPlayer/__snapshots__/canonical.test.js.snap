@@ -189,7 +189,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
     </noscript>
   </div>
   <button
@@ -263,7 +263,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
     </noscript>
   </div>
   <button
@@ -341,7 +341,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
       </noscript>
     </div>
     <button
