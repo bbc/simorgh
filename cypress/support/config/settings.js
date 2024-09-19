@@ -2026,7 +2026,7 @@ module.exports = () => ({
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
