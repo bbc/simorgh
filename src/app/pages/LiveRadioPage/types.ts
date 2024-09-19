@@ -1,5 +1,5 @@
 import { ChartbeatProps } from '#app/components/ChartbeatAnalytics/types';
-import { LiveRadioBlock } from '#app/components/MediaLoader/types';
+import { LiveRadioBlock } from '#app/models/types/media';
 
 export type LiveRadioPageData = {
   language: string;
