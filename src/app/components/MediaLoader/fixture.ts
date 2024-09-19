@@ -273,7 +273,7 @@ export const livePageClipMediaBlock = {
 };
 
 export const onDemandTvBlock = {
-  type: 'tvMedia',
+  type: 'tv',
   model: {
     id: 'w172zm8b4tlpzxh',
     subType: 'episode',

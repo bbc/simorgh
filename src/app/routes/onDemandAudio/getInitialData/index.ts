@@ -5,6 +5,11 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import { InitialDataProps } from '#app/models/types/initialData';
+import {
+  OnDemandAudioBlock,
+  OnDemandMediaModel,
+} from '#app/models/types/media';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
@@ -19,7 +24,7 @@ import { getPodcastExternalLinks } from '../tempData/podcastExternalLinks';
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
 
-const getConfig = pathname => {
+const getConfig = (pathname: string) => {
   const detailPageType = pathname.includes('podcast')
     ? 'Podcast'
     : 'On Demand Radio';
@@ -43,7 +48,7 @@ const getConfig = pathname => {
   };
 };
 
-const getPodcastPageIdentifier = pageIdentifier => {
+const getPodcastPageIdentifier = (pageIdentifier: string) => {
   const [service, masterbrand, ...rest] = pageIdentifier.split('.');
   return [service, masterbrand, 'podcasts', ...rest].join('.');
 };
@@ -54,7 +59,7 @@ export default async ({
   service,
   toggles,
   variant,
-}) => {
+}: InitialDataProps) => {
   try {
     const {
       isPodcast,
@@ -64,6 +69,7 @@ export default async ({
     } = getConfig(pathname);
 
     const radioPodcastDataPath = overrideRendererOnTest(pathname);
+    // @ts-expect-error - Ignore fetchPageData argument types
     const pageDataPromise = await fetchPageData({
       path: radioPodcastDataPath,
       pageType,
@@ -80,10 +86,10 @@ export default async ({
           path: pathname,
           radioService: getRadioService({ service, pathname }),
         })
-      : await pageDataPromise;
+      : pageDataPromise;
 
     const withLogging = pathWithLogging(getUrl(json), missingFieldCode, json);
-    const get = (fieldPath, logLevel) =>
+    const get = (fieldPath: (string | number)[], logLevel?: string) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
     const episodeId = get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR);
@@ -116,6 +122,15 @@ export default async ({
     const externalLinks = isPodcast
       ? await getPodcastExternalLinks(service, brandId, variant, versionId)
       : [];
+
+    const mediaBlocks: OnDemandAudioBlock[] = get(['content', 'blocks']).map(
+      (block: OnDemandMediaModel) => {
+        return {
+          type: 'audio',
+          model: { ...block },
+        };
+      },
+    );
 
     return {
       status,
@@ -159,9 +174,14 @@ export default async ({
         radioScheduleData: getRadioScheduleData(json),
         recentEpisodes,
         externalLinks,
+        mediaBlocks,
       },
     };
-  } catch ({ message, status = getErrorStatusCode() }) {
+  } catch ({
+    message,
+    status = getErrorStatusCode(),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  }: any | { message: string; status: number }) {
     return { error: message, status };
   }
 };
