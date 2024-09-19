@@ -7,15 +7,15 @@ export default ({
   basePlayerConfig,
   translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { model: tvMediaBlock } = filterForBlockType(blocks, 'tv');
-  const video = tvMediaBlock?.versions?.[0] || {};
-  const holdingImageURL = `https://${tvMediaBlock.imageUrl}`;
+  const { model: audioMediaBlock } = filterForBlockType(blocks, 'audio');
+  const audio = audioMediaBlock?.versions?.[0] || {};
+  const holdingImageURL = `https://${audioMediaBlock.imageUrl}`;
 
   const placeholderConfig = buildPlaceholderConfig({
-    title: tvMediaBlock.episodeTitle,
-    duration: video?.duration,
-    durationISO8601: video?.durationISO8601,
-    type: 'video',
+    title: audioMediaBlock.episodeTitle,
+    duration: audio?.duration,
+    durationISO8601: audio?.durationISO8601,
+    type: 'audio',
     holdingImageURL,
     placeholderImageLocator: holdingImageURL,
     placeholderImageOriginCode: 'pips',
@@ -28,23 +28,23 @@ export default ({
       autoplay: false,
       statsObject: {
         ...basePlayerConfig.statsObject,
-        episodePID: tvMediaBlock.id,
+        episodePID: audioMediaBlock.id,
       },
       playlistObject: {
-        title: tvMediaBlock.episodeTitle,
+        title: audioMediaBlock.episodeTitle,
         holdingImageURL,
         items: [
           {
-            versionID: video?.versionId,
-            kind: tvMediaBlock.smpKind,
-            duration: video?.duration,
+            versionID: audio?.versionId,
+            kind: audioMediaBlock.smpKind,
+            duration: audio?.duration,
           },
         ],
-        summary: tvMediaBlock.synopses.short,
-        ...(tvMediaBlock.embedding && { embedRights: 'allowed' }),
+        summary: audioMediaBlock.synopses.short,
+        ...(audioMediaBlock.embedding && { embedRights: 'allowed' }),
       },
     },
-    mediaType: 'video',
+    mediaType: 'audio',
     placeholderConfig,
     showAds: false,
   };
