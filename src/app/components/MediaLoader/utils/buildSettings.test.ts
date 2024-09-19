@@ -4,6 +4,7 @@ import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.js
 import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
 import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
+import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
 import isLive from '#app/lib/utilities/isLive';
 import buildSettings from './buildSettings';
 import {
@@ -765,30 +766,32 @@ describe('buildSettings', () => {
       });
     });
   });
+
   describe('OnDemandAudio', () => {
-    const hindiTvBaseSettings = {
+    const afriqueAudioBaseSettings = {
       counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
       lang: 'hi',
-      service: 'hindi' as Services,
+      service: 'afrique' as Services,
       statsDestination: 'WS_NEWS_LANGUAGES',
-      producer: 'HINDI',
-      translations: hindiServiceConfig.default.translations,
+      producer: 'AFRIQUE',
+      translations: afriqueServiceConfig.default.translations,
     } as BuildConfigProps;
 
-    const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
-      tvMediaBlock => {
+    const afriqueAudioMediaBlocks = hindiTvProgramme.content.blocks.map(
+      audioMediaBlock => {
         return {
-          type: 'tv',
+          type: 'audio',
           model: {
-            ...tvMediaBlock,
+            ...audioMediaBlock,
           },
         };
       },
     );
+
     it('Should process an On Demand Audio block into a valid playlist item.', () => {
       const result = buildSettings({
-        ...hindiTvBaseSettings,
-        blocks: hindiTvMediaBlocks as MediaBlock[],
+        ...afriqueAudioBaseSettings,
+        blocks: afriqueAudioMediaBlocks as MediaBlock[],
         pageType: MEDIA_PAGE,
       });
 
