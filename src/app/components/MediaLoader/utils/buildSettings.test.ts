@@ -2,6 +2,7 @@ import { PageTypes, Services } from '#app/models/types/global';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
+import afriqueRadio from '#data/afrique/bbc_afrique_radio/w172xqydyfv659p.json';
 import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
@@ -777,7 +778,7 @@ describe('buildSettings', () => {
       translations: afriqueServiceConfig.default.translations,
     } as BuildConfigProps;
 
-    const afriqueAudioMediaBlocks = hindiTvProgramme.content.blocks.map(
+    const afriqueAudioMediaBlocks = afriqueRadio.content.blocks.map(
       audioMediaBlock => {
         return {
           type: 'audio',
