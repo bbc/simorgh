@@ -60,7 +60,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            'https://www.test.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01thw22',
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01thw22',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -182,7 +182,7 @@ describe('buildSettings', () => {
         } satisfies PlaceholderConfig,
         showAds: false,
         ampIframeUrl:
-          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -246,7 +246,7 @@ describe('buildSettings', () => {
         },
         showAds: false,
         ampIframeUrl:
-          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -364,7 +364,7 @@ describe('buildSettings', () => {
         } satisfies PlaceholderConfig,
         showAds: false,
         ampIframeUrl:
-          'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
