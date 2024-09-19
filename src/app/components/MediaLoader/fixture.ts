@@ -311,6 +311,15 @@ export const onDemandTvBlock = {
   },
 };
 
+export const mediaOverridesBlock = {
+  model: {
+    language: 'hi',
+    pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+    pageTitleOverride: 'दुनिया',
+  },
+  type: 'mediaOverrides',
+};
+
 export const aresMediaLiveStreamBlocks = [
   {
     id: '3e29a5f5',
@@ -351,6 +360,11 @@ export const aresMediaLiveStreamBlocks = [
   },
   aresMediaCaptionBlock,
 ];
+
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
 export const onDemandTvBlocks = [onDemandTvBlock];
+export const onDemandTvBlocksWithOverrides = [
+  onDemandTvBlock,
+  mediaOverridesBlock,
+];

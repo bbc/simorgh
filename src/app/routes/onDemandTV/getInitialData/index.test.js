@@ -28,14 +28,14 @@ describe('Get initial data for on demand tv', () => {
     });
 
     expect(pageData.language).toEqual('ps');
-    expect(pageData.releaseDateTimeStamp).toEqual(1590537600000);
-    expect(pageData.brandTitle).toEqual('نړۍ دا وخت');
-    expect(pageData.headline).toEqual('نړۍ دا وخت');
+    expect(pageData.releaseDateTimeStamp).toEqual(1726531200000);
+    expect(pageData.brandTitle).toEqual(' د بي بي سي خبرونه ');
+    expect(pageData.headline).toEqual(' د بي بي سي خبرونه ');
     expect(pageData.shortSynopsis).toEqual(
-      'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
+      'نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي',
     );
-    expect(pageData.promoBrandTitle).toEqual('نړۍ دا وخت');
-    expect(pageData.durationISO8601).toEqual('PT24M');
+    expect(pageData.promoBrandTitle).toEqual(' د بي بي سي خبرونه ');
+    expect(pageData.durationISO8601).toEqual('PT28M');
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
@@ -51,14 +51,15 @@ describe('Get initial data for on demand tv', () => {
     });
 
     expect(pageData.language).toEqual('ps');
-    expect(pageData.releaseDateTimeStamp).toEqual(1590537600000);
-    expect(pageData.brandTitle).toEqual('نړۍ دا وخت');
-    expect(pageData.headline).toEqual('نړۍ دا وخت');
+    expect(pageData.releaseDateTimeStamp).toEqual(1726531200000);
+    expect(pageData.brandTitle).toEqual(' د بي بي سي خبرونه ');
+    expect(pageData.headline).toEqual(' د بي بي سي خبرونه ');
     expect(pageData.shortSynopsis).toEqual(
-      'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
+      'نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي',
     );
-    expect(pageData.promoBrandTitle).toEqual('نړۍ دا وخت');
-    expect(pageData.durationISO8601).toEqual('PT24M');
+    expect(pageData.promoBrandTitle).toEqual(' د بي بي سي خبرونه ');
+
+    expect(pageData.durationISO8601).toEqual('PT28M');
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
@@ -74,7 +75,7 @@ describe('Get initial data for on demand tv', () => {
     });
 
     expect(pageData.recentEpisodes.length).toEqual(3);
-    expect(pageData.recentEpisodes[0].id).toEqual('w172xclqp0l3zkq');
+    expect(pageData.recentEpisodes[0].id).toEqual('w172zmsln64wk50');
   });
 
   it('should override renderer on test', async () => {
