@@ -46,7 +46,7 @@ const AmpMediaLoader = ({
       >
         <div
           data-e2e="image-placeholder"
-          // @ts-expect-error - 'placeholder' does not exist in type
+          // @ts-expect-error - 'placeholder' does not exist in type. This is used by AMP to show a placeholder image while the iframe is loading
           placeholder=""
           css={styles.ampIframePlaceholder}
         />
