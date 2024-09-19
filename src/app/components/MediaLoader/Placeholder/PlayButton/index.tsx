@@ -11,7 +11,7 @@ type Props = {
   duration?: string;
   durationSpoken?: string;
   type?: string;
-  title: string;
+  title?: string;
   onClick: () => void;
   guidanceMessage?: string | null;
 };
@@ -22,7 +22,7 @@ const PlayButton = ({
   duration,
   durationSpoken,
   type = 'video',
-  title,
+  title = '',
   onClick,
   guidanceMessage,
 }: Props) => {

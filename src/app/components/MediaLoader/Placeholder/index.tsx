@@ -8,18 +8,18 @@ import Guidance from './Guidance';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
-  src: string;
+  src?: string;
   srcSet?: string;
-  mediaInfo: MediaInfo;
-  noJsMessage: string;
+  mediaInfo?: MediaInfo;
+  noJsMessage?: string;
 }
 
 const MediaPlayerPlaceholder = ({
   onClick,
-  src,
+  src = '',
   srcSet,
   mediaInfo,
-  noJsMessage,
+  noJsMessage = '',
 }: Props) => {
   const {
     title,
@@ -28,7 +28,7 @@ const MediaPlayerPlaceholder = ({
     durationSpoken,
     type = 'video',
     guidanceMessage,
-  } = mediaInfo;
+  } = mediaInfo ?? {};
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions

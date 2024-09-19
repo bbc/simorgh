@@ -220,6 +220,13 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
+  const {
+    placeholderSrc,
+    placeholderSrcset,
+    translatedNoJSMessage,
+    mediaInfo,
+  } = placeholderConfig ?? {};
+
   const showPlaceholder = isPlaceholder && placeholderConfig;
 
   return (
@@ -241,10 +248,10 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             <BumpLoader />
             {showPlaceholder ? (
               <Placeholder
-                src={placeholderConfig.placeholderSrc}
-                srcSet={placeholderConfig.placeholderSrcset}
-                noJsMessage={placeholderConfig.translatedNoJSMessage}
-                mediaInfo={placeholderConfig.mediaInfo}
+                src={placeholderSrc}
+                srcSet={placeholderSrcset}
+                noJsMessage={translatedNoJSMessage}
+                mediaInfo={mediaInfo}
                 onClick={() => setIsPlaceholder(false)}
               />
             ) : (
@@ -255,9 +262,9 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <div css={styles.mediaContainer}>
             <Amp
               src={ampIframeUrl}
-              title={placeholderConfig?.mediaInfo.title}
-              placeholderSrc={placeholderConfig?.placeholderSrc}
-              noJsMessage={placeholderConfig?.translatedNoJSMessage}
+              title={mediaInfo?.title}
+              placeholderSrc={placeholderSrc}
+              noJsMessage={translatedNoJSMessage}
             />
           </div>
         )}
