@@ -765,4 +765,91 @@ describe('buildSettings', () => {
       });
     });
   });
+  describe('OnDemandAudio', () => {
+    const hindiTvBaseSettings = {
+      counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+      lang: 'hi',
+      service: 'hindi' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'HINDI',
+      translations: hindiServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
+      tvMediaBlock => {
+        return {
+          type: 'tv',
+          model: {
+            ...tvMediaBlock,
+          },
+        };
+      },
+    );
+    it('Should process an On Demand Audio block into a valid playlist item.', () => {
+      const result = buildSettings({
+        ...hindiTvBaseSettings,
+        blocks: hindiTvMediaBlocks as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        playerConfig: {
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          autoplay: false,
+          appName: 'news-afrique',
+          counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'AFRIQUE',
+            episodePID: 'w172zn0kxd65h3g',
+          },
+          ui: {
+            controls: { enabled: true },
+            fullscreen: { enabled: true },
+            locale: {
+              lang: 'hi',
+            },
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+          playlistObject: {
+            title: "Bulletin D'informations",
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
+            items: [
+              {
+                versionID: 'w1mskzfksqdjrcp',
+                kind: 'programme',
+                duration: 1192,
+              },
+            ],
+            summary:
+              'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+          },
+        },
+        mediaType: 'video',
+        placeholderConfig: {
+          mediaInfo: {
+            title: 'दुनिया',
+            datetime: 'PT19M52S',
+            duration: '19:52',
+            durationSpoken: 'अवधि 19,52',
+            type: 'video',
+            guidanceMessage: undefined,
+          },
+          placeholderSrc:
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
+          placeholderSrcset:
+            'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        },
+        showAds: false,
+      });
+    });
+  });
 });
