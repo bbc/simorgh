@@ -73,6 +73,7 @@ import {
   EmbedHtmlProps,
   TimestampProps,
 } from './types';
+import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isAmp, pageType, service } = useContext(RequestContext);
@@ -139,6 +140,26 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
     pageType === ARTICLE_PAGE;
 
+  const promoImageBlocks = pathOr(
+    [],
+    ['promo', 'images', 'defaultPromoImage', 'blocks'],
+    pageData,
+  );
+
+  const promoImageAltText = path<string>(
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    filterForBlockType(promoImageBlocks, 'altText'),
+  );
+
+  const promoImage = path<string>(
+    ['model', 'locator'],
+    filterForBlockType(promoImageBlocks, 'rawImage'),
+  );
+
+  const isLiveMedia = checkIsLiveMedia(blocks);
+
+  const showTimestamp = Boolean(!hasByline && !isLiveMedia);
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -191,7 +212,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       />
     ),
     timestamp: (props: TimestampProps) =>
-      hasByline ? null : <Timestamp {...props} popOut={false} />,
+      showTimestamp ? <Timestamp {...props} popOut={false} /> : null,
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
@@ -199,22 +220,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
-
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
-  );
-
-  const promoImageAltText = path<string>(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
-
-  const promoImage = path<string>(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
-  );
 
   return (
     <div css={styles.pageWrapper}>
