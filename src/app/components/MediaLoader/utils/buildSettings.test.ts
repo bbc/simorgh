@@ -875,26 +875,26 @@ describe('buildSettings', () => {
           playlistObject: {
             title: "Bulletin D'informations",
             holdingImageURL:
-              'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png',
             items: [
               {
                 versionID: 'w1mskzfksqdjrcp',
                 kind: 'programme',
-                duration: 1192,
+                duration: 300,
               },
             ],
             summary:
               'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
           },
         },
-        mediaType: 'video',
+        mediaType: 'audio',
         placeholderConfig: {
           mediaInfo: {
             title: 'दुनिया',
             datetime: 'PT19M52S',
             duration: '19:52',
             durationSpoken: 'अवधि 19,52',
-            type: 'video',
+            type: 'audio',
             guidanceMessage: undefined,
           },
           placeholderSrc:
