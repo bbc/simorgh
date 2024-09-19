@@ -8,17 +8,18 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1q0v1eg edwq9ck2"
+    class="css-6bu8o5"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-17whsh0 edwq9ck0"
+      class="css-lllaou"
     >
-      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-sa9y e1ita3o32"
+    class="focusIndicatorRemove css-14xy2i1"
+    type="button"
   >
     <span
       class="css-m04vo2"
@@ -27,7 +28,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1apn3of e1ita3o31"
+      class="css-1xdc5yd"
     >
       <svg
         aria-hidden="true"
@@ -54,7 +55,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-11ia5vc e1ita3o30"
+      class="css-1lcsotz"
       datetime="PT2M53S"
     >
       02:53
@@ -81,17 +82,18 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1q0v1eg edwq9ck2"
+    class="css-6bu8o5"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-17whsh0 edwq9ck0"
+      class="css-lllaou"
     >
-      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-sa9y e1ita3o32"
+    class="focusIndicatorRemove css-14xy2i1"
+    type="button"
   >
     <span
       class="css-m04vo2"
@@ -100,7 +102,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1apn3of e1ita3o31"
+      class="css-1xdc5yd"
     >
       <svg
         aria-hidden="true"
@@ -127,7 +129,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-11ia5vc e1ita3o30"
+      class="css-1lcsotz"
       datetime="PT2M53S"
     >
       02:53
@@ -150,7 +152,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
 <figure
-  class="css-1veeebz"
+  class="css-gtelv7"
   data-e2e="media-loader__container"
 >
   <div
@@ -158,17 +160,18 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-1q0v1eg edwq9ck2"
+      class="css-6bu8o5"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="css-17whsh0 edwq9ck0"
+        class="css-lllaou"
       >
-        &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-sa9y e1ita3o32"
+      class="focusIndicatorRemove css-14xy2i1"
+      type="button"
     >
       <span
         class="css-m04vo2"
@@ -177,7 +180,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="css-1apn3of e1ita3o31"
+        class="css-1xdc5yd"
       >
         <svg
           aria-hidden="true"
@@ -204,7 +207,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-11ia5vc e1ita3o30"
+        class="css-1lcsotz"
         datetime="PT2M53S"
       >
         02:53
