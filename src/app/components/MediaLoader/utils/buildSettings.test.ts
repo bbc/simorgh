@@ -823,7 +823,7 @@ describe('buildSettings', () => {
   describe('OnDemandAudio', () => {
     const afriqueAudioBaseSettings = {
       counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
-      lang: 'hi',
+      lang: 'fr',
       service: 'afrique' as Services,
       statsDestination: 'WS_NEWS_LANGUAGES',
       producer: 'AFRIQUE',
