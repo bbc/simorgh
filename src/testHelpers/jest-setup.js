@@ -5,6 +5,8 @@ import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+window.require = jest.fn();
+
 /*
  * Mock to avoid async behaviour in tests
  */

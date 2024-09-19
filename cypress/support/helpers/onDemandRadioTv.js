@@ -39,12 +39,9 @@ export const isAvailable = pathEq('available', [
   'availability',
 ]);
 
-export const getEpisodeAvailability = path([
-  'content',
-  'blocks',
-  0,
-  'availability',
-]);
+export const getEpisodeAvailability = ({ mediaBlocks }) =>
+  mediaBlocks[0]?.model?.availability === 'available';
+
 export const isBrand = jsonData => {
   const pageID = path(
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
@@ -58,4 +55,10 @@ export const overrideRendererOnTest = () => {
     return '?renderer_env=live';
   }
   return '';
+};
+
+export const videoPlaceholderImageUrl = ({ mediaBlocks }) => {
+  const imageUrl = mediaBlocks[0]?.model?.imageUrl;
+
+  return imageUrl ? `https://${imageUrl}` : null;
 };
