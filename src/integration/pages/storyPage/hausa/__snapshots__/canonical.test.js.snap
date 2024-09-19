@@ -126,9 +126,9 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Bayanan sa
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
-  class="bbc-17whsh0 edwq9ck0"
+  class="bbc-n2zqlz"
 >
-  &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This audio cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+  &lt;strong&gt;This audio cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
 </noscript>
 `;
 

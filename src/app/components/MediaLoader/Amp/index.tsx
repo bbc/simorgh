@@ -44,7 +44,12 @@ const AmpMediaLoader = ({
         allowfullscreen="allowfullscreen"
         data-e2e="media-player"
       >
-        <amp-img layout="fill" placeholder class="amp-placeholder" />
+        <amp-img
+          layout="fill"
+          placeholder
+          class="amp-placeholder"
+          data-e2e="image-placeholder"
+        />
         <noscript>
           <Message
             message={noJsMessage}

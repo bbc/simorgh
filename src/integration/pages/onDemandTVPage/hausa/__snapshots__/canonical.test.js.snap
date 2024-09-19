@@ -131,17 +131,18 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-hdjghg edwq9ck2"
+    class="bbc-1xawjgp"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-17whsh0 edwq9ck0"
+      class="bbc-n2zqlz"
     >
-      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-g64ss1 e1ita3o32"
+    class="focusIndicatorRemove bbc-1yv3cvg"
+    type="button"
   >
     <span
       class="bbc-m04vo2"
@@ -150,7 +151,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </span>
     <div
       aria-hidden="true"
-      class="bbc-1apn3of e1ita3o31"
+      class="bbc-jo2gwv"
     >
       <svg
         aria-hidden="true"
@@ -177,7 +178,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </div>
     <time
       aria-hidden="true"
-      class="bbc-11ia5vc e1ita3o30"
+      class="bbc-1lcsotz"
       datetime="PT10M"
     >
       10:00
@@ -204,17 +205,18 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-hdjghg edwq9ck2"
+    class="bbc-1xawjgp"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-17whsh0 edwq9ck0"
+      class="bbc-n2zqlz"
     >
-      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-g64ss1 e1ita3o32"
+    class="focusIndicatorRemove bbc-1yv3cvg"
+    type="button"
   >
     <span
       class="bbc-m04vo2"
@@ -223,7 +225,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-1apn3of e1ita3o31"
+      class="bbc-jo2gwv"
     >
       <svg
         aria-hidden="true"
@@ -250,7 +252,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-11ia5vc e1ita3o30"
+      class="bbc-1lcsotz"
       datetime="PT10M"
     >
       10:00
@@ -273,7 +275,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-epqi9g"
+  class="bbc-1kwl7n4"
   data-e2e="media-loader__container"
 >
   <div
@@ -281,17 +283,18 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="bbc-hdjghg edwq9ck2"
+      class="bbc-1xawjgp"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="bbc-17whsh0 edwq9ck0"
+        class="bbc-n2zqlz"
       >
-        &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-g64ss1 e1ita3o32"
+      class="focusIndicatorRemove bbc-1yv3cvg"
+      type="button"
     >
       <span
         class="bbc-m04vo2"
@@ -300,7 +303,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </span>
       <div
         aria-hidden="true"
-        class="bbc-1apn3of e1ita3o31"
+        class="bbc-jo2gwv"
       >
         <svg
           aria-hidden="true"
@@ -327,7 +330,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </div>
       <time
         aria-hidden="true"
-        class="bbc-11ia5vc e1ita3o30"
+        class="bbc-1lcsotz"
         datetime="PT10M"
       >
         10:00
