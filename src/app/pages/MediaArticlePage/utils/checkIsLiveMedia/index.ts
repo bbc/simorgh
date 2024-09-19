@@ -1,3 +1,8 @@
+import {
+  AresMediaBlock,
+  AresMediaMetadataBlock,
+} from '#app/components/MediaLoader/types';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { OptimoBlock } from '#app/models/types/optimo';
 
 const checkIsLiveMedia = (blocks: OptimoBlock[]) => {
@@ -7,12 +12,16 @@ const checkIsLiveMedia = (blocks: OptimoBlock[]) => {
 
   if (!mediaBlocks || mediaBlocks?.length !== 1) return false;
 
-  const aresMediaMetadata = // @ts-expect-error - nested block structure
-    mediaBlocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.find(
-      (block: OptimoBlock) => block.type === 'aresMediaMetadata',
-    );
+  // @ts-expect-error - nested block structure
+  const mediaBlock = mediaBlocks?.[0]?.model?.blocks;
 
-  return Boolean(aresMediaMetadata?.model?.live);
+  const { model: aresMedia }: AresMediaBlock =
+    filterForBlockType(mediaBlock, 'aresMedia') ?? {};
+
+  const { model: aresMediaMetadata }: AresMediaMetadataBlock =
+    filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
+
+  return Boolean(aresMediaMetadata?.live);
 };
 
 export default checkIsLiveMedia;
