@@ -1,7 +1,7 @@
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import clipMedia from './clipMedia';
 import aresMedia from './aresMedia';
-import tvMedia from './tvMedia';
+import tv from './tv';
 import liveRadio from './liveRadio';
 import {
   ConfigBuilderReturnProps,
@@ -9,7 +9,7 @@ import {
   ConfigBuilderProps,
 } from '../types';
 
-const BLOCK_TYPES = ['aresMedia', 'clipMedia', 'tvMedia', 'liveRadio'] as const;
+const BLOCK_TYPES = ['aresMedia', 'clipMedia', 'tv', 'liveRadio'] as const;
 
 const blockTypeMapping: Record<
   (typeof BLOCK_TYPES)[number],
@@ -17,7 +17,7 @@ const blockTypeMapping: Record<
 > = {
   aresMedia,
   clipMedia,
-  tvMedia,
+  tv,
   liveRadio,
 };
 

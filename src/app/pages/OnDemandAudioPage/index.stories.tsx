@@ -1,18 +1,17 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import withServicesDecorator from '#storybook/withServicesDecorator';
 import { OnDemandAudioPage } from '..';
-import indonesia from './fixtureData/indonesia';
-import pashto from './fixtureData/pashto';
+import indonesia from './fixtureData/indonesia.json';
+import pashto from './fixtureData/pashto.json';
 
 const onDemandRadioFixtures = {
   indonesia,
   pashto,
 };
 
-const matchFixtures = service => ({
+const matchFixtures = (service: 'indonesia' | 'pashto') => ({
   params: {
     mediaId: 'liveradio',
     serviceId: {
@@ -22,7 +21,10 @@ const matchFixtures = service => ({
   },
 });
 
-const Component = (_, { service }) => {
+const Component = (
+  _: unknown,
+  { service }: { service: 'indonesia' | 'pashto' },
+) => {
   return (
     <BrowserRouter>
       <OnDemandAudioPage
