@@ -1,12 +1,11 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
-  ConfigBuilderProps,
-  ConfigBuilderReturnProps,
   LiveRadioBlock,
   LiveRadioHeadingBlock,
   LiveRadioParagraphBlock,
   LiveRadioVersionBlock,
-} from '../types';
+} from '#app/models/types/media';
+import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
   blocks,

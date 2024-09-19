@@ -520,7 +520,7 @@ describe('buildSettings', () => {
     const hindiTvMediaBlocks = hindiTvProgramme.content.blocks.map(
       tvMediaBlock => {
         return {
-          type: 'tvMedia',
+          type: 'tv',
           model: {
             ...tvMediaBlock,
           },

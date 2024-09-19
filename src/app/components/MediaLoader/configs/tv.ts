@@ -7,7 +7,7 @@ export default ({
   basePlayerConfig,
   translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { model: tvMediaBlock } = filterForBlockType(blocks, 'tvMedia');
+  const { model: tvMediaBlock } = filterForBlockType(blocks, 'tv');
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
   const video = tvMediaBlock?.versions?.[0] || {};
