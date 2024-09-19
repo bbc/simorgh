@@ -4,13 +4,13 @@ import { jsx } from '@emotion/react';
 import styles from '../index.styles';
 
 type Props = {
-  message: string;
+  message?: string;
   placeholderSrc?: string;
   placeholderSrcset?: string;
 };
 
 const Message = ({
-  message,
+  message = '',
   placeholderSrc = '',
   placeholderSrcset = '',
 }: Props) => (

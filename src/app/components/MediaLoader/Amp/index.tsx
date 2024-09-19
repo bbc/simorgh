@@ -15,10 +15,10 @@ const AmpHead = () => (
 
 type Props = {
   src?: string;
-  placeholderSrc: string;
+  placeholderSrc?: string;
   placeholderSrcset?: string;
-  title: string;
-  noJsMessage: string;
+  title?: string;
+  noJsMessage?: string;
 };
 
 const AmpMediaLoader = ({
