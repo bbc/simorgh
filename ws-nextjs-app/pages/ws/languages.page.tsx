@@ -51,7 +51,7 @@ const languageToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
   }
 };
 
-const pageTitle = 'News in your language - BBC News';
+const pageTitle = 'News in your language - BBC World Service';
 const pageDescription = 'A list of BBC World Service language services';
 const lang = 'en';
 
