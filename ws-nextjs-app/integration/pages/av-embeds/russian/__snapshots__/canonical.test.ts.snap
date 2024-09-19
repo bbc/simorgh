@@ -14,7 +14,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     <noscript
       class="css-lllaou"
     >
-      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
     </noscript>
   </div>
   <button
@@ -88,7 +88,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     <noscript
       class="css-lllaou"
     >
-      &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
     </noscript>
   </div>
   <button
@@ -166,7 +166,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       <noscript
         class="css-lllaou"
       >
-        &lt;strong&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
       </noscript>
     </div>
     <button
