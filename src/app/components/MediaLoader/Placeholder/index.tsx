@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import PlayButton from '#psammead/psammead-play-button/src';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -8,6 +7,7 @@ import Guidance from '#app/legacy/components/MediaPlayer/Guidance';
 import Image from '../../Image';
 import styles from './index.styles';
 import { MediaInfo } from '../types';
+import PlayButton from './PlayButton';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -54,7 +54,6 @@ const MediaPlayerPlaceholder = ({
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         onClick={() => {}}
         title={title}
-        service={service}
         datetime={datetime}
         duration={duration}
         durationSpoken={durationSpoken}
