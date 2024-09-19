@@ -17,5 +17,6 @@ export default {
     css({
       backgroundColor: palette.BLACK,
       aspectRatio: '16 / 9',
+      position: 'relative',
     }),
 };

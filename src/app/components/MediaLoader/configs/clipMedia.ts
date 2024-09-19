@@ -94,11 +94,7 @@ export default ({
 
   if (showAds) items.unshift({ kind: 'advert' });
 
-  const externalEmbedUrl = getExternalEmbedUrl({
-    id,
-    versionID,
-    lang,
-  });
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
   return {
     mediaType: type || 'video',

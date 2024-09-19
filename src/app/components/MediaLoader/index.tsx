@@ -184,11 +184,8 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
-  const PAGETYPE_SUPPORTS_PLACEHOLDER =
-    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
-
-  const [isPlaceholder, setIsPlaceholder] = useState(
-    PAGETYPE_SUPPORTS_PLACEHOLDER,
+  const [showPlaceholder, setShowPlaceholder] = useState(
+    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
   if (isLite) return null;
@@ -227,8 +224,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
     mediaInfo,
   } = placeholderConfig ?? {};
 
-  const showPlaceholder = isPlaceholder && placeholderConfig;
-
   return (
     <>
       {
@@ -252,7 +247,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 srcSet={placeholderSrcset}
                 noJsMessage={translatedNoJSMessage}
                 mediaInfo={mediaInfo}
-                onClick={() => setIsPlaceholder(false)}
+                onClick={() => setShowPlaceholder(false)}
               />
             ) : (
               <MediaContainer playerConfig={playerConfig} showAds={showAds} />
