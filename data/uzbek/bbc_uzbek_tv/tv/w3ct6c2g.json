@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares:ws_media:brand:bbc_uzbek_tv/w13xttqv",
+    "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2g",
     "locators": { "pid": "w3ct6c2g", "brandPid": "w13xttqv" },
     "type": "WSTV",
     "createdBy": "bbc_uzbek_tv",
     "language": "uz",
-    "lastUpdated": 1726514931000,
+    "lastUpdated": 1726564649000,
     "firstPublished": 1725925729000,
     "lastPublished": 1725925729000,
     "timestamp": 1725925729000,
     "options": {},
     "analyticsLabels": {
-      "pageTitle": "بی بی سی نیوز  - BBC News O'zbek",
-      "pageIdentifier": "uzbek.bbc_uzbek_tv.tv_programmes.w13xttqv.page",
+      "pageTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur - BBC News O'zbek",
+      "pageIdentifier": "uzbek.bbc_uzbek_tv.tv.w3ct6c2g.page",
       "producerId": "96",
       "contentType": "player-episode",
       "producer": "UZBEK"
@@ -21,7 +21,7 @@
     "tags": {},
     "version": "v1.4.48",
     "blockTypes": ["media"],
-    "title": "بی بی سی نیوز ",
+    "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
     "releaseDateTimeStamp": 1726444800000,
     "useSensitiveOnwardJourneys": false
   },
@@ -58,13 +58,15 @@
         ],
         "availability": "available",
         "smpKind": "programme",
-        "episodeTitle": "بی بی سی نیوز ",
+        "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
         "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": { "headline": "بی بی سی نیوز " },
+    "headlines": {
+      "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+    },
     "locators": { "pid": "w3ct6c2g", "brandPid": "w13xttqv" },
     "media": {
       "id": "w3ct6c2g",
@@ -93,7 +95,7 @@
       ],
       "availability": "available",
       "smpKind": "programme",
-      "episodeTitle": "بی بی سی نیوز ",
+      "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
       "type": "media"
     },
     "indexImage": {
@@ -109,7 +111,10 @@
       "type": "image"
     },
     "releaseDateTimestamp": 1726444800000,
-    "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+    "brand": {
+      "pid": "w13xttqv",
+      "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+    },
     "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2g",
     "type": "ws_tv"
   },
@@ -125,7 +130,9 @@
         "type": "other-episode",
         "promos": [
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c0r", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c0r",
@@ -158,7 +165,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -174,12 +181,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1726185600000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0r",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c43", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c43",
@@ -212,7 +224,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -228,12 +240,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1726099200000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c43",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c7g", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c7g",
@@ -266,7 +283,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -282,12 +299,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1726012800000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7g",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c5s", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c5s",
@@ -320,7 +342,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -336,12 +358,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725926400000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5s",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c2f", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c2f",
@@ -374,7 +401,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -390,12 +417,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725840000000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2f",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c0q", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c0q",
@@ -428,7 +460,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -444,12 +476,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725580800000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0q",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c42", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c42",
@@ -482,7 +519,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -498,12 +535,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725494400000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c42",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c7f", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c7f",
@@ -536,7 +578,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -552,12 +594,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725408000000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7f",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c5r", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c5r",
@@ -590,7 +637,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -606,12 +653,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725321600000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5r",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c2d", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c2d",
@@ -644,7 +696,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -660,12 +712,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1725235200000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2d",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c0p", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c0p",
@@ -698,7 +755,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -714,12 +771,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724976000000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0p",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c41", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c41",
@@ -752,7 +814,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -768,12 +830,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724889600000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c41",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c7d", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c7d",
@@ -806,7 +873,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -822,12 +889,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724803200000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7d",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c5q", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c5q",
@@ -860,7 +932,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -876,12 +948,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724716800000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5q",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c2c", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c2c",
@@ -914,7 +991,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -930,12 +1007,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724630400000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2c",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c0n", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c0n",
@@ -968,7 +1050,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -984,12 +1066,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724371200000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0n",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c40", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c40",
@@ -1022,7 +1109,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -1038,12 +1125,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724284800000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c40",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c7c", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c7c",
@@ -1076,7 +1168,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -1092,12 +1184,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724198400000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7c",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c5p", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c5p",
@@ -1130,7 +1227,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -1146,12 +1243,17 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724112000000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5p",
             "type": "ws_tv"
           },
           {
-            "headlines": { "headline": "بی بی سی نیوز " },
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "locators": { "pid": "w3ct6c2b", "brandPid": "w13xttqv" },
             "media": {
               "id": "w3ct6c2b",
@@ -1184,7 +1286,7 @@
               ],
               "availability": "available",
               "smpKind": "programme",
-              "episodeTitle": "بی بی سی نیوز ",
+              "episodeTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
               "type": "media"
             },
             "indexImage": {
@@ -1200,7 +1302,10 @@
               "type": "image"
             },
             "releaseDateTimestamp": 1724025600000,
-            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2b",
             "type": "ws_tv"
           }
