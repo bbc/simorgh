@@ -1,3 +1,4 @@
+import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
 import { css, Theme } from '@emotion/react';
 
 const NOJS_BACKGROUND_COLOUR = 'rgba(34, 34, 34, 0.75)';
@@ -40,6 +41,24 @@ export default {
       },
       [mq.FORCED_COLOURS]: {
         backgroundColor: 'window',
+      },
+    }),
+  ampIframeWrapper: ({ palette, mq }: Theme) =>
+    css({
+      '.amp-placeholder': {
+        aspectRatio: '16/9',
+        backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+        backgroundPosition: 'center center',
+        backgroundRepeat: ' no-repeat',
+        backgroundSize: '60px 17px',
+        backgroundColor: palette.LUNAR,
+
+        [mq.GROUP_2_MIN_WIDTH]: {
+          backgroundSize: ' 77px 22px',
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          backgroundSize: ' 93px 27px',
+        },
       },
     }),
 };

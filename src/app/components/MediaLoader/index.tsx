@@ -250,10 +250,10 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
         ) : (
           <div css={styles.mediaContainer}>
             <Amp
-              noJsMessage={placeholderConfig?.translatedNoJSMessage}
               src={ampIframeUrl}
-              placeholderSrc={placeholderConfig?.placeholderSrc}
               title={placeholderConfig?.mediaInfo.title}
+              placeholderSrc={placeholderConfig?.placeholderSrc}
+              noJsMessage={placeholderConfig?.translatedNoJSMessage}
             />
           </div>
         )}

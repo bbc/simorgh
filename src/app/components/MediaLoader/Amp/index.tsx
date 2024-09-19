@@ -1,7 +1,9 @@
-import React from 'react';
+/** @jsx jsx */
+
+import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Message from './Message';
+import styles from './index.styles';
 
 const AmpHead = () => (
   <Helmet>
@@ -29,7 +31,7 @@ const AmpMediaLoader = ({
   noJsMessage,
 }: Props) => {
   return (
-    <>
+    <div css={styles.ampIframeWrapper}>
       <AmpHead />
       <amp-iframe
         sandbox="allow-scripts allow-same-origin"
@@ -42,7 +44,7 @@ const AmpMediaLoader = ({
         allowfullscreen="allowfullscreen"
         data-e2e="media-player"
       >
-        <ImagePlaceholder ratio={56.25} placeholder="" />
+        <amp-img layout="fill" placeholder class="amp-placeholder" />
         <noscript>
           <Message
             message={noJsMessage}
@@ -51,7 +53,7 @@ const AmpMediaLoader = ({
           />
         </noscript>
       </amp-iframe>
-    </>
+    </div>
   );
 };
 
