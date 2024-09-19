@@ -259,12 +259,9 @@ exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
 exports[`AMP Story Page Image Caption should match text 1`] = `"Bayanan sautiमुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `
-<amp-img
-  class="amp-placeholder"
-  data-e2e="image-placeholder"
-  layout="fill"
-  placeholder="true"
-/>
+<noscript>
+  &lt;div class="bbc-122y91a"&gt;&lt;img alt="" src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01b7w9z.jpg.webp" srcSet="" aria-hidden="true"/&gt;&lt;div class="bbc-1mgo2mg"&gt;&lt;strong class="bbc-1o8u5d1"&gt;This audio cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+</noscript>
 `;
 
 exports[`AMP Story Page Main heading should match text 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"`;

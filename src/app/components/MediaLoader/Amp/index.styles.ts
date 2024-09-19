@@ -43,22 +43,24 @@ export default {
         backgroundColor: 'window',
       },
     }),
-  ampIframeWrapper: ({ palette, mq }: Theme) =>
+  ampIframeWrapper: ({ palette }: Theme) =>
     css({
-      '.amp-placeholder': {
-        aspectRatio: '16/9',
-        backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-        backgroundPosition: 'center center',
-        backgroundRepeat: ' no-repeat',
-        backgroundSize: '60px 17px',
-        backgroundColor: palette.LUNAR,
+      overflow: 'hidden',
+      aspectRatio: '16/9',
+      backgroundColor: palette.LUNAR,
+    }),
+  ampIframePlaceholder: ({ mq }: Theme) =>
+    css({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundPosition: 'center center',
+      backgroundRepeat: ' no-repeat',
+      backgroundSize: '60px 17px',
 
-        [mq.GROUP_2_MIN_WIDTH]: {
-          backgroundSize: ' 77px 22px',
-        },
-        [mq.GROUP_4_MIN_WIDTH]: {
-          backgroundSize: ' 93px 27px',
-        },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        backgroundSize: ' 77px 22px',
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        backgroundSize: ' 93px 27px',
       },
     }),
 };

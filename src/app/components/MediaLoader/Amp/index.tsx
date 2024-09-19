@@ -44,11 +44,11 @@ const AmpMediaLoader = ({
         allowfullscreen="allowfullscreen"
         data-e2e="media-player"
       >
-        <amp-img
-          layout="fill"
-          placeholder
-          class="amp-placeholder"
+        <div
           data-e2e="image-placeholder"
+          // @ts-expect-error - 'placeholder' does not exist in type
+          placeholder=""
+          css={styles.ampIframePlaceholder}
         />
         <noscript>
           <Message

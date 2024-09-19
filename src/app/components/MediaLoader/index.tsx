@@ -224,6 +224,8 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
     mediaInfo,
   } = placeholderConfig ?? {};
 
+  const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
+
   return (
     <>
       {
@@ -241,7 +243,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <>
             {showAds && <AdvertTagLoader />}
             <BumpLoader />
-            {showPlaceholder ? (
+            {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}
                 srcSet={placeholderSrcset}
@@ -250,7 +252,11 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 onClick={() => setShowPlaceholder(false)}
               />
             ) : (
-              <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+              <MediaContainer
+                playerConfig={playerConfig}
+                showAds={showAds}
+                mediaType={mediaType}
+              />
             )}
           </>
         ) : (

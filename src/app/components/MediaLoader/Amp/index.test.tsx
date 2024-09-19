@@ -19,7 +19,7 @@ describe('Amp', () => {
     expect(ampIframe).toBeInTheDocument();
   });
 
-  it('should render amp-img placeholder', async () => {
+  it('should render amp-iframe placeholder', async () => {
     let container;
 
     await act(async () => {
@@ -27,7 +27,7 @@ describe('Amp', () => {
     });
 
     const ampImg = (container as unknown as HTMLElement).querySelector(
-      'amp-img',
+      'amp-iframe > div',
     );
 
     expect(ampImg).toBeInTheDocument();
