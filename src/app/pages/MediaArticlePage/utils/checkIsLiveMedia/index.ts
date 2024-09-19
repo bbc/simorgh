@@ -9,8 +9,7 @@ const checkIsLiveMedia = (blocks: OptimoBlock[]) => {
 
   const aresMediaMetadata = // @ts-expect-error - nested block structure
     mediaBlocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.find(
-      // @ts-expect-error - nested block structure
-      block => block.type === 'aresMediaMetadata',
+      (block: OptimoBlock) => block.type === 'aresMediaMetadata',
     );
 
   return Boolean(aresMediaMetadata?.model?.live);
