@@ -8,13 +8,13 @@ const isClientSide = true;
 // WE CAN SAFELY DO SO SINCE isClientSide IS A CONSTANT AND THEREFORE GUARANTEES THAT
 // EACH HOOK WILL BE CALLED IN THE EXACT SAME ORDER UPON INITAL RENDER.
 const useOptimizelyVariation = (
-  experimentId,
+  flagId,
   overrideAttributes = {},
   useClientSide = isClientSide,
 ) => {
   if (useClientSide) {
     const [decision, isClientReady, didTimeout] = useDecision(
-      experimentId,
+      flagId,
       {
         autoUpdate: true,
       },

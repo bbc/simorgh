@@ -1,5 +1,5 @@
 export default {
-  experimentId: '005_brasil_hybrid_recommendations',
+  flagId: '005_brasil_hybrid_recommendations',
   featureId: '005_brasil_hybrid_recommendations',
   viewClickAttributeId: 'wsoj',
   variationMappings: {
