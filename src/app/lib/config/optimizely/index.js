@@ -1,6 +1,5 @@
 export default {
   flagId: '005_brasil_hybrid_recommendations',
-  featureId: '005_brasil_hybrid_recommendations',
   viewClickAttributeId: 'wsoj',
   variationMappings: {
     hybrid_recs: 'datalabHybridRecommendations',
