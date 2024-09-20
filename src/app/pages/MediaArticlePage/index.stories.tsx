@@ -9,6 +9,7 @@ import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import articleData from '../../../../data/hausa/articles/cw43vy8zdjvo.json';
 import tamilArticle from '../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';
+import arabicLiveTv from '../../../../data/arabic/cpsAssets/media-49522519.json';
 import withPageWrapper from '../../legacy/containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '../../legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -74,3 +75,8 @@ export const MediaArticlePageWithSingleLatestMedia = (
   _: StoryArgs,
   { isLite }: StoryProps,
 ) => <ComponentWithContext data={tamilArticle} isLite={isLite} />;
+
+export const MediaArticlePageWithLiveTv = (
+  _: StoryArgs,
+  { isLite }: StoryProps,
+) => <ComponentWithContext data={arabicLiveTv} isLite={isLite} />;
