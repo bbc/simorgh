@@ -1,26 +1,17 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
-import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 
 export default ({
   blocks,
   basePlayerConfig,
   translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { model: tvMediaBlock } = filterForBlockType(blocks, 'tv');
-  const video = tvMediaBlock?.versions?.[0] || {};
-  const holdingImageURL = `https://${tvMediaBlock.imageUrl}`;
-
-  const placeholderConfig = buildPlaceholderConfig({
-    title: tvMediaBlock.episodeTitle,
-    duration: video?.duration,
-    durationISO8601: video?.durationISO8601,
-    type: 'video',
-    holdingImageURL,
-    placeholderImageLocator: holdingImageURL,
-    placeholderImageOriginCode: 'pips',
-    translations,
-  });
+  const { model: afriqueAudioMediaBlocks } = filterForBlockType(
+    blocks,
+    'audio',
+  );
+  const audio = afriqueAudioMediaBlocks?.versions?.[0] || {};
+  const holdingImageURL = `https://${afriqueAudioMediaBlocks.imageUrl}`;
 
   return {
     playerConfig: {
@@ -28,24 +19,33 @@ export default ({
       autoplay: false,
       statsObject: {
         ...basePlayerConfig.statsObject,
-        episodePID: tvMediaBlock.id,
+        episodePID: afriqueAudioMediaBlocks.id,
       },
       playlistObject: {
-        title: tvMediaBlock.episodeTitle,
+        title: afriqueAudioMediaBlocks.episodeTitle,
         holdingImageURL,
         items: [
           {
-            versionID: video?.versionId,
-            kind: tvMediaBlock.smpKind,
-            duration: video?.duration,
+            versionID: audio?.versionId,
+            kind: afriqueAudioMediaBlocks.smpKind,
+            duration: audio?.duration,
           },
         ],
-        summary: tvMediaBlock.synopses.short,
-        ...(tvMediaBlock.embedding && { embedRights: 'allowed' }),
+        summary: afriqueAudioMediaBlocks.synopses.short,
+        ...(afriqueAudioMediaBlocks.embedding && { embedRights: 'allowed' }),
+      },
+      ui: {
+        ...basePlayerConfig.ui,
+        skin: 'audio',
+        colour: '#B80000',
+        foreColour: '#222222',
+        baseColour: '#222222',
+        colourOnBaseColour: '#ffffff',
+        fallbackBackgroundColour: '#ffffff',
+        controls: { enabled: true, volumeSlider: true },
       },
     },
-    mediaType: 'video',
-    placeholderConfig,
+    mediaType: 'audio',
     showAds: false,
   };
 };

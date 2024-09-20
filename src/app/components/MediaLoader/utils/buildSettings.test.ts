@@ -771,7 +771,7 @@ describe('buildSettings', () => {
   describe('OnDemandAudio', () => {
     const afriqueAudioBaseSettings = {
       counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
-      lang: 'hi',
+      lang: 'fr',
       service: 'afrique' as Services,
       statsDestination: 'WS_NEWS_LANGUAGES',
       producer: 'AFRIQUE',
@@ -810,15 +810,24 @@ describe('buildSettings', () => {
             episodePID: 'w172zn0kxd65h3g',
           },
           ui: {
-            controls: { enabled: true },
+            controls: {
+              volumeSlider: true,
+              enabled: true,
+            },
             fullscreen: { enabled: true },
             locale: {
-              lang: 'hi',
+              lang: 'fr',
             },
             subtitles: {
               defaultOn: true,
               enabled: true,
             },
+            skin: 'audio',
+            colour: '#B80000',
+            foreColour: '#222222',
+            baseColour: '#222222',
+            colourOnBaseColour: '#ffffff',
+            fallbackBackgroundColour: '#ffffff',
           },
           playlistObject: {
             title: "Bulletin D'informations",
@@ -827,31 +836,14 @@ describe('buildSettings', () => {
             items: [
               {
                 versionID: 'w1mskzfksqdjrcp',
-                kind: 'programme',
+                kind: 'radioProgramme',
                 duration: 300,
               },
             ],
-            summary:
-              'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+            summary: "Le tour du monde de l'actualité en 2 minutes ",
           },
         },
         mediaType: 'audio',
-        placeholderConfig: {
-          mediaInfo: {
-            title: 'दुनिया',
-            datetime: 'PT19M52S',
-            duration: '19:52',
-            durationSpoken: 'अवधि 19,52',
-            type: 'audio',
-            guidanceMessage: undefined,
-          },
-          placeholderSrc:
-            'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
-          placeholderSrcset:
-            'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
-          translatedNoJSMessage:
-            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
-        },
         showAds: false,
       });
     });
