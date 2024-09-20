@@ -72,6 +72,7 @@ import {
   EmbedHtmlProps,
   TimestampProps,
 } from './types';
+import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const { pageType, service } = useContext(RequestContext);
@@ -124,19 +125,39 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     metadata: { atiAnalytics, type },
   } = pageData;
 
-  const isMap = type === MEDIA_ASSET_PAGE;
+  const isCpsMap = type === MEDIA_ASSET_PAGE;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
 
   const atiData = {
     ...atiAnalytics,
-    ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
   const isTransliterated =
     ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
     pageType === ARTICLE_PAGE;
+
+  const promoImageBlocks = pathOr(
+    [],
+    ['promo', 'images', 'defaultPromoImage', 'blocks'],
+    pageData,
+  );
+
+  const promoImageAltText = path<string>(
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    filterForBlockType(promoImageBlocks, 'altText'),
+  );
+
+  const promoImage = path<string>(
+    ['model', 'locator'],
+    filterForBlockType(promoImageBlocks, 'rawImage'),
+  );
+
+  const isLiveMedia = checkIsLiveMedia(blocks);
+
+  const showTimestamp = Boolean(!hasByline && !isLiveMedia);
 
   const componentsToRender = {
     fauxHeadline,
@@ -147,7 +168,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
-          isMap && styles.cafMediaPlayer,
+          isCpsMap && styles.cafMediaPlayer,
         ]}
       >
         <MediaLoader blocks={props.blocks as MediaBlock[]} />
@@ -157,7 +178,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
-          isMap && styles.cafMediaPlayer,
+          isCpsMap && styles.cafMediaPlayer,
         ]}
       >
         <MediaLoader blocks={props.blocks as MediaBlock[]} />
@@ -182,7 +203,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       />
     ),
     timestamp: (props: TimestampProps) =>
-      hasByline ? null : <Timestamp {...props} popOut={false} />,
+      showTimestamp ? <Timestamp {...props} popOut={false} /> : null,
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
@@ -190,22 +211,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
-
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
-  );
-
-  const promoImageAltText = path<string>(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
-
-  const promoImage = path<string>(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
-  );
 
   return (
     <div css={styles.pageWrapper}>
@@ -238,7 +243,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
-          isMap
+          isCpsMap
             ? 'Article'
             : categoryName(isTrustProjectParticipant, taggings, formats)
         }
@@ -250,7 +255,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={isMap ? styles.fullWidthContainer : styles.primaryColumn}>
+        <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -264,7 +269,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        {!isMap && <SecondaryColumn pageData={pageData} />}
+        {!isCpsMap && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );
