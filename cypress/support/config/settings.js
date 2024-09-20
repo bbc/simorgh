@@ -2231,7 +2231,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -4223,7 +4223,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -4250,7 +4250,7 @@ module.exports = () => ({
               '/pashto/media-23257523', // CPS MAP with video clip
               '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -4536,7 +4536,7 @@ module.exports = () => ({
               '/persian/iran-23231114', // CPS MAP with audio clip
               '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -4750,7 +4750,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,

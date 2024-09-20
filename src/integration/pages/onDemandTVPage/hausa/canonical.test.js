@@ -1,6 +1,6 @@
 /**
- * @service pashto
- * @pathname /pashto/bbc_pashto_tv/tv_programmes/w13xttn4
+ * @service hausa
+ * @pathname /hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8
  */
 
 import runCanonicalTests from '../canonicalTests';

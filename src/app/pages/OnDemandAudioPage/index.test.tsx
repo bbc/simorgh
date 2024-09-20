@@ -2,17 +2,19 @@ import React from 'react';
 import assocPath from 'ramda/src/assocPath';
 import { StaticRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
-import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
-import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v';
-import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
-import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
+import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1.json';
+import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5.json';
+import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v.json';
+import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
+import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json';
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { Services, Variants } from '#app/models/types/global';
+import { FetchMock } from 'jest-fetch-mock';
 import {
   render,
   act,
@@ -20,7 +22,7 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
-import _OnDemandAudioPage from './OnDemandAudioPage';
+import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -35,10 +37,23 @@ const toggles = {
   },
 };
 
-const Page = ({ pageData, service, variant, lang }) => (
+const fetchMock = fetch as FetchMock;
+
+interface PageProps {
+  pageData: OnDemandAudioProps['pageData'];
+  service: Services;
+  variant: Variants;
+  lang: string;
+}
+
+const Page = ({ pageData, service, variant, lang }: PageProps) => (
   <StaticRouter>
     <ToggleContextProvider>
-      <ServiceContextProvider service={service} variant={variant} lang={lang}>
+      <ServiceContextProvider
+        service={service}
+        variant={variant}
+        pageLang={lang}
+      >
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           pageType={MEDIA_PAGE}
@@ -53,10 +68,15 @@ const Page = ({ pageData, service, variant, lang }) => (
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service, variant, lang = 'ko' }) => {
+const renderPage = async ({
+  pageData,
+  service,
+  variant,
+  lang = 'ko',
+}: PageProps) => {
   let result;
   await act(async () => {
-    result = await render(
+    result = render(
       <Page
         pageData={pageData}
         service={service}
@@ -69,7 +89,7 @@ const renderPage = async ({ pageData, service, variant, lang = 'ko' }) => {
   return result;
 };
 
-analyticsUtils.getAtUserId = jest.fn();
+(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -91,30 +111,35 @@ describe('OnDemand Radio Page ', () => {
   it('should match snapshot', async () => {
     const pashtoPageDataWithAvailableEpisode =
       getAvailableEpisode(pashtoPageData);
-    fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
 
+    // @ts-expect-error partial data required for testing purposes
     const { container } = render(<Page pageData={pageData} service="pashto" />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData({
+    // @ts-expect-error partial data required for testing purposes
+    const { pageData: pageDataWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required queries
     const { getByText, queryByText } = await renderPage({
-      pageData: pageDataWithWithoutVideo,
+      // @ts-expect-error partial data required for testing purposes
+      pageData: pageDataWithoutVideo,
       service: 'pashto',
     });
 
@@ -125,14 +150,17 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the episode title when it is available', async () => {
-    fetch.mockResponse(JSON.stringify(arabicPodcastPageData));
+    fetchMock.mockResponse(JSON.stringify(arabicPodcastPageData));
 
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-podcast-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'arabic',
     });
@@ -143,7 +171,7 @@ describe('OnDemand Radio Page ', () => {
     expect(element.tagName).toEqual('SPAN');
 
     await waitFor(() => {
-      const actual = document.querySelector('head > title').innerHTML;
+      const actual = document.querySelector('head > title')?.innerHTML;
 
       expect(actual).toEqual(
         'التصويت عبر البريد في الانتخابات الرئاسية الأميركية - BBC Xtra - Arabic - BBC News عربي',
@@ -152,7 +180,7 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the external links for podcast pages', async () => {
-    fetch.mockResponse(JSON.stringify(arabicPodcastPageData));
+    fetchMock.mockResponse(JSON.stringify(arabicPodcastPageData));
 
     const { pageData } = await getInitialData({
       path: 'some-podcast-path',
@@ -160,7 +188,9 @@ describe('OnDemand Radio Page ', () => {
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'arabic',
     });
@@ -169,14 +199,17 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
@@ -185,14 +218,17 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
-    fetch.mockResponse(JSON.stringify(koreanPageData));
+    fetchMock.mockResponse(JSON.stringify(koreanPageData));
 
+    // @ts-expect-error partial data required for testing purposes
     const { pageData: pageDataWithWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData: pageDataWithWithoutVideo,
       service: 'korean',
     });
@@ -201,15 +237,18 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
-    fetch.mockResponse(JSON.stringify(indonesiaPageData));
+    fetchMock.mockResponse(JSON.stringify(indonesiaPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData({
+    // @ts-expect-error partial data required for testing purposes
+    const { pageData: pageDataWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
-      pageData: pageDataWithWithoutVideo,
+      // @ts-expect-error partial data required for testing purposes
+      pageData: pageDataWithoutVideo,
       service: 'indonesia',
     });
 
@@ -217,15 +256,18 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the datestamp correctly for Zhongwen OnDemand Radio Pages', async () => {
-    fetch.mockResponse(JSON.stringify(zhongwenPageData));
+    fetchMock.mockResponse(JSON.stringify(zhongwenPageData));
 
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
 
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       variant: 'trad',
       service: 'zhongwen',
@@ -235,14 +277,18 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the summary for OnDemand Radio Pages', async () => {
-    fetch.mockResponse(JSON.stringify(indonesiaPageData));
+    fetchMock.mockResponse(JSON.stringify(indonesiaPageData));
+
+    // @ts-expect-error partial data required for testing purposes
 
     const { pageData: pageDataWithWithoutVideo } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData: pageDataWithWithoutVideo,
       service: 'indonesia',
     });
@@ -257,13 +303,20 @@ describe('OnDemand Radio Page ', () => {
   it('should show the audio player', async () => {
     const koreanPageDataWithAvailableEpisode =
       getAvailableEpisode(koreanPageData);
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
-    const { container } = await renderPage({ pageData, service: 'korean' });
+    // @ts-expect-error react testing library returns the required query
+    const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
+      pageData,
+      service: 'korean',
+    });
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
       .getAttribute('src');
@@ -277,13 +330,20 @@ describe('OnDemand Radio Page ', () => {
     process.env.SIMORGH_APP_ENV = 'live';
     const koreanPageDataWithAvailableEpisode =
       getAvailableEpisode(koreanPageData);
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
-    const { container } = await renderPage({ pageData, service: 'korean' });
+    // @ts-expect-error react testing library returns the required query
+    const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
+      pageData,
+      service: 'korean',
+    });
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
       .getAttribute('src');
@@ -294,13 +354,16 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the expired content message if episode is expired', async () => {
-    fetch.mockResponse(JSON.stringify(koreanPageData));
+    fetchMock.mockResponse(JSON.stringify(koreanPageData));
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container, getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'korean',
     });
@@ -319,15 +382,19 @@ describe('OnDemand Radio Page ', () => {
       koreanPageData,
     );
 
-    fetch.mockResponse(
+    fetchMock.mockResponse(
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
     );
+    // @ts-expect-error partial data required for testing purposes
+
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container, getByText } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'korean',
     });
@@ -344,13 +411,16 @@ describe('OnDemand Radio Page ', () => {
   it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio', async () => {
     const afaanPageDataWithAvailableEpisode =
       getAvailableEpisode(afaanoromooPageData);
-    fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
+    fetchMock.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'afaanoromoo',
     });
@@ -366,13 +436,17 @@ describe('OnDemand Radio Page ', () => {
   it('should contain the translated iframe title', async () => {
     const koreanPageDataWithAvailableEpisode =
       getAvailableEpisode(koreanPageData);
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+
+    // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType: MEDIA_PAGE,
       toggles,
     });
+    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'korean',
     });
@@ -386,6 +460,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the radio schedule for the On Demand radio page', async () => {
     await renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData: koreanPageWithScheduleData,
       service: 'korean',
     });
@@ -399,6 +474,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should not show the radio schedule for services without schedules', async () => {
     renderPage({
+      // @ts-expect-error partial data required for testing purposes
       pageData: { ...koreanPageWithScheduleData, radioScheduleData: undefined },
       service: 'korean',
       lang: 'ko',
