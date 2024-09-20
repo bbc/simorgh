@@ -10,8 +10,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
-import PromoList from '#components/OptimoPromos/PromoList';
+import PromoItem from '#legacy/components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#legacy/components/OptimoPromos/PromoList';
 import { BORDER_SPACING_DBL } from '../constants';
 
 export const StyledSectionLabel = styled(SectionLabel)`

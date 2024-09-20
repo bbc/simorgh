@@ -4,7 +4,7 @@ import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#legacy/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import { NEGATIVE_MARGIN } from '#lib/styles.const';

@@ -54,7 +54,7 @@
     "preinstall": "node scripts/check-package-manager.js",
     "start": "NODE_ENV=production node --no-experimental-fetch --max-old-space-size=3500 build/server.js",
     "stop": "./scripts/killApp.sh",
-    "storybook": "node .storybook/buildFontPreloads && storybook dev -p 9001 -c .storybook",
+    "storybook": "node .storybook/buildFontPreloads && storybook dev -p 9001 -c .storybook --debug-webpack",
     "test": "yarn build && yarn test:local",
     "test:local": "yarn test:lint && yarn test:dependencies && yarn test:unit && run-p --race start amp:validate && run-p --race start test:integration:ci",
     "test:dependencies": "node ./scripts/dependencyCheck",

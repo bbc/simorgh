@@ -7,7 +7,7 @@ import {
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
-import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
+import { AMP_GEO_SCRIPT } from '#legacy/components/AmpGeo';
 import { BaseRendererProps } from './types';
 
 export default function AmpRenderer({

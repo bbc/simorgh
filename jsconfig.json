@@ -9,12 +9,14 @@
       "#containers/*": ["./src/app/legacy/containers/*"],
       "#data/*": ["./data/*"],
       "#hooks/*": [".src/app/hooks/*"],
-      "#psammead/*": ["./src/app/legacy/psammead/*"],
+      "#legacy/*": ["./src/app/legacy/*"],
       "#lib/*": ["./src/app/lib/*"],
       "#models/*": ["./src/app/models/*"],
       "#pages/*": ["./src/app/pages/*"],
-      "#testHelpers/*": ["./src/testHelpers/*"],
-      "#server/*": ["./src/server/*"]
+      "#psammead/*": ["./src/app/legacy/psammead/*"],
+      "#routes/*": ["./src/app/routes/*"],
+      "#server/*": ["./src/server/*"],
+      "#testHelpers/*": ["./src/testHelpers/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
