@@ -40,6 +40,7 @@ export default async (context: GetServerSidePropsContext) => {
     pageType: AV_EMBEDS,
     pathname: resolvedUrl,
     mediaId: parsedRoute.mediaId,
+    lang: parsedRoute.lang,
   });
 
   const env = getEnvironment(resolvedUrl);
