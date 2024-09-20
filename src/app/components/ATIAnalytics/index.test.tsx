@@ -22,7 +22,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ARTICLE_PAGE,
-} from '../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';

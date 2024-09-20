@@ -18,7 +18,7 @@ import {
   UGC_PAGE,
   AV_EMBEDS,
   DOWNLOADS_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
