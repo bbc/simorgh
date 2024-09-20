@@ -6,6 +6,8 @@ export default ({
   basePlayerConfig,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: audioMediaBlock } = filterForBlockType(blocks, 'audio');
+  const { model: mediaOverrides } =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
   const audio = audioMediaBlock?.versions?.[0] || {};
   const holdingImageURL = `https://${audioMediaBlock.imageUrl}`;
 
@@ -18,7 +20,7 @@ export default ({
         episodePID: audioMediaBlock.id,
       },
       playlistObject: {
-        title: audioMediaBlock.episodeTitle,
+        title: mediaOverrides?.pageTitleOverride,
         holdingImageURL,
         items: [
           {

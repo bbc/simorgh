@@ -842,9 +842,21 @@ describe('buildSettings', () => {
     );
 
     it('Should process an On Demand Audio block into a valid playlist item.', () => {
+      const afriqueAudioMediaOverrides = {
+        model: {
+          language: 'fr',
+          pageIdentifierOverride:
+            'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+          pageTitleOverride: "Bulletin D'informations",
+        },
+        type: 'mediaOverrides',
+      };
       const result = buildSettings({
         ...afriqueAudioBaseSettings,
-        blocks: afriqueAudioMediaBlocks as MediaBlock[],
+        blocks: [
+          ...afriqueAudioMediaBlocks,
+          afriqueAudioMediaOverrides,
+        ] as MediaBlock[],
         pageType: MEDIA_PAGE,
       });
 
