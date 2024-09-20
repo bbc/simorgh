@@ -15,7 +15,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
-} from '../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 
 const blockLevelEventTrackingData = {

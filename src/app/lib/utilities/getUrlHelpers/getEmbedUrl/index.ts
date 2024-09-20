@@ -1,6 +1,6 @@
 import isLive from '../../isLive';
 import { getEnvConfig } from '../../getEnvConfig';
-import parseAvRoute from '../../../../routes/utils/parseAvRoute';
+import parseAvRoute from '#routes/utils/parseAvRoute';
 
 type MediaTypes = 'media' | 'avEmbed' | 'cps' | 'articles' | 'live' | 'legacy';
 
