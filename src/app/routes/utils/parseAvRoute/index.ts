@@ -61,6 +61,7 @@ const LANGS = [
   'tr',
   'uk',
   'ur',
+  'uz',
   'uz-cyrl',
   'uz-latn',
   'vi',
