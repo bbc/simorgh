@@ -144,7 +144,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -206,7 +206,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn',
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -276,7 +276,7 @@ describe('buildSettings', () => {
         appType: 'responsive',
         counterName: 'live_coverage.testID.page',
         externalEmbedUrl:
-          '/ws/av-embeds/cps/serbian/lat/srbija-68707945/bbc_arabic_tv/sr-latn',
+          'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/bbc_arabic_tv',
         playlistObject: {
           title: 'مباشر: تلفزيون بي بي سي عربي',
           summary: 'This is a caption!',
@@ -319,7 +319,8 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          externalEmbedUrl: '/serbian/lat/av-embeds/srbija-68707945',
+          externalEmbedUrl:
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01k6msp',
           insideIframe: true,
           embeddedOffsite: true,
           appName: 'news-serbian',
@@ -528,10 +529,20 @@ describe('buildSettings', () => {
         };
       },
     );
+
     it('Should process an On Demand TV block into a valid playlist item.', () => {
+      const hindiTvMediaOverrides = {
+        model: {
+          language: 'hi',
+          pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          pageTitleOverride: 'दुनिया',
+        },
+        type: 'mediaOverrides',
+      };
+
       const result = buildSettings({
         ...hindiTvBaseSettings,
-        blocks: hindiTvMediaBlocks as MediaBlock[],
+        blocks: [...hindiTvMediaBlocks, hindiTvMediaOverrides] as MediaBlock[],
         pageType: MEDIA_PAGE,
       });
 
@@ -593,6 +604,48 @@ describe('buildSettings', () => {
         },
         showAds: false,
       });
+    });
+
+    it('Should use the language override to build the On Demand TV SMP configuration', () => {
+      const hindiTvMediaOverrides = {
+        model: {
+          language: 'languageOverride',
+          pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          pageTitleOverride: 'दुनिया',
+        },
+        type: 'mediaOverrides',
+      };
+
+      const result = buildSettings({
+        ...hindiTvBaseSettings,
+        blocks: [...hindiTvMediaBlocks, hindiTvMediaOverrides] as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result?.playerConfig?.ui?.locale).toEqual({
+        lang: 'languageOverride',
+      });
+    });
+
+    it('Should use the page title override to build the On Demand TV SMP configuration', () => {
+      const hindiTvMediaOverrides = {
+        model: {
+          language: 'hi',
+          pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          pageTitleOverride: 'pageTitleOverride',
+        },
+        type: 'mediaOverrides',
+      };
+
+      const result = buildSettings({
+        ...hindiTvBaseSettings,
+        blocks: [...hindiTvMediaBlocks, hindiTvMediaOverrides] as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result?.playerConfig?.playlistObject?.title).toEqual(
+        'pageTitleOverride',
+      );
     });
   });
 
@@ -722,7 +775,6 @@ describe('buildSettings', () => {
           enableToucan: true,
           appType: 'responsive',
           autoplay: false,
-          mediator: { host: 'open.test.bbc.co.uk' },
           counterName: 'hausa.bbc_hausa_radio.liveradio.page',
           playlistObject: {
             items: [

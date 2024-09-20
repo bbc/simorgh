@@ -75,3 +75,12 @@ export type LiveRadioBlock = {
     LiveRadioVersionBlock,
   ];
 };
+
+export type MediaOverrides = {
+  model: {
+    language: string;
+    pageIdentifierOverride: string;
+    pageTitleOverride: string;
+  };
+  type: 'mediaOverrides';
+};

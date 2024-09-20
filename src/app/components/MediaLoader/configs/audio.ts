@@ -6,12 +6,9 @@ export default ({
   basePlayerConfig,
   translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { model: afriqueAudioMediaBlocks } = filterForBlockType(
-    blocks,
-    'audio',
-  );
-  const audio = afriqueAudioMediaBlocks?.versions?.[0] || {};
-  const holdingImageURL = `https://${afriqueAudioMediaBlocks.imageUrl}`;
+  const { model: audioMediaBlock } = filterForBlockType(blocks, 'audio');
+  const audio = audioMediaBlock?.versions?.[0] || {};
+  const holdingImageURL = `https://${audioMediaBlock.imageUrl}`;
 
   return {
     playerConfig: {
@@ -19,20 +16,20 @@ export default ({
       autoplay: false,
       statsObject: {
         ...basePlayerConfig.statsObject,
-        episodePID: afriqueAudioMediaBlocks.id,
+        episodePID: audioMediaBlock.id,
       },
       playlistObject: {
-        title: afriqueAudioMediaBlocks.episodeTitle,
+        title: audioMediaBlock.episodeTitle,
         holdingImageURL,
         items: [
           {
             versionID: audio?.versionId,
-            kind: afriqueAudioMediaBlocks.smpKind,
+            kind: audioMediaBlock.smpKind,
             duration: audio?.duration,
           },
         ],
-        summary: afriqueAudioMediaBlocks.synopses.short,
-        ...(afriqueAudioMediaBlocks.embedding && { embedRights: 'allowed' }),
+        summary: audioMediaBlock.synopses.short,
+        ...(audioMediaBlock.embedding && { embedRights: 'allowed' }),
       },
       ui: {
         ...basePlayerConfig.ui,
@@ -45,6 +42,7 @@ export default ({
         controls: { enabled: true, volumeSlider: true },
       },
     },
+
     mediaType: 'audio',
     showAds: false,
   };

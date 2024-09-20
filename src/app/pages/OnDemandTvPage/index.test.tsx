@@ -81,7 +81,9 @@ describe('OnDemand TV Brand Page ', () => {
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();
-    expect(visuallyHiddenHeadline?.innerHTML).toEqual('نړۍ دا وخت, ۲۷ می ۲۰۲۰');
+    expect(visuallyHiddenHeadline?.innerHTML).toEqual(
+      ' د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴',
+    );
   });
 
   it('should show the brand title for OnDemand TV Pages', async () => {
@@ -93,13 +95,16 @@ describe('OnDemand TV Brand Page ', () => {
       toggles,
     });
     // @ts-expect-error react testing library returns the required query
-    const { getByText } = await renderPage({
+    const { getByTestId } = await renderPage({
       // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
 
-    expect(getByText('نړۍ دا وخت')).toBeInTheDocument();
+    const brandTitle = getByTestId('brand-title');
+
+    expect(brandTitle).toBeInTheDocument();
+    expect(brandTitle).toHaveTextContent('د بي بي سي خبرونه');
   });
 
   it('a11y - should aria-hide the title', async () => {
@@ -120,7 +125,7 @@ describe('OnDemand TV Brand Page ', () => {
     const hiddenHeadline = container.querySelector('strong[aria-hidden=true]');
 
     expect(hiddenHeadline).toBeDefined();
-    expect(hiddenHeadline).toContainHTML('نړۍ دا وخت');
+    expect(hiddenHeadline).toContainHTML('د بي بي سي خبرونه');
   });
 
   it('a11y - should have a "content" id on the h1', async () => {
@@ -174,7 +179,7 @@ describe('OnDemand TV Brand Page ', () => {
       service: 'pashto',
     });
 
-    expect(getByText('۲۷ می ۲۰۲۰')).toBeInTheDocument();
+    expect(getByText('۱۷ سپتمبر ۲۰۲۴')).toBeInTheDocument();
   });
 
   it('should show the summary for OnDemand TV Pages', async () => {
@@ -193,9 +198,7 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     expect(
-      getByText(
-        'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
-      ),
+      getByText('نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي'),
     ).toBeInTheDocument();
   });
 
@@ -231,6 +234,14 @@ describe('OnDemand TV Brand Page ', () => {
       pageType,
       toggles,
     });
+    const expectedMediaOverrides = {
+      model: {
+        language: 'ps',
+        pageIdentifierOverride: 'pashto.bbc_pashto_tv.tv.w172zmsln64zg23.page',
+        pageTitleOverride: ' د بي بي سي خبرونه ',
+      },
+      type: 'mediaOverrides',
+    };
 
     await renderPage({
       // @ts-expect-error partial data required for testing purposes
@@ -239,12 +250,10 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-    const { pageIdentifierOverride } = mediaLoaderProps;
+    const { blocks } = mediaLoaderProps;
 
     expect(mediaLoaderSpy).toHaveBeenCalled();
-    expect(pageIdentifierOverride).toEqual(
-      'pashto.bbc_pashto_tv.tv.w172xcldhhrdqgb.page',
-    );
+    expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
   });
 
   it('should show the expired content message if episode is expired', async () => {

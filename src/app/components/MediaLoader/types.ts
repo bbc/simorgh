@@ -4,6 +4,7 @@ import {
   OnDemandAudioBlock,
   OnDemandTVBlock,
   LiveRadioBlock,
+  MediaOverrides,
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
@@ -208,6 +209,7 @@ export type MediaBlock =
   | CaptionBlock
   | OnDemandTVBlock
   | OnDemandAudioBlock
+  | MediaOverrides
   | LiveRadioBlock;
 
 export type BuildConfigProps = {

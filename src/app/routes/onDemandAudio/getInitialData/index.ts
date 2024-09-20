@@ -126,7 +126,7 @@ export default async ({
     const mediaBlocks: OnDemandAudioBlock[] = get(['content', 'blocks']).map(
       (block: OnDemandMediaModel) => {
         return {
-          type: 'onDemandAudio',
+          type: 'audio',
           model: { ...block },
         };
       },
