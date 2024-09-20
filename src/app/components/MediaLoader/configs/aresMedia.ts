@@ -18,6 +18,11 @@ import { getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
 
+const ORIENTATION_MAPPING = {
+  Portrait: 'portrait',
+  Original: 'landscape',
+};
+
 export default ({
   id,
   pageType,
@@ -52,6 +57,10 @@ export default ({
   const versionsBlock = aresMediaMetadata?.[versionParameter]?.[0];
 
   const versionID = versionsBlock?.versionId ?? '';
+
+  const orientation =
+    ORIENTATION_MAPPING[versionsBlock?.types[0]] ??
+    ORIENTATION_MAPPING.Original;
 
   const format = aresMediaMetadata?.format;
 
@@ -137,5 +146,6 @@ export default ({
     },
     placeholderConfig,
     showAds,
+    orientation,
   };
 };
