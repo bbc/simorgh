@@ -1,5 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
-import { ARTICLE_PAGE, FRONT_PAGE } from '../../../routes/utils/pageTypes';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#routes/utils/pageTypes';
 
 type Props = {
   pageType: PageTypes;
