@@ -14,13 +14,14 @@ const Message = ({
   placeholderSrc = '',
   placeholderSrcset = '',
 }: Props) => (
-  <div css={styles.wrapper}>
+  <div>
     {placeholderSrc && (
       <img
         alt=""
         src={placeholderSrc}
         srcSet={placeholderSrcset}
         aria-hidden="true"
+        css={styles.messageImage}
       />
     )}
     <div css={styles.messageWrapper}>

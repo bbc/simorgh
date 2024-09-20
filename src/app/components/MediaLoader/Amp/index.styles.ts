@@ -4,14 +4,6 @@ import { css, Theme } from '@emotion/react';
 const NOJS_BACKGROUND_COLOUR = 'rgba(34, 34, 34, 0.75)';
 
 export default {
-  wrapper: () =>
-    css({
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-    }),
   messageWrapper: ({ fontVariants, fontSizes, palette, mq }: Theme) =>
     css({
       ...fontVariants.sansRegular,
@@ -37,12 +29,13 @@ export default {
       position: 'absolute',
       padding: `${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: spacings.DOUBLE,
+        padding: `${spacings.DOUBLE}rem`,
       },
       [mq.FORCED_COLOURS]: {
         backgroundColor: 'window',
       },
     }),
+  messageImage: () => css({ width: '100%' }),
   ampIframeWrapper: ({ palette }: Theme) =>
     css({
       overflow: 'hidden',

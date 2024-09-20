@@ -2,14 +2,6 @@
 
 exports[`Media Message matches media message snapshot 1`] = `
 .emotion-0 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -26,26 +18,26 @@ exports[`Media Message matches media message snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-1 {
+  .emotion-0 {
     background-color: transparent;
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -54,26 +46,24 @@ exports[`Media Message matches media message snapshot 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
-    padding: 1px;
+  .emotion-1 {
+    padding: 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-2 {
+  .emotion-1 {
     background-color: window;
   }
 }
 
 <div>
-  <div
-    class="emotion-0"
-  >
+  <div>
     <div
-      class="emotion-1"
+      class="emotion-0"
     >
       <strong
-        class="emotion-2"
+        class="emotion-1"
       >
         Контент більше не доступний
       </strong>
