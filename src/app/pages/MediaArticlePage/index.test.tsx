@@ -11,7 +11,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import newsMostReadData from '../../../../data/news/mostRead/index.json';
 import MediaArticlePage from './MediaArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import pidginPageData from './fixtureData';
+import { pidginPageData } from './fixtureData';
 import { Services } from '../../models/types/global';
 
 jest.mock('../../components/ThemeProvider');
