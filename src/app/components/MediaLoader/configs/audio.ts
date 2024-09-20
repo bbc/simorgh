@@ -4,7 +4,6 @@ import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 export default ({
   blocks,
   basePlayerConfig,
-  translations,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: audioMediaBlock } = filterForBlockType(blocks, 'audio');
   const audio = audioMediaBlock?.versions?.[0] || {};
