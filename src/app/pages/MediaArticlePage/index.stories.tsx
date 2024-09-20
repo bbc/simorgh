@@ -2,10 +2,14 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import ThemeProvider from '#app/components/ThemeProvider';
+import { PageTypes } from '#app/models/types/global';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
-import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '../../routes/utils/pageTypes';
 import articleData from '../../../../data/hausa/articles/cw43vy8zdjvo.json';
 import tamilArticle from '../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';
@@ -18,8 +22,18 @@ import MediaArticlePageComponent from './MediaArticlePage';
 const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
-// @ts-expect-error - passing in partial data
-const ComponentWithContext = ({ data: { data }, isLite }) => {
+type Props = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+  isLite?: boolean;
+  pageType?: PageTypes;
+};
+
+const ComponentWithContext = ({
+  data: { data },
+  isLite,
+  pageType = MEDIA_ARTICLE_PAGE,
+}: Props) => {
   return (
     <ToggleContextProvider
       toggles={{
@@ -32,7 +46,7 @@ const ComponentWithContext = ({ data: { data }, isLite }) => {
           isAmp={false}
           isApp={false}
           isLite={isLite}
-          pageType={MEDIA_ARTICLE_PAGE}
+          pageType={pageType}
           service="news"
           pathname="/news/articles/c000000000o"
           isUK
@@ -79,4 +93,10 @@ export const MediaArticlePageWithSingleLatestMedia = (
 export const MediaArticlePageWithLiveTv = (
   _: StoryArgs,
   { isLite }: StoryProps,
-) => <ComponentWithContext data={arabicLiveTv} isLite={isLite} />;
+) => (
+  <ComponentWithContext
+    data={arabicLiveTv}
+    isLite={isLite}
+    pageType={MEDIA_ASSET_PAGE}
+  />
+);
