@@ -6,7 +6,6 @@ const styles = {
   placeholder: ({ palette }: Theme) =>
     css({
       position: 'relative',
-      aspectRatio: '16 / 9',
       cursor: 'pointer',
       [`.${NO_JS_CLASSNAME} &`]: {
         cursor: 'default',
@@ -17,6 +16,18 @@ const styles = {
         },
       },
     }),
+
+  placeholderLandscape: () =>
+    css({
+      aspectRatio: '16 / 9',
+    }),
+
+  placeholderPortrait: () =>
+    css({
+      aspectRatio: '9 / 16',
+      width: '50%',
+    }),
+
   playButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
@@ -37,6 +48,7 @@ const styles = {
         border: `${focusIndicatorThickness} solid ${palette.BLACK}`,
       },
     }),
+
   guidance: () =>
     css({
       zIndex: '1',

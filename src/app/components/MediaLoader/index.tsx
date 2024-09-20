@@ -103,6 +103,7 @@ const MediaContainer = ({
   playerConfig,
   showAds,
   mediaType,
+  orientation,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
@@ -150,16 +151,19 @@ const MediaContainer = ({
     }
   }, [playerConfig, showAds]);
 
+  const playerStyling = (() => {
+    if (orientation === 'portrait') {
+      return styles.mediaContainerPortrait;
+    }
+    if (mediaType === 'liveRadio') {
+      return styles.liveRadioMediaContainer;
+    }
+
+    return styles.mediaContainerLandscape;
+  })();
+
   return (
-    <div
-      ref={playerElementRef}
-      data-e2e="media-player"
-      css={
-        mediaType === 'liveRadio'
-          ? styles.liveRadioMediaContainer
-          : styles.mediaContainer
-      }
-    />
+    <div ref={playerElementRef} data-e2e="media-player" css={playerStyling} />
   );
 };
 
@@ -215,7 +219,8 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
+  const { mediaType, playerConfig, placeholderConfig, showAds, orientation } =
+    config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
@@ -242,6 +247,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             srcSet={placeholderConfig?.placeholderSrcset}
             noJsMessage={placeholderConfig?.translatedNoJSMessage}
             mediaInfo={placeholderConfig?.mediaInfo}
+            orientation={orientation}
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
@@ -249,6 +255,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             playerConfig={playerConfig}
             showAds={showAds}
             mediaType={mediaType}
+            orientation={orientation}
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaType} />}
