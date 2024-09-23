@@ -32,7 +32,7 @@ export const aresMediaCaptionBlock = {
   },
 };
 
-export const aresMediaPlayerBlock = {
+export const buildAresMediaPlayerBlock = ({ types }: { types: string[] }) => ({
   id: 'c77c0598',
   blockId: 'urn:bbc:ares::clip:p01k6msm',
   type: 'aresMediaMetadata',
@@ -52,7 +52,7 @@ export const aresMediaPlayerBlock = {
     versions: [
       {
         versionId: 'p01k6msp',
-        types: ['Original'],
+        types,
         duration: 191,
         durationISO8601: 'PT3M11S',
         warnings: {
@@ -72,14 +72,14 @@ export const aresMediaPlayerBlock = {
     smpKind: 'programme',
   },
   position: [5, 2, 1],
-};
+});
 
 export const aresMediaBlock = {
   id: '80e150c0',
   type: 'aresMedia',
   model: {
     blocks: [
-      aresMediaPlayerBlock,
+      buildAresMediaPlayerBlock({ types: ['Original'] }),
       {
         id: 'd8f26383',
         type: 'image',

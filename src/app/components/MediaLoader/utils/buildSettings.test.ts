@@ -9,7 +9,7 @@ import buildSettings from './buildSettings';
 import {
   aresMediaBlocks,
   clipMediaBlocks,
-  aresMediaPlayerBlock,
+  buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
 } from '../fixture';
@@ -364,6 +364,75 @@ describe('buildSettings', () => {
         showAds: false,
       } satisfies ConfigBuilderReturnProps);
     });
+    it('Should process an AresMedia block with portrait video as the orientation', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({ types: ['Portrait'] }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('portrait');
+    });
+
+    it('Should process an AresMedia block with landscape video as the orientation if nothing exists in types', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: [],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('landscape');
+    });
+
+    it('Should process an AresMedia block with landscape video as the orientation if type is unrecognised', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Foo'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('landscape');
+    });
 
     it('Should return null if the AresMedia block contains invalid data.', () => {
       const sampleBlock = [
@@ -430,7 +499,7 @@ describe('buildSettings', () => {
           model: {
             blocks: [
               {
-                ...aresMediaPlayerBlock,
+                ...buildAresMediaPlayerBlock({ types: ['Original'] }),
                 model: {
                   id: 'p01k6msm',
                   subType: 'episode',
@@ -488,7 +557,7 @@ describe('buildSettings', () => {
           model: {
             blocks: [
               {
-                ...aresMediaPlayerBlock,
+                ...buildAresMediaPlayerBlock({ types: ['Original'] }),
                 model: {
                   id: 'p01k6msm',
                   embedding: false,

@@ -7,7 +7,9 @@ import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
 import {
+  aresMediaBlock,
   aresMediaBlocks,
+  buildAresMediaPlayerBlock,
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
@@ -151,6 +153,35 @@ describe('MediaLoader', () => {
         'span',
       );
       expect(caption[3]?.textContent).toBe('This is a caption!');
+    });
+
+    it('Displays a portrait styled image when orientation is portrait', async () => {
+      let container;
+
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({ types: ['Portrait'] }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      await act(async () => {
+        ({ container } = render(<MediaPlayer blocks={myFixture} />, {
+          id: 'testId',
+        }));
+      });
+
+      const mediaPlayerLoader = (
+        container as unknown as HTMLElement
+      ).querySelector('[data-e2e="media-loader__placeholder"]');
+
+      expect(mediaPlayerLoader?.className).toContain('mediaPortraitStyles');
     });
   });
 
