@@ -3,8 +3,7 @@
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import getInitialData, { only } from '.';
+import getInitialData from '.';
 
 describe('getInitialData', () => {
   afterEach(() => {
@@ -35,27 +34,5 @@ describe('getInitialData', () => {
       '/pidgin/media-23256549',
     );
     expect(pageData.content.blocks.length).toBeTruthy();
-  });
-
-  it('should run transformer when page type matches', async () => {
-    const pageData = {
-      metadata: {
-        type: MEDIA_ASSET_PAGE,
-      },
-    };
-    const mockTransformer = jest.fn();
-    only([MEDIA_ASSET_PAGE], mockTransformer)(pageData);
-    expect(mockTransformer).toBeCalledTimes(1);
-  });
-
-  it('should not run transformer when page type does not match', async () => {
-    const pageData = {
-      metadata: {
-        type: 'PGL',
-      },
-    };
-    const mockTransformer = jest.fn();
-    only([MEDIA_ASSET_PAGE], mockTransformer)(pageData);
-    expect(mockTransformer).toBeCalledTimes(0);
   });
 });
