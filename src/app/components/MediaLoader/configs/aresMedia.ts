@@ -60,7 +60,7 @@ export default ({
   const versionID = versionsBlock?.versionId ?? '';
 
   const orientation =
-    ORIENTATION_MAPPING[versionsBlock?.types[0]] ??
+    ORIENTATION_MAPPING[versionsBlock?.types?.[0]] ??
     ORIENTATION_MAPPING.Original;
 
   const format = aresMediaMetadata?.format;
@@ -94,10 +94,10 @@ export default ({
 
   const holdingImageURL = rawImage
     ? buildIChefURL({
-        originCode,
-        locator,
-        resolution: DEFAULT_WIDTH,
-      })
+      originCode,
+      locator,
+      resolution: DEFAULT_WIDTH,
+    })
     : aresMediaMetadata?.imageUrl;
 
   const isLive = aresMediaMetadata?.live ?? false;
