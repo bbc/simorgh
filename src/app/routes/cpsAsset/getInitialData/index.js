@@ -1,39 +1,15 @@
-import pipe from 'ramda/src/pipe';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import handleError from '../../utils/handleError';
-import {
-  augmentWithTimestamp,
-  addIdsToBlocks,
-  applyBlockPositioning,
-} from '../../utils/sharedDataTransformers';
-import addHeadlineBlock from './addHeadlineBlock';
-import timestampToMilliseconds from './timestampToMilliseconds';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import isListWithLink from '../../utils/isListWithLink';
-import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
 import getArticleInitialData from '../../article/getInitialData';
-
-const formatPageData = pipe(addAnalyticsCounterName, timestampToMilliseconds);
-
-const processOptimoBlocks = pipe(
-  addHeadlineBlock,
-  augmentWithTimestamp,
-  applyBlockPositioning,
-  addIdsToBlocks,
-  addIndexToBlockGroups(isListWithLink, {
-    blockGroupType: 'listWithLink',
-    pathToBlockGroup: ['model', 'blocks', 0],
-  }),
-);
 
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
 const transformJson = async json => {
   try {
-    const formattedPageData = formatPageData(json);
-    return processOptimoBlocks(formattedPageData);
+    return addAnalyticsCounterName(json);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
