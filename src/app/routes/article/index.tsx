@@ -4,7 +4,7 @@ import {
   ErrorPage,
   MediaArticlePage,
   FeatureIdxPage,
-} from '#pages';
+} from '#pages/index';
 import {
   articlePath,
   cpsAssetPagePath,
@@ -19,13 +19,24 @@ import {
   PHOTO_GALLERY_PAGE,
   FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { Article } from '#app/models/types/optimo';
 import getInitialData from './getInitialData';
 
-const ArticleVariation = props => {
+type SupportedPageTypes =
+  | typeof ARTICLE_PAGE
+  | typeof MEDIA_ARTICLE_PAGE
+  | typeof MEDIA_ASSET_PAGE
+  | typeof STORY_PAGE
+  | typeof PHOTO_GALLERY_PAGE
+  | typeof FEATURE_INDEX_PAGE;
+
+const ArticleVariation = (props: { pageData: Article }) => {
   const consumableAsSFV = props?.pageData?.metadata?.consumableAsSFV ?? false;
   const pageType = props?.pageData?.metadata?.type;
 
-  const pageTypeToUse = consumableAsSFV ? MEDIA_ARTICLE_PAGE : pageType;
+  const pageTypeToUse = (
+    consumableAsSFV ? MEDIA_ARTICLE_PAGE : pageType
+  ) as SupportedPageTypes;
 
   const PageType = {
     [ARTICLE_PAGE]: ArticlePage,
