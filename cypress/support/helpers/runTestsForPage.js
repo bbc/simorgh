@@ -62,6 +62,7 @@ const runTestsForPage = ({
                 { foo: '123' },
               );
             }
+
             visitPage(currentPath, pageType);
           });
 
