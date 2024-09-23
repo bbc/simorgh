@@ -1,19 +1,11 @@
 /** @jsx jsx */
-import path from 'ramda/src/path';
 import { jsx } from '@emotion/react';
+import { Article } from '#app/models/types/optimo';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';
-import { LatestMedia } from './PagePromoSections/LatestMediaSection/types';
 
-type MediaArticlePageProps = {
-  pageData: object;
-};
-
-const SecondaryColumn = ({ pageData }: MediaArticlePageProps) => {
-  const latestMediaContent = path<LatestMedia[]>(
-    ['secondaryColumn', 'latestMedia'],
-    pageData,
-  );
+const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
+  const latestMediaContent = pageData?.secondaryColumn?.latestMedia;
   if (!latestMediaContent) return null;
 
   return (
