@@ -154,6 +154,7 @@ describe('MediaLoader', () => {
       );
       expect(caption[3]?.textContent).toBe('This is a caption!');
     });
+  });
 
   describe('Metadata', () => {
     it('should render metadata tags when media player is not embedded', async () => {
