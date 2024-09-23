@@ -32,10 +32,9 @@ type SupportedPageTypes =
 
 const ArticleVariation = (props: { pageData: Article }) => {
   const consumableAsSFV = props?.pageData?.metadata?.consumableAsSFV ?? false;
-  const pageType = props?.pageData?.metadata?.type;
 
-  const pageTypeToUse = (
-    consumableAsSFV ? MEDIA_ARTICLE_PAGE : pageType
+  const pageType = (
+    consumableAsSFV ? MEDIA_ARTICLE_PAGE : props?.pageData?.metadata?.type
   ) as SupportedPageTypes;
 
   const PageType = {
@@ -45,10 +44,10 @@ const ArticleVariation = (props: { pageData: Article }) => {
     [MEDIA_ARTICLE_PAGE]: MediaArticlePage,
     [MEDIA_ASSET_PAGE]: MediaArticlePage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
-  }[pageTypeToUse];
+  }[pageType];
 
   return PageType ? (
-    <PageType {...props} pageType={pageTypeToUse} />
+    <PageType {...props} pageType={pageType} />
   ) : (
     <ErrorPage {...props} pageType={ERROR_PAGE} errorCode={404} />
   );
