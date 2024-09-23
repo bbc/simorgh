@@ -1,9 +1,9 @@
 import {
   runHeaderTests,
-  runMediaPlayerEmbedTests,
+  runMediaPlayerTests,
 } from '../../../../src/integration/common';
 
 export default () => {
   runHeaderTests();
-  runMediaPlayerEmbedTests();
+  runMediaPlayerTests();
 };

@@ -21,7 +21,6 @@ const avEmbedsMetadataProps = {
         serbianCyrCps.data.avEmbed.content.model.blocks[0].model.blocks[0].model
           .imageUrl,
       language: serbianCyrCps.data.avEmbed.metadata.language,
-      mediaURL: 'https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
       promoSummary:
         serbianCyrCps.data.avEmbed.promo.summary.blocks[0].model.blocks[0].model
           .text,
@@ -130,10 +129,6 @@ describe('AV Embeds Page', () => {
       },
       { content: 'BBC News', property: 'og:site_name' },
       { content: 'sr-Cyrl', property: 'og:locale' },
-      {
-        content: 'https://www.bbc.com/serbian/cyr/av-embeds/srbija-68707945',
-        property: 'og:url',
-      },
       {
         content: 'ichef.bbci.co.uk/images/ic/$recipe/p0cfmfsv.jpg',
         property: 'og:image',

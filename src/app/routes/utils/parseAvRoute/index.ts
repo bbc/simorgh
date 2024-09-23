@@ -2,7 +2,7 @@ import services from '#lib/config/services/loadableConfig';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
-type Platform = 'cps' | 'optimo' | 'tipo';
+type Platform = 'cps' | 'articles' | 'tipo';
 
 // Asset ID regexes
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
@@ -10,7 +10,7 @@ const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
-const MEDIA_ID_REGEX = /^p[0-9a-z]{7,}/;
+const MEDIA_ID_REGEX = /^((?!portuguese)p[a-z0-9]{7,})$/;
 
 const MEDIA_DELIMITERS = ['vpid', 'pid'];
 
@@ -63,6 +63,7 @@ const LANGS = [
   'ur',
   'uz',
   'uz-cyrl',
+  'uz-latn',
   'vi',
   'yo',
   'zh-hans',
@@ -96,7 +97,7 @@ const extractPlatform = (query: Query): Platform | null => {
       break;
     }
     if (OPTIMO_ID_REGEX.test(id)) {
-      platform = 'optimo';
+      platform = 'articles';
       break;
     }
     if (TIPO_ID_REGEX.test(id)) {
@@ -146,25 +147,13 @@ const extractMediaDelimiter = (query: Query) => {
   return mediaDelimiter ?? null;
 };
 
-/**
- *  Syndication route patterns:
- *  -/:service/av-embeds/:asset_id
- *  -/:service/av-embeds/:asset_uri_wo_service
- *  -/:service/av-embeds/:asset_id/vpid/:vpid
- *  -/:service/av-embeds/:asset_uri_wo_service/pid/:pid
- *
- *  Syndication route examples:
- *  -/news/av-embeds/67303123
- *  -/serbian/cyr/av-embeds/srbija-68707945
- *  -/russian/av-embeds/38886884/vpid/p04s97g7
- *  -/news/av-embeds/58228280/pid/p09s9t1j
- */
 export default function parseAvRoute(resolvedUrl: string) {
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const query = resolvedUrlWithoutQuery.split(/[/.]/).filter(Boolean);
 
   const isWsRoute = query.includes('ws');
+  const isAmp = extractAmp(query);
 
   const service = extractService(query);
   const variant = extractVariant(query);
@@ -173,10 +162,10 @@ export default function parseAvRoute(resolvedUrl: string) {
   const mediaId = extractMediaId(query);
   const mediaDelimiter = extractMediaDelimiter(query);
   const lang = extractLang(query);
-  const amp = extractAmp(query);
 
   return {
     isWsRoute,
+    isAmp,
     service,
     variant,
     platform,
@@ -184,6 +173,5 @@ export default function parseAvRoute(resolvedUrl: string) {
     mediaId,
     mediaDelimiter,
     lang,
-    isAmp: amp,
   };
 }

@@ -238,11 +238,16 @@ describe('Routes', () => {
         service: 'pashto',
       });
 
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'نړۍ دا وخت';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'د بي بي سي خبرونه';
 
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
+      const brandTitle = screen.getByTestId('brand-title');
+      const subHeading = screen.getByTestId('sub-heading');
+
+      expect(brandTitle).toBeInTheDocument();
+      expect(brandTitle).toBeInTheDocument();
+
+      expect(brandTitle).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
+      expect(subHeading).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
     });
 
     it('should route to and render a front page', async () => {

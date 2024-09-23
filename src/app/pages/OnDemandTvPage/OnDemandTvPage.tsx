@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -10,17 +9,18 @@ import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getEmbedUrl, {
   makeAbsolute,
 } from '#lib/utilities/getUrlHelpers/getEmbedUrl';
-import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import useLocation from '#hooks/useLocation';
 import { PageTypes } from '#app/models/types/global';
+import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import MediaLoader from '#app/components/MediaLoader';
+import { OnDemandTVBlock, MediaOverrides } from '#app/models/types/media';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import MetadataContainer from '../../components/Metadata';
-import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import VisuallyHiddenText from '../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
@@ -42,6 +42,7 @@ const getGroups = (
 
 export interface OnDemandTVProps {
   pageData: {
+    mediaBlocks: OnDemandTVBlock[];
     metadata: {
       type: PageTypes;
     };
@@ -59,7 +60,7 @@ export interface OnDemandTVProps {
     recentEpisodes?: string[];
     episodeTitle: string;
     mediumSynopsis?: string;
-    contentType: 'player-episode' | string;
+    contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
   MediaError: React.Component;
@@ -78,7 +79,6 @@ const OnDemandTvPage = ({
     releaseDateTimeStamp,
     masterBrand,
     episodeId,
-    imageUrl,
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
@@ -88,7 +88,7 @@ const OnDemandTvPage = ({
     contentType,
   } = pageData;
 
-  const { lang, timezone, datetimeLocale, service, translations, brandName } =
+  const { lang, timezone, datetimeLocale, service, brandName } =
     useContext(ServiceContext);
   const location = useLocation();
 
@@ -108,23 +108,28 @@ const OnDemandTvPage = ({
     queryString: location.search,
   });
 
-  const iframeTitle = pathOr(
-    'Video player',
-    ['mediaAssetPage', 'videoPlayer'],
-    translations,
-  );
-
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
     ? `${brandTitle} - ${episodeTitle} - ${brandName}`
     : headline;
+
+  const mediaOverrides: MediaOverrides = {
+    model: {
+      language,
+      pageIdentifierOverride: `${service}.bbc_${service}_tv.tv.${episodeId}.page`,
+      pageTitleOverride: promoBrandTitle,
+    },
+    type: 'mediaOverrides',
+  };
+
+  const mediaBlocksWithOverrides = [...pageData?.mediaBlocks, mediaOverrides];
 
   return (
     <div css={styles.wrapper}>
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
-        contentType={contentType as 'player-episode'}
+        contentType={contentType}
       />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -174,17 +179,8 @@ const OnDemandTvPage = ({
             {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
-            <AVPlayer
-              embedUrl={embedUrl}
-              assetId={episodeId}
-              placeholderSrc={getPlaceholderImageUrl(imageUrl)}
-              type="video"
-              title="On-demand TV"
-              iframeTitle={iframeTitle}
-              hasBottomPadding={false}
-              skin="classic"
-              showLoadingImage
-              darkPlaceholder
+            <MediaLoader
+              blocks={mediaBlocksWithOverrides}
               css={styles.mediaPlayer}
             />
           ) : (
