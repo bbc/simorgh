@@ -3263,12 +3263,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData":
-  version: 0.0.0-use.local
-  resolution: "@bbc/simorgh-getInitialDataCpsAsset@workspace:src/app/routes/cpsAsset/getInitialData"
-  languageName: unknown
-  linkType: soft
-
 "@bbc/web-vitals@npm:1.2.0":
   version: 1.2.0
   resolution: "@bbc/web-vitals@npm:1.2.0"
