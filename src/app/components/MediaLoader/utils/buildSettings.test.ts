@@ -132,6 +132,7 @@ describe('buildSettings', () => {
 
       expect(result).toStrictEqual({
         mediaType: 'video',
+        orientation: 'landscape',
         playerConfig: {
           autoplay: true,
           product: 'news',
@@ -193,6 +194,7 @@ describe('buildSettings', () => {
 
       expect(result).toStrictEqual({
         mediaType: 'video',
+        orientation: 'landscape',
         playerConfig: {
           autoplay: false,
           preload: 'high',
@@ -308,6 +310,7 @@ describe('buildSettings', () => {
 
       expect(result).toStrictEqual({
         mediaType: 'video',
+        orientation: 'landscape',
         playerConfig: {
           autoplay: true,
           product: 'news',
