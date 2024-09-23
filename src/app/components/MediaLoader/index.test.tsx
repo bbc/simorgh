@@ -7,9 +7,7 @@ import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
 import {
-  aresMediaBlock,
   aresMediaBlocks,
-  buildAresMediaPlayerBlock,
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
