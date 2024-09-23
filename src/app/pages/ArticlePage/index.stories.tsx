@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import {
+  ServiceContext,
+  ServiceContextProvider,
+} from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
@@ -13,15 +16,16 @@ import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.jso
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
-import ArticlePageComponent from './ArticlePage';
-import { service } from '#app/lib/config/services/news';
+import { service as newsConfig } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { Services } from '#app/models/types/global';
+import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 const serviceContextMock = {
-  ...service.default,
+  ...newsConfig.default,
   service: 'news',
   script: latin,
   dir: 'ltr',
@@ -45,11 +49,22 @@ const serviceContextMock = {
   },
 };
 
+type Props = {
+  data: {
+    data: {
+      article: any;
+      secondaryData: any;
+    };
+  };
+  service?: Services;
+  podcastEnabled?: boolean;
+};
+
 const ComponentWithContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
-}) => {
+}: Props) => {
   return (
     <ToggleContextProvider
       toggles={{
@@ -89,7 +104,7 @@ const ComponentWithServiceContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
-}) => {
+}: Props) => {
   return (
     <ToggleContextProvider
       toggles={{
@@ -100,26 +115,19 @@ const ComponentWithServiceContext = ({
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
-      <ServiceContext.Provider value={{ ...serviceContextMock, service }}>
-        <RequestContextProvider
-          isAmp={false}
-          isApp={false}
-          pageType={ARTICLE_PAGE}
-          service={service}
-          pathname="/news/articles/c000000000o"
-          id="c000000000o"
-          isUK
-        >
-          <ThemeProvider service={service}>
-            <Page
-              pageData={{
-                ...data.article,
-                secondaryColumn: data.secondaryData,
-                mostRead: data.secondaryData.mostRead,
-              }}
-            />
-          </ThemeProvider>
-        </RequestContextProvider>
+      <ServiceContext.Provider
+        // @ts-expect-error - passing partial service context
+        value={{ ...serviceContextMock, service }}
+      >
+        <ThemeProvider service={service}>
+          <Page
+            pageData={{
+              ...data.article,
+              secondaryColumn: data.secondaryData,
+              mostRead: data.secondaryData.mostRead,
+            }}
+          />
+        </ThemeProvider>
       </ServiceContext.Provider>
     </ToggleContextProvider>
   );

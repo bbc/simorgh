@@ -1,9 +1,6 @@
 /** @jsx jsx */
 
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
-import propEq from 'ramda/src/propEq';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -42,6 +39,8 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
+import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
+
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -66,9 +65,9 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
-import { getPromoHeadline } from '../../lib/analyticsUtils/article';
+import { ComponentToRenderProps, TimeStampProps } from './types';
 
-const ArticlePage = ({ pageData }) => {
+const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp, isAmp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
@@ -82,23 +81,27 @@ const ArticlePage = ({ pageData }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
+  const adcampaign = pageData?.metadata?.adCampaignKeyword;
   const isTransliterated =
     ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
     pageType === ARTICLE_PAGE;
-  const allowAdvertising = path(['metadata', 'allowAdvertising'], pageData);
-  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
+
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const topics = path(['metadata', 'topics'], pageData);
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const startsWithHeading = propEq('headline', 'type')(blocks[0] || {});
+  const topics = pageData?.metadata?.topics ?? [];
+  const blocks = pageData?.content?.model?.blocks ?? [];
+  const startsWithHeading = blocks?.[0]?.type === 'headline' ?? false;
 
-  const bylineBlock = blocks.find(block => block.type === 'byline');
-  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+  const bylineBlock = blocks.find(
+    block => block.type === 'byline',
+  ) as OptimoBylineBlock;
+
+  const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
@@ -108,12 +111,10 @@ const ArticlePage = ({ pageData }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
-  const taggings = path(['metadata', 'passport', 'taggings'], pageData);
-  const formats = path(
-    ['metadata', 'passport', 'predicates', 'formats'],
-    pageData,
-  );
-  const recommendationsData = pathOr([], ['recommendations'], pageData);
+  const taggings = pageData?.metadata?.passport?.taggings ?? [];
+  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
+
+  const recommendationsData = pageData?.recommendations ?? [];
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
@@ -139,14 +140,14 @@ const ArticlePage = ({ pageData }) => {
     audio: isAmp ? articleMediaPlayer : MediaLoader,
     video: isAmp ? articleMediaPlayer : MediaLoader,
     text,
-    image: props => (
+    image: (props: ComponentToRenderProps) => (
       <ImageWithCaption
         {...props}
         sizes="(min-width: 1008px) 760px, 100vw"
         shouldPreload={preloadLeadImageToggle}
       />
     ),
-    timestamp: props =>
+    timestamp: (props: ComponentToRenderProps & TimeStampProps) =>
       hasByline ? (
         <Byline blocks={bylineContribBlocks}>
           <Timestamp
@@ -165,13 +166,13 @@ const ArticlePage = ({ pageData }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: props => <ScrollablePromo {...props} />,
-    mpu: props =>
+    links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
+    mpu: (props: ComponentToRenderProps) =>
       allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
+    wsoj: (props: ComponentToRenderProps) => (
       <CpsRecommendations {...props} items={recommendationsData} />
     ),
-    disclaimer: props => (
+    disclaimer: (props: ComponentToRenderProps) => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
@@ -187,20 +188,23 @@ const ArticlePage = ({ pageData }) => {
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const promoImageAltTextBlock = filterForBlockType(
+    promoImageBlocks,
+    'altText',
   );
 
-  const promoImageAltText = path(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
+  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
 
-  const promoImage = path(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
+  const promoImageAltText =
+    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const promoImage = promoImageRawBlock?.model?.locator;
+
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !isTransliterated,
   );
 
   return (
@@ -208,7 +212,7 @@ const ArticlePage = ({ pageData }) => {
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
-        title={getPromoHeadline(pageData)}
+        title={headline}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
@@ -255,7 +259,7 @@ const ArticlePage = ({ pageData }) => {
               componentsToRender={componentsToRender}
             />
           </main>
-          {showRelatedTopics && topics && !isTransliterated && (
+          {showTopics && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
@@ -275,7 +279,7 @@ const ArticlePage = ({ pageData }) => {
           columnLayout="multiColumn"
           size="default"
           headingBackgroundColour={GREY_2}
-          mobileDivider={showRelatedTopics && topics}
+          mobileDivider={showTopics}
         />
       )}
     </div>

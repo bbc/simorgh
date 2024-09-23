@@ -30,7 +30,6 @@ export default ({
           },
         ],
         summary: audioMediaBlock.synopses.short,
-        ...(audioMediaBlock.embedding && { embedRights: 'allowed' }),
       },
       ui: {
         ...basePlayerConfig.ui,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
@@ -26,6 +26,9 @@ import {
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
+import { Services } from '#app/models/types/global';
+
+import { Article } from '#app/models/types/optimo';
 import {
   render,
   screen,
@@ -46,14 +49,6 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 
 jest.mock('../../components/ATIAnalytics');
 
-const recommendationSettings = {
-  hasStoryRecommendations: true,
-  skipLink: {
-    text: 'Skip recommendations and continue reading',
-    endTextVisuallyHidden: 'End of recommendations',
-  },
-};
-
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
   id: 'c0000000000o',
@@ -61,6 +56,15 @@ const input = {
   pageType: ARTICLE_PAGE,
   pathname: '/pathname',
   statusCode: 200,
+};
+
+type Props = {
+  service?: Services;
+  adsToggledOn?: boolean;
+  mostReadToggledOn?: boolean;
+  showAdsBasedOnLocation?: boolean;
+  isApp?: boolean;
+  promo?: boolean | null;
 };
 
 const Context = ({
@@ -71,7 +75,7 @@ const Context = ({
   showAdsBasedOnLocation = false,
   isApp = false,
   promo = null,
-} = {}) => {
+}: PropsWithChildren<Props> = {}) => {
   const appInput = {
     ...input,
     service,
@@ -97,10 +101,7 @@ const Context = ({
           }}
         >
           <RequestContextProvider {...appInput}>
-            <ServiceContextProvider
-              service={service}
-              recommendations={recommendationSettings}
-            >
+            <ServiceContextProvider service={service}>
               {children}
             </ServiceContextProvider>
           </RequestContextProvider>
@@ -112,15 +113,18 @@ const Context = ({
 
 beforeEach(() => {
   process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
-
-  fetch.resetMocks();
-  ATIAnalytics.mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
-  );
 });
 
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
+
+  (ATIAnalytics as jest.Mock).mockImplementation(
+    jest.requireActual('../../components/ATIAnalytics').default,
+  );
+});
+
+afterAll(() => {
+  (ATIAnalytics as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
@@ -144,7 +148,7 @@ describe('Article Page', () => {
       expect(
         document
           .querySelector('meta[name="description"]')
-          .getAttribute('content'),
+          ?.getAttribute('content'),
       ).toEqual('Article Headline for SEO');
     });
   });
@@ -161,7 +165,7 @@ describe('Article Page', () => {
       expect(
         document
           .querySelector('meta[name="twitter:creator"]')
-          .getAttribute('content'),
+          ?.getAttribute('content'),
       ).toEqual('@mary_harper');
     });
   });
@@ -178,7 +182,7 @@ describe('Article Page', () => {
       expect(
         document
           .querySelector('meta[name="twitter:creator"]')
-          .getAttribute('content'),
+          ?.getAttribute('content'),
       ).toEqual('@bbcpersian');
     });
   });
@@ -205,7 +209,7 @@ describe('Article Page', () => {
         expect(
           document
             .querySelector('meta[property="og:image"]')
-            .getAttribute('content'),
+            ?.getAttribute('content'),
         ).toEqual(
           'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
         );
@@ -266,7 +270,7 @@ describe('Article Page', () => {
           },
         },
         articleDataNews,
-      );
+      ) as Article;
 
       render(
         <Context service="news">
@@ -278,7 +282,7 @@ describe('Article Page', () => {
         expect(
           document
             .querySelector('meta[property="og:image"]')
-            .getAttribute('content'),
+            ?.getAttribute('content'),
         ).toEqual(
           'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
         );
@@ -290,7 +294,10 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="news">
         <ArticlePage
-          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+          pageData={{
+            ...articleDataNews,
+            mostRead: newsMostReadData,
+          }}
         />
       </Context>,
     );
@@ -304,7 +311,10 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="persian">
         <ArticlePage
-          pageData={{ ...articleDataPersian, mostRead: persianMostReadData }}
+          pageData={{
+            ...articleDataPersian,
+            mostRead: persianMostReadData,
+          }}
         />
       </Context>,
       { service: 'persian' },
@@ -322,7 +332,10 @@ describe('Article Page', () => {
     const { container } = render(
       <Context service="pidgin">
         <ArticlePage
-          pageData={{ ...articleDataPidgin, mostRead: pidginMostReadData }}
+          pageData={{
+            ...articleDataPidgin,
+            mostRead: pidginMostReadData,
+          }}
         />
       </Context>,
       { service: 'pidgin' },
@@ -351,6 +364,7 @@ describe('Article Page', () => {
       content: {
         model: {
           blocks: [
+            // @ts-expect-error - type checking not added for block helpers
             singleTextBlock('Paragraph above headline', 2),
             {
               ...headline,
@@ -364,6 +378,7 @@ describe('Article Page', () => {
                 ],
               },
             },
+            // @ts-expect-error - type checking not added for block helpers
             singleTextBlock('Paragraph below headline', 3),
           ],
         },
@@ -400,6 +415,7 @@ describe('Article Page', () => {
       },
       content: {
         model: {
+          // @ts-expect-error - type checking not added for block helpers
           blocks: [singleTextBlock('Paragraph 1', 2)],
         },
       },
@@ -444,8 +460,11 @@ describe('Article Page', () => {
   it('should render image with the .webp image extension', () => {
     const imageBlock = articleDataNews.content.model.blocks[5];
     const imageAltText =
+      // @ts-expect-error - nested block structure
       imageBlock.model.blocks[0].model.blocks[0].model.blocks[0].model.text;
+    // @ts-expect-error - nested block structure
     const imageLocator = imageBlock.model.blocks[1].model.locator;
+    // @ts-expect-error - nested block structure
     const imageOriginCode = imageBlock.model.blocks[1].model.originCode;
     const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/640/${imageOriginCode}/${imageLocator}.webp`;
     const expectedSrcSetURLs = [
@@ -459,12 +478,17 @@ describe('Article Page', () => {
     render(
       <Context service="news">
         <ArticlePage
-          pageData={{ ...articleDataNews, mostRead: newsMostReadData }}
+          pageData={{
+            ...articleDataNews,
+            mostRead: newsMostReadData,
+          }}
         />
       </Context>,
     );
 
-    const { src, srcset } = screen.getByAltText(imageAltText);
+    const { src, srcset } = screen.getByAltText(
+      imageAltText,
+    ) as HTMLImageElement;
 
     expect(src).toEqual(imageURL);
     expect(srcset).toEqual(expectedSrcSetURLs);
@@ -530,7 +554,7 @@ describe('Article Page', () => {
       );
     });
 
-    const { src } = screen.getByAltText(imageAltText);
+    const { src } = screen.getByAltText(imageAltText) as HTMLImageElement;
 
     expect(src).toEqual(imageURL);
   });
@@ -712,7 +736,7 @@ describe('Article Page', () => {
             'urn:bbc:topcat:curie:asset:7b51390e-c5c3-11e3-a6ee-819a3db9bd6e',
         },
       },
-    };
+    } as Article;
 
     render(
       <Context service="pidgin">
@@ -726,7 +750,7 @@ describe('Article Page', () => {
     expect(ampHtmlLink).toBeUndefined();
   });
 
-  const services = ['serbian', 'uzbek', 'zhongwen'];
+  const services = ['serbian', 'uzbek', 'zhongwen'] satisfies Services[];
 
   services.forEach(service => {
     it(`should not render a relatedTopics onward journey for a ${service} optimo article`, async () => {
@@ -775,7 +799,7 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      ATIAnalytics.mockImplementation(() => <div />);
+      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
 
       render(
         <Context service="pidgin">
@@ -819,7 +843,7 @@ describe('Article Page', () => {
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      ATIAnalytics.mockImplementation(() => <div />);
+      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
 
       render(
         <Context service="pidgin">

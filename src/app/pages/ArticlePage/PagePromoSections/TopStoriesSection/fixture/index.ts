@@ -1,3 +1,5 @@
+import { TopStoryItem } from '../types';
+
 export const topStoriesItem = {
   headlines: {
     headline: 'Covid antibodies in 1 in 10 people in December',
@@ -56,7 +58,7 @@ export const topStoriesItem = {
   includeComments: true,
   id: 'urn:bbc:ares::asset:news/health-55718213',
   type: 'cps',
-};
+} as unknown as TopStoryItem;
 
 export const topStoriesLiveLabelItem = {
   headlines: {
@@ -116,7 +118,8 @@ export const topStoriesLiveLabelItem = {
   },
   id: 'urn:bbc:ares::asset:news/live/uk-55715793',
   type: 'cps',
-};
+} as unknown as TopStoryItem;
+
 export const topStoriesMediaContentItem = {
   headlines: {
     headline: 'Audio map page test',
@@ -166,7 +169,7 @@ export const topStoriesMediaContentItem = {
   },
   id: 'urn:bbc:ares::asset:mundo/23245765',
   type: 'cps',
-};
+} as unknown as TopStoryItem;
 
 export const topStoriesList = [
   {
@@ -339,7 +342,8 @@ export const topStoriesList = [
     id: 'urn:bbc:ares::asset:mundo/23245765',
     type: 'cps',
   },
-];
+] as unknown as TopStoryItem[];
+
 export const topStoriesSingleItem = [
   {
     headlines: {
@@ -401,7 +405,7 @@ export const topStoriesSingleItem = [
     id: 'urn:bbc:ares::asset:news/health-55718213',
     type: 'cps',
   },
-];
+] as unknown as TopStoryItem[];
 
 export const topStoriesListRtl = [
   {
@@ -559,7 +563,7 @@ export const topStoriesListRtl = [
     id: 'urn:bbc:ares::asset:arabic/business-52650157',
     type: 'cps',
   },
-];
+] as unknown as TopStoryItem[];
 
 export const topStoriesSingleItemRtl = [
   {
@@ -610,7 +614,7 @@ export const topStoriesSingleItemRtl = [
     id: 'urn:bbc:ares::asset:arabic/business-52650157',
     type: 'cps',
   },
-];
+] as unknown as TopStoryItem[];
 
 export const tipoFormattedTopStoriesItem = {
   locators: {
@@ -679,7 +683,7 @@ export const tipoFormattedTopStoriesItem = {
   passport: {},
   id: 'urn:bbc:ares::article:c6vdqkm8yyvo',
   type: 'optimo',
-};
+} as unknown as TopStoryItem;
 
 export const tipoLivePageTopStoriesItem = {
   headline:
@@ -703,4 +707,4 @@ export const tipoLivePageTopStoriesItem = {
   serviceIdentifier: 'hindi',
   id: 'urn:bbc:tipo:topic:c0dewwj3lk1t',
   type: 'tipo-live',
-};
+} as unknown as TopStoryItem;

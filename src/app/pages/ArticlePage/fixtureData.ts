@@ -1,40 +1,47 @@
 import {
+  Article,
+  OptimoBylineContributorBlock,
+} from '#app/models/types/optimo';
+import {
   blockContainingText,
   bylineBlock,
   singleTextBlock,
   textBlock,
 } from '#models/blocks';
 
-const blocksWithHeadlineAndText = blockValues => {
+const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, ...additional] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
+    // @ts-expect-error - type checking not added for block helpers
     singleTextBlock(paragraphText, 2),
     ...additional,
   ];
 };
 
-const blocksWithHeadlineTexAndByline = blockValues => {
+const blocksWithHeadlineTexAndByline = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, twitterHandle] = blockValues;
 
   return [
     blockContainingText('headline', headlineText, 1),
+    // @ts-expect-error - type checking not added for block helpers
     bylineBlock(twitterHandle, 2),
+    // @ts-expect-error - type checking not added for block helpers
     singleTextBlock(paragraphText, 3),
   ];
 };
 
 const articleDataBuilder = (
-  id,
-  createdBy,
-  language,
-  home,
-  blockValues,
-  seoHeadline,
-  promoHeadline,
-  summary,
-  things,
+  id: string,
+  createdBy: string,
+  language: string,
+  home: string,
+  blockValues: (object | string)[],
+  seoHeadline: string,
+  promoHeadline: string,
+  summary: string,
+  things: object,
   allowAdvertising = false,
   articleBlocksPopulator = blocksWithHeadlineAndText,
   atiAnalytics = {},
@@ -251,7 +258,7 @@ export const articleDataNews = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataNewsWithEmbeds = articleDataBuilder(
   'c0000000001o',
@@ -653,7 +660,7 @@ export const articleDataNewsWithEmbeds = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataPersian = articleDataBuilder(
   'c4vlle3q337o',
@@ -680,7 +687,7 @@ export const articleDataPersian = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
@@ -706,7 +713,7 @@ export const articleDataPidgin = articleDataBuilder(
     timePublished: '2018-01-01T12:01:00.000Z',
     timeUpdated: '2018-01-01T14:00:00.000Z',
   },
-);
+) as unknown as Article;
 
 export const articleDataPidginWithAds = articleDataBuilder(
   'cwl08rd38l6o',
@@ -719,7 +726,7 @@ export const articleDataPidginWithAds = articleDataBuilder(
   'Article summary in Pidgin',
   emptyThings,
   true,
-);
+) as unknown as Article;
 
 export const articleDataPidginWithByline = articleDataBuilder(
   'cwl08rd38l6o',
@@ -733,7 +740,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   emptyThings,
   undefined,
   blocksWithHeadlineTexAndByline,
-);
+) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
@@ -760,7 +767,7 @@ export const articlePglDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'PGL',
-);
+) as unknown as Article;
 
 export const articleStyDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
@@ -787,7 +794,7 @@ export const articleStyDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'STY',
-);
+) as unknown as Article;
 
 export const bylineWithNoRole = [
   {
@@ -920,7 +927,7 @@ export const bylineWithNoRole = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNoAuthor = [
   {
@@ -1053,7 +1060,7 @@ export const bylineWithNoAuthor = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNoAuthorAndRole = [
   {
@@ -1157,7 +1164,7 @@ export const bylineWithNoAuthorAndRole = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNameAndRole = [
   {
@@ -1227,7 +1234,7 @@ export const bylineWithNameAndRole = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithLink = [
   {
@@ -1336,7 +1343,7 @@ export const bylineWithLink = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithLinkAndLocation = [
   {
@@ -1474,7 +1481,7 @@ export const bylineWithLinkAndLocation = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithNonPngPhoto = [
   {
@@ -1636,7 +1643,7 @@ export const bylineWithNonPngPhoto = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithPngPhoto = [
   {
@@ -1796,7 +1803,7 @@ export const bylineWithPngPhoto = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const bylineWithAllData = [
   {
@@ -1958,7 +1965,7 @@ export const bylineWithAllData = [
       ],
     },
   },
-];
+] as OptimoBylineContributorBlock[];
 
 export const sampleRecommendations = [
   {
