@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
+import { Article } from '#app/models/types/optimo';
 import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
@@ -85,7 +86,7 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news">
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -97,7 +98,7 @@ describe('MediaArticlePage', () => {
   it('should set "amphtml" link tag for asset', async () => {
     render(
       <Context service="pidgin">
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -125,7 +126,7 @@ describe('MediaArticlePage', () => {
 
     render(
       <Context service="pidgin">
-        <MediaArticlePage pageData={pageDataAsTC2Asset} />
+        <MediaArticlePage pageData={pageDataAsTC2Asset as unknown as Article} />
       </Context>,
     );
 
@@ -140,7 +141,7 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -169,7 +170,7 @@ describe('MediaArticlePage', () => {
 
     render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -181,13 +182,13 @@ describe('MediaArticlePage', () => {
     expect(srcset).toEqual(expectedSrcSetURLs);
   });
 
-  const services = ['serbian', 'uzbek', 'zhongwen'];
+  const services = ['serbian', 'uzbek', 'zhongwen'] satisfies Services[];
 
   services.forEach(service => {
     it(`should not render a relatedTopics onward journey for a ${service} optimo article`, async () => {
       const { queryByTestId } = render(
         <Context service={service as Services}>
-          <MediaArticlePage pageData={pidginPageData} />
+          <MediaArticlePage pageData={pidginPageData as unknown as Article} />
         </Context>,
       );
       const relatedTopics = queryByTestId('related-topics');

@@ -1,24 +1,35 @@
+/** @jsx jsx */
+
+import { jsx, useTheme } from '@emotion/react';
 import React, { useContext } from 'react';
-import { useTheme } from '@emotion/react';
-import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
-import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
+import { EventTrackingBlock } from '#app/models/types/eventTracking';
+import SectionLabel from '#psammead/psammead-section-label/src';
+import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
+import PromoList from '#components/OptimoPromos/PromoList';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import {
-  StyledSectionLabel,
-  StyledTopStoriesSection,
-  StyledPromoItem,
-  StyledPromoList,
-} from './index.styles';
+import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
+import { TopStoryItem } from './types';
 
-const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
-  const contentType = pathOr('', ['contentType'], item);
-  const assetUri = pathOr('', ['locators', 'assetUri'], item);
-  const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
-  const uri = pathOr('', ['uri'], item);
+type TopStoriesListProps = {
+  item: TopStoryItem;
+  index: number;
+  eventTrackingData: EventTrackingBlock;
+  viewRef: React.Ref<HTMLDivElement>;
+};
+
+const renderTopStoriesList = ({
+  item,
+  index,
+  eventTrackingData,
+  viewRef,
+}: TopStoriesListProps) => {
+  const contentType = item?.contentType ?? '';
+  const assetUri = item?.locators?.assetUri ?? '';
+  const canonicalUrl = item?.locators?.canonicalUrl ?? '';
+  const uri = item?.uri ?? '';
 
   const ariaLabelledBy = generatePromoId({
     sectionType: 'top-stories',
@@ -30,40 +41,40 @@ const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   });
 
   return (
-    <StyledPromoItem key={ariaLabelledBy}>
+    <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
         ref={viewRef}
         eventTrackingData={eventTrackingData}
       />
-    </StyledPromoItem>
+    </PromoItem>
   );
 };
 
-const TopStoriesSection = ({ content = [] }) => {
+const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
   const { translations, script, service } = useContext(ServiceContext);
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
     },
   };
-  const eventTrackingDataSend = path(['block'], eventTrackingData);
+  const eventTrackingDataSend = eventTrackingData?.block;
   const viewRef = useViewTracker(eventTrackingDataSend);
 
   const {
     palette: { GREY_2 },
   } = useTheme();
 
-  if (!content || isEmpty(content)) return null;
+  if (!content || content?.length === 0) return null;
 
-  const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
+  const title = translations?.topStoriesTitle ?? 'Top Stories';
   const hasSingleContent = content.length === 1;
   const LABEL_ID = 'top-stories-heading';
 
-  const contentType = pathOr('', ['contentType'], content[0]);
-  const assetUri = pathOr('', ['locators', 'assetUri'], content[0]);
-  const uri = pathOr('', ['uri'], content[0]);
+  const contentType = content?.[0]?.contentType ?? '';
+  const assetUri = content?.[0]?.locators?.assetUri ?? '';
+  const uri = content?.[0]?.uri ?? '';
   const ariaLabelledBy = generatePromoId({
     sectionType: 'top-stories',
     assetUri,
@@ -72,12 +83,14 @@ const TopStoriesSection = ({ content = [] }) => {
   });
 
   return (
-    <StyledTopStoriesSection
+    <section
+      css={styles.topStoriesSection}
       aria-labelledby={LABEL_ID}
       role="region"
       data-e2e={LABEL_ID}
     >
-      <StyledSectionLabel
+      <SectionLabel
+        css={styles.sectionLabel}
         labelId={LABEL_ID}
         columnType="secondary"
         backgroundColor={GREY_2}
@@ -85,7 +98,7 @@ const TopStoriesSection = ({ content = [] }) => {
         service={service}
       >
         {title}
-      </StyledSectionLabel>
+      </SectionLabel>
 
       {hasSingleContent ? (
         <TopStoriesItem
@@ -95,13 +108,13 @@ const TopStoriesSection = ({ content = [] }) => {
           eventTrackingData={eventTrackingData}
         />
       ) : (
-        <StyledPromoList>
+        <PromoList css={styles.promoList}>
           {content.map((item, index) =>
-            renderTopStoriesList(item, index, eventTrackingData, viewRef),
+            renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
           )}
-        </StyledPromoList>
+        </PromoList>
       )}
-    </StyledTopStoriesSection>
+    </section>
   );
 };
 
