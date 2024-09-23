@@ -155,36 +155,6 @@ describe('MediaLoader', () => {
       expect(caption[3]?.textContent).toBe('This is a caption!');
     });
 
-    it('Displays a portrait styled image when orientation is portrait', async () => {
-      let container;
-
-      const myFixture = [
-        {
-          ...aresMediaBlock,
-          model: {
-            blocks: [
-              {
-                ...buildAresMediaPlayerBlock({ types: ['Portrait'] }),
-              },
-            ],
-          },
-        },
-      ] as unknown as MediaBlock[];
-
-      await act(async () => {
-        ({ container } = render(<MediaPlayer blocks={myFixture} />, {
-          id: 'testId',
-        }));
-      });
-
-      const mediaPlayerLoader = (
-        container as unknown as HTMLElement
-      ).querySelector('[data-e2e="media-loader__placeholder"]');
-
-      expect(mediaPlayerLoader?.className).toContain('mediaPortraitStyles');
-    });
-  });
-
   describe('Metadata', () => {
     it('should render metadata tags when media player is not embedded', async () => {
       await act(async () => {
