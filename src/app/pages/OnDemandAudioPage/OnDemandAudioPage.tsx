@@ -1,13 +1,11 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
-import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import AVPlayer from '#containers/AVPlayer';
 import EpisodeImage from '#containers/OnDemandImage';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
@@ -18,25 +16,19 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { PageTypes } from '#app/models/types/global';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
-import { OnDemandAudioBlock } from '#app/models/types/media';
+import { OnDemandAudioBlock, MediaOverrides } from '#app/models/types/media';
 import styles from './index.styles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import MediaLoader from '#app/components/MediaLoader';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
-
-const staticAssetsPath = `${
-  getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN
-}${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-
-const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const getGroups = (
   zero: number | boolean,
@@ -104,7 +96,6 @@ export interface OnDemandAudioProps {
 const OnDemandAudioPage = ({
   pageData,
   mediaIsAvailable,
-  MediaError,
 }: OnDemandAudioProps) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -132,7 +123,7 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations, serviceName } =
+  const { dir, liveRadioOverrides, lang, service, serviceName } =
     useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
@@ -149,12 +140,6 @@ const OnDemandAudioPage = ({
     queryString: location.search,
   });
 
-  const iframeTitle = pathOr(
-    'Audio player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
-
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
     ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
@@ -167,6 +152,17 @@ const OnDemandAudioPage = ({
         imageHeight: 400,
       }
     : {};
+
+  const mediaOverrides: MediaOverrides = {
+    model: {
+      language,
+      pageIdentifierOverride: `${service}.bbc_${service}_radio.${episodeId}.page`,
+      pageTitleOverride: promoBrandTitle,
+    },
+    type: 'mediaOverrides',
+  };
+
+  const mediaBlocksWithOverrides = [...pageData?.mediaBlocks?, mediaOverrides];
 
   return (
     <>
@@ -238,15 +234,7 @@ const OnDemandAudioPage = ({
             </Grid>
           </GelPageGrid>
           {mediaIsAvailable ? (
-            <AVPlayer
-              assetId={episodeId}
-              embedUrl={embedUrl}
-              iframeTitle={iframeTitle}
-              title="On-demand radio"
-              type="audio"
-              skin="audio"
-              placeholderSrc={audioPlaceholderImageSrc}
-            />
+            <MediaLoader blocks={mediaBlocksWithOverrides} />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available
             <MediaError skin="audio" />
