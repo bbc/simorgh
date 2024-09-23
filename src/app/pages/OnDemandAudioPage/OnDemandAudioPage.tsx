@@ -64,6 +64,7 @@ const PageGrid = ({ children }: any) => (
 
 export interface OnDemandAudioProps {
   pageData: {
+    mediaBlocks: OnDemandAudioBlock[];
     metadata: {
       type: PageTypes;
     };
@@ -87,7 +88,6 @@ export interface OnDemandAudioProps {
     episodeTitle: string;
     externalLinks: string[];
     contentType: ContentType;
-    mediaBlocks?: OnDemandAudioBlock[];
   };
   mediaIsAvailable?: boolean;
   MediaError: React.Component;
@@ -162,7 +162,7 @@ const OnDemandAudioPage = ({
     type: 'mediaOverrides',
   };
 
-  const mediaBlocksWithOverrides = [...pageData?.mediaBlocks?, mediaOverrides];
+  const mediaBlocksWithOverrides = [...pageData?.mediaBlocks, mediaOverrides];
 
   return (
     <>
