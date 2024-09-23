@@ -94,10 +94,10 @@ export default ({
 
   const holdingImageURL = rawImage
     ? buildIChefURL({
-      originCode,
-      locator,
-      resolution: DEFAULT_WIDTH,
-    })
+        originCode,
+        locator,
+        resolution: DEFAULT_WIDTH,
+      })
     : aresMediaMetadata?.imageUrl;
 
   const isLive = aresMediaMetadata?.live ?? false;

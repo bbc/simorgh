@@ -15,7 +15,7 @@ interface Props {
   srcSet?: string;
   mediaInfo: MediaInfo;
   noJsMessage: string;
-  orientation: Orientations;
+  orientation?: Orientations;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -44,9 +44,9 @@ const MediaPlayerPlaceholder = ({
       css={[
         styles.placeholder,
         ...[
-          orientation === 'landscape'
-            ? styles.placeholderLandscape
-            : styles.placeholderPortrait,
+          orientation === 'portrait'
+            ? styles.placeholderPortrait
+            : styles.placeholderLandscape,
         ],
       ]}
       data-e2e="media-loader__placeholder"
@@ -61,7 +61,7 @@ const MediaPlayerPlaceholder = ({
       <PlayButton
         css={styles.playButton}
         // eslint-disable-next-line @typescript-eslint/no-empty-function
-        onClick={() => {}}
+        onClick={() => { }}
         title={title}
         service={service}
         datetime={datetime}

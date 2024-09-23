@@ -97,7 +97,7 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   mediaType?: MediaType;
-  orientation: Orientations;
+  orientation?: Orientations;
 };
 
 const MediaContainer = ({
