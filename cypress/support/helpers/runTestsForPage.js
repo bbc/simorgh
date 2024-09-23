@@ -64,8 +64,10 @@ const runTestsForPage = ({
             }
 
             if (
-              Cypress.env('APP_ENV') !== 'local' &&
-              pageType !== 'mediaAssetPage'
+              !(
+                Cypress.env('APP_ENV') === 'local' &&
+                pageType === 'mediaAssetPage'
+              )
             ) {
               visitPage(currentPath, pageType);
             }
