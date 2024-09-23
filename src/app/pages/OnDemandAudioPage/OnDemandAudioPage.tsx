@@ -16,6 +16,7 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import MediaLoader from '#app/components/MediaLoader';
 import { PageTypes } from '#app/models/types/global';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
@@ -26,7 +27,6 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import MediaLoader from '#app/components/MediaLoader';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
