@@ -9,6 +9,7 @@ import {
   AresMediaMetadataBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  Orientations,
   PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
@@ -18,7 +19,7 @@ import { getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
 
-const ORIENTATION_MAPPING: Record<string, string> = {
+const ORIENTATION_MAPPING: Record<string, Orientations> = {
   Portrait: 'portrait',
   Original: 'landscape',
 };
