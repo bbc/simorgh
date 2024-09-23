@@ -61,7 +61,7 @@ const MediaPlayerPlaceholder = ({
       <PlayButton
         css={styles.playButton}
         // eslint-disable-next-line @typescript-eslint/no-empty-function
-        onClick={() => { }}
+        onClick={() => {}}
         title={title}
         service={service}
         datetime={datetime}
