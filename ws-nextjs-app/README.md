@@ -23,10 +23,11 @@ For more information on Next.js and how to use the framework, see the [Next.js d
 
 ## Running Integration tests
 
-- Navigate up to the root of the project (up a level from here)
+- Navigate to the root of the project (up one level from here)
 - Run `yarn test:integration --nextJS` to run all integration tests for the Next.js app
+- Run `yarn test:integration:updatesnaphots --nextJS` to run all integration tests and update any snapshots for the Next.js app
 
 ## Running Storybook
 
-- Navigate to the root of the project (up a level from here)
+- Navigate to the root of the project (up one level from here)
 - Run `yarn storybook` to start the Storybook server (it should open automatically in your browser)
