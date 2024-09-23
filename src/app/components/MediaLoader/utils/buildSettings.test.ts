@@ -2,8 +2,10 @@ import { PageTypes, Services } from '#app/models/types/global';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import hindiTvProgramme from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
+import afriqueRadio from '#data/afrique/bbc_afrique_radio/w172xqydyfv659p.json';
 import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
+import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
 import isLive from '#app/lib/utilities/isLive';
 import buildSettings from './buildSettings';
 import {
@@ -885,6 +887,99 @@ describe('buildSettings', () => {
           },
         },
         mediaType: 'liveRadio',
+        showAds: false,
+      });
+    });
+  });
+
+  describe('OnDemandAudio', () => {
+    const afriqueAudioBaseSettings = {
+      counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+      lang: 'fr',
+      service: 'afrique' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'AFRIQUE',
+      translations: afriqueServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    const afriqueAudioMediaBlocks = afriqueRadio.content.blocks.map(
+      audioMediaBlock => {
+        return {
+          type: 'audio',
+          model: {
+            ...audioMediaBlock,
+          },
+        };
+      },
+    );
+
+    it('Should process an On Demand Audio block into a valid playlist item.', () => {
+      const afriqueAudioMediaOverrides = {
+        model: {
+          language: 'fr',
+          pageIdentifierOverride:
+            'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+          pageTitleOverride: "Bulletin D'informations",
+        },
+        type: 'mediaOverrides',
+      };
+      const result = buildSettings({
+        ...afriqueAudioBaseSettings,
+        blocks: [
+          ...afriqueAudioMediaBlocks,
+          afriqueAudioMediaOverrides,
+        ] as MediaBlock[],
+        pageType: MEDIA_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        playerConfig: {
+          product: 'news',
+          enableToucan: true,
+          appType: 'responsive',
+          autoplay: false,
+          appName: 'news-afrique',
+          counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'AFRIQUE',
+            episodePID: 'w172zn0kxd65h3g',
+          },
+          ui: {
+            controls: {
+              volumeSlider: true,
+              enabled: true,
+            },
+            fullscreen: { enabled: true },
+            locale: {
+              lang: 'fr',
+            },
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+            skin: 'audio',
+            colour: '#B80000',
+            foreColour: '#222222',
+            baseColour: '#222222',
+            colourOnBaseColour: '#ffffff',
+            fallbackBackgroundColour: '#ffffff',
+          },
+          playlistObject: {
+            title: "Bulletin D'informations",
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png',
+            items: [
+              {
+                versionID: 'w1mskzfksqdjrcp',
+                kind: 'radioProgramme',
+                duration: 300,
+              },
+            ],
+            summary: "Le tour du monde de l'actualité en 2 minutes ",
+          },
+        },
+        mediaType: 'audio',
         showAds: false,
       });
     });

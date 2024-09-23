@@ -320,6 +320,15 @@ export const mediaOverridesBlock = {
   type: 'mediaOverrides',
 };
 
+export const afriqueMediaOverridesBlock = {
+  model: {
+    language: 'fr',
+    pageIdentifierOverride: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+    pageTitleOverride: "Bulletin D'informations",
+  },
+  type: 'mediaOverrides',
+};
+
 export const aresMediaLiveStreamBlocks = [
   {
     id: '3e29a5f5',
@@ -367,4 +376,5 @@ export const onDemandTvBlocks = [onDemandTvBlock];
 export const onDemandTvBlocksWithOverrides = [
   onDemandTvBlock,
   mediaOverridesBlock,
+  afriqueMediaOverridesBlock,
 ];
