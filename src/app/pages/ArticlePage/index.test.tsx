@@ -113,14 +113,18 @@ const Context = ({
 
 beforeEach(() => {
   process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+});
+
+afterEach(() => {
+  delete process.env.SIMORGH_ICHEF_BASE_URL;
 
   (ATIAnalytics as jest.Mock).mockImplementation(
     jest.requireActual('../../components/ATIAnalytics').default,
   );
 });
 
-afterEach(() => {
-  delete process.env.SIMORGH_ICHEF_BASE_URL;
+afterAll(() => {
+  (ATIAnalytics as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
