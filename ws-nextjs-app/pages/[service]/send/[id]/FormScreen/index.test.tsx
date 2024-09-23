@@ -14,7 +14,7 @@ import {
 import * as FormContextModule from '../FormContext';
 import { FormContext } from '../FormContext';
 import Form from '.';
-import { Field, InvalidMessageCodes } from '../types';
+import { Field, FormScreen, InvalidMessageCodes } from '../types';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({
@@ -22,24 +22,25 @@ jest.mock('next/router', () => ({
   }),
 }));
 
+const mockContextValue = {
+  formState: {},
+  handleChange: jest.fn(),
+  handleFocusOut: jest.fn(),
+  handleSubmit: jest.fn(),
+  submitted: false,
+  attemptedSubmitCount: 0,
+  validationErrors: [],
+  progress: '0',
+  screen: 'form' as FormScreen,
+  submissionID: '',
+};
+
 describe('Form', () => {
   it('should render and match snapshot', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
-      .mockImplementationOnce(() => ({
-        handleSubmit: jest.fn(e => e.preventDefault()),
-        formState: {},
-        submitted: false,
-        validationErrors: [],
-        attemptedSubmitCount: 0,
-      }))
-      .mockImplementationOnce(() => ({
-        handleSubmit: jest.fn(e => e.preventDefault()),
-        formState: {},
-        submitted: false,
-        validationErrors: [],
-        attemptedSubmitCount: 0,
-      }));
+      .mockImplementationOnce(() => mockContextValue)
+      .mockImplementationOnce(() => mockContextValue);
     const { container } = await act(() => {
       return render(
         <Form
@@ -95,9 +96,7 @@ describe('Form', () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => ({
-        handleSubmit: jest.fn(e => e.preventDefault()),
-        formState: {},
-        submitted: false,
+        ...mockContextValue,
         validationErrors: [
           {
             id: 'txt49018765',
@@ -111,9 +110,7 @@ describe('Form', () => {
         attemptedSubmitCount: 1,
       }))
       .mockImplementationOnce(() => ({
-        handleSubmit: jest.fn(e => e.preventDefault()),
-        formState: {},
-        submitted: false,
+        ...mockContextValue,
         validationErrors: [
           {
             id: 'txt49018765',
@@ -144,17 +141,11 @@ describe('Form', () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => ({
-        handleSubmit: jest.fn(e => e.preventDefault()),
-        formState: {},
-        submitted: false,
-        validationErrors: [],
+        ...mockContextValue,
         attemptedSubmitCount: 1,
       }))
       .mockImplementationOnce(() => ({
-        handleSubmit: jest.fn(e => e.preventDefault()),
-        formState: {},
-        submitted: false,
-        validationErrors: [],
+        ...mockContextValue,
         attemptedSubmitCount: 1,
       }));
     const { container } = await act(() => {
