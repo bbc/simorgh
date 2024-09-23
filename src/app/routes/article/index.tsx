@@ -24,10 +24,10 @@ import getInitialData from './getInitialData';
 
 type SupportedPageTypes =
   | typeof ARTICLE_PAGE
-  | typeof MEDIA_ARTICLE_PAGE
-  | typeof MEDIA_ASSET_PAGE
   | typeof STORY_PAGE
   | typeof PHOTO_GALLERY_PAGE
+  | typeof MEDIA_ARTICLE_PAGE
+  | typeof MEDIA_ASSET_PAGE
   | typeof FEATURE_INDEX_PAGE;
 
 const ArticleVariation = (props: { pageData: Article }) => {
