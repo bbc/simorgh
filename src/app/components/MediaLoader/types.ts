@@ -77,6 +77,8 @@ export type ConfigBuilderProps = {
   isAmp?: boolean;
 };
 
+export type Orientations = 'landscape' | 'portrait';
+
 export type PlaceholderConfig = {
   mediaInfo: MediaInfo;
   placeholderSrc: string;
@@ -89,6 +91,7 @@ export type ConfigBuilderReturnProps = {
   playerConfig: PlayerConfig;
   placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
+  orientation: Orientations;
 };
 
 export type MediaInfo = {
@@ -167,6 +170,7 @@ export type AresMediaMetadataBlock = {
     versions: {
       availableFrom?: string;
       versionId: string;
+      types: string[];
       duration: number;
       durationISO8601?: string;
       warnings?: { [key: string]: string };
@@ -174,6 +178,7 @@ export type AresMediaMetadataBlock = {
     webcastVersions: {
       versionId: string;
       duration: number;
+      types: string[];
       durationISO8601?: string;
       warnings?: { [key: string]: string };
     }[];

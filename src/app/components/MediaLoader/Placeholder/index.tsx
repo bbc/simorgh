@@ -7,7 +7,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import Guidance from '#app/legacy/components/MediaPlayer/Guidance';
 import Image from '../../Image';
 import styles from './index.styles';
-import { MediaInfo } from '../types';
+import { MediaInfo, Orientations } from '../types';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -15,6 +15,7 @@ interface Props {
   srcSet?: string;
   mediaInfo: MediaInfo;
   noJsMessage: string;
+  orientation: Orientations;
 }
 
 const MediaPlayerPlaceholder = ({
