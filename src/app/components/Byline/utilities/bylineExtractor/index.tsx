@@ -1,18 +1,17 @@
+import {
+  OptimoBylineContributorBlock,
+  OptimoBylineContributorMetadataBlock,
+} from '#app/models/types/optimo';
 import pathOr from 'ramda/src/pathOr';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
-
-type BylineBlock = {
-  type: 'name' | 'role' | 'link' | 'location' | 'images';
-  model: {
-    blocks: object[];
-  };
-};
 
 const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
   endModelType: string,
-  block: BylineBlock | undefined,
+  block: OptimoBylineContributorMetadataBlock | undefined,
 ) => {
+  if (!block) return '';
+
   const zeroIndexModelBlock = ['model', 'blocks', '0'];
   const endModel = ['model', endModelType];
   let givenPath: string[] = [];
@@ -26,12 +25,9 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const bylineExtractor = (blocks: object[]) => {
-  const bylineBlocks = pathOr<BylineBlock[]>(
-    [],
-    [0, 'model', 'blocks'],
-    blocks,
-  );
+const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
+  const bylineBlocks = blocks?.[0]?.model?.blocks || [];
+
   const authorBlock = bylineBlocks.find(block => block.type === 'name');
   const jobRoleBlock = bylineBlocks.find(block => block.type === 'role');
   const twitterBlock = bylineBlocks.find(block => block.type === 'link');
@@ -59,8 +55,8 @@ const bylineExtractor = (blocks: object[]) => {
 
   if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
-  const contributorBlock = pathOr([], [0], blocks);
-  const authorTopicUrl = pathOr('', ['model', 'topicUrl'], contributorBlock);
+  const contributorBlock = blocks?.[0] ?? [];
+  const authorTopicUrl = contributorBlock?.model?.topicUrl ?? '';
 
   return {
     authorName,
