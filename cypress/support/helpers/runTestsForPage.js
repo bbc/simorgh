@@ -62,8 +62,28 @@ const runTestsForPage = ({
                 { foo: '123' },
               );
             }
-            visitPage(currentPath, pageType);
+
+            if (
+              Cypress.env('APP_ENV') !== 'local' &&
+              pageType !== 'mediaAssetPage'
+            ) {
+              visitPage(currentPath, pageType);
+            }
           });
+
+          /* MAP tests on local are timing out - we believe it's related to the media loader scripts, but are unable to confirm
+           * For this reason, we will no longer run MAP canonical tests on local environment
+           *
+           * These tests will run on all other environments:
+           * Scheduled E2Es: Test / Live environment, when smoke: false
+           * Deployment Pipeline: Test / Live environment, when smoke: true
+           */
+          if (
+            Cypress.env('APP_ENV') === 'local' &&
+            pageType === 'mediaAssetPage'
+          ) {
+            return;
+          }
 
           const testArgs = {
             service,
