@@ -1,12 +1,14 @@
-import transformer from '.';
+import { Article } from '#app/models/types/optimo';
+import transformer from './augmentWithDisclaimer';
 
-const buildPageDataFixture = (blocks = [{ type: 'timestamp' }]) => ({
-  content: {
-    model: {
-      blocks,
+const buildPageDataFixture = (blocks = [{ type: 'timestamp' }]) =>
+  ({
+    content: {
+      model: {
+        blocks,
+      },
     },
-  },
-});
+  }) as Article;
 
 const buildTogglesFixture = (enabled = true) => ({
   disclaimer: {
@@ -19,7 +21,7 @@ describe('augmentWithDisclaimer', () => {
     const transformedData = transformer({
       toggles: buildTogglesFixture(),
       positionFromTimestamp: 1,
-    })(buildPageDataFixture());
+    })(buildPageDataFixture()) as Article;
 
     expect(transformedData.content.model.blocks[0].type).toEqual('timestamp');
     expect(transformedData.content.model.blocks[1].type).toEqual('disclaimer');
@@ -29,7 +31,7 @@ describe('augmentWithDisclaimer', () => {
     const transformedData = transformer({
       toggles: buildTogglesFixture(),
       positionFromTimestamp: 0,
-    })(buildPageDataFixture());
+    })(buildPageDataFixture()) as Article;
 
     expect(transformedData.content.model.blocks[0].type).toEqual('disclaimer');
     expect(transformedData.content.model.blocks[1].type).toEqual('timestamp');
@@ -39,7 +41,7 @@ describe('augmentWithDisclaimer', () => {
     const transformedData = transformer({
       toggles: buildTogglesFixture(),
       positionFromTimestamp: 0,
-    })(buildPageDataFixture([]));
+    })(buildPageDataFixture([])) as Article;
 
     expect(transformedData.content.model.blocks[0].type).toEqual('disclaimer');
   });
@@ -48,7 +50,7 @@ describe('augmentWithDisclaimer', () => {
     const transformedData = transformer({
       toggles: buildTogglesFixture(false),
       positionFromTimestamp: 0,
-    })(buildPageDataFixture([]));
+    })(buildPageDataFixture([])) as Article;
 
     expect(transformedData.content.model.blocks[0]).toBeUndefined();
   });
