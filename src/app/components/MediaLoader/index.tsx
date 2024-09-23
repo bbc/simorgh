@@ -234,6 +234,9 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
+      {orientation === 'portrait' && (
+        <strong css={styles.titlePortrait}>Watch Moments</strong>
+      )}
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}
