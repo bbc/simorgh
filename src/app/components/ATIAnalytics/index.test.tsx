@@ -280,7 +280,6 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
       render(<ATIAnalytics data={articleDataNews} />, {
         ...defaultRenderProps,
         isAmp: false,
@@ -321,7 +320,6 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
       render(<ATIAnalytics data={articleDataNews} />, {
         ...defaultRenderProps,
         isAmp: true,
