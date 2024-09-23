@@ -82,7 +82,7 @@ export default (overrideProps?: { defaultService?: Services }) =>
       dir,
       service,
       variant: variant || DEFAULT_VARIANT,
-      selectedService: service,
+      selectedService: serviceToUse,
       timezone,
       isLite,
     };
