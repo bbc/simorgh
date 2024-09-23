@@ -2,6 +2,8 @@ import React, { PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
+import { Article } from '#app/models/types/optimo';
+import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -9,7 +11,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import newsMostReadData from '../../../../data/news/mostRead/index.json';
 import MediaArticlePage from './MediaArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import pidginPageData from './fixtureData';
+import { pidginPageData } from './fixtureData';
 import { Services } from '../../models/types/global';
 
 jest.mock('../../components/ThemeProvider');
@@ -84,7 +86,7 @@ describe('MediaArticlePage', () => {
 
     const { container } = render(
       <Context service="news">
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -93,12 +95,53 @@ describe('MediaArticlePage', () => {
     });
   });
 
+  it('should set "amphtml" link tag for asset', async () => {
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toEqual({
+      href: 'https://www.test.bbc.co.uk/pathname.amp',
+      rel: 'amphtml',
+    });
+  });
+
+  it('should not set "amphtml" link tag for TC2 asset', async () => {
+    const pageDataAsTC2Asset = {
+      ...pidginPageData,
+      metadata: {
+        ...pidginPageData.metadata,
+        analyticsLabels: {
+          ...pidginPageData.metadata.analyticsLabels,
+          contentId:
+            'urn:bbc:topcat:curie:asset:7b51390e-c5c3-11e3-a6ee-819a3db9bd6e',
+        },
+      },
+    };
+
+    render(
+      <Context service="pidgin">
+        <MediaArticlePage pageData={pageDataAsTC2Asset as unknown as Article} />
+      </Context>,
+    );
+
+    const helmetContent = Helmet.peek()?.linkTags;
+    const ampHtmlLink = helmetContent.find(link => link.rel === 'amphtml');
+
+    expect(ampHtmlLink).toBeUndefined();
+  });
+
   it('should NOT render mpu or advert leaderboard', async () => {
     fetchMock.mockResponse(JSON.stringify(newsMostReadData));
 
     const { container } = render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -127,7 +170,7 @@ describe('MediaArticlePage', () => {
 
     render(
       <Context service="news" adsToggledOn showAdsBasedOnLocation>
-        <MediaArticlePage pageData={pidginPageData} />
+        <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
 
@@ -137,5 +180,19 @@ describe('MediaArticlePage', () => {
 
     expect(src).toEqual(imageURL);
     expect(srcset).toEqual(expectedSrcSetURLs);
+  });
+
+  const services = ['serbian', 'uzbek', 'zhongwen'] satisfies Services[];
+
+  services.forEach(service => {
+    it(`should not render a relatedTopics onward journey for a ${service} optimo article`, async () => {
+      const { queryByTestId } = render(
+        <Context service={service as Services}>
+          <MediaArticlePage pageData={pidginPageData as unknown as Article} />
+        </Context>,
+      );
+      const relatedTopics = queryByTestId('related-topics');
+      expect(relatedTopics).toBeNull();
+    });
   });
 });

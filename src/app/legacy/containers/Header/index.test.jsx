@@ -17,9 +17,6 @@ import { service as pidginServiceConfig } from '../../../lib/config/services/pid
 import HeaderContainer from './index';
 
 const defaultToggleState = {
-  navOnArticles: {
-    enabled: true,
-  },
   scriptLink: {
     enabled: true,
   },
@@ -123,6 +120,30 @@ describe(`Header`, () => {
         renderOptions: {
           pageType: FRONT_PAGE,
           service: 'serbian',
+          variant: 'cyr',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
+    it('should not render script link for uzbek when it is not an article page ', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: FRONT_PAGE,
+          service: 'uzbek',
+          variant: 'cyr',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+    });
+
+    it('should render script link for uzbek when it is an article page ', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: ARTICLE_PAGE,
+          service: 'uzbek',
           variant: 'cyr',
         },
       });

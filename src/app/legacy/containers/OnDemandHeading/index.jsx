@@ -52,7 +52,7 @@ const OnDemandHeadingContainer = ({
   idAttr = null,
   brandTitle,
   releaseDateTimeStamp,
-  episodeTitle = null,
+  episodeTitle = '',
   ariaHidden = false,
   className = '',
 }) => {
@@ -79,9 +79,11 @@ const OnDemandHeadingContainer = ({
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
-        <BrandTitle script={script}>{brandTitle}</BrandTitle>
+        <BrandTitle script={script} data-testid="brand-title">
+          {brandTitle}
+        </BrandTitle>
         <VisuallyHiddenText>, </VisuallyHiddenText>
-        <Subheading script={script} service={service}>
+        <Subheading script={script} service={service} data-testid="sub-heading">
           {episodeTitle || formattedTimestamp}
         </Subheading>
       </TextWrapper>

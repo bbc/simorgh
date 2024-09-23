@@ -39,6 +39,7 @@ const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
 const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
+const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
 const isFrontPage = ({
   path,
@@ -96,6 +97,17 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = () => pageType;
       break;
     case LIVE_PAGE:
+      getIdFunction = (path: string) => {
+        if (isTipoIdCheck(path)) {
+          return getTipoId(path);
+        }
+        if (isCpsIdCheck(path)) {
+          return `/${service}${variant ? `/${variant}` : ''}/live/${getCpsId(path)}`;
+        }
+        return null;
+      };
+      break;
+
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
         return (
@@ -136,6 +148,7 @@ export interface UrlConstructParams {
   page?: string;
   isAmp?: boolean;
   mediaId?: string | null;
+  lang?: string | null;
 }
 
 const constructPageFetchUrl = ({
@@ -146,10 +159,10 @@ const constructPageFetchUrl = ({
   page,
   isAmp,
   mediaId,
+  lang,
 }: UrlConstructParams) => {
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
-
   const id = getId({ pageType, service, env, variant })(pathname);
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
@@ -174,6 +187,9 @@ const constructPageFetchUrl = ({
     // MediaId can be supplied by av-embeds routes to determine which media asset to return
     ...(mediaId && {
       mediaId,
+    }),
+    ...(lang && {
+      lang,
     }),
     ...(env && { serviceEnv: env }),
   };
@@ -214,8 +230,9 @@ const constructPageFetchUrl = ({
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${id}${variantPath}`,
+          `${host}${port}/api/local/${service}/live/${pathname}${variantPath}`,
         );
         break;
       }
@@ -231,9 +248,11 @@ const constructPageFetchUrl = ({
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
 
-        if (parsedRoute.isSyndicationRoute) {
+        if (parsedRoute.isWsRoute) {
+          // handle /ws/av-embeds route
+        } else {
           fetchUrl = Url(
-            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}`,
+            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''} ${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
           );
         }
 

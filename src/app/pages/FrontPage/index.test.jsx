@@ -1,5 +1,4 @@
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -72,14 +71,6 @@ jest.mock('../../components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 
-jest.mock('#containers/PageHandlers/withVariant', () => Component => {
-  return props => (
-    <div id="VariantContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
 jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return props => (
     <div id="ContextsContainer">
@@ -123,15 +114,12 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 describe('Front Page', () => {
   beforeEach(() => {
     delete process.env.SIMORGH_APP_ENV;
-    fetchMock.mock(
-      'begin:http://localhost/serbian/lat',
-      JSON.stringify(serbianFrontPageData),
-    );
+    fetch.mockResponse(JSON.stringify(serbianFrontPageData));
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-    fetchMock.restore();
+    fetch.resetMocks();
   });
 
   describe('Assertions', () => {

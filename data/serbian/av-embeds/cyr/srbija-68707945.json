@@ -2,6 +2,27 @@
   "data": {
     "avEmbed": {
       "metadata": {
+        "atiAnalytics": {
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "categoryName": "News",
+          "contentId": "urn:bbc:cps:curie:asset:78f55756-ef21-47b4-a4e1-ffe1de4c957a",
+          "contentType": "article",
+          "language": "sr-Cyrl",
+          "ldpThingIds": "1791445f-977a-4e6d-b490-51f84bb4fc52~184cb2f7-e305-4c46-ab4f-2e18f60b0293~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6942cb29-9d3f-4c9c-9806-0a0578c286d6~992e096e-28e6-412d-b6a1-652f78be63c7~a1c14222-e7ab-45a2-a074-3cdc1045607c",
+          "ldpThingLabels": "Serbia~Family~Society~Education~Children~Disability",
+          "nationsProducer": null,
+          "pageIdentifier": "serbiancyr.serbia.story.68707945.page",
+          "pageTitle": "Здравље: Лични пратиоци деце са потешкоћама у развоју, „као члан породице\"",
+          "timePublished": "2024-07-25T07:01:21.000Z",
+          "timeUpdated": "2024-07-25T07:01:21.000Z",
+          "producerName": "SERBIAN",
+          "producerId": "81"
+        },
         "id": "urn:bbc:ares::asset:serbian/cyr/srbija-68707945",
         "locators": {
           "assetUri": "/serbian/cyr/srbija-68707945",
@@ -14,7 +35,7 @@
         "type": "STY",
         "createdBy": "serbian-v6",
         "language": "sr-Cyrl",
-        "lastUpdated": 1721890892000,
+        "lastUpdated": 1724927647000,
         "firstPublished": 1721890881000,
         "lastPublished": 1721890881000,
         "timestamp": 1721890881000,
@@ -426,10 +447,6 @@
           "aresMediaMetadata"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "producerName": "SERBIAN",
-          "producerId": "81"
-        },
         "readTime": 5,
         "siteUri": "/serbian/cyr",
         "topics": [
@@ -668,6 +685,12 @@
                           }
                         }
                       ]
+                    }
+                  },
+                  {
+                    "type": "captionText",
+                    "model": {
+                      "caption": "Србија и особе са инвалидитетом: Како је Стефан слухом заслужио дипломе и освојио медаље"
                     }
                   }
                 ]

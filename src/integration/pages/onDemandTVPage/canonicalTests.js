@@ -2,7 +2,7 @@ import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
   runCommonCrossPlatformTests,
-  runMediaPlayerEmbedLegacyTests,
+  runMediaPlayerTests,
   runRecentEpisodesTests,
 } from '../../common';
 
@@ -13,6 +13,6 @@ export default () => {
   runCanonicalAnalyticsTests();
   runCommonCrossPlatformTests(service);
   runCommonEpisodeTests();
-  runMediaPlayerEmbedLegacyTests();
+  runMediaPlayerTests();
   runRecentEpisodesTests();
 };

@@ -10,10 +10,10 @@ exports[`BrandContainer should render correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 15rem) {
   .emotion-1 {
-    height: 3.5rem;
-    padding: 0 1rem;
+    height: 3.75rem;
+    padding: 0 0.5rem;
   }
 }
 

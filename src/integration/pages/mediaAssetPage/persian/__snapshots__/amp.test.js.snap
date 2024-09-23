@@ -440,7 +440,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
   "@type": "AudioObject",
   "description": "Trump long headline",
   "duration": "PT26S",
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
+  "embedURL": "https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
   "name": "Trump short headline",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
   "uploadDate": "2019-02-15T12:37:28.000Z",
