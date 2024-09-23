@@ -1,4 +1,4 @@
-import * as PAGE_TYPES from '../../routes/utils/pageTypes';
+import * as PAGE_TYPES from '#routes/utils/pageTypes';
 
 export type Environments = 'local' | 'test' | 'live';
 

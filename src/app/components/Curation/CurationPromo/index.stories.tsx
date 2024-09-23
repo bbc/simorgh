@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
-import { MEDIA_TYPES } from '#components/Promo';
+import { MEDIA_TYPES } from '#legacy/components/Promo';
 import Promo from '.';
 
 const Wrapper = styled.div`

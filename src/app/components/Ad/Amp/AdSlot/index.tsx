@@ -1,6 +1,6 @@
 import React from 'react';
 import isLive from '#lib/utilities/isLive';
-import { STORY_PAGE } from '../../../../routes/utils/pageTypes';
+import { STORY_PAGE } from '#routes/utils/pageTypes';
 import { PageTypes, Services } from '../../../../models/types/global';
 import { SlotType } from '../../types';
 import {

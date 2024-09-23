@@ -10,7 +10,7 @@ import {
   HOME_PAGE,
   ERROR_PAGE,
   LIVE_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as buildPageATIFunctionImports from './genericPage/buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';

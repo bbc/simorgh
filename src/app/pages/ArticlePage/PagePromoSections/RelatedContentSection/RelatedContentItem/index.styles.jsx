@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import Promo from '#components/OptimoPromos';
+import Promo from '#legacy/components/OptimoPromos';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { BORDER_SPACING } from '../../constants';
 

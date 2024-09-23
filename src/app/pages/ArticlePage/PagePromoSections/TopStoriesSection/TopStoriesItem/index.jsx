@@ -2,7 +2,7 @@ import React, { useContext, forwardRef } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
-import Promo from '#components/OptimoPromos';
+import Promo from '#legacy/components/OptimoPromos';
 import { ServiceContext } from '../../../../../contexts/ServiceContext';
 
 import {

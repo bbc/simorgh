@@ -16,7 +16,7 @@ import {
   TOPIC_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
-} from '../../../routes/utils/pageTypes';
+} from '#routes/utils/pageTypes';
 import {
   Environments,
   PageTypes,

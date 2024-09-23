@@ -39,7 +39,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import ScrollablePromo from '#components/ScrollablePromo';
+import ScrollablePromo from '#legacy/components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import ImageWithCaption from '../../components/ImageWithCaption';

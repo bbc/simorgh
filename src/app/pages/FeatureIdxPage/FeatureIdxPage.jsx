@@ -2,7 +2,7 @@ import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import IndexHeading from '#containers/IndexHeading';
-import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
+import IndexPageContainer from '#legacy/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '../../components/Ad';

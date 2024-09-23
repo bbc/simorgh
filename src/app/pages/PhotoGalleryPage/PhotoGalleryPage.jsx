@@ -12,7 +12,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
+import { GelPageGrid, GridItemLarge } from '#legacy/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import headings from '#containers/Headings';
