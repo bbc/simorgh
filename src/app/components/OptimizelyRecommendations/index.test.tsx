@@ -7,10 +7,11 @@ import {
   ReactSDKClient,
 } from '@optimizely/react-sdk';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { Article } from '#app/models/types/optimo';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
-import OptimizelyRecommendations, { ArticlePageType } from '.';
+import OptimizelyRecommendations from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
@@ -55,7 +56,7 @@ const makeMockFn =
     return null;
   };
 
-const renderContainer = (service: Services, pageData: ArticlePageType) => {
+const renderContainer = (service: Services, pageData: Article) => {
   const toggleState = {
     cpsRecommendations: {
       enabled: true,
@@ -104,7 +105,7 @@ describe('OptimizelyRecommendations', () => {
 
       const { getByText } = renderContainer(
         'portuguese',
-        samplePageData as unknown as ArticlePageType,
+        samplePageData as unknown as Article,
       );
 
       expect(
@@ -121,7 +122,7 @@ describe('OptimizelyRecommendations', () => {
 
       const { getByText } = renderContainer(
         'portuguese',
-        samplePageData as unknown as ArticlePageType,
+        samplePageData as unknown as Article,
       );
 
       expect(
@@ -143,7 +144,7 @@ describe('OptimizelyRecommendations', () => {
 
       const { getByText } = renderContainer(
         'portuguese',
-        sampleData as unknown as ArticlePageType,
+        sampleData as unknown as Article,
       );
 
       expect(

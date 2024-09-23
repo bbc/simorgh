@@ -1,4 +1,9 @@
-import React, { createContext, PropsWithChildren, useContext } from 'react';
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useMemo,
+} from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -7,7 +12,6 @@ import {
   FRONT_PAGE,
   MEDIA_PAGE,
   MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
@@ -20,6 +24,8 @@ import {
   CPS_ASSET,
   STATIC_PAGE,
   UGC_PAGE,
+  AV_EMBEDS,
+  DOWNLOADS_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
@@ -53,7 +59,6 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [FRONT_PAGE]: 'index-home',
     [MEDIA_PAGE]: 'player-episode-tv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
-    [MOST_WATCHED_PAGE]: 'list-datadriven-watched',
     [FEATURE_INDEX_PAGE]: 'index-section-fix',
     [MEDIA_ASSET_PAGE]: 'article-media-asset',
     [STORY_PAGE]: 'article-sty',
@@ -65,6 +70,8 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CPS_ASSET]: '',
     [STATIC_PAGE]: '',
     [UGC_PAGE]: '',
+    [AV_EMBEDS]: 'av-embeds',
+    [DOWNLOADS_PAGE]: 'downloads',
   }[pageType];
 
   if (!campaignID) {
@@ -97,6 +104,37 @@ export const EventTrackingContextProvider = ({
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
+  const trackingProps = useMemo(() => {
+    if (eventTrackingIsEnabled || (data && atiData)) {
+      const campaignID = getCampaignID(pageType as CampaignPageTypes);
+
+      const { pageIdentifier, platform, statsDestination } =
+        buildATIEventTrackingParams({
+          requestContext,
+          serviceContext,
+          data,
+          atiData,
+        }) as ATIEventTrackingProps;
+
+      return {
+        campaignID,
+        pageIdentifier,
+        platform,
+        producerId: atiAnalyticsProducerId,
+        statsDestination,
+      };
+    }
+    return null;
+  }, [
+    atiAnalyticsProducerId,
+    atiData,
+    data,
+    eventTrackingIsEnabled,
+    pageType,
+    requestContext,
+    serviceContext,
+  ]);
+
   if (!eventTrackingIsEnabled || (!data && !atiData)) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
@@ -105,26 +143,17 @@ export const EventTrackingContextProvider = ({
     );
   }
 
-  const campaignID = getCampaignID(pageType as CampaignPageTypes);
-  const { pageIdentifier, platform, statsDestination } =
-    buildATIEventTrackingParams({
-      requestContext,
-      serviceContext,
-      data,
-      atiData,
-    }) as ATIEventTrackingProps;
-  const trackingProps = {
-    campaignID,
-    pageIdentifier,
-    platform,
-    producerId: atiAnalyticsProducerId,
-    statsDestination,
-  };
-  const hasRequiredProps = Object.values(trackingProps).every(Boolean);
+  const hasRequiredProps = Object.values(
+    trackingProps as EventTrackingContextProps,
+  ).every(Boolean);
 
   return (
     <EventTrackingContext.Provider
-      value={hasRequiredProps ? trackingProps : NO_TRACKING_PROPS}
+      value={
+        hasRequiredProps
+          ? (trackingProps as EventTrackingContextProps)
+          : NO_TRACKING_PROPS
+      }
     >
       {children}
     </EventTrackingContext.Provider>

@@ -86,6 +86,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग',
         postedAt: 'वाजता पोस्ट केलं',
         summary: 'थोडक्यात',
+        shareButtonText: 'शेअर करा',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'थोडक्यात',
       error: {
@@ -279,11 +284,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'सर्वाधिक पाहिलेले',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -336,10 +336,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'बातम्या',
         url: '/marathi',
-      },
-      {
-        title: 'लोकसभा निवडणूक 2024',
-        url: '/marathi/topics/c1wmk63rjkvt',
       },
       {
         title: 'महाराष्ट्र',

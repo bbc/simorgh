@@ -20,9 +20,9 @@ describe('UGC Page Layout', () => {
     jest.restoreAllMocks();
 
     ({ container } = await act(() => {
-      return render(
-        <UGCPageLayout pageData={mundoFixture as PageProps['pageData']} />,
-      );
+      const pageData = mundoFixture.data as PageProps['pageData'];
+
+      return render(<UGCPageLayout pageData={pageData} />);
     }));
   });
 
@@ -45,7 +45,7 @@ describe('UGC Page Layout', () => {
   });
 
   it('Renders a submit button within the form', () => {
-    const submitButton = container.querySelector('form input[type=submit]');
+    const submitButton = container.querySelector('button[type=submit]');
     expect(submitButton).toBeInTheDocument();
   });
 });

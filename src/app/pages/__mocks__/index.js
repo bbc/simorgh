@@ -1,12 +1,12 @@
 // a synchronous page component loading mock
 
 export { default as ArticlePage } from '../ArticlePage';
+export { default as MediaArticlePage } from '../MediaArticlePage';
 export { default as ErrorPage } from '../ErrorPage';
 export { default as FrontPage } from '../FrontPage';
 export { default as HomePage } from '../HomePage';
 export { default as MediaAssetPage } from '../MediaAssetPage';
 export { default as MostReadPage } from '../MostReadPage';
-export { default as MostWatchedPage } from '../MostWatchedPage';
 export { default as PhotoGalleryPage } from '../PhotoGalleryPage';
 export { default as LiveRadioPage } from '../LiveRadioPage';
 export { default as OnDemandAudioPage } from '../OnDemandAudioPage';

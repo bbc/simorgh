@@ -10,6 +10,9 @@ export default {
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
+      '&:visited': {
+        color: `${palette.GREY_5}`,
+      },
       '::before': {
         position: 'absolute',
         top: 0,
@@ -24,8 +27,8 @@ export default {
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
-      [mq.HIGH_CONTRAST]: {
-        borderBottom: `solid ${pixelsToRem(1)}rem transparent`,
+      [mq.FORCED_COLOURS]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
   backgroundContainer: ({ palette }: Theme) =>
@@ -33,7 +36,7 @@ export default {
       zIndex: 2,
       position: 'absolute',
       top: '0',
-      backgroundColor: palette.GREY_10,
+      backgroundColor: palette.BLACK,
       bottom: '0',
       width: '100%',
       overflow: 'hidden',
@@ -74,7 +77,7 @@ export default {
         width: `${spacings.TRIPLE + spacings.HALF}rem`,
         height: `${spacings.TRIPLE + spacings.HALF}rem`,
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         color: 'canvasText',
       },
     }),

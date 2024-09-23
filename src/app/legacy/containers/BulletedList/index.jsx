@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
-import BulletedList from '#psammead/psammead-bulleted-list/src';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
-import { arrayOf, shape, oneOf, string } from 'prop-types';
 import { GridItemMedium } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { BulletedList } from '../../../components/BulletedList';
 import Blocks from '../Blocks';
-import listItem, { ListItemPropTypes } from '../BulletedListItem';
+import listItem from '../BulletedListItem';
 
 const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -21,7 +19,7 @@ const withClickHandler = (Component, clickHandler) => props => (
 
 const BulletedListContainer = ({
   blocks,
-  className,
+  className = '',
   blockGroupType,
   blockGroupIndex,
   ...rest
@@ -31,16 +29,12 @@ const BulletedListContainer = ({
     format: 'CHD=bullet',
   };
   const viewRef = useViewTracker(eventTrackingData);
-  const { script, service, dir } = useContext(ServiceContext);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   return (
-    <StyledGridItemMedium className={className}>
+    <StyledGridItemMedium {...(className && { className })}>
       <BulletedList
         {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
-        script={script}
-        service={service}
-        dir={dir}
         ref={blockGroupType === 'listWithLink' ? viewRef : null}
       >
         <Blocks
@@ -56,16 +50,5 @@ const BulletedListContainer = ({
     </StyledGridItemMedium>
   );
 };
-
-export const ListPropTypes = {
-  blocks: arrayOf(
-    shape({ type: oneOf(['listItem']), model: shape(ListItemPropTypes) }),
-  ).isRequired,
-  class: string,
-};
-
-BulletedListContainer.propTypes = { ...ListPropTypes };
-
-BulletedListContainer.defaultProps = { className: null };
 
 export default BulletedListContainer;

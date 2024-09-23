@@ -1,6 +1,6 @@
 import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
+import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import Live from './LivePageLayout';
 
@@ -13,6 +13,7 @@ const mockPageData = {
   someResponse: {
     block: 'Its a block',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const Component = () => (

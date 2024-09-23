@@ -17,7 +17,6 @@ import {
 import OptimoSocialEmbedContainer from '.';
 import withContexts from './common/testHelper';
 
-// eslint-disable-next-line react/prop-types
 const BackgroundColorWrapper = ({ children }) => (
   <div css={css({ backgroundColor: GREY_2, padding: 20 })}>{children}</div>
 );
@@ -42,116 +41,116 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const TwitterCanonicalExample = (_, globalArgs) => (
+export const TwitterCanonicalExample = (_, { service }) => (
   <Component
     blocks={[twitterBlock]}
     source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const TwitterAmpExample = (_, globalArgs) => (
+export const TwitterAmpExample = (_, { service }) => (
   <Component
     isAmp
     blocks={[twitterBlock]}
     source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-    {...globalArgs}
+    service={service}
   />
 );
 TwitterAmpExample.decorators = [AmpDecorator];
 
-export const TwitterNoEmbed = (_, globalArgs) => (
+export const TwitterNoEmbed = (_, { service }) => (
   <Component
     blocks={[twitterBlockNoEmbed]}
     source="https://twitter.com/BBCNews/status/1384138850478346243?s=20"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const InstagramCanonicalExample = (_, globalArgs) => (
+export const InstagramCanonicalExample = (_, { service }) => (
   <Component
     blocks={[instagramBlock]}
     source="https://www.instagram.com/p/CgNAEjOK46_"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const InstagramNoEmbed = (_, globalArgs) => (
+export const InstagramNoEmbed = (_, { service }) => (
   <Component
     blocks={[instagramBlockNoEmbed]}
     source="https://www.instagram.com/p/CgNAEjOK46_"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const TikTokWithConsentBanner = (_, globalArgs) => (
+export const TikTokWithConsentBanner = (_, { service }) => (
   <Component
     blocks={[tiktokBlockEmbed]}
     source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const TikTokWithConsentBannerAmp = (_, globalArgs) => (
+export const TikTokWithConsentBannerAmp = (_, { service }) => (
   <Component
     isAmp
     blocks={[tiktokBlockEmbed]}
     source="https://www.tiktok.com/@cuppymusic/video/7086167423639997701"
-    {...globalArgs}
+    service={service}
   />
 );
 TikTokWithConsentBannerAmp.decorators = [AmpDecorator];
 
-export const YoutubeWithConsentBanner = (_, globalArgs) => (
+export const YoutubeWithConsentBanner = (_, { service }) => (
   <Component
     blocks={[youtubeBlockEmbed]}
     source="https://www.youtube.com/watch?v=1e05_rwHvOM"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const YoutubeWithConsentBannerAmp = (_, globalArgs) => (
+export const YoutubeWithConsentBannerAmp = (_, { service }) => (
   <Component
     isAmp
     blocks={[youtubeBlockEmbed]}
     source="https://www.youtube.com/watch?v=1e05_rwHvOM"
-    {...globalArgs}
+    service={service}
   />
 );
 YoutubeWithConsentBannerAmp.decorators = [AmpDecorator];
 
-export const FacebookPostCanonicalExample = (_, globalArgs) => (
+export const FacebookPostCanonicalExample = (_, { service }) => (
   <Component
     blocks={[facebookPostBlockEmbed]}
     source="https://www.facebook.com/RickAstley/posts/545713756920775"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const FacebookPostAmpExample = (_, globalArgs) => (
+export const FacebookPostAmpExample = (_, { service }) => (
   <Component
     isAmp
     blocks={[facebookPostBlockEmbed]}
     source="https://www.facebook.com/RickAstley/posts/545713756920775"
-    {...globalArgs}
+    service={service}
   />
 );
 FacebookPostAmpExample.decorators = [AmpDecorator];
 
-export const FacebookVideoCanonicalExample = (_, globalArgs) => (
+export const FacebookVideoCanonicalExample = (_, { service }) => (
   <Component
     blocks={[facebookVideoBlockEmbed]}
     source="https://www.facebook.com/RickAstley/videos/1378590239249667"
-    {...globalArgs}
+    service={service}
   />
 );
 
-export const FacebookVideoAmpExample = (_, globalArgs) => (
+export const FacebookVideoAmpExample = (_, { service }) => (
   <Component
     isAmp
     blocks={[facebookVideoBlockEmbed]}
     source="https://www.facebook.com/RickAstley/videos/1378590239249667"
-    {...globalArgs}
+    service={service}
   />
 );
 FacebookVideoAmpExample.decorators = [AmpDecorator];

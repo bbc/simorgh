@@ -1,0 +1,350 @@
+{
+  "data": {
+    "projectId": "ugc-world-service-hausa-story",
+    "title": "Gasar Hikayata ta Mata Zalla ta BBC Hausa 2023",
+    "description": "<h2>Abubuwan da ake bukata:</h2>\n<ul>\n<li>Gajeren kagaggen labari (wanda bai gaza kalmomi 1,000 ba sannan bai wuce 1,500)</li>\n<li>Takaitacce tarihinki da kuma takaitaccen bayani kan labarin naki</li>\n<li>Bayanan da za a tuntube ki</li>\n<li>Ki karanta&nbsp;<a href=\"https://www.bbc.com/hausa/articles/crgl32j2pg7o\" target=\"_blank\">Ka'idojin gasar</a>&nbsp;da&nbsp;<a title=\"Dokokin bayanan sirri na BBC\" href=\"https://www.bbc.com/hausa/articles/cz4pz9z0rn1o\" target=\"_blank\">Dokokin bayanan sirri na BBC</a>&nbsp;kafin ki shiga gasar</li>\n<li>Dole ne shekarunki ka da su gaza 18 sannan ka da su wuce 35, ya zuwa ranar da za a rufe gasar ranar 20<strong>&nbsp;ga watan Agusta 2023</strong>.&nbsp;</li>\n<li>Wannan gasa ce ga mata kawai.</li>\n</ul>",
+    "campaignId": "u143732177",
+    "languageTag": "ha-GH",
+    "campaignStatus": "closed",
+    "openingTime": "2023-06-01T00:01:00.000Z",
+    "closingTime": "2023-08-20T22:59:00.000Z",
+    "submissionUrl": "https://www.bbc.com/hausa",
+    "privacyNotice": {
+      "default": "<p><strong>Ka'idojin shiga gasa:</strong></p>\n<ul>\n<li>Dole ne masu shiga gasa su zama mata zalla kuma ka da shekarunsu su gaza 18 sannan ka da su wuce 35 ya zuwa ranar <strong>24 ga watan Agustan 2024</strong>.</li>\n<li>Za a rufe gasar da ƙarfe <strong>23:59 agogon GMT ranar 24 ga Agustan 2024</strong>.</li>\n<li>Ba za a karɓi rubutun da aka aiko ba bayan rufe gasar. Ku karanta dokokin shiga gasar da ma na bayanan sirri kafin ku shiga gasar.</li>\n<li>Ba za a yi maraba da duk labarin da ya gaza ko ya wuce adadin da aka gindaya ba.</li>\n<li>Ba ma buƙatar ku sanya bayanan da suka jiɓanci ƙabilarku ko na rashin lafiya saɓanin wadanda muka buƙata saboda haka ku aiko mana kamar suna da yadda za a tuntuɓe ku.</li>\n<li>Sannan kuma a tabbata labarin da za a aiko ƙagagge ne.</li>\n<li>Ba za mu samu damar shiga tattaunawa ko sanar da karɓar labarin ba ga duk wadda ba a zaɓi labarinta ba. Sannan ku tabbatar kun sanya labarin naku kafin ku aike da fom ɗin nan</li>\n</ul>",
+      "url": "https://www.bbc.com/hausa/articles/cz4pz9z0rn1o",
+      "additional": ""
+    },
+    "settings": {
+      "moderationRequired": false,
+      "brand": "BBC Hausa",
+      "brandId": "world-service-hausa-story",
+      "replyEmailAddress": "labari.bbchausa@bbc.co.uk",
+      "ageGroup": [],
+      "exifMetadataEnabled": true,
+      "ppGroupId": "3545bf0d-2c7c-47d4-8a42-85675b235a4f",
+      "pageBackgroundTemplateUrl": "",
+      "brandLogo": "https://ichef.bbci.co.uk/images/ic/$recipe/p0c5kswv.png",
+      "brandType": "competition",
+      "webcoreBrand": "news",
+      "entryCap": "",
+      "readableRetentionPeriod": "",
+      "retentionPeriodDays": "",
+      "retentionExpiryDate": "2025-01-31",
+      "viewType": "submission",
+      "allowSubmissionWithoutEmail": false,
+      "winnerPickerEnabled": false,
+      "cta": {
+        "title": "Enter now",
+        "buttonText": "Entry form"
+      },
+      "allowEditing": false,
+      "signinRequired": false,
+      "accountPolicy": ""
+    },
+    "sections": [
+      {
+        "sectionText": {
+          "title": "Ku shigar da bayananku"
+        },
+        "fields": [
+          {
+            "id": "txt110644636",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "text",
+            "label": "Suna",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt110644712",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "text",
+            "label": "Kasa",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt110644809",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "text",
+            "label": "Gari",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt110644947",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "phone",
+            "label": "Lambar waya",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt110644992",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "email",
+            "label": "Adireshin Imel",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "chk110710585",
+            "type": "checkbox",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "description": "",
+            "label": "Ki cike wannan akwatu domin tabbatar da shekarunki sun kai 18 kuma ba ki wuce 35, ya zuwa ranar 24 ga watan Agusta 2024."
+          },
+          {
+            "id": "chk110981471",
+            "type": "checkbox",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "description": "",
+            "label": "Cike wannan akwatu domin tabbatar da cewa kin karanta dukkannin ƙa'idojin gasar kuma za ki bi su sau da ƙafa sannan kuma kin karanta dokokin bayanan sirri na BBC."
+          },
+          {
+            "id": "cl110712158",
+            "type": "conditional-logic",
+            "validation": {
+              "options": [
+                {
+                  "label": "Ba haka ba ne",
+                  "value": "ba-haka-ba-ne",
+                  "conditionalFieldsDescription": "",
+                  "conditionalFields": []
+                },
+                {
+                  "label": "E haka ne",
+                  "value": "e-haka-ne",
+                  "conditionalFieldsDescription": "Za a iya yin haɗaka amma ka da ta wuce mutum biyu a labari guda ɗaya. (A shigar da bayan ƴar uwar haɗakar a ƙasa)",
+                  "conditionalFields": [
+                    {
+                      "id": "chk110711620",
+                      "type": "checkbox",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "checkbox",
+                      "description": "",
+                      "label": "Ki cike wannan akwatu domin tabbatar da cewa shekarun ƴar uwar haɗakarki 18 zuwa 35, ya zuwa lokacin rufe gasar ranar 24 ga watan Agusta 2024."
+                    },
+                    {
+                      "id": "txt110644636-dup-1",
+                      "type": "text",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "text",
+                      "label": "Suna",
+                      "description": "",
+                      "textArea": false
+                    },
+                    {
+                      "id": "txt110644712-dup-1",
+                      "type": "text",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "text",
+                      "label": "Kasa",
+                      "description": "",
+                      "textArea": false
+                    },
+                    {
+                      "id": "txt110644809-dup-1",
+                      "type": "text",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "text",
+                      "label": "Gari",
+                      "description": "",
+                      "textArea": false
+                    },
+                    {
+                      "id": "txt110644947-dup-1",
+                      "type": "text",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "phone",
+                      "label": "Lambar waya",
+                      "description": "",
+                      "textArea": false
+                    },
+                    {
+                      "id": "txt110644992-dup-1",
+                      "type": "text",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "email",
+                      "label": "Adireshin Imel",
+                      "description": "",
+                      "textArea": false
+                    },
+                    {
+                      "id": "chk177232092",
+                      "type": "checkbox",
+                      "validation": {
+                        "mandatory": true
+                      },
+                      "htmlType": "checkbox",
+                      "description": "",
+                      "label": "HAƊAKA (ƴar uwar haɗaka) ki cike wannan akwatu domin amincewa da bayanin da ke sama da aka bayar a maimakonki gaskiya ne, kuma kin yarda ki shiga haɗakar sannan kin karanta dukkanin ƙa'idojin gasar kuma za ki bi su sau da ƙafa sannan kin karanta Dokar Bayanan Sirri ta BBC&nbsp;<a href=\"https://www.bbc.com/hausa/articles/cz4pz9z0rn1o\" target=\"_blank\">BBC's privacy policy</a>."
+                    }
+                  ]
+                }
+              ],
+              "mandatory": true,
+              "multiSelect": false
+            },
+            "description": "",
+            "htmlType": "radiobutton",
+            "label": "Haɗaka ce?"
+          },
+          {
+            "id": "chk110981558",
+            "type": "checkbox",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "description": "",
+            "label": "Cike wannan akwatun domin ba mu tabbacin dukkanin bayanan da kika bayar gaskiya ne kuma kin fahimci cewa za a iya yin bincike dangane da bayanan naki daga bisani."
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Tarihinki",
+          "description": "Mene ne ya ba ki ƙwarin gwiwar yin rubutu? Tun yaushe kike rubutu? Waɗanne irin labarai kike sha'awa? Ka da ki bayar da bayanan da ba mu tambaye ki ba kamar batun lafiyarki ( za ki iya sanya bayanan abokiyar hadakarki)"
+        },
+        "fields": [
+          {
+            "id": "txt110645286",
+            "type": "text",
+            "validation": {
+              "mandatory": true,
+              "wordLimit": 500,
+              "wordLimitMax": 500,
+              "wordLimitMin": 10
+            },
+            "htmlType": "",
+            "label": "Bayananki",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Taƙaitaccen bayanin labari",
+          "description": "Ki rubuta taƙaitaccen bayani dangane da labarin naki (ko kuma naku idan haɗaka ce) a nan"
+        },
+        "fields": [
+          {
+            "id": "txt110645477",
+            "type": "text",
+            "validation": {
+              "mandatory": true,
+              "wordLimit": 500,
+              "wordLimitMax": 500,
+              "wordLimitMin": 10
+            },
+            "htmlType": "",
+            "label": "Ki sanya taƙaitaccen bayanin labarin",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Labarin da za ki aika"
+        },
+        "fields": [
+          {
+            "id": "txt110645641",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 1500,
+              "wordLimitMax": 1500,
+              "wordLimitMin": 1000
+            },
+            "htmlType": "",
+            "label": "Ki zuba labarin naki a nan (wanda bai gaza kalmomi 1,000 ba sannan bai wuce 1,500 ba)",
+            "description": "",
+            "textArea": true
+          },
+          {
+            "id": "upl110645713",
+            "type": "file",
+            "validation": {
+              "fileTypes": ["application/pdf"],
+              "min": 0,
+              "max": 1
+            },
+            "label": "Ko kuma ki sanya labarin naki ta tsarin PDF",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "label": "E haka"
+      },
+      {
+        "label": "Ba haka ba ne"
+      },
+      {
+        "label": "Watakila"
+      }
+    ],
+    "secondaryLabels": [
+      {
+        "label": "Top 25"
+      },
+      {
+        "label": "Top 15"
+      },
+      {
+        "label": "Top 3"
+      }
+    ],
+    "confirmationMessage": "Mun gode. Muna farin ciki da shigar ki gasar “Hikayata” ta bana. Kwararru za su duba labarinki a matakin tantancewa, idan kika samu kai wa mataki na gaba kuma, za mu sanar da ke. Karanta ka’idojin shiga gasar a nan: https://www.bbc.com/hausa/articles/crgl32j2pg7o \n",
+    "retentionPolicyMessage": "We’ll keep it until 31/01/2025 – and if we don’t use it we’ll then delete it and any other information you sent us.",
+    "includeDataRetentionText": true,
+    "includeRightToRevokeText": true,
+    "includeRemovalGuidelineText": true,
+    "emailAddressFields": ["txt110644992", "txt110644992-dup-1"],
+    "promo": {
+      "title": "",
+      "promos": []
+    },
+    "campaignArchived": false
+  },
+  "contentType": "application/json; charset=utf-8"
+}

@@ -107,13 +107,14 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 
 <div>
   <h1
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <span
       role="text"
     >
       <span
         class="emotion-2 emotion-3"
+        data-testid="brand-title"
       >
         Dunia Pagi Ini
       </span>
@@ -124,6 +125,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
       </span>
       <span
         class="emotion-5 emotion-6"
+        data-testid="sub-heading"
       >
         27 April 2020
       </span>
@@ -255,13 +257,14 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 <div>
   <h1
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <span
       role="text"
     >
       <span
         class="emotion-2 emotion-3"
+        data-testid="brand-title"
       >
         Dunia Pagi Ini
       </span>
@@ -272,6 +275,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
       </span>
       <span
         class="emotion-5 emotion-6"
+        data-testid="sub-heading"
       >
         27 April 2020
       </span>

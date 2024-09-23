@@ -32,52 +32,54 @@ export const aresMediaCaptionBlock = {
   },
 };
 
+export const aresMediaPlayerBlock = {
+  id: 'c77c0598',
+  blockId: 'urn:bbc:ares::clip:p01k6msm',
+  type: 'aresMediaMetadata',
+  model: {
+    id: 'p01k6msm',
+    subType: 'clip',
+    format: 'video',
+    title: 'Five things ants can teach us about management',
+    synopses: {
+      short:
+        'They may be tiny, but us humans could learn a thing or two from ants.',
+    },
+    imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+    imageCopyright: 'BBC',
+    embedding: true,
+    advertising: true,
+    versions: [
+      {
+        versionId: 'p01k6msp',
+        types: ['Original'],
+        duration: 191,
+        durationISO8601: 'PT3M11S',
+        warnings: {
+          short: 'Contains strong language and adult humour.',
+          long: 'Contains strong language and adult humour.',
+        },
+        availableTerritories: {
+          uk: true,
+          nonUk: true,
+        },
+        availableFrom: 1540218932000,
+      },
+    ],
+    syndication: {
+      destinations: [],
+    },
+    smpKind: 'programme',
+  },
+  position: [5, 2, 1],
+};
+
 export const aresMediaBlock = {
   id: '80e150c0',
   type: 'aresMedia',
   model: {
     blocks: [
-      {
-        id: 'c77c0598',
-        blockId: 'urn:bbc:ares::clip:p01k6msm',
-        type: 'aresMediaMetadata',
-        model: {
-          id: 'p01k6msm',
-          subType: 'clip',
-          format: 'video',
-          title: 'Five things ants can teach us about management',
-          synopses: {
-            short:
-              'They may be tiny, but us humans could learn a thing or two from ants.',
-          },
-          imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
-          imageCopyright: 'BBC',
-          embedding: true,
-          advertising: true,
-          versions: [
-            {
-              versionId: 'p01k6msp',
-              types: ['Original'],
-              duration: 191,
-              durationISO8601: 'PT3M11S',
-              warnings: {
-                short: 'Contains strong language and adult humour.',
-                long: 'Contains strong language and adult humour.',
-              },
-              availableTerritories: {
-                uk: true,
-                nonUk: true,
-              },
-              availableFrom: 1540218932000,
-            },
-          ],
-          syndication: {
-            destinations: [],
-          },
-          smpKind: 'programme',
-        },
-        position: [5, 2, 1],
-      },
+      aresMediaPlayerBlock,
       {
         id: 'd8f26383',
         type: 'image',
@@ -270,5 +272,99 @@ export const livePageClipMediaBlock = {
   },
 };
 
+export const onDemandTvBlock = {
+  type: 'tv',
+  model: {
+    id: 'w172zm8b4tlpzxh',
+    subType: 'episode',
+    format: 'Video',
+    title: '06/09/2024 GMT',
+    synopses: {
+      short:
+        'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+      medium:
+        'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+    },
+    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+    embedding: false,
+    advertising: false,
+    versions: [
+      {
+        versionId: 'w1mskypb14t285q',
+        types: ['Original'],
+        duration: 1192,
+        durationISO8601: 'PT19M52S',
+        warnings: {},
+        availableTerritories: {
+          uk: true,
+          nonUk: true,
+          world: false,
+        },
+        availableFrom: 1725641390000,
+        availabilityStatus: 'available',
+      },
+    ],
+    availability: 'available',
+    smpKind: 'programme',
+    episodeTitle: 'दुनिया',
+    type: 'media',
+  },
+};
+
+export const mediaOverridesBlock = {
+  model: {
+    language: 'hi',
+    pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+    pageTitleOverride: 'दुनिया',
+  },
+  type: 'mediaOverrides',
+};
+
+export const aresMediaLiveStreamBlocks = [
+  {
+    id: '3e29a5f5',
+    type: 'aresMedia',
+    model: {
+      blocks: [
+        {
+          id: 'd67fb17d',
+          type: 'aresMediaMetadata',
+          blockId: 'urn:bbc:ares::primary:108540166',
+          model: {
+            live: true,
+            embedding: false,
+            subType: 'primary',
+            id: '108540166',
+            available: true,
+            format: 'audio_video',
+            title: 'مباشر: تلفزيون بي بي سي عربي',
+            imageCopyright: 'BBC',
+            imageUrl:
+              'http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png',
+            synopses: {
+              short: 'مباشر: تلفزيون بي بي سي عربي',
+              medium: 'مباشر: تلفزيون بي بي سي عربي',
+              long: 'مباشر: تلفزيون بي بي سي عربي',
+            },
+            versions: [
+              {
+                kind: 'programme',
+                live: true,
+                versionId: 'bbc_arabic_tv',
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  aresMediaCaptionBlock,
+];
+
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+export const onDemandTvBlocks = [onDemandTvBlock];
+export const onDemandTvBlocksWithOverrides = [
+  onDemandTvBlock,
+  mediaOverridesBlock,
+];

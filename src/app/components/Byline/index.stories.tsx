@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from 'react';
+import { OptimoBylineBlock } from '#app/models/types/optimo';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import {
   bylineWithNameAndRole,
@@ -11,7 +12,7 @@ import Byline from '.';
 import readme from './README.md';
 
 interface ComponentProps {
-  fixture: object[];
+  fixture: OptimoBylineBlock['model']['blocks'];
 }
 
 const Component = ({

@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, bool, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import CpsOnwardJourney from '../CpsOnwardJourney';
@@ -21,11 +19,11 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
 `;
 
 const CpsRelatedContent = ({
-  content,
-  parentColumns,
-  isMediaContent,
+  content = [],
+  parentColumns = null,
+  isMediaContent = false,
   title: _title,
-  sectionLabelBackground,
+  sectionLabelBackground = undefined,
 }) => {
   const { translations } = useContext(ServiceContext);
 
@@ -49,32 +47,6 @@ const CpsRelatedContent = ({
       sectionLabelBackground={sectionLabelBackground}
     />
   );
-};
-
-CpsRelatedContent.propTypes = {
-  // We Reuse the front page story item blocks
-  // Both pages use CPS, so the data schema is the same
-  // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
-  content: arrayOf(shape(storyItem)),
-  parentColumns: shape({
-    group0: number,
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-  isMediaContent: bool,
-  title: string,
-  sectionLabelBackground: string,
-};
-
-CpsRelatedContent.defaultProps = {
-  content: [],
-  parentColumns: null,
-  isMediaContent: false,
-  title: null,
-  sectionLabelBackground: undefined,
 };
 
 export default CpsRelatedContent;

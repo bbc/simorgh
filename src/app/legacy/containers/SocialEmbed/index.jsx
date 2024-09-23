@@ -6,7 +6,6 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
-import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
@@ -86,7 +85,5 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     </GridItemMedium>
   );
 };
-
-SocialEmbedContainer.propTypes = socialEmbedBlockPropTypes;
 
 export default SocialEmbedContainer;

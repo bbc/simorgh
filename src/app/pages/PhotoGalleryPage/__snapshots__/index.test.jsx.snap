@@ -536,17 +536,15 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Masaraa Aaxee Minilik"
-                      class="emotion-16"
-                      height="549"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Masaraa Aaxee Minilik"
+                    class="emotion-16"
+                    height="549"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -579,18 +577,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Masaraa Aaxee Minilik"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F243/production/_97491026_img_1135.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F243/production/_97491026_img_1135.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F243/production/_97491026_img_1135.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F243/production/_97491026_img_1135.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F243/production/_97491026_img_1135.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F243/production/_97491026_img_1135.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Masaraa Aaxee Minilik"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -623,18 +619,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 133.33%;"
                 >
-                  <picture>
-                    <img
-                      alt="Masaraa Aaxee Minilik"
-                      class="emotion-16"
-                      height="4032"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/3547/production/_97493631_img_1065.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/3547/production/_97493631_img_1065.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/3547/production/_97493631_img_1065.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/3547/production/_97493631_img_1065.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/3547/production/_97493631_img_1065.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/3547/production/_97493631_img_1065.jpg 800w"
-                      width="3024"
-                    />
-                  </picture>
+                  <img
+                    alt="Masaraa Aaxee Minilik"
+                    class="emotion-16"
+                    height="4032"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 800w"
+                    width="3024"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -667,18 +661,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 75%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Raas Tasamaa Naadoo"
-                      class="emotion-16"
-                      height="3024"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/16B64/production/_97482039_img_1473.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/16B64/production/_97482039_img_1473.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/16B64/production/_97482039_img_1473.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/16B64/production/_97482039_img_1473.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/16B64/production/_97482039_img_1473.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/16B64/production/_97482039_img_1473.jpg 800w"
-                      width="4032"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Raas Tasamaa Naadoo"
+                    class="emotion-16"
+                    height="3024"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 800w"
+                    width="4032"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -711,18 +703,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Raas Tasamaa Naadoo"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14063/production/_97491028_img_1454.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14063/production/_97491028_img_1454.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14063/production/_97491028_img_1454.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14063/production/_97491028_img_1454.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14063/production/_97491028_img_1454.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14063/production/_97491028_img_1454.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Raas Tasamaa Naadoo"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -755,18 +745,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 75%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-                      class="emotion-16"
-                      height="3024"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1163C/production/_97482217_img_1620.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1163C/production/_97482217_img_1620.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1163C/production/_97482217_img_1620.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1163C/production/_97482217_img_1620.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1163C/production/_97482217_img_1620.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1163C/production/_97482217_img_1620.jpg 800w"
-                      width="4032"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                    class="emotion-16"
+                    height="3024"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 800w"
+                    width="4032"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -799,18 +787,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/B03F/production/_97491154_img_1576.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/B03F/production/_97491154_img_1576.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/B03F/production/_97491154_img_1576.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/B03F/production/_97491154_img_1576.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/B03F/production/_97491154_img_1576.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/B03F/production/_97491154_img_1576.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -843,18 +829,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-                      class="emotion-16"
-                      height="360"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/D74F/production/_97491155_img_1537.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/D74F/production/_97491155_img_1537.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/D74F/production/_97491155_img_1537.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/D74F/production/_97491155_img_1537.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg 640w"
-                      width="640"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                    class="emotion-16"
+                    height="360"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 640w"
+                    width="640"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -887,18 +871,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/5027/production/_97491502_img_1386.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/5027/production/_97491502_img_1386.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/5027/production/_97491502_img_1386.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/5027/production/_97491502_img_1386.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/5027/production/_97491502_img_1386.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/5027/production/_97491502_img_1386.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -931,18 +913,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/7737/production/_97491503_img_1391.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/7737/production/_97491503_img_1391.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/7737/production/_97491503_img_1391.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/7737/production/_97491503_img_1391.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/7737/production/_97491503_img_1391.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/7737/production/_97491503_img_1391.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -975,18 +955,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/EFEB/production/_97491416_img_1371.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -1019,18 +997,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12B4B/production/_97491667_img_1394.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -1063,18 +1039,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Luli Raas Siyum Mangashaa"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Luli Raas Siyum Mangashaa"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -1107,18 +1081,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Luli Raas Siyum Mangashaa"
-                      class="emotion-16"
-                      height="360"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 640w"
-                      width="640"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Luli Raas Siyum Mangashaa"
+                    class="emotion-16"
+                    height="360"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 640w"
+                    width="640"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -1151,18 +1123,16 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                   class="emotion-15"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Luli Raas Siyum Mangashaa"
-                      class="emotion-16"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Luli Raas Siyum Mangashaa"
+                    class="emotion-16"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-17 emotion-18"
@@ -1881,17 +1851,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Masaraa Aaxee Minilik"
-                      class="emotion-21"
-                      height="549"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Masaraa Aaxee Minilik"
+                    class="emotion-21"
+                    height="549"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -1924,18 +1892,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Masaraa Aaxee Minilik"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F243/production/_97491026_img_1135.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F243/production/_97491026_img_1135.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F243/production/_97491026_img_1135.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F243/production/_97491026_img_1135.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F243/production/_97491026_img_1135.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F243/production/_97491026_img_1135.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Masaraa Aaxee Minilik"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F243/production/_97491026_img_1135.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -1968,18 +1934,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 133.33%;"
                 >
-                  <picture>
-                    <img
-                      alt="Masaraa Aaxee Minilik"
-                      class="emotion-21"
-                      height="4032"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/3547/production/_97493631_img_1065.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/3547/production/_97493631_img_1065.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/3547/production/_97493631_img_1065.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/3547/production/_97493631_img_1065.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/3547/production/_97493631_img_1065.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/3547/production/_97493631_img_1065.jpg 800w"
-                      width="3024"
-                    />
-                  </picture>
+                  <img
+                    alt="Masaraa Aaxee Minilik"
+                    class="emotion-21"
+                    height="4032"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/3547/production/_97493631_img_1065.jpg.webp 800w"
+                    width="3024"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2012,18 +1976,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 75%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Raas Tasamaa Naadoo"
-                      class="emotion-21"
-                      height="3024"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/16B64/production/_97482039_img_1473.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/16B64/production/_97482039_img_1473.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/16B64/production/_97482039_img_1473.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/16B64/production/_97482039_img_1473.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/16B64/production/_97482039_img_1473.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/16B64/production/_97482039_img_1473.jpg 800w"
-                      width="4032"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Raas Tasamaa Naadoo"
+                    class="emotion-21"
+                    height="3024"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/16B64/production/_97482039_img_1473.jpg.webp 800w"
+                    width="4032"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2056,18 +2018,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Raas Tasamaa Naadoo"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14063/production/_97491028_img_1454.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14063/production/_97491028_img_1454.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14063/production/_97491028_img_1454.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14063/production/_97491028_img_1454.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14063/production/_97491028_img_1454.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14063/production/_97491028_img_1454.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Raas Tasamaa Naadoo"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14063/production/_97491028_img_1454.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2100,18 +2060,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 75%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-                      class="emotion-21"
-                      height="3024"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1163C/production/_97482217_img_1620.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1163C/production/_97482217_img_1620.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1163C/production/_97482217_img_1620.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1163C/production/_97482217_img_1620.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1163C/production/_97482217_img_1620.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1163C/production/_97482217_img_1620.jpg 800w"
-                      width="4032"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                    class="emotion-21"
+                    height="3024"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1163C/production/_97482217_img_1620.jpg.webp 800w"
+                    width="4032"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2144,18 +2102,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/B03F/production/_97491154_img_1576.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/B03F/production/_97491154_img_1576.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/B03F/production/_97491154_img_1576.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/B03F/production/_97491154_img_1576.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/B03F/production/_97491154_img_1576.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/B03F/production/_97491154_img_1576.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/B03F/production/_97491154_img_1576.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2188,18 +2144,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-                      class="emotion-21"
-                      height="360"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/D74F/production/_97491155_img_1537.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/D74F/production/_97491155_img_1537.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/D74F/production/_97491155_img_1537.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/D74F/production/_97491155_img_1537.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg 640w"
-                      width="640"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                    class="emotion-21"
+                    height="360"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg.webp 640w"
+                    width="640"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2232,18 +2186,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/5027/production/_97491502_img_1386.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/5027/production/_97491502_img_1386.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/5027/production/_97491502_img_1386.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/5027/production/_97491502_img_1386.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/5027/production/_97491502_img_1386.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/5027/production/_97491502_img_1386.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/5027/production/_97491502_img_1386.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2276,18 +2228,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/7737/production/_97491503_img_1391.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/7737/production/_97491503_img_1391.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/7737/production/_97491503_img_1391.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/7737/production/_97491503_img_1391.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/7737/production/_97491503_img_1391.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/7737/production/_97491503_img_1391.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/7737/production/_97491503_img_1391.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2320,18 +2270,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/EFEB/production/_97491416_img_1371.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/EFEB/production/_97491416_img_1371.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2364,18 +2312,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12B4B/production/_97491667_img_1394.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12B4B/production/_97491667_img_1394.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2408,18 +2354,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Luli Raas Siyum Mangashaa"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Luli Raas Siyum Mangashaa"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2452,18 +2396,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Luli Raas Siyum Mangashaa"
-                      class="emotion-21"
-                      height="360"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 640w"
-                      width="640"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Luli Raas Siyum Mangashaa"
+                    class="emotion-21"
+                    height="360"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg.webp 640w"
+                    width="640"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -2496,18 +2438,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Mana Luli Raas Siyum Mangashaa"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Mana Luli Raas Siyum Mangashaa"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -3960,17 +3900,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole festival for Pitakwa"
-                      class="emotion-21"
-                      height="549"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole festival for Pitakwa"
+                    class="emotion-21"
+                    height="549"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4003,18 +3941,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole Festival for Port Harcourt Rivers state"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole Festival for Port Harcourt Rivers state"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4047,18 +3983,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole festival for Pitakwa"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole festival for Pitakwa"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4091,18 +4025,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole Festival for Port Harcourt Rivers state"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole Festival for Port Harcourt Rivers state"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4135,18 +4067,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole festival for Pitakwa"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole festival for Pitakwa"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4179,18 +4109,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Fish wey dem display for di Bole Festival"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Fish wey dem display for di Bole Festival"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4223,18 +4151,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Pipo wey dey play games during di bola festival"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Pipo wey dey play games during di bola festival"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4267,18 +4193,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole Festival for Port Harcourt Rivers state"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole Festival for Port Harcourt Rivers state"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4311,18 +4235,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bole festival for Pitakwa"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bole festival for Pitakwa"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4355,18 +4277,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Peppered chicken wey boku for Bole festival"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Peppered chicken wey boku for Bole festival"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4399,18 +4319,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Pipo dey play table tennis for Bole festival"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Pipo dey play table tennis for Bole festival"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg.webp 800w"
+                    width="976"
+                  />
                 </div>
                 <figcaption
                   class="emotion-22 emotion-23"
@@ -4492,18 +4410,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Keyframe #1"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Keyframe #1"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-136 emotion-137"
@@ -5405,17 +5321,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Bill Clinton"
-                      class="emotion-21"
-                      height="549"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/1840E/test/_63724399_clinton.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/1840E/test/_63724399_clinton.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/1840E/test/_63724399_clinton.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/1840E/test/_63724399_clinton.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/1840E/test/_63724399_clinton.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/1840E/test/_63724399_clinton.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Bill Clinton"
+                    class="emotion-21"
+                    height="549"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -5463,18 +5377,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Holy and Phil at NTAs"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Holy and Phil at NTAs"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -5522,18 +5434,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="The guy from the bodyguard at the NTAs"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="The guy from the bodyguard at the NTAs"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -5581,18 +5491,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Some people at the NTAs"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Some people at the NTAs"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -5640,18 +5548,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Ant and Dec at the NTA Awards"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Ant and Dec at the NTA Awards"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -5699,18 +5605,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Someone at the NTA Awards"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Someone at the NTA Awards"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -5758,18 +5662,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                   class="emotion-20"
                   style="padding-bottom: 56.25%;"
                 >
-                  <picture>
-                    <img
-                      alt="Some people at the NTAs"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Some people at the NTAs"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7237,17 +7139,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 66.6%;"
                 >
-                  <picture>
-                    <img
-                      alt="AXC parlamentinin birinci iclasının açılışı"
-                      class="emotion-21"
-                      height="650"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1DBC/production/_101621670_0-158827.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="AXC parlamentinin birinci iclasının açılışı"
+                    class="emotion-21"
+                    height="650"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7295,18 +7195,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 170%;"
                 >
-                  <picture>
-                    <img
-                      alt="28 may 1918-ci il suverenliyi haqqında bəyənnamə"
-                      class="emotion-21"
-                      height="1700"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14D4A/production/_101622358_1-14573.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14D4A/production/_101622358_1-14573.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14D4A/production/_101622358_1-14573.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14D4A/production/_101622358_1-14573.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14D4A/production/_101622358_1-14573.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14D4A/production/_101622358_1-14573.jpg 800w"
-                      width="1000"
-                    />
-                  </picture>
+                  <img
+                    alt="28 may 1918-ci il suverenliyi haqqında bəyənnamə"
+                    class="emotion-21"
+                    height="1700"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/14D4A/production/_101622358_1-14573.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/14D4A/production/_101622358_1-14573.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/14D4A/production/_101622358_1-14573.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/14D4A/production/_101622358_1-14573.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/14D4A/production/_101622358_1-14573.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/14D4A/production/_101622358_1-14573.jpg.webp 800w"
+                    width="1000"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7354,18 +7252,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 155.56%;"
                 >
-                  <picture>
-                    <img
-                      alt="Fətəli Xan Xoyski"
-                      class="emotion-21"
-                      height="1400"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/DD24/production/_101621665_0-154461.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/DD24/production/_101621665_0-154461.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/DD24/production/_101621665_0-154461.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/DD24/production/_101621665_0-154461.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/DD24/production/_101621665_0-154461.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/DD24/production/_101621665_0-154461.jpg 800w"
-                      width="900"
-                    />
-                  </picture>
+                  <img
+                    alt="Fətəli Xan Xoyski"
+                    class="emotion-21"
+                    height="1400"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/DD24/production/_101621665_0-154461.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/DD24/production/_101621665_0-154461.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/DD24/production/_101621665_0-154461.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/DD24/production/_101621665_0-154461.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/DD24/production/_101621665_0-154461.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/DD24/production/_101621665_0-154461.jpg.webp 800w"
+                    width="900"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7413,18 +7309,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 174.44%;"
                 >
-                  <picture>
-                    <img
-                      alt="Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri"
-                      class="emotion-21"
-                      height="1570"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/17A90/production/_101621969_0-192365.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/17A90/production/_101621969_0-192365.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/17A90/production/_101621969_0-192365.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/17A90/production/_101621969_0-192365.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/17A90/production/_101621969_0-192365.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/17A90/production/_101621969_0-192365.jpg 800w"
-                      width="900"
-                    />
-                  </picture>
+                  <img
+                    alt="Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri"
+                    class="emotion-21"
+                    height="1570"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/17A90/production/_101621969_0-192365.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/17A90/production/_101621969_0-192365.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/17A90/production/_101621969_0-192365.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/17A90/production/_101621969_0-192365.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/17A90/production/_101621969_0-192365.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/17A90/production/_101621969_0-192365.jpg.webp 800w"
+                    width="900"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7472,18 +7366,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 140.17%;"
                 >
-                  <picture>
-                    <img
-                      alt="Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü."
-                      class="emotion-21"
-                      height="841"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/11EA1/production/_101677337_topcu.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/11EA1/production/_101677337_topcu.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/11EA1/production/_101677337_topcu.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/11EA1/production/_101677337_topcu.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/600/cpsprodpb/11EA1/production/_101677337_topcu.jpg 600w"
-                      width="600"
-                    />
-                  </picture>
+                  <img
+                    alt="Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü."
+                    class="emotion-21"
+                    height="841"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/11EA1/production/_101677337_topcu.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/11EA1/production/_101677337_topcu.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/11EA1/production/_101677337_topcu.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/11EA1/production/_101677337_topcu.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/600/cpsprodpb/11EA1/production/_101677337_topcu.jpg.webp 600w"
+                    width="600"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7531,18 +7423,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 155.56%;"
                 >
-                  <picture>
-                    <img
-                      alt="Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi"
-                      class="emotion-21"
-                      height="1400"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12B44/production/_101621667_0-154588.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12B44/production/_101621667_0-154588.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12B44/production/_101621667_0-154588.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12B44/production/_101621667_0-154588.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12B44/production/_101621667_0-154588.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12B44/production/_101621667_0-154588.jpg 800w"
-                      width="900"
-                    />
-                  </picture>
+                  <img
+                    alt="Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi"
+                    class="emotion-21"
+                    height="1400"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12B44/production/_101621667_0-154588.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12B44/production/_101621667_0-154588.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12B44/production/_101621667_0-154588.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12B44/production/_101621667_0-154588.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12B44/production/_101621667_0-154588.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12B44/production/_101621667_0-154588.jpg.webp 800w"
+                    width="900"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7590,18 +7480,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 156.56%;"
                 >
-                  <picture>
-                    <img
-                      alt="Məmməd Yusif Cəfərov"
-                      class="emotion-21"
-                      height="1409"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/7BD6/production/_101620713_0-153757.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/7BD6/production/_101620713_0-153757.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/7BD6/production/_101620713_0-153757.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/7BD6/production/_101620713_0-153757.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/7BD6/production/_101620713_0-153757.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/7BD6/production/_101620713_0-153757.jpg 800w"
-                      width="900"
-                    />
-                  </picture>
+                  <img
+                    alt="Məmməd Yusif Cəfərov"
+                    class="emotion-21"
+                    height="1409"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/7BD6/production/_101620713_0-153757.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/7BD6/production/_101620713_0-153757.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/7BD6/production/_101620713_0-153757.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/7BD6/production/_101620713_0-153757.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/7BD6/production/_101620713_0-153757.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/7BD6/production/_101620713_0-153757.jpg.webp 800w"
+                    width="900"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7649,18 +7537,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 56.6%;"
                 >
-                  <picture>
-                    <img
-                      alt="AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə"
-                      class="emotion-21"
-                      height="549"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12BA8/production/_101621767_0-159043.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12BA8/production/_101621767_0-159043.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12BA8/production/_101621767_0-159043.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12BA8/production/_101621767_0-159043.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12BA8/production/_101621767_0-159043.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12BA8/production/_101621767_0-159043.jpg 800w"
-                      width="970"
-                    />
-                  </picture>
+                  <img
+                    alt="AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə"
+                    class="emotion-21"
+                    height="549"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/12BA8/production/_101621767_0-159043.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/12BA8/production/_101621767_0-159043.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/12BA8/production/_101621767_0-159043.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/12BA8/production/_101621767_0-159043.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/12BA8/production/_101621767_0-159043.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/12BA8/production/_101621767_0-159043.jpg.webp 800w"
+                    width="970"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7708,18 +7594,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 77.59%;"
                 >
-                  <picture>
-                    <img
-                      alt="Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası"
-                      class="emotion-21"
-                      height="450"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/0DC2/production/_101622530_k-30551.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0DC2/production/_101622530_k-30551.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0DC2/production/_101622530_k-30551.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/0DC2/production/_101622530_k-30551.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/580/cpsprodpb/0DC2/production/_101622530_k-30551.jpg 580w"
-                      width="580"
-                    />
-                  </picture>
+                  <img
+                    alt="Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası"
+                    class="emotion-21"
+                    height="450"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/0DC2/production/_101622530_k-30551.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0DC2/production/_101622530_k-30551.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0DC2/production/_101622530_k-30551.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/0DC2/production/_101622530_k-30551.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/580/cpsprodpb/0DC2/production/_101622530_k-30551.jpg.webp 580w"
+                    width="580"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7767,18 +7651,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 157.89%;"
                 >
-                  <picture>
-                    <img
-                      alt="Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920"
-                      class="emotion-21"
-                      height="1500"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/FF2A/production/_101622356_1-14571.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/FF2A/production/_101622356_1-14571.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/FF2A/production/_101622356_1-14571.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/FF2A/production/_101622356_1-14571.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/FF2A/production/_101622356_1-14571.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/FF2A/production/_101622356_1-14571.jpg 800w"
-                      width="950"
-                    />
-                  </picture>
+                  <img
+                    alt="Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920"
+                    class="emotion-21"
+                    height="1500"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/FF2A/production/_101622356_1-14571.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/FF2A/production/_101622356_1-14571.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/FF2A/production/_101622356_1-14571.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/FF2A/production/_101622356_1-14571.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/FF2A/production/_101622356_1-14571.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/FF2A/production/_101622356_1-14571.jpg.webp 800w"
+                    width="950"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7826,18 +7708,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 140%;"
                 >
-                  <picture>
-                    <img
-                      alt="Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917"
-                      class="emotion-21"
-                      height="1400"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/B10A/production/_101622354_1-14569.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/B10A/production/_101622354_1-14569.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/B10A/production/_101622354_1-14569.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/B10A/production/_101622354_1-14569.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/B10A/production/_101622354_1-14569.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/B10A/production/_101622354_1-14569.jpg 800w"
-                      width="1000"
-                    />
-                  </picture>
+                  <img
+                    alt="Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917"
+                    class="emotion-21"
+                    height="1400"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/B10A/production/_101622354_1-14569.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/B10A/production/_101622354_1-14569.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/B10A/production/_101622354_1-14569.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/B10A/production/_101622354_1-14569.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/B10A/production/_101622354_1-14569.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/B10A/production/_101622354_1-14569.jpg.webp 800w"
+                    width="1000"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7885,18 +7765,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 75.76%;"
                 >
-                  <picture>
-                    <img
-                      alt="AXC ordusunun zabit və əsgərləri"
-                      class="emotion-21"
-                      height="750"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/66D2/production/_101622362_2-1398.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/66D2/production/_101622362_2-1398.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/66D2/production/_101622362_2-1398.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/66D2/production/_101622362_2-1398.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/66D2/production/_101622362_2-1398.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/66D2/production/_101622362_2-1398.jpg 800w"
-                      width="990"
-                    />
-                  </picture>
+                  <img
+                    alt="AXC ordusunun zabit və əsgərləri"
+                    class="emotion-21"
+                    height="750"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/66D2/production/_101622362_2-1398.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/66D2/production/_101622362_2-1398.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/66D2/production/_101622362_2-1398.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/66D2/production/_101622362_2-1398.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/66D2/production/_101622362_2-1398.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/66D2/production/_101622362_2-1398.jpg.webp 800w"
+                    width="990"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -7944,18 +7822,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 65.57%;"
                 >
-                  <picture>
-                    <img
-                      alt="Gəncə yunkerlər məktəbinin zabit və kursantları"
-                      class="emotion-21"
-                      height="640"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/18B2/production/_101622360_2-1396.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/18B2/production/_101622360_2-1396.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/18B2/production/_101622360_2-1396.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/18B2/production/_101622360_2-1396.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/18B2/production/_101622360_2-1396.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/18B2/production/_101622360_2-1396.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Gəncə yunkerlər məktəbinin zabit və kursantları"
+                    class="emotion-21"
+                    height="640"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/18B2/production/_101622360_2-1396.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/18B2/production/_101622360_2-1396.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/18B2/production/_101622360_2-1396.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/18B2/production/_101622360_2-1396.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/18B2/production/_101622360_2-1396.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/18B2/production/_101622360_2-1396.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8003,18 +7879,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 67.27%;"
                 >
-                  <picture>
-                    <img
-                      alt="Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919"
-                      class="emotion-21"
-                      height="670"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F43A/production/_101622526_2-13370.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F43A/production/_101622526_2-13370.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F43A/production/_101622526_2-13370.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F43A/production/_101622526_2-13370.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F43A/production/_101622526_2-13370.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F43A/production/_101622526_2-13370.jpg 800w"
-                      width="996"
-                    />
-                  </picture>
+                  <img
+                    alt="Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919"
+                    class="emotion-21"
+                    height="670"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/F43A/production/_101622526_2-13370.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/F43A/production/_101622526_2-13370.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/F43A/production/_101622526_2-13370.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/F43A/production/_101622526_2-13370.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/F43A/production/_101622526_2-13370.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/F43A/production/_101622526_2-13370.jpg.webp 800w"
+                    width="996"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8062,18 +7936,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 56.22%;"
                 >
-                  <picture>
-                    <img
-                      alt="AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı"
-                      class="emotion-21"
-                      height="560"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/34D2/production/_101622531_5-841.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/34D2/production/_101622531_5-841.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/34D2/production/_101622531_5-841.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/34D2/production/_101622531_5-841.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/34D2/production/_101622531_5-841.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/34D2/production/_101622531_5-841.jpg 800w"
-                      width="996"
-                    />
-                  </picture>
+                  <img
+                    alt="AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı"
+                    class="emotion-21"
+                    height="560"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/34D2/production/_101622531_5-841.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/34D2/production/_101622531_5-841.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/34D2/production/_101622531_5-841.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/34D2/production/_101622531_5-841.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/34D2/production/_101622531_5-841.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/34D2/production/_101622531_5-841.jpg.webp 800w"
+                    width="996"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8121,18 +7993,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 66.6%;"
                 >
-                  <picture>
-                    <img
-                      alt="AXC Nazirlər sovetinin heyəti"
-                      class="emotion-21"
-                      height="650"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/A61A/production/_101622524_2-13335.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/A61A/production/_101622524_2-13335.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/A61A/production/_101622524_2-13335.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/A61A/production/_101622524_2-13335.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/A61A/production/_101622524_2-13335.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/A61A/production/_101622524_2-13335.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="AXC Nazirlər sovetinin heyəti"
+                    class="emotion-21"
+                    height="650"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/A61A/production/_101622524_2-13335.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/A61A/production/_101622524_2-13335.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/A61A/production/_101622524_2-13335.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/A61A/production/_101622524_2-13335.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/A61A/production/_101622524_2-13335.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/A61A/production/_101622524_2-13335.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8180,18 +8050,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 71.72%;"
                 >
-                  <picture>
-                    <img
-                      alt="Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev"
-                      class="emotion-21"
-                      height="700"
-                      loading="lazy"
-                      sizes="(min-width: 1008px) 760px, 100vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6BDC/production/_101621672_0-158834.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6BDC/production/_101621672_0-158834.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6BDC/production/_101621672_0-158834.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6BDC/production/_101621672_0-158834.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6BDC/production/_101621672_0-158834.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/6BDC/production/_101621672_0-158834.jpg 800w"
-                      width="976"
-                    />
-                  </picture>
+                  <img
+                    alt="Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev"
+                    class="emotion-21"
+                    height="700"
+                    loading="lazy"
+                    sizes="(min-width: 1008px) 760px, 100vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6BDC/production/_101621672_0-158834.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6BDC/production/_101621672_0-158834.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6BDC/production/_101621672_0-158834.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6BDC/production/_101621672_0-158834.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6BDC/production/_101621672_0-158834.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/6BDC/production/_101621672_0-158834.jpg.webp 800w"
+                    width="976"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8239,18 +8107,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 155.56%;"
                 >
-                  <picture>
-                    <img
-                      alt="Əhməd bəy Ağayev"
-                      class="emotion-21"
-                      height="1400"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6D08/production/_101621972_0-210162.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6D08/production/_101621972_0-210162.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6D08/production/_101621972_0-210162.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6D08/production/_101621972_0-210162.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6D08/production/_101621972_0-210162.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/6D08/production/_101621972_0-210162.jpg 800w"
-                      width="900"
-                    />
-                  </picture>
+                  <img
+                    alt="Əhməd bəy Ağayev"
+                    class="emotion-21"
+                    height="1400"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/6D08/production/_101621972_0-210162.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/6D08/production/_101621972_0-210162.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/6D08/production/_101621972_0-210162.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/6D08/production/_101621972_0-210162.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/6D08/production/_101621972_0-210162.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/6D08/production/_101621972_0-210162.jpg.webp 800w"
+                    width="900"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8298,18 +8164,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   class="emotion-20"
                   style="padding-bottom: 155.56%;"
                 >
-                  <picture>
-                    <img
-                      alt="M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri"
-                      class="emotion-21"
-                      height="1400"
-                      loading="lazy"
-                      sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
-                      src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/10560/production/_101621966_0-173322.jpg"
-                      srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/10560/production/_101621966_0-173322.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/10560/production/_101621966_0-173322.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/10560/production/_101621966_0-173322.jpg 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/10560/production/_101621966_0-173322.jpg 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/10560/production/_101621966_0-173322.jpg 800w"
-                      width="900"
-                    />
-                  </picture>
+                  <img
+                    alt="M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri"
+                    class="emotion-21"
+                    height="1400"
+                    loading="lazy"
+                    sizes="(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw"
+                    src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/10560/production/_101621966_0-173322.jpg.webp"
+                    srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/10560/production/_101621966_0-173322.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/10560/production/_101621966_0-173322.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/10560/production/_101621966_0-173322.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/10560/production/_101621966_0-173322.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/10560/production/_101621966_0-173322.jpg.webp 800w"
+                    width="900"
+                  />
                   <p
                     class="emotion-22"
                     role="text"
@@ -8406,18 +8270,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Azərbaycan Xalq Cümhuriyyətinin zabit və əsgərləri"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Azərbaycan Xalq Cümhuriyyətinin zabit və əsgərləri"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8471,18 +8333,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Əhməd Ağayevin şəkli"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Əhməd Ağayevin şəkli"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8536,18 +8396,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Marneuli"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Marneuli"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8601,18 +8459,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Fətəli Xan Xoyski"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Fətəli Xan Xoyski"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1537C/production/_100780968_xoyski2.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8666,18 +8522,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Bakı 1991"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Bakı 1991"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8731,18 +8585,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="sakin"
-                              class="emotion-21"
-                              height="576"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg 660w"
-                              width="1024"
-                            />
-                          </picture>
+                          <img
+                            alt="sakin"
+                            class="emotion-21"
+                            height="576"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg.webp 660w"
+                            width="1024"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8838,18 +8690,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Bakı neft yataqları"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Bakı neft yataqları"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8903,18 +8753,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="Zaqatala"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="Zaqatala"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"
@@ -8968,18 +8816,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-20"
                           style="padding-bottom: 56.25%; overflow: hidden;"
                         >
-                          <picture>
-                            <img
-                              alt="İran hərbçiləri, 1911-ci il Tehran"
-                              class="emotion-21"
-                              height="549"
-                              loading="lazy"
-                              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-                              src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg"
-                              srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg 660w"
-                              width="976"
-                            />
-                          </picture>
+                          <img
+                            alt="İran hərbçiləri, 1911-ci il Tehran"
+                            class="emotion-21"
+                            height="549"
+                            loading="lazy"
+                            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+                            src="https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp"
+                            srcset="https://ichef.test.bbci.co.uk/ace/ws/70/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 70w, https://ichef.test.bbci.co.uk/ace/ws/95/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 95w, https://ichef.test.bbci.co.uk/ace/ws/144/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 144w, https://ichef.test.bbci.co.uk/ace/ws/183/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 183w, https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/660/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg.webp 660w"
+                            width="976"
+                          />
                         </div>
                         <div
                           class="emotion-238 emotion-239"

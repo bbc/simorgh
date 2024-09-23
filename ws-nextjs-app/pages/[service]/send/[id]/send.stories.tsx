@@ -3,8 +3,10 @@ import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { NextRouter } from 'next/router';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
+import somaliFormFixture from '#data/somali/send/u130092370.json';
+import hausaClosedFormFixture from '#data/hausa/send/u143732177.json';
 import UGCPage from './UGCPageLayout';
-import { PageProps } from './types';
+import { FormScreen, PageProps } from './types';
 
 const NextRouterWrapper = ({ children }: PropsWithChildren) => (
   <RouterContext.Provider
@@ -14,21 +16,51 @@ const NextRouterWrapper = ({ children }: PropsWithChildren) => (
   </RouterContext.Provider>
 );
 
-const Component = () => (
-  <NextRouterWrapper>
-    <PageLayoutWrapper
-      // @ts-expect-error partial data required for storybook
-      pageData={mundoFormFixture}
-      status={200}
-    >
-      <UGCPage pageData={mundoFormFixture as PageProps['pageData']} />
-    </PageLayoutWrapper>
-  </NextRouterWrapper>
-);
+const Component = ({
+  initialScreen = 'form',
+  fixtureData,
+}: {
+  initialScreen: FormScreen;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fixtureData: any;
+}) => {
+  const { data } = fixtureData;
+
+  return (
+    <NextRouterWrapper>
+      <PageLayoutWrapper pageData={data} status={200}>
+        <UGCPage
+          initialScreen={initialScreen}
+          pageData={data as PageProps['pageData']}
+        />
+      </PageLayoutWrapper>
+    </NextRouterWrapper>
+  );
+};
 
 export default {
   title: 'Pages/UGC Page',
   Component,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
-export const Example = Component;
+export const Form = () => (
+  <Component initialScreen="form" fixtureData={mundoFormFixture} />
+);
+export const FormWithFileUpload = () => (
+  <Component initialScreen="form" fixtureData={somaliFormFixture} />
+);
+export const UploadingScreen = () => (
+  <Component initialScreen="uploading" fixtureData={mundoFormFixture} />
+);
+export const SuccessScreen = () => (
+  <Component initialScreen="success" fixtureData={mundoFormFixture} />
+);
+export const ErrorScreen = () => (
+  <Component initialScreen="error" fixtureData={mundoFormFixture} />
+);
+export const ClosedScreen = () => (
+  <Component initialScreen="form" fixtureData={hausaClosedFormFixture} />
+);

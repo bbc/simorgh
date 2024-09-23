@@ -9,15 +9,21 @@ import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import {
   Field,
   FieldData,
+  FileData,
+  FormScreen,
   OnChangeHandler,
   OnChangeInputName,
   OnChangeInputValue,
+  OnFocusOutHandler,
+  ValidationError,
 } from '../types';
 import UGCSendError from '../UGCSendError';
 import validateFunctions from './utils/validateFunctions';
+import getValidationErrors from './utils/getValidationErrors';
 
 type SubmissionError = {
   message: string;
@@ -26,16 +32,21 @@ type SubmissionError = {
   isRecoverable?: boolean;
 } | null;
 
-type ContextProps = {
+export type ContextProps = {
   formState: Record<OnChangeInputName, FieldData>;
   handleChange: OnChangeHandler;
+  handleFocusOut: OnFocusOutHandler;
   handleSubmit: (event: FormEvent) => Promise<void>;
   submissionError?: SubmissionError;
   submitted: boolean;
+  attemptedSubmitCount: number;
+  validationErrors: ValidationError[] | [];
   progress: string;
+  screen: FormScreen;
+  submissionID: string | null;
 };
 
-const FormContext = createContext({} as ContextProps);
+export const FormContext = createContext({} as ContextProps);
 
 const getInitialFormState = (
   fields: Field[],
@@ -44,17 +55,22 @@ const getInitialFormState = (
     (acc, field) => ({
       ...acc,
       [field.id]: {
+        ...(field.validation && field.validation),
         isValid: true,
         required: field.validation.mandatory ?? false,
-        value: '',
+        wordLimit: field.validation.wordLimit ?? undefined,
+        value: field.htmlType === 'file' ? [] : '',
         htmlType: field.htmlType,
         messageCode: null,
+        wasInvalid: false,
       },
     }),
     {},
   );
 
-const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
+const validateFormStateOnSubmit = (
+  state: Record<OnChangeInputName, FieldData>,
+) => {
   const formEntries = new Map(Object.entries(state));
 
   formEntries.forEach((data, key, map) => {
@@ -67,79 +83,128 @@ const validateFormState = (state: Record<OnChangeInputName, FieldData>) => {
 };
 
 export const FormContextProvider = ({
+  initialScreen = 'form',
   fields,
   children,
-}: PropsWithChildren<{ fields: Field[] }>) => {
+}: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
   const {
     query: { id },
+    asPath,
   } = useRouter();
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
   const [progress, setProgress] = useState('0');
+  const [screen, setScreen] = useState<FormScreen>(initialScreen);
   const [submissionError, setSubmissionError] = useState<SubmissionError>(null);
+  const [attemptedSubmitCount, setAttemptedSubmitCount] = useState(0);
+  const [validationErrors, setValidationErrors] = useState<ValidationError[]>(
+    [],
+  );
+  const [submissionID, setSubmissionID] = useState(null);
 
   const handleChange = (name: OnChangeInputName, value: OnChangeInputValue) => {
-    setFormState(prevState => {
-      const updatedState = { [name]: { ...prevState[name], value } };
-      return { ...prevState, ...updatedState };
-    });
+    const prevState = formState[name];
+    const currState = { ...prevState, value };
+    let validatedData = currState;
+
+    if (currState.htmlType === 'file') {
+      const validateFunction = validateFunctions.file;
+      validatedData = validateFunction
+        ? validateFunction(currState)
+        : currState;
+    }
+    const updatedState = { [name]: { ...validatedData } };
+    const newFormState = { ...formState, ...updatedState };
+    setFormState(newFormState);
+
+    if (currState.htmlType === 'file') {
+      const validationErrorsList = getValidationErrors(newFormState);
+      setValidationErrors(validationErrorsList);
+    }
+  };
+
+  const handleFocusOut = (name: OnChangeInputName) => {
+    const currState = formState[name];
+    const validateFunction = validateFunctions[currState.htmlType];
+    const validatedData = validateFunction
+      ? validateFunction(currState)
+      : currState;
+    const updatedState = { [name]: { ...validatedData } };
+    const newFormState = { ...formState, ...updatedState };
+
+    const validationErrorsList = getValidationErrors(newFormState);
+    setValidationErrors(validationErrorsList);
+
+    setFormState(newFormState);
   };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setSubmitted(true);
-
+    setAttemptedSubmitCount(prevCount => prevCount + 1);
     // Reset error state
     setSubmissionError(null);
+    const validatedFormData = validateFormStateOnSubmit(formState);
+    setFormState(validatedFormData);
 
-    // Validate
-    setFormState(state => validateFormState(state));
+    const validationErrorsList = getValidationErrors(validatedFormData);
+    if (validationErrorsList.length > 0) {
+      setValidationErrors(validationErrorsList);
+      return;
+    }
+
+    setSubmitted(true);
 
     const formData = new FormData();
 
     Object.entries(formState).forEach(([key, item]) => {
       const fieldValue = item.value;
+      const isFileHtmlType = item.htmlType === 'file';
 
       if (fieldValue === '') return;
-      if (fieldValue instanceof FileList) {
-        const fileList = fieldValue;
-        const fileListLength = fileList.length;
+      if (isFileHtmlType) {
+        const fileList = fieldValue as FileData[];
 
-        for (let fileIndex = 0; fileIndex < fileListLength; fileIndex += 1) {
-          const file = fileList.item(fileIndex);
-          if (file) formData.append(key, file);
-        }
+        fileList.forEach(({ file }: FileData) => {
+          formData.append(key, file);
+        });
         return;
       }
       if (typeof fieldValue === 'boolean') {
         if (fieldValue) formData.append(key, 'true');
         return;
       }
-      formData.append(key, fieldValue);
+      formData.append(key, fieldValue as string);
     });
-
     try {
-      const url = `https://www.bbc.com/ugc/send/${id}?said=${uuid()}`;
+      const environment = getEnvironment(asPath);
+      const domain = `https://www.${environment === 'test' ? 'test.' : ''}bbc.com`;
+      const url = `${domain}/ugc/send/${id}?said=${uuid()}`;
 
       const req = new XMLHttpRequest();
+      req.responseType = 'json';
       req.open('POST', url, true);
+
+      req.upload.onloadstart = () => {
+        setScreen('uploading');
+      };
 
       req.upload.onprogress = e => {
         setProgress(((e.loaded / e.total) * 100).toFixed(0));
       };
-
       req.onreadystatechange = () => {
         if (req.readyState === XMLHttpRequest.DONE) {
           setSubmitted(false);
+          if (req.status === OK) {
+            setSubmissionID(req.response.submissionId);
+            setTimeout(() => {
+              setScreen('success');
+            }, 3000);
+          }
           if (req.status !== OK) {
             const { message, code, status, isRecoverable } = new UGCSendError(
               req,
             );
-
-            // Future logging invokation if feasible client-side
-            // sendCustomMetric();
-            // logger.error();
 
             setSubmissionError({
               message,
@@ -147,14 +212,20 @@ export const FormContextProvider = ({
               status,
               isRecoverable,
             });
+            setTimeout(() => {
+              setScreen('error');
+            }, 3000);
           }
         }
       };
-
       req.send(formData);
     } catch (error) {
       const { message, status } = error as UGCSendError;
+
       setSubmissionError({ message, status });
+      setTimeout(() => {
+        setScreen('error');
+      }, 3000);
     }
   };
 
@@ -163,10 +234,15 @@ export const FormContextProvider = ({
       value={{
         formState,
         handleChange,
+        handleFocusOut,
         handleSubmit,
         submissionError,
         submitted,
         progress,
+        attemptedSubmitCount,
+        validationErrors,
+        screen,
+        submissionID,
       }}
     >
       {children}

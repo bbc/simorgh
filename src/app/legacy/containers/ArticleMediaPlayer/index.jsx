@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMediumNoMargin } from '#components/Grid';
-import {
-  mediaPlayerPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '#models/propTypes';
+
 import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
@@ -30,7 +27,13 @@ const pageTypeMap = {
   [CORRESPONDENT_STORY_PAGE]: 'cps',
 };
 
-const ArticleMediaPlayerContainer = ({ blocks }) => {
+const ArticleMediaPlayerContainer = ({
+  blocks = [
+    {
+      model: {},
+    },
+  ],
+}) => {
   const { id, isLite, pageType } = useContext(RequestContext);
   const ignorePlaceholderFor = [MEDIA_ARTICLE_PAGE, MEDIA_ASSET_PAGE];
   const hasPlaceholder = !ignorePlaceholderFor.includes(pageType);
@@ -47,11 +50,6 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
       />
     </GridItemMediumNoMargin>
   );
-};
-
-ArticleMediaPlayerContainer.propTypes = mediaPlayerPropTypes;
-ArticleMediaPlayerContainer.defaultProps = {
-  ...emptyBlockArrayDefaultProps,
 };
 
 export default ArticleMediaPlayerContainer;

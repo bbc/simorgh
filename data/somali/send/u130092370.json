@@ -1,0 +1,164 @@
+{
+  "data": {
+    "projectId": "ugc-somali-young-poet",
+    "title": "Test campaign for /:service/send/:campaignId endpoint UGC Spike WSTEAMA-98 2022",
+    "description": "<p>This campaign is created as part of the work in&nbsp;WSTEAMA-98 aimed at understanding&nbsp;<br />WS rendering of UGC campaign pages.</p>",
+    "campaignId": "u130092370",
+    "languageTag": "en-GB",
+    "campaignStatus": "open",
+    "openingTime": "",
+    "closingTime": "",
+    "submissionUrl": "https://www.bbc.co.uk/newsround/63943388",
+    "privacyNotice": {
+      "default": "<p>By uploading your files you agree to our <a title=\"Terms of Use\" href=\"https://www.bbc.co.uk/usingthebbc/terms/\" target=\"_blank\">Terms of Use</a>. You can also read our <a title=\"Privacy Notice\" href=\"https://www.bbc.co.uk/usingthebbc/privacy-policy/\" target=\"_blank\">Privacy Notice</a>.</p>",
+      "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+      "additional": ""
+    },
+    "settings": {
+      "moderationRequired": false,
+      "brand": "BBC Somali Young Poet of the Year",
+      "brandId": "somali-young-poet",
+      "replyEmailAddress": "test@bbc.co.uk",
+      "ageGroup": [],
+      "exifMetadataEnabled": false,
+      "ppGroupId": "9f6c7677-8a75-48e7-abd9-bf9cc71ae2fe",
+      "pageBackgroundTemplateUrl": "",
+      "brandLogo": "",
+      "brandType": "competition",
+      "webcoreBrand": "default",
+      "entryCap": "",
+      "readableRetentionPeriod": "5 days",
+      "retentionPeriodDays": "5",
+      "retentionExpiryDate": "",
+      "viewType": "submission",
+      "allowSubmissionWithoutEmail": false,
+      "winnerPickerEnabled": false,
+      "cta": { "title": "Enter now", "buttonText": "Entry form" },
+      "allowEditing": false,
+      "signinRequired": false,
+      "accountPolicy": ""
+    },
+    "sections": [
+      {
+        "sectionText": {
+          "title": "Section title",
+          "description": "Section description"
+        },
+        "fields": [
+          {
+            "id": "txt130088581",
+            "type": "text",
+            "validation": { "mandatory": true },
+            "htmlType": "text",
+            "label": "Your name",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "lst131657755",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                { "label": "foo", "value": "foo" },
+                { "label": "bar", "value": "bar" }
+              ],
+              "multiSelect": false,
+              "mandatory": false
+            },
+            "htmlType": "select",
+            "label": "Your region",
+            "description": ""
+          },
+          {
+            "id": "txt130088442",
+            "type": "text",
+            "validation": { "mandatory": true },
+            "htmlType": "email",
+            "label": "Your email address",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "upl130087996",
+            "type": "file",
+            "validation": {
+              "fileTypes": [
+                "image/jpeg",
+                "image/png",
+                "image/gif",
+                "video/avi",
+                "video/quicktime",
+                "video/x-ms-wmv",
+                "video/mp4",
+                "video/mpeg",
+                "video/x-flv",
+                "video/3gpp",
+                "video/x-m4v",
+                "audio/x-ms-wma",
+                "audio/x-wav",
+                "audio/mpeg",
+                "audio/mp3",
+                "audio/wav",
+                "audio/wma",
+                "audio/mp4",
+                "audio/x-m4a"
+              ],
+              "min": 0,
+              "max": 3
+            },
+            "label": "Attach your file (optional)",
+            "description": "",
+            "htmlType": "file"
+          },
+          {
+            "id": "txt130088261",
+            "type": "text",
+            "validation": {
+              "mandatory": true,
+              "wordLimit": 500,
+              "wordLimitMax": 500,
+              "wordLimitMin": 100
+            },
+            "htmlType": "textarea",
+            "label": "Tell us about what you're sending (optional)",
+            "description": "",
+            "textArea": true
+          },
+          {
+            "id": "chk180200212",
+            "type": "checkbox",
+            "validation": { "mandatory": true },
+            "htmlType": "checkbox",
+            "description": "",
+            "label": "Checkbox field question"
+          },
+          {
+            "id": "txt180200396",
+            "type": "text",
+            "validation": { "mandatory": false },
+            "htmlType": "textarea",
+            "label": "text-area",
+            "description": "Some larger text area",
+            "textArea": true
+          }
+        ]
+      }
+    ],
+    "labels": [
+      { "label": "Yes" },
+      { "label": "test" },
+      { "label": "No" },
+      { "label": "Maybe" }
+    ],
+    "secondaryLabels": [],
+    "confirmationMessage": "<p>This is a <a href=\"https://bbc.com\" target=\"_blank\">customised</a> message for responses.&nbsp;</p><ul><li>one&nbsp;</li><li>two&nbsp;</li>\n<li>three</li>\n</ul>",
+    "retentionPolicyMessage": "We’ll keep it for up to 5 days – and if we don’t use it we’ll then delete it and any other information you sent us.",
+    "includeDataRetentionText": true,
+    "includeRightToRevokeText": true,
+    "includeRemovalGuidelineText": true,
+    "emailAddressFields": ["txt130088442"],
+    "promo": { "title": "", "promos": [] },
+    "campaignArchived": false
+  },
+  "contentType": "application/json; charset=utf-8"
+}

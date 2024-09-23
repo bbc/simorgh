@@ -73,6 +73,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'வந்துகொண்டிருக்கும் செய்தி',
         postedAt: 'பிரசுரிக்கப்பட்ட நேரம்',
         summary: 'முக்கிய சாராம்சம்',
+        shareButtonText: 'பகிர்க',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'முக்கிய சாராம்சம்',
       error: {
@@ -273,17 +278,79 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
       latestMediaTitle: 'மிகச் சமீபத்தியது',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'நிரப்புவது கட்டாயமல்ல',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'நீங்கள் இதை பதிவேற்றுகிறீர்கள்...',
+        fileUploadButton: 'கோப்பை தேர்வு செய்ய',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'அனுப்பு',
+
+        // Validation
+        validationRequired: 'ஏதோ விடுபடுகிறது',
+        validationInvalidEmail: 'சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'போதிய கோப்புகள் இல்லை. குறைந்தது {{minFiles}} கோப்புகள் சேர்க்கவும்.',
+        validationFilesTooMany:
+          'அதிக கோப்புகள் உள்ளன. நீங்கள் {{maxFiles}} கோப்புகள் சேர்க்கலாம்.',
+        validationFilesInvalidType:
+          'இந்த வகை கோப்புகளை நாங்கள் பயன்படுத்துவதில்லை. {{fileTypes}} சேர்க்கவும்.',
+        validationFilesTooSmall:
+          'இந்த கோப்பு சரியாக இல்லை. வேறு ஒன்றை முயற்சிக்கவும்.',
+        validationFilesSizeExceeded:
+          'கோப்பின் அளவு பெரிதாக உள்ளது. அதிகபட்சம் 2 ஜி.பி  பதிவேற்றலாம்',
+        validationWordLimit: 'அதிகட்சம் {{wordLimit}} சொற்கள்',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'குறிப்பு எண்',
+        submissionInfoSignedOutMessage:
+          'இந்த விவரங்களை நீங்கள் குறிப்பெடுத்துக் கொள்ளலாம்',
+        privacyInfoHtml:
+          'கவலை வேண்டாம் உங்கள் தரவுகளை நாங்கள் பாதுகாப்போம். மேலதிக தகவல்களுக்கு அந்தரங்க {{privacyInfoLink}} படிக்கவும்',
+        emailToHtml:
+          'உங்கள் மனம் மாறி இதை பயன்படுத்த வேண்டாம் என நினைத்தால் குறிப்பு எண்ணை சுட்டி, {{emailLink}} என்ற மின்னஞ்சலை தொடர்புகொள்ளவும்.',
+        removalGuidelineText:
+          'ஒரு நிகழ்ச்சி அல்லது இணைய பயன்பாட்டுக்கு நீங்கள் சமர்ப்பித்ததை, நாங்கள் ஏற்கனவே பயன்படுத்தி இருந்தால் அதை நீக்க முடியாது.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'பதிவேற்றம் நடக்கிறது...',
+        uploadingDescription: 'முடியும் வரை காத்திருக்கவும்.',
+
+        // Success Screen
+        successHeading: 'செய்தி அனுப்பப்பட்டது',
+        successDescription: 'தொடர்பு கொண்டதற்கு நன்றி',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'செய்தி செல்லவில்லை',
+        errorDescription: 'மீண்டும் முயற்சி',
+
+        // Closed Screen
+        closedHeading: 'இப்போது இது மூடப்பட்டுள்ளது.',
+        closedDescription: 'அன்று இது நிறைவடையும் {{date}}.',
+      },
     },
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'அதிகம் பார்க்கப்பட்டது',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -341,10 +408,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'முகப்பு',
         url: '/tamil',
-      },
-      {
-        title: 'மக்களவைத் தேர்தல் 2024',
-        url: '/tamil/topics/cpw2q7jk0kwt',
       },
       {
         title: 'உலகம்',

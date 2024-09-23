@@ -298,14 +298,14 @@ exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
 exports[`AMP Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "بودكاست",
-  "url": "/arabic/tv-and-radio-52067221",
+  "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 
 exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "برامجنا",
-  "url": "/arabic/tv-and-radio-37728883",
+  "url": "/arabic/topics/crgyknwdlwnt",
 }
 `;
 

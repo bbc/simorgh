@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { element, number, string } from 'prop-types';
 import {
   startTimeMachine,
   resetTimeMachine,
@@ -15,11 +14,6 @@ const WithTimeMachine = ({ children, dateString, timestamp }) => {
     return resetTimeMachine;
   }, [children, dateString, timestamp]);
   return componentToRender;
-};
-WithTimeMachine.propTypes = {
-  children: element.isRequired,
-  dateString: string,
-  timestamp: number,
 };
 
 export default WithTimeMachine;

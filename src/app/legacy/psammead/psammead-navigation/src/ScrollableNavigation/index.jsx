@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { node, oneOf } from 'prop-types';
 import { GEL_SPACING_SEXT } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -74,19 +73,10 @@ const StyledScrollableNav = styled.div`
   }
 `;
 
-export const ScrollableNavigation = ({ children, dir, ...props }) => (
+export const ScrollableNavigation = ({ children, dir = 'ltr', ...props }) => (
   <StyledScrollableNav data-e2e="scrollable-nav" dir={dir} {...props}>
     {children}
   </StyledScrollableNav>
 );
-
-ScrollableNavigation.propTypes = {
-  children: node.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-};
-
-ScrollableNavigation.defaultProps = {
-  dir: 'ltr',
-};
 
 export default ScrollableNavigation;

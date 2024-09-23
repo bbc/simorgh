@@ -179,12 +179,42 @@ const NOTO_SANS_TAMIL_BOLD = {
   },
 };
 
-const MALLANNA_REGULAR = {
+const NOTO_SANS_TELUGU_REGULAR = {
   '@font-face': {
-    fontFamily: 'Mallanna',
+    fontFamily: 'Noto Sans Telugu',
     fontWeight: 400,
     fontStyle: 'normal',
-    src: `url('fonts/Mallanna/normal.woff') format('woff'), url('fonts/Mallanna/normal.eot') format('eot'), url('fonts/Mallanna/normal.ttf') format('ttf')`,
+    src: `url('fonts/NotoSansTelugu/normal.woff') format('woff'), url('fonts/NotoSansTelugu/normal.eot') format('eot'), url('fonts/NotoSansTelugu/normal.ttf') format('ttf')`,
+    fontDisplay: 'swap',
+  },
+};
+
+const NOTO_SANS_TELUGU_BOLD = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Telugu',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansTelugu/bold.woff') format('woff'), url('fonts/NotoSansTelugu/bold.eot') format('eot'), url('fonts/NotoSansTelugu/bold.ttf') format('ttf')`,
+    fontDisplay: 'swap',
+  },
+};
+
+const NOTO_SANS_GUJARATI_REGULAR = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Gujarati',
+    fontWeight: 400,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansGujarati/normal.woff') format('woff'), url('fonts/NotoSansGujarati/normal.eot') format('eot'), url('fonts/NotoSansGujarati/normal.ttf') format('ttf')`,
+    fontDisplay: 'swap',
+  },
+};
+
+const NOTO_SANS_GUJARATI_BOLD = {
+  '@font-face': {
+    fontFamily: 'Noto Sans Gujarati',
+    fontWeight: 700,
+    fontStyle: 'normal',
+    src: `url('fonts/NotoSansGujarati/bold.woff') format('woff'), url('fonts/NotoSansGujarati/bold.eot') format('eot'), url('fonts/NotoSansGujarati/bold.ttf') format('ttf')`,
     fontDisplay: 'swap',
   },
 };
@@ -623,7 +653,10 @@ const preview: Preview = {
               NOTO_SERIF_SINHALA_BOLD,
               NOTO_SANS_TAMIL_REGULAR,
               NOTO_SANS_TAMIL_BOLD,
-              MALLANNA_REGULAR,
+              NOTO_SANS_TELUGU_REGULAR,
+              NOTO_SANS_TELUGU_BOLD,
+              NOTO_SANS_GUJARATI_REGULAR,
+              NOTO_SANS_GUJARATI_BOLD,
               NOTO_SANS_ETHIOPIC_REGULAR,
               NOTO_SANS_ETHIOPIC_BOLD,
               PADAUK_REGULAR,
@@ -640,28 +673,28 @@ const preview: Preview = {
       );
     },
     (Story, context) => (
-      <ThemeProvider
-        service={context.globals.service.service}
-        variant={context.globals.service.variant}
-      >
-        <ToggleContextProvider toggles={{}}>
-          <ServiceContextProvider
-            service={context.globals.service.service}
-            variant={context.globals.service.variant}
-          >
-            <RequestContextProvider isLite={context.globals.isLite}>
-              <EventTrackingContextProvider
-                // @ts-expect-error - mock data for Storybook
-                pageData={pageDataFixture}
-              >
-                <UserContextProvider>
+      <ToggleContextProvider toggles={{}}>
+        <ServiceContextProvider
+          service={context.globals.service.service}
+          variant={context.globals.service.variant}
+        >
+          <RequestContextProvider isLite={context.globals.isLite}>
+            <EventTrackingContextProvider
+              // @ts-expect-error - mock data for Storybook
+              pageData={pageDataFixture}
+            >
+              <UserContextProvider>
+                <ThemeProvider
+                  service={context.globals.service.service}
+                  variant={context.globals.service.variant}
+                >
                   <Story />
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
+                </ThemeProvider>
+              </UserContextProvider>
+            </EventTrackingContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
     ),
   ],
 };

@@ -33,7 +33,7 @@ export interface MetadataProps {
   socialHeadline?: string;
   lang: string;
   twitterHandle?: string;
-  description: string;
+  description?: string;
   openGraphType: string;
   aboutTags?: Tag[];
   mentionsTags?: Tag[];
@@ -44,24 +44,4 @@ export interface MetadataProps {
   children?: string[];
   hasAppleItunesAppBanner?: boolean;
   hasAmpPage?: boolean;
-}
-
-interface Headlines {
-  seoHeadline: string;
-}
-interface Promo {
-  headlines: Headlines;
-}
-
-interface Passport {
-  language: string;
-}
-
-interface Metadata {
-  passport: Passport;
-}
-
-export interface PageDataProps {
-  promo: Promo;
-  metadata: Metadata;
 }

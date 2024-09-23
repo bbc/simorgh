@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -49,30 +49,32 @@ const includeProps = {
   index: 1,
 };
 
-// eslint-disable-next-line react/prop-types
-const MockContext = ({ toggleState, isAmp, children }) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    isAmp={isAmp || false}
-    pageType={STORY_PAGE}
-    service="news"
-    statusCode={200}
-    pathname="/pathname"
-  >
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      {children}
-    </ToggleContext.Provider>
-  </RequestContextProvider>
-);
+const MockContext = ({ toggleState, isAmp, children }) => {
+  const memoizedToggleContextValue = useMemo(
+    () => ({ toggleState, toggleDispatch: jest.fn() }),
+    [toggleState],
+  );
+  return (
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.com"
+      isAmp={isAmp || false}
+      pageType={STORY_PAGE}
+      service="news"
+      statusCode={200}
+      pathname="/pathname"
+    >
+      <ToggleContext.Provider value={memoizedToggleContextValue}>
+        {children}
+      </ToggleContext.Provider>
+    </RequestContextProvider>
+  );
+};
 
-/* eslint-disable react/prop-types */
 const IncludeContainerWithMockContext = ({ toggleState, isAmp, ...props }) => (
   <MockContext toggleState={toggleState} isAmp={isAmp}>
     <IncludeContainer {...props} />
   </MockContext>
 );
-
-/* eslint-enable react/prop-types */
 
 describe('IncludeContainer', () => {
   afterEach(() => {

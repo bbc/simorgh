@@ -1,22 +1,21 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { string, number, node, shape, bool } from 'prop-types';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
-  GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
-const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
-const PADDING_AROUND_SVG_BELOW_400PX = 16;
+const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
 const TRANSPARENT_BORDER = `0.0625rem solid transparent`;
 
@@ -30,7 +29,10 @@ const SvgWrapper = styled.div`
   max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
   margin: 0 auto;
 
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${({ longBrandWithVariant }) =>
+      longBrandWithVariant
+        ? GEL_GROUP_1_SCREEN_WIDTH_MAX
+        : GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     display: block;
   }
 `;
@@ -41,24 +43,17 @@ const Banner = styled.div`
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    height: ${56 / 16}rem;
-    padding: 0 ${GEL_SPACING_DBL};
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    height: ${60 / 16}rem;
+    padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     height: ${64 / 16}rem;
   }
 
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
-    ${({ scriptLink, svgHeight }) =>
-      scriptLink &&
-      `min-height: ${
-        (svgHeight +
-          PADDING_AROUND_SVG_BELOW_400PX +
-          SCRIPT_LINK_OFFSET_BELOW_240PX) /
-        16
-      }rem;`}
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    ${({ scriptLink }) => scriptLink && 'height: 100%'}
   }
 
   ${({ borderTop }) => borderTop && `border-top: ${TRANSPARENT_BORDER}`};
@@ -97,6 +92,10 @@ const StyledLink = styled.a`
       props.theme.palette.BRAND_LOGO};
     outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
   }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    ${({ scriptLink }) =>
+      scriptLink && `height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX}`}
+  }
 `;
 
 // `currentColor` has been used to address high contrast mode in Firefox.
@@ -119,7 +118,11 @@ const BrandSvg = styled.svg`
   }
 `;
 
-const LocalisedBrandName = ({ linkId, product, serviceLocalisedName }) => {
+const LocalisedBrandName = ({
+  linkId = null,
+  product,
+  serviceLocalisedName = null,
+}) => {
   const brandId = `BrandLink-${linkId}`;
   return serviceLocalisedName ? (
     // id={`BrandLink-${linkId}` is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -133,17 +136,7 @@ const LocalisedBrandName = ({ linkId, product, serviceLocalisedName }) => {
   );
 };
 
-LocalisedBrandName.propTypes = {
-  linkId: string.isRequired,
-  product: string.isRequired,
-  serviceLocalisedName: string,
-};
-
-LocalisedBrandName.defaultProps = {
-  serviceLocalisedName: null,
-};
-
-const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
   <>
     {svg && (
       <>
@@ -172,37 +165,18 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName, svg }) => (
   </>
 );
 
-const brandProps = {
-  linkId: string.isRequired,
-  product: string.isRequired,
-  serviceLocalisedName: string,
-  svg: shape({
-    group: node.isRequired,
-    ratio: number.isRequired,
-    viewbox: shape({
-      height: number.isRequired,
-      width: number.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
-
-StyledBrand.propTypes = brandProps;
-
-StyledBrand.defaultProps = {
-  serviceLocalisedName: null,
-};
-
 const Brand = forwardRef((props, ref) => {
   const {
     svgHeight,
     maxWidth,
     minWidth,
-    url,
-    borderTop,
-    borderBottom,
-    scriptLink,
-    skipLink,
-    linkId,
+    url = null,
+    borderTop = false,
+    borderBottom = false,
+    scriptLink = null,
+    longBrandWithVariant = false,
+    skipLink = null,
+    linkId = null,
     ...rest
   } = props;
 
@@ -214,7 +188,7 @@ const Brand = forwardRef((props, ref) => {
       scriptLink={scriptLink}
       {...rest}
     >
-      <SvgWrapper ref={ref}>
+      <SvgWrapper ref={ref} longBrandWithVariant={longBrandWithVariant}>
         {url ? (
           <StyledLink
             href={url}
@@ -222,6 +196,7 @@ const Brand = forwardRef((props, ref) => {
             className="focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
+            scriptLink={scriptLink}
           >
             <StyledBrand {...props} />
           </StyledLink>
@@ -234,26 +209,5 @@ const Brand = forwardRef((props, ref) => {
     </Banner>
   );
 });
-
-Brand.defaultProps = {
-  url: null,
-  serviceLocalisedName: null,
-  borderTop: false,
-  borderBottom: false,
-  scriptLink: null,
-  skipLink: null,
-  linkId: null,
-};
-
-Brand.propTypes = {
-  ...brandProps,
-  url: string,
-  serviceLocalisedName: string,
-  borderTop: bool,
-  borderBottom: bool,
-  scriptLink: node,
-  skipLink: node,
-  linkId: string,
-};
 
 export default Brand;

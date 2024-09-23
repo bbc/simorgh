@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
+
 exports[`Canonical On Demand Audio Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=40&amp;p=gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page&amp;x1=[urn%3Abbc%3Apips%3Aw172x7rkcj6v0vz]&amp;x2=[responsive]&amp;x3=[news-gahuza]&amp;x4=[rw]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Amakuru%2520ya%2520Gahuzamiryango%2520-%2520BBC%2520News%2520Gahuza]"/>"`;
 
 exports[`Canonical On Demand Audio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Ibi ntibikiboneka."`;
@@ -10,6 +12,304 @@ exports[`Canonical On Demand Audio Page Expired Episode I can see the episode su
 
 exports[`Canonical On Demand Audio Page Expired Episode I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
 
-exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b8lg4.png"`;
+exports[`Canonical On Demand Audio Page Expired Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b8lg4.png.webp"`;
 
 exports[`Canonical On Demand Audio Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Gahuza",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Igituma ushobora kwizera BBC News",
+  "url": "https://www.bbc.com/gahuza/institutional-49283343",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Ingingo zo gukoresha urubuga",
+  "url": "https://www.bbc.com/gahuza/institutional-35754053",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "Ibijanye na BBC",
+  "url": "https://www.bbc.com/gahuza/institutional-35754055",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ibigenga n'ubuzima bwite",
+  "url": "https://www.bbc.com/gahuza/institutional-35754059",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Vugana na BBC",
+  "url": "https://www.bbc.co.uk/gahuza/send/u50853291",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Urupapuro rw'itangiriro",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Ibiyaga binini",
+  "url": "/gahuza/topics/c06gq67y3w5t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Afrika",
+  "url": "/gahuza/topics/crvnv566zx9t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Mpuzamahanga",
+  "url": "/gahuza/topics/c9dvd93jjkkt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Imikino",
+  "url": "/gahuza/topics/c5qvpq0jzy7t",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Amajwi n’amashusho",
+  "url": "/gahuza/topics/crldzm936jmt",
+}
+`;
+
+exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"Amakuru ya Gahuzamiryango"`;
+
+exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`Canonical On Demand Audio Page I can see the episode title 1`] = `"6 Ukwa gatatu 2020"`;
+
+exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b8lg4.png.webp"`;
+
+exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "Amajwi, Amakuru ya Gahuzamiryango, 17 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
+  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjg01g4",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "Amajwi, Amakuru ya Gahuzamiryango, 16 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
+  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjfx4k1",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "Amajwi, Amakuru ya Gahuzamiryango, 15 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
+  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjft7my",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Amajwi, Amakuru ya Gahuzamiryango, 14 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
+  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjfqbqv",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
+
+exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
+
+exports[`Canonical On Demand Audio Page SEO Lang attribute 1`] = `"rw"`;
+
+exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "rw",
+        "name": "Kinyarwanda",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
+        "@type": "WebPage",
+        "name": "Amakuru ya Gahuzamiryango",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+          "width": 1024,
+        },
+        "name": "BBC News Gahuza",
+        "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
+    },
+  ],
+}
+`;
+
+exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b8lg4.png"`;
+
+exports[`Canonical On Demand Audio Page SEO OG image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO OG locale 1`] = `"rw-RW"`;
+
+exports[`Canonical On Demand Audio Page SEO OG site name 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"Amakuru ya Gahuzamiryango - BBC News Gahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
+
+exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"Amakuru ya Gahuzamiryango - BBC News Gahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter creator 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b8lg4.png"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter site 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical On Demand Audio Page SEO Twitter title 1`] = `"Amakuru ya Gahuzamiryango - BBC News Gahuza"`;
+
+exports[`Canonical On Demand Audio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;

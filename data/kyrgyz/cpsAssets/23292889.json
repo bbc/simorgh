@@ -2,21 +2,35 @@
   "data": {
     "article": {
       "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457",
+          "contentType": "article",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "kyrgyz.story.23292889.page",
+          "pageTitle": "Test STY for social embeds",
+          "timePublished": "2020-04-24T14:51:17.000Z",
+          "timeUpdated": "2020-04-24T14:51:17.000Z",
+          "producerName": "KYRGYZ",
+          "producerId": "58"
+        },
         "id": "urn:bbc:ares::asset:kyrgyz/23292889",
         "locators": {
           "assetUri": "/kyrgyz/23292889",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457",
           "assetId": "23292889",
           "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/23292889",
+          "canonicalUrl": "https://www.bbc.com/kyrgyz/23292889",
           "curie": "http://www.bbc.co.uk/asset/bb9390aa-4b35-e448-b295-cbd7369fe457"
         },
         "type": "STY",
         "createdBy": "kyrgyz-v6",
         "language": "ky",
-        "lastUpdated": 1665415479694,
         "firstPublished": 1587739877000,
         "lastPublished": 1587739877000,
-        "timestamp": 1587739877000,
         "options": {
           "isIgorSeoTagsEnabled": false,
           "includeComments": false,
@@ -34,197 +48,548 @@
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
-          "cps_asset_type": "sty",
-          "counterName": "kyrgyz.story.23292889.page",
           "cps_asset_id": "23292889",
-          "contentId": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457"
+          "page": "kyrgyz.story.23292889.page",
+          "contentId": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457",
+          "cps_asset_type": "sty"
         },
         "passport": {
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
-          "image",
+          "headline",
+          "text",
           "paragraph",
-          "crosshead",
-          "social_embed"
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "subheadline",
+          "social",
+          "renditions",
+          "aresOEmbed"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "campaigns": null,
-          "categoryName": null,
-          "contentId": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457",
-          "contentType": "article",
-          "language": "ky",
-          "ldpThingIds": null,
-          "ldpThingLabels": null,
-          "pageIdentifier": "kyrgyz.story.23292889.page",
-          "pageTitle": "Test STY for social embeds",
-          "producerId": null,
-          "timePublished": "2020-04-24T14:51:17.000Z",
-          "timeUpdated": "2020-04-24T14:51:17.000Z",
-          "producerName": "KYRGYZ"
-        },
-        "readTime": 1,
         "siteUri": "/kyrgyz",
+        "allowAdvertising": true,
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "socialProviders": ["Instagram", "YouTube", "Twitter", "Facebook"],
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1 }
       },
       "content": {
-        "blocks": [
-          {
-            "id": "63734037",
-            "subType": "body",
-            "href": "http://b.files.bbci.co.uk/11D53/test/_63734037_socialmedia.jpg",
-            "path": "/cpsdevpb/11D53/test/_63734037_socialmedia.jpg",
-            "height": 351,
-            "width": 624,
-            "altText": "social media",
-            "caption": "Social media",
-            "copyrightHolder": "BBC",
-            "positionHint": "full-width",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          {
-            "text": "This is a test STY for social embeds.",
-            "role": "introduction",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          },
-          {
-            "text": "Social embed content galore.",
-            "markupType": "plain_text",
-            "type": "paragraph"
-          },
-          {
-            "text": "Instagram",
-            "markupType": "plain_text",
-            "type": "crosshead"
-          },
-          {
-            "href": "https://www.instagram.com/p/BWp1s3lH06h/?hl=en",
-            "source": "instagram",
-            "embed": {
-              "oembed": {
-                "version": "1.0",
-                "title": "17 JUL: A Kyrgyz student's protest video against marrying young has gone viral in Central Asia and beyond. In it, she dances to a famous 70s tune, saying Kyrgyz brides are barely surviving. Marriages are often arranged, but no-one asks young people's opinions, she says. Find out more: bbc.in/kyrgyzbrides #Kyrgyz #Kyrgyzstan #Brides #Marriage #BBCShorts #BBC #BBCNews @bbcnews",
-                "author_name": "bbcnews",
-                "author_url": "https://www.instagram.com/bbcnews",
-                "provider_name": "Instagram",
-                "provider_url": "https://www.instagram.com",
-                "thumbnail_url": "https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/e15/s640x640/20065264_116037709030321_6204254926801993728_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=101&_nc_ohc=bNlV9NVIfMgAX8aT4I8&oh=2b9ae7d3f326dfabb282b8fc2bf2310a&oe=5EA55EB5",
-                "thumbnail_width": 640,
-                "thumbnail_height": 640,
-                "html": "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/p/BWp1s3lH06h/?utm_source=ig_embed&amp;utm_campaign=loading\" data-instgrm-version=\"12\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:16px;\"> <a href=\"https://www.instagram.com/p/BWp1s3lH06h/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"> <div style=\" display: flex; flex-direction: row; align-items: center;\"> <div style=\"background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;\"></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;\"></div></div></div><div style=\"padding: 19% 0;\"></div> <div style=\"display:block; height:50px; margin:0 auto 12px; width:50px;\"><svg width=\"50px\" height=\"50px\" viewBox=\"0 0 60 60\" version=\"1.1\" xmlns=\"https://www.w3.org/2000/svg\" xmlns:xlink=\"https://www.w3.org/1999/xlink\"><g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g transform=\"translate(-511.000000, -20.000000)\" fill=\"#000000\"><g><path d=\"M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631\"></path></g></g></g></svg></div><div style=\"padding-top: 8px;\"> <div style=\" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;\"> View this post on Instagram</div></div><div style=\"padding: 12.5% 0;\"></div> <div style=\"display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;\"><div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);\"></div> <div style=\"background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;\"></div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);\"></div></div><div style=\"margin-left: 8px;\"> <div style=\" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;\"></div> <div style=\" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)\"></div></div><div style=\"margin-left: auto;\"> <div style=\" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);\"></div> <div style=\" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);\"></div> <div style=\" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);\"></div></div></div></a> <p style=\" margin:8px 0 0 0; padding:0 4px;\"> <a href=\"https://www.instagram.com/p/BWp1s3lH06h/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\" target=\"_blank\">17 JUL: A Kyrgyz student&#39;s protest video against marrying young has gone viral in Central Asia and beyond. In it, she dances to a famous 70s tune, saying Kyrgyz brides are barely surviving. Marriages are often arranged, but no-one asks young people&#39;s opinions, she says. Find out more: bbc.in/kyrgyzbrides #Kyrgyz #Kyrgyzstan #Brides #Marriage #BBCShorts #BBC #BBCNews @bbcnews</a></p> <p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\">A post shared by <a href=\"https://www.instagram.com/bbcnews/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;\" target=\"_blank\"> BBC News</a> (@bbcnews) on <time style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\" datetime=\"2017-07-17T16:05:01+00:00\">Jul 17, 2017 at 9:05am PDT</time></p></div></blockquote>",
-                "width": 658
+        "model": {
+          "blocks": [
+            {
+              "id": "d63243e0",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "75d0ad48",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b774573c",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Test STY for social embeds",
+                            "blocks": [
+                              {
+                                "id": "1eaae3d4",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Test STY for social embeds",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
               },
-              "fallback_image": {
-                "fallback_image_width": 599,
-                "fallback_image_height": 977,
-                "alt_text": "Instagram post by bbcnews: 17 JUL: A Kyrgyz student's protest video against marrying young has gone viral in Central Asia and beyond. In it, she dances to a famous 70s tune, saying Kyrgyz brides are barely surviving. Marriages are often arranged, but no-one asks young people's opinions, she says. Find out more: bbc.in/kyrgyzbrides #Kyrgyz #Kyrgyzstan #Brides #Marriage #BBCShorts #BBC #BBCNews @bbcnews"
-              }
+              "position": [1]
             },
-            "id": "BWp1s3lH06h",
-            "type": "social_embed"
-          },
-          {
-            "text": "YouTube",
-            "markupType": "plain_text",
-            "type": "crosshead"
-          },
-          {
-            "href": "https://www.youtube.com/watch?v=UqdIoCjy1CM",
-            "source": "youtube",
-            "embed": {
-              "oembed": {
-                "version": "1.0",
-                "title": "Coronavirus: la exitosa estrategia de Corea del Sur contra el covid-19 | BBC Mundo",
-                "author_name": "BBC News Mundo",
-                "author_url": "https://www.youtube.com/user/BBCMundo",
-                "provider_name": "YouTube",
-                "provider_url": "https://www.youtube.com/",
-                "thumbnail_url": "https://i.ytimg.com/vi/UqdIoCjy1CM/hqdefault.jpg",
-                "thumbnail_width": 480,
-                "thumbnail_height": 360,
-                "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/UqdIoCjy1CM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-                "width": 480,
-                "height": 270
+            {
+              "id": "a97d38fd",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1587739877000,
+                "lastPublished": 1587739877000
               },
-              "fallback_image": {
-                "fallback_image_width": 500,
-                "fallback_image_height": 269,
-                "alt_text": "YouTube post by BBC News Mundo: Coronavirus: la exitosa estrategia de Corea del Sur contra el covid-19 | BBC Mundo"
-              }
+              "position": [2]
             },
-            "id": "UqdIoCjy1CM",
-            "type": "social_embed"
-          },
-          {
-            "text": "Twitter",
-            "markupType": "plain_text",
-            "type": "crosshead"
-          },
-          {
-            "href": "https://twitter.com/bbckyrgyz/status/1253664751588126722",
-            "source": "twitter",
-            "embed": {
-              "oembed": {
-                "version": "1.0",
-                "author_name": "BBC News Кыргыз",
-                "author_url": "https://twitter.com/bbckyrgyz",
-                "provider_name": "Twitter",
-                "provider_url": "https://twitter.com",
-                "url": "https://twitter.com/bbckyrgyz/status/1253664751588126722",
-                "html": "<blockquote class=\"twitter-tweet\"><p lang=\"ru\" dir=\"ltr\">Москва: “Тез жардам” чакыргандан корккон, оорусун жашырган мигранттар <a href=\"https://t.co/rwbq3qELMm\">https://t.co/rwbq3qELMm</a></p>&mdash; BBC News Кыргыз (@bbckyrgyz) <a href=\"https://twitter.com/bbckyrgyz/status/1253664751588126722?ref_src=twsrc%5Etfw\">April 24, 2020</a></blockquote>\n",
-                "width": 550
+            {
+              "id": "5d9f35e0",
+              "type": "image",
+              "model": {
+                "emphasiseImage": true,
+                "blocks": [
+                  {
+                    "id": "749ff9f3",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1abf2219",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5054e93e",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Social media",
+                                  "blocks": [
+                                    {
+                                      "id": "6d4801bc",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Social media",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  },
+                  {
+                    "id": "191433d2",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "fc732501",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "72acbe92",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "social media",
+                                  "blocks": [
+                                    {
+                                      "id": "a380332f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "social media",
+                                        "attributes": []
+                                      },
+                                      "position": [3, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 2]
+                  },
+                  {
+                    "id": "d4427698",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 351,
+                      "width": 624,
+                      "locator": "11D53/test/_63734037_socialmedia.jpg",
+                      "href": "http://b.files.bbci.co.uk/11D53/test/_63734037_socialmedia.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [3, 3]
+                  }
+                ]
               },
-              "fallback_image": {
-                "fallback_image_width": 465,
-                "fallback_image_height": 544,
-                "alt_text": "Twitter post by BBC News Кыргыз: Москва: “Тез жардам” чакыргандан корккон, оорусун жашырган мигранттар https://t.co/rwbq3qELMm"
-              }
+              "position": [3]
             },
-            "id": "1253664751588126722",
-            "type": "social_embed"
-          },
-          {
-            "text": "Facebook",
-            "markupType": "plain_text",
-            "type": "crosshead"
-          },
-          {
-            "href": "https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&extid=ixkwkArH1fy0g2GP",
-            "source": "facebook",
-            "embed": {
-              "oembed": {
-                "version": "1.0",
-                "author_name": "BBC News",
-                "author_url": "https://www.facebook.com/bbcnews/",
-                "provider_name": "Facebook",
-                "provider_url": "https://www.facebook.com",
-                "url": "https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&extid=ixkwkArH1fy0g2GP",
-                "html": "<div class=\"fb-post\" data-href=\"https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&amp;extid=ixkwkArH1fy0g2GP\" data-width=\"552\"><blockquote cite=\"https://www.facebook.com/bbcnews/posts/10157712846517217\" class=\"fb-xfbml-parse-ignore\"><p>The makers of Lysol and Dettol say &quot;under no circumstance&quot; should disinfectant be consumed.</p>Posted by <a href=\"https://www.facebook.com/bbcnews/\">BBC News</a> on&nbsp;<a href=\"https://www.facebook.com/bbcnews/posts/10157712846517217\">Friday, April 24, 2020</a></blockquote></div>",
-                "width": 552
+            {
+              "id": "dbf933bc",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f09787ea",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is a test STY for social embeds.",
+                      "blocks": [
+                        {
+                          "id": "28a03d29",
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is a test STY for social embeds.",
+                            "attributes": ["bold"]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "f85f79c7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Social embed content galore.",
+                      "blocks": [
+                        {
+                          "id": "7cd8e003",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Social embed content galore.",
+                            "attributes": []
+                          },
+                          "position": [4, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 2]
+                  }
+                ]
               },
-              "fallback_image": {
-                "fallback_image_width": 550,
-                "fallback_image_height": 509,
-                "alt_text": "Facebook post by BBC News: The makers of Lysol and Dettol say \"under no circumstance\" should disinfectant be consumed."
-              }
+              "position": [4]
             },
-            "id": "10157712846517217",
-            "type": "social_embed"
-          }
-        ]
+            {
+              "id": "d1557f4f",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "19a10b86",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5200ce17",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Instagram",
+                            "blocks": [
+                              {
+                                "id": "2460646f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Instagram",
+                                  "attributes": []
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "9fef316b",
+              "type": "social",
+              "model": {
+                "source": "https://www.instagram.com/p/BWp1s3lH06h/?hl=en",
+                "providerName": "Instagram",
+                "blocks": [
+                  {
+                    "id": "80278ed3",
+                    "type": "renditions",
+                    "model": {
+                      "locator": "",
+                      "blocks": [
+                        {
+                          "id": "82b60c71",
+                          "type": "aresOEmbed",
+                          "model": {
+                            "oembed": {
+                              "version": "1.0",
+                              "title": "17 JUL: A Kyrgyz student's protest video against marrying young has gone viral in Central Asia and beyond. In it, she dances to a famous 70s tune, saying Kyrgyz brides are barely surviving. Marriages are often arranged, but no-one asks young people's opinions, she says. Find out more: bbc.in/kyrgyzbrides #Kyrgyz #Kyrgyzstan #Brides #Marriage #BBCShorts #BBC #BBCNews @bbcnews",
+                              "author_name": "bbcnews",
+                              "author_url": "https://www.instagram.com/bbcnews",
+                              "provider_name": "Instagram",
+                              "provider_url": "https://www.instagram.com",
+                              "thumbnail_url": "https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/e15/s640x640/20065264_116037709030321_6204254926801993728_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=101&_nc_ohc=bNlV9NVIfMgAX8aT4I8&oh=2b9ae7d3f326dfabb282b8fc2bf2310a&oe=5EA55EB5",
+                              "thumbnail_width": 640,
+                              "thumbnail_height": 640,
+                              "html": "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/p/BWp1s3lH06h/?utm_source=ig_embed&amp;utm_campaign=loading\" data-instgrm-version=\"12\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:16px;\"> <a href=\"https://www.instagram.com/p/BWp1s3lH06h/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"> <div style=\" display: flex; flex-direction: row; align-items: center;\"> <div style=\"background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;\"></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;\"></div></div></div><div style=\"padding: 19% 0;\"></div> <div style=\"display:block; height:50px; margin:0 auto 12px; width:50px;\"><svg width=\"50px\" height=\"50px\" viewBox=\"0 0 60 60\" version=\"1.1\" xmlns=\"https://www.w3.org/2000/svg\" xmlns:xlink=\"https://www.w3.org/1999/xlink\"><g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g transform=\"translate(-511.000000, -20.000000)\" fill=\"#000000\"><g><path d=\"M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631\"></path></g></g></g></svg></div><div style=\"padding-top: 8px;\"> <div style=\" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;\"> View this post on Instagram</div></div><div style=\"padding: 12.5% 0;\"></div> <div style=\"display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;\"><div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);\"></div> <div style=\"background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;\"></div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);\"></div></div><div style=\"margin-left: 8px;\"> <div style=\" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;\"></div> <div style=\" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)\"></div></div><div style=\"margin-left: auto;\"> <div style=\" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);\"></div> <div style=\" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);\"></div> <div style=\" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);\"></div></div></div></a> <p style=\" margin:8px 0 0 0; padding:0 4px;\"> <a href=\"https://www.instagram.com/p/BWp1s3lH06h/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\" target=\"_blank\">17 JUL: A Kyrgyz student&#39;s protest video against marrying young has gone viral in Central Asia and beyond. In it, she dances to a famous 70s tune, saying Kyrgyz brides are barely surviving. Marriages are often arranged, but no-one asks young people&#39;s opinions, she says. Find out more: bbc.in/kyrgyzbrides #Kyrgyz #Kyrgyzstan #Brides #Marriage #BBCShorts #BBC #BBCNews @bbcnews</a></p> <p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\">A post shared by <a href=\"https://www.instagram.com/bbcnews/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;\" target=\"_blank\"> BBC News</a> (@bbcnews) on <time style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\" datetime=\"2017-07-17T16:05:01+00:00\">Jul 17, 2017 at 9:05am PDT</time></p></div></blockquote>",
+                              "width": 658,
+                              "type": "rich"
+                            }
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "4de04424",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9d66b132",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c712ceb6",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "YouTube",
+                            "blocks": [
+                              {
+                                "id": "284bc17d",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "YouTube",
+                                  "attributes": []
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "171f2112",
+              "type": "social",
+              "model": {
+                "source": "https://www.youtube.com/watch?v=UqdIoCjy1CM",
+                "providerName": "YouTube",
+                "blocks": [
+                  {
+                    "id": "0c0d069b",
+                    "type": "renditions",
+                    "model": {
+                      "locator": "",
+                      "blocks": [
+                        {
+                          "id": "afb674c5",
+                          "type": "aresOEmbed",
+                          "model": {
+                            "oembed": {
+                              "version": "1.0",
+                              "title": "Coronavirus: la exitosa estrategia de Corea del Sur contra el covid-19 | BBC Mundo",
+                              "author_name": "BBC News Mundo",
+                              "author_url": "https://www.youtube.com/user/BBCMundo",
+                              "provider_name": "YouTube",
+                              "provider_url": "https://www.youtube.com/",
+                              "thumbnail_url": "https://i.ytimg.com/vi/UqdIoCjy1CM/hqdefault.jpg",
+                              "thumbnail_width": 480,
+                              "thumbnail_height": 360,
+                              "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/UqdIoCjy1CM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                              "width": 480,
+                              "height": 270,
+                              "type": "video"
+                            }
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "fa6783b4",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "e7ab7eee",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1724ab22",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Twitter",
+                            "blocks": [
+                              {
+                                "id": "9fe9c748",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Twitter",
+                                  "attributes": []
+                                },
+                                "position": [9, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            {
+              "id": "8194d45a",
+              "type": "social",
+              "model": {
+                "source": "https://twitter.com/bbckyrgyz/status/1253664751588126722",
+                "providerName": "Twitter",
+                "blocks": [
+                  {
+                    "id": "d86efb4f",
+                    "type": "renditions",
+                    "model": {
+                      "locator": "",
+                      "blocks": [
+                        {
+                          "id": "089d4c05",
+                          "type": "aresOEmbed",
+                          "model": {
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC News Кыргыз",
+                              "author_url": "https://twitter.com/bbckyrgyz",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/bbckyrgyz/status/1253664751588126722",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"ru\" dir=\"ltr\">Москва: “Тез жардам” чакыргандан корккон, оорусун жашырган мигранттар <a href=\"https://t.co/rwbq3qELMm\">https://t.co/rwbq3qELMm</a></p>&mdash; BBC News Кыргыз (@bbckyrgyz) <a href=\"https://twitter.com/bbckyrgyz/status/1253664751588126722?ref_src=twsrc%5Etfw\">April 24, 2020</a></blockquote>\n",
+                              "width": 550,
+                              "type": "rich"
+                            }
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  }
+                ]
+              },
+              "position": [10]
+            },
+            {
+              "id": "41575e7b",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "88c8c8ce",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e2fae724",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Facebook",
+                            "blocks": [
+                              {
+                                "id": "74fcaef4",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Facebook",
+                                  "attributes": []
+                                },
+                                "position": [11, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [11, 1]
+                  }
+                ]
+              },
+              "position": [11]
+            },
+            {
+              "id": "9ff791ab",
+              "type": "social",
+              "model": {
+                "source": "https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&extid=ixkwkArH1fy0g2GP",
+                "providerName": "Facebook",
+                "blocks": [
+                  {
+                    "id": "98749944",
+                    "type": "renditions",
+                    "model": {
+                      "locator": "",
+                      "blocks": [
+                        {
+                          "id": "8ba34c21",
+                          "type": "aresOEmbed",
+                          "model": {
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC News",
+                              "author_url": "https://www.facebook.com/bbcnews/",
+                              "provider_name": "Facebook",
+                              "provider_url": "https://www.facebook.com",
+                              "url": "https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&extid=ixkwkArH1fy0g2GP",
+                              "html": "<div class=\"fb-post\" data-href=\"https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&amp;extid=ixkwkArH1fy0g2GP\" data-width=\"552\"><blockquote cite=\"https://www.facebook.com/bbcnews/posts/10157712846517217\" class=\"fb-xfbml-parse-ignore\"><p>The makers of Lysol and Dettol say &quot;under no circumstance&quot; should disinfectant be consumed.</p>Posted by <a href=\"https://www.facebook.com/bbcnews/\">BBC News</a> on&nbsp;<a href=\"https://www.facebook.com/bbcnews/posts/10157712846517217\">Friday, April 24, 2020</a></blockquote></div>",
+                              "width": 552,
+                              "type": "rich"
+                            }
+                          },
+                          "position": [12, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [12, 1]
+                  }
+                ]
+              },
+              "position": [12]
+            },
+            { "id": "7ecb330f", "type": "mpu", "model": {}, "position": [13] }
+          ]
+        }
       },
       "promo": {
-        "headlines": {
-          "shortHeadline": "Test STY for social embeds",
-          "headline": "Test STY for social embeds"
-        },
         "locators": {
           "assetUri": "/kyrgyz/23292889",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457",
@@ -232,284 +597,201 @@
           "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/23292889",
           "curie": "http://www.bbc.co.uk/asset/bb9390aa-4b35-e448-b295-cbd7369fe457"
         },
-        "summary": "A test STY for social embeds",
-        "timestamp": 1587739877000,
-        "language": "ky",
-        "passport": {
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "taggings": []
+        "headlines": {
+          "seoHeadline": "Test STY for social embeds",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Test STY for social embeds",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Test STY for social embeds",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
-        "indexImage": {
-          "id": "63734035",
-          "subType": "index",
-          "href": "http://b.files.bbci.co.uk/CF33/test/_63734035_socialmedia.jpg",
-          "path": "/cpsdevpb/CF33/test/_63734035_socialmedia.jpg",
-          "height": 351,
-          "width": 624,
-          "altText": "social media",
-          "caption": "Social media",
-          "copyrightHolder": "BBC",
-          "originCode": "cpsdevpb",
-          "type": "image"
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Social media",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Social media",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "social media",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "social media",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 351,
+                  "width": 624,
+                  "locator": "CF33/test/_63734035_socialmedia.jpg",
+                  "href": "http://b.files.bbci.co.uk/CF33/test/_63734035_socialmedia.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
         },
-        "id": "urn:bbc:ares::asset:kyrgyz/23292889",
-        "type": "cps"
-      },
-      "relatedContent": {
-        "section": {
-          "subType": "index",
-          "name": "Башталгыч бет",
-          "uri": "/kyrgyz/front_page",
-          "urlIdentifier": "/kyrgyz/front_page",
-          "type": "simple"
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "A test STY for social embeds",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "A test STY for social embeds",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         },
-        "site": {
-          "subType": "site",
-          "name": "BBC Кыргыз",
-          "uri": "/kyrgyz",
-          "urlIdentifier": "/kyrgyz",
-          "type": "simple"
-        },
-        "groups": []
+        "serviceIdentifier": "Kyrgyz-v6",
+        "extrinsicPromo": {
+          "headlines": { "shortHeadline": "Test STY for social embeds" },
+          "assetType": "STY",
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cxvz6r1el65o",
-            "canonicalUrl": "https://www.bbc.com/azeri/articles/cxvz6r1el65o"
+          "name": "Call to action",
+          "summary": "this is the description property",
+          "indexImage": {
+            "id": "a43e/test/86175eb0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/a43e/test/86175eb0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "path": "/cpsdevpb/a43e/test/86175eb0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "height": 144,
+            "width": 224,
+            "altText": "BBC",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
           },
-          "timestamp": 1686130645419,
-          "suitableForSyndication": true,
-          "language": "az",
-          "headlines": {
-            "seoHeadline": "Türkiyə ilə Misir arasında yaxınlaşma: 2013-cü ildən bu yana nələr olub?",
-            "promoHeadline": {
-              "blocks": [
-                {
-                  "type": "text",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "paragraph",
-                        "model": {
-                          "text": "Türkiyə ilə Misir arasında yaxınlaşma: 2013-cü ildən bu yana nələr olub?",
-                          "blocks": [
-                            {
-                              "type": "fragment",
-                              "model": {
-                                "text": "Türkiyə ilə Misir arasında yaxınlaşma: 2013-cü ildən bu yana nələr olub?",
-                                "attributes": []
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          "images": {
-            "defaultPromoImage": {
-              "blocks": [
-                {
-                  "type": "altText",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "Sisi və Erdoğan əl sıxışıblar",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "Sisi və Erdoğan əl sıxışıblar",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "rawImage",
-                  "model": {
-                    "width": 1024,
-                    "height": 576,
-                    "locator": "79ad/test/9d6d7600-0516-11ee-add0-c7c64fc8119c.jpg",
-                    "originCode": "cpsdevpb",
-                    "copyrightHolder": "Getty Images",
-                    "suitableForSyndication": true
-                  }
-                }
-              ]
-            }
-          },
-          "summary": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "passport": {
-            "language": "az",
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
-            "locator": "urn:bbc:optimo:asset:cxvz6r1el65o",
-            "availability": "AVAILABLE",
-            "taggings": [
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
-                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
-              }
-            ],
-            "schemaVersion": "1.4.0",
-            "publishedState": "PUBLISHED",
-            "predicates": {
-              "about": [
-                {
-                  "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                  "thingLabel": "Siyasət",
-                  "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                  "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-                  "thingType": [
-                    "tagging:Genre",
-                    "tagging:TagConcept",
-                    "tagging:AmbiguousTerm",
-                    "core:Theme",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q7163",
-                    "http://dbpedia.org/resource/Politics"
-                  ],
-                  "thingEnglishLabel": "Politics",
-                  "type": "about"
-                }
-              ],
-              "formats": [
-                {
-                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                  "thingLabel": "News report",
-                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
-                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
-                  "thingSameAs": [],
-                  "thingEnglishLabel": "Report",
-                  "thingPreferredLabel": "Report",
-                  "thingLabelLanguage": "az",
-                  "type": "formats"
-                }
-              ],
-              "infoClass": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                  "type": "infoClass"
-                }
-              ],
-              "assetType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
-                  "type": "assetType"
-                }
-              ]
-            }
-          },
-          "id": "urn:bbc:ares::article:cxvz6r1el65o",
-          "type": "optimo"
+          "uri": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+          "aresUrl": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "id": "urn:bbc:content:url-promo:https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
+          "type": "link"
         },
         {
-          "headlines": {
-            "shortHeadline": "Bərbər saçdan Erdoğanın portretini yaradıb",
-            "headline": "Bərbər saçdan Erdoğanın portretini yaradıb"
-          },
-          "locators": {
-            "assetUri": "/azeri/23065500",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:ae482a5a-d68a-f24b-b833-01c03e435ef4",
-            "assetId": "23065500",
-            "cpsUrn": "urn:bbc:content:assetUri:azeri/23065500",
-            "curie": "http://www.bbc.co.uk/asset/ae482a5a-d68a-f24b-b833-01c03e435ef4"
-          },
-          "summary": "Bərbər saçdan Erdoğanın portretini yaradıb",
-          "timestamp": 1470318967000,
-          "language": "az",
-          "passport": {
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
-            "taggings": []
-          },
-          "indexImage": {
-            "id": "63501678",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-            "path": "/cpsdevpb/1563A/test/_63501678__90671229_dc5e4e46-8dd8-4eaa-a03d-bf22372127b8.jpg",
-            "height": 371,
-            "width": 660,
-            "altText": "kəsib",
-            "caption": "kəsib",
+          "headline": "Overtyped Headline - Tipo Live Page (was photography)",
+          "destinationUrl": "/news/live/cp4vqze8qznxt",
+          "isLive": true,
+          "summary": "Overtyped summary",
+          "image": {
+            "id": "881f76c0-c089-11ee-9cfe-dd6b961b2ea5",
+            "subType": "promo",
+            "href": "http://b.files.bbci.co.uk/a040/test/881f76c0-c089-11ee-9cfe-dd6b961b2ea5.jpg",
+            "path": "/cpsdevpb/a040/test/881f76c0-c089-11ee-9cfe-dd6b961b2ea5.jpg",
+            "height": 168,
+            "width": 299,
+            "altText": "Overtyped Alt desc",
             "copyrightHolder": "Getty Images",
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "id": "urn:bbc:ares::asset:azeri/23065500",
-          "type": "cps"
+          "serviceIdentifier": "news",
+          "promoUrl": "https://www.bbc.co.uk/news/topics/c77jz3mdmyvt",
+          "id": "urn:bbc:tipo:topic:cp4vqze8qznxt",
+          "type": "tipo-live"
         },
         {
           "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cy0pvvd9jvpo",
-            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo"
+            "optimoUrn": "urn:bbc:optimo:asset:cxvdd15r56do",
+            "canonicalUrl": "https://www.bbc.com/weather/videos/cxvdd15r56do"
           },
-          "timestamp": 1675332360977,
+          "timestamp": 1680011601841,
           "suitableForSyndication": true,
-          "language": "ky",
+          "language": "en-gb",
           "headlines": {
-            "seoHeadline": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы\r",
+            "seoHeadline": "Weather Video",
             "promoHeadline": {
               "blocks": [
                 {
@@ -519,12 +801,12 @@
                       {
                         "type": "paragraph",
                         "model": {
-                          "text": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
+                          "text": "Weather video overtyped",
                           "blocks": [
                             {
                               "type": "fragment",
                               "model": {
-                                "text": "“Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”. Кадамжайда токмоктолгон наристенин атасы 2\r",
+                                "text": "Weather video overtyped",
                                 "attributes": []
                               }
                             }
@@ -537,52 +819,7 @@
               ]
             }
           },
-          "images": {
-            "defaultPromoImage": {
-              "blocks": [
-                {
-                  "type": "altText",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "test",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "test",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "rawImage",
-                  "model": {
-                    "width": 800,
-                    "height": 450,
-                    "locator": "2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
-                    "originCode": "cpsdevpb",
-                    "copyrightHolder": "BBC",
-                    "suitableForSyndication": true
-                  }
-                }
-              ]
-            }
-          },
+          "images": {},
           "summary": {
             "blocks": [
               {
@@ -592,12 +829,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "",
+                        "text": "Overtyped summary",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "",
+                              "text": "Overtyped summary",
                               "attributes": []
                             }
                           }
@@ -610,103 +847,53 @@
             ]
           },
           "passport": {
-            "language": "ky",
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-            "locator": "urn:bbc:optimo:asset:cy0pvvd9jvpo",
+            "language": "en-gb",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Weather",
+            "locator": "urn:bbc:optimo:asset:cxvdd15r56do",
             "availability": "AVAILABLE",
             "taggings": [
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/839cfd32-9a3d-47eb-a591-bf0e136d1f4b#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-                "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
-              },
               {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
                 "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
               },
               {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
-              },
-              {
                 "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
               }
             ],
             "schemaVersion": "1.4.0",
             "publishedState": "PUBLISHED",
             "predicates": {
-              "primaryMediaType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
-                  "type": "primaryMediaType"
-                }
-              ],
-              "motivation": [],
               "infoClass": [
                 {
                   "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
                   "type": "infoClass"
                 }
               ],
-              "formats": [
+              "primaryMediaType": [
                 {
-                  "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
-                  "thingLabel": "Explainer",
-                  "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
-                  "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                  "thingType": [
-                    "tagging:Format",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": [
-                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
-                  ],
-                  "thingEnglishLabel": "Explainer",
-                  "thingPreferredLabel": "Explainer",
-                  "thingLabelLanguage": "ky",
-                  "type": "formats"
-                }
-              ],
-              "editorialSensitivity": [
-                {
-                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
-                  "type": "editorialSensitivity"
-                }
-              ],
-              "about": [
-                {
-                  "value": "http://www.bbc.co.uk/things/839cfd32-9a3d-47eb-a591-bf0e136d1f4b#id",
-                  "thingLabel": "Океанды булгоо",
-                  "thingUri": "http://www.bbc.co.uk/things/839cfd32-9a3d-47eb-a591-bf0e136d1f4b#id",
-                  "thingId": "839cfd32-9a3d-47eb-a591-bf0e136d1f4b",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "core:Theme",
-                    "core:Thing"
-                  ],
-                  "thingSameAs": [
-                    "http://www.wikidata.org/entity/Q1058325",
-                    "http://dbpedia.org/resource/Marine_pollution"
-                  ],
-                  "thingEnglishLabel": "Ocean pollution",
-                  "type": "about"
+                  "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                  "type": "primaryMediaType"
                 }
               ]
             }
           },
-          "id": "urn:bbc:ares::article:cy0pvvd9jvpo",
+          "serviceIdentifier": "Weather",
+          "breakingNews": {},
+          "id": "urn:bbc:ares::article:cxvdd15r56do",
           "type": "optimo"
         }
       ],
       "features": [
+        {
+          "name": "Би-Би-Синин 100 Айым долбоору 2023: быйыл тизмеге кимдер кирди?",
+          "uri": "https://www.bbc.com/kyrgyz/resources/idt-02d9060e-15dc-426c-bfe0-86a6437e5234",
+          "aresUrl": "https://www.bbc.com/kyrgyz/resources/idt-02d9060e-15dc-426c-bfe0-86a6437e5234",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "id": "urn:bbc:content:url-promo:https://www.bbc.com/kyrgyz/resources/idt-02d9060e-15dc-426c-bfe0-86a6437e5234",
+          "type": "link"
+        },
         {
           "locators": {
             "optimoUrn": "urn:bbc:optimo:asset:cemg3359nwro",
@@ -803,10 +990,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -869,10 +1053,7 @@
                   "thingLabel": "Explainer",
                   "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                   "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                  "thingType": [
-                    "tagging:Format",
-                    "tagging:TagConcept"
-                  ],
+                  "thingType": ["tagging:Format", "tagging:TagConcept"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                   ],
@@ -1008,10 +1189,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -1074,10 +1252,7 @@
                   "thingLabel": "Explainer",
                   "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                   "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                  "thingType": [
-                    "tagging:Format",
-                    "tagging:TagConcept"
-                  ],
+                  "thingType": ["tagging:Format", "tagging:TagConcept"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                   ],
@@ -1265,9 +1440,7 @@
                     "tagging:Agent",
                     "tagging:AmbiguousTerm"
                   ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/Donald_Trump"
-                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Donald_Trump"],
                   "thingEnglishLabel": "Donald Trump",
                   "type": "about"
                 }
@@ -1278,10 +1451,7 @@
                   "thingLabel": "Explainer",
                   "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                   "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                  "thingType": [
-                    "tagging:Format",
-                    "tagging:TagConcept"
-                  ],
+                  "thingType": ["tagging:Format", "tagging:TagConcept"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                   ],
@@ -1399,10 +1569,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -1465,10 +1632,7 @@
                   "thingLabel": "Feature",
                   "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                   "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                   ],
@@ -1497,9 +1661,7 @@
                     "core:Thing",
                     "tagging:TagConcept"
                   ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/United_Nations"
-                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/United_Nations"],
                   "thingEnglishLabel": "United Nations",
                   "type": "about"
                 }
@@ -1605,10 +1767,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -1671,10 +1830,7 @@
                   "thingLabel": "Feature",
                   "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                   "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                   ],
@@ -1703,9 +1859,7 @@
                     "core:Thing",
                     "tagging:TagConcept"
                   ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/United_Nations"
-                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/United_Nations"],
                   "thingEnglishLabel": "United Nations",
                   "type": "about"
                 }
@@ -1811,10 +1965,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -1877,10 +2028,7 @@
                   "thingLabel": "Feature",
                   "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                   "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                   ],
@@ -1909,9 +2057,7 @@
                     "core:Thing",
                     "tagging:TagConcept"
                   ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/United_Nations"
-                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/United_Nations"],
                   "thingEnglishLabel": "United Nations",
                   "type": "about"
                 }
@@ -2017,10 +2163,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -2083,10 +2226,7 @@
                   "thingLabel": "Feature",
                   "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                   "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                   ],
@@ -2115,9 +2255,7 @@
                     "core:Thing",
                     "tagging:TagConcept"
                   ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/United_Nations"
-                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/United_Nations"],
                   "thingEnglishLabel": "United Nations",
                   "type": "about"
                 }
@@ -2223,10 +2361,7 @@
                         "blocks": [
                           {
                             "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
+                            "model": { "text": "", "attributes": [] }
                           }
                         ]
                       }
@@ -2289,10 +2424,7 @@
                   "thingLabel": "Feature",
                   "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
                   "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
                   "thingSameAs": [
                     "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
                   ],
@@ -2321,9 +2453,7 @@
                     "core:Thing",
                     "tagging:TagConcept"
                   ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/United_Nations"
-                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/United_Nations"],
                   "thingEnglishLabel": "United Nations",
                   "type": "about"
                 }
@@ -2332,216 +2462,10 @@
           },
           "id": "urn:bbc:ares::article:c2qz8l2zn5eo",
           "type": "optimo"
-        },
-        {
-          "locators": {
-            "optimoUrn": "urn:bbc:optimo:asset:cm18pzwq691o",
-            "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/cm18pzwq691o"
-          },
-          "timestamp": 1675338259096,
-          "suitableForSyndication": true,
-          "language": "ky",
-          "headlines": {
-            "seoHeadline": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө",
-            "promoHeadline": {
-              "blocks": [
-                {
-                  "type": "text",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "paragraph",
-                        "model": {
-                          "text": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 9",
-                          "blocks": [
-                            {
-                              "type": "fragment",
-                              "model": {
-                                "text": "Холокостту эскерүү күнү: Унутулган цыган курмандыктары эстеликтерди сактап калуу үчүн күрөшүүдө 9",
-                                "attributes": []
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          "images": {
-            "defaultPromoImage": {
-              "blocks": [
-                {
-                  "type": "altText",
-                  "model": {
-                    "blocks": [
-                      {
-                        "type": "text",
-                        "model": {
-                          "blocks": [
-                            {
-                              "type": "paragraph",
-                              "model": {
-                                "text": "test",
-                                "blocks": [
-                                  {
-                                    "type": "fragment",
-                                    "model": {
-                                      "text": "test",
-                                      "attributes": []
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "rawImage",
-                  "model": {
-                    "width": 800,
-                    "height": 450,
-                    "locator": "fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
-                    "originCode": "cpsdevpb",
-                    "copyrightHolder": "BBC",
-                    "suitableForSyndication": true
-                  }
-                }
-              ]
-            }
-          },
-          "summary": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "passport": {
-            "language": "ky",
-            "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-            "locator": "urn:bbc:optimo:asset:cm18pzwq691o",
-            "availability": "AVAILABLE",
-            "taggings": [
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-                "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-              },
-              {
-                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-              }
-            ],
-            "schemaVersion": "1.4.0",
-            "publishedState": "PUBLISHED",
-            "predicates": {
-              "primaryMediaType": [
-                {
-                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
-                  "type": "primaryMediaType"
-                }
-              ],
-              "motivation": [],
-              "infoClass": [
-                {
-                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                  "type": "infoClass"
-                }
-              ],
-              "formats": [
-                {
-                  "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-                  "thingLabel": "Feature",
-                  "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-                  "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-                  "thingType": [
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                  ],
-                  "thingSameAs": [
-                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
-                  ],
-                  "thingEnglishLabel": "Feature",
-                  "thingPreferredLabel": "Feature",
-                  "thingLabelLanguage": "ky",
-                  "type": "formats"
-                }
-              ],
-              "editorialSensitivity": [
-                {
-                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
-                  "type": "editorialSensitivity"
-                }
-              ],
-              "about": [
-                {
-                  "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
-                  "thingLabel": "БУУ",
-                  "thingUri": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
-                  "thingId": "b79ae056-59b1-49c7-8630-50f7e223e906",
-                  "thingType": [
-                    "tagging:AmbiguousTerm",
-                    "core:Organisation",
-                    "tagging:Agent",
-                    "core:Thing",
-                    "tagging:TagConcept"
-                  ],
-                  "thingSameAs": [
-                    "http://dbpedia.org/resource/United_Nations"
-                  ],
-                  "thingEnglishLabel": "United Nations",
-                  "type": "about"
-                }
-              ]
-            }
-          },
-          "id": "urn:bbc:ares::article:cm18pzwq691o",
-          "type": "optimo"
         }
       ],
       "mostRead": {
-        "generated": "2023-06-20T16:27:57.168Z",
+        "generated": "2024-07-31T08:28:00.658Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
         "items": [
@@ -2550,144 +2474,74 @@
             "rank": 1,
             "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
             "href": "/kyrgyz/world-23090100",
-            "timestamp": 1478663803000
+            "timestamp": "2016-11-09T03:56:43.000Z"
           },
           {
             "id": "82567d2d-eb50-b644-b9a4-6523bd62bf2c",
             "rank": 2,
             "title": "Kyrgyzstanda soz erkindigi buzuluuda",
             "href": "/kyrgyz/world-23089413",
-            "timestamp": 1478506660000
+            "timestamp": "2016-11-07T08:17:40.000Z"
           },
           {
             "id": "5ac26713-7ec6-824f-a179-53f95a372408",
             "rank": 3,
             "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 36",
             "href": "/kyrgyz/kyrgyzstan-23087515",
-            "timestamp": 1477898731000
+            "timestamp": "2016-10-31T07:25:31.000Z"
           },
           {
             "id": "429a5345-bc55-5947-b11b-19ae662817a5",
             "rank": 4,
             "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 34",
             "href": "/kyrgyz/kyrgyzstan-23087513",
-            "timestamp": 1477898586000
+            "timestamp": "2016-10-31T07:23:06.000Z"
           },
           {
             "id": "a1445694-7c18-5547-928e-97f5f454bebe",
             "rank": 5,
             "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 35",
             "href": "/kyrgyz/kyrgyzstan-23087514",
-            "timestamp": 1477898591000
+            "timestamp": "2016-10-31T07:23:11.000Z"
           },
           {
             "id": "f8e5c9d1-877b-a142-805f-e435cdf9e99c",
             "rank": 6,
             "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 10",
             "href": "/kyrgyz/sapar-tv-23087494",
-            "timestamp": 1477850970000
+            "timestamp": "2016-10-30T18:09:30.000Z"
           },
           {
             "id": "08c8102e-c7e2-7b49-a38c-cb31312984a0",
             "rank": 7,
             "title": "ට්‍රම්ප්ට අලුත් ආරක්‍ෂක උපදේශකයෙක්",
             "href": "/kyrgyz/23103391",
-            "timestamp": 1487940772000
+            "timestamp": "2017-02-24T12:52:52.000Z"
           },
           {
             "id": "87ba62ed-5442-ef47-94c4-312e65400d4f",
             "rank": 8,
             "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 21",
             "href": "/kyrgyz/media-23087507",
-            "timestamp": 1477898550000
+            "timestamp": "2016-10-31T07:22:30.000Z"
           },
           {
             "id": "91d192e9-38dd-4f44-882b-c724bb41331f",
             "rank": 9,
             "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
             "href": "/kyrgyz/23103378",
-            "timestamp": 1569397958000
+            "timestamp": "2019-09-25T07:52:38.000Z"
           },
           {
             "id": "731b4ac3-ed79-b34d-93b0-64d1693c92e8",
             "rank": 10,
             "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41",
             "href": "/kyrgyz/kyrgyzstan-23087520",
-            "timestamp": 1477898715000
-          },
-          {
-            "id": "53a3f3b0-45bf-5d41-ac4c-9fc485dae11b",
-            "rank": 11,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
-            "href": "/kyrgyz/kyrgyzstan-23087511",
-            "timestamp": 1477899573000
-          },
-          {
-            "id": "3ab470b8-18c1-4c37-ae2c-9f0177c60845",
-            "rank": 12,
-            "title": "Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
-            "href": "/kyrgyz/kyrgyzstan-23088783",
-            "timestamp": 1478184211000
-          },
-          {
-            "id": "42fadb3a-fb0a-c549-b83d-da4243588a34",
-            "rank": 13,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 11",
-            "href": "/kyrgyz/blog-23087495",
-            "timestamp": 1477850987000
-          },
-          {
-            "id": "99e5af12-a546-cd4c-885a-694a637a69b2",
-            "rank": 14,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 14",
-            "href": "/kyrgyz/institutional-23087498",
-            "timestamp": 1477851087000
-          },
-          {
-            "id": "7e65aff4-c3b1-5d41-aede-777d8cd755a3",
-            "rank": 15,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 08",
-            "href": "/kyrgyz/world-23087493",
-            "timestamp": 1477850702000
-          },
-          {
-            "id": "d9d4314d-5936-8c49-96fb-4f072339c527",
-            "rank": 16,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03",
-            "href": "/kyrgyz/entertainment-23087489",
-            "timestamp": 1477850376000
-          },
-          {
-            "id": "175bd205-8b6e-4548-a24a-1b984c16e790",
-            "rank": 17,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 44",
-            "href": "/kyrgyz/kyrgyzstan-23087523",
-            "timestamp": 1477898702000
-          },
-          {
-            "id": "dd71b59e-ce18-2347-8eb5-43e9393a1f27",
-            "rank": 18,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 48",
-            "href": "/kyrgyz/kyrgyzstan-23087528",
-            "timestamp": 1477898672000
-          },
-          {
-            "id": "30d42ae7-a72f-574a-88f2-392a2dfe7c52",
-            "rank": 19,
-            "title": "Түштүк Корея президенти кечирим сурады",
-            "href": "/kyrgyz/kyrgyzstan-23089035",
-            "timestamp": 1478260541000
-          },
-          {
-            "id": "11dd0fa3-7b4f-174b-9234-ac1d59d04a34",
-            "rank": 20,
-            "title": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 32",
-            "href": "/kyrgyz/kyrgyzstan-23087510",
-            "timestamp": 1477898574000
+            "timestamp": "2016-10-31T07:25:15.000Z"
           }
         ]
       },
-      "mostWatched": null
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"

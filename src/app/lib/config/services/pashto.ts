@@ -74,6 +74,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'وروستی',
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
+        shareButtonText: 'شریک یې کړئ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'لنډیز',
       error: {
@@ -274,11 +279,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'تر ټولو ډېر لیدل شوی',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

@@ -151,7 +151,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
           scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
+          src="https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
           title="Media player"
         >
           <div
@@ -508,7 +508,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
           <img
             alt=""
             class="emotion-24 emotion-25"
-            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp"
           />
         </div>
       </div>

@@ -19,22 +19,23 @@ import { data as urduFrontPageData } from '#data/urdu/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
+import { Article } from '#app/models/types/optimo';
 import { render, waitFor } from '../react-testing-library-with-providers';
 import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer from './index';
-import { MetadataProps, PageDataProps } from './types';
+import { MetadataProps } from './types';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
 type Platform = 'canonical' | 'amp';
 
-const getArticleMetadataProps = (data: PageDataProps) => ({
+const getArticleMetadataProps = (data: Article) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: getSummary(data),
+  description: getSummary(data) as string,
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,

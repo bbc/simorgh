@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { bool, string } from 'prop-types';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { navigationIcons } from '#app/legacy/psammead/psammead-assets/src/svgs';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
@@ -41,9 +40,9 @@ const AmpConsentBannerContainer = ({
   type,
   acceptAction,
   rejectAction,
-  hideAction,
+  hideAction = null,
   promptId,
-  hidden,
+  hidden = null,
 }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
 
@@ -93,20 +92,6 @@ const AmpConsentBannerContainer = ({
       service={service}
     />
   );
-};
-
-AmpConsentBannerContainer.propTypes = {
-  type: string.isRequired,
-  acceptAction: string.isRequired,
-  rejectAction: string.isRequired,
-  hideAction: string,
-  promptId: string.isRequired,
-  hidden: bool,
-};
-
-AmpConsentBannerContainer.defaultProps = {
-  hidden: null,
-  hideAction: null,
 };
 
 export default AmpConsentBannerContainer;

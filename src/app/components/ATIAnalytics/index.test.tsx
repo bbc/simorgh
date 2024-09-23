@@ -280,7 +280,6 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
       render(<ATIAnalytics data={articleDataNews} />, {
         ...defaultRenderProps,
         isAmp: false,
@@ -306,6 +305,7 @@ describe('ATI Analytics Container', () => {
         lng: 'en-US',
         x2: '[responsive]',
         x3: '[news]',
+        x4: '[en-gb]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
         x7: '[index-home]',
         x8: '[simorgh]',
@@ -320,7 +320,6 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
       render(<ATIAnalytics data={articleDataNews} />, {
         ...defaultRenderProps,
         isAmp: true,
@@ -345,6 +344,7 @@ describe('ATI Analytics Container', () => {
         lng: '${browserLanguage}',
         x2: '[amp]',
         x3: '[news]',
+        x4: '[en-gb]',
         x5: '[${sourceUrl}]',
         x6: '[${documentReferrer}]',
         x7: '[index-home]',

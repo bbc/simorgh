@@ -21,7 +21,6 @@ import ThemeProvider from '../../components/ThemeProvider';
 
 const TopicPage = withPageWrapper(Page);
 
-// eslint-disable-next-line react/prop-types
 const Component = ({
   service,
   variant = 'default',
@@ -71,7 +70,9 @@ export default {
   decorators: [withServicesDecorator({ defaultService: 'mundo' })],
 };
 
-export const Example = (_, globalArgs) => <Component {...globalArgs} />;
+export const Example = (_, { service, variant }) => (
+  <Component service={service} variant={variant} />
+);
 
 export const MundoWithBannerVariations = () => (
   <Component service="mundo" fixture={mundoTopicWithMessageBannerVariations} />

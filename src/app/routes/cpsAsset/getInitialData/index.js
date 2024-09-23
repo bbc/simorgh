@@ -25,7 +25,6 @@ import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
-import processMostWatched from '../../utils/processMostWatched';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
@@ -87,39 +86,16 @@ const transformJson = async (json, pathname, toggles) => {
   }
 };
 
-const getDerivedServiceAndPath = (service, pathname) => {
-  switch (service) {
-    case 'cymrufyw':
-      return {
-        service: 'newyddion',
-        path: pathname.replace('cymrufyw', 'newyddion'),
-      };
-    default:
-      return { service, path: pathname };
-  }
-};
-
-export default async ({
-  path: pathname,
-  service,
-  variant,
-  pageType,
-  toggles,
-  isCaf,
-  isAmp,
-}) => {
+export default async ({ path: pathname, service, variant, toggles, isAmp }) => {
   try {
-    const { service: derivedService, path: derivedPath } =
-      getDerivedServiceAndPath(service, pathname);
-
     const {
       status,
       pageData: { secondaryColumn, recommendations, ...article } = {},
     } = await getArticleInitialData({
-      path: derivedPath,
-      service: derivedService,
+      path: pathname,
+      service,
       variant,
-      pageType: isCaf ? 'article' : 'cpsAsset',
+      pageType: 'article',
       isAmp,
       toggles,
     });
@@ -128,20 +104,11 @@ export default async ({
       throw handleError('CPS asset data fetch error', status);
     }
 
-    const { mostWatched } = processMostWatched({
-      data: article,
-      service: derivedService,
-      path: derivedPath,
-      toggles,
-      page: pageType,
-    });
-
     const { topStories, features } = secondaryColumn;
     const { mostRead } = article;
 
-    // Skip transforming JSON when CAF is enabled and the pageType is not FIX
-    const skipTransformJson =
-      isCaf && article?.metadata?.type !== FEATURE_INDEX_PAGE;
+    // Skip transforming JSON when the pageType is not FIX
+    const skipTransformJson = article?.metadata?.type !== FEATURE_INDEX_PAGE;
 
     const response = {
       status,
@@ -154,7 +121,6 @@ export default async ({
           features,
         },
         mostRead,
-        mostWatched,
         recommendations,
       },
     };

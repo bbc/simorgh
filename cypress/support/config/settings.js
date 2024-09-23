@@ -105,7 +105,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -329,7 +328,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -524,7 +522,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -748,7 +745,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -910,7 +906,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1110,7 +1105,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1342,7 +1336,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1478,7 +1471,6 @@ module.exports = () => ({
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
@@ -1621,12 +1613,11 @@ module.exports = () => ({
               '/gahuza/amakuru-23257470', // CPS MAP with video clip
               '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1810,7 +1801,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2036,12 +2026,11 @@ module.exports = () => ({
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2242,7 +2231,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -2271,7 +2260,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2428,7 +2416,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2638,7 +2625,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2794,7 +2780,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2988,7 +2973,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3195,8 +3179,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
             paths: [],
@@ -3231,7 +3215,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3431,7 +3414,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3593,7 +3575,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3751,7 +3732,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
@@ -3898,7 +3878,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4035,7 +4014,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
         environments: {
@@ -4099,7 +4077,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
         environments: {
@@ -4246,7 +4223,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -4273,12 +4250,11 @@ module.exports = () => ({
               '/pashto/media-23257523', // CPS MAP with video clip
               '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4560,12 +4536,11 @@ module.exports = () => ({
               '/persian/iran-23231114', // CPS MAP with audio clip
               '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4775,12 +4750,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4967,7 +4941,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5123,7 +5096,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5307,7 +5279,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false }, // No Most Watched page for Russian
       photoGalleryPage: {
         environments: {
           live: {
@@ -5444,7 +5415,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
@@ -5554,7 +5524,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5741,7 +5710,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5902,7 +5870,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6125,7 +6092,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6229,7 +6195,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
         environments: {
@@ -6408,7 +6373,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6632,7 +6596,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6813,7 +6776,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6970,7 +6932,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7000,7 +6961,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/international-23252825'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -7184,7 +7145,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7346,7 +7306,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7508,7 +7467,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7670,7 +7628,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7791,7 +7748,6 @@ module.exports = () => ({
         smoke: false,
       },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
@@ -7915,7 +7871,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8138,7 +8093,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8366,7 +8320,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8396,10 +8349,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek/uzbekistan-53263099'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -8454,6 +8407,84 @@ module.exports = () => ({
           },
         },
         smoke: false,
+      },
+    },
+  },
+  uzbekCyr: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'cyr',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/cyr'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+      specialFeatures: {
+        cookieBanner: { environments: undefined, smoke: false },
+      },
+    },
+  },
+  uzbekLat: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'lat',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/lat'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+      specialFeatures: {
+        cookieBanner: { environments: undefined, smoke: false },
       },
     },
   },
@@ -8528,7 +8559,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8685,7 +8715,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8893,7 +8922,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -9101,7 +9129,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {

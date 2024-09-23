@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ਤਾਜ਼ਾ',
         postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
         summary: 'ਸਾਰ',
+        shareButtonText: 'ਸਾਂਝਾ ਕਰੋ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ਸਾਰ',
       error: {
@@ -262,11 +267,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'ਸਭ ਤੋਂ ਵੱਧ ਦੇਖਿਆ',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -277,10 +277,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ਖ਼ਬਰਾਂ',
         url: '/punjabi',
-      },
-      {
-        title: 'ਲੋਕ ਸਭਾ ਚੋਣਾਂ 2024',
-        url: '/punjabi/topics/cz4xp0dw200t',
       },
       {
         title: 'ਵੀਡੀਓ',

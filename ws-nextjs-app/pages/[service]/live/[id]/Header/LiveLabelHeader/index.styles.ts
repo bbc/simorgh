@@ -21,7 +21,7 @@ const styles = {
         width: `${spacings.TRIPLE + spacings.HALF}rem`,
         height: `${spacings.TRIPLE + spacings.HALF}rem`,
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         color: 'canvasText',
       },
     }),

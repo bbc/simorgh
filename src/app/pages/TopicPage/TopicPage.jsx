@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { shape, arrayOf, string } from 'prop-types';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
@@ -49,7 +48,7 @@ const TopicPage = ({ pageData }) => {
   return (
     <>
       <AdContainer slotType="leaderboard" />
-      <main css={styles.main}>
+      <main css={styles.main} role="main">
         <div css={styles.inner}>
           <ATIAnalytics atiData={atiAnalytics} />
           <ChartbeatAnalytics title={title} />
@@ -84,6 +83,7 @@ const TopicPage = ({ pageData }) => {
               position,
               visualStyle,
               embed,
+              radioSchedule,
             }) => {
               const nthCurationByStyleAndProminence =
                 getNthCurationByStyleAndProminence({
@@ -92,11 +92,9 @@ const TopicPage = ({ pageData }) => {
                   visualStyle,
                   visualProminence,
                 });
-
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
                   <Curation
-                    headingLevel={curationTitle && 3}
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
                     summaries={summaries}
@@ -109,6 +107,7 @@ const TopicPage = ({ pageData }) => {
                       nthCurationByStyleAndProminence
                     }
                     embed={embed}
+                    radioSchedule={radioSchedule}
                   />
                 </React.Fragment>
               );
@@ -126,13 +125,6 @@ const TopicPage = ({ pageData }) => {
       </main>
     </>
   );
-};
-
-TopicPage.propTypes = {
-  pageData: shape({
-    title: string.isRequired,
-    curations: arrayOf(shape({})).isRequired,
-  }).isRequired,
 };
 
 export default TopicPage;

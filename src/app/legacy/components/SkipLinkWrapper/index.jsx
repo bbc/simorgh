@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { node, string, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
@@ -57,15 +56,6 @@ const SkipLinkWrapper = ({
       </EndText>
     </Wrapper>
   );
-};
-
-SkipLinkWrapper.propTypes = {
-  service: string.isRequired,
-  children: node.isRequired,
-  endTextId: string.isRequired,
-  text: string.isRequired,
-  endTextVisuallyHidden: string.isRequired,
-  terms: shape({}).isRequired,
 };
 
 export default SkipLinkWrapper;
