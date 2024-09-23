@@ -12,7 +12,6 @@ export default ({
     filterForBlockType(blocks, 'mediaOverrides') || {};
   const video = tvMediaBlock?.versions?.[0] || {};
   const holdingImageURL = `https://${tvMediaBlock.imageUrl}`;
-  console.log(mediaOverrides.pageTitleOverride);
 
   const placeholderConfig = buildPlaceholderConfig({
     title: tvMediaBlock.episodeTitle,
