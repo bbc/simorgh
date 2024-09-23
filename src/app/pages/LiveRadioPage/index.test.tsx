@@ -5,7 +5,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
-import { LiveRadioBlock } from '#app/components/MediaLoader/types';
+import { LiveRadioBlock } from '#app/models/types/media';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
