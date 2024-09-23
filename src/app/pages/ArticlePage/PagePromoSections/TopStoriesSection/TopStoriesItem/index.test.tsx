@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { Services } from '#app/models/types/global';
 import {
   render,
   screen,
@@ -14,15 +15,17 @@ import {
   tipoFormattedTopStoriesItem,
   tipoLivePageTopStoriesItem,
 } from '../fixture';
+import { TopStoryItem } from '../types';
 
-const TopStoriesItemFixture = ({ fixtureData, service = 'news' }) => (
+type Props = {
+  fixtureData: TopStoryItem;
+  service?: Services;
+};
+
+const TopStoriesItemFixture = ({ fixtureData, service = 'news' }: Props) => (
   <ServiceContextProvider service={service}>
     <ToggleContextProvider>
-      <TopStoriesItem
-        item={fixtureData}
-        ariaLabelledBy="topStories"
-        index={0}
-      />
+      <TopStoriesItem item={fixtureData} ariaLabelledBy="topStories" />
     </ToggleContextProvider>
   </ServiceContextProvider>
 );
@@ -83,6 +86,7 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should return null if no data is passed', () => {
+    // @ts-expect-error - testing null data
     const { container } = render(<TopStoriesItemFixture fixtureData={{}} />);
     expect(container).toBeEmptyDOMElement();
   });
