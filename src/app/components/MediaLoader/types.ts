@@ -91,7 +91,7 @@ export type ConfigBuilderReturnProps = {
   playerConfig: PlayerConfig;
   placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
-  orientation: Orientations;
+  orientation?: Orientations;
 };
 
 export type MediaInfo = {
