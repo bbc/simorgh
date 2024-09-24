@@ -86,6 +86,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Incamake',
         shareButtonText: 'Sangira',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Incamake',
       error: {
         404: {

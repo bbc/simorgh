@@ -220,6 +220,16 @@ describe('Topic Page', () => {
     });
   });
 
+  it('should render the main html tag with an attribute of role with the value of main', () => {
+    const { container } = render(
+      <TopicPage pageData={pidginMultipleItems} />,
+      getOptionParams(),
+    );
+    const mainTag = container.querySelector('main');
+    expect(mainTag).toBeInTheDocument();
+    expect(mainTag).toHaveAttribute('role', 'main');
+  });
+
   describe('Message Banner', () => {
     it('should only render when visual style is banner and visual prominence is normal', () => {
       const messageBannerCuration =
@@ -314,9 +324,7 @@ describe('Topic Page', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
       const getLinkedDataOutput = () => {
-        return Helmet.peek().scriptTags.map(({ innerHTML }) =>
-          JSON.parse(innerHTML),
-        );
+        return JSON.parse(Helmet.peek().scriptTags[1].innerHTML);
       };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();

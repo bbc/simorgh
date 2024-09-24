@@ -30,6 +30,7 @@ exports[`FormField should render a checkbox input with an associated label 1`] =
 }
 
 .emotion-2 {
+  scroll-margin-top: 0.5rem;
   display: inline-block;
   -webkit-flex: initial;
   -ms-flex: initial;
@@ -225,6 +226,7 @@ exports[`FormField should render a required input with an associated label 1`] =
 }
 
 .emotion-2 {
+  scroll-margin-top: 2.75rem;
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
   width: 100%;
@@ -248,6 +250,13 @@ exports[`FormField should render a required input with an associated label 1`] =
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 
@@ -348,6 +357,7 @@ exports[`FormField should render a tel input with an associated label 1`] = `
 }
 
 .emotion-2 {
+  scroll-margin-top: 2.75rem;
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
   width: 100%;
@@ -371,6 +381,13 @@ exports[`FormField should render a tel input with an associated label 1`] = `
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 
@@ -471,6 +488,7 @@ exports[`FormField should render a text input with an associated label 1`] = `
 }
 
 .emotion-2 {
+  scroll-margin-top: 2.75rem;
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
   width: 100%;
@@ -494,6 +512,13 @@ exports[`FormField should render a text input with an associated label 1`] = `
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 
@@ -594,6 +619,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
 }
 
 .emotion-2 {
+  scroll-margin-top: 2.75rem;
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
   width: 100%;
@@ -606,6 +632,7 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   line-height: 1.25rem;
   resize: none;
   display: block;
+  overflow: clip;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -619,6 +646,13 @@ exports[`FormField should render a textarea input with an associated label 1`] =
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 
@@ -716,6 +750,7 @@ exports[`FormField should render an email input with an associated label 1`] = `
 }
 
 .emotion-2 {
+  scroll-margin-top: 2.75rem;
   border: solid 0.0625rem #141414;
   outline: solid 0.0625rem transparent;
   width: 100%;
@@ -739,6 +774,13 @@ exports[`FormField should render an email input with an associated label 1`] = `
   .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    border-color: canvasText;
+    outline: 0;
   }
 }
 

@@ -40,16 +40,9 @@ export default {
         outlineOffset: `${focusIndicatorThickness}`,
       },
     }),
-  focusIndicatorErrorSummary: ({ palette }: Theme) =>
+  textField: ({ spacings, fontVariants, fontSizes, palette, mq }: Theme) =>
     css({
-      '&:focus': {
-        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
-        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
-        outlineOffset: `${focusIndicatorThickness}`,
-      },
-    }),
-  textField: ({ spacings, fontVariants, fontSizes, palette }: Theme) =>
-    css({
+      scrollMarginTop: `${pixelsToRem(44)}rem`, // Ensures label is visible after using error summary links
       border: `solid 0.0625rem ${palette.GREY_10}`,
       outline: 'solid 0.0625rem transparent',
       width: '100%',
@@ -57,6 +50,7 @@ export default {
       padding: `${spacings.FULL}rem`,
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
+      [mq.FORCED_COLOURS]: { borderColor: 'canvasText', outline: '0' },
     }),
   textFieldError: ({ palette }: Theme) =>
     css({
@@ -81,6 +75,13 @@ export default {
       resize: 'none',
       display: 'block',
     }),
+  // Sets overflow to clip when field is empty
+  // Resolves A11y issue with scroll-top-margin on textareas on Chrome
+  // Reverts to overflow:auto once a value is provided
+  overflowOverride: () =>
+    css({
+      overflow: 'clip',
+    }),
   checkboxLabel: ({ spacings }: Theme) =>
     css({
       flex: 'auto',
@@ -89,6 +90,7 @@ export default {
     }),
   checkbox: ({ palette, mq }: Theme) =>
     css({
+      scrollMarginTop: `${pixelsToRem(8)}rem`, // Provides spacing after using error summary links
       display: 'inline-block',
       flex: 'initial',
       flexShrink: 0,
@@ -108,7 +110,7 @@ export default {
         width: '100%',
         height: '100%',
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         appearance: 'auto', // renders browser default checkbox
         '&:checked::after': {
           content: 'none',
@@ -118,47 +120,5 @@ export default {
   checkboxError: ({ palette }: Theme) =>
     css({
       border: `solid 0.0625rem ${palette.ERROR_CORE}`,
-    }),
-  errorText: ({ palette }: Theme) =>
-    css({
-      color: palette.WHITE,
-    }),
-  errorSvg: ({ mq, palette }: Theme) =>
-    css({
-      fill: palette.WHITE,
-      verticalAlign: 'middle',
-      marginInlineEnd: '0.75rem',
-      minWidth: '1.5rem',
-      [mq.HIGH_CONTRAST]: {
-        path: {
-          fill: 'currentColor',
-        },
-      },
-    }),
-  errorMessageBox: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.ERROR_CORE,
-      outline: 'solid 0.0625rem transparent',
-      padding: '0.75rem',
-      display: 'flex',
-      alignItems: 'center',
-    }),
-  hasArrowStyle: ({ spacings }: Theme) =>
-    css({
-      marginTop: `${spacings.FULL}rem`,
-      marginBottom: `${spacings.FULL}rem`,
-    }),
-  errorArrow: ({ palette, spacings }: Theme) =>
-    css({
-      backgroundColor: palette.ERROR_CORE,
-      clipPath: 'polygon(0px 100%, 50% 0px, 100% 100%)',
-      width: `${spacings.DOUBLE}rem`,
-      height: '0.75rem',
-      marginInlineStart: `${spacings.DOUBLE}rem`,
-      marginTop: `${spacings.FULL}rem`,
-      '&::after': {
-        content: '""',
-        border: '0.5rem solid transparent',
-      },
     }),
 };

@@ -6,6 +6,8 @@ import { ReadableStream } from 'node:stream/web';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+window.require = jest.fn();
+
 /*
  * Mock to avoid async behaviour in tests
  */
@@ -23,6 +25,9 @@ window.matchMedia = jest.fn().mockImplementation(query => {
     removeListener: jest.fn(),
   };
 });
+
+// Mock RequireJS globally and let individual tests mock it as needed
+window.require = jest.fn();
 
 global.fetch = fetch;
 global.AbortSignal = {

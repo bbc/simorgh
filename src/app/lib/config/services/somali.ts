@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Kooban',
         shareButtonText: 'La wadaag',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Kooban',
       error: {
         404: {

@@ -8,7 +8,8 @@ import runAmpFooterTests from './footer.amp';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
 import runMediaPlaceholderTests from './mediaPlaceholder';
-import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
+import runMediaPlayerAudioTests from './mediaPlayerAudio';
+import runMediaPlayerTests from './mediaPlayer';
 import runMediaPlayerEmbedLegacyTests from './mediaPlayerEmbedLegacy';
 import runRadioScheduleTests from './radioSchedule';
 import runRecentEpisodesTests from './recentEpisodes';
@@ -49,7 +50,8 @@ export {
   runHeaderTests,
   runMainHeadingTests,
   runMediaPlaceholderTests,
-  runMediaPlayerEmbedTests,
+  runMediaPlayerAudioTests,
+  runMediaPlayerTests,
   runMediaPlayerEmbedLegacyTests,
   runMostReadTests,
   runRadioScheduleTests,

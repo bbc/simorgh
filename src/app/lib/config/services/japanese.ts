@@ -75,6 +75,10 @@ export const service: DefaultServiceConfig = {
         summary: '要点',
         shareButtonText: '共有する',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: '要点',
       error: {
         404: {
@@ -311,6 +315,10 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/topics/c50vpymk750t',
       },
       {
+        title: '米大統領選',
+        url: '/japanese/topics/c5qx4zgm86et',
+      },
+      {
         title: '気候変動',
         url: '/japanese/topics/c2dwqjr27zjt',
       },
@@ -331,7 +339,7 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/topics/cdr56kqdr70t',
       },
       {
-        title: '解説・読み物',
+        title: '読み物',
         url: '/japanese/topics/c2xj7ep5812t',
       },
       {
@@ -339,7 +347,7 @@ export const service: DefaultServiceConfig = {
         url: '/japanese/topics/c132079wln0t',
       },
       {
-        title: 'ワールドニュースTV',
+        title: 'ニュースTV',
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],

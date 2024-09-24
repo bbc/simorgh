@@ -2231,7 +2231,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -4223,7 +4223,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -6961,7 +6961,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/international-23252825'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,

@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Points clés',
         shareButtonText: 'Partager',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Points clés',
       error: {
         404: {
@@ -340,10 +344,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Santé',
         url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
-        title: 'Bien-être',
-        url: '/afrique/topics/c0vmyy90q8zt',
       },
       {
         title: 'Science et technologie',

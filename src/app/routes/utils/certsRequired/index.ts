@@ -8,7 +8,6 @@ export default (pathname: string) => {
   return (
     !BFF_IS_LOCAL &&
     !isLocal &&
-    process.env.INTEGRATION_TEST_BUILD !== 'true' &&
     process.env.LIGHTHOUSE_BUILD !== 'true' &&
     process.env.CYPRESS_APP_ENV !== 'local'
   );

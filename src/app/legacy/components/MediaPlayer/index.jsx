@@ -54,10 +54,10 @@ const CanonicalMediaPlayerComponent = ({
   acceptableEventOrigins = [
     'www.test.bbc.com',
     'test.bbc.com',
-    'polling.test.bbc.com',
+    'web-cdn.test.api.bbci.co.uk',
     'www.bbc.com',
     'bbc.com',
-    'polling.bbc.com',
+    'web-cdn.api.bbci.co.uk',
     'localhost.bbc.com',
     'localhost',
   ],

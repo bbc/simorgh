@@ -74,6 +74,10 @@ export const service: DefaultServiceConfig = {
         summary: 'ጭምቅ ሃሳብ',
         shareButtonText: 'ያጋሩ',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'ጭምቅ ሃሳብ',
       error: {
         404: {

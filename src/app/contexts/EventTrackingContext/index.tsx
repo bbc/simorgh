@@ -24,6 +24,8 @@ import {
   CPS_ASSET,
   STATIC_PAGE,
   UGC_PAGE,
+  AV_EMBEDS,
+  DOWNLOADS_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
@@ -68,6 +70,8 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [CPS_ASSET]: '',
     [STATIC_PAGE]: '',
     [UGC_PAGE]: '',
+    [AV_EMBEDS]: 'av-embeds',
+    [DOWNLOADS_PAGE]: 'downloads',
   }[pageType];
 
   if (!campaignID) {

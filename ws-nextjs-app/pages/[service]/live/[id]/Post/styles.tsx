@@ -16,7 +16,7 @@ export default {
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,
       display: 'inline-block',
       width: '100%',
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         borderBottom: `solid ${pixelsToRem(3)}rem transparent`,
       },
     }),
@@ -65,7 +65,7 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `0 0 ${spacings.DOUBLE}rem`,
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         border: `solid ${pixelsToRem(3)}rem transparent`,
         borderTop: `solid ${pixelsToRem(1)}rem transparent`,
       },

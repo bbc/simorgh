@@ -134,6 +134,10 @@ export const mainTranslations = {
     summary: 'Коротко',
     shareButtonText: 'Поделиться',
   },
+  downloads: {
+    instructions: 'You can download and view today’s news.',
+    title: 'File Download',
+  },
   gist: 'Коротко',
   error: {
     404: {
@@ -355,21 +359,21 @@ export const service: DefaultServiceConfig = {
       hasMostRead: true,
     },
     podcastPromo: {
-      title: 'Подкаст',
-      brandTitle: 'Что это было?',
+      title: 'WhatsApp',
+      brandTitle: 'Канал Би-би-си в WhatsApp',
       brandDescription:
-        'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.',
+        'Тут мы публикуем только главные новости и самые интересные тексты. Канал доступен для нероссийских номеров.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0776f5z.jpg',
-        alt: 'Что это было?',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jq48n8.png',
+        alt: 'WhatsApp',
       },
       linkLabel: {
-        text: 'эпизоды',
-        href: 'https://www.bbc.com/russian/media-47937790',
+        text: 'Подписывайтесь',
+        href: 'https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G',
       },
       skipLink: {
-        text: 'Пропустить Реклама подкастов и продолжить чтение.',
-        endTextVisuallyHidden: 'Конец истории Реклама подкастов',
+        text: 'Пропустить Реклама WhatsApp-канала и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории Реклама WhatsApp-канала',
       },
     },
     disclaimer: {

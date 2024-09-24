@@ -77,6 +77,10 @@ export const service: DefaultServiceConfig = {
         summary: 'Puntos clave',
         shareButtonText: 'Compartir',
       },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
       gist: 'Sumario',
       error: {
         404: {
@@ -108,6 +112,14 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/mundo',
         },
+      },
+      byline: {
+        articleInformation: 'Información del artículo',
+        author: 'Autor',
+        listItemImage: 'Imagen del autor',
+        published: 'Fecha de publicación',
+        reportingFrom: 'Informa desde',
+        role: 'Título del autor',
       },
       consentBanner: {
         privacy: {
@@ -260,18 +272,19 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Más videos',
       ugc: {
         // No JavaScript
-        noJsHeading: undefined,
-        noJsDescription: undefined,
+        noJsHeading: 'Disculpa, página no encontrada',
+        noJsDescription:
+          'Para cargar esta página, por favor habilita JavaScript o intenta con otro navegador',
 
         // Optional
         optional: 'opcional',
 
         // File upload
-        fileUploadLiveRegionText: undefined,
-        fileUploadLiveRegionUpdateText: undefined,
-        fileUploadListHeading: 'Esto es lo que estás subiendo:',
-        fileUploadButton: 'Seleccionar un archivo',
-        fileUploadRemoveButton: undefined,
+        fileUploadLiveRegionText: 'Esto es lo que estás enviando:',
+        fileUploadLiveRegionUpdateText: 'Eliminado',
+        fileUploadListHeading: 'Esto es lo que estás enviando:',
+        fileUploadButton: 'Selecciona un archivo',
+        fileUploadRemoveButton: 'Selecciona un archivo',
 
         // Submit button
         submitButton: 'Enviar',
@@ -294,8 +307,10 @@ export const service: DefaultServiceConfig = {
         validationWordLimit: 'Máximo {{wordLimit}} palabras.',
 
         // Messaging
-        removalGuidelineText: undefined,
-        retentionPeriodDays: undefined,
+        removalGuidelineText:
+          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+        retentionPeriodDays:
+          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
           'Quizás quieres tomar nota de estos detalles para futura referencia.',
@@ -305,25 +320,24 @@ export const service: DefaultServiceConfig = {
           'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
         uploadingHeading: 'Subiendo tus archivos...',
-        uploadingDescription:
-          'Por favor, espera mientras hasta que haya finalizado.',
-
+        uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
         successHeading: 'Mensaje enviado',
         successDescription: 'Gracias por contactarnos.',
-        privacyPolicyLinkHref: undefined,
-        privacyPolicyLinkText: undefined,
+        privacyPolicyLinkHref:
+          'https://www.bbc.com/mundo/institucional-36400009',
+        privacyPolicyLinkText: 'Política de privacidad',
 
         // Error Screen
         errorHeading: 'Disculpa, hubo un problema al subir esto.',
         errorDescription: 'Por favor, regresa e inténtalo más tarde.',
 
         // Closed Screen
-        closedHeading: 'Esto ya está cerrado.',
+        closedHeading: 'Esta convocatoria ya está cerrada.',
         closedDescription: 'Esto cierra el {{date}}.',
       },
     },

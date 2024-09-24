@@ -1,6 +1,7 @@
 import React from 'react';
 
 // context providers
+import { ThemeProvider } from '../../../components/ThemeProvider';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
 import { UserContextProvider } from '../../../contexts/UserContext';
@@ -18,7 +19,6 @@ const WithContexts = Component => {
       isAmp = false,
       isApp = false,
       isLite = false,
-      isCaf = false,
       pageType,
       pathname,
       previousPath = null,
@@ -48,7 +48,6 @@ const WithContexts = Component => {
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
-            isCaf={isCaf}
             pageType={pageType}
             service={service}
             statusCode={status}
@@ -67,7 +66,9 @@ const WithContexts = Component => {
               data={pageData}
             >
               <UserContextProvider>
-                <Component {...props} />
+                <ThemeProvider service={service} variant={variant}>
+                  <Component {...props} />
+                </ThemeProvider>
               </UserContextProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>

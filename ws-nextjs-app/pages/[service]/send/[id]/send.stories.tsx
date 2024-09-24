@@ -23,16 +23,20 @@ const Component = ({
   initialScreen: FormScreen;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fixtureData: any;
-}) => (
-  <NextRouterWrapper>
-    <PageLayoutWrapper pageData={fixtureData} status={200}>
-      <UGCPage
-        initialScreen={initialScreen}
-        pageData={fixtureData as PageProps['pageData']}
-      />
-    </PageLayoutWrapper>
-  </NextRouterWrapper>
-);
+}) => {
+  const { data } = fixtureData;
+
+  return (
+    <NextRouterWrapper>
+      <PageLayoutWrapper pageData={data} status={200}>
+        <UGCPage
+          initialScreen={initialScreen}
+          pageData={data as PageProps['pageData']}
+        />
+      </PageLayoutWrapper>
+    </NextRouterWrapper>
+  );
+};
 
 export default {
   title: 'Pages/UGC Page',

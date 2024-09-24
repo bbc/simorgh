@@ -7,11 +7,8 @@ const isSmoke = true;
 const baseUrl = 'http://localhost:7080';
 const pageTypes = [
   'articles',
-  'liveRadio',
   'photoGalleryPage',
   'mostReadPage',
-  'onDemandAudio',
-  'onDemandTV',
   'mediaAssetPage',
   'storyPage',
   'featureIndexPage',

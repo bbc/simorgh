@@ -10,8 +10,8 @@ import { Field } from '../types';
 import FormField from '../FormField';
 import styles from './styles';
 import Submit from '../SubmitButton';
-import InvalidMessageBox from '../FormField/InvalidMessageBox';
 import fallbackTranslations from '../fallbackTranslations';
+import ErrorSummaryBox from '../MessageBox/ErrorSummaryBox';
 
 type Props = {
   title: string;
@@ -28,7 +28,7 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
-  const { handleSubmit, submitted, hasValidationErrors, attemptedSubmitCount } =
+  const { handleSubmit, submitted, validationErrors, attemptedSubmitCount } =
     useFormContext();
 
   const {
@@ -43,6 +43,7 @@ export default function FormScreen({
   const ref = useRef<HTMLElement>(null);
 
   const hasAttemptedSubmit = attemptedSubmitCount > 0;
+  const hasValidationErrors = validationErrors.length > 0;
 
   useEffect(() => {
     if (hasValidationErrors && hasAttemptedSubmit) {
@@ -55,6 +56,7 @@ export default function FormScreen({
     title,
     hasValidationErrors,
     hasAttemptedSubmit,
+    // refocuses on error summary box after every submission attempt
     attemptedSubmitCount,
     validationRequired,
   ]);
@@ -62,6 +64,11 @@ export default function FormScreen({
   const formFields = fields?.map(({ id, label, htmlType }) => (
     <FormField key={id} id={id} label={label} htmlType={htmlType} />
   ));
+
+  const labelMap: Record<string, string> = {};
+  fields?.forEach(({ id, label }) => {
+    labelMap[id] = label;
+  });
 
   return (
     <>
@@ -89,14 +96,7 @@ export default function FormScreen({
       <form onSubmit={handleSubmit} noValidate>
         <LiveRegionContextProvider>
           {hasAttemptedSubmit && hasValidationErrors && (
-            <InvalidMessageBox
-              id="errorSummaryBox"
-              hasArrowStyle={false}
-              messageCode={null}
-              ref={ref}
-              suffix={sectionTitle}
-              isErrorSummary
-            />
+            <ErrorSummaryBox ref={ref} labelMap={labelMap} />
           )}
           {formFields}
 
