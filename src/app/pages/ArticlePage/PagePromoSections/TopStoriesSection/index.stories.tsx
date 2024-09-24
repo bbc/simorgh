@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { Services } from '#app/models/types/global';
 import TopStoriesSection from '.';
 import {
   topStoriesList,
@@ -14,6 +15,7 @@ import {
 } from './fixture';
 import metadata from './metadata.json';
 import readme from './README.md';
+import { TopStoryItem } from './types';
 
 const BackGround = styled.div`
   width: 100%;
@@ -22,7 +24,12 @@ const BackGround = styled.div`
   padding: 2rem;
 `;
 
-const RelatedContentComponent = ({ content, service }) => (
+type Props = {
+  content: TopStoryItem[];
+  service: Services;
+};
+
+const RelatedContentComponent = ({ content, service }: Props) => (
   <BackGround>
     <ServiceContextProvider service={service}>
       <TopStoriesSection content={content} />

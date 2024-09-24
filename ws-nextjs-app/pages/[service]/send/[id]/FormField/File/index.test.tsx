@@ -16,7 +16,7 @@ import {
   VIDEO_SVG_DATA_URI,
 } from './svgs';
 import { FormContext } from '../../FormContext';
-import { HtmlType } from '../../types';
+import { FormScreen, HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,
@@ -25,6 +25,26 @@ const defaultInputState = {
   htmlType: 'file' as HtmlType,
   messageCode: null,
   wasInvalid: false,
+};
+
+const mockDefaultProps = {
+  label: 'foobar',
+  handleChange: jest.fn(),
+  handleFocusOut: jest.fn(),
+  hasAttemptedSubmit: false,
+};
+
+const mockContextValue = {
+  formState: {},
+  handleChange: jest.fn(),
+  handleFocusOut: jest.fn(),
+  handleSubmit: jest.fn(),
+  submitted: false,
+  attemptedSubmitCount: 0,
+  validationErrors: [],
+  progress: '0',
+  screen: 'form' as FormScreen,
+  submissionID: '',
 };
 
 const blob = new Blob(['data:image/png;base64,']);
@@ -53,7 +73,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={defaultInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -72,7 +92,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={defaultInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -95,7 +115,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={defaultInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -110,7 +130,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={imageFileInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -121,15 +141,14 @@ describe('File', () => {
   });
 
   it('should call the function to update state when a file is added', async () => {
-    const contextValue = { handleChange: jest.fn() };
     const { container } = await act(async () => {
       return render(
-        <FormContext.Provider value={contextValue}>
+        <FormContext.Provider value={mockContextValue}>
           <FileField
             id="foo"
             name="bar"
             inputState={defaultInputState}
-            describedBy="foo"
+            {...mockDefaultProps}
           />
         </FormContext.Provider>,
       );
@@ -138,7 +157,7 @@ describe('File', () => {
     const inputFile = container.querySelector('#foo') as Element;
     fireEvent.change(inputFile, { target: { files: [mockImgFile] } });
 
-    expect(contextValue.handleChange).toHaveBeenCalledWith('bar', [
+    expect(mockContextValue.handleChange).toHaveBeenCalledWith('bar', [
       {
         file: mockImgFile,
       },
@@ -147,16 +166,15 @@ describe('File', () => {
 
   it('should remove a file from the list when the remove button is clicked', async () => {
     const user = userEvent.setup();
-    const contextValue = { handleChange: jest.fn() };
     await act(async () => {
       render(
-        <FormContext.Provider value={contextValue}>
+        <FormContext.Provider value={mockContextValue}>
           <LiveRegionContextProvider>
             <FileField
               id="foo"
               name="bar"
               inputState={imageFileInputState}
-              describedBy="foo"
+              {...mockDefaultProps}
             />
           </LiveRegionContextProvider>
         </FormContext.Provider>,
@@ -168,21 +186,20 @@ describe('File', () => {
     });
     await user.click(removeButton);
 
-    expect(contextValue.handleChange).toHaveBeenCalledWith('bar', []);
+    expect(mockContextValue.handleChange).toHaveBeenCalledWith('bar', []);
   });
 
   it('should remove the file thumbnail from state when the remove button is pressed', async () => {
     const user = userEvent.setup();
-    const contextValue = { handleChange: jest.fn() };
     await act(async () => {
       render(
-        <FormContext.Provider value={contextValue}>
+        <FormContext.Provider value={mockContextValue}>
           <LiveRegionContextProvider>
             <FileField
               id="foo"
               name="bar"
               inputState={imageFileInputState}
-              describedBy="foo"
+              {...mockDefaultProps}
             />
           </LiveRegionContextProvider>
         </FormContext.Provider>,
@@ -226,7 +243,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -242,7 +259,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={imageFileInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -275,7 +292,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -308,7 +325,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -341,7 +358,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
