@@ -16,6 +16,7 @@ import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { Services, Variants } from '#app/models/types/global';
 import { FetchMock } from 'jest-fetch-mock';
+import * as MediaLoader from '#app/components/MediaLoader';
 import {
   render,
   act,
@@ -24,7 +25,6 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
-import * as MediaLoader from '#app/components/MediaLoader';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -508,10 +508,10 @@ describe('OnDemand Radio Page ', () => {
       });
       const expectedMediaOverrides = {
         model: {
-          language: 'ps',
+          language: 'fa',
           pageIdentifierOverride:
-            'pashto.bbc_pashto_tv.tv.w172zmsln64zg23.page',
-          pageTitleOverride: ' د بي بي سي خبرونه ',
+            'persian.bbc_persian_radio.podcasts.p0jrz542.page',
+          pageTitleOverride: 'پرگار',
         },
         type: 'mediaOverrides',
       };
@@ -519,7 +519,7 @@ describe('OnDemand Radio Page ', () => {
       await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
-        service: 'pashto',
+        service: 'persian',
       });
 
       const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
