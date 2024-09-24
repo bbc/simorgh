@@ -96,6 +96,7 @@ export interface OnDemandAudioProps {
 const OnDemandAudioPage = ({
   pageData,
   mediaIsAvailable,
+  MediaError,
 }: OnDemandAudioProps) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -153,10 +154,14 @@ const OnDemandAudioPage = ({
       }
     : {};
 
+  const pageIdentifierOverride = isPodcast
+    ? `${service}.bbc_${service}_radio.podcasts.${episodeId}.page`
+    : `${service}.bbc_${service}_radio.${episodeId}.page`;
+
   const mediaOverrides: MediaOverrides = {
     model: {
       language,
-      pageIdentifierOverride: `${service}.bbc_${service}_radio.${episodeId}.page`,
+      pageIdentifierOverride,
       pageTitleOverride: promoBrandTitle,
     },
     type: 'mediaOverrides',
