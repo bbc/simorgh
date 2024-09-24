@@ -77,6 +77,9 @@ export type ArticleMetadata = {
   lastPublished: number;
   id: string;
   language: string;
+  options?: {
+    allowAdvertising?: boolean;
+  };
   passport: {
     language: string;
     home: string;

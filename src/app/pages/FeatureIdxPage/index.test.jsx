@@ -4,7 +4,7 @@ import { render, act, screen } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
-import getInitialData from '#app/routes/cpsAsset/getInitialData';
+import getInitialData from '#app/routes/article/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -120,6 +120,7 @@ describe('Feature Idx Page', () => {
     ({ pageData } = await getInitialData({
       path: '/urdu/science-51314202',
       service: 'urdu',
+      pageType: 'article',
     }));
   });
 
