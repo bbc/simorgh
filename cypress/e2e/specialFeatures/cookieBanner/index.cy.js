@@ -39,6 +39,7 @@ const getPaths = service =>
   );
 
 const pageType = 'all';
+const urlsToExcludeFromAmpTests = ['_tv', '_radio'];
 
 Object.keys(config)
   .filter(service => serviceFilter(service))
@@ -57,11 +58,13 @@ Object.keys(config)
     paths
       .map(path => `${path}.amp`)
       .forEach(path => {
-        describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
-          beforeEach(() => {
-            visitPage(path, pageType);
+        if (!urlsToExcludeFromAmpTests.some(url => path.includes(url))) {
+          describeForEuOnly(`${path} - AMP Cookie Banner`, () => {
+            beforeEach(() => {
+              visitPage(path, pageType);
+            });
+            runAmpTests({ service, variant, pageType, path });
           });
-          runAmpTests({ service, variant, pageType, path });
-        });
+        }
       });
   });

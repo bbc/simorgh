@@ -69,7 +69,7 @@ The first argument in Storybook story components is the `args` object:
 export const MyFirstStory = args => <Component {...args} />;
 ```
 
-This is does not need to be used, but is always the first argument. `args` are useful if you want to add 'controls' to dynamically change the props in the Storybook UI. To use it, you define the `args` and `argTypes` objects in your default export for the story. For example:
+This does not need to be used, but is always the first argument. `args` are useful if you want to add 'controls' to dynamically change the props in the Storybook UI. To use it, you define the `args` and `argTypes` objects in your default export for the story. For example:
 
 ```tsx
 export default {
@@ -133,6 +133,8 @@ export const MyFirstStory = ({ backgroundColor }, { service, variant }) => (
   />
 );
 ```
+
+**Do not spread the second argument in its entirety, always destructure**. If you spread, this can potentially cause issues with rendering as the second argument contains Storybook specific functions that shouldn't be spread into components.
 
 ## Manually defining `service` and `variant` values
 

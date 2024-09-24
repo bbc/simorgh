@@ -216,5 +216,117 @@ describe('Curation', () => {
 
       expect(document.querySelectorAll('section h2').length).toBe(1);
     });
+
+    it('should have h3 summary titles when page has multiple curations and a curation title', () => {
+      const { summaries } = mundoFixture.data.curations[1];
+
+      render(
+        <Curation
+          title="2nd Curation"
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={1}
+          summaries={summaries}
+          curationLength={2}
+        />,
+      );
+      expect(document.querySelectorAll('h3').length).toBe(4);
+    });
+
+    it('should have h3 summary titles when page has multiple curations and no curation title and is the first curation - simple curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={2}
+        />,
+      );
+      expect(document.querySelectorAll('h3').length).toBe(8);
+    });
+
+    it('should have h3 summary titles when page has multiple curations and no curation title and is the first curation - hierarchical curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={2}
+        />,
+      );
+      expect(document.querySelectorAll('h3').length).toBe(8);
+    });
+
+    it('should have h2 summary titles when page has one curation - somple curation', () => {
+      const { summaries } = fixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={1}
+        />,
+      );
+      expect(document.querySelectorAll('h2').length).toBe(24);
+      expect(document.querySelectorAll('h3').length).toBe(0);
+    });
+
+    it('should have h2 summary titles when page has one curation - hierarchical curation', () => {
+      const { summaries } = fixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={1}
+        />,
+      );
+      expect(document.querySelectorAll('h2').length).toBe(12);
+      expect(document.querySelectorAll('h3').length).toBe(0);
+    });
+
+    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - simple curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title="First Curation"
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+        />,
+      );
+      expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
+      expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
+    });
+
+    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - hierarchial curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title="First Curation"
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+        />,
+      );
+      expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
+      expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
+    });
   });
 });

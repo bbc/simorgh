@@ -3,35 +3,65 @@ import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';
+import InvalidMessageBox from '../MessageBox/InvalidMessageBox';
 
 export default ({
   id,
   name,
   handleChange,
+  handleFocusOut,
   inputState,
-  describedBy,
   label,
   hasAttemptedSubmit,
 }: InputProps) => {
-  const { isValid, value = '', required, wasInvalid } = inputState ?? {};
+  const {
+    isValid,
+    value = '',
+    required,
+    wasInvalid,
+    messageCode,
+  } = inputState ?? {};
+  const useErrorTheme = hasAttemptedSubmit && !isValid;
+  const labelId = `label-${id}`;
+  const errorBoxId = `${id}-error`;
+
   return (
     <>
-      <Label id={id}>{label}</Label>
+      <Label
+        required={required}
+        id={labelId}
+        forId={id}
+        useErrorTheme={useErrorTheme}
+        labelText={label}
+      />
       <div>
         <input
           id={id}
-          css={[styles.textField, styles.focusIndicator]}
+          css={[
+            styles.textField,
+            styles.focusIndicatorInput,
+            useErrorTheme && styles.textFieldError,
+          ]}
           name={name}
           type="tel"
           value={value as string}
           onChange={e => handleChange(e.target.name, e.target.value)}
+          onBlur={e => handleFocusOut(e.target.name)}
+          {...(!hasAttemptedSubmit && { 'aria-invalid': 'false' })}
           {...(hasAttemptedSubmit && {
             ...(wasInvalid && { 'aria-invalid': !isValid }),
-            ...(required && { 'aria-required': required }),
-            ...(!isValid && { 'aria-describedby': describedBy }),
+            ...(required && !isValid && { 'aria-required': required }),
+            ...(!isValid && { 'aria-describedby': errorBoxId }),
           })}
         />
       </div>
+      {hasAttemptedSubmit && !isValid && (
+        <InvalidMessageBox
+          id={errorBoxId}
+          messageCode={messageCode}
+          suffix={label}
+        />
+      )}
     </>
   );
 };

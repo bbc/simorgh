@@ -8,8 +8,8 @@ import FormField, { FormComponentProps } from '.';
 import { FormContextProvider } from '../FormContext';
 import { Field } from '../types';
 
-const fieldsData1 = mundoFormFixture.sections[0].fields as Field[];
-const fieldsData2 = somaliFormFixture.sections[0].fields as Field[];
+const fieldsData1 = mundoFormFixture.data.sections[0].fields as Field[];
+const fieldsData2 = somaliFormFixture.data.sections[0].fields as Field[];
 interface FormComponentPropsStorybook extends FormComponentProps {
   fieldsData: Field[];
 }

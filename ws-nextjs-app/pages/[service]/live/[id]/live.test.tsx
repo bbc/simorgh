@@ -6,9 +6,11 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
-import liveFixture from '#data/pidgin/livePage/c7p765ynk9qt.json';
+import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
+import { GetServerSidePropsContext } from 'next';
 import Live from './LivePageLayout';
+import { getServerSideProps } from './[[...variant]].page';
 
 const mockPageData = {
   ...liveFixture.data,
@@ -36,6 +38,7 @@ const mockPageData = {
     altText: 'Man',
     copyright: 'BBC',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const mockPageDataWithPosts = {
@@ -47,6 +50,7 @@ const mockPageDataWithPosts = {
     content: postFixture,
     contributors: 'Not a random dude',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const mockPageDataWithoutKeyPoints = {
@@ -62,6 +66,7 @@ const mockPageDataWithoutKeyPoints = {
     content: postFixture,
     contributors: 'Not a random dude',
   },
+  metadata: { atiAnalytics: {} },
 };
 
 const mockPageDataWithMetadata = ({
@@ -99,6 +104,26 @@ const mockPageDataWithMetadata = ({
 };
 
 describe('Live Page', () => {
+  it('Should set Cache-Control header to correct values', async () => {
+    const context = {
+      query: {
+        service: 'pidgin',
+        id: 'c7p765ynk9qt',
+      },
+      req: { headers: {} },
+      res: {
+        setHeader: jest.fn(),
+        on: jest.fn(),
+      },
+    } as unknown as GetServerSidePropsContext;
+
+    await getServerSideProps(context);
+    expect(context.res.setHeader).toHaveBeenCalledWith(
+      'Cache-Control',
+      'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+    );
+  });
+
   it.each`
     title             | seoTitle             | info                      | expected
     ${'I am a Title'} | ${'I am a seoTitle'} | ${'seoTitle'}             | ${'I am a seoTitle - BBC News Pidgin'}
@@ -269,9 +294,42 @@ describe('Live Page', () => {
     expect(CoverageEndTime).toBeFalsy();
   });
 
+  it('should use the seoTitle value combined with the pagination value as the page title', async () => {
+    const paginatedData = {
+      ...mockPageData,
+      liveTextStream: {
+        content: {
+          data: {
+            results: [],
+            page: {
+              index: 2,
+              total: 3,
+            },
+          },
+        },
+        contributors: 'Not a random dude',
+      },
+    };
+
+    await act(async () => {
+      render(<Live pageData={paginatedData} />, { service: 'pidgin' });
+    });
+
+    const { title: helmetTitle } = Helmet.peek();
+
+    expect(helmetTitle).toEqual(
+      `${mockPageData.seo.seoTitle}, Page 2 of 3 - BBC News Pidgin`,
+    );
+  });
+
   it('should use the title value combined with the pagination value as the page title', async () => {
     const paginatedData = {
       ...mockPageData,
+      seo: {
+        seoDescription: 'Pidgin test 2 - SEO Description',
+        datePublished: '2023-04-05T10:22:00.000Z',
+        dateModified: '2024-03-12T11:00:52+00:00',
+      },
       liveTextStream: {
         content: {
           data: {
@@ -302,7 +360,11 @@ describe('Live Page', () => {
       render(<Live pageData={mockPageData} />);
     });
 
-    expect(screen.getByText('Pidgin test 2')).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+      ),
+    ).toBeInTheDocument();
   });
 
   it('should render the live page description', async () => {
@@ -311,7 +373,9 @@ describe('Live Page', () => {
     });
 
     expect(
-      screen.getByText('Pidgin test 2 - the description'),
+      screen.getByText(
+        'The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering'
+      ),
     ).toBeInTheDocument();
   });
 

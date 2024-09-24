@@ -81,7 +81,7 @@ describe('Byline', () => {
 
     expect(imageSrc[0]).toHaveAttribute(
       'src',
-      'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+      'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
     );
   });
 

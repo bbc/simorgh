@@ -7,6 +7,7 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import userEvent from '@testing-library/user-event';
+import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 
 import FileField from '.';
 import {
@@ -15,20 +16,50 @@ import {
   VIDEO_SVG_DATA_URI,
 } from './svgs';
 import { FormContext } from '../../FormContext';
+import { FormScreen, HtmlType } from '../../types';
 
 const defaultInputState = {
   isValid: true,
   required: false,
   value: [],
-  htmlType: 'file',
+  htmlType: 'file' as HtmlType,
   messageCode: null,
+  wasInvalid: false,
+};
+
+const mockDefaultProps = {
+  label: 'foobar',
+  handleChange: jest.fn(),
+  handleFocusOut: jest.fn(),
+  hasAttemptedSubmit: false,
+};
+
+const mockContextValue = {
+  formState: {},
+  handleChange: jest.fn(),
+  handleFocusOut: jest.fn(),
+  handleSubmit: jest.fn(),
+  submitted: false,
+  attemptedSubmitCount: 0,
+  validationErrors: [],
+  progress: '0',
+  screen: 'form' as FormScreen,
+  submissionID: '',
 };
 
 const blob = new Blob(['data:image/png;base64,']);
 const mockImgFile = new File([blob], 'img.png', {
   type: 'image/png',
 });
-const imageFileInputState = { ...defaultInputState, value: [mockImgFile] };
+const imageFileInputState = {
+  ...defaultInputState,
+  value: [
+    {
+      file: mockImgFile,
+      messageCode: null,
+    },
+  ],
+};
 
 describe('File', () => {
   afterEach(() => {
@@ -42,7 +73,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={defaultInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -61,7 +92,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={defaultInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -84,7 +115,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={defaultInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -99,7 +130,7 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={imageFileInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
@@ -110,15 +141,14 @@ describe('File', () => {
   });
 
   it('should call the function to update state when a file is added', async () => {
-    const contextValue = { handleChange: jest.fn() };
     const { container } = await act(async () => {
       return render(
-        <FormContext.Provider value={contextValue}>
+        <FormContext.Provider value={mockContextValue}>
           <FileField
             id="foo"
             name="bar"
             inputState={defaultInputState}
-            describedBy="foo"
+            {...mockDefaultProps}
           />
         </FormContext.Provider>,
       );
@@ -127,23 +157,26 @@ describe('File', () => {
     const inputFile = container.querySelector('#foo') as Element;
     fireEvent.change(inputFile, { target: { files: [mockImgFile] } });
 
-    expect(contextValue.handleChange).toHaveBeenCalledWith('bar', [
-      mockImgFile,
+    expect(mockContextValue.handleChange).toHaveBeenCalledWith('bar', [
+      {
+        file: mockImgFile,
+      },
     ]);
   });
 
   it('should remove a file from the list when the remove button is clicked', async () => {
     const user = userEvent.setup();
-    const contextValue = { handleChange: jest.fn() };
     await act(async () => {
       render(
-        <FormContext.Provider value={contextValue}>
-          <FileField
-            id="foo"
-            name="bar"
-            inputState={imageFileInputState}
-            describedBy="foo"
-          />
+        <FormContext.Provider value={mockContextValue}>
+          <LiveRegionContextProvider>
+            <FileField
+              id="foo"
+              name="bar"
+              inputState={imageFileInputState}
+              {...mockDefaultProps}
+            />
+          </LiveRegionContextProvider>
         </FormContext.Provider>,
       );
     });
@@ -153,21 +186,22 @@ describe('File', () => {
     });
     await user.click(removeButton);
 
-    expect(contextValue.handleChange).toHaveBeenCalledWith('bar', []);
+    expect(mockContextValue.handleChange).toHaveBeenCalledWith('bar', []);
   });
 
   it('should remove the file thumbnail from state when the remove button is pressed', async () => {
     const user = userEvent.setup();
-    const contextValue = { handleChange: jest.fn() };
     await act(async () => {
       render(
-        <FormContext.Provider value={contextValue}>
-          <FileField
-            id="foo"
-            name="bar"
-            inputState={imageFileInputState}
-            describedBy="foo"
-          />
+        <FormContext.Provider value={mockContextValue}>
+          <LiveRegionContextProvider>
+            <FileField
+              id="foo"
+              name="bar"
+              inputState={imageFileInputState}
+              {...mockDefaultProps}
+            />
+          </LiveRegionContextProvider>
         </FormContext.Provider>,
       );
     });
@@ -175,16 +209,49 @@ describe('File', () => {
     const removeButton = screen.getByRole('button', {
       name: /remove/i,
     });
+
     await user.click(removeButton);
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         'undefined',
       ),
     );
   });
 
+  it('should rename any duplicate uploaded files', async () => {
+    const mockDuplicateFile = new File([blob], 'img.png', {
+      type: 'image/png',
+    });
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockDuplicateFile,
+          messageCode: null,
+        },
+        {
+          file: mockDuplicateFile,
+          messageCode: null,
+        },
+      ],
+    };
+    await act(async () => {
+      render(
+        <FileField
+          id="foo"
+          name="bar"
+          inputState={inputState}
+          {...mockDefaultProps}
+        />,
+      );
+    });
+
+    await waitFor(
+      () => expect(screen.queryAllByText('img.png (2)')).toBeInTheDocument,
+    );
+  });
   it('should display an image thumbnail when an image file type is added', async () => {
     await act(async () => {
       render(
@@ -192,13 +259,13 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={imageFileInputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         'data:image/png;base64,ZGF0YTppbWFnZS9wbmc7YmFzZTY0LA==',
       ),
@@ -209,7 +276,15 @@ describe('File', () => {
     const mockVideoFile = new File([blob], 'video.mp4', {
       type: 'video/mp4',
     });
-    const inputState = { ...defaultInputState, value: [mockVideoFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockVideoFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -217,13 +292,13 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         VIDEO_SVG_DATA_URI,
       ),
@@ -234,7 +309,15 @@ describe('File', () => {
     const mockAudioFile = new File([blob], 'audio.mp3', {
       type: 'audio/mpeg',
     });
-    const inputState = { ...defaultInputState, value: [mockAudioFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockAudioFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -242,13 +325,13 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         AUDIO_SVG_DATA_URI,
       ),
@@ -259,7 +342,15 @@ describe('File', () => {
     const mockFile = new File([blob], 'pdf.pdf', {
       type: 'application/pdf',
     });
-    const inputState = { ...defaultInputState, value: [mockFile] };
+    const inputState = {
+      ...defaultInputState,
+      value: [
+        {
+          file: mockFile,
+          messageCode: null,
+        },
+      ],
+    };
 
     await act(async () => {
       render(
@@ -267,13 +358,13 @@ describe('File', () => {
           id="foo"
           name="bar"
           inputState={inputState}
-          describedBy="foo"
+          {...mockDefaultProps}
         />,
       );
     });
 
     await waitFor(() =>
-      expect(screen.getByRole('presentation')).toHaveAttribute(
+      expect(screen.getByTestId('thumbnail')).toHaveAttribute(
         'src',
         DOCUMENT_SVG_DATA_URI,
       ),

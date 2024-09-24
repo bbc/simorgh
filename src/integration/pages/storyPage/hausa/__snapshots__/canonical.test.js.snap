@@ -128,7 +128,7 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
   class="bbc-17whsh0 edwq9ck0"
 >
-  &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+  &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This audio cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
 </noscript>
 `;
 
@@ -305,7 +305,7 @@ exports[`Canonical Story Page SEO Linked data should match text 2`] = `
   "@type": "AudioObject",
   "description": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
   "duration": "PT16S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/cps/hausa/labarai-23246985/p01b7w2z/ha",
+  "embedURL": "https://www.test.bbc.com/hausa/av-embeds/labarai-23246985/vpid/p01b7w2z",
   "name": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w9z.jpg",
   "uploadDate": "2017-05-22T15:38:23.000Z",
@@ -348,7 +348,7 @@ exports[`Canonical Story Page SEO Twitter title 1`] = `"Ɗanɗano: Kuskure a Hau
 
 exports[`Canonical Story Page Timestamp should match text and date 1`] = `
 {
-  "date": "PT16S",
-  "text": "00:16",
+  "date": "2019-08-20",
+  "text": "20 Agusta 2019",
 }
 `;

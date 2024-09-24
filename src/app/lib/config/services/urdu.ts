@@ -91,6 +91,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'بریکنگ',
         postedAt: 'پوسٹ کیا گیا',
         summary: 'خلاصہ',
+        shareButtonText: 'شیئر',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'خلاصہ',
       error: {
@@ -277,17 +282,78 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'اہم خبریں',
       featuresAnalysisTitle: 'فیچر اور تجزیے',
       latestMediaTitle: 'تازہ ترین',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'اختیاری',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'یہ وہ مواد ہے جو آپ اپ لوڈ کر رہے ہیں',
+        fileUploadButton: 'فائل کا انتخاب کریں',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'بھیجیں',
+
+        // Validation
+        validationRequired: 'کچھ کمی ہے۔',
+        validationInvalidEmail: 'یہ درست نہیں لگ رہا۔ درست ای میل پتا لکھیں',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'یہ کافی فائلز نہیں۔ کم از کم {{minFiles}} فائل شامل کریں',
+        validationFilesTooMany:
+          'یہ حد سے زیادہ فائلیں ہیں۔ آپ {{maxFiles}} فائلیں شامل کر سکتے ہیں',
+        validationFilesInvalidType:
+          'معاف کیجیے ہم اس قسم کی فائل استعمال نہیں کر سکتے۔ برائے مہربانی {{fileTypes}} میں سے انتخاب کریں',
+        validationFilesTooSmall:
+          'یہ فائل درست نہیں۔ کسی دیگر فائل کا انتخاب کریں',
+        validationFilesSizeExceeded:
+          'معاف کیجیے یہ فائل حد سے زیادہ بڑی ہے۔ آپ ایک وقت میں 1.2 گیگا بائٹ کی فائل اپ لوڈ کر سکتے ہیں۔',
+        validationWordLimit: 'الفاظ کی مقررہ حد {{wordLimit}}',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'ریفرینس نمبر',
+        submissionInfoSignedOutMessage:
+          'آپ شاید اپنے ریکارڈ کے لیے ان تفصیلات کو نوٹ کرنا چاہیں گے',
+        privacyInfoHtml:
+          'فکرمند نہ ہوں ہم آپ کے مواد کا تحفظ کرتے ہیں۔ مزید تفصیلات کے لیے {{privacyInfoLink}} .پڑھیں',
+        emailToHtml:
+          'اگر آپ کا ارادہ بدل جائے تو {{emailLink}} پر ای میل کریں۔ ریفرینس نمبر دیں اور بتائیں کہ آپ نہیں چاہتے کہ ہم آپ کا مواد استعمال کریں۔',
+        removalGuidelineText: undefined,
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'آپ کی فائلیں اپ لوڈ ہو رہی ہیں',
+        uploadingDescription: 'عمل مکمل ہونے تک انتظار کریں',
+
+        // Success Screen
+        successHeading: 'پیغام بھیج دیا گیا',
+        successDescription: 'رابطہ کرنے کا شکریہ',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'آپ کا پیغام نہیں بھیجا جا سکا',
+        errorDescription: 'دوبارہ بھیجنے کی کوشش کریں',
+
+        // Closed Screen
+        closedHeading: 'یہ اب بند ہو چکا ہے',
+        closedDescription: 'یہ {{date}}  کو بند ہوا',
+      },
     },
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
       lastUpdated: 'آخری اپ ڈیٹ',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'سب سے زیادہ دیکھی گئی',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

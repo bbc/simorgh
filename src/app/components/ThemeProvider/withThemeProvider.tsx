@@ -22,6 +22,7 @@ import {
   DARK_SALTIRE,
   DIM_GREY,
   EBON,
+  ERROR_CORE,
   GHOST,
   GREY_10,
   GREY_11,
@@ -59,6 +60,7 @@ import {
   SPORT_YELLOW_30,
   STONE,
   STORM,
+  SUCCESS_CORE,
   WEATHER_BLUE,
   WHITE,
 } from './palette';
@@ -78,7 +80,7 @@ import {
   GROUP_4_MIN_WIDTH,
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
-  HIGH_CONTRAST,
+  FORCED_COLOURS,
 } from './mediaQueries';
 import {
   HALF,
@@ -211,7 +213,7 @@ const withThemeProvider = ({
       GROUP_4_MIN_WIDTH,
       GROUP_4_ONLY,
       GROUP_5_MIN_WIDTH,
-      HIGH_CONTRAST,
+      FORCED_COLOURS,
     },
     palette: {
       ARCHIVE_BLUE,
@@ -228,6 +230,7 @@ const withThemeProvider = ({
       DARK_SALTIRE,
       DIM_GREY,
       EBON,
+      ERROR_CORE,
       GHOST,
       GREY_10,
       GREY_11,
@@ -265,6 +268,7 @@ const withThemeProvider = ({
       SPORT_YELLOW_30,
       STONE,
       STORM,
+      SUCCESS_CORE,
       WEATHER_BLUE,
       WHITE,
       BRAND_BACKGROUND,

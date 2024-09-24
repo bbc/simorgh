@@ -244,7 +244,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
         <img
           alt=""
           class="emotion-22 emotion-23"
-          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp"
         />
       </div>
     </div>
@@ -526,7 +526,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
         <img
           alt=""
           class="emotion-20 emotion-21"
-          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg"
+          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp"
         />
       </div>
     </div>
@@ -656,7 +656,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
         layout="fill"
         sandbox="allow-scripts allow-same-origin"
         scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
+        src="https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
         title="Media player"
       >
         <div

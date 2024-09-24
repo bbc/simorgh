@@ -41,7 +41,6 @@ const getPageData = async ({
     service,
     variant,
   });
-
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 
@@ -92,6 +91,11 @@ const getPageData = async ({
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+  );
+
   logResponseTime(
     {
       path: context.resolvedUrl,
@@ -125,7 +129,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
     return {
       props: {
-        bbcOrigin: reqHeaders['bbc-origin'] || null,
         isApp,
         isLite,
         isNextJs: true,
@@ -161,7 +164,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   context.res.statusCode = data.status;
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       error: data?.error || null,
       id,
       isApp,
@@ -181,7 +183,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
-      showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,

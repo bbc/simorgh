@@ -1,48 +1,59 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React, { useMemo } from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 
-const BulletsWithContext = ({ blocks, blockGroupIndex }) => (
-  <ToggleContextProvider>
-    <ServiceContext.Provider
-      value={{ script: arabic, service: 'arabic', dir: 'rtl' }}
-    >
-      <BulletedListContainer
-        blocks={blocks}
-        blockGroupIndex={blockGroupIndex}
-      />
-    </ServiceContext.Provider>
-  </ToggleContextProvider>
-);
+const BulletsWithContext = ({ blocks, blockGroupIndex }) => {
+  const memoizedToggleContextValue = useMemo(
+    () => ({ script: arabic, service: 'arabic', dir: 'rtl' }),
+    [],
+  );
+  return (
+    <ToggleContextProvider>
+      <ServiceContext.Provider value={memoizedToggleContextValue}>
+        <BulletedListContainer
+          blocks={blocks}
+          blockGroupIndex={blockGroupIndex}
+        />
+      </ServiceContext.Provider>
+    </ToggleContextProvider>
+  );
+};
 
 describe('BulletedListContainer', () => {
   suppressPropWarnings(['blocks', 'supplied']);
 
-  shouldMatchSnapshot(
-    'should render ltr correctly',
-    <BulletsWithContext
-      blocks={orderedList.model.blocks}
-      blockGroupIndex={1}
-    />,
-  );
+  it('should render ltr correctly', () => {
+    const { container } = render(
+      <BulletsWithContext
+        blocks={orderedList.model.blocks}
+        blockGroupIndex={1}
+      />,
+      {
+        service: 'arabic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render rtl correctly',
-    <BulletsWithContext
-      blocks={orderedList.model.blocks}
-      blockGroupIndex={2}
-    />,
-  );
+  it('should render rtl correctly', () => {
+    const { container } = render(
+      <BulletsWithContext
+        blocks={orderedList.model.blocks}
+        blockGroupIndex={2}
+      />,
+      {
+        service: 'arabic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   describe('getEventTrackingData', () => {
     afterEach(() => {

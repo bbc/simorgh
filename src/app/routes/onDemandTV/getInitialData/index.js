@@ -39,10 +39,28 @@ export default async ({ path: pathname, pageType, toggles }) => {
         })
       : [];
 
+    const mediaBlocks = get(['content', 'blocks']).map(block => {
+      return {
+        type: 'tv',
+        model: { ...block },
+      };
+    });
+
+    const pageIdentifier = get([
+      'metadata',
+      'analyticsLabels',
+      'pageIdentifier',
+    ]);
+
     return {
       status,
       pageData: {
-        metadata: { type: 'On Demand TV' },
+        metadata: {
+          type: 'On Demand TV',
+          atiAnalytics: {
+            pageIdentifier,
+          },
+        },
         language: get(['metadata', 'language']),
         brandTitle: get(['metadata', 'title']),
         id: get(['metadata', 'id'], LOG_LEVELS.ERROR),
@@ -51,7 +69,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         mediumSynopsis: get(['promo', 'media', 'synopses', 'medium']),
         contentType: get(['metadata', 'analyticsLabels', 'contentType']),
         pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
-        pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
+        pageIdentifier,
         releaseDateTimeStamp: get(
           ['metadata', 'releaseDateTimeStamp'],
           LOG_LEVELS.WARN,
@@ -73,6 +91,7 @@ export default async ({ path: pathname, pageType, toggles }) => {
         episodeAvailability: getEpisodeAvailability(json),
         episodeTitle: get(['content', 'blocks', 0, 'episodeTitle']),
         recentEpisodes,
+        mediaBlocks,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

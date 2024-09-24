@@ -128,10 +128,6 @@ exports[`Canonical Media Asset Page I can see a bulleted list item with link: <M
 
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
 
-exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"Media player"`;
-
-exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
-
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
@@ -272,7 +268,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "トランプ氏、香港人権法案に署名　中国は反発",
   "duration": "PT5S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm",
+  "embedURL": "https://www.test.bbc.com/pidgin/av-embeds/23248703/vpid/p01kx42v",
   "name": "トランプ氏、香港人権法案に署名　中国は反発",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg",
   "uploadDate": "2018-12-20T11:06:51.000Z",

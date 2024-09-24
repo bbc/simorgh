@@ -2,18 +2,18 @@
 
 exports[`SubmitButton should render a submit button with an associated label 1`] = `
 .emotion-0 {
-  background-color: #0071F1;
-  color: #FFFFFF;
-  width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  margin-top: 1rem;
+  background-color: #0071F1;
+  color: #FFFFFF;
+  width: 100%;
   border: none;
   outline: solid 0.0625rem transparent;
   padding: 0.75rem 0;
-  margin-bottom: 1rem;
   cursor: pointer;
 }
 
@@ -26,8 +26,8 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -36,12 +36,6 @@ exports[`SubmitButton should render a submit button with an associated label 1`]
   -webkit-text-decoration: underline;
   text-decoration: underline;
   background-color: #0051AD;
-}
-
-@media (min-width: 15rem) {
-  .emotion-0 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 <button

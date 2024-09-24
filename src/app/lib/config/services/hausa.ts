@@ -84,9 +84,14 @@ export const service: DefaultServiceConfig = {
         liveCoverage: 'Rahoto kai-tsaye',
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
-        summary: 'Takaitacce',
+        summary: 'Taƙaitattu',
+        shareButtonText: 'Aika',
       },
-      gist: 'Takaitacce',
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
+      },
+      gist: 'Taƙaitattu',
       error: {
         404: {
           statusCode: '404',
@@ -280,17 +285,76 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Labarai na musamman',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'wannan zaɓi ne',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'Ga abin da kuke dorawa:',
+        fileUploadButton: 'Ku zabi irin abin da za ka tura',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Aika',
+
+        // Validation
+        validationRequired: 'Ka manta wani abu',
+        validationInvalidEmail:
+          'Kamar akwai kuskure. Saka adireshin imail na na ƙwarai.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'Abubuwan da ka tura ba su isa ba. Ka ƙara a ƙalla {{minFiles}}.',
+        validationFilesTooMany:
+          'Ka sanya abubuwa da yawa. {{maxFiles}} ne iya yawan abin da za ka iya sakawa.',
+        validationFilesInvalidType:
+          'Ba za mu iya amfani da wannan abin ba. Ku ƙara {{fileTypes}}.',
+        validationFilesTooSmall: undefined,
+        validationFilesSizeExceeded:
+          'Waɗannan abubuwan sun yi nauyi. Za ka iya tura abu mai nauyin 12GB ne kawai a lokaci guda.',
+        validationWordLimit: 'Iya yawan kalmomi {{wordLimit}}',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: undefined,
+        submissionInfoSignedOutMessage: undefined,
+        privacyInfoHtml: undefined,
+        emailToHtml: undefined,
+        removalGuidelineText:
+          'Idan har kun aiko da wani abu don a sanya a shirye-shirye ko a wallafa, ba za mu iya cire shi ba idan har mun yi amfani da shi.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'Saƙon da kake ɗorawa na hawa...',
+        uploadingDescription: 'Ka jira har sai ya kammala.',
+
+        // Success Screen
+        successHeading: 'Saƙonka ya tafi',
+        successDescription: 'Mun gode da tuntuɓarmu.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'Saƙonka bai je ba',
+        errorDescription: 'Sake aikawa.',
+
+        // Closed Screen
+        closedHeading: 'This is now closed',
+        closedDescription: 'This closed on {{date}}.',
+      },
     },
     mostRead: {
       header: 'Wanda aka fi karantawa',
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Wadanda aka fi kallo',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

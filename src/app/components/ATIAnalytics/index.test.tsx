@@ -1,9 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
-import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
-import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
-import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
 import { data as fixData } from '#data/afrique/cpsAssets/48465371.json';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
@@ -12,6 +9,9 @@ import {
   setWindowValue,
   resetWindowValue,
 } from '#psammead/psammead-test-helpers/src';
+import styAssetData from './fixtures/storyPage.json';
+import pglAssetData from './fixtures/photoGalleryPage.json';
+import mapAssetData from './fixtures/mediaAssetPage.json';
 import { render } from '../react-testing-library-with-providers';
 import {
   ARTICLE_PAGE,
@@ -280,7 +280,6 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
       render(<ATIAnalytics data={articleDataNews} />, {
         ...defaultRenderProps,
         isAmp: false,
@@ -306,6 +305,7 @@ describe('ATI Analytics Container', () => {
         lng: 'en-US',
         x2: '[responsive]',
         x3: '[news]',
+        x4: '[en-gb]',
         x5: '[http%3A%2F%2Flocalhost%2F]',
         x7: '[index-home]',
         x8: '[simorgh]',
@@ -320,7 +320,6 @@ describe('ATI Analytics Container', () => {
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
 
-      /* @ts-expect-error - only partial data required for testing purposes */
       render(<ATIAnalytics data={articleDataNews} />, {
         ...defaultRenderProps,
         isAmp: true,
@@ -345,6 +344,7 @@ describe('ATI Analytics Container', () => {
         lng: '${browserLanguage}',
         x2: '[amp]',
         x3: '[news]',
+        x4: '[en-gb]',
         x5: '[${sourceUrl}]',
         x6: '[${documentReferrer}]',
         x7: '[index-home]',

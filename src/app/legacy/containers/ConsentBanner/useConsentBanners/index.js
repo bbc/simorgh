@@ -144,7 +144,7 @@ const useConsentBanner = (
       dispatch(SHOW_COOKIE_BANNER);
     } else if (!showCookieBannerBasedOnCountry) {
       setUserDidDismissCookieBanner(isUK, 1);
-      setUserDidAcceptPolicy();
+      if (!userHasPolicyCookie) setUserDidAcceptPolicy();
       setUserDidSeePrivacyBanner(1);
     }
 

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useMemo } from 'react';
 import {
   Environments,
   Platforms,
@@ -20,13 +20,11 @@ export type RequestContextProps = {
   canonicalLink: string;
   canonicalUkLink: string;
   canonicalNonUkLink: string;
-  counterName: string | null;
   env: Environments;
   id: string | null;
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
-  isCaf: boolean;
   isNextJs: boolean;
   isUK: boolean;
   mvtExperiments?: MvtExperiment[] | null;
@@ -54,10 +52,9 @@ type RequestProviderProps = {
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
-  isAmp: boolean;
+  isAmp?: boolean;
   isApp?: boolean;
   isLite?: boolean;
-  isCaf?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
@@ -70,7 +67,6 @@ type RequestProviderProps = {
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
-  counterName?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -78,10 +74,9 @@ export const RequestContextProvider = ({
   derivedPageType = null,
   children,
   id = null,
-  isAmp,
+  isAmp = false,
   isApp = false,
   isLite = false,
-  isCaf = false,
   isNextJs = false,
   mvtExperiments = null,
   pageType,
@@ -94,7 +89,6 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
-  counterName = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -123,33 +117,57 @@ export const RequestContextProvider = ({
     id,
   });
 
-  const value = {
-    env,
-    id,
-    isUK: formattedIsUK,
-    origin,
-    pageType,
-    derivedPageType,
-    isAmp,
-    isApp,
-    isLite,
-    isCaf,
-    isNextJs,
-    platform,
-    statsDestination,
-    statsPageIdentifier,
-    statusCode,
-    previousPath,
-    variant,
-    timeOnServer,
-    showAdsBasedOnLocation,
-    showCookieBannerBasedOnCountry,
-    service,
-    pathname,
-    counterName,
-    ...getMetaUrls(origin, pathname),
-    mvtExperiments,
-  };
+  const value = useMemo(
+    () => ({
+      env,
+      id,
+      isUK: formattedIsUK,
+      origin,
+      pageType,
+      derivedPageType,
+      isAmp,
+      isApp,
+      isLite,
+      isNextJs,
+      platform,
+      statsDestination,
+      statsPageIdentifier,
+      statusCode,
+      previousPath,
+      variant,
+      timeOnServer,
+      showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry,
+      service,
+      pathname,
+      ...getMetaUrls(origin, pathname),
+      mvtExperiments,
+    }),
+    [
+      derivedPageType,
+      env,
+      formattedIsUK,
+      id,
+      isAmp,
+      isApp,
+      isLite,
+      isNextJs,
+      mvtExperiments,
+      origin,
+      pageType,
+      pathname,
+      platform,
+      previousPath,
+      service,
+      showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry,
+      statsDestination,
+      statsPageIdentifier,
+      statusCode,
+      timeOnServer,
+      variant,
+    ],
+  );
 
   return (
     <RequestContext.Provider value={value}>{children}</RequestContext.Provider>

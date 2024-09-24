@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act } from '@testing-library/react';
+import { render, act, screen } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202.json';
-import getInitialData from '#app/routes/cpsAsset/getInitialData';
+import getInitialData from '#app/routes/article/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -70,14 +70,6 @@ jest.mock('../../components/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
 
-jest.mock('#containers/PageHandlers/withVariant', () => Component => {
-  return props => (
-    <div id="VariantContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
 jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return props => (
     <div id="ContextsContainer">
@@ -128,6 +120,7 @@ describe('Feature Idx Page', () => {
     ({ pageData } = await getInitialData({
       path: '/urdu/science-51314202',
       service: 'urdu',
+      pageType: 'article',
     }));
   });
 
@@ -170,6 +163,30 @@ describe('Feature Idx Page', () => {
           expect(strapline.textContent).toMatchSnapshot();
         });
       });
+    });
+
+    it('should render images with the .webp image extension', () => {
+      process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
+      render(<FeatureIdxPageWithContext pageData={pageData} />);
+
+      const imageBlock = pageData.content.groups[3].items[0].indexImage;
+      const { altText: imageAltText, path: imagePath } = imageBlock;
+      const imageURL = `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp`;
+      const expectedSrcSetURLs = [
+        `https://ichef.test.bbci.co.uk/ace/ws/70${imagePath}.webp 70w`,
+        `https://ichef.test.bbci.co.uk/ace/ws/95${imagePath}.webp 95w`,
+        `https://ichef.test.bbci.co.uk/ace/ws/144${imagePath}.webp 144w`,
+        `https://ichef.test.bbci.co.uk/ace/ws/183${imagePath}.webp 183w`,
+        `https://ichef.test.bbci.co.uk/ace/ws/240${imagePath}.webp 240w`,
+        `https://ichef.test.bbci.co.uk/ace/ws/320${imagePath}.webp 320w`,
+        `https://ichef.test.bbci.co.uk/ace/ws/660${imagePath}.webp 660w`,
+      ].join(', ');
+
+      const { src, srcset } = screen.getByAltText(imageAltText);
+
+      expect(src).toEqual(imageURL);
+      expect(srcset).toEqual(expectedSrcSetURLs);
     });
 
     describe('Ads', () => {
