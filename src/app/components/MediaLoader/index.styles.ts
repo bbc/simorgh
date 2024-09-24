@@ -67,6 +67,7 @@ export default {
       ...fontSizes.doublePica,
       ...fontVariants.sansBold,
       paddingBottom: `${spacings.DOUBLE}rem`,
+      color: 'canvasText',
       [mq.GROUP_2_ONLY]: {
         paddingBottom: `${spacings.TRIPLE}rem`,
       },
