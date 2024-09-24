@@ -1,6 +1,5 @@
 import React, { useState, memo } from 'react';
 import styled from '@emotion/styled';
-import { string, bool, oneOf, shape, func, arrayOf } from 'prop-types';
 import equals from 'ramda/src/equals';
 import {
   GEL_SPACING_DBL,
@@ -30,27 +29,38 @@ const StyledAudioContainer = styled.div`
   }
 `;
 
+const noop = () => {};
+
 const CanonicalMediaPlayerComponent = ({
-  showPlaceholder,
-  placeholderSrc,
-  placeholderSrcset,
-  portrait,
+  showPlaceholder = true,
+  placeholderSrc = null,
+  placeholderSrcset = null,
+  portrait = false,
   src,
   title,
-  skin,
+  skin = 'classic',
   service,
-  mediaInfo,
-  noJsClassName,
+  mediaInfo = {},
+  noJsClassName = null,
   noJsMessage,
-  showLoadingImage,
-  darkPlaceholder,
-  onMediaInitialised,
-  onMediaPlaying,
-  onMediaPause,
-  onMediaEnded,
-  onMediaPlaylistEnded,
-  onMediaError,
-  acceptableEventOrigins,
+  showLoadingImage = false,
+  darkPlaceholder = false,
+  onMediaInitialised = noop,
+  onMediaPlaying = noop,
+  onMediaPause = noop,
+  onMediaEnded = noop,
+  onMediaPlaylistEnded = noop,
+  onMediaError = noop,
+  acceptableEventOrigins = [
+    'www.test.bbc.com',
+    'test.bbc.com',
+    'web-cdn.test.api.bbci.co.uk',
+    'www.bbc.com',
+    'bbc.com',
+    'web-cdn.api.bbci.co.uk',
+    'localhost.bbc.com',
+    'localhost',
+  ],
 }) => {
   const [placeholderActive, setPlaceholderActive] = useState(showPlaceholder);
   const handlePlaceholderClick = () => setPlaceholderActive(false);
@@ -100,12 +110,12 @@ const CanonicalMediaPlayerComponent = ({
 export const CanonicalMediaPlayer = memo(CanonicalMediaPlayerComponent, equals);
 
 export const AmpMediaPlayer = ({
-  placeholderSrcset,
+  placeholderSrcset = null,
   placeholderSrc,
-  portrait,
+  portrait = false,
   src,
   title,
-  skin,
+  skin = 'classic',
   noJsMessage,
   service,
 }) => {
@@ -127,92 +137,3 @@ export const AmpMediaPlayer = ({
 };
 
 export const MediaMessage = Message;
-
-CanonicalMediaPlayerComponent.propTypes = {
-  placeholderSrc: string,
-  placeholderSrcset: string,
-  portrait: bool,
-  showPlaceholder: bool,
-  src: string.isRequired,
-  title: string.isRequired,
-  skin: oneOf(['classic', 'audio']),
-  service: string.isRequired,
-  noJsClassName: string,
-  noJsMessage: string.isRequired,
-  mediaInfo: shape({
-    title: string,
-    datetime: string,
-    duration: string,
-    durationSpoken: string,
-    type: oneOf(['video', 'audio']),
-    guidanceMessage: string,
-  }),
-  showLoadingImage: bool,
-  darkPlaceholder: bool,
-  onMediaInitialised: func,
-  onMediaPlaying: func,
-  onMediaPause: func,
-  onMediaEnded: func,
-  onMediaPlaylistEnded: func,
-  onMediaError: func,
-  acceptableEventOrigins: arrayOf(string),
-};
-
-const noop = () => {};
-
-CanonicalMediaPlayerComponent.defaultProps = {
-  portrait: false,
-  showPlaceholder: true,
-  skin: 'classic',
-  placeholderSrc: null,
-  placeholderSrcset: null,
-  noJsClassName: null,
-  mediaInfo: {},
-  showLoadingImage: false,
-  darkPlaceholder: false,
-  onMediaInitialised: noop,
-  onMediaPlaying: noop,
-  onMediaPause: noop,
-  onMediaEnded: noop,
-  onMediaPlaylistEnded: noop,
-  onMediaError: noop,
-  acceptableEventOrigins: [
-    'www.test.bbc.com',
-    'test.bbc.com',
-    'polling.test.bbc.com',
-    'www.bbc.com',
-    'bbc.com',
-    'polling.bbc.com',
-    'localhost.bbc.com',
-    'localhost',
-  ],
-};
-
-MediaMessage.propTypes = {
-  service: string.isRequired,
-  message: string.isRequired,
-  placeholderSrc: string,
-  placeholderSrcset: string,
-};
-
-MediaMessage.defaultProps = {
-  placeholderSrc: null,
-  placeholderSrcset: null,
-};
-
-AmpMediaPlayer.propTypes = {
-  placeholderSrc: string.isRequired,
-  placeholderSrcset: string,
-  portrait: bool,
-  src: string.isRequired,
-  title: string.isRequired,
-  skin: oneOf(['classic', 'audio']),
-  noJsMessage: string.isRequired,
-  service: string.isRequired,
-};
-
-AmpMediaPlayer.defaultProps = {
-  portrait: false,
-  skin: 'classic',
-  placeholderSrcset: null,
-};

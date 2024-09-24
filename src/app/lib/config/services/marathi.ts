@@ -86,6 +86,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग',
         postedAt: 'वाजता पोस्ट केलं',
         summary: 'थोडक्यात',
+        shareButtonText: 'शेअर करा',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'थोडक्यात',
       error: {
@@ -279,11 +284,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'सर्वाधिक पाहिलेले',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -329,16 +329,13 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         'BBC. बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
+      collectiveNewsroomText: 'बीबीसीसाठी कलेक्टिव्ह न्यूजरूमचं प्रकाशन',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
       {
         title: 'बातम्या',
         url: '/marathi',
-      },
-      {
-        title: 'लोकसभा निवडणूक 2024',
-        url: '/marathi/topics/c1wmk63rjkvt',
       },
       {
         title: 'महाराष्ट्र',

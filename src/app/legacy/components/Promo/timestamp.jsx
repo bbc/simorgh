@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
-import { oneOfType, number, string } from 'prop-types';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
+const PromoTimestamp = ({
+  children,
+  serviceDatetimeLocale = '',
+  className = '',
+}) => {
   const { altCalendar, script, datetimeLocale, service, timezone } =
     useContext(ServiceContext);
 
@@ -27,18 +30,6 @@ const PromoTimestamp = ({ children, serviceDatetimeLocale, className }) => {
       className={className}
     />
   );
-};
-
-PromoTimestamp.propTypes = {
-  // epoch time or ISO8601 timestamp
-  children: oneOfType([number, string]).isRequired,
-  serviceDatetimeLocale: string,
-  className: string,
-};
-
-PromoTimestamp.defaultProps = {
-  serviceDatetimeLocale: null,
-  className: null,
 };
 
 export default PromoTimestamp;

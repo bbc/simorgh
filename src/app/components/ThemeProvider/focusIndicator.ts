@@ -4,9 +4,12 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 export const focusIndicatorThickness = `${pixelsToRem(3)}rem`; // 3px
 
 const focusIndicator = ({ palette }: Theme) => css`
-  // Adds focus indicator styling to all a and button elements by default.
+  // Adds focus indicator styling to all a, button and h3 elements by default.
   a:focus-visible,
-  button:focus-visible {
+  button:focus-visible,
+  button[type='submit']:focus-visible,
+  button[type='button']:focus-visible,
+  h3:focus-visible {
     outline: ${focusIndicatorThickness} solid ${palette.BLACK};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.WHITE};
     outline-offset: ${focusIndicatorThickness};
@@ -55,6 +58,13 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline: ${focusIndicatorThickness} solid ${palette.WHITE};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.BLACK};
     outline-offset: ${focusIndicatorThickness};
+  }
+
+  // Overrides focus indicator styles with a thinner version in inverted colours. E.g. for links on coloured backgrounds.
+  a.focusIndicatorReducedWidthInverted:focus-visible {
+    outline: ${pixelsToRem(2)}rem solid ${palette.WHITE};
+    box-shadow: 0 0 0 ${pixelsToRem(1)}rem ${palette.BLACK};
+    outline-offset: ${pixelsToRem(1)}rem;
   }
 `;
 

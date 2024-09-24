@@ -314,7 +314,7 @@ exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`]
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
           scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+          src="https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
           title="Audio player"
         >
           <div
@@ -350,7 +350,7 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
 
 <div>
   <div
-    class=" emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"

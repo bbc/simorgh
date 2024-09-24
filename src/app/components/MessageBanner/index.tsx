@@ -3,7 +3,6 @@ import { useContext, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
-import idSanitiser from '#app/lib/utilities/idSanitiser';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -18,6 +17,7 @@ interface MessageBannerProps {
   link?: string;
   linkText: string;
   image?: string;
+  id?: string;
   eventTrackingData?: EventTrackingMetadata;
 }
 
@@ -30,13 +30,12 @@ const Banner = forwardRef(
       linkText,
       image,
       eventTrackingData,
+      id = 'message-banner-1',
     }: MessageBannerProps,
     viewRef,
   ) => {
     const { dir } = useContext(ServiceContext);
     const isRtl = dir === 'rtl';
-
-    const id = `message-banner-${idSanitiser(heading)}`;
 
     return (
       <section
@@ -72,7 +71,7 @@ const Banner = forwardRef(
               <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
                 <Image
                   alt=""
-                  src={image.replace('{width}', 'raw')}
+                  src={`${image.replace('{width}', '240')}`}
                   placeholder={false}
                   aspectRatio={[16, 9]}
                 />
@@ -92,6 +91,7 @@ const MessageBanner = ({
   linkText,
   image,
   eventTrackingData,
+  id,
 }: MessageBannerProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 
@@ -104,6 +104,7 @@ const MessageBanner = ({
       image={image}
       eventTrackingData={eventTrackingData}
       ref={viewRef}
+      id={id}
     />
   );
 };

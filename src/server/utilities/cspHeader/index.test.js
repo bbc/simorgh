@@ -1,4 +1,6 @@
-import injectCspHeader, {
+import injectCspHeader from '.';
+
+import {
   generateChildSrc,
   generateConnectSrc,
   generateDefaultSrc,
@@ -9,7 +11,7 @@ import injectCspHeader, {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
-} from '.';
+} from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
@@ -49,23 +51,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: [
-        ...bbcDomains,
-        'https://*.akamaihd.net',
-        'https://cdn.ampproject.org',
-        'https://*.ampproject.net',
-        'https://amp-error-reporting.appspot.com',
-        'https://*.doubleclick.net',
-        'https://*.effectivemeasure.net',
-        'https://*.google.com',
-        'https://*.googlesyndication.com',
-        'https://*.gstatic.com',
-        'https://*.imrworldwide.com',
-        'https://*.twitter.com',
-        'https://connect.facebook.net',
-        'https://cdn.privacy-mgmt.com',
-        "'self'",
-      ].sort(),
+      connectSrcExpectation: ["'self' https:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -86,6 +72,7 @@ describe('cspHeader', () => {
         'https://www.facebook.com',
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
+        'https://*.googleadservices.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -118,7 +105,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
-      mediaSrcExpectation: [...bbcDomains].sort(),
+      mediaSrcExpectation: ["'self' blob: https:"],
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
     },
     {
@@ -127,24 +114,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: [
-        ...bbcDomains,
-        'https://*.akamaihd.net',
-        'https://cognito-identity.eu-west-1.amazonaws.com',
-        'https://dataplane.rum.eu-west-1.amazonaws.com',
-        'https://sts.eu-west-1.amazonaws.com',
-        'https://ws.bbc-reporting-api.app',
-        'https://*.doubleclick.net',
-        'https://*.effectivemeasure.net',
-        'https://*.google.com',
-        'https://*.googlesyndication.com',
-        'https://*.gstatic.com',
-        'https://*.imrworldwide.com',
-        'https://*.optimizely.com',
-        'https://*.wearehearken.eu',
-        'https://cdn.privacy-mgmt.com',
-        "'self'",
-      ].sort(),
+      connectSrcExpectation: ["'self' https:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -176,6 +146,7 @@ describe('cspHeader', () => {
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
         'https://public.flourish.studio',
+        'https://*.googleadservices.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -239,7 +210,7 @@ describe('cspHeader', () => {
         'https://*.xx.fbcdn.net',
         "'unsafe-inline'",
       ].sort(),
-      mediaSrcExpectation: [...bbcDomains].sort(),
+      mediaSrcExpectation: ["'self' blob: https:"],
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
     },
     {
@@ -248,24 +219,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: [
-        ...bbcDomains,
-        'https://*.akamaihd.net',
-        'https://cdn.ampproject.org',
-        'https://*.ampproject.net',
-        'https://amp-error-reporting.appspot.com',
-        'https://logws1363.ati-host.net',
-        'https://*.doubleclick.net',
-        'https://*.effectivemeasure.net',
-        'https://*.google.com',
-        'https://*.googlesyndication.com',
-        'https://*.gstatic.com',
-        'https://*.imrworldwide.com',
-        'https://cdn.privacy-mgmt.com',
-        'https://*.twitter.com',
-        'https://connect.facebook.net',
-        "'self'",
-      ].sort(),
+      connectSrcExpectation: ["'self' https:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -286,6 +240,7 @@ describe('cspHeader', () => {
         'https://www.facebook.com',
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
+        'https://*.googleadservices.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -320,7 +275,7 @@ describe('cspHeader', () => {
         "'unsafe-inline'",
       ].sort(),
       styleSrcExpectation: [...bbcDomains, "'unsafe-inline'"].sort(),
-      mediaSrcExpectation: [...bbcDomains].sort(),
+      mediaSrcExpectation: ["'self' blob: https:"],
       workerSrcExpectation: ['blob:', '*.bbc.co.uk', '*.bbc.com'],
     },
     {
@@ -329,25 +284,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: [
-        ...bbcDomains,
-        'https://*.akamaihd.net',
-        'https://logws1363.ati-host.net',
-        'https://ws.bbc-reporting-api.app',
-        'https://cognito-identity.eu-west-1.amazonaws.com',
-        'https://dataplane.rum.eu-west-1.amazonaws.com',
-        'https://sts.eu-west-1.amazonaws.com',
-        'https://*.doubleclick.net',
-        'https://*.effectivemeasure.net',
-        'https://*.google.com',
-        'https://*.googlesyndication.com',
-        'https://*.gstatic.com',
-        'https://*.imrworldwide.com',
-        'https://*.optimizely.com',
-        'https://*.wearehearken.eu',
-        'https://cdn.privacy-mgmt.com',
-        "'self'",
-      ].sort(),
+      connectSrcExpectation: ["'self' https:"],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -379,6 +316,7 @@ describe('cspHeader', () => {
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
         'https://public.flourish.studio',
+        'https://*.googleadservices.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -446,7 +384,7 @@ describe('cspHeader', () => {
         'https://*.xx.fbcdn.net',
         "'unsafe-inline'",
       ].sort(),
-      mediaSrcExpectation: [...bbcDomains].sort(),
+      mediaSrcExpectation: ["'self' blob: https:"],
       workerSrcExpectation: ['blob:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
     },
   ].forEach(
@@ -474,9 +412,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this connectSrc`, () => {
-          expect(generateConnectSrc({ isAmp, isLive })).toEqual(
-            connectSrcExpectation,
-          );
+          expect(generateConnectSrc()).toEqual(connectSrcExpectation);
         });
 
         it(`Then it has this defaultSrc`, () => {
@@ -514,9 +450,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this mediaSrc`, () => {
-          expect(generateMediaSrc({ isAmp, isLive })).toEqual(
-            mediaSrcExpectation,
-          );
+          expect(generateMediaSrc()).toEqual(mediaSrcExpectation);
         });
 
         it(`Then it has this workerSrc`, () => {

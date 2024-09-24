@@ -73,6 +73,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ด่วน',
         postedAt: 'โพสต์ทาง',
         summary: 'สรุป',
+        shareButtonText: 'แชร์"',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'สรุป',
       error: {
@@ -253,11 +258,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'มียอดชมมากที่สุด',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,

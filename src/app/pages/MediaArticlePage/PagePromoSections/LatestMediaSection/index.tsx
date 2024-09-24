@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import path from 'ramda/src/path';
-import isEmpty from 'ramda/src/isEmpty';
 
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -50,16 +48,17 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       componentName: 'latest',
     },
   };
-  const eventTrackingDataSend = path<EventTrackingBlock>(
-    ['block'],
-    eventTrackingData,
-  );
+
+  const eventTrackingDataSend = eventTrackingData?.block;
+
   const viewRef = useViewTracker(eventTrackingDataSend);
   const LABEL_ID = 'latest-media-heading';
 
-  if (!content || isEmpty(content)) return null;
+  if (!content || content?.length === 0) return null;
+
   const hasSingleItem = content.length === 1;
   const singleItem = content[0];
+
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
     assetUri: null,
@@ -78,13 +77,13 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       <SectionLabel
         columnType="secondary"
         dir={dir}
-        href={null}
+        href=""
         labelId={LABEL_ID}
-        linkText={null}
+        linkText=""
         script={script}
         service={service}
         backgroundColor="transparent"
-        overrideHeadingAs={null}
+        overrideHeadingAs=""
         visuallyHidden={false}
         css={styles.sectionTitle}
       >

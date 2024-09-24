@@ -17,6 +17,7 @@ exports[`should render Copyright with news service context 1`] = `
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -80,6 +81,7 @@ exports[`should render Copyright with persian service context 1`] = `
   inset-inline-start: 0;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
+  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

@@ -4,9 +4,13 @@
  */
 
 import runGistTests from '../gistTests';
+import runImageCopyrightBBC from '../imageCopyrightBBC';
+import runMediaPlayerTests from '../../../common/mediaPlayer';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runGistTests();
+    runMediaPlayerTests(pageType);
+    runImageCopyrightBBC();
   });
 });

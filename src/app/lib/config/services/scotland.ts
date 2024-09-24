@@ -62,6 +62,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Breaking',
         postedAt: 'Posted at',
         summary: 'Summary',
+        shareButtonText: 'Share',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       error: {
         404: {
@@ -206,11 +211,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
       hasMostRead: false,
-    },
-    mostWatched: {
-      header: 'Most watched',
-      numberOfItems: 10,
-      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,

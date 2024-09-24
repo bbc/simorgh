@@ -1,13 +1,10 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
-import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import formatDuration from '#lib/utilities/formatDuration';
 import { isPgl, isMap } from '../utilities';
 
@@ -49,7 +46,13 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
+const MediaIndicatorContainer = ({
+  item,
+  script,
+  service,
+  dir = 'ltr',
+  isInline = false,
+}) => {
   const type = getMediaType(item);
 
   if (!type) {
@@ -83,16 +86,4 @@ const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
   );
 };
 
-MediaIndicatorContainer.propTypes = {
-  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
-  isInline: bool,
-};
-
-MediaIndicatorContainer.defaultProps = {
-  dir: 'ltr',
-  isInline: false,
-};
 export default MediaIndicatorContainer;

@@ -3,6 +3,7 @@
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
+import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import BylineCss from './index.styles';
@@ -11,11 +12,10 @@ import Text from '../Text';
 import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
 
-type Props = {
-  blocks: object[];
-};
-
-const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
+const Byline = ({
+  blocks,
+  children = null,
+}: PropsWithChildren<OptimoBylineBlock['model']>) => {
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -170,10 +170,6 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
       </ul>
     </section>
   );
-};
-
-Byline.defaultProps = {
-  children: null,
 };
 
 export default Byline;

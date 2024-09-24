@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useMemo } from 'react';
 import {
   Environments,
   Platforms,
@@ -20,12 +20,11 @@ export type RequestContextProps = {
   canonicalLink: string;
   canonicalUkLink: string;
   canonicalNonUkLink: string;
-  counterName: string | null;
   env: Environments;
   id: string | null;
   isAmp: boolean;
   isApp: boolean;
-  isCaf: boolean;
+  isLite: boolean;
   isNextJs: boolean;
   isUK: boolean;
   mvtExperiments?: MvtExperiment[] | null;
@@ -37,6 +36,7 @@ export type RequestContextProps = {
   previousPath: string | null;
   service: Services;
   showAdsBasedOnLocation: boolean;
+  showCookieBannerBasedOnCountry: boolean;
   statsDestination: string;
   statsPageIdentifier: string | null;
   statusCode: number | null;
@@ -52,21 +52,21 @@ type RequestProviderProps = {
   bbcOrigin?: string | null;
   derivedPageType?: string | null;
   id?: string | null;
-  isAmp: boolean;
-  isApp: boolean;
-  isCaf?: boolean;
+  isAmp?: boolean;
+  isApp?: boolean;
+  isLite?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
   previousPath?: string | null;
   service: Services;
   showAdsBasedOnLocation?: boolean;
+  showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
-  counterName?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -74,9 +74,9 @@ export const RequestContextProvider = ({
   derivedPageType = null,
   children,
   id = null,
-  isAmp,
-  isApp,
-  isCaf = false,
+  isAmp = false,
+  isApp = false,
+  isLite = false,
   isNextJs = false,
   mvtExperiments = null,
   pageType,
@@ -84,11 +84,11 @@ export const RequestContextProvider = ({
   previousPath = null,
   service,
   showAdsBasedOnLocation = false,
+  showCookieBannerBasedOnCountry = true,
   statusCode = null,
   timeOnServer = null,
   variant = null,
   isUK = null,
-  counterName = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -117,31 +117,57 @@ export const RequestContextProvider = ({
     id,
   });
 
-  const value = {
-    env,
-    id,
-    isUK: formattedIsUK,
-    origin,
-    pageType,
-    derivedPageType,
-    isAmp,
-    isApp,
-    isCaf,
-    isNextJs,
-    platform,
-    statsDestination,
-    statsPageIdentifier,
-    statusCode,
-    previousPath,
-    variant,
-    timeOnServer,
-    showAdsBasedOnLocation,
-    service,
-    pathname,
-    counterName,
-    ...getMetaUrls(origin, pathname),
-    mvtExperiments,
-  };
+  const value = useMemo(
+    () => ({
+      env,
+      id,
+      isUK: formattedIsUK,
+      origin,
+      pageType,
+      derivedPageType,
+      isAmp,
+      isApp,
+      isLite,
+      isNextJs,
+      platform,
+      statsDestination,
+      statsPageIdentifier,
+      statusCode,
+      previousPath,
+      variant,
+      timeOnServer,
+      showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry,
+      service,
+      pathname,
+      ...getMetaUrls(origin, pathname),
+      mvtExperiments,
+    }),
+    [
+      derivedPageType,
+      env,
+      formattedIsUK,
+      id,
+      isAmp,
+      isApp,
+      isLite,
+      isNextJs,
+      mvtExperiments,
+      origin,
+      pageType,
+      pathname,
+      platform,
+      previousPath,
+      service,
+      showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry,
+      statsDestination,
+      statsPageIdentifier,
+      statusCode,
+      timeOnServer,
+      variant,
+    ],
+  );
 
   return (
     <RequestContext.Provider value={value}>{children}</RequestContext.Provider>

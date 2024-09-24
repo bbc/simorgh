@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
+
+exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=51&amp;x2=[responsive]&amp;x3=[news-hausa]&amp;x4=[ha]&amp;x8=[simorgh-nojs]"/>"`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Hausa",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "Me ya sa za ku iya aminta da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-49283501",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "Sharuddan yin amfani",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377086",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "A game da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377088",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ka'idojin tsare sirri",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377090",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "Ka'idoji",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "Tuntubi BBC",
+  "url": "https://www.bbc.co.uk/hausa/send/u50853335",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
+
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+
+exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Hausa"`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "Labaran Duniya",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "Wasanni",
+  "url": "/hausa/topics/cz74kjgv220t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "Nishadi",
+  "url": "/hausa/topics/cg726kz37wdt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "Cikakkun Rahotanni",
+  "url": "/hausa/52140979",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "Bidiyo",
+  "url": "/hausa/topics/cn09qmz4jryt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "Shirye-shirye na Musamman",
+  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "Shirye-shiryen rediyo",
+  "url": "/hausa/topics/c4nx34q5724t",
+}
+`;
+
+exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;
+
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
+  class="bbc-139onq"
+  height="351"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 624w"
+  style="aspect-ratio:624 / 351"
+  width="624"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"Wannan shine taken wannan labarin gwajin"`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/hausa/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/hausa/articles/c2nr6xqmnewo"`;
+
+exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Articles SEO Heading level 1 1`] = `"Wannan shine taken wannan labarin gwajin"`;
+
+exports[`Canonical Articles SEO Lang attribute 1`] = `"ha"`;
+
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "width": 1024,
+        },
+        "name": "BBC News Hausa",
+        "noBylinesPolicy": "https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise",
+      },
+      "dateModified": "2019-07-12T13:07:09.639Z",
+      "datePublished": "2019-07-12T13:07:09.639Z",
+      "description": "Wannan shine taken SEO na wannan labarin gwaji",
+      "headline": "Wannan shine taken SEO na wannan labarin gwaji",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ha",
+        "name": "Hausa",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/hausa/articles/c2nr6xqmnewo",
+        "@type": "WebPage",
+        "name": "Wannan shine taken SEO na wannan labarin gwaji",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "width": 1024,
+        },
+        "name": "BBC News Hausa",
+        "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "url": "http://localhost:7080/hausa/articles/c2nr6xqmnewo",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Articles SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "They may be tiny, but us humans could learn a thing or two from ants.",
+  "duration": "PT3M11S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/c2nr6xqmnewo/p01k6msp/ha",
+  "name": "Five things ants can teach us about management",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
+  "uploadDate": "2018-10-22T14:35:32.000Z",
+}
+`;
+
+exports[`Canonical Articles SEO OG description 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
+
+exports[`Canonical Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical Articles SEO OG image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical Articles SEO OG locale 1`] = `"ha-GH"`;
+
+exports[`Canonical Articles SEO OG site name 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical Articles SEO OG title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
+
+exports[`Canonical Articles SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/hausa/articles/c2nr6xqmnewo"`;
+
+exports[`Canonical Articles SEO Page title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
+
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Articles SEO Twitter creator 1`] = `"@bbchausa"`;
+
+exports[`Canonical Articles SEO Twitter description 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
+
+exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical Articles SEO Twitter site 1`] = `"@bbchausa"`;
+
+exports[`Canonical Articles SEO Twitter title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+{
+  "date": "2019-07-12",
+  "text": "12 Yuli 2019",
+}
+`;

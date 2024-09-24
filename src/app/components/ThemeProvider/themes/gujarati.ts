@@ -1,5 +1,9 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
+import {
+  NOTO_SANS_GUJARATI_REGULAR,
+  NOTO_SANS_GUJARATI_BOLD,
+} from '../fontFaces';
 import gujaratiFontVariants from '../fontVariants/gujarati';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/gujarati';
@@ -15,7 +19,7 @@ const gujaratiTheme = {
   typography: {
     script: devanagariScript,
     fontVariants: gujaratiFontVariants,
-    fontFaces: [],
+    fontFaces: [NOTO_SANS_GUJARATI_REGULAR, NOTO_SANS_GUJARATI_BOLD],
   },
   brandSVG,
 };

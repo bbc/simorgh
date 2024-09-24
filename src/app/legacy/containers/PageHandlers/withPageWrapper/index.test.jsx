@@ -14,16 +14,9 @@ const dataProps = {
   route: { pageType: ARTICLE_PAGE },
 };
 
-// eslint-disable-next-line react/prop-types
 jest.mock('../../../../components/PageLayoutWrapper', () => ({ children }) => (
   <div id="defaultPageWrapper">{children}</div>
 ));
-
-const defaultToggleState = {
-  navOnArticles: {
-    enabled: true,
-  },
-};
 
 const mockToggleDispatch = jest.fn();
 
@@ -34,7 +27,7 @@ describe('with pageWrapper', () => {
     `should render correctly`,
     <ToggleContext.Provider
       value={{
-        toggleState: defaultToggleState,
+        toggleState: {},
         toggleDispatch: mockToggleDispatch,
       }}
     >

@@ -40,7 +40,6 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-/* eslint-disable react/prop-types */
 const MediaIndicatorComponent = ({
   type,
   script,
@@ -62,9 +61,7 @@ const MediaIndicatorComponent = ({
     </MediaIndicator>
   );
 };
-/* eslint-enable react/prop-types */
 
-/* eslint-disable-next-line react/prop-types */
 const HiddenText = ({ type, headline }) => (
   /* eslint-disable-next-line jsx-a11y/aria-role */
   <span role="text">
@@ -74,7 +71,6 @@ const HiddenText = ({ type, headline }) => (
   </span>
 );
 
-/* eslint-disable react/prop-types */
 const InfoComponent = ({
   headlineText,
   summaryText,
@@ -180,16 +176,41 @@ const generateStory =
   };
 
 /* eslint-disable-next-line no-shadow */
-const generate2FeatureStory = () => args =>
-  (
+const generate2FeatureStory = () => args => (
+  <Grid
+    columns={{
+      group0: 8,
+      group1: 8,
+      group2: 8,
+      group3: 8,
+      group4: 8,
+      group5: 8,
+    }}
+    enableGelGutters
+    {...args}
+  >
+    <Grid
+      item
+      columns={{
+        group0: 8,
+        group1: 8,
+        group2: 8,
+        group3: 8,
+        group4: 6,
+        group5: 6,
+      }}
+      {...args}
+    >
+      {generateStory({ promoType: 'leading' })(args)}
+    </Grid>
     <Grid
       columns={{
         group0: 8,
         group1: 8,
         group2: 8,
         group3: 8,
-        group4: 8,
-        group5: 8,
+        group4: 2,
+        group5: 2,
       }}
       enableGelGutters
       {...args}
@@ -201,42 +222,16 @@ const generate2FeatureStory = () => args =>
           group1: 8,
           group2: 8,
           group3: 8,
-          group4: 6,
-          group5: 6,
-        }}
-        {...args}
-      >
-        {generateStory({ promoType: 'leading' })(args)}
-      </Grid>
-      <Grid
-        columns={{
-          group0: 8,
-          group1: 8,
-          group2: 8,
-          group3: 8,
           group4: 2,
           group5: 2,
         }}
-        enableGelGutters
         {...args}
       >
-        <Grid
-          item
-          columns={{
-            group0: 8,
-            group1: 8,
-            group2: 8,
-            group3: 8,
-            group4: 2,
-            group5: 2,
-          }}
-          {...args}
-        >
-          {generateStory({ promoType: 'regular' })(args)}
-        </Grid>
+        {generateStory({ promoType: 'regular' })(args)}
       </Grid>
     </Grid>
-  );
+  </Grid>
+);
 
 storiesOf('Components/StoryPromo/StoryPromo', module)
   .addDecorator(withKnobs)

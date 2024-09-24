@@ -119,7 +119,7 @@ exports[`AMP Media Asset Page Analytics chartbeat 1`] = `
   "vars": {
     "contentType": "article-media-asset",
     "domain": "test.bbc.co.uk",
-    "sections": "Pidgin, Pidgin - Domot, Pidgin - MAP, Pidgin - Domot - MAP, Pidgin - Opinion-category",
+    "sections": "Pidgin, Pidgin - MAP, Pidgin - Opinion-category",
     "title": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
@@ -203,7 +203,7 @@ exports[`AMP Media Asset Page Footer Cookie Settings Button should match text an
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -268,31 +268,6 @@ exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"<Media Asse
 exports[`AMP Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"/afrique/23248423"`;
 
 exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
-
-exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"Media player"`;
-
-exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"`;
-
-exports[`AMP Media Asset Page Related Content should match text and url 1`] = `
-{
-  "text": "Police Arrest 3 ontop Anambra Church Attack",
-  "url": "/pidgin/tori-23145776",
-}
-`;
-
-exports[`AMP Media Asset Page Related Content should match text and url 2`] = `
-{
-  "text": "Image gallery, Kenya Elections Pictures: 8 August 2017",
-  "url": "/pidgin/23146654",
-}
-`;
-
-exports[`AMP Media Asset Page Related Content should match text and url 3`] = `
-{
-  "text": "Make you listen, BBC News Pidgin One Minute News, Duration 0,15",
-  "url": "/pidgin/media-23147054",
-}
-`;
 
 exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -434,7 +409,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "トランプ氏、香港人権法案に署名　中国は反発",
   "duration": "PT5S",
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp",
+  "embedURL": "https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp",
   "name": "トランプ氏、香港人権法案に署名　中国は反発",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg",
   "uploadDate": "2018-12-20T11:06:51.000Z",
@@ -451,7 +426,7 @@ exports[`AMP Media Asset Page SEO OG locale 1`] = `"pcm"`;
 
 exports[`AMP Media Asset Page SEO OG site name 1`] = `"BBC News Pidgin"`;
 
-exports[`AMP Media Asset Page SEO OG title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST - Lorem ipsum dolor sit amet, þ ¼ - BBC News Pidgin"`;
+exports[`AMP Media Asset Page SEO OG title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
 
 exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
 
@@ -473,7 +448,7 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.c
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`AMP Media Asset Page SEO Twitter title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST - Lorem ipsum dolor sit amet, þ ¼ - BBC News Pidgin"`;
+exports[`AMP Media Asset Page SEO Twitter title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
 
 exports[`AMP Media Asset Page Timestamp should match text and date 1`] = `
 {

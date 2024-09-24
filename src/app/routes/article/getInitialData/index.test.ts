@@ -243,29 +243,6 @@ describe('Articles - BFF Fetching', () => {
     });
   });
 
-  it('should throw an error if the article ID is malformed', async () => {
-    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    fetchDataSpy.mockImplementation(() =>
-      Promise.resolve({
-        status: 200,
-        json: JSON.stringify(bffArticleJson),
-      }),
-    );
-
-    await getInitialData({
-      path: '/kyrgyz/articles/somethingelse',
-      service: 'kyrgyz',
-      pageType: ARTICLE_PAGE,
-    });
-
-    expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
-      pathname: '/kyrgyz/articles/somethingelse',
-      service: 'kyrgyz',
-      message: 'Article ID is invalid',
-      status: 500,
-    });
-  });
-
   it('should throw an error if the article metadata is malformed', async () => {
     const malformedBffArticleJson = {
       metadata: {},
@@ -320,6 +297,5 @@ describe('Articles - BFF Fetching', () => {
     expect(pageData.secondaryColumn).toHaveProperty('features');
     expect(pageData.secondaryColumn).toHaveProperty('latestMedia');
     expect(pageData).toHaveProperty('mostRead');
-    expect(pageData).toHaveProperty('mostWatched');
   });
 });

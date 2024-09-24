@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
-import { oneOfType, func, shape, any } from 'prop-types';
 
 import { UserContext } from '#contexts/UserContext';
 import Banner from './Banner/index.canonical';
 import useConsentBanners from './useConsentBanners';
 import { RequestContext } from '../../../contexts/RequestContext';
 
-const Canonical = ({ onDismissFocusRef }) => {
+const Canonical = ({ onDismissFocusRef = null }) => {
   const { updateCookiePolicy } = useContext(UserContext);
-  const { isUK } = useContext(RequestContext);
+  const { isUK, showCookieBannerBasedOnCountry } = useContext(RequestContext);
 
   const {
     showPrivacyBanner,
@@ -16,7 +15,7 @@ const Canonical = ({ onDismissFocusRef }) => {
     handlePrivacyBannerAccepted,
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
-  } = useConsentBanners(isUK);
+  } = useConsentBanners(isUK, showCookieBannerBasedOnCountry);
 
   return (
     <>
@@ -36,15 +35,6 @@ const Canonical = ({ onDismissFocusRef }) => {
       )}
     </>
   );
-};
-
-Canonical.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  onDismissFocusRef: oneOfType([func, shape({ current: any })]),
-};
-
-Canonical.defaultProps = {
-  onDismissFocusRef: null,
 };
 
 export default Canonical;

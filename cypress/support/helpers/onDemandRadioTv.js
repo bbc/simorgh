@@ -32,17 +32,16 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isAvailable = pathEq(
-  ['content', 'blocks', '0', 'availability'],
-  'available',
-);
-
-export const getEpisodeAvailability = path([
+export const isAvailable = pathEq('available', [
   'content',
   'blocks',
-  0,
+  '0',
   'availability',
 ]);
+
+export const getEpisodeAvailability = ({ mediaBlocks }) =>
+  mediaBlocks[0]?.model?.availability === 'available';
+
 export const isBrand = jsonData => {
   const pageID = path(
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
@@ -56,4 +55,10 @@ export const overrideRendererOnTest = () => {
     return '?renderer_env=live';
   }
   return '';
+};
+
+export const videoPlaceholderImageUrl = ({ mediaBlocks }) => {
+  const imageUrl = mediaBlocks[0]?.model?.imageUrl;
+
+  return imageUrl ? `https://${imageUrl}` : null;
 };

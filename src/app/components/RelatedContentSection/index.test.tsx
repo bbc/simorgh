@@ -23,7 +23,6 @@ type Props = {
   service?: Services;
 };
 
-// eslint-disable-next-line react/prop-types
 const RelatedContentSectionFixture = ({
   fixtureData,
   service = 'mundo',

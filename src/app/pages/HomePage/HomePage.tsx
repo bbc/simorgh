@@ -20,6 +20,7 @@ import LinkedData from '../../components/LinkedData';
 import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -50,7 +51,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     curations,
     metadata: { atiAnalytics },
   } = pageData;
-
   const itemList = getItemList({ curations, name: brandName });
   return (
     <>
@@ -69,7 +69,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main css={styles.main}>
+      <main role="main" css={styles.main}>
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
@@ -91,6 +91,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   visualStyle,
                   mostRead,
                   radioSchedule,
+                  embed,
                 },
                 index,
               ) => {
@@ -101,10 +102,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
                     visualStyle,
                     visualProminence,
                   });
+                const indexOfFirstNonBanner =
+                  getIndexOfFirstNonBanner(curations);
                 return (
                   <React.Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
-                      headingLevel={curationTitle ? 3 : 2}
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
                       summaries={summaries || []}
@@ -118,8 +120,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
+                      embed={embed}
                     />
-                    {index === 0 && <MPU />}
+                    {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
                 );
               },

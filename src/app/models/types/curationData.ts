@@ -1,18 +1,20 @@
+import { OEmbedData } from '#app/components/Embeds/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {
-  imageUrl?: string;
-  link?: string;
-  imageAlt?: string;
-  description?: string;
+  imageUrl: string;
+  link: string;
+  imageAlt: string;
+  description: string;
   title: string;
   id?: string;
   type: string;
   firstPublished?: string | number;
   lastPublished?: string | number;
   duration?: string | number;
+  isLive?: boolean;
 }
 
 export interface Summary extends BaseSummary {
@@ -56,10 +58,10 @@ export interface BaseCuration {
   curationType?: string;
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
+  embed?: OEmbedData;
 }
 
 export interface Curation extends BaseCuration {
-  headingLevel?: number;
   topStoriesTitle?: string;
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;

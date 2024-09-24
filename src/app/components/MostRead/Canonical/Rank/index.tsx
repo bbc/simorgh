@@ -56,7 +56,7 @@ const getColumnCss = ({
       service,
       size,
     }),
-  }[columnLayout]);
+  })[columnLayout];
 
 const MostReadRank = ({
   service,

@@ -1,18 +1,16 @@
 import { getBlockData } from './helpers';
 
-export default () => {
+export default ({ service, id, pageType }) => {
   describe('Media Player', () => {
     let livePageData;
     before(() => {
       cy.getPageData({
-        service: 'pidgin',
-        pageType: 'live',
-        id: 'c7p765ynk9qt',
+        service,
+        pageType,
+        id,
       }).then(({ body }) => {
         livePageData = body;
       });
-
-      cy.visit('/pidgin/live/c7p765ynk9qt?renderer_env=test');
     });
 
     it('should render a visible placeholder image', () => {

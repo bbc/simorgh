@@ -6,7 +6,6 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import AVPlayer from '.';
 
-/* eslint-disable react/prop-types */
 const GenerateFixtureData = ({
   platform,
   assetId = 'w3ct0l8r',
@@ -52,7 +51,7 @@ const AVPlayerCanonicalODTV = (
 const AVPlayerAMPODRadio = (
   <GenerateFixtureData
     platform="amp"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+    embedUrl="https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
     title="Audio Player"
     type="audio"
     iframeTitle="Audio player"

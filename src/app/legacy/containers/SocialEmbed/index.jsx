@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
-import is from 'ramda/src/is';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -8,7 +6,6 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 import { GridItemMedium } from '#components/Grid';
-import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import createTranslations from './common/translations';
@@ -16,10 +13,12 @@ import Wrapper from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const SocialEmbedContainer = ({ blocks, source }) => {
-  const { isAmp, pageType } = useContext(RequestContext);
+  const { isAmp, isLite, pageType } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
 
+  if (isLite) return null;
   if (!blocks || !source) return null;
+
   const { model, id: blockId } = blocks[0];
   const provider = getProviderFromSource(source);
 
@@ -27,9 +26,11 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   if (!id) return null;
 
-  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
-  const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
-  const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
+  const oEmbed = model?.blocks?.[0]?.model?.oembed || model?.oembed;
+
+  const oEmbedIndexOfType = oEmbed?.indexOfType;
+  const oEmbedPosition =
+    typeof oEmbedIndexOfType === 'number' && oEmbedIndexOfType + 1;
 
   const isLive = pageType === LIVE_PAGE;
 
@@ -84,7 +85,5 @@ const SocialEmbedContainer = ({ blocks, source }) => {
     </GridItemMedium>
   );
 };
-
-SocialEmbedContainer.propTypes = socialEmbedBlockPropTypes;
 
 export default SocialEmbedContainer;

@@ -7,6 +7,7 @@ export const bbcDomains = [
   '*.bbc.com',
   '*.bbci.co.uk',
   '*.bbci.com',
+  'http://localhost.bbc.com',
 ];
 
 export const advertisingServiceCountryDomains = [
@@ -78,4 +79,6 @@ export const advertisingServiceCountryDomains = [
   'https://*.google.lk',
   'https://*.google.lv',
   'https://*.google.ge',
+  'https://*.covatic.io',
+  'https://*.doubleverify.com',
 ];

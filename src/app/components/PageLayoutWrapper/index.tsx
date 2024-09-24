@@ -15,7 +15,6 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import ThemeProvider from '../ThemeProvider';
 import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
 
 import styles from './index.styles';
@@ -56,7 +55,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isAmp, variant } = useContext(RequestContext);
+  const { isLite, isAmp } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -81,7 +80,10 @@ const PageLayoutWrapper = ({
   }
   const serviceFonts = fontFacesLazy(service);
   const fontJs =
-    isAmp || !serviceFonts.length || process.env.JEST_WORKER_ID !== undefined
+    isLite ||
+    isAmp ||
+    !serviceFonts.length ||
+    process.env.JEST_WORKER_ID !== undefined
       ? ''
       : `
   				if ("FileReader" in window && "Promise" in window && "fetch" in window) {
@@ -199,20 +201,18 @@ const PageLayoutWrapper = ({
           },
         ]}
       />
-      <ThemeProvider service={service} variant={variant}>
-        <ServiceWorker />
-        <ManifestContainer />
-        {!isErrorPage && <WebVitals pageType={pageType} />}
-        <GlobalStyles />
-        <div id="main-wrapper" css={styles.wrapper}>
-          <HeaderContainer
-            scriptSwitchId={scriptSwitchId}
-            renderScriptSwitch={renderScriptSwitch}
-          />
-          <div css={styles.content}>{children}</div>
-          <FooterContainer />
-        </div>
-      </ThemeProvider>
+      <ServiceWorker />
+      <ManifestContainer />
+      {!isErrorPage && <WebVitals pageType={pageType} />}
+      <GlobalStyles />
+      <div id="main-wrapper" css={styles.wrapper}>
+        <HeaderContainer
+          scriptSwitchId={scriptSwitchId}
+          renderScriptSwitch={renderScriptSwitch}
+        />
+        <div css={styles.content}>{children}</div>
+        <FooterContainer />
+      </div>
     </>
   );
 };

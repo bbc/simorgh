@@ -7,10 +7,8 @@ import {
   frontPageDataPath,
   homePageDataPath,
   tipoHomeDataPath,
-  IdxDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
-  mostWatchedDataPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
   topicDataPath,
@@ -97,16 +95,6 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'mostRead',
-        service,
-        variant,
-      });
-
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(mostWatchedDataPath, async ({ params }, res, next) => {
-      const { service, variant } = params;
-      const dataFilePath = constructDataFilePath({
-        pageType: 'mostWatched',
         service,
         variant,
       });
@@ -222,11 +210,6 @@ export default server => {
         variant,
       });
 
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(IdxDataPath, async ({ params }, res, next) => {
-      const { idx } = params;
-      const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
     .get(africaEyeTVDataPath, async ({ params }, res, next) => {

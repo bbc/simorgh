@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 2,
+    "month": "April",
+    "year": 2024
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/dT9dPptb5PqGiHvY6ed7Ci/Legal-footer-credit-on-Indian-websites-PW?type=design&node-id=104%3A10&mode=design&t=ENGpSKATLxZ0NCwB-1",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Footer-additional-credit-on-6-Indian-sites-A11y-acceptance-criteria--CMeMVMf5WxRZA_U5L5ACqcr8Ag-sSKuqs9Vsss0ZXWKbAcki",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Footer-with-Legal-Credit-for-Indian-Services-Hdr4jK1smhwRXegcQQsjl",
+      "label": "A11y swarm notes"
+    }
+  }
+}

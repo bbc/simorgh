@@ -63,6 +63,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Briseadh',
         postedAt: 'Air a chur suas aig',
         summary: 'Geàrr-chunntas',
+        shareButtonText: 'Sgaoil',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Geàrr-shealladh',
       error: {
@@ -241,17 +246,86 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Prìomh Sgeulachdan',
       featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'roghainneil · optional',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading:
+          "Seo na tha thu a' luchdachadh suas: · Here's what you're uploading:",
+        fileUploadButton: 'Tagh faidhle · Choose a file',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Cuir · Send',
+
+        // Validation
+        validationRequired: "Tha rudeigin a dhìth · There's something missing.",
+        validationInvalidEmail:
+          "Chan eil sin a' coimhead ceart. Cleachd seòladh-d ceart. · That doesn't look right. Please enter a proper email address.",
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          "Chan eil faidhlichean gu leòr ann. Cuir ris co-dhiù {{minFiles}}. · There aren't enough files. Please add at least {{minFiles}}.",
+        validationFilesTooMany:
+          'Tha cus faidhlichean an sin. Chan eil ceadaichte ach {{maxFiles}}. · There are too many files. You can add {{maxFiles}}.',
+        validationFilesInvalidType:
+          "Duilich, cha tèid againn air an seòrsa faidhle sin a chleachdadh. Feuch {{fileTypes}}. · Sorry, we can't use this type of file. Please add {{fileTypes}}.",
+        validationFilesTooSmall:
+          'Tha am faidhle sin briste. Feuch fear eile. · This file is broken. Try picking another.',
+        validationFilesSizeExceeded:
+          'Duilich, tha na faidhlichean sin ro mhòr. Chan urrainn ach 1.2 GB a luchdachadh suas aig aon àm. · Sorry, these files are too big. You can only upload up to 1.2 GB at a time.',
+        validationWordLimit:
+          'Nas lugha na {{wordLimit}} facal · Maximum {{wordLimit}} words',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'Aireamh clàraidh · Reference number',
+        submissionInfoSignedOutMessage:
+          "Dh'fhaodadh gum bi thu airson nota a ghabhail dhen seo gus am bi e agad. · You may wish to make a note of these details for your reference.",
+        privacyInfoHtml:
+          "Na biodh dragh ort, tha sinn a' cumail d' fhiosrachadh tèarainte — leugh ar Poileasaidh Prìobhaideachd airson tuilleadh fios: · Don't worry, we protect your information — read the Privacy Notice for more details: {{privacyInfoLink}}",
+        emailToHtml:
+          "Cuir post-d gu {{emailLink}} mas e 's gun atharraich thu d' inntinn is nach eil thu airson 's gun cleachd sinn e. Cuimhnich air an àireamh clàraidh. · If you change your mind and don't want us to use it, just email us at {{emailLink}}. Don't forget the reference number.",
+        removalGuidelineText:
+          'Ma chuir thu rudeigin a-steach airson prògram no airson a chleachdadh air-loidhne, cha bhi e comasach dhuinn a thoirt às ma thèid a chleachdadh. · If you submitted something for a programme or online, we won’t be able to remove it once we use it.',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading:
+          "A' luchdachadh suas d' fhaidhlichean… · Uploading your files…",
+        uploadingDescription:
+          "Fuirich gus am bi e ullamh. · Please wait until it's complete.",
+
+        // Success Screen
+        successHeading: 'Teachdaireachd air a chuir · Message sent',
+        successDescription:
+          'Tapadh leat airson fios a chuir thugainn. · Thanks for getting in touch.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading:
+          "Cha do dh'fhalbh do theachdaireachd · Your message didn't send",
+        errorDescription: 'Feuch ri chur a-rithist. · Try sending it again.',
+
+        // Closed Screen
+        closedHeading: 'Tha seo a-nise dùinte.',
+        closedDescription: 'Dhùin seo air {{date}}.',
+      },
     },
     mostRead: {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
       hasMostRead: false,
-    },
-    mostWatched: {
-      header: 'As motha leughte',
-      numberOfItems: 10,
-      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,

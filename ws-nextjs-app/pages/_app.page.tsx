@@ -1,5 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
 import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
@@ -21,13 +23,15 @@ interface Props extends AppProps {
     id?: string;
     isAmp: boolean;
     isApp?: boolean;
+    isLite?: boolean;
     isNextJs: boolean;
+    isAvEmbeds?: boolean;
     mvtExperiments: MvtExperiment[] | null;
     pageData: {
       metadata: {
         type: PageTypes;
+        atiAnalytics?: ATIData;
       };
-      atiAnalytics?: { pageIdentifier: string };
     };
     pageLang?: string;
     pageType: PageTypes;
@@ -49,7 +53,9 @@ export default function App({ Component, pageProps }: Props) {
     id,
     isAmp,
     isApp = false,
+    isLite = false,
     isNextJs = true,
+    isAvEmbeds = false,
     mvtExperiments = null,
     pageData,
     pageLang = '',
@@ -65,6 +71,15 @@ export default function App({ Component, pageProps }: Props) {
     isUK,
   } = pageProps;
 
+  const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
+  const RenderChildrenOrError =
+    status === 200 ? (
+      <Component {...pageProps} />
+    ) : (
+      <ErrorPage errorCode={status || 500} />
+    );
+
   return (
     <ToggleContextProvider toggles={toggles}>
       <ServiceContextProvider
@@ -77,6 +92,7 @@ export default function App({ Component, pageProps }: Props) {
           id={id}
           isAmp={isAmp}
           isApp={isApp}
+          isLite={isLite}
           pageType={pageType}
           service={service}
           statusCode={status}
@@ -88,18 +104,21 @@ export default function App({ Component, pageProps }: Props) {
           mvtExperiments={mvtExperiments}
           isNextJs={isNextJs}
           isUK={isUK ?? false}
-          counterName={pageData?.atiAnalytics?.pageIdentifier ?? null}
         >
-          <EventTrackingContextProvider data={pageData}>
-            <UserContextProvider>
-              <PageWrapper pageData={pageData} status={status}>
-                {status === 200 ? (
-                  <Component {...pageProps} />
-                ) : (
-                  <ErrorPage errorCode={status || 500} />
-                )}
-              </PageWrapper>
-            </UserContextProvider>
+          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
+            {isAvEmbeds ? (
+              <ThemeProvider service={service} variant={variant}>
+                {RenderChildrenOrError}
+              </ThemeProvider>
+            ) : (
+              <UserContextProvider>
+                <ThemeProvider service={service} variant={variant}>
+                  <PageWrapper pageData={pageData} status={status}>
+                    {RenderChildrenOrError}
+                  </PageWrapper>
+                </ThemeProvider>
+              </UserContextProvider>
+            )}
           </EventTrackingContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>

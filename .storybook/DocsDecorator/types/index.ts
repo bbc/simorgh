@@ -32,4 +32,7 @@ export default interface HealthFactorsMetadata {
 
 export interface HealthFactorsProps {
   metadata?: HealthFactorsMetadata;
+  docs?: {
+    readme?: string;
+  };
 }

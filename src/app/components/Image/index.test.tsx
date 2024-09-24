@@ -20,7 +20,7 @@ const removeStyles = (el: HTMLElement) => {
 const Fixture = ({ ...props }) => (
   <Image
     alt="Test image alt text"
-    src="/test-image-500.jpg"
+    src="/test-image-500.jpg.webp"
     srcSet="/test-image-200.webp 200w, /test-image-500.webp 500w"
     mediaType="image/webp"
     fallbackSrcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
@@ -41,7 +41,7 @@ describe('Image - Canonical', () => {
 
       expect(linkEl).toHaveAttribute('rel', 'preload');
       expect(linkEl).toHaveAttribute('as', 'image');
-      expect(linkEl).toHaveAttribute('href', '/test-image-500.jpg');
+      expect(linkEl).toHaveAttribute('href', '/test-image-500.jpg.webp');
       expect(linkEl).toHaveAttribute(
         'imagesrcset',
         '/test-image-200.webp 200w, /test-image-500.webp 500w',
@@ -100,7 +100,7 @@ describe('Image - Canonical', () => {
     const sourceEl = screen.getByAltText('Test image alt text');
     expect(sourceEl).toHaveAttribute(
       'srcset',
-      '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
     );
     expect(sourceEl).toHaveAttribute(
       'sizes',
@@ -124,7 +124,7 @@ describe('Image - Canonical', () => {
   it('should render a placeholder image by default', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
   });
@@ -132,7 +132,7 @@ describe('Image - Canonical', () => {
   it('should render a placeholder image when placeholder is true', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
   });
@@ -140,7 +140,7 @@ describe('Image - Canonical', () => {
   it('should render a placeholder image when placeholder is true', () => {
     render(<Fixture darkPlaceholder />);
     const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
       backgroundColor: SHADOW,
     });
@@ -149,23 +149,16 @@ describe('Image - Canonical', () => {
   it('should not render a placeholder image when placeholder is false', () => {
     render(<Fixture placeholder={false} />);
     const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl.parentNode?.parentNode).not.toHaveStyle({
+    expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
-  });
-
-  it('should render the fallback image in the src attribute', () => {
-    render(<Fixture />);
-    const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl).toHaveAttribute('src', '/test-image-500.jpg');
   });
 
   it('should render the container with an aspect ratio based on width and height', () => {
     render(<Fixture />);
 
     const imageEl = screen.getByAltText('Test image alt text');
-
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '56.2%',
     });
   });
@@ -175,7 +168,7 @@ describe('Image - Canonical', () => {
 
     const imageEl = screen.getByAltText('Test image alt text');
 
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '0',
     });
   });
@@ -187,7 +180,7 @@ describe('Image - Canonical', () => {
 
     const imageEl = screen.getByAltText('Test image alt text');
 
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
     });
   });
@@ -197,7 +190,7 @@ describe('Image - Canonical', () => {
 
     const imageEl = screen.getByAltText('Test image alt text');
 
-    expect(imageEl.parentNode?.parentNode).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
     });
   });
@@ -212,35 +205,35 @@ describe('Image - Canonical', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <img
-          alt="Test image alt text"
-          src="/test-image-500.jpg"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <img
+    alt="Test image alt text"
+    src="/test-image-500.jpg"
+  />
+</div>
+`);
   });
 
   it('should match markup for a responsive image', () => {
     const { container } = render(
       <Image
         alt="Test image alt text"
-        src="/test-image-500.jpg"
-        srcSet="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+        src="/test-image-500.jpg.webp"
+        srcSet="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
         aspectRatio={[16, 9]}
       />,
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
       <div
-        style="padding-bottom: 56.25%;"
+        style="padding-bottom: 56.25%; overflow: hidden;"
       >
         <img
           alt="Test image alt text"
-          src="/test-image-500.jpg"
-          srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+          src="/test-image-500.jpg.webp"
+          srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
         />
       </div>
     `);
@@ -256,7 +249,7 @@ describe('Image - AMP pages', () => {
 
       expect(linkEl).toHaveAttribute('rel', 'preload');
       expect(linkEl).toHaveAttribute('as', 'image');
-      expect(linkEl).toHaveAttribute('href', '/test-image-500.jpg');
+      expect(linkEl).toHaveAttribute('href', '/test-image-500.jpg.webp');
       expect(linkEl).toHaveAttribute(
         'imagesrcset',
         '/test-image-200.webp 200w, /test-image-500.webp 500w',
@@ -302,7 +295,7 @@ describe('Image - AMP pages', () => {
     const imageEls = screen.getAllByAltText('Test image alt text');
     expect(imageEls[0]).toHaveAttribute(
       'srcset',
-      '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
     );
   });
 
@@ -406,17 +399,17 @@ describe('Image - AMP pages', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <amp-img
-          alt="Test image alt text"
-          fallback=""
-          layout="fill"
-          src="/test-image-500.jpg"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <amp-img
+    alt="Test image alt text"
+    fallback=""
+    layout="fill"
+    src="/test-image-500.jpg"
+  />
+</div>
+`);
   });
 
   it('should match markup for a responsive image', () => {
@@ -431,18 +424,18 @@ describe('Image - AMP pages', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <amp-img
-          alt="Test image alt text"
-          fallback=""
-          layout="fill"
-          src="/test-image-500.jpg"
-          srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <amp-img
+    alt="Test image alt text"
+    fallback=""
+    layout="fill"
+    src="/test-image-500.jpg"
+    srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
+  />
+</div>
+`);
   });
 
   it('should match markup for a responsive jpg image', () => {
@@ -461,18 +454,18 @@ describe('Image - AMP pages', () => {
     );
 
     expect(removeStyles(container)).toMatchInlineSnapshot(`
-      <div
-        style="padding-bottom: 56.25%;"
-      >
-        <amp-img
-          alt="Test image alt text"
-          fallback=""
-          layout="fill"
-          sizes="(max-width: 600px) 480px, 800px"
-          src="/test-image-500.webp"
-          srcset="/test-image-200.jpg 200w, /test-image-500.jpg 500w"
-        />
-      </div>
-    `);
+<div
+  style="padding-bottom: 56.25%; overflow: hidden;"
+>
+  <amp-img
+    alt="Test image alt text"
+    fallback=""
+    layout="fill"
+    sizes="(max-width: 600px) 480px, 800px"
+    src="/test-image-500.webp"
+    srcset="/test-image-200.webp 200w, /test-image-500.webp 500w"
+  />
+</div>
+`);
   });
 });

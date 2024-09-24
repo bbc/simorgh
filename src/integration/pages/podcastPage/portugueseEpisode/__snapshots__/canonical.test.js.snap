@@ -62,7 +62,7 @@ exports[`Canonical Podcast Page Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Podcast Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/portuguese"`;
 
-exports[`Canonical Podcast Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
+exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
 
 exports[`Canonical Podcast Page Header I can see the branding 1`] = `"BBC News, Brasil"`;
 
@@ -82,43 +82,57 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 
 exports[`Canonical Podcast Page Header Navigation link should match text and url 3`] = `
 {
+  "text": "Eleições EUA",
+  "url": "/portuguese/topics/c30gn378n6kt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 4`] = `
+{
   "text": "Internacional",
   "url": "/portuguese/topics/cmdm4ynm24kt",
 }
 `;
 
-exports[`Canonical Podcast Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Podcast Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Economia",
   "url": "/portuguese/topics/cvjp2jr0k9rt",
 }
 `;
 
-exports[`Canonical Podcast Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Podcast Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Saúde",
   "url": "/portuguese/topics/c340q430z4vt",
 }
 `;
 
-exports[`Canonical Podcast Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Podcast Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Ciência",
   "url": "/portuguese/topics/cr50y580rjxt",
 }
 `;
 
-exports[`Canonical Podcast Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Podcast Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Tecnologia",
   "url": "/portuguese/topics/c404v027pd4t",
 }
 `;
 
-exports[`Canonical Podcast Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Podcast Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Vídeos",
   "url": "/portuguese/topics/c9y2j35dn2zt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 10`] = `
+{
+  "text": "BBC Lê",
+  "url": "/portuguese/topics/cxndrr1qgllt",
 }
 `;
 
@@ -128,7 +142,7 @@ exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Pais de Ma
 
 exports[`Canonical Podcast Page I can see the episode title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu'"`;
 
-exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p083x9j5.jpg"`;
+exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p083x9j5.jpg.webp"`;
 
 exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu'"`;
 

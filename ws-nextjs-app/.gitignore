@@ -41,3 +41,4 @@ next-env.d.ts
 
 # Consider removing this once we move Express app over to Next.js
 /public
+certificates

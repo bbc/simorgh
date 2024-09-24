@@ -14,7 +14,6 @@ import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 import storyPromoData from '../testHelpers/fixtureData';
 import notes from '../README.md';
 
-// eslint-disable-next-line react/prop-types
 const ImageComponent = ({ alt, src }) => (
   <Image
     alt={alt}
@@ -27,7 +26,6 @@ const ImageComponent = ({ alt, src }) => (
   />
 );
 
-// eslint-disable-next-line react/prop-types
 const InfoComponent = ({ headlineText, summaryText, datetime, dateformat }) => (
   <>
     <Headline script={latin} service="news">

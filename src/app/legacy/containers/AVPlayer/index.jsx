@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { string, bool, func, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -29,18 +28,18 @@ const Wrapper = styled.div`
 `;
 
 const AVPlayer = ({
-  assetId,
-  placeholderSrc,
-  title,
-  embedUrl,
-  iframeTitle,
-  type,
-  skin,
-  className,
-  hasBottomPadding,
-  showLoadingImage,
-  darkPlaceholder,
-  onMediaInitialised,
+  assetId = '',
+  placeholderSrc = '',
+  title = '',
+  embedUrl = '',
+  iframeTitle = '',
+  type = '',
+  skin = 'classic',
+  className = '',
+  hasBottomPadding = true,
+  showLoadingImage = false,
+  darkPlaceholder = false,
+  onMediaInitialised = () => {},
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
@@ -59,7 +58,10 @@ const AVPlayer = ({
   if (!isValidPlatform || !assetId) return null;
 
   return (
-    <Wrapper hasBottomPadding={hasBottomPadding} className={className}>
+    <Wrapper
+      hasBottomPadding={hasBottomPadding}
+      {...(className && { className })}
+    >
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -100,54 +102,22 @@ const AudioPlayer = styled(AVPlayer)`
   }
 `;
 
-AVPlayer.propTypes = {
-  embedUrl: string,
-  assetId: string,
-  placeholderSrc: string,
-  type: string,
-  title: string,
-  iframeTitle: string,
-  className: string,
-  skin: string,
-  hasBottomPadding: bool,
-  showLoadingImage: bool,
-  darkPlaceholder: bool,
-  onMediaInitialised: func,
-};
-
-AVPlayer.defaultProps = {
-  embedUrl: '',
-  assetId: '',
-  placeholderSrc: '',
-  type: '',
-  title: '',
-  iframeTitle: '',
-  className: '',
-  skin: 'classic',
-  hasBottomPadding: true,
-  showLoadingImage: false,
-  darkPlaceholder: false,
-  onMediaInitialised: () => {},
-};
-
-const AVSelector = props => {
-  const { skin } = props;
+const AVSelector = ({ skin = 'classic', ...props }) => {
+  const { isLite } = useContext(RequestContext);
   const [isLoading, setIsLoading] = useState(true);
+
+  if (isLite) return null;
   return skin === 'audio' ? (
     <AudioLoader isLoading={isLoading}>
-      <AudioPlayer {...props} onMediaInitialised={() => setIsLoading(false)} />
+      <AudioPlayer
+        {...props}
+        skin={skin}
+        onMediaInitialised={() => setIsLoading(false)}
+      />
     </AudioLoader>
   ) : (
     <AVPlayer {...props} />
   );
-};
-
-AVSelector.propTypes = {
-  skin: oneOf(['classic', 'audio']),
-};
-
-AVSelector.defaultProps = {
-  skin: 'classic',
 };
 
 export default AVSelector;

@@ -85,6 +85,11 @@ const baseServiceConfig = {
       breaking: 'Терміново',
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
+      shareButtonText: 'Поділитися',
+    },
+    downloads: {
+      instructions: 'You can download and view today’s news.',
+      title: 'File Download',
     },
     gist: 'Стисло',
     error: {
@@ -278,16 +283,9 @@ const baseServiceConfig = {
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,
-    onIdxPage: false,
-  },
-  mostWatched: {
-    header: 'Найпопулярніше',
-    numberOfItems: 5,
-    hasMostWatched: false,
   },
   radioSchedule: {
     hasRadioSchedule: false,
-    onIdxPage: false,
   },
   recommendations: {
     hasStoryRecommendations: false,
@@ -347,7 +345,7 @@ const baseServiceConfig = {
     },
     {
       title: 'Книга року BBC',
-      url: '/ukrainian/features-50320117',
+      url: '/ukrainian/topics/cqwrq3rkdrnt',
     },
     {
       title: 'Подкасти',

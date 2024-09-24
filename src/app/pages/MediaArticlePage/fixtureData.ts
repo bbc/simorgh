@@ -304,6 +304,65 @@ const pidginPageData = {
           position: [6],
         },
         {
+          id: '21bc192b',
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                id: '78a0870a',
+                type: 'altText',
+                model: {
+                  blocks: [
+                    {
+                      id: 'c6fbe914',
+                      type: 'text',
+                      model: {
+                        blocks: [
+                          {
+                            id: 'b4f87fca',
+                            type: 'paragraph',
+                            model: {
+                              text: '...',
+                              blocks: [
+                                {
+                                  id: '487e481b',
+                                  type: 'fragment',
+                                  model: {
+                                    text: '...',
+                                    attributes: [],
+                                  },
+                                  position: [6, 1, 1, 1, 1],
+                                },
+                              ],
+                            },
+                            position: [6, 1, 1, 1],
+                          },
+                        ],
+                      },
+                      position: [6, 1, 1],
+                    },
+                  ],
+                },
+                position: [6, 1],
+              },
+              {
+                id: '03897da1',
+                type: 'rawImage',
+                model: {
+                  width: 819,
+                  height: 461,
+                  locator: '1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg',
+                  originCode: 'cpsprodpb',
+                  copyrightHolder: 'Getty Images',
+                  suitableForSyndication: true,
+                },
+                position: [6, 2],
+              },
+            ],
+          },
+          position: [6],
+        },
+        {
           id: 'e094dc5b',
           type: 'wsoj',
           model: {
@@ -449,4 +508,162 @@ const pidginPageData = {
   },
 };
 
-export default pidginPageData;
+const arabicLiveTvPageData = {
+  content: {
+    model: {
+      blocks: [
+        {
+          id: 'e9a81000',
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                id: '88bb971a',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '7859c2a8',
+                      type: 'paragraph',
+                      model: {
+                        text: 'مباشر: تلفزيون بي بي سي عربي',
+                        blocks: [
+                          {
+                            id: '21b0d7bd',
+                            type: 'fragment',
+                            model: {
+                              text: 'مباشر: تلفزيون بي بي سي عربي',
+                              attributes: [],
+                            },
+                            position: [1, 1, 1, 1],
+                          },
+                        ],
+                      },
+                      position: [1, 1, 1],
+                    },
+                  ],
+                },
+                position: [1, 1],
+              },
+            ],
+          },
+          position: [1],
+        },
+        {
+          id: 'd139c6c2',
+          type: 'timestamp',
+          model: {
+            firstPublished: 1567154178000,
+            lastPublished: 1567154178000,
+          },
+          position: [2],
+        },
+        {
+          id: '5990c4b3',
+          type: 'video',
+          model: {
+            blocks: [
+              {
+                id: '7cd2cee7',
+                type: 'aresMedia',
+                model: {
+                  blocks: [
+                    {
+                      id: 'b3f281a4',
+                      type: 'aresMediaMetadata',
+                      blockId: 'urn:bbc:ares::primary:108540166',
+                      model: {
+                        live: true,
+                        embedding: false,
+                        subType: 'primary',
+                        id: '108540166',
+                        available: true,
+                        format: 'audio_video',
+                        title: 'مباشر: تلفزيون بي بي سي عربي',
+                        imageCopyright: 'BBC',
+                        imageUrl:
+                          'http://c.files.bbci.co.uk/CF4E/production/_111607035_arabic_16_9_updated.png',
+                        synopses: {
+                          short: 'مباشر: تلفزيون بي بي سي عربي',
+                          medium: 'مباشر: تلفزيون بي بي سي عربي',
+                          long: 'مباشر: تلفزيون بي بي سي عربي',
+                        },
+                        versions: [
+                          {
+                            kind: 'programme',
+                            live: true,
+                            versionId: 'bbc_arabic_tv',
+                          },
+                        ],
+                      },
+                      position: [3, 1, 1],
+                    },
+                  ],
+                },
+                position: [3, 1],
+              },
+            ],
+          },
+          position: [3],
+        },
+        {
+          id: '26755ba1',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '48f09eb5',
+                type: 'paragraph',
+                model: {
+                  text: 'يقدم لكم تلفزيون بي بي سي العربي الأخبار والأخبار العاجلة والتحليلات والحوارات والبرامج الوثائقية، على مدى 24 ساعة كل يوم. ويمكنكم التقاط القناة عبر الأطباق اللاقطة. بإمكانكم إرسال تعليقاتكم واقتراحاتكم عبر هذا الرابط',
+                  blocks: [
+                    {
+                      id: 'c0f89bee',
+                      type: 'fragment',
+                      model: {
+                        text: 'يقدم لكم تلفزيون بي بي سي العربي الأخبار والأخبار العاجلة والتحليلات والحوارات والبرامج الوثائقية، على مدى 24 ساعة كل يوم. ويمكنكم التقاط القناة عبر الأطباق اللاقطة. بإمكانكم إرسال تعليقاتكم واقتراحاتكم ',
+                        attributes: ['bold'],
+                      },
+                      position: [4, 1, 1],
+                    },
+                    {
+                      id: '80ec51a1',
+                      type: 'urlLink',
+                      model: {
+                        text: 'عبر هذا الرابط',
+                        locator: 'https://www.bbc.co.uk/arabic/send/u50853203',
+                        isExternal: false,
+                        blocks: [
+                          {
+                            id: 'f78daa8e',
+                            type: 'fragment',
+                            model: {
+                              text: 'عبر هذا الرابط',
+                              attributes: [],
+                            },
+                            position: [4, 1, 2, 1],
+                          },
+                        ],
+                      },
+                      position: [4, 1, 2],
+                    },
+                  ],
+                },
+                position: [4, 1],
+              },
+            ],
+          },
+          position: [4],
+        },
+        {
+          id: '81eb6130',
+          type: 'mpu',
+          model: {},
+          position: [5],
+        },
+      ],
+    },
+  },
+};
+
+export { arabicLiveTvPageData, pidginPageData };

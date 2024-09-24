@@ -16,13 +16,7 @@ describe('Media Asset Pages - Preroll Ads', () => {
           paths.forEach(url => {
             it(url, () => {
               cy.visit(url);
-              cy.get('iframe').then(iframe => {
-                const embedUrl = iframe.prop('src');
-                cy.visit(embedUrl);
-                cy.get(`script[src*="dotcom-bootstrap.js"]`).should(
-                  'not.exist',
-                );
-              });
+              cy.get(`script[src*="dotcom-bootstrap.js"]`).should('not.exist');
             });
           });
         });
@@ -48,13 +42,9 @@ describe('Media Asset Pages - Preroll Ads', () => {
 
                   if (adsEnabled) {
                     cy.visit(url);
-                    cy.get('iframe').then(iframe => {
-                      const embedUrl = iframe.prop('src');
-                      cy.visit(embedUrl);
-                      cy.get(`script[src*="dotcom-bootstrap.js"]`).should(
-                        'exist',
-                      );
-                    });
+                    cy.get(`script[src*="dotcom-bootstrap.js"]`).should(
+                      'exist',
+                    );
                   }
                 });
               });

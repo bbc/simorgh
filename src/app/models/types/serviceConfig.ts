@@ -5,7 +5,9 @@ import {
   ChineseService,
   ZhongwenService,
   UkrainianService,
+  UzbekService,
   Direction,
+  Variants,
 } from './global';
 import { Translations } from './translations';
 
@@ -27,6 +29,10 @@ export type ZhongwenConfig = {
 
 export type UkrainianConfig = {
   [key in UkrainianService['variant']]: ServiceConfig;
+};
+
+export type UzbekConfig = {
+  [key in UzbekService['variant']]: ServiceConfig;
 };
 
 export type ServiceConfig = {
@@ -84,7 +90,6 @@ export type ServiceConfig = {
   };
   translations: Translations;
   mostRead: MostRead;
-  mostWatched: MostWatched;
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
@@ -95,7 +100,7 @@ export type ServiceConfig = {
   }[];
   scriptLink?: {
     text: string;
-    variant: string;
+    variant: Variants;
   };
   timezone: string;
   liveRadioOverrides?: {
@@ -129,13 +134,6 @@ export interface MostRead {
   lastUpdated: string;
   numberOfItems: number;
   hasMostRead: boolean;
-  onIdxPage?: boolean;
-}
-
-export interface MostWatched {
-  header: string;
-  numberOfItems?: number;
-  hasMostWatched: boolean;
 }
 
 export interface RadioSchedule {
@@ -144,8 +142,6 @@ export interface RadioSchedule {
   frequenciesPageLabel?: string;
   header?: string;
   durationLabel?: string;
-  onIdxPage?: boolean;
-  idxPagePosition?: string;
 }
 
 export interface Recommendations {
@@ -156,20 +152,17 @@ export interface Recommendations {
   };
 }
 
+export interface FooterLink {
+  href: string;
+  text: string;
+  id?: string | null;
+  lang?: string;
+}
+
 export interface Footer {
-  trustProjectLink?: {
-    href: string;
-    text: string;
-  };
-  externalLink?: {
-    href: string;
-    text: string;
-  };
-  links?: {
-    href: string;
-    text: string;
-    id?: string | null;
-    lang?: string | null;
-  }[];
+  trustProjectLink?: FooterLink;
+  externalLink?: FooterLink;
+  links?: FooterLink[];
   copyrightText?: string;
+  collectiveNewsroomText?: string;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from '../react-testing-library-with-providers';
 import PaginationComponent from '.';
 
-// eslint-disable-next-line react/prop-types
 const renderComponent = ({
   activePage = 1,
   pageCount = 2,

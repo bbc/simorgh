@@ -171,6 +171,61 @@
         "title": "برنامه‌های رادیو",
         "visualProminence": "NORMAL",
         "visualStyle": "COLLECTION"
+      },
+      {
+        "title": "Radio Schedule",
+        "curationId": "urn:bbc:programmes:available-episodes:bbc_dari_radio",
+        "curationType": "available-episodes",
+        "radioSchedule": [
+          {
+            "id": "p0hq1k3j",
+            "state": "next",
+            "startTime": "2024-05-15T16:00:00.000Z",
+            "link": "/persian/bbc_dari_radio/w172zpp9jvgp59x",
+            "brandTitle": "خبر و نظر",
+            "summary": "برنامه نویسی از سرویس بی بی سی فارسی",
+            "duration": "PT29M30S"
+          },
+          {
+            "id": "p0hq0jk4",
+            "state": "onDemand",
+            "startTime": "2024-05-15T14:30:00.000Z",
+            "link": "/persian/bbc_dari_radio/w3ct6m5z",
+            "brandTitle": "بحث هفته",
+            "summary": "در این برنامه، مهم ترین مسایل روز مرتبط به افغانستان وجهان با نگاه ژرف با حضور صاحب نظران و مقامات بررسی می شود.",
+            "duration": "PT29M30S"
+          },
+          {
+            "id": "p0hq0jk2",
+            "state": "onDemand",
+            "startTime": "2024-05-15T14:00:00.000Z",
+            "link": "/persian/bbc_dari_radio/w3ct6lhj",
+            "brandTitle": "مجله شامگاهی",
+            "summary": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
+            "duration": "PT30M"
+          },
+          {
+            "id": "p0hpvn00",
+            "state": "onDemand",
+            "startTime": "2024-05-15T02:30:00.000Z",
+            "link": "/persian/bbc_dari_radio/w3ct6l7g",
+            "brandTitle": "چشم انداز بامدادی 1",
+            "summary": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+            "duration": "PT29M30S"
+          }
+        ]
+      },
+      {
+        "curationId": "urn:bbc:tipo:list:b9b4842d-b1a7-4ada-a14d-52b76c43862f",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "VJ",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER",
+        "link": "https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed",
+        "embed": {
+          "html": "<div>VJ Embed</div>"
+        }
       }
     ],
     "activePage": 1,

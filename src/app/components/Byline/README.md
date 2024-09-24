@@ -1,5 +1,3 @@
-# Byline
-
 ## Description
 
 A Byline component with all relevant article's author information.

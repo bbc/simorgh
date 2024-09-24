@@ -1,0 +1,399 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Coding Standards/Migrating Legacy Components" />
+
+# Coding standards: Migrating Legacy Components
+
+## Props / Typing
+
+### Do not define `children` as an interface prop
+
+There are helpers in React which will accept `children` as a prop (with the appropriate type) without us having to declare it.
+
+### Before
+
+```jsx
+
+interface MyComponentProps {
+  children: React.Node,
+  prop1: string,
+  ...
+}
+
+const MyComponent = ({
+  prop1,
+  children
+}: MyComponentProps) => {
+  return (
+  <TheComponent prop1={prop1}>
+    {children}
+  </>
+  );
+}
+```
+
+### After
+
+```jsx
+
+import { PropsWithChildren } from 'react';
+
+interface MyComponentProps {
+  prop1: string,
+  ...
+}
+
+const MyComponent = ({
+  prop1,
+  children
+}: PropsWithChildren<MyComponentProps>) => {
+  return (
+  <TheComponent prop1={prop1}>
+    {children}
+  </>
+  );
+}
+```
+
+## Where appropriate, add new types/interfaces to a `types.ts` file next to the component
+
+This keeps all types in a single location, which can be easily imported when required. It is recommended to do this if the type/interface declaration is required to be in a shared (but not global) location, if it is used by other components.
+
+### Before
+
+**(index.tsx)**
+
+```jsx
+
+interface MyComponentProps {
+  prop1: string,
+  ...
+}
+
+const MyComponent = ({ prop1 }: MyComponentProps) => {
+  ...
+}
+```
+
+### After
+
+**(types.ts)**
+
+```jsx
+export interface MyComponentProps {
+  prop1: string,
+  ...
+}
+```
+
+**(index.ts)**
+
+```jsx
+import { MyComponentProps } from './types';
+
+const MyComponent = ({ prop1 }: MyComponentProps) => {
+  ...
+}
+```
+
+## ⚠️ When not to declare types/interfaces in a seperate `types.ts` file
+
+Usually if it makes more sense to keep the type/interface declaration right next to the component if it is not required or used anywhere else.
+
+## Styling
+
+### Use emotion's `css` library instead of `styled`
+
+Follow the guidelines outlined in [Emotion Docs](https://emotion.sh/docs/css-prop) about how to convert from styled → css
+
+### Before
+
+**(index.jsx)**
+
+```jsx
+
+const StyledContainer = styled.{html primitive element}`
+  color: ${props => props.theme.palette.BLACK}
+  text-align: center;
+```
+
+### After
+
+**(index.styles.ts)**
+
+```jsx
+import { css, Theme } from '@emotion/react';
+
+const styles = {
+  link: ({ palette }: Theme) =>
+    css({
+      color: palette.BLACK,
+      textAlign: 'center',
+    }),
+};
+
+export default styles;
+```
+
+_Ensure that the `jsx` function is imported from the `@emotion/react` library, per the [https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact](https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact) docs._
+
+**(index.tsx)**
+
+```jsx
+
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
+
+import styles from './index.styles';
+
+...
+
+<a css={styles.link} href={href}>Link Text Here</a>
+```
+
+## Migrating `fontVariants` and `fontSizes`
+
+### Before
+
+`script` and `service` were passed as props to the styled component, and used to determine the font size based on script , and the font variant, based on `service`.
+
+**(index.jsx)**
+
+```jsx
+const StyledLink = styled.a`
+  /* Font Size */
+  ${({ script }) => script && getCanon(script)}
+  /* Font Variant */
+  ${({ service }) => getSerifMedium(service)}
+  ...otherProps
+`;
+```
+
+### After
+
+**(index.styles.ts)**
+
+```jsx
+
+import { css, Theme } from '@emotion/react';
+
+const styles = {
+  link: ({ fontSizes, fontVariants }: Theme) => css({
+    ...fontSizes.canon,
+    ...fontVariants.serifMedium
+    ...otherProps
+  }),
+};
+
+export const styles;
+```
+
+### Font Sizes Mappings
+
+| Before                                                                                                                                                     | After                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `${({ script }) => script && getCanon(script)}` <br /> **OR** <br />`${({ script }) => getCanon(script)}` <br /> **OR** <br /> `${() => getCanon(script)}` | `...fontSizes.canon` |
+
+### Font Variants Mappings
+
+| Before                                                                                                | After                         |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------- |
+| `${({ service }) => getSerifMedium(service)}` <br /> **OR** <br /> `${() => getSerifMedium(service)}` | `...fontVariants.serifMedium` |
+
+## Migrating Media Queries
+
+### Before
+
+```jsx
+const StyledLink = styled.a`
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    ...cssForGroup
+  }
+`;
+```
+
+### After
+
+```jsx
+import { css, Theme } from '@emotion/react';
+
+const styles = {
+  link: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_2_MIN_WIDTH]: {
+        ...cssForGroup,
+      },
+    }),
+};
+
+export default styles;
+```
+
+### Media Query / Breakpoint Mappings
+
+| Before                                                                                                   | After                         |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **Min Widths**                                                                                           |                               |
+| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_1_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_2_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_3_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_4_MIN_WIDTH]: {`   |
+| `@media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_5_MIN_WIDTH]: {`   |
+| **Max Widths**                                                                                           |                               |
+| `@media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_0_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_1_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_2_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_3_MAX_WIDTH]: {`   |
+| `@media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_4_MAX_WIDTH]: {`   |
+| **Min and Max Widths**                                                                                   |                               |
+| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_ONLY]: {`        |
+| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_2_ONLY]: {`        |
+| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_AND_GROUP_2]: {` |
+| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_3_ONLY]: {`        |
+| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_4_ONLY]: {`        |
+| **Forced Colours/High Contrast**                                                                         |                               |
+| `@media screen and (forced-colors: active)`                                                              | `[mq.FORCED_COLOURS]: {`      |
+
+### Migrating GEL Breakpoints (Spacing)
+
+| Rems (Pixels)  | GEL Spacing              | New Theme Spacing          |
+| -------------- | ------------------------ | -------------------------- |
+| 0.25rem (4px)  | `GEL_SPACING_HLF`        | `${spacings.HALF}rem`      |
+| 0.5rem (8px)   | `GEL_SPACING`            | `${spacings.FULL}rem`      |
+| 0.75rem (12px) | `GEL_SPACING_HLF_TRPL`   | `0.75rem`                  |
+| 1rem (16px)    | `GEL_SPACING_DBL`        | `${spacings.DOUBLE}rem`    |
+| 1.5rem (24px)  | `GEL_SPACING_TRPL`       | `${spacings.TRIPLE}rem`    |
+| 2rem (32px)    | `GEL_SPACING_QUAD`       | `${spacings.QUADRUPLE}rem` |
+| 2.5rem (40px)  | `GEL_SPACING_QUIN`       | `${spacings.QUINTUPLE}rem` |
+| 3rem (48px)    | `GEL_SPACING_SEXT`       | `${spacings.SEXTUPLE}rem`  |
+| 3.5rem (56px)  | `GEL_SPACING_SEPT`       | `3.5rem`                   |
+| **Other**      |                          |                            |
+| 0.5rem (8px)   | `GEL_MARGIN_BELOW_400PX` | `${MARGIN_BELOW_400PX}`    |
+| 1rem (16px)    | `GEL_MARGIN_ABOVE_400PX` | `${MARGIN_ABOVE_400PX}`    |
+| 0.5rem (8px)   | `GEL_GUTTER_BELOW_600PX` | `${GUTTER_BELOW_600PX}`    |
+| 1rem (16px)    | `GEL_GUTTER_ABOVE_600PX` | `${GUTTER_ABOVE_600PX}`    |
+
+## Using `CSS` library with values driven by props
+
+When using the `styled` library it was possible to use any prop to return different css based on conditional logic.
+
+### Before
+
+_It was possible to pass in props to conditionally change the css_
+
+```jsx
+
+const Timestamp = styled.time`
+  ..timestampStyledProps
+  color: ${props => props.isAmp ? props.theme.palette.BLACK : props.theme.palette.GREY_3: }
+`
+```
+
+### After
+
+See [https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/components/FrostedGlassPromo/withData.tsx#L71-L76](https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/components/FrostedGlassPromo/withData.tsx#L71-L76) as an example.
+
+_Here, the value of color is based on the value of the `isAmp` variable, and this variation is added to the list of css functions already applied to the component._
+
+```jsx
+
+css={theme => [
+  styles.timestamp,
+  {
+    color: isAmp ? theme.palette.BLACK : theme.palette.GREY_3,
+  },
+]}
+```
+
+## Using `CSS` library with values driven by props within media queries
+
+When using the `styled` library it was possible to use any prop to return different css within a media query.
+
+### Before
+
+e.g. https://github.com/bbc/simorgh/blob/3dd7ead41db069ce638da887fbfe47d13e63d119/src/app/legacy/components/Footer/List/index.jsx#L49-L58
+
+In this example, `itemCount` and `trustProjectLink` are used to calculate the number of rows in `grid-template-rows`
+
+```jsx
+styled.ul`
+  ...
+    @media
+    (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN})
+    and
+    (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-column-gap: ${GEL_SPACING};
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(
+      ${({ itemCount, trustProjectLink }) =>
+        getRowCount(itemCount, 2, trustProjectLink)},
+      auto
+    );
+    column-count: 2;
+  }
+`;
+```
+
+### After
+
+In this example, we have created a function which can take `itemCount` and `trustProjectLink` as a prop, and return the correct `gridTemplateRows` for the respective breakpoints.
+
+```ts
+const gridTemplateRows = ({
+  itemCount,
+  trustProjectLink,
+}: {
+  itemCount: number;
+  trustProjectLink?: FooterLink;
+}) =>
+  css({
+    [GROUP_1_AND_GROUP_2]: {
+      gridTemplateRows: `repeat(${getRowCount({
+        itemCount,
+        columns: 2,
+        trustProjectLink,
+      })}, auto)`,
+    },
+    ...
+  })
+
+```
+
+This function is then called from the component which requires it: https://github.com/bbc/simorgh/blob/2972055de18e470667be6a58b9c796f79eaa0e07/src/app/components/Footer/List/index.tsx#L18-L30
+
+```tsx
+css={[
+...
+  gridTemplateRows({
+    itemCount: elements.length,
+    trustProjectLink,
+  }),
+]}
+```
+
+# General Standards
+
+## Use `@ts-expect-error` instead of `@ts-ignore` to suppress unfixable / expected TypeScript errors
+
+### Why?
+
+Sometimes Typescript errors are unavoidable / cannot be fixed (usually in tests). One way to make the TS compiler ignore errors is to use `@ts-ignore`. However, usage of `@ts-expect-error` is preferred, because it requires a description explaining why the error is to be expected. If the error is then fixed in future, the TS compiler will require removal of the `@ts-expect-error` comment.
+
+### Before
+
+_No idea why this syntax is ignored, and will remain this way until someone revisits the code and removes the comment._
+
+```jsx
+// @ts-ignore
+broken.typescript.syntax;
+```
+
+### After
+
+_A reason explaining why the syntax is ignored. Once the fix is merged in a future PR, the TS compiler should throw an error, meaning that this comment must then be removed._
+
+```jsx
+// @ts-expect-error ignoring broken TS syntax until ticket 12345 is merged
+broken.typescript.syntax;
+```

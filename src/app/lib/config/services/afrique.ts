@@ -74,6 +74,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgent',
         postedAt: 'Posté à',
         summary: 'Points clés',
+        shareButtonText: 'Partager',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Points clés',
       error: {
@@ -270,11 +275,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Les plus vus',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Journaux et Magazines',
@@ -334,10 +334,6 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
-        title: 'Présidentielle Sénégal 2024',
-        url: '/afrique/topics/c0vj3r1jjd2t',
-      },
-      {
         title: 'Afrique',
         url: '/afrique/topics/cvqxn2k7kv7t',
       },
@@ -348,10 +344,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Santé',
         url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
-        title: 'Bien-être',
-        url: '/afrique/topics/c0vmyy90q8zt',
       },
       {
         title: 'Science et technologie',
@@ -371,7 +363,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Nos émissions',
-        url: '/afrique/media-54074891',
+        url: '/afrique/topics/c88nzggm8gxt',
       },
       {
         title: 'Ecoutez en direct',

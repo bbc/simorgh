@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
-import { oneOfType, object, arrayOf, shape, string } from 'prop-types';
 import Caption from '#psammead/psammead-caption/src';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -37,9 +36,12 @@ const chooseOffscreenText = (
 const renderParagraph = block => {
   const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
   return (
-    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
+    <span
+      data-testid="caption-paragraph"
+      key={pathOr(null, ['0', 'id'], paragraphBlock)}
+    >
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
-    </p>
+    </span>
   );
 };
 const renderCaption = (
@@ -84,15 +86,6 @@ const CaptionContainer = ({ block, type }) => {
   );
 
   return renderCaption(paragraphBlocks, offscreenText, script, service, dir);
-};
-
-CaptionContainer.propTypes = {
-  block: shape({
-    model: shape({
-      blocks: arrayOf(oneOfType([string, object])).isRequired,
-    }).isRequired,
-  }).isRequired,
-  type: string.isRequired,
 };
 
 export default CaptionContainer;

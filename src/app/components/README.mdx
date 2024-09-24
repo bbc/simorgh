@@ -1,0 +1,65 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Simorgh structure/components directory" />
+
+# Components
+
+The components in this directory adhere to our [Coding Standards](../../../docs/Coding-Standards/README.md) in order to ensure easy maintenance, use of best practices, and avoid the mistakes we made when maintaining [legacy components](../legacy/README.md).
+
+## Custom React Testing Library
+
+`react-testing-library-with-providers.tsx` is a utility that re-exports everything from React Testing Library but with a custom render method that wraps everything in all the providers used in the app. This eliminates the need to to have to wrap every component's unit tests in providers. Instead, you can replace use of `@testing-library/react` with this custom version.
+
+This idea comes from React Testing Library's own docs. See [Custom Render](https://testing-library.com/docs/react-testing-library/setup/#custom-render) for more info.
+
+**Usage**
+
+```tsx
+// import { render, act } from '@testing-library/react';
+import { render, screen } from '../react-testing-library-with-providers'; // import from the custom React Testing Library
+
+it('should render the title', async () => {
+  // This can be a typical component test setup
+  //   render(
+  //     <ThemeProvider service="mundo">
+  //       <ToggleContextProvider toggles={{ adsEnabled: true }}>
+  //         <ServiceContextProvider service="mundo">
+  //           <RequestContextProvider
+  //             bbcOrigin="https://www.test.bbc.com"
+  //             pageType="article"
+  //             isAmp="false"
+  //             service="mundo"
+  //             pathname="/news/articles/c0g992jmmkko"
+  //           >
+  //             <SomeComponent />
+  //           </RequestContextProvider>
+  //         </ServiceContextProvider>
+  //       </ToggleContextProvider>
+  //     </ThemeProvider>,
+  //   );
+  render(<SomeComponent />); // this render method comes packaged with all of the providers
+
+  expect(screen.getByText('This is the title')).toBeInTheDocument();
+});
+```
+
+The custom render method uses default values in the providers. The default values are:
+
+| prop                   | value                                                              |
+| ---------------------- | ------------------------------------------------------------------ |
+| isAmp                  | false                                                              |
+| pageData               | [c0g992jmmkko.json](../../../data/news/articles/c0g992jmmkko.json) |
+| pageType               | 'article'                                                          |
+| pathname               | '/news/articles/c0g992jmmkko'                                      |
+| service                | 'news'                                                             |
+| toggles                | {}                                                                 |
+| variant                | 'default'                                                          |
+| showAdsBasedOnLocation | false                                                              |
+
+You can override any of these values using the options argument in the render method:
+
+```tsx
+render(<SomeComponent />, {
+  service: 'arabic',
+});
+```

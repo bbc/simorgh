@@ -242,7 +242,7 @@ exports[`AMP Home Page Footer Cookie Settings Button should match text and on ha
 
 exports[`AMP Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`AMP Home Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`AMP Home Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`AMP Home Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -298,14 +298,14 @@ exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
 exports[`AMP Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "بودكاست",
-  "url": "/arabic/tv-and-radio-52067221",
+  "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 
 exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "برامجنا",
-  "url": "/arabic/tv-and-radio-37728883",
+  "url": "/arabic/topics/crgyknwdlwnt",
 }
 `;
 

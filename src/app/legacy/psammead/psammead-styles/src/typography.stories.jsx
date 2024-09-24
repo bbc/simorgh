@@ -1,11 +1,7 @@
 import React from 'react';
-import { shape, func } from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import * as typographies from '#psammead/gel-foundations/src/typography';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import notes from '../README.md';
 
 const TypographyText = styled.p`
@@ -15,20 +11,13 @@ const TypographyText = styled.p`
       : ''}
 `;
 
-TypographyText.propTypes = {
-  script: shape(scriptPropType).isRequired,
-  typographyFunc: func.isRequired,
-};
-
 const typographyStory = (typographyFunc, text, script) => (
   <TypographyText script={script} typographyFunc={typographyFunc}>
     {text}
   </TypographyText>
 );
 
-const stories = storiesOf('Others/Typography', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob());
+const stories = storiesOf('Others/Typography', module);
 
 Object.keys(typographies)
   .filter(typographyName => typeof typographies[typographyName] === 'function')

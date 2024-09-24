@@ -19,7 +19,6 @@ const styles = Object.keys(typography)
   })
   .filter(style => style);
 
-// eslint-disable-next-line react/prop-types
 const ExampleTimestamp = ({ children, ...props }) => {
   const padding = boolean('Padding', true);
   const style = select('Typography', styles, 'Brevier');

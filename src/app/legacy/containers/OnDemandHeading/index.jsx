@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
 import {
@@ -50,12 +49,12 @@ const Subheading = styled.span`
 `;
 
 const OnDemandHeadingContainer = ({
-  idAttr,
+  idAttr = null,
   brandTitle,
   releaseDateTimeStamp,
-  episodeTitle,
-  ariaHidden,
-  className,
+  episodeTitle = '',
+  ariaHidden = false,
+  className = '',
 }) => {
   const { script, service, timezone, datetimeLocale } =
     useContext(ServiceContext);
@@ -75,35 +74,21 @@ const OnDemandHeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
-      className={className}
+      {...(className && { className })}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
-        <BrandTitle script={script}>{brandTitle}</BrandTitle>
+        <BrandTitle script={script} data-testid="brand-title">
+          {brandTitle}
+        </BrandTitle>
         <VisuallyHiddenText>, </VisuallyHiddenText>
-        <Subheading script={script} service={service}>
+        <Subheading script={script} service={service} data-testid="sub-heading">
           {episodeTitle || formattedTimestamp}
         </Subheading>
       </TextWrapper>
     </Headline>
   );
-};
-
-OnDemandHeadingContainer.propTypes = {
-  idAttr: string,
-  brandTitle: string.isRequired,
-  releaseDateTimeStamp: number.isRequired,
-  episodeTitle: string,
-  ariaHidden: bool,
-  className: string,
-};
-
-OnDemandHeadingContainer.defaultProps = {
-  idAttr: null,
-  episodeTitle: null,
-  ariaHidden: false,
-  className: '',
 };
 
 export default OnDemandHeadingContainer;
