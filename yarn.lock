@@ -5467,16 +5467,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.6.11":
-  version: 2.6.11
-  resolution: "@types/node-fetch@npm:2.6.11"
-  dependencies:
-    "@types/node": "npm:*"
-    form-data: "npm:^4.0.0"
-  checksum: 10/c416df8f182ec3826278ea42557fda08f169a48a05e60722d9c8edd4e5b2076ae281c6b6601ad406035b7201f885b0257983b61c26b3f9eb0f41192a807b5de5
-  languageName: node
-  linkType: hard
-
 "@types/node-forge@npm:^1.3.0":
   version: 1.3.11
   resolution: "@types/node-forge@npm:1.3.11"
@@ -16177,7 +16167,6 @@ __metadata:
     "@types/js-cookie": "npm:^3.0.3"
     "@types/jsdom": "npm:^21.0.0"
     "@types/loadable__component": "npm:5.13.9"
-    "@types/node-fetch": "npm:^2.6.11"
     "@types/ramda": "npm:0.30.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
