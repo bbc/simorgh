@@ -18,7 +18,7 @@ interface FetchDataFromBffParams {
   variant?: Variants;
   isAmp?: boolean;
   page?: string;
-  getAgent: GetAgent;
+  getAgent?: GetAgent;
 }
 
 type OptHeaders =
@@ -50,7 +50,7 @@ export default async ({
     page,
   });
 
-  const agent = useCerts ? await getAgent() : undefined;
+  const agent = useCerts && getAgent ? await getAgent() : undefined;
   const timeout = useCerts ? undefined : 60000;
 
   const optHeaders: OptHeaders = isLocal
