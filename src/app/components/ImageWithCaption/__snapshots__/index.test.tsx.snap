@@ -40,19 +40,18 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 .emotion-3 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #545658;
   margin-top: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  width: 100%;
+  margin-inline: 0.5rem 0;
+  padding-inline: 0.5rem;
   width: calc(100% - 0.5rem);
-  margin-left: 0.5rem;
-  border-left: 0.0625rem solid #6E6E73;
+  border-inline-start: 0.0625rem solid #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -69,10 +68,19 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    width: calc(100% - 1rem);
+    margin-inline: 1rem 0;
+    padding-inline: 0.5rem 1rem;
+  }
+}
+
 @media (min-width: 63rem) {
   .emotion-3 {
     width: 100%;
     margin: 0.5rem 0 0;
+    padding-inline: 0.5rem 0;
   }
 }
 
@@ -85,23 +93,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   padding-bottom: 0;
 }
 
-@media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-3 {
-    width: calc(100% - 1rem);
-    margin-left: 1rem;
-    padding-right: 1rem;
-    padding-left: 0.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-3 {
-    padding-right: 0;
-    padding-left: 0.5rem;
-  }
-}
-
-.emotion-5 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -131,14 +123,14 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
       />
     </div>
     <figcaption
-      class="emotion-3 emotion-4"
+      class="emotion-3"
       dir="ltr"
     >
       <span
         role="text"
       >
         <span
-          class="emotion-5"
+          class="emotion-4"
         >
           Image caption, 
         </span>
