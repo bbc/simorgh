@@ -8,6 +8,7 @@ import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json';
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
+import persianPodcastPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
@@ -23,6 +24,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
+import * as MediaLoader from '#app/components/MediaLoader';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -485,5 +487,46 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(scheduleWrapper).not.toBeInTheDocument();
+  });
+
+  describe('Page identifier overrides ', () => {
+    it('should use the derived page identifier to render the audio player for Persian Podcast', async () => {
+      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+      fetchMock.mockResponse(JSON.stringify(persianPodcastPageData));
+      // @ts-expect-error partial data required for testing purposes
+      const { pageData } = await getInitialData({
+        path: 'some-ondemand-radio-path',
+        pageType: MEDIA_PAGE,
+        toggles,
+      });
+      // @ts-expect-error react testing library returns the required query
+      const { container, getByText } = await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'persian',
+      });
+      const expectedMediaOverrides = {
+        model: {
+          language: 'ps',
+          pageIdentifierOverride:
+            'pashto.bbc_pashto_tv.tv.w172zmsln64zg23.page',
+          pageTitleOverride: ' د بي بي سي خبرونه ',
+        },
+        type: 'mediaOverrides',
+      };
+
+      await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'pashto',
+      });
+
+      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+      const { blocks } = mediaLoaderProps;
+
+      expect(mediaLoaderSpy).toHaveBeenCalled();
+      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
+    });
   });
 });
