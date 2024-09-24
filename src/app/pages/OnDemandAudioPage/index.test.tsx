@@ -9,6 +9,7 @@ import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json';
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
 import persianPodcastPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
+import bengaliPodcastPageData from '#data/bengali/bbc_bangla_radio/p030vjwg.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
@@ -532,7 +533,7 @@ describe('OnDemand Radio Page ', () => {
     it('should use the derived page identifier to render the audio player for Bengali Brand', async () => {
       const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
-      fetchMock.mockResponse(JSON.stringify(persianPodcastPageData));
+      fetchMock.mockResponse(JSON.stringify(bengaliPodcastPageData));
       // @ts-expect-error partial data required for testing purposes
       const { pageData } = await getInitialData({
         path: 'some-ondemand-radio-path',
@@ -548,7 +549,8 @@ describe('OnDemand Radio Page ', () => {
       const expectedMediaOverrides = {
         model: {
           language: 'bn',
-          pageIdentifierOverride: 'bengali.bbc_bangla_radio.p030vjwg.page',
+          pageIdentifierOverride:
+            'bengali.bbc_bangla_radio.w172yylmc0c11jh.page',
           pageTitleOverride: 'প্রবাহ',
         },
         type: 'mediaOverrides',
