@@ -262,6 +262,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   padding-bottom: 0;
 }
 
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-23 {
+    margin-inline: 1rem 0;
+  }
+}
+
 @media (max-width: 14.9375rem) {
   .emotion-25 {
     padding: 0 0.5rem;
