@@ -8,6 +8,7 @@ import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
+import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
@@ -16,12 +17,7 @@ interface Props extends PropsWithChildren {
   isAmp?: boolean;
   isApp?: boolean;
   pageData?: object;
-  atiData?: {
-    contentId?: string;
-    contentType?: string;
-    pageIdentifier?: string;
-    pageTitle?: string;
-  };
+  atiData?: ATIData;
   bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;
