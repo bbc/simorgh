@@ -266,7 +266,9 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <Caption
             block={captionBlock}
             type={mediaType}
-            css={styles.captionPortrait}
+            css={
+              orientation === 'portrait' ? styles.captionPortrait : undefined
+            }
           />
         )}
       </figure>
