@@ -147,10 +147,12 @@ export default class AppDocument extends Document<DocProps> {
       case isAmp:
         return (
           <AmpRenderer
+            bodyContent={<Main />}
             helmetLinkTags={helmetLinkTags}
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
+            ids={ids}
             styles={css}
             title={title}
           />

@@ -172,7 +172,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isApp,
       isAmp,
       isLite,
-      isAmp: false,
       isNextJs: true,
       page: page || null,
       pageData: data?.pageData
