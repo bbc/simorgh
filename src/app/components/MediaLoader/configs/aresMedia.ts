@@ -59,9 +59,10 @@ export default ({
 
   const versionID = versionsBlock?.versionId ?? '';
 
-  const orientation =
-    ORIENTATION_MAPPING[versionsBlock?.types?.[0]] ??
-    ORIENTATION_MAPPING.Original;
+  const orientation = embedded
+    ? ORIENTATION_MAPPING.Original
+    : ORIENTATION_MAPPING[versionsBlock?.types?.[0]] ??
+      ORIENTATION_MAPPING.Original;
 
   const format = aresMediaMetadata?.format;
 
