@@ -1,5 +1,6 @@
 import colours from 'colors';
 import '@testing-library/jest-dom';
+import themes from '#app/components/ThemeProvider/themes/loadableConfig';
 
 // Errors
 const FAILED_PROP = 'Failed prop';
@@ -27,7 +28,9 @@ const getFormattedMessage = (message, rest) => {
   let theMessage = message;
 
   if (typeof message === 'object') {
-    theMessage = JSON.stringify(message);
+    if (message?.stack) {
+      theMessage = message?.stack.toString();
+    } else theMessage = JSON.stringify(message);
   }
 
   return theMessage.replace('%s', rest);
