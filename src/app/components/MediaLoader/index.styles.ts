@@ -5,7 +5,9 @@ const commonMarginSpacing = ({ mq, spacings }: Theme) =>
   css({
     marginInline: `${spacings.FULL}rem`,
     [mq.GROUP_2_MIN_WIDTH]: {
-      marginInline: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_3_MAX_WIDTH]: {
+        marginInline: `${spacings.DOUBLE}rem`,
+      },
     },
     [mq.GROUP_4_MIN_WIDTH]: {
       marginInline: 0,
@@ -16,16 +18,16 @@ export const mediaPortraitStyles = ({ mq }: Theme) => [
   css({
     aspectRatio: '9 / 16',
     maxWidth: `${pixelsToRem(185)}rem`,
-    [mq.GROUP_1_MIN_WIDTH]: {
+    [mq.GROUP_1_ONLY]: {
       maxWidth: `${pixelsToRem(256)}rem`,
     },
-    [mq.GROUP_2_MIN_WIDTH]: {
+    [mq.GROUP_2_ONLY]: {
       maxWidth: `${pixelsToRem(274)}rem`,
     },
-    [mq.GROUP_3_MIN_WIDTH]: {
+    [mq.GROUP_3_ONLY]: {
       maxWidth: `${pixelsToRem(200)}rem`,
     },
-    [mq.GROUP_3_MIN_WIDTH]: {
+    [mq.GROUP_4_MIN_WIDTH]: {
       maxWidth: `${pixelsToRem(190)}rem`,
     },
   }),
@@ -59,13 +61,13 @@ export default {
     mediaPortraitStyles,
   ],
 
-  titlePortrait: ({ fontSizes, fontVariants, mq, spacings }: Theme) => [
+  titlePortrait: ({ mq, fontSizes, fontVariants, spacings }: Theme) => [
     css({
       display: 'block',
       ...fontSizes.doublePica,
       ...fontVariants.sansBold,
       paddingBottom: `${spacings.DOUBLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_2_ONLY]: {
         paddingBottom: `${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
@@ -74,4 +76,11 @@ export default {
     }),
     commonMarginSpacing,
   ],
+
+  captionPortrait: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_3_ONLY]: {
+        marginInline: `${spacings.DOUBLE}rem 0`,
+      },
+    }),
 };
