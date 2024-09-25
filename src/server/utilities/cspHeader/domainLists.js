@@ -7,7 +7,6 @@ export const bbcDomains = [
   '*.bbc.com',
   '*.bbci.co.uk',
   '*.bbci.com',
-  'http://localhost.bbc.com',
 ];
 
 export const advertisingServiceCountryDomains = [

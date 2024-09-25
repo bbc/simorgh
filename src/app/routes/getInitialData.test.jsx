@@ -19,7 +19,6 @@ const pageTypesToSkip = [
   TOPIC_PAGE,
   ARTICLE_PAGE,
   HOME_PAGE,
-  'cpsAsset',
   FRONT_PAGE,
   MOST_READ_PAGE,
 ];
