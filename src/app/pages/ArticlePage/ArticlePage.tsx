@@ -16,6 +16,8 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
+import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
+import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
 import {
   ARTICLE_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -41,6 +43,7 @@ import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 
+import useOptimizelyScrollDepth from '#app/hooks/useOptimizelyScrollDepth';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -207,6 +210,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics && topics.length > 0 && !isTransliterated,
   );
 
+  useOptimizelyScrollDepth();
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -282,6 +287,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           mobileDivider={showTopics}
         />
       )}
+      <OptimizelyArticleCompleteTracking />
+      <OptimizelyPageViewTracking />
     </div>
   );
 };
