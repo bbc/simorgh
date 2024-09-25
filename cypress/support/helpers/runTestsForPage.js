@@ -78,7 +78,7 @@ const runTestsForPage = ({
            * Scheduled E2Es: Test / Live environment, when smoke: false
            * Deployment Pipeline: Test / Live environment, when smoke: true
            */
-          if (getAppEnv === 'local' && pageType === 'mediaAssetPage') return;
+          if (getAppEnv() === 'local' && pageType === 'mediaAssetPage') return;
 
           const testArgs = {
             service,
