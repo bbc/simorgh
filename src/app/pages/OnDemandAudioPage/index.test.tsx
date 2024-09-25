@@ -503,8 +503,7 @@ describe('OnDemand Radio Page ', () => {
         pageType: MEDIA_PAGE,
         toggles,
       });
-      // @ts-expect-error react testing library returns the required query
-      const { container, getByText } = await renderPage({
+      await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'persian',
