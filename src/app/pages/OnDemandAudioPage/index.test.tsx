@@ -8,10 +8,10 @@ import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json';
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
-import persianPodcastPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
-import bengaliPageData from '#data/bengali/bbc_bangla_radio/p030vjwg.json';
-import indonesianPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
-import persianDariPageData from '#data/persian/bbc_dari_radio/'
+import persianPodcastBrandPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
+import bengaliBrandPageData from '#data/bengali/bbc_bangla_radio/p030vjwg.json';
+import indonesianBrandPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
+import persianDariEpisodePageData from '#data/persian/bbc_dari_radio/p0340v11.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
@@ -496,15 +496,14 @@ describe('OnDemand Radio Page ', () => {
     it('should use the derived page identifier to render the audio player for Persian Podcast', async () => {
       const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
-      fetchMock.mockResponse(JSON.stringify(persianPodcastPageData));
+      fetchMock.mockResponse(JSON.stringify(persianPodcastBrandPageData));
       // @ts-expect-error partial data required for testing purposes
       const { pageData } = await getInitialData({
         path: 'some-ondemand-radio-path',
         pageType: MEDIA_PAGE,
         toggles,
       });
-      // @ts-expect-error react testing library returns the required query
-      const { container, getByText } = await renderPage({
+      await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'persian',
@@ -535,15 +534,14 @@ describe('OnDemand Radio Page ', () => {
     it('should use the derived page identifier to render the audio player for Bengali Brand', async () => {
       const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
-      fetchMock.mockResponse(JSON.stringify(bengaliPageData));
+      fetchMock.mockResponse(JSON.stringify(bengaliBrandPageData));
       // @ts-expect-error partial data required for testing purposes
       const { pageData } = await getInitialData({
         path: 'some-ondemand-radio-path',
         pageType: MEDIA_PAGE,
         toggles,
       });
-      // @ts-expect-error react testing library returns the required query
-      const { container, getByText } = await renderPage({
+      await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'bengali',
@@ -574,15 +572,14 @@ describe('OnDemand Radio Page ', () => {
     it('should use the derived page identifier to render the audio player for Indonesian Brand', async () => {
       const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
-      fetchMock.mockResponse(JSON.stringify(indonesianPageData));
+      fetchMock.mockResponse(JSON.stringify(indonesianBrandPageData));
       // @ts-expect-error partial data required for testing purposes
       const { pageData } = await getInitialData({
         path: 'some-ondemand-radio-path',
         pageType: MEDIA_PAGE,
         toggles,
       });
-      // @ts-expect-error react testing library returns the required query
-      const { container, getByText } = await renderPage({
+      await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'indonesia',
@@ -612,25 +609,23 @@ describe('OnDemand Radio Page ', () => {
     it('should use the derived page identifier to render the audio player for Persian Dari Episode', async () => {
       const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
-      fetchMock.mockResponse(JSON.stringify(indonesianPageData));
+      fetchMock.mockResponse(JSON.stringify(persianDariEpisodePageData));
       // @ts-expect-error partial data required for testing purposes
       const { pageData } = await getInitialData({
         path: 'some-ondemand-radio-path',
         pageType: MEDIA_PAGE,
         toggles,
       });
-      // @ts-expect-error react testing library returns the required query
-      const { container, getByText } = await renderPage({
+      await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
-        service: 'indonesia',
+        service: 'persian',
       });
       const expectedMediaOverrides = {
         model: {
-          language: 'id',
-          pageIdentifierOverride:
-            'indonesia.bbc_indonesian_radio.w172ywztppckjfb.page',
-          pageTitleOverride: 'Dunia Pagi Ini',
+          language: 'fa',
+          pageIdentifierOverride: 'persian.bbc_dari_radio.w3ct6lbh.page',
+          pageTitleOverride: 'مجله شامگاهی',
         },
         type: 'mediaOverrides',
       };
@@ -638,7 +633,7 @@ describe('OnDemand Radio Page ', () => {
       await renderPage({
         // @ts-expect-error partial data required for testing purposes
         pageData,
-        service: 'indonesia',
+        service: 'persian',
       });
 
       const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
