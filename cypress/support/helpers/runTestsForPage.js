@@ -62,9 +62,9 @@ const runTestsForPage = ({
                 { foo: '123' },
               );
             }
-          });
 
-          visitPage(currentPath, pageType);
+            visitPage(currentPath, pageType);
+          });
 
           const testArgs = {
             service,
