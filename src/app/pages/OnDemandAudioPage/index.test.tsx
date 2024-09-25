@@ -10,6 +10,7 @@ import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttn
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
 import persianPodcastPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
 import bengaliPodcastPageData from '#data/bengali/bbc_bangla_radio/p030vjwg.json';
+import indonesianPodcastPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
@@ -560,6 +561,45 @@ describe('OnDemand Radio Page ', () => {
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'bengali',
+      });
+
+      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+      const { blocks } = mediaLoaderProps;
+
+      expect(mediaLoaderSpy).toHaveBeenCalled();
+      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
+    });
+
+    it('should use the derived page identifier to render the audio player for Indonesian Brand', async () => {
+      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+      fetchMock.mockResponse(JSON.stringify(indonesianPodcastPageData));
+      // @ts-expect-error partial data required for testing purposes
+      const { pageData } = await getInitialData({
+        path: 'some-ondemand-radio-path',
+        pageType: MEDIA_PAGE,
+        toggles,
+      });
+      // @ts-expect-error react testing library returns the required query
+      const { container, getByText } = await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'indonesia',
+      });
+      const expectedMediaOverrides = {
+        model: {
+          language: 'id',
+          pageIdentifierOverride:
+            'indonesia.bbc_indonesian_radio.w172ywztppckjfb.page',
+          pageTitleOverride: 'Dunia Pagi Ini',
+        },
+        type: 'mediaOverrides',
+      };
+
+      await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'indonesia',
       });
 
       const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
