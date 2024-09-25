@@ -9,7 +9,6 @@ import serviceHasPageType from './serviceHasPageType';
 import ampOnlyServices from './ampOnlyServices';
 import visitPage from './visitPage';
 import getAmpUrl from './getAmpUrl';
-import getAppEnv from './getAppEnv';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -63,22 +62,7 @@ const runTestsForPage = ({
                 { foo: '123' },
               );
             }
-
-            if (!(getAppEnv() === 'local' && pageType === 'mediaAssetPage')) {
-              visitPage(currentPath, pageType);
-            }
           });
-
-          /* MAP tests on local are timing out when running on localhost in production mode,
-           * due to CORS / CSP errors when loading the media loader scripts
-           *
-           * For this reason, we will no longer run MAP canonical tests on local environment
-           *
-           * These tests will run on all other environments:
-           * Scheduled E2Es: Test / Live environment, when smoke: false
-           * Deployment Pipeline: Test / Live environment, when smoke: true
-           */
-          if (getAppEnv() === 'local' && pageType === 'mediaAssetPage') return;
 
           const testArgs = {
             service,
