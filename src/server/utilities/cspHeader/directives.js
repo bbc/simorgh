@@ -8,6 +8,7 @@ const advertisingDirectives = {
     'https://*.googlesyndication.com',
     'https://cdn.privacy-mgmt.com',
     'https://*.google.com',
+    'https://*.amazon-adsystem.com',
   ],
   imgSrc: [
     'https://*.adsafeprotected.com',
@@ -18,6 +19,7 @@ const advertisingDirectives = {
     'https://*.gstatic.com',
     'https://*.imrworldwide.com',
     'https://sb.scorecardresearch.com',
+    'https://*.amazon-adsystem.com',
   ],
   scriptSrc: [
     'https://*.adsafeprotected.com',
@@ -34,6 +36,7 @@ const advertisingDirectives = {
     'https://cdn.privacy-mgmt.com',
     'https://*.permutive.com',
     'https://*.webcontentassessor.com',
+    'https://*.amazon-adsystem.com',
     ...advertisingServiceCountryDomains,
   ],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
