@@ -61,13 +61,19 @@ export default {
     mediaPortraitStyles,
   ],
 
-  titlePortrait: ({ mq, fontSizes, fontVariants, spacings }: Theme) => [
+  titlePortrait: ({
+    mq,
+    fontSizes,
+    fontVariants,
+    spacings,
+    palette,
+  }: Theme) => [
     css({
       display: 'block',
       ...fontSizes.doublePica,
       ...fontVariants.sansBold,
       paddingBottom: `${spacings.DOUBLE}rem`,
-      color: 'canvasText',
+      color: palette.BLACK,
       [mq.GROUP_2_ONLY]: {
         paddingBottom: `${spacings.TRIPLE}rem`,
       },
