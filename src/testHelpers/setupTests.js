@@ -1,6 +1,5 @@
 import colours from 'colors';
 import '@testing-library/jest-dom';
-import themes from '#app/components/ThemeProvider/themes/loadableConfig';
 
 // Errors
 const FAILED_PROP = 'Failed prop';
