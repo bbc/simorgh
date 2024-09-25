@@ -64,6 +64,8 @@ const runTestsForPage = ({
             }
           });
 
+          visitPage(currentPath, pageType);
+
           const testArgs = {
             service,
             pageType,
