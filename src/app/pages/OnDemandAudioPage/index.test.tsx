@@ -110,6 +110,7 @@ const getAvailableEpisode = assocPath(
 
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {
+    jest.clearAllMocks();
     process.env = { ...env };
   });
 
@@ -499,14 +500,9 @@ describe('OnDemand Radio Page ', () => {
       fetchMock.mockResponse(JSON.stringify(persianPodcastBrandPageData));
       // @ts-expect-error partial data required for testing purposes
       const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
+        path: 'some-podcast-radio-path',
         pageType: MEDIA_PAGE,
         toggles,
-      });
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'persian',
       });
       const expectedMediaOverrides = {
         model: {
@@ -541,11 +537,7 @@ describe('OnDemand Radio Page ', () => {
         pageType: MEDIA_PAGE,
         toggles,
       });
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'bengali',
-      });
+
       const expectedMediaOverrides = {
         model: {
           language: 'bn',
@@ -579,11 +571,7 @@ describe('OnDemand Radio Page ', () => {
         pageType: MEDIA_PAGE,
         toggles,
       });
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'indonesia',
-      });
+
       const expectedMediaOverrides = {
         model: {
           language: 'id',
@@ -616,11 +604,7 @@ describe('OnDemand Radio Page ', () => {
         pageType: MEDIA_PAGE,
         toggles,
       });
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'persian',
-      });
+
       const expectedMediaOverrides = {
         model: {
           language: 'fa',
@@ -634,6 +618,37 @@ describe('OnDemand Radio Page ', () => {
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'persian',
+      });
+
+      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+      const { blocks } = mediaLoaderProps;
+
+      expect(mediaLoaderSpy).toHaveBeenCalled();
+      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
+    });
+    it('should use the derived page identifier to render the audio player for Pashto Brand', async () => {
+      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+      fetchMock.mockResponse(JSON.stringify(pashtoPageData));
+      // @ts-expect-error partial data required for testing purposes
+      const { pageData } = await getInitialData({
+        path: 'some-ondemand-radio-path',
+        pageType: MEDIA_PAGE,
+        toggles,
+      });
+      const expectedMediaOverrides = {
+        model: {
+          language: 'ps',
+          pageIdentifierOverride: 'pashto.bbc_pashto_radio.w3ct0lz1.page',
+          pageTitleOverride: 'ماښامنۍ خپرونه',
+        },
+        type: 'mediaOverrides',
+      };
+
+      await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'pashto',
       });
 
       const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
