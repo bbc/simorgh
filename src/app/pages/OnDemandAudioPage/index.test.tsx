@@ -11,6 +11,7 @@ import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json'
 import persianPodcastBrandPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
 import indonesianBrandPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
 import persianDariEpisodePageData from '#data/persian/bbc_dari_radio/p0340v11.json';
+import persianEpisodePageData from '#data/persian/bbc_persian_radio/p0340vyx.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
@@ -576,6 +577,38 @@ describe('OnDemand Radio Page ', () => {
           language: 'fa',
           pageIdentifierOverride: 'persian.bbc_dari_radio.w3ct6lbh.page',
           pageTitleOverride: 'مجله شامگاهی',
+        },
+        type: 'mediaOverrides',
+      };
+
+      await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'persian',
+      });
+
+      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+      const { blocks } = mediaLoaderProps;
+
+      expect(mediaLoaderSpy).toHaveBeenCalled();
+      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
+    });
+
+    it('should use the derived page identifier to render the audio player for Persian Episode', async () => {
+      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+      fetchMock.mockResponse(JSON.stringify(persianEpisodePageData));
+      // @ts-expect-error partial data required for testing purposes
+      const { pageData } = await getInitialData({
+        path: 'some-ondemand-radio-path',
+        pageType: MEDIA_PAGE,
+        toggles,
+      });
+      const expectedMediaOverrides = {
+        model: {
+          language: 'fa',
+          pageIdentifierOverride: 'persian.bbc_persian_radio.w3ct2czp.page',
+          pageTitleOverride: 'چشم انداز بامدادی',
         },
         type: 'mediaOverrides',
       };
