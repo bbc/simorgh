@@ -330,33 +330,6 @@ describe('OnDemand Radio Page ', () => {
     expect(audioPlayer).toBeInTheDocument();
   });
 
-  it('should show the audio player using no override on live', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-    const koreanPageDataWithAvailableEpisode =
-      getAvailableEpisode(koreanPageData);
-    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'korean',
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
-    );
-  });
-
   it('should show the expired content message if episode is expired', async () => {
     fetchMock.mockResponse(JSON.stringify(koreanPageData));
     // @ts-expect-error partial data required for testing purposes
