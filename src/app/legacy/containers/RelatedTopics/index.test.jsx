@@ -5,17 +5,52 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
-jest.mock('@optimizely/react-sdk', () => ({
-  OptimizelyExperiment: ({ children }) => children('on'),
-}));
-
-beforeEach(() => {
-  jest.resetModules();
+jest.mock('@optimizely/react-sdk', () => {
+  const actualModules = jest.requireActual('@optimizely/react-sdk');
+  return {
+    __esModule: true,
+    ...actualModules,
+    OptimizelyExperiment: jest.fn(),
+  };
 });
+
+// Have mocked this inline with the Optimizely source code: https://github.com/optimizely/react-sdk/blob/master/src/Experiment.tsx
+const OptimizelyExperimentMock = variation => props => {
+  const { children } = props;
+
+  let defaultMatch = null;
+  let variationMatch = null;
+  let match = null;
+
+  React.Children.forEach(children, child => {
+    if (!React.isValidElement(child)) {
+      return;
+    }
+
+    if (child.props.variation) {
+      if (variation === child.props.variation) {
+        variationMatch = child;
+      }
+    }
+
+    if (child.props.default) {
+      defaultMatch = child;
+    }
+  });
+
+  if (variationMatch) {
+    match = variationMatch;
+  } else if (defaultMatch) {
+    match = defaultMatch;
+  }
+
+  return match;
+};
 
 const WithContexts = ({
   children,
@@ -50,6 +85,10 @@ const WithContexts = ({
 };
 
 describe('Expected use', () => {
+  beforeEach(() => {
+    OptimizelyExperiment.mockImplementation(OptimizelyExperimentMock());
+  });
+
   it('should render correctly with no tags', () => {
     const { container } = render(
       <WithContexts>
@@ -140,6 +179,9 @@ describe('Expected use', () => {
 });
 
 describe('A11y', () => {
+  beforeEach(() => {
+    OptimizelyExperiment.mockImplementation(OptimizelyExperimentMock());
+  });
   it('should not render an unordered list when there is only one topic', () => {
     const { container } = render(
       <WithContexts>
@@ -168,6 +210,10 @@ describe('Event Tracking', () => {
   const eventTrackingData = {
     componentName: 'topics',
   };
+
+  beforeEach(() => {
+    OptimizelyExperiment.mockImplementation(OptimizelyExperimentMock());
+  });
 
   it('should call the click tracker with the correct params', () => {
     const clickTrackerSpy = jest.spyOn(clickTracker, 'default');
