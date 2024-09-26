@@ -323,13 +323,11 @@ describe('OnDemand Radio Page ', () => {
       pageData,
       service: 'korean',
     });
-    const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
+    const audioPlayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
     );
+
+    expect(audioPlayer).toBeInTheDocument();
   });
 
   it('should show the audio player using no override on live', async () => {
