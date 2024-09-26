@@ -13,6 +13,7 @@ interface Props {
   mediaInfo?: MediaInfo;
   noJsMessage?: string;
   orientation?: Orientations;
+  embedded?: boolean;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -22,6 +23,7 @@ const MediaPlayerPlaceholder = ({
   mediaInfo,
   noJsMessage = '',
   orientation,
+  embedded,
 }: Props) => {
   const {
     title,
@@ -38,11 +40,12 @@ const MediaPlayerPlaceholder = ({
       onClick={onClick}
       css={[
         styles.placeholder,
-        ...[
-          orientation === 'portrait'
+        // eslint-disable-next-line no-nested-ternary
+        orientation === 'portrait'
+          ? !embedded
             ? styles.placeholderPortrait
-            : styles.placeholderLandscape,
-        ],
+            : styles.placeholderPortraitEmbedded
+          : styles.placeholderLandscape,
       ]}
       data-e2e="media-loader__placeholder"
     >

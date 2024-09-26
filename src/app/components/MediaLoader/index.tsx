@@ -99,6 +99,7 @@ type MediaContainerProps = {
   showAds: boolean;
   mediaType?: MediaType;
   orientation?: Orientations;
+  embedded?: boolean;
 };
 
 const MediaContainer = ({
@@ -106,6 +107,7 @@ const MediaContainer = ({
   showAds,
   mediaType,
   orientation,
+  embedded,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
@@ -155,7 +157,9 @@ const MediaContainer = ({
 
   const playerStyling = (() => {
     if (orientation === 'portrait') {
-      return styles.mediaContainerPortrait;
+      return !embedded
+        ? styles.mediaContainerPortrait
+        : styles.mediaContainerPortraitEmbedded;
     }
     if (mediaType === 'liveRadio') {
       return styles.liveRadioMediaContainer;
@@ -268,6 +272,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 mediaInfo={mediaInfo}
                 orientation={orientation}
                 onClick={() => setShowPlaceholder(false)}
+                embedded={embedded}
               />
             ) : (
               <MediaContainer
@@ -275,6 +280,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 showAds={showAds}
                 mediaType={mediaType}
                 orientation={orientation}
+                embedded={embedded}
               />
             )}
           </>

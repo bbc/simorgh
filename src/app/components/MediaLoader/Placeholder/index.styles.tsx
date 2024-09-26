@@ -24,6 +24,10 @@ const styles = {
     }),
 
   placeholderPortrait: () => mediaPortraitStyles,
+  placeholderPortraitEmbedded: () =>
+    css({
+      aspectRatio: '9 / 16',
+    }),
 
   playButton: ({ palette }: Theme) =>
     css({

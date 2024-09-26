@@ -62,6 +62,11 @@ export default {
     }),
     mediaPortraitStyles,
   ],
+  mediaContainerPortraitEmbedded: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.BLACK,
+      aspectRatio: '9 / 16',
+    }),
 
   titlePortrait: ({
     mq,
