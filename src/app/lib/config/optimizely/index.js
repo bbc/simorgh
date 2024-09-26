@@ -3,7 +3,7 @@ export default {
   experimentId: 'first_ab_test',
   viewClickAttributeId: 'wsoj',
   variationMappings: {
-    on: true,
-    off: false,
+    on: 'on',
+    off: 'off',
   },
 };
