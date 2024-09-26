@@ -9,7 +9,6 @@ import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json';
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
 import persianPodcastBrandPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
-import bengaliBrandPageData from '#data/bengali/bbc_bangla_radio/p030vjwg.json';
 import indonesianBrandPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
 import persianDariEpisodePageData from '#data/persian/bbc_dari_radio/p0340v11.json';
 import * as analyticsUtils from '#lib/analyticsUtils';

@@ -154,14 +154,14 @@ const OnDemandAudioPage = ({
       }
     : {};
 
-  const getServiceId = (service: string) => {
-    const serviceOverrides: { [key: string]: string } = {
-      indonesia: 'bbc_indonesian_radio',
-      persian: 'bbc_dari_radio',
+    const getServiceId = (service: string) => {
+      const serviceOverrides: { [key: string]: string } = {
+        indonesia: 'bbc_indonesian_radio',
+        persian: isPodcast ? 'bbc_persian_radio' : "bbc_dari_radio"
+      };
+  
+      return serviceOverrides[service] || `bbc_${service}_radio`;
     };
-
-    return serviceOverrides[service] || `bbc_${service}_radio`;
-  };
 
   const pageIdentifierOverride = isPodcast
     ? `${service}.${getServiceId(service)}.podcasts.${episodeId}.page`
