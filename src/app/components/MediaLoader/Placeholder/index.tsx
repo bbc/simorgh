@@ -7,7 +7,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import Guidance from '#app/legacy/components/MediaPlayer/Guidance';
 import Image from '../../Image';
 import styles from './index.styles';
-import { MediaInfo } from '../types';
+import { MediaInfo, Orientations } from '../types';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -15,6 +15,7 @@ interface Props {
   srcSet?: string;
   mediaInfo: MediaInfo;
   noJsMessage: string;
+  orientation?: Orientations;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -23,6 +24,7 @@ const MediaPlayerPlaceholder = ({
   srcSet,
   mediaInfo,
   noJsMessage,
+  orientation,
 }: Props) => {
   const {
     title,
@@ -39,7 +41,14 @@ const MediaPlayerPlaceholder = ({
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
-      css={styles.placeholder}
+      css={[
+        styles.placeholder,
+        ...[
+          orientation === 'portrait'
+            ? styles.placeholderPortrait
+            : styles.placeholderLandscape,
+        ],
+      ]}
       data-e2e="media-loader__placeholder"
     >
       <Guidance
