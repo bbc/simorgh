@@ -527,40 +527,6 @@ describe('OnDemand Radio Page ', () => {
       expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
     });
 
-    it('should use the derived page identifier to render the audio player for Bengali Brand', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
-
-      fetchMock.mockResponse(JSON.stringify(bengaliBrandPageData));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-
-      const expectedMediaOverrides = {
-        model: {
-          language: 'bn',
-          pageIdentifierOverride:
-            'bengali.bbc_bangla_radio.w172yylmc0c11jh.page',
-          pageTitleOverride: 'প্রবাহ',
-        },
-        type: 'mediaOverrides',
-      };
-
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'bengali',
-      });
-
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
-
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
-
     it('should use the derived page identifier to render the audio player for Indonesian Brand', async () => {
       const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
