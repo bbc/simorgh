@@ -442,31 +442,6 @@ describe('buildSettings', () => {
       expect(result?.orientation).toEqual('landscape');
     });
 
-    it('Should process an AresMedia block with landscape video as the orientation if embedded is true', () => {
-      const myFixture = [
-        {
-          ...aresMediaBlock,
-          model: {
-            blocks: [
-              {
-                ...buildAresMediaPlayerBlock({
-                  types: ['Portrait'],
-                }),
-              },
-            ],
-          },
-        },
-      ] as unknown as MediaBlock[];
-
-      const result = buildSettings({
-        ...baseSettings,
-        embedded: true,
-        blocks: myFixture,
-      });
-
-      expect(result?.orientation).toEqual('landscape');
-    });
-
     it('Should return null if the AresMedia block contains invalid data.', () => {
       const sampleBlock = [
         {

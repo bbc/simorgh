@@ -39,8 +39,8 @@ export default {
   ampIframeWrapper: ({ palette }: Theme) =>
     css({
       overflow: 'hidden',
-      aspectRatio: '16/9',
       backgroundColor: palette.LUNAR,
+      height: '100%',
     }),
   ampIframePlaceholder: ({ mq }: Theme) =>
     css({

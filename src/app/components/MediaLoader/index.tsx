@@ -238,6 +238,8 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
+  const showPortraitTitle = orientation === 'portrait' && !embedded;
+
   return (
     <>
       {
@@ -246,7 +248,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
-      {orientation === 'portrait' && (
+      {showPortraitTitle && (
         <strong css={styles.titlePortrait}>Watch Moments</strong>
       )}
       <figure
@@ -264,6 +266,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 srcSet={placeholderSrcset}
                 noJsMessage={translatedNoJSMessage}
                 mediaInfo={mediaInfo}
+                orientation={orientation}
                 onClick={() => setShowPlaceholder(false)}
               />
             ) : (
