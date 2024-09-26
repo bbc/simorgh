@@ -7,7 +7,7 @@ import {
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+// import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import getOptimizelyUserId from './getOptimizelyUserId';
 
@@ -18,8 +18,10 @@ if (isLive() || isCypress) {
   setLogger(null);
 }
 
+const SDK_KEY = 'CNGmeWtSCwje5Yi9o3Jxa';
+
 const optimizely = createInstance({
-  sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
+  sdkKey: SDK_KEY,
   eventBatchSize: 10,
   eventFlushInterval: 1000,
 });
