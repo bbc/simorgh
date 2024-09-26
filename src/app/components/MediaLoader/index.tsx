@@ -227,7 +227,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
     playerConfig,
     placeholderConfig,
     showAds,
-    orientation,
+    orientation = 'landscape',
     ampIframeUrl,
   } = config;
 
