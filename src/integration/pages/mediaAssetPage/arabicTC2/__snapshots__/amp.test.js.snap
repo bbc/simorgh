@@ -252,7 +252,7 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 6
 exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
 {
   "text": "تحقيقات",
-  "url": "/arabic/tv-and-radio-42414864",
+  "url": "/arabic/topics/c51nnzdeg9zt",
 }
 `;
 
