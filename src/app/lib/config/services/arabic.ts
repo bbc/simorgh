@@ -436,7 +436,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'تحقيقات',
-        url: '/arabic/tv-and-radio-42414864',
+        url: '/arabic/topics/c51nnzdeg9zt',
       },
       {
         title: 'بودكاست',
