@@ -1,15 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OnDemand Radio Page  should match snapshot 1`] = `
-@keyframes animation-0 {
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 .emotion-1 {
   width: 100%;
 }
@@ -701,87 +692,14 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 .emotion-29 {
-  position: relative;
-}
-
-.emotion-31 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.no-js .emotion-31 {
-  display: none;
-}
-
-.emotion-33 {
-  width: 64px;
-  height: 64px;
-  stroke: currentColor;
-  will-change: transform;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-33 {
-    stroke: windowText;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .emotion-33 {
-    -webkit-animation: animation-0 1.1s 3 linear;
-    animation: animation-0 1.1s 3 linear;
-  }
-}
-
-.emotion-36 amp-iframe,
-.emotion-36 div>iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-36 amp-iframe,
-  .emotion-36 div>iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
-.emotion-38 {
-  height: 165px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 63rem) {
-  .emotion-38 {
-    margin-bottom: 2rem;
-  }
-}
-
-.emotion-40 {
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
+  margin: 0;
+  padding-bottom: 1.5rem;
   width: 100%;
-  height: 100%;
+}
+
+.emotion-30 {
+  background-color: #000000;
+  aspect-ratio: 16/9;
 }
 
 <div>
@@ -865,62 +783,15 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="emotion-29 emotion-30"
+      <figure
+        class="emotion-29"
+        data-e2e="media-loader__container"
       >
         <div
-          aria-hidden="true"
-          class="emotion-31 emotion-32"
-          data-testid="audio-loader-overlay"
-        >
-          <svg
-            class="emotion-33 emotion-34"
-            focusable="false"
-            height="38"
-            stroke="black"
-            viewBox="0 0 38 38"
-            width="38"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="none"
-              stroke-width="2"
-              transform="translate(1 1)"
-            >
-              <circle
-                cx="18"
-                cy="18"
-                r="18"
-                stroke-opacity="0.2"
-              />
-              <path
-                d="M36 18c0-9.94-8.06-18-18-18"
-              />
-            </g>
-          </svg>
-        </div>
-        <div
-          class="emotion-35 emotion-36 emotion-37"
-        >
-          <div
-            class="emotion-38 emotion-39"
-            data-e2e="media-player"
-          >
-            <iframe
-              allow="autoplay"
-              allowfullscreen=""
-              class="emotion-40 emotion-41"
-              height="362.953125"
-              loading="lazy"
-              scrolling="no"
-              src="/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
-              title="اډیو پلیئر"
-              width="645.25"
-            />
-            <noscript />
-          </div>
-        </div>
-      </div>
+          class="emotion-30"
+          data-e2e="media-player"
+        />
+      </figure>
     </div>
   </main>
 </div>
