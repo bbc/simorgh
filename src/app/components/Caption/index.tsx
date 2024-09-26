@@ -58,8 +58,10 @@ const renderCaption = (
   paragraphBlocks: OptimoBlock[],
   offscreenText: string,
   dir: string,
+  className?: string,
 ) => (
   <Text
+    className={className}
     css={styles.captionStyles}
     size="longPrimer"
     fontVariant="sansRegular"
@@ -75,7 +77,7 @@ const renderCaption = (
   </Text>
 );
 
-const CaptionContainer = ({ block, type }: Props) => {
+const CaptionContainer = ({ block, type, className }: Props) => {
   const {
     imageCaptionOffscreenText,
     videoCaptionOffscreenText,
@@ -100,12 +102,13 @@ const CaptionContainer = ({ block, type }: Props) => {
 
   if (!paragraphBlocks) return null;
 
-  return renderCaption(paragraphBlocks, offscreenText, dir);
+  return renderCaption(paragraphBlocks, offscreenText, dir, className);
 };
 
 type Props = {
   block: OptimoBlock;
   type: string;
+  className?: string;
 };
 
 export default CaptionContainer;
