@@ -9,6 +9,10 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
+jest.mock('@optimizely/react-sdk', () => ({
+  OptimizelyExperiment: ({ children }) => children('on'),
+}));
+
 beforeEach(() => {
   jest.resetModules();
 });
