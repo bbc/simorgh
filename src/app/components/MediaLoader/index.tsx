@@ -286,11 +286,10 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           </>
         ) : (
           <div
-            css={
-              orientation === 'portrait'
-                ? styles.mediaContainerPortrait
-                : styles.mediaContainerLandscape
-            }
+            css={[
+              orientation === 'portrait' && styles.mediaContainerPortrait,
+              orientation === 'landscape' && styles.mediaContainerLandscape,
+            ]}
           >
             <Amp
               src={ampIframeUrl}

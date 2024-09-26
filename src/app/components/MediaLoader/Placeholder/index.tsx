@@ -34,18 +34,19 @@ const MediaPlayerPlaceholder = ({
     guidanceMessage,
   } = mediaInfo ?? {};
 
+  const portraitStyling =
+    orientation === 'portrait' && !embedded
+      ? styles.placeholderPortrait
+      : styles.placeholderPortraitEmbedded;
+
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
       css={[
         styles.placeholder,
-        // eslint-disable-next-line no-nested-ternary
-        orientation === 'portrait'
-          ? !embedded
-            ? styles.placeholderPortrait
-            : styles.placeholderPortraitEmbedded
-          : styles.placeholderLandscape,
+        orientation === 'portrait' && portraitStyling,
+        orientation === 'landscape' && styles.placeholderLandscape,
       ]}
       data-e2e="media-loader__placeholder"
     >
