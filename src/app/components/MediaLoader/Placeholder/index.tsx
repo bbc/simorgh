@@ -35,9 +35,9 @@ const MediaPlayerPlaceholder = ({
   } = mediaInfo ?? {};
 
   const portraitStyling =
-    orientation === 'portrait' && !embedded
-      ? styles.placeholderPortrait
-      : styles.placeholderPortraitEmbedded;
+    orientation === 'portrait' && embedded
+      ? styles.placeholderPortraitEmbedded
+      : styles.placeholderPortrait;
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions

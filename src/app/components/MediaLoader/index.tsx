@@ -157,9 +157,9 @@ const MediaContainer = ({
 
   const playerStyling = (() => {
     if (orientation === 'portrait') {
-      return !embedded
-        ? styles.mediaContainerPortrait
-        : styles.mediaContainerPortraitEmbedded;
+      return embedded
+        ? styles.mediaContainerPortraitEmbedded
+        : styles.mediaContainerPortrait;
     }
     if (mediaType === 'liveRadio') {
       return styles.liveRadioMediaContainer;
