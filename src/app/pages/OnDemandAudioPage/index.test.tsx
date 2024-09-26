@@ -385,31 +385,6 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio', async () => {
-    const afaanPageDataWithAvailableEpisode =
-      getAvailableEpisode(afaanoromooPageData);
-    fetchMock.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'afaanoromoo',
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
-    );
-  });
-
   it('should contain the translated iframe title', async () => {
     const koreanPageDataWithAvailableEpisode =
       getAvailableEpisode(koreanPageData);
@@ -588,6 +563,41 @@ describe('OnDemand Radio Page ', () => {
         // @ts-expect-error partial data required for testing purposes
         pageData,
         service: 'persian',
+      });
+
+      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+      const { blocks } = mediaLoaderProps;
+
+      expect(mediaLoaderSpy).toHaveBeenCalled();
+      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
+    });
+
+    it('should use the derived page identifier to render the audio player for Afaan Oromoo Episode', async () => {
+      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+      const afaanPageDataWithAvailableEpisode =
+        getAvailableEpisode(afaanoromooPageData);
+      fetchMock.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
+      // @ts-expect-error partial data required for testing purposes
+      const { pageData } = await getInitialData({
+        path: 'some-ondemand-radio-path',
+        pageType: MEDIA_PAGE,
+        toggles,
+      });
+      const expectedMediaOverrides = {
+        model: {
+          language: 'om',
+          pageIdentifierOverride:
+            'afaanoromoo.bbc_afaanoromoo_radio.w3ct0l8r.page',
+          pageTitleOverride: 'Oduu BBC Afaan Oromoo',
+        },
+        type: 'mediaOverrides',
+      };
+
+      await renderPage({
+        // @ts-expect-error partial data required for testing purposes
+        pageData,
+        service: 'afaanoromoo',
       });
 
       const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
