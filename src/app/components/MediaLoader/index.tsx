@@ -250,6 +250,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
       )}
       <figure
         data-e2e="media-loader__container"
+        className={className}
         css={[
           styles.figure(embedded),
           setAspectRatio && [
@@ -257,7 +258,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             orientation === 'landscape' && styles.landscapeFigure,
           ],
         ]}
-        className={className}
       >
         {!isAmp ? (
           <>
