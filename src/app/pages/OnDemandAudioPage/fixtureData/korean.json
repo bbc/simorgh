@@ -55,5 +55,27 @@
       "summary": "BBC와 함께하는 영어학습 코너입니다",
       "duration": "PT10M"
     }
+  ],
+  "mediaBlocks": [
+    {
+      "type": "audio",
+      "model": {
+        "id": "w3ct0kn5",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "2020/05/04 GMT",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
+        "type": "media"
+      }
+    }
   ]
 }

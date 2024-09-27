@@ -118,7 +118,6 @@ describe('OnDemand Radio Page ', () => {
     const pashtoPageDataWithAvailableEpisode =
       getAvailableEpisode(pashtoPageData);
     fetchMock.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
