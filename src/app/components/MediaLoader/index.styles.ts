@@ -42,13 +42,7 @@ export default {
       width: '100%',
     }),
 
-  liveRadioMediaContainer: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.WHITE,
-      height: '165px',
-    }),
-
-  onDemandAudioMediaContainer: ({ palette }: Theme) =>
+  audioMediaContainer: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
       height: '165px',
