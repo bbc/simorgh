@@ -4,7 +4,7 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
 .emotion-0 {
   background-color: #FFFFFF;
   display: block;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   border: solid 0.1875rem transparent;
 }
 

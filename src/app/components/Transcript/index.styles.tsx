@@ -7,7 +7,7 @@ export default {
     css({
       backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
       display: 'block',
-      marginBottom: `${spacings.TRIPLE}rem`,
+      marginTop: `${spacings.TRIPLE}rem`,
       border: `solid ${pixelsToRem(3)}rem transparent`,
       'summary svg': {
         color: isDarkUi ? palette.WHITE : palette.GREY_10,
