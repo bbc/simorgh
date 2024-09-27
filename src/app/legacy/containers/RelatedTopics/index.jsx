@@ -12,7 +12,6 @@ import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
-import { useDecision } from '@optimizely/react-sdk';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
