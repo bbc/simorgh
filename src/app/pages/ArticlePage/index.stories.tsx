@@ -178,8 +178,5 @@ export const ArticlePageWithPodcastNews = () => (
 );
 
 export const ArticlePageWithTranscript = () => (
-  <ComponentWithServiceContext
-    data={articleDataWithTranscript}
-    service="news"
-  />
+  <ComponentWithServiceContext data={articleDataWithTranscript} />
 );
