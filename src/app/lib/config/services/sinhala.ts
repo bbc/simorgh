@@ -314,6 +314,10 @@ export const service: DefaultServiceConfig = {
         url: '/sinhala',
       },
       {
+        title: 'ජනාධිපතිවරණය 2024',
+        url: '/sinhala/topics/cg3e84v9ky0t',
+      },
+      {
         title: 'ශ්‍රී ලංකා',
         url: '/sinhala/topics/cg7267dz901t',
       },

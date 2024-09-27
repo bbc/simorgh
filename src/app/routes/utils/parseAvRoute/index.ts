@@ -63,6 +63,7 @@ const LANGS = [
   'ur',
   'uz',
   'uz-cyrl',
+  'uz-latn',
   'vi',
   'yo',
   'zh-hans',
@@ -146,19 +147,6 @@ const extractMediaDelimiter = (query: Query) => {
   return mediaDelimiter ?? null;
 };
 
-/**
- *  Syndication route patterns:
- *  -/:service/av-embeds/:asset_id
- *  -/:service/av-embeds/:asset_uri_wo_service
- *  -/:service/av-embeds/:asset_id/vpid/:vpid
- *  -/:service/av-embeds/:asset_uri_wo_service/pid/:pid
- *
- *  Syndication route examples:
- *  -/news/av-embeds/67303123
- *  -/serbian/cyr/av-embeds/srbija-68707945
- *  -/russian/av-embeds/38886884/vpid/p04s97g7
- *  -/news/av-embeds/58228280/pid/p09s9t1j
- */
 export default function parseAvRoute(resolvedUrl: string) {
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 

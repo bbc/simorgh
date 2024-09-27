@@ -34,7 +34,7 @@ export const aresMediaCaptionBlock = {
   },
 };
 
-export const aresMediaPlayerBlock = {
+export const buildAresMediaPlayerBlock = ({ types }: { types: string[] }) => ({
   id: 'c77c0598',
   blockId: 'urn:bbc:ares::clip:p01k6msm',
   type: 'aresMediaMetadata',
@@ -54,7 +54,7 @@ export const aresMediaPlayerBlock = {
     versions: [
       {
         versionId: 'p01k6msp',
-        types: ['Original'],
+        types,
         duration: 191,
         durationISO8601: 'PT3M11S',
         warnings: {
@@ -74,14 +74,14 @@ export const aresMediaPlayerBlock = {
     smpKind: 'programme',
   },
   position: [5, 2, 1],
-};
+});
 
 export const aresMediaBlock = {
   id: '80e150c0',
   type: 'aresMedia',
   model: {
     blocks: [
-      aresMediaPlayerBlock,
+      buildAresMediaPlayerBlock({ types: ['Original'] }),
       {
         id: 'd8f26383',
         type: 'image',
@@ -274,8 +274,62 @@ export const livePageClipMediaBlock = {
   },
 };
 
-export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
-export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+export const onDemandTvBlock = {
+  type: 'tv',
+  model: {
+    id: 'w172zm8b4tlpzxh',
+    subType: 'episode',
+    format: 'Video',
+    title: '06/09/2024 GMT',
+    synopses: {
+      short:
+        'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+      medium:
+        'ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया',
+    },
+    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0hfjjfk.png',
+    embedding: false,
+    advertising: false,
+    versions: [
+      {
+        versionId: 'w1mskypb14t285q',
+        types: ['Original'],
+        duration: 1192,
+        durationISO8601: 'PT19M52S',
+        warnings: {},
+        availableTerritories: {
+          uk: true,
+          nonUk: true,
+          world: false,
+        },
+        availableFrom: 1725641390000,
+        availabilityStatus: 'available',
+      },
+    ],
+    availability: 'available',
+    smpKind: 'programme',
+    episodeTitle: 'दुनिया',
+    type: 'media',
+  },
+};
+
+export const mediaOverridesBlock = {
+  model: {
+    language: 'hi',
+    pageIdentifierOverride: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+    pageTitleOverride: 'दुनिया',
+  },
+  type: 'mediaOverrides',
+};
+
+export const afriqueMediaOverridesBlock = {
+  model: {
+    language: 'fr',
+    pageIdentifierOverride: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+    pageTitleOverride: "Bulletin D'informations",
+  },
+  type: 'mediaOverrides',
+};
 
 export const aresMediaLiveStreamBlocks = [
   {
@@ -322,4 +376,11 @@ export const aresMediaBlockWithTranscript = [
   aresMediaBlock,
   aresMediaCaptionBlock,
   TranscriptBlock,
+export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
+export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+export const onDemandTvBlocks = [onDemandTvBlock];
+export const onDemandTvBlocksWithOverrides = [
+  onDemandTvBlock,
+  mediaOverridesBlock,
+  afriqueMediaOverridesBlock,
 ];

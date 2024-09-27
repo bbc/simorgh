@@ -1,5 +1,4 @@
 import getConfig from '#app/routes/utils/getConfig';
-import path from 'ramda/src/path';
 
 const hasArticleRecommendations = async (
   service: string,
@@ -8,10 +7,8 @@ const hasArticleRecommendations = async (
 ) => {
   const config = await getConfig(service, variant);
 
-  const serviceHasRecommendations = path(
-    ['recommendations', 'hasStoryRecommendations'],
-    config,
-  );
+  const serviceHasRecommendations =
+    config?.recommendations?.hasStoryRecommendations;
 
   return serviceHasRecommendations && isAdvertising;
 };

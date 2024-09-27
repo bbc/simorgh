@@ -1,7 +1,9 @@
+import pipe from 'ramda/src/pipe';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
-import addDisclaimer from '../utils/addDisclaimer';
+import addAnalyticsCounterName from '../utils/addAnalyticsCounterName';
+import augmentWithDisclaimer from '../utils/augmentWithDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
 import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
@@ -15,11 +17,17 @@ const logger = nodeLogger(__filename);
 type Props = {
   service: Services;
   path: string;
-  pageType: 'article' | 'cpsAsset';
+  pageType: 'article';
   variant?: Variants;
   toggles?: Toggles;
   isAmp?: boolean;
 };
+
+const transformPageData = (toggles?: Toggles) =>
+  pipe(
+    addAnalyticsCounterName,
+    augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 }),
+  );
 
 export default async ({
   service,
@@ -72,10 +80,12 @@ export default async ({
 
     const { topStories, features, latestMedia, mostRead } = secondaryData;
 
+    const transformedArticleData = transformPageData(toggles)(article);
+
     const response = {
       status,
       pageData: {
-        ...(await addDisclaimer(article, toggles, isArticleSfv)),
+        ...transformedArticleData,
         secondaryColumn: {
           topStories,
           features,

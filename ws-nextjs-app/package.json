@@ -28,7 +28,7 @@
     "@babel/preset-react": "7.24.7",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
-    "@testing-library/jest-dom": "6.4.8",
+    "@testing-library/jest-dom": "6.5.0",
     "@testing-library/react": "15.0.7",
     "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "13.10.0",
@@ -41,7 +41,7 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "next": "14.2.6",
+    "next": "14.2.10",
     "undici": "6.19.8"
   }
 }

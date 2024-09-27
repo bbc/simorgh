@@ -24,7 +24,7 @@ Storybook finds story files to render using glob patterns. The glob patterns can
 
 ```jsx
 stories: [
-    '../docs/**/*.stories.mdx',
+    '../docs/**/*.mdx',
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
@@ -39,7 +39,7 @@ For any of our stories or documentation to correctly display in storybook we mus
 ### How to add documentation
 
 Make sure that the place where you store your documentation is pointed by any of the glob patterns in `.storybook/main.js`.
-Then create a `.stories.mdx` file and write your documentation in normal markdown. Once you have the documentation file ready, add these lines at the top of the file:
+Then create a `.mdx` file and write your documentation in normal markdown. Once you have the documentation file ready, add these lines at the top of the file:
 
 NB: Your documentation should follow markdown format. Guidelines on markdown can be found [here](https://www.markdownguide.org/basic-syntax/).
 

@@ -31,22 +31,16 @@ export default async (context: GetServerSidePropsContext) => {
 
   const parsedRoute = parseAvRoute(resolvedUrl);
 
-  if (parsedRoute.isWsRoute) {
-    context.res.setHeader(
-      'Cache-Control',
-      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
-    );
-  } else {
-    context.res.setHeader(
-      'Cache-Control',
-      'private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate',
-    );
-  }
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+  );
 
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,
     pathname: resolvedUrl,
     mediaId: parsedRoute.mediaId,
+    lang: parsedRoute.lang,
   });
 
   const env = getEnvironment(resolvedUrl);

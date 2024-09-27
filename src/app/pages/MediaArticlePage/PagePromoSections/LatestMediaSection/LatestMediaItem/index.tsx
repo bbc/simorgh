@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { forwardRef } from 'react';
 import { jsx } from '@emotion/react';
-import isEmpty from 'ramda/src/isEmpty';
 
 import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';
@@ -10,7 +9,7 @@ import styles from './index.styles';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
   ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
-    if (!item || isEmpty(item)) return null;
+    if (!item || Object.keys(item).length === 0) return null;
 
     const timestamp = item.firstPublished;
 
