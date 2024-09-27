@@ -17,7 +17,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { MediaType } from '#app/models/types/media';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import { BumpType, MediaBlock, PlayerConfig, Orientations } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -97,12 +97,14 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   mediaType?: MediaType;
+  orientation?: Orientations;
 };
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   mediaType,
+  orientation,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
@@ -150,16 +152,19 @@ const MediaContainer = ({
     }
   }, [playerConfig, showAds]);
 
+  const playerStyling = (() => {
+    if (orientation === 'portrait') {
+      return styles.mediaContainerPortrait;
+    }
+    if (mediaType === 'liveRadio') {
+      return styles.liveRadioMediaContainer;
+    }
+
+    return styles.mediaContainerLandscape;
+  })();
+
   return (
-    <div
-      ref={playerElementRef}
-      data-e2e="media-player"
-      css={
-        mediaType === 'liveRadio'
-          ? styles.liveRadioMediaContainer
-          : styles.mediaContainer
-      }
-    />
+    <div ref={playerElementRef} data-e2e="media-player" css={playerStyling} />
   );
 };
 
@@ -215,7 +220,8 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
+  const { mediaType, playerConfig, placeholderConfig, showAds, orientation } =
+    config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
@@ -229,6 +235,9 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
+      {orientation === 'portrait' && (
+        <strong css={styles.titlePortrait}>Watch Moments</strong>
+      )}
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}
@@ -242,6 +251,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             srcSet={placeholderConfig?.placeholderSrcset}
             noJsMessage={placeholderConfig?.translatedNoJSMessage}
             mediaInfo={placeholderConfig?.mediaInfo}
+            orientation={orientation}
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
@@ -249,9 +259,18 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             playerConfig={playerConfig}
             showAds={showAds}
             mediaType={mediaType}
+            orientation={orientation}
           />
         )}
-        {captionBlock && <Caption block={captionBlock} type={mediaType} />}
+        {captionBlock && (
+          <Caption
+            block={captionBlock}
+            type={mediaType}
+            css={
+              orientation === 'portrait' ? styles.captionPortrait : undefined
+            }
+          />
+        )}
       </figure>
     </>
   );
