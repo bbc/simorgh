@@ -305,7 +305,6 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "@type": "AudioObject",
       "description": "د بي بي سي ورلډ سروس څخه پروګرام کول",
       "duration": "PT29M30S",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live",
       "name": "ماښامنۍ خپرونه",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
       "uploadDate": "2020-05-01T00:00:00.000Z",

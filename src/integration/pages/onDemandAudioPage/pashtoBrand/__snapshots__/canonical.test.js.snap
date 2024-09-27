@@ -305,7 +305,6 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "@type": "AudioObject",
       "description": "د نړۍ وروستي خبرونه",
       "duration": "PT3M",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live",
       "name": "وروستي خبرونه",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
       "uploadDate": "2020-05-18T00:00:00.000Z",
