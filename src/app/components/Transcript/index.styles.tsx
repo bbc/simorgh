@@ -14,7 +14,7 @@ export default {
         fill: 'currentcolor',
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
-        verticalAlign: 'middle',
+        verticalAlign: 'text-top',
       },
       '&[open] summary svg': {
         transform: 'rotate(90deg)',

@@ -13,7 +13,7 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
   fill: currentcolor;
   width: 1rem;
   height: 1rem;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 .emotion-0[open] summary svg {
@@ -193,12 +193,12 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
         class="emotion-2"
       >
         Read transcripts
-      </span>
-      <span
-        class="emotion-3"
-      >
-        , 
-        My Title
+        <span
+          class="emotion-3"
+        >
+          , 
+          My Title
+        </span>
       </span>
     </summary>
     <ul

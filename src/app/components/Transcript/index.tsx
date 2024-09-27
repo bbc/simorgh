@@ -43,8 +43,8 @@ const Transcript = ({
         <ArrowSvg />
         <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
           Read transcripts
+          {title && <VisuallyHiddenText>, {title}</VisuallyHiddenText>}
         </Text>
-        {title && <VisuallyHiddenText>, {title}</VisuallyHiddenText>}
       </summary>
       <ul css={styles.ul} role="list">
         {/*  eslint-disable-next-line @typescript-eslint/no-unused-vars */}
