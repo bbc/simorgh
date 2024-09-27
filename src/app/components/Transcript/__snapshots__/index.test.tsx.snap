@@ -190,14 +190,17 @@ exports[`Transcript Component should match snapshot (temp) 1`] = `
         </g>
       </svg>
       <span
-        class="emotion-2"
+        role="text"
       >
-        Read transcripts
+        <span
+          class="emotion-2"
+        >
+          Read transcripts
+        </span>
         <span
           class="emotion-3"
         >
-          , 
-          My Title
+          , My Title
         </span>
       </span>
     </summary>
