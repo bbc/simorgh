@@ -41,10 +41,10 @@ const masterBrands = {
 export default {
   title: 'Containers/Episode List/Audio',
   Component,
-  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
+  decorators: [withServicesDecorator()],
 };
 
-export const MultipleItems = (_, { service }) => (
+export const MultipleItems = (_, { service = 'indonesia' }) => (
   <Component
     episodes={fixtures?.[service] ?? fixtures.indonesia}
     pageType="Podcast"
@@ -53,7 +53,7 @@ export const MultipleItems = (_, { service }) => (
   />
 );
 
-export const SingleItem = (_, { service }) => {
+export const SingleItem = (_, { service = 'indonesia' }) => {
   const fixture = fixtures?.[service]?.[0] ?? fixtures.indonesia[0];
   return (
     <Component

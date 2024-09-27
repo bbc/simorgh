@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import TEXT_VARIANTS from './text-variants';
 import arabic from '../../src/app/components/ThemeProvider/fontScripts/arabic';
@@ -13,6 +13,8 @@ import sinhalese from '../../src/app/components/ThemeProvider/fontScripts/sinhal
 import tamil from '../../src/app/components/ThemeProvider/fontScripts/tamil';
 import thai from '../../src/app/components/ThemeProvider/fontScripts/thai';
 import { Services } from '../../src/app/models/types/global';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { StoryProps } from '#app/models/types/storybook';
 
 const DEFAULT_SERVICE = 'news';
 const DEFAULT_VARIANT = 'default';
@@ -37,7 +39,7 @@ const scripts = {
   thai,
 };
 
-export default (overrideProps?: { defaultService?: Services }) =>
+export default (props: StoryProps) =>
   (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     story: (storyProps: any) => JSX.Element,
@@ -53,14 +55,15 @@ export default (overrideProps?: { defaultService?: Services }) =>
       },
     },
   ) => {
-    const defaultServiceOverride = overrideProps?.defaultService;
-    const serviceToUse = defaultServiceOverride || service;
+    const {service: serviceFromContext} = useContext(ServiceContext);
 
-    let serviceLookup = serviceToUse;
+    let serviceLookup = service;
 
     if (variant !== DEFAULT_VARIANT) {
       serviceLookup = `${service}-${variant}`;
     }
+
+    const textOverrides = TEXT_VARIANTS[serviceLookup];
 
     const {
       text,
@@ -70,7 +73,13 @@ export default (overrideProps?: { defaultService?: Services }) =>
       locale,
       dir = 'ltr',
       timezone = 'GMT',
-    } = TEXT_VARIANTS[serviceLookup];
+    } = textOverrides;
+
+    console.log({
+      overrideService: textOverrides.service,
+      service,
+      serviceFromContext,
+    });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
@@ -80,9 +89,8 @@ export default (overrideProps?: { defaultService?: Services }) =>
       script: scripts[script as keyof typeof scripts],
       locale,
       dir,
-      service,
+      service: textOverrides.service || service,
       variant: variant || DEFAULT_VARIANT,
-      selectedService: serviceToUse,
       timezone,
       isLite,
     };
