@@ -40,7 +40,6 @@ export default {
     css({
       overflow: 'hidden',
       backgroundColor: palette.LUNAR,
-      position: 'relative',
       height: '100%',
     }),
   ampIframePlaceholder: ({ mq }: Theme) =>

@@ -17,7 +17,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { MediaType } from '#app/models/types/media';
-import { BumpType, MediaBlock, PlayerConfig, Orientations } from './types';
+import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -98,16 +98,12 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   mediaType?: MediaType;
-  orientation?: Orientations;
-  embedded?: boolean;
 };
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   mediaType,
-  orientation,
-  embedded,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
@@ -156,16 +152,11 @@ const MediaContainer = ({
   }, [playerConfig, showAds]);
 
   const playerStyling = (() => {
-    if (orientation === 'portrait') {
-      return embedded
-        ? styles.mediaContainerPortraitEmbedded
-        : styles.mediaContainerPortrait;
-    }
     if (mediaType === 'liveRadio') {
       return styles.liveRadioMediaContainer;
     }
 
-    return styles.mediaContainerLandscape;
+    return styles.standardMediaContainer;
   })();
 
   return (
@@ -257,7 +248,11 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
       )}
       <figure
         data-e2e="media-loader__container"
-        css={styles.figure}
+        css={[
+          styles.figure(embedded),
+          orientation === 'portrait' && styles.portraitFigure(embedded),
+          orientation === 'landscape' && styles.landscapeFigure,
+        ]}
         className={className}
       >
         {!isAmp ? (
@@ -270,43 +265,30 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 srcSet={placeholderSrcset}
                 noJsMessage={translatedNoJSMessage}
                 mediaInfo={mediaInfo}
-                orientation={orientation}
                 onClick={() => setShowPlaceholder(false)}
-                embedded={embedded}
               />
             ) : (
               <MediaContainer
                 playerConfig={playerConfig}
                 showAds={showAds}
                 mediaType={mediaType}
-                orientation={orientation}
-                embedded={embedded}
               />
             )}
           </>
         ) : (
-          <div
-            css={[
-              orientation === 'portrait' && styles.mediaContainerPortrait,
-              orientation === 'landscape' && styles.mediaContainerLandscape,
-            ]}
-          >
-            <Amp
-              src={ampIframeUrl}
-              title={mediaInfo?.title}
-              placeholderSrc={placeholderSrc}
-              placeholderSrcset={placeholderSrcset}
-              noJsMessage={translatedNoJSMessage}
-            />
-          </div>
+          <Amp
+            src={ampIframeUrl}
+            title={mediaInfo?.title}
+            placeholderSrc={placeholderSrc}
+            placeholderSrcset={placeholderSrcset}
+            noJsMessage={translatedNoJSMessage}
+          />
         )}
         {captionBlock && (
           <Caption
             block={captionBlock}
             type={mediaType}
-            css={
-              orientation === 'portrait' ? styles.captionPortrait : undefined
-            }
+            css={orientation === 'portrait' && styles.captionPortrait}
           />
         )}
       </figure>

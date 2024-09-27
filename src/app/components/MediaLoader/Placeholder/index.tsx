@@ -4,7 +4,7 @@ import Image from '../../Image';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
 import Guidance from './Guidance';
-import { MediaInfo, Orientations } from '../types';
+import { MediaInfo } from '../types';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -12,8 +12,6 @@ interface Props {
   srcSet?: string;
   mediaInfo?: MediaInfo;
   noJsMessage?: string;
-  orientation?: Orientations;
-  embedded?: boolean;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -22,8 +20,6 @@ const MediaPlayerPlaceholder = ({
   srcSet,
   mediaInfo,
   noJsMessage = '',
-  orientation,
-  embedded,
 }: Props) => {
   const {
     title,
@@ -34,20 +30,11 @@ const MediaPlayerPlaceholder = ({
     guidanceMessage,
   } = mediaInfo ?? {};
 
-  const portraitStyling =
-    orientation === 'portrait' && embedded
-      ? styles.placeholderPortraitEmbedded
-      : styles.placeholderPortrait;
-
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       onClick={onClick}
-      css={[
-        styles.placeholder,
-        orientation === 'portrait' && portraitStyling,
-        orientation === 'landscape' && styles.placeholderLandscape,
-      ]}
+      css={styles.placeholder}
       data-e2e="media-loader__placeholder"
     >
       <Guidance

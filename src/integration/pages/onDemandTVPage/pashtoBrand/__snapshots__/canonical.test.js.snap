@@ -155,7 +155,7 @@ exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-s76i1e"
+  class="bbc-171plmm"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -229,7 +229,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-s76i1e"
+  class="bbc-171plmm"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -303,11 +303,11 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1kwl7n4"
+  class="bbc-a1ld5a"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-s76i1e"
+    class="bbc-171plmm"
     data-e2e="media-loader__placeholder"
   >
     <div

@@ -4,6 +4,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-0 {
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
@@ -283,6 +284,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-0 {
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
@@ -594,6 +596,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 .emotion-0 {
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
@@ -857,6 +860,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-0 {
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
@@ -1129,6 +1133,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 .emotion-0 {
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
@@ -1385,6 +1390,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-0 {
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 
 .no-js .emotion-0 {

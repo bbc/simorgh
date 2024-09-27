@@ -4,7 +4,7 @@ exports[`Canonical Av-embeds Media Loader a11y assistive technology can read the
 
 exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 <div
-  class="css-dhobuv"
+  class="css-171plmm"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -78,7 +78,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 <div
-  class="css-dhobuv"
+  class="css-171plmm"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -152,11 +152,11 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
 <figure
-  class="css-gtelv7"
+  class="css-jyu05k"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-dhobuv"
+    class="css-171plmm"
     data-e2e="media-loader__placeholder"
   >
     <div

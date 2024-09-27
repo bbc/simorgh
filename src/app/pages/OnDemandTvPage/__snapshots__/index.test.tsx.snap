@@ -200,9 +200,9 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 .emotion-7 {
   position: relative;
-  margin: 0;
-  padding-bottom: 1.5rem;
   width: 100%;
+  margin: 0 0 1.5rem 0;
+  aspect-ratio: 16/9;
 }
 
 @media (min-width: 63rem) {
@@ -232,7 +232,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 .emotion-8 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-8 {
