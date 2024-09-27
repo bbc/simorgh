@@ -229,8 +229,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   const showPortraitTitle = orientation === 'portrait' && !embedded;
 
-  const setAspectRatio = mediaType !== 'liveRadio';
-
   return (
     <>
       {
@@ -247,7 +245,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
         className={className}
         css={[
           styles.figure(embedded),
-          setAspectRatio && [
+          playerConfig?.ui?.skin === 'classic' && [
             orientation === 'portrait' && styles.portraitFigure(embedded),
             orientation === 'landscape' && styles.landscapeFigure,
           ],
