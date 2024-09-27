@@ -37,14 +37,18 @@ const Transcript = ({
     return null;
   }
 
+  const formattedTitle = title ? `, ${title}` : '';
+
   return (
     <details css={styles.details}>
       <summary css={styles.summary}>
         <ArrowSvg />
-        <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
-          Read transcripts
-          {title && <VisuallyHiddenText>, {title}</VisuallyHiddenText>}
-        </Text>
+        <span role="text">
+          <Text size="pica" fontVariant="sansBold" css={styles.summaryTitle}>
+            Read transcripts
+          </Text>
+          {title && <VisuallyHiddenText>{formattedTitle}</VisuallyHiddenText>}
+        </span>
       </summary>
       <ul css={styles.ul} role="list">
         {/*  eslint-disable-next-line @typescript-eslint/no-unused-vars */}
