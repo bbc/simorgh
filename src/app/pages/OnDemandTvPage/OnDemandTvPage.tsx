@@ -6,12 +6,8 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import getEmbedUrl, {
-  makeAbsolute,
-} from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import useLocation from '#hooks/useLocation';
 import { PageTypes } from '#app/models/types/global';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
@@ -88,9 +84,8 @@ const OnDemandTvPage = ({
     contentType,
   } = pageData;
 
-  const { lang, timezone, datetimeLocale, service, brandName } =
+  const { timezone, datetimeLocale, service, brandName } =
     useContext(ServiceContext);
-  const location = useLocation();
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -98,14 +93,6 @@ const OnDemandTvPage = ({
     timezone,
     locale: datetimeLocale,
     isRelative: false,
-  });
-
-  const mediaId = `${service}/${masterBrand}/${episodeId}/${lang}`;
-
-  const embedUrl = getEmbedUrl({
-    mediaId,
-    type: 'media',
-    queryString: location.search,
   });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
@@ -153,7 +140,6 @@ const OnDemandTvPage = ({
                   thumbnailUrl: thumbnailImageUrl,
                   duration: durationISO8601,
                   uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-                  embedURL: makeAbsolute(embedUrl),
                 },
               ]
             : []
