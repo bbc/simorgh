@@ -13,6 +13,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 import { useDecision } from '@optimizely/react-sdk';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const eventTrackingData = {
@@ -52,10 +53,9 @@ const RelatedTopics = ({
       : `/${service}/${topicsPath}/${id}`;
   };
 
-  const [decisions] = useDecision(OPTIMIZELY_CONFIG.flagId);
-  const defaultCondition = decisions.enabled === false;
-  const showCondition =
-    decisions.enabled === true && decisions.variationKey === 'on';
+  const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagId);
+  const showCondition = variation === 'on';
+  const defaultCondition = variation === null;
 
   return (
     (defaultCondition || showCondition) &&
