@@ -1,17 +1,12 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
-import useLocation from '#hooks/useLocation';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import EpisodeImage from '#containers/OnDemandImage';
-import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
-import getEmbedUrl, {
-  makeAbsolute,
-} from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
@@ -123,23 +118,9 @@ const OnDemandAudioPage = ({
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, serviceName } =
+  const { dir, liveRadioOverrides, service, serviceName } =
     useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
-
-  const mediaId = getMediaId({
-    assetId: episodeId,
-    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
-    lang,
-    service,
-  });
-
-  const embedUrl = getEmbedUrl({
-    mediaId,
-    type: 'media',
-    queryString: location.search,
-  });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
@@ -260,7 +241,6 @@ const OnDemandAudioPage = ({
                       thumbnailUrl: thumbnailImageUrl,
                       duration: durationISO8601,
                       uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-                      embedURL: makeAbsolute(embedUrl),
                     },
                   ]
                 : []
