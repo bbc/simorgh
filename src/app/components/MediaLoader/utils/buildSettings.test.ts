@@ -83,6 +83,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -161,6 +162,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -226,6 +228,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -299,6 +302,7 @@ describe('buildSettings', () => {
           simulcast: true,
         },
         ui: {
+          skin: 'classic',
           controls: { enabled: true },
           locale: { lang: 'sr-latn' },
           subtitles: { enabled: true, defaultOn: true },
@@ -345,6 +349,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -638,6 +643,7 @@ describe('buildSettings', () => {
             episodePID: 'w172zm89sk8n4lc',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             fullscreen: { enabled: true },
             locale: {
@@ -964,7 +970,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
             skin: 'audio',
-            colour: '#B80000',
+            colour: '#b80000',
             foreColour: '#222222',
             baseColour: '#222222',
             colourOnBaseColour: '#ffffff',

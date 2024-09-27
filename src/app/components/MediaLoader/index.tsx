@@ -16,7 +16,6 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { MediaType } from '#app/models/types/media';
 import { BumpType, MediaBlock, PlayerConfig } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
@@ -97,14 +96,9 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
-  mediaType?: MediaType;
 };
 
-const MediaContainer = ({
-  playerConfig,
-  showAds,
-  mediaType,
-}: MediaContainerProps) => {
+const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -151,16 +145,16 @@ const MediaContainer = ({
     }
   }, [playerConfig, showAds]);
 
-  const playerStyling = (() => {
-    if (mediaType === 'liveRadio') {
-      return styles.liveRadioMediaContainer;
-    }
-
-    return styles.standardMediaContainer;
-  })();
-
   return (
-    <div ref={playerElementRef} data-e2e="media-player" css={playerStyling} />
+    <div
+      ref={playerElementRef}
+      data-e2e="media-player"
+      css={
+        playerConfig?.ui?.skin === 'audio'
+          ? styles.audioMediaContainer
+          : styles.standardMediaContainer
+      }
+    />
   );
 };
 
@@ -272,11 +266,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
                 onClick={() => setShowPlaceholder(false)}
               />
             ) : (
-              <MediaContainer
-                playerConfig={playerConfig}
-                showAds={showAds}
-                mediaType={mediaType}
-              />
+              <MediaContainer playerConfig={playerConfig} showAds={showAds} />
             )}
           </>
         ) : (

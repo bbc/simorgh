@@ -12,6 +12,7 @@ import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import { getExternalEmbedUrl } from '../utils/urlConstructors';
+import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
@@ -80,16 +81,6 @@ export default ({
     guidanceMessage,
   });
 
-  const audioUi = {
-    skin: 'audio',
-    colour: '#b80000',
-    foreColour: '#222222',
-    baseColour: '#222222',
-    colourOnBaseColour: '#ffffff',
-    fallbackBackgroundColour: '#ffffff',
-    controls: { enabled: true, volumeSlider: true },
-  };
-
   const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
 
   if (showAds) items.unshift({ kind: 'advert' });
@@ -111,7 +102,7 @@ export default ({
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(type === 'audio' && audioUi),
+        ...(type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,

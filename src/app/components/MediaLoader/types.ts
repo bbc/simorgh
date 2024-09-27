@@ -41,16 +41,16 @@ export type PlayerConfig = {
 };
 
 export type PlayerUiConfig = {
-  skin?: string;
+  skin?: 'audio' | 'classic';
   colour?: string;
   foreColour?: string;
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean; volumeSlider?: boolean };
-  locale: { lang: string };
-  subtitles: { enabled: boolean; defaultOn: boolean };
-  fullscreen: { enabled: boolean };
+  controls?: { enabled: boolean; volumeSlider?: boolean };
+  locale?: { lang: string };
+  subtitles?: { enabled: boolean; defaultOn: boolean };
+  fullscreen?: { enabled: boolean };
 };
 
 export type PlaylistItem = {
