@@ -235,6 +235,8 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   const showPortraitTitle = orientation === 'portrait' && !embedded;
 
+  const setAspectRatio = mediaType !== 'liveRadio';
+
   return (
     <>
       {
@@ -250,8 +252,10 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
         data-e2e="media-loader__container"
         css={[
           styles.figure(embedded),
-          orientation === 'portrait' && styles.portraitFigure(embedded),
-          orientation === 'landscape' && styles.landscapeFigure,
+          setAspectRatio && [
+            orientation === 'portrait' && styles.portraitFigure(embedded),
+            orientation === 'landscape' && styles.landscapeFigure,
+          ],
         ]}
         className={className}
       >
