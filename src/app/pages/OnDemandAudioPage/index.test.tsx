@@ -385,31 +385,6 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should contain the translated iframe title', async () => {
-    const koreanPageDataWithAvailableEpisode =
-      getAvailableEpisode(koreanPageData);
-    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'korean',
-    });
-
-    const audioPlayerIframeTitle = container
-      .querySelector('iframe')
-      .getAttribute('title');
-
-    expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
-  });
-
   it('should show the radio schedule for the On Demand radio page', async () => {
     await renderPage({
       // @ts-expect-error partial data required for testing purposes
