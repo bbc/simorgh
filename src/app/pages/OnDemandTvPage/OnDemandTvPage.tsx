@@ -8,7 +8,6 @@ import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadin
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
-import useLocation from '#hooks/useLocation';
 import { PageTypes } from '#app/models/types/global';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
