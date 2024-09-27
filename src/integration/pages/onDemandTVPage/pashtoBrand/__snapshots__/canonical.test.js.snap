@@ -525,7 +525,6 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "@type": "VideoObject",
       "description": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
       "duration": "PT28M",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172zmsln64zg23/ps?morph_env=live",
       "name": " د بي بي سي خبرونه ",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
       "uploadDate": "2024-09-17T00:00:00.000Z",
