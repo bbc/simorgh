@@ -12,10 +12,8 @@ import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
-import {
-  OptimizelyExperiment,
-  OptimizelyVariation,
-} from '@optimizely/react-sdk';
+import { useDecision } from '@optimizely/react-sdk';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const eventTrackingData = {
@@ -55,60 +53,58 @@ const RelatedTopics = ({
       : `/${service}/${topicsPath}/${id}`;
   };
 
-  const TopicsComponent = topics && topics.length !== 0 && (
-    <StyledTopicsWrapper
-      data-testid="related-topics"
-      aria-labelledby="related-topics"
-      role="complementary"
-      {...(className && { className })}
-    >
-      <StyledSectionLabel
-        bar={bar}
-        script={script}
-        service={service}
-        dir={dir}
-        labelId="related-topics"
-        mobileDivider={mobileDivider}
-        {...(backgroundColour && { backgroundColor: backgroundColour })}
-      >
-        {heading}
-      </StyledSectionLabel>
-      <TopicTags
-        service={service}
-        script={script}
-        {...(tagBackgroundColour && { tagBackgroundColour })}
-      >
-        {topics.length === 1 ? (
-          <TopicTag
-            name={topics[0].topicName}
-            link={getTopicPageUrl(topics[0].topicId)}
-            onClick={clickTrackerHandler}
-            ref={viewRef}
-            key={topics[0].topicId}
-          />
-        ) : (
-          topics.map(({ topicName, topicId }) => (
-            <TopicTag
-              name={topicName}
-              link={getTopicPageUrl(topicId)}
-              onClick={clickTrackerHandler}
-              ref={viewRef}
-              key={topicId}
-            />
-          ))
-        )}
-      </TopicTags>
-    </StyledTopicsWrapper>
-  );
+  const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagId);
+  const showCondition = variation === 'on';
+  const defaultCondition = variation === null;
 
   return (
-    <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
-      <OptimizelyVariation variation="on">
-        {TopicsComponent}
-      </OptimizelyVariation>
-      <OptimizelyVariation variation="off">{null}</OptimizelyVariation>
-      <OptimizelyVariation default>{TopicsComponent}</OptimizelyVariation>
-    </OptimizelyExperiment>
+    (defaultCondition || showCondition) &&
+    topics &&
+    topics.length !== 0 && (
+      <StyledTopicsWrapper
+        data-testid="related-topics"
+        aria-labelledby="related-topics"
+        role="complementary"
+        {...(className && { className })}
+      >
+        <StyledSectionLabel
+          bar={bar}
+          script={script}
+          service={service}
+          dir={dir}
+          labelId="related-topics"
+          mobileDivider={mobileDivider}
+          {...(backgroundColour && { backgroundColor: backgroundColour })}
+        >
+          {heading}
+        </StyledSectionLabel>
+        <TopicTags
+          service={service}
+          script={script}
+          {...(tagBackgroundColour && { tagBackgroundColour })}
+        >
+          {topics.length === 1 ? (
+            <TopicTag
+              name={topics[0].topicName}
+              link={getTopicPageUrl(topics[0].topicId)}
+              onClick={clickTrackerHandler}
+              ref={viewRef}
+              key={topics[0].topicId}
+            />
+          ) : (
+            topics.map(({ topicName, topicId }) => (
+              <TopicTag
+                name={topicName}
+                link={getTopicPageUrl(topicId)}
+                onClick={clickTrackerHandler}
+                ref={viewRef}
+                key={topicId}
+              />
+            ))
+          )}
+        </TopicTags>
+      </StyledTopicsWrapper>
+    )
   );
 };
 
