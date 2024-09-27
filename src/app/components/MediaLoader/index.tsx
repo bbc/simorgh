@@ -251,7 +251,15 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           ],
         ]}
       >
-        {!isAmp ? (
+        {isAmp ? (
+          <Amp
+            src={ampIframeUrl}
+            title={mediaInfo?.title}
+            placeholderSrc={placeholderSrc}
+            placeholderSrcset={placeholderSrcset}
+            noJsMessage={translatedNoJSMessage}
+          />
+        ) : (
           <>
             {showAds && <AdvertTagLoader />}
             <BumpLoader />
@@ -267,14 +275,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
               <MediaContainer playerConfig={playerConfig} showAds={showAds} />
             )}
           </>
-        ) : (
-          <Amp
-            src={ampIframeUrl}
-            title={mediaInfo?.title}
-            placeholderSrc={placeholderSrc}
-            placeholderSrcset={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
-          />
         )}
         {captionBlock && (
           <Caption
