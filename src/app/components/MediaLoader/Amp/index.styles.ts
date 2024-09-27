@@ -35,9 +35,16 @@ export default {
         backgroundColor: 'window',
       },
     }),
-  messageImage: () => css({ width: '100%' }),
+  messageImage: () =>
+    css({
+      position: 'absolute',
+      inset: 0,
+      width: '100%',
+      height: '100%',
+    }),
   ampIframeWrapper: ({ palette }: Theme) =>
     css({
+      position: 'relative',
       overflow: 'hidden',
       backgroundColor: palette.LUNAR,
       height: '100%',
