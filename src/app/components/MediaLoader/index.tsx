@@ -277,7 +277,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
         {transcriptBlock && (
           <Transcript
             transcript={transcriptBlock}
-            title={mediaInfo.title}
+            title={placeholderConfig?.mediaInfo?.title}
             hideDisclaimer
           />
         )}

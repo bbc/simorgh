@@ -376,6 +376,7 @@ export const aresMediaBlockWithTranscript = [
   aresMediaBlock,
   aresMediaCaptionBlock,
   TranscriptBlock,
+];
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
 export const onDemandTvBlocks = [onDemandTvBlock];
