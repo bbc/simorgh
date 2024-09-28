@@ -413,204 +413,61 @@ describe('OnDemand Radio Page ', () => {
     expect(scheduleWrapper).not.toBeInTheDocument();
   });
 
-  describe('Page identifier overrides ', () => {
-    it('should use the derived page identifier to render the audio player for Persian Podcast', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+  describe('Page Identifier Overrides ', () => {
+    const afaanPageDataWithAvailableEpisode =
+      getAvailableEpisode(afaanoromooPageData);
 
-      fetchMock.mockResponse(JSON.stringify(persianPodcastBrandPageData));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-podcast-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-      const expectedMediaOverrides = {
-        model: {
-          language: 'fa',
-          pageIdentifierOverride:
-            'persian.bbc_persian_radio.podcasts.p0jrz542.page',
-          pageTitleOverride: 'پرگار',
-        },
-        type: 'mediaOverrides',
-      };
+    it.each`
+      path                          | data                                 | language | pageIdentifierOverride                                   | pageTitleOverride          | service          | description
+      ${'some-podcast-radio-path'}  | ${persianPodcastBrandPageData}       | ${'fa'}  | ${'persian.bbc_persian_radio.podcasts.p0jrz542.page'}    | ${'پرگار'}                 | ${'persian'}     | ${'Persian Podcast'}
+      ${'some-ondemand-radio-path'} | ${indonesianBrandPageData}           | ${'id'}  | ${'indonesia.bbc_indonesian_radio.w172ywztppckjfb.page'} | ${'Dunia Pagi Ini'}        | ${'indonesia'}   | ${'Indonesian Brand'}
+      ${'some-ondemand-radio-path'} | ${persianDariEpisodePageData}        | ${'fa'}  | ${'persian.bbc_dari_radio.w3ct6lbh.page'}                | ${'مجله شامگاهی'}          | ${'persian'}     | ${'Persian Dari Episode'}
+      ${'some-ondemand-radio-path'} | ${persianEpisodePageData}            | ${'fa'}  | ${'persian.bbc_persian_radio.w3ct2czp.page'}             | ${'چشم انداز بامدادی'}     | ${'persian'}     | ${'Persian Episode'}
+      ${'some-ondemand-radio-path'} | ${afaanPageDataWithAvailableEpisode} | ${'om'}  | ${'afaanoromoo.bbc_afaanoromoo_radio.w3ct0l8r.page'}     | ${'Oduu BBC Afaan Oromoo'} | ${'afaanoromoo'} | ${'Afaan Oromoo Episode'}
+      ${'some-ondemand-radio-path'} | ${pashtoPageData}                    | ${'ps'}  | ${'pashto.bbc_pashto_radio.w3ct0lz1.page'}               | ${'ماښامنۍ خپرونه'}        | ${'pashto'}      | ${'Pashto Brand'}
+    `(
+      'should use the derived page identifier to render the audio player for $description',
+      async ({
+        path,
+        data,
+        language,
+        pageIdentifierOverride,
+        pageTitleOverride,
+        service,
+      }) => {
+        // returns $expected when environment is $environment, lighthouseBuild is $lighthouseBuild, cypressAppEnv is $cypressAppEnv, and url is $url'
+        const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
-      await renderPage({
+        fetchMock.mockResponse(JSON.stringify(data));
         // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'persian',
-      });
+        const { pageData } = await getInitialData({
+          path,
+          pageType: MEDIA_PAGE,
+          toggles,
+        });
+        const expectedMediaOverrides = {
+          model: {
+            language,
+            pageIdentifierOverride,
+            pageTitleOverride,
+          },
+          type: 'mediaOverrides',
+        };
 
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
+        await renderPage({
+          // @ts-expect-error partial data required for testing purposes
+          pageData,
+          service,
+        });
 
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
+        const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+        const { blocks } = mediaLoaderProps;
 
-    it('should use the derived page identifier to render the audio player for Indonesian Brand', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
-
-      fetchMock.mockResponse(JSON.stringify(indonesianBrandPageData));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-
-      const expectedMediaOverrides = {
-        model: {
-          language: 'id',
-          pageIdentifierOverride:
-            'indonesia.bbc_indonesian_radio.w172ywztppckjfb.page',
-          pageTitleOverride: 'Dunia Pagi Ini',
-        },
-        type: 'mediaOverrides',
-      };
-
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'indonesia',
-      });
-
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
-
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
-
-    it('should use the derived page identifier to render the audio player for Persian Dari Episode', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
-
-      fetchMock.mockResponse(JSON.stringify(persianDariEpisodePageData));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-
-      const expectedMediaOverrides = {
-        model: {
-          language: 'fa',
-          pageIdentifierOverride: 'persian.bbc_dari_radio.w3ct6lbh.page',
-          pageTitleOverride: 'مجله شامگاهی',
-        },
-        type: 'mediaOverrides',
-      };
-
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'persian',
-      });
-
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
-
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
-
-    it('should use the derived page identifier to render the audio player for Persian Episode', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
-
-      fetchMock.mockResponse(JSON.stringify(persianEpisodePageData));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-      const expectedMediaOverrides = {
-        model: {
-          language: 'fa',
-          pageIdentifierOverride: 'persian.bbc_persian_radio.w3ct2czp.page',
-          pageTitleOverride: 'چشم انداز بامدادی',
-        },
-        type: 'mediaOverrides',
-      };
-
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'persian',
-      });
-
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
-
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
-
-    it('should use the derived page identifier to render the audio player for Afaan Oromoo Episode', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
-
-      const afaanPageDataWithAvailableEpisode =
-        getAvailableEpisode(afaanoromooPageData);
-      fetchMock.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-      const expectedMediaOverrides = {
-        model: {
-          language: 'om',
-          pageIdentifierOverride:
-            'afaanoromoo.bbc_afaanoromoo_radio.w3ct0l8r.page',
-          pageTitleOverride: 'Oduu BBC Afaan Oromoo',
-        },
-        type: 'mediaOverrides',
-      };
-
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'afaanoromoo',
-      });
-
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
-
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
-
-    it('should use the derived page identifier to render the audio player for Pashto Brand', async () => {
-      const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
-
-      fetchMock.mockResponse(JSON.stringify(pashtoPageData));
-      // @ts-expect-error partial data required for testing purposes
-      const { pageData } = await getInitialData({
-        path: 'some-ondemand-radio-path',
-        pageType: MEDIA_PAGE,
-        toggles,
-      });
-      const expectedMediaOverrides = {
-        model: {
-          language: 'ps',
-          pageIdentifierOverride: 'pashto.bbc_pashto_radio.w3ct0lz1.page',
-          pageTitleOverride: 'ماښامنۍ خپرونه',
-        },
-        type: 'mediaOverrides',
-      };
-
-      await renderPage({
-        // @ts-expect-error partial data required for testing purposes
-        pageData,
-        service: 'pashto',
-      });
-
-      const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
-      const { blocks } = mediaLoaderProps;
-
-      expect(mediaLoaderSpy).toHaveBeenCalled();
-      expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
-    });
+        expect(mediaLoaderSpy).toHaveBeenCalled();
+        expect(blocks).toEqual(
+          expect.arrayContaining([expectedMediaOverrides]),
+        );
+      },
+    );
   });
 });
