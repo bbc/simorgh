@@ -1,7 +1,5 @@
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { StaticRouter } from 'react-router-dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1.json';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5.json';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v.json';
@@ -13,7 +11,6 @@ import indonesianBrandPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt
 import persianDariEpisodePageData from '#data/persian/bbc_dari_radio/p0340v11.json';
 import persianEpisodePageData from '#data/persian/bbc_persian_radio/p0340vyx.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
@@ -25,7 +22,6 @@ import {
   act,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
 
@@ -40,6 +36,9 @@ const toggles = {
     enabled: false,
     value: 8,
   },
+  radioSchedule: {
+    enabled: true,
+  },
 };
 
 const fetchMock = fetch as FetchMock;
@@ -51,28 +50,6 @@ interface PageProps {
   lang: string;
 }
 
-const Page = ({ pageData, service, variant, lang }: PageProps) => (
-  <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider
-        service={service}
-        variant={variant}
-        pageLang={lang}
-      >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={MEDIA_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <OnDemandAudioPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </StaticRouter>
-);
-
 const renderPage = async ({
   pageData,
   service,
@@ -82,12 +59,18 @@ const renderPage = async ({
   let result;
   await act(async () => {
     result = render(
-      <Page
-        pageData={pageData}
-        service={service}
-        variant={variant}
-        lang={lang}
-      />,
+      <OnDemandAudioPage service={service} pageData={pageData} />,
+      {
+        service,
+        variant,
+        pageLang: lang,
+        bbcOrigin: 'https://www.test.bbc.com',
+        pageType: MEDIA_PAGE,
+        derivedPageType: 'On Demand Radio',
+        pathname: '/pathname',
+        statusCode: 200,
+        toggles,
+      },
     );
   });
 
@@ -127,7 +110,11 @@ describe('OnDemand Radio Page ', () => {
     });
 
     // @ts-expect-error partial data required for testing purposes
-    const { container } = render(<Page pageData={pageData} service="pashto" />);
+    const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
+      pageData,
+      service: 'pashto',
+    });
 
     expect(container).toMatchSnapshot();
   });
