@@ -18,5 +18,41 @@
   "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
   "metadata": {
     "type": "On Demand Radio"
-  }
+  },
+  "mediaBlocks": [
+    {
+      "type": "audio",
+      "model": {
+        "availability": "available",
+        "id": "w3ct0lz1",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "01/05/2020 GMT",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرامد بي بي سي ورلډ سروس څخه پروګرام کول"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w4hqw5tl",
+            "types": ["Original"],
+            "duration": 1770,
+            "durationISO8601": "PT29M30S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1590949800000,
+            "availableFrom": 1588347000000
+          }
+        ],
+        "type": "media"
+      }
+    }
+  ]
 }
