@@ -1,5 +1,4 @@
 import path from 'ramda/src/path';
-import pathEq from 'ramda/src/pathEq';
 
 import envConfig from '../config/envs';
 
