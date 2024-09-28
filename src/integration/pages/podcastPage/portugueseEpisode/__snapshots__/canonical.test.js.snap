@@ -153,9 +153,17 @@ exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.b
 
 exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu'"`;
 
-exports[`Canonical Podcast Page Media Player a11y assistive technology can read the media player title 1`] = `"Audio player"`;
-
-exports[`Canonical Podcast Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/media/portuguese/bbc_brasil/p083x9gr/pt-BR?morph_env=live"`;
+exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
+<figure
+  class="bbc-1qn0xuy"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="bbc-1eq7znh"
+    data-e2e="media-player"
+  />
+</figure>
+`;
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 1`] = `
 {
@@ -333,7 +341,6 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
       "@type": "AudioObject",
       "description": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
       "duration": "PT16M22S",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/portuguese/bbc_brasil/p083x9gr/pt-BR?morph_env=live",
       "name": "Que História!",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p083x9j5.jpg",
       "uploadDate": "2020-03-13T00:00:00.000Z",
