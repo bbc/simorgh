@@ -32,13 +32,6 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isAvailable = pathEq('available', [
-  'content',
-  'blocks',
-  '0',
-  'availability',
-]);
-
 export const getEpisodeAvailability = ({ mediaBlocks }) =>
   mediaBlocks[0]?.model?.availability === 'available';
 
