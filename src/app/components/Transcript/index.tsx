@@ -12,18 +12,12 @@ import { TranscriptBlock, TranscriptItem } from './types';
 const removeHoursMilliseconds = (timestamp: string) => timestamp.slice(3, -4);
 
 const TranscriptListItem = ({ id, start, content }: TranscriptItem) => (
-  // aria-labelledby fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-  // But this is introduces bug on Voiceover/Mac
   <li key={id} css={styles.listItem}>
-    <span aria-labelledby={`a11y-${id}`}>
-      {/* A11Y TO DO -  see if we can avoid using role=text but still having content announced in one swipe on AT */}
-      <Text role="text" css={styles.transcriptText} id={`a11y-${id}`}>
-        <TranscriptTimestamp timestamp={removeHoursMilliseconds(start)} />
-        {/* A11Y TO DO -  check this doesn't introduce extra swipe on AT */}
-        <VisuallyHiddenText> </VisuallyHiddenText>
-        <span css={styles.itemText}>{content}</span>
-      </Text>
-    </span>
+    <Text role="text" css={styles.transcriptText}>
+      <TranscriptTimestamp timestamp={removeHoursMilliseconds(start)} />
+      <VisuallyHiddenText> </VisuallyHiddenText>
+      <span css={styles.itemText}>{content}</span>
+    </Text>
   </li>
 );
 
