@@ -13,6 +13,7 @@ import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
 import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
+import articleDataWithTranscript from '#data/mundo/articles/ce42wzqr2mko.json';
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
@@ -174,4 +175,8 @@ export const ArticlePageWithPodcastNews = () => (
     service="news"
     podcastEnabled
   />
+);
+
+export const ArticlePageWithTranscript = () => (
+  <ComponentWithServiceContext data={articleDataWithTranscript} />
 );

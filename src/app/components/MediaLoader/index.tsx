@@ -27,6 +27,8 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
+import getTranscriptBlock from './utils/getTranscriptBlock';
+import Transcript from '../Transcript';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -225,6 +227,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
+  const transcriptBlock = getTranscriptBlock(blocks);
   const showPlaceholder = isPlaceholder && placeholderConfig;
 
   return (
@@ -269,6 +272,13 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             css={
               orientation === 'portrait' ? styles.captionPortrait : undefined
             }
+          />
+        )}
+        {transcriptBlock && (
+          <Transcript
+            transcript={transcriptBlock}
+            title={placeholderConfig?.mediaInfo?.title}
+            hideDisclaimer
           />
         )}
       </figure>

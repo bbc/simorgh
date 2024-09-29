@@ -7,6 +7,7 @@ import {
   validAresWebcastVideoBlock,
   validAresVideoBlockEmptyWebcast,
   validAresWebcastVideoBlockVersionsPresent,
+  validVideoWithCaptionAndTranscriptBlock,
 } from '../../../fixtureData';
 
 describe('getDefaultProps', () => {
@@ -371,6 +372,56 @@ describe('getDefaultProps', () => {
         'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
+    });
+  });
+
+  it('infers values for rendering video with a transcript', () => {
+    const props = {
+      assetId: 'ce42wzqr2mko',
+      assetType: 'articles',
+      blocks: validVideoWithCaptionAndTranscriptBlock,
+      isAmp: false,
+      lang: 'pcm',
+      translations: {
+        media: {
+          duration: 'Duration',
+          noJs: 'Dem no support media player for your device',
+          contentExpired: 'Dis thing no dey again',
+        },
+        mediaAssetPage: {
+          mediaPlayer: 'Foobar',
+        },
+      },
+    };
+
+    expect(getDefaultProps(props)).toEqual({
+      blockId: undefined,
+      captionBlock: validVideoWithCaptionAndTranscriptBlock[0],
+      clipId: 'p01k6msp',
+      embedUrlParams: {
+        isAmp: false,
+        mediaId: 'ce42wzqr2mko/p01k6msp/pcm',
+        type: 'articles',
+      },
+      iframeTitle: 'Foobar',
+      mediaBlock: validVideoWithCaptionAndTranscriptBlock[1],
+      mediaInfo: {
+        title: 'Five things ants can teach us about management',
+        duration: '03:11',
+        durationSpoken: 'Duration 3,11',
+        datetime: 'PT3M11S',
+        type: 'video',
+        guidanceMessage: 'Contains strong language and adult humour.',
+        kind: 'programme',
+        rawDuration: 191,
+      },
+      placeholderSrc:
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+      placeholderSrcset:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+      translatedExpiredContentMessage: 'Dis thing no dey again',
+      translatedNoJSMessage: 'Dem no support media player for your device',
+      transcriptBlock: validVideoWithCaptionAndTranscriptBlock[2],
     });
   });
 });
