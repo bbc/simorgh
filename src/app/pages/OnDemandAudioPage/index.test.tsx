@@ -422,7 +422,6 @@ describe('OnDemand Radio Page ', () => {
         pageTitleOverride,
         service,
       }) => {
-        // returns $expected when environment is $environment, lighthouseBuild is $lighthouseBuild, cypressAppEnv is $cypressAppEnv, and url is $url'
         const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
 
         fetchMock.mockResponse(JSON.stringify(data));
