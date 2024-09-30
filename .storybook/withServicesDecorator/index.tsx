@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import TEXT_VARIANTS from './text-variants';
 import arabic from '../../src/app/components/ThemeProvider/fontScripts/arabic';
@@ -12,11 +12,8 @@ import noAscendersOrDescenders from '../../src/app/components/ThemeProvider/font
 import sinhalese from '../../src/app/components/ThemeProvider/fontScripts/sinhalese';
 import tamil from '../../src/app/components/ThemeProvider/fontScripts/tamil';
 import thai from '../../src/app/components/ThemeProvider/fontScripts/thai';
-import { Services } from '../../src/app/models/types/global';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import { StoryProps } from '#app/models/types/storybook';
 
-const DEFAULT_SERVICE = 'news';
 const DEFAULT_VARIANT = 'default';
 
 const scripts = {
@@ -39,28 +36,18 @@ const scripts = {
   thai,
 };
 
-export default (props: StoryProps) =>
+export default () =>
   (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    story: (storyProps: any) => JSX.Element,
-    {
-      globals: {
-        service: { service, variant },
-        isLite,
-      },
-    } = {
-      globals: {
-        service: { service: DEFAULT_SERVICE, variant: DEFAULT_VARIANT },
-        isLite: false,
-      },
-    },
+    story: (storyProps: StoryProps) => JSX.Element,
+    context: any,
   ) => {
-    const {service: serviceFromContext} = useContext(ServiceContext);
+    const globalService = context.globals?.service.service;
+    const globalVariant = context.globals?.service.variant || DEFAULT_VARIANT;
 
-    let serviceLookup = service;
+    let serviceLookup: string = globalService;
 
-    if (variant !== DEFAULT_VARIANT) {
-      serviceLookup = `${service}-${variant}`;
+    if (globalVariant !== DEFAULT_VARIANT) {
+      serviceLookup = `${globalService}-${globalVariant}`;
     }
 
     const textOverrides = TEXT_VARIANTS[serviceLookup];
@@ -75,11 +62,8 @@ export default (props: StoryProps) =>
       timezone = 'GMT',
     } = textOverrides;
 
-    console.log({
-      overrideService: textOverrides.service,
-      service,
-      serviceFromContext,
-    });
+    context.globals.service.service = textOverrides?.service || globalService;
+    context.globals.service.variant = textOverrides?.variant || globalVariant;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
@@ -89,10 +73,10 @@ export default (props: StoryProps) =>
       script: scripts[script as keyof typeof scripts],
       locale,
       dir,
-      service: textOverrides.service || service,
-      variant: variant || DEFAULT_VARIANT,
+      service: context.globals.service.service,
+      variant: context.globals.service.variant,
       timezone,
-      isLite,
+      isLite: context.globals.isLite,
     };
 
     return (

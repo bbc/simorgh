@@ -76,9 +76,20 @@ const Component = ({ service, variant }: StoryProps) => {
 export default {
   Component,
   title: 'Pages/Home Page',
-  decorators: [withServicesDecorator({ service: 'kyrgyz' })],
+  decorators: [withServicesDecorator()],
 };
 
-export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
-  <Component service={service} variant={variant} />
-);
+export const Example = {
+  render: (_: StoryArgs, { service, variant }: StoryProps) => (
+    <Component service={service} variant={variant} />
+  ),
+  parameters: { chromatic: { disableSnapshot: true } },
+};
+
+// This story is for chromatic testing purposes only, and does not appear in the sidebar
+export const Test = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="kyrgyz" variant={variant} />
+  ),
+  tags: ['test'],
+};

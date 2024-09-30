@@ -538,6 +538,12 @@ const preview: Preview = {
       },
     },
   },
+  initialGlobals: {
+    service: {
+      service: 'news',
+      variant: 'default'
+    }
+  },
   parameters: {
     passArgsFirst: false,
     options: {
