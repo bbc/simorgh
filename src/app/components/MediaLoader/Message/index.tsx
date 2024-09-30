@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/react';
-import styles from '../index.styles';
+import styles from './index.styles';
 
 type Props = {
   message?: string;

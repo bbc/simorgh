@@ -14,7 +14,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 
-import Message from '#app/components/MediaLoader/Amp/Message';
+import Message from '#app/components/MediaLoader/Message';
 import { EPISODE_STATUS } from '..';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
