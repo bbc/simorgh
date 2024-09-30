@@ -41,6 +41,7 @@ import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -133,6 +134,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
+  const scrollablePromoVariation = useOptimizelyVariation(
+    'scrollable_promo',
+  ) as unknown as string;
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -166,7 +171,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
+    links: (props: ComponentToRenderProps) =>
+      scrollablePromoVariation === 'variation_1_aa' ? (
+        <ScrollablePromo {...props} />
+      ) : (
+        <ScrollablePromo {...props} />
+      ),
     mpu: (props: ComponentToRenderProps) =>
       allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: (props: ComponentToRenderProps) => (
