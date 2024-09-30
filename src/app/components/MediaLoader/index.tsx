@@ -157,7 +157,10 @@ const MediaContainer = ({
       return styles.mediaContainerPortrait;
     }
     if (mediaType === 'liveRadio') {
-      return styles.liveRadioMediaContainer;
+      return styles.audioMediaContainer;
+    }
+    if (mediaType === 'audio') {
+      return styles.audioMediaContainer;
     }
 
     return styles.mediaContainerLandscape;

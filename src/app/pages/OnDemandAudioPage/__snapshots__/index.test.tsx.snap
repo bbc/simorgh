@@ -698,8 +698,8 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 .emotion-30 {
-  background-color: #000000;
-  aspect-ratio: 16/9;
+  background-color: #FFFFFF;
+  height: 165px;
 }
 
 <div>
