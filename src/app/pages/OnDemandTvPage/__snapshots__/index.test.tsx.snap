@@ -1052,19 +1052,11 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 }
 
 .emotion-9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-11 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.375rem;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1075,19 +1067,27 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
     background-color: transparent;
   }
 }
 
-.emotion-13 {
+.emotion-10 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1095,19 +1095,19 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-13 {
-    background-color: window;
-  }
-}
-
 @media (min-width: 25rem) {
-  .emotion-13 {
+  .emotion-10 {
     padding: 1rem;
   }
 }
 
-.emotion-16 {
+@media screen and (forced-colors: active) {
+  .emotion-10 {
+    background-color: window;
+  }
+}
+
+.emotion-12 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1120,38 +1120,38 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-12 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-12 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 1rem 0;
   }
 }
 
-.emotion-18 {
+.emotion-14 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -1160,14 +1160,14 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-14 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-21 {
+.emotion-17 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
@@ -1178,89 +1178,89 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-23 {
+  .emotion-19 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-23 {
+  .emotion-19 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1269,7 +1269,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1278,7 +1278,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1287,7 +1287,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1296,7 +1296,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1304,7 +1304,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 
   @media (min-width: 80rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1312,7 +1312,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   }
 }
 
-.emotion-25 {
+.emotion-21 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1325,26 +1325,26 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-21 {
     padding-bottom: 0.5rem;
   }
 }
 
-.emotion-27 {
+.emotion-23 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1355,14 +1355,14 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-23 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
@@ -1395,14 +1395,12 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
         <div
           class="emotion-7 emotion-8"
         >
-          <div
-            class="emotion-9 emotion-10"
-          >
+          <div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-9"
             >
               <strong
-                class="emotion-13 emotion-14"
+                class="emotion-10"
               >
                 دغه فایل نور د لاسرسي وړ نه دی.
               </strong>
@@ -1411,10 +1409,10 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
         </div>
         <strong
           aria-hidden="true"
-          class="emotion-15 emotion-16 emotion-17"
+          class="emotion-11 emotion-12 emotion-13"
         >
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-14 emotion-15"
             data-testid="brand-title"
           >
              د بي بي سي خبرونه 
@@ -1425,7 +1423,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
             , 
           </span>
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-17 emotion-18"
             data-testid="sub-heading"
           >
              د بي بي سي خبرونه 
@@ -1433,16 +1431,16 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
         </strong>
       </div>
       <div
-        class="emotion-23 emotion-3"
+        class="emotion-19 emotion-3"
         dir="rtl"
       >
         <p
-          class="emotion-25 emotion-26"
+          class="emotion-21 emotion-22"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
         <time
-          class="emotion-27 emotion-28"
+          class="emotion-23 emotion-24"
           datetime="۲۰۲۴-۰۹-۱۷"
         >
           ۱۷ سپتمبر ۲۰۲۴
@@ -1677,19 +1675,11 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 .emotion-9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-11 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.375rem;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1700,19 +1690,27 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
     background-color: transparent;
   }
 }
 
-.emotion-13 {
+.emotion-10 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1720,19 +1718,19 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-13 {
-    background-color: window;
-  }
-}
-
 @media (min-width: 25rem) {
-  .emotion-13 {
+  .emotion-10 {
     padding: 1rem;
   }
 }
 
-.emotion-16 {
+@media screen and (forced-colors: active) {
+  .emotion-10 {
+    background-color: window;
+  }
+}
+
+.emotion-12 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1745,38 +1743,38 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-12 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-12 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 1rem 0;
   }
 }
 
-.emotion-18 {
+.emotion-14 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -1785,14 +1783,14 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-14 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-21 {
+.emotion-17 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
@@ -1803,89 +1801,89 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-23 {
+  .emotion-19 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-23 {
+  .emotion-19 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1894,7 +1892,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -1903,7 +1901,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1912,7 +1910,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -1921,7 +1919,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -1929,7 +1927,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 80rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -1937,7 +1935,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 }
 
-.emotion-25 {
+.emotion-21 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1950,26 +1948,26 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-21 {
     padding-bottom: 0.5rem;
   }
 }
 
-.emotion-27 {
+.emotion-23 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1980,14 +1978,14 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-23 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
@@ -2020,14 +2018,12 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         <div
           class="emotion-7 emotion-8"
         >
-          <div
-            class="emotion-9 emotion-10"
-          >
+          <div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-9"
             >
               <strong
-                class="emotion-13 emotion-14"
+                class="emotion-10"
               >
                 دغه پروګرام د خپرولو لپاره چمتو نه دی.
               </strong>
@@ -2036,10 +2032,10 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         </div>
         <strong
           aria-hidden="true"
-          class="emotion-15 emotion-16 emotion-17"
+          class="emotion-11 emotion-12 emotion-13"
         >
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-14 emotion-15"
             data-testid="brand-title"
           >
              د بي بي سي خبرونه 
@@ -2050,7 +2046,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
             , 
           </span>
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-17 emotion-18"
             data-testid="sub-heading"
           >
              د بي بي سي خبرونه 
@@ -2058,16 +2054,16 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         </strong>
       </div>
       <div
-        class="emotion-23 emotion-3"
+        class="emotion-19 emotion-3"
         dir="rtl"
       >
         <p
-          class="emotion-25 emotion-26"
+          class="emotion-21 emotion-22"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
         <time
-          class="emotion-27 emotion-28"
+          class="emotion-23 emotion-24"
           datetime="۲۰۲۴-۰۹-۱۷"
         >
           ۱۷ سپتمبر ۲۰۲۴
@@ -2302,19 +2298,11 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 .emotion-9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-11 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.375rem;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2325,19 +2313,27 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
     background-color: transparent;
   }
 }
 
-.emotion-13 {
+.emotion-10 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -2345,19 +2341,19 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-13 {
-    background-color: window;
-  }
-}
-
 @media (min-width: 25rem) {
-  .emotion-13 {
+  .emotion-10 {
     padding: 1rem;
   }
 }
 
-.emotion-16 {
+@media screen and (forced-colors: active) {
+  .emotion-10 {
+    background-color: window;
+  }
+}
+
+.emotion-12 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2370,38 +2366,38 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-12 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-12 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-12 {
     padding: 1rem 0;
   }
 }
 
-.emotion-18 {
+.emotion-14 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -2410,14 +2406,14 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-14 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-21 {
+.emotion-17 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
@@ -2428,89 +2424,89 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-23 {
+  .emotion-19 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-23 {
+  .emotion-19 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-23 {
+  .emotion-19 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2519,7 +2515,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -2528,7 +2524,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2537,7 +2533,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -2546,7 +2542,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -2554,7 +2550,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 
   @media (min-width: 80rem) {
-    .emotion-23 {
+    .emotion-19 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -2562,7 +2558,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   }
 }
 
-.emotion-25 {
+.emotion-21 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2575,26 +2571,26 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-21 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-25 {
+  .emotion-21 {
     padding-bottom: 0.5rem;
   }
 }
 
-.emotion-27 {
+.emotion-23 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2605,14 +2601,14 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-23 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-27 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
@@ -2645,14 +2641,12 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         <div
           class="emotion-7 emotion-8"
         >
-          <div
-            class="emotion-9 emotion-10"
-          >
+          <div>
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-9"
             >
               <strong
-                class="emotion-13 emotion-14"
+                class="emotion-10"
               >
                 دغه پروګرام د خپرولو لپاره چمتو نه دی.
               </strong>
@@ -2661,10 +2655,10 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         </div>
         <strong
           aria-hidden="true"
-          class="emotion-15 emotion-16 emotion-17"
+          class="emotion-11 emotion-12 emotion-13"
         >
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-14 emotion-15"
             data-testid="brand-title"
           >
              د بي بي سي خبرونه 
@@ -2675,7 +2669,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
             , 
           </span>
           <span
-            class="emotion-21 emotion-22"
+            class="emotion-17 emotion-18"
             data-testid="sub-heading"
           >
              د بي بي سي خبرونه 
@@ -2683,16 +2677,16 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
         </strong>
       </div>
       <div
-        class="emotion-23 emotion-3"
+        class="emotion-19 emotion-3"
         dir="rtl"
       >
         <p
-          class="emotion-25 emotion-26"
+          class="emotion-21 emotion-22"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
         </p>
         <time
-          class="emotion-27 emotion-28"
+          class="emotion-23 emotion-24"
           datetime="۲۰۲۴-۰۹-۱۷"
         >
           ۱۷ سپتمبر ۲۰۲۴
