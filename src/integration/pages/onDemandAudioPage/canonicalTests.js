@@ -3,7 +3,7 @@ import {
   runCanonicalAnalyticsTests,
   runRadioScheduleTests,
   runCommonCrossPlatformTests,
-  runMediaPlayerEmbedLegacyTests,
+  runMediaPlayerAudioTests,
   runRecentEpisodesTests,
 } from '../../common';
 import runCommonEpisodeTests from './commonEpisodeTests';
@@ -12,7 +12,7 @@ export default service => {
   runCommonCrossPlatformTests(service);
   runCommonEpisodeTests();
   runRecentEpisodesTests();
-  runMediaPlayerEmbedLegacyTests();
+  runMediaPlayerAudioTests();
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
   runRadioScheduleTests();
