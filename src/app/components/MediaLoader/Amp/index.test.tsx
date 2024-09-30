@@ -1,6 +1,9 @@
 import React from 'react';
+import {
+  act,
+  render,
+} from '#app/components/react-testing-library-with-providers';
 import Amp from './index';
-import { act, render } from '../../react-testing-library-with-providers';
 
 const mockAmpIframeUrl = 'https://www.bbc.com/news/av-embeds/123456789';
 

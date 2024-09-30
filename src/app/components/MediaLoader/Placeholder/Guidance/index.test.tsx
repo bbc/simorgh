@@ -1,6 +1,6 @@
 import React from 'react';
+import { render } from '#app/components/react-testing-library-with-providers';
 import Guidance from '.';
-import { render } from '../../../react-testing-library-with-providers';
 
 describe('Media Player: Guidance', () => {
   it('should render Guidance', () => {

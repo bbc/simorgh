@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../react-testing-library-with-providers';
+import { render } from '#app/components/react-testing-library-with-providers';
 import Message from './index';
 
 describe('Media Message', () => {
