@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/blocks';
+import { Meta, Story, Markdown } from '@storybook/blocks';
 import figmaImage from './images/figma-link.png';
 import storyIcon from './images/storybook-story-icon.png';
 import groupIcon from './images/storybook-group-icon.png';
@@ -413,14 +413,18 @@ To prevent excessive nesting and enable correct functioning of health factors si
 
 ## Create a storybook checklist
 
+<Markdown>
+{`
 * \[ ] Create the index.stories.tsx co-located with the component
 * \[ ] Create the basic story
 * \[ ] Add ltr/rtl and english variants
 * \[ ] Add health factors component metadata
 * \[ ] Add component's documentation
 * \[ ] Add Figma links:
-  * \[ ] Screen reader UX
-  * \[ ] Typography
-  * \[ ] States
-  * \[ ] Groups
+    * \[ ] Screen reader UX
+    * \[ ] Typography
+    * \[ ] States
+    * \[ ] Groups
 * \[ ] Praise yourself for the good work d(•́ω•̀)
+`}
+</Markdown>
