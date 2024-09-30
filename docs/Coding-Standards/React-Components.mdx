@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Markdown } from '@storybook/blocks';
 
 <Meta title="Coding Standards/React Components" />
 
@@ -40,8 +40,8 @@ If logic or behaviour can be shared across components, then consider writing a [
 
 ### Resources
 
-* https://reactjs.org/docs/hooks-overview.html
-* https://reactjs.org/docs/hooks-faq.html#do-hooks-replace-render-props-and-higher-order-components
+* [React Docs: Hooks at a Glance](https://reactjs.org/docs/hooks-overview.html)
+* [React FAQs: Do Hooks replace render props and higher-order components?](https://reactjs.org/docs/hooks-faq.html#do-hooks-replace-render-props-and-higher-order-components)
 
 ## Write function components rather than class components
 
@@ -233,11 +233,16 @@ In the new approach we make simple highly reusable primitive components with few
 
 Before looking to apply our component standards we have a huge body of components that will not meet the existing standards to provide a ‘clean slate’. These have been moved to a legacy location in the following manner:
 
+<Markdown>
+{`
 | Previous Location  | New Location              | Remarks                                                                                                                                                                                                                        |
 | ------------------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| src/app/legacy     | src/app/legacy/psammead   | These are components that used be maintained in a seperate component library: https://github.com/bbc/psammead                                                                                                                  |
+| src/app/legacy     | src/app/legacy/psammead   | These are components that used be maintained in a separate component library: https://github.com/bbc/psammead                                                                                                                  |
 | src/app/components | src/app/legacy/components | These are react components vaguely constituting components from the [component-container](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern - we have decided not to follow this pattern anymore |
 | src/app/containers | src/app/legacy/containers | These are react components vaguely constituting containers from the [component-container](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern - we have decided not to follow this pattern anymore |
+`}
+</Markdown>
+
 
 N.B. As referred to above we are moving away from the [component-container](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern as engineers historically struggled to differentiate between the two and the distinction offered little from a maintenance perspective
 
@@ -250,10 +255,14 @@ Firstly, we will move pages into the now empty components directory:
 
 And all components meeting our standards will from now on will be maintained in the following directories:
 
+<Markdown>
+{`
 | Component Types                 | Location                    |
 | ------------------------------- | --------------------------- |
-| Primitive, Compound, Complex    | `src/app/components`        |
-| Applied Compound, Page Specific | `/src/app/components/pages` |
+| Primitive, Compound, Complex    | src/app/components      |
+| Applied Compound, Page Specific | src/app/components/pages |
+`}
+</Markdown>
 
 ### Applying Standardisation
 

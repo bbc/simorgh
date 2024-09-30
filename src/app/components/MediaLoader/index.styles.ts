@@ -48,6 +48,11 @@ export default {
       height: '165px',
     }),
 
+  onDemandAudioMediaContainer: () =>
+    css({
+      height: '165px',
+    }),
+
   mediaContainerLandscape: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.BLACK,
