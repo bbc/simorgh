@@ -500,7 +500,6 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "@type": "VideoObject",
       "description": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
       "duration": "PT10M",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/hausa/bbc_hausa_tv/w172xcg0kg6vph8/ha?morph_env=live",
       "name": "Labaran Talabijin",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b216l.png",
       "uploadDate": "2020-11-23T00:00:00.000Z",
