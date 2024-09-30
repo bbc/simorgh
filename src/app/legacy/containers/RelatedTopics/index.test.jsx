@@ -6,21 +6,11 @@ import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { useDecision } from '@optimizely/react-sdk';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
-jest.mock('@optimizely/react-sdk', () => ({
-  useDecision: jest.fn(),
-}));
-
 beforeEach(() => {
   jest.resetModules();
-  useDecision.mockReturnValue([
-    { variationKey: 'off', enabled: false },
-    true,
-    false,
-  ]);
 });
 
 const WithContexts = ({

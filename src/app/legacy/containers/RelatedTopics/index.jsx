@@ -8,11 +8,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const eventTrackingData = {
@@ -52,12 +50,7 @@ const RelatedTopics = ({
       : `/${service}/${topicsPath}/${id}`;
   };
 
-  const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagId);
-  const showCondition = variation === 'on';
-  const defaultCondition = variation === null;
-
   return (
-    (defaultCondition || showCondition) &&
     topics &&
     topics.length !== 0 && (
       <StyledTopicsWrapper
