@@ -1,26 +1,27 @@
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { StaticRouter } from 'react-router-dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1.json';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5.json';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v.json';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw.json';
 import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
+import persianPodcastBrandPageData from '#data/persian/bbc_persian_radio/p02pc9wf.json';
+import indonesianBrandPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
+import persianDariEpisodePageData from '#data/persian/bbc_dari_radio/p0340v11.json';
+import persianEpisodePageData from '#data/persian/bbc_persian_radio/p0340vyx.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { Services, Variants } from '#app/models/types/global';
 import { FetchMock } from 'jest-fetch-mock';
+import * as MediaLoader from '#app/components/MediaLoader';
 import {
   render,
   act,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage, { OnDemandAudioProps } from './OnDemandAudioPage';
 
@@ -35,6 +36,9 @@ const toggles = {
     enabled: false,
     value: 8,
   },
+  radioSchedule: {
+    enabled: true,
+  },
 };
 
 const fetchMock = fetch as FetchMock;
@@ -46,28 +50,6 @@ interface PageProps {
   lang: string;
 }
 
-const Page = ({ pageData, service, variant, lang }: PageProps) => (
-  <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider
-        service={service}
-        variant={variant}
-        pageLang={lang}
-      >
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={MEDIA_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <OnDemandAudioPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </StaticRouter>
-);
-
 const renderPage = async ({
   pageData,
   service,
@@ -77,12 +59,18 @@ const renderPage = async ({
   let result;
   await act(async () => {
     result = render(
-      <Page
-        pageData={pageData}
-        service={service}
-        variant={variant}
-        lang={lang}
-      />,
+      <OnDemandAudioPage service={service} pageData={pageData} />,
+      {
+        service,
+        variant,
+        pageLang: lang,
+        bbcOrigin: 'https://www.test.bbc.com',
+        pageType: MEDIA_PAGE,
+        derivedPageType: 'On Demand Radio',
+        pathname: '/pathname',
+        statusCode: 200,
+        toggles,
+      },
     );
   });
 
@@ -105,6 +93,7 @@ const getAvailableEpisode = assocPath(
 
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {
+    jest.clearAllMocks();
     process.env = { ...env };
   });
 
@@ -112,7 +101,6 @@ describe('OnDemand Radio Page ', () => {
     const pashtoPageDataWithAvailableEpisode =
       getAvailableEpisode(pashtoPageData);
     fetchMock.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
-    fetchMock.mockResponse(JSON.stringify(pashtoPageData));
 
     // @ts-expect-error partial data required for testing purposes
     const { pageData } = await getInitialData({
@@ -122,7 +110,11 @@ describe('OnDemand Radio Page ', () => {
     });
 
     // @ts-expect-error partial data required for testing purposes
-    const { container } = render(<Page pageData={pageData} service="pashto" />);
+    const { container } = await renderPage({
+      // @ts-expect-error partial data required for testing purposes
+      pageData,
+      service: 'pashto',
+    });
 
     expect(container).toMatchSnapshot();
   });
@@ -317,40 +309,11 @@ describe('OnDemand Radio Page ', () => {
       pageData,
       service: 'korean',
     });
-    const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
+    const audioPlayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
     );
-  });
 
-  it('should show the audio player using no override on live', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-    const koreanPageDataWithAvailableEpisode =
-      getAvailableEpisode(koreanPageData);
-    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'korean',
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
-    );
+    expect(audioPlayer).toBeInTheDocument();
   });
 
   it('should show the expired content message if episode is expired', async () => {
@@ -408,56 +371,6 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio', async () => {
-    const afaanPageDataWithAvailableEpisode =
-      getAvailableEpisode(afaanoromooPageData);
-    fetchMock.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'afaanoromoo',
-    });
-    const audioPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
-
-    expect(audioPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
-    );
-  });
-
-  it('should contain the translated iframe title', async () => {
-    const koreanPageDataWithAvailableEpisode =
-      getAvailableEpisode(koreanPageData);
-    fetchMock.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
-
-    // @ts-expect-error partial data required for testing purposes
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-radio-path',
-      pageType: MEDIA_PAGE,
-      toggles,
-    });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
-      // @ts-expect-error partial data required for testing purposes
-      pageData,
-      service: 'korean',
-    });
-
-    const audioPlayerIframeTitle = container
-      .querySelector('iframe')
-      .getAttribute('title');
-
-    expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
-  });
-
   it('should show the radio schedule for the On Demand radio page', async () => {
     await renderPage({
       // @ts-expect-error partial data required for testing purposes
@@ -485,5 +398,62 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(scheduleWrapper).not.toBeInTheDocument();
+  });
+
+  describe('Page Identifier Overrides ', () => {
+    const afaanPageDataWithAvailableEpisode =
+      getAvailableEpisode(afaanoromooPageData);
+
+    it.each`
+      path                          | data                                 | language | pageIdentifierOverride                                   | pageTitleOverride          | service          | description
+      ${'some-podcast-radio-path'}  | ${persianPodcastBrandPageData}       | ${'fa'}  | ${'persian.bbc_persian_radio.podcasts.p0jrz542.page'}    | ${'پرگار'}                 | ${'persian'}     | ${'Persian Podcast'}
+      ${'some-ondemand-radio-path'} | ${indonesianBrandPageData}           | ${'id'}  | ${'indonesia.bbc_indonesian_radio.w172ywztppckjfb.page'} | ${'Dunia Pagi Ini'}        | ${'indonesia'}   | ${'Indonesian Brand'}
+      ${'some-ondemand-radio-path'} | ${persianDariEpisodePageData}        | ${'fa'}  | ${'persian.bbc_dari_radio.w3ct6lbh.page'}                | ${'مجله شامگاهی'}          | ${'persian'}     | ${'Persian Dari Episode'}
+      ${'some-ondemand-radio-path'} | ${persianEpisodePageData}            | ${'fa'}  | ${'persian.bbc_persian_radio.w3ct2czp.page'}             | ${'چشم انداز بامدادی'}     | ${'persian'}     | ${'Persian Episode'}
+      ${'some-ondemand-radio-path'} | ${afaanPageDataWithAvailableEpisode} | ${'om'}  | ${'afaanoromoo.bbc_afaanoromoo_radio.w3ct0l8r.page'}     | ${'Oduu BBC Afaan Oromoo'} | ${'afaanoromoo'} | ${'Afaan Oromoo Episode'}
+      ${'some-ondemand-radio-path'} | ${pashtoPageData}                    | ${'ps'}  | ${'pashto.bbc_pashto_radio.w3ct0lz1.page'}               | ${'ماښامنۍ خپرونه'}        | ${'pashto'}      | ${'Pashto Brand'}
+    `(
+      'should use the derived page identifier to render the audio player for $description',
+      async ({
+        path,
+        data,
+        language,
+        pageIdentifierOverride,
+        pageTitleOverride,
+        service,
+      }) => {
+        const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+        fetchMock.mockResponse(JSON.stringify(data));
+        // @ts-expect-error partial data required for testing purposes
+        const { pageData } = await getInitialData({
+          path,
+          pageType: MEDIA_PAGE,
+          toggles,
+        });
+        const expectedMediaOverrides = {
+          model: {
+            language,
+            pageIdentifierOverride,
+            pageTitleOverride,
+          },
+          type: 'mediaOverrides',
+        };
+
+        await renderPage({
+          // @ts-expect-error partial data required for testing purposes
+          pageData,
+          service,
+        });
+
+        const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+        const { blocks } = mediaLoaderProps;
+
+        expect(mediaLoaderSpy).toHaveBeenCalled();
+        expect(blocks).toEqual(
+          expect.arrayContaining([expectedMediaOverrides]),
+        );
+      },
+    );
   });
 });
