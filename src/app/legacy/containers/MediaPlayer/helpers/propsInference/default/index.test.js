@@ -4,6 +4,9 @@ import {
   validAudioWithCaptionBlock,
   validVideoWithCaptionBlock,
   validTransformedCPSAudioWithCaptionBlock,
+  validAresWebcastVideoBlock,
+  validAresVideoBlockEmptyWebcast,
+  validAresWebcastVideoBlockVersionsPresent,
 } from '../../../fixtureData';
 
 describe('getDefaultProps', () => {
@@ -44,11 +47,13 @@ describe('getDefaultProps', () => {
         datetime: 'PT3M11S',
         type: 'video',
         guidanceMessage: 'Contains strong language and adult humour.',
+        kind: 'programme',
+        rawDuration: 191,
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
@@ -91,11 +96,13 @@ describe('getDefaultProps', () => {
         datetime: 'PT2M7S',
         type: 'audio',
         guidanceMessage: 'Contains some strong language.',
+        kind: 'programme',
+        rawDuration: 127,
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
@@ -138,11 +145,13 @@ describe('getDefaultProps', () => {
         datetime: 'PT32M41S',
         type: 'audio',
         guidanceMessage: undefined,
+        kind: 'programme',
+        rawDuration: 1961,
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01mr7dp.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01mr7dp.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mr7dp.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mr7dp.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mr7dp.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mr7dp.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mr7dp.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mr7dp.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mr7dp.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mr7dp.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mr7dp.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mr7dp.jpg.webp 800w',
       translatedExpiredContentMessage: 'Dis thing no dey again',
       translatedNoJSMessage: 'Dem no support media player for your device',
     });
@@ -183,11 +192,13 @@ describe('getDefaultProps', () => {
         datetime: 'PT3M11S',
         type: 'video',
         guidanceMessage: 'Contains strong language and adult humour.',
+        kind: 'programme',
+        rawDuration: 191,
       },
       placeholderSrc:
-        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg',
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
       placeholderSrcset:
-        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
       translatedExpiredContentMessage: 'This content is no longer available',
       translatedNoJSMessage:
         'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
@@ -214,5 +225,152 @@ describe('getDefaultProps', () => {
     };
 
     expect(getDefaultProps(props)).toEqual({ mediaBlock: null });
+  });
+
+  it('infers values for rendering webcast video', () => {
+    const props = {
+      assetId: 'c881llnevmeo',
+      assetType: 'articles',
+      blocks: [validAresWebcastVideoBlock],
+      isAmp: false,
+      lang: 'pcm',
+      translations: {
+        media: {
+          duration: 'Duration',
+          noJs: 'Dem no support media player for your device',
+          contentExpired: 'Dis thing no dey again',
+        },
+        mediaAssetPage: {
+          mediaPlayer: 'Foobar',
+        },
+      },
+    };
+
+    expect(getDefaultProps(props)).toEqual({
+      blockId: undefined,
+      clipId: 'p01k6msp',
+      captionBlock: undefined,
+      embedUrlParams: {
+        isAmp: false,
+        mediaId: 'c881llnevmeo/p01k6msp/pcm',
+        type: 'articles',
+      },
+      iframeTitle: 'Foobar',
+      mediaBlock: validAresWebcastVideoBlock,
+      mediaInfo: {
+        title: 'Five things ants can teach us about management',
+        duration: '03:11',
+        durationSpoken: 'Duration 3,11',
+        datetime: 'PT3M11S',
+        type: 'video',
+        kind: 'programme',
+        rawDuration: 191,
+        guidanceMessage: 'Contains strong language and adult humour.',
+      },
+      placeholderSrc:
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+      placeholderSrcset:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+      translatedExpiredContentMessage: 'Dis thing no dey again',
+      translatedNoJSMessage: 'Dem no support media player for your device',
+    });
+  });
+
+  it('infers values for rendering video when an empty webcast array exists', () => {
+    const props = {
+      assetId: 'c881llnevmeo',
+      assetType: 'articles',
+      blocks: [validAresVideoBlockEmptyWebcast],
+      isAmp: false,
+      lang: 'pcm',
+      translations: {
+        media: {
+          duration: 'Duration',
+          noJs: 'Dem no support media player for your device',
+          contentExpired: 'Dis thing no dey again',
+        },
+        mediaAssetPage: {
+          mediaPlayer: 'Foobar',
+        },
+      },
+    };
+
+    expect(getDefaultProps(props)).toEqual({
+      blockId: undefined,
+      clipId: 'p01k6msp',
+      captionBlock: undefined,
+      embedUrlParams: {
+        isAmp: false,
+        mediaId: 'c881llnevmeo/p01k6msp/pcm',
+        type: 'articles',
+      },
+      iframeTitle: 'Foobar',
+      mediaBlock: validAresVideoBlockEmptyWebcast,
+      mediaInfo: {
+        title: 'Five things ants can teach us about management',
+        duration: '03:11',
+        durationSpoken: 'Duration 3,11',
+        datetime: 'PT3M11S',
+        type: 'video',
+        kind: 'programme',
+        rawDuration: 191,
+        guidanceMessage: 'Contains strong language and adult humour.',
+      },
+      placeholderSrc:
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+      placeholderSrcset:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+      translatedExpiredContentMessage: 'Dis thing no dey again',
+      translatedNoJSMessage: 'Dem no support media player for your device',
+    });
+  });
+
+  it('prioritises values from webcastVersions when data is also present for versions', () => {
+    const props = {
+      assetId: 'c881llnevmeo',
+      assetType: 'articles',
+      blocks: [validAresWebcastVideoBlockVersionsPresent],
+      isAmp: false,
+      lang: 'pcm',
+      translations: {
+        media: {
+          duration: 'Duration',
+          noJs: 'Dem no support media player for your device',
+          contentExpired: 'Dis thing no dey again',
+        },
+        mediaAssetPage: {
+          mediaPlayer: 'Foobar',
+        },
+      },
+    };
+
+    expect(getDefaultProps(props)).toEqual({
+      blockId: undefined,
+      clipId: 'p01k6msp',
+      captionBlock: undefined,
+      embedUrlParams: {
+        isAmp: false,
+        mediaId: 'c881llnevmeo/p01k6msp/pcm',
+        type: 'articles',
+      },
+      iframeTitle: 'Foobar',
+      mediaBlock: validAresWebcastVideoBlockVersionsPresent,
+      mediaInfo: {
+        title: 'Five things ants can teach us about management',
+        duration: '03:11',
+        durationSpoken: 'Duration 3,11',
+        datetime: 'PT3M11S',
+        type: 'video',
+        kind: 'programme',
+        rawDuration: 191,
+        guidanceMessage: 'Contains strong language and adult humour.',
+      },
+      placeholderSrc:
+        'https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg.webp',
+      placeholderSrcset:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp 800w',
+      translatedExpiredContentMessage: 'Dis thing no dey again',
+      translatedNoJSMessage: 'Dem no support media player for your device',
+    });
   });
 });

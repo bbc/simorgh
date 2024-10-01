@@ -1,24 +1,16 @@
-import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+import React, { useEffect, useState } from 'react';
+import Url from 'url-parse';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import metadata from './metadata.json';
-import md from './README.md';
+import readme from './README.md';
 import MostRead from '.';
-import { data as defaultData } from '../../../../data/pidgin/mostRead/index.json';
-import { data as japaneseData } from '../../../../data/japanese/mostRead/index.json';
-import { data as persianData } from '../../../../data/persian/mostRead/index.json';
-import ThemeProvider from '../ThemeProvider';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { StoryProps } from '../../models/types/storybook';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
-import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import { ColumnLayout, MostReadData, Size } from './types';
 
 interface Props extends StoryProps {
   columnLayout?: ColumnLayout;
   size?: Size;
-  data: MostReadData;
 }
 
 const Component = ({
@@ -26,79 +18,98 @@ const Component = ({
   variant,
   columnLayout = 'multiColumn',
   size = 'default',
-  data,
-}: Props) => (
-  <ThemeProvider service={service} variant={variant}>
+}: Props) => {
+  const [pageData, setPageData] = useState({});
+
+  useEffect(() => {
+    const loadPageData = async () => {
+      const response = await fetch(
+        new Url(
+          `data/${service}/mostRead/${
+            variant === 'default' ? 'index' : variant
+          }.json`,
+        ).toString(),
+      );
+
+      const { data } = await response.json();
+      setPageData(data as MostReadData);
+    };
+
+    loadPageData();
+  }, [service, variant]);
+
+  if (Object.keys(pageData).length === 0) {
+    return <>Unable to render Most Read Component for {service}</>;
+  }
+
+  return (
     <ToggleContextProvider>
-      <RequestContextProvider
-        isAmp={false}
-        isApp={false}
-        pageType={ARTICLE_PAGE}
-        service={service}
-        statusCode={200}
-        pathname={`/${service}`}
-        variant={variant}
-      >
-        <ServiceContextProvider service={service} variant={variant}>
-          <MostRead data={data} size={size} columnLayout={columnLayout} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
+      <ServiceContextProvider service={service} variant={variant}>
+        <MostRead
+          data={pageData as MostReadData}
+          size={size}
+          columnLayout={columnLayout}
+        />
+      </ServiceContextProvider>
     </ToggleContextProvider>
-  </ThemeProvider>
-);
+  );
+};
 
 export default {
-  title: 'New Components/Most Read',
-  Component,
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+  title: 'Components/Most Read',
+  component: Component,
   parameters: {
     chromatic: {
       viewports: [1280],
     },
     metadata,
-    docs: {
-      page: md,
+    docs: { readme },
+  },
+  args: {
+    columnLayout: 'multiColumn',
+    size: 'default',
+  },
+  argTypes: {
+    columnLayout: {
+      control: { type: 'select' },
+      options: ['oneColumn', 'twoColumn', 'multiColumn'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'default'],
     },
   },
 };
 
-export const ArticlePage5Columns = ({ service, variant }: Props) => (
-  <Component service={service} variant={variant} data={defaultData} />
-);
-
-export const HomePage2Columns = ({ service, variant }: Props) => (
+export const Example = (
+  { columnLayout, size }: Props,
+  { service, variant }: StoryProps,
+) => (
   <Component
     service={service}
     variant={variant}
-    columnLayout="twoColumn"
-    data={defaultData}
+    columnLayout={columnLayout}
+    size={size}
   />
 );
 
-export const StoryPage1Column = ({ service, variant }: Props) => (
+export const TwoColumns = (_: StoryArgs, { service, variant }: Props) => (
+  <Component service={service} variant={variant} columnLayout="twoColumn" />
+);
+
+export const SmallOneColumn = (_: StoryArgs, { service, variant }: Props) => (
   <Component
     service={service}
     variant={variant}
     size="small"
     columnLayout="oneColumn"
-    data={defaultData}
   />
 );
 
-export const Japanese1Column = ({ variant }: Props) => (
-  <Component
-    service="japanese"
-    variant={variant}
-    columnLayout="oneColumn"
-    data={japaneseData}
-  />
+export const Japanese1Column = (_: StoryArgs, { variant }: Props) => (
+  <Component service="japanese" variant={variant} columnLayout="oneColumn" />
 );
 
-export const Persian1Column = ({ variant }: Props) => (
-  <Component
-    service="persian"
-    variant={variant}
-    columnLayout="oneColumn"
-    data={persianData}
-  />
+export const Persian1Column = (_: StoryArgs, { variant }: Props) => (
+  <Component service="persian" variant={variant} columnLayout="oneColumn" />
 );

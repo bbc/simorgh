@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import FlourishEmbed from '.';
 import { render } from '../../react-testing-library-with-providers';
-import { OEmbedProps } from '../types';
+import { OEmbedData } from '../types';
 
 describe('EmbedIFrame', () => {
   it('should render an iFrame', async () => {
@@ -13,7 +13,7 @@ describe('EmbedIFrame', () => {
       iFrameTitle: 'Visual Content',
       iFrameId: 'iFrame id',
       sizeAdjustScript: 'script to adjust size',
-    } as unknown as OEmbedProps;
+    } satisfies OEmbedData;
 
     const { container } = render(<FlourishEmbed {...props} />);
     const actual = container.querySelector(
@@ -30,7 +30,7 @@ describe('EmbedIFrame', () => {
       iFrameTitle: 'Visual Content',
       iFrameId: 'iFrame id',
       sizeAdjustScript: 'script to adjust size',
-    } as unknown as OEmbedProps;
+    } satisfies OEmbedData;
 
     render(<FlourishEmbed {...props} />);
 
@@ -41,7 +41,7 @@ describe('EmbedIFrame', () => {
   });
 
   it('should not render when no iframe src is provided', async () => {
-    const props = {} as unknown as OEmbedProps;
+    const props = {} satisfies OEmbedData;
 
     const { container } = render(<FlourishEmbed {...props} />);
 

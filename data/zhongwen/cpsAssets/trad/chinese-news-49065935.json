@@ -2,21 +2,41 @@
   "data": {
     "article": {
       "metadata": {
+        "atiAnalytics": {
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "categoryName": "News",
+          "contentId": "urn:bbc:cps:curie:asset:093e8311-37b7-6944-931d-655cc0efb5c0",
+          "contentType": "article-photo-gallery",
+          "language": null,
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "zhongwentrad.chinese_news.photo_gallery.49065935.page",
+          "pageTitle": "圖輯：香港示威抗議繼續 大規模警民衝突",
+          "timePublished": "2019-07-21T17:40:02.000Z",
+          "timeUpdated": "2019-07-21T17:40:02.000Z",
+          "producerName": "CHINESE",
+          "producerId": "38"
+        },
         "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49065935",
         "locators": {
           "assetUri": "/zhongwen/trad/chinese-news-49065935",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:093e8311-37b7-6944-931d-655cc0efb5c0",
           "assetId": "49065935",
           "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065935",
+          "canonicalUrl": "https://www.bbc.com/zhongwen/trad/chinese-news-49065935",
           "curie": "http://www.bbc.co.uk/asset/093e8311-37b7-6944-931d-655cc0efb5c0"
         },
         "type": "PGL",
         "createdBy": "zhongwen-traditional-v6",
         "language": "zh-Hant",
-        "lastUpdated": 1684383674725,
         "firstPublished": 1563730802000,
         "lastPublished": 1563730802000,
-        "timestamp": 1563730802000,
         "options": {
           "isIgorSeoTagsEnabled": false,
           "includeComments": false,
@@ -34,10 +54,10 @@
           "allowPrintingSharingLinks": true
         },
         "analyticsLabels": {
-          "cps_asset_type": "pgl",
-          "counterName": "zhongwentrad.chinese_news.photo_gallery.49065935.page",
           "cps_asset_id": "49065935",
-          "contentId": "urn:bbc:cps:curie:asset:093e8311-37b7-6944-931d-655cc0efb5c0"
+          "page": "zhongwentrad.chinese_news.photo_gallery.49065935.page",
+          "contentId": "urn:bbc:cps:curie:asset:093e8311-37b7-6944-931d-655cc0efb5c0",
+          "cps_asset_type": "pgl"
         },
         "passport": {
           "category": {
@@ -53,142 +73,1023 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
           "taggings": []
         },
-        "tags": {},
-        "version": "v1.4.23",
         "blockTypes": [
-          "image"
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "links",
+          "link",
+          "urlLink",
+          "aresLink"
         ],
         "includeComments": false,
-        "atiAnalytics": {
-          "producerName": "CHINESE",
-          "producerId": "38"
-        },
-        "readTime": 1,
         "siteUri": "/zhongwen/trad",
+        "allowAdvertising": true,
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
       },
       "content": {
-        "blocks": [
-          {
-            "id": "107965611",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/2D88/production/_107965611_mediaitem107965610.jpg",
-            "path": "/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "香港示威抗議",
-            "caption": "香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。",
-            "copyrightHolder": "EPA",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107965614",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/A2B8/production/_107965614_hk_2_reuters.jpg",
-            "path": "/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "香港示威",
-            "caption": "遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。",
-            "copyrightHolder": "Reuters",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107965616",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/F0D8/production/_107965616_hk_3_epa.jpg",
-            "path": "/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "抗議者自製盾牌",
-            "caption": "組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。",
-            "copyrightHolder": "EPA",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107965619",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/16608/production/_107965619_hk_5_reuters.jpg",
-            "path": "/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "在場記者受傷",
-            "caption": "抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。",
-            "copyrightHolder": "Reuters",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107965741",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/39A4/production/_107965741_hk_8_china_office_getty.jpg",
-            "path": "/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "中國中央政府駐香港機構的國徽被塗污",
-            "caption": "抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。",
-            "copyrightHolder": "Getty Images",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107965749",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/17224/production/_107965749_hk_gas_7_getty.jpg",
-            "path": "/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "香港抗議",
-            "caption": "抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。",
-            "copyrightHolder": "Getty Images",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107965787",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/133A4/production/_107965787_hk_reuters.jpg",
-            "path": "/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "香港抗議",
-            "caption": "香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。",
-            "copyrightHolder": "Reuters",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          },
-          {
-            "id": "107966057",
-            "subType": "photogallery",
-            "href": "http://c.files.bbci.co.uk/1253A/production/_107966057_hk_getty_protesters.jpg",
-            "path": "/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "香港示威",
-            "caption": "過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。",
-            "copyrightHolder": "Getty Images",
-            "originCode": "cpsprodpb",
-            "allowSyndication": true,
-            "type": "image"
-          }
-        ]
+        "model": {
+          "blocks": [
+            {
+              "id": "4339b53f",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f3aee1e2",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e0b44135",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "圖輯：香港示威抗議繼續 大規模警民衝突",
+                            "blocks": [
+                              {
+                                "id": "cf62710c",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "圖輯：香港示威抗議繼續 大規模警民衝突",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "14f5e70d",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1563730802000,
+                "lastPublished": 1563730802000
+              },
+              "position": [2]
+            },
+            {
+              "id": "6b0e9d81",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "dc3dd402",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。",
+                      "blocks": [
+                        {
+                          "id": "8ca6c359",
+                          "type": "fragment",
+                          "model": {
+                            "text": "香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。",
+                            "attributes": []
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "23048d3b",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b85d6dad",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "317babfb",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "bc58e5cf",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。",
+                                  "blocks": [
+                                    {
+                                      "id": "d37d0d94",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。",
+                                        "attributes": []
+                                      },
+                                      "position": [4, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "8ba4d976",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e0d39e88",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0b316015",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港示威抗議",
+                                  "blocks": [
+                                    {
+                                      "id": "432dc5ca",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港示威抗議",
+                                        "attributes": []
+                                      },
+                                      "position": [4, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 2]
+                  },
+                  {
+                    "id": "5b92cd8c",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "2D88/production/_107965611_mediaitem107965610.jpg",
+                      "href": "http://c.files.bbci.co.uk/2D88/production/_107965611_mediaitem107965610.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "EPA",
+                      "suitableForSyndication": true
+                    },
+                    "position": [4, 3]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "1bb3c3a9",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7a64f372",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ce4073aa",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2f3d0fe3",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。",
+                                  "blocks": [
+                                    {
+                                      "id": "02fbf7d9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "5465ac3c",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e669fc3a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "39311336",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港示威",
+                                  "blocks": [
+                                    {
+                                      "id": "34a74ff5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港示威",
+                                        "attributes": []
+                                      },
+                                      "position": [5, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [5, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "9354a94e",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "A2B8/production/_107965614_hk_2_reuters.jpg",
+                      "href": "http://c.files.bbci.co.uk/A2B8/production/_107965614_hk_2_reuters.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Reuters",
+                      "suitableForSyndication": true
+                    },
+                    "position": [5, 3]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "0c0c99ac",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ae2de758",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ce1ee5bc",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b41bdd14",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。",
+                                  "blocks": [
+                                    {
+                                      "id": "505b0ecb",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。",
+                                        "attributes": []
+                                      },
+                                      "position": [6, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [6, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  },
+                  {
+                    "id": "a6914e82",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8b0b541a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f4477987",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "抗議者自製盾牌",
+                                  "blocks": [
+                                    {
+                                      "id": "9057b1f0",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "抗議者自製盾牌",
+                                        "attributes": []
+                                      },
+                                      "position": [6, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [6, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [6, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 2]
+                  },
+                  {
+                    "id": "7e4de871",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "F0D8/production/_107965616_hk_3_epa.jpg",
+                      "href": "http://c.files.bbci.co.uk/F0D8/production/_107965616_hk_3_epa.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "EPA",
+                      "suitableForSyndication": true
+                    },
+                    "position": [6, 3]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "883fed6c",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ee772c59",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "037dc1d0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3759cb44",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。",
+                                  "blocks": [
+                                    {
+                                      "id": "0fe5e6a9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  },
+                  {
+                    "id": "f655c896",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "556448c6",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1756dda4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "在場記者受傷",
+                                  "blocks": [
+                                    {
+                                      "id": "c657ab3b",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "在場記者受傷",
+                                        "attributes": []
+                                      },
+                                      "position": [7, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [7, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [7, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 2]
+                  },
+                  {
+                    "id": "1dc7aa0d",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "16608/production/_107965619_hk_5_reuters.jpg",
+                      "href": "http://c.files.bbci.co.uk/16608/production/_107965619_hk_5_reuters.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Reuters",
+                      "suitableForSyndication": true
+                    },
+                    "position": [7, 3]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "ff5ddfed",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "364b27c3",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0e4d3af8",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "82c699e7",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。",
+                                  "blocks": [
+                                    {
+                                      "id": "b4ec751a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  },
+                  {
+                    "id": "b1713a04",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b27672c0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5ac76eff",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "中國中央政府駐香港機構的國徽被塗污",
+                                  "blocks": [
+                                    {
+                                      "id": "5d81da62",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "中國中央政府駐香港機構的國徽被塗污",
+                                        "attributes": []
+                                      },
+                                      "position": [8, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [8, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [8, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 2]
+                  },
+                  {
+                    "id": "722c8c34",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "39A4/production/_107965741_hk_8_china_office_getty.jpg",
+                      "href": "http://c.files.bbci.co.uk/39A4/production/_107965741_hk_8_china_office_getty.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [8, 3]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "d63222fc",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1f9d123a",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4f40e0b9",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "faf02875",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。",
+                                  "blocks": [
+                                    {
+                                      "id": "9dc95487",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  },
+                  {
+                    "id": "869e2797",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a4c6a9cb",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b2c76a18",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港抗議",
+                                  "blocks": [
+                                    {
+                                      "id": "9eff924a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港抗議",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 2]
+                  },
+                  {
+                    "id": "e1ef7444",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "17224/production/_107965749_hk_gas_7_getty.jpg",
+                      "href": "http://c.files.bbci.co.uk/17224/production/_107965749_hk_gas_7_getty.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [9, 3]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            {
+              "id": "521153fc",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5844f79b",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0defd4c3",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0432b58c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。",
+                                  "blocks": [
+                                    {
+                                      "id": "5b39507f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "474ab368",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0a9a24fa",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2faff833",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港抗議",
+                                  "blocks": [
+                                    {
+                                      "id": "b91620c5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港抗議",
+                                        "attributes": []
+                                      },
+                                      "position": [10, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [10, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [10, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  },
+                  {
+                    "id": "676c981a",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "133A4/production/_107965787_hk_reuters.jpg",
+                      "href": "http://c.files.bbci.co.uk/133A4/production/_107965787_hk_reuters.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Reuters",
+                      "suitableForSyndication": true
+                    },
+                    "position": [10, 3]
+                  }
+                ]
+              },
+              "position": [10]
+            },
+            {
+              "id": "a13e2614",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f7eb3aa3",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "56c50142",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a135a721",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。",
+                                  "blocks": [
+                                    {
+                                      "id": "eb0a04dd",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。",
+                                        "attributes": []
+                                      },
+                                      "position": [11, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [11, 1]
+                  },
+                  {
+                    "id": "8938272c",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "30aa5301",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b563a7ce",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港示威",
+                                  "blocks": [
+                                    {
+                                      "id": "5ae945fe",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "香港示威",
+                                        "attributes": []
+                                      },
+                                      "position": [11, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [11, 2]
+                  },
+                  {
+                    "id": "5e3886a5",
+                    "type": "rawImage",
+                    "model": {
+                      "height": 549,
+                      "width": 976,
+                      "locator": "1253A/production/_107966057_hk_getty_protesters.jpg",
+                      "href": "http://c.files.bbci.co.uk/1253A/production/_107966057_hk_getty_protesters.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [11, 3]
+                  }
+                ]
+              },
+              "position": [11]
+            },
+            {
+              "id": "70227d15",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "595bfafe",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:d01af467-81da-a24f-be12-34708b56246f",
+                      "blocks": [
+                        {
+                          "id": "8864fbcd",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3c7b20f4",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "72517f81",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "1b554cf8",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Anti extradition bill protesters",
+                                              "blocks": [
+                                                {
+                                                  "id": "9a265c5f",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Anti extradition bill protesters",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    12, 1, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [12, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [12, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [12, 1, 1, 1]
+                              },
+                              {
+                                "id": "14b24a93",
+                                "type": "rawImage",
+                                "model": {
+                                  "height": 432,
+                                  "width": 768,
+                                  "locator": "10377/production/_107832466_wz59muhl.jpg",
+                                  "href": "http://c.files.bbci.co.uk/10377/production/_107832466_wz59muhl.jpg",
+                                  "originCode": "cpsprodpb",
+                                  "copyrightHolder": "Reuters",
+                                  "suitableForSyndication": false
+                                },
+                                "position": [12, 1, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [12, 1, 1]
+                        },
+                        {
+                          "id": "3d5246a1",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1601c911",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "香港逃犯條例壽終正寢為何仍然對經濟不利",
+                                  "blocks": [
+                                    {
+                                      "id": "fa5a8301",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "香港逃犯條例壽終正寢為何仍然對經濟不利",
+                                        "locator": "https://www.bbc.com/zhongwen/trad/chinese-news-48972427",
+                                        "blocks": [
+                                          {
+                                            "id": "816a3e37",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "香港逃犯條例壽終正寢為何仍然對經濟不利",
+                                              "attributes": []
+                                            },
+                                            "position": [12, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [12, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [12, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [12, 1, 2]
+                        },
+                        {
+                          "id": "8158490f",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "839b1983",
+                                "type": "cpsLinkMetadata",
+                                "model": {
+                                  "assetType": "STY",
+                                  "timestamp": 1562968859000
+                                },
+                                "position": [12, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [12, 1, 3]
+                        }
+                      ]
+                    },
+                    "position": [12, 1]
+                  }
+                ]
+              },
+              "position": [12]
+            },
+            { "id": "7758809a", "type": "mpu", "model": {}, "position": [13] }
+          ]
+        }
       },
       "promo": {
-        "headlines": {
-          "shortHeadline": "圖輯：香港示威抗議繼續 大規模警民衝突",
-          "headline": "圖輯：香港示威抗議繼續 大規模警民衝突"
-        },
         "locators": {
           "assetUri": "/zhongwen/trad/chinese-news-49065935",
           "curieCpsUrn": "urn:bbc:cps:curie:asset:093e8311-37b7-6944-931d-655cc0efb5c0",
@@ -196,9 +1097,137 @@
           "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065935",
           "curie": "http://www.bbc.co.uk/asset/093e8311-37b7-6944-931d-655cc0efb5c0"
         },
-        "summary": "香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。",
-        "timestamp": 1563730802000,
-        "language": "zh-Hant",
+        "headlines": {
+          "seoHeadline": "圖輯：香港示威抗議繼續 大規模警民衝突",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "圖輯：香港示威抗議繼續 大規模警民衝突",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "圖輯：香港示威抗議繼續 大規模警民衝突",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "香港連續第七個周末出現抗議示威",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "香港連續第七個周末出現抗議示威",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "香港抗議",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "香港抗議",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "height": 749,
+                  "width": 1331,
+                  "locator": "B456/production/_107966164_hk_gas_7_getty.jpg",
+                  "href": "http://c.files.bbci.co.uk/B456/production/_107966164_hk_gas_7_getty.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -209,83 +1238,23 @@
               "campaignId": "5a988e4739461b000e9dabfc",
               "campaignName": "WS - Update me"
             }
-          ],
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
-          "taggings": []
+          ]
         },
-        "indexImage": {
-          "id": "107966164",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/B456/production/_107966164_hk_gas_7_getty.jpg",
-          "path": "/cpsprodpb/B456/production/_107966164_hk_gas_7_getty.jpg",
-          "height": 749,
-          "width": 1331,
-          "altText": "香港抗議",
-          "caption": "香港連續第七個周末出現抗議示威",
-          "copyrightHolder": "Getty Images",
-          "originCode": "cpsprodpb",
-          "allowSyndication": true,
-          "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49065935",
-        "type": "cps"
-      },
-      "relatedContent": {
-        "section": {
-          "subType": "index",
-          "name": "兩岸三地",
-          "uri": "/zhongwen/trad/chinese_news",
-          "urlIdentifier": "/zhongwen/trad/chinese_news",
-          "type": "simple"
-        },
-        "site": {
-          "subType": "site",
-          "name": "BBC 中文網",
-          "uri": "/zhongwen/trad",
-          "urlIdentifier": "/zhongwen/trad",
-          "type": "simple"
-        },
-        "groups": [
-          {
-            "type": "see-alsos",
-            "promos": [
-              {
-                "headlines": {
-                  "shortHeadline": "香港逃犯條例壽終正寢為何仍然對經濟不利",
-                  "headline": "香港逃犯條例壽終正寢為何仍然對經濟不利"
-                },
-                "locators": {
-                  "assetUri": "/zhongwen/trad/chinese-news-48972427",
-                  "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/trad/chinese-news-48972427"
-                },
-                "summary": "香港這顆東方明珠，在逃犯條例引發大規模遊行示威之後，還能繼續璀璨下去嗎？",
-                "timestamp": 1562968859000,
-                "language": "zh-Hant",
-                "cpsType": "STY",
-                "indexImage": {
-                  "id": "107832466",
-                  "subType": "index",
-                  "href": "http://c.files.bbci.co.uk/10377/production/_107832466_wz59muhl.jpg",
-                  "path": "/cpsprodpb/10377/production/_107832466_wz59muhl.jpg",
-                  "height": 432,
-                  "width": 768,
-                  "altText": "Anti extradition bill protesters",
-                  "copyrightHolder": "Reuters",
-                  "type": "image"
-                },
-                "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-48972427",
-                "type": "cps"
-              }
-            ]
-          }
-        ]
+        "serviceIdentifier": "Zhongwen-traditional-v6",
+        "extrinsicPromo": {
+          "headlines": {
+            "shortHeadline": "圖輯：香港示威抗議繼續 大規模警民衝突"
+          },
+          "assetType": "PGL",
+          "type": "cps"
+        }
       }
     },
     "secondaryData": {
       "topStories": null,
       "features": null,
       "mostRead": null,
-      "mostWatched": null
+      "latestMedia": null
     }
   },
   "contentType": "application/json; charset=utf-8"

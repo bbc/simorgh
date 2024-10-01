@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { string, bool, func, arrayOf } from 'prop-types';
 import styled from '@emotion/styled';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Message from '../Message';
@@ -16,9 +15,9 @@ const isValidEvent = ({ origin }, acceptableEventOrigins) => {
 
 const Canonical = ({
   src,
-  placeholderSrcset,
+  placeholderSrcset = '',
   title,
-  placeholderSrc,
+  placeholderSrc = null,
   service,
   noJsMessage,
   showPlaceholder,
@@ -30,7 +29,14 @@ const Canonical = ({
   onMediaEnded,
   onMediaPlaylistEnded,
   onMediaError,
-  acceptableEventOrigins,
+  acceptableEventOrigins = [
+    'www.test.bbc.com',
+    'web-cdn.test.api.bbci.co.uk',
+    'www.bbc.com',
+    'web-cdn.api.bbci.co.uk',
+    'localhost.bbc.com',
+    'localhost',
+  ],
 }) => {
   const backgroundStyle = `
     background-image: url(${placeholderSrc});
@@ -107,38 +113,6 @@ const Canonical = ({
       </noscript>
     </>
   );
-};
-
-Canonical.propTypes = {
-  src: string.isRequired,
-  placeholderSrcset: string,
-  title: string.isRequired,
-  placeholderSrc: string,
-  service: string.isRequired,
-  noJsMessage: string.isRequired,
-  showPlaceholder: bool.isRequired,
-  showLoadingImage: bool.isRequired,
-  darkPlaceholder: bool.isRequired,
-  onMediaInitialised: func.isRequired,
-  onMediaPlaying: func.isRequired,
-  onMediaPause: func.isRequired,
-  onMediaEnded: func.isRequired,
-  onMediaPlaylistEnded: func.isRequired,
-  onMediaError: func.isRequired,
-  acceptableEventOrigins: arrayOf(string),
-};
-
-Canonical.defaultProps = {
-  placeholderSrc: null,
-  placeholderSrcset: '',
-  acceptableEventOrigins: [
-    'www.test.bbc.com',
-    'polling.test.bbc.com',
-    'www.bbc.com',
-    'polling.bbc.com',
-    'localhost.bbc.com',
-    'localhost',
-  ],
 };
 
 export default Canonical;

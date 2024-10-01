@@ -4,10 +4,10 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
+import { Summary } from '#app/models/types/curationData';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-import { Promo as CurationPromoProps } from '../types';
 import LiveLabel from '../../LiveLabel';
 
 const CurationPromo = ({
@@ -21,7 +21,8 @@ const CurationPromo = ({
   type,
   duration: mediaDuration,
   headingLevel = 2,
-}: CurationPromoProps) => {
+  isLive,
+}: Summary) => {
   const { isAmp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
@@ -34,7 +35,7 @@ const CurationPromo = ({
   const separator = ',';
 
   const formattedDuration = formatDuration({ duration, separator });
-  const durationString = `${durationTranslation}, ${formattedDuration}`;
+  const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
   const showDuration = mediaDuration && ['video', 'audio'].includes(type);
   const isMedia = ['video', 'audio', 'photogallery'].includes(type);
@@ -42,8 +43,6 @@ const CurationPromo = ({
     (type === 'audio' && `${audioTranslation}, `) ||
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
-
-  const isLive = link?.includes('/live/');
 
   return (
     <Promo>

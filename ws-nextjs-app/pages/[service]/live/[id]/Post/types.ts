@@ -58,6 +58,7 @@ export interface StreamResponse {
   };
 }
 export interface PostHeadingBlock {
+  id: string;
   type: 'headline' | 'subheadline';
   model: {
     blocks: [

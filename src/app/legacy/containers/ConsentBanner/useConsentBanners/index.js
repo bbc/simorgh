@@ -60,7 +60,7 @@ const isChromatic = () =>
 // Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
 const SAME_SITE_VALUE = 'None';
 
-const setPolicyCookie = ({ policy, explicit }) => {
+const setPolicyCookie = ({ policy, explicit, expires = null }) => {
   if (explicit) {
     // Use cookie oven to set cookie via http so Safari does not delete in 7 days
     setCookieOven(policy);
@@ -72,17 +72,19 @@ const setPolicyCookie = ({ policy, explicit }) => {
       name: POLICY_COOKIE,
       value: policy,
       sameSite: SAME_SITE_VALUE,
+      ...(expires && { expires }),
     });
   }
 };
 
-const setUserDidSeePrivacyBanner = () => {
+const setUserDidSeePrivacyBanner = (expires = null) => {
   // prevent setting cookies on Chromatic so that snapshots are consistent
   if (!isChromatic()) {
     setCookie({
       name: PRIVACY_COOKIE,
       value: PRIVACY_COOKIE_CURRENT_VALUE,
       sameSite: SAME_SITE_VALUE,
+      ...(expires && { expires }),
     });
   }
 };
@@ -99,16 +101,20 @@ const setUserDidAcceptPolicy = () =>
     explicit: true,
   });
 
-const setUserDidDismissCookieBanner = isUK =>
+const setUserDidDismissCookieBanner = (isUK, expires = null) =>
   setCookie({
     name: EXPLICIT_COOKIE,
     value: isUK
       ? COOKIE_BANNER_EXPLICIT_CHOICE_MADE
       : COOKIE_BANNER_EXPLICIT_CHOICE_MADE_NON_UK,
     sameSite: SAME_SITE_VALUE,
+    ...(expires && { expires }),
   });
 
-const useConsentBanner = (isUK = false) => {
+const useConsentBanner = (
+  isUK = false,
+  showCookieBannerBasedOnCountry = true,
+) => {
   const [{ showPrivacyBanner, showCookieBanner }, dispatch] = useReducer(
     bannerReducer,
     initialState,
@@ -125,21 +131,27 @@ const useConsentBanner = (isUK = false) => {
       PRIVACY_COOKIE_LEGACY_VALUES.includes(privacyCookie);
     const userHasExplicitCookie =
       EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(explicitCookie);
-    const shouldShowCookieBanner = !userHasExplicitCookie;
+    const shouldShowCookieBanner =
+      !userHasExplicitCookie && showCookieBannerBasedOnCountry;
     const shouldShowPrivacyBanner =
-      !userHasPrivacyCookie || userHasLegacyPrivacyCookie;
+      (!userHasPrivacyCookie || userHasLegacyPrivacyCookie) &&
+      showCookieBannerBasedOnCountry;
 
     if (shouldShowPrivacyBanner) {
       dispatch(SHOW_PRIVACY_BANNER);
       setUserDidSeePrivacyBanner();
     } else if (shouldShowCookieBanner) {
       dispatch(SHOW_COOKIE_BANNER);
+    } else if (!showCookieBannerBasedOnCountry) {
+      setUserDidDismissCookieBanner(isUK, 1);
+      if (!userHasPolicyCookie) setUserDidAcceptPolicy();
+      setUserDidSeePrivacyBanner(1);
     }
 
     if (!userHasPolicyCookie) {
       setDefaultPolicy();
     }
-  }, []);
+  }, [isUK, showCookieBannerBasedOnCountry]);
 
   const handlePrivacyBannerAccepted = () => {
     dispatch(SHOW_COOKIE_BANNER);

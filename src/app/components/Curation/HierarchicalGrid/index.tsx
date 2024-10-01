@@ -32,7 +32,7 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
 };
 
 const HiearchicalGrid = ({
-  promos,
+  summaries,
   headingLevel,
   isFirstCuration,
 }: CurationGridProps) => {
@@ -43,9 +43,9 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
-  if (!promos || promos.length < 3) return null;
+  if (!summaries || summaries.length < 3) return null;
 
-  const promoItems = promos.slice(0, 12);
+  const promoItems = summaries.slice(0, 12);
   return (
     <div data-testid="hierarchical-grid">
       <ul role="list" css={styles.list} data-testid="topic-promos">
@@ -53,7 +53,7 @@ const HiearchicalGrid = ({
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
-          const durationString = `${durationTranslation}, ${formattedDuration}`;
+          const durationString = `, ${durationTranslation} ${formattedDuration}`;
 
           const useLargeImages = i === 0 && promoItems.length >= 3;
 
@@ -74,7 +74,7 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-          const isLive = promo.link?.includes('/live/');
+          const { isLive } = promo;
 
           return (
             <li

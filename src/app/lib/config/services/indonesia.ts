@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     frontPageTitle: 'Berita',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'Podcast',
       brandTitle: 'Investigasi: Skandal Adopsi',
@@ -92,6 +93,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Terbaru',
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
+        shareButtonText: 'Kirim',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Rangkuman',
       error: {
@@ -288,11 +294,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Terpopuler',
-      numberOfItems: 5,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Siaran radio',
@@ -351,10 +352,6 @@ export const service: DefaultServiceConfig = {
         url: '/indonesia',
       },
       {
-        title: 'Pemilu 2024',
-        url: '/indonesia/topics/ck0mgrlgyplt',
-      },
-      {
         title: 'Indonesia',
         url: '/indonesia/topics/cjgn7k8yx4gt',
       },
@@ -368,11 +365,11 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Liputan Mendalam',
-        url: '/indonesia/laporan-khusus-51267199',
+        url: '/indonesia/topics/cw9qgeqd18zt',
       },
       {
         title: 'Majalah',
-        url: '/indonesia/majalah-51456120',
+        url: '/indonesia/topics/cpxrqmrkeg8t',
       },
     ],
     timezone: 'Asia/Jakarta',

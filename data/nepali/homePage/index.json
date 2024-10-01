@@ -8,83 +8,43 @@
         "summaries": [
           {
             "type": "article",
-            "title": "सुडानबाट उम्किएका नेपाली भन्छन्, 'पैसा नभएर अलपत्र परेका साथीहरूको उद्धार होस्'",
-            "firstPublished": "2023-04-26T09:30:57.856Z",
-            "link": "https://www.bbc.com/nepali/articles/c3g9e5l236po",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/369c/live/931ddd80-e409-11ed-b1f7-499e17e0d082.jpg",
-            "description": "इजिप्टस्थित नेपाली राजदूतले समस्यामा परेका नेपालीहरूबारे आफूलाई जानकारी भएको र उनीहरूलाई फर्काउन पहल भइरहेको बीबीसीलाई बताएका छन्।",
-            "imageAlt": "तुलसी राम खनाल",
-            "id": "c3g9e5l236po"
+            "title": "How a traffic accident stopped a city of 18 million",
+            "firstPublished": "2018-08-06T11:17:55.000Z",
+            "lastPublished": "2018-08-06T11:17:55.000Z",
+            "link": "https://www.bbc.com/nepali/23210854",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/193A/test/_63685460_abd9adbd-894c-4616-826b-0327af7f0e35.jpg",
+            "description": "For more than a week, Bangladesh has been gripped by mass protests triggered by the death of two children in a traffic accident.",
+            "imageAlt": "Students protesting",
+            "id": "16b1db1d-7363-0540-83e6-a05315222d68"
           },
           {
             "type": "article",
-            "title": "छत्तीसगढमा 'माओवादी आक्रमण', ११ जनाको मृत्यु",
-            "firstPublished": "2023-04-26T11:26:15.350Z",
-            "link": "https://www.bbc.com/nepali/articles/cq5wzgdvz4go",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/98cb/live/b77c8c40-e421-11ed-8df1-d74cbf1089d7.jpg",
-            "description": "भारतको छत्तीसगढ राज्यको दन्तवाडमा भएको एउटा आक्रमणमा ११ जनाको मृत्यु भएको प्रहरीले जनाएको छ। ",
-            "imageAlt": "दन्तेवाडा",
-            "id": "cq5wzgdvz4go"
+            "title": "Indonesia: Lombok quake kills dozens while thousands evacuated",
+            "firstPublished": "2018-08-06T11:15:37.000Z",
+            "lastPublished": "2018-08-06T11:15:37.000Z",
+            "link": "https://www.bbc.com/nepali/23210795",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1265E/test/_63685357_048519321-1.jpg",
+            "description": "Withness speak of choas and terror, as more than 90 people die on the island of Lombok",
+            "imageAlt": "Lombok quake",
+            "id": "d97b8b2b-9310-5548-9460-0159dbb0cd4c"
           },
           {
             "type": "article",
-            "title": "के अब मधेसका मुख्य राजनीतिक प्रतिस्पर्धी उपेन्द्र यादव र सीके राउत मात्र हुन्?  ",
-            "firstPublished": "2023-04-26T01:33:00.964Z",
-            "link": "https://www.bbc.com/nepali/articles/czd1xd581kxo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9e6b/live/93a980b0-e3d2-11ed-93ff-dfbb5bebbe1d.png",
-            "description": "आम निर्वाचन र अहिलेको उपनिर्वाचनमा ती दलहरूले प्राप्त गरेको मतको विवरणले पनि ती दुई दलबीच नै मधेसमा मुख्य प्रतिस्पर्धा हुने देखिन्छ। ",
-            "imageAlt": "सीके र उपेन्द्र ",
-            "id": "czd1xd581kxo"
+            "title": "सेक्यूरिटी गार्ड मार्ने व्यक्ति पक्राउ",
+            "firstPublished": "2018-01-30T09:44:42.000Z",
+            "lastPublished": "2018-01-30T09:44:42.000Z",
+            "link": "https://www.bbc.com/nepali/news-23184393",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8877/test/_63653943_suspect-nepal_police.jpg",
+            "description": "अनुसन्धान गर्दै जाँदा राजन थापा क्षेत्रीलाई मिति १५ गते दिउँसो काठमाण्डौंको बाङगेमुढाबाट पक्राउ गरिएको।",
+            "imageAlt": "राजन थापा क्षेत्री",
+            "id": "edc3e916-1534-8a46-8d46-45d645f139c7"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:6c48b4bc-e6dc-4205-ae31-ca3b82b29f31",
+        "curationId": "urn:bbc:tipo:list:67f8a638-371a-4863-84d4-ae662c2c6f98",
         "curationType": "tipo-curation",
         "position": 0,
-        "title": "Top Stories",
-        "visualProminence": "HIGH",
-        "visualStyle": "COLLECTION"
-      },
-      {
-        "summaries": [
-          {
-            "type": "video",
-            "duration": "PT2M7S",
-            "title": "जसले २० वर्ष प्रत्येक दिन छोराको फोटो खिचे",
-            "firstPublished": "2023-04-03T01:33:38.000Z",
-            "link": "https://www.bbc.com/nepali/news-65097336",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/BEB1/production/_129171884_photo_dad.jpg",
-            "description": "छोराको बाल्यकालको कुनै समय पनि नबिर्सिइयोस् भनेर एक बुवाले गरेको रोचक प्रयास।",
-            "imageAlt": "इयन मक्लिओडका छोराको बाल्यकालको तस्बिर",
-            "id": "ef71a33e-e528-4f0e-8805-38cdb0fa6170"
-          },
-          {
-            "type": "article",
-            "title": "राष्ट्रपतिको अवस्था ‘सुधार हुँदै’, उनमा देखिएको स्वास्थ्य समस्याबारे चिकित्सक के भन्छन्?",
-            "firstPublished": "2023-04-02T08:23:08.138Z",
-            "link": "https://www.bbc.com/nepali/articles/ce74644wkepo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/fbbb/live/a50f6b80-d130-11ed-9fcc-4fa74dd10aec.jpg",
-            "description": "शनिवार अस्पताल भर्ना भएका उनको पछिल्लो स्वास्थ्य अवस्थाबारे जानकारी लिन प्रधानमन्त्री पुष्पकमल दाहाल आइतवार बिहान शिक्षण अस्पताल पुगेका थिए। ",
-            "imageAlt": "रामचन्द्र पौडेल",
-            "id": "ce74644wkepo"
-          },
-          {
-            "type": "article",
-            "title": "सुनमा किन लगानीकर्ताहरू आकर्षित भइरहेका छन्, महँगो मूल्य अझै बढ्ला कि घट्ला?",
-            "firstPublished": "2023-04-02T02:34:07.152Z",
-            "link": "https://www.bbc.com/nepali/articles/cp6wy57r28zo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/29e6/live/5c4b0fd0-cfa5-11ed-be2e-754a65c11505.jpg",
-            "description": "नेपाल राष्ट्र ब्याङ्कका प्रवक्ता गुणाकर भट्टले पछिल्लो समय दुई ठूला अमेरिकी ब्याङ्कहरू धरासायी भएपछि डलरका लगानीकर्ता पनि सुनतर्फ आकर्षित भएको हुनसक्ने ठान्छन्।\n",
-            "imageAlt": "सुन",
-            "id": "cp6wy57r28zo"
-          }
-        ],
-        "activePage": 1,
-        "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:bfdf9f2e-4881-4cf0-9f79-3ca75437dbf4",
-        "curationType": "tipo-curation",
-        "position": 1,
         "title": "अन‌ि यो पनि",
         "visualProminence": "HIGH",
         "visualStyle": "COLLECTION"
@@ -99,6 +59,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "dataSource": "Data is from live TIPO"
+  "contentType": "application/json; charset=utf-8"
 }

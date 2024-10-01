@@ -38,3 +38,7 @@ next-env.d.ts
 .yarn
 
 .vscode
+
+# Consider removing this once we move Express app over to Next.js
+/public
+certificates

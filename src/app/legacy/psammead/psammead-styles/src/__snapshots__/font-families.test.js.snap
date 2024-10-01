@@ -273,12 +273,12 @@ exports[`Psammead Styles - Font Families should match gahuza 1`] = `
 exports[`Psammead Styles - Font Families should match gujarati 1`] = `
 {
   "sansBold": "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 700;
    font-style: normal;
   ",
   "sansRegular": "
-    font-family: "Mukta Vaani", Rasa, "Noto Sans Gujarati", "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
     font-weight: 400;
    font-style: normal;
   ",
@@ -1163,12 +1163,12 @@ exports[`Psammead Styles - Font Families should match tamil 1`] = `
 exports[`Psammead Styles - Font Families should match telugu 1`] = `
 {
   "sansBold": "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 700;
    font-style: normal;
   ",
   "sansRegular": "
-    font-family: Mallanna, "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
     font-weight: 400;
    font-style: normal;
   ",

@@ -46,20 +46,20 @@ interface PaginationProps {
 
 const visibilityToMediaQuery = (visibility: string) =>
   ({
-    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GROUP_2_MIN_WIDTH_BP}) and (max-width: ${GROUP_2_MAX_WIDTH_BP}) {
+    [VISIBILITY.MOBILE_ONLY]: `display: none; @media (min-width: ${GROUP_2_MIN_WIDTH_BP}rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GROUP_3_MAX_WIDTH_BP}) {
+    [VISIBILITY.TABLET_DOWN]: `display: none; @media (max-width: ${GROUP_3_MAX_WIDTH_BP}rem) {
       display: inline-block;
     }`,
-    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}) {
+    [VISIBILITY.TABLET_UP]: `display: none; @media (min-width: ${GROUP_3_MIN_WIDTH_BP}rem) {
       display: inline-block;
     }`,
-    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GROUP_4_MIN_WIDTH_BP}) {
+    [VISIBILITY.DESKTOP_ONLY]: `display: none; @media (min-width: ${GROUP_4_MIN_WIDTH_BP}rem) {
       display: inline-block;
     }`,
     [VISIBILITY.ALL]: `display: inline-block;`,
-  }[visibility] || 'display: none;');
+  })[visibility] || 'display: none;';
 
 const LinkComponent = ({
   children,
@@ -148,7 +148,6 @@ const renderBlock = ({
     </li>
   );
 };
-/* eslint-enable react/prop-types */
 
 const Pagination = ({
   activePage = 1,
@@ -163,12 +162,11 @@ const Pagination = ({
   const blocks = buildBlocks(activePage, pageCount);
   const isLive = pageType === LIVE_PAGE;
   if (!blocks) return null;
-
   const tokenMapper = (token: string, key: number) =>
     ({
       '{x}': <b key={key}>{activePage}</b>,
       '{y}': <b key={key}>{pageCount}</b>,
-    }[token] || <span key={key}>{token}</span>);
+    })[token] || <span key={key}>{token}</span>;
 
   const tokens = pageXOfY.split(/(\{.\})/).map(tokenMapper);
 

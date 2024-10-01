@@ -359,4 +359,4 @@ export const makeOptimoPromoFixture = (imageData: unknown) =>
       id: 'urn:bbc:ares::article:cemg3359nwro',
       type: 'optimo',
     },
-  } as PromoProps);
+  }) as PromoProps;

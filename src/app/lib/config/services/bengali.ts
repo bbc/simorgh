@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       pagination: {
         page: 'পৃষ্ঠা',
@@ -70,10 +71,15 @@ export const service: DefaultServiceConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'লাইভ',
-        liveCoverage: 'সরাসির কভারেজ',
+        liveCoverage: 'সরাসরি কভারেজ',
         breaking: 'ব্রেকিং',
         postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',
+        shareButtonText: 'শেয়ার করুন',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'সার সংক্ষেপ',
       error: {
@@ -263,11 +269,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'সবচেয়ে বেশি দেখা হয়েছে',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'রেডিও অনুষ্ঠান',
@@ -327,12 +328,16 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
-        title: 'বিশ্ব',
-        url: '/bengali/topics/c907347rezkt',
-      },
-      {
         title: 'রাজনীতি',
         url: '/bengali/topics/cqywj91rkg6t',
+      },
+      {
+        title: 'সর্বাধিক পঠিত',
+        url: '/bengali/popular/read',
+      },
+      {
+        title: 'বিশ্ব',
+        url: '/bengali/topics/c907347rezkt',
       },
       {
         title: 'অর্থনীতি',
@@ -353,10 +358,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ভিডিও',
         url: '/bengali/topics/cxy7jg418e7t',
-      },
-      {
-        title: 'সর্বাধিক পঠিত',
-        url: '/bengali/popular/read',
       },
     ],
   },

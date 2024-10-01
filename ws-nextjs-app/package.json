@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "Simorgh - Next.JS",
   "scripts": {
-    "setupDevEnv": "cp ../envConfig/local.env .env",
+    "setupDevEnv": "cp ../envConfig/local.env .env && mkdir -p public && cp -r ../public/. public",
     "moveStaticAssets": "mkdir -p build/standalone/ws-nextjs-app/public/_next/static && cp -r build/static/. build/standalone/ws-nextjs-app/public/_next/static",
-    "build:local": "cp ../envConfig/local.env .env && NODE_ENV=production && next build && yarn moveStaticAssets",
+    "build:local": "yarn setupDevEnv && NODE_ENV=production && next build && yarn moveStaticAssets",
     "build:preview": "cp ../envConfig/preview.env .env && NODE_ENV=production && next build",
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081",
+    "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https",
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",
     "stop": "lsof -t -i:7081 | xargs kill",
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
@@ -22,22 +23,25 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.23.2",
-    "@babel/plugin-proposal-export-default-from": "7.22.17",
-    "@babel/preset-react": "7.22.15",
+    "@babel/core": "7.25.2",
+    "@babel/plugin-proposal-export-default-from": "7.24.7",
+    "@babel/preset-react": "7.24.7",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/jest": "^11.11.0",
-    "@testing-library/jest-dom": "6.1.4",
-    "@testing-library/react": "14.0.0",
+    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/react": "15.0.7",
     "babel-plugin-transform-rename-import": "2.3.0",
-    "cypress": "^13.1.0",
-    "jest": "^29.6.4",
-    "jest-environment-jsdom": "^29.6.4",
-    "npm-run-all": "^4.1.5",
-    "ts-node": "^10.9.1"
+    "cypress": "13.10.0",
+    "cypress-axe": "^1.5.0",
+    "cypress-terminal-report": "6.1.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "next-test-api-route-handler": "^4.0.8",
+    "npm-run-all2": "6.2.2",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "next": "14.0.1",
-    "undici": "5.27.0"
+    "next": "14.2.10",
+    "undici": "6.19.8"
   }
 }

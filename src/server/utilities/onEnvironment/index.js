@@ -1,5 +1,7 @@
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
 const onEnvironment = (env, params) => wrappedFunction => {
-  const shouldCallFunction = env.includes(process.env.SIMORGH_APP_ENV);
+  const shouldCallFunction = env.includes(getEnvConfig().SIMORGH_APP_ENV);
 
   if (!shouldCallFunction) return;
 

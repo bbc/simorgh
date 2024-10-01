@@ -6,31 +6,36 @@ jest.mock('../getEnvironment', () =>
 );
 
 describe('certsRequired', () => {
-  const originalIntegrationTestBuild = process.env.INTEGRATION_TEST_BUILD;
+  const originaLighthouseBuild = process.env.LIGHTHOUSE_BUILD;
+  const originalCypressAppEnv = process.env.CYPRESS_APP_ENV;
 
   afterEach(() => {
-    process.env.INTEGRATION_TEST_BUILD = originalIntegrationTestBuild;
+    process.env.LIGHTHOUSE_BUILD = originaLighthouseBuild;
+    process.env.CYPRESS_APP_ENV = originalCypressAppEnv;
   });
 
   it.each`
-    url         | environment  | integrationTestBuild | expected
-    ${'/mundo'} | ${'local'}   | ${undefined}         | ${false}
-    ${'/mundo'} | ${'local'}   | ${'true'}            | ${false}
-    ${'/mundo'} | ${'local'}   | ${true}              | ${false}
-    ${'/mundo'} | ${undefined} | ${undefined}         | ${false}
-    ${'/mundo'} | ${undefined} | ${'true'}            | ${false}
-    ${'/mundo'} | ${undefined} | ${true}              | ${false}
-    ${'/mundo'} | ${'test'}    | ${undefined}         | ${true}
-    ${'/mundo'} | ${'test'}    | ${'true'}            | ${false}
-    ${'/mundo'} | ${'test'}    | ${true}              | ${false}
-    ${'/mundo'} | ${'live'}    | ${undefined}         | ${true}
-    ${'/mundo'} | ${'live'}    | ${'true'}            | ${false}
-    ${'/mundo'} | ${'live'}    | ${true}              | ${false}
+    url         | environment  | lighthouseBuild | cypressAppEnv | expected
+    ${'/mundo'} | ${'local'}   | ${undefined}    | ${undefined}  | ${false}
+    ${'/mundo'} | ${'local'}   | ${'true'}       | ${'local'}    | ${false}
+    ${'/mundo'} | ${'local'}   | ${true}         | ${'local'}    | ${false}
+    ${'/mundo'} | ${undefined} | ${undefined}    | ${undefined}  | ${false}
+    ${'/mundo'} | ${undefined} | ${'true'}       | ${'local'}    | ${false}
+    ${'/mundo'} | ${undefined} | ${true}         | ${true}       | ${false}
+    ${'/mundo'} | ${'test'}    | ${undefined}    | ${undefined}  | ${true}
+    ${'/mundo'} | ${'test'}    | ${'true'}       | ${'test'}     | ${false}
+    ${'/mundo'} | ${'test'}    | ${'false'}      | ${'test'}     | ${true}
+    ${'/mundo'} | ${'test'}    | ${true}         | ${'test'}     | ${false}
+    ${'/mundo'} | ${'live'}    | ${undefined}    | ${undefined}  | ${true}
+    ${'/mundo'} | ${'live'}    | ${'true'}       | ${'live'}     | ${false}
+    ${'/mundo'} | ${'live'}    | ${'false'}      | ${'live'}     | ${true}
+    ${'/mundo'} | ${'live'}    | ${true}         | ${'live'}     | ${false}
   `(
-    'returns $expected when environment is $environment, integrationTestBuild is $integrationTestBuild and url is $url',
-    ({ url, environment, integrationTestBuild, expected }) => {
+    'returns $expected when environment is $environment, lighthouseBuild is $lighthouseBuild, cypressAppEnv is $cypressAppEnv, and url is $url',
+    ({ url, environment, lighthouseBuild, cypressAppEnv, expected }) => {
       (getEnvironment as jest.Mock).mockImplementationOnce(() => environment);
-      process.env.INTEGRATION_TEST_BUILD = integrationTestBuild;
+      process.env.LIGHTHOUSE_BUILD = lighthouseBuild;
+      process.env.CYPRESS_APP_ENV = cypressAppEnv;
       expect(certsRequired(url)).toBe(expected);
     },
   );

@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'બ્રેકિંગ',
         postedAt: 'અહીં પોસ્ટ કર્યું',
         summary: 'સારાંશ',
+        shareButtonText: 'શેર કરો',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'સારાંશ',
       error: {
@@ -267,11 +272,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'સૌથી વધુ જોવાયેલ',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -316,6 +316,7 @@ export const service: DefaultServiceConfig = {
         },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
+      collectiveNewsroomText: 'બીબીસી માટે કલેક્ટિવ ન્યૂઝરૂમનું પ્રકાશન',
     },
     timezone: 'Asia/Kolkata',
     navigation: [
@@ -334,6 +335,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'વિદેશ',
         url: '/gujarati/topics/c83plvezd90t',
+      },
+      {
+        title: 'હવામાન સમાચાર',
+        url: '/gujarati/topics/cv2gk3nze31t',
       },
       {
         title: 'સ્પોર્ટ્સ',

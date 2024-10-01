@@ -1,9 +1,6 @@
 import React from 'react';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ScrollablePromo from '.';
 import {
   threeLinks,
@@ -15,59 +12,56 @@ import {
   truncatedTextInSingleLink,
   arabicText,
 } from './helpers/fixtureData';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
-// eslint-disable-next-line react/prop-types
-const ScrollablePromoComponent = ({ data, service, script, dir }) => (
-  <ThemeProvider service={service}>
-    <ToggleContextProvider>
-      <BackGround>
-        <ServiceContextProvider service={service} script={script} dir={dir}>
-          <ScrollablePromo blocks={data} />
-        </ServiceContextProvider>
-      </BackGround>
-    </ToggleContextProvider>
-  </ThemeProvider>
+
+const ScrollablePromoComponent = ({ data, service }) => (
+  <BackGround>
+    <ServiceContextProvider service={service}>
+      <ScrollablePromo blocks={data} />
+    </ServiceContextProvider>
+  </BackGround>
 );
 
 export default {
-  title: 'components/scrollable promo component',
+  title: 'Components/Scrollable Promo',
   ScrollablePromoComponent,
-  decorators: [withKnobs, withServicesKnob()],
 };
 
-export const ThreeLinks = props => (
-  <ScrollablePromoComponent data={threeLinks} {...props} />
+export const ThreeLinks = (_, { service }) => (
+  <ScrollablePromoComponent data={threeLinks} service={service} />
 );
 
-export const OnlyOneLink = props => (
-  <ScrollablePromoComponent data={oneLinkOnly} {...props} />
+export const OnlyOneLink = (_, { service }) => (
+  <ScrollablePromoComponent data={oneLinkOnly} service={service} />
 );
 
-export const OneLinkWithNoTitle = props => (
-  <ScrollablePromoComponent data={oneLinkWithNoTitle} {...props} />
+export const OneLinkWithNoTitle = (_, { service }) => (
+  <ScrollablePromoComponent data={oneLinkWithNoTitle} service={service} />
 );
 
-export const MoreThanThreeLinks = props => (
-  <ScrollablePromoComponent data={moreThanThreeLinks} {...props} />
+export const MoreThanThreeLinks = (_, { service }) => (
+  <ScrollablePromoComponent data={moreThanThreeLinks} service={service} />
 );
 
-export const NoImagesInData = props => (
-  <ScrollablePromoComponent data={twoLinksWithNoImages} {...props} />
+export const NoImagesInData = (_, { service }) => (
+  <ScrollablePromoComponent data={twoLinksWithNoImages} service={service} />
 );
 
-export const TruncatedTextInSingleLink = props => (
-  <ScrollablePromoComponent data={truncatedTextInSingleLink} {...props} />
+export const TruncatedTextInSingleLink = (_, { service }) => (
+  <ScrollablePromoComponent
+    data={truncatedTextInSingleLink}
+    service={service}
+  />
 );
 
-export const ArabicText = props => (
-  <ScrollablePromoComponent data={arabicText} {...props} />
+export const ArabicText = () => (
+  <ScrollablePromoComponent data={arabicText} service="arabic" />
 );
 
-export const WithTimestamp = props => (
-  <ScrollablePromoComponent data={oneLinkWithTimestamp} {...props} />
+export const WithTimestamp = (_, { service }) => (
+  <ScrollablePromoComponent data={oneLinkWithTimestamp} service={service} />
 );

@@ -62,7 +62,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
         class="emotion-4 emotion-5 emotion-6"
         height="256"
         sizes="(min-width: 1008px) 228px, 30vw"
-        src="https://mock-url"
+        src="https://mock-url.webp"
         width="256"
       />
     </div>

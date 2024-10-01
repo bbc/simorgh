@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: '속보',
         postedAt: '작성',
         summary: '요약',
+        shareButtonText: '공유',
+      },
+      downloads: {
+        instructions: '오늘의 뉴스를 다운받아 보실 수 있습니다',
+        title: '파일 다운로드',
       },
       gist: '요약',
       error: {
@@ -252,20 +257,15 @@ export const service: DefaultServiceConfig = {
           'Sorry, we can’t display this part of the story on this lightweight mobile page.',
         linkText: 'View the full version of the page to see all the content.',
       },
-      topStoriesTitle: '주요뉴스',
+      topStoriesTitle: '주요 뉴스',
       featuresAnalysisTitle: '이 시간 이슈',
-      latestMediaTitle: '최신',
+      latestMediaTitle: '최신 뉴스',
     },
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: '인기 콘텐츠',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

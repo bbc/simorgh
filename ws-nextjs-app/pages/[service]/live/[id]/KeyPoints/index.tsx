@@ -44,6 +44,8 @@ const KeyPoints = ({
               bulletPointColour={GREY_10}
             />
           ),
+          orderedList: () => <></>,
+          paragraph: () => <></>,
         }}
       />
     ),

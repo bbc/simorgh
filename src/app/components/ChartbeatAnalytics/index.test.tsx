@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -39,35 +39,39 @@ const ContextWrap = ({
   origin,
   children,
   toggleState = defaultToggleState,
-}: PropsWithChildren<Props>) => (
-  <RequestContextProvider
-    isAmp={platform === 'amp'}
-    isApp={false}
-    pageType={pageType}
-    service="news"
-    statusCode={200}
-    bbcOrigin={origin}
-    pathname="/pathname"
-  >
-    <ServiceContextProvider service="news">
-      <ToggleContext.Provider
-        value={{
-          toggleState,
-          toggleDispatch: mockToggleDispatch,
-        }}
-      >
-        <UserContext.Provider
-          // @ts-expect-error requires mocking for testing purposes
-          value={{
-            sendCanonicalChartbeatBeacon,
-          }}
-        >
-          {children}
-        </UserContext.Provider>
-      </ToggleContext.Provider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+}: PropsWithChildren<Props>) => {
+  const memoizedToggleContextValue = useMemo(
+    () => ({ toggleState, toggleDispatch: mockToggleDispatch }),
+    [toggleState],
+  );
+
+  const memoizedUserContextValue = useMemo(
+    () => ({ sendCanonicalChartbeatBeacon }),
+    [],
+  );
+  return (
+    <RequestContextProvider
+      isAmp={platform === 'amp'}
+      isApp={false}
+      pageType={pageType}
+      service="news"
+      statusCode={200}
+      bbcOrigin={origin}
+      pathname="/pathname"
+    >
+      <ServiceContextProvider service="news">
+        <ToggleContext.Provider value={memoizedToggleContextValue}>
+          <UserContext.Provider
+            // @ts-expect-error requires mocking for testing purposes
+            value={memoizedUserContextValue}
+          >
+            {children}
+          </UserContext.Provider>
+        </ToggleContext.Provider>
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  );
+};
 
 describe('Charbeats Analytics Container', () => {
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {

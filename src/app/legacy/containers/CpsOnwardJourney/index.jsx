@@ -1,15 +1,4 @@
 import React, { useContext } from 'react';
-import {
-  arrayOf,
-  shape,
-  number,
-  node,
-  string,
-  func,
-  bool,
-  oneOf,
-  elementType,
-} from 'prop-types';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
@@ -25,22 +14,10 @@ import {
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 
-import { storyItem } from '#models/propTypes/storyItem';
-import { RequestContext } from '#contexts/RequestContext';
-import Grid, { GridWrapper, GridItemLarge } from '#components/Grid';
-import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import { GridWrapper, GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { GHOST } from '../../../components/ThemeProvider/palette';
-
-const LargeGridColumns = {
-  group0: 1,
-  group1: 1,
-  group2: 1,
-  group3: 1,
-  group4: 6,
-  group5: 12,
-};
 
 const Wrapper = styled.div`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -51,35 +28,6 @@ const Wrapper = styled.div`
     padding: 0 ${GEL_SPACING_DBL};
   }
 `;
-
-const LargeGrid = ({ children, ...gridProps }) => (
-  <Grid
-    {...gridProps}
-    columns={LargeGridColumns}
-    margins={{
-      group0: true,
-      group1: true,
-      group2: true,
-      group3: true,
-      group4: false,
-      group5: false,
-    }}
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 3,
-      group5: 6,
-    }}
-  >
-    {children}
-  </Grid>
-);
-
-LargeGrid.propTypes = {
-  children: node.isRequired,
-};
 
 const gridMarginSmall = `
   margin-bottom: ${GEL_SPACING_DBL};
@@ -129,7 +77,11 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
-const OptionallyRenderedSkipWrapper = ({ skipLink, service, children }) =>
+const OptionallyRenderedSkipWrapper = ({
+  skipLink = null,
+  service,
+  children,
+}) =>
   skipLink ? (
     <SkipLinkWrapper service={service} {...skipLink}>
       {children}
@@ -138,55 +90,38 @@ const OptionallyRenderedSkipWrapper = ({ skipLink, service, children }) =>
     children
   );
 
-const skipLinkProps = {
-  terms: shape({
-    '%title%': string,
-  }),
-  endTextVisuallyHidden: string,
-  endTextId: string,
-  text: string,
-};
-
-OptionallyRenderedSkipWrapper.propTypes = {
-  service: string.isRequired,
-  children: node.isRequired,
-  skipLink: shape(skipLinkProps),
-};
-
-OptionallyRenderedSkipWrapper.defaultProps = {
-  skipLink: null,
-};
-
 const CpsOnwardJourney = ({
-  className,
-  LabelComponent,
+  className = '',
+  LabelComponent = StyledSectionLabel,
   labelId,
-  title,
-  content,
-  isMediaContent,
-  parentColumns,
+  title = '',
+  content = [],
+  isMediaContent = false,
+  parentColumns = null,
   promoListComponent: PromoListComponent,
   promoComponent: PromoComponent,
-  sectionLabelOverrideAs,
-  sectionLabelBar,
-  sectionLabelBackground,
+  sectionLabelOverrideAs = null,
+  sectionLabelBar = true,
+  sectionLabelBackground = GHOST,
   columnType,
-  skipLink,
-  eventTrackingData,
+  skipLink = null,
+  eventTrackingData = null,
 }) => {
   const { script, service, dir } = useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
 
-  const isMostWatched = pageType === MOST_WATCHED_PAGE;
-  const a11yAttributes = isMostWatched
-    ? {
-        as: 'div',
-      }
-    : { as: 'section', role: 'region', 'aria-labelledby': labelId };
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-labelledby': labelId,
+  };
 
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
-      <Wrapper data-e2e={labelId} {...a11yAttributes} className={className}>
+      <Wrapper
+        data-e2e={labelId}
+        {...a11yAttributes}
+        {...(className && { className })}
+      >
         {children}
       </Wrapper>
     ) : (
@@ -194,10 +129,6 @@ const CpsOnwardJourney = ({
         <LegacyGridItemLarge dir={dir}>{children}</LegacyGridItemLarge>
       </GridWrapper>
     );
-
-  CpsOnwardJourneyWrapper.propTypes = {
-    children: node.isRequired,
-  };
 
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
@@ -239,51 +170,6 @@ const CpsOnwardJourney = ({
       </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>
   );
-};
-
-CpsOnwardJourney.propTypes = {
-  className: string,
-  LabelComponent: elementType,
-  labelId: string.isRequired,
-  title: string,
-  content: arrayOf(shape(storyItem)),
-  isMediaContent: bool,
-  parentColumns: shape({
-    group0: number,
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }),
-  promoListComponent: func.isRequired,
-  promoComponent: func.isRequired,
-  sectionLabelOverrideAs: string,
-  sectionLabelBar: bool,
-  sectionLabelBackground: string,
-  /* since this component is reused in both the main and secondary columns,
-      the property below helps ensure that it lays out properly in both
-      usages.
-  */
-  columnType: oneOf(['main', 'secondary']).isRequired,
-  skipLink: shape(skipLinkProps),
-  eventTrackingData: shape({
-    componentName: string,
-  }),
-};
-
-CpsOnwardJourney.defaultProps = {
-  className: '',
-  LabelComponent: StyledSectionLabel,
-  content: [],
-  title: '',
-  isMediaContent: false,
-  parentColumns: null,
-  sectionLabelOverrideAs: null,
-  sectionLabelBar: true,
-  sectionLabelBackground: GHOST,
-  skipLink: null,
-  eventTrackingData: null,
 };
 
 export default CpsOnwardJourney;

@@ -62,7 +62,7 @@ exports[`Canonical Topic Page Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Topic Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Topic Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Topic Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Topic Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 

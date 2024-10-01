@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, element } from 'prop-types';
 import partition from 'ramda/src/partition';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -14,12 +13,11 @@ import A from './a';
 import Timestamp from './timestamp';
 
 const PromoContext = React.createContext({});
-const withPromoContext = Component => props =>
-  (
-    <PromoContext.Consumer>
-      {context => <Component {...context} {...props} />}
-    </PromoContext.Consumer>
-  );
+const withPromoContext = Component => props => (
+  <PromoContext.Consumer>
+    {context => <Component {...context} {...props} />}
+  </PromoContext.Consumer>
+);
 
 const Wrapper = styled.div`
   position: relative;
@@ -33,9 +31,16 @@ const Promo = ({ children }) => {
     child => child.type === Promo.Image,
     children.filter(Boolean),
   );
+  const promoValue = useMemo(
+    () => ({
+      script,
+      service,
+    }),
+    [script, service],
+  );
   return (
     <Wrapper>
-      <PromoContext.Provider value={{ script, service }}>
+      <PromoContext.Provider value={promoValue}>
         {leftChildren && <div className="promo-image">{leftChildren}</div>}
         {rightChildren && <div className="promo-text">{rightChildren}</div>}
       </PromoContext.Provider>
@@ -50,10 +55,6 @@ Promo.Body = withPromoContext(Body);
 Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
 Promo.Timestamp = withPromoContext(Timestamp);
-
-Promo.propTypes = {
-  children: arrayOf(element).isRequired,
-};
 
 export const MEDIA_TYPES = TYPES;
 export default Promo;

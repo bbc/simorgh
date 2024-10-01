@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ሰበር',
         postedAt: 'የታተመዉ',
         summary: 'ጭምቅ ሃሳብ',
+        shareButtonText: 'ያጋሩ',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'ጭምቅ ሃሳብ',
       error: {
@@ -248,17 +253,75 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'እንዳያመልጥዎ',
       featuresAnalysisTitle: 'ከየፈርጁ',
       latestMediaTitle: 'የቅርብ ጊዜ',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'ግዴት አይደለም',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'እየጫኑ ያሉት ይህ ነው፡',
+        fileUploadButton: 'ፋይል ይምረጡ',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'ላክ',
+
+        // Validation
+        validationRequired: 'አንድ የጎደለ ነገር አለ',
+        validationInvalidEmail: 'ትክክል አይመስልም። እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ።',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough: 'በቂ ፋይሎች አይደሉም። እባክዎ ቢያንስ {{minFiles}} ያስገቡ።',
+        validationFilesTooMany: 'ብዙ ፋይሎች ናቸው። መጫን የሚችሉት የፋይል መጠን {{maxFiles}}።',
+        validationFilesInvalidType:
+          'ይቅርታ፤ እንደዚህ አይነት ፋይሎችን መጠቀም አንችልም። እባክዎ {{fileTypes}} አይነት ፋይሎችን ይጨምሩ።',
+        validationFilesTooSmall: 'ፋይሉ ስህተት አለው። እባክዎ ሌላ ፋይል ይምረጡ።',
+        validationFilesSizeExceeded:
+          'ይቅርታ፤ እነዚህ ፋይሎች መጠናቸው ከፍ ያለ ነው። በአንድ ግዜ መጫን የሚችሉት 1.2GB ፋይል ነው።',
+        validationWordLimit: 'የሚፈቀደው የቃላት መጠን {{wordLimit}}',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'መለያ ቁጥር',
+        submissionInfoSignedOutMessage: 'ለማስታወስ ያክል ዝርዝሩን በግልዎ መዝግበው መያዝ ይችላሉ።',
+        privacyInfoHtml:
+          'የግላዊ መረጃዎ ምስጢራዊነት የተጠበቀ ይሆናል፤ ዝርዝሩን ለማወቅ {{privacyInfoLink}} ክፍል ያንብቡ።',
+        emailToHtml:
+          'ሃሳብዎን ቀይረው መጠቀም ካልፈለጉ፤ በዚህ አድራሻ ኢሜይል ይላኩ {{emailLink}}። የማጣቀሻ ቁጥሩንም ከመጻፍ አይዘንጉ።',
+        removalGuidelineText:
+          'በፕሮግራም ወይም በኦንላይን ላይ አንዳች ነገር አቅርበው ጥቅም ላይ ከዋለ በኋላ ልናነሳው አንችልም።',
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'በመጫን ላይ . . .',
+        uploadingDescription: 'እባክዎ እስኪጠናቀቅ ድረስ ይጠብቁ።',
+
+        // Success Screen
+        successHeading: 'መልዕክቱ ተልኳል',
+        successDescription: 'መልዕክት ስለላኩ እናመሰግናለን',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'መልዕክትዎ አልተጫነም',
+        errorDescription: 'በድጋሚ ለመጫን ይሞክሩ',
+
+        // Closed Screen
+        closedHeading: 'ይህ አሁን ዝግ ነው',
+        closedDescription: 'ይህ የተዘጋው {{date}} ነው።',
+      },
     },
     mostRead: {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'በብዛት የታዩ',
-      numberOfItems: 5,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

@@ -24,6 +24,8 @@ jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(mockAgent as unknown as Agent)),
 );
 
+const localTimeout = 60000;
+
 describe('Fetch Data from BFF', () => {
   beforeEach(() => {
     process.env.BFF_PATH = 'https://mock-bff-path';
@@ -62,6 +64,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -71,13 +77,13 @@ describe('Fetch Data from BFF', () => {
     const url = '/pidgin/12345678';
 
     it.each`
-      environment | pathname                      | path                                                                                                 | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/12345678'}                                                                | ${undefined} | ${undefined}
-      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=%2Fpidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=%2Fpidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=%2Fpidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=%2Fpidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=%2Fpidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      environment | pathname                      | path                                                                                              | agent        | optHeaders
+      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/12345678'}                                                             | ${undefined} | ${undefined}
+      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin%2F12345678&service=pidgin&pageType=cpsAsset&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
     `(
       'when environment is $environment and pathname is $pathname, should invoke the BFF with the expected params',
       async ({ environment, path, agent, optHeaders, pathname }) => {
@@ -95,6 +101,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -129,6 +139,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -162,6 +176,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );
@@ -195,6 +213,10 @@ describe('Fetch Data from BFF', () => {
           path,
           agent,
           optHeaders,
+          timeout:
+            environment === 'local' && !pathname.includes('renderer_env')
+              ? localTimeout
+              : undefined,
         });
       },
     );

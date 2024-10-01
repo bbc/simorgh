@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { node, number, shape } from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { number as numberKnob, withKnobs } from '@storybook/addon-knobs';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import notes from '../README.md';
 import * as allSvgs from './svgs';
@@ -22,7 +20,15 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-const getSVG = ({ group, ratio, viewbox, height }) => {
+const getSVG = ({
+  group = svgs.news.group,
+  ratio = svgs.news.ratio,
+  viewbox = {
+    width: 167.95,
+    height: 24,
+  },
+  height = 24,
+}) => {
   const width = height * ratio;
 
   return (
@@ -41,56 +47,28 @@ const getSVG = ({ group, ratio, viewbox, height }) => {
   );
 };
 
-getSVG.defaultProps = {
-  group: svgs.news.group,
-  ratio: svgs.news.ratio,
-  viewbox: {
-    width: 167.95,
-    height: 24,
-  },
-  height: 24,
-};
-
-getSVG.propTypes = {
-  group: node,
-  ratio: number,
-  viewbox: shape({
-    height: number,
-    width: number,
-  }),
-  height: number,
-};
-
-const stories = storiesOf('Utilities/SVGS/Brand Svgs', module).addDecorator(
-  withKnobs,
-);
+const stories = storiesOf('Utilities/SVGS/Brand Svgs', module);
 Object.keys(svgs)
   .filter(svgName => !svgName.includes('BBC_BLOCKS'))
   .forEach(svgName => {
     stories.add(
       svgName,
       () => {
-        const height = numberKnob('Height', 24);
+        const height = 24;
         return getSVG({ ...svgs[svgName], height });
       },
       { notes, chromatic: { disable: true } },
     );
   });
 
-const coreIconStories = storiesOf(
-  'Utilities/SVGS/CoreIcons Svgs',
-  module,
-).addDecorator(withKnobs);
+const coreIconStories = storiesOf('Utilities/SVGS/CoreIcons Svgs', module);
 
-const mediaIconStories = storiesOf(
-  'Utilities/SVGS/MediaIcons Svgs',
-  module,
-).addDecorator(withKnobs);
+const mediaIconStories = storiesOf('Utilities/SVGS/MediaIcons Svgs', module);
 
 const navigationIconsStories = storiesOf(
   'Utilities/SVGS/NavigationIcons Svgs',
   module,
-).addDecorator(withKnobs);
+);
 
 Object.keys(coreIcons).forEach(iconName => {
   coreIconStories.add(iconName, () => coreIcons[iconName], {

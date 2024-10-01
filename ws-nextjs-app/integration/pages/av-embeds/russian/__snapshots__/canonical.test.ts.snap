@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Av-embeds Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53"`;
+
+exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
+<div
+  class="css-8bpknm"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="css-1q0v1eg edwq9ck2"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="css-17whsh0 edwq9ck0"
+    >
+      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove css-sa9y e1ita3o32"
+  >
+    <span
+      class="css-m04vo2"
+    >
+      Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
+    </span>
+    <div
+      aria-hidden="true"
+      class="css-1apn3of e1ita3o31"
+    >
+      <svg
+        aria-hidden="true"
+        class="css-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="css-11ia5vc e1ita3o30"
+      datetime="PT2M53S"
+    >
+      02:53
+    </time>
+  </button>
+  <div
+    class="css-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="css-1uq6tv3"
+      src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
+<div
+  class="css-8bpknm"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="css-1q0v1eg edwq9ck2"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="css-17whsh0 edwq9ck0"
+    >
+      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove css-sa9y e1ita3o32"
+  >
+    <span
+      class="css-m04vo2"
+    >
+      Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
+    </span>
+    <div
+      aria-hidden="true"
+      class="css-1apn3of e1ita3o31"
+    >
+      <svg
+        aria-hidden="true"
+        class="css-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="css-11ia5vc e1ita3o30"
+      datetime="PT2M53S"
+    >
+      02:53
+    </time>
+  </button>
+  <div
+    class="css-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="css-1uq6tv3"
+      src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
+<figure
+  class="css-1veeebz"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="css-8bpknm"
+    data-e2e="media-loader__placeholder"
+  >
+    <div
+      class="css-1q0v1eg edwq9ck2"
+      data-e2e="media-player__guidance"
+    >
+      <noscript
+        class="css-17whsh0 edwq9ck0"
+      >
+        &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      </noscript>
+    </div>
+    <button
+      class="focusIndicatorRemove css-sa9y e1ita3o32"
+    >
+      <span
+        class="css-m04vo2"
+      >
+        Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
+      </span>
+      <div
+        aria-hidden="true"
+        class="css-1apn3of e1ita3o31"
+      >
+        <svg
+          aria-hidden="true"
+          class="css-vja2s5 e1s2dgdk5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="css-11ia5vc e1ita3o30"
+        datetime="PT2M53S"
+      >
+        02:53
+      </time>
+    </button>
+    <div
+      class="css-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
+    >
+      <img
+        alt=""
+        class="css-1uq6tv3"
+        src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
+        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
+        style="aspect-ratio:auto"
+      />
+    </div>
+  </div>
+</figure>
+`;

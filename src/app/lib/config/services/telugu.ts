@@ -71,6 +71,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'బ్రేకింగ్ న్యూస్',
         postedAt: 'పోస్ట్ చేసిన సమయం',
         summary: 'సారాంశం',
+        shareButtonText: 'షేర్ చేయండి',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'సారాంశం',
       error: {
@@ -270,11 +275,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 10,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'ఎక్కువగా చూసినవి',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -320,6 +320,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText:
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
+      collectiveNewsroomText: 'బీబీసి కోసం కలెక్టివ్ న్యూస్‌రూమ్ ప్రచురణ',
     },
     timezone: 'Asia/Kolkata',
     navigation: [

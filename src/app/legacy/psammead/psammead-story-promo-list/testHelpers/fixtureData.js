@@ -2,7 +2,7 @@ const storyPromoData = [
   {
     image: {
       alt: 'BBC correspondent Daniel Sandford on the unseen footage of the London Bridge attacks',
-      src: 'https://ichef.bbci.co.uk/news/660/cpsprodpb/AF0F/production/_106651844_cabello.jpg',
+      src: 'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/AF0F/production/_106651844_cabello.jpg',
     },
     info: {
       headline: 'Unseen footage of the London Bridge attacks',
@@ -15,7 +15,7 @@ const storyPromoData = [
   {
     image: {
       alt: 'Emperor Akihito in his ceremonial dress, in 1990.',
-      src: 'https://ichef.bbci.co.uk/news/660/cpsprodpb/5D2E/production/_106645832_sqgettyimages-146949399.jpg',
+      src: 'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/5D2E/production/_106645832_sqgettyimages-146949399.jpg',
     },
     info: {
       headline:
@@ -29,7 +29,7 @@ const storyPromoData = [
   {
     image: {
       alt: 'Leopoldo López',
-      src: 'https://ichef.bbci.co.uk/news/660/cpsprodpb/5037/production/_106653502_hi053657116.jpg',
+      src: 'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/5037/production/_106653502_hi053657116.jpg',
     },
     info: {
       headline:
@@ -43,7 +43,7 @@ const storyPromoData = [
   {
     image: {
       alt: 'Arya Stark',
-      src: 'https://ichef.bbci.co.uk/news/660/cpsprodpb/2E26/production/_106641811_872e4518-d1e3-4bfa-86a6-fb2806a9fb21.jpg',
+      src: 'https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/2E26/production/_106641811_872e4518-d1e3-4bfa-86a6-fb2806a9fb21.jpg',
     },
     info: {
       headline:

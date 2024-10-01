@@ -1,6 +1,10 @@
 import React from 'react';
-import { node, string, bool } from 'prop-types';
-import { renderHook, act, cleanup } from '@testing-library/react-hooks';
+import {
+  renderHook,
+  act,
+  cleanup,
+} from '#app/components/react-testing-library-with-providers';
+
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -11,10 +15,16 @@ jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
 
 const optimizelyMock = {
   onReady: jest.fn(() => Promise.resolve()),
+  setUser: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
 };
 
-const wrapper = ({ isAmp, pageType, service, children }) => (
+const wrapper = ({
+  isAmp = false,
+  pageType = ARTICLE_PAGE,
+  service = 'news',
+  children,
+}) => (
   <RequestContextProvider
     isAmp={isAmp}
     pageType={pageType}
@@ -26,19 +36,6 @@ const wrapper = ({ isAmp, pageType, service, children }) => (
     </OptimizelyProvider>
   </RequestContextProvider>
 );
-
-wrapper.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  isAmp: bool.isRequired,
-  service: string.isRequired,
-};
-
-wrapper.defaultProps = {
-  isAmp: false,
-  pageType: ARTICLE_PAGE,
-  service: 'news',
-};
 
 describe('useOptimizelyScrollDepth', () => {
   const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
@@ -65,21 +62,17 @@ describe('useOptimizelyScrollDepth', () => {
   it('should call remove event listener with scroll', () => {
     renderHook(() => useOptimizelyScrollDepth());
 
-    cleanup().then(() => {
-      expect(removeEventListenerSpy).toHaveBeenCalledWith(
-        'scroll',
-        expect.any(Function),
-        { passive: true },
-      );
-    });
+    cleanup();
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'scroll',
+      expect.any(Function),
+      { passive: true },
+    );
   });
 
   it('should not fire events for pages on AMP', () => {
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
-      wrapper,
-      initialProps: {
-        isAmp: true,
-      },
+      wrapper: props => wrapper({ isAmp: true, ...props }),
     });
 
     act(() => {

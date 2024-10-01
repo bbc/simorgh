@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
-import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -16,7 +15,12 @@ const StyledBrand = styled(Brand)`
   }
 `;
 
-const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
+const BrandContainer = ({
+  skipLink = null,
+  scriptLink = null,
+  brandRef = null,
+  ...props
+}) => {
   const { product, serviceLocalizedName, service } = useContext(ServiceContext);
   const { brandSVG } = useTheme();
   const svgMaxHeight = 24;
@@ -24,7 +28,6 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-
   return (
     <StyledBrand
       product={product}
@@ -36,27 +39,11 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
       url={`/${service}`}
       skipLink={skipLink}
       scriptLink={scriptLink}
+      longBrandWithVariant={service === 'serbian'}
       ref={brandRef}
       {...props}
     />
   );
-};
-
-BrandContainer.propTypes = {
-  borderTop: bool,
-  borderBottom: bool,
-  skipLink: node,
-  scriptLink: node,
-  // eslint-disable-next-line react/forbid-prop-types
-  brandRef: oneOfType([func, shape({ current: any })]),
-};
-
-BrandContainer.defaultProps = {
-  borderTop: false,
-  borderBottom: false,
-  skipLink: null,
-  scriptLink: null,
-  brandRef: null,
 };
 
 export default BrandContainer;

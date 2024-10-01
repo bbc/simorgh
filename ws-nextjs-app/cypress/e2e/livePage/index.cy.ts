@@ -1,28 +1,21 @@
-describe(
-  'Live Page Spec',
-  {
-    env: {
-      optionalOvveride: 'foo',
-    },
-  },
-  // @ts-expect-error Conflicts with Jest global types describe, it etc.
-  () => {
-    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-    let livePageData;
-    before(() => {
-      cy.getPageData({
-        service: 'pidgin',
-        pageType: 'live',
-        id: 'c7p765ynk9qt',
-      }).then(({ body }) => {
-        livePageData = body;
-      });
-    });
+import mediaPlayerTests from './mediaPlayer';
+import pageVisit from './pageVisit';
+import { testsThatAlwaysRunForAllPages } from '../testsForAllPages';
+import runTestsForPage from '../../support/helpers/runTestsForPage';
 
-    if (Cypress.env('APP_ENV') === 'test') {
-      it('passes', () => {
-        cy.visit('/pidgin/live/c7p765ynk9qt');
-      });
-    }
-  },
-);
+const testDetails = {
+  pageType: 'live',
+  testSuites: [
+    {
+      path: '/pidgin/live/c7p765ynk9qt',
+      id: 'c7p765ynk9qt',
+      runforEnv: ['test', 'local'],
+      service: 'pidgin',
+      tests: [testsThatAlwaysRunForAllPages, pageVisit, mediaPlayerTests],
+    },
+  ],
+};
+
+describe('Live Page Spec', () => {
+  runTestsForPage(testDetails);
+});

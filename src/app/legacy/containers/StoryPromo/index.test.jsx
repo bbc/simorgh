@@ -51,8 +51,7 @@ const fixtures = {
   podcastLink: podcastLinkItem,
 };
 
-// eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service, platform, ...props }) => (
+const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
   <ThemeProvider service={service} variant="default">
     <ServiceContextProvider service={service}>
       <RequestContextProvider
@@ -77,10 +76,6 @@ const WrappedStoryPromo = ({ service, platform, ...props }) => (
     </ServiceContextProvider>
   </ThemeProvider>
 );
-
-WrappedStoryPromo.defaultProps = {
-  service: 'igbo',
-};
 
 describe('StoryPromo Container', () => {
   suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
@@ -271,7 +266,9 @@ describe('StoryPromo Container', () => {
       expect(container.getElementsByTagName('amp-img').length).toEqual(0);
       expect(
         container.getElementsByTagName('img')[0].getAttribute('src'),
-      ).toEqual(`https://ichef.bbci.co.uk/news/660${cpsItem.indexImage.path}`);
+      ).toEqual(
+        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}.webp`,
+      );
       expect(
         container.getElementsByTagName('img')[0].getAttribute('alt'),
       ).toEqual(cpsItem.indexImage.altText);
@@ -286,7 +283,9 @@ describe('StoryPromo Container', () => {
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
-      ).toEqual(`https://ichef.bbci.co.uk/news/660${cpsItem.indexImage.path}`);
+      ).toEqual(
+        `https://ichef.bbci.co.uk/ace/ws/660${cpsItem.indexImage.path}.webp`,
+      );
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('alt'),
       ).toEqual(cpsItem.indexImage.altText);

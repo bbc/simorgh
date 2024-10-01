@@ -39,14 +39,14 @@ describe('LiveLabel', () => {
   describe('Screenreader Text', () => {
     it.each`
       service      | offScreenText               | children                                | expectedAriaHiddenText | expectedScreenReaderText
-      ${'pidgin'}  | ${undefined}                | ${undefined}                            | ${undefined}           | ${'As E Dey Happen '}
-      ${'pidgin'}  | ${'Pidgin Offscreen Text'}  | ${undefined}                            | ${'As E Dey Happen '}  | ${'Pidgin Offscreen Text'}
-      ${'pidgin'}  | ${undefined}                | ${(<p>Pidgin Live Promo Headline</p>)}  | ${undefined}           | ${'As E Dey Happen , Pidgin Live Promo Headline'}
-      ${'pidgin'}  | ${'Pidgin Offscreen Text'}  | ${(<p>Pidgin Live Promo Headline</p>)}  | ${'As E Dey Happen '}  | ${'Pidgin Offscreen Text, Pidgin Live Promo Headline'}
-      ${'russian'} | ${undefined}                | ${undefined}                            | ${'LIVE '}             | ${'Live'}
-      ${'russian'} | ${'Russian Offscreen Text'} | ${undefined}                            | ${'LIVE '}             | ${'Russian Offscreen Text'}
-      ${'russian'} | ${undefined}                | ${(<p>Russian Live Promo Headline</p>)} | ${'LIVE '}             | ${'Live, Russian Live Promo Headline'}
-      ${'russian'} | ${'Russian Offscreen Text'} | ${(<p>Russian Live Promo Headline</p>)} | ${'LIVE '}             | ${'Russian Offscreen Text, Russian Live Promo Headline'}
+      ${'pidgin'}  | ${undefined}                | ${undefined}                            | ${undefined}           | ${'As E Dey Happen'}
+      ${'pidgin'}  | ${'Pidgin Offscreen Text'}  | ${undefined}                            | ${'As E Dey Happen'}   | ${' Pidgin Offscreen Text'}
+      ${'pidgin'}  | ${undefined}                | ${(<p>Pidgin Live Promo Headline</p>)}  | ${undefined}           | ${'As E Dey Happen, Pidgin Live Promo Headline'}
+      ${'pidgin'}  | ${'Pidgin Offscreen Text'}  | ${(<p>Pidgin Live Promo Headline</p>)}  | ${'As E Dey Happen'}   | ${' Pidgin Offscreen Text, Pidgin Live Promo Headline'}
+      ${'russian'} | ${undefined}                | ${undefined}                            | ${'LIVE'}              | ${' Live'}
+      ${'russian'} | ${'Russian Offscreen Text'} | ${undefined}                            | ${'LIVE'}              | ${' Russian Offscreen Text'}
+      ${'russian'} | ${undefined}                | ${(<p>Russian Live Promo Headline</p>)} | ${'LIVE'}              | ${' Live, Russian Live Promo Headline'}
+      ${'russian'} | ${'Russian Offscreen Text'} | ${(<p>Russian Live Promo Headline</p>)} | ${'LIVE'}              | ${' Russian Offscreen Text, Russian Live Promo Headline'}
     `(
       'should be |$expectedScreenReaderText| for $service service when offScreenText = $offScreenText and children = $children',
       ({

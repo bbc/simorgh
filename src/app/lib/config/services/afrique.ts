@@ -74,6 +74,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgent',
         postedAt: 'Posté à',
         summary: 'Points clés',
+        shareButtonText: 'Partager',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Points clés',
       error: {
@@ -270,11 +275,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Les plus vus',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Journaux et Magazines',
@@ -346,16 +346,8 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/c06gq9jxz3rt',
       },
       {
-        title: 'Bien-être',
-        url: '/afrique/topics/c0vmyy90q8zt',
-      },
-      {
-        title: 'Science',
-        url: '/afrique/topics/cdr561vr57gt',
-      },
-      {
-        title: 'Technologie',
-        url: '/afrique/topics/cnq687nn703t',
+        title: 'Science et technologie',
+        url: '/afrique/topics/crezq2zk0q4t',
       },
       {
         title: 'Economie',
@@ -371,7 +363,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Nos émissions',
-        url: '/afrique/media-54074891',
+        url: '/afrique/topics/c88nzggm8gxt',
       },
       {
         title: 'Ecoutez en direct',

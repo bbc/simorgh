@@ -1,15 +1,26 @@
+import { OEmbedData } from '#app/components/Embeds/types';
+import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
 
-export interface Summary {
-  imageUrl?: string;
-  link?: string;
-  imageAlt?: string;
-  description?: string;
+// This maps to the Summary type definition from the BFF
+interface BaseSummary {
+  imageUrl: string;
+  link: string;
+  imageAlt: string;
+  description: string;
   title: string;
   id?: string;
   type: string;
   firstPublished?: string | number;
   lastPublished?: string | number;
+  duration?: string | number;
+  isLive?: boolean;
+}
+
+export interface Summary extends BaseSummary {
+  mediaType?: 'audio' | 'video' | 'photogallery';
+  lazy?: boolean;
+  headingLevel?: number;
 }
 
 export const VISUAL_STYLE = {
@@ -33,24 +44,12 @@ export type VisualStyle = keyof typeof VISUAL_STYLE;
 
 export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
-export interface CurationProps {
-  visualStyle: VisualStyle;
-  visualProminence: VisualProminence;
-  promos?: Summary[];
-  title?: string;
-  link?: string;
-  headingLevel?: number;
-  position?: number;
-  topStoriesTitle?: string;
-  curationLength?: number;
-  mostRead?: MostReadData;
-}
-
-export interface CurationData {
+// This maps to the Curation type definition in the BFF
+export interface BaseCuration {
   summaries?: Summary[];
   visualStyle?: VisualStyle | string;
   visualProminence: VisualProminence | string;
-  curationId: string;
+  curationId?: string;
   title?: string;
   link?: string;
   position: number;
@@ -58,4 +57,12 @@ export interface CurationData {
   pageCount?: number;
   curationType?: string;
   mostRead?: MostReadData;
+  radioSchedule?: RadioScheduleData[];
+  embed?: OEmbedData;
+}
+
+export interface Curation extends BaseCuration {
+  topStoriesTitle?: string;
+  curationLength?: number;
+  nthCurationByStyleAndProminence?: number;
 }

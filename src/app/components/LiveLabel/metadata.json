@@ -1,9 +1,9 @@
 {
   "alpha": false,
   "lastUpdated": {
-    "day": 24,
-    "month": "October",
-    "year": 2023
+    "day": 23,
+    "month": "January",
+    "year": 2024
   },
   "uxAccessibilityDoc": {
     "done": true,
@@ -20,9 +20,9 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
+      "url": "https://docs.google.com/spreadsheets/d/1AjcnMSp0S5UfwDFeMgg_wjcKIpsN0wJ2kTdOzCxoQQM/edit#gid=1748460042",
       "label": "Accessibility Swarm Notes"
     }
   }

@@ -3,13 +3,11 @@ import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
-import { arrayOf, bool, shape, string } from 'prop-types';
 import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
@@ -32,12 +30,12 @@ const StyledSectionLabel = styled(SectionLabel)`
 `;
 
 const RelatedTopics = ({
-  topics,
-  mobileDivider,
-  bar,
-  className,
-  backgroundColour,
-  tagBackgroundColour,
+  topics = [],
+  mobileDivider = true,
+  bar = true,
+  className = '',
+  backgroundColour = '',
+  tagBackgroundColour = '',
 }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
@@ -53,11 +51,13 @@ const RelatedTopics = ({
   };
 
   return (
-    topics && (
+    topics &&
+    topics.length !== 0 && (
       <StyledTopicsWrapper
+        data-testid="related-topics"
         aria-labelledby="related-topics"
         role="complementary"
-        className={className}
+        {...(className && { className })}
       >
         <StyledSectionLabel
           bar={bar}
@@ -98,29 +98,6 @@ const RelatedTopics = ({
       </StyledTopicsWrapper>
     )
   );
-};
-
-RelatedTopics.propTypes = {
-  topics: arrayOf(
-    shape({
-      topicName: string,
-      topicId: string,
-    }),
-  ),
-  mobileDivider: bool,
-  bar: bool,
-  className: string,
-  backgroundColour: string,
-  tagBackgroundColour: string,
-};
-
-RelatedTopics.defaultProps = {
-  topics: null,
-  mobileDivider: true,
-  bar: true,
-  className: null,
-  backgroundColour: null,
-  tagBackgroundColour: null,
 };
 
 export default RelatedTopics;

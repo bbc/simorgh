@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useTheme } from '@emotion/react';
 import 'isomorphic-fetch';
-import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import {
@@ -26,7 +25,6 @@ import webLogger from '#lib/logger.web';
 import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
-import radioSchedulesShape from '../utilities/radioScheduleShape';
 
 const logger = webLogger();
 
@@ -96,7 +94,12 @@ const RadioFrequencyLink = styled.a`
   }
 `;
 
-const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
+const CanonicalRadioSchedule = ({
+  initialData,
+  endpoint,
+  lang = null,
+  className = '',
+}) => {
   const {
     service,
     script,
@@ -160,10 +163,11 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
 
   return (
     <RadioScheduleSection
-      className={className}
       role="region"
       aria-labelledby="Radio-Schedule"
+      data-testid="radio-schedule"
       {...(lang && { lang })}
+      {...(className && { className })}
     >
       <RadioScheduleSectionLabel
         script={script}
@@ -189,19 +193,6 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
       </RadioScheduleWrapper>
     </RadioScheduleSection>
   );
-};
-
-CanonicalRadioSchedule.propTypes = {
-  endpoint: string.isRequired,
-  initialData: radioSchedulesShape,
-  lang: string,
-  className: string,
-};
-
-CanonicalRadioSchedule.defaultProps = {
-  initialData: undefined,
-  lang: null,
-  className: '',
 };
 
 export default CanonicalRadioSchedule;

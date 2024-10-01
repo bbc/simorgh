@@ -31,8 +31,7 @@ describe('Document Component', () => {
     </>
   );
 
-  // eslint-disable-next-line react/prop-types
-  const TestDocumentComponent = ({ service, isAmp, isApp }) => (
+  const TestDocumentComponent = ({ service, isAmp, isApp, isLite }) => (
     <DocumentComponent
       app={{
         css: '.css-7prgni-StyledLink{display:inline-block;}',
@@ -62,6 +61,7 @@ describe('Document Component', () => {
       service={service}
       isAmp={isAmp}
       isApp={isApp}
+      isLite={isLite}
       links={links}
     />
   );
@@ -100,6 +100,13 @@ describe('Document Component', () => {
     expect(dom.window.document.documentElement).toMatchSnapshot();
   });
 
+  it('should render LITE version correctly', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" isLite />),
+    );
+    expect(dom.window.document.documentElement).toMatchSnapshot();
+  });
+
   it('should render "noindex" meta tag on APP version', () => {
     const dom = new JSDOM(
       renderToString(<TestDocumentComponent service="news" isApp />),
@@ -108,5 +115,20 @@ describe('Document Component', () => {
     const head = dom.window.document.querySelector('head');
 
     expect(head).toContainHTML('<meta name="robots" content="noindex" />');
+  });
+
+  it('should render the "window.SIMORGH_DATA" object as the first script tag in the body', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" />),
+    );
+
+    const body = dom.window.document.querySelector('body');
+    const scripts = body.querySelectorAll('script');
+
+    const firstScript = scripts[0];
+
+    expect(firstScript.innerHTML).toBe(
+      `window.SIMORGH_DATA=${JSON.stringify(data)}`,
+    );
   });
 });

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -71,13 +72,13 @@ const MostRead = ({
   // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
   const AmpMostRead = () =>
     mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection className={className}>
+      <MostReadSection {...(className && { className })}>
         <MostReadSectionLabel
           mobileDivider={mobileDivider}
           backgroundColor={headingBackgroundColour}
         />
         <Amp
-          endpoint={`${process.env.SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
+          endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
           size={size}
         />
       </MostReadSection>

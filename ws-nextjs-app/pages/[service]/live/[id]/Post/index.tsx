@@ -8,19 +8,21 @@ import Text from '#app/components/Text';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
-import LivePageMediaPlayer from '#app/legacy/containers/LivePageMediaPlayer';
+import MediaLoader from '#app/components/MediaLoader';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import styles from './styles';
 import {
   Post as PostType,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
+import ShareButton from '../ShareButton';
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -63,9 +65,8 @@ const PostHeaderBanner = ({
     },
   } = useContext(ServiceContext);
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
-
   return (
-    <div css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
       <TimeStampContainer
         css={styles.timeStamp}
         timestamp={curated}
@@ -74,24 +75,23 @@ const PostHeaderBanner = ({
         locale={locale}
         timezone={timezone}
         service={service}
-        // @ts-expect-error: type differences: script is outlined as a generic object in the service context, but as a more specific shape in TimeStampContainer.
         script={script}
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
       />
-      <VisuallyHiddenText>, </VisuallyHiddenText>
       <PostBreakingNewsLabel
         isBreakingNews={isBreakingNews}
         breakingNewsLabelText={breaking}
       />
-    </div>
+    </span>
   );
 };
 
 const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
   const isHeadline = headerBlock.type === 'headline';
-  const headingText = headerBlock.model.blocks[0].model.blocks[0].model.text;
+  const headingText =
+    headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   return (
     <>
@@ -144,14 +144,11 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         sizes="(min-width: 1008px) 760px, 100vw"
         className="mediaStyles"
         css={styles.bodyMedia}
+        position={[9]}
       />
     ),
-    video: (props: ComponentToRenderProps) => (
-      <LivePageMediaPlayer
-        blocks={props.blocks}
-        className="mediaStyles"
-        css={styles.bodyMedia}
-      />
+    video: (props: { blocks: MediaBlock[] }) => (
+      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
     ),
     social: SocialEmbedContainer,
   };
@@ -161,39 +158,59 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
   );
 };
 
-const Post = ({ post }: { post: PostType }) => {
+const Post = ({
+  post,
+  hasShareApi = false,
+}: {
+  post: PostType;
+  hasShareApi?: boolean;
+}) => {
   const headerBlocks = pathOr<PostHeadingBlock[]>(
     [],
     ['header', 'model', 'blocks'],
     post,
   );
 
+  const firstHeadingText =
+    headerBlocks[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
     ['content', 'model', 'blocks'],
     post,
   );
+  const { urn } = post;
 
   const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
   const timestamp = post?.dates?.curated ?? '';
 
   return (
     <article css={styles.postContainer}>
-      <Heading level={3}>
+      <Heading id={urn} tabIndex={-1} level={3} css={styles.heading}>
         {/* eslint-disable-next-line jsx-a11y/aria-role */}
         <span role="text">
           <PostHeaderBanner
             isBreakingNews={isBreakingNews}
             timestamp={timestamp}
           />
+
           {headerBlocks.map(headerBlock => (
-            <PostHeadings headerBlock={headerBlock} />
+            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
           ))}
         </span>
       </Heading>
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
+      {hasShareApi && (
+        <ShareButton
+          eventTrackingData={{
+            componentName: urn,
+          }}
+          contentId={urn}
+          headline={firstHeadingText}
+        />
+      )}
     </article>
   );
 };

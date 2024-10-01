@@ -9,23 +9,21 @@ import {
   MEDIA_ARTICLE_PAGE,
   FEATURE_INDEX_PAGE,
   MOST_READ_PAGE,
-  MOST_WATCHED_PAGE,
-  INDEX_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_PAGE,
   ERROR_PAGE,
   LIVE_PAGE,
   CPS_ASSET,
+  STATIC_PAGE,
+  UGC_PAGE,
+  AV_EMBEDS,
+  DOWNLOADS_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
 } from './tvRadioPage/buildParams';
 import { buildPageATIUrl, buildPageATIParams } from './genericPage/buildParams';
-import {
-  buildMostWatchedATIParams,
-  buildMostWatchedATIUrl,
-} from './mostWatchedPage/buildParams';
 import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
@@ -50,8 +48,9 @@ const MIGRATED_PAGE_TYPES: PageTypes[] = [
   MEDIA_ASSET_PAGE,
   CORRESPONDENT_STORY_PAGE,
   FEATURE_INDEX_PAGE,
-  INDEX_PAGE,
   LIVE_PAGE,
+  STATIC_PAGE,
+  DOWNLOADS_PAGE,
 ];
 
 const noOp = () => {
@@ -65,8 +64,6 @@ const pageTypeUrlBuilders = {
   [FRONT_PAGE]: buildIndexPageATIUrl,
   [MEDIA_PAGE]: buildTvRadioATIUrl,
   [MOST_READ_PAGE]: noOp,
-  [MOST_WATCHED_PAGE]: buildMostWatchedATIUrl,
-  [INDEX_PAGE]: noOp,
   [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: noOp,
@@ -76,6 +73,10 @@ const pageTypeUrlBuilders = {
   [ERROR_PAGE]: noOp,
   [LIVE_PAGE]: noOp,
   [CPS_ASSET]: noOp,
+  [STATIC_PAGE]: noOp,
+  [UGC_PAGE]: noOp,
+  [AV_EMBEDS]: noOp,
+  [DOWNLOADS_PAGE]: noOp,
 };
 
 const pageTypeParamBuilders = {
@@ -84,8 +85,6 @@ const pageTypeParamBuilders = {
   [FRONT_PAGE]: buildIndexPageATIParams,
   [MEDIA_PAGE]: buildTvRadioATIParams,
   [MOST_READ_PAGE]: noOp,
-  [MOST_WATCHED_PAGE]: buildMostWatchedATIParams,
-  [INDEX_PAGE]: noOp,
   [FEATURE_INDEX_PAGE]: noOp,
   [TOPIC_PAGE]: noOp,
   [MEDIA_ASSET_PAGE]: noOp,
@@ -96,6 +95,10 @@ const pageTypeParamBuilders = {
   [ERROR_PAGE]: noOp,
   [LIVE_PAGE]: noOp,
   [CPS_ASSET]: noOp,
+  [STATIC_PAGE]: noOp,
+  [UGC_PAGE]: noOp,
+  [AV_EMBEDS]: noOp,
+  [DOWNLOADS_PAGE]: noOp,
 };
 
 type BuilderFunction = {

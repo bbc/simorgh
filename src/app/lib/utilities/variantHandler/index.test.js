@@ -25,6 +25,10 @@ describe('getVariant', () => {
     expect(getVariant({ service: 'serbian', variant: 'simp' })).toEqual('lat');
   });
 
+  it('should return service default when no variant is passed for service with variants', () => {
+    expect(getVariant({ service: 'uzbek', variant: null })).toEqual('cyr');
+  });
+
   it('should return "default" when service without variants is passed', () => {
     expect(getVariant({ service: 'news', variant: 'simp' })).toEqual('default');
   });

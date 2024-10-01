@@ -2,7 +2,7 @@
 
 exports[`Canonical Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Photo Gallery Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&amp;x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[R%C3%ADo%25202016%2C%2520el%2520antes%2520y%2520el%2520ahora%3A%2520c%C3%B3mo%2520ha%2520cambiado%2520la%2520ropa%2520deportiva%2520en%2520m%C3%A1s%2520de%2520un%2520siglo%2520de%2520juegos%2520ol%C3%ADmpicos%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2016-08-07T09%3A21%3A02.000Z]&amp;x12=[2016-08-07T09%3A21%3A02.000Z]"/>"`;
+exports[`Canonical Photo Gallery Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=mundo.sport.photo_gallery.36935058.page&amp;x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[R%C3%ADo%25202016%2C%2520el%2520antes%2520y%2520el%2520ahora%3A%2520c%C3%B3mo%2520ha%2520cambiado%2520la%2520ropa%2520deportiva%2520en%2520m%C3%A1s%2520de%2520un%2520siglo%2520de%2520juegos%2520ol%C3%ADmpicos%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2016-08-07T09%3A21%3A02.000Z]&amp;x12=[2016-08-07T09%3A21%3A02.000Z]"/>"`;
 
 exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 1`] = `
 {
@@ -62,7 +62,7 @@ exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 8
 
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -90,7 +90,7 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Hay Festival",
-  "url": "/mundo/noticias-36795069",
+  "url": "/mundo/topics/cr50y7p7qyqt",
 }
 `;
 
@@ -132,14 +132,7 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
 {
   "text": "Centroamérica Cuenta",
-  "url": "/mundo/noticias-43826245",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
-{
-  "text": "BBC Extra",
-  "url": "/mundo/noticias-48908206",
+  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 
@@ -148,11 +141,11 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pi
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
-  class="bbc-1uwua2r"
+  class="bbc-139onq"
   height="549"
-  sizes="(min-width: 600px) 80vw, (min-width: 1008px) 632px, 95vw"
-  src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 549w"
   style="aspect-ratio:549 / 549"
   width="549"
 />

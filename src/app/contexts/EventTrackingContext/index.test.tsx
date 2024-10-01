@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React, { useContext } from 'react';
 import {
@@ -193,7 +192,8 @@ describe('Error handling', () => {
         service: 'pidgin',
         toggles: defaultToggles,
       });
-    } catch ({ message }) {
+    } catch (error: unknown) {
+      const { message } = error as Error;
       errorMessage = message;
     }
 
@@ -214,7 +214,8 @@ describe('Error handling', () => {
         pageType: 'funky-page-type',
         toggles: defaultToggles,
       });
-    } catch ({ message }) {
+    } catch (error: unknown) {
+      const { message } = error as Error;
       errorMessage = message;
     }
 

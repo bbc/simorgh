@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import useLocation from '#hooks/useLocation';
@@ -7,13 +6,12 @@ import useToggle from '#hooks/useToggle';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './Canonical';
-import radioSchedulesShape from './utilities/radioScheduleShape';
 
-const RadioScheduleContainer = ({
+const RadioSchedule = ({
   initialData,
-  radioScheduleEndpointOverride,
-  lang,
-  className,
+  radioScheduleEndpointOverride = null,
+  lang = null,
+  className = '',
 }) => {
   const { enabled } = useToggle('radioSchedule');
   const { isAmp, env } = useContext(RequestContext);
@@ -25,7 +23,6 @@ const RadioScheduleContainer = ({
   if (!radioScheduleEnabled) {
     return null;
   }
-
   const endpoint =
     radioScheduleEndpointOverride ||
     getRadioScheduleEndpoint({
@@ -44,18 +41,4 @@ const RadioScheduleContainer = ({
   );
 };
 
-RadioScheduleContainer.propTypes = {
-  radioScheduleEndpointOverride: string,
-  initialData: radioSchedulesShape,
-  lang: string,
-  className: string,
-};
-
-RadioScheduleContainer.defaultProps = {
-  radioScheduleEndpointOverride: null,
-  initialData: undefined,
-  lang: null,
-  className: '',
-};
-
-export default RadioScheduleContainer;
+export default RadioSchedule;

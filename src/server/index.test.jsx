@@ -869,7 +869,7 @@ describe('Server', () => {
     it('should serve the sw.js with cache control information', async () => {
       const { header } = await makeRequest('/pidgin/sw.js');
       expect(header['cache-control']).toBe(
-        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+        'public, stale-if-error=6000, stale-while-revalidate=600, max-age=300',
       );
     });
   });
@@ -890,7 +890,9 @@ describe('Server', () => {
 
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
-      expect(header['cache-control']).toBe('public, max-age=604800');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+      );
     });
   });
 
@@ -971,21 +973,6 @@ describe('Server', () => {
     it('should respond with a 500 for non-existing services', async () => {
       const { statusCode } = await makeRequest(
         '/some-service/recommendations.json',
-      );
-      expect(statusCode).toEqual(500);
-    });
-  });
-
-  describe('IDX json', () => {
-    it('should serve a file for valid idx paths', async () => {
-      const { body } = await makeRequest('/persian/afghanistan.json');
-      expect(body.data.article).toEqual(
-        expect.objectContaining({ content: expect.any(Object) }),
-      );
-    });
-    it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest(
-        '/some-service/ukraine_in_russian.json',
       );
       expect(statusCode).toEqual(500);
     });
@@ -1459,7 +1446,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['cache-control']).toBe(
-      'public, stale-if-error=120, stale-while-revalidate=30, max-age=30',
+      'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
     );
   });
 
@@ -1477,7 +1464,9 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
-    expect(header.vary).toBe('mvt-simorgh_dark_mode, Accept-Encoding');
+    expect(header.vary).toBe(
+      'X-Country, mvt-simorgh_dark_mode, Accept-Encoding',
+    );
   });
 
   it(`should not add mvt experiment header names to vary if they are not enabled`, async () => {
@@ -1488,7 +1477,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
-    expect(header.vary).toBe('Accept-Encoding');
+    expect(header.vary).toBe('X-Country, Accept-Encoding');
   });
 
   it(`should not add mvt experiment header names to vary if on AMP`, async () => {
@@ -1500,7 +1489,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
-    expect(header.vary).toBe('Accept-Encoding');
+    expect(header.vary).toBe('X-Country, Accept-Encoding');
   });
 
   it(`should set isUK value to true when 'x-bbc-edge-isuk' is set to 'yes'`, async () => {

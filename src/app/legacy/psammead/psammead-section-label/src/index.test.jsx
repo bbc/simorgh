@@ -301,29 +301,6 @@ describe('SectionLabel', () => {
         );
         expect(container).toMatchSnapshot();
       });
-
-      it('should log a warning when heading override is an unsupported element', () => {
-        console.error = jest.fn();
-
-        render(
-          <SectionLabel
-            script={latin}
-            bar={false}
-            labelId="test-section-label"
-            service="news"
-            overrideHeadingAs="h1"
-          >
-            This is the text in a SectionLabel
-          </SectionLabel>,
-        );
-
-        const error = console.error.mock.calls.join(' ');
-
-        expect(error).toMatch(
-          `Warning: Failed %s type: %s%s,prop,Invalid prop \`overrideHeadingAs\` of value \`h1\` supplied to \`SectionLabel\`, expected one of [null,"strong"].,
-    at children`,
-        );
-      });
     });
   });
 });

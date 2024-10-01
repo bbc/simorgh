@@ -2,7 +2,9 @@ import { Services } from '../../../models/types/global';
 
 type Envs = 'test' | 'live';
 
-const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
+export const HOME_PAGE_CONFIG: {
+  [service in Services]: { [env in Envs]: string };
+} = {
   kyrgyz: {
     test: 'cm7682qz7v1t',
     live: 'crg7kj2e52nt',
@@ -186,6 +188,10 @@ const HOME_PAGE_CONFIG: { [service in Services]: { [env in Envs]: string } } = {
   vietnamese: {
     test: 'c93v2kk9r7lt',
     live: 'c5q5105m81dt',
+  },
+  ws: {
+    test: '',
+    live: '',
   },
   yoruba: {
     test: 'cw95pllwv8rt',

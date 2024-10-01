@@ -54,8 +54,9 @@ const EmbedConsentBannerAmp = ({
 
 const EmbedConsentBannerCanonical = ({
   provider,
+  id,
   children,
-}: PropsWithChildren<Omit<ConsentBannerProps, 'id'>>) => {
+}: PropsWithChildren<ConsentBannerProps>) => {
   const [consented, setConsented] = useState(false);
 
   const handleClickTracking = useClickTrackerHandler(
@@ -70,6 +71,7 @@ const EmbedConsentBannerCanonical = ({
   return (
     <ConsentBanner
       provider={provider}
+      id={id}
       clickHandler={{
         onClick: e => {
           setConsented(true);

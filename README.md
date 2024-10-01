@@ -5,13 +5,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-BBC World Service News websites are rendered using Simorgh, a ReactJS based Single Page Application which also builds Accelerated Mobile Pages (AMP) for every regular HTML page that it renders. Simorgh also renders AMP pages for BBC Public Service News and BBC Sport.
+BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service, Public Service News and BBC Sport.
 
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.mdx)). It is regularly maintained and well documented, and we welcome open source contributors.
 
 Simorgh is primarily maintained by the BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
-
-We use an open source component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain.
 
 ## Documentation index
 
@@ -20,12 +18,11 @@ Please familiarise yourself with our:
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
-- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.stories.mdx)
-- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.stories.mdx)
-- [GPG Signing Guide](docs/GPG-Signing-Guide.stories.mdx)
+- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.mdx)
+- [GPG Signing Guide](https://github.com/bbc/simorgh/blob/latest/docs/GPG-Signing-Guide.mdx)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
-- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.stories.mdx)
-- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.stories.mdx)
+- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.mdx)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.mdx)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
@@ -248,7 +245,7 @@ Please also note that if you would like to see the components rendered with our 
 
 ### Configuring the application to run on a local network
 
-If you want to host the application to be accessible through your local network, follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.stories.mdx).
+If you want to host the application to be accessible through your local network, follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.mdx).
 
 ## Production build locally
 

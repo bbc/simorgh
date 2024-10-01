@@ -41,13 +41,20 @@ export default {
         marginTop: '2rem',
       },
     }),
+  fullWidthContainer: () =>
+    css({
+      gridColumn: '1 / span 12',
+      paddingBottom: '2rem',
+    }),
   mainContent: ({ spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
     }),
-  mediaPlayer: ({ spacings }: Theme) =>
+  cafMediaPlayer: ({ mq, spacings }: Theme) =>
     css({
-      paddingTop: `${spacings.TRIPLE}rem`,
+      [mq.GROUP_3_ONLY]: {
+        padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
+      },
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({

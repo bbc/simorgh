@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { number, bool, string } from 'prop-types';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -18,9 +17,9 @@ const LastUpdatedTimestamp = Timestamp;
 const ArticleTimestamp = ({
   firstPublished,
   lastPublished,
-  popOut,
-  minutesTolerance,
-  className,
+  popOut = true,
+  minutesTolerance = 0,
+  className = '',
 }) => {
   const {
     articleTimestampPrefix,
@@ -71,7 +70,7 @@ const ArticleTimestamp = ({
   });
 
   return (
-    <GridWrapper className={className}>
+    <GridWrapper {...(className && { className })}>
       <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
@@ -81,20 +80,6 @@ const ArticleTimestamp = ({
       )}
     </GridWrapper>
   );
-};
-
-ArticleTimestamp.propTypes = {
-  firstPublished: number.isRequired,
-  lastPublished: number.isRequired,
-  popOut: bool,
-  minutesTolerance: number,
-  // eslint-disable-next-line react/require-default-props
-  className: string,
-};
-
-ArticleTimestamp.defaultProps = {
-  popOut: true,
-  minutesTolerance: 0,
 };
 
 export default ArticleTimestamp;

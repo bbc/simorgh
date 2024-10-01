@@ -41,6 +41,11 @@ export default {
         marginTop: '2rem',
       },
     }),
+  pglColumn: () =>
+    css({
+      gridColumn: '1 / span 12',
+      paddingBottom: '2rem',
+    }),
   mainContent: ({ spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,

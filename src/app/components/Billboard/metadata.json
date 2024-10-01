@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 15,
+    "month": "April",
+    "year": 2024
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/file/VVUlxWsaAqYm6xiejdj9ZB/Billboard-MVP%E2%80%A8--HANDOFF-FILE?type=design&node-id=5-63&mode=design&t=K3vMTbWSZFiBCuOo-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Billboard-Accessibility-acceptance-criteria--CNSjZ3ZoimGOAaqGczzRKzRgAg-KbKnkf3Jbzss1RwuDshAk",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Billboard--COtYXE~oz~wawNreBs_FO_VBAg-unCCpn2lQrsGeo4p84xpR",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

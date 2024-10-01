@@ -165,7 +165,7 @@ describe('Frosted Glass Promo', () => {
     ).toBeInTheDocument();
     expect(
       container.querySelector(
-        `img[src="https://ichef.bbci.co.uk/news/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"]`,
+        `img[src="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"]`,
       ),
     ).toBeInTheDocument();
   });

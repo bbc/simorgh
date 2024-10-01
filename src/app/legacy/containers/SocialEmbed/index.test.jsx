@@ -17,13 +17,6 @@ import {
   facebookVideoBlockEmbed,
 } from './common/fixtures';
 
-/* eslint-disable react/prop-types */
-jest.mock('react-lazyload', () => {
-  return function MockedLazyload({ children }) {
-    return <>{children}</>;
-  };
-});
-
 describe('SocialEmbedContainer', () => {
   afterEach(() => {
     loggerMock.info.mockClear();

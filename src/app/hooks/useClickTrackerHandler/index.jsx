@@ -19,6 +19,7 @@ const useClickTrackerHandler = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
   const optimizely = path(['optimizely'], props);
+  const detailedPlacement = props?.detailedPlacement;
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -39,7 +40,6 @@ const useClickTrackerHandler = (props = {}) => {
         !clicked,
         isValidClick(event),
       ].every(Boolean);
-
       if (shouldRegisterClick) {
         setClicked(true);
 
@@ -52,7 +52,6 @@ const useClickTrackerHandler = (props = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
-
         if (shouldSendEvent) {
           const nextPageUrl = path(['currentTarget', 'href'], event);
 
@@ -85,6 +84,7 @@ const useClickTrackerHandler = (props = {}) => {
               advertiserID,
               statsDestination,
               url,
+              detailedPlacement,
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
@@ -112,6 +112,7 @@ const useClickTrackerHandler = (props = {}) => {
       advertiserID,
       format,
       optimizely,
+      detailedPlacement,
     ],
   );
 };
