@@ -35,7 +35,9 @@ jest.mock('@optimizely/react-sdk', () => {
     setLogger: jest.fn(),
     OptimizelyExperiment: jest.fn(),
     createInstance: jest.fn(),
-    useDecision: jest.fn(),
+    useDecision: jest
+      .fn()
+      .mockReturnValue([{ variationKey: 'variation' }, true, false]),
     OptimizelyProvider: ({ children }) => children,
   };
 });
