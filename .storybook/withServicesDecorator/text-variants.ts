@@ -1,4 +1,16 @@
-import { TextVariant } from '#app/models/types/storybook';
+import { Services, Variants } from "#app/models/types/global";
+
+type TextVariant = {
+  text: string;
+  longText: string;
+  script: string;
+  locale: string;
+  timezone: string;
+  articlePath: string;
+  dir?: string;
+  service?: Services;
+  variant?: Variants;
+}
 
 const TEXT_VARIANTS: Record<string, TextVariant> = {
   afaanoromoo: {
