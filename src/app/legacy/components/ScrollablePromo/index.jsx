@@ -20,6 +20,7 @@ import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -59,10 +60,12 @@ const LabelComponent = styled.strong`
 
 const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
+    optimizely,
   };
 
   const viewRef = useViewTracker(eventTrackingData);

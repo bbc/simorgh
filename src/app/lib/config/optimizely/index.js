@@ -1,5 +1,5 @@
 export default {
-  flagId: 'ws_test_flag',
+  flagId: 'scrollable_promo',
   viewClickAttributeId: 'wsoj',
   variationMappings: {
     on: 'on',
