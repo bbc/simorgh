@@ -418,6 +418,10 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/cz74k717pw5t',
       },
       {
+        title: 'Eleições municipais',
+        url: '/portuguese/topics/cy6z19wz1zet',
+      },
+      {
         title: 'Eleições EUA',
         url: '/portuguese/topics/c30gn378n6kt',
       },

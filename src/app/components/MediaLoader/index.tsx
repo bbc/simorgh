@@ -159,6 +159,9 @@ const MediaContainer = ({
     if (mediaType === 'liveRadio') {
       return styles.liveRadioMediaContainer;
     }
+    if (mediaType === 'audio') {
+      return styles.onDemandAudioMediaContainer;
+    }
 
     return styles.mediaContainerLandscape;
   })();

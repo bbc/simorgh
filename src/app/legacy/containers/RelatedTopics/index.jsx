@@ -8,7 +8,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';

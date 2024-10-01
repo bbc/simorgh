@@ -1,0 +1,118 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares:ws_media:brand:bbc_bangla_radio/p030vjwg",
+        "locators": {
+            "pid": "w172yylmc0c11jh",
+            "brandPid": "p030vjwg"
+        },
+        "type": "WSRADIO",
+        "createdBy": "bbc_bangla_radio",
+        "language": "bn",
+        "lastUpdated": 1727190718000,
+        "firstPublished": 1670857206000,
+        "lastPublished": 1670857206000,
+        "timestamp": 1670857206000,
+        "options": {},
+        "analyticsLabels": {
+            "pageTitle": "প্রবাহ - BBC News বাংলা",
+            "pageIdentifier": "bengali.bbc_bangla_radio.programmes.p030vjwg.page",
+            "producerId": "31",
+            "contentType": "player-episode",
+            "producer": "BENGALI"
+        },
+        "passport": {
+            "home": "",
+            "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.48",
+        "blockTypes": [
+            "media"
+        ],
+        "title": "প্রবাহ",
+        "releaseDateTimeStamp": 1673827200000,
+        "useSensitiveOnwardJourneys": false
+    },
+    "content": {
+        "blocks": [
+            {
+                "id": "w172yylmc0c11jh",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "16/01/2023 GMT",
+                "synopses": {
+                    "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+                    "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+                "embedding": false,
+                "advertising": false,
+                "versions": [],
+                "availability": "notAvailable",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "প্রবাহ",
+                "type": "media"
+            }
+        ]
+    },
+    "promo": {
+        "headlines": {
+            "headline": "প্রবাহ"
+        },
+        "locators": {
+            "pid": "w172yylmc0c11jh",
+            "brandPid": "p030vjwg"
+        },
+        "media": {
+            "id": "w172yylmc0c11jh",
+            "subType": "episode",
+            "format": "Audio",
+            "title": "16/01/2023 GMT",
+            "synopses": {
+                "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
+                "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+            "embedding": false,
+            "advertising": false,
+            "versions": [],
+            "availability": "notAvailable",
+            "smpKind": "radioProgramme",
+            "episodeTitle": "প্রবাহ",
+            "type": "media"
+        },
+        "indexImage": {
+            "id": "p08b2kb7",
+            "subType": "index",
+            "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+            "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+            "height": 576,
+            "width": 1025,
+            "altText": "পরিক্রমা",
+            "caption": "সংবাদ বুলেটিনসহ সমসাময়িক ঘটনা নিয়ে দৈনিক অনুষ্ঠান, সাথে সাপ্তাহিক ফোন-ইন, বিতর্ক ও ফিচার",
+            "copyrightHolder": null,
+            "type": "image"
+        },
+        "releaseDateTimestamp": 1673827200000,
+        "brand": {
+            "pid": "p030vjwg",
+            "title": "প্রবাহ"
+        },
+        "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172yylmc0c11jh",
+        "type": "ws_radio"
+    },
+    "relatedContent": {
+        "site": {
+            "subType": "site",
+            "name": "Bengali",
+            "uri": "/bengali",
+            "type": "simple"
+        },
+        "groups": [
+            {
+                "type": "other-episode",
+                "promos": []
+            }
+        ]
+    }
+}

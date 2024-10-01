@@ -18,6 +18,7 @@ import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helper
 // 005_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
+  setUser: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   user: {
     attributes: {},
@@ -42,6 +43,19 @@ jest.mock('../ATIAnalytics/beacon', () => {
     sendEventBeacon: jest.fn(),
   };
 });
+
+jest.mock('#lib/config/optimizely', () => ({
+  flagId: '005_brasil_hybrid_recommendations',
+  viewClickAttributeId: 'wsoj',
+  variationMappings: {
+    hybrid_recs: 'datalabHybridRecommendations',
+    variation_1: 'datalabHybridRecommendationsV1x1',
+    variation_2: 'datalabHybridRecommendationsV1x2',
+    variation_3: 'datalabHybridRecommendationsV1x3',
+    variation_4: 'datalabHybridRecommendationsV1x4',
+    variation_5: 'datalabHybridRecommendationsV1x5',
+  },
+}));
 
 const makeMockFn =
   (variationMock: string | null) => (props: { children: unknown }) => {

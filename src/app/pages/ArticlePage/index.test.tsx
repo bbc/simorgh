@@ -48,6 +48,14 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 });
 
 jest.mock('../../components/ATIAnalytics');
+jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
+jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+jest.mock('#app/hooks/useOptimizelyScrollDepth');
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
