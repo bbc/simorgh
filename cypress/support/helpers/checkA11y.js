@@ -3,6 +3,7 @@ const exclude = [
   '.bbc-news-vj-embed-wrapper, [id^="include-"]', // VJ includes
   '[class*=dotcom], [id*=dotcom], amp-ad', // GNL ads
   '[id^="toucan-"]', // SMP Toucan player
+  '[id^="hearken-"]', // Hearken embeds
 ];
 
 const logA11yViolations = violations => {
