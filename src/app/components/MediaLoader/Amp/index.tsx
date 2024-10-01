@@ -36,7 +36,6 @@ const AmpMediaLoader = ({
       <amp-iframe
         sandbox="allow-scripts allow-same-origin"
         layout="fill"
-        // @ts-expect-error - 'scrolling' does not exist in type
         scrolling="no"
         frameborder="0"
         src={src}
@@ -46,7 +45,6 @@ const AmpMediaLoader = ({
       >
         <div
           data-e2e="image-placeholder"
-          // @ts-expect-error - 'placeholder' does not exist in type. This is used by AMP to show a placeholder image while the iframe is loading
           placeholder=""
           css={styles.ampIframePlaceholder}
         />
