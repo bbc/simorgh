@@ -541,7 +541,7 @@ const preview: Preview = {
   initialGlobals: {
     service: {
       service: 'news',
-      variant: 'default'
+      variant: 'default',
     }
   },
   parameters: {
