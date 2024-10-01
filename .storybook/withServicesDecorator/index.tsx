@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { StoryProps } from '#app/models/types/storybook';
+import { Services, Variants } from '#app/models/types/global';
 import TEXT_VARIANTS from './text-variants';
 import arabic from '../../src/app/components/ThemeProvider/fontScripts/arabic';
 import bengali from '../../src/app/components/ThemeProvider/fontScripts/bengali';
@@ -12,7 +14,6 @@ import noAscendersOrDescenders from '../../src/app/components/ThemeProvider/font
 import sinhalese from '../../src/app/components/ThemeProvider/fontScripts/sinhalese';
 import tamil from '../../src/app/components/ThemeProvider/fontScripts/tamil';
 import thai from '../../src/app/components/ThemeProvider/fontScripts/thai';
-import { StoryProps } from '#app/models/types/storybook';
 
 const DEFAULT_VARIANT = 'default';
 
@@ -39,11 +40,21 @@ const scripts = {
 export default () =>
   (
     story: (storyProps: StoryProps) => JSX.Element,
-    context: any,
+    {
+      globals: {
+        service: { service: globalService, variant: globalVariant },
+        isLite,
+      },
+    }: {
+      globals: {
+        service: {
+          service: Services;
+          variant: Variants;
+        };
+        isLite: boolean;
+      };
+    },
   ) => {
-    const globalService = context.globals?.service.service;
-    const globalVariant = context.globals?.service.variant || DEFAULT_VARIANT;
-
     let serviceLookup: string = globalService;
 
     if (globalVariant !== DEFAULT_VARIANT) {
@@ -62,9 +73,6 @@ export default () =>
       timezone = 'GMT',
     } = textOverrides;
 
-    context.globals.service.service = textOverrides?.service || globalService;
-    context.globals.service.variant = textOverrides?.variant || globalVariant;
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
       text,
@@ -73,10 +81,10 @@ export default () =>
       script: scripts[script as keyof typeof scripts],
       locale,
       dir,
-      service: context.globals.service.service,
-      variant: context.globals.service.variant,
+      service: textOverrides?.service || globalService,
+      variant: textOverrides?.variant || globalVariant,
       timezone,
-      isLite: context.globals.isLite,
+      isLite,
     };
 
     return (
