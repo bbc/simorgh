@@ -1,4 +1,4 @@
-import { Services, Variants } from "#app/models/types/global";
+import { Services, Variants } from '#app/models/types/global';
 
 type TextVariant = {
   text: string;
@@ -10,7 +10,7 @@ type TextVariant = {
   dir?: string;
   service?: Services;
   variant?: Variants;
-}
+};
 
 const TEXT_VARIANTS: Record<string, TextVariant> = {
   afaanoromoo: {
