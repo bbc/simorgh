@@ -2,7 +2,6 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
 

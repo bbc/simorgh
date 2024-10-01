@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import { Services } from '#app/models/types/global';
 import { OnDemandAudioPage } from '..';
@@ -24,26 +23,13 @@ const matchFixtures = (service: Services) => ({
   },
 });
 
-const Component = ({ service, text, longText }: StoryProps) => {
-  // @ts-expect-error partial data for testing purposes
-  let pageData = onDemandRadioFixtures[service];
-
-  if (!pageData) {
-    pageData = {
-      ...indonesia,
-      brandTitle: text,
-      episodeTitle: '',
-      summary: longText,
-      imageUrl:
-        'ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png',
-    };
-  }
-
+const Component = ({ service }: StoryProps) => {
   return (
     <BrowserRouter>
       <OnDemandAudioPage
         match={matchFixtures(service)}
-        pageData={pageData}
+        // @ts-expect-error partial data for storybook
+        pageData={onDemandRadioFixtures[service] || indonesia}
         status={200}
         service={service}
         loading={false}
@@ -57,7 +43,6 @@ const Component = ({ service, text, longText }: StoryProps) => {
 export default {
   Component,
   title: 'Pages/OnDemand Radio Page',
-  decorators: [withServicesDecorator()],
   parameters: {
     chromatic: {
       diffThreshold: 0.2,
@@ -66,13 +51,8 @@ export default {
 };
 
 export const Example = {
-  render: (_: StoryArgs, { service, variant, text, longText }: StoryProps) => (
-    <Component
-      service={service}
-      variant={variant}
-      text={text}
-      longText={longText}
-    />
+  render: (_: StoryArgs, { service, variant }: StoryProps) => (
+    <Component service={service} variant={variant} />
   ),
   parameters: { chromatic: { disableSnapshot: true } },
 };
