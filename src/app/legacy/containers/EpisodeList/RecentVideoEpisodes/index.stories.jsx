@@ -1,7 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
 
@@ -24,7 +23,6 @@ const fixtures = { afrique, pashto };
 export default {
   title: 'Containers/Episode List/Video',
   Component,
-  decorators: [withServicesDecorator({ defaultService: 'afrique' })],
   parameters: {
     backgrounds: {
       default: 'Dark',
