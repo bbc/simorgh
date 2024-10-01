@@ -12,6 +12,11 @@ import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
 import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 
+jest.mock('#app/hooks/useOptimizelyScrollDepth', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(<ScrollablePromo blocks={[]} />);

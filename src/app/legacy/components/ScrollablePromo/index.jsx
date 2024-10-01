@@ -21,6 +21,7 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimizelyContext } from '@optimizely/react-sdk';
+import useOptimizelyScrollDepth from '#app/hooks/useOptimizelyScrollDepth';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -70,6 +71,8 @@ const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
 
   const viewRef = useViewTracker(eventTrackingData);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+
+  useOptimizelyScrollDepth();
 
   if (!blocks || isEmpty(blocks)) {
     return null;
