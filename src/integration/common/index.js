@@ -7,7 +7,6 @@ import runFooterTests from './footer';
 import runAmpFooterTests from './footer.amp';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
-import runMediaPlaceholderTests from './mediaPlaceholder';
 import runMediaPlayerAudioTests from './mediaPlayerAudio';
 import runMediaPlayerTests from './mediaPlayer';
 import runRadioScheduleTests from './radioSchedule';
@@ -48,7 +47,6 @@ export {
   runAmpFooterTests,
   runHeaderTests,
   runMainHeadingTests,
-  runMediaPlaceholderTests,
   runMediaPlayerAudioTests,
   runMediaPlayerTests,
   runMostReadTests,
