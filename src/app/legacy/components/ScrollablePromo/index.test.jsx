@@ -12,7 +12,7 @@ import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
 import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useOptimizelyScrollDepth', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
