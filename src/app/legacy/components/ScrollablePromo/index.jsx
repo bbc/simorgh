@@ -72,6 +72,8 @@ const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
   const viewRef = useViewTracker(eventTrackingData);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
+  useOptimizelyScrollDepth();
+
   if (!blocks || isEmpty(blocks)) {
     return null;
   }
@@ -102,8 +104,6 @@ const ScrollablePromo = ({ blocks, blockGroupIndex = null }) => {
           ),
         }),
   };
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useOptimizelyScrollDepth();
 
   return (
     <GridItemMediumNoMargin {...a11yAttributes}>
