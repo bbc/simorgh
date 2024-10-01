@@ -71,7 +71,7 @@ export default () =>
       locale,
       dir = 'ltr',
       timezone = 'GMT',
-    } = textOverrides;
+    } = textOverrides || {};
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
