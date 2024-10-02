@@ -3637,9 +3637,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/darwin-arm64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@esbuild/darwin-arm64@npm:0.24.0"
+  checksum: 10/0c110c85434224edd1f5693ec89e5ffe3125abace3777b6917cfac284b44a4abc1daeb08e23aa4f65dd59b3e4e0682c7664cb5e6ebe209e5999ebe6ff18427af
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@esbuild/darwin-x64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/darwin-x64@npm:0.21.5"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/darwin-x64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@esbuild/darwin-x64@npm:0.24.0"
+  checksum: 10/05ddd4320735e685f332f1e0fa3ffb69f0ca90db69f536cb48787891acf5bb5afd98b019757df31d940cd9252219f7ec272985098ed41527ab87419d4285957f
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -3661,6 +3677,14 @@ __metadata:
 "@esbuild/linux-arm64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/linux-arm64@npm:0.21.5"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@esbuild/linux-arm64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@esbuild/linux-arm64@npm:0.24.0"
+  checksum: 10/297634c8c9006dfcbfdaa149854ec1d159809be46108a4ccde59ede7273811c90d2dadf1695bf44c31b99fd4a06fbd1609857732e197be1316f3f1b70ebbd021
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -3721,6 +3745,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/linux-x64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@esbuild/linux-x64@npm:0.24.0"
+  checksum: 10/f5059e76379e264796293175ac7f6c09e3ccd6bee7dce57fecedcb2ace95270eeb44a73cf57f9ce83c7624f1984b817c9235f1b4e196f87e87d1d211c3fb8eae
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@esbuild/netbsd-x64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/netbsd-x64@npm:0.21.5"
@@ -3749,6 +3781,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@esbuild/win32-arm64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@esbuild/win32-arm64@npm:0.24.0"
+  checksum: 10/c3d7aef352c0e74e3eb03d5831c0e87be75ad97b2eef7d8ad0883a44077cddd8f4aec7e0009f32eb1072b3bedcdb95876cb526b3c8ad7eedb3586cbce1ccbc29
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@esbuild/win32-ia32@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/win32-ia32@npm:0.21.5"
@@ -3759,6 +3799,14 @@ __metadata:
 "@esbuild/win32-x64@npm:0.21.5":
   version: 0.21.5
   resolution: "@esbuild/win32-x64@npm:0.21.5"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@esbuild/win32-x64@npm:0.24.0":
+  version: 0.24.0
+  resolution: "@esbuild/win32-x64@npm:0.24.0"
+  checksum: 10/14b0662e72cb4c7f1c04acb1a530f078a519acf21609b5699a79cda6dba706271c4dfcecd85a2789abc2199e9d7734418155c26cf6f21d89a4eba7318c00053e
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4258,6 +4306,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-darwin-arm64@npm:14.2.14":
+  version: 14.2.14
+  resolution: "@next/swc-darwin-arm64@npm:14.2.14"
+  checksum: 10/d55cbf3e8a876fa66378c45161fae1a09fb4092d2dff1d51b68b0b30975d472a9433c57ecc60d7e5582ca606892c116aeb567958366adfaccefe62ce7d2ae815
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-x64@npm:14.2.10":
   version: 14.2.10
   resolution: "@next/swc-darwin-x64@npm:14.2.10"
@@ -4265,9 +4321,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-darwin-x64@npm:14.2.14":
+  version: 14.2.14
+  resolution: "@next/swc-darwin-x64@npm:14.2.14"
+  checksum: 10/c909611ffeaaeb94723740ec5e13b388f631b4c66f073e32622e26aad501c08361be583e8f5d03b41e7e37e673968509000de3fb985058b3cf347df0442e9030
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-arm64-gnu@npm:14.2.10":
   version: 14.2.10
   resolution: "@next/swc-linux-arm64-gnu@npm:14.2.10"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm64-gnu@npm:14.2.14":
+  version: 14.2.14
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.14"
+  checksum: 10/f65acb86ccc5ffee5fa64d5fca3aad982913a83ce5db1f5f5be991912ddc91d2a082e52bb25350bf4c4b192ad8ec6283c5d568638361030dd4287c8d746bbcc9
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -4286,6 +4358,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-x64-gnu@npm:14.2.14":
+  version: 14.2.14
+  resolution: "@next/swc-linux-x64-gnu@npm:14.2.14"
+  checksum: 10/17cc9b707fbcb3e057dfcf21adc4501bcfe8717c5286181a9c5829f4d629990610d79b718180d047fae359944feda2ea2e74c4ab9645d7c9615dd7d2a79f9e15
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-x64-musl@npm:14.2.10":
   version: 14.2.10
   resolution: "@next/swc-linux-x64-musl@npm:14.2.10"
@@ -4300,6 +4380,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-arm64-msvc@npm:14.2.14":
+  version: 14.2.14
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.14"
+  checksum: 10/e120e8ac58297d56d6c7df26d68514068360d50f609b00447c24caed14c156cec5f95b9e26d6e7d8b12e47d8a1c8aa71a6548161d310d55fe1467e6ba9f83170
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-ia32-msvc@npm:14.2.10":
   version: 14.2.10
   resolution: "@next/swc-win32-ia32-msvc@npm:14.2.10"
@@ -4310,6 +4398,14 @@ __metadata:
 "@next/swc-win32-x64-msvc@npm:14.2.10":
   version: 14.2.10
   resolution: "@next/swc-win32-x64-msvc@npm:14.2.10"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:14.2.14":
+  version: 14.2.14
+  resolution: "@next/swc-win32-x64-msvc@npm:14.2.14"
+  checksum: 10/56900de85e6ea4fed6e6dc4fbe5ddd7f98dddfb2868875a38dea81e5955bd8c0c14cfb190cd062a8408ce603b5774d58b5b2ba6a58aa4b81ca88fd67d188c937
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -16136,10 +16232,22 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.11.5"
+    "@esbuild/darwin-arm64": "npm:0.24.0"
+    "@esbuild/darwin-x64": "npm:0.24.0"
+    "@esbuild/linux-arm64": "npm:0.24.0"
+    "@esbuild/linux-x64": "npm:0.24.0"
+    "@esbuild/win32-arm64": "npm:0.24.0"
+    "@esbuild/win32-x64": "npm:0.24.0"
     "@loadable/babel-plugin": "npm:5.16.1"
     "@loadable/component": "npm:5.16.4"
     "@loadable/server": "npm:5.16.5"
     "@loadable/webpack-plugin": "npm:5.15.2"
+    "@next/swc-darwin-arm64": "npm:14.2.14"
+    "@next/swc-darwin-x64": "npm:14.2.14"
+    "@next/swc-linux-arm64-gnu": "npm:14.2.14"
+    "@next/swc-linux-x64-gnu": "npm:14.2.14"
+    "@next/swc-win32-arm64-msvc": "npm:14.2.14"
+    "@next/swc-win32-x64-msvc": "npm:14.2.14"
     "@optimizely/react-sdk": "npm:3.2.2"
     "@storybook/addon-a11y": "npm:8.2.9"
     "@storybook/addon-backgrounds": "npm:8.2.9"
