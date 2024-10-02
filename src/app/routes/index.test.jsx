@@ -30,20 +30,6 @@ import {
 import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
 import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
 
-jest.mock('@optimizely/react-sdk', () => {
-  return {
-    setLogger: jest.fn(),
-    OptimizelyExperiment: jest.fn(),
-    createInstance: jest.fn(),
-    useDecision: jest.fn(),
-    OptimizelyProvider: ({ children }) => children,
-  };
-});
-
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
-jest.mock('#app/hooks/useOptimizelyScrollDepth');
-
 global.performance.getEntriesByName = jest.fn(() => []);
 
 // mock pages/index.js to return a non async page component
