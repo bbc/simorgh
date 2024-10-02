@@ -542,7 +542,7 @@ const preview: Preview = {
     service: {
       service: 'news',
       variant: 'default',
-    }
+    },
   },
   parameters: {
     passArgsFirst: false,
