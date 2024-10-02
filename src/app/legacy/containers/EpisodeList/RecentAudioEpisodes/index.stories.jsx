@@ -42,23 +42,38 @@ export default {
   Component,
 };
 
-export const MultipleItems = (_, { service }) => (
-  <Component
-    episodes={fixtures?.[service] ?? fixtures.indonesia}
-    pageType="Podcast"
-    masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
-    service={service}
-  />
-);
-
-export const SingleItem = (_, { service }) => {
-  const fixture = fixtures?.[service]?.[0] ?? fixtures.indonesia[0];
-  return (
+export const MultipleItems = {
+  render: (_, { service }) => (
     <Component
-      episodes={[fixture]}
+      episodes={fixtures?.[service] ?? fixtures.indonesia}
       pageType="Podcast"
       masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
       service={service}
     />
-  );
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
 };
+
+export const SingleItem = {
+  render: (_, { service }) => (
+    <Component
+      episodes={[fixtures?.[service]?.[0] ?? fixtures.indonesia[0]]}
+      pageType="Podcast"
+      masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
+      service={service}
+    />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
+
+export const TestMultipleItems = storyArgs =>
+  MultipleItems.render(storyArgs, { service: 'indonesia' });
+TestMultipleItems.tags = ['test'];
+
+export const TestSingleItem = storyArgs =>
+  SingleItem.render(storyArgs, { service: 'indonesia' });
+TestSingleItem.tags = ['test'];

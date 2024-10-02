@@ -53,7 +53,7 @@ export const Example = {
   render: (_, { service, variant }) => (<Component service={service} variant={variant} />),
   parameters: {
     chromatic: {
-      disableSnapshots: true
+      disableSnapshot: true
     }
   }
 };

@@ -31,21 +31,40 @@ export default {
   },
 };
 
-export const MultipleItems = (_, { service }) => (
-  <Component
-    episodes={fixtures?.[service] ?? fixtures.afrique}
-    masterBrand={`bbc_${service}_tv`}
-    service={service}
-  />
-);
-
-export const SingleItem = (_, { service }) => {
-  const fixture = fixtures?.[service]?.[0] ?? fixtures.afrique[0];
-  return (
+export const MultipleItems = {
+  render: (_, { service }) => (
     <Component
-      episodes={[fixture]}
+      episodes={fixtures?.[service] ?? fixtures.afrique}
       masterBrand={`bbc_${service}_tv`}
       service={service}
     />
-  );
+  ),
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
 };
+
+export const SingleItem = {
+  render: (_, { service }) => (
+    <Component
+      episodes={[fixtures?.[service]?.[0] ?? fixtures.afrique[0]]}
+      masterBrand={`bbc_${service}_tv`}
+      service={service}
+    />
+  ),
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
+};
+
+export const TestMultipleItems = storyArgs =>
+  MultipleItems.render(storyArgs, { service: 'afrique' });
+TestMultipleItems.tags = ['test'];
+
+export const TestSingleItem = storyArgs =>
+  SingleItem.render(storyArgs, { service: 'afrique' });
+TestSingleItem.tags = ['test'];
