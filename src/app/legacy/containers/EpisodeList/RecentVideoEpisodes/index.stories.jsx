@@ -61,10 +61,12 @@ export const SingleItem = {
   },
 };
 
+// This story is for chromatic testing purposes only
 export const TestMultipleItems = storyArgs =>
   MultipleItems.render(storyArgs, { service: 'afrique' });
-TestMultipleItems.tags = ['test'];
+TestMultipleItems.tags = ['!dev'];
 
+// This story is for chromatic testing purposes only
 export const TestSingleItem = storyArgs =>
   SingleItem.render(storyArgs, { service: 'afrique' });
-TestSingleItem.tags = ['test'];
+TestSingleItem.tags = ['!dev'];

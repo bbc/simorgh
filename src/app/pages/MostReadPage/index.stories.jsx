@@ -58,4 +58,6 @@ export const Example = {
   }
 };
 
+// This story is for chromatic testing purposes only
 export const Test = (_, { variant }) => <Component service="pidgin" variant={variant}/>;
+Test.tags = ['!dev']

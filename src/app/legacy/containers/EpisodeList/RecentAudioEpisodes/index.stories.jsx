@@ -70,10 +70,12 @@ export const SingleItem = {
   },
 };
 
+// This story is for chromatic testing purposes only
 export const TestMultipleItems = storyArgs =>
   MultipleItems.render(storyArgs, { service: 'indonesia' });
-TestMultipleItems.tags = ['test'];
+TestMultipleItems.tags = ['!dev'];
 
+// This story is for chromatic testing purposes only
 export const TestSingleItem = storyArgs =>
   SingleItem.render(storyArgs, { service: 'indonesia' });
-TestSingleItem.tags = ['test'];
+TestSingleItem.tags = ['!dev'];

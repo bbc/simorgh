@@ -69,5 +69,5 @@ export const Test = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="pashto" variant={variant} />
   ),
-  tags: ['test'],
+  tags: ['!dev'],
 };

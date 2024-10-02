@@ -62,5 +62,5 @@ export const Test = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="indonesia" variant={variant} />
   ),
-  tags: ['test'],
+  tags: ['!dev'],
 };
