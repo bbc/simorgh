@@ -412,6 +412,10 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
+        title: 'Elecciones EE.UU. 2024',
+        url: '/mundo/topics/c1v8en6r2qgt',
+      },
+      {
         title: 'Hay Festival',
         url: '/mundo/topics/cr50y7p7qyqt',
       },

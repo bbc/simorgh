@@ -216,8 +216,8 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 1
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "جنگ اسرائیل-غزه",
-  "url": "/persian/topics/clm0z4jgj3xt",
+  "text": "بحران خاورمیانه",
+  "url": "/persian/topics/cj31ldvmg1et",
 }
 `;
 
