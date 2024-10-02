@@ -127,7 +127,7 @@ exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-1jvsvcw"
+  class="bbc-1b7q6mf"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -200,7 +200,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-1jvsvcw"
+  class="bbc-1b7q6mf"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -277,7 +277,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1jvsvcw"
+    class="bbc-1b7q6mf"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -497,7 +497,6 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "@type": "VideoObject",
       "description": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
       "duration": "PT10M",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/hausa/bbc_hausa_tv/w172xcg0kg6vph8/ha?morph_env=live",
       "name": "Labaran Talabijin",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b216l.png",
       "uploadDate": "2020-11-23T00:00:00.000Z",

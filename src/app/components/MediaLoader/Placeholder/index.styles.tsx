@@ -1,12 +1,12 @@
 import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
+import { mediaPortraitStyles } from '../index.styles';
 
 const styles = {
   placeholder: ({ palette }: Theme) =>
     css({
       position: 'relative',
-      aspectRatio: '16 / 9',
       cursor: 'pointer',
       [`.${NO_JS_CLASSNAME} &`]: {
         cursor: 'default',
@@ -17,6 +17,14 @@ const styles = {
         },
       },
     }),
+
+  placeholderLandscape: () =>
+    css({
+      aspectRatio: '16 / 9',
+    }),
+
+  placeholderPortrait: () => mediaPortraitStyles,
+
   playButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
@@ -37,6 +45,7 @@ const styles = {
         border: `${focusIndicatorThickness} solid ${palette.BLACK}`,
       },
     }),
+
   guidance: () =>
     css({
       zIndex: '1',

@@ -13,7 +13,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     jest.clearAllMocks();
   });
 
-  const renderUseOptimizelyMvtVariation = (mvtExperiments, experimentId) => {
+  const renderUseOptimizelyMvtVariation = (mvtExperiments, flagId) => {
     const props = {
       mvtExperiments,
       isAmp: false,
@@ -24,7 +24,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     const wrapper = ({ children }) => (
       <RequestContextProvider {...props}>{children}</RequestContextProvider>
     );
-    return renderHook(() => useOptimizelyMvtVariation(experimentId), {
+    return renderHook(() => useOptimizelyMvtVariation(flagId), {
       wrapper,
     }).result.current;
   };

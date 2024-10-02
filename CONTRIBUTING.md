@@ -12,7 +12,6 @@ Please familiarise yourself with our:
 - [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.mdx)
-- [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.mdx)
 - [GPG Signing Guide](https://github.com/bbc/simorgh/blob/latest/docs/GPG-Signing-Guide.mdx)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 - [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.mdx)
@@ -27,8 +26,6 @@ Before starting a pull request, firstly search through [existing issues](https:/
 If the work you want to carry out is not captured in an issue, please open one. Otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
 There are issue templates available for bug fix and feature requests, so you know what details to include.
-
-Once you find an issue you would like to work on, please see this [guide about our project board workflow](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.mdx)
 
 ## Pull Requests
 

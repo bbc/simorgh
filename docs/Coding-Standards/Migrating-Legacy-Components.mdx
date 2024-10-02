@@ -1,4 +1,18 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Markdown } from '@storybook/blocks';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MAX,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
+} from '../../src/app/legacy/psammead/gel-foundations/src/breakpoints';
+import * as spacings from '../../src/app/components/ThemeProvider/spacings'
+import {MARGIN_BELOW_400PX, MARGIN_ABOVE_400PX, GUTTER_BELOW_600PX, GUTTER_ABOVE_600PX} from '../../src/app/components/ThemeProvider/spacings'
 
 <Meta title="Coding Standards/Migrating Legacy Components" />
 
@@ -191,15 +205,23 @@ export const styles;
 
 ### Font Sizes Mappings
 
+<Markdown>
+  {`
 | Before                                                                                                                                                     | After                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| `${({ script }) => script && getCanon(script)}` <br /> **OR** <br />`${({ script }) => getCanon(script)}` <br /> **OR** <br /> `${() => getCanon(script)}` | `...fontSizes.canon` |
+| \`${({ script }) => script && getCanon(script)}\` <br /> **OR** <br />\`${({ script }) => getCanon(script)}\` <br /> **OR** <br /> \`${() => getCanon(script)}\` | \`...fontSizes.canon\` |
+`}
+</Markdown>
 
 ### Font Variants Mappings
 
+<Markdown>
+  {`
 | Before                                                                                                | After                         |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------- |
-| `${({ service }) => getSerifMedium(service)}` <br /> **OR** <br /> `${() => getSerifMedium(service)}` | `...fontVariants.serifMedium` |
+| \`${({ service }) => getSerifMedium(service)}\` <br /> **OR** <br /> \`${() => getSerifMedium(service)}\` | \`...fontVariants.serifMedium\` |
+`}
+</Markdown>
 
 ## Migrating Media Queries
 
@@ -232,47 +254,55 @@ export default styles;
 
 ### Media Query / Breakpoint Mappings
 
+<Markdown>
+  {`
 | Before                                                                                                   | After                         |
 | -------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | **Min Widths**                                                                                           |                               |
-| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_1_MIN_WIDTH]: {`   |
-| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_2_MIN_WIDTH]: {`   |
-| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_3_MIN_WIDTH]: {`   |
-| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_4_MIN_WIDTH]: {`   |
-| `@media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {`                                                  | `[mq.GROUP_5_MIN_WIDTH]: {`   |
+| \`@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_1_MIN_WIDTH]: {\`   |
+| \`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_2_MIN_WIDTH]: {\`   |
+| \`@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_3_MIN_WIDTH]: {\`   |
+| \`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_4_MIN_WIDTH]: {\`   |
+| \`@media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_5_MIN_WIDTH]: {\`   |
 | **Max Widths**                                                                                           |                               |
-| `@media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_0_MAX_WIDTH]: {`   |
-| `@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_1_MAX_WIDTH]: {`   |
-| `@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_2_MAX_WIDTH]: {`   |
-| `@media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_3_MAX_WIDTH]: {`   |
-| `@media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {`                                                  | `[mq.GROUP_4_MAX_WIDTH]: {`   |
+| \`@media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_0_MAX_WIDTH]: {\`   |
+| \`@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_1_MAX_WIDTH]: {\`   |
+| \`@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_2_MAX_WIDTH]: {\`   |
+| \`@media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_3_MAX_WIDTH]: {\`   |
+| \`@media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_4_MAX_WIDTH]: {\`   |
 | **Min and Max Widths**                                                                                   |                               |
-| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_ONLY]: {`        |
-| `@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_2_ONLY]: {`        |
-| `@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_1_AND_GROUP_2]: {` |
-| `@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_3_ONLY]: {`        |
-| `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {` | `[mq.GROUP_4_ONLY]: {`        |
+| \`@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_1_ONLY]: {\`        |
+| \`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_2_ONLY]: {\`        |
+| \`@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_1_AND_GROUP_2]: {\` |
+| \`@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_3_ONLY]: {\`        |
+| \`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_4_ONLY]: {\`        |
 | **Forced Colours/High Contrast**                                                                         |                               |
-| `@media screen and (forced-colors: active)`                                                              | `[mq.FORCED_COLOURS]: {`      |
+| \`@media screen and (forced-colors: active)\`                                                              | \`[mq.FORCED_COLOURS]: {\`      |
+`}
+</Markdown>
 
 ### Migrating GEL Breakpoints (Spacing)
 
+<Markdown>
+  {`
 | Rems (Pixels)  | GEL Spacing              | New Theme Spacing          |
 | -------------- | ------------------------ | -------------------------- |
-| 0.25rem (4px)  | `GEL_SPACING_HLF`        | `${spacings.HALF}rem`      |
-| 0.5rem (8px)   | `GEL_SPACING`            | `${spacings.FULL}rem`      |
-| 0.75rem (12px) | `GEL_SPACING_HLF_TRPL`   | `0.75rem`                  |
-| 1rem (16px)    | `GEL_SPACING_DBL`        | `${spacings.DOUBLE}rem`    |
-| 1.5rem (24px)  | `GEL_SPACING_TRPL`       | `${spacings.TRIPLE}rem`    |
-| 2rem (32px)    | `GEL_SPACING_QUAD`       | `${spacings.QUADRUPLE}rem` |
-| 2.5rem (40px)  | `GEL_SPACING_QUIN`       | `${spacings.QUINTUPLE}rem` |
-| 3rem (48px)    | `GEL_SPACING_SEXT`       | `${spacings.SEXTUPLE}rem`  |
-| 3.5rem (56px)  | `GEL_SPACING_SEPT`       | `3.5rem`                   |
+| 0.25rem (4px)  | \`GEL_SPACING_HLF\`        | \`${spacings.HALF}rem\`      |
+| 0.5rem (8px)   | \`GEL_SPACING\`            | \`${spacings.FULL}rem\`      |
+| 0.75rem (12px) | \`GEL_SPACING_HLF_TRPL\`   | \`0.75rem\`                  |
+| 1rem (16px)    | \`GEL_SPACING_DBL\`        | \`${spacings.DOUBLE}rem\`    |
+| 1.5rem (24px)  | \`GEL_SPACING_TRPL\`       | \`${spacings.TRIPLE}rem\`    |
+| 2rem (32px)    | \`GEL_SPACING_QUAD\`       | \`${spacings.QUADRUPLE}rem\` |
+| 2.5rem (40px)  | \`GEL_SPACING_QUIN\`       | \`${spacings.QUINTUPLE}rem\` |
+| 3rem (48px)    | \`GEL_SPACING_SEXT\`       | \`${spacings.SEXTUPLE}rem\`  |
+| 3.5rem (56px)  | \`GEL_SPACING_SEPT\`       | \`3.5rem\`                   |
 | **Other**      |                          |                            |
-| 0.5rem (8px)   | `GEL_MARGIN_BELOW_400PX` | `${MARGIN_BELOW_400PX}`    |
-| 1rem (16px)    | `GEL_MARGIN_ABOVE_400PX` | `${MARGIN_ABOVE_400PX}`    |
-| 0.5rem (8px)   | `GEL_GUTTER_BELOW_600PX` | `${GUTTER_BELOW_600PX}`    |
-| 1rem (16px)    | `GEL_GUTTER_ABOVE_600PX` | `${GUTTER_ABOVE_600PX}`    |
+| 0.5rem (8px)   | \`GEL_MARGIN_BELOW_400PX\` | \`${MARGIN_BELOW_400PX}\`    |
+| 1rem (16px)    | \`GEL_MARGIN_ABOVE_400PX\` | \`${MARGIN_ABOVE_400PX}\`    |
+| 0.5rem (8px)   | \`GEL_GUTTER_BELOW_600PX\` | \`${GUTTER_BELOW_600PX}\`    |
+| 1rem (16px)    | \`GEL_GUTTER_ABOVE_600PX\` | \`${GUTTER_ABOVE_600PX}\`    |
+`}
+</Markdown>
 
 ## Using `CSS` library with values driven by props
 

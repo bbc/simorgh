@@ -10,7 +10,7 @@ A description of how feature toggles work can be found in the toggles readme [he
 
 ### Using the useToggle Hook
 
-```
+```jsx
 import useToggle from './useToggle';
 
 const Component = () => {
@@ -26,7 +26,7 @@ export default Component;
 
 When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a `ToggleContextProvider`. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
 
-```
+```jsx
 const toggles = {
   myFeature: {
     enabled: true,

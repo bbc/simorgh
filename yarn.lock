@@ -4372,84 +4372,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/js-sdk-datafile-manager@npm:^0.9.5":
-  version: 0.9.5
-  resolution: "@optimizely/js-sdk-datafile-manager@npm:0.9.5"
+"@optimizely/optimizely-sdk@npm:^5.3.4":
+  version: 5.3.4
+  resolution: "@optimizely/optimizely-sdk@npm:5.3.4"
   dependencies:
-    "@optimizely/js-sdk-logging": "npm:^0.3.1"
-    "@optimizely/js-sdk-utils": "npm:^0.4.0"
     decompress-response: "npm:^4.2.1"
+    json-schema: "npm:^0.4.0"
+    murmurhash: "npm:^2.0.1"
+    ua-parser-js: "npm:^1.0.37"
+    uuid: "npm:^9.0.1"
   peerDependencies:
+    "@babel/runtime": ^7.0.0
     "@react-native-async-storage/async-storage": ^1.2.0
-  peerDependenciesMeta:
-    "@react-native-async-storage/async-storage":
-      optional: true
-  checksum: 10/da9dfadfc77dac295bb0552d006f15c479d7c2d17e8e72aa87bedbc825dc485b774b176551e2aac19687999d1f30e76aa56dde8351f656c2bed9de025b63eb3a
-  languageName: node
-  linkType: hard
-
-"@optimizely/js-sdk-event-processor@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "@optimizely/js-sdk-event-processor@npm:0.10.0"
-  dependencies:
-    "@optimizely/js-sdk-logging": "npm:^0.3.1"
-    "@optimizely/js-sdk-utils": "npm:^0.4.0"
-  peerDependencies:
-    "@react-native-async-storage/async-storage": ^1.2.0
-    "@react-native-community/netinfo": 5.9.4
+    "@react-native-community/netinfo": ^11.3.2
+    fast-text-encoding: ^1.0.6
+    react-native-get-random-values: ^1.11.0
   peerDependenciesMeta:
     "@react-native-async-storage/async-storage":
       optional: true
     "@react-native-community/netinfo":
       optional: true
-  checksum: 10/9ca5dbe1580c926f9e557182bb6fe6c7558b1b1987ab4e583443f6e0d8470f605315339c10bd76351a62226b1a96fb5ef6c2227fffbe6ef587ffa41b81ed524f
+    fast-text-encoding:
+      optional: true
+    react-native-get-random-values:
+      optional: true
+  checksum: 10/89708f3f27ccc8de70274c693a87bb940e08493dc307a4c95d46e9383c1eff05f637db850ef73a6ed36cd063bc7925b3f0e11ad0c0c593f9588eabcaf8f42205
   languageName: node
   linkType: hard
 
-"@optimizely/js-sdk-logging@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@optimizely/js-sdk-logging@npm:0.3.1"
+"@optimizely/react-sdk@npm:3.2.2":
+  version: 3.2.2
+  resolution: "@optimizely/react-sdk@npm:3.2.2"
   dependencies:
-    "@optimizely/js-sdk-utils": "npm:^0.4.0"
-  checksum: 10/e6761b7e414173a1976a2731d930940b60941d912b9d05c30016f04960dd76392870b4e443a9cdadd2a83cb88c382523ca31e6a2eb9c243d46492ca34d735ec5
-  languageName: node
-  linkType: hard
-
-"@optimizely/js-sdk-utils@npm:0.4.0":
-  version: 0.4.0
-  resolution: "@optimizely/js-sdk-utils@npm:0.4.0"
-  dependencies:
-    uuid: "npm:^3.3.2"
-  checksum: 10/74e2369aed26af5faec434a05b8182b08d489e08798bde2259903bcb87a64adb2bb576198ccd5754794411ccc3a6f7af1ff8a391e594566e74dcbaaafd89789f
-  languageName: node
-  linkType: hard
-
-"@optimizely/optimizely-sdk@npm:^4.9.1":
-  version: 4.10.0
-  resolution: "@optimizely/optimizely-sdk@npm:4.10.0"
-  dependencies:
-    "@optimizely/js-sdk-datafile-manager": "npm:^0.9.5"
-    "@optimizely/js-sdk-event-processor": "npm:^0.10.0"
-    "@optimizely/js-sdk-logging": "npm:^0.3.1"
-    json-schema: "npm:^0.4.0"
-    murmurhash: "npm:0.0.2"
-    uuid: "npm:^3.3.2"
-  checksum: 10/464d61e99565807b8dd28b49db69867d8de8452146e0672819e27551029fea6cca33ddf9fd54dfe5fc711ba874a5d72c09e7d2d50638194d6e491dc816ca561d
-  languageName: node
-  linkType: hard
-
-"@optimizely/react-sdk@npm:2.9.2":
-  version: 2.9.2
-  resolution: "@optimizely/react-sdk@npm:2.9.2"
-  dependencies:
-    "@optimizely/js-sdk-logging": "npm:^0.3.1"
-    "@optimizely/optimizely-sdk": "npm:^4.9.1"
-    hoist-non-react-statics: "npm:^3.3.0"
-    prop-types: "npm:^15.6.2"
+    "@optimizely/optimizely-sdk": "npm:^5.3.4"
+    hoist-non-react-statics: "npm:^3.3.2"
+    prop-types: "npm:^15.8.1"
     utility-types: "npm:^2.1.0 || ^3.0.0"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 10/7264961a2d3527c5c172a8fc5f719aeccc7a36952882c3a24a8574f08568e12a81ff4026d0eb347ea9fab30caba48081c4a3080429cf62654921b4e0d8658536
+  checksum: 10/3b3435d0582a59c14a8376c85bb13ee887025fdc69ad5f058cd358930f8341619ed59def5d4f05cda9c6f76037c755dc2ff3c204bc47d284eceac67642ba76fc
   languageName: node
   linkType: hard
 
@@ -10946,7 +10907,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1":
+"hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -13734,10 +13695,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"murmurhash@npm:0.0.2":
-  version: 0.0.2
-  resolution: "murmurhash@npm:0.0.2"
-  checksum: 10/e06d1e7cfdc39d742584d96af30e9b26bd44c995b9ced192b62c36b52898347ac28d32a9a94f5e0b286339d45657490ae32ed42ead75ef2a15aef9cfe386e5fa
+"murmurhash@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "murmurhash@npm:2.0.1"
+  checksum: 10/8bb90f43b1c41b1d046efe662a02dcc3cdbda4b42fbbadf7488046772d9eecf2b37ffb6cb73d0d96f2ff489d9f4a8252c674bbae588a6179f60854fe0bfe3325
   languageName: node
   linkType: hard
 
@@ -16179,7 +16140,7 @@ __metadata:
     "@loadable/component": "npm:5.16.4"
     "@loadable/server": "npm:5.16.5"
     "@loadable/webpack-plugin": "npm:5.15.2"
-    "@optimizely/react-sdk": "npm:2.9.2"
+    "@optimizely/react-sdk": "npm:3.2.2"
     "@storybook/addon-a11y": "npm:8.2.9"
     "@storybook/addon-backgrounds": "npm:8.2.9"
     "@storybook/addon-controls": "npm:8.2.9"
@@ -17559,6 +17520,15 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/760f7d92fb383dbf7dee2443bf902f4365db2117f96f875cf809167f6103d55064de973db9f78fe8f31ec08fff52b2c969aee0d310939c0a3798ec75d0bca2e1
+  languageName: node
+  linkType: hard
+
+"ua-parser-js@npm:^1.0.37":
+  version: 1.0.39
+  resolution: "ua-parser-js@npm:1.0.39"
+  bin:
+    ua-parser-js: script/cli.js
+  checksum: 10/dd4026b6ece8a34a0d39b6de5542154c4506077d8def8647a300a29e1b3ffa0e23f5c8eeeb8101df6162b7b3eb3597d0b4adb031ae6104cbdb730d6ebc07f3c0
   languageName: node
   linkType: hard
 
