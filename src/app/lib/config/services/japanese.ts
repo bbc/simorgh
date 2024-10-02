@@ -307,8 +307,8 @@ export const service: DefaultServiceConfig = {
         url: '/japanese',
       },
       {
-        title: 'ガザ',
-        url: '/japanese/topics/cw5wn2e9rpnt',
+        title: '中東危機',
+        url: '/japanese/topics/cn7y603vz3lt',
       },
       {
         title: 'ウクライナ侵攻',
