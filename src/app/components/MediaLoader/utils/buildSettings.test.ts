@@ -14,6 +14,7 @@ import {
   buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
+  legacyMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -301,6 +302,67 @@ describe('buildSettings', () => {
           fullscreen: { enabled: true },
         },
       });
+    });
+
+    it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: [legacyMediaBlock] as unknown as MediaBlock[],
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+          },
+          enableToucan: true,
+          appName: 'news-serbian',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          playlistObject: {
+            title: '',
+            holdingImageURL:
+              'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+            items: [
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_med.mp4',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_hi.mp4',
+              },
+            ],
+          },
+          ui: {
+            controls: { enabled: true },
+            locale: { lang: 'sr-latn' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: undefined,
+            duration: '00:00',
+            durationSpoken: 'Duration 0,00',
+            guidanceMessage: undefined,
+            title: '',
+            type: 'video',
+          },
+          placeholderSrc:
+            'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+          placeholderSrcset: '',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        } as PlaceholderConfig,
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
     });
 
     it('Should process an AresMedia block into a valid playlist item for syndication.', () => {
