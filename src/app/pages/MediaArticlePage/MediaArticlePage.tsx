@@ -1,12 +1,14 @@
 /** @jsx jsx */
 
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
+import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -43,13 +45,6 @@ import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
 
-import { Article, OptimoBlock } from '../../models/types/optimo';
-import {
-  MetadataFormats,
-  MetadataTaggings,
-  MetadataTopics,
-} from '../../models/types/metadata';
-
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
 
@@ -70,8 +65,10 @@ import {
   EmbedHtmlProps,
   TimestampProps,
 } from './types';
+import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { isAmp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -84,20 +81,19 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headline = getHeadline(pageData) as string;
+  const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData) as Tag[];
-  const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
-  const blocks = pathOr<OptimoBlock[]>(
-    [],
-    ['content', 'model', 'blocks'],
-    pageData,
-  );
+  const topics = pageData?.metadata?.topics ?? [];
+  const blocks = pageData?.content?.model?.blocks ?? [];
 
-  const bylineBlock = blocks.find(block => block.type === 'byline');
-  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+  const bylineBlock = blocks.find(
+    block => block.type === 'byline',
+  ) as OptimoBylineBlock;
+
+  const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
@@ -107,29 +103,51 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
-  const taggings = path<MetadataTaggings>(
-    ['metadata', 'passport', 'taggings'],
-    pageData,
-  );
-  const formats = path<MetadataFormats>(
-    ['metadata', 'passport', 'predicates', 'formats'],
-    pageData,
-  );
+  const taggings = pageData?.metadata?.passport?.taggings ?? [];
+
+  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
   // ATI
   const {
     metadata: { atiAnalytics, type },
   } = pageData;
 
-  const isMap = type === MEDIA_ASSET_PAGE;
+  const isCpsMap = type === MEDIA_ASSET_PAGE;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
 
   const atiData = {
     ...atiAnalytics,
-    ...(isMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
+
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === ARTICLE_PAGE;
+
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const promoImageAltTextBlock = filterForBlockType(
+    promoImageBlocks,
+    'altText',
+  );
+
+  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+
+  const promoImageAltText =
+    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const promoImage = promoImageRawBlock?.model?.locator;
+
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !isTransliterated,
+  );
+
+  const isLiveMedia = checkIsLiveMedia(blocks);
+
+  const showTimestamp = Boolean(!hasByline && !isLiveMedia);
 
   const componentsToRender = {
     fauxHeadline,
@@ -140,26 +158,34 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
-          isMap && styles.cafMediaPlayer,
+          isCpsMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
-          isMap && styles.cafMediaPlayer,
+          isCpsMap && styles.cafMediaPlayer,
         ]}
       >
-        <ArticleMediaPlayer {...props} />
+        {isAmp ? (
+          <ArticleMediaPlayer {...props} />
+        ) : (
+          <MediaLoader blocks={props.blocks as MediaBlock[]} />
+        )}
       </div>
     ),
     text,
-    byline: (props: ComponentToRenderProps) =>
+    byline: () =>
       hasByline ? (
-        <Byline {...props}>
+        <Byline blocks={bylineContribBlocks}>
           <Timestamp
             firstPublished={new Date(firstPublished).getTime()}
             lastPublished={new Date(lastPublished).getTime()}
@@ -175,7 +201,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       />
     ),
     timestamp: (props: TimestampProps) =>
-      hasByline ? null : <Timestamp {...props} popOut={false} />,
+      showTimestamp ? <Timestamp {...props} popOut={false} /> : null,
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
@@ -183,22 +209,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
-
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
-  );
-
-  const promoImageAltText = path<string>(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
-
-  const promoImage = path<string>(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
-  );
 
   return (
     <div css={styles.pageWrapper}>
@@ -212,15 +222,15 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       <ComscoreAnalytics />
       <NielsenAnalytics />
       <ArticleMetadata
-        articleId={getArticleId(pageData) as string | undefined}
+        articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(pageData) as string | undefined}
+        section={getArticleSection(pageData)}
         aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData) as string[] | undefined}
+        mentionsTags={getMentions(pageData)}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}
@@ -231,7 +241,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         showAuthor
         bylineLinkedData={bylineLinkedData}
         type={
-          isMap
+          isCpsMap
             ? 'Article'
             : categoryName(isTrustProjectParticipant, taggings, formats)
         }
@@ -243,11 +253,11 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={isMap ? styles.fullWidthContainer : styles.primaryColumn}>
+        <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          {showRelatedTopics && topics && (
+          {showTopics && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
@@ -257,7 +267,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        {!isMap && <SecondaryColumn pageData={pageData} />}
+        {!isCpsMap && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );

@@ -14,9 +14,10 @@ describe('processRecentEpisodes', () => {
       }),
     ).toEqual([
       {
-        id: 'w172xc9xq2gllfk',
+        id: 'w172yj93rrkg6r7',
         brandTitle: 'BBC Info',
-        timestamp: 1605225600000,
+        episodeTitle: 'BBC Info',
+        timestamp: 1679011200000,
         duration: 'PT15M',
         image: '//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
         altText: 'BBC Info',
@@ -32,9 +33,10 @@ describe('processRecentEpisodes', () => {
       }),
     ).toEqual([
       {
-        id: 'w172xnm8j4tz686',
+        id: 'w172ywztppckdp6',
         brandTitle: 'Dunia Pagi Ini',
-        timestamp: 1605484800000,
+        episodeTitle: 'Dunia Pagi Ini',
+        timestamp: 1674345600000,
         duration: 'PT15M30S',
         image: '//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png',
         altText: 'Dunia Pagi Ini',

@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Markdown } from '@storybook/blocks';
 
 <Meta title="Simorgh structure/legacy directory" />
 
@@ -6,14 +6,18 @@ import { Meta } from '@storybook/blocks';
 
 This folder contains components that we want to replace with new standardised components using the strangler pattern.
 
+<Markdown>
+{`
 | Previous Location    | New Location                | Remarks                                                                                                                                              |
 | -------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/app/legacy`     | `src/app/legacy/psammead`   | These are components that used be maintained in a seperate component library: https://github.com/bbc/psammead                                        |
-| `src/app/components` | `src/app/legacy/components` | These are react components vaguely constituting components from the component-container pattern - we have decided not to follow this pattern anymore |
-| `src/app/containers` | `src/app/legacy/containers` | These are react components vaguely constituting containers from the component-container pattern - we have decided not to follow this pattern anymore |
+| src/app/legacy     | src/app/legacy/psammead   | These are components that used be maintained in a seperate component library: https://github.com/bbc/psammead                                        |
+| src/app/components | src/app/legacy/components | These are react components vaguely constituting components from the component-container pattern - we have decided not to follow this pattern anymore |
+| src/app/containers | src/app/legacy/containers | These are react components vaguely constituting containers from the component-container pattern - we have decided not to follow this pattern anymore |
+`}
+</Markdown>
 
 N.B. As referred to above we are moving away from the component-container pattern as engineers historically struggled to differentiate between the two and the distinction offered little from a maintenance perspective.
 
 The plan is to incrementally write new components that follow standards and best practices to replace the legacy components contained in this directory.
 
-The new components will be contained in `/src/app/components`.
+The new components will be contained in /src/app/components.

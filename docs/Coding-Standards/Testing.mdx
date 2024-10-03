@@ -6,8 +6,8 @@ import { Meta } from '@storybook/blocks';
 
 It’s important to have readable and maintainable tests because they help to catch defects and bugs in new features and when changing existing functionality. Tests are also another way of understanding our code.
 
-“Nothing makes a system more flexible than a suite of tests”
-— Robert C. Martin (Uncle Bob)
+> “Nothing makes a system more flexible than a suite of tests”
+> — Robert C. Martin (Uncle Bob)
 
 There are various patterns we can use to help improve the readability and maintainability tests.
 
@@ -21,17 +21,17 @@ It also encourages writing more maintainable tests because we are testing the fu
 
 ### Resources
 
-* https://testing-library.com/docs/guiding-principles
-* https://testing-library.com/docs/react-testing-library/faq
-* https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+* [Testing Library: Guiding principles](https://testing-library.com/docs/guiding-principles)
+* [Testing Library: FAQs](https://testing-library.com/docs/react-testing-library/faq)
+* [Ken C. Dodds Blog on Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
 
 ## Use the Arrange, Act, Assert pattern
 
 Arrange, Act, Assert is a great way to structure test cases. It prescribes an order of operations:
 
-1. ***Arrange*** \*\*\*\*inputs and targets. \*Arrange\* steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.
-2. ***Act*** \*\*\*\*on the target behaviour. \*Act\* steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behaviour.
-3. ***Assert*** \*\*\*\*expected outcomes. *Act* steps should elicit some sort of response. \*Assert\* steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
+1. ***Arrange*** inputs and targets. **Arrange** steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.
+2. ***Act*** on the target behaviour. **Act** steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behaviour.
+3. ***Assert*** expected outcomes. *Act* steps should elicit some sort of response. **Assert** steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
 
 ```js
 it('should render the cookie banner when the privacy banner is dismissed', async () => {
@@ -173,4 +173,4 @@ TDD is too big a subject to discuss here but we recommend learning about it to h
 
 ### Resources
 
-* https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/
+* [Automation Panda: Arrange-Act-Assert: A pattern for writing good tests](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/)

@@ -6,8 +6,13 @@ import {
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
 import MediaPlayer from '.';
-import { aresMediaBlocks } from './fixture';
+import {
+  aresMediaBlocks,
+  onDemandTvBlocks,
+  onDemandTvBlocksWithOverrides,
+} from './fixture';
 import { MediaBlock } from './types';
+import * as buildConfig from './utils/buildSettings';
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
@@ -17,14 +22,14 @@ jest.mock('react', () => ({
 jest.mock('#app/hooks/useLocation');
 
 describe('MediaLoader', () => {
+  beforeEach(() => {
+    jest.restoreAllMocks();
+
+    (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
+    (useState as jest.Mock).mockImplementation(() => [false, () => false]);
+  });
+
   describe('BUMP Loader', () => {
-    beforeEach(() => {
-      jest.restoreAllMocks();
-
-      (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
-      (useState as jest.Mock).mockImplementation(() => [false, () => false]);
-    });
-
     it('Loads Ads, requireJS and Bump4 when Ads are enabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
@@ -150,7 +155,25 @@ describe('MediaLoader', () => {
   });
 
   describe('Metadata', () => {
-    it('should render metadata tags when media player is embedded', async () => {
+    it('should render metadata tags when media player is not embedded', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            embedded={false}
+          />,
+          {
+            id: 'cn8jgj8rjppo',
+          },
+        );
+      });
+
+      const helmetMetaTags = Helmet.peek().metaTags;
+
+      expect(helmetMetaTags).not.toBeNull();
+    });
+
+    it('should not render metadata tags when media player is embedded', async () => {
       await act(async () => {
         render(
           <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded />,
@@ -162,10 +185,69 @@ describe('MediaLoader', () => {
 
       const helmetMetaTags = Helmet.peek().metaTags;
 
-      expect(helmetMetaTags[0]).toEqual({
-        property: 'og:url',
-        content: '/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB',
+      expect(helmetMetaTags).toEqual([]);
+    });
+  });
+
+  describe('Config', () => {
+    it('should use the pageIdentifierOverride when rendering On Demand TV', async () => {
+      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={onDemandTvBlocksWithOverrides as MediaBlock[]}
+            embedded
+          />,
+          { service: 'hindi' },
+        );
       });
+
+      expect(buildConfigSpy.mock.calls[0][0]).toEqual(
+        expect.objectContaining({
+          counterName: 'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+        }),
+      );
+      expect(buildConfigSpy.mock.calls[0][0].blocks).toEqual(
+        expect.arrayContaining([
+          {
+            model: {
+              language: 'hi',
+              pageIdentifierOverride:
+                'hindi.bbc_hindi_tv.tv.w172zm8b4tlpzxh.page',
+              pageTitleOverride: 'दुनिया',
+            },
+            type: 'mediaOverrides',
+          },
+        ]),
+      );
+    });
+
+    it('should use the pageIdentifier from the EventTrackingContext when overrides are not present', async () => {
+      const buildConfigSpy = jest.spyOn(buildConfig, 'default');
+      await act(async () => {
+        render(
+          <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />,
+          {
+            service: 'hindi',
+            pageData: {
+              id: 'urn:bbc:ares:ws_media:brand:bbc_hindi_tv/w13xttlw',
+              language: 'hi',
+              pageTitle: 'दुनिया - BBC News हिंदी',
+              pageIdentifier: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+              contentType: 'player-episode',
+            },
+            pageType: 'media',
+            pathname: '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',
+            toggles: { eventTracking: { enabled: true } },
+          },
+        );
+      });
+
+      expect(buildConfigSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          counterName: 'hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page',
+        }),
+      );
     });
   });
 });

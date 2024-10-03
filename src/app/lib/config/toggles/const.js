@@ -9,7 +9,6 @@ export default {
   LIVE_RADIO_SCHEDULE: 'liveRadioSchedule',
   MEDIA_PLAYER: 'mediaPlayer',
   MOST_READ: 'mostRead',
-  NAVIGATION_ON_ARTICLES: 'navOnArticles',
   PRELOAD_LEAD_IMAGE: 'preloadLeadImage',
   PREROLL_ADS: 'prerollAds',
   RADIO_SCHEDULE: 'radioSchedule',

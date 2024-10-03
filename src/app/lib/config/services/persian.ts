@@ -436,8 +436,8 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'جنگ اسرائیل-غزه',
-        url: '/persian/topics/clm0z4jgj3xt',
+        title: 'بحران خاورمیانه',
+        url: '/persian/topics/cj31ldvmg1et',
       },
       {
         title: 'پخش زنده',

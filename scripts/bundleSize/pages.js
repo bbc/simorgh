@@ -5,9 +5,6 @@ export const pages = [
   'HomePage',
   'MostReadPage',
   'LiveRadioPage',
-  'MediaAssetPage',
   'OnDemandAudioPage',
   'OnDemandTvPage',
-  'PhotoGalleryPage',
-  'StoryPage',
 ];

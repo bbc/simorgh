@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Markdown } from '@storybook/blocks';
 
 <Meta title="Simorgh structure/components directory" />
 
@@ -45,16 +45,20 @@ it('should render the title', async () => {
 
 The custom render method uses default values in the providers. The default values are:
 
+<Markdown>
+{`
 | prop                   | value                                                              |
 | ---------------------- | ------------------------------------------------------------------ |
 | isAmp                  | false                                                              |
-| pageData               | [c0g992jmmkko.json](../../../data/news/articles/c0g992jmmkko.json) |
-| pageType               | 'article'                                                          |
-| pathname               | '/news/articles/c0g992jmmkko'                                      |
-| service                | 'news'                                                             |
+| pageData               | c0g992jmmkko.json |
+| pageType               | article                                                          |
+| pathname               | /news/articles/c0g992jmmkko                                      |
+| service                | news                                                             |
 | toggles                | {}                                                                 |
-| variant                | 'default'                                                          |
+| variant                | default                                                          |
 | showAdsBasedOnLocation | false                                                              |
+`}
+</Markdown>
 
 You can override any of these values using the options argument in the render method:
 

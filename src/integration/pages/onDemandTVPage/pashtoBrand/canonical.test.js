@@ -4,11 +4,9 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
-import runMediaPlaceholderTests from '../mediaPlaceholderTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
     runCanonicalTests();
-    runMediaPlaceholderTests();
   });
 });

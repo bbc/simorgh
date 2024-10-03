@@ -9,7 +9,15 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
+import filterForBlockType from '#lib/utilities/blockHandlers';
+import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { MediaType } from '#app/models/types/media';
+import { BumpType, MediaBlock, PlayerConfig, Orientations } from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -19,6 +27,11 @@ import getCaptionBlock from './utils/getCaptionBlock';
 import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
+
+const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+];
 
 const logger = nodeLogger(__filename);
 
@@ -83,9 +96,16 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
+  mediaType?: MediaType;
+  orientation?: Orientations;
 };
 
-const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+  mediaType,
+  orientation,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -132,12 +152,22 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
     }
   }, [playerConfig, showAds]);
 
+  const playerStyling = (() => {
+    if (orientation === 'portrait') {
+      return styles.mediaContainerPortrait;
+    }
+    if (mediaType === 'liveRadio') {
+      return styles.liveRadioMediaContainer;
+    }
+    if (mediaType === 'audio') {
+      return styles.onDemandAudioMediaContainer;
+    }
+
+    return styles.mediaContainerLandscape;
+  })();
+
   return (
-    <div
-      ref={playerElementRef}
-      data-e2e="media-player"
-      css={styles.mediaContainer}
-    />
+    <div ref={playerElementRef} data-e2e="media-player" css={playerStyling} />
   );
 };
 
@@ -147,15 +177,14 @@ type Props = {
   embedded?: boolean;
 };
 
-const MediaLoader = ({ blocks, embedded, className }: Props) => {
-  const [isPlaceholder, setIsPlaceholder] = useState(true);
+const MediaLoader = ({ blocks, className, embedded }: Props) => {
   const { lang, translations } = useContext(ServiceContext);
+  const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
     id,
     pageType,
-    counterName,
     statsDestination,
     service,
     isAmp,
@@ -163,13 +192,23 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
     showAdsBasedOnLocation,
   } = useContext(RequestContext);
 
+  const PAGETYPE_SUPPORTS_PLACEHOLDER =
+    !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType);
+
+  const [isPlaceholder, setIsPlaceholder] = useState(
+    PAGETYPE_SUPPORTS_PLACEHOLDER,
+  );
+
   if (isLite) return null;
+
+  const { model: mediaOverrides } =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
   const config = buildConfig({
     id,
     blocks,
-    counterName,
+    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
     statsDestination,
     producer,
     isAmp,
@@ -184,24 +223,24 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
 
   if (!config) return null;
 
-  const { mediaType, playerConfig, placeholderConfig, showAds } = config;
-
-  const {
-    mediaInfo,
-    placeholderSrc,
-    placeholderSrcset,
-    translatedNoJSMessage,
-  } = placeholderConfig;
+  const { mediaType, playerConfig, placeholderConfig, showAds, orientation } =
+    config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
 
+  const showPlaceholder = isPlaceholder && placeholderConfig;
+
   return (
     <>
-      <Metadata
-        blocks={blocks}
-        embedURL={playerConfig?.externalEmbedUrl}
-        embedded={embedded}
-      />
+      {
+        // Prevents the av-embeds route itself rendering the Metadata component
+        !embedded && (
+          <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
+        )
+      }
+      {orientation === 'portrait' && (
+        <strong css={styles.titlePortrait}>Watch Moments</strong>
+      )}
       <figure
         data-e2e="media-loader__container"
         css={styles.figure}
@@ -209,18 +248,32 @@ const MediaLoader = ({ blocks, embedded, className }: Props) => {
       >
         {showAds && <AdvertTagLoader />}
         <BumpLoader />
-        {isPlaceholder ? (
+        {showPlaceholder ? (
           <Placeholder
-            src={placeholderSrc}
-            srcSet={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
-            mediaInfo={mediaInfo}
+            src={placeholderConfig?.placeholderSrc}
+            srcSet={placeholderConfig?.placeholderSrcset}
+            noJsMessage={placeholderConfig?.translatedNoJSMessage}
+            mediaInfo={placeholderConfig?.mediaInfo}
+            orientation={orientation}
             onClick={() => setIsPlaceholder(false)}
           />
         ) : (
-          <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+          <MediaContainer
+            playerConfig={playerConfig}
+            showAds={showAds}
+            mediaType={mediaType}
+            orientation={orientation}
+          />
         )}
-        {captionBlock && <Caption block={captionBlock} type={mediaType} />}
+        {captionBlock && (
+          <Caption
+            block={captionBlock}
+            type={mediaType}
+            css={
+              orientation === 'portrait' ? styles.captionPortrait : undefined
+            }
+          />
+        )}
       </figure>
     </>
   );

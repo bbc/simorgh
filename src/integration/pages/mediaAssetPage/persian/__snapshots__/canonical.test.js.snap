@@ -75,8 +75,8 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "جنگ اسرائیل-غزه",
-  "url": "/persian/topics/clm0z4jgj3xt",
+  "text": "بحران خاورمیانه",
+  "url": "/persian/topics/cj31ldvmg1et",
 }
 `;
 
@@ -299,7 +299,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
   "@type": "AudioObject",
   "description": "Trump long headline",
   "duration": "PT26S",
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa",
+  "embedURL": "https://www.test.bbc.com/persian/av-embeds/iran-23231114/vpid/p01lmkjk",
   "name": "Trump short headline",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
   "uploadDate": "2019-02-15T12:37:28.000Z",
