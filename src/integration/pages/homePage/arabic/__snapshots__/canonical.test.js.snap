@@ -2,6 +2,20 @@
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
+exports[`Canonical Home Page Ads should have the following properties 1`] = `
+<div
+  class="dotcom-ad"
+  id="dotcom-leaderboard"
+/>
+`;
+
+exports[`Canonical Home Page Ads should have the following properties 2`] = `
+<div
+  class="dotcom-ad"
+  id="dotcom-mpu"
+/>
+`;
+
 exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, عربي",

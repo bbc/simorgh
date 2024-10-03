@@ -165,6 +165,146 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 </figure>
 `;
 
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "Áudio, Que História!, O homem que passou 76 dias à deriva no Atlântico,  Duration 15,12  Duration 15:1210 junho 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09cls7w",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "Áudio, Que História!, O caso dos passageiros sugados para fora de avião,  Duration 11,59  Duration 11:593 junho 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09clrrg",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "Áudio, Que História!, O médico que virou pianista após ser atingido por um raio,  Duration 14,01  Duration 14:0127 maio 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09clrc9",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Áudio, Que História!, A jovem que passou 12 anos sem conseguir emitir um som,  Duration 15,11  Duration 15:1120 maio 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09clqpf",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 5`] = `
+{
+  "text": "Áudio, Que História!, A poção que criava 'zumbis' no Haiti,  Duration 15,06  Duration 15:0613 maio 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09clpjz",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 6`] = `
+{
+  "text": "Áudio, Que História!, A espontânea 'trégua' de Natal em plena frente de combates da Primeira Guerra,  Duration 12,12  Duration 12:126 maio 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09cl7zl",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 7`] = `
+{
+  "text": "Áudio, Que História!, O mergulhador que passou 30 minutos sem ar e escapou da morte,  Duration 15,48  Duration 15:4829 abril 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09cj16h",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 8`] = `
+{
+  "text": "Áudio, Que História!, Como Jorge Amado e Dorival Caymmi encantaram a URSS,  Duration 18,20  Duration 18:2022 abril 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09chv2t",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 9`] = `
+{
+  "text": "Áudio, Que História!, O pedido de SOS em decoração de Dia das Bruxas,  Duration 16,45  Duration 16:458 abril 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p099wpnb",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 10`] = `
+{
+  "text": "Áudio, Que História!, Segunda temporada vem aí: ouça o trailer,  Duration 00,49  Duration 00:4931 março 2021",
+  "url": "/portuguese/podcasts/p07r3r3t/p09chbv1",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 11`] = `
+{
+  "text": "Áudio, Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu',  Duration 16,22  Duration 16:2212 março 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p083x9gr",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 12`] = `
+{
+  "text": "Áudio, Que História!, 'Uísque ao mar!': a curiosa história do 'verão da lata' escocês em plena 2ª Guerra,  Duration 09,08  Duration 09:085 março 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p083x87j",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 13`] = `
+{
+  "text": "Áudio, Que História!, As famílias 'alugadas' no Japão,  Duration 12,05  Duration 12:0527 fevereiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p083wkq9",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 14`] = `
+{
+  "text": "Áudio, Que História!, Quatro dias boiando em águas infestadas por tubarões,  Duration 11,43  Duration 11:4320 fevereiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p0837nfw",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 15`] = `
+{
+  "text": "Áudio, Que História!, 'Graças a uma selfie, descobri que minha mãe me roubou quando era bebê',  Duration 17,13  Duration 17:1313 fevereiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p082wrwc",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 16`] = `
+{
+  "text": "Áudio, Que História!, Os Brasileiros da Blitz,  Duration 18,04  Duration 18:046 fevereiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p081mcd8",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 17`] = `
+{
+  "text": "Áudio, Que História!, A saga do avô em busca dos netos órfãos do Estado Islâmico,  Duration 13,35  Duration 13:3530 janeiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p081jh7q",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 18`] = `
+{
+  "text": "Áudio, Que História!, Krakatoa: a erupção que o mundo inteiro sentiu,  Duration 11,07  Duration 11:0723 janeiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p08129g5",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 19`] = `
+{
+  "text": "Áudio, Que História!, 'O post criado para arruinar minha vida',  Duration 13,52  Duration 13:5216 janeiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p080j23n",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 20`] = `
+{
+  "text": "Áudio, Que História!, O Caso D.B. Cooper,  Duration 13,21  Duration 13:219 janeiro 2020",
+  "url": "/portuguese/podcasts/p07r3r3t/p07zr485",
+}
+`;
+
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

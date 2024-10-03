@@ -161,6 +161,34 @@ exports[`Canonical Pashto On Demand TV Page I can see the episode title 1`] = `"
 
 exports[`Canonical Pashto On Demand TV Page Main heading should match text 1`] = `"نړۍ دا وخت, ۲۸ می ۲۰۲۰"`;
 
+exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۲۱ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclrdk6lcw9",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۲۰ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclr18xcmq1",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۱۹ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclr18x8qsy",
+}
+`;
+
+exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۱۸ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
+  "url": "/pashto/bbc_pashto_tv/tv/w172xclr18x5twv",
+}
+`;
+
 exports[`Canonical Pashto On Demand TV Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

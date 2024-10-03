@@ -130,6 +130,34 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
 </figure>
 `;
 
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732xfp",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 14 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9z732spk",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw58f",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Audio, Dunia Pagi Ini, 13 Desember 2020,  Durasi 15,30  Durasi 15:30",
+  "url": "/indonesia/bbc_indonesian_radio/w172xnm9lysw1j9",
+}
+`;
+
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
