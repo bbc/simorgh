@@ -349,34 +349,6 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
 </figure>
 `;
 
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "10:00Bidiyo, Labaran Talabijin, 21 Disamba 2020, Tsawon lokaci 10,00",
-  "url": "/hausa/bbc_hausa_tv/tv/w172xcg20jgz8xm",
-}
-`;
-
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "10:00Bidiyo, Labaran Talabijin, 18 Disamba 2020, Tsawon lokaci 10,00",
-  "url": "/hausa/bbc_hausa_tv/tv/w172xcg1n85kqy5",
-}
-`;
-
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "10:00Bidiyo, Labaran Talabijin, 17 Disamba 2020, Tsawon lokaci 10,00",
-  "url": "/hausa/bbc_hausa_tv/tv/w172xcg1n85gv12",
-}
-`;
-
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "10:00Bidiyo, Labaran Talabijin, 16 Disamba 2020, Tsawon lokaci 10,00",
-  "url": "/hausa/bbc_hausa_tv/tv/w172xcg1n85cy3z",
-}
-`;
-
 exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

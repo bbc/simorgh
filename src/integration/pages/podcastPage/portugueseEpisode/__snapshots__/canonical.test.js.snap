@@ -165,62 +165,6 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 </figure>
 `;
 
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "Áudio, Que História!, 'Uísque ao mar!': a curiosa história do 'verão da lata' escocês em plena 2ª Guerra,  Duration 09,08  Duration 09:085 março 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p083x87j",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "Áudio, Que História!, As famílias 'alugadas' no Japão,  Duration 12,05  Duration 12:0527 fevereiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p083wkq9",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "Áudio, Que História!, O naufrágio de navio militar na 2ª Guerra que inspirou filme 'Tubarão',  Duration 11,43  Duration 11:4320 fevereiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p0837nfw",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "Áudio, Que História!, 'Graças a uma selfie, descobri que minha mãe me roubou quando era bebê',  Duration 17,13  Duration 17:1313 fevereiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p082wrwc",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 5`] = `
-{
-  "text": "Áudio, Que História!, Os Brasileiros da Blitz,  Duration 18,04  Duration 18:046 fevereiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p081mcd8",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 6`] = `
-{
-  "text": "Áudio, Que História!, A saga do avô em busca dos netos órfãos do Estado Islâmico,  Duration 13,35  Duration 13:3530 janeiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p081jh7q",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 7`] = `
-{
-  "text": "Áudio, Que História!, Krakatoa: a erupção que o mundo inteiro sentiu,  Duration 11,07  Duration 11:0723 janeiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p08129g5",
-}
-`;
-
-exports[`Canonical Podcast Page Recent Episodes List items should match text and url 8`] = `
-{
-  "text": "Áudio, Que História!, 'O post criado para arruinar minha vida',  Duration 13,52  Duration 13:5216 janeiro 2020",
-  "url": "/portuguese/podcasts/p07r3r3t/p080j23n",
-}
-`;
-
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

@@ -165,34 +165,6 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
 </figure>
 `;
 
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "غږ, ماښامنۍ خپرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct155x",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "غږ, ماښامنۍ خپرونه, ۸ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct154s",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "غږ, ماښامنۍ خپرونه, ۷ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct1508",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "غږ, ماښامنۍ خپرونه, ۶ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct152h",
-}
-`;
-
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

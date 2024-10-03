@@ -377,34 +377,6 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
 </figure>
 `;
 
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۶ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsln64wk50",
-}
-`;
-
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۵ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvnszr",
-}
-`;
-
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۴ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvkx2n",
-}
-`;
-
-exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۳ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvh05k",
-}
-`;
-
 exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
