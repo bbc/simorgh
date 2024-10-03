@@ -42,7 +42,11 @@ export const ArticleMediaLoader = () => (
 );
 
 export const LegacyMediaLoader = () => (
-  <Component service="pidgin" pageType="article" blocks={legacyMediaBlock} />
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={legacyMediaBlock as MediaBlock[]}
+  />
 );
 
 export const LivePageMediaLoader = () => (
