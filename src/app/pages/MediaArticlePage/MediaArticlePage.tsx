@@ -9,6 +9,7 @@ import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { MediaOverrides } from '#app/models/types/media';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -182,16 +183,23 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         )}
       </div>
     ),
-    legacyMedia: (props: ComponentToRenderProps) => (
-      <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
-        ]}
-      >
-        <MediaLoader blocks={[props] as unknown as MediaBlock[]} />
-      </div>
-    ),
+    legacyMedia: (props: ComponentToRenderProps) => {
+      const mediaOverrides: MediaOverrides = {
+        model: { pageTitleOverride: headline },
+        type: 'mediaOverrides',
+      };
+
+      return (
+        <div
+          css={({ spacings }: Theme) => [
+            `padding-top: ${spacings.TRIPLE}rem`,
+            isCpsMap && styles.cafMediaPlayer,
+          ]}
+        >
+          <MediaLoader blocks={[props, mediaOverrides] as MediaBlock[]} />
+        </div>
+      );
+    },
     text,
     byline: () =>
       hasByline ? (

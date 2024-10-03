@@ -305,9 +305,18 @@ describe('buildSettings', () => {
     });
 
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
+      const legacyMediaOverrides = {
+        model: {
+          pageTitleOverride: 'Legacy Media Page Title',
+        },
+        type: 'mediaOverrides',
+      };
+
       const result = buildSettings({
         ...baseSettings,
-        blocks: legacyMediaBlock as MediaBlock[],
+        service: 'arabic',
+        counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+        blocks: [legacyMediaBlock, legacyMediaOverrides] as MediaBlock[],
       });
 
       expect(result).toStrictEqual({
@@ -320,22 +329,25 @@ describe('buildSettings', () => {
             producer: 'SERBIAN',
           },
           enableToucan: true,
-          appName: 'news-serbian',
+          appName: 'news-arabic',
           appType: 'responsive',
-          counterName: 'live_coverage.testID.page',
+          counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
           playlistObject: {
-            title: '',
+            title: 'Legacy Media Page Title',
             holdingImageURL:
               'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
             items: [
               {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
+                kind: 'programme',
               },
               {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_med.mp4',
+                kind: 'programme',
               },
               {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_hi.mp4',
+                kind: 'programme',
               },
             ],
           },

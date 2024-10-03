@@ -65,6 +65,7 @@ export type PlaylistItem = {
 
 export type LegacyPlayListItem = {
   href: string;
+  kind: string;
 };
 
 export type ConfigBuilderProps = {

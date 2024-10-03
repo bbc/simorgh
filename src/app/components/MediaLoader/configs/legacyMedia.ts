@@ -1,3 +1,4 @@
+import { MediaOverrides } from '#app/models/types/media';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
   LegacyMediaBlock,
@@ -14,6 +15,9 @@ export default ({
   const legacyMediaBlock: LegacyMediaBlock =
     filterForBlockType(blocks, 'legacyMedia') ?? {};
 
+  const { model: mediaOverrides }: MediaOverrides =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
+
   const { image, format, playlist } = legacyMediaBlock?.content ?? {};
 
   const placeholderConfig = buildPlaceholderConfig({
@@ -25,14 +29,14 @@ export default ({
 
   const mp4Items = playlist
     ?.filter(item => item.format === 'mp4')
-    ?.map(item => ({ href: item.url }));
+    ?.map(item => ({ href: item.url, kind: 'programme' }));
 
   return {
     mediaType: format || 'video',
     playerConfig: {
       ...basePlayerConfig,
       playlistObject: {
-        title: '',
+        title: mediaOverrides?.pageTitleOverride || '',
         holdingImageURL: image?.href,
         items: mp4Items,
       },
