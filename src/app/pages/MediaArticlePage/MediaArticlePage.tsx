@@ -182,6 +182,16 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         )}
       </div>
     ),
+    legacyMedia: (props: ComponentToRenderProps) => (
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isCpsMap && styles.cafMediaPlayer,
+        ]}
+      >
+        <MediaLoader blocks={[props] as unknown as MediaBlock[]} />
+      </div>
+    ),
     text,
     byline: () =>
       hasByline ? (
