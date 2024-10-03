@@ -307,7 +307,7 @@ describe('buildSettings', () => {
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
       const result = buildSettings({
         ...baseSettings,
-        blocks: [legacyMediaBlock] as unknown as MediaBlock[],
+        blocks: legacyMediaBlock as MediaBlock[],
       });
 
       expect(result).toStrictEqual({
