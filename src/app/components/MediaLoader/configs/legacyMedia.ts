@@ -21,7 +21,7 @@ export default ({
   const { image, format, playlist } = legacyMediaBlock?.content ?? {};
 
   const placeholderConfig = buildPlaceholderConfig({
-    title: '',
+    title: mediaOverrides?.pageTitleOverride || '',
     type: format || 'video',
     holdingImageURL: image?.href,
     translations,

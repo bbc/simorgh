@@ -315,8 +315,10 @@ describe('buildSettings', () => {
       const result = buildSettings({
         ...baseSettings,
         service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
         counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
-        blocks: [legacyMediaBlock, legacyMediaOverrides] as MediaBlock[],
+        blocks: [...legacyMediaBlock, legacyMediaOverrides] as MediaBlock[],
       });
 
       expect(result).toStrictEqual({
@@ -326,7 +328,7 @@ describe('buildSettings', () => {
           product: 'news',
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
-            producer: 'SERBIAN',
+            producer: 'ARABIC',
           },
           enableToucan: true,
           appName: 'news-arabic',
@@ -353,7 +355,7 @@ describe('buildSettings', () => {
           },
           ui: {
             controls: { enabled: true },
-            locale: { lang: 'sr-latn' },
+            locale: { lang: 'ar' },
             subtitles: { enabled: true, defaultOn: true },
             fullscreen: { enabled: true },
           },
@@ -364,7 +366,7 @@ describe('buildSettings', () => {
             duration: '00:00',
             durationSpoken: 'Duration 0,00',
             guidanceMessage: undefined,
-            title: '',
+            title: 'Legacy Media Page Title',
             type: 'video',
           },
           placeholderSrc:
@@ -671,7 +673,6 @@ describe('buildSettings', () => {
       const result = buildSettings({
         ...baseSettings,
         embedded: true,
-        // @ts-expect-error partial data used for testing purposes
         blocks: myFixture as MediaBlock[],
       });
       expect(result?.playerConfig).not.toHaveProperty(
