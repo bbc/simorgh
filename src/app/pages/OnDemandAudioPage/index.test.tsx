@@ -330,10 +330,8 @@ describe('OnDemand Radio Page ', () => {
       pageData,
       service: 'korean',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const expiredMessageEl = getByText('더 이상 이용할 수 없는 콘텐츠입니다.');
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(expiredMessageEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
@@ -361,12 +359,11 @@ describe('OnDemand Radio Page ', () => {
       pageData,
       service: 'korean',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
+
     const notYetAvailableMessageEl = getByText(
       '아직 재생할 수 없는 프로그램입니다.',
     );
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableMessageEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });

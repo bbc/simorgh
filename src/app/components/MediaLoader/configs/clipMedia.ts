@@ -2,7 +2,6 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   ClipMediaBlock,
   ConfigBuilderProps,
@@ -12,19 +11,19 @@ import {
 import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
+import { getExternalEmbedUrl } from '../utils/urlConstructors';
+import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
 export default ({
   id,
   lang,
-  isAmp,
   blocks,
   basePlayerConfig,
   translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
-  embedded,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -82,32 +81,17 @@ export default ({
     guidanceMessage,
   });
 
-  const audioUi = {
-    skin: 'audio',
-    colour: '#b80000',
-    foreColour: '#222222',
-    baseColour: '#222222',
-    colourOnBaseColour: '#ffffff',
-    fallbackBackgroundColour: '#ffffff',
-    controls: { enabled: true, volumeSlider: true },
-  };
-
   const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
 
   if (showAds) items.unshift({ kind: 'advert' });
 
-  const embedUrl = getEmbedURL({
-    mediaId: `${id}/${versionID}/${lang}`,
-    type: 'avEmbed',
-    isAmp,
-    embedded,
-  });
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
   return {
     mediaType: type || 'video',
     playerConfig: {
       ...basePlayerConfig,
-      ...(embedUrl && { externalEmbedUrl: embedUrl }),
+      ...(externalEmbedUrl && { externalEmbedUrl }),
       playlistObject: {
         title,
         summary: caption || '',
@@ -118,7 +102,7 @@ export default ({
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(type === 'audio' && audioUi),
+        ...(type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,

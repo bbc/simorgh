@@ -74,6 +74,69 @@ export const buildAresMediaPlayerBlock = ({ types }: { types: string[] }) => ({
   position: [5, 2, 1],
 });
 
+export const aresMediaPortraitBlock = {
+  id: '80e150c0',
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      buildAresMediaPlayerBlock({ types: ['Portrait'] }),
+      {
+        id: 'd8f26383',
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              id: 'fcdba133',
+              type: 'rawImage',
+              model: {
+                width: 1920,
+                height: 1080,
+                locator:
+                  'ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg',
+                originCode: 'mpv',
+                copyrightHolder: 'BBC',
+              },
+            },
+            {
+              id: '63679c9e',
+              type: 'altText',
+              model: {
+                blocks: [
+                  {
+                    id: '33876888',
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          id: '26dbfca2',
+                          type: 'paragraph',
+                          model: {
+                            text: 'Ants',
+                            blocks: [
+                              {
+                                id: 'ed9f30c9',
+                                type: 'fragment',
+                                model: {
+                                  text: 'Ants',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 export const aresMediaBlock = {
   id: '80e150c0',
   type: 'aresMedia',
@@ -311,6 +374,57 @@ export const onDemandTvBlock = {
   },
 };
 
+export const legacyMediaBlock = [
+  {
+    type: 'legacyMedia',
+    content: {
+      id: '28780250',
+      subType: 'primary',
+      format: 'video',
+      image: {
+        id: '28780250',
+        subType: 'thumbnail',
+        href: 'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+        path: '/amz/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+        height: 360,
+        width: 640,
+        altText: 'اثار التفجير على احدى السيارات في بغداد',
+        copyrightHolder: '',
+      },
+      aspectRatio: '16:9',
+      live: false,
+      href: 'http://www.bbc.co.uk/arabic/meta/dps/2013/12/emp/131208_iraq_blast_.emp.xml',
+      playlist: [
+        {
+          format: '3gp',
+          bitrate: '80000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/3gp/2013/12/iraqblast_16x9_lo.3gp',
+        },
+        {
+          format: '3gp',
+          bitrate: '160000',
+          url: 'https://wsodprogrf.akamaized.net/zhongwen/simp/3gp/2013/12/iraqblast_16x9_hi.3gp',
+        },
+        {
+          format: 'mp4',
+          bitrate: '168000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
+        },
+        {
+          format: 'mp4',
+          bitrate: '320000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_med.mp4',
+        },
+        {
+          format: 'mp4',
+          bitrate: '904000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_hi.mp4',
+        },
+      ],
+    },
+  },
+];
+
 export const mediaOverridesBlock = {
   model: {
     language: 'hi',
@@ -372,6 +486,10 @@ export const aresMediaLiveStreamBlocks = [
 
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+export const aresMediaPortraitBlocks = [
+  aresMediaPortraitBlock,
+  aresMediaCaptionBlock,
+];
 export const onDemandTvBlocks = [onDemandTvBlock];
 export const onDemandTvBlocksWithOverrides = [
   onDemandTvBlock,

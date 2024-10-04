@@ -6,6 +6,7 @@ import {
   LiveRadioVersionBlock,
 } from '#app/models/types/media';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import AUDIO_UI_CONFIG from './constants';
 
 export default ({
   blocks,
@@ -42,13 +43,7 @@ export default ({
       },
       ui: {
         ...basePlayerConfig.ui,
-        skin: 'audio',
-        colour: '#b80000',
-        foreColour: '#222222',
-        baseColour: '#222222',
-        colourOnBaseColour: '#ffffff',
-        fallbackBackgroundColour: '#ffffff',
-        controls: { enabled: true, volumeSlider: true },
+        ...AUDIO_UI_CONFIG,
       },
     },
     mediaType: 'liveRadio',
