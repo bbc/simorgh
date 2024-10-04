@@ -362,6 +362,7 @@ describe('buildSettings', () => {
             ],
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'ar' },
             subtitles: { enabled: true, defaultOn: true },
