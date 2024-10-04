@@ -62,7 +62,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01thw22/sr-latn',
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01thw22',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -83,6 +83,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -161,6 +162,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -184,6 +186,8 @@ describe('buildSettings', () => {
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         } satisfies PlaceholderConfig,
         showAds: false,
+        ampIframeUrl:
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -224,6 +228,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -247,6 +252,8 @@ describe('buildSettings', () => {
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
         showAds: false,
+        ampIframeUrl:
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -295,6 +302,7 @@ describe('buildSettings', () => {
           simulcast: true,
         },
         ui: {
+          skin: 'classic',
           controls: { enabled: true },
           locale: { lang: 'sr-latn' },
           subtitles: { enabled: true, defaultOn: true },
@@ -341,6 +349,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -364,6 +373,8 @@ describe('buildSettings', () => {
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         } satisfies PlaceholderConfig,
         showAds: false,
+        ampIframeUrl:
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
     it('Should process an AresMedia block with portrait video as the orientation', () => {
@@ -430,31 +441,6 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
-        blocks: myFixture,
-      });
-
-      expect(result?.orientation).toEqual('landscape');
-    });
-
-    it('Should process an AresMedia block with landscape video as the orientation if embedded is true', () => {
-      const myFixture = [
-        {
-          ...aresMediaBlock,
-          model: {
-            blocks: [
-              {
-                ...buildAresMediaPlayerBlock({
-                  types: ['Portrait'],
-                }),
-              },
-            ],
-          },
-        },
-      ] as unknown as MediaBlock[];
-
-      const result = buildSettings({
-        ...baseSettings,
-        embedded: true,
         blocks: myFixture,
       });
 
@@ -657,6 +643,7 @@ describe('buildSettings', () => {
             episodePID: 'w172zm89sk8n4lc',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             fullscreen: { enabled: true },
             locale: {
@@ -696,8 +683,7 @@ describe('buildSettings', () => {
             'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
           placeholderSrcset:
             'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
-          translatedNoJSMessage:
-            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+          translatedNoJSMessage: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         },
         showAds: false,
       });
@@ -984,7 +970,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
             skin: 'audio',
-            colour: '#B80000',
+            colour: '#b80000',
             foreColour: '#222222',
             baseColour: '#222222',
             colourOnBaseColour: '#ffffff',

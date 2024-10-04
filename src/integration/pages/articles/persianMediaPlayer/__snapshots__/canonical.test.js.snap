@@ -179,21 +179,22 @@ exports[`Canonical Articles Media Loader a11y assistive technology can read the 
 
 exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-1b7q6mf"
+  class="bbc-171plmm"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-rmay7 edwq9ck2"
+    class="bbc-1u05bd9"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-17whsh0 edwq9ck0"
+      class="bbc-n2zqlz"
     >
-      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-y5mp4k e1ita3o32"
+    class="focusIndicatorRemove bbc-1puku5e"
+    type="button"
   >
     <span
       class="bbc-m04vo2"
@@ -202,7 +203,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-1apn3of e1ita3o31"
+      class="bbc-jo2gwv"
     >
       <svg
         aria-hidden="true"
@@ -229,7 +230,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-11ia5vc e1ita3o30"
+      class="bbc-1lcsotz"
       datetime="PT16S"
     >
       00:16
@@ -252,21 +253,22 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-1b7q6mf"
+  class="bbc-171plmm"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-rmay7 edwq9ck2"
+    class="bbc-1u05bd9"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-17whsh0 edwq9ck0"
+      class="bbc-n2zqlz"
     >
-      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-y5mp4k e1ita3o32"
+    class="focusIndicatorRemove bbc-1puku5e"
+    type="button"
   >
     <span
       class="bbc-m04vo2"
@@ -275,7 +277,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-1apn3of e1ita3o31"
+      class="bbc-jo2gwv"
     >
       <svg
         aria-hidden="true"
@@ -302,7 +304,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-11ia5vc e1ita3o30"
+      class="bbc-1lcsotz"
       datetime="PT16S"
     >
       00:16
@@ -325,25 +327,26 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Articles Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1qn0xuy"
+  class="bbc-1hu5uc3"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1b7q6mf"
+    class="bbc-171plmm"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="bbc-rmay7 edwq9ck2"
+      class="bbc-1u05bd9"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="bbc-17whsh0 edwq9ck0"
+        class="bbc-n2zqlz"
       >
-        &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.&lt;/strong&gt;
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-y5mp4k e1ita3o32"
+      class="focusIndicatorRemove bbc-1puku5e"
+      type="button"
     >
       <span
         class="bbc-m04vo2"
@@ -352,7 +355,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="bbc-1apn3of e1ita3o31"
+        class="bbc-jo2gwv"
       >
         <svg
           aria-hidden="true"
@@ -379,7 +382,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="bbc-11ia5vc e1ita3o30"
+        class="bbc-1lcsotz"
         datetime="PT16S"
       >
         00:16
