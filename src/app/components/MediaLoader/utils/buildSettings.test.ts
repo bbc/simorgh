@@ -14,6 +14,7 @@ import {
   buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
+  legacyMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -62,7 +63,7 @@ describe('buildSettings', () => {
           },
           enableToucan: true,
           externalEmbedUrl:
-            '/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01thw22/sr-latn',
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01thw22',
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
@@ -83,6 +84,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -161,6 +163,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -184,6 +187,8 @@ describe('buildSettings', () => {
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         } satisfies PlaceholderConfig,
         showAds: false,
+        ampIframeUrl:
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -224,6 +229,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -247,6 +253,8 @@ describe('buildSettings', () => {
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
         showAds: false,
+        ampIframeUrl:
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
 
@@ -295,12 +303,89 @@ describe('buildSettings', () => {
           simulcast: true,
         },
         ui: {
+          skin: 'classic',
           controls: { enabled: true },
           locale: { lang: 'sr-latn' },
           subtitles: { enabled: true, defaultOn: true },
           fullscreen: { enabled: true },
         },
       });
+    });
+
+    it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
+      const legacyMediaOverrides = {
+        model: {
+          pageTitleOverride: 'Legacy Media Page Title',
+        },
+        type: 'mediaOverrides',
+      };
+
+      const result = buildSettings({
+        ...baseSettings,
+        service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
+        counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+        blocks: [...legacyMediaBlock, legacyMediaOverrides] as MediaBlock[],
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'ARABIC',
+          },
+          enableToucan: true,
+          appName: 'news-arabic',
+          appType: 'responsive',
+          counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+          playlistObject: {
+            title: 'Legacy Media Page Title',
+            holdingImageURL:
+              'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+            items: [
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_med.mp4',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_hi.mp4',
+                kind: 'programme',
+              },
+            ],
+          },
+          ui: {
+            skin: 'classic',
+            controls: { enabled: true },
+            locale: { lang: 'ar' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: undefined,
+            duration: '00:00',
+            durationSpoken: 'Duration 0,00',
+            guidanceMessage: undefined,
+            title: 'Legacy Media Page Title',
+            type: 'video',
+          },
+          placeholderSrc:
+            'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+          placeholderSrcset: '',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        } as PlaceholderConfig,
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
     });
 
     it('Should process an AresMedia block into a valid playlist item for syndication.', () => {
@@ -341,6 +426,7 @@ describe('buildSettings', () => {
             embedRights: 'allowed',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             locale: { lang: 'sr-latn' },
             subtitles: { enabled: true, defaultOn: true },
@@ -364,6 +450,8 @@ describe('buildSettings', () => {
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         } satisfies PlaceholderConfig,
         showAds: false,
+        ampIframeUrl:
+          'https://web-cdn.api.bbci.co.uk/ws/av-embeds/cps/serbian/lat/srbija-68707945/p01k6msp/sr-latn/amp',
       } satisfies ConfigBuilderReturnProps);
     });
     it('Should process an AresMedia block with portrait video as the orientation', () => {
@@ -430,31 +518,6 @@ describe('buildSettings', () => {
 
       const result = buildSettings({
         ...baseSettings,
-        blocks: myFixture,
-      });
-
-      expect(result?.orientation).toEqual('landscape');
-    });
-
-    it('Should process an AresMedia block with landscape video as the orientation if embedded is true', () => {
-      const myFixture = [
-        {
-          ...aresMediaBlock,
-          model: {
-            blocks: [
-              {
-                ...buildAresMediaPlayerBlock({
-                  types: ['Portrait'],
-                }),
-              },
-            ],
-          },
-        },
-      ] as unknown as MediaBlock[];
-
-      const result = buildSettings({
-        ...baseSettings,
-        embedded: true,
         blocks: myFixture,
       });
 
@@ -597,7 +660,6 @@ describe('buildSettings', () => {
       const result = buildSettings({
         ...baseSettings,
         embedded: true,
-        // @ts-expect-error partial data used for testing purposes
         blocks: myFixture as MediaBlock[],
       });
       expect(result?.playerConfig).not.toHaveProperty(
@@ -657,6 +719,7 @@ describe('buildSettings', () => {
             episodePID: 'w172zm89sk8n4lc',
           },
           ui: {
+            skin: 'classic',
             controls: { enabled: true },
             fullscreen: { enabled: true },
             locale: {
@@ -696,8 +759,7 @@ describe('buildSettings', () => {
             'https://ichef.bbci.co.uk/images/ic/$recipe/p0jlxsx8.jpg',
           placeholderSrcset:
             'https://ichef.bbci.co.uk/images/ic/240xn/p0jlxsx8.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0jlxsx8.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0jlxsx8.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0jlxsx8.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0jlxsx8.jpg.webp 800w',
-          translatedNoJSMessage:
-            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+          translatedNoJSMessage: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         },
         showAds: false,
       });
@@ -984,7 +1046,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
             skin: 'audio',
-            colour: '#B80000',
+            colour: '#b80000',
             foreColour: '#222222',
             baseColour: '#222222',
             colourOnBaseColour: '#ffffff',

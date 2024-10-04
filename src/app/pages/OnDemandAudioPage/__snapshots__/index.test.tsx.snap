@@ -692,12 +692,13 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 .emotion-29 {
-  margin: 0;
-  padding-bottom: 1.5rem;
+  position: relative;
   width: 100%;
+  margin: 0 0 1.5rem 0;
 }
 
 .emotion-30 {
+  background-color: #FFFFFF;
   height: 165px;
 }
 
@@ -1494,19 +1495,11 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 .emotion-31 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-33 {
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1517,19 +1510,27 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-33 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-31 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-33 {
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-31 {
     background-color: transparent;
   }
 }
 
-.emotion-35 {
+.emotion-32 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1537,15 +1538,15 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-35 {
-    background-color: window;
+@media (min-width: 25rem) {
+  .emotion-32 {
+    padding: 1rem;
   }
 }
 
-@media (min-width: 25rem) {
-  .emotion-35 {
-    padding: 1rem;
+@media screen and (forced-colors: active) {
+  .emotion-32 {
+    background-color: window;
   }
 }
 
@@ -1633,14 +1634,12 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
       <div
         class="emotion-29 emotion-30"
       >
-        <div
-          class="emotion-31 emotion-32"
-        >
+        <div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-31"
           >
             <strong
-              class="emotion-35 emotion-36"
+              class="emotion-32"
             >
               아직 재생할 수 없는 프로그램입니다.
             </strong>
@@ -2350,19 +2349,11 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 .emotion-31 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-33 {
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2373,19 +2364,27 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-33 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-31 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-33 {
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-31 {
     background-color: transparent;
   }
 }
 
-.emotion-35 {
+.emotion-32 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -2393,15 +2392,15 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-35 {
-    background-color: window;
+@media (min-width: 25rem) {
+  .emotion-32 {
+    padding: 1rem;
   }
 }
 
-@media (min-width: 25rem) {
-  .emotion-35 {
-    padding: 1rem;
+@media screen and (forced-colors: active) {
+  .emotion-32 {
+    background-color: window;
   }
 }
 
@@ -2489,14 +2488,12 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
       <div
         class="emotion-29 emotion-30"
       >
-        <div
-          class="emotion-31 emotion-32"
-        >
+        <div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-31"
           >
             <strong
-              class="emotion-35 emotion-36"
+              class="emotion-32"
             >
               더 이상 이용할 수 없는 콘텐츠입니다.
             </strong>

@@ -250,4 +250,31 @@ describe('MediaLoader', () => {
       );
     });
   });
+
+  describe('AMP', () => {
+    it('should render the AMP version of the media player', async () => {
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+          {
+            id: 'cn8jgj8rjppo',
+            isAmp: true,
+          },
+        ));
+      });
+
+      const ampPlayer = (container as unknown as HTMLElement).querySelector(
+        'amp-iframe',
+      );
+
+      const ampIframeUrl = ampPlayer?.getAttribute('src');
+
+      expect(ampPlayer).toBeInTheDocument();
+      expect(ampIframeUrl).toEqual(
+        'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB/amp',
+      );
+    });
+  });
 });
