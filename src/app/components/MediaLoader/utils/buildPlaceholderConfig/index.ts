@@ -7,12 +7,12 @@ import { PlaceholderConfig } from '../../types';
 
 type BuildPlaceholderConfigParams = {
   title: string;
-  duration: number;
   holdingImageURL: string;
-  placeholderImageOriginCode: string;
-  placeholderImageLocator: string;
   type: MediaType;
+  duration?: number;
   durationISO8601?: string;
+  placeholderImageOriginCode?: string;
+  placeholderImageLocator?: string;
   translations?: Translations;
   guidanceMessage?: string | null;
 };

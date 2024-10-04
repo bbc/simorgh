@@ -374,6 +374,57 @@ export const onDemandTvBlock = {
   },
 };
 
+export const legacyMediaBlock = [
+  {
+    type: 'legacyMedia',
+    content: {
+      id: '28780250',
+      subType: 'primary',
+      format: 'video',
+      image: {
+        id: '28780250',
+        subType: 'thumbnail',
+        href: 'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+        path: '/amz/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+        height: 360,
+        width: 640,
+        altText: 'اثار التفجير على احدى السيارات في بغداد',
+        copyrightHolder: '',
+      },
+      aspectRatio: '16:9',
+      live: false,
+      href: 'http://www.bbc.co.uk/arabic/meta/dps/2013/12/emp/131208_iraq_blast_.emp.xml',
+      playlist: [
+        {
+          format: '3gp',
+          bitrate: '80000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/3gp/2013/12/iraqblast_16x9_lo.3gp',
+        },
+        {
+          format: '3gp',
+          bitrate: '160000',
+          url: 'https://wsodprogrf.akamaized.net/zhongwen/simp/3gp/2013/12/iraqblast_16x9_hi.3gp',
+        },
+        {
+          format: 'mp4',
+          bitrate: '168000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
+        },
+        {
+          format: 'mp4',
+          bitrate: '320000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_med.mp4',
+        },
+        {
+          format: 'mp4',
+          bitrate: '904000',
+          url: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_hi.mp4',
+        },
+      ],
+    },
+  },
+];
+
 export const mediaOverridesBlock = {
   model: {
     language: 'hi',

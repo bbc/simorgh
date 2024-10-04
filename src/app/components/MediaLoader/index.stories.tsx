@@ -6,6 +6,7 @@ import {
   aresMediaBlocks,
   aresMediaPortraitBlocks,
   clipMediaBlocks,
+  legacyMediaBlock,
 } from './fixture';
 import { MediaBlock } from './types';
 import readme from './README.md';
@@ -50,6 +51,14 @@ export const Portrait = () => (
     service="pidgin"
     pageType="article"
     blocks={aresMediaPortraitBlocks as MediaBlock[]}
+  />
+);
+
+export const LegacyMediaLoader = () => (
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={legacyMediaBlock as MediaBlock[]}
   />
 );
 

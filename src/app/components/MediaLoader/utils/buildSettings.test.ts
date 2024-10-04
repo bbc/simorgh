@@ -14,6 +14,7 @@ import {
   buildAresMediaPlayerBlock,
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
+  legacyMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -311,6 +312,82 @@ describe('buildSettings', () => {
       });
     });
 
+    it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
+      const legacyMediaOverrides = {
+        model: {
+          pageTitleOverride: 'Legacy Media Page Title',
+        },
+        type: 'mediaOverrides',
+      };
+
+      const result = buildSettings({
+        ...baseSettings,
+        service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
+        counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+        blocks: [...legacyMediaBlock, legacyMediaOverrides] as MediaBlock[],
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: true,
+          product: 'news',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'ARABIC',
+          },
+          enableToucan: true,
+          appName: 'news-arabic',
+          appType: 'responsive',
+          counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+          playlistObject: {
+            title: 'Legacy Media Page Title',
+            holdingImageURL:
+              'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+            items: [
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_med.mp4',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_hi.mp4',
+                kind: 'programme',
+              },
+            ],
+          },
+          ui: {
+            skin: 'classic',
+            controls: { enabled: true },
+            locale: { lang: 'ar' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: undefined,
+            duration: '00:00',
+            durationSpoken: 'Duration 0,00',
+            guidanceMessage: undefined,
+            title: 'Legacy Media Page Title',
+            type: 'video',
+          },
+          placeholderSrc:
+            'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
+          placeholderSrcset: '',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        } as PlaceholderConfig,
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
+    });
+
     it('Should process an AresMedia block into a valid playlist item for syndication.', () => {
       const result = buildSettings({
         ...baseSettings,
@@ -583,7 +660,6 @@ describe('buildSettings', () => {
       const result = buildSettings({
         ...baseSettings,
         embedded: true,
-        // @ts-expect-error partial data used for testing purposes
         blocks: myFixture as MediaBlock[],
       });
       expect(result?.playerConfig).not.toHaveProperty(

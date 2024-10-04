@@ -32,7 +32,7 @@ export type PlayerConfig = {
     title: string;
     summary?: string;
     holdingImageURL?: string;
-    items: PlaylistItem[];
+    items: PlaylistItem[] | LegacyPlayListItem[];
     guidance?: string;
     embedRights?: 'allowed';
     liveRewind?: boolean;
@@ -61,6 +61,11 @@ export type PlaylistItem = {
   embedRights?: 'allowed';
   vpid?: string;
   serviceID?: string;
+};
+
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
 };
 
 export type ConfigBuilderProps = {
@@ -208,14 +213,41 @@ export type ClipMediaBlock = {
   };
 };
 
+export type LegacyMediaBlock = {
+  type: 'legacyMedia';
+  content: {
+    id: string;
+    subType: string;
+    format: MediaType;
+    image: {
+      id: string;
+      subType: string;
+      href: string;
+      path: string;
+      height: number;
+      width: number;
+      altText: string;
+      copyrightHolder: string;
+    };
+    aspectRatio: string;
+    live: boolean;
+    href: string;
+    playlist: {
+      format: string;
+      url: string;
+    }[];
+  };
+};
+
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
-  | CaptionBlock
+  | LegacyMediaBlock
+  | LiveRadioBlock
   | OnDemandTVBlock
   | OnDemandAudioBlock
-  | MediaOverrides
-  | LiveRadioBlock;
+  | CaptionBlock
+  | MediaOverrides;
 
 export type BuildConfigProps = {
   id: string;

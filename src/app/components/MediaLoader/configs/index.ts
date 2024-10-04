@@ -4,6 +4,7 @@ import aresMedia from './aresMedia';
 import tv from './tv';
 import liveRadio from './liveRadio';
 import audio from './audio';
+import legacyMedia from './legacyMedia';
 
 import {
   ConfigBuilderReturnProps,
@@ -17,6 +18,7 @@ const BLOCK_TYPES = [
   'tv',
   'liveRadio',
   'audio',
+  'legacyMedia',
 ] as const;
 
 const blockTypeMapping: Record<
@@ -28,6 +30,7 @@ const blockTypeMapping: Record<
   tv,
   liveRadio,
   audio,
+  legacyMedia,
 };
 
 export default (blocks: MediaBlock[]) => {
