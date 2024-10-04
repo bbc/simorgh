@@ -325,6 +325,10 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
+        title: 'Orta Doğu',
+        url: '/turkce/topics/cg726y2qxg1t',
+      },
+      {
         title: 'Rusya-Ukrayna Savaşı',
         url: '/turkce/topics/cy0ryl4pvx6t',
       },
