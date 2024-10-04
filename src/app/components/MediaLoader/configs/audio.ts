@@ -1,5 +1,6 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import AUDIO_UI_CONFIG from './constants';
 
 export default ({
   blocks,
@@ -33,16 +34,9 @@ export default ({
       },
       ui: {
         ...basePlayerConfig.ui,
-        skin: 'audio',
-        colour: '#B80000',
-        foreColour: '#222222',
-        baseColour: '#222222',
-        colourOnBaseColour: '#ffffff',
-        fallbackBackgroundColour: '#ffffff',
-        controls: { enabled: true, volumeSlider: true },
+        ...AUDIO_UI_CONFIG,
       },
     },
-
     mediaType: 'audio',
     showAds: false,
   };

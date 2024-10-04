@@ -13,7 +13,6 @@ import text from '#containers/Text';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -36,10 +35,10 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
+import ScrollablePromo from '#components/ScrollablePromo';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -67,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, isAmp, pageType, service } = useContext(RequestContext);
+  const { isApp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -136,8 +135,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: isAmp ? articleMediaPlayer : MediaLoader,
-    video: isAmp ? articleMediaPlayer : MediaLoader,
+    audio: MediaLoader,
+    video: MediaLoader,
     text,
     image: (props: ComponentToRenderProps) => (
       <ImageWithCaption

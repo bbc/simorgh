@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Player: Guidance should render Guidance 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.no-js .emotion-0 {
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media screen and (forced-colors: active) {
+  .no-js .emotion-0 {
+    background-color: transparent;
+  }
+}
+
+.no-js .emotion-0 .guidance-message {
+  display: none;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: transparent;
+  }
+}
+
+.emotion-1 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-1 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 strong {
+  font-weight: normal;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-e2e="media-player__guidance"
+  >
+    <strong
+      aria-hidden="true"
+      class="guidance-message emotion-1"
+    >
+      Guidance: Contains strong language with adult humor
+    </strong>
+    <noscript
+      class="emotion-2"
+    />
+  </div>
+</div>
+`;
+
+exports[`Media Player: Guidance should render no-js styles when noJsClassName prop is used 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.no-js .emotion-0 {
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media screen and (forced-colors: active) {
+  .no-js .emotion-0 {
+    background-color: transparent;
+  }
+}
+
+.no-js .emotion-0 .guidance-message {
+  display: none;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: transparent;
+  }
+}
+
+.emotion-1 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-1 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 strong {
+  font-weight: normal;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-e2e="media-player__guidance"
+  >
+    <strong
+      aria-hidden="true"
+      class="guidance-message emotion-1"
+    >
+      Guidance: Contains strong language with adult humor
+    </strong>
+    <noscript
+      class="emotion-2"
+    />
+  </div>
+</div>
+`;

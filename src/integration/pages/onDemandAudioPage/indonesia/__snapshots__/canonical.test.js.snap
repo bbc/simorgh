@@ -120,11 +120,11 @@ exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"D
 
 exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1qn0xuy"
+  class="bbc-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1ty1x88"
+    class="bbc-1eq7znh"
     data-e2e="media-player"
   />
 </figure>

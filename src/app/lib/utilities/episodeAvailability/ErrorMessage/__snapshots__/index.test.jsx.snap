@@ -8,17 +8,9 @@ exports[`episodeAvailability - Error Message should correctly render for expired
 }
 
 .emotion-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125rem;
   width: 100%;
@@ -31,19 +23,27 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
     background-color: transparent;
   }
 }
 
-.emotion-6 {
+.emotion-3 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -51,15 +51,15 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-6 {
-    background-color: window;
+@media (min-width: 25rem) {
+  .emotion-3 {
+    padding: 1rem;
   }
 }
 
-@media (min-width: 25rem) {
-  .emotion-6 {
-    padding: 1rem;
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: window;
   }
 }
 
@@ -67,14 +67,12 @@ exports[`episodeAvailability - Error Message should correctly render for expired
   <div
     class="emotion-0 emotion-1"
   >
-    <div
-      class="emotion-2 emotion-3"
-    >
+    <div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <strong
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           Dis thing no dey again
         </strong>
@@ -111,17 +109,9 @@ exports[`episodeAvailability - Error Message should correctly render for future 
 }
 
 .emotion-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.125rem;
   width: 100%;
@@ -134,19 +124,27 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    font-size: 0.875rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2 {
     background-color: transparent;
   }
 }
 
-.emotion-6 {
+.emotion-3 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -154,15 +152,15 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   padding: 0.5rem;
 }
 
-@media screen and (-ms-high-contrast: active) {
-  .emotion-6 {
-    background-color: window;
+@media (min-width: 25rem) {
+  .emotion-3 {
+    padding: 1rem;
   }
 }
 
-@media (min-width: 25rem) {
-  .emotion-6 {
-    padding: 1rem;
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: window;
   }
 }
 
@@ -170,14 +168,12 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   <div
     class="emotion-0 emotion-1"
   >
-    <div
-      class="emotion-2 emotion-3"
-    >
+    <div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <strong
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           De thing wey de here never ready for you to play.
         </strong>

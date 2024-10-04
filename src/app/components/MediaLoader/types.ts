@@ -41,16 +41,16 @@ export type PlayerConfig = {
 };
 
 export type PlayerUiConfig = {
-  skin?: string;
+  skin?: 'audio' | 'classic';
   colour?: string;
   foreColour?: string;
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean; volumeSlider?: boolean };
-  locale: { lang: string };
-  subtitles: { enabled: boolean; defaultOn: boolean };
-  fullscreen: { enabled: boolean };
+  controls?: { enabled: boolean; volumeSlider?: boolean };
+  locale?: { lang: string };
+  subtitles?: { enabled: boolean; defaultOn: boolean };
+  fullscreen?: { enabled: boolean };
 };
 
 export type PlaylistItem = {
@@ -69,7 +69,7 @@ export type LegacyPlayListItem = {
 };
 
 export type ConfigBuilderProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
@@ -79,7 +79,6 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
-  isAmp?: boolean;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -96,6 +95,7 @@ export type ConfigBuilderReturnProps = {
   playerConfig: PlayerConfig;
   placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
+  ampIframeUrl?: string;
   orientation?: Orientations;
 };
 
@@ -250,7 +250,7 @@ export type MediaBlock =
   | MediaOverrides;
 
 export type BuildConfigProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;

@@ -2,7 +2,12 @@ import React from 'react';
 import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaLoaderComponent from '.';
-import { aresMediaBlocks, clipMediaBlocks, legacyMediaBlock } from './fixture';
+import {
+  aresMediaBlocks,
+  aresMediaPortraitBlocks,
+  clipMediaBlocks,
+  legacyMediaBlock,
+} from './fixture';
 import { MediaBlock } from './types';
 import readme from './README.md';
 
@@ -33,11 +38,19 @@ export default {
   },
 };
 
-export const ArticleMediaLoader = () => (
+export const Landscape = () => (
   <Component
     service="pidgin"
     pageType="article"
     blocks={aresMediaBlocks as MediaBlock[]}
+  />
+);
+
+export const Portrait = () => (
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={aresMediaPortraitBlocks as MediaBlock[]}
   />
 );
 
@@ -49,7 +62,7 @@ export const LegacyMediaLoader = () => (
   />
 );
 
-export const LivePageMediaLoader = () => (
+export const LivePageMedia = () => (
   <Component
     service="pidgin"
     pageType="live"

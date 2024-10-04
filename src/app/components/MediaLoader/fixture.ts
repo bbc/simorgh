@@ -74,6 +74,69 @@ export const buildAresMediaPlayerBlock = ({ types }: { types: string[] }) => ({
   position: [5, 2, 1],
 });
 
+export const aresMediaPortraitBlock = {
+  id: '80e150c0',
+  type: 'aresMedia',
+  model: {
+    blocks: [
+      buildAresMediaPlayerBlock({ types: ['Portrait'] }),
+      {
+        id: 'd8f26383',
+        type: 'image',
+        model: {
+          blocks: [
+            {
+              id: 'fcdba133',
+              type: 'rawImage',
+              model: {
+                width: 1920,
+                height: 1080,
+                locator:
+                  'ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg',
+                originCode: 'mpv',
+                copyrightHolder: 'BBC',
+              },
+            },
+            {
+              id: '63679c9e',
+              type: 'altText',
+              model: {
+                blocks: [
+                  {
+                    id: '33876888',
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          id: '26dbfca2',
+                          type: 'paragraph',
+                          model: {
+                            text: 'Ants',
+                            blocks: [
+                              {
+                                id: 'ed9f30c9',
+                                type: 'fragment',
+                                model: {
+                                  text: 'Ants',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 export const aresMediaBlock = {
   id: '80e150c0',
   type: 'aresMedia',
@@ -423,6 +486,10 @@ export const aresMediaLiveStreamBlocks = [
 
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const clipMediaBlocks = [livePageClipMediaBlock, livePageCaptionBlock];
+export const aresMediaPortraitBlocks = [
+  aresMediaPortraitBlock,
+  aresMediaCaptionBlock,
+];
 export const onDemandTvBlocks = [onDemandTvBlock];
 export const onDemandTvBlocksWithOverrides = [
   onDemandTvBlock,
