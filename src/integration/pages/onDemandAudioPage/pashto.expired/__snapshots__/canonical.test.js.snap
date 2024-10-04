@@ -165,34 +165,6 @@ exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https:/
 
 exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"وروستي خبرونه, ۴ فبروري ۲۰۲۰"`;
 
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2kz848lv",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2kz844vq",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2kz8413l",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "غږ, وروستي خبرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۰۳،۰۰  موده ۰۳:۰۰",
-  "url": "/pashto/bbc_pashto_radio/w172xqk2kz83xcg",
-}
-`;
-
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
