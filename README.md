@@ -61,7 +61,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 - withHashChangeHandler
 
-With a selection of page types passed through withOptimizelyProvider, currently [Article](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) and [Story](https://github.com/bbc/simorgh/blob/latest/src/app/pages/StoryPage/index.jsx) pages.
+With a selection of page types passed through withOptimizelyProvider, that enables usage of Optimizely in the selected page types.
 
 #### withVariant
 
@@ -96,6 +96,20 @@ The withHashChangeHandler HOC is a wrapper applied to all pages that checks for 
 #### withOptimizelyProvider
 
 The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles by page type, that means if we're only running A/B testing on certain page types, we can prevent polluting page type bundles with the weight of the SDK library we use for Optimizely.
+
+This should be used by using the `lastFunction` object key within [applyBasicPageHandlers.js](https://github.com/bbc/simorgh/blob/d559889a551202f0b9ad8d6ce2a94d31ecfad6a5/src/app/pages/utils/applyBasicPageHandlers.js#L8), as the `ckns_mvt` is set within the user context, so the withOptimizelyProvider HOC needs to be applied after the withContexts HOC, so the `ckns_mvt` is availible to be used on first time visits to be used as the Optimizely User Id
+
+Example for Article page:
+```jsx
+import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import ArticlePage from './ArticlePage';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
+
+export default applyBasicPageHandlers(ArticlePage, {
+  lastHandler: withOptimizelyProvider,
+});
+
+```
 
 ### Adding a new Page type
 
