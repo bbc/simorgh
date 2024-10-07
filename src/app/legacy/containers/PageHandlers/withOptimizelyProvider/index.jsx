@@ -50,8 +50,6 @@ const withOptimizelyProvider = Component => {
       }
     }
 
-    console.log(getUserId());
-
     return (
       <OptimizelyProvider
         optimizely={optimizely}
