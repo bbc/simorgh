@@ -57,5 +57,6 @@ describe('applyBasicPageHandlers', () => {
     const lastArg = args[args.length - 1];
 
     expect(lastArg).toEqual(withOptimizelyProvider);
+    expect(withOptimizelyProvider).toHaveBeenCalledTimes(1);
   });
 });
