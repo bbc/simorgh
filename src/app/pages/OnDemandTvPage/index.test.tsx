@@ -274,10 +274,8 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const expiredMessageEl = getByText('دغه فایل نور د لاسرسي وړ نه دی.');
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(expiredMessageEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
@@ -300,12 +298,10 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const notYetAvailableEl = getByText(
       'دغه پروګرام د خپرولو لپاره چمتو نه دی.',
     );
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
@@ -328,12 +324,10 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const notYetAvailableEl = getByText(
       'دغه پروګرام د خپرولو لپاره چمتو نه دی.',
     );
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });

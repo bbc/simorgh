@@ -7,12 +7,12 @@ import { PlaceholderConfig } from '../../types';
 
 type BuildPlaceholderConfigParams = {
   title: string;
-  duration: number;
   holdingImageURL: string;
-  placeholderImageOriginCode: string;
-  placeholderImageLocator: string;
   type: MediaType;
+  duration?: number;
   durationISO8601?: string;
+  placeholderImageOriginCode?: string;
+  placeholderImageLocator?: string;
   translations?: Translations;
   guidanceMessage?: string | null;
 };
@@ -32,7 +32,9 @@ export default ({
 
   const durationTranslation = translations?.media?.duration || 'Duration';
 
-  const translatedNoJSMessage = `This ${type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
+  const translatedNoJSMessage =
+    translations?.media?.noJs ||
+    `This ${type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
   const placeholderSrcset = getPlaceholderSrcSet({
     originCode: placeholderImageOriginCode,

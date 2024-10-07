@@ -32,7 +32,7 @@ export type PlayerConfig = {
     title: string;
     summary?: string;
     holdingImageURL?: string;
-    items: PlaylistItem[];
+    items: PlaylistItem[] | LegacyPlayListItem[];
     guidance?: string;
     embedRights?: 'allowed';
     liveRewind?: boolean;
@@ -41,16 +41,16 @@ export type PlayerConfig = {
 };
 
 export type PlayerUiConfig = {
-  skin?: string;
+  skin?: 'audio' | 'classic';
   colour?: string;
   foreColour?: string;
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls: { enabled: boolean; volumeSlider?: boolean };
-  locale: { lang: string };
-  subtitles: { enabled: boolean; defaultOn: boolean };
-  fullscreen: { enabled: boolean };
+  controls?: { enabled: boolean; volumeSlider?: boolean };
+  locale?: { lang: string };
+  subtitles?: { enabled: boolean; defaultOn: boolean };
+  fullscreen?: { enabled: boolean };
 };
 
 export type PlaylistItem = {
@@ -63,8 +63,13 @@ export type PlaylistItem = {
   serviceID?: string;
 };
 
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
+};
+
 export type ConfigBuilderProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   basePlayerConfig: PlayerConfig;
   pageType: PageTypes;
@@ -74,7 +79,6 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
-  isAmp?: boolean;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -91,6 +95,7 @@ export type ConfigBuilderReturnProps = {
   playerConfig: PlayerConfig;
   placeholderConfig?: PlaceholderConfig;
   showAds: boolean;
+  ampIframeUrl?: string;
   orientation?: Orientations;
 };
 
@@ -208,17 +213,44 @@ export type ClipMediaBlock = {
   };
 };
 
+export type LegacyMediaBlock = {
+  type: 'legacyMedia';
+  content: {
+    id: string;
+    subType: string;
+    format: MediaType;
+    image: {
+      id: string;
+      subType: string;
+      href: string;
+      path: string;
+      height: number;
+      width: number;
+      altText: string;
+      copyrightHolder: string;
+    };
+    aspectRatio: string;
+    live: boolean;
+    href: string;
+    playlist: {
+      format: string;
+      url: string;
+    }[];
+  };
+};
+
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
-  | CaptionBlock
+  | LegacyMediaBlock
+  | LiveRadioBlock
   | OnDemandTVBlock
   | OnDemandAudioBlock
-  | MediaOverrides
-  | LiveRadioBlock;
+  | CaptionBlock
+  | MediaOverrides;
 
 export type BuildConfigProps = {
-  id: string | null;
+  id: string;
   blocks: MediaBlock[];
   counterName: string | null;
   statsDestination: string;

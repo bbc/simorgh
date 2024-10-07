@@ -9,6 +9,7 @@ import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 import { RequestContext } from '#app/contexts/RequestContext';
+import { MediaOverrides } from '#app/models/types/media';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -35,7 +36,6 @@ import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../legacy/containers/RelatedTopics';
@@ -68,7 +68,7 @@ import {
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isAmp, pageType, service } = useContext(RequestContext);
+  const { pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -161,11 +161,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isCpsMap && styles.cafMediaPlayer,
         ]}
       >
-        {isAmp ? (
-          <ArticleMediaPlayer {...props} />
-        ) : (
-          <MediaLoader blocks={props.blocks as MediaBlock[]} />
-        )}
+        <MediaLoader blocks={props.blocks as MediaBlock[]} />
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
@@ -175,13 +171,26 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           isCpsMap && styles.cafMediaPlayer,
         ]}
       >
-        {isAmp ? (
-          <ArticleMediaPlayer {...props} />
-        ) : (
-          <MediaLoader blocks={props.blocks as MediaBlock[]} />
-        )}
+        <MediaLoader blocks={props.blocks as MediaBlock[]} />
       </div>
     ),
+    legacyMedia: (props: ComponentToRenderProps) => {
+      const mediaOverrides: MediaOverrides = {
+        model: { pageTitleOverride: headline },
+        type: 'mediaOverrides',
+      };
+
+      return (
+        <div
+          css={({ spacings }: Theme) => [
+            `padding-top: ${spacings.TRIPLE}rem`,
+            isCpsMap && styles.cafMediaPlayer,
+          ]}
+        >
+          <MediaLoader blocks={[props, mediaOverrides] as MediaBlock[]} />
+        </div>
+      );
+    },
     text,
     byline: () =>
       hasByline ? (

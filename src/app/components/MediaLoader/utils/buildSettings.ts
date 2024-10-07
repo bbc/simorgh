@@ -48,6 +48,7 @@ const buildSettings = ({
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
     ui: {
+      skin: 'classic',
       controls: { enabled: true },
       locale: { lang: mediaOverrides?.language || lang || 'en' },
       subtitles: { enabled: true, defaultOn: true },
@@ -72,7 +73,6 @@ const buildSettings = ({
     showAdsBasedOnLocation,
     embedded,
     lang,
-    isAmp,
   });
 
   if (!config) return null;

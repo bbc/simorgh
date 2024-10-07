@@ -105,7 +105,7 @@ exports[`Canonical Sinhala Live Radio Page Main heading should match text 1`] = 
 
 exports[`Canonical Sinhala Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1qn0xuy"
+  class="bbc-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
