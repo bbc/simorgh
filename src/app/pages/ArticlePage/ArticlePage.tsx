@@ -13,7 +13,6 @@ import text from '#containers/Text';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -36,15 +35,10 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import ScrollablePromo from '#components/ScrollablePromo';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
-
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
-import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
-import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
-import useOptimizelyScrollDepth from '#app/hooks/useOptimizelyScrollDepth';
+import ScrollablePromo from '#components/ScrollablePromo';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -72,7 +66,7 @@ import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, isAmp, pageType, service } = useContext(RequestContext);
+  const { isApp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -137,16 +131,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  const scrollablePromoVariation = useOptimizelyVariation(
-    'scrollable_promo',
-  ) as unknown as string;
-
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: isAmp ? articleMediaPlayer : MediaLoader,
-    video: isAmp ? articleMediaPlayer : MediaLoader,
+    audio: MediaLoader,
+    video: MediaLoader,
     text,
     image: (props: ComponentToRenderProps) => (
       <ImageWithCaption
@@ -174,12 +164,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: (props: ComponentToRenderProps) =>
-      scrollablePromoVariation === 'variation_1_aa' ? (
-        <ScrollablePromo {...props} />
-      ) : (
-        <ScrollablePromo {...props} />
-      ),
+    links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
     mpu: (props: ComponentToRenderProps) =>
       allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null,
     wsoj: (props: ComponentToRenderProps) => (
@@ -218,8 +203,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(
     showRelatedTopics && topics.length > 0 && !isTransliterated,
   );
-
-  useOptimizelyScrollDepth();
 
   return (
     <div css={styles.pageWrapper}>
@@ -296,8 +279,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           mobileDivider={showTopics}
         />
       )}
-      <OptimizelyArticleCompleteTracking />
-      <OptimizelyPageViewTracking />
     </div>
   );
 };

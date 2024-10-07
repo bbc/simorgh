@@ -78,7 +78,6 @@ describe('ScrollablePromo', () => {
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'edoj1',
         format: 'CHD=edoj',
-        optimizely: null,
       });
     });
 
@@ -95,12 +94,10 @@ describe('ScrollablePromo', () => {
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'edoj1',
         format: 'CHD=edoj',
-        optimizely: null,
       });
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'edoj2',
         format: 'CHD=edoj',
-        optimizely: null,
       });
     });
 
@@ -113,7 +110,6 @@ describe('ScrollablePromo', () => {
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'edoj1',
         format: 'CHD=edoj',
-        optimizely: null,
       });
     });
 
@@ -130,12 +126,10 @@ describe('ScrollablePromo', () => {
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'edoj1',
         format: 'CHD=edoj',
-        optimizely: null,
       });
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'edoj2',
         format: 'CHD=edoj',
-        optimizely: null,
       });
     });
   });

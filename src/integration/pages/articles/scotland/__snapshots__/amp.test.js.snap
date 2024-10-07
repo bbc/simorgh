@@ -320,7 +320,7 @@ exports[`AMP Articles SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "They may be tiny, but us humans could learn a thing or two from ants.",
   "duration": "PT3M11S",
-  "embedURL": "https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB/amp",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB",
   "name": "Five things ants can teach us about management",
   "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
   "uploadDate": "2018-10-22T14:35:32.000Z",
