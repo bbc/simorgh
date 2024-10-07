@@ -6,26 +6,6 @@ import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import withOptimizelyProvider from '.';
 
-// const optimizelyProviderSpy = jest.spyOn(
-//   optimizelyReactSdk.OptimizelyProvider,
-//   'default',
-// );
-
-// jest.mock('@optimizely/react-sdk', () => ({
-
-// }));
-
-// jest.mock('../myModule', () => {
-//   // Require the original module to not be mocked...
-//   const originalModule = jest.requireActual('../myModule');
-
-//   return {
-//     __esModule: true, // Use it when dealing with esModules
-//     ...originalModule,
-//     getRandom: jest.fn(() => 10),
-//   };
-// });
-
 const props = {
   bbcOrigin: 'https://www.bbc.com',
   id: 'c0000000000o',
