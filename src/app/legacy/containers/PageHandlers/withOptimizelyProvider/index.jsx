@@ -33,7 +33,7 @@ const withOptimizelyProvider = Component => {
     let mobile;
 
     const getUserId = () => {
-      if (disableOptimizely || isOperaProxy() || !onClient()) {
+      if (disableOptimizely || !onClient() || isOperaProxy()) {
         return null;
       }
       return Cookie.get('ckns_mvt') ?? null;
@@ -49,6 +49,8 @@ const withOptimizelyProvider = Component => {
         mobile = false;
       }
     }
+
+    console.log(getUserId());
 
     return (
       <OptimizelyProvider
