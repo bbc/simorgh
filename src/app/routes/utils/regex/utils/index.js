@@ -101,9 +101,7 @@ export const getHomePageRegex = services => {
   if (isLive()) {
     homePages = services.filter(service => homePageServices.includes(service));
   } else {
-    homePages = services.filter(
-      service => !servicesWithVariants.includes(service),
-    );
+    homePages = services;
   }
   const homePageServiceRegex = getServiceRegex(homePages);
   return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:lite(${liteRegex})?`;
