@@ -1,7 +1,7 @@
 {
   "data": {
-    "title": "Početna stranica",
-    "description": "Srpska početna stranica",
+    "title": "Почетна страница",
+    "description": "Српска почетна страница",
     "pageType": "home",
     "curations": [
       {
@@ -34,7 +34,7 @@
         "contentId": "urn:bbc:tipo:topic:c6zr6pp47w7t",
         "contentType": "index-home",
         "pageIdentifier": "serbian.page",
-        "pageTitle": "Početna stranica"
+        "pageTitle": "Почетна страница"
       }
     }
   },
