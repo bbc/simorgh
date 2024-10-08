@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 
 const styles = {
@@ -21,6 +22,8 @@ const styles = {
         '&:hover, &:focus': {
           '> button': {
             backgroundColor: 'canvas',
+            border: `${pixelsToRem(3)}rem solid canvasText`,
+            '> time': { textDecoration: 'underline' },
           },
         },
       },
