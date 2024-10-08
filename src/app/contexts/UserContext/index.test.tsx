@@ -101,7 +101,7 @@ describe('UserContext', () => {
       expect(cookieGetterSpy).not.toHaveBeenCalled();
     });
 
-    it('should not set cookie when ckns_mvt cookie exists', () => {
+    it('should not set cookie when ckns_mvt cookie already exists', () => {
       onClientSpy.mockImplementationOnce(() => true as unknown as Location);
       isOperaProxySpy.mockImplementationOnce(() => false);
       // @ts-expect-error This should be able to be mocked as a string or undefined
