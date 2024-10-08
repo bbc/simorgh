@@ -1,0 +1,42 @@
+{
+  "data": {
+    "title": "Početna stranica",
+    "description": "Srpska početna stranica",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo",
+            "firstPublished": "2024-07-30T16:38:41.828Z",
+            "lastPublished": "2024-07-30T16:38:41.828Z",
+            "link": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e80/test/de02d740-4e90-11ef-ae89-b10ee2354b32.jpg.webp",
+            "description": "Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo",
+            "imageAlt": "Koren, grane i lišće.",
+            "id": "czmk8npevn0o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c01fef7f-0197-418e-8757-1d89293fad17",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Serbian",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c6zr6pp47w7t",
+        "contentType": "index-home",
+        "pageIdentifier": "serbian.page",
+        "pageTitle": "Početna stranica"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
