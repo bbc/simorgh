@@ -72,6 +72,7 @@ describe('UserContext', () => {
 
     beforeEach(() => {
       jest.clearAllMocks();
+      Cookie.remove('ckns_mvt');
     });
 
     it('should call cookie logic when not opera mini and is on client', () => {
@@ -104,11 +105,12 @@ describe('UserContext', () => {
     it('should not set cookie when ckns_mvt cookie already exists', () => {
       onClientSpy.mockImplementationOnce(() => true as unknown as Location);
       isOperaProxySpy.mockImplementationOnce(() => false);
-      // @ts-expect-error This should be able to be mocked as a string or undefined
-      cookieGetterSpy.mockImplementationOnce(() => 'foo');
+      Cookie.set('ckns_mvt', 'foo');
+      cookieSetterSpy.mockClear();
 
       render(<DummyComponentWithContext />);
 
+      expect(cookieGetterSpy).toHaveReturnedWith('foo');
       expect(cookieSetterSpy).not.toHaveBeenCalled();
     });
 
