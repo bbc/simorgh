@@ -76,6 +76,13 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   .emotion-7:hover>button,
   .emotion-7:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-7:hover>button>time,
+  .emotion-7:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 

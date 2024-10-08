@@ -248,6 +248,13 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   .emotion-8:hover>button,
   .emotion-8:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-8:hover>button>time,
+  .emotion-8:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 

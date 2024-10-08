@@ -20,6 +20,13 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   .emotion-0:hover>button,
   .emotion-0:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -340,6 +347,13 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   .emotion-0:hover>button,
   .emotion-0:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -692,6 +706,13 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   .emotion-0:hover>button,
   .emotion-0:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -989,6 +1010,13 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   .emotion-0:hover>button,
   .emotion-0:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -1302,6 +1330,13 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   .emotion-0:hover>button,
   .emotion-0:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
@@ -1592,6 +1627,13 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   .emotion-0:hover>button,
   .emotion-0:focus>button {
     background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
   }
 }
 
