@@ -179,7 +179,7 @@ exports[`Canonical Articles Media Loader a11y assistive technology can read the 
 
 exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-171plmm"
+  class="bbc-1lip28y"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -193,7 +193,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1puku5e"
+    class="focusIndicatorRemove bbc-1s7djye"
     type="button"
   >
     <span
@@ -203,7 +203,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-jo2gwv"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -230,7 +230,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-1lcsotz"
+      class="bbc-digyti"
       datetime="PT16S"
     >
       00:16
@@ -253,7 +253,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-171plmm"
+  class="bbc-1lip28y"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -267,7 +267,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1puku5e"
+    class="focusIndicatorRemove bbc-1s7djye"
     type="button"
   >
     <span
@@ -277,7 +277,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-jo2gwv"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -304,7 +304,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-1lcsotz"
+      class="bbc-digyti"
       datetime="PT16S"
     >
       00:16
@@ -331,7 +331,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-171plmm"
+    class="bbc-1lip28y"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -345,7 +345,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-1puku5e"
+      class="focusIndicatorRemove bbc-1s7djye"
       type="button"
     >
       <span
@@ -355,7 +355,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="bbc-jo2gwv"
+        class="bbc-7qcky8"
       >
         <svg
           aria-hidden="true"
@@ -382,7 +382,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="bbc-1lcsotz"
+        class="bbc-digyti"
         datetime="PT16S"
       >
         00:16
