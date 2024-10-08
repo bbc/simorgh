@@ -3,7 +3,7 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { focusIndicatorThickness } from '../../ThemeProvider/focusIndicator';
 
 const styles = {
-  placeholder: ({ palette }: Theme) =>
+  placeholder: ({ palette, mq }: Theme) =>
     css({
       position: 'relative',
       cursor: 'pointer',
@@ -13,8 +13,15 @@ const styles = {
         cursor: 'default',
       },
       '&:hover, &:focus': {
-        '.focusIndicatorRemove': {
+        '> button': {
           backgroundColor: palette.POSTBOX,
+        },
+      },
+      [mq.FORCED_COLOURS]: {
+        '&:hover, &:focus': {
+          '> button': {
+            backgroundColor: 'canvas',
+          },
         },
       },
     }),
