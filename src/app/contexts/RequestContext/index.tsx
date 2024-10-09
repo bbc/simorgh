@@ -174,8 +174,6 @@ export const RequestContextProvider = ({
     ],
   );
 
-  console.log({ value });
-
   return (
     <RequestContext.Provider value={value}>{children}</RequestContext.Provider>
   );
