@@ -187,7 +187,7 @@ const PreviewEnvironmentIndicator = () => {
     requestServiceChain &&
     requestServiceChain.includes('MOZART')
   ) {
-    return <StyledParagraph>⚠️ Mozart</StyledParagraph>;
+    return <StyledParagraph aria-hidden>⚠️ Mozart</StyledParagraph>;
   }
   return null;
 };
