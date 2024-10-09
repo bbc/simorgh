@@ -166,7 +166,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
   </>
 );
 
-const StyledParagraph = styled.p`
+const StyledDiv = styled.div`
   color: ${props => props.theme.palette.WHITE};
 `;
 
@@ -174,7 +174,7 @@ const PreviewEnvironmentIndicator = () => {
   const { requestServiceChain } = useContext(RequestContext);
 
   if (requestServiceChain && requestServiceChain.includes('MOZART')) {
-    return <StyledParagraph aria-hidden>⚠️ Mozart</StyledParagraph>;
+    return <StyledDiv aria-hidden>⚠️ Mozart</StyledDiv>;
   }
   return null;
 };
