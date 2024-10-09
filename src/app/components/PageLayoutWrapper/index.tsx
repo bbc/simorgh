@@ -55,7 +55,7 @@ const PageLayoutWrapper = ({
   status,
 }: PropsWithChildren<Props>) => {
   const { service } = useContext(ServiceContext);
-  const { isLite, isAmp } = useContext(RequestContext);
+  const { isLite, isAmp, saveData } = useContext(RequestContext);
 
   const scriptSwitchId = pathOr('', ['scriptSwitchId'], pageData);
   const renderScriptSwitch = pathOr(true, ['renderScriptSwitch'], pageData);
@@ -127,7 +127,7 @@ const PageLayoutWrapper = ({
                     let fontContents = localStorage.getItem(storageKey);
 
                     if (!fontContents) {
-                        retrieveAndStoreFont(font, storageKey, true);
+                        if (!${saveData}) retrieveAndStoreFont(font, storageKey, true);
                     }
                     else {
                     	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);

@@ -1465,7 +1465,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     const { header } = await makeRequest('/mundo/c0000000001o');
 
     expect(header.vary).toBe(
-      'X-Country, mvt-simorgh_dark_mode, Accept-Encoding',
+      'X-Country, Save-Data, mvt-simorgh_dark_mode, Accept-Encoding',
     );
   });
 
@@ -1477,7 +1477,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
-    expect(header.vary).toBe('X-Country, Accept-Encoding');
+    expect(header.vary).toBe('X-Country, Save-Data, Accept-Encoding');
   });
 
   it(`should not add mvt experiment header names to vary if on AMP`, async () => {
@@ -1489,7 +1489,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
-    expect(header.vary).toBe('X-Country, Accept-Encoding');
+    expect(header.vary).toBe('X-Country, Save-Data, Accept-Encoding');
   });
 
   it(`should set isUK value to true when 'x-bbc-edge-isuk' is set to 'yes'`, async () => {

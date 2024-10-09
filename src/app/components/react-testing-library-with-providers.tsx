@@ -26,6 +26,7 @@ interface Props extends PropsWithChildren {
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
   showCookieBannerBasedOnCountry?: boolean;
+  saveData?: boolean;
   statusCode?: number | null;
   variant?: Variants;
   isNextJs?: boolean;
@@ -50,6 +51,7 @@ const AllTheProviders: FC<Props> = ({
   pageLang = undefined,
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
+  saveData = false,
   statusCode = null,
   isNextJs = false,
   isUK = null,
@@ -73,6 +75,7 @@ const AllTheProviders: FC<Props> = ({
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+          saveData={saveData}
           statusCode={statusCode}
           isUK={isUK}
         >
@@ -108,6 +111,7 @@ const customRender = (
     variant,
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
+    saveData,
     statusCode,
     isNextJs,
     pageLang,
@@ -131,6 +135,7 @@ const customRender = (
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
         showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+        saveData={saveData}
         statusCode={statusCode}
         isNextJs={isNextJs}
         pageLang={pageLang}

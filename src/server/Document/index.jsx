@@ -24,7 +24,7 @@ const renderDocument = async ({
   url,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
-  const cache = createCache({ key: 'bbc' });
+  const cache = createCache({ key: 'bbc', prefix: false, stylisPlugins: [] });
   const { extractCritical } = createEmotionServer(cache);
   const modernStatsFile = path.resolve(
     `${__dirname}/public/modern-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,

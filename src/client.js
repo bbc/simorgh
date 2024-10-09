@@ -21,7 +21,11 @@ const bundleToExecute = isModernBrowser ? 'modern' : 'legacy';
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   loadableReady(
     () => {
-      const cache = createCache({ key: 'bbc' });
+      const cache = createCache({
+        key: 'bbc',
+        prefix: false,
+        stylisPlugins: [],
+      });
 
       hydrateRoot(
         root,

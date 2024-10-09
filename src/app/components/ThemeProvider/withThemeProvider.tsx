@@ -5,6 +5,7 @@ import {
   Theme,
 } from '@emotion/react';
 import focusIndicator from './focusIndicator';
+import helmetFontVariants from './fontVariants/helmet';
 import { RequestContext } from '../../contexts/RequestContext';
 
 import {
@@ -293,19 +294,20 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, isLite, pageType, derivedPageType } =
+    const { isAmp, isLite, pageType, derivedPageType, saveData } =
       useContext(RequestContext);
 
     const theme = {
       ...themeConfig,
       isDarkUi: isDarkUiPage(pageType, derivedPageType),
       isLite,
+      fontVariants: saveData ? helmetFontVariants : fontVariants,
     };
 
     return (
       <EmotionThemeProvider theme={theme}>
         {children}
-        {isAmp && <Global styles={fontFaces} />}
+        {isAmp && <Global styles={saveData ? [] : fontFaces} />}
         <Global styles={focusIndicator} />
       </EmotionThemeProvider>
     );
