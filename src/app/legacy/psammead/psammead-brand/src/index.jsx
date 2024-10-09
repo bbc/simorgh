@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { forwardRef, useContext, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -12,8 +12,6 @@ import {
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useLocation from '#app/hooks/useLocation';
-import onClient from '#app/lib/utilities/onClient';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -175,27 +173,22 @@ const StyledParagraph = styled.p`
 const PreviewEnvironmentIndicator = () => {
   const { requestServiceChain } = useContext(RequestContext);
 
-  let isPreview = false;
-
-  if (onClient()) {
-    const previewMatches = window.location.hostname.match(/preview/g);
-    isPreview = previewMatches && previewMatches.length > 0;
-    console.log('on client', { isPreview });
-  }
-
-  console.log({ isPreview, requestServiceChain });
-
-  if (
-    isPreview &&
-    requestServiceChain &&
-    requestServiceChain.includes('MOZART')
-  ) {
+  if (requestServiceChain && requestServiceChain.includes('MOZART')) {
     return <StyledParagraph aria-hidden>⚠️ Mozart</StyledParagraph>;
   }
   return null;
 };
 
 const Brand = forwardRef((props, ref) => {
+  const [isPreview, setIsPreview] = useState(false);
+
+  useEffect(() => {
+    const previewMatches = window.location.hostname.match(/preview/g);
+    const isPreviewEnvironment = previewMatches && previewMatches.length > 0;
+
+    setIsPreview(isPreviewEnvironment);
+  }, []);
+
   const {
     svgHeight,
     maxWidth,
@@ -235,7 +228,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
-        <PreviewEnvironmentIndicator />
+        {isPreview && <PreviewEnvironmentIndicator />}
       </SvgWrapper>
     </Banner>
   );
