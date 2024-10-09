@@ -170,24 +170,38 @@ const StyledParagraph = styled.p`
   color: ${props => props.theme.palette.WHITE};
 `;
 
-const PreviewEnvironmentIndicator = () => {
+const PreviewEnvironmentIndicator = isPreview => {
   const { requestServiceChain } = useContext(RequestContext);
 
-  if (requestServiceChain && requestServiceChain.includes('MOZART')) {
+  if (
+    isPreview &&
+    requestServiceChain &&
+    requestServiceChain.includes('MOZART')
+  ) {
     return <StyledParagraph aria-hidden>⚠️ Mozart</StyledParagraph>;
   }
-  return null;
+  return <StyledParagraph aria-hidden />;
 };
 
 const Brand = forwardRef((props, ref) => {
   const [isPreview, setIsPreview] = useState(false);
 
+  console.log('before', { isPreview });
+
   useEffect(() => {
     const previewMatches = window.location.hostname.match(/preview/g);
     const isPreviewEnvironment = previewMatches && previewMatches.length > 0;
 
+    console.log({
+      previewMatches,
+      isPreviewEnvironment,
+      location: window.location,
+    });
+
     setIsPreview(isPreviewEnvironment);
   }, []);
+
+  console.log('after', { isPreview });
 
   const {
     svgHeight,
@@ -228,7 +242,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
-        {isPreview && <PreviewEnvironmentIndicator />}
+        <PreviewEnvironmentIndicator isPreview />
       </SvgWrapper>
     </Banner>
   );
