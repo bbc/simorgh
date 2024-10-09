@@ -97,40 +97,44 @@ const runTestsForPage = ({
           }
         });
 
-        // Switch to AMP page URL (NB all our pages have AMP variants)
+        // Switch to AMP page URL (NB only some of our pages have AMP variants)
         describe(`${pageType} - ${currentPath} - AMP`, () => {
-          before(() => {
-            Cypress.env('currentPath', currentPath);
+          // TC2 MAPs are not loading the media player which causes the tests to fail when the page is visited, this is accepted behaviour
+          // The substring '/20' is common to all the TC2 MAPs test URLs in the settings and we will not be adding more
+          if (!currentPath.includes('/20')) {
+            before(() => {
+              Cypress.env('currentPath', currentPath);
 
-            visitPage(getAmpUrl(currentPath), pageType);
-          });
+              visitPage(getAmpUrl(currentPath), pageType);
+            });
 
-          const testArgs = {
-            service,
-            pageType,
-            variant: config[service].variant,
-            isAmp: true,
-          };
+            const testArgs = {
+              service,
+              pageType,
+              variant: config[service].variant,
+              isAmp: true,
+            };
 
-          // Enables overriding of the smoke test values in the config/settings.js file
-          testsThatAlwaysRunForAllPages(testArgs);
-          // Page specific tests
-          testsThatAlwaysRunForAMPOnly(testArgs);
-          testsThatAlwaysRun(testArgs);
-
-          // This runs most tests but only on Service:PageType combinations with smoke enabled
-          if (shouldSmokeTest(pageType, service)) {
-            testsThatFollowSmokeTestConfigForAllAMPPages(testArgs);
+            // Enables overriding of the smoke test values in the config/settings.js file
+            testsThatAlwaysRunForAllPages(testArgs);
             // Page specific tests
-            testsThatFollowSmokeTestConfig(testArgs);
-            testsThatFollowSmokeTestConfigForAMPOnly(testArgs);
-          }
+            testsThatAlwaysRunForAMPOnly(testArgs);
+            testsThatAlwaysRun(testArgs);
 
-          // This is for low priority and long running tests and ensures they're only run when not smoke testing.
-          if (!Cypress.env('SMOKE')) {
-            // Page specific tests
-            testsThatNeverRunDuringSmokeTestingForAMPOnly(testArgs);
-            testsThatNeverRunDuringSmokeTesting(testArgs);
+            // This runs most tests but only on Service:PageType combinations with smoke enabled
+            if (shouldSmokeTest(pageType, service)) {
+              testsThatFollowSmokeTestConfigForAllAMPPages(testArgs);
+              // Page specific tests
+              testsThatFollowSmokeTestConfig(testArgs);
+              testsThatFollowSmokeTestConfigForAMPOnly(testArgs);
+            }
+
+            // This is for low priority and long running tests and ensures they're only run when not smoke testing.
+            if (!Cypress.env('SMOKE')) {
+              // Page specific tests
+              testsThatNeverRunDuringSmokeTestingForAMPOnly(testArgs);
+              testsThatNeverRunDuringSmokeTesting(testArgs);
+            }
           }
         });
       });
