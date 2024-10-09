@@ -100,4 +100,25 @@ describe('extractHeader', () => {
       }),
     );
   });
+
+  describe('requestServiceChain', () => {
+    it('is set to empty string if req-svc-chain header does not exist', () => {
+      const actual = extractHeaders({});
+
+      expect(actual).toStrictEqual(
+        expect.objectContaining({
+          requestServiceChain: '',
+        }),
+      );
+    });
+    it('is set to the value of the req-svc-chain header', () => {
+      const actual = extractHeaders({ 'req-svc-chain': 'MOZART,SIMORGH' });
+
+      expect(actual).toStrictEqual(
+        expect.objectContaining({
+          requestServiceChain: 'MOZART,SIMORGH',
+        }),
+      );
+    });
+  });
 });
