@@ -215,9 +215,11 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
         fetchUrl = Url(`/${id}`);
         break;
-      case HOME_PAGE:
-        fetchUrl = Url(`/${service}/${id}`);
+      case HOME_PAGE: {
+        const variantPath = variant ? `/${variant}` : '';
+        fetchUrl = Url(`/${service}${variantPath}/${id}`);
         break;
+      }
       case MOST_READ_PAGE:
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
