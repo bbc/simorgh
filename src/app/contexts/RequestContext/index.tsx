@@ -34,6 +34,7 @@ export type RequestContextProps = {
   pathname: string;
   platform: Platforms;
   previousPath: string | null;
+  requestServiceChain: string | null;
   service: Services;
   showAdsBasedOnLocation: boolean;
   showCookieBannerBasedOnCountry: boolean;
@@ -67,6 +68,7 @@ type RequestProviderProps = {
   mvtExperiments?: MvtExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
+  requestServiceChain?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -89,6 +91,7 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
+  requestServiceChain = null,
 }: PropsWithChildren<RequestProviderProps>) => {
   const { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -142,6 +145,7 @@ export const RequestContextProvider = ({
       pathname,
       ...getMetaUrls(origin, pathname),
       mvtExperiments,
+      requestServiceChain,
     }),
     [
       derivedPageType,
@@ -158,6 +162,7 @@ export const RequestContextProvider = ({
       pathname,
       platform,
       previousPath,
+      requestServiceChain,
       service,
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
@@ -168,6 +173,8 @@ export const RequestContextProvider = ({
       variant,
     ],
   );
+
+  console.log({ value });
 
   return (
     <RequestContext.Provider value={value}>{children}</RequestContext.Provider>

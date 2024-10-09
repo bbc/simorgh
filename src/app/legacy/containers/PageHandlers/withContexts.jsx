@@ -30,6 +30,7 @@ const WithContexts = Component => {
       mvtExperiments = null,
       isNextJs = false,
       isUK = false,
+      requestServiceChain = null,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -60,6 +61,7 @@ const WithContexts = Component => {
             mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
+            requestServiceChain={requestServiceChain}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}

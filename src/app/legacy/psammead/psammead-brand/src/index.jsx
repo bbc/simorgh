@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -11,6 +11,9 @@ import {
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useLocation from '#app/hooks/useLocation';
+import onClient from '#app/lib/utilities/onClient';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -165,6 +168,30 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
   </>
 );
 
+const StyledParagraph = styled.p`
+  color: ${props => props.theme.palette.WHITE};
+`;
+
+const PreviewEnvironmentIndicator = () => {
+  const { requestServiceChain } = useContext(RequestContext);
+
+  let isPreview = false;
+
+  if (onClient()) {
+    const previewMatches = window.location.hostname.match(/preview.test/g);
+    isPreview = previewMatches && previewMatches.length > 0;
+  }
+
+  if (
+    isPreview &&
+    requestServiceChain &&
+    requestServiceChain.includes('MOZART')
+  ) {
+    return <StyledParagraph>⚠️ Mozart</StyledParagraph>;
+  }
+  return null;
+};
+
 const Brand = forwardRef((props, ref) => {
   const {
     svgHeight,
@@ -205,6 +232,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
+        <PreviewEnvironmentIndicator />
       </SvgWrapper>
     </Banner>
   );

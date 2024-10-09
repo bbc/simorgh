@@ -233,7 +233,8 @@ server.get(
         isAmp,
       });
 
-      const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
+      const { isUK, showCookieBannerBasedOnCountry, requestServiceChain } =
+        extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
@@ -242,8 +243,10 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
+      data.requestServiceChain = requestServiceChain;
 
       let { status } = data;
+
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
@@ -274,7 +277,8 @@ server.get(
           url,
           variant,
         });
-      } catch ({ message }) {
+      } catch (error) {
+        const { message } = error;
         status = 500;
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
