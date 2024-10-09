@@ -111,12 +111,13 @@ describe('extractHeader', () => {
         }),
       );
     });
+
     it('is set to the value of the req-svc-chain header', () => {
-      const actual = extractHeaders({ 'req-svc-chain': 'MOZART,SIMORGH' });
+      const actual = extractHeaders({ 'req-svc-chain': 'SIMORGH' });
 
       expect(actual).toStrictEqual(
         expect.objectContaining({
-          requestServiceChain: 'MOZART,SIMORGH',
+          requestServiceChain: 'SIMORGH',
         }),
       );
     });

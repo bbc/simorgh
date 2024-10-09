@@ -209,7 +209,7 @@ describe('Brand', () => {
       resetWindowValue('location', windowLocation);
     });
 
-    it('should only be displayed when the hostname includes preview and req-svc-chain contains MOZART', () => {
+    it('should only be displayed when the hostname includes preview and requestServiceChain contains MOZART', () => {
       setWindowValue('location', {
         hostname: 'http://localhost-preview.test.bbc.com',
       });
@@ -240,7 +240,7 @@ describe('Brand', () => {
       },
     );
 
-    it('should not be displayed when hostname is preview but req-svc-chain does not contain MOZART', () => {
+    it('should not be displayed when hostname is preview but requestServiceChain does not contain MOZART', () => {
       setWindowValue('location', {
         hostname: 'http://localhost-preview.test.bbc.com',
       });
