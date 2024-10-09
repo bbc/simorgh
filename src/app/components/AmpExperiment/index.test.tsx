@@ -35,7 +35,17 @@ describe('Amp experiment container on Amp pages', () => {
       <AmpExperiment experimentData={experimentConfig} />,
     );
     expect(container.querySelector('amp-experiment')).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchInlineSnapshot(`
+    <div>
+      <amp-experiment>
+        <script
+          type="application/json"
+        >
+          {"someExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
+        </script>
+      </amp-experiment>
+    </div>
+    `);
   });
 
   it('should render an amp-experiment with the expected config when multiple experiments are running at the same time', async () => {
@@ -43,7 +53,17 @@ describe('Amp experiment container on Amp pages', () => {
       <AmpExperiment experimentData={multipleExperimentConfig} />,
     );
     expect(container.querySelector('amp-experiment')).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <amp-experiment>
+          <script
+            type="application/json"
+          >
+            {"aExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}},"bExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
+          </script>
+        </amp-experiment>
+      </div>
+    `);
   });
 
   it(`should add amp-experiment extension script to page head`, async () => {
