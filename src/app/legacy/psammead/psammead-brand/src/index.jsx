@@ -178,9 +178,12 @@ const PreviewEnvironmentIndicator = () => {
   let isPreview = false;
 
   if (onClient()) {
-    const previewMatches = window.location.hostname.match(/preview.test/g);
+    const previewMatches = window.location.hostname.match(/preview/g);
     isPreview = previewMatches && previewMatches.length > 0;
+    console.log('on client', { isPreview });
   }
+
+  console.log({ isPreview, requestServiceChain });
 
   if (
     isPreview &&
