@@ -1,6 +1,6 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
-import { MALLANNA_REGULAR } from '../fontFaces';
+import { NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD } from '../fontFaces';
 import teluguFontVariants from '../fontVariants/telugu';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/telugu';
@@ -16,7 +16,7 @@ const teluguTheme = {
   typography: {
     script: devanagariScript,
     fontVariants: teluguFontVariants,
-    fontFaces: [MALLANNA_REGULAR],
+    fontFaces: [NOTO_SANS_TELUGU_REGULAR, NOTO_SANS_TELUGU_BOLD],
   },
   brandSVG,
 };

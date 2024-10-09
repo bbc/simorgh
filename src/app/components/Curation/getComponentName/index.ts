@@ -11,6 +11,8 @@ export const COMPONENT_NAMES = {
   NOT_SUPPORTED: 'not-supported',
   MOST_READ: 'most-read',
   RADIO_SCHEDULE: 'radio-schedule',
+  EMBED: 'embed',
+  BILLBOARD: 'billboard',
 } as const;
 
 const { NONE, BANNER, COLLECTION, RANKED } = VISUAL_STYLE;
@@ -22,22 +24,28 @@ const {
   MOST_READ,
   NOT_SUPPORTED,
   RADIO_SCHEDULE,
+  EMBED,
+  BILLBOARD,
 } = COMPONENT_NAMES;
 
 export default ({
   visualStyle,
   visualProminence,
   radioSchedule,
+  embed,
 }: Partial<Curation>) => {
   if (radioSchedule) {
     return RADIO_SCHEDULE;
+  }
+  if (embed) {
+    return EMBED;
   }
 
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
-    [`${BANNER}_${MAXIMUM}`]: MESSAGE_BANNER,
+    [`${BANNER}_${MAXIMUM}`]: BILLBOARD,
     [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,

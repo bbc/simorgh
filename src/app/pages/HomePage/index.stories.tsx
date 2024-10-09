@@ -1,15 +1,12 @@
 /* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
-import { withKnobs } from '@storybook/addon-knobs';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import fetch from 'node-fetch';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../../components/ThemeProvider';
-import { StoryProps } from '../../models/types/storybook';
+import withServicesDecorator from '#storybook/withServicesDecorator';
+import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
@@ -64,28 +61,24 @@ const Component = ({ service, variant }: StoryProps) => {
   }
 
   return (
-    <ThemeProvider service={service} variant={variant}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <HomePage
-          service={service}
-          variant={variant}
-          pageType={HOME_PAGE}
-          status={200}
-          isAmp={false}
-          pathname={`/${service}`}
-          pageData={pageData}
-        />
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <HomePage
+      service={service}
+      variant={variant}
+      pageType={HOME_PAGE}
+      status={200}
+      isAmp={false}
+      pathname={`/${service}`}
+      pageData={pageData}
+    />
   );
 };
 
 export default {
   Component,
   title: 'Pages/Home Page',
-  decorators: [withKnobs, withServicesKnob({ defaultService: 'kyrgyz' })],
+  decorators: [withServicesDecorator({ defaultService: 'kyrgyz' })],
 };
 
-export const Example = ({ service, variant }: StoryProps) => (
+export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
   <Component service={service} variant={variant} />
 );

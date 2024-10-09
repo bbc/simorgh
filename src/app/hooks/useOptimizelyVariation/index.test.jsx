@@ -1,5 +1,5 @@
-import * as optimizelyReactSdk from '@optimizely/react-sdk';
-import { renderHook } from '@testing-library/react-hooks';
+import optimizelyReactSdk from '@optimizely/react-sdk';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import useOptimizelyVariation from '.';
 
 describe('useOptimizelyVariation client side', () => {
@@ -50,7 +50,7 @@ describe('useOptimizelyVariation client side', () => {
     expect(result.current).toEqual(null);
   });
 
-  it('should return a variation of null when the experiment id is null', () => {
+  it('should return a variation of null when the flag id is null', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
     const { result } = renderHook(() =>

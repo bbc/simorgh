@@ -2,21 +2,28 @@ import moment from 'moment-timezone';
 
 import buildIChefURL from '#lib/utilities/ichefURL';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import formatDuration from '#lib/utilities/formatDuration';
-import { getPlaceholderSrcSet } from '#app/lib/utilities/srcSet';
 import {
   ClipMediaBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
+import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
+import shouldDisplayAds from '../utils/shouldDisplayAds';
+import { getExternalEmbedUrl } from '../utils/urlConstructors';
+import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
 export default ({
+  id,
+  lang,
   blocks,
   basePlayerConfig,
   translations,
+  adsEnabled = false,
+  showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const clipMediaBlock: ClipMediaBlock = filterForBlockType(
     blocks,
@@ -34,9 +41,10 @@ export default ({
   const clipISO8601Duration = video?.version?.duration;
 
   const rawDuration = moment.duration(clipISO8601Duration).asSeconds();
-  const duration = moment.duration(rawDuration, 'seconds');
 
   const title = video?.title;
+
+  const videoId = video?.id;
 
   const captionBlock = getCaptionBlock(blocks, 'live');
 
@@ -47,74 +55,61 @@ export default ({
 
   const guidanceMessage = video?.version?.guidance;
 
-  const durationSpokenPrefix = translations?.media?.duration || 'Duration';
-
-  const mediaInfo = {
-    title,
-    kind,
-    duration: formatDuration({ duration, padMinutes: true }),
-    rawDuration,
-    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
-      duration,
-      separator: ',',
-    })}`,
-    datetime: clipISO8601Duration,
-    type: type || 'video',
-    guidanceMessage,
-  };
+  const showAds = shouldDisplayAds({
+    adsEnabled,
+    showAdsBasedOnLocation,
+    duration: rawDuration,
+  });
 
   const embeddingAllowed = video?.isEmbeddingAllowed ?? false;
 
-  const placeholderSrc = buildIChefURL({
+  const holdingImageURL = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_WIDTH,
   });
 
-  const placeholderSrcset = getPlaceholderSrcSet({
-    originCode,
-    locator,
-    isWebP: true,
+  const placeholderConfig = buildPlaceholderConfig({
+    title,
+    duration: rawDuration,
+    durationISO8601: clipISO8601Duration,
+    type: type || 'video',
+    holdingImageURL,
+    placeholderImageLocator: locator,
+    placeholderImageOriginCode: originCode,
+    translations,
+    guidanceMessage,
   });
 
-  const noJsMessage = `This ${type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
+  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
 
-  const audioUi = {
-    skin: 'audio',
-    colour: '#b80000',
-    foreColour: '#222222',
-    baseColour: '#222222',
-    colourOnBaseColour: '#ffffff',
-    fallbackBackgroundColour: '#ffffff',
-    controls: { enabled: true, volumeSlider: true },
-  };
+  if (showAds) items.unshift({ kind: 'advert' });
+
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
   return {
     mediaType: type || 'video',
     playerConfig: {
       ...basePlayerConfig,
+      ...(externalEmbedUrl && { externalEmbedUrl }),
       playlistObject: {
         title,
         summary: caption || '',
-        holdingImageURL: placeholderSrc,
-        items: [{ versionID, kind, duration: rawDuration }],
+        holdingImageURL,
+        items,
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
       },
       ui: {
         ...basePlayerConfig.ui,
-        ...(type === 'audio' && audioUi),
+        ...(type === 'audio' && AUDIO_UI_CONFIG),
       },
       statsObject: {
         ...basePlayerConfig.statsObject,
-        clipPID: versionID,
+        ...(videoId && { clipPID: videoId }),
       },
     },
-    placeholderConfig: {
-      mediaInfo,
-      placeholderSrc,
-      placeholderSrcset,
-      translatedNoJSMessage: noJsMessage,
-    },
+    placeholderConfig,
+    showAds,
   };
 };

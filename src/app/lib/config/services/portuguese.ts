@@ -48,16 +48,16 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'BBC Lê',
-      brandDescription: 'Podcast traz áudios com reportagens selecionadas.',
+      title: 'Que História!',
+      brandTitle: 'Que História!',
+      brandDescription: 'A 3ª temporada com histórias reais incríveis',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
-        alt: 'Logo: BBC Lê',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0jfptnr.png',
+        alt: 'Logo: Que História!',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/topics/cxndrr1qgllt',
+        href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -94,6 +94,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Urgente',
         postedAt: 'Publicado às',
         summary: 'Pontos-chave',
+        shareButtonText: 'Compartilhar',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Pontos-chave',
       error: {
@@ -278,17 +283,79 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
       latestMediaTitle: 'Mais recentes',
+      ugc: {
+        // No JavaScript
+        noJsHeading: undefined,
+        noJsDescription: undefined,
+
+        // Optional
+        optional: 'opcional',
+
+        // File upload
+        fileUploadLiveRegionText: undefined,
+        fileUploadLiveRegionUpdateText: undefined,
+        fileUploadListHeading: 'O que você está uploading:',
+        fileUploadButton: 'Selecione um arquivo',
+        fileUploadRemoveButton: undefined,
+
+        // Submit button
+        submitButton: 'Enviar',
+
+        // Validation
+        validationRequired: 'Falta alguma coisa.',
+        validationInvalidEmail:
+          'Algo não está correto. Digite um endereço de email válido.',
+        validationInvalidTelephone: undefined,
+        validationFilesNotEnough:
+          'O número de arquivos não é suficiente. Adicione pelo menos {{minFiles}} arquivos.',
+        validationFilesTooMany:
+          'Existem muitos arquivos. Você pode adicionar até {{maxFiles}} arquivos.',
+        validationFilesInvalidType:
+          'Esse tipo de arquivo não pode ser utilizado. Adicionar {{fileTypes}}.',
+        validationFilesTooSmall:
+          'Este arquivo está corrompido. Tente escolher outro arquivo.',
+        validationFilesSizeExceeded:
+          'Estes arquivos são muito grandes. Você só pode fazer upload de até 1,2GB de cada vez.',
+        validationWordLimit: 'Máximo de {{wordLimit}} palavras',
+
+        // Messaging
+        retentionPeriodDays: undefined,
+        referenceNumber: 'Número de referência',
+        submissionInfoSignedOutMessage:
+          'Você deve anotar esses detalhes para sua referência.',
+        privacyInfoHtml:
+          'Não se preocupe, nós protegemos seus dados pessoais — para maiores detalhes, leia {{privacyInfoLink}}.',
+        emailToHtml:
+          'Envie email para {{emailLink}} caso você mude de ideia. Mencione o número de referência e diga apenas que você não quer que o material seja utilizado.',
+        removalGuidelineText: undefined,
+
+        // Form Screen
+        dataPolicyHeading: undefined,
+
+        // Uploading Screen
+        uploadingHeading: 'Uploading seus arquivos...',
+        uploadingDescription: 'Aguarde até finalizar.',
+
+        // Success Screen
+        successHeading: 'Mensagem enviada',
+        successDescription: 'Obrigado por entrar em contato.',
+        privacyPolicyLinkHref: undefined,
+        privacyPolicyLinkText: undefined,
+
+        // Error Screen
+        errorHeading: 'Sua mensagem não foi enviada',
+        errorDescription: 'Tente enviar novamente.',
+
+        // Closed Screen
+        closedHeading: 'Está encerrado',
+        closedDescription: 'Foi encerrado em {{date}}.',
+      },
     },
     mostRead: {
       header: 'Mais lidas',
       lastUpdated: 'Última atualização:',
       numberOfItems: 10,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'Mais assistido',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -351,6 +418,14 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/cz74k717pw5t',
       },
       {
+        title: 'Eleições municipais',
+        url: '/portuguese/topics/cy6z19wz1zet',
+      },
+      {
+        title: 'Eleições EUA',
+        url: '/portuguese/topics/c30gn378n6kt',
+      },
+      {
         title: 'Internacional',
         url: '/portuguese/topics/cmdm4ynm24kt',
       },
@@ -373,6 +448,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Vídeos',
         url: '/portuguese/topics/c9y2j35dn2zt',
+      },
+      {
+        title: 'BBC Lê',
+        url: '/portuguese/topics/cxndrr1qgllt',
       },
     ],
   },

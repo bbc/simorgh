@@ -100,12 +100,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/afaanoromoo/23149891'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -157,7 +156,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -324,12 +323,11 @@ module.exports = () => ({
               '/afrique/region-23278969', // CPS MAP
               '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -381,7 +379,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -519,12 +517,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/amharic/news-23263266'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -577,7 +574,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -656,23 +652,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      frontPage: {
-        environments: {
-          live: {
-            paths: ['/arabic'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic'],
-            enabled: false,
-          },
-        },
-        smoke: true,
-      },
+      frontPage: { environments: undefined, smoke: false },
       liveRadio: {
         environments: {
           live: {
@@ -760,12 +740,11 @@ module.exports = () => ({
               '/arabic/world-23278971', // CPS audio
               '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -817,7 +796,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -922,12 +901,11 @@ module.exports = () => ({
               '/azeri/azerbaijan-23257464', // CPS MAP with video clip
               '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -979,7 +957,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1122,12 +1100,11 @@ module.exports = () => ({
               '/bengali/media-23269006', // CPS MAP with video clip
               '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1179,7 +1156,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1354,12 +1331,11 @@ module.exports = () => ({
               '/burmese/media-23269011', // CPS MAP with video clip
               '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1411,7 +1387,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1495,12 +1471,11 @@ module.exports = () => ({
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -1638,12 +1613,11 @@ module.exports = () => ({
               '/gahuza/amakuru-23257470', // CPS MAP with video clip
               '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1695,7 +1669,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -1822,12 +1796,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/gujarati/other-news-23130286'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1879,7 +1852,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2053,12 +2026,11 @@ module.exports = () => ({
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2080,18 +2052,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/labarai-54292969'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/hausa/labarai-23190660'],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/hausa/labarai-23190660'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -2110,7 +2082,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2259,7 +2231,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -2283,12 +2255,11 @@ module.exports = () => ({
               '/hindi/23201477', // CPS video
               '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2340,7 +2311,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2440,12 +2411,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/igbo/media-23256786'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2497,7 +2467,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -2650,12 +2620,11 @@ module.exports = () => ({
               '/indonesia/media-23269037', // CPS MAP with video clip
               '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2707,7 +2676,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -2807,12 +2775,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/japanese/video-23248670'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2864,7 +2831,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -3002,12 +2968,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/korean/media-23248686'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3059,7 +3024,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -3215,8 +3179,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
             paths: [],
@@ -3246,12 +3210,11 @@ module.exports = () => ({
               '/kyrgyz/media-23257484', // CPS MAP with video clip
               // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3303,7 +3266,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -3447,12 +3409,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/marathi/media-23127353'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3504,7 +3465,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -3609,12 +3570,11 @@ module.exports = () => ({
               '/mundo/media-23283126', // CPS MAP
               '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3669,7 +3629,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -3772,11 +3732,10 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -3914,12 +3873,11 @@ module.exports = () => ({
               '/nepali/media-23269034', // CPS MAP with audio clip
               '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3971,7 +3929,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -4056,7 +4014,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
         environments: {
@@ -4070,13 +4027,12 @@ module.exports = () => ({
           },
           local: {
             paths: ['/news/uk-56342465', '/news/technology-56294493'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -4121,7 +4077,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
         environments: {
@@ -4135,13 +4090,12 @@ module.exports = () => ({
           },
           local: {
             paths: ['/newsround/56331357'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -4269,7 +4223,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -4296,12 +4250,11 @@ module.exports = () => ({
               '/pashto/media-23257523', // CPS MAP with video clip
               '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4353,7 +4306,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
         environments: {
           live: {
@@ -4584,12 +4536,11 @@ module.exports = () => ({
               '/persian/iran-23231114', // CPS MAP with audio clip
               '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4641,7 +4592,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -4729,7 +4680,10 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/pidgin/articles/cgwk9w4zlg8o'],
+            paths: [
+              '/pidgin/articles/cgwk9w4zlg8o',
+              '/pidgin/articles/cw8qv1d11l9o',
+            ],
             enabled: true,
           },
           test: {
@@ -4796,12 +4750,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4853,7 +4806,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -4983,12 +4936,11 @@ module.exports = () => ({
               '/portuguese/media-23282671', // CPS MAP
               '/portuguese/revista/2016/05/160506_tc2_map_0605', // TC2 MAP video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5040,7 +4992,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5139,12 +5091,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/punjabi/media-23248705'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5196,7 +5147,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5328,7 +5279,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false }, // No Most Watched page for Russian
       photoGalleryPage: {
         environments: {
           live: {
@@ -5380,7 +5330,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5465,11 +5415,10 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -5570,12 +5519,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/serbian/cyr/23279016'], // CPS video
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5627,7 +5575,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5757,12 +5705,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/serbian/lat/23279016'], // CPS video
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5814,7 +5761,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -5918,12 +5865,11 @@ module.exports = () => ({
             paths: [
               '/sinhala/23248970', // CPS MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5975,7 +5921,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6141,12 +6087,11 @@ module.exports = () => ({
               '/somali/hayadeed-23269042', // CPS MAP with video clip
               '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6198,7 +6143,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6250,7 +6195,6 @@ module.exports = () => ({
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
         environments: {
@@ -6270,7 +6214,7 @@ module.exports = () => ({
         smoke: false,
       },
       mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: undefined,
         smoke: false,
@@ -6424,12 +6368,11 @@ module.exports = () => ({
               // '/swahili/media-23268999', // CPS MAP with live stream
               '/swahili/michezo/2016/07/160712_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6481,7 +6424,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6648,12 +6591,11 @@ module.exports = () => ({
               '/tamil/india-23268994', // CPS MAP with video clip
               '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6705,7 +6647,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6829,12 +6771,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/telugu/international-23263261'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6886,7 +6827,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -6986,12 +6927,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/thai/23122810'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7007,13 +6947,13 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       storyPage: {
         environments: {
           live: {
             paths: ['/thai/international-53381389'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/thai/23124008'],
@@ -7024,7 +6964,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -7043,7 +6983,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7200,12 +7140,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/tigrinya/news-23263262'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7257,7 +7196,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7362,12 +7301,11 @@ module.exports = () => ({
               '/turkce/media-23268997', // CPS MAP with video clip
               '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7419,7 +7357,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7529,7 +7467,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7581,7 +7518,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7691,7 +7628,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7743,7 +7679,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -7788,23 +7724,6 @@ module.exports = () => ({
     isWorldService: true,
     variant: 'default',
     pageTypes: {
-      idxPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       articles: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
@@ -7829,7 +7748,6 @@ module.exports = () => ({
         smoke: false,
       },
       mediaAssetPage: { environments: undefined, smoke: false },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
@@ -7948,12 +7866,11 @@ module.exports = () => ({
               '/ukrainian/other-news-23279018', // Ukrainian CPS
               '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian video (no Russian TC2 MAP)
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8003,10 +7920,6 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
-      },
-      idxPage: {
-        environments: undefined,
         smoke: false,
       },
       featureIndexPage: {
@@ -8175,12 +8088,11 @@ module.exports = () => ({
               '/urdu/world-23268929', // CPS MAP with video clip
               '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8232,7 +8144,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8403,12 +8315,11 @@ module.exports = () => ({
               '/uzbek/23279019', // CPS MAP Latin
               '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8438,10 +8349,10 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek/uzbekistan-53263099'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -8460,7 +8371,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8496,6 +8407,84 @@ module.exports = () => ({
           },
         },
         smoke: false,
+      },
+    },
+  },
+  uzbekCyr: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'cyr',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/cyr'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+      specialFeatures: {
+        cookieBanner: { environments: undefined, smoke: false },
+      },
+    },
+  },
+  uzbekLat: {
+    name: 'uzbek',
+    font: undefined,
+    isWorldService: true,
+    variant: 'lat',
+    pageTypes: {
+      articles: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/articles/cxj3rjxm6r0o/lat'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      topicPage: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+      specialFeatures: {
+        cookieBanner: { environments: undefined, smoke: false },
       },
     },
   },
@@ -8565,12 +8554,11 @@ module.exports = () => ({
               '/vietnamese/23222411', // CPS MAP with video clip
               '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8622,7 +8610,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8722,12 +8710,11 @@ module.exports = () => ({
           },
           local: {
             paths: ['/yoruba/media-23256797'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8779,7 +8766,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -8930,12 +8917,11 @@ module.exports = () => ({
               '/zhongwen/simp/uk-23283128', // CPS Audio
               '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -8987,7 +8973,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {
@@ -9138,12 +9124,11 @@ module.exports = () => ({
               '/zhongwen/trad/uk-23283128', // CPS Audio
               '/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: {
         environments: {
           live: {
@@ -9195,7 +9180,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
+
       featureIndexPage: {
         environments: {
           live: {

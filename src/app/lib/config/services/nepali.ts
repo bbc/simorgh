@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'ब्रेकिंग',
         postedAt: 'पोस्ट गरिएको',
         summary: 'सारांश',
+        shareButtonText: 'शेयर गर्नुहोस्',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'सारांश',
       error: {
@@ -262,11 +267,6 @@ export const service: DefaultServiceConfig = {
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
       numberOfItems: 5,
       hasMostRead: true,
-    },
-    mostWatched: {
-      header: 'धेरै हेरिएको',
-      numberOfItems: 10,
-      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

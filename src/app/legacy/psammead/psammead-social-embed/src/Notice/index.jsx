@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   getSansRegular,
@@ -62,9 +61,9 @@ const Notice = ({
   service,
   text,
   linkText,
-  linkTextSuffixVisuallyHidden,
+  linkTextSuffixVisuallyHidden = null,
   linkHref,
-  warningText,
+  warningText = null,
 }) => {
   const dictionary = dictionaryFactory({ provider });
   const [detokenisedLinkText, detokenisedLinkTextSuffix] = [
@@ -89,21 +88,6 @@ const Notice = ({
       {warningText && <small>{warningText}</small>}
     </Wrapper>
   );
-};
-
-Notice.defaultProps = {
-  linkTextSuffixVisuallyHidden: null,
-  warningText: null,
-};
-
-Notice.propTypes = {
-  provider: string.isRequired,
-  service: string.isRequired,
-  text: string.isRequired,
-  linkText: string.isRequired,
-  linkTextSuffixVisuallyHidden: string,
-  linkHref: string.isRequired,
-  warningText: string,
 };
 
 export default memo(Notice);

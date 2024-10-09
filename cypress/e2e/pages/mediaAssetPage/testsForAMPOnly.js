@@ -15,7 +15,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.getPageData({ service, pageType: 'cpsAsset', variant }).then(
+          cy.getPageData({ service, pageType: 'article', variant }).then(
             ({ body }) => {
               const {
                 data: { article: jsonData },

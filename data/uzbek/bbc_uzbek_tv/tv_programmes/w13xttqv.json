@@ -1,36 +1,37 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:brand:bbc_uzbek_tv/w13xttqv",
-    "locators": { "pid": "w172xcvcngjbyx7", "brandPid": "w13xttqv" },
+    "locators": { "pid": "w3ct6c2g", "brandPid": "w13xttqv" },
     "type": "WSTV",
     "createdBy": "bbc_uzbek_tv",
     "language": "uz",
-    "lastUpdated": 1608649311356,
-    "firstPublished": 1605621343000,
-    "lastPublished": 1605621343000,
-    "timestamp": 1605621343000,
+    "lastUpdated": 1726514931000,
+    "firstPublished": 1725925729000,
+    "lastPublished": 1725925729000,
+    "timestamp": 1725925729000,
     "options": {},
     "analyticsLabels": {
-      "pageTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur - BBC News O'zbek",
+      "pageTitle": "بی بی سی نیوز  - BBC News O'zbek",
       "pageIdentifier": "uzbek.bbc_uzbek_tv.tv_programmes.w13xttqv.page",
       "producerId": "96",
       "contentType": "player-episode",
       "producer": "UZBEK"
     },
+    "passport": { "home": "", "taggings": [] },
     "tags": {},
-    "version": "v1.3.11",
+    "version": "v1.4.48",
     "blockTypes": ["media"],
-    "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
-    "releaseDateTimeStamp": 1608595200000,
-    "atiAnalytics": {}
+    "title": "بی بی سی نیوز ",
+    "releaseDateTimeStamp": 1726444800000,
+    "useSensitiveOnwardJourneys": false
   },
   "content": {
     "blocks": [
       {
-        "id": "w172xcvcngjbyx7",
+        "id": "w3ct6c2g",
         "subType": "episode",
         "format": "Video",
-        "title": "22/12/2020 GMT",
+        "title": "16/09/2024 GMT",
         "synopses": {
           "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
           "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -40,37 +41,36 @@
         "advertising": false,
         "versions": [
           {
-            "versionId": "w1mshjqmsvqz831",
+            "versionId": "w4hr2f0n",
             "types": ["Original"],
             "duration": 900,
             "durationISO8601": "PT15M",
             "warnings": {},
             "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
+              "uk": true,
+              "nonUk": true,
+              "world": false
             },
-            "availableUntil": 1618185600000,
-            "availableFrom": 1608644700000,
+            "availableUntil": 1737936000000,
+            "availableFrom": 1726492500000,
             "availabilityStatus": "available"
           }
         ],
         "availability": "available",
         "smpKind": "programme",
+        "episodeTitle": "بی بی سی نیوز ",
         "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-    },
-    "locators": { "pid": "w172xcvcngjbyx7", "brandPid": "w13xttqv" },
+    "headlines": { "headline": "بی بی سی نیوز " },
+    "locators": { "pid": "w3ct6c2g", "brandPid": "w13xttqv" },
     "media": {
-      "id": "w172xcvcngjbyx7",
+      "id": "w3ct6c2g",
       "subType": "episode",
       "format": "Video",
-      "title": "22/12/2020 GMT",
+      "title": "16/09/2024 GMT",
       "synopses": {
         "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
         "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -80,42 +80,37 @@
       "advertising": false,
       "versions": [
         {
-          "versionId": "w1mshjqmsvqz831",
+          "versionId": "w4hr2f0n",
           "types": ["Original"],
           "duration": 900,
           "durationISO8601": "PT15M",
           "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1618185600000,
-          "availableFrom": 1608644700000,
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1737936000000,
+          "availableFrom": 1726492500000,
           "availabilityStatus": "available"
         }
       ],
       "availability": "available",
       "smpKind": "programme",
+      "episodeTitle": "بی بی سی نیوز ",
       "type": "media"
     },
     "indexImage": {
-      "id": "",
+      "id": "p06hkfxs",
       "subType": "index",
       "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
       "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-      "height": 0,
-      "width": 0,
-      "altText": null,
+      "height": 1080,
+      "width": 1920,
+      "altText": "logo1.jpg",
+      "caption": "BBC Uzbek logo",
       "copyrightHolder": null,
       "type": "image"
     },
-    "releaseDateTimestamp": 1608595200000,
-    "brand": {
-      "pid": "w13xttqv",
-      "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvcngjbyx7",
+    "releaseDateTimestamp": 1726444800000,
+    "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+    "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2g",
     "type": "ws_tv"
   },
   "relatedContent": {
@@ -130,15 +125,13 @@
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvcngj8204", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c0r", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvcngj8204",
+              "id": "w3ct6c0r",
               "subType": "episode",
               "format": "Video",
-              "title": "21/12/2020 GMT",
+              "title": "13/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -148,54 +141,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqmsvqwc5y",
+                  "versionId": "w4hr2dyy",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608558300000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1726233300000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1608508800000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvcngj8204",
+            "releaseDateTimestamp": 1726185600000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0r",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvc966vj0p", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c43", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvc966vj0p",
+              "id": "w3ct6c43",
               "subType": "episode",
               "format": "Video",
-              "title": "18/12/2020 GMT",
+              "title": "12/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -205,54 +195,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqmflfgt6h",
+                  "versionId": "w4hr2f29",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608299100000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1726146900000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1608249600000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966vj0p",
+            "releaseDateTimestamp": 1726099200000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c43",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvc966rm3l", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c7g", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvc966rm3l",
+              "id": "w3ct6c7g",
               "subType": "episode",
               "format": "Video",
-              "title": "17/12/2020 GMT",
+              "title": "11/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -262,54 +249,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqmflfcx9d",
+                  "versionId": "w4hr2f5n",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608212700000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1726060500000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1608163200000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966rm3l",
+            "releaseDateTimestamp": 1726012800000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7g",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvc966nq6h", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c5s", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvc966nq6h",
+              "id": "w3ct6c5s",
               "subType": "episode",
               "format": "Video",
-              "title": "16/12/2020 GMT",
+              "title": "10/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -319,54 +303,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqmflf90d9",
+                  "versionId": "w4hr2f3z",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608126300000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725974100000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1608076800000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966nq6h",
+            "releaseDateTimestamp": 1725926400000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5s",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvc966kt9d", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c2f", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvc966kt9d",
+              "id": "w3ct6c2f",
               "subType": "episode",
               "format": "Video",
-              "title": "15/12/2020 GMT",
+              "title": "09/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -376,54 +357,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqmflf63h6",
+                  "versionId": "w4hr2f0m",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608039900000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725887700000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966kt9d",
+            "releaseDateTimestamp": 1725840000000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2f",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvc966gxd9", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c0q", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvc966gxd9",
+              "id": "w3ct6c0q",
               "subType": "episode",
               "format": "Video",
-              "title": "14/12/2020 GMT",
+              "title": "06/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -433,54 +411,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqmflf36l3",
+                  "versionId": "w4hr2dyx",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607953500000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725628500000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966gxd9",
+            "releaseDateTimestamp": 1725580800000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0q",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvbxxx2cdv", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c42", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvbxxx2cdv",
+              "id": "w3ct6c42",
               "subType": "episode",
               "format": "Video",
-              "title": "11/12/2020 GMT",
+              "title": "05/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -490,54 +465,51 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqm2b3pnln",
+                  "versionId": "w4hr2f28",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607694300000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725542100000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607644800000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvbxxx2cdv",
+            "releaseDateTimestamp": 1725494400000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c42",
             "type": "ws_tv"
           },
           {
-            "headlines": {
-              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
-            },
-            "locators": { "pid": "w172xcvbxxwzghr", "brandPid": "w13xttqv" },
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c7f", "brandPid": "w13xttqv" },
             "media": {
-              "id": "w172xcvbxxwzghr",
+              "id": "w3ct6c7f",
               "subType": "episode",
               "format": "Video",
-              "title": "10/12/2020 GMT",
+              "title": "04/09/2024 GMT",
               "synopses": {
                 "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
                 "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
@@ -547,42 +519,689 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjqm2b3lrpk",
+                  "versionId": "w4hr2f5m",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607607900000,
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725455700000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p06hkfxs",
               "subType": "index",
               "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
               "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607558400000,
-            "brand": {
-              "pid": "w13xttqv",
-              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            "releaseDateTimestamp": 1725408000000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7f",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c5r", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c5r",
+              "subType": "episode",
+              "format": "Video",
+              "title": "03/09/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f3y",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725369300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvbxxwzghr",
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1725321600000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5r",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c2d", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c2d",
+              "subType": "episode",
+              "format": "Video",
+              "title": "02/09/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f0l",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725282900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1725235200000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2d",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c0p", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c0p",
+              "subType": "episode",
+              "format": "Video",
+              "title": "30/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2dyw",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1725023700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724976000000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0p",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c41", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c41",
+              "subType": "episode",
+              "format": "Video",
+              "title": "29/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f27",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724937300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724889600000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c41",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c7d", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c7d",
+              "subType": "episode",
+              "format": "Video",
+              "title": "28/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f5l",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724850900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724803200000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7d",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c5q", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c5q",
+              "subType": "episode",
+              "format": "Video",
+              "title": "27/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f3x",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724764500000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724716800000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5q",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c2c", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c2c",
+              "subType": "episode",
+              "format": "Video",
+              "title": "26/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f0k",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724678100000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724630400000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2c",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c0n", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c0n",
+              "subType": "episode",
+              "format": "Video",
+              "title": "23/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2dyv",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724418900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724371200000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c0n",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c40", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c40",
+              "subType": "episode",
+              "format": "Video",
+              "title": "22/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f26",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724332500000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724284800000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c40",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c7c", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c7c",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f5k",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724246100000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724198400000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c7c",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c5p", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c5p",
+              "subType": "episode",
+              "format": "Video",
+              "title": "20/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f3w",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724159700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724112000000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c5p",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "بی بی سی نیوز " },
+            "locators": { "pid": "w3ct6c2b", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w3ct6c2b",
+              "subType": "episode",
+              "format": "Video",
+              "title": "19/08/2024 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr2f0j",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1737936000000,
+                  "availableFrom": 1724073300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "episodeTitle": "بی بی سی نیوز ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p06hkfxs",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 1080,
+              "width": 1920,
+              "altText": "logo1.jpg",
+              "caption": "BBC Uzbek logo",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1724025600000,
+            "brand": { "pid": "w13xttqv", "title": "بی بی سی نیوز " },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w3ct6c2b",
             "type": "ws_tv"
           }
         ]

@@ -1,22 +1,59 @@
 {
   "language": "fr",
-  "brandTitle": "Dunia Pagi Ini",
-  "episodeTitle": "18/05/2020 GMT",
+  "brandTitle": "BBC Info",
+  "episodeTitle": "BBC Info",
   "headline": "BBC Info",
   "shortSynopsis": "Le journal télévisé international de BBC Afrique.",
   "id": "urn:bbc:ares:ws_media:brand:bbc_afrique_tv/w13xttmz",
-  "summary": "Le journal télévisé international de BBC Afrique.",
   "contentType": "player-episode",
-  "episodeId": "w172xc9mmckr8m6",
+  "episodeId": "w172yrnhsjqw4c9",
   "masterBrand": "bbc_afrique_tv",
-  "releaseDateTimeStamp": 1589760000000,
+  "releaseDateTimeStamp": 1679011200000,
   "pageTitle": "BBC Info - BBC News Afrique",
-  "pageIdentifier": "afrique.bbc_afrique_tv.w172xc9mmckr8m6.page",
+  "pageIdentifier": "afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page",
   "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
   "promoBrandTitle": "BBC Info",
   "durationISO8601": "PT15M",
   "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
   "metadata": {
     "type": "On Demand TV"
-  }
+  },
+  "mediaBlocks": [
+    {
+      "type": "tvMedia",
+      "model": {
+        "id": "w172yrnhsjqw4c9",
+        "subType": "episode",
+        "format": "Video",
+        "title": "17/03/2023 GMT",
+        "synopses": {
+          "short": "Le journal télévisé international de BBC Afrique.",
+          "medium": "Le journal télévisé international de BBC Afrique."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1msk0thd8j6rng",
+            "types": ["Original"],
+            "duration": 900,
+            "durationISO8601": "PT15M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1679081400000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "episodeTitle": "BBC Info",
+        "type": "media"
+      }
+    }
+  ]
 }

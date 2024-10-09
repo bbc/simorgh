@@ -203,7 +203,7 @@ exports[`AMP Most Read Page Footer Cookie Settings Button should match text and 
 
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`AMP Most Read Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -230,47 +230,54 @@ exports[`AMP Most Read Page Header Navigation link should match text and url 3`]
 
 exports[`AMP Most Read Page Header Navigation link should match text and url 4`] = `
 {
+  "text": "Elecciones EE.UU. 2024",
+  "url": "/mundo/topics/c1v8en6r2qgt",
+}
+`;
+
+exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
+{
   "text": "Hay Festival",
   "url": "/mundo/topics/cr50y7p7qyqt",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 10`] = `
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Most Read Page Header Navigation link should match text and url 11`] = `
 {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/topics/c404v5z1k8wt",

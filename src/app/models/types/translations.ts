@@ -30,6 +30,11 @@ export interface Translations {
     breaking: string;
     postedAt: string;
     summary: string;
+    shareButtonText: string;
+  };
+  downloads?: {
+    instructions?: string;
+    title?: string;
   };
   gist?: string;
   error: {
@@ -187,6 +192,7 @@ export interface Translations {
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;
   infoBannerLabel?: string;
+  ugc?: Partial<UgcTranslations>;
 }
 
 export interface TranslationsError {
@@ -210,4 +216,62 @@ export interface DescriptionStringBuilder {
 export type OnDemandRadioTvTranslations = {
   title?: string;
   subtitle?: string;
+};
+
+export type UgcTranslations = {
+  // No JavaScript
+  noJsHeading: string;
+  noJsDescription: string;
+
+  // Optional
+  optional: string;
+
+  // File upload
+  fileUploadLiveRegionText: string;
+  fileUploadLiveRegionUpdateText: string;
+  fileUploadButton: string;
+  fileUploadListHeading: string;
+  fileUploadRemoveButton: string;
+
+  // Submit
+  submitButton: string;
+
+  // Validation
+  errorSummary: string;
+  validationRequired: string;
+  validationInvalidEmail: string;
+  validationInvalidTelephone: string;
+  validationFilesNotEnough: string;
+  validationFilesTooMany: string;
+  validationFilesInvalidType: string;
+  validationFilesTooSmall: string;
+  validationFilesSizeExceeded: string;
+  validationWordLimit: string;
+  referenceNumber: string;
+  submissionInfoSignedOutMessage: string;
+  retentionPeriodDays: string;
+  privacyInfoHtml: string;
+  emailToHtml: string;
+  removalGuidelineText: string;
+
+  // Form Screen
+  dataPolicyHeading: string;
+
+  // Uploading Screen
+  uploadingHeading: string;
+  uploadingDescription: string;
+
+  // Success Screen
+  successHeading: string;
+  successDescription: string;
+  privacyPolicyLinkHref: string;
+  privacyPolicyLinkText: string;
+
+  // Error Screen
+  errorHeading: string;
+  errorDescription: string;
+
+  // Closed Screen
+  closedHeading: string;
+  closedDescription: string;
 };

@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import useOperaMiniDetection from '.';
 
 describe('useOperaMiniDetection', () => {

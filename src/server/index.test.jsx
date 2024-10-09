@@ -978,21 +978,6 @@ describe('Server', () => {
     });
   });
 
-  describe('IDX json', () => {
-    it('should serve a file for valid idx paths', async () => {
-      const { body } = await makeRequest('/ukrainian/ukraine_in_russian.json');
-      expect(body.data.article).toEqual(
-        expect.objectContaining({ content: expect.any(Object) }),
-      );
-    });
-    it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest(
-        '/some-service/ukraine_in_russian.json',
-      );
-      expect(statusCode).toEqual(500);
-    });
-  });
-
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
@@ -1479,7 +1464,9 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
-    expect(header.vary).toBe('mvt-simorgh_dark_mode, Accept-Encoding');
+    expect(header.vary).toBe(
+      'X-Country, mvt-simorgh_dark_mode, Accept-Encoding',
+    );
   });
 
   it(`should not add mvt experiment header names to vary if they are not enabled`, async () => {
@@ -1490,7 +1477,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
-    expect(header.vary).toBe('Accept-Encoding');
+    expect(header.vary).toBe('X-Country, Accept-Encoding');
   });
 
   it(`should not add mvt experiment header names to vary if on AMP`, async () => {
@@ -1502,7 +1489,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
-    expect(header.vary).toBe('Accept-Encoding');
+    expect(header.vary).toBe('X-Country, Accept-Encoding');
   });
 
   it(`should set isUK value to true when 'x-bbc-edge-isuk' is set to 'yes'`, async () => {

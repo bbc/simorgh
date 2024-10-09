@@ -45,18 +45,19 @@ export const service: DefaultServiceConfig = {
     frontPageTitle: 'Berita',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Investigasi: Skandal Adopsi',
+      title: 'Whatsapp',
+      brandTitle: 'Akun resmi kami di WhatsApp',
       brandDescription:
-        'Investigasi untuk menyibak tabir adopsi ilegal dari Indonesia ke Belanda di masa lalu',
+        'Liputan mendalam BBC News Indonesia langsung di WhatsApp Anda.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/448xn/p0btnm4z.jpg',
-        alt: 'Investigasi: Skandal Adopsi',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jtrf6c.png',
+        alt: 'BBC News Indonesia - Kini hadir di',
       },
       linkLabel: {
-        text: 'Episode',
-        href: 'https://www.bbc.com/indonesia/podcasts/p0btnmzx',
+        text: 'Klik di sini',
+        href: 'https://whatsapp.com/channel/0029VafUgPX42DcbVwVCgZ3x',
       },
       skipLink: {
         text: 'Lewati %title% dan lanjutkan membaca',
@@ -92,6 +93,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'Terbaru',
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
+        shareButtonText: 'Kirim',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'Rangkuman',
       error: {
@@ -288,11 +294,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'Terpopuler',
-      numberOfItems: 5,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: true,
       header: 'Siaran radio',
@@ -349,10 +350,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Berita',
         url: '/indonesia',
-      },
-      {
-        title: 'Pemilu 2024',
-        url: '/indonesia/topics/ck0mgrlgyplt',
       },
       {
         title: 'Indonesia',

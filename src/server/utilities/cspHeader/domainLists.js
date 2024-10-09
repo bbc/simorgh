@@ -78,4 +78,6 @@ export const advertisingServiceCountryDomains = [
   'https://*.google.lk',
   'https://*.google.lv',
   'https://*.google.ge',
+  'https://*.covatic.io',
+  'https://*.doubleverify.com',
 ];

@@ -2,14 +2,7 @@
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
-exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=worldnews%3A%3Aarabic.worldnews.2015.11.151120_t_arabic_av.page&amp;x1=[urn%3Abbc%3Atopcat%3Acurie%3Aasset%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B4%D8%B1%D9%83%D8%A9%2520%D8%B4%D8%A7%D8%B1%D8%A8%2520%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2520%D8%AA%D8%AD%D8%AB%2520%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2520%D8%B9%D9%84%D9%89%2520%D8%B4%D8%B1%D8%A7%D8%A1%2520%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2520-%2520BBC%2520News%2520%D8%B9%D8%B1%D8%A8%D9%8A]&amp;x11=[2015-11-20T10%3A09%3A33.000Z]&amp;x12=[2015-11-20T10%3A09%3A33.000Z]"/>"`;
-
-exports[`Canonical Media Asset Page Apple iTunes App meta tag should match name and content 1`] = `
-{
-  "content": "app-id=558497376, app-argument=http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av?utm_medium=banner&utm_content=apple-itunes-app",
-  "name": "apple-itunes-app",
-}
-`;
+exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;x1=[urn%3Abbc%3Atopcat%3Acurie%3Aasset%3A22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B4%D8%B1%D9%83%D8%A9%2520%D8%B4%D8%A7%D8%B1%D8%A8%2520%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA%2520%D8%AA%D8%AD%D8%AB%2520%D9%85%D9%88%D8%B8%D9%81%D9%8A%D9%87%D8%A7%2520%D8%B9%D9%84%D9%89%2520%D8%B4%D8%B1%D8%A7%D8%A1%2520%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7%2520-%2520BBC%2520News%2520%D8%B9%D8%B1%D8%A8%D9%8A]&amp;x11=[2015-11-20T10%3A09%3A33.000Z]&amp;x12=[2015-11-20T10%3A09%3A33.000Z]"/>"`;
 
 exports[`Canonical Media Asset Page Footer Anchors should match text and url 1`] = `
 {
@@ -69,7 +62,7 @@ exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`]
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Media Asset Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -118,29 +111,25 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
 {
   "text": "تحقيقات",
-  "url": "/arabic/tv-and-radio-42414864",
+  "url": "/arabic/topics/c51nnzdeg9zt",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 {
   "text": "بودكاست",
-  "url": "/arabic/tv-and-radio-52067221",
+  "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 {
   "text": "برامجنا",
-  "url": "/arabic/tv-and-radio-37728883",
+  "url": "/arabic/topics/crgyknwdlwnt",
 }
 `;
 
 exports[`Canonical Media Asset Page Main heading should match text 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
-
-exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
-
-exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"`;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -245,7 +234,7 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
         "width": 1024,
       },
       "inLanguage": {
@@ -269,29 +258,16 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
         "name": "BBC News عربي",
         "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
       "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
     },
   ],
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
-{
-  "@context": "http://schema.org",
-  "@type": "VideoObject",
-  "description": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-  "duration": null,
-  "embedURL": "https://www.test.bbc.com/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
-  "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-  "thumbnailUrl": "https://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
-  "uploadDate": "2015-11-20T10:09:33.000Z",
-}
-`;
-
 exports[`Canonical Media Asset Page SEO OG description 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
-exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+exports[`Canonical Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
 
 exports[`Canonical Media Asset Page SEO OG image alt 1`] = `"BBC News عربي"`;
 
@@ -317,7 +293,7 @@ exports[`Canonical Media Asset Page SEO Twitter description 1`] = `"شركة ش�
 
 exports[`Canonical Media Asset Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_arabic/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg"`;
 
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCArabic"`;
 

@@ -22,6 +22,7 @@ import {
   DARK_SALTIRE,
   DIM_GREY,
   EBON,
+  ERROR_CORE,
   GHOST,
   GREY_10,
   GREY_11,
@@ -50,6 +51,8 @@ import {
   POSTBOX,
   POSTBOX_30,
   RHINO,
+  SERVICE_NEUTRAL_CORE,
+  SERVICE_NEUTRAL_DARK,
   SHADOW,
   SPORT_MIST,
   SPORT_SILVER,
@@ -57,6 +60,7 @@ import {
   SPORT_YELLOW_30,
   STONE,
   STORM,
+  SUCCESS_CORE,
   WEATHER_BLUE,
   WHITE,
 } from './palette';
@@ -68,6 +72,7 @@ import {
   GROUP_2_MAX_WIDTH,
   GROUP_2_MIN_WIDTH,
   GROUP_2_ONLY,
+  GROUP_1_AND_GROUP_2,
   GROUP_3_MAX_WIDTH,
   GROUP_3_MIN_WIDTH,
   GROUP_3_ONLY,
@@ -75,7 +80,7 @@ import {
   GROUP_4_MIN_WIDTH,
   GROUP_4_ONLY,
   GROUP_5_MIN_WIDTH,
-  HIGH_CONTRAST,
+  FORCED_COLOURS,
 } from './mediaQueries';
 import {
   HALF,
@@ -200,6 +205,7 @@ const withThemeProvider = ({
       GROUP_2_MAX_WIDTH,
       GROUP_2_MIN_WIDTH,
       GROUP_2_ONLY,
+      GROUP_1_AND_GROUP_2,
       GROUP_3_MAX_WIDTH,
       GROUP_3_MIN_WIDTH,
       GROUP_3_ONLY,
@@ -207,7 +213,7 @@ const withThemeProvider = ({
       GROUP_4_MIN_WIDTH,
       GROUP_4_ONLY,
       GROUP_5_MIN_WIDTH,
-      HIGH_CONTRAST,
+      FORCED_COLOURS,
     },
     palette: {
       ARCHIVE_BLUE,
@@ -224,6 +230,7 @@ const withThemeProvider = ({
       DARK_SALTIRE,
       DIM_GREY,
       EBON,
+      ERROR_CORE,
       GHOST,
       GREY_10,
       GREY_11,
@@ -252,6 +259,8 @@ const withThemeProvider = ({
       POSTBOX,
       POSTBOX_30,
       RHINO,
+      SERVICE_NEUTRAL_CORE,
+      SERVICE_NEUTRAL_DARK,
       SHADOW,
       SPORT_MIST,
       SPORT_SILVER,
@@ -259,6 +268,7 @@ const withThemeProvider = ({
       SPORT_YELLOW_30,
       STONE,
       STORM,
+      SUCCESS_CORE,
       WEATHER_BLUE,
       WHITE,
       BRAND_BACKGROUND,
@@ -279,14 +289,17 @@ const withThemeProvider = ({
     brandSVG,
     gridWidths,
     isDarkUi: false,
+    isLite: false,
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, pageType, derivedPageType } = useContext(RequestContext);
+    const { isAmp, isLite, pageType, derivedPageType } =
+      useContext(RequestContext);
 
     const theme = {
       ...themeConfig,
       isDarkUi: isDarkUiPage(pageType, derivedPageType),
+      isLite,
     };
 
     return (

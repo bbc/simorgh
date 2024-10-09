@@ -1,25 +1,15 @@
 import React, { useContext, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '#hooks/useToggle';
-import { string, bool } from 'prop-types';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+import ScriptLink from '#app/components/Header/ScriptLink';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import ScriptLink from './ScriptLink';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
-const Header = ({
-  /* eslint-disable react/prop-types */
-  brandRef,
-  borderBottom,
-  skipLink,
-  scriptLink,
-  linkId,
-  /* eslint-enable react/prop-types */
-}) => {
+const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -51,17 +41,14 @@ const Header = ({
   );
 };
 
-const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
-  const { pageType, isAmp, isApp } = useContext(RequestContext);
+const HeaderContainer = ({
+  scriptSwitchId = '',
+  renderScriptSwitch = true,
+}) => {
+  const { isAmp, isApp, pageType } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
-
-  // The article page toggles the nav bar based on environment
-  const showNavOnArticles = useToggle('navOnArticles').enabled;
-
-  // All other page types show the nav bar at all times
-  const showNav = showNavOnArticles || pageType !== ARTICLE_PAGE;
 
   const isOperaMini = useOperaMiniDetection();
 
@@ -82,7 +69,15 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
     </SkipLink>
   );
 
-  const shouldRenderScriptSwitch = scriptLink && renderScriptSwitch;
+  let shouldRenderScriptSwitch = false;
+
+  if (scriptLink && renderScriptSwitch) {
+    if (service === 'uzbek' && pageType !== ARTICLE_PAGE) {
+      shouldRenderScriptSwitch = false;
+    } else {
+      shouldRenderScriptSwitch = true;
+    }
+  }
 
   if (isApp) return null;
 
@@ -109,19 +104,9 @@ const HeaderContainer = ({ scriptSwitchId, renderScriptSwitch }) => {
           }
         />
       )}
-      {showNav && <NavigationContainer />}
+      <NavigationContainer />
     </header>
   );
-};
-
-HeaderContainer.propTypes = {
-  scriptSwitchId: string,
-  renderScriptSwitch: bool,
-};
-
-HeaderContainer.defaultProps = {
-  scriptSwitchId: '',
-  renderScriptSwitch: true,
 };
 
 export default HeaderContainer;

@@ -5,10 +5,8 @@ import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
-import { Services } from '../../models/types/global';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import Copyright from '../Copyright';
-import Caption from '../../legacy/containers/Caption';
+import Caption from '../Caption';
 import Image from '../Image';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -33,9 +31,9 @@ const shouldLazyLoad = (position: number[]) =>
 const renderCopyright = (copyright: string) =>
   copyright && <Copyright>{copyright}</Copyright>;
 
-const renderCaption = (block: object, type: string, service: Services) =>
+const renderCaption = (block: object, type: string) =>
   // @ts-expect-error - TODO: fix types for blocks
-  block && <Caption block={block} type={type} service={service} />;
+  block && <Caption block={block} type={type} />;
 
 type Props = {
   blocks: object[];
@@ -52,12 +50,10 @@ const ImageWithCaption = ({
   sizes,
   shouldPreload,
 }: Props) => {
-  const { service } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
 
-  if (!blocks) {
-    return null;
-  }
+  if (isLite) return null;
+  if (!blocks) return null;
 
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
   const altTextBlock = filterForBlockType(blocks, 'altText');
@@ -109,10 +105,11 @@ const ImageWithCaption = ({
         sizes={!isAmp ? sizes : undefined}
         isAmp={isAmp}
         placeholder
+        hasCaption
       >
         {renderCopyright(copyright || '')}
       </Image>
-      {captionBlock && renderCaption(captionBlock, 'image', service)}
+      {captionBlock && renderCaption(captionBlock, 'image')}
     </figure>
   );
 };

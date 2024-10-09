@@ -1,11 +1,15 @@
 /** @jsx jsx */
 
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
-import { jsx, useTheme } from '@emotion/react';
-
+import { jsx, useTheme, Theme } from '@emotion/react';
 import { OEmbedProps } from '#app/components/Embeds/types';
+import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { Tag } from '#app/components/LinkedData/types';
+import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { MediaOverrides } from '#app/models/types/media';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -32,7 +36,6 @@ import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
-import ArticleMediaPlayer from '../../legacy/containers/ArticleMediaPlayer';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
 import RelatedTopics from '../../legacy/containers/RelatedTopics';
@@ -41,13 +44,6 @@ import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import OEmbedLoader from '../../components/Embeds/OEmbed';
-
-import { OptimoBlock } from '../../models/types/optimo';
-import {
-  MetadataFormats,
-  MetadataTaggings,
-  MetadataTopics,
-} from '../../models/types/metadata';
 
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
@@ -67,33 +63,37 @@ import styles from './MediaArticlePage.styles';
 import {
   ComponentToRenderProps,
   EmbedHtmlProps,
-  MediaArticlePageProps,
   TimestampProps,
 } from './types';
+import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
-const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
-  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
-    useContext(ServiceContext);
+const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { pageType, service } = useContext(RequestContext);
+  const {
+    articleAuthor,
+    isTrustProjectParticipant,
+    showRelatedTopics,
+    brandName,
+  } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const headline = getHeadline(pageData);
+  const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
-  const topics = path<MetadataTopics>(['metadata', 'topics'], pageData);
-  const blocks = pathOr<OptimoBlock[]>(
-    [],
-    ['content', 'model', 'blocks'],
-    pageData,
-  );
+  const aboutTags = getAboutTags(pageData) as Tag[];
+  const topics = pageData?.metadata?.topics ?? [];
+  const blocks = pageData?.content?.model?.blocks ?? [];
 
-  const bylineBlock = blocks.find(block => block.type === 'byline');
-  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+  const bylineBlock = blocks.find(
+    block => block.type === 'byline',
+  ) as OptimoBylineBlock;
+
+  const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
@@ -103,14 +103,51 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
-  const taggings = path<MetadataTaggings>(
-    ['metadata', 'passport', 'taggings'],
-    pageData,
+  const taggings = pageData?.metadata?.passport?.taggings ?? [];
+
+  const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
+
+  // ATI
+  const {
+    metadata: { atiAnalytics, type },
+  } = pageData;
+
+  const isCpsMap = type === MEDIA_ASSET_PAGE;
+  const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
+    ?.split(':')
+    ?.includes('topcat');
+
+  const atiData = {
+    ...atiAnalytics,
+    ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
+
+  const isTransliterated =
+    ['serbian', 'zhongwen', 'uzbek'].includes(service) &&
+    pageType === ARTICLE_PAGE;
+
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const promoImageAltTextBlock = filterForBlockType(
+    promoImageBlocks,
+    'altText',
   );
-  const formats = path<MetadataFormats>(
-    ['metadata', 'passport', 'predicates', 'formats'],
-    pageData,
+
+  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+
+  const promoImageAltText =
+    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const promoImage = promoImageRawBlock?.model?.locator;
+
+  const showTopics = Boolean(
+    showRelatedTopics && topics.length > 0 && !isTransliterated,
   );
+
+  const isLiveMedia = checkIsLiveMedia(blocks);
+
+  const showTimestamp = Boolean(!hasByline && !isLiveMedia);
 
   const componentsToRender = {
     fauxHeadline,
@@ -118,19 +155,46 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     headline: headings,
     subheadline: headings,
     audio: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
-        <ArticleMediaPlayer {...props} />
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isCpsMap && styles.cafMediaPlayer,
+        ]}
+      >
+        <MediaLoader blocks={props.blocks as MediaBlock[]} />
       </div>
     ),
     video: (props: ComponentToRenderProps) => (
-      <div css={styles.mediaPlayer}>
-        <ArticleMediaPlayer {...props} />
+      <div
+        css={({ spacings }: Theme) => [
+          `padding-top: ${spacings.TRIPLE}rem`,
+          isCpsMap && styles.cafMediaPlayer,
+        ]}
+      >
+        <MediaLoader blocks={props.blocks as MediaBlock[]} />
       </div>
     ),
+    legacyMedia: (props: ComponentToRenderProps) => {
+      const mediaOverrides: MediaOverrides = {
+        model: { pageTitleOverride: headline },
+        type: 'mediaOverrides',
+      };
+
+      return (
+        <div
+          css={({ spacings }: Theme) => [
+            `padding-top: ${spacings.TRIPLE}rem`,
+            isCpsMap && styles.cafMediaPlayer,
+          ]}
+        >
+          <MediaLoader blocks={[props, mediaOverrides] as MediaBlock[]} />
+        </div>
+      );
+    },
     text,
-    byline: (props: ComponentToRenderProps) =>
+    byline: () =>
       hasByline ? (
-        <Byline {...props}>
+        <Byline blocks={bylineContribBlocks}>
           <Timestamp
             firstPublished={new Date(firstPublished).getTime()}
             lastPublished={new Date(lastPublished).getTime()}
@@ -146,7 +210,7 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
       />
     ),
     timestamp: (props: TimestampProps) =>
-      hasByline ? null : <Timestamp {...props} popOut={false} />,
+      showTimestamp ? <Timestamp {...props} popOut={false} /> : null,
     social: SocialEmbedContainer,
     embedHtml: (props: EmbedHtmlProps) => <EmbedHtml {...props} />,
     embedImages: (props: ComponentToRenderProps) => <EmbedImages {...props} />,
@@ -155,30 +219,9 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
     links: (props: ComponentToRenderProps) => <ScrollablePromo {...props} />,
   };
 
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
-  );
-
-  const promoImageAltText = path<string>(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
-
-  const promoImage = path<string>(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
-  );
-
-  // ATI
-  const {
-    metadata: { atiAnalytics },
-  } = pageData;
-
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}
@@ -201,11 +244,16 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         description={description}
         imageLocator={promoImage}
         imageAltText={promoImageAltText}
+        hasAmpPage={!isTC2Asset}
       />
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type={categoryName(isTrustProjectParticipant, taggings, formats)}
+        type={
+          isCpsMap
+            ? 'Article'
+            : categoryName(isTrustProjectParticipant, taggings, formats)
+        }
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
@@ -214,22 +262,21 @@ const MediaArticlePage = ({ pageData }: MediaArticlePageProps) => {
         imageLocator={promoImage}
       />
       <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
+        <div css={isCpsMap ? styles.fullWidthContainer : styles.primaryColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          {showRelatedTopics && topics && (
+          {showTopics && (
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
-              mobileDivider={false}
               backgroundColour={GREY_2}
               tagBackgroundColour={WHITE}
             />
           )}
           <RelatedContentSection content={blocks} />
         </div>
-        <SecondaryColumn pageData={pageData} />
+        {!isCpsMap && <SecondaryColumn pageData={pageData} />}
       </div>
     </div>
   );

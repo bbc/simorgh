@@ -6,7 +6,7 @@ import Url from 'url-parse';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
+import { styles } from './index.styles';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;

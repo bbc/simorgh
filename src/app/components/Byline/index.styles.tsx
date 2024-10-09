@@ -37,7 +37,7 @@ export default {
       fill: 'currentcolor',
       width: `${spacings.FULL + spacings.HALF}rem`,
       height: `${spacings.FULL + spacings.HALF}rem`,
-      [mq.HIGH_CONTRAST]: { fill: 'linkText' },
+      [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
   twitterChevron: ({ palette, spacings, mq }: Theme) =>
@@ -48,7 +48,7 @@ export default {
       fill: 'currentcolor',
       width: `${spacings.FULL}rem`,
       height: `${spacings.FULL}rem`,
-      [mq.HIGH_CONTRAST]: { fill: 'linkText' },
+      [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
   link: ({ mq }: Theme) =>
@@ -61,7 +61,7 @@ export default {
           textDecoration: 'underline',
         },
       },
-      [mq.HIGH_CONTRAST]: {
+      [mq.FORCED_COLOURS]: {
         '&:visited': {
           svg: {
             fill: 'VisitedText',

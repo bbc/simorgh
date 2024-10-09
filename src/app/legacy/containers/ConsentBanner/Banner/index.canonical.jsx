@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
-import { func, string, shape } from 'prop-types';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import BannerText from './Text';
@@ -25,13 +24,17 @@ const AcceptButton = ({ message, onClick, dataAttribute }) => (
   </button>
 );
 
-const RejectButton = ({ message, href, onClick, dataAttribute }) => (
+const RejectButton = ({ message, href, onClick, dataAttribute = {} }) => (
   <a href={href} onClick={onClick} {...dataAttribute}>
     {message}
   </a>
 );
 
-const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
+const CanonicalConsentBannerContainer = ({
+  type,
+  onReject = () => {},
+  onAccept,
+}) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
 
   const consentBannerConfig =
@@ -46,7 +49,15 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
   const headingRef = useRef(null);
 
   useEffect(() => {
-    headingRef.current?.focus();
+    const hasHashInUrl = window.location.hash;
+
+    if (hasHashInUrl) {
+      const urlHashValue = window.location.href.split('#')[1];
+      const isShareUrl = urlHashValue.startsWith('asset:');
+      if (!isShareUrl) headingRef.current?.focus();
+    } else {
+      headingRef.current?.focus();
+    }
   }, []);
 
   return (
@@ -76,35 +87,6 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
       />
     </ConsentBannerWrapper>
   );
-};
-
-AcceptButton.propTypes = {
-  message: string.isRequired,
-  onClick: func.isRequired,
-  dataAttribute: shape({}).isRequired,
-};
-
-RejectButton.propTypes = {
-  message: string.isRequired,
-  href: string.isRequired,
-  onClick: func.isRequired,
-  dataAttribute: shape({
-    'data-cookie-banner': string,
-  }),
-};
-
-RejectButton.defaultProps = {
-  dataAttribute: {},
-};
-
-CanonicalConsentBannerContainer.propTypes = {
-  type: string.isRequired,
-  onReject: func,
-  onAccept: func.isRequired,
-};
-
-CanonicalConsentBannerContainer.defaultProps = {
-  onReject: () => {},
 };
 
 export default CanonicalConsentBannerContainer;

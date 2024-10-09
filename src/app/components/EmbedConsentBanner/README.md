@@ -1,5 +1,3 @@
-# EmbedConsentBanner
-
 ## Description
 
 This component renders a consent banner that the user must 'accept' in order to view the embed.

@@ -26,12 +26,6 @@ export default {
   mostRead: {
     enabled: true,
   },
-  mostWatched: {
-    enabled: true,
-  },
-  navOnArticles: {
-    enabled: true,
-  },
   nielsenAnalytics: {
     enabled: true,
   },

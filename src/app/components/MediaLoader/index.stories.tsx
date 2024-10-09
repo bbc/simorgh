@@ -1,12 +1,15 @@
 import React from 'react';
 import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaLoaderComponent from '.';
-import ThemeProvider from '../ThemeProvider';
-import md from './README.md';
-import { aresMediaBlocks, clipMediaBlocks } from './fixture';
+import {
+  aresMediaBlocks,
+  aresMediaPortraitBlocks,
+  clipMediaBlocks,
+  legacyMediaBlock,
+} from './fixture';
 import { MediaBlock } from './types';
+import readme from './README.md';
 
 type Props = {
   pageType: PageTypes;
@@ -15,37 +18,27 @@ type Props = {
 };
 
 const Component = ({ service, pageType, blocks }: Props) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      id="testID"
-      isAmp={false}
-      isApp={false}
-      pageType={pageType}
-      pathname=""
-      service={service}
-      counterName="testCounterName"
-    >
-      <ThemeProvider service={service}>
-        <MediaLoaderComponent blocks={blocks} />
-      </ThemeProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <RequestContextProvider
+    id="testID"
+    isAmp={false}
+    isApp={false}
+    pageType={pageType}
+    pathname=""
+    service={service}
+  >
+    <MediaLoaderComponent blocks={blocks} />
+  </RequestContextProvider>
 );
 
 export default {
   title: 'Components/MediaLoader',
   Component,
   parameters: {
-    docs: {
-      component: {
-        title: 'MediaLoader',
-      },
-      page: md,
-    },
+    docs: { readme },
   },
 };
 
-export const ArticleMediaLoader = () => (
+export const Landscape = () => (
   <Component
     service="pidgin"
     pageType="article"
@@ -53,7 +46,23 @@ export const ArticleMediaLoader = () => (
   />
 );
 
-export const LivePageMediaLoader = () => (
+export const Portrait = () => (
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={aresMediaPortraitBlocks as MediaBlock[]}
+  />
+);
+
+export const LegacyMediaLoader = () => (
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={legacyMediaBlock as MediaBlock[]}
+  />
+);
+
+export const LivePageMedia = () => (
   <Component
     service="pidgin"
     pageType="live"

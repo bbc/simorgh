@@ -159,7 +159,7 @@ exports[`AMP Articles Footer Cookie Settings Button should match text and on han
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2024 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -172,8 +172,8 @@ exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 
 exports[`AMP Articles Header Navigation link should match text and url 2`] = `
 {
-  "text": "جنگ اسرائیل-غزه",
-  "url": "/persian/topics/clm0z4jgj3xt",
+  "text": "بحران خاورمیانه",
+  "url": "/persian/topics/cj31ldvmg1et",
 }
 `;
 
@@ -247,7 +247,22 @@ exports[`AMP Articles Header Navigation link should match text and url 12`] = `
 }
 `;
 
+exports[`AMP Articles Header Navigation link should match text and url 13`] = `
+{
+  "text": "فراتر از خبر",
+  "url": "/persian/topics/cxr3ex12k6et",
+}
+`;
+
 exports[`AMP Articles Image Caption should match text 1`] = `"توضیح تصویر، نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند "`;
+
+exports[`AMP Articles Image Copyright Non BBC should match snapshot 1`] = `
+<span
+  lang="en-GB"
+>
+  Getty Images
+</span>
+`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
@@ -258,13 +273,15 @@ exports[`AMP Articles Image should match snapshot 1`] = `
   fallback=""
   height="360"
   layout="responsive"
-  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg 640w"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg.webp 640w"
   width="640"
 />
 `;
 
 exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
+
+exports[`AMP Articles Paragraph should match paragraph text 1`] = `"شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید."`;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -365,6 +382,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       },
       "dateModified": "2019-07-23T15:47:11.893Z",
       "datePublished": "2019-05-28T13:42:44.996Z",
+      "description": "پهپادی که برایتان قهوه می‌آورد",
       "headline": "پهپادی که برایتان قهوه می‌آورد",
       "image": {
         "@type": "ImageObject",

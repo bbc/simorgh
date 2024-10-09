@@ -72,6 +72,11 @@ export const service: DefaultServiceConfig = {
         breaking: 'අලුත්ම පුවතක්',
         postedAt: 'යාවත්කාලීන කළේ',
         summary: 'සාරාංශය',
+        shareButtonText: 'යවන්න',
+      },
+      downloads: {
+        instructions: 'You can download and view today’s news.',
+        title: 'File Download',
       },
       gist: 'සාරාංශය',
       error: {
@@ -261,11 +266,6 @@ export const service: DefaultServiceConfig = {
       numberOfItems: 5,
       hasMostRead: true,
     },
-    mostWatched: {
-      header: 'වැඩියෙන්ම නැරඹූ',
-      numberOfItems: 10,
-      hasMostWatched: true,
-    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
@@ -312,6 +312,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'මුල් පිටුව',
         url: '/sinhala',
+      },
+      {
+        title: 'ජනාධිපතිවරණය 2024',
+        url: '/sinhala/topics/cg3e84v9ky0t',
       },
       {
         title: 'ශ්‍රී ලංකා',

@@ -1,6 +1,6 @@
 import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
 
-export default ({ service, pageType, variant }) => {
+export default ({ service, pageType, variant, currentPath }) => {
   let topicId;
   let variantTopicId;
   let topicTitle;
@@ -31,51 +31,50 @@ export default ({ service, pageType, variant }) => {
             otherVariant = variant === 'simp' ? 'trad' : 'simp';
           }
         }
-
         // Gets the topic page data for all the tests
-        cy.getPageData({
-          service,
-          pageType: 'topic',
-          variant,
-        }).then(({ body }) => {
-          topicTitle = body.data.title;
-          variantTopicId = body.data.variantTopicId;
-          pageCount = body.data.pageCount;
-          numberOfItems = body.data.curations[0].summaries.length;
-          firstItemHeadline = body.data.curations[0].summaries[0].title;
-          messageBanner = body.data.curations.find(
+        cy.getPageDataFromWindow().then(data => {
+          const { pageData } = data;
+          topicTitle = pageData.title;
+          variantTopicId = pageData.scriptSwitchId;
+          pageCount = pageData.pageCount;
+          numberOfItems = pageData.curations?.[0]?.summaries.length;
+          firstItemHeadline = pageData.curations?.[0]?.summaries?.[0]?.title;
+          messageBanner = pageData.curations?.find(
             curation =>
               curation.visualProminence === 'NORMAL' &&
               curation.visualStyle === 'BANNER',
           );
         });
+
         cy.log(`topic id ${topicId}`);
       }
     });
 
     describe(`Page content`, () => {
+      beforeEach(() => {
+        // make sure we always start from the path being tested to make the tests deterministic and not reliant on order
+        // as otherwise some tests can change the path and affect subsequent tests (i.e. when you change page script)
+        cy.visit(currentPath);
+      });
       it('should render a H1, which contains/displays topic title', () => {
         cy.log(Cypress.env('currentPath'));
-
         cy.get('h1').should('contain', topicTitle);
       });
+
       it('should render the correct number of items', () => {
         // Print SIMORGH_DATA if the number of promos on the page does not match
-        // the number of promos in the data from the BFF
+        // the number of promos in the data from window.SIMORGH_DATA
         // This is to help find out why sometimes a promo doesn't show on the page
-        cy.log(`Number of promos in BFF data${numberOfItems}`);
+        cy.log(`Number of promos in SIMORGH data${numberOfItems}`);
         const selector = '[data-testid="topic-promos"]:first > li';
         const promoCount = Cypress.$(selector).length;
         cy.log(`Number of promos on the page${promoCount}`);
-
         if (promoCount !== numberOfItems) {
           cy.window().then(win => {
             const pageData = win.SIMORGH_DATA;
-
             cy.log(pageData);
           });
         }
-
         // Checks number of items on page
         cy.get('[data-testid="topic-promos"]')
           .first()
@@ -83,7 +82,12 @@ export default ({ service, pageType, variant }) => {
           .its('length')
           .should('eq', numberOfItems);
       });
-      it.skip('First item has correct headline', () => {
+
+      it('First item has correct headline', () => {
+        if (!firstItemHeadline) {
+          cy.log('No first item headline exists on Page!');
+          return;
+        }
         cy.log(firstItemHeadline);
         // Goes down into the first item's h2 text and compares to title
         cy.get('[data-testid="topic-promos"]')
@@ -91,10 +95,11 @@ export default ({ service, pageType, variant }) => {
           .children()
           .first()
           .within(() => {
-            cy.get('h2').should('have.text', firstItemHeadline);
+            cy.get('h2').should('include.text', firstItemHeadline);
           });
       });
-      it('Clicking the first item should navigate to the correct page (goes to live article)', () => {
+
+      it('Clicking the first item should navigate to the correct page (goes to live item)', () => {
         // Goes down into the first item's href
         cy.get('[data-testid="topic-promos"]')
           .first()
@@ -108,10 +113,11 @@ export default ({ service, pageType, variant }) => {
                 cy.url().should('eq', $href);
               });
           });
+        cy.go('back');
       });
+
       it('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
-          cy.go('back');
           cy.get(
             `[data-testid="${`message-banner-${idSanitiser(
               messageBanner.title,
@@ -133,10 +139,9 @@ export default ({ service, pageType, variant }) => {
         }
       });
     });
+
     describe(`Pagination`, () => {
       it('should show pagination if there is more than one page', () => {
-        // First return to the topics page. Last test has page on article
-        cy.go('back');
         cy.log(`pagecount is ${pageCount}`);
         // Checks pagination only is on page if there is more than one page
         if (pageCount > 1) {
@@ -145,6 +150,7 @@ export default ({ service, pageType, variant }) => {
           cy.get('[data-testid="topic-pagination"]').should('not.exist');
         }
       });
+
       it('should have the correct max pagination number', () => {
         // Gets last pagination element and checks the number is the length of pageCount
         if (pageCount > 1) {
@@ -163,13 +169,13 @@ export default ({ service, pageType, variant }) => {
             .first()
             .next()
             .click();
-
           cy.url().should('include', '?page=2');
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
         }
       });
+
       it('Page 2 does not have a fallback response', () => {
         const expectedContentType = 'text/html';
         const isErrorPage = pageType.includes('error');
@@ -184,6 +190,7 @@ export default ({ service, pageType, variant }) => {
           });
         });
       });
+
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {
           cy.get('[id="pagination-next-page"]').click();
@@ -193,6 +200,7 @@ export default ({ service, pageType, variant }) => {
           cy.log('No next button when on page 2 of 2');
         }
       });
+
       it('Last page number button navigates to last page', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
@@ -202,6 +210,7 @@ export default ({ service, pageType, variant }) => {
           cy.log('No pagination as there is only one page');
         }
       });
+
       it('Previous page button navigates to previous page (second to last)', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > span > a').click();
@@ -213,6 +222,7 @@ export default ({ service, pageType, variant }) => {
           cy.log('No pagination as there is only one page');
         }
       });
+
       it('Page 1 button navigates to page 1', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
@@ -222,6 +232,7 @@ export default ({ service, pageType, variant }) => {
           cy.log('No pagination as there is only one page');
         }
       });
+
       it('Above 400px does not show Page x of y', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination-summary"]').should(
@@ -231,6 +242,7 @@ export default ({ service, pageType, variant }) => {
           cy.log('No pagination as there is only one page');
         }
       });
+
       it('Below 400px shows Page x of y', () => {
         if (pageCount > 1) {
           cy.viewport(320, 480);
@@ -242,6 +254,7 @@ export default ({ service, pageType, variant }) => {
         }
       });
     });
+
     describe(`Script switch`, () => {
       it('Pages with 2 scripts should have a script switch button with correct other variant', () => {
         if (scriptSwitchServices.includes(service)) {
@@ -251,15 +264,14 @@ export default ({ service, pageType, variant }) => {
         }
         cy.log(Cypress.env('currentPath'));
       });
+
       it('Script switch button switches the script', () => {
         if (scriptSwitchServices.includes(service)) {
-          // clicks script switch
           cy.get(`[data-variant="${otherVariant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', otherVariant);
           // URL contains the correct topic ID
           cy.url().should('contain', variantTopicId);
-
           // clicks script switch
           cy.get(`[data-variant="${variant}"]`).click();
           // URL contains correct variant after click

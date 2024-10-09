@@ -7,16 +7,18 @@ import {
   ReactSDKClient,
 } from '@optimizely/react-sdk';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { Article } from '#app/models/types/optimo';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
-import OptimizelyRecommendations, { ArticlePageType } from '.';
+import OptimizelyRecommendations from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
 
 // 005_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
+  setUser: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
   user: {
     attributes: {},
@@ -42,6 +44,19 @@ jest.mock('../ATIAnalytics/beacon', () => {
   };
 });
 
+jest.mock('#lib/config/optimizely', () => ({
+  flagId: '005_brasil_hybrid_recommendations',
+  viewClickAttributeId: 'wsoj',
+  variationMappings: {
+    hybrid_recs: 'datalabHybridRecommendations',
+    variation_1: 'datalabHybridRecommendationsV1x1',
+    variation_2: 'datalabHybridRecommendationsV1x2',
+    variation_3: 'datalabHybridRecommendationsV1x3',
+    variation_4: 'datalabHybridRecommendationsV1x4',
+    variation_5: 'datalabHybridRecommendationsV1x5',
+  },
+}));
+
 const makeMockFn =
   (variationMock: string | null) => (props: { children: unknown }) => {
     const { children } = props;
@@ -55,7 +70,7 @@ const makeMockFn =
     return null;
   };
 
-const renderContainer = (service: Services, pageData: ArticlePageType) => {
+const renderContainer = (service: Services, pageData: Article) => {
   const toggleState = {
     cpsRecommendations: {
       enabled: true,
@@ -104,7 +119,7 @@ describe('OptimizelyRecommendations', () => {
 
       const { getByText } = renderContainer(
         'portuguese',
-        samplePageData as unknown as ArticlePageType,
+        samplePageData as unknown as Article,
       );
 
       expect(
@@ -121,7 +136,7 @@ describe('OptimizelyRecommendations', () => {
 
       const { getByText } = renderContainer(
         'portuguese',
-        samplePageData as unknown as ArticlePageType,
+        samplePageData as unknown as Article,
       );
 
       expect(
@@ -143,7 +158,7 @@ describe('OptimizelyRecommendations', () => {
 
       const { getByText } = renderContainer(
         'portuguese',
-        sampleData as unknown as ArticlePageType,
+        sampleData as unknown as Article,
       );
 
       expect(

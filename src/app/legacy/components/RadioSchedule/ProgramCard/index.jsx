@@ -14,7 +14,6 @@ import {
   getMinion,
   getPica,
 } from '#psammead/gel-foundations/src/typography';
-import { shape, string, number, oneOfType } from 'prop-types';
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
@@ -125,18 +124,6 @@ const ProgramCard = ({ program, id, ...props }) => {
       </ButtonWrapper>
     </CardWrapper>
   );
-};
-
-ProgramCard.propTypes = {
-  program: shape({
-    state: string.isRequired,
-    duration: string.isRequired,
-    startTime: oneOfType([number, string]).isRequired,
-    summary: string.isRequired,
-    link: string.isRequired,
-    brandTitle: string.isRequired,
-  }).isRequired,
-  id: string.isRequired,
 };
 
 export default ProgramCard;

@@ -2,14 +2,7 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
-exports[`Canonical Story Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=world%3A%3Amundo.world.story.51266689.page&amp;x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2520qu%C3%A9%2520cambiar%C3%A1%2520para%2520visitar%2C%2520trabajar%2520y%2520estudiar%2520en%2520Reino%2520Unido%2520tras%2520la%2520salida%2520del%2520pa%C3%ADs%2520de%2520la%2520Uni%C3%B3n%2520Europea%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-30T06%3A35%3A49.000Z]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]"/>"`;
-
-exports[`Canonical Story Page Apple iTunes App meta tag should match name and content 1`] = `
-{
-  "content": "app-id=515255747, app-argument=http://localhost:7080/mundo/noticias-internacional-51266689?utm_medium=banner&utm_content=apple-itunes-app",
-  "name": "apple-itunes-app",
-}
-`;
+exports[`Canonical Story Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=62&amp;p=mundo.world.story.51266689.page&amp;x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3Afaf2993a-dcc0-0746-81a6-a6aca4cd59b1]&amp;x2=[responsive]&amp;x3=[news-mundo]&amp;x4=[es]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Brexit%3A%2520qu%C3%A9%2520cambiar%C3%A1%2520para%2520visitar%2C%2520trabajar%2520y%2520estudiar%2520en%2520Reino%2520Unido%2520tras%2520la%2520salida%2520del%2520pa%C3%ADs%2520de%2520la%2520Uni%C3%B3n%2520Europea%2520-%2520BBC%2520News%2520Mundo]&amp;x11=[2020-01-30T06%3A35%3A49.000Z]&amp;x12=[2020-01-30T06%3A35%3A49.000Z]&amp;x16=[WS%20-%20Give%20me%20perspective]&amp;x17=[Explainer]"/>"`;
 
 exports[`Canonical Story Page Footer Anchors should match text and url 1`] = `
 {
@@ -76,7 +69,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -103,47 +96,54 @@ exports[`Canonical Story Page Header Navigation link should match text and url 3
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
+  "text": "Elecciones EE.UU. 2024",
+  "url": "/mundo/topics/c1v8en6r2qgt",
+}
+`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+{
   "text": "Hay Festival",
   "url": "/mundo/topics/cr50y7p7qyqt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
 {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/topics/c404v5z1k8wt",
@@ -157,9 +157,9 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
   alt="A person holding a union jack umbrella in front of Big Ben"
   class="bbc-139onq"
   height="549"
-  sizes="(min-width: 1008px) 645px, 100vw"
-  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 800w"
   style="aspect-ratio:976 / 549"
   width="976"
 />
@@ -171,71 +171,71 @@ exports[`Canonical Story Page Main heading should match text 1`] = `"Brexit: qu�
 
 exports[`Canonical Story Page Most Read has item with rank 1`] = `
 {
-  "text": "Qué se sabe de las 5 personas que viajan en el sumergible desaparecido que se dirigía al Titanic",
-  "url": "/mundo/noticias-internacional-65957893",
+  "text": "3 posibles escenarios en Venezuela tras el triunfo de Maduro rechazado por la oposición",
+  "url": "https://www.bbc.com/mundo/articles/c3gekqplyn4o",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 2`] = `
 {
-  "text": "Desaparece un sumergible que lleva a turistas y expertos a visitar los restos del Titanic",
-  "url": "/mundo/noticias-internacional-65936312",
+  "text": "El Consejo Nacional Electoral anuncia el triunfo de Nicolás Maduro en las elecciones presidenciales de Venezuela y la oposición rechaza los resultados",
+  "url": "https://www.bbc.com/mundo/articles/cn38n9knl3no",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 3`] = `
 {
-  "text": ""Firmas un descargo de responsabilidad que enumera todas las formas en que podrías morir": cómo es viajar a bordo del sumergible Titán que se perdió camino al Titanic",
-  "url": "https://www.bbc.com/mundo/articles/cy0jjgx7579o",
+  "text": ""Difíciles de creer": los cuestionamientos internacionales a los resultados que dieron ganador a Maduro en Venezuela",
+  "url": "https://www.bbc.com/mundo/articles/cz47dxzyzd1o",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 4`] = `
 {
-  "text": "La compleja operación para rescatar el sumergible desaparecido con 5 personas que iban a visitar los restos del Titanic",
-  "url": "/mundo/noticias-internacional-65957851",
+  "text": "Cómo funciona el proceso electoral en Venezuela y por qué han puesto en duda el resultado de los comicios",
+  "url": "https://www.bbc.com/mundo/articles/c2x0vlnzm17o",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 5`] = `
 {
-  "text": "Cómo es Titán, el sumergible con 5 personas a bordo que se perdió cuando iba a observar los restos del Titanic",
-  "url": "https://www.bbc.com/mundo/articles/c4n998dnnw2o",
+  "text": ""Hay un nuevo presidente electo y es Edmundo González": la oposición de Venezuela rechaza la victoria de Maduro anunciada por el CNE",
+  "url": "https://www.bbc.com/mundo/articles/cv2gwyg11z1o",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 6`] = `
 {
-  "text": ""Ahora que los selk’nam son la imagen de Chile, contemos cómo los matamos": Felipe Gálvez, director de la película premiada en Cannes "Los colonos"",
-  "url": "/mundo/noticias-65930070",
+  "text": "La elaborada operación encubierta con la que engañaron al capo de las drogas "El Mayo" Zambada para llevarlo a EE.UU.",
+  "url": "https://www.bbc.com/mundo/articles/c4ngy135jw5o",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 7`] = `
 {
-  "text": ""Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidades",
-  "url": "/mundo/noticias-65372150",
+  "text": "¿Es la comida fermentada buena para la salud de tus intestinos? Y otras 8 preguntas sobre estos alimentos",
+  "url": "https://www.bbc.com/mundo/articles/c3g0r9vgl9lo",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 8`] = `
 {
-  "text": "La innovadora solución de Japón para las escuelas abandonadas por falta de estudiantes",
-  "url": "/mundo/noticias-65919722",
+  "text": ""Si alguien como El Mayo soltara toda la información, sería algo potencialmente desestabilizador para las relaciones de México y EE.UU."",
+  "url": "https://www.bbc.com/mundo/articles/cg3jxdg727xo",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 9`] = `
 {
-  "text": "Dónde se hundió exactamente el Titanic y cómo encontraron sus restos en 1985",
-  "url": "/mundo/noticias-internacional-65957299",
+  "text": "La física cuyo descubrimiento ayudó a predecir partículas como el bosón de Higgs y ahora recibe su doctorado (a los 98 años)",
+  "url": "https://www.bbc.com/mundo/articles/c4ngv9gr7qlo",
 }
 `;
 
 exports[`Canonical Story Page Most Read has item with rank 10`] = `
 {
-  "text": "Cómo el nuevo gasoducto de 600 km de Vaca Muerta puede ayudar a Argentina a salir de la crisis económica",
-  "url": "/mundo/noticias-america-latina-65851160",
+  "text": "Nicolás Maduro: "Hay que respetar al árbitro y que nadie pretenda manchar esta jornada bella"",
+  "url": "https://www.bbc.com/mundo/articles/cy945e5nen4o",
 }
 `;
 
@@ -324,17 +324,10 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
   "@context": "http://schema.org",
   "@graph": [
     {
-      "@type": "BackgroundNewsArticle",
+      "@type": "NewsArticle",
       "author": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-          "width": 1024,
-        },
-        "name": "BBC News Mundo",
-        "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
+        "@type": "Person",
+        "name": "Redacción  ",
       },
       "dateModified": "2020-01-30T06:35:49.000Z",
       "datePublished": "2020-01-30T06:35:49.000Z",

@@ -9,7 +9,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandHeadingContainer from '.';
 
 const releaseDateTimeStamp = 1587945600000;
-// eslint-disable-next-line react/prop-types
+
 const Component = ({ ariaHidden, idAttr, episodeTitle }) => (
   <ServiceContextProvider service="news">
     <OnDemandHeadingContainer

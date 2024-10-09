@@ -1,12 +1,17 @@
 import Head from 'next/head';
 import * as React from 'react';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 
-export const getStaticProps: GetStaticProps = () => {
+export const getServerSideProps: GetServerSideProps = async context => {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+  );
+
   return {
     props: {
       error: null,
@@ -15,11 +20,11 @@ export const getStaticProps: GetStaticProps = () => {
       page: null,
       pageData: {
         metadata: {
-            type: STATIC_PAGE,
+          type: STATIC_PAGE,
         },
       },
       pageType: STATIC_PAGE,
-      pathname: '/ws/languages',
+      pathname: context.resolvedUrl,
       service: 'ws',
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
@@ -31,11 +36,10 @@ const morphCSS1 = `@charset "CP850";@font-face{font-family:ReithSans;font-weight
 
 const morphCSS2 = `body{color:#404040;font-family:ReithSans,Arial,Helvetica,sans-serif}ol,ul{list-style:none}a:link{-webkit-tap-highlight-color:rgba(17,103,168,.3)}#core-navigation{display:none}.column-clearfix::after,.column-clearfix::before{content:"";display:block;height:0;overflow:hidden}.column-clearfix::after,.column-clearfix::before{clear:both}.units-list .unit+.unit{padding-top:9px}.units-list--separators .unit+.unit{padding-top:8px;border-top:1px solid #dcdcdc}.units-list--columning .unit+.unit{padding-top:0}.units-list .unit+.unit{padding-top:17px}#page{position:relative;z-index:10;background:#fff}.c-open{font-size:14px;padding-left:0;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}.container{padding-bottom:42px}.container ul{margin:0;padding:0}.story-body__h1{font-family:ReithSerif,Arial,Helvetica,sans-serif;font-size:1.5rem;line-height:1.125;color:#1e1e1e;font-weight:700;margin:0;}.column--primary{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding-right:16px;padding-top:12px}.group__title{font-family:ReithSerif,Arial,Helvetica,sans-serif;font-size:24px;font-size:1.5rem;line-height:1;text-rendering:optimizeLegibility;letter-spacing:-.0425em;font-weight:700;margin-bottom:.5em}.group-title-component{margin-top:40px}.unit{clear:both;margin-bottom:8px}.container{padding-left:8px;padding-right:8px}.hide{display:none}.atlas-languages-page a{text-decoration:none;color:inherit}.atlas-languages-page a:focus,.atlas-languages-page a:hover{color:#1167a8}.language-switcher{padding:8px 0; margin:0;}@media (max-width:600px){.group-title-component{float:none}.group-title-component:nth-child(2){clear:both}}@media (min-width:480px){.container{padding-left:16px;padding-right:16px}.unit{margin-bottom:16px}}@media (min-width:600px){.group-title-component{float:left;width:50%}.group-title-component:nth-child(3),.group-title-component:nth-child(5),.group-title-component:nth-child(7){clear:both}.story-body__h1{font-size:2.25rem}.column--primary{padding-top:24px}}@media (min-width:976px){.container{margin:0 auto;max-width:1008px}.group-title-component{float:left;width:25%}.group-title-component:nth-child(3),.group-title-component:nth-child(5),.group-title-component:nth-child(7){clear:none}.story-body__h1{font-size:2rem}.column--primary{padding-top:20px;float:left;width:976px}}@media (min-width:1280px){.container{margin:0 auto;max-width:63.4rem; padding:0}}`;
 
-// @ts-ignore
-const languageToggle = e => {
+const languageToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
   e.stopPropagation();
   const elements = document.querySelectorAll('.panel, .toggle');
-  for (let i = 0; i < elements.length; ++i) {
+  for (let i = 0; i < elements.length; i += 1) {
     const classNames = elements[i].className.split(' ');
     const indexOfHide = classNames.indexOf('hide');
     if (indexOfHide !== -1) {
@@ -47,7 +51,7 @@ const languageToggle = e => {
   }
 };
 
-const pageTitle = 'News in your language - BBC News';
+const pageTitle = 'News in your language - BBC World Service';
 const pageDescription = 'A list of BBC World Service language services';
 const lang = 'en';
 
@@ -93,6 +97,7 @@ const pageLayout = () => {
                     className="switcher"
                     id="switcher"
                     onClick={languageToggle}
+                    type="button"
                   >
                     <span className="toggle">Switch list to English</span>
                     <span className="toggle hide">
@@ -114,7 +119,7 @@ const pageLayout = () => {
                       </li>
                       <li id="afrique" className="unit">
                         <a href="https://www.bbc.com/afrique">
-                          L'actualité en Français
+                          L&#39;actualité en Français
                         </a>
                       </li>
                       <li id="hausa" className="unit">

@@ -17,9 +17,6 @@ import { service as pidginServiceConfig } from '../../../lib/config/services/pid
 import HeaderContainer from './index';
 
 const defaultToggleState = {
-  navOnArticles: {
-    enabled: true,
-  },
   scriptLink: {
     enabled: true,
   },
@@ -33,7 +30,6 @@ jest.mock('react-router-dom', () => ({
   useRouteMatch: () => ({ path: '/news', params: {} }),
 }));
 
-/* eslint-disable react/prop-types */
 const HeaderContainerWithContext = ({
   renderScriptSwitch = true,
   renderOptions,
@@ -124,6 +120,30 @@ describe(`Header`, () => {
         renderOptions: {
           pageType: FRONT_PAGE,
           service: 'serbian',
+          variant: 'cyr',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
+    it('should not render script link for uzbek when it is not an article page ', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: FRONT_PAGE,
+          service: 'uzbek',
+          variant: 'cyr',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+    });
+
+    it('should render script link for uzbek when it is an article page ', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: ARTICLE_PAGE,
+          service: 'uzbek',
           variant: 'cyr',
         },
       });

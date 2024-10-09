@@ -1,11 +1,9 @@
 import React, { PropsWithChildren } from 'react';
 
-import { withKnobs } from '@storybook/addon-knobs';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
+import { StoryArgs } from '#app/models/types/storybook';
 import ThemeProvider from '../../../../components/ThemeProvider';
 import { Services } from '../../../../models/types/global';
 
@@ -18,27 +16,31 @@ import metadata from './metadata.json';
 
 interface Props {
   service: Services;
+  isLite?: boolean;
 }
 
 interface ComponentProps extends Props {
   content: LatestMedia[];
 }
-const Component = ({ service, content }: PropsWithChildren<ComponentProps>) => (
+const Component = ({
+  service,
+  isLite,
+  content,
+}: PropsWithChildren<ComponentProps>) => (
   <RequestContextProvider
     isAmp={false}
     isApp={false}
+    isLite={isLite}
     pageType={MEDIA_ARTICLE_PAGE}
     service={service}
     pathname=""
     isUK
   >
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service}>
-        <ToggleContextProvider>
-          <LatestMediaSection content={content} />
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <ToggleContextProvider>
+      <ThemeProvider service={service}>
+        <LatestMediaSection content={content} />
+      </ThemeProvider>
+    </ToggleContextProvider>
   </RequestContextProvider>
 );
 
@@ -79,23 +81,46 @@ export default {
       },
     ],
   },
-  decorators: [withKnobs, withServicesKnob()],
 };
 
-export const MultipleLatestMediaWithCustomAltText = ({ service }: Props) => {
+export const MultipleLatestMediaWithCustomAltText = (
+  _: StoryArgs,
+  { service, isLite }: Props,
+) => {
   const pidginLatestMediaList = pidginArticle.data.secondaryData
     .latestMedia as LatestMedia[];
-  return <Component content={pidginLatestMediaList} service={service} />;
+  return (
+    <Component
+      content={pidginLatestMediaList}
+      service={service}
+      isLite={isLite}
+    />
+  );
 };
 
-export const MultipleLatestMediawithFallbackAltText = ({ service }: Props) => {
+export const MultipleLatestMediawithFallbackAltText = (
+  _: StoryArgs,
+  { service, isLite }: Props,
+) => {
   const hausaLatestMediaList = hausaArticle.data.secondaryData
     .latestMedia as LatestMedia[];
-  return <Component content={hausaLatestMediaList} service={service} />;
+  return (
+    <Component
+      content={hausaLatestMediaList}
+      service={service}
+      isLite={isLite}
+    />
+  );
 };
 
-export const SingleLatestMedia = ({ service }: Props) => {
+export const SingleLatestMedia = (_: StoryArgs, { service, isLite }: Props) => {
   const tamilLatestMediaList = tamilArticle.data.secondaryData
     .latestMedia as LatestMedia[];
-  return <Component content={tamilLatestMediaList} service={service} />;
+  return (
+    <Component
+      content={tamilLatestMediaList}
+      service={service}
+      isLite={isLite}
+    />
+  );
 };

@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/blocks';
+import { CROSS_PLATFORM } from './colours.tsx';
+import ColorList from '../../.storybook/StorybookComponents/ColorList/index.tsx';
+import ThemeProvider from '../../src/app/components/ThemeProvider';
+
+<Meta title="docs/ux/colors/cross platform" />
+
+# Simorgh's Cross Platform Colours
+
+Our cross-platform colours creates consistency across the BBC digital portfolio and is used to highlight common states. Like service colours, each cross-platform colour has an accompanying light and dark version.
+
+* **Active (Blue):** Used for pan-BBC non-core actions – those that don’t relate to account, content or service. It can be used in priority use.
+* **Live (Teal):** Used to signal live content
+* **Success (Green):** Used to signal safety and success
+* **Alert (Yellow):** Used to alert users of something (e.g. notifications)
+* **Error (Red):** Used to highlight a problem
+
+All these are available in `light`, `core` and `dark` variants.
+
+<ThemeProvider service="news">
+  <ColorList Colors={CROSS_PLATFORM} />
+</ThemeProvider>

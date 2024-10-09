@@ -1,6 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { ParsedUrlQuery } from 'querystring';
-import omit from 'ramda/src/omit';
 import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -8,12 +6,7 @@ import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isAppPath from '#app/routes/utils/isAppPath';
 
-import {
-  ROUTING_INFORMATION,
-  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
-  BFF_FETCH_ERROR,
-} from '#app/lib/logger.const';
-import { Services, Variants } from '#models/types/global';
+import { ROUTING_INFORMATION, BFF_FETCH_ERROR } from '#app/lib/logger.const';
 import { FetchError } from '#models/types/fetch';
 
 import getEnvironment from '#app/routes/utils/getEnvironment';
@@ -22,21 +15,13 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
+import isLitePath from '#app/routes/utils/isLitePath';
+import PageDataParams from '#app/models/types/pageDataParams';
 import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
-
-interface PageDataParams extends ParsedUrlQuery {
-  id: string;
-  page?: string;
-  service: Services;
-  variant?: Variants;
-  // eslint-disable-next-line camelcase
-  renderer_env?: string;
-  resolvedUrl: string;
-}
 
 const logger = nodeLogger(__filename);
 
@@ -56,7 +41,6 @@ const getPageData = async ({
     service,
     variant,
   });
-
   const env = getEnvironment(pathname);
   const optHeaders = { 'ctx-service-env': env };
 
@@ -107,6 +91,11 @@ const getPageData = async ({
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+  );
+
   logResponseTime(
     {
       path: context.resolvedUrl,
@@ -126,6 +115,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { headers: reqHeaders } = context.req;
 
   const isApp = isAppPath(context.resolvedUrl);
+  const isLite = isLitePath(context.resolvedUrl);
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
@@ -139,8 +129,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
     return {
       props: {
-        bbcOrigin: reqHeaders['bbc-origin'] || null,
         isApp,
+        isLite,
         isNextJs: true,
         service,
         status: 404,
@@ -150,15 +140,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       },
     };
   }
-
-  logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-    url: context.resolvedUrl,
-    headers: omit(
-      (process.env.SENSITIVE_HTTP_HEADERS || '').split(','),
-      reqHeaders,
-    ),
-    pageType: LIVE_PAGE,
-  });
 
   const { data, toggles } = await getPageData({
     id,
@@ -183,10 +164,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
   context.res.statusCode = data.status;
   return {
     props: {
-      bbcOrigin: reqHeaders['bbc-origin'] || null,
       error: data?.error || null,
       id,
       isApp,
+      isLite,
       isAmp: false,
       isNextJs: true,
       page: page || null,
@@ -202,7 +183,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
-      showAdsBasedOnLocation: reqHeaders['bbc-adverts'] === 'true' || false,
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,

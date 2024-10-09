@@ -1,6 +1,5 @@
-/* eslint react/prop-types: 0 */
 import React from 'react';
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import useOptimizelyMvtVariation from '.';
 import * as activateExperiment from './activateExperiment';
@@ -14,7 +13,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     jest.clearAllMocks();
   });
 
-  const renderUseOptimizelyMvtVariation = (mvtExperiments, experimentId) => {
+  const renderUseOptimizelyMvtVariation = (mvtExperiments, flagId) => {
     const props = {
       mvtExperiments,
       isAmp: false,
@@ -25,7 +24,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     const wrapper = ({ children }) => (
       <RequestContextProvider {...props}>{children}</RequestContextProvider>
     );
-    return renderHook(() => useOptimizelyMvtVariation(experimentId), {
+    return renderHook(() => useOptimizelyMvtVariation(flagId), {
       wrapper,
     }).result.current;
   };

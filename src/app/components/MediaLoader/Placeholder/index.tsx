@@ -1,28 +1,25 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import PlayButton from '#psammead/psammead-play-button/src';
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-import { useContext } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import Guidance from '#app/legacy/components/MediaPlayer/Guidance';
 import Image from '../../Image';
 import styles from './index.styles';
+import PlayButton from './PlayButton';
+import Guidance from './Guidance';
 import { MediaInfo } from '../types';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
-  src: string;
+  src?: string;
   srcSet?: string;
-  mediaInfo: MediaInfo;
-  noJsMessage: string;
+  mediaInfo?: MediaInfo;
+  noJsMessage?: string;
 }
 
 const MediaPlayerPlaceholder = ({
   onClick,
-  src,
+  src = '',
   srcSet,
   mediaInfo,
-  noJsMessage,
+  noJsMessage = '',
 }: Props) => {
   const {
     title,
@@ -31,9 +28,7 @@ const MediaPlayerPlaceholder = ({
     durationSpoken,
     type = 'video',
     guidanceMessage,
-  } = mediaInfo;
-
-  const { service } = useContext(ServiceContext);
+  } = mediaInfo ?? {};
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
@@ -44,9 +39,7 @@ const MediaPlayerPlaceholder = ({
     >
       <Guidance
         css={styles.guidance}
-        service={service}
         guidanceMessage={guidanceMessage}
-        noJsClassName={NO_JS_CLASSNAME}
         noJsMessage={noJsMessage}
       />
       <PlayButton
@@ -54,7 +47,6 @@ const MediaPlayerPlaceholder = ({
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         onClick={() => {}}
         title={title}
-        service={service}
         datetime={datetime}
         duration={duration}
         durationSpoken={durationSpoken}

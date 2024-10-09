@@ -6,8 +6,9 @@ const styles = {
   placeholder: ({ palette }: Theme) =>
     css({
       position: 'relative',
-      aspectRatio: '16 / 9',
       cursor: 'pointer',
+      height: '100%',
+
       [`.${NO_JS_CLASSNAME} &`]: {
         cursor: 'default',
       },
@@ -17,6 +18,7 @@ const styles = {
         },
       },
     }),
+
   playButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
@@ -37,6 +39,7 @@ const styles = {
         border: `${focusIndicatorThickness} solid ${palette.BLACK}`,
       },
     }),
+
   guidance: () =>
     css({
       zIndex: '1',

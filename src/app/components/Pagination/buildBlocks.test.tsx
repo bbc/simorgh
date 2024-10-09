@@ -42,7 +42,7 @@ const isVisible = (block: ResultItem, device: string) =>
     [DEVICE.MOBILE]: isVisibleOnMobile,
     [DEVICE.TABLET]: isVisibleOnTablet,
     [DEVICE.DESKTOP]: isVisibleOnDesktop,
-  }[device](block));
+  })[device](block);
 
 const validate = ({
   output,

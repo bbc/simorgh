@@ -9,7 +9,6 @@ import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-/* eslint-disable react/prop-types */
 const Component = ({
   isAmp = false,
   service = 'news',

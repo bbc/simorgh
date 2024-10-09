@@ -1,11 +1,9 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { withKnobs, select, boolean } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import ThemeProvider from '../../../components/ThemeProvider';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
@@ -29,47 +27,47 @@ const promoFixture = type =>
         pathOr(null, ['contentType'], item) === type,
     );
 
-const audioFixture = mediaFixture('audio');
-const videoFixture = mediaFixture('video');
-const standardPromo = promoFixture('Text');
-const videoPromo = promoFixture('Video');
-const featurePromo = promoFixture('Feature');
-const audioPromo = promoFixture('Audio');
-const galleryPromo = promoFixture('Gallery');
-const podcastPromo = promoFixture('Podcast');
+const promoTypes = {
+  audioFixture: mediaFixture('audio'),
+  videoFixture: mediaFixture('video'),
+  standardPromo: promoFixture('Text'),
+  featurePromo: promoFixture('Feature'),
+  videoPromo: promoFixture('Video'),
+  audioPromo: promoFixture('Audio'),
+  galleryPromo: promoFixture('Gallery'),
+  podcastPromo: promoFixture('Podcast'),
+  guideLinkItem,
+};
 
-/* eslint-disable react/prop-types */
 const Component = ({
   isAmp = false,
-  item = audioFixture,
+  item = promoTypes.audioFixture,
   promoType = 'regular',
   isSingleColumnLayout = false,
 }) => {
   return (
-    <ThemeProvider service="news">
-      <ServiceContextProvider service="news">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={isAmp}
-          pathname="/pathname"
-          pageType={ARTICLE_PAGE}
-          service="news"
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={isAmp}
+        pathname="/pathname"
+        pageType={ARTICLE_PAGE}
+        service="news"
+      >
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
         >
-          <ToggleContextProvider
-            toggles={{
-              eventTracking: { enabled: false },
-            }}
-          >
-            <StoryPromoContainer
-              item={item}
-              promoType={promoType}
-              isSingleColumnLayout={isSingleColumnLayout}
-            />
-          </ToggleContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ThemeProvider>
+          <StoryPromoContainer
+            item={item}
+            promoType={promoType}
+            isSingleColumnLayout={isSingleColumnLayout}
+          />
+        </ToggleContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
   );
 };
 
@@ -77,74 +75,57 @@ export default {
   title: 'Containers/Story Promo',
   Component,
   parameters: { chromatic: { disable: true } },
+  args: {
+    type: 'audioFixture',
+    promoType: 'regular',
+    isSingleColumnLayout: false,
+  },
+  argTypes: {
+    type: {
+      options: [
+        'audioFixture',
+        'videoFixture',
+        'standardPromo',
+        'featurePromo',
+        'videoPromo',
+        'audioPromo',
+        'galleryPromo',
+        'podcastPromo',
+        'guideLinkItem',
+      ],
+      control: { type: 'select' },
+    },
+    promoType: {
+      options: ['regular', 'leading', 'top'],
+      control: { type: 'select' },
+    },
+    isSingleColumnLayout: {
+      control: { type: 'boolean' },
+    },
+  },
 };
 
 // Canonical
-export const Promo = () => {
+export const Promo = ({ type, promoType, isSingleColumnLayout }) => {
   return (
     <Component
-      item={select(
-        'type',
-        {
-          audioFixture,
-          videoFixture,
-          standardPromo,
-          featurePromo,
-          videoPromo,
-          audioPromo,
-          galleryPromo,
-          podcastPromo,
-          guideLinkItem,
-        },
-        audioFixture,
-      )}
-      promoType={select(
-        'Promo Type',
-        {
-          regular: 'regular',
-          leading: 'leading',
-          top: 'top',
-        },
-        'regular',
-      )}
+      item={promoTypes[type]}
+      promoType={promoType}
       isAmp={false}
-      isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+      isSingleColumnLayout={isSingleColumnLayout}
     />
   );
 };
-Promo.decorators = [withKnobs];
 
 // Amp
-export const PromoAmp = () => {
+export const PromoAmp = ({ type, promoType, isSingleColumnLayout }) => {
   return (
     <Component
-      item={select(
-        'type',
-        {
-          audioFixture,
-          videoFixture,
-          standardPromo,
-          featurePromo,
-          videoPromo,
-          audioPromo,
-          galleryPromo,
-          podcastPromo,
-          guideLinkItem,
-        },
-        audioFixture,
-      )}
-      promoType={select(
-        'Promo Type',
-        {
-          regular: 'regular',
-          leading: 'leading',
-          top: 'top',
-        },
-        'regular',
-      )}
+      item={promoTypes[type]}
+      promoType={promoType}
       isAmp
-      isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+      isSingleColumnLayout={isSingleColumnLayout}
     />
   );
 };
-PromoAmp.decorators = [withKnobs, AmpDecorator];
+PromoAmp.decorators = [AmpDecorator];

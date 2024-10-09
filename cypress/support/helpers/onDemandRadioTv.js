@@ -1,5 +1,4 @@
 import path from 'ramda/src/path';
-import pathEq from 'ramda/src/pathEq';
 
 import envConfig from '../config/envs';
 
@@ -32,17 +31,9 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isAvailable = pathEq(
-  ['content', 'blocks', '0', 'availability'],
-  'available',
-);
+export const getEpisodeAvailability = ({ mediaBlocks }) =>
+  mediaBlocks[0]?.model?.availability === 'available';
 
-export const getEpisodeAvailability = path([
-  'content',
-  'blocks',
-  0,
-  'availability',
-]);
 export const isBrand = jsonData => {
   const pageID = path(
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
@@ -56,4 +47,10 @@ export const overrideRendererOnTest = () => {
     return '?renderer_env=live';
   }
   return '';
+};
+
+export const videoPlaceholderImageUrl = ({ mediaBlocks }) => {
+  const imageUrl = mediaBlocks[0]?.model?.imageUrl;
+
+  return imageUrl ? `https://${imageUrl}` : null;
 };

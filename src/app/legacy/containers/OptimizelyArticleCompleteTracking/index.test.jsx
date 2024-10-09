@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { node, string, bool } from 'prop-types';
 import { render, waitFor, act } from '@testing-library/react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 
@@ -15,6 +14,7 @@ jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
+  setUser: jest.fn(() => Promise.resolve()),
 };
 
 const observers = new Map();
@@ -69,13 +69,6 @@ const ContextWrap = ({ pageType, isAmp, children, service }) => (
     </OptimizelyProvider>
   </RequestContextProvider>
 );
-
-ContextWrap.propTypes = {
-  children: node.isRequired,
-  pageType: string.isRequired,
-  isAmp: bool.isRequired,
-  service: string.isRequired,
-};
 
 const { error } = console;
 

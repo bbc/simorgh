@@ -203,7 +203,7 @@ exports[`AMP Media Article Page Footer Cookie Settings Button should match text 
 
 exports[`AMP Media Article Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`AMP Media Article Page Footer I can see the footer copyright and external linking text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`AMP Media Article Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Media Article Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -481,7 +481,7 @@ exports[`AMP Media Article Page SEO Linked data should match text 2`] = `
   "@type": "VideoObject",
   "description": "INEC boss interview",
   "duration": "PT6M17S",
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/articles/cw0x29n2pvqo/p0dxnwbk/pcm/amp",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cw0x29n2pvqo/p0dxnwbk/pcm",
   "name": "INEC",
   "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0dxnxnv.jpg",
   "uploadDate": "2023-01-20T09:07:40.000Z",

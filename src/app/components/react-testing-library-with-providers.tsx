@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';
@@ -8,21 +8,16 @@ import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
+import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
 
-interface Props {
-  children: JSX.Element | JSX.Element[];
+interface Props extends PropsWithChildren {
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
   pageData?: object;
-  atiData?: {
-    contentId?: string;
-    contentType?: string;
-    pageIdentifier?: string;
-    pageTitle?: string;
-  };
+  atiData?: ATIData;
   bbcOrigin?: string | null;
   pageType?: PageTypes;
   derivedPageType?: string | null;
@@ -30,6 +25,7 @@ interface Props {
   service?: Services;
   toggles?: Toggles;
   showAdsBasedOnLocation?: boolean;
+  showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   variant?: Variants;
   isNextJs?: boolean;
@@ -53,6 +49,7 @@ const AllTheProviders: FC<Props> = ({
   variant = 'default',
   pageLang = undefined,
   showAdsBasedOnLocation = false,
+  showCookieBannerBasedOnCountry = true,
   statusCode = null,
   isNextJs = false,
   isUK = null,
@@ -75,6 +72,7 @@ const AllTheProviders: FC<Props> = ({
           pathname={pathname}
           derivedPageType={derivedPageType}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           statusCode={statusCode}
           isUK={isUK}
         >
@@ -109,6 +107,7 @@ const customRender = (
     toggles,
     variant,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry,
     statusCode,
     isNextJs,
     pageLang,
@@ -131,6 +130,7 @@ const customRender = (
         toggles={toggles}
         variant={variant}
         showAdsBasedOnLocation={showAdsBasedOnLocation}
+        showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
         statusCode={statusCode}
         isNextJs={isNextJs}
         pageLang={pageLang}

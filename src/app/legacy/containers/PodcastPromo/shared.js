@@ -37,7 +37,10 @@ const getPromo = podcastPromo => {
     componentName: 'promo-podcast',
   };
 
-  const imgSrc = img.replace('$recipe', '512x512');
+  const imgReplacedRecipe = img.replace('$recipe', '512x512');
+  const imgSrc = imgReplacedRecipe.endsWith('.webp')
+    ? imgReplacedRecipe
+    : `${imgReplacedRecipe}.webp`;
   const srcset = getSrcSet(img, [128, 240, 480]);
   const primaryMimeType = getMimeType(srcset);
   const sizes = '(min-width: 1008px) 228px, 30vw';

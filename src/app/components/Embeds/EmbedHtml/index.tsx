@@ -16,6 +16,7 @@ const EmbedHtml = ({ embeddableContent }: PropsWithChildren<Props>) => {
       suppressHydrationWarning
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: embeddableContent }}
+      data-testid="embed"
     />
   );
 };

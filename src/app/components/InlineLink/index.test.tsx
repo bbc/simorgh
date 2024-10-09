@@ -97,7 +97,8 @@ describe('InlineLink', () => {
     ${'ukchina'}      | ${'trad'}    | ${'Google, 外部'}
     ${'ukrainian'}    | ${'default'} | ${'Google, зовнішнє'}
     ${'urdu'}         | ${'default'} | ${'Google، بیرو'}
-    ${'uzbek'}        | ${'default'} | ${'Google, ташқи'}
+    ${'uzbek'}        | ${'cyr'}     | ${'Google, ташқи'}
+    ${'uzbek'}        | ${'lat'}     | ${'Google, ташқи'}
     ${'vietnamese'}   | ${'default'} | ${'Google, bên ngoài'}
     ${'yoruba'}       | ${'default'} | ${'Google, ìta'}
     ${'zhongwen'}     | ${'simp'}    | ${'Google, 外部'}
@@ -135,7 +136,6 @@ describe('InlineLink', () => {
     );
 
     expect(screen.getByText('Hello World!')).toHaveStyle({
-      color: '#222222',
       'font-size': `${expected}rem`,
     });
   });
@@ -159,7 +159,6 @@ describe('InlineLink', () => {
       );
 
       expect(screen.getByText('Hello World!')).toHaveStyle({
-        color: '#222222',
         'font-style': fontStyle,
         'font-weight': fontWeight,
       });

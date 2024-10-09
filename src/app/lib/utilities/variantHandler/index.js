@@ -1,21 +1,12 @@
-import pathOr from 'ramda/src/pathOr';
-
 export const servicesWithVariants = {
   // the first element in the array is the default variant
   serbian: ['lat', 'cyr'],
   ukchina: ['simp', 'trad'],
+  uzbek: ['cyr', 'lat'],
   zhongwen: ['simp', 'trad'],
 };
 
 export const variants = ['simp', 'trad', 'lat', 'cyr', 'default'];
-
-const variantCookieConfig = {
-  ukchina: 'chinese',
-  zhongwen: 'chinese',
-};
-
-export const getVariantCookieName = service =>
-  pathOr(service, [service], variantCookieConfig);
 
 // Remove leading slash from variant
 export const variantSanitiser = variant => variant && variant.replace('/', '');

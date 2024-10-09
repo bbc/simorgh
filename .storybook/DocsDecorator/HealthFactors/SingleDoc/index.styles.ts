@@ -28,6 +28,7 @@ const styles = {
       width: `${pixelsToRem(20)}rem`,
       height: `${pixelsToRem(20)}rem`,
       padding: `${pixelsToRem(4)}rem`,
+      marginRight: `${pixelsToRem(8)}rem`,
     }),
 
   icon: () => css({ height: '100%', width: `100%` }),
