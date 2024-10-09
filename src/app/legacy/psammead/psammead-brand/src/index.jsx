@@ -170,38 +170,25 @@ const StyledParagraph = styled.p`
   color: ${props => props.theme.palette.WHITE};
 `;
 
-const PreviewEnvironmentIndicator = isPreview => {
+const PreviewEnvironmentIndicator = () => {
   const { requestServiceChain } = useContext(RequestContext);
 
-  if (
-    isPreview &&
-    requestServiceChain &&
-    requestServiceChain.includes('MOZART')
-  ) {
+  if (requestServiceChain && requestServiceChain.includes('MOZART')) {
     return <StyledParagraph aria-hidden>⚠️ Mozart</StyledParagraph>;
   }
-  return <StyledParagraph aria-hidden />;
+  return null;
 };
 
 const Brand = forwardRef((props, ref) => {
   const [isPreview, setIsPreview] = useState(false);
 
-  console.log('before', { isPreview });
-
   useEffect(() => {
-    const previewMatches = window.location.hostname.match(/preview/g);
-    const isPreviewEnvironment = previewMatches && previewMatches.length > 0;
-
-    console.log({
-      previewMatches,
-      isPreviewEnvironment,
-      location: window.location,
-    });
+    const hostnameMatchesPreview = window.location.hostname.match(/preview/g);
+    const isPreviewEnvironment =
+      hostnameMatchesPreview && hostnameMatchesPreview.length > 0;
 
     setIsPreview(isPreviewEnvironment);
   }, []);
-
-  console.log('after', { isPreview });
 
   const {
     svgHeight,
@@ -242,7 +229,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
-        <PreviewEnvironmentIndicator isPreview />
+        {isPreview && <PreviewEnvironmentIndicator />}
       </SvgWrapper>
     </Banner>
   );
