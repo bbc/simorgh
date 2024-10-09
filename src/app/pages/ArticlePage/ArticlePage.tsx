@@ -56,6 +56,7 @@ import {
   categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
+import AmpExperiment from '../../components/AmpExperiment';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
@@ -64,15 +65,20 @@ import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
+import {
+  ExperimentTopStories,
+  insertExperimentTopStories,
+} from './experimentTopStoriesUtils';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service } = useContext(RequestContext);
+  const { isApp, pageType, service, isAmp } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
   } = useContext(ServiceContext);
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -131,6 +137,27 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
+  const enableExperimentTopStories =
+    isAmp && (service === 'news' || service === 'sport');
+
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  let blocksWithExperimentTopStories = blocks;
+  if (enableExperimentTopStories) {
+    blocksWithExperimentTopStories = insertExperimentTopStories({
+      blocks,
+      topStoriesContent,
+    });
+  }
+
+  const experimentData = {
+    topStoriesExperiment: {
+      variants: {
+        control: 50,
+        show_at_halfway: 50,
+      },
+    },
+  };
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -173,7 +200,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     disclaimer: (props: ComponentToRenderProps) => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
-    podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
+    experimentTopStories: () =>
+      topStoriesContent ? (
+        <ExperimentTopStories topStoriesContent={topStoriesContent} />
+      ) : null,
   };
 
   const visuallyHiddenBlock = {
@@ -183,8 +213,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
+    ? blocksWithExperimentTopStories
+    : [visuallyHiddenBlock, ...blocksWithExperimentTopStories];
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
@@ -206,6 +236,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
+      {enableExperimentTopStories && (
+        <AmpExperiment experimentData={experimentData} />
+      )}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
