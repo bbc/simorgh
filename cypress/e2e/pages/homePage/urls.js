@@ -11,6 +11,10 @@ const urls = [
     test: '/arabic',
     live: '/arabic',
   },
+  {
+    service: 'serbian',
+    test: '/serbian/lat',
+  },
 ];
 
 export default () => {
