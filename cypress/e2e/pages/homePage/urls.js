@@ -13,6 +13,7 @@ const urls = [
   },
   {
     service: 'serbian',
+    local: '/serbian/lat',
     test: '/serbian/lat',
   },
 ];
