@@ -510,7 +510,7 @@ describe('frontPage -> homePage migration', () => {
 
   const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
   const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
-  const homepageServices = worldServices.map(serviceToRoute); 
+  const homepageServices = worldServices.map(serviceToRoute);
 
   const servicesWithoutVariantsRoutes = worldServices
     .filter(service => !servicesWithVariants.includes(service))
