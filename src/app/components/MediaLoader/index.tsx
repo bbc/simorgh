@@ -249,9 +249,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             orientation === 'portrait' && styles.portraitFigure(embedded),
             orientation === 'landscape' && styles.landscapeFigure,
           ],
-          playerConfig?.ui?.skin === 'audio' &&
-            hasPlaceholder &&
-            styles.landscapeFigure,
         ]}
       >
         {isAmp ? (

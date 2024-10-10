@@ -50,10 +50,9 @@ export default {
       !isEmbedded && commonMarginSpacing,
     ],
 
-  audioMediaContainer: ({ palette }: Theme) =>
+  audioMediaContainer: () =>
     css({
-      backgroundColor: palette.WHITE,
-      height: '165px',
+      height: '130px',
     }),
 
   standardMediaContainer: ({ palette }: Theme) =>

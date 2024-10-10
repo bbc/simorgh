@@ -226,82 +226,9 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="css-171plmm"
-    data-e2e="media-loader__placeholder"
-  >
-    <div
-      class="css-czokpf"
-      data-e2e="media-player__guidance"
-    >
-      <strong
-        aria-hidden="true"
-        class="guidance-message css-e3010g"
-      >
-        Contains strong language and some upsetting scenes.
-      </strong>
-      <noscript
-        class="css-lllaou"
-      >
-        &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
-      </noscript>
-    </div>
-    <button
-      class="focusIndicatorRemove css-1yv3cvg"
-      type="button"
-    >
-      <span
-        class="css-m04vo2"
-      >
-        Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
-      </span>
-      <div
-        aria-hidden="true"
-        class="css-1xdc5yd"
-      >
-        <svg
-          aria-hidden="true"
-          class="css-vja2s5 e1s2dgdk5"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
-      </div>
-      <time
-        aria-hidden="true"
-        class="css-1lcsotz"
-        datetime="PT34S"
-      >
-        00:34
-      </time>
-    </button>
-    <div
-      class="css-lgx6cw"
-      style="padding-bottom:0;overflow:hidden"
-    >
-      <img
-        alt=""
-        class="css-1uq6tv3"
-        src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
-        srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
-        style="aspect-ratio:auto"
-      />
-    </div>
-  </div>
+    class="css-9p9hvp"
+    data-e2e="media-player"
+  />
   <figcaption
     class="css-12vqlmi"
     dir="ltr"
