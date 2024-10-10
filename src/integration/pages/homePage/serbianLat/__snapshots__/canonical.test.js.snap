@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"Pređite na sadržaj"`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, na srpskom",
+  "url": "/serbian",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Zašto BBC zaslužuje vaše poverenje",
+  "url": "https://www.bbc.com/serbian/lat/institutional-50173730",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Pravila korišćenja",
+  "url": "https://www.bbc.com/terms",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "O BBC-ju",
+  "url": "https://www.bbc.co.uk/aboutthebbc/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Pravila privatnosti",
+  "url": "https://www.bbc.com/privacy/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Kolačići",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Kontaktirajte BBC",
+  "url": "https://www.bbc.co.uk/serbian/send/u50853665",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Pročitajte naša pravila o linkovanju drugih sajtova.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+
+exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, na srpskom"`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Otvorena stranica, Početna strana",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Ukrajina",
+  "url": "/serbian/lat/topics/c5wzvzzz5vrt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Srbija",
+  "url": "/serbian/lat/topics/cr50vdy9q6wt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Balkan",
+  "url": "/serbian/lat/topics/c06g87137jgt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Svet",
+  "url": "/serbian/lat/topics/c2lej05e1eqt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Video",
+  "url": "/serbian/lat/topics/c44vyp5g049t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Najpopularnije",
+  "url": "/serbian/lat/popular/read",
+}
+`;
+
+exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/serbian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Canonical link 1`] = `"http://localhost:7080/serbian/lat"`;
+
+exports[`Canonical Home Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Home Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Home Page SEO Heading level 1 1`] = `"BBC News, na srpskom - Glavna stranica"`;
+
+exports[`Canonical Home Page SEO Lang attribute 1`] = `"sr-latn"`;
+
+exports[`Canonical Home Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "Početna stranica",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "sr-latn",
+        "name": "Serbian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/serbian/lat",
+        "@type": "WebPage",
+        "name": "Početna stranica",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "width": 1024,
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "url": "http://localhost:7080/serbian/lat",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+      ],
+      "name": "BBC News na srpskom",
+      "numberOfItems": 1,
+    },
+  ],
+}
+`;
+
+exports[`Canonical Home Page SEO OG description 1`] = `"Srpska početna stranica"`;
+
+exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO OG locale 1`] = `"sr-latn"`;
+
+exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO OG title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/serbian/lat"`;
+
+exports[`Canonical Home Page SEO Page title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Home Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Home Page SEO Twitter creator 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical Home Page SEO Twitter description 1`] = `"Srpska početna stranica"`;
+
+exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical Home Page SEO Twitter title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Home Page Timestamp should match text and date 1`] = `
+{
+  "date": "2024-07-30",
+  "text": "30 jul 2024",
+}
+`;

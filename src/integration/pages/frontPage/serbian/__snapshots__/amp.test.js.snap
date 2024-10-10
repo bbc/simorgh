@@ -98,7 +98,7 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 {
   "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=81&p=serbianlat.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A5be5c72e-2538-caaf-e050-17ac2b8cd8a2]&x2=[amp]&x3=[news-serbian]&x4=[sr-Latn]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Po%C4%8Detna%2520strana%2520-%2520BBC%2520News%2520na%2520srpskom]&x11=[2017-10-19T14%3A06%3A28.000Z]&x12=[2022-09-01T16%3A33%3A24.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=81&p=serbian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Atipo%3Atopic%3Ac6zr6pp47w7t]&x2=[amp]&x3=[news-serbian]&x4=[sr-latn]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Po%C4%8Detna%2520stranica]&ref=\${documentReferrer}",
   },
   "transport": {
     "beacon": false,
@@ -117,23 +117,12 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 exports[`AMP Front Page Analytics chartbeat 1`] = `
 {
   "vars": {
-    "contentType": "Index",
+    "contentType": "home",
     "domain": "test.bbc.co.uk",
-    "sections": "Serbian, Serbian - IDX",
-    "title": "Početna strana - BBC News na srpskom",
+    "sections": "Serbian, Serbian - home",
+    "title": "Početna stranica",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
-  },
-}
-`;
-
-exports[`AMP Front Page Analytics comscore 1`] = `
-{
-  "extraUrlParams": {
-    "comscorekw": "amp",
-  },
-  "vars": {
-    "c2": "17986528",
   },
 }
 `;
@@ -336,14 +325,15 @@ exports[`AMP Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, na srpskom - Glavna stranica"`;
 
-exports[`AMP Front Page SEO Lang attribute 1`] = `"sr-Latn"`;
+exports[`AMP Front Page SEO Lang attribute 1`] = `"sr-latn"`;
 
 exports[`AMP Front Page SEO Linked data should match text 1`] = `
 {
   "@context": "http://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
+      "@type": "CollectionPage",
+      "headline": "Početna stranica",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -358,7 +348,7 @@ exports[`AMP Front Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/serbian/lat",
         "@type": "WebPage",
-        "name": "Početna strana",
+        "name": "Početna stranica",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -374,11 +364,24 @@ exports[`AMP Front Page SEO Linked data should match text 1`] = `
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
       "url": "http://localhost:7080/serbian/lat",
     },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+      ],
+      "name": "BBC News na srpskom",
+      "numberOfItems": 1,
+    },
   ],
 }
 `;
 
-exports[`AMP Front Page SEO OG description 1`] = `"BBC na srpskom nudi ekskluzivan sadržaj - analitičko, istraživačko i nepristrasno izveštavanje u tekstovima i video prilozima prilagođenim i društvenim mrežama."`;
+exports[`AMP Front Page SEO OG description 1`] = `"Srpska početna stranica"`;
 
 exports[`AMP Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
 
@@ -402,7 +405,7 @@ exports[`AMP Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`AMP Front Page SEO Twitter creator 1`] = `"@bbcnasrpskom"`;
 
-exports[`AMP Front Page SEO Twitter description 1`] = `"BBC na srpskom nudi ekskluzivan sadržaj - analitičko, istraživačko i nepristrasno izveštavanje u tekstovima i video prilozima prilagođenim i društvenim mrežama."`;
+exports[`AMP Front Page SEO Twitter description 1`] = `"Srpska početna stranica"`;
 
 exports[`AMP Front Page SEO Twitter image alt 1`] = `"BBC News na srpskom"`;
 
@@ -411,38 +414,3 @@ exports[`AMP Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co
 exports[`AMP Front Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 
 exports[`AMP Front Page SEO Twitter title 1`] = `"Glavna stranica - BBC News na srpskom"`;
-
-exports[`AMP Front Page Sections should match headline text 1`] = `"Top Stories"`;
-
-exports[`AMP Front Page Sections should match headline text 2`] = `"Danas"`;
-
-exports[`AMP Front Page Sections should match headline text 3`] = `"Zanimljivo"`;
-
-exports[`AMP Front Page Sections should match headline text 4`] = `"In case you missed it"`;
-
-exports[`AMP Front Page Sections should match headline text 5`] = `"Korisni linkovi"`;
-
-exports[`AMP Front Page Useful Links should match text and url 1`] = `"Kontaktirajte nas 1 - /serbian/lat/popular/read"`;
-
-exports[`AMP Front Page Useful Links should match text and url 2`] = `"Kontaktirajte nas 2 - /serbian/lat/popular/read"`;
-
-exports[`AMP Front Page Useful Links should match text and url 3`] = `"Kontaktirajte nas 3 - /serbian/lat/popular/read"`;
-
-exports[`AMP Front Page Useful Links should match text and url 4`] = `"Kontaktirajte nas 4 - /serbian/lat/popular/read"`;
-
-exports[`AMP Front Page Useful Links should match text and url 5`] = `"Kontaktirajte nas 5 - /serbian/lat/popular/read"`;
-
-exports[`Story Promo Headline should match text 1`] = `"Promo test for cookie setting"`;
-
-exports[`Story Promo Image should match image 1`] = `
-<amp-img
-  alt="test"
-  attribution="BBC"
-  class="bbc-image"
-  fallback=""
-  height="1152"
-  layout="responsive"
-  src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/3C9A/test/_63941551_p09lw3dk.jpg.webp"
-  width="2048"
-/>
-`;
