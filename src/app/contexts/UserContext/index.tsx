@@ -9,9 +9,9 @@ import { v4 as uuid } from 'uuid';
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import setCookie from '#app/lib/utilities/setCookie';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 import Chartbeat from './Chartbeat';
-import setCookie from '#app/lib/utilities/setCookie';
 
 export type UserContextProps = {
   cookiePolicy: string;
@@ -30,7 +30,7 @@ const cknsMvtCookie = () => {
 
   if (!cookieValue) {
     const cookieUuid = uuid();
-    setCookie({name: cookieName, value: cookieUuid});
+    setCookie({ name: cookieName, value: cookieUuid });
   }
 };
 
