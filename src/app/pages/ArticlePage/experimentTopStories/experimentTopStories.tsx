@@ -2,8 +2,17 @@
 import { jsx } from '@emotion/react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-import styles from './ArticlePage.styles';
+import TopStoriesSection from '../PagePromoSections/TopStoriesSection';
+import styles from '../ArticlePage.styles';
+
+export const experimentTopStoriesConfig = {
+  topStoriesExperiment: {
+    variants: {
+      control: 50,
+      show_at_halfway: 50,
+    },
+  },
+};
 
 export const ExperimentTopStories = ({
   topStoriesContent,
@@ -36,13 +45,6 @@ export const insertExperimentTopStories = ({
     id: 'experimentTopStories',
   };
 
-  const halfway = (blocks.length / 2, 10) + 1;
-  const blocksBeforeInsertIndex = blocks.slice(0, halfway);
-  const blocksAfterInsertIndex = blocks.slice(halfway, blocks.length);
-
-  return [
-    ...blocksBeforeInsertIndex,
-    experimentTopStoriesBlock,
-    ...blocksAfterInsertIndex,
-  ];
+  const halfway = Math.floor(blocks.length * 0.5);
+  return blocks.splice(halfway, 0, experimentTopStoriesBlock);
 };

@@ -56,22 +56,23 @@ import {
   categoryName,
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
-import AmpExperiment from '../../components/AmpExperiment';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
-
 import SecondaryColumn from './SecondaryColumn';
-
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
+import AmpExperiment from '../../components/AmpExperiment';
 import {
+  experimentTopStoriesConfig,
   ExperimentTopStories,
   insertExperimentTopStories,
-} from './experimentTopStoriesUtils';
+} from './experimentTopStories/experimentTopStories';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service, isAmp } = useContext(RequestContext);
+  const { isApp, pageType, service, isAmp, pathname } =
+    useContext(RequestContext);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -137,9 +138,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  const enableExperimentTopStories =
-    isAmp && (service === 'news' || service === 'sport');
+  const urn = pathname.split('/').pop();
+  const newsTestAsset = 'c6v11qzyv8po';
+  const newsAsset = 'cz7xywn940ro';
+  const sportAsset = 'cpgw0xjmpd3o';
+  const experimentAssets = [newsAsset, sportAsset, newsTestAsset];
+  const experimentServices = ['news', 'sport'];
 
+  const enableExperimentTopStories =
+    isAmp &&
+    urn &&
+    experimentServices.includes(service) &&
+    experimentAssets.includes(urn);
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   let blocksWithExperimentTopStories = blocks;
   if (enableExperimentTopStories) {
@@ -148,15 +158,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       topStoriesContent,
     });
   }
-
-  const experimentData = {
-    topStoriesExperiment: {
-      variants: {
-        control: 50,
-        show_at_halfway: 50,
-      },
-    },
-  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -200,6 +201,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     disclaimer: (props: ComponentToRenderProps) => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
+    podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
     experimentTopStories: () =>
       topStoriesContent ? (
         <ExperimentTopStories topStoriesContent={topStoriesContent} />
@@ -237,7 +239,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   return (
     <div css={styles.pageWrapper}>
       {enableExperimentTopStories && (
-        <AmpExperiment experimentData={experimentData} />
+        <AmpExperiment experimentData={experimentTopStoriesConfig} />
       )}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
