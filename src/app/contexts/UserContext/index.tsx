@@ -11,6 +11,7 @@ import onClient from '#app/lib/utilities/onClient';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 import Chartbeat from './Chartbeat';
+import setCookie from '#app/lib/utilities/setCookie';
 
 export type UserContextProps = {
   cookiePolicy: string;
@@ -29,8 +30,7 @@ const cknsMvtCookie = () => {
 
   if (!cookieValue) {
     const cookieUuid = uuid();
-    const expires = 365;
-    Cookie.set(cookieName, cookieUuid, { expires, path: '/', secure: true });
+    setCookie({name: cookieName, value: cookieUuid});
   }
 };
 

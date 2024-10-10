@@ -129,7 +129,11 @@ describe('UserContext', () => {
 
       expect(cookieValue).toMatch(uuidRegex);
       expect(cookieName).toEqual('ckns_mvt');
-      expect(cookieOptions).toEqual({ expires: 365, path: '/', secure: true });
+      expect(cookieOptions).toEqual({
+        expires: 365,
+        domain: '.bbc.com',
+        sameSite: 'Lax',
+      });
       expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
     });
   });
