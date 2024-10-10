@@ -109,7 +109,7 @@ export default ({
         ...(videoId && { clipPID: videoId }),
       },
     },
-    ...(type !== 'audio' && placeholderConfig),
+    ...(type !== 'audio' && { placeholderConfig }),
     showAds,
   };
 };
