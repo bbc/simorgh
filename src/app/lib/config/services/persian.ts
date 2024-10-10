@@ -440,6 +440,10 @@ export const service: DefaultServiceConfig = {
         url: '/persian/topics/cj31ldvmg1et',
       },
       {
+        title: 'انتخابات آمریکا',
+        url: '/persian/topics/cj1gj22k6z6t',
+      },
+      {
         title: 'پخش زنده',
         url: '/persian/media-49522521',
       },
