@@ -39,7 +39,7 @@ const getPaths = service =>
   );
 
 const pageType = 'all';
-const urlsToExcludeFromAmpTests = ['_tv', '_radio'];
+const urlsToExcludeFromAmpTests = ['_tv', '_radio', '/20'];
 
 Object.keys(config)
   .filter(service => serviceFilter(service))
