@@ -130,34 +130,6 @@ exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https:/
 
 exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"Amakuru ya Gahuzamiryango, 6 Ukwa gatatu 2020"`;
 
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
-{
-  "text": "Amajwi, Amakuru ya Gahuzamiryango, 17 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
-  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjg01g4",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
-{
-  "text": "Amajwi, Amakuru ya Gahuzamiryango, 16 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
-  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjfx4k1",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
-{
-  "text": "Amajwi, Amakuru ya Gahuzamiryango, 15 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
-  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjft7my",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
-{
-  "text": "Amajwi, Amakuru ya Gahuzamiryango, 14 Ukw'icumi na kabiri 2020,  Umwanya bimara 30,00  Umwanya bimara 30:00",
-  "url": "/gahuza/bbc_gahuza_radio/w172xp11bjfqbqv",
-}
-`;
-
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
