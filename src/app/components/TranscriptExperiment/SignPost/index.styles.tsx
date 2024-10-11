@@ -12,7 +12,7 @@ const styles = {
       padding: `${spacings.FULL}rem`,
       display: 'flex',
       flexWrap: 'nowrap',
-      background: `rgba(25, 163, 55, 0.6)`,
+      background: `rgba(48, 128, 59, 0.9)`,
       height: '100%',
       width: '100%',
       zIndex: '1',
@@ -22,17 +22,25 @@ const styles = {
         height: 'unset',
       },
     }),
-  icon: ({ spacings, mq, palette }: Theme) =>
+  icon: ({ mq, palette }: Theme) =>
     css({
-      margin: `0 ${spacings.FULL}rem 0 0`,
       fill: palette.WHITE,
-      width: '100px',
-      height: '35px',
       [mq.FORCED_COLOURS]: {
         path: {
           fill: 'currentColor',
         },
       },
+    }),
+  fanIcon: ({ spacings }: Theme) =>
+    css({
+      margin: `0 ${spacings.FULL}rem 0 0`,
+    }),
+  plusIcon: () =>
+    css({
+      margin: `0 0.2rem 0 0`,
+    }),
+  collapsable: () =>
+    css({
       [`@media (max-width: ${BUTTON_COLLAPSE_WIDTH}rem)`]: {
         width: 0,
       },
@@ -42,10 +50,14 @@ const styles = {
       margin: '0',
       color: palette.WHITE,
     }),
+  underline: ({ palette }: Theme) =>
+    css({
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
+    }),
   loadVideo: ({ spacings }: Theme) =>
     css({
       all: 'unset',
-      margin: `${spacings.DOUBLE}rem 0 0 0`,
+      margin: `${spacings.DOUBLE}rem 0 ${spacings.HALF}rem 0`,
     }),
 };
 

@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Text from '#app/components/Text';
 import styles from './index.styles';
-import FanSvg from './svgs';
+import SVGs from './svgs';
 
 const DEFAULT_MESSAGE =
   'Help reduce your power and data usage by not playing video content.';
@@ -21,7 +21,7 @@ const SignPost = () => {
   const buttonLabel = loadVideo ?? DEFAULT_LOAD_TITLE;
   return (
     <div css={styles.container}>
-      <FanSvg css={styles.icon} />
+      <SVGs.FanSvg css={[styles.icon, styles.fanIcon, styles.collapsable]} />
       <div>
         <div>
           <Text css={styles.message} as="p">
@@ -29,8 +29,11 @@ const SignPost = () => {
           </Text>
         </div>
         <button type="button" css={[styles.loadVideo]}>
-          <Text css={styles.message} as="p">
-            + {buttonLabel}
+          <span>
+            <SVGs.PlusSvg css={[styles.icon, styles.plusIcon]} />
+          </span>
+          <Text css={[styles.message, styles.underline]} as="span">
+            {buttonLabel}
           </Text>
         </button>
       </div>

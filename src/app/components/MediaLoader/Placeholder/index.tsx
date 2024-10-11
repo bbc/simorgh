@@ -7,10 +7,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import Guidance from '#app/legacy/components/MediaPlayer/Guidance';
 import { Stages } from '#app/hooks/useExperimentHook';
 import SignPost from '#app/components/TranscriptExperiment/SignPost';
-import MiniPlayButton from '../../TranscriptExperiment/PlayButton';
 import Image from '../../Image';
 import styles from './index.styles';
 import { MediaInfo } from '../types';
+import MediaIndicator from '../../TranscriptExperiment/MediaIndicator';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -57,14 +57,13 @@ const MediaPlayerPlaceholder = ({
   );
 
   const experimentPlayButton = (
-    <MiniPlayButton
+    <MediaIndicator
       title={title}
       datetime={datetime}
       duration={duration}
       durationSpoken={durationSpoken}
       type={type}
       guidanceMessage={guidanceMessage}
-      className="experimentButtonFocus"
     />
   );
 
@@ -87,8 +86,9 @@ const MediaPlayerPlaceholder = ({
       css={styles.placeholder}
       data-e2e="media-loader__placeholder"
     >
-      {experimentStage === Stages.STAGE_2 ? experimentSignPost : guideComponent}
+      {experimentStage !== Stages.STAGE_2 ? guideComponent : null}
       {experimentStage === Stages.STAGE_2 ? experimentPlayButton : playButton}
+      {experimentStage === Stages.STAGE_2 ? experimentSignPost : null}
       <Image alt="" src={src} srcSet={srcSet} />
     </div>
   );
