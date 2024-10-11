@@ -67,9 +67,23 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   cursor: default;
 }
 
-.emotion-7:hover .focusIndicatorRemove,
-.emotion-7:focus .focusIndicatorRemove {
+.emotion-7:hover>button,
+.emotion-7:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7:hover>button,
+  .emotion-7:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-7:hover>button>time,
+  .emotion-7:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-8 {
@@ -182,6 +196,26 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-10 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-10:hover,
+  .emotion-10:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-10:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-10 {
   display: none;
 }
@@ -208,6 +242,12 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-12>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-13 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -220,6 +260,13 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-15 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-15 {
+    color: canvasText;
+  }
 }
 
 .emotion-16 {
