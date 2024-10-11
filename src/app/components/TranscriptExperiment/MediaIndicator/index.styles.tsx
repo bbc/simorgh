@@ -21,7 +21,7 @@ const styles = {
       position: 'absolute',
       bottom: '0',
       left: '0',
-      zIndex: '1',
+      zIndex: '2',
       [`.${NO_JS_CLASSNAME} &`]: {
         display: 'none',
       },

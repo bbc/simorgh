@@ -54,10 +54,13 @@ const styles = {
     css({
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
     }),
-  loadVideo: ({ spacings }: Theme) =>
+  loadVideoContainer: ({ spacings }: Theme) =>
+    css({
+      margin: `${spacings.DOUBLE}rem 0 ${spacings.HALF}rem 0`,
+    }),
+  loadVideo: () =>
     css({
       all: 'unset',
-      margin: `${spacings.DOUBLE}rem 0 ${spacings.HALF}rem 0`,
     }),
 };
 

@@ -28,14 +28,16 @@ const SignPost = () => {
             {message}
           </Text>
         </div>
-        <button type="button" css={[styles.loadVideo]}>
+        <div css={[styles.loadVideoContainer]}>
           <span>
             <SVGs.PlusSvg css={[styles.icon, styles.plusIcon]} />
           </span>
-          <Text css={[styles.message, styles.underline]} as="span">
-            {buttonLabel}
-          </Text>
-        </button>
+          <button type="button" css={[styles.loadVideo]}>
+            <Text css={[styles.message, styles.underline]} as="span">
+              {buttonLabel}
+            </Text>
+          </button>
+        </div>
       </div>
     </div>
   );
