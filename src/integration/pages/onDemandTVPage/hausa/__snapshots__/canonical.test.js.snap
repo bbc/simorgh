@@ -1,0 +1,545 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
+
+exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=51&amp;p=hausa.bbc_hausa_tv.tv.w172xcg0kg6vph8.page&amp;x1=[urn%3Abbc%3Apips%3Aw172xcg0kg6vph8]&amp;x2=[responsive]&amp;x3=[news-hausa]&amp;x4=[ha]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Labaran%2520Talabijin%2520-%2520BBC%2520News%2520Hausa]"/>"`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Hausa",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Me ya sa za ku iya aminta da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-49283501",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Sharuddan yin amfani",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377086",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "A game da BBC",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377088",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ka'idojin tsare sirri",
+  "url": "https://www.bbc.com/hausa/game-da-mu-37377090",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Ka'idoji",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Tuntubi BBC",
+  "url": "https://www.bbc.co.uk/hausa/send/u50853335",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
+
+exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+
+exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, Hausa"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Labaran Duniya",
+  "url": "/hausa",
+}
+`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Wasanni",
+  "url": "/hausa/topics/cz74kjgv220t",
+}
+`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Nishadi",
+  "url": "/hausa/topics/cg726kz37wdt",
+}
+`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Cikakkun Rahotanni",
+  "url": "/hausa/52140979",
+}
+`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Bidiyo",
+  "url": "/hausa/topics/cn09qmz4jryt",
+}
+`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Shirye-shirye na Musamman",
+  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+}
+`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Shirye-shiryen rediyo",
+  "url": "/hausa/topics/c4nx34q5724t",
+}
+`;
+
+exports[`Canonical On Demand T V Page I can see the brand title 1`] = `"Labaran Talabijin"`;
+
+exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
+
+exports[`Canonical On Demand T V Page I can see the episode title 1`] = `"23 Nuwamba 2020"`;
+
+exports[`Canonical On Demand T V Page Main heading should match text 1`] = `"Labaran Talabijin, 23 Nuwamba 2020"`;
+
+exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, "", Tsawon lokaci 10,00"`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
+<div
+  class="bbc-145siv3"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-1xawjgp"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-n2zqlz"
+    >
+      &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-4vlf9b"
+    type="button"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, "", Tsawon lokaci 10,00
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-7qcky8"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-digyti"
+      datetime="PT10M"
+    >
+      10:00
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
+<div
+  class="bbc-145siv3"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-1xawjgp"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-n2zqlz"
+    >
+      &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-4vlf9b"
+    type="button"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, "", Tsawon lokaci 10,00
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-7qcky8"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-digyti"
+      datetime="PT10M"
+    >
+      10:00
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
+<figure
+  class="bbc-7rf7s3"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="bbc-145siv3"
+    data-e2e="media-loader__placeholder"
+  >
+    <div
+      class="bbc-1xawjgp"
+      data-e2e="media-player__guidance"
+    >
+      <noscript
+        class="bbc-n2zqlz"
+      >
+        &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
+      </noscript>
+    </div>
+    <button
+      class="focusIndicatorRemove bbc-4vlf9b"
+      type="button"
+    >
+      <span
+        class="bbc-m04vo2"
+      >
+        Play video, "", Tsawon lokaci 10,00
+      </span>
+      <div
+        aria-hidden="true"
+        class="bbc-7qcky8"
+      >
+        <svg
+          aria-hidden="true"
+          class="bbc-vja2s5 e1s2dgdk5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="bbc-digyti"
+        datetime="PT10M"
+      >
+        10:00
+      </time>
+    </button>
+    <div
+      class="bbc-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
+    >
+      <img
+        alt=""
+        class="bbc-ipdj63"
+        src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
+        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
+        style="aspect-ratio:auto"
+      />
+    </div>
+  </div>
+</figure>
+`;
+
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
+{
+  "text": "10:00Bidiyo, Labaran Talabijin, 21 Disamba 2020, Tsawon lokaci 10,00",
+  "url": "/hausa/bbc_hausa_tv/tv/w172xcg20jgz8xm",
+}
+`;
+
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
+{
+  "text": "10:00Bidiyo, Labaran Talabijin, 18 Disamba 2020, Tsawon lokaci 10,00",
+  "url": "/hausa/bbc_hausa_tv/tv/w172xcg1n85kqy5",
+}
+`;
+
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
+{
+  "text": "10:00Bidiyo, Labaran Talabijin, 17 Disamba 2020, Tsawon lokaci 10,00",
+  "url": "/hausa/bbc_hausa_tv/tv/w172xcg1n85gv12",
+}
+`;
+
+exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "10:00Bidiyo, Labaran Talabijin, 16 Disamba 2020, Tsawon lokaci 10,00",
+  "url": "/hausa/bbc_hausa_tv/tv/w172xcg1n85cy3z",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/hausa/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8"`;
+
+exports[`Canonical On Demand T V Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical On Demand T V Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `"Labaran Talabijin, 23 Nuwamba 2020"`;
+
+exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"ha"`;
+
+exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ha",
+        "name": "Hausa",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8",
+        "@type": "WebPage",
+        "name": "Labaran Talabijin",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "width": 1024,
+        },
+        "name": "BBC News Hausa",
+        "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "url": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8",
+    },
+    {
+      "@type": "VideoObject",
+      "description": "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
+      "duration": "PT10M",
+      "name": "Labaran Talabijin",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b216l.png",
+      "uploadDate": "2020-11-23T00:00:00.000Z",
+    },
+  ],
+}
+`;
+
+exports[`Canonical On Demand T V Page SEO OG description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
+
+exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical On Demand T V Page SEO OG image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical On Demand T V Page SEO OG locale 1`] = `"ha-GH"`;
+
+exports[`Canonical On Demand T V Page SEO OG site name 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical On Demand T V Page SEO OG title 1`] = `"Labaran Talabijin - BBC News Hausa"`;
+
+exports[`Canonical On Demand T V Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8"`;
+
+exports[`Canonical On Demand T V Page SEO Page title 1`] = `"Labaran Talabijin - BBC News Hausa"`;
+
+exports[`Canonical On Demand T V Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical On Demand T V Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical On Demand T V Page SEO Twitter creator 1`] = `"@bbchausa"`;
+
+exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
+
+exports[`Canonical On Demand T V Page SEO Twitter image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical On Demand T V Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical On Demand T V Page SEO Twitter site 1`] = `"@bbchausa"`;
+
+exports[`Canonical On Demand T V Page SEO Twitter title 1`] = `"Labaran Talabijin - BBC News Hausa"`;
+
+exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Labaran Talabijin, 23 Nuwamba 2020"`;

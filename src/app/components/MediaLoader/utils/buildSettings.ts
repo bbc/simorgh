@@ -1,16 +1,22 @@
 import onClient from '#app/lib/utilities/onClient';
+import isLive from '#app/lib/utilities/isLive';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
 
 const isTestRequested = () => {
+  if (isLive()) {
+    return false;
+  }
+
   if (onClient()) {
     const testLiterals = window.location.hostname.match(/localhost|test/g);
     const isTest = testLiterals && testLiterals.length > 0;
 
     const queryParams = new URLSearchParams(window.location.search);
-    const isRenderEnvLive = queryParams.get('renderer_env') === 'live';
+    const isRenderEnvTest = queryParams.get('renderer_env') === 'test';
 
-    return isTest && !isRenderEnvLive;
+    return isTest && isRenderEnvTest;
   }
 
   return false;
@@ -31,6 +37,9 @@ const buildSettings = ({
   showAdsBasedOnLocation = false,
   embedded,
 }: BuildConfigProps) => {
+  const { model: mediaOverrides } =
+    filterForBlockType(blocks, 'mediaOverrides') || {};
+
   // Base configuration that all media players should have
   const basePlayerConfig: PlayerConfig = {
     autoplay: true,
@@ -39,8 +48,9 @@ const buildSettings = ({
     appType: isAmp ? 'amp' : 'responsive',
     appName: service !== 'news' ? `news-${service}` : 'news',
     ui: {
+      skin: 'classic',
       controls: { enabled: true },
-      locale: { lang: lang || 'en' },
+      locale: { lang: mediaOverrides?.language || lang || 'en' },
       subtitles: { enabled: true, defaultOn: true },
       fullscreen: { enabled: true },
     },
@@ -63,7 +73,6 @@ const buildSettings = ({
     showAdsBasedOnLocation,
     embedded,
     lang,
-    isAmp,
   });
 
   if (!config) return null;

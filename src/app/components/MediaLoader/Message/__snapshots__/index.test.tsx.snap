@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Message matches media message snapshot 1`] = `
+.emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: transparent;
+  }
+}
+
+.emotion-1 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 {
+    padding: 1rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-1 {
+    background-color: window;
+  }
+}
+
+<div>
+  <div>
+    <div
+      class="emotion-0"
+    >
+      <strong
+        class="emotion-1"
+      >
+        Контент більше не доступний
+      </strong>
+    </div>
+  </div>
+</div>
+`;

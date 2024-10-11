@@ -340,7 +340,7 @@ export const service: DefaultServiceConfig = {
         errorDescription: 'Por favor, regresa e inténtalo más tarde.',
 
         // Closed Screen
-        closedHeading: 'Esto ya está cerrado.',
+        closedHeading: 'Esta convocatoria ya está cerrada.',
         closedDescription: 'Esto cierra el {{date}}.',
       },
     },
@@ -413,6 +413,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Internacional',
         url: '/mundo/topics/c2lej05epw5t',
+      },
+      {
+        title: 'Elecciones EE.UU. 2024',
+        url: '/mundo/topics/c1v8en6r2qgt',
       },
       {
         title: 'Hay Festival',

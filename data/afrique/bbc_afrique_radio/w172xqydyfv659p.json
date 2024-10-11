@@ -1,116 +1,138 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqydyfv659p",
-    "locators": { "pid": "w172xqydyfv659p", "brandPid": "p030s6g6" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0kxd65h3g",
+    "locators": {
+      "pid": "w172zn0kxd65h3g",
+      "brandPid": "p030s6dq"
+    },
     "type": "WSRADIO",
     "createdBy": "bbc_afrique_radio",
     "language": "fr",
-    "lastUpdated": 1608028470702,
-    "firstPublished": 1603707736000,
-    "lastPublished": 1603707736000,
-    "timestamp": 1603707736000,
+    "lastUpdated": 1726746286000,
+    "firstPublished": 1721116924000,
+    "lastPublished": 1721116924000,
+    "timestamp": 1721116924000,
     "options": {},
     "analyticsLabels": {
-      "pageTitle": "A Vous L'antenne - BBC News Afrique",
-      "pageIdentifier": "afrique.bbc_afrique_radio.w172xqydyfv659p.page",
+      "pageTitle": "Bulletin D'informations - BBC News Afrique",
+      "pageIdentifier": "afrique.bbc_afrique_radio.w172zn0kxd65h3g.page",
       "producerId": "3",
       "contentType": "player-episode",
       "producer": "AFRIQUE"
     },
+    "passport": {
+      "home": "",
+      "taggings": []
+    },
     "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "A Vous L'antenne",
-    "releaseDateTimeStamp": 1606089600000,
-    "atiAnalytics": {}
+    "version": "v1.4.48",
+    "blockTypes": [
+      "media"
+    ],
+    "title": "Bulletin D'informations",
+    "releaseDateTimeStamp": 1724112000000,
+    "useSensitiveOnwardJourneys": false
   },
   "content": {
     "blocks": [
       {
-        "id": "w172xqydyfv659p",
+        "id": "w172zn0kxd65h3g",
         "subType": "episode",
         "format": "Audio",
-        "title": "23/11/2020 GMT",
+        "title": "20/08/2024 GMT",
         "synopses": {
-          "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-          "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+          "short": "Le tour du monde de l'actualité en 2 minutes ",
+          "medium": "Le tour du monde de l'actualité en 2 minutes "
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
         "embedding": false,
         "advertising": false,
         "versions": [
           {
-            "versionId": "w1mshy5trq4z4yb",
-            "types": ["Original"],
-            "duration": 600,
-            "durationISO8601": "PT10M",
+            "versionId": "w1mskzfksqdjrcp",
+            "types": [
+              "Original"
+            ],
+            "duration": 300,
+            "durationISO8601": "PT5M",
             "warnings": {},
             "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
+              "uk": true,
+              "nonUk": true,
+              "world": false
             },
-            "availableUntil": 1608726600000,
-            "availableFrom": 1606134600000,
+            "availableFrom": 1724135700000,
             "availabilityStatus": "available"
           }
         ],
         "availability": "available",
         "smpKind": "radioProgramme",
+        "episodeTitle": "Bulletin D'informations",
         "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": { "headline": "A Vous L'antenne" },
-    "locators": { "pid": "w172xqydyfv659p", "brandPid": "p030s6g6" },
+    "headlines": {
+      "headline": "Bulletin D'informations"
+    },
+    "locators": {
+      "pid": "w172zn0kxd65h3g",
+      "brandPid": "p030s6dq"
+    },
     "media": {
-      "id": "w172xqydyfv659p",
+      "id": "w172zn0kxd65h3g",
       "subType": "episode",
       "format": "Audio",
-      "title": "23/11/2020 GMT",
+      "title": "20/08/2024 GMT",
       "synopses": {
-        "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-        "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+        "short": "Le tour du monde de l'actualité en 2 minutes ",
+        "medium": "Le tour du monde de l'actualité en 2 minutes "
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
       "embedding": false,
       "advertising": false,
       "versions": [
         {
-          "versionId": "w1mshy5trq4z4yb",
-          "types": ["Original"],
-          "duration": 600,
-          "durationISO8601": "PT10M",
+          "versionId": "w1mskzfksqdjrcp",
+          "types": [
+            "Original"
+          ],
+          "duration": 300,
+          "durationISO8601": "PT5M",
           "warnings": {},
           "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
+            "uk": true,
+            "nonUk": true,
+            "world": false
           },
-          "availableUntil": 1608726600000,
-          "availableFrom": 1606134600000,
+          "availableFrom": 1724135700000,
           "availabilityStatus": "available"
         }
       ],
       "availability": "available",
       "smpKind": "radioProgramme",
+      "episodeTitle": "Bulletin D'informations",
       "type": "media"
     },
     "indexImage": {
-      "id": "",
+      "id": "p0gsjjjl",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-      "height": 0,
-      "width": 0,
-      "altText": null,
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+      "height": 1080,
+      "width": 1920,
+      "altText": "Le Journal",
+      "caption": "Le premier rendez-vous d'information de la matinée.",
       "copyrightHolder": null,
       "type": "image"
     },
-    "releaseDateTimestamp": 1606089600000,
-    "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqydyfv659p",
+    "releaseDateTimestamp": 1724112000000,
+    "brand": {
+      "pid": "p030s6dq",
+      "title": "Bulletin D'informations"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0kxd65h3g",
     "type": "ws_radio"
   },
   "relatedContent": {
@@ -125,419 +147,1263 @@
         "type": "other-episode",
         "promos": [
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqyg17slwzz", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcgggwnp",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqyg17slwzz",
+              "id": "w172zn0mcgggwnp",
               "subType": "episode",
               "format": "Audio",
-              "title": "15/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5vvj3cwmm",
-                  "types": ["Original"],
-                  "duration": 600,
-                  "durationISO8601": "PT10M",
+                  "versionId": "w1mskzfm7snv4xx",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610609100000,
-                  "availableFrom": 1608017100000,
+                  "availableFrom": 1726728000000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqyg17slwzz",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcgggwnp",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqy19wh866y", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcgggwc0",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqy19wh866y",
+              "id": "w172zn0mcgggwc0",
               "subType": "episode",
               "format": "Audio",
-              "title": "15/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5g44t15vl",
-                  "types": ["Original"],
-                  "duration": 570,
-                  "durationISO8601": "PT9M30S",
+                  "versionId": "w1mskzfm7snv4m7",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610607600000,
-                  "availableFrom": 1608015600000,
+                  "availableFrom": 1726727700000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqy19wh866y",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcgggwc0",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqy19wh84bw", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcgggrxk",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqy19wh84bw",
+              "id": "w172zn0mcgggrxk",
               "subType": "episode",
               "format": "Audio",
-              "title": "15/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5g44t13zj",
-                  "types": ["Original"],
-                  "duration": 570,
-                  "durationISO8601": "PT9M30S",
+                  "versionId": "w1mskzfm7snv15s",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610605800000,
-                  "availableFrom": 1608013800000,
+                  "availableFrom": 1726724400000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqy19wh84bw",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcgggrxk",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqy19wh82gt", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcgggrlw",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqy19wh82gt",
+              "id": "w172zn0mcgggrlw",
               "subType": "episode",
               "format": "Audio",
-              "title": "15/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5g44t123g",
-                  "types": ["Original"],
-                  "duration": 570,
-                  "durationISO8601": "PT9M30S",
+                  "versionId": "w1mskzfm7snv0w3",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610604000000,
-                  "availableFrom": 1608012000000,
+                  "availableFrom": 1726724100000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqy19wh82gt",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcgggrlw",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqy19wh80lr", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n354rzy",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqy19wh80lr",
+              "id": "w172zn06n354rzy",
               "subType": "episode",
               "format": "Audio",
-              "title": "15/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5g44t107d",
-                  "types": ["Original"],
-                  "duration": 570,
-                  "durationISO8601": "PT9M30S",
+                  "versionId": "w1mskzf6jfcj185",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610602200000,
-                  "availableFrom": 1608010200000,
+                  "availableFrom": 1726743720000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqy19wh80lr",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n354rzy",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqyg17sjm46", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n354n7t",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqyg17sjm46",
+              "id": "w172zn06n354n7t",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5vvj39lrv",
-                  "types": ["Original"],
-                  "duration": 600,
-                  "durationISO8601": "PT10M",
+                  "versionId": "w1mskzf6jfchxj1",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610541000000,
-                  "availableFrom": 1607949000000,
+                  "availableFrom": 1726740120000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqyg17sjm46",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n354n7t",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqyg17sj02w", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n354jhp",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqyg17sj02w",
+              "id": "w172zn06n354jhp",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5vvj38zqj",
-                  "types": ["Original"],
-                  "duration": 600,
-                  "durationISO8601": "PT10M",
+                  "versionId": "w1mskzf6jfchsrx",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610522700000,
-                  "availableFrom": 1607930700000,
+                  "availableFrom": 1726736520000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqyg17sj02w",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n354jhp",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "A Vous L'antenne" },
-            "locators": { "pid": "w172xqy19wh599v", "brandPid": "p030s6g6" },
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n354drk",
+              "brandPid": "p030s6dq"
+            },
             "media": {
-              "id": "w172xqy19wh599v",
+              "id": "w172zn06n354drk",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/12/2020 GMT",
+              "title": "19/09/2024 GMT",
               "synopses": {
-                "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
-                "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshy5g44sy8yh",
-                  "types": ["Original"],
-                  "duration": 570,
-                  "durationISO8601": "PT9M30S",
+                  "versionId": "w1mskzf6jfchp0s",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
                   "warnings": {},
                   "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
                   },
-                  "availableUntil": 1610521200000,
-                  "availableFrom": 1607929200000,
+                  "availableFrom": 1726732920000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
               "type": "media"
             },
             "indexImage": {
-              "id": "",
+              "id": "p0gsjjjl",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": { "pid": "p030s6g6", "title": "A Vous L'antenne" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172xqy19wh599v",
+            "releaseDateTimestamp": 1726704000000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n354drk",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggfcjd",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggfcjd",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snsmsm",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726682700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggfcjd",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggf414",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggf414",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snsd9c",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726675500000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggf414",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggdn1m",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggdn1m",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snrx9v",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726661100000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggdn1m",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggczrl",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggczrl",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snr80t",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726641600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggczrl",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggczfx",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggczfx",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snr7q4",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726641300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggczfx",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggcw0g",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggcw0g",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snr48p",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726638000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggcw0g",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn0mcggcvps",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn0mcggcvps",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzfm7snr3z0",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726637700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn0mcggcvps",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n352c2c",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn06n352c2c",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzf6jfcfmbl",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726671720000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n352c2c",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n3527b7",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn06n3527b7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzf6jfcfhlg",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726668120000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n3527b7",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n351w2v",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn06n351w2v",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzf6jfcf4c2",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726657320000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n351w2v",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n351rbq",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn06n351rbq",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzf6jfcf0ly",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726653720000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n351rbq",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Bulletin D'informations"
+            },
+            "locators": {
+              "pid": "w172zn06n351mll",
+              "brandPid": "p030s6dq"
+            },
+            "media": {
+              "id": "w172zn06n351mll",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/09/2024 GMT",
+              "synopses": {
+                "short": "Le tour du monde de l'actualité en 2 minutes ",
+                "medium": "Le tour du monde de l'actualité en 2 minutes "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mskzf6jfcdwvt",
+                  "types": [
+                    "Original"
+                  ],
+                  "duration": 120,
+                  "durationISO8601": "PT2M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1726650120000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bulletin D'informations",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0gsjjjl",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0gsjjjl.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "Le Journal",
+              "caption": "Le premier rendez-vous d'information de la matinée.",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1726617600000,
+            "brand": {
+              "pid": "p030s6dq",
+              "title": "Bulletin D'informations"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172zn06n351mll",
             "type": "ws_radio"
           }
         ]

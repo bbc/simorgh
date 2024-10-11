@@ -2,7 +2,7 @@
 
 exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_tv.w172xcldhhrdqgb.page&amp;x1=[urn%3Abbc%3Apips%3Aw13xttn4]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%86%DA%93%DB%8D%2520%D8%AF%D8%A7%2520%D9%88%D8%AE%D8%AA%2520-%2520BBC%2520News%2520%D9%BE%DA%9A%D8%AA%D9%88]"/>"`;
+exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_tv.tv_programmes.w13xttn4.page&amp;x1=[urn%3Abbc%3Apips%3Aw13xttn4]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%AF%2520%D8%A8%D9%8A%2520%D8%A8%D9%8A%2520%D8%B3%D9%8A%2520%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2520%2520-%2520BBC%2520News%2520%D9%BE%DA%9A%D8%AA%D9%88]"/>"`;
 
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 1`] = `
 {
@@ -143,43 +143,268 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical On Demand T V Page I can see the brand title 1`] = `"نړۍ دا وخت"`;
+exports[`Canonical On Demand T V Page I can see the brand title 1`] = `" د بي بي سي خبرونه "`;
 
-exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي"`;
 
-exports[`Canonical On Demand T V Page I can see the episode title 1`] = `"۲۷ می ۲۰۲۰"`;
+exports[`Canonical On Demand T V Page I can see the episode title 1`] = `" د بي بي سي خبرونه "`;
 
-exports[`Canonical On Demand T V Page Main heading should match text 1`] = `"نړۍ دا وخت, ۲۷ می ۲۰۲۰"`;
+exports[`Canonical On Demand T V Page Main heading should match text 1`] = `" د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴"`;
 
-exports[`Canonical On Demand T V Page Media Player a11y assistive technology can read the media player title 1`] = `"ویډیو پلیئر"`;
+exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, " د بي بي سي خبرونه ", موده 28,00"`;
 
-exports[`Canonical On Demand T V Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"`;
+exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
+<div
+  class="bbc-145siv3"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-1u05bd9"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-n2zqlz"
+    >
+      &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-1s7djye"
+    type="button"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, " د بي بي سي خبرونه ", موده 28,00
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-7qcky8"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-digyti"
+      datetime="PT28M"
+    >
+      28:00
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
+<div
+  class="bbc-145siv3"
+  data-e2e="media-loader__placeholder"
+>
+  <div
+    class="bbc-1u05bd9"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="bbc-n2zqlz"
+    >
+      &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
+    </noscript>
+  </div>
+  <button
+    class="focusIndicatorRemove bbc-1s7djye"
+    type="button"
+  >
+    <span
+      class="bbc-m04vo2"
+    >
+      Play video, " د بي بي سي خبرونه ", موده 28,00
+    </span>
+    <div
+      aria-hidden="true"
+      class="bbc-7qcky8"
+    >
+      <svg
+        aria-hidden="true"
+        class="bbc-vja2s5 e1s2dgdk5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+    <time
+      aria-hidden="true"
+      class="bbc-digyti"
+      datetime="PT28M"
+    >
+      28:00
+    </time>
+  </button>
+  <div
+    class="bbc-lgx6cw"
+    style="padding-bottom:0;overflow:hidden"
+  >
+    <img
+      alt=""
+      class="bbc-ipdj63"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+      style="aspect-ratio:auto"
+    />
+  </div>
+</div>
+`;
+
+exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
+<figure
+  class="bbc-7rf7s3"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="bbc-145siv3"
+    data-e2e="media-loader__placeholder"
+  >
+    <div
+      class="bbc-1u05bd9"
+      data-e2e="media-player__guidance"
+    >
+      <noscript
+        class="bbc-n2zqlz"
+      >
+        &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
+      </noscript>
+    </div>
+    <button
+      class="focusIndicatorRemove bbc-1s7djye"
+      type="button"
+    >
+      <span
+        class="bbc-m04vo2"
+      >
+        Play video, " د بي بي سي خبرونه ", موده 28,00
+      </span>
+      <div
+        aria-hidden="true"
+        class="bbc-7qcky8"
+      >
+        <svg
+          aria-hidden="true"
+          class="bbc-vja2s5 e1s2dgdk5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
+        </svg>
+      </div>
+      <time
+        aria-hidden="true"
+        class="bbc-digyti"
+        datetime="PT28M"
+      >
+        28:00
+      </time>
+    </button>
+    <div
+      class="bbc-lgx6cw"
+      style="padding-bottom:0;overflow:hidden"
+    >
+      <img
+        alt=""
+        class="bbc-ipdj63"
+        src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
+        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+        style="aspect-ratio:auto"
+      />
+    </div>
+  </div>
+</figure>
+`;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۸ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l3zkq",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۶ سپتمبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmsln64wk50",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۷ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclqp0l12nm",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۵ سپتمبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvnszr",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۶ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8tbhc",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۴ سپتمبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvkx2n",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "۲۶:۰۰ویډیو, نړۍ دا وخت, ۵ ډیسمبر ۲۰۲۰, موده ۲۶،۰۰",
-  "url": "/pashto/bbc_pashto_tv/tv/w172xclq9r8qfl8",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۳ سپتمبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvh05k",
 }
 `;
 
@@ -259,7 +484,7 @@ exports[`Canonical On Demand T V Page SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`Canonical On Demand T V Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `"نړۍ دا وخت, ۲۷ می ۲۰۲۰"`;
+exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `" د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴"`;
 
 exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"ps"`;
 
@@ -283,7 +508,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4",
         "@type": "WebPage",
-        "name": "نړۍ دا وخت",
+        "name": " د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -301,18 +526,17 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
     },
     {
       "@type": "VideoObject",
-      "description": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-      "duration": "PT24M",
-      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live",
-      "name": "نړۍ دا وخت",
+      "description": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
+      "duration": "PT28M",
+      "name": " د بي بي سي خبرونه ",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
-      "uploadDate": "2020-05-27T00:00:00.000Z",
+      "uploadDate": "2024-09-17T00:00:00.000Z",
     },
   ],
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO OG description 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+exports[`Canonical On Demand T V Page SEO OG description 1`] = `"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي"`;
 
 exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
 
@@ -322,13 +546,13 @@ exports[`Canonical On Demand T V Page SEO OG locale 1`] = `"ps"`;
 
 exports[`Canonical On Demand T V Page SEO OG site name 1`] = `"BBC News پښتو"`;
 
-exports[`Canonical On Demand T V Page SEO OG title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
+exports[`Canonical On Demand T V Page SEO OG title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
 
 exports[`Canonical On Demand T V Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4"`;
 
-exports[`Canonical On Demand T V Page SEO Page title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
+exports[`Canonical On Demand T V Page SEO Page title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
 
 exports[`Canonical On Demand T V Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -336,7 +560,7 @@ exports[`Canonical On Demand T V Page SEO Twitter card 1`] = `"summary_large_ima
 
 exports[`Canonical On Demand T V Page SEO Twitter creator 1`] = `"@bbcpashto"`;
 
-exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي"`;
 
 exports[`Canonical On Demand T V Page SEO Twitter image alt 1`] = `"BBC News پښتو"`;
 
@@ -344,6 +568,6 @@ exports[`Canonical On Demand T V Page SEO Twitter image src 1`] = `"https://news
 
 exports[`Canonical On Demand T V Page SEO Twitter site 1`] = `"@bbcpashto"`;
 
-exports[`Canonical On Demand T V Page SEO Twitter title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
+exports[`Canonical On Demand T V Page SEO Twitter title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
 
-exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"نړۍ دا وخت, ۲۷ می ۲۰۲۰"`;
+exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴"`;

@@ -73,6 +73,7 @@ describe('cspHeader', () => {
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
         'https://*.googleadservices.com',
+        'https://*.amazon-adsystem.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -94,6 +95,7 @@ describe('cspHeader', () => {
         'https://*.facebook.com',
         'https://sb.scorecardresearch.com',
         'https://i.ytimg.com',
+        'https://*.amazon-adsystem.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -147,6 +149,7 @@ describe('cspHeader', () => {
         'https://cdn.privacy-mgmt.com',
         'https://public.flourish.studio',
         'https://*.googleadservices.com',
+        'https://*.amazon-adsystem.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -167,6 +170,7 @@ describe('cspHeader', () => {
         'https://i.ytimg.com',
         'https://*.tiktokcdn.com',
         'https://*.xx.fbcdn.net',
+        'https://*.amazon-adsystem.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -197,6 +201,7 @@ describe('cspHeader', () => {
         'https://*.facebook.com',
         'https://connect.facebook.net',
         'https://*.xx.fbcdn.net',
+        'https://*.amazon-adsystem.com',
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",
@@ -241,6 +246,7 @@ describe('cspHeader', () => {
         'https://*.google.com',
         'https://cdn.privacy-mgmt.com',
         'https://*.googleadservices.com',
+        'https://*.amazon-adsystem.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -264,6 +270,7 @@ describe('cspHeader', () => {
         'https://*.tiktokcdn.com',
         'https://*.facebook.com',
         'https://*.xx.fbcdn.net',
+        'https://*.amazon-adsystem.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -317,6 +324,7 @@ describe('cspHeader', () => {
         'https://cdn.privacy-mgmt.com',
         'https://public.flourish.studio',
         'https://*.googleadservices.com',
+        'https://*.amazon-adsystem.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -339,6 +347,7 @@ describe('cspHeader', () => {
         'https://sb.scorecardresearch.com',
         'https://*.tiktokcdn.com',
         'https://*.xx.fbcdn.net',
+        'https://*.amazon-adsystem.com',
         "data: 'self'",
       ].sort(),
       scriptSrcExpectation: [
@@ -371,6 +380,7 @@ describe('cspHeader', () => {
         'https://connect.facebook.net',
         'https://*.xx.fbcdn.net',
         'https://*.webcontentassessor.com',
+        'https://*.amazon-adsystem.com',
         ...advertisingServiceCountryDomains,
         "'self'",
         "'unsafe-inline'",

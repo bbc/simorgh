@@ -110,9 +110,17 @@ exports[`Canonical Live Radio Header Navigation link should match text and url 6
 
 exports[`Canonical Live Radio Main heading should match text 1`] = `"Radio BBC Gahuza"`;
 
-exports[`Canonical Live Radio Media Player a11y assistive technology can read the media player title 1`] = `"Kina amajwi"`;
-
-exports[`Canonical Live Radio Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/media/bbc_gahuza_radio/liveradio/rw?morph_env=live"`;
+exports[`Canonical Live Radio Media Loader renders a valid container 1`] = `
+<figure
+  class="bbc-ucozvf"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="bbc-1eq7znh"
+    data-e2e="media-player"
+  />
+</figure>
+`;
 
 exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 1`] = `
 {

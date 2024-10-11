@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta, Markdown } from '@storybook/blocks';
 
 <Meta title="hooks/useOptimizelyScrollDepth" />
 
@@ -17,13 +17,16 @@ This hook is currently only being used in conjunction with `OptimizelyPageViewTr
 
 The following table shows the thresholds with the corresponding event name (set up in Optimizely). When sending an events to Optimizely, we need to send the event name in order for Optimizely to process the event received.
 
+<Markdown>
+{`
 | Threshold | Event name |
 | :-------: | :--------: |
 |    25%    |  scroll25  |
 |    50%    |  scroll50  |
 |    75%    |  scroll75  |
 |   100%    | scroll100  |
-
+`}
+</Markdown>
 ## Usage
 
 ```jsx

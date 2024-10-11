@@ -4,19 +4,25 @@ import {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
-import getEmbedURL from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import {
   AresMediaBlock,
   AresMediaMetadataBlock,
   ConfigBuilderProps,
   ConfigBuilderReturnProps,
+  Orientations,
   PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
+import { getAmpIframeUrl, getExternalEmbedUrl } from '../utils/urlConstructors';
 
 const DEFAULT_WIDTH = 512;
+
+const ORIENTATION_MAPPING: Record<string, Orientations> = {
+  Portrait: 'portrait',
+  Original: 'landscape',
+};
 
 export default ({
   id,
@@ -28,7 +34,6 @@ export default ({
   showAdsBasedOnLocation = false,
   embedded,
   lang,
-  isAmp,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: aresMedia }: AresMediaBlock =
     filterForBlockType(blocks, 'aresMedia') ?? {};
@@ -53,6 +58,10 @@ export default ({
   const versionsBlock = aresMediaMetadata?.[versionParameter]?.[0];
 
   const versionID = versionsBlock?.versionId ?? '';
+
+  const orientation =
+    ORIENTATION_MAPPING[versionsBlock?.types?.[0]] ??
+    ORIENTATION_MAPPING.Original;
 
   const format = aresMediaMetadata?.format;
 
@@ -93,11 +102,11 @@ export default ({
 
   const isLive = aresMediaMetadata?.live ?? false;
 
-  const items = [
+  const items: PlaylistItem[] = [
     { versionID, kind, duration: rawDuration, ...(isLive && { live: true }) },
   ];
 
-  if (showAds) items.unshift({ kind: 'advert' } as PlaylistItem);
+  if (showAds) items.unshift({ kind: 'advert' });
 
   const placeholderConfig = buildPlaceholderConfig({
     title,
@@ -111,19 +120,16 @@ export default ({
     placeholderImageLocator: locator,
   });
 
-  const embedUrl = getEmbedURL({
-    mediaId: `${id}/${versionID}/${lang}`,
-    type: 'avEmbed',
-    isAmp,
-    embedded,
-  });
+  const ampIframeUrl = getAmpIframeUrl({ id, versionID, lang });
+
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
 
   return {
     mediaType: actualFormat || 'video',
     playerConfig: {
       ...basePlayerConfig,
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
-      ...(embedUrl && { externalEmbedUrl: embedUrl }),
+      ...(externalEmbedUrl && { externalEmbedUrl }),
       autoplay: pageType !== 'mediaArticle',
       playlistObject: {
         title,
@@ -143,5 +149,7 @@ export default ({
     },
     placeholderConfig,
     showAds,
+    orientation,
+    ...(ampIframeUrl && { ampIframeUrl }),
   };
 };

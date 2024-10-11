@@ -11,7 +11,7 @@ type MediaIndicatorProps = {
   duration?: string;
   durationSpoken?: string;
   type?: string;
-  title: string;
+  title?: string;
   guidanceMessage?: string | null;
 };
 
@@ -20,7 +20,7 @@ const MediaIndicator = ({
   duration,
   durationSpoken,
   type = 'video',
-  title,
+  title = '',
   guidanceMessage,
 }: MediaIndicatorProps) => {
   const hiddenText = `${guidanceMessage || ''} Play ${type}, ${

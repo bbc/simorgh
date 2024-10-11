@@ -1,17 +1,7 @@
-import {
-  runCommonCrossPlatformTests,
-  runMediaPlayerEmbedLegacyTests,
-  runTimestampTests,
-} from '../../common';
+import { runCommonCrossPlatformTests, runTimestampTests } from '../../common';
 
-export default (service, pageType) => {
-  const ignoreMediaPlayerFor = ['MAP', 'PGL', 'STY'];
-
+export default service => {
   runCommonCrossPlatformTests(service);
-
-  if (!ignoreMediaPlayerFor.includes(pageType)) {
-    runMediaPlayerEmbedLegacyTests();
-  }
 
   runTimestampTests();
 

@@ -1,11 +1,8 @@
 import { FetchMock } from 'jest-fetch-mock';
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { StaticRouter } from 'react-router-dom';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
@@ -14,7 +11,7 @@ import {
   act,
   render,
 } from '../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import * as MediaLoader from '../../components/MediaLoader';
 import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
 
 const pageType = MEDIA_PAGE;
@@ -33,31 +30,16 @@ interface Props {
   service: Services;
 }
 
-const Page = ({ pageData, service }: Props) => (
-  <StaticRouter>
-    <ToggleContextProvider>
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.com"
-          pageType={pageType}
-          derivedPageType="On Demand TV"
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <OnDemandTvPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  </StaticRouter>
-);
-
 const renderPage = async ({ pageData, service }: Props) => {
   let result;
   await act(async () => {
-    result = render(<Page pageData={pageData} service={service} />, {
-      pageType,
+    result = render(<OnDemandTvPage service={service} pageData={pageData} />, {
+      bbcOrigin: 'https://www.test.bbc.com',
       derivedPageType: 'On Demand TV',
+      pageType,
+      pathname: '/pathname',
+      service,
+      statusCode: 200,
     });
   });
 
@@ -99,7 +81,9 @@ describe('OnDemand TV Brand Page ', () => {
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();
-    expect(visuallyHiddenHeadline?.innerHTML).toEqual('نړۍ دا وخت, ۲۷ می ۲۰۲۰');
+    expect(visuallyHiddenHeadline?.innerHTML).toEqual(
+      ' د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴',
+    );
   });
 
   it('should show the brand title for OnDemand TV Pages', async () => {
@@ -111,13 +95,16 @@ describe('OnDemand TV Brand Page ', () => {
       toggles,
     });
     // @ts-expect-error react testing library returns the required query
-    const { getByText } = await renderPage({
+    const { getByTestId } = await renderPage({
       // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
 
-    expect(getByText('نړۍ دا وخت')).toBeInTheDocument();
+    const brandTitle = getByTestId('brand-title');
+
+    expect(brandTitle).toBeInTheDocument();
+    expect(brandTitle).toHaveTextContent('د بي بي سي خبرونه');
   });
 
   it('a11y - should aria-hide the title', async () => {
@@ -138,7 +125,7 @@ describe('OnDemand TV Brand Page ', () => {
     const hiddenHeadline = container.querySelector('strong[aria-hidden=true]');
 
     expect(hiddenHeadline).toBeDefined();
-    expect(hiddenHeadline).toContainHTML('نړۍ دا وخت');
+    expect(hiddenHeadline).toContainHTML('د بي بي سي خبرونه');
   });
 
   it('a11y - should have a "content" id on the h1', async () => {
@@ -192,7 +179,7 @@ describe('OnDemand TV Brand Page ', () => {
       service: 'pashto',
     });
 
-    expect(getByText('۲۷ می ۲۰۲۰')).toBeInTheDocument();
+    expect(getByText('۱۷ سپتمبر ۲۰۲۴')).toBeInTheDocument();
   });
 
   it('should show the summary for OnDemand TV Pages', async () => {
@@ -211,13 +198,11 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     expect(
-      getByText(
-        'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
-      ),
+      getByText('نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي'),
     ).toBeInTheDocument();
   });
 
-  it('should show the video player on canonical with no live override', async () => {
+  it('should show the video player', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     fetchMock.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData } = await getInitialData({
@@ -231,36 +216,44 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const videoPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
 
-    expect(videoPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
+    const videoPlayer = container.querySelector(
+      '[data-e2e="media-loader__container"]',
     );
+
+    expect(videoPlayer).toBeInTheDocument();
   });
 
-  it('should show the video player on canonical with live override', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
+  it('should use the derived page identifier to render the video player', async () => {
+    const mediaLoaderSpy = jest.spyOn(MediaLoader, 'default');
+
+    process.env.SIMORGH_APP_ENV = 'live';
     fetchMock.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-tv-path',
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
-    const { container } = await renderPage({
+    const expectedMediaOverrides = {
+      model: {
+        language: 'ps',
+        pageIdentifierOverride: 'pashto.bbc_pashto_tv.tv.w172zmsln64zg23.page',
+        pageTitleOverride: ' د بي بي سي خبرونه ',
+      },
+      type: 'mediaOverrides',
+    };
+
+    await renderPage({
       // @ts-expect-error partial data required for testing purposes
       pageData,
       service: 'pashto',
     });
-    const videoPlayerIframeSrc = container
-      .querySelector('iframe')
-      .getAttribute('src');
 
-    expect(videoPlayerIframeSrc).toEqual(
-      '/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
-    );
+    const mediaLoaderProps = mediaLoaderSpy.mock.calls[0][0];
+    const { blocks } = mediaLoaderProps;
+
+    expect(mediaLoaderSpy).toHaveBeenCalled();
+    expect(blocks).toEqual(expect.arrayContaining([expectedMediaOverrides]));
   });
 
   it('should show the expired content message if episode is expired', async () => {
@@ -281,10 +274,8 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const expiredMessageEl = getByText('دغه فایل نور د لاسرسي وړ نه دی.');
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(expiredMessageEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
@@ -307,12 +298,10 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const notYetAvailableEl = getByText(
       'دغه پروګرام د خپرولو لپاره چمتو نه دی.',
     );
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
@@ -335,12 +324,10 @@ describe('OnDemand TV Brand Page ', () => {
       pageData,
       service: 'pashto',
     });
-    const audioPlayerIframeEl = container.querySelector('iframe');
     const notYetAvailableEl = getByText(
       'دغه پروګرام د خپرولو لپاره چمتو نه دی.',
     );
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
