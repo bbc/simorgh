@@ -17,6 +17,38 @@
             "description": "Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo",
             "imageAlt": "Koren, grane i lišće.",
             "id": "czmk8npevn0o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Obrazovanje u Srbiji: Priče onih koji su se posle velike pauze vratili studiranju",
+            "firstPublished": "2024-10-10T13:06:13.117Z",
+            "lastPublished": "2024-10-10T13:06:13.117Z",
+            "link": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/0806/test/dcd61aa0-8705-11ef-befc-6554bf4e69f9.jpg.webp",
+            "description": "summary text ",
+            "imageAlt": "alternative text",
+            "id": "c3x8zzpdy8ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Članak u srpskim medijima - Audio i video",
+            "firstPublished": "2024-10-07T15:18:08.624Z",
+            "lastPublished": "2024-10-07T15:18:08.624Z",
+            "link": "https://www.bbc.com/serbian/articles/cqy6nykzpwmo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cqy6nykzpwmo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Klimatske promene: Šta je ozonski omotač i kakva mu se budućnost smeši",
+            "firstPublished": "2024-09-16T16:43:14.456Z",
+            "lastPublished": "2024-09-16T16:43:14.456Z",
+            "link": "https://www.bbc.com/serbian/articles/c3v223kzpzko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c3v223kzpzko"
           }
         ],
         "activePage": 1,
@@ -25,15 +57,15 @@
         "curationType": "tipo-curation",
         "position": 0,
         "title": "Serbian",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
       }
     ],
     "metadata": {
       "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c6zr6pp47w7t",
         "contentType": "index-home",
-        "pageIdentifier": "serbian.page",
+        "pageIdentifier": "serbiancyr.page",
         "pageTitle": "Почетна страница"
       }
     }
