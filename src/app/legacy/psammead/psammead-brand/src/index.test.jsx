@@ -223,7 +223,7 @@ describe('Brand', () => {
 
     it.each([
       'http://localhost:7080/pidgin',
-      'https://www.test.bbc.com',
+      'https://www.test.bbc.com/pidgin',
       'https://www.bbc.com/pidgin',
     ])(
       'should not be displayed when hostname is %s because hostname does not include preview',
