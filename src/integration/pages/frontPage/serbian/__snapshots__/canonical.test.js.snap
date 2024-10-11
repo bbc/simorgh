@@ -261,9 +261,33 @@ exports[`Canonical Front Page SEO Linked data should match text 1`] = `
           "position": 4,
           "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
       ],
       "name": "BBC News na srpskom",
-      "numberOfItems": 4,
+      "numberOfItems": 8,
     },
   ],
 }
@@ -302,3 +326,19 @@ exports[`Canonical Front Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`Canonical Front Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 
 exports[`Canonical Front Page SEO Twitter title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Front Page Sections should match headline text 1`] = `"Serbian"`;
+
+exports[`Canonical Front Page Sections should match headline text 2`] = `"Serbian"`;
+
+exports[`Story Promo Headline should match text 1`] = `"Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo"`;
+
+exports[`Story Promo Image should match image 1`] = `
+<img
+  alt="Koren, grane i lišće."
+  class="bbc-139onq"
+  loading="lazy"
+  src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/8e80/test/de02d740-4e90-11ef-ae89-b10ee2354b32.jpg.webp"
+  style="aspect-ratio:16 / 9"
+/>
+`;
