@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { Helmet } from 'react-helmet';
 import { v4 as uuid } from 'uuid';
 
@@ -21,7 +21,7 @@ export const LiteButton = ({
   className,
   script,
   ...htmlAttributes
-}: Props & React.ComponentProps<'button'>) => {
+}: Props & ComponentProps<'button'>) => {
   const elementId = `lite-button-${uuid()}`;
 
   return (
