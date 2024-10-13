@@ -33,7 +33,7 @@ const styles = {
         },
       },
     }),
-  list: ({ mq, spacings, isLite }: Theme) =>
+  list: ({ mq, spacings }: Theme) =>
     css({
       padding: 0,
       margin: `0 0 ${spacings.QUINTUPLE}rem`,
@@ -46,34 +46,6 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(4, 1fr)',
       },
-
-      ...(isLite && {
-        gridTemplateColumns: 'unset',
-
-        [mq.GROUP_3_MIN_WIDTH]: {
-          gridTemplateColumns: 'unset',
-        },
-        [mq.GROUP_4_MIN_WIDTH]: {
-          gridTemplateColumns: 'unset',
-        },
-
-        li: {
-          gridColumn: 'unset',
-          gridRow: 'unset',
-          paddingTop: 0,
-
-          '&::before': {
-            display: 'none',
-          },
-          '.promo-image': {
-            display: 'none',
-          },
-          '.promo-text': {
-            width: '100%',
-            paddingInlineStart: 0,
-          },
-        },
-      }),
     }),
 };
 

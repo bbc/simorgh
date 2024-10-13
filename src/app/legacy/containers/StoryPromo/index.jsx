@@ -149,7 +149,7 @@ const StoryPromoContainer = ({
   sectionType = '',
 }) => {
   const { script, service } = useContext(ServiceContext);
-  const { isAmp, isLite, pageType } = useContext(RequestContext);
+  const { isAmp, pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const linkId = buildUniquePromoId({
@@ -313,7 +313,7 @@ const StoryPromoContainer = ({
       mediaIndicator={MediaIndicator}
       promoType={promoType}
       dir={dir}
-      displayImage={displayImage && !isLite}
+      displayImage={displayImage}
     />
   );
 };

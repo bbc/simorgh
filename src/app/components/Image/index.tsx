@@ -64,7 +64,6 @@ const Image = ({
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
@@ -78,6 +77,7 @@ const Image = ({
   );
 
   const hasFallback =
+    !isLite &&
     srcSet &&
     fallbackSrcSet &&
     (pageType === FRONT_PAGE || pageType === HOME_PAGE);

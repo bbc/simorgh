@@ -50,9 +50,8 @@ const ImageWithCaption = ({
   sizes,
   shouldPreload,
 }: Props) => {
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
 
-  if (isLite) return null;
   if (!blocks) return null;
 
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');

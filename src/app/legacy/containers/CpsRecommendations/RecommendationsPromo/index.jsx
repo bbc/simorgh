@@ -43,7 +43,7 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
   display: inline-block;
-  width: ${props => (props.theme.isLite ? '100%' : 'calc(100% - 7.5rem)')};
+  width: calc(100% - 7.5rem);
   padding: 0 ${GEL_SPACING};
   vertical-align: top;
   height: 100%;

@@ -11,7 +11,7 @@ const styles = {
         marginTop: `0`,
       },
     }),
-  textWrapper: ({ mq, isLite }: Theme) =>
+  textWrapper: ({ mq }: Theme) =>
     css({
       width: '67%',
       display: 'inline-block',
@@ -20,8 +20,6 @@ const styles = {
       [mq.GROUP_3_ONLY]: {
         width: '100%',
       },
-
-      ...(isLite && { width: '100%' }),
     }),
   promoTitle: ({ mq, fontSizes }: Theme) =>
     css({
