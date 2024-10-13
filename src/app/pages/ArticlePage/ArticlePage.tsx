@@ -39,6 +39,7 @@ import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import { Article, OptimoBylineBlock } from '#app/models/types/optimo';
 import ScrollablePromo from '#components/ScrollablePromo';
+import LiteButton from '#app/components/LiteButton';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -64,6 +65,29 @@ import SecondaryColumn from './SecondaryColumn';
 
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
+
+const testScript = () => {
+  const mainWrapper = document.getElementsByTagName('main')[0];
+
+  const counterEl = document.getElementById('counter');
+
+  if (!counterEl) {
+    const counter = document.createElement('div');
+    counter.id = 'counter';
+    counter.innerText = '0';
+    counter.className = 'test-counter';
+    mainWrapper.prepend(counter);
+  } else {
+    const currentCount = parseInt(counterEl.innerText, 10);
+    counterEl.innerText = (currentCount + 1).toString();
+
+    if (currentCount % 2 === 0) {
+      counterEl.style.backgroundColor = 'red';
+    } else {
+      counterEl.style.backgroundColor = 'transparent';
+    }
+  }
+};
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp, pageType, service } = useContext(RequestContext);
@@ -93,7 +117,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
-  const startsWithHeading = blocks?.[0]?.type === 'headline' ?? false;
+  const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
@@ -251,6 +275,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
+            <LiteButton script={testScript}>Click the Lite Button 1</LiteButton>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
