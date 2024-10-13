@@ -89,18 +89,21 @@ const ImageWithCaption = ({
   const lazyLoad = shouldLazyLoad(position);
 
   const imgId = `image-${position[0]}`;
+  const buttonId = `button-${position[0]}`;
 
-  const testScript = () => {
-    const imgWrapper = document?.getElementById(imgId);
+  const testScript = `
+    const imgWrapper = document.getElementById('${imgId}');
+    const buttonWrapper = document.getElementById('${buttonId}');
 
-    if (imgWrapper) {
+    if (imgWrapper && buttonWrapper) {
       imgWrapper.style.display = 'block';
+      buttonWrapper.style.display = 'none';
     }
-  };
+  `;
 
   return (
     <figure className={className} css={styles.figure}>
-      <div css={styles.liteImageOverlay}>
+      <div id={buttonId} css={styles.liteImageOverlay}>
         <LiteButton css={styles.liteImageOverlayButton} script={testScript}>
           Load Image
         </LiteButton>
