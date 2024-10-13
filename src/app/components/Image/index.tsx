@@ -64,7 +64,6 @@ const Image = ({
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;

@@ -2,16 +2,29 @@ import React, { ComponentProps } from 'react';
 import { Helmet } from 'react-helmet';
 import { v4 as uuid } from 'uuid';
 
-const generateScript = (script: () => void, elementId: string) => `
+type Script = string | (() => void);
+
+const generateScript = (script: Script, elementId: string) => {
+  if (typeof script === 'string') {
+    return `
+      window.addEventListener("load", function(event) {
+        var button = document.getElementById('${elementId}');
+        button.addEventListener('click', function() {${script}});
+      });
+    `;
+  }
+
+  return `
     window.addEventListener("load", function(event) {
       var button = document.getElementById('${elementId}');
       button.addEventListener('click', ${script});
     });
   `;
+};
 
 type Props = {
   className?: string;
-  script?: () => void;
+  script?: Script;
 };
 
 export const LiteButton = ({

@@ -10,6 +10,7 @@ import Caption from '../Caption';
 import Image from '../Image';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
+import LiteButton from '../LiteButton';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
@@ -50,9 +51,8 @@ const ImageWithCaption = ({
   sizes,
   shouldPreload,
 }: Props) => {
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
 
-  if (isLite) return null;
   if (!blocks) return null;
 
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
@@ -88,27 +88,44 @@ const ImageWithCaption = ({
 
   const lazyLoad = shouldLazyLoad(position);
 
+  const imgId = `image-${position[0]}`;
+
+  const testScript = () => {
+    const imgWrapper = document?.getElementById(imgId);
+
+    if (imgWrapper) {
+      imgWrapper.style.display = 'block';
+    }
+  };
+
   return (
     <figure className={className} css={styles.figure}>
-      <Image
-        alt={alt}
-        attribution={copyright}
-        src={src}
-        height={height}
-        width={width}
-        lazyLoad={lazyLoad}
-        preload={shouldPreloadLeadImage}
-        srcSet={primarySrcset || undefined}
-        fallbackSrcSet={fallbackSrcset || undefined}
-        mediaType={primaryMimeType || undefined}
-        fallbackMediaType={fallbackMimeType || undefined}
-        sizes={!isAmp ? sizes : undefined}
-        isAmp={isAmp}
-        placeholder
-        hasCaption
-      >
-        {renderCopyright(copyright || '')}
-      </Image>
+      <div css={styles.liteImageOverlay}>
+        <LiteButton css={styles.liteImageOverlayButton} script={testScript}>
+          Load Image
+        </LiteButton>
+      </div>
+      <div id={imgId} style={{ display: 'none' }}>
+        <Image
+          alt={alt}
+          attribution={copyright}
+          src={src}
+          height={height}
+          width={width}
+          lazyLoad={lazyLoad}
+          preload={shouldPreloadLeadImage}
+          srcSet={primarySrcset || undefined}
+          fallbackSrcSet={fallbackSrcset || undefined}
+          mediaType={primaryMimeType || undefined}
+          fallbackMediaType={fallbackMimeType || undefined}
+          sizes={!isAmp ? sizes : undefined}
+          isAmp={isAmp}
+          placeholder
+          hasCaption
+        >
+          {renderCopyright(copyright || '')}
+        </Image>
+      </div>
       {captionBlock && renderCaption(captionBlock, 'image')}
     </figure>
   );
