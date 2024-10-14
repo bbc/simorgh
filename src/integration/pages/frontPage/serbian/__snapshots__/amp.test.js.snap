@@ -98,7 +98,7 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 {
   "requests": {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=81&p=serbian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Atipo%3Atopic%3Ac6zr6pp47w7t]&x2=[amp]&x3=[news-serbian]&x4=[sr-latn]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Po%C4%8Detna%2520stranica]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=81&p=serbianlat.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Atipo%3Atopic%3Ac6zr6pp47w7t]&x2=[amp]&x3=[news-serbian]&x4=[sr-latn]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Po%C4%8Detna%2520stranica]&ref=\${documentReferrer}",
   },
   "transport": {
     "beacon": false,
@@ -124,6 +124,13 @@ exports[`AMP Front Page Analytics chartbeat 1`] = `
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
   },
+}
+`;
+
+exports[`AMP Front Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, na srpskom",
+  "url": "/serbian",
 }
 `;
 
@@ -370,47 +377,23 @@ exports[`AMP Front Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 3,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/cqy6nykzpwmo/lat",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 5,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 6,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 7,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 8,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/c3v223kzpzko",
         },
       ],
       "name": "BBC News na srpskom",
-      "numberOfItems": 8,
+      "numberOfItems": 4,
     },
   ],
 }
@@ -451,8 +434,6 @@ exports[`AMP Front Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 exports[`AMP Front Page SEO Twitter title 1`] = `"Glavna stranica - BBC News na srpskom"`;
 
 exports[`AMP Front Page Sections should match headline text 1`] = `"Serbian"`;
-
-exports[`AMP Front Page Sections should match headline text 2`] = `"Serbian"`;
 
 exports[`Story Promo Headline should match text 1`] = `"Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo"`;
 

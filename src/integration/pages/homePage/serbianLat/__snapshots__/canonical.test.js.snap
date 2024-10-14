@@ -115,6 +115,76 @@ exports[`Canonical Home Page Header Navigation link should match text and url 7`
 
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
 
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+  "url": "/serbian/lat/media-23169623",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "test, please ignore",
+  "url": "/serbian/lat/23200492",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+  "url": "/serbian/lat/media-23169493",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+  "url": "/serbian/lat/media-23169626",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Otvorene ZOI 2014",
+  "url": "/serbian/lat/23181035",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 6`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+  "url": "/serbian/lat/media-23169624",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 7`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+  "url": "/serbian/lat/media-23169495",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 8`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+  "url": "/serbian/lat/media-23169494",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 9`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+  "url": "/serbian/lat/media-23169608",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 10`] = `
+{
+  "text": "Beba panda odmara nakon prvog javnog nastupa",
+  "url": "/serbian/lat/23180965",
+}
+`;
+
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo"`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
@@ -247,47 +317,23 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 3,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/cqy6nykzpwmo/lat",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 5,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 6,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 7,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 8,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/c3v223kzpzko",
         },
       ],
       "name": "BBC News na srpskom",
-      "numberOfItems": 8,
+      "numberOfItems": 4,
     },
   ],
 }

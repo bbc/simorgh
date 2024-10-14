@@ -2,7 +2,7 @@
 
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"Pređite na sadržaj"`;
 
-exports[`Canonical Front Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=81&amp;p=serbian.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac6zr6pp47w7t]&amp;x2=[responsive]&amp;x3=[news-serbian]&amp;x4=[sr-latn]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Po%C4%8Detna%2520stranica]"/>"`;
+exports[`Canonical Front Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=81&amp;p=serbianlat.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac6zr6pp47w7t]&amp;x2=[responsive]&amp;x3=[news-serbian]&amp;x4=[sr-latn]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Po%C4%8Detna%2520stranica]"/>"`;
 
 exports[`Canonical Front Page Footer Anchors should match text and url 1`] = `
 {
@@ -116,6 +116,76 @@ exports[`Canonical Front Page Header Navigation link should match text and url 7
 `;
 
 exports[`Canonical Front Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
+
+exports[`Canonical Front Page Most Read has item with rank 1`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+  "url": "/serbian/lat/media-23169623",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 2`] = `
+{
+  "text": "test, please ignore",
+  "url": "/serbian/lat/23200492",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 3`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+  "url": "/serbian/lat/media-23169493",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 4`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+  "url": "/serbian/lat/media-23169626",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 5`] = `
+{
+  "text": "Otvorene ZOI 2014",
+  "url": "/serbian/lat/23181035",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 6`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+  "url": "/serbian/lat/media-23169624",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 7`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+  "url": "/serbian/lat/media-23169495",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 8`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+  "url": "/serbian/lat/media-23169494",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 9`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+  "url": "/serbian/lat/media-23169608",
+}
+`;
+
+exports[`Canonical Front Page Most Read has item with rank 10`] = `
+{
+  "text": "Beba panda odmara nakon prvog javnog nastupa",
+  "url": "/serbian/lat/23180965",
+}
+`;
 
 exports[`Canonical Front Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -247,47 +317,23 @@ exports[`Canonical Front Page SEO Linked data should match text 1`] = `
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 2,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 3,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/cqy6nykzpwmo/lat",
         },
         {
           "@context": "http://schema.org",
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 5,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 6,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 7,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
-        },
-        {
-          "@context": "http://schema.org",
-          "@type": "ListItem",
-          "position": 8,
-          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+          "url": "https://www.bbc.com/serbian/articles/c3v223kzpzko",
         },
       ],
       "name": "BBC News na srpskom",
-      "numberOfItems": 8,
+      "numberOfItems": 4,
     },
   ],
 }
@@ -329,7 +375,7 @@ exports[`Canonical Front Page SEO Twitter title 1`] = `"Glavna stranica - BBC Ne
 
 exports[`Canonical Front Page Sections should match headline text 1`] = `"Serbian"`;
 
-exports[`Canonical Front Page Sections should match headline text 2`] = `"Serbian"`;
+exports[`Canonical Front Page Sections should match headline text 2`] = `"Najčitanije"`;
 
 exports[`Story Promo Headline should match text 1`] = `"Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo"`;
 
