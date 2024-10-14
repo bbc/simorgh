@@ -65,9 +65,10 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import AmpExperiment from '../../components/AmpExperiment';
 import {
   experimentTopStoriesConfig,
-  ExperimentTopStories,
+  enableExperimentTopStories,
   insertExperimentTopStories,
-} from './experimentTopStories/experimentTopStories';
+  ExperimentTopStories,
+} from './experimentTopStories/helpers';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp, pageType, service, isAmp, pathname } =
@@ -138,21 +139,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  const urn = pathname.split('/').pop();
-  const newsTestAsset = 'c6v11qzyv8po';
-  const newsAsset = 'cz7xywn940ro';
-  const sportAsset = 'cpgw0xjmpd3o';
-  const experimentAssets = [newsAsset, sportAsset, newsTestAsset];
-  const experimentServices = ['news', 'sport'];
-
-  const enableExperimentTopStories =
-    isAmp &&
-    urn &&
-    experimentServices.includes(service) &&
-    experimentAssets.includes(urn);
-  const topStoriesContent = pageData?.secondaryColumn?.topStories;
   let blocksWithExperimentTopStories = blocks;
-  if (enableExperimentTopStories) {
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const shouldEnableExperimentTopStories = enableExperimentTopStories({
+    isAmp,
+    pathname,
+    service,
+  });
+  if (shouldEnableExperimentTopStories) {
     blocksWithExperimentTopStories = insertExperimentTopStories({
       blocks,
       topStoriesContent,
@@ -203,7 +197,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ),
     podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
     experimentTopStories: () =>
-      topStoriesContent ? (
+      shouldEnableExperimentTopStories && topStoriesContent ? (
         <ExperimentTopStories topStoriesContent={topStoriesContent} />
       ) : null,
   };
@@ -238,7 +232,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      {enableExperimentTopStories && (
+      {shouldEnableExperimentTopStories && (
         <AmpExperiment experimentData={experimentTopStoriesConfig} />
       )}
       <ATIAnalytics atiData={atiData} />

@@ -14,6 +14,30 @@ export const experimentTopStoriesConfig = {
   },
 };
 
+export const enableExperimentTopStories = ({
+  isAmp,
+  pathname,
+  service,
+}: {
+  isAmp: boolean;
+  pathname: string;
+  service: string;
+}) => {
+  const urn = pathname.split('/')[3].slice(0, -4); // .slice() to remove '.amp' at the end of pathname
+  const newsTestAsset = 'c6v11qzyv8po';
+  const newsAsset = 'cz7xywn940ro';
+  const sportAsset = 'cpgw0xjmpd3o';
+  const experimentAssets = [newsAsset, newsTestAsset, sportAsset];
+  const experimentServices = ['news', 'sport'];
+
+  return (
+    isAmp &&
+    urn &&
+    experimentServices.includes(service) &&
+    experimentAssets.includes(urn)
+  );
+};
+
 export const ExperimentTopStories = ({
   topStoriesContent,
 }: {
@@ -46,5 +70,12 @@ export const insertExperimentTopStories = ({
   };
 
   const halfway = Math.floor(blocks.length * 0.5);
-  return blocks.splice(halfway, 0, experimentTopStoriesBlock);
+  const blocksBeforeInsertIndex = blocks.slice(0, halfway);
+  const blocksAfterInsertIndex = blocks.slice(halfway, blocks.length);
+
+  return [
+    ...blocksBeforeInsertIndex,
+    experimentTopStoriesBlock,
+    ...blocksAfterInsertIndex,
+  ];
 };
