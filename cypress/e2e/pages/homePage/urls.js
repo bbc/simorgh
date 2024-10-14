@@ -16,6 +16,11 @@ const urls = [
     local: '/serbian/lat',
     test: '/serbian/lat',
   },
+  {
+    service: 'serbian',
+    local: '/serbian/cyr',
+    test: '/serbian/cyr',
+  },
 ];
 
 export default () => {
