@@ -8,16 +8,27 @@ const styles = {
       width: '100%',
       height: '100%',
     }),
-  liteImageOverlay: ({ palette }: Theme) =>
+  liteImageOverlayButton: ({ palette }: Theme) =>
     css({
       position: 'relative',
-      backgroundColor: palette.GREY_2,
+      backgroundColor: palette.WHITE,
       zIndex: 1,
+      width: '100%',
       height: 200,
-      border: `1px solid ${palette.GREY_4}`,
-      marginBottom: '1rem',
+      border: 'none',
+      cursor: 'pointer',
+
+      '&:hover, &:focus-visible': {
+        outline: 'none',
+        boxShadow: 'none',
+
+        div: {
+          backgroundColor: palette.BLACK,
+          color: palette.WHITE,
+        },
+      },
     }),
-  liteImageOverlayButton: ({ palette, fontVariants }: Theme) =>
+  liteImageButtonText: ({ palette, fontVariants }: Theme) =>
     css({
       ...fontVariants.sansBold,
       position: 'absolute',
@@ -25,11 +36,8 @@ const styles = {
       left: '50%',
       transform: 'translate(-50%, -50%)',
       padding: '1rem',
-      backgroundColor: palette.GREY_2,
       color: palette.BLACK,
-      border: `1px solid ${palette.BLACK}`,
-      borderRadius: '4px',
-      cursor: 'pointer',
+      border: `2px solid ${palette.BLACK}`,
     }),
 };
 

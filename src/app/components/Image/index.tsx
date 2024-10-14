@@ -80,7 +80,9 @@ const Image = ({
     srcSet &&
     fallbackSrcSet &&
     (pageType === FRONT_PAGE || pageType === HOME_PAGE);
-  const ImageWrapper = hasFallback ? 'picture' : Fragment;
+
+  const ImageComponentWrapper = isLite ? 'noscript' : Fragment;
+  const CanonicalImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
@@ -100,8 +102,9 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
+
   return (
-    <>
+    <ImageComponentWrapper>
       {preload && (
         <Helmet>
           <link
@@ -162,7 +165,7 @@ const Image = ({
             />
           </>
         ) : (
-          <ImageWrapper>
+          <CanonicalImageWrapper>
             {hasFallback &&
               (pageType === FRONT_PAGE || pageType === HOME_PAGE) && (
                 <>
@@ -196,11 +199,11 @@ const Image = ({
                   : 'auto',
               }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
-          </ImageWrapper>
+          </CanonicalImageWrapper>
         )}
         {children}
       </div>
-    </>
+    </ImageComponentWrapper>
   );
 };
 

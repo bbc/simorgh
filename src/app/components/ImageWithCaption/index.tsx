@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext, Fragment } from 'react';
+import { useContext } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
@@ -88,52 +88,42 @@ const ImageWithCaption = ({
 
   const lazyLoad = shouldLazyLoad(position);
 
-  const imgId = `image-${position[0]}`;
-  const buttonId = `button-${position[0]}`;
-
   const testScript = `
-    const imgWrapper = document.getElementById('${imgId}');
-    const buttonWrapper = document.getElementById('${buttonId}');
+    const figureEl = this.parentNode;
+    const noScriptEl = figureEl.querySelector('noscript');
 
-    if (imgWrapper && buttonWrapper) {
-      const newNode = document.createElement('div');
-      newNode.innerHTML = imgWrapper.innerHTML;
-      imgWrapper.replaceWith(newNode);
+    figureEl.insertAdjacentHTML('afterbegin', noScriptEl.innerHTML);
 
-      buttonWrapper.remove();
-    }
+    noScriptEl.remove();
+    this.remove();
   `;
-
-  const ImageWrapper = isLite ? 'noscript' : Fragment;
 
   return (
     <figure className={className} css={styles.figure}>
-      <div id={buttonId} css={styles.liteImageOverlay}>
+      {isLite && (
         <LiteButton css={styles.liteImageOverlayButton} script={testScript}>
-          Load Image
+          <div css={styles.liteImageButtonText}>Load Image</div>
         </LiteButton>
-      </div>
-      <ImageWrapper id={imgId}>
-        <Image
-          alt={alt}
-          attribution={copyright}
-          src={src}
-          height={height}
-          width={width}
-          lazyLoad={lazyLoad}
-          preload={shouldPreloadLeadImage}
-          srcSet={primarySrcset || undefined}
-          fallbackSrcSet={fallbackSrcset || undefined}
-          mediaType={primaryMimeType || undefined}
-          fallbackMediaType={fallbackMimeType || undefined}
-          sizes={!isAmp ? sizes : undefined}
-          isAmp={isAmp}
-          placeholder
-          hasCaption
-        >
-          {renderCopyright(copyright || '')}
-        </Image>
-      </ImageWrapper>
+      )}
+      <Image
+        alt={alt}
+        attribution={copyright}
+        src={src}
+        height={height}
+        width={width}
+        lazyLoad={lazyLoad}
+        preload={shouldPreloadLeadImage}
+        srcSet={primarySrcset || undefined}
+        fallbackSrcSet={fallbackSrcset || undefined}
+        mediaType={primaryMimeType || undefined}
+        fallbackMediaType={fallbackMimeType || undefined}
+        sizes={!isAmp ? sizes : undefined}
+        isAmp={isAmp}
+        placeholder
+        hasCaption
+      >
+        {renderCopyright(copyright || '')}
+      </Image>
       {captionBlock && renderCaption(captionBlock, 'image')}
     </figure>
   );
