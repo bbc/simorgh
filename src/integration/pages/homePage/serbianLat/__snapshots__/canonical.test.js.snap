@@ -2,6 +2,8 @@
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"Pređite na sadržaj"`;
 
+exports[`Canonical Home Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=81&amp;p=serbianlat.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac6zr6pp47w7t]&amp;x2=[responsive]&amp;x3=[news-serbian]&amp;x4=[sr-latn]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Po%C4%8Detna%2520stranica]"/>"`;
+
 exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, na srpskom",
@@ -186,6 +188,16 @@ exports[`Canonical Home Page Most Read has item with rank 10`] = `
 `;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo"`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="Koren, grane i lišće."
+  class="bbc-139onq"
+  loading="lazy"
+  src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/8e80/test/de02d740-4e90-11ef-ae89-b10ee2354b32.jpg.webp"
+  style="aspect-ratio:16 / 9"
+/>
+`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
