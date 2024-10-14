@@ -1,0 +1,104 @@
+{
+  "data": {
+    "title": "Zhongwen",
+    "description": "",
+    "pageType": "home",
+    "curations": [
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 0,
+        "title": "Most Read",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/zhongwen/simp/popular/read",
+        "mostRead": {
+          "generated": "2024-10-14T14:59:56.363Z",
+          "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+          "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+          "items": [
+            {
+              "id": "dad81266-60bb-bc4d-a33e-43110bf433ff",
+              "rank": 1,
+              "title": "图辑：德国最恐怖的城堡 25",
+              "href": "/zhongwen/simp/chinese-news-23093914",
+              "timestamp": "2016-11-25T11:51:24.000Z"
+            },
+            {
+              "id": "48f8723c-65cb-9844-8085-4a5b19b42dad",
+              "rank": 2,
+              "title": "贸易战升级：中国同步反制 国际舆论众议纷纷",
+              "href": "/zhongwen/simp/chinese-news-23216629",
+              "timestamp": "2018-09-26T11:10:37.000Z"
+            },
+            {
+              "id": "5b744292-2c3a-534f-b07e-b9cf3bbf1040",
+              "rank": 3,
+              "title": "图辑：德国最恐怖的城堡 40",
+              "href": "/zhongwen/simp/chinese-news-23093928",
+              "timestamp": "2016-11-25T12:02:59.000Z"
+            },
+            {
+              "id": "b1268a18-4770-a44f-9acc-768be9bbb241",
+              "rank": 4,
+              "title": "中美贸易战：餐桌、学费、房地产，看你的生活如何被影响",
+              "href": "/zhongwen/simp/chinese-news-23216630",
+              "timestamp": "2018-09-26T11:38:14.000Z"
+            },
+            {
+              "id": "ceb3cc46-5b29-2c4b-88b5-0b321937c432",
+              "rank": 5,
+              "title": "“债务陷阱”质疑下的中非合作论坛",
+              "href": "/zhongwen/simp/chinese-news-23213007",
+              "timestamp": "2018-09-03T09:44:43.000Z"
+            },
+            {
+              "id": "d48e4036-4f28-7c46-bcaa-1fb0ca80461b",
+              "rank": 6,
+              "title": "图辑：德国最恐怖的城堡 15",
+              "href": "/zhongwen/simp/world-outlook-23093905",
+              "timestamp": "2016-11-25T11:49:22.000Z"
+            },
+            {
+              "id": "43003e08-a878-9845-9e93-842b59532fa4",
+              "rank": 7,
+              "title": "维族高官白克力仕途一路看好 突然“违纪”落马",
+              "href": "/zhongwen/simp/chinese-news-23216627",
+              "timestamp": "2018-09-25T15:31:53.000Z"
+            },
+            {
+              "id": "7b42abef-f9f7-7f47-8e13-9c4df9134b29",
+              "rank": 8,
+              "title": "台风“山竹”：本年最强风暴重创粤港澳 多地周一续停课",
+              "href": "/zhongwen/simp/chinese-news-23215968",
+              "timestamp": "2018-09-20T15:23:56.000Z"
+            },
+            {
+              "id": "84bf4e5b-1351-7544-bad8-cba6ee902e54",
+              "rank": 9,
+              "title": "图辑：德国最恐怖的城堡 11",
+              "href": "/zhongwen/simp/china-watch-23093901",
+              "timestamp": "2016-11-25T11:48:16.000Z"
+            },
+            {
+              "id": "32d4d31a-07e5-2e40-931d-f06360fa7405",
+              "rank": 10,
+              "title": "图辑：德国最恐怖的城堡 29 - 1",
+              "href": "/zhongwen/simp/chinese-news-23093918",
+              "timestamp": "2016-11-25T11:51:48.000Z"
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cw95pll8714t",
+        "contentType": "index-home",
+        "pageIdentifier": "zhongwensimp.page",
+        "pageTitle": "Zhongwen"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
