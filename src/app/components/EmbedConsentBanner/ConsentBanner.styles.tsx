@@ -42,7 +42,7 @@ export default {
       },
     }),
 
-  button: ({ spacings, palette, isDarkUi }: Theme) =>
+  button: ({ spacings, palette, isDarkUi, mq }: Theme) =>
     css({
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       border: `${pixelsToRem(1)}rem solid ${
@@ -51,12 +51,24 @@ export default {
       borderRadius: 0,
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
+      color: palette.BLACK,
 
       '&:hover, &:focus': {
         backgroundColor: palette.POSTBOX,
         color: palette.WHITE,
         border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
         textDecoration: 'underline',
+      },
+
+      [mq.FORCED_COLOURS]: {
+        backgroundColor: 'canvas',
+        color: 'canvasText',
+        border: `${pixelsToRem(1)}rem solid canvasText`,
+        '&:hover, &:focus': {
+          backgroundColor: 'canvas',
+          color: 'canvasText',
+          border: `${pixelsToRem(1)}rem solid canvasText`,
+        },
       },
 
       // Applies focus indicator black outline.
