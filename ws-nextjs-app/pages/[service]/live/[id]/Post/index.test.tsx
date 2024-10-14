@@ -167,7 +167,7 @@ describe('Post', () => {
       });
 
       expect(
-        container.querySelector('[data-e2e="media-loader"]'),
+        container.querySelector('[data-e2e="media-loader_container"]'),
       ).toBeInTheDocument();
     });
 
