@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import setCookie from '#app/lib/utilities/setCookie';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 import * as chartbeat from './Chartbeat';
@@ -105,7 +106,7 @@ describe('UserContext', () => {
     it('should not set cookie when ckns_mvt cookie already exists', () => {
       onClientSpy.mockImplementationOnce(() => true as unknown as Location);
       isOperaProxySpy.mockImplementationOnce(() => false);
-      Cookie.set('ckns_mvt', 'foo');
+      setCookie({ name: 'ckns_mvt', value: 'foo' });
       cookieSetterSpy.mockClear();
 
       render(<DummyComponentWithContext />);
@@ -131,7 +132,7 @@ describe('UserContext', () => {
       expect(cookieName).toEqual('ckns_mvt');
       expect(cookieOptions).toEqual({
         expires: 365,
-        domain: '.bbc.com',
+        domain: 'localhost',
         sameSite: 'Lax',
       });
       expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
