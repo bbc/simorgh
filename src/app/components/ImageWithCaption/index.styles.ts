@@ -22,19 +22,14 @@ const styles = {
         outline: 'none',
         boxShadow: 'none',
 
-        div: {
+        span: {
           backgroundColor: palette.BLACK,
           color: palette.WHITE,
         },
       },
     }),
-  liteImageButtonText: ({ palette, fontVariants }: Theme) =>
+  liteImageButtonText: ({ palette }: Theme) =>
     css({
-      ...fontVariants.sansBold,
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
       padding: '1rem',
       color: palette.BLACK,
       border: `2px solid ${palette.BLACK}`,

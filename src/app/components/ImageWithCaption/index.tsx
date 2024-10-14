@@ -10,7 +10,7 @@ import Caption from '../Caption';
 import Image from '../Image';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
-import LiteButton from '../LiteButton';
+import LiteImageLoader from './LiteImageLoader';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
@@ -35,16 +35,6 @@ const renderCopyright = (copyright: string) =>
 const renderCaption = (block: object, type: string) =>
   // @ts-expect-error - TODO: fix types for blocks
   block && <Caption block={block} type={type} />;
-
-const testScript = function testScript(this: Element) {
-  const figureEl = this.parentElement;
-  const noScriptEl = figureEl?.querySelector('noscript');
-
-  figureEl?.insertAdjacentHTML('afterbegin', noScriptEl?.innerHTML || '');
-
-  noScriptEl?.remove();
-  this.remove();
-};
 
 type Props = {
   blocks: object[];
@@ -100,9 +90,7 @@ const ImageWithCaption = ({
 
   return (
     <figure className={className} css={styles.figure}>
-      <LiteButton css={styles.liteImageOverlayButton} script={testScript}>
-        <div css={styles.liteImageButtonText}>Load Image</div>
-      </LiteButton>
+      <LiteImageLoader />
       <Image
         alt={alt}
         attribution={copyright}
