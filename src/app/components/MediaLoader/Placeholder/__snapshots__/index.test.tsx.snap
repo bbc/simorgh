@@ -11,9 +11,23 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-1 {
@@ -126,6 +140,26 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-3 {
   display: none;
 }
@@ -163,6 +197,12 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -175,6 +215,13 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-8 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    color: canvasText;
+  }
 }
 
 .emotion-9 {
@@ -291,9 +338,23 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-1 {
@@ -432,6 +493,26 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-4 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:hover,
+  .emotion-4:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-4 {
   display: none;
 }
@@ -469,6 +550,12 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-7 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -481,6 +568,13 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-9 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
+    color: canvasText;
+  }
 }
 
 .emotion-10 {
@@ -603,9 +697,23 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-1 {
@@ -718,6 +826,26 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-3 {
   display: none;
 }
@@ -749,6 +877,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
 }
 
 .emotion-6 {
@@ -867,9 +1001,23 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-1 {
@@ -982,6 +1130,26 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-3 {
   display: none;
 }
@@ -1019,6 +1187,12 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1031,6 +1205,13 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-8 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    color: canvasText;
+  }
 }
 
 .emotion-9 {
@@ -1140,9 +1321,23 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-1 {
@@ -1255,6 +1450,26 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-3 {
   display: none;
 }
@@ -1286,6 +1501,12 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
 }
 
 .emotion-6 {
@@ -1397,9 +1618,23 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-1 {
@@ -1538,6 +1773,26 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-4 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:hover,
+  .emotion-4:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-4 {
   display: none;
 }
@@ -1575,6 +1830,12 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-7 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1587,6 +1848,13 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-9 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
+    color: canvasText;
+  }
 }
 
 .emotion-10 {
