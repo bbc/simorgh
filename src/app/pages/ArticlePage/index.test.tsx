@@ -39,6 +39,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import ATIAnalytics from '../../components/ATIAnalytics';
+import { topStoriesList } from './PagePromoSections/TopStoriesSection/fixture/index';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -64,6 +65,8 @@ type Props = {
   showAdsBasedOnLocation?: boolean;
   isApp?: boolean;
   promo?: boolean | null;
+  isAmp?: boolean;
+  pathname?: string;
 };
 
 const Context = ({
@@ -74,12 +77,16 @@ const Context = ({
   showAdsBasedOnLocation = false,
   isApp = false,
   promo = null,
+  isAmp = false,
+  pathname = '/pathname',
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
     ...input,
     service,
     showAdsBasedOnLocation,
     isApp,
+    isAmp,
+    pathname,
   };
 
   return (
@@ -868,5 +875,70 @@ describe('Article Page', () => {
         {},
       );
     });
+  });
+
+  describe('when rendering an AMP page', () => {
+    const pageDataWithSecondaryColumn = {
+      ...articleDataNews,
+      secondaryColumn: {
+        topStories: topStoriesList,
+        features: [],
+      },
+    };
+
+    const renderAmpPage = ({
+      service,
+      pathname,
+    }: {
+      service: Services;
+      pathname: string;
+    }) => {
+      return render(
+        <Context isAmp service={service} pathname={pathname}>
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+        {
+          isAmp: true,
+          service,
+          pathname,
+        },
+      );
+    };
+
+    const validNewsAsset = '/news/articles/c6v11qzyv8po.amp';
+    const validSportAsset = '/sport/articles/cpgw0xjmpd3o.amp';
+
+    it.each`
+      service    | pathname
+      ${'news'}  | ${validNewsAsset}
+      ${'sport'} | ${validSportAsset}
+    `(
+      'should render page with experiment-top-stories blocks only on specific $service assets',
+      ({ service, pathname }) => {
+        const { queryByTestId } = renderAmpPage({
+          service,
+          pathname,
+        });
+
+        expect(queryByTestId('experiment-top-stories')).toBeInTheDocument();
+      },
+    );
+
+    it.each`
+      service     | pathname                               | testDescription
+      ${'news'}   | ${'/news/articles/c1231qzyv8po.amp'}   | ${'news assets not specified'}
+      ${'sport'}  | ${'/sport/articles/c1231qzyv8po.amp'}  | ${'sport assets not specified'}
+      ${'pidgin'} | ${'/pidgin/articles/c6v11qzyv8po.amp'} | ${`services which are not 'news' or 'sport'`}
+    `(
+      'should render page without experiment-top-stories blocks on $testDescription',
+      ({ service, pathname }) => {
+        const { queryByTestId } = renderAmpPage({
+          service,
+          pathname,
+        });
+
+        expect(queryByTestId('experiment-top-stories')).not.toBeInTheDocument();
+      },
+    );
   });
 });

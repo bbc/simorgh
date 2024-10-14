@@ -31,13 +31,6 @@ export const enableExperimentTopStories = ({
   const experimentAssets = [newsAsset, newsTestAsset, sportAsset];
   const experimentServices = ['news', 'sport'];
 
-  console.log(
-    isAmp,
-    urn,
-    experimentServices.includes(service),
-    experimentAssets.includes(urn),
-  );
-
   return (
     isAmp &&
     urn &&
@@ -76,6 +69,8 @@ export const insertExperimentTopStories = ({
     id: `experimentTopStories-${insertIndex}`,
   };
 
-  blocks.splice(insertIndex, 0, experimentTopStoriesBlock);
-  return blocks;
+  const blocksClone = [...blocks];
+
+  blocksClone.splice(insertIndex, 0, experimentTopStoriesBlock);
+  return blocksClone;
 };
