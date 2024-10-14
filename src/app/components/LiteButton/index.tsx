@@ -34,11 +34,9 @@ export const LiteButton = ({
   ...htmlAttributes
 }: Props & ComponentProps<'button'>) => {
   const { isLite } = useContext(RequestContext);
-  const uniqueElId = useId();
+  const elementId = `lite-button-${useId()}`;
 
   if (!isLite) return null;
-
-  const elementId = `lite-button-${uniqueElId}`;
 
   return (
     <>
