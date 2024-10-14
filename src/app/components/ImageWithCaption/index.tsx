@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { useContext, Fragment } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
@@ -51,7 +51,7 @@ const ImageWithCaption = ({
   sizes,
   shouldPreload,
 }: Props) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
 
   if (!blocks) return null;
 
@@ -60,7 +60,7 @@ const ImageWithCaption = ({
   const captionBlock = filterForBlockType(blocks, 'caption');
 
   const shouldPreloadLeadImage =
-    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
+    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload && !isLite;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -96,10 +96,15 @@ const ImageWithCaption = ({
     const buttonWrapper = document.getElementById('${buttonId}');
 
     if (imgWrapper && buttonWrapper) {
-      imgWrapper.style.display = 'block';
-      buttonWrapper.style.display = 'none';
+      const newNode = document.createElement('div');
+      newNode.innerHTML = imgWrapper.innerHTML;
+      imgWrapper.replaceWith(newNode);
+
+      buttonWrapper.remove();
     }
   `;
+
+  const ImageWrapper = isLite ? 'noscript' : Fragment;
 
   return (
     <figure className={className} css={styles.figure}>
@@ -108,7 +113,7 @@ const ImageWithCaption = ({
           Load Image
         </LiteButton>
       </div>
-      <div id={imgId} style={{ display: 'none' }}>
+      <ImageWrapper id={imgId}>
         <Image
           alt={alt}
           attribution={copyright}
@@ -128,7 +133,7 @@ const ImageWithCaption = ({
         >
           {renderCopyright(copyright || '')}
         </Image>
-      </div>
+      </ImageWrapper>
       {captionBlock && renderCaption(captionBlock, 'image')}
     </figure>
   );
