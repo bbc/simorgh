@@ -127,13 +127,6 @@ exports[`AMP Front Page Analytics chartbeat 1`] = `
 }
 `;
 
-exports[`AMP Front Page Footer Anchors should match text and url 1`] = `
-{
-  "text": "BBC News, na srpskom",
-  "url": "/serbian",
-}
-`;
-
 exports[`AMP Front Page Footer Anchors should match text and url 2`] = `
 {
   "text": "Zašto BBC zaslužuje vaše poverenje",

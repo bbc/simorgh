@@ -250,8 +250,8 @@ describe('Routes', () => {
       expect(subHeading).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
     });
 
-    it.skip('should route to and render a front page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
+    it('should route to and render a front page', async () => {
+      process.env.SIMORGH_APP_ENV = 'live';
       const service = 'serbian';
       const variant = 'lat';
       const pathname = `/${service}/${variant}`;
