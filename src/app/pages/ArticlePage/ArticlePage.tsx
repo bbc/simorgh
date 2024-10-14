@@ -141,11 +141,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   let blocksWithExperimentTopStories = blocks;
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
-  const shouldEnableExperimentTopStories = enableExperimentTopStories({
-    isAmp,
-    pathname,
-    service,
-  });
+  const shouldEnableExperimentTopStories =
+    enableExperimentTopStories({
+      isAmp,
+      service,
+      pathname,
+    }) && topStoriesContent;
+
   if (shouldEnableExperimentTopStories) {
     blocksWithExperimentTopStories = insertExperimentTopStories({
       blocks,
@@ -197,7 +199,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ),
     podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
     experimentTopStories: () =>
-      shouldEnableExperimentTopStories && topStoriesContent ? (
+      shouldEnableExperimentTopStories ? (
         <ExperimentTopStories topStoriesContent={topStoriesContent} />
       ) : null,
   };

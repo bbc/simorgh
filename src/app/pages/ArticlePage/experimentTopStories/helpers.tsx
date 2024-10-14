@@ -16,19 +16,27 @@ export const experimentTopStoriesConfig = {
 
 export const enableExperimentTopStories = ({
   isAmp,
-  pathname,
   service,
+  pathname,
 }: {
   isAmp: boolean;
-  pathname: string;
   service: string;
+  pathname: string;
 }) => {
+  if (!isAmp || !service || !pathname) return false;
   const urn = pathname.split('/')[3].slice(0, -4); // .slice() to remove '.amp' at the end of pathname
   const newsTestAsset = 'c6v11qzyv8po';
   const newsAsset = 'cz7xywn940ro';
   const sportAsset = 'cpgw0xjmpd3o';
   const experimentAssets = [newsAsset, newsTestAsset, sportAsset];
   const experimentServices = ['news', 'sport'];
+
+  console.log(
+    isAmp,
+    urn,
+    experimentServices.includes(service),
+    experimentAssets.includes(urn),
+  );
 
   return (
     isAmp &&
@@ -45,7 +53,7 @@ export const ExperimentTopStories = ({
 }) => {
   return (
     <div
-      css={styles.experimentTopStoriesAndFeaturesSection}
+      css={styles.experimentTopStoriesSection}
       data-testid="experiment-top-stories"
       data-vars-top-stories-position="experiment"
     >
@@ -59,23 +67,15 @@ export const insertExperimentTopStories = ({
   topStoriesContent,
 }: {
   blocks: OptimoBlock[];
-  topStoriesContent: TopStoryItem[] | undefined;
+  topStoriesContent: TopStoryItem[];
 }) => {
-  if (!topStoriesContent) return blocks;
-
+  const insertIndex = Math.floor(blocks.length * 0.5); // halfway index of blocks array
   const experimentTopStoriesBlock = {
     type: 'experimentTopStories',
     model: topStoriesContent,
-    id: 'experimentTopStories',
+    id: `experimentTopStories-${insertIndex}`,
   };
 
-  const halfway = Math.floor(blocks.length * 0.5);
-  const blocksBeforeInsertIndex = blocks.slice(0, halfway);
-  const blocksAfterInsertIndex = blocks.slice(halfway, blocks.length);
-
-  return [
-    ...blocksBeforeInsertIndex,
-    experimentTopStoriesBlock,
-    ...blocksAfterInsertIndex,
-  ];
+  blocks.splice(insertIndex, 0, experimentTopStoriesBlock);
+  return blocks;
 };

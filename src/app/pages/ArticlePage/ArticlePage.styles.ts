@@ -107,7 +107,7 @@ export default {
         },
       },
     }),
-  experimentTopStoriesAndFeaturesSection: ({ spacings, mq }: Theme) =>
+  experimentTopStoriesSection: ({ spacings, mq }: Theme) =>
     css({
       display: 'none',
       marginBottom: `${spacings.TRIPLE}rem`,
