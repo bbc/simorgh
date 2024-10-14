@@ -4,12 +4,10 @@ import serviceConfig from '../../../../lib/config/services/loadableConfig';
 
 jest.mock('#app/lib/utilities/isLive', () => jest.fn());
 
-const isLiveEnvironmentValues = [true, false];
-
 describe('regex utils snapshots', () => {
   const services = Object.keys(serviceConfig);
   Object.keys(regexGenerators).forEach(funcName => {
-    it.each(isLiveEnvironmentValues)(
+    it.each([true, false])(
       `should create expected regex from ${funcName} when isLive = %s`,
       isLiveEnvironment => {
         isLive.mockImplementationOnce(() => isLiveEnvironment);
