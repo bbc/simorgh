@@ -115,6 +115,8 @@ exports[`Canonical Home Page Header Navigation link should match text and url 7`
 
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
 
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo"`;
+
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
@@ -259,9 +261,33 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
           "position": 4,
           "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+        },
       ],
       "name": "BBC News na srpskom",
-      "numberOfItems": 4,
+      "numberOfItems": 8,
     },
   ],
 }
