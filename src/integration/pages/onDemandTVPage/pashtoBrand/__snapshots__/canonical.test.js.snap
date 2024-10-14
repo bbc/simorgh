@@ -155,21 +155,22 @@ exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-1b7q6mf"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-rmay7 edwq9ck2"
+    class="bbc-1u05bd9"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-17whsh0 edwq9ck0"
+      class="bbc-n2zqlz"
     >
-      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-y5mp4k e1ita3o32"
+    class="focusIndicatorRemove bbc-1s7djye"
+    type="button"
   >
     <span
       class="bbc-m04vo2"
@@ -178,7 +179,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </span>
     <div
       aria-hidden="true"
-      class="bbc-1apn3of e1ita3o31"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -205,7 +206,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </div>
     <time
       aria-hidden="true"
-      class="bbc-11ia5vc e1ita3o30"
+      class="bbc-digyti"
       datetime="PT28M"
     >
       28:00
@@ -228,21 +229,22 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-1b7q6mf"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-rmay7 edwq9ck2"
+    class="bbc-1u05bd9"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-17whsh0 edwq9ck0"
+      class="bbc-n2zqlz"
     >
-      &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-y5mp4k e1ita3o32"
+    class="focusIndicatorRemove bbc-1s7djye"
+    type="button"
   >
     <span
       class="bbc-m04vo2"
@@ -251,7 +253,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-1apn3of e1ita3o31"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -278,7 +280,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-11ia5vc e1ita3o30"
+      class="bbc-digyti"
       datetime="PT28M"
     >
       28:00
@@ -301,25 +303,26 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-epqi9g"
+  class="bbc-7rf7s3"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1b7q6mf"
+    class="bbc-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="bbc-rmay7 edwq9ck2"
+      class="bbc-1u05bd9"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="bbc-17whsh0 edwq9ck0"
+        class="bbc-n2zqlz"
       >
-        &lt;strong class="bbc-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-y5mp4k e1ita3o32"
+      class="focusIndicatorRemove bbc-1s7djye"
+      type="button"
     >
       <span
         class="bbc-m04vo2"
@@ -328,7 +331,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </span>
       <div
         aria-hidden="true"
-        class="bbc-1apn3of e1ita3o31"
+        class="bbc-7qcky8"
       >
         <svg
           aria-hidden="true"
@@ -355,7 +358,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </div>
       <time
         aria-hidden="true"
-        class="bbc-11ia5vc e1ita3o30"
+        class="bbc-digyti"
         datetime="PT28M"
       >
         28:00

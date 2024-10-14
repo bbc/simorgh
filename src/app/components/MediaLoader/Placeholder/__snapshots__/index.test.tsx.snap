@@ -4,24 +4,38 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 .emotion-0 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
 .emotion-1 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -30,9 +44,17 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   z-index: 1;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-1 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -40,7 +62,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
   .no-js .emotion-1 {
     background-color: transparent;
   }
@@ -50,45 +72,99 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   display: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
   position: absolute;
   bottom: 0;
 }
 
-.emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 strong {
+  font-weight: normal;
+}
+
+.emotion-3 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
   height: 5rem;
+  width: 5rem;
   padding: 0;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  width: 5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:hover,
+.emotion-3:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
+.no-js .emotion-3 {
   display: none;
 }
 
-.emotion-5:focus-visible::before {
+.emotion-3:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -99,7 +175,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-7 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -110,15 +186,24 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   margin: 0;
 }
 
-.emotion-8>svg {
+.emotion-5 {
+  margin-top: 0.5rem;
+}
+
+.emotion-5>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
-  margin-top: 0.5rem;
   width: 1.5rem;
 }
 
-.emotion-10 {
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
+}
+
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -127,12 +212,19 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   height: 0.75rem;
 }
 
-.emotion-12 {
+.emotion-8 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
 }
 
-.emotion-14 {
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    color: canvasText;
+  }
+}
+
+.emotion-9 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -145,20 +237,20 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-14 {
+  .emotion-9 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-9 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-15 {
+.emotion-10 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -170,28 +262,29 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="emotion-3 emotion-4"
+        class="emotion-2"
       />
     </div>
     <button
-      class="focusIndicatorRemove emotion-5 emotion-6"
+      class="focusIndicatorRemove emotion-3"
+      type="button"
     >
       <span
-        class="emotion-7"
+        class="emotion-4"
       >
         Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-8 emotion-9"
+        class="emotion-5"
       >
         <svg
           aria-hidden="true"
-          class="emotion-10 emotion-11"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -214,19 +307,19 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="emotion-12 emotion-13"
+        class="emotion-8"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-14"
+      class="emotion-9"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-15"
+        class="emotion-10"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -238,24 +331,38 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-0 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
 .emotion-1 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -265,15 +372,17 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   z-index: 1;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-1 {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media (min-width: 37.5rem) {
   .emotion-1 {
-    background-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -281,7 +390,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
   .no-js .emotion-1 {
     background-color: transparent;
   }
@@ -291,14 +400,41 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   display: none;
 }
 
-.emotion-3 {
+@media screen and (forced-colors: active) {
+  .emotion-1 {
+    background-color: transparent;
+  }
+}
+
+.emotion-2 {
   display: block;
   font-weight: normal;
   padding: 0.5rem;
   border-bottom: 0.0625rem solid transparent;
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-3 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (forced-colors: active) {
   .emotion-3 {
     background-color: window;
   }
@@ -310,45 +446,78 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   }
 }
 
-.emotion-5 {
-  position: absolute;
-  bottom: 0;
+.emotion-3 strong {
+  font-weight: normal;
 }
 
-.emotion-7 {
+.emotion-4 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
   height: 5rem;
+  width: 5rem;
   padding: 0;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  width: 5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-7 {
+@media screen and (forced-colors: active) {
+  .emotion-4 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:hover,
+  .emotion-4:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:focus {
+    border: none;
+  }
+}
+
+.no-js .emotion-4 {
   display: none;
 }
 
-.emotion-7:focus-visible::before {
+.emotion-4:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -359,7 +528,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   border: 0.1875rem solid #000000;
 }
 
-.emotion-9 {
+.emotion-5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -370,15 +539,24 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   margin: 0;
 }
 
-.emotion-10>svg {
+.emotion-6 {
+  margin-top: 0.5rem;
+}
+
+.emotion-6>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
-  margin-top: 0.5rem;
   width: 1.5rem;
 }
 
-.emotion-12 {
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    color: canvasText;
+  }
+}
+
+.emotion-7 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -387,12 +565,19 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   height: 0.75rem;
 }
 
-.emotion-14 {
+.emotion-9 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
 }
 
-.emotion-16 {
+@media screen and (forced-colors: active) {
+  .emotion-9 {
+    color: canvasText;
+  }
+}
+
+.emotion-10 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -405,20 +590,20 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-10 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-10 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-17 {
+.emotion-11 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -430,34 +615,35 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1"
       data-e2e="media-player__guidance"
     >
       <strong
         aria-hidden="true"
-        class="guidance-message emotion-3 emotion-4"
+        class="guidance-message emotion-2"
       >
         Guidance: May contain strong language, sexual or violent content that may offend.
       </strong>
       <noscript
-        class="emotion-5 emotion-6"
+        class="emotion-3"
       />
     </div>
     <button
-      class="focusIndicatorRemove emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-4"
+      type="button"
     >
       <span
-        class="emotion-9"
+        class="emotion-5"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-10 emotion-11"
+        class="emotion-6"
       >
         <svg
           aria-hidden="true"
-          class="emotion-12 emotion-13"
+          class="emotion-7 emotion-8"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -480,19 +666,19 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       </div>
       <time
         aria-hidden="true"
-        class="emotion-14 emotion-15"
+        class="emotion-9"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-16"
+      class="emotion-10"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-17"
+        class="emotion-11"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -504,24 +690,38 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 .emotion-0 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
 .emotion-1 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -530,9 +730,17 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   z-index: 1;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-1 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -540,7 +748,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
   .no-js .emotion-1 {
     background-color: transparent;
   }
@@ -550,45 +758,99 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   display: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
   position: absolute;
   bottom: 0;
 }
 
-.emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 strong {
+  font-weight: normal;
+}
+
+.emotion-3 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
   height: 5rem;
+  width: 5rem;
   padding: 0;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  width: 5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:hover,
+.emotion-3:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
+.no-js .emotion-3 {
   display: none;
 }
 
-.emotion-5:focus-visible::before {
+.emotion-3:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -599,7 +861,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   border: 0.1875rem solid #000000;
 }
 
-.emotion-7 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -610,14 +872,20 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   margin: 0;
 }
 
-.emotion-8>svg {
+.emotion-5>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-10 {
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
+}
+
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -626,7 +894,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   height: 0.75rem;
 }
 
-.emotion-12 {
+.emotion-8 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -639,20 +907,20 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 @media (min-width: 25rem) {
-  .emotion-12 {
+  .emotion-8 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-8 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-13 {
+.emotion-9 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -664,28 +932,29 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="emotion-3 emotion-4"
+        class="emotion-2"
       />
     </div>
     <button
-      class="focusIndicatorRemove emotion-5 emotion-6"
+      class="focusIndicatorRemove emotion-3"
+      type="button"
     >
       <span
-        class="emotion-7"
+        class="emotion-4"
       >
         Play video, "Dog chases cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-8 emotion-9"
+        class="emotion-5"
       >
         <svg
           aria-hidden="true"
-          class="emotion-10 emotion-11"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -708,12 +977,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       </div>
     </button>
     <div
-      class="emotion-12"
+      class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-13"
+        class="emotion-9"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -725,24 +994,38 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-0 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
 .emotion-1 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -751,9 +1034,17 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   z-index: 1;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-1 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -761,7 +1052,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
   .no-js .emotion-1 {
     background-color: transparent;
   }
@@ -771,45 +1062,99 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   display: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
   position: absolute;
   bottom: 0;
 }
 
-.emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 strong {
+  font-weight: normal;
+}
+
+.emotion-3 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
   height: 5rem;
+  width: 5rem;
   padding: 0;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  width: 5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:hover,
+.emotion-3:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
+.no-js .emotion-3 {
   display: none;
 }
 
-.emotion-5:focus-visible::before {
+.emotion-3:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -820,7 +1165,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   border: 0.1875rem solid #000000;
 }
 
-.emotion-7 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -831,15 +1176,24 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   margin: 0;
 }
 
-.emotion-8>svg {
+.emotion-5 {
+  margin-top: 0.5rem;
+}
+
+.emotion-5>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
-  margin-top: 0.5rem;
   width: 1.5rem;
 }
 
-.emotion-10 {
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
+}
+
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -848,12 +1202,19 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   height: 0.75rem;
 }
 
-.emotion-12 {
+.emotion-8 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
 }
 
-.emotion-14 {
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    color: canvasText;
+  }
+}
+
+.emotion-9 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -866,20 +1227,20 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-14 {
+  .emotion-9 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-9 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-15 {
+.emotion-10 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -891,28 +1252,29 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="emotion-3 emotion-4"
+        class="emotion-2"
       />
     </div>
     <button
-      class="focusIndicatorRemove emotion-5 emotion-6"
+      class="focusIndicatorRemove emotion-3"
+      type="button"
     >
       <span
-        class="emotion-7"
+        class="emotion-4"
       >
         Play audio, "Dog barks at cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-8 emotion-9"
+        class="emotion-5"
       >
         <svg
           aria-hidden="true"
-          class="emotion-10 emotion-11"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -928,19 +1290,19 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="emotion-12 emotion-13"
+        class="emotion-8"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-14"
+      class="emotion-9"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-15"
+        class="emotion-10"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -952,24 +1314,38 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 .emotion-0 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
 .emotion-1 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -978,9 +1354,17 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   z-index: 1;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-1 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -988,7 +1372,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
   .no-js .emotion-1 {
     background-color: transparent;
   }
@@ -998,45 +1382,99 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   display: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
   position: absolute;
   bottom: 0;
 }
 
-.emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-2 strong {
+  font-weight: normal;
+}
+
+.emotion-3 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
   height: 5rem;
+  width: 5rem;
   padding: 0;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  width: 5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:hover,
+.emotion-3:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-5 {
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:hover,
+  .emotion-3:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-3:focus {
+    border: none;
+  }
+}
+
+.no-js .emotion-3 {
   display: none;
 }
 
-.emotion-5:focus-visible::before {
+.emotion-3:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1047,7 +1485,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   border: 0.1875rem solid #000000;
 }
 
-.emotion-7 {
+.emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1058,14 +1496,20 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   margin: 0;
 }
 
-.emotion-8>svg {
+.emotion-5>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.emotion-10 {
+@media screen and (forced-colors: active) {
+  .emotion-5>svg {
+    color: canvasText;
+  }
+}
+
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1074,7 +1518,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   height: 0.75rem;
 }
 
-.emotion-12 {
+.emotion-8 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -1087,20 +1531,20 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 @media (min-width: 25rem) {
-  .emotion-12 {
+  .emotion-8 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-8 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-13 {
+.emotion-9 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1112,28 +1556,29 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="emotion-3 emotion-4"
+        class="emotion-2"
       />
     </div>
     <button
-      class="focusIndicatorRemove emotion-5 emotion-6"
+      class="focusIndicatorRemove emotion-3"
+      type="button"
     >
       <span
-        class="emotion-7"
+        class="emotion-4"
       >
         Play audio, "Dog barks at cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-8 emotion-9"
+        class="emotion-5"
       >
         <svg
           aria-hidden="true"
-          class="emotion-10 emotion-11"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -1149,12 +1594,12 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       </div>
     </button>
     <div
-      class="emotion-12"
+      class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-13"
+        class="emotion-9"
         src="http://foo.bar/placeholder.png"
       />
     </div>
@@ -1166,24 +1611,38 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-0 {
   position: relative;
   cursor: pointer;
-  aspect-ratio: 16/9;
+  height: 100%;
 }
 
 .no-js .emotion-0 {
   cursor: default;
 }
 
-.emotion-0:hover .focusIndicatorRemove,
-.emotion-0:focus .focusIndicatorRemove {
+.emotion-0:hover>button,
+.emotion-0:focus>button {
   background-color: #B80000;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0:hover>button,
+  .emotion-0:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-0:hover>button>time,
+  .emotion-0:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
 .emotion-1 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1193,15 +1652,17 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   z-index: 1;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-1 {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media (min-width: 37.5rem) {
   .emotion-1 {
-    background-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -1209,7 +1670,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
   .no-js .emotion-1 {
     background-color: transparent;
   }
@@ -1219,14 +1680,41 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   display: none;
 }
 
-.emotion-3 {
+@media screen and (forced-colors: active) {
+  .emotion-1 {
+    background-color: transparent;
+  }
+}
+
+.emotion-2 {
   display: block;
   font-weight: normal;
   padding: 0.5rem;
   border-bottom: 0.0625rem solid transparent;
 }
 
-@media screen and (-ms-high-contrast: active) {
+@media screen and (forced-colors: active) {
+  .emotion-2 {
+    background-color: window;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding: 1rem;
+  }
+}
+
+.emotion-3 {
+  display: block;
+  font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (forced-colors: active) {
   .emotion-3 {
     background-color: window;
   }
@@ -1238,45 +1726,78 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   }
 }
 
-.emotion-5 {
-  position: absolute;
-  bottom: 0;
+.emotion-3 strong {
+  font-weight: normal;
 }
 
-.emotion-7 {
+.emotion-4 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
   background-color: #222222;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
   height: 5rem;
+  width: 5rem;
   padding: 0;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
-  width: 5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-7 {
+@media screen and (forced-colors: active) {
+  .emotion-4 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:hover,
+  .emotion-4:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-4:focus {
+    border: none;
+  }
+}
+
+.no-js .emotion-4 {
   display: none;
 }
 
-.emotion-7:focus-visible::before {
+.emotion-4:focus-visible::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1287,7 +1808,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   border: 0.1875rem solid #000000;
 }
 
-.emotion-9 {
+.emotion-5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1298,15 +1819,24 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   margin: 0;
 }
 
-.emotion-10>svg {
+.emotion-6 {
+  margin-top: 0.5rem;
+}
+
+.emotion-6>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
-  margin-top: 0.5rem;
   width: 1.5rem;
 }
 
-.emotion-12 {
+@media screen and (forced-colors: active) {
+  .emotion-6>svg {
+    color: canvasText;
+  }
+}
+
+.emotion-7 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1315,12 +1845,19 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   height: 0.75rem;
 }
 
-.emotion-14 {
+.emotion-9 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
 }
 
-.emotion-16 {
+@media screen and (forced-colors: active) {
+  .emotion-9 {
+    color: canvasText;
+  }
+}
+
+.emotion-10 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
@@ -1333,20 +1870,20 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-10 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-10 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-17 {
+.emotion-11 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1358,34 +1895,35 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1"
       data-e2e="media-player__guidance"
     >
       <strong
         aria-hidden="true"
-        class="guidance-message emotion-3 emotion-4"
+        class="guidance-message emotion-2"
       >
         Guidance: May contain strong language, sexual or violent content that may offend.
       </strong>
       <noscript
-        class="emotion-5 emotion-6"
+        class="emotion-3"
       />
     </div>
     <button
-      class="focusIndicatorRemove emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-4"
+      type="button"
     >
       <span
-        class="emotion-9"
+        class="emotion-5"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-10 emotion-11"
+        class="emotion-6"
       >
         <svg
           aria-hidden="true"
-          class="emotion-12 emotion-13"
+          class="emotion-7 emotion-8"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -1408,19 +1946,19 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       </div>
       <time
         aria-hidden="true"
-        class="emotion-14 emotion-15"
+        class="emotion-9"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-16"
+      class="emotion-10"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-17"
+        class="emotion-11"
         src="http://foo.bar/placeholder.png"
       />
     </div>

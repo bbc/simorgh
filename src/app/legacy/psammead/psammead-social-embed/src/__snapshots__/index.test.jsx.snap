@@ -326,6 +326,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -349,6 +350,21 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-7:hover,
+  .emotion-7:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-7:focus-visible {
@@ -602,6 +618,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -625,6 +642,21 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-7:hover,
+  .emotion-7:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-7:focus-visible {
@@ -879,6 +911,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -902,6 +935,21 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-7 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-7:hover,
+  .emotion-7:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-7:focus-visible {
@@ -1160,6 +1208,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1183,6 +1232,21 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-9 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-9:hover,
+  .emotion-9:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-9:focus-visible {

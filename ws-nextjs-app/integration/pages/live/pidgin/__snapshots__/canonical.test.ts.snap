@@ -62,27 +62,28 @@ exports[`Canonical Live Media Loader a11y assistive technology can read the medi
 
 exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 <div
-  class="css-8bpknm"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-w22u5j edwq9ck2"
+    class="css-czokpf"
     data-e2e="media-player__guidance"
   >
     <strong
       aria-hidden="true"
-      class="guidance-message css-1l7spgt edwq9ck1"
+      class="guidance-message css-e3010g"
     >
       Contains strong language and some upsetting scenes.
     </strong>
     <noscript
-      class="css-17whsh0 edwq9ck0"
+      class="css-lllaou"
     >
-      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-g64ss1 e1ita3o32"
+    class="focusIndicatorRemove css-4vlf9b"
+    type="button"
   >
     <span
       class="css-m04vo2"
@@ -91,7 +92,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1apn3of e1ita3o31"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -118,7 +119,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-11ia5vc e1ita3o30"
+      class="css-digyti"
       datetime="PT34S"
     >
       00:34
@@ -141,27 +142,28 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 <div
-  class="css-8bpknm"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-w22u5j edwq9ck2"
+    class="css-czokpf"
     data-e2e="media-player__guidance"
   >
     <strong
       aria-hidden="true"
-      class="guidance-message css-1l7spgt edwq9ck1"
+      class="guidance-message css-e3010g"
     >
       Contains strong language and some upsetting scenes.
     </strong>
     <noscript
-      class="css-17whsh0 edwq9ck0"
+      class="css-lllaou"
     >
-      &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-g64ss1 e1ita3o32"
+    class="focusIndicatorRemove css-4vlf9b"
+    type="button"
   >
     <span
       class="css-m04vo2"
@@ -170,7 +172,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1apn3of e1ita3o31"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -197,7 +199,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-11ia5vc e1ita3o30"
+      class="css-digyti"
       datetime="PT34S"
     >
       00:34
@@ -220,31 +222,32 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="css-17euut"
+  class="css-1cyic3f"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-8bpknm"
+    class="css-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-w22u5j edwq9ck2"
+      class="css-czokpf"
       data-e2e="media-player__guidance"
     >
       <strong
         aria-hidden="true"
-        class="guidance-message css-1l7spgt edwq9ck1"
+        class="guidance-message css-e3010g"
       >
         Contains strong language and some upsetting scenes.
       </strong>
       <noscript
-        class="css-17whsh0 edwq9ck0"
+        class="css-lllaou"
       >
-        &lt;strong class="css-1l7spgt edwq9ck1"&gt;This video cannot play in your browser. Please enable JavaScript or try a different browser.&lt;/strong&gt;
+        &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-g64ss1 e1ita3o32"
+      class="focusIndicatorRemove css-4vlf9b"
+      type="button"
     >
       <span
         class="css-m04vo2"
@@ -253,7 +256,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="css-1apn3of e1ita3o31"
+        class="css-d0ra4q"
       >
         <svg
           aria-hidden="true"
@@ -280,7 +283,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-11ia5vc e1ita3o30"
+        class="css-digyti"
         datetime="PT34S"
       >
         00:34

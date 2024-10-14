@@ -14,57 +14,58 @@ const commonMarginSpacing = ({ mq, spacings }: Theme) =>
     },
   });
 
-export const mediaPortraitStyles = ({ mq }: Theme) => [
-  css({
-    aspectRatio: '9 / 16',
-    maxWidth: `${pixelsToRem(185)}rem`,
-    [mq.GROUP_1_ONLY]: {
-      maxWidth: `${pixelsToRem(256)}rem`,
-    },
-    [mq.GROUP_2_ONLY]: {
-      maxWidth: `${pixelsToRem(274)}rem`,
-    },
-    [mq.GROUP_3_ONLY]: {
-      maxWidth: `${pixelsToRem(200)}rem`,
-    },
-    [mq.GROUP_4_MIN_WIDTH]: {
-      maxWidth: `${pixelsToRem(190)}rem`,
-    },
-  }),
-  commonMarginSpacing,
-];
-
 export default {
-  figure: ({ spacings }: Theme) =>
-    css({
-      margin: 0,
-      paddingBottom: `${spacings.TRIPLE}rem`,
-      width: '100%',
-    }),
+  figure:
+    (isEmbedded = false) =>
+    ({ spacings }: Theme) =>
+      css({
+        position: 'relative',
+        width: '100%',
+        ...(isEmbedded && { margin: '0' }),
+        ...(!isEmbedded && { margin: `0 0 ${spacings.TRIPLE}rem 0` }),
+      }),
 
-  liveRadioMediaContainer: ({ palette }: Theme) =>
+  landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
+  portraitFigure:
+    (isEmbedded = false) =>
+    ({ mq }: Theme) => [
+      css({
+        aspectRatio: '9 / 16',
+        ...(!isEmbedded && {
+          maxWidth: `${pixelsToRem(185)}rem`,
+          [mq.GROUP_1_ONLY]: {
+            maxWidth: `${pixelsToRem(256)}rem`,
+          },
+          [mq.GROUP_2_ONLY]: {
+            maxWidth: `${pixelsToRem(274)}rem`,
+          },
+          [mq.GROUP_3_ONLY]: {
+            maxWidth: `${pixelsToRem(200)}rem`,
+          },
+          [mq.GROUP_4_MIN_WIDTH]: {
+            maxWidth: `${pixelsToRem(190)}rem`,
+          },
+        }),
+      }),
+      !isEmbedded && commonMarginSpacing,
+    ],
+
+  audioMediaContainer: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.WHITE,
       height: '165px',
+    }),
+
+  standardMediaContainer: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.BLACK,
+      height: '100%',
     }),
 
   onDemandAudioMediaContainer: () =>
     css({
       height: '165px',
     }),
-
-  mediaContainerLandscape: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.BLACK,
-      aspectRatio: '16 / 9',
-    }),
-
-  mediaContainerPortrait: ({ palette }: Theme) => [
-    css({
-      backgroundColor: palette.BLACK,
-    }),
-    mediaPortraitStyles,
-  ],
 
   titlePortrait: ({
     mq,
@@ -89,10 +90,11 @@ export default {
     commonMarginSpacing,
   ],
 
-  captionPortrait: ({ mq, spacings }: Theme) =>
+  captionPortrait: ({ mq }: Theme) =>
     css({
-      [mq.GROUP_3_ONLY]: {
-        marginInline: `${spacings.DOUBLE}rem 0`,
+      marginInline: '0',
+      [mq.GROUP_2_ONLY]: {
+        marginInline: '0',
       },
     }),
 };
