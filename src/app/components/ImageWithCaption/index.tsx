@@ -90,7 +90,7 @@ const ImageWithCaption = ({
 
   return (
     <figure className={className} css={styles.figure}>
-      <LiteImageLoader />
+      {isLite && <LiteImageLoader />}
       <Image
         alt={alt}
         attribution={copyright}

@@ -1,6 +1,5 @@
-import React, { ComponentProps, useContext, useId } from 'react';
+import React, { ComponentProps, useId } from 'react';
 import { Helmet } from 'react-helmet';
-import { RequestContext } from '#app/contexts/RequestContext';
 
 type Script = string | (() => void);
 
@@ -33,10 +32,7 @@ export const LiteButton = ({
   script,
   ...htmlAttributes
 }: Props & ComponentProps<'button'>) => {
-  const { isLite } = useContext(RequestContext);
   const elementId = `lite-button-${useId()}`;
-
-  if (!isLite) return null;
 
   return (
     <>
