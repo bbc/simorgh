@@ -13,7 +13,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import getAgent from '../../../utilities/undiciAgent';
+import getAgent from '#server/utilities/getAgent';
 
 const logger = nodeLogger(__filename);
 

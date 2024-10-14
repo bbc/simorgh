@@ -6,6 +6,9 @@ import getInitialData from '.';
 process.env.BFF_PATH = 'https://mock-bff-path';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+
+const mockGetAgent = () => Promise.resolve(agent);
+
 jest.mock('../../../../server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
@@ -39,6 +42,7 @@ describe('MostReadPage - BFF Fetching', () => {
       path: '/pidgin/popular/read',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -63,6 +67,7 @@ describe('MostReadPage - BFF Fetching', () => {
       path: '/pidgin/popular/read',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -90,6 +95,7 @@ describe('MostReadPage - BFF Fetching', () => {
       path: '/pidgin/popular/read',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -117,6 +123,7 @@ describe('MostReadPage - BFF Fetching', () => {
       path: '/pidgin/popular/read?renderer_env=test',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -144,6 +151,7 @@ describe('MostReadPage - BFF Fetching', () => {
       path: '/pidgin/popular/read?renderer_env=live',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
+      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -169,6 +177,7 @@ describe('MostReadPage - BFF Fetching', () => {
       path: '/pidgin/popular/read',
       service: 'pidgin',
       pageType: MOST_READ_PAGE,
+      getAgent: mockGetAgent,
     });
 
     const { pageData } = response;
