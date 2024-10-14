@@ -7,7 +7,7 @@ import React, { PropsWithChildren } from 'react';
 import styles from './index.styles';
 import LiteButton from '../LiteButton';
 
-const script = function script(this: Element) {
+function script(this: Element) {
   const parentEl = this.parentElement;
   const noScriptEl = parentEl?.querySelector('noscript');
 
@@ -15,7 +15,7 @@ const script = function script(this: Element) {
 
   noScriptEl?.remove();
   this.remove();
-};
+}
 
 const LiteImageLoader = ({ children }: PropsWithChildren) => {
   return (

@@ -6,7 +6,6 @@ const styles = {
       margin: 0,
       paddingBottom: `${theme.spacings.TRIPLE}rem`,
       width: '100%',
-      height: '100%',
     }),
 };
 
