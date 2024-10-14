@@ -3,6 +3,7 @@ import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import Cookies from 'js-cookie';
 import {
   render,
   fireEvent,
@@ -71,6 +72,11 @@ const CanonicalBannerWithContext = React.forwardRef(
 );
 
 describe('canonical', () => {
+  beforeEach(() => {
+    Object.keys(Cookies.get()).forEach(cookieName => {
+      Cookies.remove(cookieName);
+    });
+  });
   it('should focus on canonical consent banner heading on mount on canonical', () => {
     const { getByText } = render(
       <CanonicalBannerWithContext
