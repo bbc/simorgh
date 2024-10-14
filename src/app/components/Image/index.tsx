@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { FRONT_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
+import LiteImageLoader from './LiteImageLoader';
 
 type Props = {
   alt: string;
@@ -32,6 +33,7 @@ type Props = {
   width?: number;
   fetchpriority?: 'high';
   hasCaption?: boolean;
+  showLiteLoadButton?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -61,13 +63,17 @@ const Image = ({
   children,
   fetchpriority,
   hasCaption,
+  showLiteLoadButton = false,
 }: PropsWithChildren<Props>) => {
   const { pageType, isLite } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  if (isLite && !showLiteLoadButton) return null;
+
   const showPlaceholder = placeholder && !isLoaded;
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
+
   const [aspectRatioX, aspectRatioY] = aspectRatio ||
     (hasDimensions && [width, height]) || [null, null];
 
@@ -81,9 +87,10 @@ const Image = ({
     fallbackSrcSet &&
     (pageType === FRONT_PAGE || pageType === HOME_PAGE);
 
-  const ImageComponentWrapper = isLite ? 'noscript' : Fragment;
+  const ComponentWrapper = isLite ? LiteImageLoader : Fragment;
   const CanonicalImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
+
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
     if (pageType !== FRONT_PAGE && pageType !== HOME_PAGE) {
@@ -91,6 +98,7 @@ const Image = ({
     }
     return undefined;
   };
+
   const getImgSizes = () => {
     if (
       (!hasFallback && srcSet) ||
@@ -100,12 +108,13 @@ const Image = ({
     }
     return undefined;
   };
+
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
 
   return (
-    <ImageComponentWrapper>
-      {preload && (
+    <ComponentWrapper>
+      {preload && !isLite && (
         <Helmet>
           <link
             rel="preload"
@@ -203,7 +212,7 @@ const Image = ({
         )}
         {children}
       </div>
-    </ImageComponentWrapper>
+    </ComponentWrapper>
   );
 };
 

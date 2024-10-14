@@ -10,7 +10,6 @@ import Caption from '../Caption';
 import Image from '../Image';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
-import LiteImageLoader from './LiteImageLoader';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
@@ -60,7 +59,7 @@ const ImageWithCaption = ({
   const captionBlock = filterForBlockType(blocks, 'caption');
 
   const shouldPreloadLeadImage =
-    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload && !isLite;
+    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -90,7 +89,6 @@ const ImageWithCaption = ({
 
   return (
     <figure className={className} css={styles.figure}>
-      {isLite && <LiteImageLoader />}
       <Image
         alt={alt}
         attribution={copyright}
@@ -107,6 +105,7 @@ const ImageWithCaption = ({
         isAmp={isAmp}
         placeholder
         hasCaption
+        showLiteLoadButton={isLite}
       >
         {renderCopyright(copyright || '')}
       </Image>
