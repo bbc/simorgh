@@ -49,11 +49,12 @@ describe('AMP top stories experiment', () => {
     const expectedExperimentTopStoriesBlock = {
       type: 'experimentTopStories',
       model: topStoriesList,
-      id: 'experimentTopStories',
+      id: 'experimentTopStories-1',
     };
 
     const blocksEvenLength = [mockTextBlock, mockTextBlock];
     const blocksOddLength = [mockTextBlock, mockTextBlock, mockTextBlock];
+
     const expectedBlocksEvenLength = [
       mockTextBlock,
       expectedExperimentTopStoriesBlock,
