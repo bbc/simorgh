@@ -62,7 +62,7 @@ exports[`Canonical Live Media Loader a11y assistive technology can read the medi
 
 exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 <div
-  class="css-171plmm"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -82,7 +82,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-1yv3cvg"
+    class="focusIndicatorRemove css-4vlf9b"
     type="button"
   >
     <span
@@ -92,7 +92,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1xdc5yd"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -119,7 +119,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-1lcsotz"
+      class="css-digyti"
       datetime="PT34S"
     >
       00:34
@@ -142,7 +142,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 <div
-  class="css-171plmm"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -162,7 +162,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-1yv3cvg"
+    class="focusIndicatorRemove css-4vlf9b"
     type="button"
   >
     <span
@@ -172,7 +172,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1xdc5yd"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -199,7 +199,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-1lcsotz"
+      class="css-digyti"
       datetime="PT34S"
     >
       00:34
@@ -226,7 +226,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="css-171plmm"
+    class="css-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -246,7 +246,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-1yv3cvg"
+      class="focusIndicatorRemove css-4vlf9b"
       type="button"
     >
       <span
@@ -256,7 +256,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="css-1xdc5yd"
+        class="css-d0ra4q"
       >
         <svg
           aria-hidden="true"
@@ -283,7 +283,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-1lcsotz"
+        class="css-digyti"
         datetime="PT34S"
       >
         00:34

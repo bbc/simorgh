@@ -275,6 +275,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -298,6 +299,21 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-13 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-13:hover,
+  .emotion-13:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-13:focus-visible {
@@ -1376,6 +1392,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1399,6 +1416,21 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-13 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-13:hover,
+  .emotion-13:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-13:focus-visible {
@@ -2119,6 +2151,7 @@ min-height:7.0625rem .no-js .emotion-2 {
   border-radius: 0;
   padding: 0.5rem;
   cursor: pointer;
+  color: #000000;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2142,6 +2175,21 @@ min-height:7.0625rem .no-js .emotion-2 {
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-13 {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
+
+  .emotion-13:hover,
+  .emotion-13:focus {
+    background-color: canvas;
+    color: canvasText;
+    border: 0.0625rem solid canvasText;
+  }
 }
 
 .emotion-13:focus-visible {

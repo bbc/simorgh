@@ -127,7 +127,7 @@ exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-171plmm"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -141,7 +141,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1yv3cvg"
+    class="focusIndicatorRemove bbc-4vlf9b"
     type="button"
   >
     <span
@@ -151,7 +151,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </span>
     <div
       aria-hidden="true"
-      class="bbc-jo2gwv"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -178,7 +178,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </div>
     <time
       aria-hidden="true"
-      class="bbc-1lcsotz"
+      class="bbc-digyti"
       datetime="PT10M"
     >
       10:00
@@ -201,7 +201,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-171plmm"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -215,7 +215,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1yv3cvg"
+    class="focusIndicatorRemove bbc-4vlf9b"
     type="button"
   >
     <span
@@ -225,7 +225,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-jo2gwv"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -252,7 +252,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-1lcsotz"
+      class="bbc-digyti"
       datetime="PT10M"
     >
       10:00
@@ -279,7 +279,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-171plmm"
+    class="bbc-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -293,7 +293,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-1yv3cvg"
+      class="focusIndicatorRemove bbc-4vlf9b"
       type="button"
     >
       <span
@@ -303,7 +303,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </span>
       <div
         aria-hidden="true"
-        class="bbc-jo2gwv"
+        class="bbc-7qcky8"
       >
         <svg
           aria-hidden="true"
@@ -330,7 +330,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </div>
       <time
         aria-hidden="true"
-        class="bbc-1lcsotz"
+        class="bbc-digyti"
         datetime="PT10M"
       >
         10:00
