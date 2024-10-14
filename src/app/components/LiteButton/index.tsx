@@ -1,4 +1,5 @@
-import React, { ComponentProps } from 'react';
+import { RequestContext } from '#app/contexts/RequestContext';
+import React, { ComponentProps, useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { v4 as uuid } from 'uuid';
 
@@ -33,6 +34,10 @@ export const LiteButton = ({
   script,
   ...htmlAttributes
 }: Props & ComponentProps<'button'>) => {
+  const { isLite } = useContext(RequestContext);
+
+  if (!isLite) return null;
+
   const elementId = `lite-button-${uuid()}`;
 
   return (

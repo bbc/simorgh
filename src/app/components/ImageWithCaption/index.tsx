@@ -36,6 +36,16 @@ const renderCaption = (block: object, type: string) =>
   // @ts-expect-error - TODO: fix types for blocks
   block && <Caption block={block} type={type} />;
 
+const testScript = function testScript(this: Element) {
+  const figureEl = this.parentElement;
+  const noScriptEl = figureEl?.querySelector('noscript');
+
+  figureEl?.insertAdjacentHTML('afterbegin', noScriptEl?.innerHTML || '');
+
+  noScriptEl?.remove();
+  this.remove();
+};
+
 type Props = {
   blocks: object[];
   className?: string;
@@ -88,23 +98,11 @@ const ImageWithCaption = ({
 
   const lazyLoad = shouldLazyLoad(position);
 
-  const testScript = `
-    const figureEl = this.parentNode;
-    const noScriptEl = figureEl.querySelector('noscript');
-
-    figureEl.insertAdjacentHTML('afterbegin', noScriptEl.innerHTML);
-
-    noScriptEl.remove();
-    this.remove();
-  `;
-
   return (
     <figure className={className} css={styles.figure}>
-      {isLite && (
-        <LiteButton css={styles.liteImageOverlayButton} script={testScript}>
-          <div css={styles.liteImageButtonText}>Load Image</div>
-        </LiteButton>
-      )}
+      <LiteButton css={styles.liteImageOverlayButton} script={testScript}>
+        <div css={styles.liteImageButtonText}>Load Image</div>
+      </LiteButton>
       <Image
         alt={alt}
         attribution={copyright}
