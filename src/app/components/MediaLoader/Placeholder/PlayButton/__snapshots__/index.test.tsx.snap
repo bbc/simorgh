@@ -40,6 +40,26 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:hover,
+  .emotion-0:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:focus {
+    border: none;
+  }
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -56,6 +76,12 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    color: canvasText;
+  }
 }
 
 .emotion-3 {
@@ -141,6 +167,26 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:hover,
+  .emotion-0:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:focus {
+    border: none;
+  }
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -163,6 +209,12 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-3 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -175,6 +227,13 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
 .emotion-5 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5 {
+    color: canvasText;
+  }
 }
 
 <div>
@@ -258,6 +317,26 @@ exports[`PlayButton should render video by default 1`] = `
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:hover,
+  .emotion-0:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:focus {
+    border: none;
+  }
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -274,6 +353,12 @@ exports[`PlayButton should render video by default 1`] = `
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    color: canvasText;
+  }
 }
 
 .emotion-3 {
@@ -366,6 +451,26 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:hover,
+  .emotion-0:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:focus {
+    border: none;
+  }
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -388,6 +493,12 @@ exports[`PlayButton should render video correctly with duration and guidance mes
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-3 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -400,6 +511,13 @@ exports[`PlayButton should render video correctly with duration and guidance mes
 .emotion-5 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5 {
+    color: canvasText;
+  }
 }
 
 <div>
@@ -490,6 +608,26 @@ exports[`PlayButton should render video correctly without duration details 1`] =
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:hover,
+  .emotion-0:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:focus {
+    border: none;
+  }
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -506,6 +644,12 @@ exports[`PlayButton should render video correctly without duration details 1`] =
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    color: canvasText;
+  }
 }
 
 .emotion-3 {
@@ -598,6 +742,26 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:hover,
+  .emotion-0:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-0:focus {
+    border: none;
+  }
+}
+
 .emotion-1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -620,6 +784,12 @@ exports[`PlayButton should render video indicator correctly 1`] = `
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-3 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -632,6 +802,13 @@ exports[`PlayButton should render video indicator correctly 1`] = `
 .emotion-5 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5 {
+    color: canvasText;
+  }
 }
 
 <div>

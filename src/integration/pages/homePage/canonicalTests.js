@@ -2,12 +2,14 @@ import {
   runCoreCanonicalTests,
   runMostReadTests,
   runCanonicalAdsTests,
+  runCanonicalAnalyticsTests,
 } from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default ({ service, pageData, displayAds }) => {
-  runCrossPlatformTests({ service, pageData });
+  runCrossPlatformTests({ service });
   runCoreCanonicalTests();
+  runCanonicalAnalyticsTests();
   runMostReadTests();
 
   if (displayAds) {
