@@ -9,7 +9,7 @@ type AmpExperimentConfig = {
     sticky?: boolean;
     consentNotificationId?: string;
     variants: {
-      [key: string]: number; // floating point number
+      [key: string]: number; // variantName: traffic allocation %
     };
   };
 };
