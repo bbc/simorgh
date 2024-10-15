@@ -16,6 +16,8 @@ exports[`Canonical Home Page Ads should have the following properties 2`] = `
 />
 `;
 
+exports[`Canonical Home Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Acx35pee6zvpt]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[BBC%2520News%2520%D8%B9%D8%B1%D8%A8%D9%8A]"/>"`;
+
 exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, عربي",
@@ -151,6 +153,16 @@ exports[`Canonical Home Page Header Navigation link should match text and url 9`
 exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, عربي - الرئيسية"`;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"مرأة الخارقة ""`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="الرياضه"
+  class="bbc-139onq"
+  loading="lazy"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
+  style="aspect-ratio:16 / 9"
+/>
+`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
