@@ -15,6 +15,7 @@ describe('AMP top stories experiment', () => {
         }),
       ).toBe(true);
     });
+
     it.each`
       testDescription                                | isAmp    | pathname                             | service
       ${'all props are undefined'}                   | ${false} | ${undefined}                         | ${undefined}
