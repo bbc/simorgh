@@ -27,7 +27,7 @@ const LiteImageLoader = ({ children }: PropsWithChildren) => {
           Load Image
         </Text>
       </LiteButton>
-      <template type="text/">{children}</template>
+      <template>{children}</template>
     </>
   );
 };

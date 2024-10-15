@@ -31,16 +31,14 @@ export const LiteButton = ({
 
   return (
     <>
-      {script && (
-        <Helmet
-          script={[
-            {
-              type: 'text/javascript',
-              innerHTML: generateScript(script, elementId),
-            },
-          ]}
-        />
-      )}
+      <Helmet
+        script={[
+          {
+            type: 'text/javascript',
+            innerHTML: generateScript(script, elementId),
+          },
+        ]}
+      />
       <button
         type="button"
         id={elementId}

@@ -17,7 +17,7 @@ declare namespace JSX {
   }
 
   interface TemplateProps extends React.HTMLAttributes<HTMLTemplateElement> {
-    type: string;
+    type?: string;
   }
   interface IntrinsicElements {
     'amp-script': React.PropsWithChildren<ScriptHTMLAttributesHTMLScriptElement>;
