@@ -4,18 +4,23 @@ import { jsx } from '@emotion/react';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+
+type Variant = string;
+type Experiment = string;
+type trafficAllocationPercentage = number;
+
 type AmpExperimentConfig = {
-  [key: string]: {
+  [key: Experiment]: {
     sticky?: boolean;
     consentNotificationId?: string;
     variants: {
-      [key: string]: number; // variantName: traffic allocation %
+      [key: Variant]: trafficAllocationPercentage;
     };
   };
 };
 
-type AmpExperiment = {
-  [key: string]: AmpExperimentConfig;
+type AmpExperimentProps = {
+  [key: Experiment]: AmpExperimentConfig;
 };
 
 const AmpHead = () => (
@@ -28,7 +33,7 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpExperiment = ({ experimentData }: AmpExperiment) => {
+const AmpExperiment = ({ experimentConfig }: AmpExperimentProps) => {
   return (
     <>
       <AmpHead />
@@ -36,7 +41,7 @@ const AmpExperiment = ({ experimentData }: AmpExperiment) => {
         <script
           type="application/json"
           /* eslint-disable-next-line react/no-danger */
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(experimentData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(experimentConfig) }}
         />
       </amp-experiment>
     </>

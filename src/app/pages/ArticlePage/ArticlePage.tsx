@@ -139,7 +139,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  let blocksWithExperimentTopStories = blocks;
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const shouldEnableExperimentTopStories =
     enableExperimentTopStories({
@@ -147,13 +146,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       service,
       pathname,
     }) && topStoriesContent;
+  const blocksWithExperimentTopStories = shouldEnableExperimentTopStories
+    ? insertExperimentTopStories({
+        blocks,
+        topStoriesContent,
+      })
+    : blocks;
 
-  if (shouldEnableExperimentTopStories) {
-    blocksWithExperimentTopStories = insertExperimentTopStories({
-      blocks,
-      topStoriesContent,
-    });
-  }
 
   const componentsToRender = {
     visuallyHiddenHeadline,

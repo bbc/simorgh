@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import TopStoriesSection from '../PagePromoSections/TopStoriesSection';
-import styles from '../ArticlePage.styles';
+import styles from './index.styles';
 
 export const experimentTopStoriesConfig = {
   topStoriesExperiment: {
