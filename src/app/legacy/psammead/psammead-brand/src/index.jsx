@@ -187,7 +187,9 @@ const Brand = forwardRef((props, ref) => {
     const isPreviewEnvironment =
       hostnameMatchesPreview && hostnameMatchesPreview.length > 0;
 
-    setIsPreview(isPreviewEnvironment);
+    if (isPreviewEnvironment) {
+      setIsPreview(isPreviewEnvironment);
+    }
   }, []);
 
   const {
