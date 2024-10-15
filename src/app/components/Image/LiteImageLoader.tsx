@@ -13,9 +13,9 @@ function script(this: Element) {
 
   if (!templateEl) return;
 
-  parentEl?.prepend(templateEl?.content.cloneNode(true));
+  parentEl?.prepend(templateEl.content.cloneNode(true));
 
-  templateEl?.remove();
+  templateEl.remove();
   this.remove();
 }
 
