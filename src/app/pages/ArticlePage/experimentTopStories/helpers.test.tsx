@@ -26,18 +26,15 @@ describe('AMP top stories experiment', () => {
       ${'only service is undefined'}                 | ${true}  | ${'/news/articles/c6v11qzyv8po.amp'} | ${undefined}
       ${'only service is defined and valid'}         | ${false} | ${undefined}                         | ${'news'}
       ${'all props defined but service is invalid'}  | ${true}  | ${'/news/articles/c6v11qzyv8po.amp'} | ${'igbo'}
-    `(
-      'should return false if $testDescription.',
-      ({ isAmp, id, service }) => {
-        expect(
-          enableExperimentTopStories({
-            isAmp,
-            id,
-            service,
-          }),
-        ).toBe(false);
-      },
-    );
+    `('should return false if $testDescription.', ({ isAmp, id, service }) => {
+      expect(
+        enableExperimentTopStories({
+          isAmp,
+          id,
+          service,
+        }),
+      ).toBe(false);
+    });
   });
 
   describe('insertExperimentTopStories()', () => {

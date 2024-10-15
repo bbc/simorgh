@@ -78,7 +78,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
-  id
+  id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
     ...input,

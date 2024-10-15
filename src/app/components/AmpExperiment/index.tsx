@@ -4,7 +4,6 @@ import { jsx } from '@emotion/react';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-
 type Variant = string;
 type Experiment = string;
 type trafficAllocationPercentage = number;

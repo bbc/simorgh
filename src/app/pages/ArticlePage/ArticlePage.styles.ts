@@ -106,5 +106,5 @@ export default {
           padding: `${spacings.DOUBLE}rem`,
         },
       },
-    })
+    }),
 };

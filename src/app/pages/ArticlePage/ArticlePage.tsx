@@ -71,8 +71,7 @@ import {
 } from './experimentTopStories/helpers';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service, isAmp, id } =
-    useContext(RequestContext);
+  const { isApp, pageType, service, isAmp, id } = useContext(RequestContext);
 
   const {
     articleAuthor,
@@ -152,7 +151,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         topStoriesContent,
       })
     : blocks;
-
 
   const componentsToRender = {
     visuallyHiddenHeadline,
