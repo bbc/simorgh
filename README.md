@@ -61,7 +61,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withData
 - withHashChangeHandler
 
-With a selection of page types passed through withOptimizelyProvider, currently [Article](https://github.com/bbc/simorgh/blob/latest/src/app/pages/ArticlePage/index.jsx) and [Story](https://github.com/bbc/simorgh/blob/latest/src/app/pages/StoryPage/index.jsx) pages.
+With a selection of page types passed through withOptimizelyProvider, that enables usage of Optimizely in the selected page types.
 
 #### withVariant
 
@@ -96,6 +96,20 @@ The withHashChangeHandler HOC is a wrapper applied to all pages that checks for 
 #### withOptimizelyProvider
 
 The withOptimizelyProvider HOC returns components that have been enhanced with access to an Optimizely client, that is used to run our A/B testing. This is done to limit bundle sizes, as we seperate some of our bundles by page type, that means if we're only running A/B testing on certain page types, we can prevent polluting page type bundles with the weight of the SDK library we use for Optimizely.
+
+withOptimizelyProvider should be added as the value of the `handlerBeforeContexts` object key within [applyBasicPageHandlers.js](https://github.com/bbc/simorgh/tree/latest/src/app/pages/utils/applyBasicPageHandlers.js#L8), as the `ckns_mvt` is [set within the UserContext](https://github.com/bbc/simorgh/tree/latest/src/app/contexts/UserContext/index.tsx#L33), so the `withOptimizelyProvider` HOC needs to be applied in the correct order alongside the [withContexts](https://github.com/bbc/simorgh/tree/latest/src/app/pages/utils/applyBasicPageHandlers.js#L13) HOC. This makes the `ckns_mvt` available on first time visits to pass into the `OptimizelyProvider`, along with attributes such as `service`, which is used for determining when Optimizely should enable an experiment.
+
+Example for Article page:
+```jsx
+import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import ArticlePage from './ArticlePage';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
+
+export default applyBasicPageHandlers(ArticlePage, {
+  handlerBeforeContexts: withOptimizelyProvider,
+});
+
+```
 
 ### Adding a new Page type
 

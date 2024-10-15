@@ -8,6 +8,7 @@ import {
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import userEvent from '@testing-library/user-event';
+import Cookies from 'js-cookie';
 import {
   render,
   screen,
@@ -40,6 +41,12 @@ const HeaderContainerWithContext = ({
   });
 
 describe(`Header`, () => {
+  beforeEach(() => {
+    Object.keys(Cookies.get()).forEach(cookieName => {
+      Cookies.remove(cookieName);
+    });
+  });
+
   describe('Snapshots', () => {
     it('should render correctly for news article', () => {
       const { container } = HeaderContainerWithContext({

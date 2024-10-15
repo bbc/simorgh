@@ -82,10 +82,12 @@ const TestComponentSingleLink = ({ hookProps }) => {
 
 beforeEach(() => {
   jest.clearAllMocks();
+  const { href, assign, ...rest } = window.location;
   delete window.location;
   window.location = {
     href: 'http://bbc.com/pidgin/tori-51745682',
     assign: jest.fn(),
+    ...rest,
   };
 });
 

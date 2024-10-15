@@ -33,7 +33,7 @@ const setCookie = ({
 
   return Cookie.set(name, value, {
     expires,
-    domain: getCookieDomain(document.domain),
+    domain: getCookieDomain(window.location.hostname),
     sameSite: sameSiteValues[sameSite],
     ...(isHttps && { secure: true }),
   });

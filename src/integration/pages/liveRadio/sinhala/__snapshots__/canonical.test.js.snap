@@ -68,8 +68,8 @@ exports[`Canonical Sinhala Live Radio Page Header Navigation link should match t
 
 exports[`Canonical Sinhala Live Radio Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "ජනාධිපතිවරණය 2024",
-  "url": "/sinhala/topics/cg3e84v9ky0t",
+  "text": "මහ මැතිවරණය 2024",
+  "url": "/sinhala/topics/c5y3ve4z2lkt",
 }
 `;
 
