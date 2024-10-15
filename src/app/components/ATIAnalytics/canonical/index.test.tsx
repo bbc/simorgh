@@ -31,7 +31,7 @@ describe('Canonical ATI Analytics', () => {
   });
 
   it('should not send beacon when browser is Opera Mini', () => {
-    jest.spyOn(isOperaProxy, 'default').mockImplementationOnce(() => true);
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => true);
 
     act(() => {
       render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
