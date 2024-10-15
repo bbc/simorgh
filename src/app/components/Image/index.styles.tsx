@@ -46,9 +46,6 @@ const styles = {
       aspectRatio: '16 / 9',
 
       '&:hover, &:focus-visible': {
-        outline: 'none',
-        boxShadow: 'none',
-
         span: {
           backgroundColor: palette.BLACK,
           color: palette.WHITE,
