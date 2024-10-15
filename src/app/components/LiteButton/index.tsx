@@ -21,17 +21,12 @@ const generateScript = (script: Script, elementId: string) => {
   `;
 };
 
-type Props = {
-  className?: string;
-  script?: Script;
-};
-
 export const LiteButton = ({
   children,
   className,
   script,
   ...htmlAttributes
-}: Props & ComponentProps<'button'>) => {
+}: { script: Script } & ComponentProps<'button'>) => {
   const elementId = `lite-button-${useId()}`;
 
   return (
