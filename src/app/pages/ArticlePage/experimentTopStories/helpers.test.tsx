@@ -10,7 +10,7 @@ describe('AMP top stories experiment', () => {
       expect(
         enableExperimentTopStories({
           isAmp: true,
-          pathname: '/news/articles/c6v11qzyv8po.amp',
+          id: 'c6v11qzyv8po',
           service: 'news',
         }),
       ).toBe(true);
