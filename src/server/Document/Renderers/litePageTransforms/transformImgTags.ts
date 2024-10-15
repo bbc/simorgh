@@ -2,6 +2,8 @@ const LITE_ACE_WS_IMG_SIZE = '320';
 const LITE_IMAGES_IC_IMG_SIZE = '96xn';
 
 const setImgSize = (src: string) => {
+  if (!src) return '';
+
   let modifiedSrc = src;
 
   const isAceWs = src.includes('ace/ws');
@@ -30,6 +32,8 @@ export default (html: string) => {
       const src = tag?.match(/src="([^"]*)"/)?.[1] || '';
 
       const modifiedSrc = setImgSize(src);
+
+      if (!modifiedSrc) return;
 
       modifiedHtml = modifiedHtml.replace(
         tag,
