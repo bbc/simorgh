@@ -54,9 +54,9 @@ export default (overrideProps?: { defaultService?: Services }) =>
   ) => {
     const defaultServiceOverride = overrideProps?.defaultService;
     const serviceToUse = defaultServiceOverride || selectedService;
-
+    console.log('HELLO', serviceToUse, '2', selectedService);
     const variant = getVariant(serviceToUse as Services)(TEXT_VARIANTS);
-
+    console.log(variant);
     const service = variant
       ? getService(serviceToUse as Services)(TEXT_VARIANTS)
       : serviceToUse;

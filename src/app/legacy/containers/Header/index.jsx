@@ -11,7 +11,7 @@ import BrandContainer from '../Brand';
 
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
-
+  console.log('HELLO23', scriptLink);
   const handleBannerBlur = event => {
     const isRejectButton =
       event.target?.getAttribute('data-terms-banner') === 'reject' ||
@@ -49,7 +49,7 @@ const HeaderContainer = ({
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
-
+  console.log(renderScriptSwitch);
   const isOperaMini = useOperaMiniDetection();
 
   const brandRef = useRef(null);
@@ -78,7 +78,7 @@ const HeaderContainer = ({
       shouldRenderScriptSwitch = true;
     }
   }
-
+  console.log('render?', shouldRenderScriptSwitch);
   if (isApp) return null;
 
   return (
