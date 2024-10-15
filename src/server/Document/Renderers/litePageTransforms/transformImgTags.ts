@@ -7,8 +7,7 @@ const setImgSize = (src: string) => {
   const isAceWs = src.includes('ace/ws');
   const isImageIc = src.includes('images/ic');
 
-  const srcParts = src.split('/');
-  const imgSize = srcParts[5];
+  const imgSize = src.split('/')?.[5];
 
   if (isAceWs) {
     modifiedSrc = src.replace(imgSize, LITE_ACE_WS_IMG_SIZE);
