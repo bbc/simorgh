@@ -1,6 +1,7 @@
 const AUDIT_URLS = {
   FRONT_PAGE: {
     live: ['https://www.bbc.com/serbian/cyr'],
+    test: [],
   },
   FIX: {
     live: ['https://www.bbc.com/persian/science-52004647'],
