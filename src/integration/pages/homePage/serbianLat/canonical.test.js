@@ -4,9 +4,10 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
+import { data as pageData } from '../../../../../data/serbian/homePage/lat.json';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCanonicalTests(service);
+    runCanonicalTests({ service, pageData });
   });
 });
