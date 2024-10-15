@@ -39,22 +39,6 @@ export const enableExperimentTopStories = ({
   );
 };
 
-export const ExperimentTopStories = ({
-  topStoriesContent,
-}: {
-  topStoriesContent: TopStoryItem[];
-}) => {
-  return (
-    <div
-      css={styles.experimentTopStoriesSection}
-      data-testid="experiment-top-stories"
-      data-vars-top-stories-position="experiment"
-    >
-      <TopStoriesSection content={topStoriesContent} />
-    </div>
-  );
-};
-
 export const insertExperimentTopStories = ({
   blocks,
   topStoriesContent,
@@ -73,4 +57,20 @@ export const insertExperimentTopStories = ({
 
   blocksClone.splice(insertIndex, 0, experimentTopStoriesBlock);
   return blocksClone;
+};
+
+export const ExperimentTopStories = ({
+  topStoriesContent,
+}: {
+  topStoriesContent: TopStoryItem[];
+}) => {
+  return (
+    <div
+      css={styles.experimentTopStoriesSection}
+      data-testid="experiment-top-stories"
+      data-vars-top-stories-position="experiment"
+    >
+      <TopStoriesSection content={topStoriesContent} />
+    </div>
+  );
 };
