@@ -65,8 +65,7 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import AmpExperiment from '../../components/AmpExperiment';
 import {
   experimentTopStoriesConfig,
-  enableExperimentTopStories,
-  insertExperimentTopStories,
+  getExperimentTopStoriesBlocks,
   ExperimentTopStories,
 } from './experimentTopStories/helpers';
 
@@ -139,18 +138,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
-  const shouldEnableExperimentTopStories =
-    enableExperimentTopStories({
+  const { shouldEnableExperimentTopStories, transformedBlocks } =
+    getExperimentTopStoriesBlocks({
+      blocks,
+      topStoriesContent,
       isAmp,
       service,
       id,
-    }) && topStoriesContent;
-  const blocksWithExperimentTopStories = shouldEnableExperimentTopStories
-    ? insertExperimentTopStories({
-        blocks,
-        topStoriesContent,
-      })
-    : blocks;
+    });
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -196,7 +191,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ),
     podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
     experimentTopStories: () =>
-      shouldEnableExperimentTopStories ? (
+      topStoriesContent ? (
         <ExperimentTopStories topStoriesContent={topStoriesContent} />
       ) : null,
   };
@@ -208,8 +203,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const articleBlocks = startsWithHeading
-    ? blocksWithExperimentTopStories
-    : [visuallyHiddenBlock, ...blocksWithExperimentTopStories];
+    ? transformedBlocks
+    : [visuallyHiddenBlock, ...transformedBlocks];
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];

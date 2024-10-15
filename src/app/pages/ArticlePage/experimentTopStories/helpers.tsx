@@ -14,16 +14,18 @@ export const experimentTopStoriesConfig = {
   },
 };
 
-export const enableExperimentTopStories = ({
+const enableExperimentTopStories = ({
+  topStoriesContent,
   isAmp,
   service,
   id,
 }: {
+  topStoriesContent: TopStoryItem[] | undefined;
   isAmp: boolean;
   service: string;
   id: string | null;
 }) => {
-  if (!isAmp || !service || !id) return false;
+  if (!topStoriesContent || !isAmp || !service || !id) return false;
   const newsTestAsset = 'c6v11qzyv8po';
   const newsAsset = 'cz7xywn940ro';
   const sportAsset = 'cpgw0xjmpd3o';
@@ -38,7 +40,7 @@ export const enableExperimentTopStories = ({
   );
 };
 
-export const insertExperimentTopStories = ({
+const insertExperimentTopStories = ({
   blocks,
   topStoriesContent,
 }: {
@@ -55,6 +57,43 @@ export const insertExperimentTopStories = ({
   const blocksClone = [...blocks];
   blocksClone.splice(insertIndex, 0, experimentTopStoriesBlock);
   return blocksClone;
+};
+
+export const getExperimentTopStoriesBlocks = ({
+  blocks,
+  topStoriesContent,
+  isAmp,
+  service,
+  id,
+}: {
+  blocks: OptimoBlock[];
+  topStoriesContent: TopStoryItem[] | undefined;
+  isAmp: boolean;
+  service: string;
+  id: string | null;
+}) => {
+  if (!topStoriesContent)
+    return {
+      transformedBlocks: blocks,
+      shouldEnableExperimentTopStories: false,
+    };
+
+  const shouldEnableExperimentTopStories = enableExperimentTopStories({
+    topStoriesContent,
+    isAmp,
+    service,
+    id,
+  });
+
+  const transformedBlocks = insertExperimentTopStories({
+    blocks,
+    topStoriesContent,
+  });
+
+  return {
+    transformedBlocks,
+    shouldEnableExperimentTopStories,
+  };
 };
 
 export const ExperimentTopStories = ({
