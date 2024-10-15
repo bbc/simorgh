@@ -66,7 +66,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
-  pathname?: string;
+  id?: string | null;
 };
 
 const Context = ({
@@ -78,7 +78,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
-  pathname = '/pathname',
+  id
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
     ...input,
@@ -86,7 +86,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
-    pathname,
+    id,
   };
 
   return (
@@ -888,36 +888,36 @@ describe('Article Page', () => {
 
     const renderAmpPage = ({
       service,
-      pathname,
+      id,
     }: {
       service: Services;
-      pathname: string;
+      id: string | null;
     }) => {
       return render(
-        <Context isAmp service={service} pathname={pathname}>
+        <Context isAmp service={service} id={id}>
           <ArticlePage pageData={pageDataWithSecondaryColumn} />
         </Context>,
         {
           isAmp: true,
           service,
-          pathname,
+          id,
         },
       );
     };
 
-    const validNewsAsset = '/news/articles/c6v11qzyv8po.amp';
-    const validSportAsset = '/sport/articles/cpgw0xjmpd3o.amp';
+    const validNewsAsset = 'c6v11qzyv8po';
+    const validSportAsset = 'cpgw0xjmpd3o';
 
     it.each`
-      service    | pathname
+      service    | id
       ${'news'}  | ${validNewsAsset}
       ${'sport'} | ${validSportAsset}
     `(
       'should render page with experiment-top-stories blocks only on specific $service assets',
-      ({ service, pathname }) => {
+      ({ service, id }) => {
         const { queryByTestId } = renderAmpPage({
           service,
-          pathname,
+          id,
         });
 
         expect(queryByTestId('experiment-top-stories')).toBeInTheDocument();
@@ -931,10 +931,10 @@ describe('Article Page', () => {
       ${'pidgin'} | ${'/pidgin/articles/c6v11qzyv8po.amp'} | ${`services which are not 'news' or 'sport'`}
     `(
       'should render page without experiment-top-stories blocks on $testDescription',
-      ({ service, pathname }) => {
+      ({ service, id }) => {
         const { queryByTestId } = renderAmpPage({
           service,
-          pathname,
+          id,
         });
 
         expect(queryByTestId('experiment-top-stories')).not.toBeInTheDocument();

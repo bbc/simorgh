@@ -17,14 +17,13 @@ export const experimentTopStoriesConfig = {
 export const enableExperimentTopStories = ({
   isAmp,
   service,
-  pathname,
+  id,
 }: {
   isAmp: boolean;
   service: string;
-  pathname: string;
+  id: string | null;
 }) => {
-  if (!isAmp || !service || !pathname) return false;
-  const urn = pathname.split('/').pop()?.slice(0, -4); // .slice() to remove '.amp' at the end of pathname
+  if (!isAmp || !service || !id) return false;
   const newsTestAsset = 'c6v11qzyv8po';
   const newsAsset = 'cz7xywn940ro';
   const sportAsset = 'cpgw0xjmpd3o';
@@ -33,9 +32,9 @@ export const enableExperimentTopStories = ({
 
   return (
     isAmp &&
-    urn &&
+    id &&
     experimentServices.includes(service) &&
-    experimentAssets.includes(urn)
+    experimentAssets.includes(id)
   );
 };
 
@@ -54,7 +53,6 @@ export const insertExperimentTopStories = ({
   };
 
   const blocksClone = [...blocks];
-
   blocksClone.splice(insertIndex, 0, experimentTopStoriesBlock);
   return blocksClone;
 };

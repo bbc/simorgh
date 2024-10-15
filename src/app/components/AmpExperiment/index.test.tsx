@@ -32,7 +32,7 @@ const multipleExperimentConfig = {
 describe('Amp experiment container on Amp pages', () => {
   it('should render an amp-experiment with the expected config', async () => {
     const { container } = render(
-      <AmpExperiment experimentData={experimentConfig} />,
+      <AmpExperiment experimentConfig={experimentConfig} />,
     );
     expect(container.querySelector('amp-experiment')).toBeInTheDocument();
     expect(container).toMatchInlineSnapshot(`
@@ -50,7 +50,7 @@ describe('Amp experiment container on Amp pages', () => {
 
   it('should render an amp-experiment with the expected config when multiple experiments are running at the same time', async () => {
     const { container } = render(
-      <AmpExperiment experimentData={multipleExperimentConfig} />,
+      <AmpExperiment experimentConfig={multipleExperimentConfig} />,
     );
     expect(container.querySelector('amp-experiment')).toBeInTheDocument();
     expect(container).toMatchInlineSnapshot(`
@@ -67,7 +67,7 @@ describe('Amp experiment container on Amp pages', () => {
   });
 
   it(`should add amp-experiment extension script to page head`, async () => {
-    render(<AmpExperiment experimentData={experimentConfig} />);
+    render(<AmpExperiment experimentConfig={experimentConfig} />);
 
     await waitFor(() => {
       const scripts = Array.from(document.querySelectorAll('head script'));

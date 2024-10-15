@@ -71,7 +71,7 @@ import {
 } from './experimentTopStories/helpers';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service, isAmp, pathname } =
+  const { isApp, pageType, service, isAmp, id } =
     useContext(RequestContext);
 
   const {
@@ -144,7 +144,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     enableExperimentTopStories({
       isAmp,
       service,
-      pathname,
+      id,
     }) && topStoriesContent;
   const blocksWithExperimentTopStories = shouldEnableExperimentTopStories
     ? insertExperimentTopStories({
