@@ -15,6 +15,7 @@ describe('AMP top stories experiment', () => {
         }),
       ).toBe(true);
     });
+
     it.each`
       testDescription                                | isAmp    | pathname                             | service
       ${'all props are undefined'}                   | ${false} | ${undefined}                         | ${undefined}
@@ -26,7 +27,7 @@ describe('AMP top stories experiment', () => {
       ${'only service is defined and valid'}         | ${false} | ${undefined}                         | ${'news'}
       ${'all props defined but service is invalid'}  | ${true}  | ${'/news/articles/c6v11qzyv8po.amp'} | ${'igbo'}
     `(
-      'should return false if $testDescription.',
+      'should return false because $testDescription.',
       ({ isAmp, pathname, service }) => {
         expect(
           enableExperimentTopStories({
