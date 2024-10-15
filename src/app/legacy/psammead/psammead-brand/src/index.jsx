@@ -166,17 +166,11 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
   </>
 );
 
-const StyledDiv = styled.div`
-  color: ${props => props.theme.palette.WHITE};
-`;
-
 const PreviewEnvironmentIndicator = () => {
-  const { requestServiceChain } = useContext(RequestContext);
-
-  if (requestServiceChain && requestServiceChain.includes('MOZART')) {
-    return <StyledDiv aria-hidden>⚠️ Mozart</StyledDiv>;
-  }
-  return null;
+  const StyledDiv = styled.div`
+    color: ${props => props.theme.palette.WHITE};
+  `;
+  return <StyledDiv aria-hidden>⚠️ Mozart</StyledDiv>;
 };
 
 const Brand = forwardRef((props, ref) => {
@@ -191,6 +185,11 @@ const Brand = forwardRef((props, ref) => {
       setIsPreview(isPreviewEnvironment);
     }
   }, []);
+
+  const { requestServiceChain } = useContext(RequestContext);
+
+  const shouldDisplayPreviewIndicator =
+    isPreview && requestServiceChain && requestServiceChain.includes('MOZART');
 
   const {
     svgHeight,
@@ -231,7 +230,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
-        {isPreview && <PreviewEnvironmentIndicator />}
+        {shouldDisplayPreviewIndicator && <PreviewEnvironmentIndicator />}
       </SvgWrapper>
     </Banner>
   );
