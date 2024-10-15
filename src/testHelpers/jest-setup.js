@@ -29,7 +29,6 @@ window.matchMedia = jest.fn().mockImplementation(query => {
 window.require = jest.fn();
 
 global.fetch = fetch;
-global.document.domain = 'www.bbc.com';
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';
