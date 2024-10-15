@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
@@ -50,6 +51,10 @@ const styles = {
           backgroundColor: palette.BLACK,
           color: palette.WHITE,
         },
+      },
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        display: 'none',
       },
     }),
   liteImageButtonText: ({ palette }: Theme) =>

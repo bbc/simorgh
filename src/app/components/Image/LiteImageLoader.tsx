@@ -9,11 +9,13 @@ import LiteButton from '../LiteButton';
 
 function script(this: Element) {
   const parentEl = this.parentElement;
-  const noScriptEl = parentEl?.querySelector('noscript');
+  const templateEl = parentEl?.querySelector('template');
 
-  parentEl?.insertAdjacentHTML('afterbegin', noScriptEl?.innerHTML || '');
+  if (!templateEl) return;
 
-  noScriptEl?.remove();
+  parentEl?.prepend(templateEl?.content.cloneNode(true));
+
+  templateEl?.remove();
   this.remove();
 }
 
@@ -25,7 +27,7 @@ const LiteImageLoader = ({ children }: PropsWithChildren) => {
           Load Image
         </Text>
       </LiteButton>
-      <noscript>{children}</noscript>
+      <template type="text/">{children}</template>
     </>
   );
 };
