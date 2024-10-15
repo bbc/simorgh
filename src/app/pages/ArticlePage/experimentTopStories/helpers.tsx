@@ -24,7 +24,7 @@ export const enableExperimentTopStories = ({
   pathname: string;
 }) => {
   if (!isAmp || !service || !pathname) return false;
-  const urn = pathname.split('/')[3].slice(0, -4); // .slice() to remove '.amp' at the end of pathname
+  const urn = pathname.split('/').pop()?.slice(0, -4); // .slice() to remove '.amp' at the end of pathname
   const newsTestAsset = 'c6v11qzyv8po';
   const newsAsset = 'cz7xywn940ro';
   const sportAsset = 'cpgw0xjmpd3o';
