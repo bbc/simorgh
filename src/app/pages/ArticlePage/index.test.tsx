@@ -925,10 +925,10 @@ describe('Article Page', () => {
     );
 
     it.each`
-      service     | pathname                               | testDescription
-      ${'news'}   | ${'/news/articles/c1231qzyv8po.amp'}   | ${'news assets not specified'}
-      ${'sport'}  | ${'/sport/articles/c1231qzyv8po.amp'}  | ${'sport assets not specified'}
-      ${'pidgin'} | ${'/pidgin/articles/c6v11qzyv8po.amp'} | ${`services which are not 'news' or 'sport'`}
+      service     | id                | testDescription
+      ${'news'}   | ${'c1231qzyv8po'} | ${'news assets not specified'}
+      ${'sport'}  | ${'c1231qzyv8po'} | ${'sport assets not specified'}
+      ${'pidgin'} | ${'c6v11qzyv8po'} | ${`services which are not 'news' or 'sport'`}
     `(
       'should render page without experiment-top-stories blocks on $testDescription',
       ({ service, id }) => {
