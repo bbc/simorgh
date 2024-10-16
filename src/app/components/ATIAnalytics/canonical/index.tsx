@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, Fragment } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -12,14 +12,9 @@ const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
     ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
     : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
 
-const renderNoScriptTrackingPixel = (
-  atiPageViewUrl: string,
-  isLite: boolean,
-) => {
-  const ImgPixelWrapper = isLite ? Fragment : 'noscript';
-
+const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
   return (
-    <ImgPixelWrapper>
+    <noscript>
       <img
         height="1px"
         width="1px"
@@ -30,7 +25,7 @@ const renderNoScriptTrackingPixel = (
         style={{ position: 'absolute' }}
         src={getNoJsATIPageViewUrl(atiPageViewUrl)}
       />
-    </ImgPixelWrapper>
+    </noscript>
   );
 };
 
@@ -40,6 +35,21 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   return (
     <Helmet>
       <script type="text/javascript">{script}</script>
+    </Helmet>
+  );
+};
+
+const addLiteScript = (atiPageViewUrlString: string) => {
+  return (
+    <Helmet>
+      <script type="text/javascript">
+        {`
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "${atiPageViewUrlString}", true);
+          xhr.withCredentials = true;
+          xhr.send();
+        `}
+      </script>
     </Helmet>
   );
 };
@@ -58,8 +68,9 @@ const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
 
   return (
     <>
-      {addOperaMiniExtremeScript(atiPageViewUrlString)}
-      {renderNoScriptTrackingPixel(atiPageViewUrl, isLite)}
+      {isLite && addLiteScript(atiPageViewUrlString)}
+      {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
+      {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );
 };
