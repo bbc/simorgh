@@ -3,7 +3,7 @@ import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import ScriptLink from '#app/components/Header/ScriptLink';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -72,7 +72,7 @@ const HeaderContainer = ({
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink && renderScriptSwitch) {
-    if (service === 'uzbek' && pageType !== ARTICLE_PAGE) {
+    if (service === 'uzbek' && ![ARTICLE_PAGE, HOME_PAGE].includes(pageType)) {
       shouldRenderScriptSwitch = false;
     } else {
       shouldRenderScriptSwitch = true;

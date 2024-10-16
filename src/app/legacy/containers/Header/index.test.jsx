@@ -6,6 +6,7 @@ import {
   MEDIA_PAGE,
   MEDIA_ASSET_PAGE,
   TOPIC_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import userEvent from '@testing-library/user-event';
 import Cookies from 'js-cookie';
@@ -134,7 +135,7 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
-    it('should not render script link for uzbek when it is not an article page ', () => {
+    it('should not render script link for uzbek when it is not a supported page type', () => {
       const { container } = HeaderContainerWithContext({
         renderOptions: {
           pageType: FRONT_PAGE,
@@ -146,17 +147,20 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
     });
 
-    it('should render script link for uzbek when it is an article page ', () => {
-      const { container } = HeaderContainerWithContext({
-        renderOptions: {
-          pageType: ARTICLE_PAGE,
-          service: 'uzbek',
-          variant: 'cyr',
-        },
-      });
+    it.each([ARTICLE_PAGE, HOME_PAGE])(
+      'should render script link for uzbek when page type is %s',
+      pageType => {
+        const { container } = HeaderContainerWithContext({
+          renderOptions: {
+            pageType,
+            service: 'uzbek',
+            variant: 'cyr',
+          },
+        });
 
-      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
-    });
+        expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+      },
+    );
 
     it('should not render script link on Topic page when missing variant topic ID', () => {
       const { container } = HeaderContainerWithContext({
