@@ -227,7 +227,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   return (
     <div css={styles.pageWrapper}>
       {shouldEnableExperimentTopStories && (
-        <AmpExperiment experimentData={experimentTopStoriesConfig} />
+        <AmpExperiment experimentConfig={experimentTopStoriesConfig} />
       )}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
