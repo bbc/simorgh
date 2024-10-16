@@ -85,10 +85,12 @@ export const getExperimentTopStoriesBlocks = ({
     id,
   });
 
-  const transformedBlocks = shouldEnableExperimentTopStories ? insertExperimentTopStories({
-    blocks,
-    topStoriesContent,
-  }) : blocks;
+  const transformedBlocks = shouldEnableExperimentTopStories
+    ? insertExperimentTopStories({
+        blocks,
+        topStoriesContent,
+      })
+    : blocks;
 
   return {
     transformedBlocks,
