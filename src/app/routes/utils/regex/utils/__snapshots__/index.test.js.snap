@@ -24,7 +24,7 @@ exports[`regex utils snapshots should create expected regex from getErrorPageReg
 
 exports[`regex utils snapshots should create expected regex from getErrorPageRegex when isLive = true 1`] = `"/:service(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)/:errorCode(404|500):variant(/simp|/trad|/cyr|/lat)?:lite(.lite)?"`;
 
-exports[`regex utils snapshots should create expected regex from getFrontPageRegex when isLive = false 1`] = `"/:service():variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?:lite(.lite)?"`;
+exports[`regex utils snapshots should create expected regex from getFrontPageRegex when isLive = false 1`] = `"/:service(zhongwen):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?:lite(.lite)?"`;
 
 exports[`regex utils snapshots should create expected regex from getFrontPageRegex when isLive = true 1`] = `"/:service(archive|cymrufyw|naidheachdan|news|newsround|scotland|serbian|sport|ukchina|uzbek|ws|zhongwen):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?:lite(.lite)?"`;
 
