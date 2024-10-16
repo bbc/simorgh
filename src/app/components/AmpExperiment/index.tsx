@@ -6,14 +6,14 @@ import { Helmet } from 'react-helmet';
 
 type Variant = string;
 type Experiment = string;
-type trafficAllocationPercentage = number;
+type TrafficAllocationPercentage = number;
 
 type AmpExperimentConfig = {
   [key: Experiment]: {
     sticky?: boolean;
     consentNotificationId?: string;
     variants: {
-      [key: Variant]: trafficAllocationPercentage;
+      [key: Variant]: TrafficAllocationPercentage;
     };
   };
 };
