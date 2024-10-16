@@ -81,7 +81,7 @@ export const getFrontPageRegex = services => {
       service => !homePageServices.includes(service),
     );
   } else {
-    frontPages = [];
+    frontPages = ['zhongwen'];
   }
   const serviceRegex = getServiceRegex(frontPages);
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:lite(${liteRegex})?`;
