@@ -1006,12 +1006,10 @@ describe('Server', () => {
       });
     });
 
-    describe('for front pages', () => {
+    describe('for home pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/serbian/cyr.json');
-        expect(body.data.article).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
-        );
+        expect(body.data.pageType).toEqual('home');
       });
 
       describe('with non-existent data', () => {

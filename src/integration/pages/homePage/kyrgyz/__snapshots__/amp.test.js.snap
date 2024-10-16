@@ -242,6 +242,19 @@ exports[`AMP Home Page Main heading should match text 1`] = `"BBC News, Кырг
 
 exports[`AMP Home Page Page content First item in the first curation is the correct headline 1`] = `"Түз ободо, Overtyped Headline - Tipo Live Page (was photography)"`;
 
+exports[`AMP Home Page Page content First item in the first curation is the correct image 1`] = `
+<amp-img
+  alt="bbc"
+  class="bbc-image"
+  data-hero="true"
+  fallback=""
+  height="533"
+  layout="responsive"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png"
+  width="800"
+/>
+`;
+
 exports[`AMP Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

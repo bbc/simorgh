@@ -6,7 +6,7 @@ import {
   articlePath,
   cpsAssetPagePath,
   errorPagePath,
-  frontPagePath,
+  homePagePath,
   legacyAssetPagePath,
   topicPath,
 } from '#app/routes/utils/regex';
@@ -80,7 +80,7 @@ describe(`Script Link`, () => {
   it('should render correctly', () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/serbian/lat']}>
-        <Route path={frontPagePath}>
+        <Route path={homePagePath}>
           <ScriptLinkContainerWithContext />
         </Route>
       </MemoryRouter>,
@@ -105,8 +105,8 @@ describe(`Script Link`, () => {
         path: '/serbian/404/lat',
         variantPath: '/serbian/404/cyr',
       },
-      frontPage: {
-        matchPath: frontPagePath,
+      homePage: {
+        matchPath: homePagePath,
         path: '/serbian/lat',
         variantPath: '/serbian/cyr',
       },
@@ -303,7 +303,7 @@ describe(`Script Link`, () => {
           toggleDispatch: mockToggleDispatch,
         }}
       />,
-      frontPagePath,
+      homePagePath,
       '/serbian/lat',
     );
     expect(container).toBeEmptyDOMElement();
@@ -318,7 +318,7 @@ describe(`Script Link`, () => {
           isNextJs: true,
         }}
       />,
-      frontPagePath,
+      homePagePath,
       '/serbian/lat',
     );
     expect(container).toBeEmptyDOMElement();
