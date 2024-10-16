@@ -88,7 +88,9 @@ export const getFrontPageRegex = services => {
 };
 
 export const getTipoHomeRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  const serviceRegex = getServiceRegex(
+    isLive() ? services : services.filter(service => service !== 'zhongwen'),
+  );
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?:lite(${liteRegex})?`;
 };
 
@@ -96,6 +98,8 @@ export const getHomePageRegex = services => {
   let homePages = services;
   if (isLive()) {
     homePages = services.filter(service => homePageServices.includes(service));
+  } else {
+    homePages = services.filter(service => service !== 'zhongwen');
   }
   const homePageServiceRegex = getServiceRegex(homePages);
   return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:lite(${liteRegex})?`;
