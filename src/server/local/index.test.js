@@ -20,7 +20,7 @@ describe('Local Server', () => {
     pageType                             | dataPath                                                         | expectedDataFile
     ${'Article'}                         | ${'/news/articles/c0g992jmmkko.json'}                            | ${'/news/articles/c0g992jmmkko.json'}
     ${'Article with variant'}            | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}                   | ${'/zhongwen/articles/c3xd4x9prgyo/simp.json'}
-    ${'Migrated Home Page with variant'} | ${'/zhongwen/trad.json'}                                         | ${'/zhongwen/frontpage/trad.json'}
+    ${'Migrated Home Page with variant'} | ${'/zhongwen/trad.json'}                                         | ${'/zhongwen/homePage/trad.json'}
     ${'Migrated Home Page'}              | ${'/pidgin.json'}                                                | ${'/pidgin/homePage/index.json'}
     ${'Home Page'}                       | ${'/kyrgyz/tipohome.json'}                                       | ${'/kyrgyz/homePage/index.json'}
     ${'Most Read'}                       | ${'/pidgin/mostread.json'}                                       | ${'/pidgin/mostRead/index.json'}
