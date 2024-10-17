@@ -65,7 +65,7 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import AmpExperiment from '../../components/AmpExperiment';
 import {
   experimentTopStoriesConfig,
-  getExperimentTopStoriesBlocks,
+  getExperimentTopStories,
   ExperimentTopStories,
 } from './experimentTopStories/helpers';
 
@@ -139,7 +139,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const { shouldEnableExperimentTopStories, transformedBlocks } =
-    getExperimentTopStoriesBlocks({
+    getExperimentTopStories({
       blocks,
       topStoriesContent,
       isAmp,

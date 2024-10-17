@@ -1,4 +1,4 @@
-import { getExperimentTopStoriesBlocks } from './helpers';
+import { getExperimentTopStories } from './helpers';
 import { topStoriesList } from '../PagePromoSections/TopStoriesSection/fixture/index';
 
 describe('AMP top stories experiment', () => {
@@ -17,16 +17,15 @@ describe('AMP top stories experiment', () => {
   const blocksEvenLength = [mockTextBlock, mockTextBlock];
   const blocksOddLength = [mockTextBlock, mockTextBlock, mockTextBlock];
 
-  describe('getExperimentTopStoriesBlocks()', () => {
+  describe('getExperimentTopStories()', () => {
     it('returns shouldEnableExperimentTopStories as true if props match conditions.', () => {
-      const { shouldEnableExperimentTopStories } =
-        getExperimentTopStoriesBlocks({
-          blocks: blocksEvenLength,
-          topStoriesContent: topStoriesList,
-          isAmp: true,
-          id: 'c6v11qzyv8po',
-          service: 'news',
-        });
+      const { shouldEnableExperimentTopStories } = getExperimentTopStories({
+        blocks: blocksEvenLength,
+        topStoriesContent: topStoriesList,
+        isAmp: true,
+        id: 'c6v11qzyv8po',
+        service: 'news',
+      });
       expect(shouldEnableExperimentTopStories).toBe(true);
     });
 
@@ -43,14 +42,13 @@ describe('AMP top stories experiment', () => {
     `(
       'returns shouldEnableExperimentTopStories as false because $testDescription.',
       ({ isAmp, id, service }) => {
-        const { shouldEnableExperimentTopStories } =
-          getExperimentTopStoriesBlocks({
-            blocks: blocksEvenLength,
-            topStoriesContent: topStoriesList,
-            isAmp,
-            id,
-            service,
-          });
+        const { shouldEnableExperimentTopStories } = getExperimentTopStories({
+          blocks: blocksEvenLength,
+          topStoriesContent: topStoriesList,
+          isAmp,
+          id,
+          service,
+        });
 
         expect(shouldEnableExperimentTopStories).toBe(false);
       },
@@ -75,7 +73,7 @@ describe('AMP top stories experiment', () => {
     `(
       'should insert experimentTopStories block into blocks array in the correct position when blocks.length is $testType',
       ({ inputBlocks, expectedOutput }) => {
-        const { transformedBlocks } = getExperimentTopStoriesBlocks({
+        const { transformedBlocks } = getExperimentTopStories({
           blocks: inputBlocks,
           topStoriesContent: topStoriesList,
           isAmp: true,

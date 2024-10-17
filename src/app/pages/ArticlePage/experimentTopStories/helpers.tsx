@@ -59,7 +59,7 @@ const insertExperimentTopStories = ({
   return blocksClone;
 };
 
-export const getExperimentTopStoriesBlocks = ({
+export const getExperimentTopStories = ({
   blocks,
   topStoriesContent,
   isAmp,
