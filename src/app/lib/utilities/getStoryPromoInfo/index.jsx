@@ -32,8 +32,8 @@ export const getUrl = (item, service = null, variant = null) => {
   const assetUri = pathOr(null, ['locators', 'assetUri'], item);
   const canonicalUrl = pathOr(null, ['locators', 'canonicalUrl'], item);
   let uri = pathOr(null, ['uri'], item);
-  if (uri && service === 'zhongwen') {
-    if (uri.indexOf(`/${variant}`) === -1 && uri.indexOf('/articles/') !== -1) {
+  if (uri && variant) {
+    if (uri.indexOf('/articles/') !== -1 && uri.indexOf(`/${variant}`) === -1) {
       uri = uri.substr(0, uri.length - variant.length) + variant;
     }
   }
