@@ -23,7 +23,7 @@ describe('litePageTransforms', () => {
     });
 
     it('should not append .lite suffix to invalid hrefs', () => {
-      const html = `
+      const originalHtml = `
         <a href="https://www.bbc.co.uk/news">News</a>
         <a href="https://www.bbc.com/news.lite">News</a>
         <a href="https://www.bbc.com/news.amp">News</a>
@@ -31,29 +31,29 @@ describe('litePageTransforms', () => {
         <a href="mailto:test@gmail.com">News</a>
       `;
 
-      const modifiedHtml = litePageTransforms(html);
+      const modifiedHtml = litePageTransforms(originalHtml);
 
-      expect(modifiedHtml).toEqual(html);
+      expect(modifiedHtml).toEqual(originalHtml);
     });
 
     it('should not append .lite suffix to an invalid "service"', () => {
-      const html = `
+      const originalHtml = `
         <a href="https://www.bbc.co.uk/future">Future</a>
         <a href="https://www.bbc.com/food">Food</a>
         <a href="https://www.bbc.com/weather">Weather</a>
       `;
 
-      const modifiedHtml = litePageTransforms(html);
+      const modifiedHtml = litePageTransforms(originalHtml);
 
-      expect(modifiedHtml).toEqual(html);
+      expect(modifiedHtml).toEqual(originalHtml);
     });
 
     it('should not append .lite suffix when no anchor tags are present', () => {
-      const html = '<p>I am a paragraph</p>';
+      const originalHtml = '<p>I am a paragraph</p>';
 
-      const modifiedHtml = litePageTransforms(html);
+      const modifiedHtml = litePageTransforms(originalHtml);
 
-      expect(modifiedHtml).toEqual(html);
+      expect(modifiedHtml).toEqual(originalHtml);
     });
   });
 });
