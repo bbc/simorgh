@@ -503,9 +503,7 @@ describe('frontPage -> homePage migration', () => {
 
   const serviceToRoute = service => `/${service}`;
 
-  const homepageServices = worldServices
-    .filter(service => service !== 'zhongwen')
-    .map(serviceToRoute);
+  const homepageServices = worldServices.map(serviceToRoute);
 
   const migratedServices = [
     'afaanoromoo',
