@@ -8,13 +8,22 @@ describe('AMP top stories experiment', () => {
       blocks: [],
     },
   };
-  const expectedExperimentTopStoriesBlock = {
-    type: 'experimentTopStories',
-    model: topStoriesList,
-    id: 'experimentTopStories-1',
+  const expectedExperimentTopStoriesBlock = (index: number) => {
+    return {
+      type: 'experimentTopStories',
+      model: topStoriesList,
+      id: `experimentTopStories-${index}`,
+    };
   };
 
-  const blocksEvenLength = [mockTextBlock, mockTextBlock];
+  const blocksShortLength = [mockTextBlock];
+
+  const blocksEvenLength = [
+    mockTextBlock,
+    mockTextBlock,
+    mockTextBlock,
+    mockTextBlock,
+  ];
   const blocksOddLength = [mockTextBlock, mockTextBlock, mockTextBlock];
 
   describe('getExperimentTopStories()', () => {
@@ -56,12 +65,14 @@ describe('AMP top stories experiment', () => {
 
     const expectedBlocksEvenLength = [
       mockTextBlock,
-      expectedExperimentTopStoriesBlock,
+      mockTextBlock,
+      expectedExperimentTopStoriesBlock(2),
+      mockTextBlock,
       mockTextBlock,
     ];
     const expectedBlocksOddLength = [
       mockTextBlock,
-      expectedExperimentTopStoriesBlock,
+      expectedExperimentTopStoriesBlock(1),
       mockTextBlock,
       mockTextBlock,
     ];
@@ -83,5 +94,16 @@ describe('AMP top stories experiment', () => {
         expect(transformedBlocks).toEqual(expectedOutput);
       },
     );
+
+    it('does not insert experiment top stories blocks if the blocks array length is < 2.', () => {
+      const { transformedBlocks } = getExperimentTopStories({
+        blocks: blocksShortLength,
+        topStoriesContent: topStoriesList,
+        isAmp: true,
+        id: 'c6v11qzyv8po',
+        service: 'news',
+      });
+      expect(transformedBlocks).toBe(blocksShortLength);
+    });
   });
 });
