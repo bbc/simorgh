@@ -24,7 +24,9 @@ const isValidHref = (href: string) => {
     RESERVED_ROUTE_EXTENSIONS.includes(extension);
 
   const isValidDomain = VALID_DOMAINS.includes(url.hostname);
-  const isWsService = SERVICES.some(service => url.href.includes(service));
+  const isWsService = SERVICES.includes(
+    url?.pathname?.split('/')?.[1] as Services,
+  );
 
   return (
     isValidDomain &&
