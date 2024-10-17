@@ -135,10 +135,10 @@ describe('getStoryPromoInfo', () => {
     });
 
     it('should return the correct url for optimoPromoItem', () => {
-      expect(getUrl(optimoPromoItem, 'zhongwen', 'trad')).toEqual(
+      expect(getUrl(optimoPromoItem, 'trad')).toEqual(
         '/zhongwen/articles/cl01rmr1d8po/trad',
       );
-      expect(getUrl(optimoPromoItem, 'zhongwen', 'simp')).toEqual(
+      expect(getUrl(optimoPromoItem, 'simp')).toEqual(
         '/zhongwen/articles/cl01rmr1d8po/simp',
       );
       expect(getUrl(optimoPromoItem)).toEqual(

@@ -28,7 +28,7 @@ export const getHeadline = item => {
   return headline;
 };
 
-export const getUrl = (item, service = null, variant = null) => {
+export const getUrl = (item, variant = null) => {
   const assetUri = pathOr(null, ['locators', 'assetUri'], item);
   const canonicalUrl = pathOr(null, ['locators', 'canonicalUrl'], item);
   let uri = pathOr(null, ['uri'], item);
