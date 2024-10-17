@@ -33,9 +33,8 @@ module.exports = {
   assetPrefix: isLocal ? undefined : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
-  experimental: {
-    externalDir: true,
-  },
+  // This references the 'name' field in the Simorgh package.json
+  transpilePackages: ['simorgh'],
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
