@@ -88,9 +88,7 @@ export const getFrontPageRegex = services => {
 };
 
 export const getTipoHomeRegex = services => {
-  const serviceRegex = getServiceRegex(
-    isLive() ? services : services.filter(service => service !== 'zhongwen'),
-  );
+  const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?:lite(${liteRegex})?`;
 };
 
