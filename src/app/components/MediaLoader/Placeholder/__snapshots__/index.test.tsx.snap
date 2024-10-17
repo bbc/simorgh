@@ -16,6 +16,17 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   background-color: #B80000;
 }
 
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-0:hover>button,
   .emotion-0:focus>button {
@@ -341,6 +352,17 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 .emotion-0:hover>button,
 .emotion-0:focus>button {
   background-color: #B80000;
+}
+
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
@@ -702,6 +724,17 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   background-color: #B80000;
 }
 
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-0:hover>button,
   .emotion-0:focus>button {
@@ -1004,6 +1037,17 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 .emotion-0:hover>button,
 .emotion-0:focus>button {
   background-color: #B80000;
+}
+
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
@@ -1326,6 +1370,17 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   background-color: #B80000;
 }
 
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-0:hover>button,
   .emotion-0:focus>button {
@@ -1621,6 +1676,17 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 .emotion-0:hover>button,
 .emotion-0:focus>button {
   background-color: #B80000;
+}
+
+.emotion-0:hover .experimentButtonFocus,
+.emotion-0:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-0:hover .experimentButtonFocus svg,
+.emotion-0:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
