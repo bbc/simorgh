@@ -2,7 +2,7 @@
 import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import styles from './index.styles';
-import { PulseProps } from '../types';
+import { PulseProps } from '../LiveLabel/types';
 
 const Pulse = ({ className, width, height }: PropsWithChildren<PulseProps>) => {
   return (
