@@ -6,7 +6,7 @@ import AmpATIAnalytics from './amp';
 import { ATIProps } from './types';
 import buildATIUrl from './params';
 
-const ATIAnalytics = ({ data, atiData }: ATIProps) => {
+const ATIAnalytics = ({ data, atiData, atiEventsData }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
@@ -23,7 +23,10 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={pageviewParams} />
+    <AmpATIAnalytics
+      pageviewParams={pageviewParams}
+      eventsParams={atiEventsData}
+    />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />
   );
