@@ -252,6 +252,7 @@ export const buildATIEventTrackUrl = ({
   advertiserID,
   url,
   detailedPlacement,
+  variant,
 }: ATIEventTrackingProps) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
@@ -323,6 +324,7 @@ export const buildATIEventTrackUrl = ({
         advertiserID,
         url,
         detailedPlacement,
+        variant,
       }),
       wrap: false,
       disableEncoding: true,

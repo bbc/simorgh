@@ -65,6 +65,7 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import AmpExperiment from '../../components/AmpExperiment';
 import {
   experimentTopStoriesConfig,
+  experimentTopStoriesAnalyticsConfig,
   getExperimentTopStories,
   ExperimentTopStories,
 } from './experimentTopStories/helpers';
@@ -229,7 +230,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       {shouldEnableExperimentTopStories && (
         <AmpExperiment experimentConfig={experimentTopStoriesConfig} />
       )}
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics
+        atiData={atiData}
+        atiEventsData={experimentTopStoriesAnalyticsConfig}
+      />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
