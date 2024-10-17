@@ -28,10 +28,15 @@ export const getHeadline = item => {
   return headline;
 };
 
-export const getUrl = item => {
+export const getUrl = (item, variant = null) => {
   const assetUri = pathOr(null, ['locators', 'assetUri'], item);
   const canonicalUrl = pathOr(null, ['locators', 'canonicalUrl'], item);
-  const uri = pathOr(null, ['uri'], item);
+  let uri = pathOr(null, ['uri'], item);
+  if (uri && variant) {
+    if (uri.indexOf('/articles/') !== -1 && uri.indexOf(`/${variant}`) === -1) {
+      uri = uri.substr(0, uri.length - variant.length) + variant;
+    }
+  }
 
   return assetUri || makeRelativeUrlPath(uri) || canonicalUrl;
 };
