@@ -24,7 +24,7 @@ describe('ElectionBanner', () => {
       const { getByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
-          toggles: { electionBanner: { enabled: true } },
+          toggles: { articleElectionBanner: { enabled: true } },
           isAmp,
         },
       );

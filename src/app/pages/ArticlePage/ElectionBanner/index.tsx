@@ -16,13 +16,12 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
     useToggle('articleElectionBanner');
 
   if (isLive()) return null; // TODO: Remove once going Live
-  if (!electionBannerEnabled) return null;
 
-  const { iframeSrc, thingId } = BANNER_CONFIG ?? {};
+  const { iframeSrc, thingId } = BANNER_CONFIG;
 
   const validAboutTag = aboutTags?.some(tag => tag.thingId === thingId);
 
-  const showBanner = validAboutTag;
+  const showBanner = validAboutTag && electionBannerEnabled;
 
   if (!showBanner) return null;
 
