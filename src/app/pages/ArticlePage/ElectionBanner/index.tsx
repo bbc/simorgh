@@ -46,7 +46,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   return (
     <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
-        title="Election Banner"
+        title="US Election results"
         src={iframeSrc}
         scrolling="no"
         css={styles.electionBannerIframe}
