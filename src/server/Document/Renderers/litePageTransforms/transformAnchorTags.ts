@@ -1,3 +1,8 @@
+import { Services } from '#app/models/types/global';
+import services from '#lib/config/services/loadableConfig';
+
+const SERVICES = Object.keys(services) as Services[];
+
 const VALID_DOMAINS = [
   '/',
   'localhost',
@@ -15,9 +20,16 @@ const isValidHref = (href: string) => {
   const extension = url?.pathname?.split('.')?.pop() || '';
   const startsWithHash = href?.startsWith('#');
 
+  const hasReservedRouteExtension =
+    RESERVED_ROUTE_EXTENSIONS.includes(extension);
+
+  const isValidDomain = VALID_DOMAINS.includes(url.hostname);
+  const isWsService = SERVICES.some(service => url.href.includes(service));
+
   return (
-    VALID_DOMAINS.includes(url.hostname) &&
-    !RESERVED_ROUTE_EXTENSIONS.includes(extension) &&
+    isValidDomain &&
+    isWsService &&
+    !hasReservedRouteExtension &&
     !startsWithHash
   );
 };
