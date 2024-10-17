@@ -89,6 +89,7 @@ const expectedOutput = {
   ampNonUkLink: 'ampNonUkLink',
   showAdsBasedOnLocation: input.showAdsBasedOnLocation,
   showCookieBannerBasedOnCountry: true,
+  saveData: false,
   service: 'service',
   pathname: '/current-path',
   mvtExperiments: input.mvtExperiments,

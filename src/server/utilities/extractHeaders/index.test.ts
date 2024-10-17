@@ -10,6 +10,7 @@ describe('extractHeader', () => {
       isUK: true,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
+      saveData: false,
     });
   });
 
@@ -22,6 +23,7 @@ describe('extractHeader', () => {
       isUK: true,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
+      saveData: false,
     });
   });
 
@@ -35,6 +37,7 @@ describe('extractHeader', () => {
       isUK: false,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
+      saveData: false,
     });
   });
 
@@ -48,6 +51,7 @@ describe('extractHeader', () => {
       isUK: true,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
+      saveData: false,
     });
   });
 
@@ -60,6 +64,7 @@ describe('extractHeader', () => {
       isUK: null,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
+      saveData: false,
     });
   });
 
@@ -72,6 +77,7 @@ describe('extractHeader', () => {
       isUK: null,
       showAdsBasedOnLocation: true,
       showCookieBannerBasedOnCountry: true,
+      saveData: false,
     });
   });
 
@@ -84,6 +90,7 @@ describe('extractHeader', () => {
       isUK: null,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
+      saveData: false,
     });
   });
 });

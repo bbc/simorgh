@@ -233,13 +233,15 @@ server.get(
         isAmp,
       });
 
-      const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
+      const { isUK, showCookieBannerBasedOnCountry, saveData } =
+        extractHeaders(headers);
 
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
+      data.saveData = service === 'gujarati' && saveData;
       data.isUK = isUK;
       data.isLite = isLite;
 
@@ -330,7 +332,7 @@ server.get(
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
 
-        const allVaryHeaders = ['X-Country'];
+        const allVaryHeaders = ['X-Country', 'Save-Data'];
         const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
         if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
 
