@@ -4,6 +4,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import ScriptLink from '#app/components/Header/ScriptLink';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import LiteSiteCta from '#app/components/LiteSiteCta';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -45,7 +46,7 @@ const HeaderContainer = ({
   scriptSwitchId = '',
   renderScriptSwitch = true,
 }) => {
-  const { isAmp, isApp, pageType } = useContext(RequestContext);
+  const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
@@ -104,6 +105,7 @@ const HeaderContainer = ({
           }
         />
       )}
+      {isLite && service === 'gahuza' && <LiteSiteCta />}
       <NavigationContainer />
     </header>
   );
