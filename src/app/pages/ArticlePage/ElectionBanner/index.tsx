@@ -13,7 +13,7 @@ import BANNER_CONFIG from './config';
 export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { isAmp } = useContext(RequestContext);
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
-    useToggle('electionBanner');
+    useToggle('articleElectionBanner');
 
   if (isLive()) return null; // TODO: Remove once going Live
   if (!electionBannerEnabled) return null;

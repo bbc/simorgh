@@ -14,7 +14,7 @@ import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.j
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
-import articleDataHindiWithElectionTag from '#data/hindi/articles/c03rl9735klo.json';
+import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
@@ -60,14 +60,14 @@ type Props = {
   };
   service?: Services;
   podcastEnabled?: boolean;
-  indianElectionBanner?: boolean;
+  articleElectionBanner?: boolean;
 };
 
 const ComponentWithContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
-  indianElectionBanner = false,
+  articleElectionBanner = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -76,7 +76,7 @@ const ComponentWithContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
-        indianElectionBanner: { enabled: indianElectionBanner },
+        articleElectionBanner: { enabled: articleElectionBanner },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -109,7 +109,7 @@ const ComponentWithServiceContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
-  indianElectionBanner = false,
+  articleElectionBanner = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -118,7 +118,7 @@ const ComponentWithServiceContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
-        indianElectionBanner: { enabled: indianElectionBanner },
+        articleElectionBanner: { enabled: articleElectionBanner },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -197,12 +197,12 @@ export const ArticlePageWithPodcastNews = () => (
   />
 );
 
-export const HindiWithElectionBanner = {
+export const ArticleWithElectionBanner = {
   render: () => (
     <ComponentWithServiceContext
-      data={articleDataHindiWithElectionTag}
-      service="hindi"
-      indianElectionBanner
+      data={articleDataWithElectionTag}
+      service="mundo"
+      articleElectionBanner
     />
   ),
   parameters: {

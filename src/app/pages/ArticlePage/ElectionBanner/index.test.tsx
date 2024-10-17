@@ -36,7 +36,7 @@ describe('ElectionBanner', () => {
       const { queryByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
-          toggles: { indianElectionBanner: { enabled: false } },
+          toggles: { articleElectionBanner: { enabled: false } },
           isAmp,
         },
       );
