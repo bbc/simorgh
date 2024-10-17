@@ -168,7 +168,7 @@ exports[`Document Component should render LITE version correctly 1`] = `
 >
   <head>
     <meta
-      content="noindex"
+      content="none"
       name="robots"
     />
     <title
