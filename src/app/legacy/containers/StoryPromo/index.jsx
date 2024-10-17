@@ -168,7 +168,7 @@ const StoryPromoContainer = ({
     pathOr(null, ['contentType'], item) === 'Guide';
   const headline = getHeadline(item);
 
-  const url = getUrl(item, service, variant);
+  const url = getUrl(item, variant);
   const isLive = getIsLive(item);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
