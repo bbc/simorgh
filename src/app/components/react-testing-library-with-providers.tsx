@@ -31,6 +31,7 @@ interface Props extends PropsWithChildren {
   isNextJs?: boolean;
   pageLang?: string;
   isUK?: boolean | null;
+  requestServiceChain?: string | null;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -53,6 +54,7 @@ const AllTheProviders: FC<Props> = ({
   statusCode = null,
   isNextJs = false,
   isUK = null,
+  requestServiceChain = null,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -75,6 +77,7 @@ const AllTheProviders: FC<Props> = ({
           showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           statusCode={statusCode}
           isUK={isUK}
+          requestServiceChain={requestServiceChain}
         >
           <EventTrackingContextProvider data={pageData} atiData={atiData}>
             <UserContextProvider>
@@ -112,6 +115,7 @@ const customRender = (
     isNextJs,
     pageLang,
     isUK,
+    requestServiceChain,
   } = options || {};
 
   return render(ui, {
@@ -135,6 +139,7 @@ const customRender = (
         isNextJs={isNextJs}
         pageLang={pageLang}
         isUK={isUK}
+        requestServiceChain={requestServiceChain}
       >
         {children}
       </AllTheProviders>
