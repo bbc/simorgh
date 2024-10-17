@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
 import isLive from '#app/lib/utilities/isLive';
+import BANNER_CONFIG from './config';
 import ElectionBanner from '.';
 
 jest.mock('#app/lib/utilities/isLive', () =>
@@ -9,15 +10,9 @@ jest.mock('#app/lib/utilities/isLive', () =>
 );
 
 const mockAboutTags = [
-  {
-    thingLabel: 'thing1',
-  },
-  {
-    thingLabel: 'लोकसभा चुनाव 2024',
-  },
-  {
-    thingLabel: 'thing3',
-  },
+  { thingId: 'thing1' },
+  { thingId: BANNER_CONFIG.thingId },
+  { thingId: 'thing3' },
 ] as Tag[];
 
 describe('ElectionBanner', () => {
@@ -25,12 +20,11 @@ describe('ElectionBanner', () => {
     const isAmp = platform === 'amp';
     const bannerElement = isAmp ? 'election-banner-amp' : 'election-banner';
 
-    it('should render ElectionBanner for Hindi service when aboutTags contain the correct thingLabel', () => {
+    it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
       const { getByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
-          service: 'hindi',
-          toggles: { indianElectionBanner: { enabled: true } },
+          toggles: { electionBanner: { enabled: true } },
           isAmp,
         },
       );
@@ -42,7 +36,6 @@ describe('ElectionBanner', () => {
       const { queryByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} />,
         {
-          service: 'hindi',
           toggles: { indianElectionBanner: { enabled: false } },
           isAmp,
         },
@@ -51,13 +44,10 @@ describe('ElectionBanner', () => {
       expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
     });
 
-    it('should not render ElectionBanner for Hindi service when aboutTags do not contain the correct thingLabel', () => {
+    it('should not render ElectionBanner when aboutTags do not contain the correct thingLabel', () => {
       const { queryByTestId } = render(
         <ElectionBanner aboutTags={[{ thingLabel: 'thing1' }] as Tag[]} />,
-        {
-          service: 'hindi',
-          isAmp,
-        },
+        { isAmp },
       );
 
       expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
@@ -65,7 +55,6 @@ describe('ElectionBanner', () => {
 
     it('should not render ElectionBanner when aboutTags is empty', () => {
       const { queryByTestId } = render(<ElectionBanner aboutTags={[]} />, {
-        service: 'hindi',
         isAmp,
       });
 
@@ -77,10 +66,7 @@ describe('ElectionBanner', () => {
 
       const { queryByTestId } = render(
         <ElectionBanner aboutTags={mockAboutTags} />,
-        {
-          service: 'hindi',
-          isAmp,
-        },
+        { isAmp },
       );
 
       expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
