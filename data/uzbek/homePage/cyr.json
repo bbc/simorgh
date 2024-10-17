@@ -1,0 +1,61 @@
+{
+  "data": {
+    "title": "Uzbek",
+    "description": "",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Суриянинг темир хоними Асмо Асад ким?",
+            "firstPublished": "2024-07-30T16:58:46.760Z",
+            "lastPublished": "2024-07-30T16:58:46.760Z",
+            "link": "https://www.bbc.com/uzbek/articles/cve6ql6nr9do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e45/test/ee2a18b0-4e93-11ef-ae89-b10ee2354b32.jpg.webp",
+            "imageAlt": "Россиянинг Яқин Шарқдаги асосий иттифоқчиси Сурия 13 йиллик урушдан кейин вайронага айланган. Ундан нима қолган бўлса",
+            "id": "cve6ql6nr9do"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Сўз сизга: Ўзбекистон аҳолиси 37 миллиондан ошди деб мақтанамиз, лекин миллионлар ишсиз ё мардикор",
+            "firstPublished": "2024-09-16T15:46:52.239Z",
+            "lastPublished": "2024-09-16T15:46:52.239Z",
+            "link": "https://www.bbc.com/uzbek/articles/cl066728v0zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cl066728v0zo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Борис Николаевич Ельцин",
+            "firstPublished": "2024-10-07T09:52:06.034Z",
+            "lastPublished": "2024-10-07T09:58:27.823Z",
+            "link": "https://www.bbc.com/uzbek/articles/c6328w94722o/cyr",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c6328w94722o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:40724044-f99a-412d-a948-1f7410adeeab",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top Stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cvp5j113ngqt",
+        "contentType": "index-home",
+        "pageIdentifier": "uzbekcyr.page",
+        "pageTitle": "Uzbek"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
