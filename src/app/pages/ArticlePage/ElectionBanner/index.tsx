@@ -20,9 +20,9 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   if (isLite) return null;
   if (isLive()) return null; // TODO: Remove once going Live
 
-  const { iframeSrc, thingId } = BANNER_CONFIG;
+  const { iframeSrc, thingIds } = BANNER_CONFIG;
 
-  const validAboutTag = aboutTags?.some(tag => tag.thingId === thingId);
+  const validAboutTag = aboutTags?.some(tag => thingIds.includes(tag.thingId));
 
   const showBanner = validAboutTag;
 

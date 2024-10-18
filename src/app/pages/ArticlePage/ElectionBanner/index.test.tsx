@@ -11,8 +11,9 @@ jest.mock('#app/lib/utilities/isLive', () =>
 
 const mockAboutTags = [
   { thingId: 'thing1' },
-  { thingId: BANNER_CONFIG.thingId },
+  { thingId: BANNER_CONFIG.thingIds[0] },
   { thingId: 'thing3' },
+  { thingId: BANNER_CONFIG.thingIds[1] },
 ] as Tag[];
 
 const AMP_ELEMENT = 'election-banner-amp';
@@ -44,18 +45,6 @@ describe('ElectionBanner', () => {
       expect(getByTestId(bannerElement)).toBeInTheDocument();
     });
 
-    it('should not render ElectionBanner when toggle is disabled', () => {
-      const { queryByTestId } = render(
-        <ElectionBanner aboutTags={mockAboutTags} />,
-        {
-          toggles: { articleElectionBanner: { enabled: false } },
-          isAmp,
-        },
-      );
-
-      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
-    });
-
     it('should not render ElectionBanner when aboutTags do not contain the correct thingLabel', () => {
       const { queryByTestId } = render(
         <ElectionBanner aboutTags={[{ thingLabel: 'thing1' }] as Tag[]} />,
@@ -69,6 +58,18 @@ describe('ElectionBanner', () => {
       const { queryByTestId } = render(<ElectionBanner aboutTags={[]} />, {
         isAmp,
       });
+
+      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
+    });
+
+    it('should not render ElectionBanner when toggle is disabled', () => {
+      const { queryByTestId } = render(
+        <ElectionBanner aboutTags={mockAboutTags} />,
+        {
+          toggles: { articleElectionBanner: { enabled: false } },
+          isAmp,
+        },
+      );
 
       expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
     });
