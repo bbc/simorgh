@@ -1,10 +1,11 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import BANNER_CONFIG from './config';
 
 const IFRAME_STYLES = css({
   border: 'none',
   width: '100%',
-  height: `${pixelsToRem(340)}rem`,
+  height: `${pixelsToRem(BANNER_CONFIG.iframeHeight)}rem`,
 });
 
 export default {
