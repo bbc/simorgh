@@ -103,6 +103,13 @@ const MetadataContainer = ({
     },
   ];
 
+  const pathsForUkLink = [
+    '/sport/formula1',
+    '/sport/cricket/articles/',
+    '/sport/rugby_union/articles',
+    '/sport/rugby_league/articles',
+  ];
+
   const isFormula1 = pathname && pathname.startsWith('/sport/formula1');
 
   const canonicalToUse =
