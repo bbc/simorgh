@@ -20,7 +20,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   if (isLite) return null;
   if (isLive()) return null; // TODO: Remove once going Live
 
-  const { iframeSrc, iframeHeight, thingIds } = BANNER_CONFIG;
+  const { iframeSrc, iframeSrcAmp, iframeHeight, thingIds } = BANNER_CONFIG;
 
   const validAboutTag = aboutTags?.some(tag => thingIds.includes(tag.thingId));
 
@@ -39,7 +39,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
           ampMetadata={{
             imageWidth: 1,
             imageHeight: iframeHeight,
-            src: iframeSrc.replace('{service}', service),
+            src: iframeSrcAmp.replace('{service}', service),
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
           }}

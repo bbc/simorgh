@@ -43,6 +43,18 @@ describe('ElectionBanner', () => {
       );
 
       expect(getByTestId(bannerElement)).toBeInTheDocument();
+
+      const iframe = getByTestId(bannerElement).querySelector(
+        isAmp ? 'amp-iframe' : 'iframe',
+      );
+
+      expect(iframe).toHaveAttribute(
+        'src',
+        BANNER_CONFIG[isAmp ? 'iframeSrcAmp' : 'iframeSrc'].replace(
+          '{service}',
+          'news',
+        ),
+      );
     });
 
     it('should not render ElectionBanner when aboutTags do not contain the correct thingLabel', () => {
