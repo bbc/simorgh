@@ -16,6 +16,7 @@ interface Props extends PropsWithChildren {
   id?: string | null;
   isAmp?: boolean;
   isApp?: boolean;
+  isLite?: boolean;
   pageData?: object;
   atiData?: ATIData;
   bbcOrigin?: string | null;
@@ -40,6 +41,7 @@ const AllTheProviders: FC<Props> = ({
   id = null,
   isAmp = false,
   isApp = false,
+  isLite = false,
   bbcOrigin = 'https://www.test.bbc.com',
   pageType = 'article',
   derivedPageType,
@@ -67,6 +69,7 @@ const AllTheProviders: FC<Props> = ({
           pageType={pageType}
           isAmp={isAmp}
           isApp={isApp}
+          isLite={isLite}
           isNextJs={isNextJs}
           service={service}
           pathname={pathname}
@@ -97,6 +100,7 @@ const customRender = (
     id,
     isAmp,
     isApp,
+    isLite,
     bbcOrigin,
     pageData,
     pageType,
@@ -120,6 +124,7 @@ const customRender = (
         id={id}
         isAmp={isAmp}
         isApp={isApp}
+        isLite={isLite}
         bbcOrigin={bbcOrigin}
         pageData={pageData}
         atiData={atiData}
