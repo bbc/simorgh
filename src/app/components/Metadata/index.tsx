@@ -105,15 +105,16 @@ const MetadataContainer = ({
 
   const pathsForUkLink = [
     '/sport/formula1',
-    '/sport/cricket/articles/',
+    '/sport/cricket/articles',
     '/sport/rugby_union/articles',
     '/sport/rugby_league/articles',
   ];
 
-  const isFormula1 = pathname && pathname.startsWith('/sport/formula1');
+  const isSport = pathsForUkLink.some(
+    path => pathname && pathname.startsWith(path),
+  );
 
-  const canonicalToUse =
-    isUK && isFormula1 ? canonicalUkLink : canonicalNonUkLink;
+  const canonicalToUse = isUK && isSport ? canonicalUkLink : canonicalNonUkLink;
 
   const htmlAttributes = {
     dir,
