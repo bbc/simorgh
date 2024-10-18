@@ -73,6 +73,12 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
       navMenuText: 'Imice',
+      liteSite: {
+        disclaimer: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,
+        backToCanonical: 'Take me to the main website',
+        findOutMore: 'Find out more about this data-saving version',
+        dataSaving: 'Data saving',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',
         audioPlayer: 'Kina amajwi',
