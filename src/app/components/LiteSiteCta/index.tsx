@@ -1,30 +1,53 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import CallToActionLink from '../CallToActionLink';
-import InlineLink from '../InlineLink';
+// import CallToActionLink from '../CallToActionLink';
+// import InlineLink from '../InlineLink';
 import Paragraph from '../Paragraph';
+import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 
+// TO DO - see if it's possible to refactor with existing components
+const CtaLink = ({
+  isRtl,
+  href,
+  text,
+}: {
+  isRtl: boolean;
+  href: string;
+  text: string;
+}) => {
+  return (
+    <a href={href}>
+      <Text size="bodyCopy" fontVariant="sansBold">
+        {text}
+      </Text>
+      {isRtl ? <LeftChevron /> : <RightChevron />}
+    </a>
+  );
+};
+
 const LiteSiteCta = () => {
-  // thinking it is better to do this here than in Header and pass in?
   const { dir, translations } = useContext(ServiceContext);
-  // this is still taking to lite.
+  // TO DO - this is still taking to lite.
   const { canonicalLink } = useContext(RequestContext);
   const isRtl = dir === 'rtl';
+  // TO DO - Add real translations
   const { skipLinkText } = translations;
+  const id = 'LiteSiteCta';
 
   return (
-    <div>
+    <section role="region" aria-labelledby={id}>
+      <strong aria-hidden="true" id={id}>
+        {skipLinkText}
+      </strong>
       <Paragraph>{skipLinkText}</Paragraph>
-      <CallToActionLink href={canonicalLink} className="focusIndicatorInvert">
-        Go to main page
-        {isRtl ? <LeftChevron /> : <RightChevron />}
-      </CallToActionLink>
-      <InlineLink text="Go to info page" to={canonicalLink} />
-    </div>
+      <Paragraph>
+        <CtaLink isRtl={isRtl} href={canonicalLink} text={skipLinkText} />
+      </Paragraph>
+    </section>
   );
 };
 

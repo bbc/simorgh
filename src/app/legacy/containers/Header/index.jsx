@@ -80,6 +80,9 @@ const HeaderContainer = ({
     }
   }
 
+  const liteSiteServices = ['gahuaza'];
+  const renderLiteSiteCTA = isLite && liteSiteServices.includes(service);
+
   if (isApp) return null;
 
   return (
@@ -105,7 +108,7 @@ const HeaderContainer = ({
           }
         />
       )}
-      {isLite && service === 'gahuza' && <LiteSiteCta />}
+      {renderLiteSiteCTA && <LiteSiteCta />}
       <NavigationContainer />
     </header>
   );
