@@ -61,6 +61,7 @@ const MetadataContainer = ({
     canonicalNonUkLink,
     ampNonUkLink,
     pathname,
+    isUK,
   } = useContext(RequestContext);
 
   const {
@@ -102,6 +103,19 @@ const MetadataContainer = ({
     },
   ];
 
+  const pathsForUkLink = [
+    '/sport/formula1',
+    '/sport/cricket/articles',
+    '/sport/rugby_union/articles',
+    '/sport/rugby_league/articles',
+  ];
+
+  const isSport = pathsForUkLink.some(
+    path => pathname && pathname.startsWith(path),
+  );
+
+  const canonicalToUse = isUK && isSport ? canonicalUkLink : canonicalNonUkLink;
+
   const htmlAttributes = {
     dir,
     lang,
@@ -134,7 +148,7 @@ const MetadataContainer = ({
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
       <title>{pageTitle}</title>
-      <link rel="canonical" href={canonicalNonUkLink} />
+      <link rel="canonical" href={canonicalToUse} />
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&
         !isEnglishService &&
