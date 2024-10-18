@@ -4,7 +4,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 const useToggle = toggleName => {
   const featureToggle = useContext(ToggleContext).toggleState[toggleName];
   const { enabled = null, value } = featureToggle || {};
-
+  console.log('maybe??', featureToggle, enabled);
   if (featureToggle) {
     return {
       ...{ enabled, value },
