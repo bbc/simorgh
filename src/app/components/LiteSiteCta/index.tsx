@@ -1,32 +1,35 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-// import CallToActionLink from '../CallToActionLink';
-// import InlineLink from '../InlineLink';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
+import VisuallyHiddenText from '../VisuallyHiddenText';
+import styles from './index.styles';
 
-// TO DO - see if it's possible to refactor with existing components
-const CtaLink = ({
-  isRtl,
-  href,
-  text,
-}: {
+type CtaLinkProps = {
   isRtl: boolean;
   href: string;
   text: string;
-}) => {
+  className?: string;
+};
+
+const CtaLink = ({ isRtl, href, text, className }: CtaLinkProps) => {
   return (
-    <a href={href}>
-      <Text size="bodyCopy" fontVariant="sansBold">
-        {text}
-      </Text>
+    <Text as="a" size="brevier" href={href} className={className}>
+      {text}
       {isRtl ? <LeftChevron /> : <RightChevron />}
-    </a>
+    </Text>
   );
+};
+
+const defaultTranslations = {
+  disclaimer: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,
+  backToCanonical: 'Take me to the main website',
+  findOutMore: 'Find out more about this data-saving version',
+  dataSaving: 'Data saving version',
 };
 
 const LiteSiteCta = () => {
@@ -35,17 +38,33 @@ const LiteSiteCta = () => {
   const { canonicalLink } = useContext(RequestContext);
   const isRtl = dir === 'rtl';
   // TO DO - Add real translations
-  const { skipLinkText } = translations;
+  const { liteSite = defaultTranslations } = translations;
+  const { disclaimer, backToCanonical, findOutMore, dataSaving } = liteSite;
   const id = 'LiteSiteCta';
 
   return (
-    <section role="region" aria-labelledby={id}>
-      <strong aria-hidden="true" id={id}>
-        {skipLinkText}
-      </strong>
-      <Paragraph>{skipLinkText}</Paragraph>
+    <section role="region" aria-labelledby={id} css={styles.container}>
+      <VisuallyHiddenText as="strong" id={id} aria-hidden>
+        {dataSaving}
+      </VisuallyHiddenText>
       <Paragraph>
-        <CtaLink isRtl={isRtl} href={canonicalLink} text={skipLinkText} />
+        <Text size="brevier">{disclaimer}</Text>
+      </Paragraph>
+      <Paragraph css={styles.linkContainer}>
+        <CtaLink
+          css={[styles.link, styles.canonicalLink]}
+          isRtl={isRtl}
+          href={canonicalLink}
+          text={backToCanonical}
+        />
+      </Paragraph>
+      <Paragraph>
+        <CtaLink
+          css={styles.link}
+          isRtl={isRtl}
+          href={canonicalLink}
+          text={findOutMore}
+        />
       </Paragraph>
     </section>
   );
