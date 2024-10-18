@@ -3,7 +3,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 const IFRAME_BASE_URL = getEnvConfig().SIMORGH_INCLUDES_BASE_URL;
 
 export default {
-  iframeHeight: 340,
+  iframeHeight: 324,
   iframeSrc: `${IFRAME_BASE_URL}/include/vjafwest/1365-2024-us-presidential-election-banner/develop/{service}/app`,
   iframeSrcAmp: `${IFRAME_BASE_URL}/include/vjafwest/1365-2024-us-presidential-election-banner/develop/{service}/app/amp`,
   iframeTitle: 'US Election results',
