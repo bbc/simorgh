@@ -20,7 +20,8 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   if (isLite) return null;
   if (isLive()) return null; // TODO: Remove once going Live
 
-  const { iframeSrc, iframeSrcAmp, iframeHeight, thingIds } = BANNER_CONFIG;
+  const { iframeHeight, iframeSrc, iframeSrcAmp, iframeTitle, thingIds } =
+    BANNER_CONFIG;
 
   const validAboutTag = aboutTags?.some(tag => thingIds.includes(tag.thingId));
 
@@ -42,6 +43,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
             src: iframeSrcAmp.replace('{service}', service),
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
+            title: iframeTitle,
           }}
         />
       </aside>
@@ -55,7 +57,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
       css={styles.electionBannerWrapper}
     >
       <iframe
-        title="US Election results"
+        title={iframeTitle}
         src={iframeSrc.replace('{service}', service)}
         scrolling="no"
         css={styles.electionBannerIframe}
