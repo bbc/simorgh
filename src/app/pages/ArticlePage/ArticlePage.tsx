@@ -65,13 +65,14 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import AmpExperiment from '../../components/AmpExperiment';
 import {
   experimentTopStoriesConfig,
-  experimentTopStoriesAnalyticsConfig,
+  getExperimentAnalyticsConfig,
   getExperimentTopStories,
   ExperimentTopStories,
 } from './experimentTopStories/helpers';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service, isAmp, id } = useContext(RequestContext);
+  const { isApp, pageType, service, isAmp, id, env } =
+    useContext(RequestContext);
 
   const {
     articleAuthor,
@@ -232,7 +233,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       )}
       <ATIAnalytics
         atiData={atiData}
-        atiEventsData={experimentTopStoriesAnalyticsConfig}
+        atiEventsData={getExperimentAnalyticsConfig({ env, service })}
       />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}

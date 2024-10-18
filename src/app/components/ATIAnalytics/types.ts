@@ -119,6 +119,7 @@ export interface ATIEventTrackingProps {
   advertiserID?: string;
   url?: string;
   detailedPlacement?: string;
+  variant?: string;
 }
 
 export interface ATIPageTrackingProps {

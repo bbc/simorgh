@@ -3,13 +3,14 @@ import { jsx } from '@emotion/react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { buildATIEventTrackUrl } from '#app/components/ATIAnalytics/atiUrl';
+import { Services, Environments } from '#app/models/types/global';
 import TopStoriesSection from '../PagePromoSections/TopStoriesSection';
 import styles from './index.styles';
 
 const experimentName = 'topStoriesExperiment';
 
 export const experimentTopStoriesConfig = {
-  topStoriesExperiment: {
+  [experimentName]: {
     variants: {
       control: 50,
       show_at_halfway: 50,
@@ -17,31 +18,73 @@ export const experimentTopStoriesConfig = {
   },
 };
 
-export const experimentTopStoriesAnalyticsConfig = {
-  requests: {
-    topStoriesView: buildATIEventTrackUrl({
-      campaignID: 'article',
-      componentName: 'top-stories-section',
-      pageIdentifier: 'page.testing',
-      platform: 'amp',
-      producerId: '64',
-      statsDestination: 'NEWS_PS',
-      variant: `${experimentName}:VARIANT(topStoriesExperiment)`,
-      type: 'view',
-    }),
-  },
-  triggers: {
-    trackTopStories: {
-      on: 'visible',
-      request: 'topStoriesView',
-      visibilitySpec: {
-        selector: `[class*='experimentTopStoriesSection']`,
-        visiblePercentageMin: 20,
-        totalTimeMin: 500,
-        continuousTimeMin: 200,
+const getStatsDestinationKey = ({
+  env,
+  service,
+}: {
+  service: Services;
+  env: Environments;
+}) => {
+  if (env !== 'live') {
+    return service === 'news' ? 'NEWS_PS_TEST' : 'SPORT_PS_TEST';
+  }
+
+  return service === 'news' ? 'NEWS_PS' : 'SPORT_PS';
+};
+
+// SOURCE_URL and VARIANT(${experimentName}) are replaced with their actual values via AMP's variable substitution: https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-var-substitutions.md
+const buildTopStoriesEventUrl = ({
+  type,
+  env,
+  service,
+}: {
+  type: 'view' | 'click';
+
+  env: Environments;
+  service: Services;
+}) => {
+  return buildATIEventTrackUrl({
+    campaignID: 'article',
+    componentName: 'top-stories-section',
+    pageIdentifier: 'SOURCE_URL',
+    platform: 'amp',
+    producerId: '64',
+    statsDestination: `${getStatsDestinationKey({ env, service })}`,
+    variant: `${experimentName}:VARIANT(${experimentName})`,
+    type,
+  });
+};
+
+export const getExperimentAnalyticsConfig = ({
+  env,
+  service,
+}: {
+  env: Environments;
+  service: Services;
+}) => {
+  return {
+    requests: {
+      topStoriesView: buildTopStoriesEventUrl({ type: 'view', env, service }),
+      topStoriesClick: buildTopStoriesEventUrl({ type: 'click', env, service }),
+    },
+    triggers: {
+      trackTopStoriesView: {
+        on: 'visible',
+        request: 'topStoriesView',
+        visibilitySpec: {
+          selector: `[class*='experimentTopStoriesSection']`,
+          visiblePercentageMin: 20,
+          totalTimeMin: 500,
+          continuousTimeMin: 200,
+        },
+      },
+      trackTopStoriesClick: {
+        on: 'click',
+        request: 'topStoriesClick',
+        selector: 'a',
       },
     },
-  },
+  };
 };
 
 const enableExperimentTopStories = ({
