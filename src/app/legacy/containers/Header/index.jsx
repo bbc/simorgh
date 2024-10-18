@@ -80,7 +80,7 @@ const HeaderContainer = ({
     }
   }
 
-  const liteSiteServices = ['gahuaza'];
+  const liteSiteServices = ['gahuza'];
   const renderLiteSiteCTA = isLite && liteSiteServices.includes(service);
 
   if (isApp) return null;
