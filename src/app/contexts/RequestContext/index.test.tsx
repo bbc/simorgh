@@ -61,6 +61,7 @@ const input = {
   showAdsBasedOnLocation: true,
   mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
   isUK: true,
+  requestServiceChain: 'SIMORGH',
 };
 
 const expectedOutput = {
@@ -92,6 +93,7 @@ const expectedOutput = {
   service: 'service',
   pathname: '/current-path',
   mvtExperiments: input.mvtExperiments,
+  requestServiceChain: 'SIMORGH',
 };
 
 describe('RequestContext', () => {
