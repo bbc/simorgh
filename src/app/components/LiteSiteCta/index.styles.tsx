@@ -2,13 +2,17 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
+  outerContainer: ({ palette }: Theme) =>
+    css({
+      backgroundColor: `${palette.WHITE}`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
+    }),
   container: ({ spacings, mq }: Theme) =>
     css({
       margin: `0 ${spacings.FULL}rem`,
       padding: `${spacings.TRIPLE}rem 0 ${spacings.FULL}rem 0`,
       maxWidth: '63.4rem',
       position: 'relative',
-
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 ${spacings.DOUBLE}rem`,
       },
@@ -16,51 +20,42 @@ export default {
         margin: `0 auto`,
       },
     }),
-  // link: ({ palette, spacings }: Theme) =>
-  //   css({
-
-  //   }),
   chevron: ({ palette, spacings }: Theme) =>
     css({
       color: palette.GREY_10,
       fill: 'currentColor',
       marginInlineStart: `${spacings.HALF}rem`,
       verticalAlign: 'middle',
-    }),
-  // TO DO - split out padding so that the different links have different padding
-  linkWrapper: ({ palette, spacings }: Theme) =>
-    css({
-      paddingTop: `${spacings.FULL}rem`, // touch target
-      paddingBottom: `${spacings.DOUBLE}rem`, // touch target
-      display: 'inline-block',
-      textDecoration: 'none',
-      svg: {
-        ' &:visited': {
-          color: palette.METAL,
-        },
-        '&:focus, &:hover': {
-          color: palette.POSTBOX,
-        },
+      'a:visited &': {
+        color: palette.METAL,
+      },
+      'a:focus &, a:hover &': {
+        color: palette.POSTBOX,
       },
     }),
-  canonicalLink: ({ fontVariants }: Theme) =>
+  link: () =>
     css({
-      ...fontVariants.sansBold,
+      display: 'inline-block',
+      textDecoration: 'none',
     }),
-  linkContainer: ({ spacings }: Theme) =>
+  bottomLinkSpacing: ({ spacings }: Theme) =>
     css({
-      // margin: `${spacings.DOUBLE}rem 0`,
+      padding: `${spacings.FULL}rem 0 ${spacings.DOUBLE}rem`,
+    }),
+  topLinkSpacing: ({ spacings }: Theme) =>
+    css({
+      padding: `${spacings.DOUBLE}rem 0 ${spacings.FULL}rem`,
     }),
   linkText: ({ palette }: Theme) =>
     css({
-      borderBottom: `1px solid ${palette.GREY_10}`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
       textDecoration: 'none',
-      ' &:visited': {
+      'a:visited &': {
         color: palette.METAL,
-        borderBottom: `1px solid ${palette.METAL}`,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,
       },
-      '&:focus, &:hover': {
-        borderBottom: `2px solid ${palette.POSTBOX}`,
+      'a:focus &, a:hover &': {
+        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
         color: palette.POSTBOX,
       },
     }),

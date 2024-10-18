@@ -13,13 +13,20 @@ type CtaLinkProps = {
   isRtl: boolean;
   href: string;
   text: string;
+  fontVariant?: string;
   className?: string;
 };
 
-const CtaLink = ({ isRtl, href, text, className }: CtaLinkProps) => {
+const CtaLink = ({
+  isRtl,
+  href,
+  text,
+  fontVariant = 'sansRegular',
+  className,
+}: CtaLinkProps) => {
   return (
-    <a href={href} css={styles.linkWrapper}>
-      <Text size="brevier" className={className} css={styles.linkText}>
+    <a href={href} className={className} css={styles.link}>
+      <Text size="brevier" fontVariant={fontVariant} css={styles.linkText}>
         {text}
       </Text>
       {isRtl ? (
@@ -49,29 +56,32 @@ const LiteSiteCta = () => {
   const id = 'LiteSiteCta';
 
   return (
-    <section role="region" aria-labelledby={id} css={styles.container}>
+    <section role="region" aria-labelledby={id} css={styles.outerContainer}>
       <VisuallyHiddenText as="strong" id={id} aria-hidden>
         {dataSaving}
       </VisuallyHiddenText>
-      <Paragraph>
-        <Text size="brevier">{disclaimer}</Text>
-      </Paragraph>
-      <Paragraph css={styles.linkContainer}>
-        <CtaLink
-          css={[styles.link, styles.canonicalLink]}
-          isRtl={isRtl}
-          href={canonicalLink}
-          text={backToCanonical}
-        />
-      </Paragraph>
-      <Paragraph css={styles.linkContainer}>
-        <CtaLink
-          css={styles.link}
-          isRtl={isRtl}
-          href={canonicalLink}
-          text={findOutMore}
-        />
-      </Paragraph>
+      <div css={styles.container}>
+        <Paragraph>
+          <Text size="brevier">{disclaimer}</Text>
+        </Paragraph>
+        <Paragraph>
+          <CtaLink
+            fontVariant="sansBold"
+            isRtl={isRtl}
+            href={canonicalLink}
+            text={backToCanonical}
+            css={styles.topLinkSpacing}
+          />
+        </Paragraph>
+        <Paragraph>
+          <CtaLink
+            isRtl={isRtl}
+            href={canonicalLink}
+            text={findOutMore}
+            css={styles.bottomLinkSpacing}
+          />
+        </Paragraph>
+      </div>
     </section>
   );
 };
