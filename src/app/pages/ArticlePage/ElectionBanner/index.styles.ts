@@ -7,26 +7,28 @@ const HEIGHT_STYLING = () =>
   });
 
 export default {
-  electionBannerWrapper: ({ palette }: Theme) => [
+  electionBannerWrapper: ({ mq, spacings }: Theme) => [
     css({
-      backgroundColor: palette.GHOST,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      maxWidth: '63rem',
+      margin: '0 auto',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        paddingTop: `${spacings.QUINTUPLE}rem`,
+      },
     }),
-    HEIGHT_STYLING,
   ],
-  electionBannerIframe: () =>
+  electionBannerIframe: () => [
     css({
       border: 'none',
       width: '100%',
-      maxWidth: '63rem',
-      height: '100%',
-      // margin: '-1rem 0',
     }),
-  electionBannerWrapperAmp: ({ palette }: Theme) => [
+    HEIGHT_STYLING,
+  ],
+  electionBannerWrapperAmp: () => [
     css({
-      backgroundColor: palette.GHOST,
       overflow: 'hidden',
 
       '& amp-iframe': {

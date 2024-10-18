@@ -30,7 +30,8 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
 
   if (isAmp) {
     return (
-      <div
+      <aside
+        role="complementary"
         data-testid="election-banner-amp"
         css={styles.electionBannerWrapperAmp}
       >
@@ -43,18 +44,22 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
           }}
         />
-      </div>
+      </aside>
     );
   }
 
   return (
-    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
+    <aside
+      role="complementary"
+      data-testid="election-banner"
+      css={styles.electionBannerWrapper}
+    >
       <iframe
         title="US Election results"
         src={iframeSrc.replace('{service}', service)}
         scrolling="no"
         css={styles.electionBannerIframe}
       />
-    </div>
+    </aside>
   );
 }
