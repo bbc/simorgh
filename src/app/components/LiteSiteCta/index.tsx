@@ -18,10 +18,16 @@ type CtaLinkProps = {
 
 const CtaLink = ({ isRtl, href, text, className }: CtaLinkProps) => {
   return (
-    <Text as="a" size="brevier" href={href} className={className}>
-      {text}
-      {isRtl ? <LeftChevron /> : <RightChevron />}
-    </Text>
+    <a href={href} css={styles.linkWrapper}>
+      <Text size="brevier" className={className} css={styles.linkText}>
+        {text}
+      </Text>
+      {isRtl ? (
+        <LeftChevron css={styles.chevron} />
+      ) : (
+        <RightChevron css={styles.chevron} />
+      )}
+    </a>
   );
 };
 
@@ -58,7 +64,7 @@ const LiteSiteCta = () => {
           text={backToCanonical}
         />
       </Paragraph>
-      <Paragraph>
+      <Paragraph css={styles.linkContainer}>
         <CtaLink
           css={styles.link}
           isRtl={isRtl}
