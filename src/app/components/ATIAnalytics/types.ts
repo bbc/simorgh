@@ -91,9 +91,19 @@ export interface ATIConfigurationDetailsProviders {
   atiData?: ATIData;
 }
 
+export interface ATIEventsData {
+  requests?: {
+    [key: string]: string;
+  };
+  triggers?: {
+    [key: string]: object;
+  };
+}
+
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;
+  eventsParams?: ATIEventsData;
 }
 
 export interface ATIEventTrackingProps {
@@ -109,6 +119,7 @@ export interface ATIEventTrackingProps {
   advertiserID?: string;
   url?: string;
   detailedPlacement?: string;
+  variant?: string;
 }
 
 export interface ATIPageTrackingProps {
@@ -136,4 +147,5 @@ export interface ATIPageTrackingProps {
 export interface ATIProps {
   data?: PageData;
   atiData?: ATIData;
+  atiEventsData?: ATIEventsData;
 }

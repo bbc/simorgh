@@ -32,7 +32,10 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpExperiment = ({ experimentConfig }: AmpExperimentProps) => {
+const AmpExperiment = ({
+  experimentConfig,
+  analyticsConfig,
+}: AmpExperimentProps) => {
   return (
     <>
       <AmpHead />
@@ -43,6 +46,17 @@ const AmpExperiment = ({ experimentConfig }: AmpExperimentProps) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(experimentConfig) }}
         />
       </amp-experiment>
+      {analyticsConfig && (
+        <amp-analytics>
+          <script
+            type="application/json"
+            /* eslint-disable-next-line react/no-danger */
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(analyticsConfig),
+            }}
+          />
+        </amp-analytics>
+      )}
     </>
   );
 };

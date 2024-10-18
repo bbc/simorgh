@@ -4,7 +4,11 @@
 
 import { ATIAnalyticsProps } from '../types';
 
-const ampAnalyticsJson = ({ baseUrl, pageviewParams }: ATIAnalyticsProps) => ({
+const ampAnalyticsJson = ({
+  baseUrl,
+  pageviewParams,
+  eventsParams,
+}: ATIAnalyticsProps) => ({
   transport: {
     beacon: false,
     xhrpost: false,
@@ -13,8 +17,12 @@ const ampAnalyticsJson = ({ baseUrl, pageviewParams }: ATIAnalyticsProps) => ({
   requests: {
     base: baseUrl,
     pageview: '${base}' + pageviewParams,
+    ...eventsParams?.requests,
   },
-  triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
+  triggers: {
+    trackPageview: { on: 'visible', request: 'pageview' },
+    ...eventsParams?.triggers,
+  },
 });
 
 export default ampAnalyticsJson;
