@@ -313,6 +313,16 @@ exports[`AMP Home Page Main heading should match text 1`] = `"BBC News, عربي
 
 exports[`AMP Home Page Page content First item in the first curation is the correct headline 1`] = `"مرأة الخارقة ""`;
 
+exports[`AMP Home Page Page content First item in the first curation is the correct image 1`] = `
+<amp-img
+  alt="الرياضه"
+  class="bbc-image"
+  fallback=""
+  layout="fill"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
+/>
+`;
+
 exports[`AMP Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

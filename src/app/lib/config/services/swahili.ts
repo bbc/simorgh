@@ -328,6 +328,10 @@ export const service: DefaultServiceConfig = {
         url: '/swahili',
       },
       {
+        title: 'Uchaguzi wa Marekani 2024',
+        url: '/swahili/topics/c3v8qp1qz4xt',
+      },
+      {
         title: 'Michezo',
         url: '/swahili/topics/ckdxndddjkxt',
       },

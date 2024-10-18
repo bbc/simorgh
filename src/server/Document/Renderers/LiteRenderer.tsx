@@ -19,7 +19,7 @@ export default function LitePageRenderer({
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
       <head>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="none" />
         {title}
         {helmetMetaTags}
         {helmetLinkTags}
