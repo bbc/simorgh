@@ -3,7 +3,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const HEIGHT_STYLING = () =>
   css({
-    height: `${pixelsToRem(450)}rem`,
+    height: `${pixelsToRem(340)}rem`,
   });
 
 export default {
@@ -16,16 +16,13 @@ export default {
     }),
     HEIGHT_STYLING,
   ],
-  electionBannerIframe: ({ mq }: Theme) =>
+  electionBannerIframe: () =>
     css({
       border: 'none',
       width: '100%',
       maxWidth: '63rem',
       height: '100%',
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: '0 1rem',
-      },
+      // margin: '-1rem 0',
     }),
   electionBannerWrapperAmp: ({ palette }: Theme) => [
     css({

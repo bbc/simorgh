@@ -15,10 +15,22 @@ const mockAboutTags = [
   { thingId: 'thing3' },
 ] as Tag[];
 
+const AMP_ELEMENT = 'election-banner-amp';
+const CANONICAL_ELEMENT = 'election-banner';
+
 describe('ElectionBanner', () => {
+  it('should not render ElectionBanner when isLite is true', () => {
+    const { queryByTestId } = render(
+      <ElectionBanner aboutTags={mockAboutTags} />,
+      { isLite: true },
+    );
+
+    expect(queryByTestId(CANONICAL_ELEMENT)).not.toBeInTheDocument();
+  });
+
   describe.each(['canonical', 'amp'])('%s', platform => {
     const isAmp = platform === 'amp';
-    const bannerElement = isAmp ? 'election-banner-amp' : 'election-banner';
+    const bannerElement = isAmp ? AMP_ELEMENT : CANONICAL_ELEMENT;
 
     it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
       const { getByTestId } = render(
