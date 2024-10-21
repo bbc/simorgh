@@ -35,7 +35,7 @@ const runTestsForPage = ({
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
       const paths = getPaths(service, pageType);
-      console.log('CHECK', paths);
+
       paths.forEach(currentPath => {
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
