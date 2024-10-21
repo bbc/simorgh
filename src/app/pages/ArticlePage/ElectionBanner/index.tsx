@@ -17,8 +17,8 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
     useToggle('articleElectionBanner');
 
-  if (isLite) return null;
   if (isLive()) return null; // TODO: Remove once going Live
+  if (isLite) return null;
 
   const { iframeHeight, iframeSrc, iframeSrcAmp, iframeTitle, thingIds } =
     BANNER_CONFIG;
