@@ -2,6 +2,7 @@ import runTestsForPage from '../../../support/helpers/runTestsForPage';
 import { testsThatAlwaysRun, testsThatFollowSmokeTestConfig } from './tests';
 import { testsThatFollowSmokeTestConfigForAMPOnly } from './testsForAMPOnly';
 import { testsThatFollowSmokeTestConfigForCanonicalOnly } from './testsForCanonicalOnly';
+import { testsForLiteOnly } from './testsForLiteOnly';
 
 const testsForPage = {
   pageType: 'articles',
@@ -9,6 +10,7 @@ const testsForPage = {
   testsThatFollowSmokeTestConfig,
   testsThatFollowSmokeTestConfigForCanonicalOnly,
   testsThatFollowSmokeTestConfigForAMPOnly,
+  testsForLiteOnly,
 };
 
 runTestsForPage(testsForPage);

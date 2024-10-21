@@ -56,7 +56,12 @@ const LiteSiteCta = () => {
   const id = 'LiteSiteCta';
 
   return (
-    <section role="region" aria-labelledby={id} css={styles.outerContainer}>
+    <section
+      role="region"
+      data-e2e="lite-cta"
+      aria-labelledby={id}
+      css={styles.outerContainer}
+    >
       <VisuallyHiddenText as="strong" id={id} aria-hidden>
         {dataSaving}
       </VisuallyHiddenText>

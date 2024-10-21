@@ -9,6 +9,7 @@ import serviceHasPageType from './serviceHasPageType';
 import ampOnlyServices from './ampOnlyServices';
 import visitPage from './visitPage';
 import getAmpUrl from './getAmpUrl';
+import getLiteUrl from './getLiteUrl';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -26,6 +27,7 @@ const runTestsForPage = ({
   testsThatNeverRunDuringSmokeTesting = noOp,
   testsThatNeverRunDuringSmokeTestingForCanonicalOnly = noOp,
   testsThatNeverRunDuringSmokeTestingForAMPOnly = noOp,
+  testsForLiteOnly = noOp,
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
 
@@ -33,7 +35,7 @@ const runTestsForPage = ({
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
       const paths = getPaths(service, pageType);
-
+      console.log('CHECK', paths);
       paths.forEach(currentPath => {
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
@@ -134,6 +136,30 @@ const runTestsForPage = ({
               // Page specific tests
               testsThatNeverRunDuringSmokeTestingForAMPOnly(testArgs);
               testsThatNeverRunDuringSmokeTesting(testArgs);
+            }
+          }
+        });
+
+        // Switch to Lite page URL (NB only some of our pages have AMP variants)
+        describe(`${pageType} - ${currentPath} - Lite`, () => {
+          // TC2 MAPs are not loading the media player which causes the tests to fail when the page is visited, this is accepted behaviour
+          // The substring '/20' is common to all the TC2 MAPs test URLs in the settings and we will not be adding more
+          if (!currentPath.includes('/20')) {
+            before(() => {
+              Cypress.env('currentPath', currentPath);
+
+              visitPage(getLiteUrl(currentPath), pageType);
+            });
+
+            const testArgs = {
+              service,
+              pageType,
+              variant: config[service].variant,
+              isAmp: true,
+            };
+
+            if (service === 'gahuza') {
+              testsForLiteOnly(testArgs);
             }
           }
         });
