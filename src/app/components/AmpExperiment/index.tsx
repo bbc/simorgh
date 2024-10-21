@@ -27,6 +27,11 @@ type AmpAnalyticsConfig = {
   };
 };
 
+type AmpExperimentProps = {
+  experimentConfig: AmpExperimentConfig;
+  analyticsConfig?: AmpAnalyticsConfig;
+};
+
 const AmpHead = () => (
   <Helmet>
     <script
@@ -40,10 +45,7 @@ const AmpHead = () => (
 const AmpExperiment = ({
   experimentConfig,
   analyticsConfig,
-}: {
-  experimentConfig: AmpExperimentConfig;
-  analyticsConfig: AmpAnalyticsConfig;
-}) => {
+}: AmpExperimentProps) => {
   return (
     <>
       <AmpHead />

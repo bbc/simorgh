@@ -1,5 +1,13 @@
-import { getExperimentTopStories } from './helpers';
+import {
+  getExperimentAnalyticsConfig,
+  getExperimentTopStories,
+} from './helpers';
 import { topStoriesList } from '../PagePromoSections/TopStoriesSection/fixture/index';
+import * as analyticsUtils from '../../../lib/analyticsUtils';
+
+(analyticsUtils.getAtUserId as jest.Mock) = jest
+  .fn()
+  .mockReturnValue('123-456-789');
 
 describe('AMP top stories experiment', () => {
   const mockTextBlock = {
@@ -106,4 +114,77 @@ describe('AMP top stories experiment', () => {
       expect(transformedBlocks).toBe(blocksShortLength);
     });
   });
+
+  describe('getExperimentAnalyticsConfig()', () => {
+    process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
+    const PS_NEWS_DESTINATION_ID = 598285;
+    const PS_NEWS_TEST_DESTINATION_ID = 598286;
+    const PS_NEWS_GNL_DESTINATION_ID = 598287;
+    const PS_NEWS_GNL_TEST_DESINTATION_ID = 598288;
+    const PS_SPORT_DESTINATION_ID = 598310;
+    const PS_SPORT_TEST_DESTINATION_ID = 598311;
+    const PS_SPORT_GNL_DESTINATION_ID = 598308;
+    const PS_SPORT_GNL_TEST_DESTINATION_ID = 598309;
+    it.each`
+      service    | env       | destinationId                   | gnlId
+      ${'news'}  | ${'live'} | ${PS_NEWS_DESTINATION_ID}       | ${PS_NEWS_GNL_DESTINATION_ID}
+      ${'news'}  | ${'test'} | ${PS_NEWS_TEST_DESTINATION_ID}  | ${PS_NEWS_GNL_TEST_DESINTATION_ID}
+      ${'sport'} | ${'live'} | ${PS_SPORT_DESTINATION_ID}      | ${PS_SPORT_GNL_DESTINATION_ID}
+      ${'sport'} | ${'test'} | ${PS_SPORT_TEST_DESTINATION_ID} | ${PS_SPORT_GNL_TEST_DESTINATION_ID}
+    `(
+      'should create the analytics config with the correct parameters for $service on $env.',
+      ({ env, service, destinationId, gnlId }) => {
+        const analyticsConfig = getExperimentAnalyticsConfig({ env, service });
+        expect(analyticsConfig).toMatchInlineSnapshot(`
+        {
+          "requests": {
+            "topStoriesClick": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&atc=PUB-[article]-[top-stories-promo]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
+            "topStoriesView": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-[article]-[top-stories-section]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
+          },
+          "triggers": {
+            "trackTopStoriesClick": {
+              "on": "click",
+              "request": "topStoriesClick",
+              "selector": "[data-testid='promo-link']",
+            },
+            "trackTopStoriesView": {
+              "on": "visible",
+              "request": "topStoriesView",
+              "visibilitySpec": {
+                "continuousTimeMin": 200,
+                "selector": "[class*='experimentTopStoriesSection']",
+                "totalTimeMin": 500,
+                "visiblePercentageMin": 20,
+              },
+            },
+          },
+        }
+        `);
+      },
+    );
+  });
 });
+
+// {
+//           "requests": {
+//             "topStoriesClick": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&atc=PUB-[article]-[top-stories-promo]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
+//             "topStoriesView": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-[article]-[top-stories-section]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
+//           },
+//           "triggers": {
+//             "trackTopStoriesClick": {
+//               "on": "click",
+//               "request": "topStoriesClick",
+//               "selector": "[data-testid='promo-link']",
+//             },
+//             "trackTopStoriesView": {
+//               "on": "visible",
+//               "request": "topStoriesView",
+//               "visibilitySpec": {
+//                 "continuousTimeMin": 200,
+//                 "selector": "[class*='experimentTopStoriesSection']",
+//                 "totalTimeMin": 500,
+//                 "visiblePercentageMin": 20,
+//               },
+//             },
+//           },
+//         }
