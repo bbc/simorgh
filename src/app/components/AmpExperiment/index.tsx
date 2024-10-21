@@ -18,8 +18,13 @@ type AmpExperimentConfig = {
   };
 };
 
-type AmpExperimentProps = {
-  [key: Experiment]: AmpExperimentConfig;
+type AmpAnalyticsConfig = {
+  requests?: {
+    [key: string]: string;
+  };
+  triggers?: {
+    [key: string]: object;
+  };
 };
 
 const AmpHead = () => (
@@ -32,7 +37,13 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpExperiment = ({ experimentConfig }: AmpExperimentProps) => {
+const AmpExperiment = ({
+  experimentConfig,
+  analyticsConfig,
+}: {
+  experimentConfig: AmpExperimentConfig;
+  analyticsConfig: AmpAnalyticsConfig;
+}) => {
   return (
     <>
       <AmpHead />
@@ -43,6 +54,17 @@ const AmpExperiment = ({ experimentConfig }: AmpExperimentProps) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(experimentConfig) }}
         />
       </amp-experiment>
+      {analyticsConfig && (
+        <amp-analytics type="piano">
+          <script
+            type="application/json"
+            /* eslint-disable-next-line react/no-danger */
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(analyticsConfig),
+            }}
+          />
+        </amp-analytics>
+      )}
     </>
   );
 };
