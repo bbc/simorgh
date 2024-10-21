@@ -57,6 +57,7 @@ interface MetadataWithContextProps extends MetadataProps {
   pageType: PageTypes;
   id?: string | null;
   pathname: string;
+  isUK?: boolean;
 }
 
 const MetadataWithContext = ({
@@ -79,6 +80,7 @@ const MetadataWithContext = ({
   mentionsTags,
   hasAppleItunesAppBanner,
   hasAmpPage,
+  isUK = false,
 }: MetadataWithContextProps) => (
   <ServiceContextProvider service={service} pageLang={lang}>
     <RequestContextProvider
@@ -90,6 +92,7 @@ const MetadataWithContext = ({
       pathname={pathname}
       service={service}
       statusCode={200}
+      isUK={isUK}
     >
       <MetadataContainer
         title={title}
@@ -192,6 +195,72 @@ it('should render the alternate links for article page', async () => {
     },
     {
       href: 'https://www.bbc.co.uk/news/articles/c0000000001o',
+      hreflang: 'en-gb',
+    },
+  ];
+
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > link[rel="alternate"]'),
+    ).map(tag => ({
+      href: tag.getAttribute('href'),
+      hreflang: tag.getAttribute('hreflang'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+it(`should render the canonical link's top level domain as .co.uk for UK article pages`, async () => {
+  render(
+    <MetadataWithContext
+      service="sport"
+      bbcOrigin={dotCoDotUKOrigin}
+      platform="canonical"
+      id="c0000000001o"
+      pageType={ARTICLE_PAGE}
+      pathname="/sport/cricket/articles/c0000000001o"
+      isUK
+      {...newsArticleMetadataProps}
+    />,
+  );
+
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > link[rel="canonical"]')
+      ?.getAttribute('href');
+
+    expect(actual).toEqual(
+      'https://www.bbc.co.uk/sport/cricket/articles/c0000000001o',
+    );
+  });
+});
+
+it('should render the correct specified alternative links for UK article pages', async () => {
+  render(
+    <MetadataWithContext
+      service="sport"
+      bbcOrigin={dotCoDotUKOrigin}
+      platform="canonical"
+      id="c0000000001o"
+      pageType={ARTICLE_PAGE}
+      pathname="/sport/cricket/articles/c0000000001o"
+      isUK
+      {...newsArticleMetadataProps}
+    />,
+  );
+
+  const expected = [
+    {
+      href: 'https://www.bbc.com/sport/cricket/articles/c0000000001o',
+      hreflang: 'x-default',
+    },
+    {
+      href: 'https://www.bbc.com/sport/cricket/articles/c0000000001o',
+      hreflang: 'en',
+    },
+    {
+      href: 'https://www.bbc.co.uk/sport/cricket/articles/c0000000001o',
       hreflang: 'en-gb',
     },
   ];
