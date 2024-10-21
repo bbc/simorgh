@@ -79,6 +79,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
+    atiAnalyticsProducerId,
   } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -231,7 +232,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       {shouldEnableExperimentTopStories && (
         <AmpExperiment
           experimentConfig={experimentTopStoriesConfig}
-          analyticsConfig={getExperimentAnalyticsConfig({ env, service })}
+          analyticsConfig={getExperimentAnalyticsConfig({
+            env,
+            service,
+            atiAnalyticsProducerId,
+          })}
         />
       )}
       <ATIAnalytics atiData={atiData} />

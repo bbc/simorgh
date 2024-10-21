@@ -117,6 +117,7 @@ describe('AMP top stories experiment', () => {
 
   describe('getExperimentAnalyticsConfig()', () => {
     process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
+
     const PS_NEWS_DESTINATION_ID = 598285;
     const PS_NEWS_TEST_DESTINATION_ID = 598286;
     const PS_NEWS_GNL_DESTINATION_ID = 598287;
@@ -125,21 +126,28 @@ describe('AMP top stories experiment', () => {
     const PS_SPORT_TEST_DESTINATION_ID = 598311;
     const PS_SPORT_GNL_DESTINATION_ID = 598308;
     const PS_SPORT_GNL_TEST_DESTINATION_ID = 598309;
+    const NEWS_PRODUCER_ID = 64;
+    const SPORT_PRODUCER_ID = 85;
+
     it.each`
-      service    | env       | destinationId                   | gnlId
-      ${'news'}  | ${'live'} | ${PS_NEWS_DESTINATION_ID}       | ${PS_NEWS_GNL_DESTINATION_ID}
-      ${'news'}  | ${'test'} | ${PS_NEWS_TEST_DESTINATION_ID}  | ${PS_NEWS_GNL_TEST_DESINTATION_ID}
-      ${'sport'} | ${'live'} | ${PS_SPORT_DESTINATION_ID}      | ${PS_SPORT_GNL_DESTINATION_ID}
-      ${'sport'} | ${'test'} | ${PS_SPORT_TEST_DESTINATION_ID} | ${PS_SPORT_GNL_TEST_DESTINATION_ID}
+      service    | env       | destinationId                   | gnlId                               | producerId
+      ${'news'}  | ${'live'} | ${PS_NEWS_DESTINATION_ID}       | ${PS_NEWS_GNL_DESTINATION_ID}       | ${NEWS_PRODUCER_ID}
+      ${'news'}  | ${'test'} | ${PS_NEWS_TEST_DESTINATION_ID}  | ${PS_NEWS_GNL_TEST_DESINTATION_ID}  | ${NEWS_PRODUCER_ID}
+      ${'sport'} | ${'live'} | ${PS_SPORT_DESTINATION_ID}      | ${PS_SPORT_GNL_DESTINATION_ID}      | ${SPORT_PRODUCER_ID}
+      ${'sport'} | ${'test'} | ${PS_SPORT_TEST_DESTINATION_ID} | ${PS_SPORT_GNL_TEST_DESTINATION_ID} | ${SPORT_PRODUCER_ID}
     `(
       'should create the analytics config with the correct parameters for $service on $env.',
-      ({ env, service, destinationId, gnlId }) => {
-        const analyticsConfig = getExperimentAnalyticsConfig({ env, service });
+      ({ env, service, destinationId, gnlId, producerId }) => {
+        const analyticsConfig = getExperimentAnalyticsConfig({
+          env,
+          service,
+          atiAnalyticsProducerId: producerId,
+        });
         expect(analyticsConfig).toMatchInlineSnapshot(`
         {
           "requests": {
-            "topStoriesClick": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&atc=PUB-[article]-[top-stories-promo]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
-            "topStoriesView": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-[article]-[top-stories-section]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
+            "topStoriesClick": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=${producerId}&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&atc=PUB-[article]-[top-stories-promo]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
+            "topStoriesView": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=${producerId}&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-[article]-[top-stories-section]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
           },
           "triggers": {
             "trackTopStoriesClick": {

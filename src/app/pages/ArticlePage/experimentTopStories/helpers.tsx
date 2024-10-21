@@ -36,17 +36,19 @@ const buildTopStoriesEventUrl = ({
   type,
   env,
   service,
+  atiAnalyticsProducerId,
 }: {
   type: 'view' | 'click';
   env: Environments;
   service: Services;
+  atiAnalyticsProducerId: string;
 }) => {
   return buildATIEventTrackUrl({
     campaignID: 'article',
     componentName: `${type === 'view' ? 'top-stories-section' : 'top-stories-promo'}`,
     pageIdentifier: 'SOURCE_URL',
     platform: 'amp',
-    producerId: '64',
+    producerId: atiAnalyticsProducerId,
     statsDestination: `${getStatsDestinationKey({ env, service })}`,
     variant: `${experimentName}:VARIANT(${experimentName})`,
     type,
@@ -56,14 +58,26 @@ const buildTopStoriesEventUrl = ({
 export const getExperimentAnalyticsConfig = ({
   env,
   service,
+  atiAnalyticsProducerId,
 }: {
   env: Environments;
   service: Services;
+  atiAnalyticsProducerId: string;
 }) => {
   return {
     requests: {
-      topStoriesView: buildTopStoriesEventUrl({ type: 'view', env, service }),
-      topStoriesClick: buildTopStoriesEventUrl({ type: 'click', env, service }),
+      topStoriesView: buildTopStoriesEventUrl({
+        type: 'view',
+        env,
+        service,
+        atiAnalyticsProducerId,
+      }),
+      topStoriesClick: buildTopStoriesEventUrl({
+        type: 'click',
+        env,
+        service,
+        atiAnalyticsProducerId,
+      }),
     },
     triggers: {
       trackTopStoriesView: {
