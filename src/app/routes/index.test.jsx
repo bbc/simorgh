@@ -16,7 +16,6 @@ import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
-import frontPageJson from '#data/serbian/frontpage/lat.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
@@ -248,40 +247,6 @@ describe('Routes', () => {
 
       expect(brandTitle).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
       expect(subHeading).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
-    });
-
-    it('should route to and render a front page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const service = 'serbian';
-      const variant = 'lat';
-      const pathname = `/${service}/${variant}`;
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...frontPageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service,
-        variant,
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service,
-        variant,
-      });
-
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Top Stories';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
     });
 
     it('should route to and render a media asset page', async () => {

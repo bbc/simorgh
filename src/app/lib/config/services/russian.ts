@@ -441,6 +441,10 @@ export const service: DefaultServiceConfig = {
         url: '/russian/topics/cez0n29ggrdt',
       },
       {
+        title: 'Выборы в США',
+        url: '/russian/topics/ce802g1vrdgt',
+      },
+      {
         title: 'Истории',
         url: '/russian/topics/cv27xky1pppt',
       },

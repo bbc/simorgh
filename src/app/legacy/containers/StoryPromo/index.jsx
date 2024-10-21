@@ -149,7 +149,7 @@ const StoryPromoContainer = ({
   sectionType = '',
 }) => {
   const { script, service } = useContext(ServiceContext);
-  const { isAmp, isLite, pageType } = useContext(RequestContext);
+  const { isAmp, isLite, pageType, variant } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const linkId = buildUniquePromoId({
@@ -167,7 +167,8 @@ const StoryPromoContainer = ({
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
   const headline = getHeadline(item);
-  const url = getUrl(item);
+
+  const url = getUrl(item, variant);
   const isLive = getIsLive(item);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
