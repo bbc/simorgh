@@ -342,6 +342,10 @@ export const service: DefaultServiceConfig = {
         url: '/marathi/topics/c5qvpxvv7y3t',
       },
       {
+        title: 'विधानसभा निवडणूक',
+        url: '/marathi/topics/c625x8zjyj7t',
+      },
+      {
         title: 'भारत',
         url: '/marathi/topics/cxnyk3y49x6t',
       },
