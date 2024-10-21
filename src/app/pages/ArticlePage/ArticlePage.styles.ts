@@ -81,30 +81,14 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  featuresSection: ({ spacings, mq }: Theme) =>
+
+  topStoriesAndFeaturesSection: ({ spacings, mq }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
 
       [mq.GROUP_4_MIN_WIDTH]: {
         marginBottom: `${spacings.FULL}rem`,
         padding: `${spacings.DOUBLE}rem`,
-      },
-    }),
-  topStoriesSection: ({ spacings, mq }: Theme) =>
-    css({
-      marginBottom: `${spacings.TRIPLE}rem`,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'block',
-        marginBottom: `${spacings.FULL}rem`,
-        padding: `${spacings.DOUBLE}rem`,
-      },
-      '[amp-x-topStoriesExperiment="show_at_halfway"] &': {
-        display: 'none',
-        [mq.GROUP_4_MIN_WIDTH]: {
-          display: 'block',
-          marginBottom: `${spacings.FULL}rem`,
-          padding: `${spacings.DOUBLE}rem`,
-        },
       },
     }),
 };

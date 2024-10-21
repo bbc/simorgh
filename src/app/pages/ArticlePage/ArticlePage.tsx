@@ -59,26 +59,20 @@ import {
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
+
 import SecondaryColumn from './SecondaryColumn';
+
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import AmpExperiment from '../../components/AmpExperiment';
-import {
-  experimentTopStoriesConfig,
-  getExperimentTopStories,
-  ExperimentTopStories,
-} from './experimentTopStories/helpers';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service, isAmp, id } = useContext(RequestContext);
-
+  const { isApp, pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
   } = useContext(ServiceContext);
-
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -137,16 +131,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  const topStoriesContent = pageData?.secondaryColumn?.topStories;
-  const { shouldEnableExperimentTopStories, transformedBlocks } =
-    getExperimentTopStories({
-      blocks,
-      topStoriesContent,
-      isAmp,
-      service,
-      id,
-    });
-
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: headings,
@@ -190,10 +174,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: () => (podcastPromoEnabled ? <InlinePodcastPromo /> : null),
-    experimentTopStories: () =>
-      topStoriesContent ? (
-        <ExperimentTopStories topStoriesContent={topStoriesContent} />
-      ) : null,
   };
 
   const visuallyHiddenBlock = {
@@ -203,8 +183,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const articleBlocks = startsWithHeading
-    ? transformedBlocks
-    : [visuallyHiddenBlock, ...transformedBlocks];
+    ? blocks
+    : [visuallyHiddenBlock, ...blocks];
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
@@ -226,9 +206,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      {shouldEnableExperimentTopStories && (
-        <AmpExperiment experimentConfig={experimentTopStoriesConfig} />
-      )}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
