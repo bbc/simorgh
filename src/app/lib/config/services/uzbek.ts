@@ -681,7 +681,6 @@ export const service: UzbekConfig = {
       variant: 'lat',
     },
   },
-  // TODO: remove ...defaultCyrillicConfig
   lat: {
     ...baseServiceConfig,
     script: latinWithDiacritics,
