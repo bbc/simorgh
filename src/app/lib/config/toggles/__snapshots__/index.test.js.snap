@@ -55,6 +55,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "ads": {
     "enabled": false,
   },
+  "articleElectionBanner": {
+    "enabled": true,
+  },
   "chartbeatAnalytics": {
     "enabled": true,
   },
