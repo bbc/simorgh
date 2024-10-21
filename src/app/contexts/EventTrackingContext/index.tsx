@@ -68,7 +68,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [LIVE_PAGE]: 'live-page',
     [HOME_PAGE]: 'index-home',
     [CPS_ASSET]: '',
-    [STATIC_PAGE]: '',
+    [STATIC_PAGE]: 'static-page',
     [UGC_PAGE]: '',
     [AV_EMBEDS]: 'av-embeds',
     [DOWNLOADS_PAGE]: 'downloads',
