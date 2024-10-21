@@ -31,8 +31,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
 
   if (isAmp) {
     return (
-      <aside
-        role="complementary"
+      <div
         data-testid="election-banner-amp"
         css={styles.electionBannerWrapperAmp}
       >
@@ -46,16 +45,12 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
             title: iframeTitle,
           }}
         />
-      </aside>
+      </div>
     );
   }
 
   return (
-    <aside
-      role="complementary"
-      data-testid="election-banner"
-      css={styles.electionBannerWrapper}
-    >
+    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
         title={iframeTitle}
         src={iframeSrc.replace('{service}', service)}
@@ -63,6 +58,6 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
         css={styles.electionBannerIframe}
         height={iframeHeight}
       />
-    </aside>
+    </div>
   );
 }
