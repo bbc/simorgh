@@ -21,15 +21,12 @@ const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
   return (
     <div css={styles.secondaryColumn}>
       {topStoriesContent && (
-        <div
-          css={styles.topStoriesAndFeaturesSection}
-          data-testid="top-stories"
-        >
+        <div css={styles.topStoriesSection} data-testid="top-stories">
           <TopStoriesSection content={topStoriesContent} />
         </div>
       )}
       {featuresContent && (
-        <div css={styles.topStoriesAndFeaturesSection} data-testid="features">
+        <div css={styles.featuresSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
             parentColumns={{}}
