@@ -4,7 +4,7 @@ import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
-// import useToggle from '#app/hooks/useToggle';
+import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import isLive from '#app/lib/utilities/isLive';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -14,8 +14,8 @@ import BANNER_CONFIG from './config';
 export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   const { service } = useContext(ServiceContext);
   const { isAmp, isLite } = useContext(RequestContext);
-  // const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
-  //   useToggle('articleElectionBanner');
+  const { enabled: electionBannerEnabled }: { enabled: boolean | null } =
+    useToggle('articleElectionBanner');
 
   if (isLite) return null;
   if (isLive()) return null; // TODO: Remove once going Live
@@ -25,7 +25,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
 
   const validAboutTag = aboutTags?.some(tag => thingIds.includes(tag.thingId));
 
-  const showBanner = validAboutTag;
+  const showBanner = validAboutTag && electionBannerEnabled;
 
   if (!showBanner) return null;
 
