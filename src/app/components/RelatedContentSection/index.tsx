@@ -3,15 +3,17 @@
 import { useContext } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import pathOr from 'ramda/src/pathOr';
-import pathEq from 'ramda/src/pathEq';
-import path from 'ramda/src/path';
-import tail from 'ramda/src/tail';
-import slice from 'ramda/src/slice';
-import identity from 'ramda/src/identity';
-import last from 'ramda/src/last';
-import filter from 'ramda/src/filter';
-import pipe from 'ramda/src/pipe';
+import {
+  pathOr,
+  path,
+  pathEq,
+  tail,
+  slice,
+  identity,
+  last,
+  filter,
+  pipe,
+} from 'rambda';
 
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -108,7 +110,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const eventTrackingDataSend = path<object>(['block'], eventTrackingData);
   const viewRef = useViewTracker(eventTrackingDataSend);
 
-  if (!pathEq('relatedContent', ['type'], blocks)) return null;
+  if (!pathEq(['type'], 'relatedContent', blocks)) return null;
 
   if (!blocks) return null;
 
@@ -116,7 +118,7 @@ const RelatedContentSection = ({ content }: { content: OptimoBlock[] }) => {
   const LABEL_ID = 'related-content-heading';
 
   const customTitle =
-    pathEq('title', [0, 'type'], items) &&
+    pathEq([0, 'type'], 'title', items) &&
     pathOr(
       [],
       [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],

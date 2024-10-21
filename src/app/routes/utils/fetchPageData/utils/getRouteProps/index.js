@@ -1,6 +1,6 @@
 import { matchRoutes } from 'react-router-config';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import { path } from 'rambda';
+import { pathOr } from 'rambda';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
 import isAmpPath from '#app/routes/utils/isAmpPath';
 import isAppPath from '#app/routes/utils/isAppPath';

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import is from 'ramda/src/is';
+import { is } from 'rambda';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_QUAD,

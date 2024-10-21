@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 // MAP is now either a Media Asset Page or a Media Article Page

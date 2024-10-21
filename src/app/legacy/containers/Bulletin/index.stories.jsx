@@ -9,7 +9,7 @@ import {
   radioBulletinItem,
   liveRadioBulletinItem,
 } from './fixtureData';
-import { dissocPath } from 'ramda';
+import { dissocPath } from 'rambda';
 
 const tvFixture = tvBulletinItem;
 const audioFixture = radioBulletinItem;

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
 import idSanitiser from '#lib/utilities/idSanitiser';

@@ -1,5 +1,5 @@
-import assocPath from 'ramda/src/assocPath';
-import pipe from 'ramda/src/pipe';
+import { assocPath } from 'rambda';
+import { pipe } from 'rambda';
 import loggerMock from '#testHelpers/loggerMock';
 import {
   EPISODE_EXPIRED,

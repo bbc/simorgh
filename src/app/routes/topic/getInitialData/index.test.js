@@ -1,4 +1,4 @@
-import assocPath from 'ramda/src/assocPath';
+import { assocPath } from 'rambda';
 import * as fetchPageData from '../../utils/fetchPageData';
 import getInitialData from '.';
 import { TOPIC_PAGE } from '../../utils/pageTypes';

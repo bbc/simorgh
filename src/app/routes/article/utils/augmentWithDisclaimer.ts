@@ -1,14 +1,11 @@
-import pathOr from 'ramda/src/pathOr';
-import pathEq from 'ramda/src/pathEq';
-import assocPath from 'ramda/src/assocPath';
-import insert from 'ramda/src/insert';
+import { pathOr, pathEq, assocPath, insert } from 'rambda';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import { Toggles } from '#app/models/types/global';
 import { isSfv } from './paramChecks';
 
 const getBlocks = pathOr([], ['content', 'model', 'blocks']);
 const setBlocks = assocPath(['content', 'model', 'blocks']);
-const isDisclaimerToggledOn = pathEq(true, ['disclaimer', 'enabled']);
+const isDisclaimerToggledOn = pathEq(['disclaimer', 'enabled'], true);
 const disclaimerBlock = {
   type: 'disclaimer',
   model: {},

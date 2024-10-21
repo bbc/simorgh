@@ -1,4 +1,4 @@
-import splitEvery from 'ramda/src/splitEvery';
+import { splitEvery } from 'rambda';
 
 // Split the top row stories out into their own list
 const splitFirstRow = (items, isFirstSection) => {

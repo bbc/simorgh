@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/react';
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   AMP_ACCESS_JS,

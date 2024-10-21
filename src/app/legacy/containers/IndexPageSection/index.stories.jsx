@@ -1,5 +1,5 @@
 import React from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { data as serbianData } from '#data/serbian/frontpage/lat.json';
 import { RequestContextProvider } from '#contexts/RequestContext';

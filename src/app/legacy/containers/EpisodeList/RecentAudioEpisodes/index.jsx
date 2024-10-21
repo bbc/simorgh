@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import {
   formatDuration,
   formatUnixTimestamp,

@@ -1,5 +1,5 @@
-import pipe from 'ramda/src/pipe';
-import clone from 'ramda/src/clone';
+import { pipe } from 'rambda';
+import { clone } from 'rambda';
 import findNClosestIndices from '#lib/utilities/findNClosestIndicies';
 
 export const VISIBILITY = {

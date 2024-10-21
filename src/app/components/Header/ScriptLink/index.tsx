@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import { compile } from 'path-to-regexp';
-import clone from 'ramda/src/clone';
+import { clone } from 'rambda';
 import { useRouteMatch } from 'react-router-dom';
 import useToggle from '#hooks/useToggle';
 import { Services, Variants } from '#app/models/types/global';

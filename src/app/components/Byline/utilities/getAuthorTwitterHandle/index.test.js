@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import getAuthorTwitterHandle from '.';
 import {
   contentBlockWithByline,

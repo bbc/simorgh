@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { RequestContext } from '#contexts/RequestContext';
 import useLocation from '#hooks/useLocation';
 import useToggle from '#hooks/useToggle';

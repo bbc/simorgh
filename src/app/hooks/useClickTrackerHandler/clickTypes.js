@@ -1,5 +1,4 @@
-import pathSatisfies from 'ramda/src/pathSatisfies';
-import startsWith from 'ramda/src/startsWith';
+import { pathSatisfies, startsWith } from 'rambda';
 
 const isLeftClick = button => button === 0;
 const isMiddleClick = button => button === 1 || button === 4; // middle click for IE is 4

@@ -1,5 +1,5 @@
-import path from 'ramda/src/path';
-import is from 'ramda/src/is';
+import { path } from 'rambda';
+import { is } from 'rambda';
 
 const validateEpisode = episode => {
   try {

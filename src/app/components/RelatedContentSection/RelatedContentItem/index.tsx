@@ -2,12 +2,11 @@
 
 import { jsx } from '@emotion/react';
 import { forwardRef } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import { path } from 'rambda';
+import { pathOr, isEmpty } from 'rambda';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
-import isEmpty from 'ramda/src/isEmpty';
 import styles from './index.styles';
 import { EventTrackingBlock } from '../../../models/types/eventTracking';
 

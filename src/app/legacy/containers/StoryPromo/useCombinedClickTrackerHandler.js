@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import { path } from 'rambda';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 

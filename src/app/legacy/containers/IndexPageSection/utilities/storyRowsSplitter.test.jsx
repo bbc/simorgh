@@ -1,4 +1,4 @@
-import range from 'ramda/src/range';
+import { range } from 'rambda';
 import getRows from './storyRowsSplitter';
 
 const numberOfStories = {

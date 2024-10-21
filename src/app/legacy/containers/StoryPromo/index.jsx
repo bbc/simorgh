@@ -6,7 +6,7 @@ import StoryPromo, {
   Link,
 } from '#psammead/psammead-story-promo/src';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import LiveLabel from '#app/components/LiveLabel';
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { RequestContext } from '#contexts/RequestContext';

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';

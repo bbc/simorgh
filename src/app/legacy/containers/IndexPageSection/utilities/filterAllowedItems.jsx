@@ -1,4 +1,4 @@
-import dropWhile from 'ramda/src/dropWhile';
+import { dropWhile } from 'rambda';
 import { getHeadline, getUrl } from '#lib/utilities/getStoryPromoInfo';
 
 const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;

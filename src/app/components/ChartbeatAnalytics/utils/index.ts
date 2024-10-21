@@ -1,7 +1,5 @@
 import Cookie from 'js-cookie';
-import find from 'ramda/src/find';
-import propSatisfies from 'ramda/src/propSatisfies';
-import includes from 'ramda/src/includes';
+import { find, propSatisfies, includes } from 'rambda';
 import onClient from '../../../lib/utilities/onClient';
 import { getReferrer } from '../../../lib/analyticsUtils';
 import {

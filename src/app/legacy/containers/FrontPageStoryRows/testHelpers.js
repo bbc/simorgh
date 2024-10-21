@@ -1,5 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
-import take from 'ramda/src/take';
+import { pathOr, take } from 'rambda';
 import { v4 as uuid } from 'uuid';
 import { data as serbianFrontPageData } from '#data/serbian/frontpage/lat';
 import { data as urduFrontPageData } from '#data/urdu/frontpage';

@@ -1,5 +1,5 @@
 import React from 'react';
-import assocPath from 'ramda/src/assocPath';
+import { assocPath } from 'rambda';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1.json';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5.json';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v.json';

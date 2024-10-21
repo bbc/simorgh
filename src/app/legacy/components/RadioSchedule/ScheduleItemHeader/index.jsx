@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import LiveLabel from '#app/components/LiveLabel';

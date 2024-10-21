@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
+import { path } from 'rambda';
 
 const Clearer = styled.div`
   clear: both;

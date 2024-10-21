@@ -1,5 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
-import isEmpty from 'ramda/src/isEmpty';
+import { pathOr, isEmpty } from 'rambda';
 import {
   MetadataFormats,
   MetadataTaggings,

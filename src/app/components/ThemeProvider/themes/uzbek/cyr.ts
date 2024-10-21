@@ -1,4 +1,4 @@
-import { mergeDeepLeft } from 'ramda';
+import { mergeDeepLeft } from 'rambda';
 import cyrillicScript from '../../fontScripts/cyrillic';
 import withThemeProvider from '../../withThemeProvider';
 import baseUzbekTheme from './base';

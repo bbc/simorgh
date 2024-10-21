@@ -1,5 +1,4 @@
-import path from 'ramda/src/path';
-import hasPath from 'ramda/src/hasPath';
+import { path, hasPath } from 'rambda';
 import getOriginCode from '../../../../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../../../../lib/utilities/imageSrcHelpers/locator';
 import {

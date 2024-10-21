@@ -1,4 +1,4 @@
-import pipe from 'ramda/src/pipe';
+import { pipe } from 'rambda';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import OnDemandAudioPage from './OnDemandAudioPage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';

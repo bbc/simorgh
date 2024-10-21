@@ -1,5 +1,5 @@
 import React from 'react';
-import omit from 'ramda/src/omit';
+import { omit } from 'rambda';
 
 // Prevents component outputting invalid HTML when styled with emotion
 const omitInvalidProps = omit([

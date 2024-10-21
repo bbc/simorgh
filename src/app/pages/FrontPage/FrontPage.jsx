@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react';
-import path from 'ramda/src/path';
-import findIndex from 'ramda/src/findIndex';
+import { path, findIndex } from 'rambda';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';

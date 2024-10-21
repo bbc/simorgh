@@ -1,6 +1,4 @@
-import pipe from 'ramda/src/pipe';
-import dissocPath from 'ramda/src/dissocPath';
-import map from 'ramda/src/map';
+import { pipe, dissocPath, map } from 'rambda';
 import loggerMock from '#testHelpers/loggerMock';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import { TV_MISSING_FIELD } from '#lib/logger.const';

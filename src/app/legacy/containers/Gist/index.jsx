@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
 import {

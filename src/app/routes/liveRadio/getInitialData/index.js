@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import { path } from 'rambda';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';

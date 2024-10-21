@@ -1,5 +1,4 @@
-import assocPath from 'ramda/src/assocPath';
-import hasPath from 'ramda/src/hasPath';
+import { assocPath, hasPath } from 'rambda';
 import { Article } from '#app/models/types/optimo';
 
 const hasCounterName = hasPath(['metadata', 'analyticsLabels', 'counterName']);
