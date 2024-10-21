@@ -75,26 +75,33 @@ exports[`Canonical Korean Live Radio Page Header Navigation link should match te
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "2024 미국 대선",
+  "url": "/korean/topics/cxdyjwpx5v0t",
+}
+`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
+{
   "text": "비디오",
   "url": "/korean/topics/cnwng7v0e54t",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
 {
   "text": "라디오",
   "url": "/korean/bbc_korean_radio/programmes/w13xttll",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 5`] = `
 {
   "text": "다운로드",
   "url": "/korean/downloads",
 }
 `;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 6`] = `
 {
   "text": "TOP 뉴스",
   "url": "/korean/popular/read",

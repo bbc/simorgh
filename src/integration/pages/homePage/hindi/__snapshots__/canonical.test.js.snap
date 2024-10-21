@@ -84,47 +84,54 @@ exports[`Canonical Home Page Header Navigation link should match text and url 2`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
+  "text": "अमेरिकी चुनाव 2024",
+  "url": "/hindi/topics/cp9r94x30m5t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/institutional-61824775",

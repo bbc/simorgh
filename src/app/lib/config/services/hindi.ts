@@ -435,6 +435,10 @@ export const service: DefaultServiceConfig = {
         url: '/hindi/topics/ckdxnkz7607t',
       },
       {
+        title: 'अमेरिकी चुनाव 2024',
+        url: '/hindi/topics/cp9r94x30m5t',
+      },
+      {
         title: 'विदेश',
         url: '/hindi/topics/c9wpm0en87xt',
       },
