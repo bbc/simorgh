@@ -1,0 +1,160 @@
+{
+  "data": {
+    "title": "Почетна страница",
+    "description": "Српска почетна страница",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo",
+            "firstPublished": "2024-07-30T16:38:41.828Z",
+            "lastPublished": "2024-07-30T16:38:41.828Z",
+            "link": "https://www.bbc.com/serbian/articles/czmk8npevn0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8e80/test/de02d740-4e90-11ef-ae89-b10ee2354b32.jpg.webp",
+            "description": "Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo Prijateljstvo: Smanjuje li se broj bliskih ljudi kako starimo",
+            "imageAlt": "Koren, grane i lišće.",
+            "id": "czmk8npevn0o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Obrazovanje u Srbiji: Priče onih koji su se posle velike pauze vratili studiranju",
+            "firstPublished": "2024-10-10T13:06:13.117Z",
+            "lastPublished": "2024-10-10T13:06:13.117Z",
+            "link": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/0806/test/dcd61aa0-8705-11ef-befc-6554bf4e69f9.jpg.webp",
+            "description": "summary text ",
+            "imageAlt": "alternative text",
+            "id": "c3x8zzpdy8ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Članak u srpskim medijima - Audio i video",
+            "firstPublished": "2024-10-07T15:18:08.624Z",
+            "lastPublished": "2024-10-07T15:18:08.624Z",
+            "link": "https://www.bbc.com/serbian/articles/cqy6nykzpwmo/lat",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "cqy6nykzpwmo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Klimatske promene: Šta je ozonski omotač i kakva mu se budućnost smeši",
+            "firstPublished": "2024-09-16T16:43:14.456Z",
+            "lastPublished": "2024-09-16T16:43:14.456Z",
+            "link": "https://www.bbc.com/serbian/articles/c3v223kzpzko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c3v223kzpzko"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c01fef7f-0197-418e-8757-1d89293fad17",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Serbian",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 1,
+        "title": "Najčitanije",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/serbian/cyr/popular/read",
+        "mostRead": {
+          "generated": "2024-10-11T09:06:56.858Z",
+          "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+          "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+          "items": [
+            {
+              "id": "c893a22a-b367-e743-90ec-737606624e7a",
+              "rank": 1,
+              "title": "test, please ignore",
+              "href": "/serbian/cyr/23200492",
+              "timestamp": "2018-05-16T12:59:55.000Z"
+            },
+            {
+              "id": "8ec20548-be66-3545-8d55-9d3378dd4874",
+              "rank": 2,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 36",
+              "href": "/serbian/cyr/media-23169633",
+              "timestamp": "2017-12-04T16:32:43.000Z"
+            },
+            {
+              "id": "82cc4275-a7b5-6d4a-a6ff-59c592c2ba46",
+              "rank": 3,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 8",
+              "href": "/serbian/cyr/media-23169495",
+              "timestamp": "2017-12-04T16:25:28.000Z"
+            },
+            {
+              "id": "60898e52-4a3e-aa44-88f5-861644dde52d",
+              "rank": 4,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 34",
+              "href": "/serbian/cyr/media-23169631",
+              "timestamp": "2017-12-04T16:32:26.000Z"
+            },
+            {
+              "id": "76ddfd93-f5bb-9f40-8181-857965827959",
+              "rank": 5,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 17",
+              "href": "/serbian/cyr/media-23169614",
+              "timestamp": "2017-12-04T16:29:04.000Z"
+            },
+            {
+              "id": "05a64eb2-12b3-1742-b149-6cd4b050b571",
+              "rank": 6,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 6",
+              "href": "/serbian/cyr/media-23169493",
+              "timestamp": "2017-12-04T16:23:59.000Z"
+            },
+            {
+              "id": "8f52c324-d00c-f944-b299-f8f13c542b63",
+              "rank": 7,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 33",
+              "href": "/serbian/cyr/media-23169630",
+              "timestamp": "2017-12-04T16:32:12.000Z"
+            },
+            {
+              "id": "eca68bfa-610a-c04b-b184-bf37a0b6d9d1",
+              "rank": 8,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 2",
+              "href": "/serbian/cyr/media-23169489",
+              "timestamp": "2017-12-04T16:19:47.000Z"
+            },
+            {
+              "id": "151206d3-aff2-e949-976c-e9acb326ab44",
+              "rank": 9,
+              "title": "Beba panda odmara nakon prvog javnog nastupa",
+              "href": "/serbian/cyr/23180965",
+              "timestamp": "2018-01-15T15:10:46.000Z"
+            },
+            {
+              "id": "dc35d343-6b9d-0e41-888c-fa036f1d4a61",
+              "rank": 10,
+              "title": "Ухапшено 56 особа осумњичених за злоупотребе и корупцију 31",
+              "href": "/serbian/cyr/media-23169628",
+              "timestamp": "2017-12-04T16:31:51.000Z"
+            }
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c6zr6pp47w7t",
+        "contentType": "index-home",
+        "pageIdentifier": "serbiancyr.page",
+        "pageTitle": "Почетна страница"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
