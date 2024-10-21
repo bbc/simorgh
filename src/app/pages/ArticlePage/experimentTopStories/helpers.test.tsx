@@ -164,27 +164,3 @@ describe('AMP top stories experiment', () => {
     );
   });
 });
-
-// {
-//           "requests": {
-//             "topStoriesClick": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&atc=PUB-[article]-[top-stories-promo]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
-//             "topStoriesView": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=64&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-[article]-[top-stories-section]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
-//           },
-//           "triggers": {
-//             "trackTopStoriesClick": {
-//               "on": "click",
-//               "request": "topStoriesClick",
-//               "selector": "[data-testid='promo-link']",
-//             },
-//             "trackTopStoriesView": {
-//               "on": "visible",
-//               "request": "topStoriesView",
-//               "visibilitySpec": {
-//                 "continuousTimeMin": 200,
-//                 "selector": "[class*='experimentTopStoriesSection']",
-//                 "totalTimeMin": 500,
-//                 "visiblePercentageMin": 20,
-//               },
-//             },
-//           },
-//         }
