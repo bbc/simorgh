@@ -55,5 +55,16 @@ describe('litePageTransforms', () => {
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
+
+    it('should not append .lite suffix when href is not present or is empty', () => {
+      const originalHtml = `
+        <a>News</a>
+        <a href="">News</a>
+      `;
+
+      const modifiedHtml = litePageTransforms(originalHtml);
+
+      expect(modifiedHtml).toEqual(originalHtml);
+    });
   });
 });
