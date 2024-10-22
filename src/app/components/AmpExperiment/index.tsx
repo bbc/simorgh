@@ -19,12 +19,8 @@ type AmpExperimentConfig = {
 };
 
 type AmpAnalyticsConfig = {
-  requests?: {
-    [key: string]: string;
-  };
-  triggers?: {
-    [key: string]: object;
-  };
+  requests: Record<string, unknown>;
+  triggers: Record<string, unknown>;
 };
 
 type AmpExperimentProps = {
@@ -42,7 +38,7 @@ const AmpHead = () => (
   </Helmet>
 );
 
-const AmpScript = ({ config }: { config: object }) => {
+const AmpScript = ({ config }: { config: Record<string, unknown> }) => {
   return (
     <script
       type="application/json"

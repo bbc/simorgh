@@ -3,11 +3,11 @@ import {
   getExperimentTopStories,
 } from './helpers';
 import { topStoriesList } from '../PagePromoSections/TopStoriesSection/fixture/index';
-import * as analyticsUtils from '../../../lib/analyticsUtils';
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('123-456-789');
+jest.mock('../../../lib/analyticsUtils', () => ({
+  ...jest.requireActual('../../../lib/analyticsUtils'),
+  getAtUserId: jest.fn().mockReturnValue('123-456-789'),
+}));
 
 describe('AMP top stories experiment', () => {
   const mockTextBlock = {
