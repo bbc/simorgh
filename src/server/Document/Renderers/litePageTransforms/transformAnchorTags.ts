@@ -41,7 +41,11 @@ const addLiteExtension = (href?: string) => {
   if (shouldAddLiteExtension) {
     url.pathname += '.lite';
 
-    return url;
+    // Retain relative path if passed in 'href' starts with a forward slash
+    if (href.startsWith('/')) return url.pathname;
+
+    // Else return the full URL
+    return url.href;
   }
 
   return null;
@@ -60,7 +64,7 @@ export default (html: string) => {
       if (href && urlWithLite) {
         modifiedHtml = modifiedHtml.replace(
           tag,
-          tag.replace(href, urlWithLite.href),
+          tag.replace(href, urlWithLite),
         );
       }
     });
