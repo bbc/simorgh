@@ -74,10 +74,11 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Ibindi bisa n’ibi',
       navMenuText: 'Imice',
       liteSite: {
-        disclaimer: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,
-        backToCanonical: 'Take me to the main website',
-        findOutMore: 'Find out more about this data-saving version',
-        dataSaving: 'Data saving',
+        onboardingMessage: `Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.`,
+        toMainSite: 'Njana ku rubuga nyamukuru canke aho gusoma gusa',
+        informationPage:
+          'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
+        dataSaving: 'Ahagusaba uburyo(ama mega) buke',
       },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',

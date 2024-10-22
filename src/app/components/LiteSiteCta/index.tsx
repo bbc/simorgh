@@ -39,9 +39,9 @@ const CtaLink = ({
 };
 
 const defaultTranslations = {
-  disclaimer: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,
-  backToCanonical: 'Take me to the main website',
-  findOutMore: 'Find out more about this data-saving version',
+  onboardingMessage: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,
+  toMainSite: 'Take me to the main website',
+  informationPage: 'Find out more about this data-saving version',
   dataSaving: 'Data saving version',
 };
 
@@ -50,7 +50,8 @@ const LiteSiteCta = () => {
   const { canonicalLink } = useContext(RequestContext);
   const isRtl = dir === 'rtl';
   const { liteSite = defaultTranslations } = translations;
-  const { disclaimer, backToCanonical, findOutMore, dataSaving } = liteSite;
+  const { onboardingMessage, toMainSite, informationPage, dataSaving } =
+    liteSite;
   const id = 'LiteSiteCta';
 
   return (
@@ -65,14 +66,14 @@ const LiteSiteCta = () => {
       </VisuallyHiddenText>
       <div css={styles.container}>
         <Paragraph>
-          <Text size="brevier">{disclaimer}</Text>
+          <Text size="brevier">{onboardingMessage}</Text>
         </Paragraph>
         <Paragraph>
           <CtaLink
             fontVariant="sansBold"
             isRtl={isRtl}
             href={canonicalLink}
-            text={backToCanonical}
+            text={toMainSite}
             css={styles.topLinkSpacing}
           />
         </Paragraph>
@@ -80,7 +81,7 @@ const LiteSiteCta = () => {
           <CtaLink
             isRtl={isRtl}
             href={canonicalLink}
-            text={findOutMore}
+            text={informationPage}
             css={styles.bottomLinkSpacing}
           />
         </Paragraph>

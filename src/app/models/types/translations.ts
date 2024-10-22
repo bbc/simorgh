@@ -20,9 +20,9 @@ export interface Translations {
   relatedTopics?: string;
   navMenuText: string;
   liteSite?: {
-    disclaimer: string;
-    backToCanonical: string;
-    findOutMore: string;
+    onboardingMessage: string;
+    toMainSite: string;
+    informationPage: string;
     dataSaving: string;
   };
   mediaAssetPage: {
