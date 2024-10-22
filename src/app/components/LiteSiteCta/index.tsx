@@ -47,10 +47,8 @@ const defaultTranslations = {
 
 const LiteSiteCta = () => {
   const { dir, translations } = useContext(ServiceContext);
-  // TO DO - this is still taking to lite.
   const { canonicalLink } = useContext(RequestContext);
   const isRtl = dir === 'rtl';
-  // TO DO - Add real translations
   const { liteSite = defaultTranslations } = translations;
   const { disclaimer, backToCanonical, findOutMore, dataSaving } = liteSite;
   const id = 'LiteSiteCta';
