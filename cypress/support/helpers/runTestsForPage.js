@@ -158,9 +158,7 @@ const runTestsForPage = ({
               isAmp: true,
             };
 
-            if (service === 'gahuza') {
-              testsForLiteOnly(testArgs);
-            }
+            testsForLiteOnly(testArgs);
           }
         });
       });
