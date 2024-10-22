@@ -42,6 +42,16 @@ const AmpHead = () => (
   </Helmet>
 );
 
+const AmpScript = ({ config }: { config: object }) => {
+  return (
+    <script
+      type="application/json"
+      /* eslint-disable-next-line react/no-danger */
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(config) }}
+    />
+  );
+};
+
 const AmpExperiment = ({
   experimentConfig,
   analyticsConfig,
@@ -50,21 +60,11 @@ const AmpExperiment = ({
     <>
       <AmpHead />
       <amp-experiment>
-        <script
-          type="application/json"
-          /* eslint-disable-next-line react/no-danger */
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(experimentConfig) }}
-        />
+        <AmpScript config={experimentConfig} />
       </amp-experiment>
       {analyticsConfig && (
         <amp-analytics type="piano">
-          <script
-            type="application/json"
-            /* eslint-disable-next-line react/no-danger */
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(analyticsConfig),
-            }}
-          />
+          <AmpScript config={analyticsConfig} />
         </amp-analytics>
       )}
     </>
