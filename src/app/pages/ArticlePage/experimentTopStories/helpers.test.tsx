@@ -153,14 +153,14 @@ describe('AMP top stories experiment', () => {
             "trackTopStoriesClick": {
               "on": "click",
               "request": "topStoriesClick",
-              "selector": "[data-testid='promo-link']",
+              "selector": "a[aria-labelledby*='top-stories-promo']",
             },
             "trackTopStoriesView": {
               "on": "visible",
               "request": "topStoriesView",
               "visibilitySpec": {
                 "continuousTimeMin": 200,
-                "selector": "[class*='experimentTopStoriesSection']",
+                "selector": "section[aria-labelledby='top-stories-heading']",
                 "totalTimeMin": 500,
                 "visiblePercentageMin": 20,
               },

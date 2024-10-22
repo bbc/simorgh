@@ -84,7 +84,7 @@ export const getExperimentAnalyticsConfig = ({
         on: 'visible',
         request: 'topStoriesView',
         visibilitySpec: {
-          selector: `[class*='experimentTopStoriesSection']`,
+          selector: `section[aria-labelledby='top-stories-heading']`,
           visiblePercentageMin: 20,
           totalTimeMin: 500,
           continuousTimeMin: 200,
@@ -93,7 +93,7 @@ export const getExperimentAnalyticsConfig = ({
       trackTopStoriesClick: {
         on: 'click',
         request: 'topStoriesClick',
-        selector: `[data-testid='promo-link']`,
+        selector: `a[aria-labelledby*='top-stories-promo']`,
       },
     },
   };
@@ -193,7 +193,6 @@ export const ExperimentTopStories = ({
     <div
       css={styles.experimentTopStoriesSection}
       data-testid="experiment-top-stories"
-      data-vars-top-stories-position="experiment"
     >
       <TopStoriesSection content={topStoriesContent} />
     </div>
