@@ -1,3 +1,4 @@
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { Services } from '#app/models/types/global';
 import services from '#lib/config/services/loadableConfig';
 
@@ -45,9 +46,12 @@ export default (html: string) => {
     anchorTags.forEach(tag => {
       const href = tag?.match(/href="([^"]*)"/)?.[1];
       if (href && isValidHref(href)) {
+        const newUrl = new URL(href, getEnvConfig().SIMORGH_BASE_URL);
+        newUrl.pathname += '.lite';
+
         modifiedHtml = modifiedHtml.replace(
           tag,
-          tag.replace(href, `${href}.lite`),
+          tag.replace(href, newUrl.href),
         );
       }
     });
