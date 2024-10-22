@@ -84,7 +84,17 @@ export const getExperimentAnalyticsConfig = ({
         on: 'visible',
         request: 'topStoriesView',
         visibilitySpec: {
-          selector: `section[aria-labelledby='top-stories-heading']`,
+          selector: `div[data-experiment='position:articleBody'] > section[aria-labelledby='top-stories-heading']`,
+          visiblePercentageMin: 20,
+          totalTimeMin: 500,
+          continuousTimeMin: 200,
+        },
+      },
+      trackTopStoriesDesktopView: {
+        on: 'visible',
+        request: 'topStoriesView',
+        visibilitySpec: {
+          selector: `div[data-experiment='position:secondaryColumn'] > section[aria-labelledby='top-stories-heading']`,
           visiblePercentageMin: 20,
           totalTimeMin: 500,
           continuousTimeMin: 200,
@@ -132,7 +142,7 @@ const insertExperimentTopStories = ({
   blocks: OptimoBlock[];
   topStoriesContent: TopStoryItem[];
 }) => {
-  const insertIndex = Math.floor(blocks.length * 0.5); // halfway index of blocks array
+  const insertIndex = Math.floor((blocks.length - 1) * 0.5); // halfway index of blocks array, -1 accounts for 'wsoj' block which is never rendered on PS articles
   const experimentTopStoriesBlock = {
     type: 'experimentTopStories',
     model: topStoriesContent,
@@ -193,6 +203,7 @@ export const ExperimentTopStories = ({
     <div
       css={styles.experimentTopStoriesSection}
       data-testid="experiment-top-stories"
+      data-experiment="position:articleBody"
     >
       <TopStoriesSection content={topStoriesContent} />
     </div>

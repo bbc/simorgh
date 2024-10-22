@@ -73,8 +73,8 @@ describe('AMP top stories experiment', () => {
 
     const expectedBlocksEvenLength = [
       mockTextBlock,
+      expectedExperimentTopStoriesBlock(1),
       mockTextBlock,
-      expectedExperimentTopStoriesBlock(2),
       mockTextBlock,
       mockTextBlock,
     ];
@@ -155,12 +155,22 @@ describe('AMP top stories experiment', () => {
               "request": "topStoriesClick",
               "selector": "a[aria-labelledby*='top-stories-promo']",
             },
+            "trackTopStoriesDesktopView": {
+              "on": "visible",
+              "request": "topStoriesView",
+              "visibilitySpec": {
+                "continuousTimeMin": 200,
+                "selector": "div[data-experiment='position:secondaryColumn'] > section[aria-labelledby='top-stories-heading']",
+                "totalTimeMin": 500,
+                "visiblePercentageMin": 20,
+              },
+            },
             "trackTopStoriesView": {
               "on": "visible",
               "request": "topStoriesView",
               "visibilitySpec": {
                 "continuousTimeMin": 200,
-                "selector": "section[aria-labelledby='top-stories-heading']",
+                "selector": "div[data-experiment='position:articleBody'] > section[aria-labelledby='top-stories-heading']",
                 "totalTimeMin": 500,
                 "visiblePercentageMin": 20,
               },
