@@ -8,12 +8,14 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.styles';
+import { defaultTranslations } from './liteSiteConfig';
 
 type CtaLinkProps = {
   isRtl: boolean;
   href: string;
   text: string;
   fontVariant?: string;
+  showChevron?: boolean;
   className?: string;
 };
 
@@ -22,27 +24,23 @@ const CtaLink = ({
   href,
   text,
   fontVariant = 'sansRegular',
+  showChevron = false,
   className,
 }: CtaLinkProps) => {
+  const chevron = isRtl ? (
+    <LeftChevron css={styles.chevron} />
+  ) : (
+    <RightChevron css={styles.chevron} />
+  );
+
   return (
     <a href={href} className={className} css={styles.link}>
       <Text size="brevier" fontVariant={fontVariant} css={styles.linkText}>
         {text}
       </Text>
-      {isRtl ? (
-        <LeftChevron css={styles.chevron} />
-      ) : (
-        <RightChevron css={styles.chevron} />
-      )}
+      {showChevron && chevron}
     </a>
   );
-};
-
-const defaultTranslations = {
-  onboardingMessage: `You’re viewing a text-only version of this website that uses less data. View the main version of the website including all images and videos.`,
-  toMainSite: 'Take me to the main website',
-  informationPage: 'Find out more about this data-saving version',
-  dataSaving: 'Data saving version',
 };
 
 const LiteSiteCta = () => {
@@ -75,6 +73,7 @@ const LiteSiteCta = () => {
             href={canonicalLink}
             text={toMainSite}
             css={styles.topLinkSpacing}
+            showChevron
           />
         </Paragraph>
         <Paragraph>
