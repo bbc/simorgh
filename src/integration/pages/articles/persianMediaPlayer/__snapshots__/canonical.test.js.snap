@@ -82,75 +82,82 @@ exports[`Canonical Articles Header Navigation link should match text and url 2`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
 {
+  "text": "انتخابات آمریکا",
+  "url": "/persian/topics/cj1gj22k6z6t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 {
   "text": "ویدیو",
   "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "تلویزیون",
   "url": "/persian/tv-and-radio-37434377",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
 {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
 {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
 {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
 {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
 {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
 {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
 {
   "text": "فراتر از خبر",
   "url": "/persian/topics/cxr3ex12k6et",
@@ -179,7 +186,7 @@ exports[`Canonical Articles Media Loader a11y assistive technology can read the 
 
 exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-171plmm"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -193,7 +200,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1puku5e"
+    class="focusIndicatorRemove bbc-1s7djye"
     type="button"
   >
     <span
@@ -203,7 +210,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-jo2gwv"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -230,7 +237,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-1lcsotz"
+      class="bbc-digyti"
       datetime="PT16S"
     >
       00:16
@@ -253,7 +260,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-171plmm"
+  class="bbc-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -267,7 +274,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-1puku5e"
+    class="focusIndicatorRemove bbc-1s7djye"
     type="button"
   >
     <span
@@ -277,7 +284,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-jo2gwv"
+      class="bbc-7qcky8"
     >
       <svg
         aria-hidden="true"
@@ -304,7 +311,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-1lcsotz"
+      class="bbc-digyti"
       datetime="PT16S"
     >
       00:16
@@ -331,7 +338,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-171plmm"
+    class="bbc-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -345,7 +352,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-1puku5e"
+      class="focusIndicatorRemove bbc-1s7djye"
       type="button"
     >
       <span
@@ -355,7 +362,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="bbc-jo2gwv"
+        class="bbc-7qcky8"
       >
         <svg
           aria-hidden="true"
@@ -382,7 +389,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="bbc-1lcsotz"
+        class="bbc-digyti"
         datetime="PT16S"
       >
         00:16

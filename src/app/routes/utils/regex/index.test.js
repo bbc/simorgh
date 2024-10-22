@@ -102,14 +102,6 @@ describe('articleDataPath', () => {
 });
 
 describe('frontPagePath', () => {
-  const validRoutes = [
-    '/ukchina/simp',
-    '/ukchina/trad',
-    '/serbian/lat.amp',
-    '/serbian/cyr.amp',
-  ];
-  shouldMatchValidRoutes(validRoutes, frontPagePath);
-
   const invalidRoutes = [
     '/news/home',
     '/persian/c5jje4ejkqvo.amp',
@@ -118,20 +110,23 @@ describe('frontPagePath', () => {
     '/news/foobar.amp',
     '/kyrgyz',
     '/kyrgyz.amp',
+    '/ukchina/simp',
+    '/ukchina/trad',
+    '/serbian/lat.amp',
+    '/serbian/cyr.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
 describe('frontPageDataPath', () => {
-  const validRoutes = ['/serbian/cyr.json', '/ukchina/trad.json'];
-  shouldMatchValidRoutes(validRoutes, frontPageDataPath);
-
   const invalidRoutes = [
     '/news/data.json',
     '/iplayer.json',
     '/news/foobar.json',
     '/persian/.json',
     '/persian.json',
+    '/serbian/cyr.json',
+    '/ukchina/trad.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
@@ -508,12 +503,7 @@ describe('frontPage -> homePage migration', () => {
 
   const serviceToRoute = service => `/${service}`;
 
-  const servicesWithVariants = ['serbian', 'ukchina', 'zhongwen'];
-  const servicesWithVariantsRoutes = servicesWithVariants.map(serviceToRoute);
-
-  const servicesWithoutVariantsRoutes = worldServices
-    .filter(service => !servicesWithVariants.includes(service))
-    .map(serviceToRoute);
+  const homepageServices = worldServices.map(serviceToRoute);
 
   const migratedServices = [
     'afaanoromoo',
@@ -575,9 +565,7 @@ describe('frontPage -> homePage migration', () => {
 
       const homePageRegex = getHomePageRegex(services);
 
-      shouldMatchValidRoutes(servicesWithoutVariantsRoutes, homePageRegex);
-
-      shouldNotMatchInvalidRoutes(servicesWithVariantsRoutes, homePageRegex);
+      shouldMatchValidRoutes(homepageServices, homePageRegex);
     },
   );
 
@@ -588,12 +576,7 @@ describe('frontPage -> homePage migration', () => {
 
       const frontPageRegex = getFrontPageRegex(services);
 
-      shouldMatchValidRoutes(servicesWithVariantsRoutes, frontPageRegex);
-
-      shouldNotMatchInvalidRoutes(
-        servicesWithoutVariantsRoutes,
-        frontPageRegex,
-      );
+      shouldNotMatchInvalidRoutes(homepageServices, frontPageRegex);
     },
   );
 

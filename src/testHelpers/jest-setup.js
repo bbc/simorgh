@@ -35,8 +35,6 @@ global.AbortSignal = {
 };
 global.ReadableStream = ReadableStream;
 
-global.document.domain = 'www.bbc.com';
-
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';
 process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(

@@ -239,9 +239,23 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   cursor: default;
 }
 
-.emotion-8:hover .focusIndicatorRemove,
-.emotion-8:focus .focusIndicatorRemove {
+.emotion-8:hover>button,
+.emotion-8:focus>button {
   background-color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8:hover>button,
+  .emotion-8:focus>button {
+    background-color: canvas;
+    border: 0.1875rem solid canvasText;
+  }
+
+  .emotion-8:hover>button>time,
+  .emotion-8:focus>button>time {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+  }
 }
 
 .emotion-9 {
@@ -354,6 +368,26 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   transition: background-color 300ms;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-11 {
+    background-color: canvas;
+    border: 0.0625rem solid canvasText;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-11:hover,
+  .emotion-11:focus {
+    background-color: canvas;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .emotion-11:focus {
+    border: none;
+  }
+}
+
 .no-js .emotion-11 {
   display: none;
 }
@@ -380,6 +414,12 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   width: 1.5rem;
 }
 
+@media screen and (forced-colors: active) {
+  .emotion-13>svg {
+    color: canvasText;
+  }
+}
+
 .emotion-14 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -392,6 +432,13 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 .emotion-16 {
   display: block;
   margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-16 {
+    color: canvasText;
+  }
 }
 
 .emotion-17 {

@@ -214,47 +214,54 @@ exports[`AMP Home Page Header Navigation link should match text and url 2`] = `
 
 exports[`AMP Home Page Header Navigation link should match text and url 3`] = `
 {
+  "text": "अमेरिकी चुनाव 2024",
+  "url": "/hindi/topics/cp9r94x30m5t",
+}
+`;
+
+exports[`AMP Home Page Header Navigation link should match text and url 4`] = `
+{
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/institutional-61824775",
@@ -264,6 +271,16 @@ exports[`AMP Home Page Header Navigation link should match text and url 9`] = `
 exports[`AMP Home Page Main heading should match text 1`] = `"BBC News, हिंदी - होम पेज"`;
 
 exports[`AMP Home Page Page content First item in the first curation is the correct headline 1`] = `"पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23"`;
+
+exports[`AMP Home Page Page content First item in the first curation is the correct image 1`] = `
+<amp-img
+  alt="पढ़ें"
+  class="bbc-image"
+  fallback=""
+  layout="fill"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/15392/test/_63503968_160822002233_rio_olympic_closing_624x351_afp.jpg"
+/>
+`;
 
 exports[`AMP Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {

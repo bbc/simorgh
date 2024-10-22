@@ -4,7 +4,7 @@ exports[`Canonical Av-embeds Media Loader a11y assistive technology can read the
 
 exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 <div
-  class="css-171plmm"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -18,7 +18,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-14xy2i1"
+    class="focusIndicatorRemove css-c2c21w"
     type="button"
   >
     <span
@@ -28,7 +28,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1xdc5yd"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -55,7 +55,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-1lcsotz"
+      class="css-digyti"
       datetime="PT2M53S"
     >
       02:53
@@ -78,7 +78,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 <div
-  class="css-171plmm"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
@@ -92,7 +92,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-14xy2i1"
+    class="focusIndicatorRemove css-c2c21w"
     type="button"
   >
     <span
@@ -102,7 +102,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="css-1xdc5yd"
+      class="css-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -129,7 +129,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-1lcsotz"
+      class="css-digyti"
       datetime="PT2M53S"
     >
       02:53
@@ -156,7 +156,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="css-171plmm"
+    class="css-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -170,7 +170,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-14xy2i1"
+      class="focusIndicatorRemove css-c2c21w"
       type="button"
     >
       <span
@@ -180,7 +180,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </span>
       <div
         aria-hidden="true"
-        class="css-1xdc5yd"
+        class="css-d0ra4q"
       >
         <svg
           aria-hidden="true"
@@ -207,7 +207,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-1lcsotz"
+        class="css-digyti"
         datetime="PT2M53S"
       >
         02:53

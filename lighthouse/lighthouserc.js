@@ -1,7 +1,7 @@
 const AUDIT_URLS = {
   FRONT_PAGE: {
     live: ['https://www.bbc.com/serbian/cyr'],
-    test: ['https://www.test.bbc.com/serbian/cyr?renderer_env=live'],
+    test: [],
   },
   FIX: {
     live: ['https://www.bbc.com/persian/science-52004647'],
@@ -58,7 +58,10 @@ const AUDIT_URLS = {
 
   TIPO_HOME_PAGE: {
     live: ['https://www.bbc.com/kyrgyz'],
-    test: ['https://www.test.bbc.com/kyrgyz?renderer_env=live'],
+    test: [
+      'https://www.test.bbc.com/kyrgyz?renderer_env=live',
+      'https://www.test.bbc.com/serbian/lat?renderer_env=live',
+    ],
   },
 
   MEDIA_ARTICLE_PAGE: {

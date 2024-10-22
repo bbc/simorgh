@@ -2,6 +2,8 @@
 
 exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;
 
+exports[`Canonical Home Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=52&amp;p=hindi.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Acg8nwjjm7vet]&amp;x2=[responsive]&amp;x3=[news-hindi]&amp;x4=[hi]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[BBC%2520News%2520%E0%A4%B9%E0%A4%BF%E0%A4%82%E0%A4%A6%E0%A5%80]"/>"`;
+
 exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC News, हिंदी",
@@ -82,47 +84,54 @@ exports[`Canonical Home Page Header Navigation link should match text and url 2`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
+  "text": "अमेरिकी चुनाव 2024",
+  "url": "/hindi/topics/cp9r94x30m5t",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/institutional-61824775",
@@ -202,6 +211,16 @@ exports[`Canonical Home Page Most Read has item with rank 10`] = `
 `;
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23"`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="पढ़ें"
+  class="bbc-139onq"
+  loading="lazy"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/15392/test/_63503968_160822002233_rio_olympic_closing_624x351_afp.jpg"
+  style="aspect-ratio:16 / 9"
+/>
+`;
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
