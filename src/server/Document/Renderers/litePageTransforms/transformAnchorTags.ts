@@ -26,16 +26,11 @@ const addLiteExtension = (href?: string) => {
     url.pathname?.split('/')?.[1] as Services,
   );
 
-  const startsWithHash = url.href?.startsWith('#');
-
   const hasReservedRouteExtension =
     RESERVED_ROUTE_EXTENSIONS.includes(extension);
 
   const shouldAddLiteExtension =
-    isValidDomain &&
-    isWsService &&
-    !hasReservedRouteExtension &&
-    !startsWithHash;
+    isValidDomain && isWsService && !hasReservedRouteExtension;
 
   if (shouldAddLiteExtension) {
     url.pathname += '.lite';
