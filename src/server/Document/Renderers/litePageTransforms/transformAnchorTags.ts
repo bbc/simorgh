@@ -1,4 +1,3 @@
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { Services } from '#app/models/types/global';
 import services from '#lib/config/services/loadableConfig';
 
@@ -18,7 +17,7 @@ const RESERVED_ROUTE_EXTENSIONS = ['amp', 'app', 'lite'];
 const addLiteExtension = (href?: string) => {
   if (!href) return null;
 
-  const url = new URL(href, getEnvConfig().SIMORGH_BASE_URL);
+  const url = new URL(href, 'http://localhost');
 
   const extension = url.pathname?.split('.')?.pop() || '';
 

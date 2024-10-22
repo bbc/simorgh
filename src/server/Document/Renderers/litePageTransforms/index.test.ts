@@ -1,9 +1,6 @@
 import litePageTransforms from '.';
 
 describe('litePageTransforms', () => {
-  beforeAll(() => {
-    process.env.SIMORGH_BASE_URL = 'https://www.bbc.com';
-  });
   describe('anchor tags', () => {
     it('should append .lite suffix to valid hrefs', () => {
       const html = `
