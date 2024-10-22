@@ -14,7 +14,7 @@ import {
 import { IconSizes, MetadataProps, Tag } from './types';
 import {
   defaultTranslations,
-  allowedServices,
+  liteEnabledServices,
 } from '../LiteSiteCta/liteSiteConfig';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
@@ -131,7 +131,7 @@ const MetadataContainer = ({
   const { liteSite = defaultTranslations } = translations;
   const { dataSaving } = liteSite;
 
-  const showLiteTitle = isLite && allowedServices.includes(service);
+  const showLiteTitle = isLite && liteEnabledServices.includes(service);
   const litePageTitle = `${title} - ${dataSaving}: ${brandName}`;
   const pageTitle = `${title} - ${brandName}`;
   const socialTitle = `${socialHeadline || title} - ${brandName}`;

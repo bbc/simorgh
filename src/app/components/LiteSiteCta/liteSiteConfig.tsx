@@ -7,4 +7,4 @@ export const defaultTranslations = {
   dataSaving: 'Data saving version',
 };
 
-export const allowedServices: Services[] = ['gahuza'];
+export const liteEnabledServices: Services[] = ['gahuza'];

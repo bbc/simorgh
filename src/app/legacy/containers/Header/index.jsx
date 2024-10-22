@@ -5,6 +5,7 @@ import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import ScriptLink from '#app/components/Header/ScriptLink';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import LiteSiteCta from '#app/components/LiteSiteCta';
+import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -80,8 +81,7 @@ const HeaderContainer = ({
     }
   }
 
-  const liteSiteServices = ['gahuza'];
-  const renderLiteSiteCTA = isLite && liteSiteServices.includes(service);
+  const renderLiteSiteCTA = isLite && liteEnabledServices.includes(service);
 
   if (isApp) return null;
 
