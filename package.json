@@ -13,8 +13,7 @@
     "@optimizely/js-sdk-utils": "0.4.0",
     "uuid": "3.4.0",
     "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
-    "cookie": "0.7.1",
-    "ws": "8.18.0"
+    "cookie": "0.7.1"
   },
   "workspaces": {
     "packages": [
