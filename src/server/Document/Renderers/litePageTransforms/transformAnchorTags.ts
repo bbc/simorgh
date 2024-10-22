@@ -44,7 +44,9 @@ export default (html: string) => {
 
     anchorTags.forEach(tag => {
       const href = tag?.match(/href="([^"]*)"/)?.[1];
-      if (href && isValidHref(href)) {
+      const ignoreFlag = tag?.includes('data-ignore-lite="true"');
+
+      if (href && isValidHref(href) && !ignoreFlag) {
         modifiedHtml = modifiedHtml.replace(
           tag,
           tag.replace(href, `${href}.lite`),

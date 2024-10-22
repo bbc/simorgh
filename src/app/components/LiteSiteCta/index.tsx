@@ -16,6 +16,7 @@ type CtaLinkProps = {
   text: string;
   fontVariant?: string;
   showChevron?: boolean;
+  ignoreLiteExtension?: boolean;
   className?: string;
 };
 
@@ -25,6 +26,7 @@ const CtaLink = ({
   text,
   fontVariant = 'sansRegular',
   showChevron = false,
+  ignoreLiteExtension = false,
   className,
 }: CtaLinkProps) => {
   const chevron = isRtl ? (
@@ -34,7 +36,12 @@ const CtaLink = ({
   );
 
   return (
-    <a href={href} className={className} css={styles.link}>
+    <a
+      href={href}
+      className={className}
+      css={styles.link}
+      {...(ignoreLiteExtension && { 'data-ignore-lite': true })}
+    >
       <Text size="brevier" fontVariant={fontVariant} css={styles.linkText}>
         {text}
       </Text>
@@ -73,6 +80,7 @@ const LiteSiteCta = () => {
             href={canonicalLink}
             text={toMainSite}
             css={styles.topLinkSpacing}
+            ignoreLiteExtension
             showChevron
           />
         </Paragraph>
