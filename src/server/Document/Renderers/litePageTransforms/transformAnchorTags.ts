@@ -36,10 +36,12 @@ const addLiteExtension = (href?: string) => {
     url.pathname += '.lite';
 
     // Retain relative path if passed in 'href' starts with a forward slash
-    if (href.startsWith('/')) return url.pathname;
+    if (href.startsWith('/')) {
+      return `${url.pathname}${url.search}${url.hash}`;
+    }
 
     // Else return the full URL
-    return url.href;
+    return url.toString();
   }
 
   return null;
