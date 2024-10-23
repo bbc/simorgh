@@ -31,7 +31,7 @@ const checkIsSupportedProvider = (provider, pageType) => {
   }
 
   if ([LIVE_PAGE].includes(pageType)) {
-    return ['twitter'].includes(provider);
+    return ['twitter', 'instagram', 'youtube'].includes(provider);
   }
 
   // Only Optimo and CPS articles support social embeds
