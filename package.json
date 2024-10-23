@@ -69,7 +69,7 @@
     "test:unit:watch": "yarn test:unit -- --watch",
     "test:unit:updatesnapshots": "NODE_OPTIONS=--experimental-vm-modules jest --updateSnapshot --env=jsdom --coverage --silent=false --colors --testPathIgnorePatterns=\"src/integration\" \"scripts/bundleSize\" \"puppeteer\" \"ws-nextjs-app\"",
     "test:integration": "node src/integration/utils/runTests/index.js",
-    "test:integration:updatesnapshots": "yarn test:integration:express:updatesnapshots && yarn test:integration:nextjs:updatesnapshots",
+    "test:integration:updatesnapshots": "run-p test:integration:express:updatesnapshots test:integration:nextjs:updatesnapshots",
     "test:integration:express:updatesnapshots": "node src/integration/utils/runTests/index.js  --updateSnapshot",
     "test:integration:nextjs:updatesnapshots": "node src/integration/utils/runTests/index.js  --updateSnapshot --nextJS",
     "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true yarn test:integration -- --ci --onlyRunTests --reporters=jest-silent-reporter",
