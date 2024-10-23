@@ -205,41 +205,6 @@ exports[`AMP Home Page Header Navigation link should match text and url 1`] = `
 
 exports[`AMP Home Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Украјина",
-  "url": "/serbian/cyr/topics/cqwvxvvw9qrt",
-}
-`;
-
-exports[`AMP Home Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Србија",
-  "url": "/serbian/cyr/topics/cvjp1d3k9dvt",
-}
-`;
-
-exports[`AMP Home Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Балкан",
-  "url": "/serbian/cyr/topics/c8y9k0k2pvvt",
-}
-`;
-
-exports[`AMP Home Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Свет",
-  "url": "/serbian/cyr/topics/c3m1x951mljt",
-}
-`;
-
-exports[`AMP Home Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Видео",
-  "url": "/serbian/cyr/topics/crg7kj2ejj2t",
-}
-`;
-
-exports[`AMP Home Page Header Navigation link should match text and url 7`] = `
-{
   "text": "Најпопуларније",
   "url": "/serbian/cyr/popular/read",
 }
