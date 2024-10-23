@@ -2929,6 +2929,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/reverb@github:bbc/reverb#3.9.2":
+  version: 3.9.2
+  resolution: "@bbc/reverb@https://github.com/bbc/reverb.git#commit=12b1a99e14d6bc4b1d28b7e6a9e31a2d850d2393"
+  checksum: 10/ef0dfb69277aac3de4b420391841c80444fb3c821d5bb53d9438767ae09f55904e88e5ed5311f7f11b1a56fe79fc8fa92ba011b7030d29ad694db0b614a8d8bd
+  languageName: node
+  linkType: hard
+
 "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize":
   version: 0.0.0-use.local
   resolution: "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize"
@@ -15968,6 +15975,7 @@ __metadata:
     "@babel/preset-react": "npm:7.25.9"
     "@babel/preset-typescript": "npm:7.25.9"
     "@babel/runtime": "npm:7.25.9"
+    "@bbc/reverb": "github:bbc/reverb#3.9.2"
     "@bbc/web-vitals": "npm:1.2.0"
     "@cypress/webpack-preprocessor": "npm:6.0.2"
     "@emotion/babel-plugin": "npm:11.11.0"
