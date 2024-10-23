@@ -3,7 +3,7 @@ import { render } from '../react-testing-library-with-providers';
 import LiteSiteCta from '.';
 
 describe('LiteSiteCTA', () => {
-  it('Should have a strong element with page identifier.', () => {
+  it('Should have a strong element with lite site identifier.', () => {
     const { container } = render(<LiteSiteCta />);
     const strongText = container.querySelector('strong');
     expect(strongText?.innerHTML).toBe('Data saving version');
