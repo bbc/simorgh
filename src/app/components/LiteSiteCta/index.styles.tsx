@@ -20,6 +20,10 @@ export default {
         margin: `0 auto`,
       },
     }),
+  message: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.HALF}rem`,
+    }),
   chevron: ({ palette, spacings }: Theme) =>
     css({
       color: palette.GREY_10,

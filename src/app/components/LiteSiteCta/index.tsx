@@ -75,7 +75,9 @@ const LiteSiteCta = () => {
         {dataSaving}
       </VisuallyHiddenText>
       <div css={styles.container}>
-        <Paragraph size="brevier">{onboardingMessage}</Paragraph>
+        <Paragraph size="brevier" css={styles.message}>
+          {onboardingMessage}
+        </Paragraph>
         <Paragraph>
           <CtaLink
             fontVariant="sansBold"
