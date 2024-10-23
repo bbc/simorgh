@@ -24,8 +24,6 @@ describe('AMP top stories experiment', () => {
     };
   };
 
-  const blocksShortLength = [mockTextBlock];
-
   const blocksEvenLength = [
     mockTextBlock,
     mockTextBlock,
@@ -71,26 +69,67 @@ describe('AMP top stories experiment', () => {
       },
     );
 
-    const expectedBlocksEvenLength = [
+    const blocksShortLength = [mockTextBlock];
+    const blocksLongEvenLength = [
       mockTextBlock,
-      expectedExperimentTopStoriesBlock(1),
+      mockTextBlock,
+      mockTextBlock,
       mockTextBlock,
       mockTextBlock,
       mockTextBlock,
     ];
+    const blocksLongOddLength = [
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+    ];
+
+    const expectedBlocksEvenLength = [
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      expectedExperimentTopStoriesBlock(3),
+      mockTextBlock,
+    ];
     const expectedBlocksOddLength = [
       mockTextBlock,
-      expectedExperimentTopStoriesBlock(1),
+      mockTextBlock,
+      mockTextBlock,
+      expectedExperimentTopStoriesBlock(3),
+    ];
+    const expectedBlocksLongEvenLength = [
+      mockTextBlock,
+      mockTextBlock,
+      expectedExperimentTopStoriesBlock(2),
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+    ];
+
+    const expectedBlocksLongOddLength = [
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      expectedExperimentTopStoriesBlock(3),
+      mockTextBlock,
+      mockTextBlock,
       mockTextBlock,
       mockTextBlock,
     ];
 
     it.each`
-      testType  | inputBlocks         | expectedOutput
-      ${'even'} | ${blocksEvenLength} | ${expectedBlocksEvenLength}
-      ${'odd'}  | ${blocksOddLength}  | ${expectedBlocksOddLength}
+      testType  | inputBlocks             | expectedOutput
+      ${'4'}    | ${blocksEvenLength}     | ${expectedBlocksEvenLength}
+      ${'3'}    | ${blocksOddLength}      | ${expectedBlocksOddLength}
+      ${'even'} | ${blocksLongEvenLength} | ${expectedBlocksLongEvenLength}
+      ${'odd'}  | ${blocksLongOddLength}  | ${expectedBlocksLongOddLength}
     `(
-      'should insert experimentTopStories block into blocks array in the correct position when blocks.length is $testType',
+      'should insert experimentTopStories block into blocks array in the correct position when blocks.length is $testType.',
       ({ inputBlocks, expectedOutput }) => {
         const { transformedBlocks } = getExperimentTopStories({
           blocks: inputBlocks,

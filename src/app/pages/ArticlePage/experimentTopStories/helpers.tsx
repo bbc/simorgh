@@ -142,7 +142,8 @@ const insertExperimentTopStories = ({
   blocks: OptimoBlock[];
   topStoriesContent: TopStoryItem[];
 }) => {
-  const insertIndex = Math.floor((blocks.length - 1) * 0.5); // halfway index of blocks array, -1 accounts for 'wsoj' block which is never rendered on PS articles
+  const halfwayIndex = Math.floor((blocks.length - 1) * 0.5); // halfway index of blocks array, -1 accounts for 'wsoj' block which is never rendered on PS articles
+  const insertIndex = halfwayIndex < 2 ? 3 : halfwayIndex; // should not insert before content, arbitrary value
   const experimentTopStoriesBlock = {
     type: 'experimentTopStories',
     model: topStoriesContent,
