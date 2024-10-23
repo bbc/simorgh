@@ -4054,10 +4054,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:14.2.14":
-  version: 14.2.14
-  resolution: "@next/swc-darwin-x64@npm:14.2.14"
-  checksum: 10/c909611ffeaaeb94723740ec5e13b388f631b4c66f073e32622e26aad501c08361be583e8f5d03b41e7e37e673968509000de3fb985058b3cf347df0442e9030
+"@next/swc-darwin-x64@npm:14.2.16":
+  version: 14.2.16
+  resolution: "@next/swc-darwin-x64@npm:14.2.16"
+  checksum: 10/fe8446681c9246e0a1372dc4afca3557278d7cccd523586a7dbb5f8004247f385d027efdabd2a9e0e8ea305f9c49457b7261da648529b2a6f00e57f6ce07a2de
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -15900,7 +15900,7 @@ __metadata:
     "@loadable/server": "npm:5.16.5"
     "@loadable/webpack-plugin": "npm:5.15.2"
     "@next/swc-darwin-arm64": "npm:14.2.14"
-    "@next/swc-darwin-x64": "npm:14.2.14"
+    "@next/swc-darwin-x64": "npm:14.2.16"
     "@next/swc-linux-arm64-gnu": "npm:14.2.14"
     "@next/swc-linux-x64-gnu": "npm:14.2.14"
     "@next/swc-win32-arm64-msvc": "npm:14.2.14"
