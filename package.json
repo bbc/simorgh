@@ -124,7 +124,7 @@
     "react-lazyload": "3.2.1",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.3.4",
-    "undici": "6.19.0",
+    "undici": "6.20.1",
     "url-parse": "1.5.10",
     "uuid": "8.3.2",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
