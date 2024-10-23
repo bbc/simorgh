@@ -1,4 +1,4 @@
-import { css, Theme } from '@emotion/react';
+import { css } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import BANNER_CONFIG from './config';
 
@@ -9,30 +9,18 @@ const IFRAME_STYLES = css({
 });
 
 export default {
-  electionBannerWrapper: ({ mq, spacings }: Theme) =>
+  electionBannerWrapper: () =>
     css({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      maxWidth: '63rem',
-      margin: '0 auto',
-
-      [mq.GROUP_3_MIN_WIDTH]: {
-        paddingTop: `${spacings.QUINTUPLE}rem`,
-      },
     }),
 
   electionBannerIframe: () => IFRAME_STYLES,
 
-  electionBannerWrapperAmp: ({ mq, spacings }: Theme) =>
+  electionBannerWrapperAmp: () =>
     css({
       overflow: 'hidden',
-      maxWidth: '63rem',
-      margin: '0 auto',
-
-      [mq.GROUP_3_MIN_WIDTH]: {
-        paddingTop: `${spacings.QUINTUPLE}rem`,
-      },
 
       '> div': { padding: '0' },
       '& amp-iframe': IFRAME_STYLES,
