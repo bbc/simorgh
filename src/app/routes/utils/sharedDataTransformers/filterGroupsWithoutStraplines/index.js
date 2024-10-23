@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 
 const filterGroupsWithoutStraplines = data => {
   const groups = pathOr(null, ['content', 'groups'], data);

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { PropsWithChildren, useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
-import pick from 'ramda/src/pick';
+import { path } from 'rambda';
+import { pathOr } from 'rambda';
+import { pick } from 'rambda';
 
 import PromoTimestamp from '../../legacy/components/Promo/timestamp';
 import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';

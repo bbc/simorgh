@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import {
   formatDuration,

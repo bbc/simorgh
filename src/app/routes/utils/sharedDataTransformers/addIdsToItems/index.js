@@ -1,7 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import lensPath from 'ramda/src/lensPath';
-import view from 'ramda/src/view';
-import set from 'ramda/src/set';
+import { lensPath, view, set } from 'rambda';
 
 const addIdsToItem =
   ({ lens, customKeyName, recursive }) =>

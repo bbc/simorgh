@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 
 const squashKeys = [
   'responsive-top-stories',

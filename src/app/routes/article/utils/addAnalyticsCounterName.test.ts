@@ -1,4 +1,4 @@
-import assocPath from 'ramda/src/assocPath';
+import { assocPath } from 'rambda';
 
 import { data as legacyFIXData } from '#data/urdu/cpsAssets/science-51314202.json';
 import { Article } from '#app/models/types/optimo';

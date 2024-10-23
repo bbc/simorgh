@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import EmbedHtml from '../EmbedHtml';

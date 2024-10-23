@@ -1,5 +1,5 @@
 import React from 'react';
-import path from 'ramda/src/path';
+import { path } from 'rambda';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';

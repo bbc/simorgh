@@ -1,4 +1,4 @@
-import pipe from 'ramda/src/pipe';
+import { pipe } from 'rambda';
 import nodeLogger from '../../../lib/logger.node';
 import { Services, Toggles, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';

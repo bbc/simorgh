@@ -14842,6 +14842,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rambda@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "rambda@npm:9.3.0"
+  checksum: 10/e4e17aa2dee6fb0e0239c4963f9c42120ba3ceb8243c5a736a1b2d9ebc07f7ee1bd2476050b20f5c21bd2968f059e08a7626498b7cce8e7258996c786779717d
+  languageName: node
+  linkType: hard
+
 "ramda@npm:0.30.1":
   version: 0.30.1
   resolution: "ramda@npm:0.30.1"
@@ -16097,6 +16104,7 @@ __metadata:
     path-to-regexp: "npm:6.3.0"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.2.5"
+    rambda: "npm:^9.3.0"
     ramda: "npm:0.30.1"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"

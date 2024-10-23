@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import deepClone from 'ramda/src/clone';
+import { clone as deepClone } from 'rambda';
 
 export const shouldMatchSnapshot = (title, component) => {
   it(title, () => {

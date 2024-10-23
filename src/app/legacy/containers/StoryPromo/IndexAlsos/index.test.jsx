@@ -1,5 +1,5 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import { compose } from 'rambda';
 import {
   shouldMatchSnapshot,
   suppressPropWarnings,

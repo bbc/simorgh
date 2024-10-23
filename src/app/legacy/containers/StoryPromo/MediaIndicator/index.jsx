@@ -3,8 +3,8 @@ import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import { path } from 'rambda';
+import { pathOr } from 'rambda';
 import formatDuration from '#lib/utilities/formatDuration';
 import { isPgl, isMap } from '../utilities';
 

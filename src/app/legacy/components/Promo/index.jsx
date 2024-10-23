@@ -1,10 +1,10 @@
 import React, { useContext, useMemo } from 'react';
 import styled from '@emotion/styled';
-import partition from 'ramda/src/partition';
+import { partition } from 'rambda';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-import Image from './image';
+import Image from './image'
 import MediaIcon, { TYPES } from './media-icon';
 import Heading from './heading';
 import Body from './body';

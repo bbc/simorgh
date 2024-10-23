@@ -1,12 +1,12 @@
 import React, { Children, cloneElement, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
-import tail from 'ramda/src/tail';
+import { tail } from 'rambda';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import Image from './Image';
 import { withEpisodeContext } from './helpers';
 

@@ -1,5 +1,5 @@
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import { path } from 'rambda';
+import { pathOr } from 'rambda';
 import { RADIO_MISSING_FIELD, PODCAST_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,

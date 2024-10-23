@@ -1,8 +1,7 @@
 /* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
-import ramdaPath from 'ramda/src/path';
-import omit from 'ramda/src/omit';
+import { path as rambdaPath, omit } from 'rambda';
 // not part of react-helmet
 import helmet from 'helmet';
 import routes from '#app/routes';
@@ -246,7 +245,7 @@ server.get(
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
-        derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+        derivedPageType = rambdaPath(['pageData', 'metadata', 'type'], data);
 
         mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
         data.mvtExperiments = mvtExperiments;

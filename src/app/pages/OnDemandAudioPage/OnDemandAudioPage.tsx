@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
-import is from 'ramda/src/is';
+import { path } from 'rambda';
+import { is } from 'rambda';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';

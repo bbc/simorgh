@@ -1,6 +1,6 @@
 import React, { memo, useEffect } from 'react';
-import path from 'ramda/src/path';
-import pipe from 'ramda/src/pipe';
+import { path } from 'rambda';
+import { pipe } from 'rambda';
 
 import isHashChangeOnSamePath from './isHashChangeOnSamePath';
 

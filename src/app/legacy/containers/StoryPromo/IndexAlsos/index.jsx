@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
   IndexAlsos,

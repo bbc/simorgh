@@ -1,5 +1,4 @@
-import path from 'ramda/src/path';
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import { path, mergeDeepLeft } from 'rambda';
 
 import addIdsToItems from '../addIdsToItems';
 

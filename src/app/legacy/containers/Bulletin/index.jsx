@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import Bulletin from '#psammead/psammead-bulletin/src';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';

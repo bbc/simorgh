@@ -3,7 +3,7 @@
 /** @jsx  jsx  */
 import { jsx } from '@emotion/react';
 import { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Blocks from '#app/legacy/containers/Blocks';
 import { OptimoBlock } from '#app/models/types/optimo';

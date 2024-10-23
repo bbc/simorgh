@@ -1,6 +1,4 @@
-import isNil from 'ramda/src/isNil';
-import path from 'ramda/src/path';
-import curry from 'ramda/src/curry';
+import { path, isNil, curry } from 'rambda';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);

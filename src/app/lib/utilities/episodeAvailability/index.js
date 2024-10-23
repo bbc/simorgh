@@ -1,5 +1,5 @@
-import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
+import { pathOr } from 'rambda';
+import { path } from 'rambda';
 import nodeLogger from '#lib/logger.node';
 import {
   EPISODE_EXPIRED,

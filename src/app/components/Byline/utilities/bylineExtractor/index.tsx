@@ -2,7 +2,7 @@ import {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
+import { path } from 'rambda';
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';

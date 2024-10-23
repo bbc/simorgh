@@ -2,7 +2,7 @@ import React from 'react';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import { Article } from '#app/models/types/optimo';
 
 // 005_brasil_recommendations_experiment

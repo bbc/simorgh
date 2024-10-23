@@ -1,5 +1,5 @@
 import React from 'react';
-import omit from 'ramda/src/omit';
+import { omit } from 'rambda';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { getMinion } from '#psammead/gel-foundations/src/typography';

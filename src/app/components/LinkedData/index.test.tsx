@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Helmet from 'react-helmet';
-import assocPath from 'ramda/src/assocPath';
+import { assocPath } from 'rambda';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';

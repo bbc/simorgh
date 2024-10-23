@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import formatDuration from '#lib/utilities/formatDuration';
 import { getHeadline } from '#lib/utilities/getStoryPromoInfo';
 import { ServiceContext } from '../../../../contexts/ServiceContext';

@@ -1,5 +1,5 @@
-import pipe from 'ramda/src/pipe';
-import path from 'ramda/src/path';
+import { pipe } from 'rambda';
+import { path } from 'rambda';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';

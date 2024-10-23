@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import { pathOr } from 'rambda';
 import makeRelativeUrlPath from '../makeRelativeUrlPath';
 
 export const getAssetTypeCode = pathOr(null, ['assetTypeCode']);

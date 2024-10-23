@@ -1,4 +1,4 @@
-import is from 'ramda/src/is';
+import { is } from 'rambda';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 export const FALLBACK_PLACEHOLDER_IMAGE_URL = `${

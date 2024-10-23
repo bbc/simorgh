@@ -1,7 +1,5 @@
 import { useContext, useEffect, useState, useRef } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
-import prop from 'ramda/src/prop';
+import { path, pathOr, prop } from 'rambda';
 
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';

@@ -1,5 +1,4 @@
-import range from 'ramda/src/range';
-import {
+import { range } from 'rambda';import {
   getAllowedItems,
   removeFirstSlotRadioBulletin,
   removeTVBulletinsIfNotAVLiveStream,

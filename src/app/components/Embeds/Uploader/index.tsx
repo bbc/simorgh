@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useContext } from 'react';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
+import { path } from 'rambda';
+import { pathOr } from 'rambda';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Paragraph from '../../Paragraph';
