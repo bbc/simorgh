@@ -244,6 +244,17 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   background-color: #B80000;
 }
 
+.emotion-8:hover .experimentButtonFocus,
+.emotion-8:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-8:hover .experimentButtonFocus svg,
+.emotion-8:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-8:hover>button,
   .emotion-8:focus>button {

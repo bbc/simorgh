@@ -72,6 +72,17 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   background-color: #B80000;
 }
 
+.emotion-7:hover .experimentButtonFocus,
+.emotion-7:focus .experimentButtonFocus {
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-7:hover .experimentButtonFocus svg,
+.emotion-7:focus .experimentButtonFocus svg {
+  color: #FFFFFF;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-7:hover>button,
   .emotion-7:focus>button {

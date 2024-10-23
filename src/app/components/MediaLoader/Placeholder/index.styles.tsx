@@ -17,6 +17,13 @@ const styles = {
         '> button': {
           backgroundColor: palette.POSTBOX,
         },
+        '.experimentButtonFocus': {
+          backgroundColor: palette.POSTBOX,
+          color: palette.WHITE,
+          svg: {
+            color: palette.WHITE,
+          },
+        },
       },
       [mq.FORCED_COLOURS]: {
         '&:hover, &:focus': {
