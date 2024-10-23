@@ -26,6 +26,8 @@ export default {
       fill: 'currentColor',
       marginInlineStart: `${spacings.HALF}rem`,
       verticalAlign: 'middle',
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
       'a:visited &': {
         color: palette.METAL,
       },
