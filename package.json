@@ -214,7 +214,7 @@
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-alias": "1.1.2",
-    "eslint-plugin-cypress": "3.5.0",
+    "eslint-plugin-cypress": "4.0.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-json": "4.0.0",
     "eslint-plugin-jsx-a11y": "6.10.0",
