@@ -17,6 +17,13 @@ exports[`BrandContainer should render correctly 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-1 {
+    height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-1 {
     height: 4rem;

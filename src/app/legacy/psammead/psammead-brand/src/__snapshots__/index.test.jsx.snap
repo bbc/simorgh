@@ -15,6 +15,13 @@ exports[`Brand should render correctly with link not provided 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-0 {
+    height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-0 {
     height: 4rem;
@@ -140,6 +147,13 @@ exports[`Brand should render correctly with link provided 1`] = `
   .emotion-0 {
     height: 3.75rem;
     padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    height: 3.75rem;
+    padding: 0 1rem;
   }
 }
 
@@ -311,6 +325,13 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-0 {
+    height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-0 {
     height: 4rem;
@@ -430,6 +451,13 @@ exports[`Brand should render correctly with transparent borders 1`] = `
   .emotion-0 {
     height: 3.75rem;
     padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    height: 3.75rem;
+    padding: 0 1rem;
   }
 }
 
