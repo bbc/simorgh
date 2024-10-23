@@ -9,19 +9,9 @@ const IFRAME_STYLES = css({
 });
 
 export default {
-  electionBannerWrapper: () =>
-    css({
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }),
-
   electionBannerIframe: () => IFRAME_STYLES,
-
   electionBannerWrapperAmp: () =>
     css({
-      overflow: 'hidden',
-
       '> div': { padding: '0' },
       '& amp-iframe': IFRAME_STYLES,
     }),
