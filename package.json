@@ -155,7 +155,7 @@
     "@loadable/babel-plugin": "5.16.1",
     "@loadable/webpack-plugin": "5.15.2",
     "@next/swc-darwin-arm64": "14.2.14",
-    "@next/swc-darwin-x64": "14.2.14",
+    "@next/swc-darwin-x64": "14.2.16",
     "@next/swc-linux-arm64-gnu": "14.2.14",
     "@next/swc-linux-x64-gnu": "14.2.14",
     "@next/swc-win32-arm64-msvc": "14.2.14",
