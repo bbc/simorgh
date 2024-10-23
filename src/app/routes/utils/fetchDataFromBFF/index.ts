@@ -44,16 +44,14 @@ export default async ({
 
   const agent = useCerts && getAgent ? await getAgent() : undefined;
   const timeout = useCerts ? undefined : 60000;
-  const optHeaders = useCerts
-    ? { 'ctx-service-env': environment }
-    : { Accept: 'text/html,application/xhtml+xml,application/xml' };
+  const optHeaders = useCerts ? { 'ctx-service-env': environment } : undefined;
 
   try {
     const fetchPageDataArgs = {
       path: fetchUrl.toString(),
-      agent,
-      optHeaders,
       pageType,
+      ...(agent && { agent }),
+      ...(optHeaders && { optHeaders }),
       ...(timeout && { timeout }),
     };
 
