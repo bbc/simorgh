@@ -89,11 +89,11 @@ const MetadataContainer = ({
     '/sport/rugby_league/articles',
   ];
 
-  const isUKSport = pathsForUkLink.some(
+  const isUKLink = pathsForUkLink.some(
     path => pathname && pathname.startsWith(path),
   );
 
-  const showAlternateUKAmp = !isUKSport && isAmp;
+  const showAlternateUKAmp = !isUKLink && isAmp;
 
   const alternateLinksEnglishSites = [
     {
@@ -117,7 +117,7 @@ const MetadataContainer = ({
   ];
 
   const canonicalToUse =
-    isUK && isUKSport ? canonicalUkLink : canonicalNonUkLink;
+    isUK && isUKLink ? canonicalUkLink : canonicalNonUkLink;
 
   const htmlAttributes = {
     dir,
