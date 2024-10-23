@@ -8,7 +8,9 @@ describe('litePageTransforms', () => {
         <a href="https://www.bbc.com/serbian/lat">News</a>
         <a href="https://www.bbc.com/mundo">News</a>
         <a href="https://www.bbcrussian.com/news">News</a>
+        <a href="https://www.bbc.com/mundo?something=value&another=one#content">News</a>
         <a href="/news">News</a>
+        <a href="/news?something=value&another=one#content">News</a>
       `;
 
       const modifiedHtml = litePageTransforms(html);
@@ -18,7 +20,9 @@ describe('litePageTransforms', () => {
         <a href="https://www.bbc.com/serbian/lat.lite">News</a>
         <a href="https://www.bbc.com/mundo.lite">News</a>
         <a href="https://www.bbcrussian.com/news.lite">News</a>
+        <a href="https://www.bbc.com/mundo.lite?something=value&another=one#content">News</a>
         <a href="/news.lite">News</a>
+        <a href="/news.lite?something=value&another=one#content">News</a>
       `);
     });
 
@@ -64,6 +68,17 @@ describe('litePageTransforms', () => {
 
     it('should not append .lite suffix when no anchor tags are present', () => {
       const originalHtml = '<p>I am a paragraph</p>';
+
+      const modifiedHtml = litePageTransforms(originalHtml);
+
+      expect(modifiedHtml).toEqual(originalHtml);
+    });
+
+    it('should not append .lite suffix when href is not present or is empty', () => {
+      const originalHtml = `
+        <a>News</a>
+        <a href="">News</a>
+      `;
 
       const modifiedHtml = litePageTransforms(originalHtml);
 

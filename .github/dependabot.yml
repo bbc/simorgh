@@ -27,6 +27,11 @@ updates:
       emotion:
         patterns:
           - '@emotion/*'
+      next:
+        patterns:
+          - '@next/*'
+          - 'next'
+          - 'next-*'
       storybook:
         patterns:
           - '@storybook/*'
