@@ -99,4 +99,4 @@ jobs:
         run: yarn test:lint
 
       - name: NPM Audit
-        run: yarn npm audit --no-deprecations
+        run: yarn npm audit --all --severity low --no-deprecations
