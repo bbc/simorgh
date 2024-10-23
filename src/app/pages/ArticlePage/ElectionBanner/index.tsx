@@ -46,7 +46,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   }
 
   return (
-    <div data-testid="election-banner">
+    <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
         title={validAboutTag.thingLabel}
         src={iframeSrc.replace('{service}', service)}
