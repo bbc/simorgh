@@ -11,9 +11,8 @@ jest.mock('#app/lib/utilities/isLive', () =>
 
 const mockAboutTags = [
   { thingId: 'thing1' },
-  { thingId: BANNER_CONFIG.thingIds[0] },
-  { thingId: 'thing3' },
-  { thingId: BANNER_CONFIG.thingIds[1] },
+  { thingId: 'thing2' },
+  ...BANNER_CONFIG.thingIds.map(thingId => ({ thingId })),
 ] as Tag[];
 
 const AMP_ELEMENT = 'election-banner-amp';
