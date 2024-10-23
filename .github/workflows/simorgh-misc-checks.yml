@@ -99,4 +99,4 @@ jobs:
         run: yarn test:lint
 
       - name: NPM Audit
-        run: npx audit-ci --config audit-ci.json
+        run: yarn npm audit --environment production
