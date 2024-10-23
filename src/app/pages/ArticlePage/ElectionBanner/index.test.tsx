@@ -15,8 +15,7 @@ const mockAboutTags = [
   ...BANNER_CONFIG.thingIds.map(thingId => ({ thingId })),
 ] as Tag[];
 
-const AMP_ELEMENT = 'election-banner-amp';
-const CANONICAL_ELEMENT = 'election-banner';
+const ELEMENT_ID = 'election-banner';
 
 describe('ElectionBanner', () => {
   it('should not render ElectionBanner when isLite is true', () => {
@@ -25,12 +24,11 @@ describe('ElectionBanner', () => {
       { isLite: true },
     );
 
-    expect(queryByTestId(CANONICAL_ELEMENT)).not.toBeInTheDocument();
+    expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
   });
 
   describe.each(['canonical', 'amp'])('%s', platform => {
     const isAmp = platform === 'amp';
-    const bannerElement = isAmp ? AMP_ELEMENT : CANONICAL_ELEMENT;
 
     it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
       const { getByTestId } = render(
@@ -41,9 +39,9 @@ describe('ElectionBanner', () => {
         },
       );
 
-      expect(getByTestId(bannerElement)).toBeInTheDocument();
+      expect(getByTestId(ELEMENT_ID)).toBeInTheDocument();
 
-      const iframe = getByTestId(bannerElement).querySelector(
+      const iframe = getByTestId(ELEMENT_ID).querySelector(
         isAmp ? 'amp-iframe' : 'iframe',
       );
 
@@ -62,7 +60,7 @@ describe('ElectionBanner', () => {
         { isAmp },
       );
 
-      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
     });
 
     it('should not render ElectionBanner when aboutTags is empty', () => {
@@ -70,7 +68,7 @@ describe('ElectionBanner', () => {
         isAmp,
       });
 
-      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
     });
 
     it('should not render ElectionBanner when toggle is disabled', () => {
@@ -82,7 +80,7 @@ describe('ElectionBanner', () => {
         },
       );
 
-      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
     });
 
     it('should not render ElectionBanner when isLive is true', () => {
@@ -93,7 +91,7 @@ describe('ElectionBanner', () => {
         { isAmp },
       );
 
-      expect(queryByTestId(bannerElement)).not.toBeInTheDocument();
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
     });
   });
 });

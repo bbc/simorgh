@@ -20,10 +20,9 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   if (isLive()) return null; // TODO: Remove once going Live
   if (isLite) return null;
 
-  const { iframeHeight, iframeSrc, iframeSrcAmp, iframeTitle, thingIds } =
-    BANNER_CONFIG;
+  const { iframeHeight, iframeSrc, iframeSrcAmp, thingIds } = BANNER_CONFIG;
 
-  const validAboutTag = aboutTags?.some(tag => thingIds.includes(tag.thingId));
+  const validAboutTag = aboutTags?.find(tag => thingIds.includes(tag.thingId));
 
   const showBanner = validAboutTag && electionBannerEnabled;
 
@@ -31,10 +30,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
 
   if (isAmp) {
     return (
-      <div
-        data-testid="election-banner-amp"
-        css={styles.electionBannerWrapperAmp}
-      >
+      <div data-testid="election-banner" css={styles.electionBannerWrapperAmp}>
         <AmpIframe
           ampMetadata={{
             imageWidth: 1,
@@ -42,7 +38,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
             src: iframeSrcAmp.replace('{service}', service),
             image:
               'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-            title: iframeTitle,
+            title: validAboutTag.thingLabel,
           }}
         />
       </div>
@@ -52,7 +48,7 @@ export default function ElectionBanner({ aboutTags }: { aboutTags: Tag[] }) {
   return (
     <div data-testid="election-banner" css={styles.electionBannerWrapper}>
       <iframe
-        title={iframeTitle}
+        title={validAboutTag.thingLabel}
         src={iframeSrc.replace('{service}', service)}
         scrolling="no"
         css={styles.electionBannerIframe}
