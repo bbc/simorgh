@@ -103,7 +103,7 @@ const BrandSvg = styled.svg`
   box-sizing: content-box;
   color: ${props => props.theme.palette.BRAND_LOGO};
   fill: currentColor;
-  height: ${20 / 16}rem;
+  height: ${props => props.isLongBrand ? `${16 / 16}rem` : `${20 / 16}rem`};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     height: ${24 / 16}rem;
@@ -136,7 +136,7 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg, isLongBrand }) => (
   <>
     {svg && (
       <>
@@ -152,6 +152,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
           focusable="false"
           aria-hidden="true"
           height="32"
+          isLongBrand={isLongBrand}
         >
           {svg.group}
         </BrandSvg>
@@ -175,6 +176,7 @@ const Brand = forwardRef((props, ref) => {
     borderBottom = false,
     scriptLink = null,
     longBrandWithVariant = false,
+    isLongBrand = false,
     skipLink = null,
     linkId = null,
     ...rest
