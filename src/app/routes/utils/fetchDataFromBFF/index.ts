@@ -9,7 +9,6 @@ import nodeLogger from '../../../lib/logger.node';
 import certsRequired from '../certsRequired';
 
 const logger = nodeLogger(__filename);
-const BFF_IS_LOCAL = process?.env?.BFF_PATH?.includes('localhost:3210');
 
 interface FetchDataFromBffParams {
   pathname: string;
@@ -21,13 +20,6 @@ interface FetchDataFromBffParams {
   getAgent?: GetAgent;
 }
 
-type OptHeaders =
-  | {
-      'ctx-service-env': string;
-      Accept?: string;
-    }
-  | undefined;
-
 export default async ({
   pathname,
   pageType,
@@ -37,9 +29,7 @@ export default async ({
   page,
   getAgent,
 }: FetchDataFromBffParams) => {
-  const useCerts = certsRequired(pathname);
   const environment = getEnvironment(pathname);
-  const isLocal = !environment || environment === 'local';
 
   const fetchUrl = constructPageFetchUrl({
     pathname,
@@ -50,18 +40,13 @@ export default async ({
     page,
   });
 
+  const useCerts = certsRequired(pathname);
+
   const agent = useCerts && getAgent ? await getAgent() : undefined;
   const timeout = useCerts ? undefined : 60000;
-
-  const optHeaders: OptHeaders = isLocal
-    ? undefined
-    : {
-        'ctx-service-env': environment,
-      };
-
-  if (BFF_IS_LOCAL && optHeaders) {
-    optHeaders.Accept = 'text/html,application/xhtml+xml,application/xml';
-  }
+  const optHeaders = useCerts
+    ? { 'ctx-service-env': environment }
+    : { Accept: 'text/html,application/xhtml+xml,application/xml' };
 
   try {
     const fetchPageDataArgs = {
