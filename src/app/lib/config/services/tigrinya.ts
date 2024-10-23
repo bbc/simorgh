@@ -301,6 +301,26 @@ export const service: DefaultServiceConfig = {
         url: '/tigrinya',
       },
       {
+        title: 'ኤርትራ',
+        url: '/tigrinya/topics/c1gdqrg28zxt',
+      },
+      {
+        title: 'ኢትዮጵያ',
+        url: '/tigrinya/topics/cdr56vrknx6t',
+      },
+      {
+        title: 'ሱዳን',
+        url: '/tigrinya/topics/c5qvp11n2vzt',
+      },
+      {
+        title: 'ቅልውላው ማእከላይ ምብራቕ',
+        url: '/tigrinya/topics/c5qvp1qz3q6t',
+      },
+      {
+        title: 'ምርጫ ኣመሪካ',
+        url: '/tigrinya/topics/cxdyjg4kpxpt',
+      },
+      {
         title: 'ቪድዮ',
         url: '/tigrinya/topics/crldzm9n4rdt',
       },
