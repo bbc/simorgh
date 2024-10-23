@@ -31,6 +31,9 @@ export default async ({
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
 
+  const isLocal = !environment || environment === 'local';
+  const optHeaders = isLocal ? undefined : { 'ctx-service-env': environment };
+
   const fetchUrl = constructPageFetchUrl({
     pathname,
     pageType,
@@ -44,7 +47,6 @@ export default async ({
 
   const agent = useCerts && getAgent ? await getAgent() : undefined;
   const timeout = useCerts ? undefined : 60000;
-  const optHeaders = useCerts ? { 'ctx-service-env': environment } : undefined;
 
   try {
     const fetchPageDataArgs = {
