@@ -205,8 +205,8 @@ exports[`AMP Home Page Header Navigation link should match text and url 1`] = `
 
 exports[`AMP Home Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "Ukrajina",
-  "url": "/serbian/lat/topics/c5wzvzzz5vrt",
+  "text": "Američki izbori",
+  "url": "/serbian/lat/topics/c1v8enng1npt",
 }
 `;
 
