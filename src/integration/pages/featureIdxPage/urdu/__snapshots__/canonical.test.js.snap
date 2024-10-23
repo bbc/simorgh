@@ -75,47 +75,54 @@ exports[`Canonical Feature Index page Header Navigation link should match text a
 
 exports[`Canonical Feature Index page Header Navigation link should match text and url 2`] = `
 {
+  "text": "امریکی صدارتی انتخاب 2024",
+  "url": "/urdu/topics/c0w3wed04e3t",
+}
+`;
+
+exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
+{
   "text": "پاکستان",
   "url": "/urdu/topics/cjgn7n9zzq7t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
 {
   "text": "آس پاس",
   "url": "/urdu/topics/cl8l9mveql2t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
 {
   "text": "ورلڈ",
   "url": "/urdu/topics/cw57v2pmll9t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
 {
   "text": "کھیل",
   "url": "/urdu/topics/c340q0p2585t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
 {
   "text": "فن فنکار",
   "url": "/urdu/topics/ckdxnx900n5t",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
 {
   "text": "سائنس",
   "url": "/urdu/topics/c40379e2ymxt",
 }
 `;
 
-exports[`Canonical Feature Index page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Feature Index page Header Navigation link should match text and url 9`] = `
 {
   "text": "ویڈیو",
   "url": "/urdu/topics/c1e0mzr3r2yt",

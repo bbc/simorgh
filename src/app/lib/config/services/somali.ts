@@ -331,6 +331,10 @@ export const service: DefaultServiceConfig = {
         url: '/somali',
       },
       {
+        title: 'Doorashada Mareykanka 2024',
+        url: '/somali/topics/cv2g4v31x97t',
+      },
+      {
         title: 'Ganacsi',
         url: '/somali/topics/c2dwqd32v4yt',
       },

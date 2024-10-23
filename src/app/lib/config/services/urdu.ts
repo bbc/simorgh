@@ -410,6 +410,10 @@ export const service: DefaultServiceConfig = {
         url: '/urdu',
       },
       {
+        title: 'امریکی صدارتی انتخاب 2024',
+        url: '/urdu/topics/c0w3wed04e3t',
+      },
+      {
         title: 'پاکستان',
         url: '/urdu/topics/cjgn7n9zzq7t',
       },

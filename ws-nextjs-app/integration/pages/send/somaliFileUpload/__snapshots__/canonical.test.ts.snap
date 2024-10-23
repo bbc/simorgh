@@ -73,26 +73,33 @@ exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 2`] = `
 {
+  "text": "Doorashada Mareykanka 2024",
+  "url": "/somali/topics/cv2g4v31x97t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 3`] = `
+{
   "text": "Ganacsi",
   "url": "/somali/topics/c2dwqd32v4yt",
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 3`] = `
+exports[`Canonical Send Header Navigation link should match text and url 4`] = `
 {
   "text": "Cayaaraha",
   "url": "/somali/topics/cpzd4zj1pn2t",
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 4`] = `
+exports[`Canonical Send Header Navigation link should match text and url 5`] = `
 {
   "text": "Muuqaal",
   "url": "/somali/topics/c7pl4k5r9xxt",
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 5`] = `
+exports[`Canonical Send Header Navigation link should match text and url 6`] = `
 {
   "text": "Barnaamijyada Idaacadda",
   "url": "/somali/topics/cn6rqlrkm0pt",
