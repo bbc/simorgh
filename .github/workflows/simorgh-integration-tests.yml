@@ -21,6 +21,7 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
     steps:
       - uses: actions/checkout@v3
