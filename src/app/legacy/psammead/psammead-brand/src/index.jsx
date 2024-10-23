@@ -10,6 +10,7 @@ import {
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
+  GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -46,6 +47,11 @@ const Banner = styled.div`
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    height: ${60 / 16}rem;
+    padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -176,7 +182,6 @@ const Brand = forwardRef((props, ref) => {
     borderBottom = false,
     scriptLink = null,
     longBrandWithVariant = false,
-    isLongBrand = false,
     skipLink = null,
     linkId = null,
     ...rest
