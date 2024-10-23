@@ -78,7 +78,8 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'Njana ku rubuga nyamukuru canke aho gusoma gusa',
         informationPage:
           'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
-        dataSaving: 'Ahagusaba uburyo(ama mega) buke',
+        informationPageLink: 'https://www.bbc.com/gahuza/articles/cn7y7pvem0vo',
+        dataSaving: 'Ahagusaba uburyo (ama mega) buke',
       },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',

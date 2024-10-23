@@ -181,7 +181,7 @@ it('should render the lite page title', async () => {
     const actual = document.querySelector('head > title')?.innerHTML;
 
     expect(actual).toEqual(
-      'Article Headline for SEO - Ahagusaba uburyo(ama mega) buke: BBC News Gahuza',
+      'Article Headline for SEO - Ahagusaba uburyo (ama mega) buke: BBC News Gahuza',
     );
   });
 });

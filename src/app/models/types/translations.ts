@@ -23,6 +23,7 @@ export interface Translations {
     onboardingMessage: string;
     toMainSite: string;
     informationPage: string;
+    informationPageLink: string;
     dataSaving: string;
   };
   mediaAssetPage: {

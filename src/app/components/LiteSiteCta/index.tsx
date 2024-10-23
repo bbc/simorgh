@@ -55,8 +55,13 @@ const LiteSiteCta = () => {
   const { canonicalLink } = useContext(RequestContext);
   const isRtl = dir === 'rtl';
   const { liteSite = defaultTranslations } = translations;
-  const { onboardingMessage, toMainSite, informationPage, dataSaving } =
-    liteSite;
+  const {
+    onboardingMessage,
+    toMainSite,
+    informationPage,
+    informationPageLink,
+    dataSaving,
+  } = liteSite;
   const id = 'LiteSiteCta';
 
   return (
@@ -87,7 +92,7 @@ const LiteSiteCta = () => {
         <Paragraph>
           <CtaLink
             isRtl={isRtl}
-            href={canonicalLink}
+            href={informationPageLink}
             text={informationPage}
             css={styles.bottomLinkSpacing}
           />
