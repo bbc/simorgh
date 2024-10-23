@@ -89,7 +89,7 @@ const pageLayout = () => {
           <div className="container c-open" role="main">
             <div className="column-clearfix">
               <div className="column--primary">
-                <h1 className="story-body__h1">
+                <h1 className="story-body__h1" id="content">
                   Get the news in your language
                 </h1>
                 <p className="language-switcher">
