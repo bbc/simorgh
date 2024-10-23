@@ -12,6 +12,7 @@
     "@babel/runtime": "7.25.9",
     "@optimizely/js-sdk-utils": "0.4.0",
     "uuid": "3.4.0",
+    "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch",
     "cookie": "0.7.1"
   },
   "workspaces": {
@@ -50,6 +51,7 @@
     "mostReadAndWatchedCollectionData": "node ./scripts/mostReadAndWatchedCollectionData",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "prepare": "husky install",
+    "preinstall": "node scripts/check-package-manager.js",
     "start": "NODE_ENV=production node --no-experimental-fetch --max-old-space-size=3500 build/server.js",
     "stop": "./scripts/killApp.sh",
     "storybook": "node .storybook/buildFontPreloads && storybook dev -p 9001 -c .storybook",
@@ -125,7 +127,8 @@
     "react-router-config": "5.1.1",
     "react-router-dom": "5.3.4",
     "url-parse": "1.5.10",
-    "uuid": "8.3.2"
+    "uuid": "8.3.2",
+    "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
   "devDependencies": {
     "@babel/core": "7.25.9",
