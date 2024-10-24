@@ -239,7 +239,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           })}
         />
       )}
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics
+        atiData={{ ...atiData, ampExperimentVariant: 'topStoriesExperiment' }}
+      />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}

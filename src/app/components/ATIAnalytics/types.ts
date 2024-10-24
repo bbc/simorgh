@@ -30,6 +30,7 @@ export interface ATIData {
   producerName?: string | null;
   timePublished?: string | null;
   timeUpdated?: string | null;
+  ampExperimentVariant?: string | undefined;
 }
 
 export interface PageData {
@@ -132,6 +133,7 @@ export interface ATIPageTrackingProps {
   categoryName?: string | null;
   campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
+  ampExperimentVariant?: string | undefined;
 }
 
 export interface ATIProps {

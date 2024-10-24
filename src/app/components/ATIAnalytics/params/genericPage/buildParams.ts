@@ -25,9 +25,11 @@ export const buildPageATIParams = ({
     producerId,
     timePublished,
     timeUpdated,
+    ampExperimentVariant,
   } = atiData;
 
   return {
+    ampExperimentVariant,
     appName: atiAnalyticsAppName,
     campaigns,
     categoryName,
@@ -58,5 +60,9 @@ export const buildPageATIUrl = ({
   serviceContext,
 }: ATIDataWithContexts) =>
   buildATIPageTrackPath(
-    buildPageATIParams({ atiData, requestContext, serviceContext }),
+    buildPageATIParams({
+      atiData,
+      requestContext,
+      serviceContext,
+    }),
   );
