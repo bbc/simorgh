@@ -77,7 +77,7 @@ const LiteSiteCta = () => {
         <Paragraph size="brevier" css={styles.message}>
           {onboardingMessage}
         </Paragraph>
-        <Paragraph>
+        <Paragraph data-e2e="to-main-site">
           <CtaLink
             fontVariant="sansBold"
             isRtl={isRtl}
@@ -88,7 +88,7 @@ const LiteSiteCta = () => {
             showChevron
           />
         </Paragraph>
-        <Paragraph>
+        <Paragraph data-e2e="information-page">
           <CtaLink
             isRtl={isRtl}
             href={informationPageLink}
