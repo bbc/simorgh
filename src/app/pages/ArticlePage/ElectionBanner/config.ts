@@ -4,7 +4,7 @@ const { SIMORGH_INCLUDES_BASE_URL, SIMORGH_INCLUDES_BASE_AMP_URL } =
   getEnvConfig();
 
 export default {
-  iframeHeight: 324,
+  iframeHeight: 310,
   iframeSrc: `${SIMORGH_INCLUDES_BASE_URL}/include/vjafwest/1365-2024-us-presidential-election-banner/develop/{service}/app`,
   iframeSrcAmp: `${SIMORGH_INCLUDES_BASE_AMP_URL}/include/vjafwest/1365-2024-us-presidential-election-banner/develop/{service}/app/amp`,
   thingIds: [
