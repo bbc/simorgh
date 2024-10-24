@@ -25,6 +25,10 @@ export default {
       marginBottom: `${spacings.FULL}rem`,
 
       '> div': { padding: '0' },
+      '& amp-img': {
+        maxWidth: 640,
+        margin: '0 auto',
+      },
       '& amp-iframe': {
         border: 'none',
         width: '100%',
