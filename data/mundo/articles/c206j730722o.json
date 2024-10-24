@@ -1,0 +1,2763 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "History~US+election+2024~United+States~Israel~Israel+&+the+Palestinians~Lebanon~Middle+East",
+          "contentId": "urn:bbc:optimo:asset:c206j730722o",
+          "contentType": "article",
+          "language": "es",
+          "ldpThingIds": "03eb3674-6190-4cd7-8104-1a00991d67a3~647d5613-e0e2-4ef5-b0ce-b491de38bdbd~82857f8e-8134-462a-bb32-b7b14f4eab75~84b77b58-6acb-4074-8733-c237a0687641~a2ada86c-5450-4055-ad81-ef6bc0b922cc~b8e62d9e-6df2-45c6-905e-465e7d8cf987~dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+          "ldpThingLabels": "History~US+election+2024~United+States~Israel~Israel+&+the+Palestinians~Lebanon~Middle+East",
+          "nationsProducer": null,
+          "pageIdentifier": "mundo.articles.c206j730722o.page",
+          "pageTitle": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+          "timePublished": "2024-10-17T13:50:24.631Z",
+          "timeUpdated": "2024-10-17T13:50:24.631Z"
+        },
+        "id": "urn:bbc:ares::article:c206j730722o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c206j730722o",
+          "canonicalUrl": "https://www.bbc.com/mundo/articles/c206j730722o"
+        },
+        "type": "article",
+        "createdBy": "Mundo",
+        "language": "es",
+        "firstPublished": 1729173024631,
+        "lastPublished": 1729173024631,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "History~US+election+2024~United+States~Israel~Israel+&+the+Palestinians~Lebanon~Middle+East",
+          "page": "mundo.articles.c206j730722o.page",
+          "irisKeyword": null,
+          "audience_motivation": "Give me perspective",
+          "ldp_ids": "03eb3674-6190-4cd7-8104-1a00991d67a3~647d5613-e0e2-4ef5-b0ce-b491de38bdbd~82857f8e-8134-462a-bb32-b7b14f4eab75~84b77b58-6acb-4074-8733-c237a0687641~a2ada86c-5450-4055-ad81-ef6bc0b922cc~b8e62d9e-6df2-45c6-905e-465e7d8cf987~dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+          "contentId": "urn:bbc:optimo:asset:c206j730722o",
+          "producer": "Mundo"
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Historia",
+              "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+              "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+              "thingType": [
+                "tagging:Genre",
+                "tagging:AmbiguousTerm",
+                "core:Theme",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/History",
+                "http://www.wikidata.org/entity/Q309"
+              ],
+              "topicName": "Historia",
+              "topicId": "c404v587340t",
+              "curationList": [
+                {
+                  "curationId": "757f1d88-be11-4f42-a723-764bdb157d01",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "History",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "History"
+            },
+            {
+              "thingLabel": "Elecciones presidenciales en Estados Unidos 2024",
+              "thingUri": "http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id",
+              "thingId": "647d5613-e0e2-4ef5-b0ce-b491de38bdbd",
+              "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q101110072",
+                "http://dbpedia.org/resource/2024_United_States_presidential_election"
+              ],
+              "topicName": "Elecciones en Estados Unidos 2024",
+              "topicId": "c1v8en6r2qgt",
+              "curationList": [
+                {
+                  "curationId": "urn:bbc:tipo:list:bdef5a7d-5eb5-4181-ab03-d9e6d8ac7d57",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:8bfa2c8f-9daf-4e66-8387-1a302b08d8fb",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:0df89706-e645-4810-90b4-ea0ec40fab73",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:ff052b13-ffff-44ce-9915-7d8f09ea8e1d",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:dc1aeaa1-ff01-4102-99e5-c56e6a092237",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:d57b792e-208e-4e57-a78b-f448767cfd89",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "82f747c5-5467-4a7b-a29a-d8e2f65aa134",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "US election 2024",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "US election 2024"
+            },
+            {
+              "thingLabel": "Estados Unidos",
+              "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+              "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+              "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+              "thingSameAs": [
+                "http://sws.geonames.org/6252001/",
+                "http://www.wikidata.org/entity/Q30"
+              ],
+              "topicName": "Estados Unidos",
+              "topicId": "cdr5613yzwqt",
+              "curationList": [
+                {
+                  "curationId": "5c2bf4db-926e-4a03-941f-8ef9ad70855a",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "United States",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "United States"
+            },
+            {
+              "thingLabel": "Israel",
+              "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+              "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://sws.geonames.org/294640/",
+                "http://dbpedia.org/resource/Israel",
+                "http://www.wikidata.org/entity/Q801"
+              ],
+              "topicName": "Israel",
+              "topicId": "cqywjvpr12kt",
+              "curationList": [
+                {
+                  "curationId": "d351a9e1-95e6-4a3a-a6ab-a8cf05c6f0e5",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Israel",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "Israel"
+            },
+            {
+              "thingLabel": "Conflicto palestino-israelí",
+              "thingUri": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+              "thingId": "a2ada86c-5450-4055-ad81-ef6bc0b922cc",
+              "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q16125891",
+                "http://dbpedia.org/resource/Israel–Palestine_relations"
+              ],
+              "topicName": "Conflicto palestino-israelí",
+              "topicId": "ckdxnw95218t",
+              "curationList": [
+                {
+                  "curationId": "f3428588-266a-4ac4-8dc8-3be13ff739e7",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Israel & the Palestinians",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "Israel & the Palestinians"
+            },
+            {
+              "thingLabel": "Líbano",
+              "thingUri": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+              "thingId": "b8e62d9e-6df2-45c6-905e-465e7d8cf987",
+              "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q822",
+                "http://dbpedia.org/resource/Lebanon",
+                "http://sws.geonames.org/272103/"
+              ],
+              "topicName": "Líbano",
+              "topicId": "c0w2g90xkv9t",
+              "curationList": [
+                {
+                  "curationId": "92fc4888-61b4-4834-bd77-43c5b1ad78df",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Lebanon",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "Lebanon"
+            },
+            {
+              "thingLabel": "Medio Oriente",
+              "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+              "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+              "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+              "thingSameAs": [],
+              "topicName": "Medio Oriente",
+              "topicId": "c404v5gwx1rt",
+              "curationList": [
+                {
+                  "curationId": "c73ffb5e-240a-47bf-9ef3-a43ee0ff22ef",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Middle East",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "Middle East"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "byline",
+          "contributor",
+          "name",
+          "role",
+          "link",
+          "urlLink",
+          "location",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "subheadline",
+          "links",
+          "aresLink"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "Líbano",
+            "topicId": "c0w2g90xkv9t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "92fc4888-61b4-4834-bd77-43c5b1ad78df",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/c0w2g90xkv9t"
+          },
+          {
+            "topicName": "Elecciones en Estados Unidos 2024",
+            "topicId": "c1v8en6r2qgt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "urn:bbc:tipo:list:bdef5a7d-5eb5-4181-ab03-d9e6d8ac7d57",
+                "curationType": "tipo-curation",
+                "position": 0,
+                "visualProminence": "HIGH"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:8bfa2c8f-9daf-4e66-8387-1a302b08d8fb",
+                "curationType": "tipo-curation",
+                "position": 1,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:0df89706-e645-4810-90b4-ea0ec40fab73",
+                "curationType": "tipo-curation",
+                "position": 2,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:ff052b13-ffff-44ce-9915-7d8f09ea8e1d",
+                "curationType": "tipo-curation",
+                "position": 3,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:dc1aeaa1-ff01-4102-99e5-c56e6a092237",
+                "curationType": "tipo-curation",
+                "position": 4,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:d57b792e-208e-4e57-a78b-f448767cfd89",
+                "curationType": "tipo-curation",
+                "position": 5,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "82f747c5-5467-4a7b-a29a-d8e2f65aa134",
+                "curationType": "vivo-stream",
+                "position": 6,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/c1v8en6r2qgt"
+          },
+          {
+            "topicName": "Historia",
+            "topicId": "c404v587340t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "757f1d88-be11-4f42-a723-764bdb157d01",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:Genre",
+              "tagging:AmbiguousTerm",
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/c404v587340t"
+          },
+          {
+            "topicName": "Medio Oriente",
+            "topicId": "c404v5gwx1rt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "c73ffb5e-240a-47bf-9ef3-a43ee0ff22ef",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/c404v5gwx1rt"
+          },
+          {
+            "topicName": "Estados Unidos",
+            "topicId": "cdr5613yzwqt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "5c2bf4db-926e-4a03-941f-8ef9ad70855a",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/cdr5613yzwqt"
+          },
+          {
+            "topicName": "Conflicto palestino-israelí",
+            "topicId": "ckdxnw95218t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "f3428588-266a-4ac4-8dc8-3be13ff739e7",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/ckdxnw95218t"
+          },
+          {
+            "topicName": "Israel",
+            "topicId": "cqywjvpr12kt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "d351a9e1-95e6-4a3a-a6ab-a8cf05c6f0e5",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "topicUrl": "/mundo/topics/cqywjvpr12kt"
+          }
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 9,
+          "wordCount": 2163
+        },
+        "isTransliterated": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "c36c8803",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a0a4b466",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "02f99230",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+                            "blocks": [
+                              {
+                                "id": "8dcb4571",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "159ca57f",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "74d0540c",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "93361b34",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9b6855c8",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Dearborn, en Michigan, es la primera ciudad de mayoría árabe de EE.UU.",
+                                  "blocks": [
+                                    {
+                                      "id": "fb6174b9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Dearborn, en Michigan, es la primera ciudad de mayoría árabe de EE.UU.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "07170192",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "6af76c70",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f957df24",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Un mujer musulmana con una bandera de Líbano en Dearborn, Michigan. ",
+                                  "blocks": [
+                                    {
+                                      "id": "7209edbc",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Un mujer musulmana con una bandera de Líbano en Dearborn, Michigan. ",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "47b2a02c",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2856,
+                      "height": 1607,
+                      "locator": "6366/live/65a47510-84d2-11ef-8869-e90b7d6ed85d.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [2, 3]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "5a9d7963",
+              "type": "byline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "cf0ff0e5",
+                    "type": "contributor",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d0f8537f",
+                          "type": "name",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6382be14",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "48a1c8c6",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Ayelén Oliva",
+                                        "blocks": [
+                                          {
+                                            "id": "56007ecf",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Ayelén Oliva",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        },
+                        {
+                          "id": "ee74b738",
+                          "type": "role",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f20734cb",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "549ecf81",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "BBC News Mundo",
+                                        "blocks": [
+                                          {
+                                            "id": "d73beb42",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "BBC News Mundo",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 2, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 2]
+                        },
+                        {
+                          "id": "056292df",
+                          "type": "link",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "3b8d912d",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "4d0fe1ba",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "ayelenoliva",
+                                        "blocks": [
+                                          {
+                                            "id": "bff22d7d",
+                                            "type": "urlLink",
+                                            "model": {
+                                              "text": "@ayelenoliva",
+                                              "locator": "https://twitter.com/ayelenoliva",
+                                              "blocks": [
+                                                {
+                                                  "id": "0f336216",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "@ayelenoliva",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    3, 1, 3, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ],
+                                              "isExternal": true
+                                            },
+                                            "position": [3, 1, 3, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 3, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 3]
+                        },
+                        {
+                          "id": "7786d287",
+                          "type": "location",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "fcc63860",
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "0bf47372",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Dearborn, Michigan",
+                                        "blocks": [
+                                          {
+                                            "id": "da61da38",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Dearborn, Michigan",
+                                              "attributes": []
+                                            },
+                                            "position": [3, 1, 4, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [3, 1, 4, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [3, 1, 4, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 4]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "b07e3d65",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1729173024631,
+                "lastPublished": 1729173024631
+              },
+              "position": [4]
+            },
+            {
+              "id": "056b794f",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "23d3efc8",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Desde que Israel aumentó su ofensiva militar en el sur de Líbano, Naddine Ahmad, de 31 años, cada mañana les envía un mensaje a sus familiares en Beirut para saber si están con vida. ",
+                      "blocks": [
+                        {
+                          "id": "0ba5c44d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Desde que Israel aumentó su ofensiva militar en el sur de Líbano, Naddine Ahmad, de 31 años, cada mañana les envía un mensaje a sus familiares en Beirut para saber si están con vida. ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "0b19c298",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Naddine, una analista de datos de Dearborn, una ciudad de 110.000 habitantes ubicada en el área metropolitana de Detroit, está molesta porque dice que \"no es aceptable\" el rol de Estados Unidos en Medio Oriente. ",
+                      "blocks": [
+                        {
+                          "id": "4b4a5aac",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Naddine, una analista de datos de ",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        },
+                        {
+                          "id": "e6f9d917",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Dearborn",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 2, 2]
+                        },
+                        {
+                          "id": "450b9ce1",
+                          "type": "fragment",
+                          "model": {
+                            "text": ", una ciudad de 110.000 habitantes ubicada en el área metropolitana de Detroit, está molesta porque dice que \"no es aceptable\" el rol de Estados Unidos en Medio Oriente. ",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 3]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  },
+                  {
+                    "id": "e1cb533b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "\"Es muy duro. Nuestro hogar está siendo destrozado con el dinero de nuestros impuestos\", le dice a BBC Mundo, envuelta en una kufiya roja y blanca, en medio de una protesta que reclama que Israel detenga los bombardeos.  ",
+                      "blocks": [
+                        {
+                          "id": "315d9f64",
+                          "type": "fragment",
+                          "model": {
+                            "text": "\"Es muy duro. ",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 1]
+                        },
+                        {
+                          "id": "ece6d32c",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Nuestro hogar está siendo destrozado con el dinero de nuestros impuestos",
+                            "attributes": ["bold"]
+                          },
+                          "position": [5, 3, 2]
+                        },
+                        {
+                          "id": "34dbdc93",
+                          "type": "fragment",
+                          "model": {
+                            "text": "\", le dice a BBC Mundo, envuelta en una kufiya roja y blanca, en medio de una protesta que reclama que Israel detenga los bombardeos.  ",
+                            "attributes": []
+                          },
+                          "position": [5, 3, 3]
+                        }
+                      ]
+                    },
+                    "position": [5, 3]
+                  },
+                  {
+                    "id": "15f1b22a",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Para los árabes estadounidenses, la guerra de Medio Oriente se siente cerca.",
+                      "blocks": [
+                        {
+                          "id": "1ac1fcd6",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Para los árabes estadounidenses, la guerra de Medio Oriente se siente cerca.",
+                            "attributes": []
+                          },
+                          "position": [5, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 4]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "f492f812",
+              "type": "mpu",
+              "model": {},
+              "position": [6]
+            },
+            {
+              "id": "d25b369e",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a4a839a7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "A un año del ataque de Hamás a Israel y de la respuesta posterior contra Gaza y Líbano, en las vistosas casas del sur de Michigan ondean las banderas libanesas y en las cafeterías se ven carteles que anuncian el \"esfuerzo consciente\" para retirar los \"productos sionistas\" de la venta como una forma de protesta.",
+                      "blocks": [
+                        {
+                          "id": "f4d94232",
+                          "type": "fragment",
+                          "model": {
+                            "text": "A un año del ataque de Hamás a Israel y de la respuesta posterior contra Gaza y Líbano, en las vistosas casas del sur de Michigan ondean las banderas libanesas y en las cafeterías se ven carteles que anuncian el \"esfuerzo consciente\" para retirar los \"productos sionistas\" de la venta como una forma de protesta.",
+                            "attributes": []
+                          },
+                          "position": [7, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [7, 1]
+                  }
+                ]
+              },
+              "position": [7]
+            },
+            {
+              "id": "7ab45669",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [8]
+            },
+            {
+              "id": "3059232c",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "5b51780c",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ee23a7ce",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "50b45658",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Naddine Ahmad votó por Joe Biden en 2020 pero dice que no votará por Kamala Harris. ",
+                                  "blocks": [
+                                    {
+                                      "id": "d76a200a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Naddine Ahmad votó por Joe Biden en 2020 pero dice que no votará por Kamala Harris. ",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  },
+                  {
+                    "id": "06e4e5fb",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b92da877",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0468293b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Naddine Ahmad en una protestas en solidaridad con Líbano, en Dearborn. ",
+                                  "blocks": [
+                                    {
+                                      "id": "f931c155",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Naddine Ahmad en una protestas en solidaridad con Líbano, en Dearborn. ",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 2]
+                  },
+                  {
+                    "id": "d47b1883",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2856,
+                      "height": 1607,
+                      "locator": "e5e5/live/74f0b4e0-896c-11ef-b39e-cf9068ab5e0b.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [9, 3]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            {
+              "id": "ba7a6dba",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "0ad633c7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "La ciudad de Dearborn, en el histórico corredor industrial del país, concentra la mayor población de árabes estadounidenses, con el 54%, lo que la convierte en la primera ciudad de mayoría árabe del país, según datos del último censo. ",
+                      "blocks": [
+                        {
+                          "id": "c53079f0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "La ciudad de ",
+                            "attributes": []
+                          },
+                          "position": [10, 1, 1]
+                        },
+                        {
+                          "id": "887cddeb",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Dearborn, ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [10, 1, 2]
+                        },
+                        {
+                          "id": "231d1a16",
+                          "type": "fragment",
+                          "model": {
+                            "text": "en el histórico corredor industrial del país, concentra la mayor población de árabes estadounidenses, con el 54%, lo que la convierte en la primera ciudad de mayoría árabe del país, según ",
+                            "attributes": []
+                          },
+                          "position": [10, 1, 3]
+                        },
+                        {
+                          "id": "e3bc413a",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "datos",
+                            "blocks": [
+                              {
+                                "id": "18c96533",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "datos",
+                                  "attributes": []
+                                },
+                                "position": [10, 1, 4, 1]
+                              }
+                            ],
+                            "locator": "https://www.census.gov/newsroom/stories/arab-american-heritage-month.html",
+                            "isExternal": true
+                          },
+                          "position": [10, 1, 4]
+                        },
+                        {
+                          "id": "dd492ae3",
+                          "type": "fragment",
+                          "model": {
+                            "text": " del último censo. ",
+                            "attributes": []
+                          },
+                          "position": [10, 1, 5]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "6f784678",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Michigan, con la comunidad libanesa más grande del país y la mayor concentración de votantes de origen árabe de Estados Unidos, es uno de los siete estados clave en las elecciones del 5 de noviembre.",
+                      "blocks": [
+                        {
+                          "id": "ccbcc14d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Michigan",
+                            "attributes": ["bold"]
+                          },
+                          "position": [10, 2, 1]
+                        },
+                        {
+                          "id": "ddc4a81e",
+                          "type": "fragment",
+                          "model": {
+                            "text": ", con la comunidad libanesa más grande del país y la mayor concentración de votantes de origen árabe de Estados Unidos, es uno de los siete estados clave en las elecciones del 5 de noviembre.",
+                            "attributes": []
+                          },
+                          "position": [10, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  }
+                ]
+              },
+              "position": [10]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dearborn, en Michigan, es la primera ciudad de mayoría árabe de EE.UU.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dearborn, en Michigan, es la primera ciudad de mayoría árabe de EE.UU.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Un mujer musulmana con una bandera de Líbano en Dearborn, Michigan. ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Un mujer musulmana con una bandera de Líbano en Dearborn, Michigan. ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2856,
+                  "height": 1607,
+                  "locator": "6366/live/65a47510-84d2-11ef-8869-e90b7d6ed85d.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "En la disputa por el estado de Michigan en las elecciones del 5 de noviembre, los votos de Dearborn pueden ser cruciales. El principal tema es la posición de EE.UU. en el conflicto en Gaza y Líbano.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "En la disputa por el estado de Michigan en las elecciones del 5 de noviembre, los votos de Dearborn pueden ser cruciales. El principal tema es la posición de EE.UU. en el conflicto en Gaza y Líbano.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "byline": {
+          "blocks": [
+            {
+              "type": "contributor",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "name",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ayelén Oliva",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ayelén Oliva",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "role",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "BBC News Mundo",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "BBC News Mundo",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "@ayelenoliva",
+                                  "blocks": [
+                                    {
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "@ayelenoliva",
+                                        "locator": "https://twitter.com/ayelenoliva",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "@ayelenoliva",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ],
+                                        "isExternal": true
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "location",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Dearborn, Michigan",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Dearborn, Michigan",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Mundo",
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c7560gekrkwo",
+            "canonicalUrl": "https://www.bbc.com/mundo/articles/c7560gekrkwo"
+          },
+          "timestamp": 1729189928108,
+          "suitableForSyndication": true,
+          "language": "es",
+          "headlines": {
+            "seoHeadline": "Yahya Sinwar: Israel anuncia la muerte del líder de Hamás, cerebro de los ataques del 7 de octubre",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Israel anuncia la muerte del líder de Hamás, Yahya Sinwar, cerebro de los ataques del 7 de octubre",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Israel anuncia la muerte del líder de Hamás, Yahya Sinwar, cerebro de los ataques del 7 de octubre",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Yahya Sinwar",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Yahya Sinwar",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 959,
+                    "height": 540,
+                    "locator": "1223/live/7af9e3d0-8cae-11ef-9e4a-81fe6e2d3b5a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Sinwar era el objetivo número 1 de Israel al considerarlo el cerebro detrás del ataque de hace poco más de un año en el que murieron 1.200 israelíes.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Sinwar era el objetivo número 1 de Israel al considerarlo el cerebro detrás del ataque de hace poco más de un año en el que murieron 1.200 israelíes.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "es",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "locator": "urn:bbc:optimo:asset:c7560gekrkwo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/be78be13-d6db-4f71-a988-143a40f80a4a#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/49de5cf0-9dce-4531-8c57-33eb5e5d2df3#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/80a36c9b-7ac8-490a-b2de-b6496a82c1d4#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "es",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/49de5cf0-9dce-4531-8c57-33eb5e5d2df3#id",
+                  "thingLabel": "Hamas",
+                  "thingUri": "http://www.bbc.co.uk/things/49de5cf0-9dce-4531-8c57-33eb5e5d2df3#id",
+                  "thingId": "49de5cf0-9dce-4531-8c57-33eb5e5d2df3",
+                  "thingType": [
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:Agent",
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Hamas"],
+                  "thingEnglishLabel": "Hamas",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/80a36c9b-7ac8-490a-b2de-b6496a82c1d4#id",
+                  "thingLabel": "Fuerzas de Defensa de Israel",
+                  "thingUri": "http://www.bbc.co.uk/things/80a36c9b-7ac8-490a-b2de-b6496a82c1d4#id",
+                  "thingId": "80a36c9b-7ac8-490a-b2de-b6496a82c1d4",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Organisation",
+                    "tagging:Agent",
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q58967",
+                    "http://dbpedia.org/resource/Israel_Defense_Forces"
+                  ],
+                  "thingEnglishLabel": "Israel Defense Forces",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "Israel",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/294640/",
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id",
+                  "thingLabel": "Guerra",
+                  "thingUri": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id",
+                  "thingId": "9d4b0cb6-1f21-40f0-ac81-75f58f01f884",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/War",
+                    "http://www.wikidata.org/entity/Q198"
+                  ],
+                  "thingEnglishLabel": "War",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingLabel": "Conflicto palestino-israelí",
+                  "thingUri": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingId": "a2ada86c-5450-4055-ad81-ef6bc0b922cc",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q16125891",
+                    "http://dbpedia.org/resource/Israel–Palestine_relations"
+                  ],
+                  "thingEnglishLabel": "Israel & the Palestinians",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/be78be13-d6db-4f71-a988-143a40f80a4a#id",
+                  "thingLabel": "Territorios Palestinos",
+                  "thingUri": "http://www.bbc.co.uk/things/be78be13-d6db-4f71-a988-143a40f80a4a#id",
+                  "thingId": "be78be13-d6db-4f71-a988-143a40f80a4a",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/6254930/"],
+                  "thingEnglishLabel": "Palestinian territories",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingLabel": "Medio Oriente",
+                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Middle East",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Redacción",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Redacción",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC News Mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC News Mundo",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Mundo",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c7560gekrkwo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c206j730722o",
+            "canonicalUrl": "https://www.bbc.com/mundo/articles/c206j730722o"
+          },
+          "timestamp": 1729173024631,
+          "suitableForSyndication": true,
+          "language": "es",
+          "headlines": {
+            "seoHeadline": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Kamala vs Trump: el impacto electoral del conflicto de Medio Oriente en Dearborn, la primera ciudad de EE.UU. con mayoría árabe ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Dearborn, en Michigan, es la primera ciudad de mayoría árabe de EE.UU.",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Dearborn, en Michigan, es la primera ciudad de mayoría árabe de EE.UU.",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Un mujer musulmana con una bandera de Líbano en Dearborn, Michigan. ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Un mujer musulmana con una bandera de Líbano en Dearborn, Michigan. ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2856,
+                    "height": 1607,
+                    "locator": "6366/live/65a47510-84d2-11ef-8869-e90b7d6ed85d.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "En la disputa por el estado de Michigan en las elecciones del 5 de noviembre, los votos de Dearborn pueden ser cruciales. El principal tema es la posición de EE.UU. en el conflicto en Gaza y Líbano.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "En la disputa por el estado de Michigan en las elecciones del 5 de noviembre, los votos de Dearborn pueden ser cruciales. El principal tema es la posición de EE.UU. en el conflicto en Gaza y Líbano.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "es",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "locator": "urn:bbc:optimo:asset:c206j730722o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                "value": "http://www.bbc.co.uk/things/a6238684-6146-4e20-9572-ed0490dbbae0#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "contributor": [
+                {
+                  "value": "http://www.bbc.co.uk/things/a6238684-6146-4e20-9572-ed0490dbbae0#id",
+                  "type": "contributor"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                  "thingLabel": "Feature",
+                  "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                  "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [
+                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                  ],
+                  "thingEnglishLabel": "Feature",
+                  "thingPreferredLabel": "Feature",
+                  "thingLabelLanguage": "es",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+                  "thingLabel": "Historia",
+                  "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+                  "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+                  "thingType": [
+                    "tagging:Genre",
+                    "tagging:AmbiguousTerm",
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/History",
+                    "http://www.wikidata.org/entity/Q309"
+                  ],
+                  "thingEnglishLabel": "History",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id",
+                  "thingLabel": "Elecciones presidenciales en Estados Unidos 2024",
+                  "thingUri": "http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id",
+                  "thingId": "647d5613-e0e2-4ef5-b0ce-b491de38bdbd",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Event",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q101110072",
+                    "http://dbpedia.org/resource/2024_United_States_presidential_election"
+                  ],
+                  "thingEnglishLabel": "US election 2024",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingLabel": "Estados Unidos",
+                  "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/6252001/",
+                    "http://www.wikidata.org/entity/Q30"
+                  ],
+                  "thingEnglishLabel": "United States",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "Israel",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/294640/",
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingLabel": "Conflicto palestino-israelí",
+                  "thingUri": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingId": "a2ada86c-5450-4055-ad81-ef6bc0b922cc",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q16125891",
+                    "http://dbpedia.org/resource/Israel–Palestine_relations"
+                  ],
+                  "thingEnglishLabel": "Israel & the Palestinians",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                  "thingLabel": "Líbano",
+                  "thingUri": "http://www.bbc.co.uk/things/b8e62d9e-6df2-45c6-905e-465e7d8cf987#id",
+                  "thingId": "b8e62d9e-6df2-45c6-905e-465e7d8cf987",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q822",
+                    "http://dbpedia.org/resource/Lebanon",
+                    "http://sws.geonames.org/272103/"
+                  ],
+                  "thingEnglishLabel": "Lebanon",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingLabel": "Medio Oriente",
+                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Middle East",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Ayelén Oliva",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Ayelén Oliva",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC News Mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC News Mundo",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "@ayelenoliva",
+                                    "blocks": [
+                                      {
+                                        "type": "urlLink",
+                                        "model": {
+                                          "text": "@ayelenoliva",
+                                          "locator": "https://twitter.com/ayelenoliva",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "@ayelenoliva",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ],
+                                          "isExternal": true
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "location",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Dearborn, Michigan",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Dearborn, Michigan",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Mundo",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c206j730722o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c7v6g9y1z8yo",
+            "canonicalUrl": "https://www.bbc.com/mundo/articles/c7v6g9y1z8yo"
+          },
+          "timestamp": 1729136974556,
+          "suitableForSyndication": true,
+          "language": "es",
+          "headlines": {
+            "seoHeadline": "\"El Consejo de Seguridad de la ONU, el FMI y el Banco Mundial, que nos sirvieron durante décadas, están resultando ser anacrónicos en esta época de turbulencias y amenazas existenciales\"",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "\"El Consejo de Seguridad de la ONU, el FMI y el Banco Mundial, que nos sirvieron durante décadas, están resultando ser anacrónicos en esta época de turbulencias y amenazas existenciales\"",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "\"El Consejo de Seguridad de la ONU, el FMI y el Banco Mundial, que nos sirvieron durante décadas, están resultando ser anacrónicos en esta época de turbulencias y amenazas existenciales\"",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Stephen Heintz es el autor de \"Una lógica para el futuro\", un reciente ensayo donde plantea la necesidad de adaptar el sistema internacional al mundo del siglo XXI.",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Stephen Heintz es el autor de \"Una lógica para el futuro\", un reciente ensayo donde plantea la necesidad de adaptar el sistema internacional al mundo del siglo XXI.",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Stephen Heintz ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Stephen Heintz ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 2148,
+                    "height": 1208,
+                    "locator": "7a0f/live/3aee4290-8b37-11ef-b716-d918ad7eec68.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Aslan Habib Chalom",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Stephen Heintz, presidente del Rockefeller Brothers Fund, plantea en una entrevista el reto de crear un nuevo sistema internacional en medio de la crisis climática, guerras, una carrera armamentística nuclear y tecnologías riesgosas.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Stephen Heintz, presidente del Rockefeller Brothers Fund, plantea en una entrevista el reto de crear un nuevo sistema internacional en medio de la crisis climática, guerras, una carrera armamentística nuclear y tecnologías riesgosas.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "es",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "locator": "urn:bbc:optimo:asset:c7v6g9y1z8yo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/d96b284b-8461-41b5-b96e-33b6297565f5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                "value": "http://www.bbc.co.uk/things/7887f689-46da-4753-8209-ec862ed6f43f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84bab5a3-426e-4051-86a3-00f0b085ef8e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "contributor": [
+                {
+                  "value": "http://www.bbc.co.uk/things/7887f689-46da-4753-8209-ec862ed6f43f#id",
+                  "type": "contributor"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+                  "thingLabel": "Interview",
+                  "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+                  "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q178651",
+                    "http://dbpedia.org/resource/Interview"
+                  ],
+                  "thingEnglishLabel": "Interview",
+                  "thingPreferredLabel": "Interview",
+                  "thingLabelLanguage": "es",
+                  "type": "formats"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                  "thingLabel": "Brasil",
+                  "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                  "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+                  "thingType": [
+                    "core:Place",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://sws.geonames.org/3469034/"],
+                  "thingEnglishLabel": "Brazil",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                  "thingLabel": "Conflicto Rusia-Ucrania",
+                  "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                  "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Event",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+                  "thingEnglishLabel": "Russia-Ukraine war",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingLabel": "Estados Unidos",
+                  "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/6252001/",
+                    "http://www.wikidata.org/entity/Q30"
+                  ],
+                  "thingEnglishLabel": "United States",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84bab5a3-426e-4051-86a3-00f0b085ef8e#id",
+                  "thingLabel": "Fondo Monetario Internacional",
+                  "thingUri": "http://www.bbc.co.uk/things/84bab5a3-426e-4051-86a3-00f0b085ef8e#id",
+                  "thingId": "84bab5a3-426e-4051-86a3-00f0b085ef8e",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "tagging:Agent",
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:AmbiguousTerm"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q7804",
+                    "http://dbpedia.org/resource/International_Monetary_Fund"
+                  ],
+                  "thingEnglishLabel": "International Monetary Fund (IMF)",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+                  "thingLabel": "Naciones Unidas",
+                  "thingUri": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+                  "thingId": "b79ae056-59b1-49c7-8630-50f7e223e906",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "core:Organisation",
+                    "tagging:Agent",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q1065",
+                    "http://dbpedia.org/resource/United_Nations"
+                  ],
+                  "thingEnglishLabel": "United Nations",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/d96b284b-8461-41b5-b96e-33b6297565f5#id",
+                  "thingLabel": "Banco Mundial",
+                  "thingUri": "http://www.bbc.co.uk/things/d96b284b-8461-41b5-b96e-33b6297565f5#id",
+                  "thingId": "d96b284b-8461-41b5-b96e-33b6297565f5",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "tagging:Agent",
+                    "core:Organisation",
+                    "tagging:AmbiguousTerm",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/World_Bank"],
+                  "thingEnglishLabel": "World Bank",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingLabel": "Medio Oriente",
+                  "thingUri": "http://www.bbc.co.uk/things/dc27493c-d8e8-4fe2-9fbd-150564b5b959#id",
+                  "thingId": "dc27493c-d8e8-4fe2-9fbd-150564b5b959",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Middle East",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
+                  "thingLabel": "América Latina",
+                  "thingUri": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
+                  "thingId": "e0d04166-b92f-468e-9e68-d5f9330e6ae7",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q12585",
+                    "http://dbpedia.org/resource/Latin_America"
+                  ],
+                  "thingEnglishLabel": "Latin America",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Gerardo Lissardy",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Gerardo Lissardy",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC News Mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC News Mundo",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Mundo",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c7v6g9y1z8yo",
+          "type": "optimo"
+        }
+      ],
+      "features": null,
+      "mostRead": null,
+      "latestMedia": null
+    }
+  }
+}
