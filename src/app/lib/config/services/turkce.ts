@@ -329,6 +329,10 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/cg726y2qxg1t',
       },
       {
+        title: 'ABD Seçimleri',
+        url: '/turkce/topics/c3gyjy0vy91t',
+      },
+      {
         title: 'Rusya-Ukrayna Savaşı',
         url: '/turkce/topics/cy0ryl4pvx6t',
       },

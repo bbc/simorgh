@@ -1,6 +1,7 @@
 import fetch from 'jest-fetch-mock';
 import path from 'path';
 import { TextEncoder, TextDecoder } from 'util';
+import { ReadableStream } from 'node:stream/web';
 
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -29,6 +30,10 @@ window.matchMedia = jest.fn().mockImplementation(query => {
 window.require = jest.fn();
 
 global.fetch = fetch;
+global.AbortSignal = {
+  timeout: jest.fn(),
+};
+global.ReadableStream = ReadableStream;
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH = '/';

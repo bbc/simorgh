@@ -111,8 +111,8 @@ export const service: SerbianConfig = {
         url: '/serbian/lat',
       },
       {
-        title: 'Ukrajina',
-        url: '/serbian/lat/topics/c5wzvzzz5vrt',
+        title: 'Američki izbori',
+        url: '/serbian/lat/topics/c1v8enng1npt',
       },
       {
         title: 'Srbija',
@@ -502,26 +502,6 @@ export const service: SerbianConfig = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
-      },
-      {
-        title: 'Украјина',
-        url: '/serbian/cyr/topics/cqwvxvvw9qrt',
-      },
-      {
-        title: 'Србија',
-        url: '/serbian/cyr/topics/cvjp1d3k9dvt',
-      },
-      {
-        title: 'Балкан',
-        url: '/serbian/cyr/topics/c8y9k0k2pvvt',
-      },
-      {
-        title: 'Свет',
-        url: '/serbian/cyr/topics/c3m1x951mljt',
-      },
-      {
-        title: 'Видео',
-        url: '/serbian/cyr/topics/crg7kj2ejj2t',
       },
       {
         title: 'Најпопуларније',

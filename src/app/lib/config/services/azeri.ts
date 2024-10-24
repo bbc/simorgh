@@ -329,6 +329,10 @@ export const service: DefaultServiceConfig = {
         title: 'Beynəlxalq',
         url: '/azeri/topics/cde15l4vn02t',
       },
+      {
+        title: 'COP29',
+        url: '/azeri/topics/cv2dz9j8ywyt',
+      },
     ],
   },
 };
