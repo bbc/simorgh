@@ -1,5 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import {
+  suppressPropWarnings,
+  setWindowValue,
+  resetWindowValue,
+} from '#psammead/psammead-test-helpers/src';
+
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Brand from '.';
@@ -194,6 +199,57 @@ describe('Brand', () => {
 
       const brandLink = container.querySelector('#brandLink');
       expect(brandLink).toBe(container.querySelector('a'));
+    });
+  });
+
+  describe('Preview Indicator', () => {
+    const windowLocation = window.location;
+
+    afterEach(() => {
+      resetWindowValue('location', windowLocation);
+    });
+
+    it('should only be displayed when the hostname includes preview and requestServiceChain contains MOZART', () => {
+      setWindowValue('location', {
+        hostname: 'http://localhost-preview.test.bbc.com',
+      });
+
+      const { getByText } = render(<Brand />, {
+        requestServiceChain: 'MOZART,SIMORGH',
+      });
+
+      expect(getByText('⚠️ Mozart')).toBeInTheDocument();
+    });
+
+    it.each([
+      'http://localhost:7080/pidgin',
+      'https://www.test.bbc.com/pidgin',
+      'https://www.bbc.com/pidgin',
+    ])(
+      'should not be displayed when hostname is %s because hostname does not include preview',
+      hostname => {
+        setWindowValue('location', {
+          hostname,
+        });
+
+        const { queryByText } = render(<Brand />, {
+          requestServiceChain: 'MOZART,SIMORGH',
+        });
+
+        expect(queryByText('⚠️ Mozart')).not.toBeInTheDocument();
+      },
+    );
+
+    it('should not be displayed when hostname is preview but requestServiceChain does not contain MOZART', () => {
+      setWindowValue('location', {
+        hostname: 'http://localhost-preview.test.bbc.com',
+      });
+
+      const { queryByText } = render(<Brand />, {
+        requestServiceChain: 'SIMORGH',
+      });
+
+      expect(queryByText('⚠️ Mozart')).not.toBeInTheDocument();
     });
   });
 });

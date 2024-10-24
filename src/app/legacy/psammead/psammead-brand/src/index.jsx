@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -11,6 +11,7 @@ import {
   GEL_SPACING_HLF,
   GEL_SPACING,
 } from '#psammead/gel-foundations/src/spacings';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -165,7 +166,31 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
   </>
 );
 
+const PreviewEnvironmentIndicator = () => {
+  const StyledDiv = styled.div`
+    color: ${props => props.theme.palette.WHITE};
+  `;
+  return <StyledDiv aria-hidden>⚠️ Mozart</StyledDiv>;
+};
+
 const Brand = forwardRef((props, ref) => {
+  const [isPreview, setIsPreview] = useState(false);
+
+  useEffect(() => {
+    const hostnameMatchesPreview = window.location.hostname.match(/preview/g);
+    const isPreviewEnvironment =
+      hostnameMatchesPreview && hostnameMatchesPreview.length > 0;
+
+    if (isPreviewEnvironment) {
+      setIsPreview(isPreviewEnvironment);
+    }
+  }, []);
+
+  const { requestServiceChain } = useContext(RequestContext);
+
+  const shouldDisplayPreviewIndicator =
+    isPreview && requestServiceChain && requestServiceChain.includes('MOZART');
+
   const {
     svgHeight,
     maxWidth,
@@ -205,6 +230,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
+        {shouldDisplayPreviewIndicator && <PreviewEnvironmentIndicator />}
       </SvgWrapper>
     </Banner>
   );

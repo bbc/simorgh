@@ -49,6 +49,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     toggles,
     mvtExperiments,
     isUK,
+    requestServiceChain,
   } = initialData;
 
   const routeProps = getRouteProps(pathname);
@@ -67,6 +68,7 @@ export const App = ({ initialData, bbcOrigin }) => {
     showCookieBannerBasedOnCountry,
     mvtExperiments,
     isUK,
+    requestServiceChain,
   });
 };
 
