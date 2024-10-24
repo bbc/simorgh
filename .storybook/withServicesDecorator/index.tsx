@@ -1,6 +1,7 @@
 import React from 'react';
-import path from 'ramda/src/path';
 import { Helmet } from 'react-helmet';
+import { StoryProps } from '#app/models/types/storybook';
+import { Services, Variants } from '#app/models/types/global';
 import TEXT_VARIANTS from './text-variants';
 import arabic from '../../src/app/components/ThemeProvider/fontScripts/arabic';
 import bengali from '../../src/app/components/ThemeProvider/fontScripts/bengali';
@@ -13,13 +14,8 @@ import noAscendersOrDescenders from '../../src/app/components/ThemeProvider/font
 import sinhalese from '../../src/app/components/ThemeProvider/fontScripts/sinhalese';
 import tamil from '../../src/app/components/ThemeProvider/fontScripts/tamil';
 import thai from '../../src/app/components/ThemeProvider/fontScripts/thai';
-import { Services } from '../../src/app/models/types/global';
 
-const DEFAULT_SERVICE = 'news';
-const getVariant = (selectedService: Services) =>
-  path([selectedService, 'variant']);
-const getService = (selectedService: Services) =>
-  path([selectedService, 'service']);
+const DEFAULT_VARIANT = 'default';
 
 const scripts = {
   arabic,
@@ -41,25 +37,31 @@ const scripts = {
   thai,
 };
 
-export default (overrideProps?: { defaultService?: Services }) =>
+export default () =>
   (
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    story: (storyProps: any) => JSX.Element,
+    story: (storyProps: StoryProps) => JSX.Element,
     {
       globals: {
-        service: { service: selectedService },
+        service: { service: globalService, variant: globalVariant },
         isLite,
       },
-    } = { globals: { service: { service: DEFAULT_SERVICE }, isLite: false } },
+    }: {
+      globals: {
+        service: {
+          service: Services;
+          variant: Variants;
+        };
+        isLite: boolean;
+      };
+    },
   ) => {
-    const defaultServiceOverride = overrideProps?.defaultService;
-    const serviceToUse = defaultServiceOverride || selectedService;
+    let serviceLookup: string = globalService;
 
-    const variant = getVariant(serviceToUse as Services)(TEXT_VARIANTS);
+    if (globalVariant !== DEFAULT_VARIANT) {
+      serviceLookup = `${globalService}-${globalVariant}`;
+    }
 
-    const service = variant
-      ? getService(serviceToUse as Services)(TEXT_VARIANTS)
-      : serviceToUse;
+    const textOverrides = TEXT_VARIANTS[serviceLookup];
 
     const {
       text,
@@ -69,7 +71,7 @@ export default (overrideProps?: { defaultService?: Services }) =>
       locale,
       dir = 'ltr',
       timezone = 'GMT',
-    } = TEXT_VARIANTS[serviceToUse];
+    } = textOverrides || {};
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const storyProps: any = {
@@ -79,9 +81,8 @@ export default (overrideProps?: { defaultService?: Services }) =>
       script: scripts[script as keyof typeof scripts],
       locale,
       dir,
-      service,
-      variant: variant || 'default',
-      selectedService: serviceToUse,
+      service: textOverrides?.service || globalService,
+      variant: textOverrides?.variant || globalVariant,
       timezone,
       isLite,
     };

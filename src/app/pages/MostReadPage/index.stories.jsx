@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { BrowserRouter } from 'react-router-dom';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import MostReadPage from '.';
 
-const Component = (_, { service, variant }) => {
+const Component = ({ service, variant }) => {
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -47,7 +46,17 @@ const Component = (_, { service, variant }) => {
 export default {
   Component,
   title: 'Pages/Most Read Page',
-  decorators: [withServicesDecorator({ defaultService: 'pidgin' })],
 };
 
-export const Example = Component;
+export const Example = {
+  render: (_, { service, variant }) => (<Component service={service} variant={variant} />),
+  parameters: {
+    chromatic: {
+      disableSnapshot: true
+    }
+  }
+};
+
+// This story is for chromatic testing purposes only
+export const Test = (_, { variant }) => <Component service="pidgin" variant={variant}/>;
+Test.tags = ['!dev']
