@@ -24,13 +24,8 @@ describe('AMP top stories experiment', () => {
     };
   };
 
-  const blocksEvenLength = [
-    mockTextBlock,
-    mockTextBlock,
-    mockTextBlock,
-    mockTextBlock,
-  ];
-  const blocksOddLength = [mockTextBlock, mockTextBlock, mockTextBlock];
+  const blocksEvenLength = Array(10).fill(mockTextBlock);
+  const blocksOddLength = Array(11).fill(mockTextBlock);
 
   describe('getExperimentTopStories()', () => {
     it('returns shouldEnableExperimentTopStories as true if props match conditions.', () => {
@@ -45,15 +40,17 @@ describe('AMP top stories experiment', () => {
     });
 
     it.each`
-      testDescription                                | isAmp    | id                | service
-      ${'all props are undefined'}                   | ${false} | ${undefined}      | ${undefined}
-      ${'only isAmp is true'}                        | ${true}  | ${undefined}      | ${undefined}
-      ${'only pathname is undefined'}                | ${true}  | ${undefined}      | ${'news'}
-      ${'only pathname is defined and valid'}        | ${false} | ${'c6v11qzyv8po'} | ${undefined}
-      ${'all props defined but pathname is invalid'} | ${false} | ${'c1231qzyv8po'} | ${undefined}
-      ${'only service is undefined'}                 | ${true}  | ${'c6v11qzyv8po'} | ${undefined}
-      ${'only service is defined and valid'}         | ${false} | ${undefined}      | ${'news'}
-      ${'all props defined but service is invalid'}  | ${true}  | ${'c6v11qzyv8po'} | ${'igbo'}
+      testDescription                                     | isAmp    | id                | service      | blocksLength
+      ${'all props are undefined'}                        | ${false} | ${undefined}      | ${undefined} | ${undefined}
+      ${'only isAmp is true'}                             | ${true}  | ${undefined}      | ${undefined} | ${undefined}
+      ${'only id is undefined'}                           | ${true}  | ${undefined}      | ${'news'}    | ${11}
+      ${'only id is defined and valid'}                   | ${false} | ${'c6v11qzyv8po'} | ${undefined} | ${undefined}
+      ${'all props defined but id is invalid'}            | ${true}  | ${'c1231qzyv8po'} | ${'news'}    | ${11}
+      ${'only service is undefined'}                      | ${true}  | ${'c6v11qzyv8po'} | ${undefined} | ${11}
+      ${'only service is defined and valid'}              | ${false} | ${undefined}      | ${'news'}    | ${undefined}
+      ${'all props defined but service is invalid'}       | ${true}  | ${'c6v11qzyv8po'} | ${'igbo'}    | ${11}
+      ${'only blocks length is defined and valid'}        | ${false} | ${undefined}      | ${undefined} | ${11}
+      ${'all props defined but blocks length is invalid'} | ${true}  | ${'c6v11qzyv8po'} | ${'news'}    | ${7}
     `(
       'returns shouldEnableExperimentTopStories as false because $testDescription.',
       ({ isAmp, id, service }) => {
@@ -69,53 +66,28 @@ describe('AMP top stories experiment', () => {
       },
     );
 
-    const blocksShortLength = [mockTextBlock];
-    const blocksLongEvenLength = [
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-    ];
-    const blocksLongOddLength = [
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-    ];
-
     const expectedBlocksEvenLength = [
       mockTextBlock,
       mockTextBlock,
       mockTextBlock,
-      expectedExperimentTopStoriesBlock(3),
+      mockTextBlock,
+      expectedExperimentTopStoriesBlock(4),
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
+      mockTextBlock,
       mockTextBlock,
     ];
     const expectedBlocksOddLength = [
       mockTextBlock,
       mockTextBlock,
       mockTextBlock,
-      expectedExperimentTopStoriesBlock(3),
-    ];
-    const expectedBlocksLongEvenLength = [
       mockTextBlock,
       mockTextBlock,
-      expectedExperimentTopStoriesBlock(2),
+      expectedExperimentTopStoriesBlock(5),
       mockTextBlock,
       mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-    ];
-
-    const expectedBlocksLongOddLength = [
-      mockTextBlock,
-      mockTextBlock,
-      mockTextBlock,
-      expectedExperimentTopStoriesBlock(3),
       mockTextBlock,
       mockTextBlock,
       mockTextBlock,
@@ -123,11 +95,9 @@ describe('AMP top stories experiment', () => {
     ];
 
     it.each`
-      testType  | inputBlocks             | expectedOutput
-      ${'4'}    | ${blocksEvenLength}     | ${expectedBlocksEvenLength}
-      ${'3'}    | ${blocksOddLength}      | ${expectedBlocksOddLength}
-      ${'even'} | ${blocksLongEvenLength} | ${expectedBlocksLongEvenLength}
-      ${'odd'}  | ${blocksLongOddLength}  | ${expectedBlocksLongOddLength}
+      testType  | inputBlocks         | expectedOutput
+      ${'even'} | ${blocksEvenLength} | ${expectedBlocksEvenLength}
+      ${'odd'}  | ${blocksOddLength}  | ${expectedBlocksOddLength}
     `(
       'should insert experimentTopStories block into blocks array in the correct position when blocks.length is $testType.',
       ({ inputBlocks, expectedOutput }) => {
@@ -141,17 +111,6 @@ describe('AMP top stories experiment', () => {
         expect(transformedBlocks).toEqual(expectedOutput);
       },
     );
-
-    it('does not insert experiment top stories blocks if the blocks array length is < 2.', () => {
-      const { transformedBlocks } = getExperimentTopStories({
-        blocks: blocksShortLength,
-        topStoriesContent: topStoriesList,
-        isAmp: true,
-        id: 'c6v11qzyv8po',
-        service: 'news',
-      });
-      expect(transformedBlocks).toBe(blocksShortLength);
-    });
   });
 
   describe('getExperimentAnalyticsConfig()', () => {
@@ -189,12 +148,17 @@ describe('AMP top stories experiment', () => {
             "topStoriesView": "http://foobar.com?idclient=123-456-789&s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), ${destinationId}, ${gnlId})&s2=${producerId}&p=SOURCE_URL&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-[article]-[top-stories-section]-[topStoriesExperiment:VARIANT(topStoriesExperiment)]-[]-[SOURCE_URL]-[]-[]-[]&type=AT",
           },
           "triggers": {
-            "trackTopStoriesClick": {
-              "on": "click",
-              "request": "topStoriesClick",
-              "selector": "a[aria-labelledby*='top-stories-promo']",
+            "articleBodyView": {
+              "on": "visible",
+              "request": "topStoriesView",
+              "visibilitySpec": {
+                "continuousTimeMin": 200,
+                "selector": "div[data-experiment='position:articleBody'] > section[aria-labelledby='top-stories-heading']",
+                "totalTimeMin": 500,
+                "visiblePercentageMin": 20,
+              },
             },
-            "trackTopStoriesDesktopView": {
+            "secondaryColumnView": {
               "on": "visible",
               "request": "topStoriesView",
               "visibilitySpec": {
@@ -204,15 +168,10 @@ describe('AMP top stories experiment', () => {
                 "visiblePercentageMin": 20,
               },
             },
-            "trackTopStoriesView": {
-              "on": "visible",
-              "request": "topStoriesView",
-              "visibilitySpec": {
-                "continuousTimeMin": 200,
-                "selector": "div[data-experiment='position:articleBody'] > section[aria-labelledby='top-stories-heading']",
-                "totalTimeMin": 500,
-                "visiblePercentageMin": 20,
-              },
+            "topStoriesPromoClick": {
+              "on": "click",
+              "request": "topStoriesClick",
+              "selector": "a[aria-labelledby*='top-stories-promo']",
             },
           },
         }

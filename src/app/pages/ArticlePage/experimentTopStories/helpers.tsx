@@ -17,6 +17,108 @@ export const experimentTopStoriesConfig = {
   },
 };
 
+const ARTICLE_LENGTH_THRESHOLD = 10;
+const enableExperimentTopStories = ({
+  isAmp,
+  service,
+  id,
+  blocksLength,
+}: {
+  isAmp: boolean;
+  service: string;
+  id: string | null;
+  blocksLength: number;
+}) => {
+  if (!isAmp || !service || !id || blocksLength < ARTICLE_LENGTH_THRESHOLD) {
+    return false;
+  }
+
+  const newsTestAsset = 'c6v11qzyv8po';
+  const newsAsset = 'cz7xywn940ro';
+  const sportAsset = 'cpgw0xjmpd3o';
+  const experimentAssets = [newsAsset, newsTestAsset, sportAsset];
+  const experimentServices = ['news', 'sport'];
+
+  return (
+    isAmp &&
+    id &&
+    experimentServices.includes(service) &&
+    experimentAssets.includes(id)
+  );
+};
+
+const insertExperimentTopStories = ({
+  blocks,
+  topStoriesContent,
+}: {
+  blocks: OptimoBlock[];
+  topStoriesContent: TopStoryItem[];
+}) => {
+  const insertIndex = Math.floor((blocks.length - 1) * 0.5); // halfway index of blocks array, -1 accounts for 'wsoj' block which is never rendered on PS articles
+  const experimentTopStoriesBlock = {
+    type: 'experimentTopStories',
+    model: topStoriesContent,
+    id: `experimentTopStories-${insertIndex}`,
+  };
+
+  const blocksClone = [...blocks];
+  blocksClone.splice(insertIndex, 0, experimentTopStoriesBlock);
+  return blocksClone;
+};
+
+export const getExperimentTopStories = ({
+  blocks,
+  topStoriesContent,
+  isAmp,
+  service,
+  id,
+}: {
+  blocks: OptimoBlock[];
+  topStoriesContent: TopStoryItem[] | undefined;
+  isAmp: boolean;
+  service: string;
+  id: string | null;
+}) => {
+  const shouldEnableExperimentTopStories = enableExperimentTopStories({
+    isAmp,
+    service,
+    id,
+    blocksLength: blocks.length,
+  });
+
+  if (!topStoriesContent || !shouldEnableExperimentTopStories)
+    return {
+      transformedBlocks: blocks,
+      shouldEnableExperimentTopStories: false,
+    };
+
+  const transformedBlocks = insertExperimentTopStories({
+    blocks,
+    topStoriesContent,
+  });
+
+  return {
+    transformedBlocks,
+    shouldEnableExperimentTopStories,
+  };
+};
+
+export const ExperimentTopStories = ({
+  topStoriesContent,
+}: {
+  topStoriesContent: TopStoryItem[];
+}) => {
+  return (
+    <div
+      css={styles.experimentTopStoriesSection}
+      data-testid="experiment-top-stories"
+      data-experiment="position:articleBody"
+    >
+      <TopStoriesSection content={topStoriesContent} />
+    </div>
+  );
+};
+
 const getStatsDestinationKey = ({
   env,
   service,
@@ -80,7 +182,7 @@ export const getExperimentAnalyticsConfig = ({
       }),
     },
     triggers: {
-      trackTopStoriesView: {
+      articleBodyView: {
         on: 'visible',
         request: 'topStoriesView',
         visibilitySpec: {
@@ -90,7 +192,7 @@ export const getExperimentAnalyticsConfig = ({
           continuousTimeMin: 200,
         },
       },
-      trackTopStoriesDesktopView: {
+      secondaryColumnView: {
         on: 'visible',
         request: 'topStoriesView',
         visibilitySpec: {
@@ -100,113 +202,11 @@ export const getExperimentAnalyticsConfig = ({
           continuousTimeMin: 200,
         },
       },
-      trackTopStoriesClick: {
+      topStoriesPromoClick: {
         on: 'click',
         request: 'topStoriesClick',
         selector: `a[aria-labelledby*='top-stories-promo']`,
       },
     },
   };
-};
-
-const enableExperimentTopStories = ({
-  topStoriesContent,
-  isAmp,
-  service,
-  id,
-}: {
-  topStoriesContent: TopStoryItem[] | undefined;
-  isAmp: boolean;
-  service: string;
-  id: string | null;
-}) => {
-  if (!topStoriesContent || !isAmp || !service || !id) return false;
-  const newsTestAsset = 'c6v11qzyv8po';
-  const newsAsset = 'cz7xywn940ro';
-  const sportAsset = 'cpgw0xjmpd3o';
-  const experimentAssets = [newsAsset, newsTestAsset, sportAsset];
-  const experimentServices = ['news', 'sport'];
-
-  return (
-    isAmp &&
-    id &&
-    experimentServices.includes(service) &&
-    experimentAssets.includes(id)
-  );
-};
-
-const insertExperimentTopStories = ({
-  blocks,
-  topStoriesContent,
-}: {
-  blocks: OptimoBlock[];
-  topStoriesContent: TopStoryItem[];
-}) => {
-  const halfwayIndex = Math.floor((blocks.length - 1) * 0.5); // halfway index of blocks array, -1 accounts for 'wsoj' block which is never rendered on PS articles
-  const insertIndex = halfwayIndex < 2 ? 3 : halfwayIndex; // should not insert before content, arbitrary value
-  const experimentTopStoriesBlock = {
-    type: 'experimentTopStories',
-    model: topStoriesContent,
-    id: `experimentTopStories-${insertIndex}`,
-  };
-
-  const blocksClone = [...blocks];
-  blocksClone.splice(insertIndex, 0, experimentTopStoriesBlock);
-  return blocksClone;
-};
-
-export const getExperimentTopStories = ({
-  blocks,
-  topStoriesContent,
-  isAmp,
-  service,
-  id,
-}: {
-  blocks: OptimoBlock[];
-  topStoriesContent: TopStoryItem[] | undefined;
-  isAmp: boolean;
-  service: string;
-  id: string | null;
-}) => {
-  if (!topStoriesContent)
-    return {
-      transformedBlocks: blocks,
-      shouldEnableExperimentTopStories: false,
-    };
-
-  const shouldEnableExperimentTopStories = enableExperimentTopStories({
-    topStoriesContent,
-    isAmp,
-    service,
-    id,
-  });
-
-  const transformedBlocks =
-    shouldEnableExperimentTopStories && blocks.length > 2
-      ? insertExperimentTopStories({
-          blocks,
-          topStoriesContent,
-        })
-      : blocks;
-
-  return {
-    transformedBlocks,
-    shouldEnableExperimentTopStories,
-  };
-};
-
-export const ExperimentTopStories = ({
-  topStoriesContent,
-}: {
-  topStoriesContent: TopStoryItem[];
-}) => {
-  return (
-    <div
-      css={styles.experimentTopStoriesSection}
-      data-testid="experiment-top-stories"
-      data-experiment="position:articleBody"
-    >
-      <TopStoriesSection content={topStoriesContent} />
-    </div>
-  );
 };
