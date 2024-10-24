@@ -314,6 +314,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   padding-inline: 0.5rem;
   width: calc(100% - 0.5rem);
   border-inline-start: 0.0625rem solid #6E6E73;
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.5rem 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

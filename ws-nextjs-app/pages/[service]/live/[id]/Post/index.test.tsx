@@ -7,7 +7,12 @@ import {
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import { LIVE_PAGE } from '../../../../../../src/app/routes/utils/pageTypes';
 import Post from '.';
-import { samplePost, twitterSamplePost, videoSamplePost } from './fixture';
+import {
+  audioSamplePost,
+  samplePost,
+  twitterSamplePost,
+  videoSamplePost,
+} from './fixture';
 
 const singlePostWithTitle = postFixture.data.results[0];
 
@@ -148,6 +153,21 @@ describe('Post', () => {
 
       expect(
         container.querySelector('[data-e2e="media-loader__placeholder"]'),
+      ).toBeInTheDocument();
+    });
+
+    it('should render the new media player in a post containing audio', async () => {
+      const { container } = await act(async () => {
+        return render(<Post post={audioSamplePost} />, {
+          id: 'c7p765ynk9qt',
+          service: 'pidgin',
+          pageType: LIVE_PAGE,
+          pathname: '/pidgin/live/c7p765ynk9qt',
+        });
+      });
+
+      expect(
+        container.querySelector('[data-e2e="media-loader__container"]'),
       ).toBeInTheDocument();
     });
 

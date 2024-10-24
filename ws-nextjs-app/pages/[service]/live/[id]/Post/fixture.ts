@@ -585,3 +585,236 @@ export const videoSamplePost = {
     },
   ],
 };
+
+export const audioSamplePost = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          id: '877a928e',
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                id: '780e425c',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: 'e8c211d7',
+                      type: 'paragraph',
+                      model: {
+                        text: 'Post with embedded audio',
+                        blocks: [
+                          {
+                            id: '2eb52ab5',
+                            type: 'fragment',
+                            model: {
+                              text: 'Post with embedded audio',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          id: '0c665c43',
+          type: 'paragraph',
+          model: {
+            text: 'Audio',
+            blocks: [
+              {
+                id: '8658cc94',
+                type: 'fragment',
+                model: {
+                  text: 'Audio',
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: '586c041a',
+          type: 'audio',
+          model: {
+            locator: 'urn:bbc:pips:pid:p01vqk5l',
+            blocks: [
+              {
+                id: '51c17264',
+                type: 'clipMedia',
+                model: {
+                  id: 'urn:bbc:pips:pid:p01vqk5l',
+                  urns: {
+                    pipsPid: 'urn:bbc:pips:pid:p01vqk5l',
+                  },
+                  images: [
+                    {
+                      url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vkjg8.png',
+                      urlTemplate:
+                        'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vkjg8.png',
+                      altText: 'BBC flat logo 2023 default image',
+                      type: 'socialImage',
+                      source: 'pipsImage',
+                    },
+                    {
+                      url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01vkjg8.png',
+                      urlTemplate:
+                        'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01vkjg8.png',
+                      altText: 'BBC flat logo 2023 default image',
+                      type: 'promoImage',
+                      source: 'pipsImage',
+                    },
+                  ],
+                  assetPath: 'p01vqk5l',
+                  type: 'audio',
+                  headlines: {
+                    primaryHeadline: 'a',
+                    seoHeadline: 'a',
+                    promoHeadline: 'a',
+                    socialHeadline: 'a',
+                  },
+                  analytics: {
+                    page: {
+                      name: 'programmes.av.p01vqk5l.page',
+                      contentId: 'urn:bbc:pips:pid:p01vqk5l',
+                      producer: 'PROGRAMMES',
+                    },
+                  },
+                  description: 'a',
+                  summary: {
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          type: 'paragraph',
+                          model: {
+                            text: 'a',
+                            blocks: [
+                              {
+                                type: 'fragment',
+                                model: {
+                                  text: 'a',
+                                  attributes: [],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  lastPublished: '2023-10-10T11:48:18Z',
+                  firstPublished: null,
+                  video: {
+                    id: 'p01vqk5l',
+                    title: 'a',
+                    holdingImage: {
+                      id: 'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01vkjg8.png',
+                      altText: 'BBC flat logo 2023 default image',
+                    },
+                    version: {
+                      id: 'p01vqk5n',
+                      duration: 'PT27S',
+                      kind: 'audio',
+                      guidance: null,
+                      territories: ['nonuk', 'uk'],
+                    },
+                    isAdvertisingAllowed: false,
+                    isEmbeddingAllowed: true,
+                    isUnavailable: false,
+                  },
+                  attributions: null,
+                  link: {
+                    path: '/programmes/p01vqk5l',
+                  },
+                  section: null,
+                  isSharingAllowed: true,
+                },
+              },
+              {
+                id: 'cfdc8dc2',
+                type: 'caption',
+                model: {
+                  blocks: [
+                    {
+                      id: '25d8408a',
+                      type: 'text',
+                      model: {
+                        blocks: [
+                          {
+                            id: '6355a247',
+                            type: 'paragraph',
+                            model: {
+                              text: 'caption for audio',
+                              blocks: [
+                                {
+                                  id: '9f54b5d9',
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'caption for audio',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:c40c0735-cff0-415f-95fa-b72a8f5a97a3',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+  },
+  dates: {
+    firstPublished: '2023-11-17T16:30:52.000Z',
+    lastPublished: '2023-12-05T15:55:18.000Z',
+    time: null,
+    curated: '2023-11-17T16:30:53.254Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
