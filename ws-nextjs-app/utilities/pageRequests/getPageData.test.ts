@@ -1,10 +1,11 @@
-import loggerMock from '#testHelpers/loggerMock';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as getToggles from '#app/lib/utilities/getToggles';
 import getPageData from './getPageData';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('../undiciAgent', () => jest.fn(() => Promise.resolve(agent)));
+jest.mock('#server/utilities/getAgent', () =>
+  jest.fn(() => Promise.resolve(agent)),
+);
 
 describe('getPageData', () => {
   beforeEach(() => {
@@ -26,20 +27,14 @@ describe('getPageData', () => {
 
       jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
 
-      const { data: actualData, toggles: actualToggles } = await getPageData(
-        {
-          id: 'u50853489',
-          service: 'mundo',
-          rendererEnv: undefined,
-          resolvedUrl: '/mundo/send/u50853489',
-        },
-        {
-          pageType: 'ugcForm',
-          service: 'mundo',
-          variant: undefined,
-        },
-        loggerMock,
-      );
+      const { data: actualData, toggles: actualToggles } = await getPageData({
+        id: 'u50853489',
+        service: 'mundo',
+        variant: undefined,
+        rendererEnv: undefined,
+        resolvedUrl: '/mundo/send/u50853489',
+        pageType: 'ugcForm',
+      });
 
       expect(actualData).toStrictEqual({
         pageData: fetchDataResponse,
@@ -61,20 +56,14 @@ describe('getPageData', () => {
 
       jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
 
-      const { data: actualData, toggles: actualToggles } = await getPageData(
-        {
-          id: 'u50853489',
-          service: 'mundo',
-          rendererEnv: undefined,
-          resolvedUrl: '/mundo/send/u50853489',
-        },
-        {
-          pageType: 'ugcForm',
-          service: 'mundo',
-          variant: undefined,
-        },
-        loggerMock,
-      );
+      const { data: actualData, toggles: actualToggles } = await getPageData({
+        id: 'u50853489',
+        service: 'mundo',
+        variant: undefined,
+        rendererEnv: undefined,
+        resolvedUrl: '/mundo/send/u50853489',
+        pageType: 'ugcForm',
+      });
 
       expect(actualData).toStrictEqual({
         error: errorMessage,
