@@ -14,11 +14,13 @@ import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.j
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
+import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { Services } from '#app/models/types/global';
+import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
@@ -58,12 +60,14 @@ type Props = {
   };
   service?: Services;
   podcastEnabled?: boolean;
+  articleElectionBanner?: boolean;
 };
 
 const ComponentWithContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
+  articleElectionBanner = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -72,6 +76,7 @@ const ComponentWithContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
+        articleElectionBanner: { enabled: articleElectionBanner },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -104,6 +109,7 @@ const ComponentWithServiceContext = ({
   data: { data },
   service = 'news',
   podcastEnabled = false,
+  articleElectionBanner = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -112,6 +118,7 @@ const ComponentWithServiceContext = ({
         mostRead: { enabled: true },
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
+        articleElectionBanner: { enabled: articleElectionBanner },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -139,17 +146,31 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = () => <ComponentWithContext data={articleData} />;
+export const ArticlePage = (_: StoryArgs, { service }: StoryProps) => (
+  <ComponentWithContext data={articleData} service={service} />
+);
 export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
 
-export const ArticlePageWithRelatedContent = () => (
-  <ComponentWithContext data={articleDataWithRelatedContent} />
+export const ArticlePageWithRelatedContent = (
+  _: StoryArgs,
+  { service }: StoryProps,
+) => (
+  <ComponentWithContext
+    data={articleDataWithRelatedContent}
+    service={service}
+  />
 );
 
-export const ArticlePageWithSingleRelatedContent = () => (
-  <ComponentWithContext data={articleDataWithSingleRelatedContent} />
+export const ArticlePageWithSingleRelatedContent = (
+  _: StoryArgs,
+  { service }: StoryProps,
+) => (
+  <ComponentWithContext
+    data={articleDataWithSingleRelatedContent}
+    service={service}
+  />
 );
 
 export const ArticlePageWithPodcastPromo = () => (
@@ -175,3 +196,16 @@ export const ArticlePageWithPodcastNews = () => (
     podcastEnabled
   />
 );
+
+export const ArticleWithElectionBanner = {
+  render: () => (
+    <ComponentWithServiceContext
+      data={articleDataWithElectionTag}
+      service="mundo"
+      articleElectionBanner
+    />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
