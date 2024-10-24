@@ -1,94 +1,22 @@
 import { GetServerSideProps } from 'next';
-import constructPageFetchUrl from '#app/routes/utils/constructPageFetchUrl';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
 import isAppPath from '#app/routes/utils/isAppPath';
 
-import { ROUTING_INFORMATION, BFF_FETCH_ERROR } from '#app/lib/logger.const';
-import { FetchError } from '#models/types/fetch';
-
-import getEnvironment from '#app/routes/utils/getEnvironment';
-import fetchPageData from '#app/routes/utils/fetchPageData';
-import certsRequired from '#app/routes/utils/certsRequired';
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
-import getAgent from '../../../../utilities/undiciAgent';
 
 import LivePageLayout from './LivePageLayout';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
+import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
-
-const getPageData = async ({
-  id,
-  page,
-  service,
-  variant,
-  rendererEnv,
-  resolvedUrl,
-}: PageDataParams) => {
-  const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-  const livePageUrl = constructPageFetchUrl({
-    page,
-    pageType: 'live',
-    pathname,
-    service,
-    variant,
-  });
-  const env = getEnvironment(pathname);
-  const optHeaders = { 'ctx-service-env': env };
-
-  const agent = certsRequired(pathname) ? await getAgent() : null;
-
-  let pageStatus;
-  let pageJson;
-  let errorMessage;
-
-  const path = livePageUrl.toString();
-
-  try {
-    // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
-    const { status, json } = await fetchPageData({
-      path,
-      agent,
-      optHeaders,
-    });
-    pageStatus = status;
-    pageJson = json;
-  } catch (error: unknown) {
-    const { message, status } = error as FetchError;
-
-    sendCustomMetric({
-      metricName: NON_200_RESPONSE,
-      statusCode: status,
-      pageType: LIVE_PAGE,
-      requestUrl: resolvedUrl,
-    });
-
-    logger.error(BFF_FETCH_ERROR, {
-      service,
-      status,
-      pathname,
-      message,
-    });
-    pageStatus = status;
-    errorMessage = message;
-  }
-
-  const data = pageJson
-    ? { pageData: pageJson.data, status: pageStatus }
-    : { error: errorMessage, status: pageStatus };
-
-  const toggles = await getToggles(service);
-
-  return { data, toggles };
-};
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -148,6 +76,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant,
     rendererEnv,
     resolvedUrl: context.resolvedUrl,
+    pageType: LIVE_PAGE,
   });
 
   let routingInfoLogger = logger.debug;
@@ -162,6 +91,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   });
 
   context.res.statusCode = data.status;
+
   return {
     props: {
       error: data?.error || null,
