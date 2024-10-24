@@ -1,4 +1,3 @@
-import { GetAgent } from './fetch';
 import { PageTypes, Services, Toggles, Variants } from './global';
 
 export type InitialDataProps = {
@@ -7,5 +6,4 @@ export type InitialDataProps = {
   pageType: PageTypes;
   variant?: Variants;
   toggles?: Toggles;
-  getAgent?: GetAgent;
 };

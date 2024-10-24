@@ -1,3 +1,4 @@
+import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
 import {
   DATA_FETCH_RESPONSE_TIME,
@@ -20,7 +21,7 @@ import getUrl from './utils/getUrl';
 const logger = nodeLogger(__filename);
 
 /**
- * A fetch wrapper for pages, with error and log handling.
+ * An isomorphic fetch wrapper for pages, with error and log handling.
  * @param {string} path The URL of a resource to fetch.
  * @param {number} timeout Optional parameter to provide a custom timeout
  * for request for 'secondary data'. The fetch timeout defaults to the 'primary
@@ -69,7 +70,7 @@ const fetchPageData = async ({
       'User-Agent': 'Simorgh/ws-web-rendering',
       ...(optHeaders && optHeaders),
     },
-    signal: AbortSignal.timeout(effectiveTimeout),
+    timeout: effectiveTimeout,
     ...(agent && { agent }),
   };
 

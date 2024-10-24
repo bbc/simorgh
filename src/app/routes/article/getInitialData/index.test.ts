@@ -1,4 +1,4 @@
-import { Agent } from 'undici';
+import { Agent } from 'https';
 import * as getOnwardsPageData from '../utils/getOnwardsData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
@@ -9,13 +9,11 @@ import { ARTICLE_PAGE } from '../../utils/pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
 
-const agent = {
-  connect: { cert: 'cert', ca: 'ca', key: 'key' },
-} as unknown as Agent;
+const agent = { cert: 'cert', ca: 'ca', key: 'key' };
 
-const mockGetAgent = () => Promise.resolve(agent);
-
-jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
+jest.mock('../../../../server/utilities/getAgent', () =>
+  jest.fn(() => Promise.resolve(agent as unknown as Agent)),
+);
 
 const bffArticleJson = {
   data: {
@@ -58,7 +56,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -83,7 +80,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -111,7 +107,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -141,7 +136,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(getOnwardsPageDataSpy).toBeCalledWith({
@@ -169,7 +163,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o?renderer_env=test',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -197,7 +190,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o?renderer_env=live',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -219,7 +211,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -242,7 +233,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -273,7 +263,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -298,7 +287,6 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       pageType: 'article',
-      getAgent: mockGetAgent,
     })) as { pageData: Record<string, unknown> };
 
     expect(pageData).toHaveProperty('content');

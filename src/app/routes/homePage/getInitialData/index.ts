@@ -12,7 +12,6 @@ export default async ({
   path: pathname,
   pageType,
   variant,
-  getAgent,
 }: InitialDataProps) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -20,7 +19,6 @@ export default async ({
       pageType: HOME_PAGE,
       service,
       variant,
-      getAgent,
     });
 
     const {

@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 /* eslint-disable no-undef */
 const getServiceName = serviceConfig => {
   if (serviceConfig.default) {

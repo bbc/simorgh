@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import fetch from 'node-fetch';
 import Url from 'url-parse';
 import { BrowserRouter } from 'react-router-dom';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';

@@ -5,9 +5,10 @@ import getOnwardsPageData from '../utils/getOnwardsData';
 import addAnalyticsCounterName from '../utils/addAnalyticsCounterName';
 import augmentWithDisclaimer from '../utils/augmentWithDisclaimer';
 import { advertisingAllowed, isSfv } from '../utils/paramChecks';
-import { FetchError, GetAgent } from '../../../models/types/fetch';
+import { FetchError } from '../../../models/types/fetch';
 import handleError from '../../utils/handleError';
 import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
+import getAgent from '../../../../server/utilities/getAgent';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import certsRequired from '../../utils/certsRequired';
 
@@ -20,7 +21,6 @@ type Props = {
   variant?: Variants;
   toggles?: Toggles;
   isAmp?: boolean;
-  getAgent: GetAgent;
 };
 
 const transformPageData = (toggles?: Toggles) =>
@@ -36,7 +36,6 @@ export default async ({
   variant,
   toggles,
   isAmp,
-  getAgent,
 }: Props) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -45,7 +44,6 @@ export default async ({
       service,
       variant,
       isAmp,
-      getAgent,
     });
 
     const agent = certsRequired(pathname) ? await getAgent() : null;
