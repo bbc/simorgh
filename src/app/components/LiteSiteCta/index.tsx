@@ -6,7 +6,6 @@ import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './index.styles';
 import { defaultTranslations } from './liteSiteConfig';
 
@@ -71,9 +70,9 @@ const LiteSiteCta = () => {
       aria-labelledby={id}
       css={styles.outerContainer}
     >
-      <VisuallyHiddenText as="strong" id={id} aria-hidden>
+      <Text as="strong" id={id} hidden>
         {dataSaving}
-      </VisuallyHiddenText>
+      </Text>
       <div css={styles.container}>
         <Paragraph size="brevier" css={styles.message}>
           {onboardingMessage}

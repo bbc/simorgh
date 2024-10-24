@@ -3,10 +3,11 @@ import { render } from '../react-testing-library-with-providers';
 import LiteSiteCta from '.';
 
 describe('LiteSiteCTA', () => {
-  it('Should have a strong element with lite site identifier.', () => {
+  it('Should have a hidden strong element with lite site identifier.', () => {
     const { container } = render(<LiteSiteCta />);
     const strongText = container.querySelector('strong');
     expect(strongText?.innerHTML).toBe('Data saving version');
+    expect(strongText).toHaveAttribute('hidden');
   });
   it('Should have a CTA link to the main site.', () => {
     const { container } = render(<LiteSiteCta />);
