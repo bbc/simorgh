@@ -2,53 +2,44 @@ import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles';
 import { FetchError } from '#app/models/types/fetch';
 import PageDataParams from '#app/models/types/pageDataParams';
-import constructPageFetchUrl, {
-  UrlConstructParams,
-} from '#app/routes/utils/constructPageFetchUrl';
 import sendCustomMetric from '#server/utilities/customMetrics';
-import getEnvironment from '#app/routes/utils/getEnvironment';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import fetchPageData from '#app/routes/utils/fetchPageData';
-import certsRequired from '#app/routes/utils/certsRequired';
-import getAgent from '../undiciAgent';
+import getAgent from '#server/utilities/getAgent';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import nodeLogger from '#lib/logger.node';
 
-type LoggerType = {
-  error: (id: string, params: { [key: string]: string | number }) => void;
-};
+const logger = nodeLogger(__filename);
 
-const getPageData = async (
-  { id, service, rendererEnv, resolvedUrl }: PageDataParams,
-  constructUrlParams: Omit<UrlConstructParams, 'pathname'>,
-  logger: LoggerType,
-) => {
+const getPageData = async ({
+  id,
+  page,
+  service,
+  variant,
+  rendererEnv,
+  resolvedUrl,
+  pageType,
+}: PageDataParams) => {
   const pathname = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
-
-  const env = getEnvironment(pathname);
-  const optHeaders = { 'ctx-service-env': env };
-  const agent = certsRequired(pathname) ? await getAgent() : null;
-
-  let pageStatus;
-  let pageJson;
-  let errorMessage;
+  let message;
+  let status;
+  let json;
 
   try {
-    const pageUrl = constructPageFetchUrl({ ...constructUrlParams, pathname });
-    const path = pageUrl.toString();
-    // @ts-expect-error Due to jsdoc inference, and no TS within fetchPageData
-    const { status, json } = await fetchPageData({
-      path,
-      agent,
-      optHeaders,
-    });
-    pageStatus = status;
-    pageJson = json;
+    ({ status, json } = await fetchDataFromBFF({
+      pathname,
+      pageType,
+      service,
+      variant,
+      page,
+      getAgent,
+    }));
   } catch (error: unknown) {
-    const { message, status } = error as FetchError;
+    ({ message, status } = error as FetchError);
 
     sendCustomMetric({
       metricName: NON_200_RESPONSE,
       statusCode: status,
-      pageType: constructUrlParams.pageType,
+      pageType,
       requestUrl: resolvedUrl,
     });
 
@@ -58,13 +49,11 @@ const getPageData = async (
       pathname,
       message,
     });
-    pageStatus = status;
-    errorMessage = message;
   }
 
-  const data = pageJson
-    ? { pageData: pageJson.data, status: pageStatus }
-    : { error: errorMessage, status: pageStatus };
+  const data = json
+    ? { pageData: json.data, status }
+    : { error: message, status };
 
   const toggles = await getToggles(service);
 
