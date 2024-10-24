@@ -1,6 +1,3 @@
-const fetch = require('isomorphic-fetch');
-
-jest.mock('isomorphic-fetch');
 fetch.mockImplementation(() => ({ text: () => '<html amp></html>' }));
 const log = jest.spyOn(global.console, 'log');
 log.mockImplementation(jest.fn);

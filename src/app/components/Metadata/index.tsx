@@ -88,17 +88,30 @@ const MetadataContainer = ({
   } = useTheme();
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
+  const pathsForUkLink = [
+    '/sport/formula1',
+    '/sport/cricket/articles',
+    '/sport/rugby_union/articles',
+    '/sport/rugby_league/articles',
+  ];
+
+  const isUKLink = pathsForUkLink.some(
+    path => pathname && pathname.startsWith(path),
+  );
+
+  const showAlternateUKAmp = !isUKLink && isAmp;
+
   const alternateLinksEnglishSites = [
     {
-      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
+      href: showAlternateUKAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'x-default',
     },
     {
-      href: isAmp ? ampNonUkLink : canonicalNonUkLink,
+      href: showAlternateUKAmp ? ampNonUkLink : canonicalNonUkLink,
       hrefLang: 'en',
     },
     {
-      href: isAmp ? ampUkLink : canonicalUkLink,
+      href: showAlternateUKAmp ? ampUkLink : canonicalUkLink,
       hrefLang: 'en-gb',
     },
   ];
@@ -109,18 +122,8 @@ const MetadataContainer = ({
     },
   ];
 
-  const pathsForUkLink = [
-    '/sport/formula1',
-    '/sport/cricket/articles',
-    '/sport/rugby_union/articles',
-    '/sport/rugby_league/articles',
-  ];
-
-  const isSport = pathsForUkLink.some(
-    path => pathname && pathname.startsWith(path),
-  );
-
-  const canonicalToUse = isUK && isSport ? canonicalUkLink : canonicalNonUkLink;
+  const canonicalToUse =
+    isUK && isUKLink ? canonicalUkLink : canonicalNonUkLink;
 
   const htmlAttributes = {
     dir,

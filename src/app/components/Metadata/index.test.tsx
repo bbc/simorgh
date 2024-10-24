@@ -253,6 +253,47 @@ it(`should render the canonical link's top level domain as .co.uk for UK article
   });
 });
 
+it(`should render canonical alternative links for UK article AMP pages`, async () => {
+  render(
+    <MetadataWithContext
+      service="sport"
+      platform="amp"
+      bbcOrigin={dotCoDotUKOrigin}
+      id="c0000000001o"
+      pageType={ARTICLE_PAGE}
+      pathname="/sport/cricket/articles/c0000000001o"
+      isUK
+      {...newsArticleMetadataProps}
+    />,
+  );
+
+  const expected = [
+    {
+      href: `https://www.bbc.com/sport/cricket/articles/c0000000001o`,
+      hreflang: 'x-default',
+    },
+    {
+      href: `https://www.bbc.com/sport/cricket/articles/c0000000001o`,
+      hreflang: 'en',
+    },
+    {
+      href: `https://www.bbc.co.uk/sport/cricket/articles/c0000000001o`,
+      hreflang: 'en-gb',
+    },
+  ];
+
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > link[rel="alternate"]'),
+    ).map(tag => ({
+      href: tag.getAttribute('href'),
+      hreflang: tag.getAttribute('hreflang'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
+});
+
 it(`should render the canonical link's top level domain as .com for WS article pages`, async () => {
   render(
     <MetadataWithContext
