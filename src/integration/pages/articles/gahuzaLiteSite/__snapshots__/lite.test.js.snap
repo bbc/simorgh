@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
+<section
+  aria-labelledby="LiteSiteCta"
+  class="bbc-19vk4f1"
+  data-e2e="lite-cta"
+  role="region"
+>
+  <strong
+    class="bbc-ory9gk"
+    hidden=""
+    id="LiteSiteCta"
+  >
+    Ahagusaba uburyo (ama mega) buke
+  </strong>
+  <div
+    class="bbc-1pk70g2"
+  >
+    <p
+      class="bbc-2phg37"
+    >
+      Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.
+    </p>
+    <p
+      class="bbc-vit5au"
+      data-e2e="to-main-site"
+    >
+      <a
+        class="bbc-12216v1"
+        data-ignore-lite="true"
+        href="http://localhost:7080/gahuza/articles/cey23zx8wx8o"
+      >
+        <span
+          class="bbc-x7bqmd"
+        >
+          Njana ku rubuga nyamukuru canke aho gusoma gusa
+        </span>
+        <svg
+          aria-hidden="true"
+          class="bbc-p6gd0c"
+          focusable="false"
+          height="12"
+          viewBox="0 0 32 32"
+          width="12"
+        >
+          <path
+            d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+          />
+        </svg>
+      </a>
+    </p>
+    <p
+      class="bbc-vit5au"
+      data-e2e="information-page"
+    >
+      <a
+        class="bbc-1hvke8g"
+        href="https://www.bbc.com/gahuza/articles/cn7y7pvem0vo.lite"
+      >
+        <span
+          class="bbc-1qfjcgd"
+        >
+          Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke
+        </span>
+      </a>
+    </p>
+  </div>
+</section>
+`;

@@ -52,6 +52,20 @@ describe('litePageTransforms', () => {
       expect(modifiedHtml).toEqual(originalHtml);
     });
 
+    it('should not append .lite suffix when the attribute "data-ignore-lite" is present', () => {
+      const originalHtml = `
+        <a href="https://www.bbc.com/news" data-ignore-lite="true">News</a>
+        <a href="https://www.bbc.com/serbian/lat" data-ignore-lite="true">News</a>
+        <a href="https://www.bbc.com/mundo" data-ignore-lite="true">News</a>
+        <a href="https://www.bbcrussian.com/news" data-ignore-lite="true">News</a>
+        <a href="/news" data-ignore-lite="true">News</a>
+      `;
+
+      const modifiedHtml = litePageTransforms(originalHtml);
+
+      expect(modifiedHtml).toEqual(originalHtml);
+    });
+
     it('should not append .lite suffix when no anchor tags are present', () => {
       const originalHtml = '<p>I am a paragraph</p>';
 

@@ -58,6 +58,7 @@ interface MetadataWithContextProps extends MetadataProps {
   id?: string | null;
   pathname: string;
   isUK?: boolean;
+  isLite?: boolean;
 }
 
 const MetadataWithContext = ({
@@ -81,6 +82,7 @@ const MetadataWithContext = ({
   hasAppleItunesAppBanner,
   hasAmpPage,
   isUK = false,
+  isLite = false,
 }: MetadataWithContextProps) => (
   <ServiceContextProvider service={service} pageLang={lang}>
     <RequestContextProvider
@@ -93,6 +95,7 @@ const MetadataWithContext = ({
       service={service}
       statusCode={200}
       isUK={isUK}
+      isLite={isLite}
     >
       <MetadataContainer
         title={title}
@@ -115,6 +118,8 @@ const MetadataWithContext = ({
 
 interface CanonicalNewsInternationalOriginProps {
   hasAmpPage?: boolean;
+  isLite?: boolean;
+  service?: Services;
 }
 
 const CanonicalNewsInternationalOrigin = (
@@ -166,6 +171,18 @@ it('should render the document title', async () => {
     const actual = document.querySelector('head > title')?.innerHTML;
 
     expect(actual).toEqual('Article Headline for SEO - BBC News');
+  });
+});
+
+it('should render the lite page title', async () => {
+  render(<CanonicalNewsInternationalOrigin service="gahuza" isLite />);
+
+  await waitFor(() => {
+    const actual = document.querySelector('head > title')?.innerHTML;
+
+    expect(actual).toEqual(
+      'Article Headline for SEO - Ahagusaba uburyo (ama mega) buke: BBC News Gahuza',
+    );
   });
 });
 

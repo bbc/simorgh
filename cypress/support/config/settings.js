@@ -1518,11 +1518,11 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/gahuza/articles/cey23zx8wx8o'],
-            enabled: false,
+            paths: ['/gahuza/articles/c5y51yxeg53o'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         environments: {

@@ -54,10 +54,11 @@ export default (html: string) => {
     const anchorTags = modifiedHtml.match(/<a[^>]*>/g) || [];
 
     anchorTags.forEach(tag => {
+      const ignoreFlag = tag?.includes('data-ignore-lite="true"');
       const href = tag?.match(/href="([^"]*)"/)?.[1];
       const urlWithLite = addLiteExtension(href);
 
-      if (href && urlWithLite) {
+      if (href && urlWithLite && !ignoreFlag) {
         modifiedHtml = modifiedHtml.replace(
           tag,
           tag.replace(href, urlWithLite),

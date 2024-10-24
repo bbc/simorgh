@@ -27,6 +27,7 @@ import runCanonicalEmbedHtmlTests from './embedHtml.canonical';
 import runAmpEmbedHtmlTests from './embedHtml.amp';
 import runEmbedImagesTests from './embedImages';
 import runAmpIframeTests from './ampIframe.amp';
+import runLiteSiteTests from './liteSite.lite';
 
 const runCommonCrossPlatformTests = service => {
   runA11yTests();
@@ -67,4 +68,5 @@ export {
   runAmpEmbedHtmlTests,
   runEmbedImagesTests,
   runAmpIframeTests,
+  runLiteSiteTests,
 };

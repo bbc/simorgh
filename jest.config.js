@@ -32,7 +32,8 @@ const ampIntegrationTests = {
     platform: 'amp',
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  testMatch: ['**/src/integration/!(utils)/**/*[^.canonical].test.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
+  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*canonical\\.test\\.js$'],
 };
 
 const canonicalIntegrationTests = {
@@ -42,11 +43,28 @@ const canonicalIntegrationTests = {
     platform: 'canonical',
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  testMatch: ['**/src/integration/!(utils)/**/*[^.amp].test.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
+  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*amp\\.test\\.js$'],
+};
+
+const liteIntegrationTests = {
+  displayName: 'Integration Tests - Lite',
+  testEnvironment: './src/integration/integrationTestEnvironment.js',
+  testEnvironmentOptions: {
+    platform: 'lite',
+  },
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
+  testPathIgnorePatterns: ['.*canonical\\.test\\.js$', '.*amp\\.test\\.js$'],
 };
 
 module.exports = {
-  projects: [unitTests, ampIntegrationTests, canonicalIntegrationTests],
+  projects: [
+    unitTests,
+    ampIntegrationTests,
+    canonicalIntegrationTests,
+    liteIntegrationTests,
+  ],
   reporters: [
     'default',
     [

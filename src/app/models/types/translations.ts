@@ -19,6 +19,13 @@ export interface Translations {
   topicsPath?: string;
   relatedTopics?: string;
   navMenuText: string;
+  liteSite?: {
+    onboardingMessage: string;
+    toMainSite: string;
+    informationPage: string;
+    informationPageLink: string;
+    dataSaving: string;
+  };
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
