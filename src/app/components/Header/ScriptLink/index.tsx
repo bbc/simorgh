@@ -59,15 +59,23 @@ const ScriptLink = ({ scriptSwitchId = '' }) => {
   const { service, scriptLink } = useContext(ServiceContext);
   const { isNextJs } = useContext(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
-
+  const isStoryBook = process.env.STORYBOOK;
+  let path;
+  let params;
   // TODO: Next.JS doesn't support `react-router-dom` hooks, so we need to
   // revisit this to support both Express and Next.JS in the future.
   if (!scriptLinkEnabled || isNextJs) return null;
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { path, params }: UseRouteMatcher = useRouteMatch();
-  const { text, variant } = scriptLink || {};
-  if (!variant) return null;
+  if (!isStoryBook) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const match = useRouteMatch();
+    path = match.path;
+    params = match.params;
+  }
 
+  const { text, variant } = scriptLink || {};
+  console.log('hello?123', isStoryBook);
+  if (!variant) return null;
   return (
     <a
       css={styles.link}

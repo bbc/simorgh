@@ -1,3 +1,4 @@
+import serbian from '#app/lib/config/services/serbian';
 import { Services, Variants } from '#app/models/types/global';
 
 type TextVariant = {
@@ -285,6 +286,9 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     locale: 'ru',
     timezone: 'GMT',
     articlePath: '/russian/articles/ck7pz7re3zgo',
+  },
+  serbian: {
+    variant: 'cyr',
   },
   serbianCyr: {
     service: 'serbian',
