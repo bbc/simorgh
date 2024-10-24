@@ -23,6 +23,7 @@ jobs:
       LOG_LEVEL: 'error'
       BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
       LIGHTHOUSE_BUILD: true
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - uses: actions/checkout@v3
