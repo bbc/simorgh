@@ -45,6 +45,7 @@ export const buildATIPageTrackPath = ({
   categoryName,
   campaigns,
   nationsProducer,
+  ampExperimentVariant,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
@@ -214,6 +215,16 @@ export const buildATIPageTrackPath = ({
       value: getATIMarketingString(href, campaignType),
       wrap: false,
     },
+    ...(ampExperimentVariant
+      ? [
+          {
+            key: 'ati',
+            description: 'test',
+            value: `PUB-[]-[]-[topStoriesExperiment:VARIANT(${ampExperimentVariant})]-[]-[]-[]-[]-[]`,
+            wrap: false,
+          },
+        ]
+      : []),
     ...getRSSMarketingString(href, campaignType),
     ...(onOnionTld()
       ? [
@@ -252,6 +263,7 @@ export const buildATIEventTrackUrl = ({
   advertiserID,
   url,
   detailedPlacement,
+  variant,
 }: ATIEventTrackingProps) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
@@ -323,6 +335,7 @@ export const buildATIEventTrackUrl = ({
         advertiserID,
         url,
         detailedPlacement,
+        variant,
       }),
       wrap: false,
       disableEncoding: true,

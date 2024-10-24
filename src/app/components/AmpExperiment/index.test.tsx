@@ -29,8 +29,22 @@ const multipleExperimentConfig = {
   },
 };
 
+const analyticsConfig = {
+  requests: {
+    base: 'somehost.com',
+    clicks: 'somehost.com?somequeryparam=somevalue',
+  },
+  triggers: {
+    trackClicks: {
+      on: 'click',
+      request: 'clicks',
+      selector: 'a',
+    },
+  },
+};
+
 describe('Amp experiment container on Amp pages', () => {
-  it('should render an amp-experiment with the expected config', async () => {
+  it('should render an amp-experiment with the expected experiment config', async () => {
     const { container } = render(
       <AmpExperiment experimentConfig={experimentConfig} />,
     );
@@ -63,6 +77,36 @@ describe('Amp experiment container on Amp pages', () => {
           </script>
         </amp-experiment>
       </div>
+    `);
+  });
+
+  it('should render an amp-analytics with the expected analytics config if present', async () => {
+    const { container } = render(
+      <AmpExperiment
+        experimentConfig={experimentConfig}
+        analyticsConfig={analyticsConfig}
+      />,
+    );
+    expect(container.querySelector('amp-experiment')).toBeInTheDocument();
+    expect(container).toMatchInlineSnapshot(`
+    <div>
+      <amp-experiment>
+        <script
+          type="application/json"
+        >
+          {"someExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
+        </script>
+      </amp-experiment>
+      <amp-analytics
+        type="piano"
+      >
+        <script
+          type="application/json"
+        >
+          {"requests":{"base":"somehost.com","clicks":"somehost.com?somequeryparam=somevalue"},"triggers":{"trackClicks":{"on":"click","request":"clicks","selector":"a"}}}
+        </script>
+      </amp-analytics>
+    </div>
     `);
   });
 

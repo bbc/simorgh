@@ -67,18 +67,21 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import AmpExperiment from '../../components/AmpExperiment';
 import {
   experimentTopStoriesConfig,
+  getExperimentAnalyticsConfig,
   getExperimentTopStories,
   ExperimentTopStories,
 } from './experimentTopStories/helpers';
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service, isAmp, id } = useContext(RequestContext);
+  const { isApp, pageType, service, isAmp, id, env } =
+    useContext(RequestContext);
 
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
+    atiAnalyticsProducerId,
   } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -229,9 +232,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   return (
     <div css={styles.pageWrapper}>
       {shouldEnableExperimentTopStories && (
-        <AmpExperiment experimentConfig={experimentTopStoriesConfig} />
+        <AmpExperiment
+          experimentConfig={experimentTopStoriesConfig}
+          analyticsConfig={getExperimentAnalyticsConfig({
+            env,
+            service,
+            atiAnalyticsProducerId,
+          })}
+        />
       )}
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics
+        atiData={{ ...atiData, ampExperimentVariant: 'topStoriesExperiment' }}
+      />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}

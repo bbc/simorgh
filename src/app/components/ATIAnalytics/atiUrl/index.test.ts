@@ -244,6 +244,7 @@ describe('buildATIEventTrackUrl', () => {
       format: 'format',
       url: 'url',
       detailedPlacement: 'detailedPlacement',
+      variant: 'variant_1',
     });
 
     expect(splitUrl(atiEventTrackUrl)).toEqual([
@@ -255,7 +256,7 @@ describe('buildATIEventTrackUrl', () => {
       're=getBrowserViewPort',
       'hl=getCurrentTime',
       'lng=getDeviceLanguage',
-      'atc=PUB-[campaignID]-[component]-[]-[format]-[pageIdentifier]-[detailedPlacement]-[]-[url]',
+      'atc=PUB-[campaignID]-[component]-[variant_1]-[format]-[pageIdentifier]-[detailedPlacement]-[]-[url]',
       'type=AT',
     ]);
   });
