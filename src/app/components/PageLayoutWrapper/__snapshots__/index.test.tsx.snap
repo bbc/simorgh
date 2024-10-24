@@ -315,6 +315,13 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-18 {
+    height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-18 {
     height: 4rem;
@@ -865,6 +872,13 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   .emotion-140 {
     height: 3.75rem;
     padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-140 {
+    height: 3.75rem;
+    padding: 0 1rem;
   }
 }
 

@@ -300,6 +300,13 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-17 {
+    height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-17 {
     height: 4rem;
@@ -1582,6 +1589,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
+@media (min-width: 25rem) {
+  .emotion-17 {
+    height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-17 {
     height: 4rem;
@@ -2861,6 +2875,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   .emotion-17 {
     height: 3.75rem;
     padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    height: 3.75rem;
+    padding: 0 1rem;
   }
 }
 

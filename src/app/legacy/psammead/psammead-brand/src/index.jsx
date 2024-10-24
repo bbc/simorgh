@@ -10,6 +10,7 @@ import {
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
+  GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -46,6 +47,11 @@ const Banner = styled.div`
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    height: ${60 / 16}rem;
+    padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -103,7 +109,7 @@ const BrandSvg = styled.svg`
   box-sizing: content-box;
   color: ${props => props.theme.palette.BRAND_LOGO};
   fill: currentColor;
-  height: ${20 / 16}rem;
+  height: ${props => (props.isLongBrand ? `${16 / 16}rem` : `${20 / 16}rem`)};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     height: ${24 / 16}rem;
@@ -136,7 +142,13 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
+const StyledBrand = ({
+  linkId,
+  product,
+  serviceLocalisedName = null,
+  svg,
+  isLongBrand,
+}) => (
   <>
     {svg && (
       <>
@@ -152,6 +164,7 @@ const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
           focusable="false"
           aria-hidden="true"
           height="32"
+          isLongBrand={isLongBrand}
         >
           {svg.group}
         </BrandSvg>
