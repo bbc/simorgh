@@ -8,8 +8,8 @@ exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
   role="region"
 >
   <strong
-    aria-hidden="true"
-    class="bbc-m04vo2"
+    class="bbc-ory9gk"
+    hidden=""
     id="LiteSiteCta"
   >
     Ahagusaba uburyo (ama mega) buke
@@ -24,6 +24,7 @@ exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
     </p>
     <p
       class="bbc-vit5au"
+      data-e2e="to-main-site"
     >
       <a
         class="bbc-12216v1"
@@ -51,6 +52,7 @@ exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
     </p>
     <p
       class="bbc-vit5au"
+      data-e2e="information-page"
     >
       <a
         class="bbc-1hvke8g"
