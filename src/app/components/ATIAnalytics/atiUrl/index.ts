@@ -1,4 +1,5 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { format } from 'node:path';
 import {
   getDestination,
   getAppType,
@@ -489,9 +490,9 @@ export const buildReverbPageSectionEventModel = ({
   statsDestination,
   componentName,
   campaignID,
-  // format,
+  format,
   type,
-  // advertiserID,
+  advertiserID,
   url,
 }: ATIEventTrackingProps) => {
   // const eventDetails = {
@@ -513,6 +514,8 @@ export const buildReverbPageSectionEventModel = ({
     item: {
       name: componentName,
       link: url,
+      attribution: advertiserID,
+      type: format,
     },
     group: {
       name: campaignID,
