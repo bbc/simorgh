@@ -65,10 +65,16 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
+import isPortraitVideo from './utils/isPortraitVideo';
+
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    return (
+    return isPortraitVideo(blocks) ? (
+      <div css={styles.mapPortraitVideoPlayer}>
+        <MediaLoader blocks={blocks as MediaBlock[]} />
+      </div>
+    ) : (
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,

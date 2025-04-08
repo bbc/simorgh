@@ -51,6 +51,18 @@ export default {
         padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
+  mapPortraitVideoPlayer: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_3_ONLY]: {
+        padding: `${spacings.DOUBLE}rem 0 0 ${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_ONLY]: {
+        padding: `${spacings.TRIPLE}rem 0 0 ${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem 0 0 0`,
+      },
+    }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {

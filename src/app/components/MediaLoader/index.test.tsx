@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import {
   act,
   render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { TV_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
+  aresMediaPortraitBlocks,
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
@@ -28,6 +30,64 @@ describe('MediaLoader', () => {
 
     (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
     (useState as jest.Mock).mockImplementation(() => [false, () => false]);
+  });
+
+  describe('Portrait Title', () => {
+    it('Renders a title', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer blocks={aresMediaPortraitBlocks as MediaBlock[]} />,
+          {
+            id: 'testId',
+            pageType: TV_PAGE,
+          },
+        );
+      });
+
+      const title = screen.getByRole('strong');
+      expect(title).toBeInTheDocument();
+      expect(title.textContent).toEqual('Watch Moments');
+    });
+
+    it('Does not render a title when the page type is MAP', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer blocks={aresMediaPortraitBlocks as MediaBlock[]} />,
+          {
+            id: 'testId',
+            pageType: MEDIA_ARTICLE_PAGE,
+          },
+        );
+      });
+
+      const title = screen.queryByRole('strong');
+      expect(title).toBe(null);
+    });
+
+    it('Does not render a title when the video orientation is landscape', async () => {
+      await act(async () => {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          id: 'testId',
+        });
+      });
+
+      const title = screen.queryByRole('strong');
+      expect(title).toBe(null);
+    });
+
+    it('Does not render a title when the video is embedded', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded />,
+          {
+            id: 'testId',
+          },
+        );
+      });
+
+      const title = screen.queryByRole('strong');
+      expect(title).toBe(null);
+    });
   });
 
   describe('BUMP Loader', () => {

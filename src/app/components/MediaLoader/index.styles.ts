@@ -1,5 +1,8 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import {
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const commonMarginSpacing = ({ mq, spacings }: Theme) =>
   css({
@@ -27,8 +30,9 @@ export default {
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
   portraitFigure:
-    (isEmbedded = false) =>
+    (isEmbedded = false, pageType: string) =>
     ({ mq }: Theme) => [
+      !isEmbedded && commonMarginSpacing,
       css({
         aspectRatio: '9 / 16',
         display: 'flex',
@@ -48,8 +52,28 @@ export default {
             maxWidth: `${pixelsToRem(190)}rem`,
           },
         }),
+        ...(pageType === MEDIA_ARTICLE_PAGE && {
+          maxWidth: '100%',
+          marginInline: 0,
+          margin: 0,
+          [mq.GROUP_1_ONLY]: {
+            maxWidth: '100%',
+            marginInline: 0,
+            margin: 0,
+          },
+          [mq.GROUP_2_ONLY]: {
+            maxWidth: '100%',
+            marginInline: 0,
+            margin: 0,
+          },
+          [mq.GROUP_3_MIN_WIDTH]: {
+            maxWidth: `${pixelsToRem(315)}rem`,
+          },
+          [mq.GROUP_5_MIN_WIDTH]: {
+            maxWidth: `${pixelsToRem(397)}rem`,
+          },
+        }),
       }),
-      !isEmbedded && commonMarginSpacing,
     ],
 
   audioMediaContainer: ({ palette }: Theme) =>

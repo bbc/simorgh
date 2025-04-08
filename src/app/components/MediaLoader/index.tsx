@@ -263,7 +263,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         css={[
           styles.figure(embedded),
           playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' && styles.portraitFigure(embedded),
+            orientation === 'portrait' && styles.portraitFigure(embedded, pageType),
             orientation === 'landscape' && styles.landscapeFigure,
           ],
         ]}
