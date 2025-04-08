@@ -37,7 +37,7 @@
     "build:storybook": "yarn build && node .storybook/buildFontPreloads && storybook build -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
-    "cypress": "cypress run",
+    "cypress": "cypress run --browser chrome",
     "cypress:onefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false cypress run --spec './cypress/e2e/pages/storyPage/*'",
     "cypress:oneservice": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false CYPRESS_ONLY_SERVICE=mundo cypress run",
     "cypress:oneserviceandonefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false CYPRESS_ONLY_SERVICE=mundo cypress run  --spec './cypress/e2e/pages/storyPage/*'",
