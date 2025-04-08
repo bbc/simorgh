@@ -40,7 +40,6 @@ export const assertLiveMediaComponentClick = ({
       duration: 1000,
     });
 
-    // Click on first item
     cy.get('[data-testid="watch-now-close-button"]').click();
 
     assertATIComponentClickEvent({
