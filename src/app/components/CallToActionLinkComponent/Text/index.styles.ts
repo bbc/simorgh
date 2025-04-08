@@ -4,5 +4,6 @@ export default {
   text: () =>
     css({
       verticalAlign: 'middle',
+      color: 'inherit',
     }),
 };

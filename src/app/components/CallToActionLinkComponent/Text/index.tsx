@@ -8,7 +8,6 @@ import styles from './index.styles';
 
 type TextProps = {
   as?: string;
-  className?: string;
   fontVariant?: FontVariant;
   size?: GelFontSize;
 };

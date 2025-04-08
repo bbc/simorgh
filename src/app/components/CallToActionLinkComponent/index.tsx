@@ -30,7 +30,7 @@ const CallToActionLink = ({
       href={to}
       onClick={onClick}
       {...htmlAttributes}
-      css={alignWithMargin && styles.link}
+      css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >
       {children}
     </a>

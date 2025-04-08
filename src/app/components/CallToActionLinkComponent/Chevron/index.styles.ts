@@ -5,6 +5,8 @@ export default {
   chevron: () =>
     css({
       verticalAlign: 'middle',
+      color: 'inherit',
+      fill: 'currentColor',
     }),
   brevierSize: ({ spacings }: Theme) =>
     css({

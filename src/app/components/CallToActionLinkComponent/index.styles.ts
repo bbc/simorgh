@@ -1,7 +1,26 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 export default {
-  link: () =>
+  link: ({ palette, mq }: Theme) =>
+    css({
+      color: palette.GREY_10,
+      '&:visited': {
+        color: palette.METAL,
+      },
+      '&:focus, &:hover': {
+        color: palette.POSTBOX,
+      },
+      [mq.FORCED_COLOURS]: {
+        fill: 'linkText',
+        '&:visited': {
+          fill: 'visitedText',
+        },
+        '&:active': {
+          fill: 'activeText', // not sure this is required.
+        },
+      },
+    }),
+  alignWithMargin: () =>
     css({
       display: 'inline-block', // positions link against margin. Otherwise it's centered.
     }),
