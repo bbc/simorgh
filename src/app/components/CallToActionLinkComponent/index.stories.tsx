@@ -56,7 +56,7 @@ export const MessageBannerCTA = () => {
       <CallToActionLink.FlexWrapper>
         <CallToActionLink.Text size="pica" fontVariant="sansBold">
           Hello
-          <CallToActionLink.Chevron />
+          <CallToActionLink.Chevron size="pica" />
         </CallToActionLink.Text>
       </CallToActionLink.FlexWrapper>
     </CallToActionLink>
@@ -68,7 +68,7 @@ export const UploaderEmbedCTA = () => {
       <CallToActionLink.FlexWrapper>
         <CallToActionLink.Text size="pica" fontVariant="sansBold">
           Hello
-          <CallToActionLink.Chevron />
+          <CallToActionLink.Chevron size="pica" />
         </CallToActionLink.Text>
       </CallToActionLink.FlexWrapper>
     </CallToActionLink>
@@ -80,7 +80,7 @@ export const CanonicalToLiteSiteCTAWithChevron = () => {
     <CallToActionLink to="https://www.bbc.com/ws/languages" alignWithMargin>
       <CallToActionLink.Text size="brevier" fontVariant="sansBold">
         Hello
-        <CallToActionLink.Chevron />
+        <CallToActionLink.Chevron size="brevier" />
       </CallToActionLink.Text>
     </CallToActionLink>
   );
@@ -91,7 +91,7 @@ export const LiteSiteCTAWithChevron = () => {
       <CallToActionLink.Text size="brevier" fontVariant="sansBold">
         Hello
       </CallToActionLink.Text>
-      <CallToActionLink.Chevron />
+      <CallToActionLink.Chevron size="brevier" />
     </CallToActionLink>
   );
 };
