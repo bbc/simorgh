@@ -15,6 +15,10 @@ export default {
       position: 'relative',
       width: '4.7rem',
 
+      '> div': {
+        paddingBottom: '56.25%',
+      },
+
       [mq.GROUP_2_MIN_WIDTH]: {
         width: '6.8rem',
       },
