@@ -11,6 +11,7 @@ type TextProps = {
   fontVariant?: FontVariant;
   size?: GelFontSize;
   className?: string;
+  overrideBottomBorder?: boolean;
 };
 
 const Text = ({
@@ -19,13 +20,19 @@ const Text = ({
   fontVariant,
   children,
   className,
+  overrideBottomBorder,
 }: PropsWithChildren<TextProps>) => {
   return (
     <TEXT
       as={as}
       size={size}
       fontVariant={fontVariant}
-      css={styles.text}
+      css={[
+        styles.text,
+        overrideBottomBorder
+          ? styles.underlineOnHoverFocus
+          : styles.bottomBorder,
+      ]}
       className={className}
     >
       {children}

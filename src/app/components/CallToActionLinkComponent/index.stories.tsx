@@ -15,10 +15,10 @@ export const Example = () => {
   );
 };
 
-export const ExampleChevronInText = () => {
+export const ExampleChevronInTextAndOverrideBottomBorder = () => {
   return (
     <CallToActionLink to="https://www.bbc.com/ws/languages">
-      <CallToActionLink.Text>
+      <CallToActionLink.Text overrideBottomBorder>
         Hello
         <CallToActionLink.Chevron />
       </CallToActionLink.Text>
@@ -37,11 +37,11 @@ export const ExampleWithFlex = () => {
   );
 };
 
-export const ExampleWithFlexAndChevronInText = () => {
+export const ExampleWithFlexAndChevronInTextAndOverrideBottomBorder = () => {
   return (
     <CallToActionLink to="https://www.bbc.com/ws/languages">
       <CallToActionLink.FlexWrapper>
-        <CallToActionLink.Text>
+        <CallToActionLink.Text overrideBottomBorder>
           Hello
           <CallToActionLink.Chevron />
         </CallToActionLink.Text>
@@ -54,7 +54,11 @@ export const MessageBannerCTA = () => {
   return (
     <CallToActionLink to="https://www.bbc.com/ws/languages">
       <CallToActionLink.FlexWrapper>
-        <CallToActionLink.Text size="pica" fontVariant="sansBold">
+        <CallToActionLink.Text
+          size="pica"
+          fontVariant="sansBold"
+          overrideBottomBorder
+        >
           Hello
           <CallToActionLink.Chevron size="pica" />
         </CallToActionLink.Text>
@@ -66,7 +70,11 @@ export const UploaderEmbedCTA = () => {
   return (
     <CallToActionLink to="https://www.bbc.com/ws/languages">
       <CallToActionLink.FlexWrapper>
-        <CallToActionLink.Text size="pica" fontVariant="sansBold">
+        <CallToActionLink.Text
+          size="pica"
+          fontVariant="sansBold"
+          overrideBottomBorder
+        >
           Hello
           <CallToActionLink.Chevron size="pica" />
         </CallToActionLink.Text>
@@ -80,8 +88,8 @@ export const CanonicalToLiteSiteCTAWithChevron = () => {
     <CallToActionLink to="https://www.bbc.com/ws/languages" alignWithMargin>
       <CallToActionLink.Text size="brevier" fontVariant="sansBold">
         Hello
-        <CallToActionLink.Chevron size="brevier" />
       </CallToActionLink.Text>
+      <CallToActionLink.Chevron size="brevier" />
     </CallToActionLink>
   );
 };
