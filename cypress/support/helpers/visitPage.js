@@ -27,5 +27,6 @@ export default (path, pageType) => {
 
   cy.visit(path, {
     failOnStatusCode,
+    retryOnStatusCodeFailure: true,
   });
 };
