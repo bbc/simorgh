@@ -573,9 +573,6 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
       liteSiteTests.push(assertLiteSiteCTAComponentClick);
       liteSiteTests.push(assertMostReadComponentClick);
       break;
-    case 'index-home':
-      liteSiteTests.push(assertMostReadComponentClick);
-      break;
     default:
       break;
   }

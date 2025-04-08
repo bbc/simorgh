@@ -124,3 +124,14 @@ export const getPathWithSuffix = ({ path, suffix = '' }) => {
 
   return `${pathname}${suffix}${search}`;
 };
+
+export const runIfToggleEnabled = ({ service, toggleName, testContext }) => {
+  cy.getToggles(service);
+
+  cy.fixture(`toggles/${service}.json`).then(toggles => {
+    const { enabled } = toggles[toggleName];
+    if (!enabled) {
+      testContext.skip();
+    }
+  });
+};
