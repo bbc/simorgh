@@ -1,4 +1,3 @@
-import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { assertPageView } from './assertions';
 import {
@@ -555,49 +554,42 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   };
 });
 
-// Most Read & On Demand TV pages do not currently support .lite
-const supportsLite = ({ path, contentType, service }) =>
-  liteEnabledServices.includes(service) &&
-  !path.includes('_tv') &&
-  contentType !== 'list-datadriven';
+const liteTestSuites = canonicalTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+    assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+    assertSocialEmbedComponentView, // Social embeds removed from lite article pages
+  ];
 
-const liteTestSuites = canonicalTestSuites
-  .filter(supportsLite)
-  .map(testSuite => {
-    const excludedLiteTests = [
-      assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
-      assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
-    ];
+  const liteSiteTests = testSuite.tests.filter(
+    test =>
+      // Exclude component click tests, as component click support is not supported on all components yet
+      !test.name.toLowerCase().includes('click') &&
+      !excludedLiteTests.includes(test),
+  );
 
-    const liteSiteTests = testSuite.tests.filter(
-      test =>
-        // Exclude component click tests, as component click support is not supported on all components yet
-        !test.name.toLowerCase().includes('click') &&
-        !excludedLiteTests.includes(test),
-    );
+  switch (testSuite.contentType) {
+    case 'article':
+      liteSiteTests.push(assertLiteSiteCTAComponentClick);
+      liteSiteTests.push(assertMostReadComponentClick);
+      break;
+    case 'index-home':
+      liteSiteTests.push(assertMostReadComponentClick);
+      break;
+    default:
+      break;
+  }
 
-    switch (testSuite.contentType) {
-      case 'article':
-        liteSiteTests.push(assertLiteSiteCTAComponentClick);
-        liteSiteTests.push(assertMostReadComponentClick);
-        break;
-      case 'index-home':
-        liteSiteTests.push(assertMostReadComponentClick);
-        break;
-      default:
-        break;
-    }
-
-    return {
-      ...testSuite,
-      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
-      applicationType: 'lite',
-      useReverb: false,
-      tests: [...liteSiteTests],
-    };
-  });
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    tests: [...liteSiteTests],
+  };
+});
 
 runTestsForPage({
-  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+  testSuites: [...liteTestSuites],
   testIsolation: true,
 });
