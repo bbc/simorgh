@@ -15,8 +15,10 @@ export default {
     css({
       marginRight: `${spacings.FULL}rem`,
       marginBottom: `${spacings.FULL}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: { marginRight: ` ${spacings.DOUBLE}rem` },
-      [mq.GROUP_3_MIN_WIDTH]: { marginBottom: 0 },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginRight: `${spacings.DOUBLE}rem`,
+        marginBottom: 0,
+      },
     }),
 
   bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
