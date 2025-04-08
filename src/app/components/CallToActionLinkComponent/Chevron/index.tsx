@@ -8,6 +8,7 @@ import styles from './index.styles';
 
 type ChevronProps = {
   size?: GelFontSize;
+  className?: string;
 };
 
 const getChevronCss = (size: GelFontSize) => {
@@ -24,13 +25,13 @@ const getChevronCss = (size: GelFontSize) => {
   return chevronCss;
 };
 
-const Chevron = ({ size = 'pica' }: ChevronProps) => {
+const Chevron = ({ size = 'pica', className }: ChevronProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   return isRtl ? (
-    <LeftChevron css={getChevronCss(size)} />
+    <LeftChevron className={className} css={getChevronCss(size)} />
   ) : (
-    <RightChevron css={getChevronCss(size)} />
+    <RightChevron className={className} css={getChevronCss(size)} />
   );
 };
 
