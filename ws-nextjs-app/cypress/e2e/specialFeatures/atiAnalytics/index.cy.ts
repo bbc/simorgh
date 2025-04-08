@@ -37,7 +37,7 @@ const canonicalTestSuites = [
   {
     path: '/mundo/live/c7dkx155e626t',
     runforEnv: ['local', 'test'],
-    service: 'pidgin',
+    service: 'mundo',
     pageIdentifier: 'live_coverage.c7dkx155e626t.page',
     applicationType: 'responsive',
     contentType: 'live-coverage',
