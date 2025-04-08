@@ -563,19 +563,14 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
 
   const liteSiteTests = testSuite.tests.filter(
     test =>
+      test.name !== assertMostReadComponentClick.name &&
       // Exclude component click tests, as component click support is not supported on all components yet
       !test.name.toLowerCase().includes('click') &&
       !excludedLiteTests.includes(test),
   );
 
-  switch (testSuite.contentType) {
-    case 'article':
-      liteSiteTests.push(assertLiteSiteCTAComponentClick);
-      liteSiteTests.push(assertMostReadComponentClick);
-      break;
-    default:
-      break;
-  }
+  // All lite enabled pages should have the LiteSiteCTA component
+  liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
 
   return {
     ...testSuite,
