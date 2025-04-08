@@ -2,19 +2,21 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  bylineContainer: () =>
+  bylineContainer: ({ spacings, mq }: Theme) =>
     css({
       display: 'flex',
       flexWrap: 'wrap',
+      paddingInlineStart: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: { paddingInlineStart: `${spacings.DOUBLE}rem` },
+      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
     }),
 
   bylineSection: ({ spacings, mq }: Theme) =>
     css({
-      paddingInlineStart: `${spacings.FULL}rem`,
-      marginRight: `${spacings.DOUBLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: { paddingInlineStart: `${spacings.DOUBLE}rem` },
-      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
-      div: { padding: 0 },
+      marginRight: `${spacings.FULL}rem`,
+      marginBottom: `${spacings.FULL}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: { marginRight: ` ${spacings.DOUBLE}rem` },
+      [mq.GROUP_3_MIN_WIDTH]: { marginBottom: 0 },
     }),
 
   bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),

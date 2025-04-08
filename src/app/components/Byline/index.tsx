@@ -17,7 +17,6 @@ const Byline = ({
   blocks,
   children = null,
 }: PropsWithChildren<OptimoBylineBlock['model']>) => {
-  console.log('blocks', blocks);
   const { translations, dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
