@@ -590,6 +590,6 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
 });
 
 runTestsForPage({
-  testSuites: [...liteTestSuites],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   testIsolation: true,
 });
