@@ -1,9 +1,7 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { Ref, useContext } from 'react';
 import { jsx } from '@emotion/react';
-
 import SectionLabel from '#psammead/psammead-section-label/src';
-import { ViewRef } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
@@ -18,7 +16,7 @@ const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
   eventTrackingData: EventTrackingBlock,
-  viewRef: ViewRef,
+  viewRef: Ref<HTMLDivElement>,
 ) => {
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -34,7 +32,6 @@ const renderLatestMediaList = (
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        // @ts-expect-error TODO need help fixing this!
         ref={viewRef}
         eventTrackingData={eventTrackingData}
       />
