@@ -10,7 +10,7 @@ const runIfLiteEnabled = service => {
 
   if (!liteEnabledServices.includes(service)) {
     run = it.skip;
-    reason = `- skipped because ${service} does not have lite enabled`;
+    skipReason = `- skipped because ${service} does not have lite enabled`;
   }
 
   return { run, skipReason };
