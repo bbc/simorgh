@@ -42,7 +42,7 @@ export const assertMostReadComponentClick = ({
   path,
   service,
 }) => {
-  it.only('should send a click event for the Most Read component', function test() {
+  it('should send a click event for the Most Read component', function test() {
     runIfToggleEnabled({
       service,
       toggleName: 'mostRead',
