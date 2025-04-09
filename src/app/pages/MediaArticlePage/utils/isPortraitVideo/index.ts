@@ -11,9 +11,11 @@ const ORIENTATION_MAPPING: Record<string, Orientations> = {
   Original: 'landscape',
 };
 
-const isPortraitVideo = (blocks: OptimoBlock[]) => {
+const isPortraitVideo = (videoBlock: OptimoBlock[]) => {
   const { model: aresMedia }: AresMediaBlock =
-    filterForBlockType(blocks, 'aresMedia') ?? {};
+    filterForBlockType(videoBlock, 'aresMedia') ?? {};
+
+  if (!aresMedia) return false; 
 
   const { model: aresMediaMetadata }: AresMediaMetadataBlock =
     filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
