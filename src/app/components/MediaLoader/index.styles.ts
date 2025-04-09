@@ -1,6 +1,8 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
-import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const commonMarginSpacing = ({ mq, spacings }: Theme) =>
   css({
@@ -28,7 +30,7 @@ export default {
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
   portraitFigure:
-    (pageType: string, isEmbedded = false) =>
+    (isEmbedded = false, pageType: string) =>
     ({ mq }: Theme) => [
       !isEmbedded && commonMarginSpacing,
       css({
