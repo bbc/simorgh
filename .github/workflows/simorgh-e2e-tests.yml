@@ -32,17 +32,36 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
-      - name: Run Simorgh E2Es
-        uses: cypress-io/github-action@v6
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v4
         with:
-          browser: chrome
-          build: yarn build
-          start: yarn start
+          path: |
+            node_modules
+            ws-nextjs-app/node_modules
+          key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: ./scripts/installNodeModules.sh
+
+      - name: Build Simorgh - Express App
+        run: yarn build:local
+
+      - name: Start Simorgh Server - Express App
+        run: nohup node build/server.js > /dev/null 2>&1 &
+
+      - name: Build Simorgh - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: yarn build:local
+
+      - name: Start Simorgh Server - Next.JS App
+        working-directory: ./ws-nextjs-app
+        run: PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
+
+      - name: Run Simorgh E2Es
+        run: yarn cypress
 
       - name: Run Simorgh NextJS E2Es
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
-          working-directory: ws-nextjs-app
-          build: yarn build
-          start: yarn start
+        working-directory: ./ws-nextjs-app
+        run: yarn cypress
