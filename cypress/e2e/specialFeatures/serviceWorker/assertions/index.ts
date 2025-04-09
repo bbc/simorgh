@@ -56,7 +56,7 @@ export const serviceWorkerCaching = () => {
       });
     });
 
-    const cacheableItems = ['cwr.js', 'woff2', 'moment-lib', 'frosted_promo'];
+    const cacheableItems = ['woff2', 'moment-lib', 'frosted_promo'];
 
     it(`simorgh cache contains cached responses for cacheable items - ${JSON.stringify(cacheableItems)}`, () => {
       cy.window().then(win => {

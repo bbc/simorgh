@@ -176,7 +176,6 @@ describe('Service Worker', () => {
     describe('when url is not cacheable', () => {
       it.each`
         assetUrl                  | reason
-        ${'cwr.js'}               | ${'url is missing leading /'}
         ${'woff2'}                | ${'url is missing leading .'}
         ${'modern.frosted_promo'} | ${'full static files path is missing'}
         ${'not-cached'}           | ${'url is not in the allow list of cacheable urls'}
@@ -203,7 +202,6 @@ describe('Service Worker', () => {
     describe('when cache contains asset', () => {
       it.each`
         assetUrl
-        ${'/cwr.js'}
         ${'reith.woff2'}
         ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.32caa641.js'}
         ${'/moment-lib.dfdb34b8.js'}
@@ -247,7 +245,6 @@ describe('Service Worker', () => {
 
       it.each`
         assetUrl
-        ${'/cwr.js'}
         ${'reith.woff2'}
         ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.32caa641.js'}
         ${'/moment-lib.dfdb34b8.js'}
@@ -280,7 +277,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.2.4',
-      fileContentHash: 'afc38e4d39120d30482b329e67aa740b',
+      fileContentHash: '8947d810879e555d85b7598c3139a761',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

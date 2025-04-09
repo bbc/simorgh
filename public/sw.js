@@ -48,7 +48,7 @@ const fetchEventHandler = async event => {
       );
     }
   } else if (
-    /((\/cwr\.js$)|(\.woff2$)|(^https:\/\/static\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
+    /((\.woff2$)|(^https:\/\/static\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
       event.request.url,
     ) ||
     cacheableFiles.includes(event.request.url)
