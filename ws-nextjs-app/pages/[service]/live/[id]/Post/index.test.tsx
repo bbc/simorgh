@@ -58,7 +58,7 @@ describe('Post', () => {
       ${'pidgin'}   | ${'2 minutes wey don pass'}
       ${'zhongwen'} | ${'2 分钟前'}
     `(
-      'Shows timestamp as a relative time for articles under 10 hours old.',
+      'Shows timestamp as a relative time for $service articles under 10 hours old.',
       async ({ service, expectedTime }) => {
         jest
           .useFakeTimers()
