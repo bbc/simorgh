@@ -60,7 +60,7 @@ export default {
         fill: 'currentColor',
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
-        marginInlineEnd: `${pixelsToRem(10)}rem`,
+        marginInlineStart: `${pixelsToRem(10)}rem`,
         verticalAlign: 'middle',
       },
       '@media (forced-colors: active)': {
