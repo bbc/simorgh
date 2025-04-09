@@ -234,6 +234,7 @@ export const ArticlePageWithContinueReadingButtonVariation1 = {
       data={articleData}
       service="pidgin"
       continueReadingEnabled
+      liteSiteCTAEnabled
     />
   ),
   parameters: {
@@ -250,6 +251,7 @@ export const ArticlePageWithContinueReadingButtonVariation2 = {
       data={articleData}
       service="mundo"
       continueReadingEnabled
+      liteSiteCTAEnabled
     />
   ),
   parameters: {

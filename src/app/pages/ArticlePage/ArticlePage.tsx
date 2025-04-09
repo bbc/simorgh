@@ -119,7 +119,7 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 
 const ArticlePage = ({
   pageData,
-  continueReadingEnabled = true, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
+  continueReadingEnabled = false, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
 }: {
   pageData: Article;
   continueReadingEnabled?: boolean;
@@ -262,7 +262,7 @@ const ArticlePage = ({
       !isApp,
   );
 
-  const { enabled: showCTA } = useToggle('liteSiteCTA');
+  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
   return (
     <div css={styles.pageWrapper}>
@@ -318,7 +318,7 @@ const ArticlePage = ({
               ...(showContinueReadingButton
                 ? [
                     !showAllContent &&
-                      (showCTA
+                      (liteCTAShows
                         ? styles.contentHiddenWithLiveCTA
                         : styles.contentHiddenNoLiveCTA),
                   ]
@@ -335,7 +335,7 @@ const ArticlePage = ({
                 showAllContent={showAllContent}
                 setShowAllContent={() => setShowAllContent(true)}
                 variation={continueReadingButtonVariation}
-                showCTA={showCTA}
+                liteCTAShows={liteCTAShows}
               />
             )}
           </main>

@@ -13,14 +13,14 @@ type Props = {
   setShowAllContent: () => void;
   variation: 'A' | 'B' | null;
   eventTrackingData?: EventTrackingMetadata;
-  showCTA?: boolean;
+  liteCTAShows?: boolean;
 };
 
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
   variation,
-  showCTA,
+  liteCTAShows,
 }: Props) => {
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'read-more-button',
@@ -56,7 +56,7 @@ const ContinueReadingButton = ({
       const main = document.querySelector('main');
       // Get the 7th or 8th child element of the main element depending on if the liveCTA link is present
       const nthElement =
-        main?.querySelectorAll<HTMLElement>(':scope > *')[showCTA ? 8 : 7];
+        main?.querySelectorAll<HTMLElement>(':scope > *')[liteCTAShows ? 8 : 7];
 
       if (nthElement) {
         nthElement.tabIndex = 0;
