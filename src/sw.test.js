@@ -1,5 +1,5 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable import/no-unresolved */
-/* eslint-disable import/first */
 import fs from 'fs';
 import { join, resolve } from 'path';
 import fetchMock from 'jest-fetch-mock';
@@ -16,7 +16,6 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-/* eslint-disable-next-line no-restricted-globals */
 Object.defineProperty(self, 'location', {
   writable: true,
   value: { assign: jest.fn() },
@@ -26,7 +25,6 @@ describe('Service Worker', () => {
   let fetchEventHandler;
 
   beforeEach(() => {
-    /* eslint-disable-next-line no-restricted-globals */
     global.self.location = {
       pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
       hostname: 'www.bbc.com',
@@ -166,7 +164,6 @@ describe('Service Worker', () => {
       global.caches = {
         open: () => Promise.resolve(serviceWorkerCache),
       };
-      /* eslint-disable-next-line no-restricted-globals */
       global.self.location = {
         pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
         hostname: 'www.bbc.com',
@@ -199,18 +196,29 @@ describe('Service Worker', () => {
       );
     });
 
+    const cacheableAssets = [
+      // Fonts
+      'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff2',
+      'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
+      // Moment-lib - local, test & live
+      'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
+      // Frosted_promo - test & live
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      // PWA Icons - test & live
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
+      // Reverb
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+    ];
+
     describe('when cache contains asset', () => {
-      it.each`
-        assetUrl
-        ${'reith.woff2'}
-        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.32caa641.js'}
-        ${'/moment-lib.dfdb34b8.js'}
-        ${'/moment-lib.js'}
-        ${'http://localhost:7080/moment-lib.js'}
-        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.dfdb34b8.js'}
-      `(
-        `should return a cached response for $assetUrl`,
-        async ({ assetUrl }) => {
+      it.each(cacheableAssets)(
+        `should return a cached response for %s`,
+        async assetUrl => {
           ({ fetchEventHandler } = await import('./service-worker-test'));
 
           const event = {
@@ -243,41 +251,41 @@ describe('Service Worker', () => {
         fetchedCache = {};
       });
 
-      it.each`
-        assetUrl
-        ${'reith.woff2'}
-        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.32caa641.js'}
-        ${'/moment-lib.dfdb34b8.js'}
-      `(`should fetch $assetUrl and cache it`, async ({ assetUrl }) => {
-        ({ fetchEventHandler } = await import('./service-worker-test'));
+      it.each(cacheableAssets)(
+        `should fetch %s and cache it`,
+        async assetUrl => {
+          ({ fetchEventHandler } = await import('./service-worker-test'));
 
-        const event = {
-          request: new Request(assetUrl, {
-            mode: 'same-origin',
-          }),
-          respondWith: jest.fn(),
-        };
+          const event = {
+            request: new Request(assetUrl, {
+              mode: 'same-origin',
+            }),
+            respondWith: jest.fn(),
+          };
 
-        const mockResponse = new Response(assetUrl);
-        fetchMock.mockImplementationOnce(() => mockResponse);
+          const mockResponse = new Response(assetUrl);
+          fetchMock.mockImplementationOnce(() => mockResponse);
 
-        await fetchEventHandler(event);
+          await fetchEventHandler(event);
 
-        expect(event.respondWith).toHaveBeenCalled();
+          expect(event.respondWith).toHaveBeenCalled();
 
-        const [eventResponse] = event.respondWith.mock.calls[0];
-        await Promise.resolve(eventResponse);
+          const [eventResponse] = event.respondWith.mock.calls[0];
+          await Promise.resolve(eventResponse);
 
-        expect(fetchMock).toHaveBeenCalledWith(assetUrl);
-        expect(fetchedCache[event.request]).toStrictEqual(mockResponse.clone());
-      });
+          expect(fetchMock).toHaveBeenCalledWith(assetUrl);
+          expect(fetchedCache[event.request]).toStrictEqual(
+            mockResponse.clone(),
+          );
+        },
+      );
     });
   });
 
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.2.4',
-      fileContentHash: '8947d810879e555d85b7598c3139a761',
+      fileContentHash: '2f4642c4441960016d1508656b7f1322',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

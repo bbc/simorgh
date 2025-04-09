@@ -48,10 +48,10 @@ const fetchEventHandler = async event => {
       );
     }
   } else if (
-    /((\.woff2$)|(^https:\/\/static\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
+    cacheableFiles.includes(event.request.url) ||
+    /((\.woff2$)|(^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
       event.request.url,
-    ) ||
-    cacheableFiles.includes(event.request.url)
+    )
   ) {
     event.respondWith(
       (async () => {
