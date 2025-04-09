@@ -9,7 +9,7 @@ export const customFocusStyle = ({ palette }: Theme) => css`
 `;
 
 export default {
-  continueReadingButtonA: ({ spacings, palette }: Theme) =>
+  continueReadingButtonA: ({ spacings, palette, mq }: Theme) =>
     css({
       cursor: 'pointer',
       fontWeight: 'bold',
@@ -27,7 +27,12 @@ export default {
       '@media (forced-colors: active)': {
         backgroundColor: 'Canvas', // System-defined background color
         color: 'CanvasText', // System-defined text color
-        border: '1px solid CanvasText', // Ensure visibility in high contrast
+        border: `${pixelsToRem(1)}rem solid CanvasText`, // Ensure visibility in high contrast
+      },
+
+      [mq.GROUP_1_MAX_WIDTH]: {
+        margin: `0 ${spacings.FULL}rem -1.5rem ${spacings.FULL}rem`,
+        width: 'calc(100% - 1rem)',
       },
 
       '&:hover, &:focus': {
@@ -66,7 +71,7 @@ export default {
       '@media (forced-colors: active)': {
         backgroundColor: 'Canvas', // System-defined background color
         color: 'CanvasText', // System-defined text color
-        border: '1px solid CanvasText', // Ensure visibility in high contrast
+        border: `${pixelsToRem(1)}rem solid CanvasText`, // Ensure visibility in high contrast
       },
 
       '&:hover, &:focus': {
