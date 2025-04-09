@@ -34,21 +34,22 @@ export default {
         aspectRatio: '9 / 16',
         display: 'flex',
         flexDirection: 'column',
-        ...(!isEmbedded && pageType !== MEDIA_ARTICLE_PAGE && {
-          maxWidth: `${pixelsToRem(185)}rem`,
-          [mq.GROUP_1_ONLY]: {
-            maxWidth: `${pixelsToRem(256)}rem`,
-          },
-          [mq.GROUP_2_ONLY]: {
-            maxWidth: `${pixelsToRem(274)}rem`,
-          },
-          [mq.GROUP_3_ONLY]: {
-            maxWidth: `${pixelsToRem(200)}rem`,
-          },
-          [mq.GROUP_4_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(190)}rem`,
-          },
-        }),
+        ...(!isEmbedded &&
+          pageType !== MEDIA_ARTICLE_PAGE && {
+            maxWidth: `${pixelsToRem(185)}rem`,
+            [mq.GROUP_1_ONLY]: {
+              maxWidth: `${pixelsToRem(256)}rem`,
+            },
+            [mq.GROUP_2_ONLY]: {
+              maxWidth: `${pixelsToRem(274)}rem`,
+            },
+            [mq.GROUP_3_ONLY]: {
+              maxWidth: `${pixelsToRem(200)}rem`,
+            },
+            [mq.GROUP_4_MIN_WIDTH]: {
+              maxWidth: `${pixelsToRem(190)}rem`,
+            },
+          }),
         ...(pageType === MEDIA_ARTICLE_PAGE && {
           maxWidth: '100%',
           marginInline: 0,
