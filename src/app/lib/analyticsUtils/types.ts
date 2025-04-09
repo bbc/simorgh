@@ -11,6 +11,6 @@ export type ATIEventType = typeof VIEW_EVENT | typeof CLICK_EVENT;
 export type EventTrackingProps = ATIEventTrackingProps & EventTrackingMetadata;
 
 export type ViewRef = {
-  ref?: React.Ref<HTMLElement>;
+  ref?: React.Ref<HTMLDivElement>;
   [LITE_ATI_VIEW_TRACKING]?: string;
 };

@@ -32,7 +32,7 @@ const Banner = forwardRef(
       eventTrackingData,
       id = 'message-banner-1',
     }: MessageBannerProps,
-    viewRef: ForwardedRef<HTMLElement>,
+    viewRef: ForwardedRef<HTMLDivElement>,
   ) => {
     const { dir } = useContext(ServiceContext);
     const { mq } = useTheme();
