@@ -178,6 +178,8 @@ export default (props = {}) => {
   return isLite
     ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
     : {
-        ref: viewRef,
+        ref: element => {
+          viewRef(element)();
+        },
       };
 };
