@@ -50,6 +50,7 @@
     "setupDevEnv": "cp envConfig/local.env .env && rm -rf envConfig/secret.env && ./scripts/checkSecretEnvVariables.sh",
     "dependencyFreshness": "node ./scripts/dependencyFreshness",
     "dev": "yarn setupDevEnv && rm -rf build && run-p webpack:dev:client webpack:dev:server",
+    "dev:all": "yarn workspaces foreach --all --parallel --interlaced run dev",
     "esmDependencyCheck": "node ./scripts/esmDependencyCheck.js",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
