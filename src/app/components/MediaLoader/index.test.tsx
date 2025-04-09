@@ -32,7 +32,7 @@ describe('MediaLoader', () => {
     (useState as jest.Mock).mockImplementation(() => [false, () => false]);
   });
 
-  describe('Portrait Title', () => {
+  describe('Portrait title', () => {
     it('Renders a title', async () => {
       await act(async () => {
         render(
