@@ -17,6 +17,13 @@ self.addEventListener('install', event => {
   });
 });
 
+// versioned JS files
+const cacheableFiles = [
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js'
+];
+
+
 const fetchEventHandler = async event => {
   if (
     /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/.test(
@@ -42,9 +49,14 @@ const fetchEventHandler = async event => {
       );
     }
   } else if (
-    /((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
-      event.request.url,
+    (
+      event.request.url.indexOf('https://static.files.bbci.co.uk/') === 0 &&
+      /((\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png$))/.test(
+        event.request.url,
+      )
     )
+    ||
+    cacheableFiles.includes(event.request.url)
   ) {
     event.respondWith(
       (async () => {
