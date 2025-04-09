@@ -117,7 +117,7 @@ export default class AppDocument extends Document<DocProps> {
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
     handleServerLogging(ctx);
-    console.log({ isLite, isApp });
+
     return {
       ...initialProps,
       clientSideEnvVariables,
