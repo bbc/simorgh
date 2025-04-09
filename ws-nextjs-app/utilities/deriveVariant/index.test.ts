@@ -25,7 +25,7 @@ describe('deriveVariant', () => {
     expect(result).toBe('trad');
   });
 
-  it('returns the nullt if the input is null', () => {
+  it('returns null if the input is null', () => {
     const variant = null;
     const result = deriveVariant(variant);
     expect(result).toBe(null);
