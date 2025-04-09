@@ -194,7 +194,6 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
-            // @ts-expect-error TODO need help fixing this!
             ref={viewRef}
             eventTrackingData={eventTrackingData}
           />
@@ -206,7 +205,6 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
               item,
               index,
               eventTrackingData,
-              // @ts-expect-error TODO need help fixing this!
               viewRef,
             }),
           )}

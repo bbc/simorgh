@@ -104,7 +104,6 @@ export default ({
       altText={altText}
       id={id}
       eventTrackingData={eventTrackingData}
-      // @ts-expect-error TODO need help fixing this!
       ref={viewRef}
       showLiveLabel={showLiveLabel}
     />

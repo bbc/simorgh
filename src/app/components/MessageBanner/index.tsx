@@ -121,7 +121,6 @@ const MessageBanner = ({
       link={link}
       image={image}
       eventTrackingData={eventTrackingData}
-      // @ts-expect-error TODO need help fixing this!
       ref={viewRef}
       id={id}
     />

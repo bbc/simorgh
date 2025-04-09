@@ -168,7 +168,7 @@ const getViewRef = (props = {}) => {
 };
 
 /**
- * @returns {({'data-lite-ati-view': string} | {'ref': () => void})}
+ * @returns {}
  */
 
 export default (props = {}) => {
