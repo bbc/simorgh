@@ -14770,7 +14770,7 @@ __metadata:
     undici: "npm:7.5.0"
     url-parse: "npm:1.5.10"
     wait-on: "npm:8.0.3"
-    webpack: "npm:5.98.0"
+    webpack: "npm:5.99.5"
     webpack-bundle-analyzer: "npm:4.10.2"
     webpack-cli: "npm:6.0.1"
     webpack-dev-server: "npm:5.2.1"
@@ -16696,7 +16696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5, webpack@npm:5.98.0":
+"webpack@npm:5":
   version: 5.98.0
   resolution: "webpack@npm:5.98.0"
   dependencies:
@@ -16729,6 +16729,42 @@ __metadata:
   bin:
     webpack: bin/webpack.js
   checksum: 10/eb16a58b3eb02bfb538c7716e28d7f601a03922e975c74007b41ba5926071ae70302d9acae9800fbd7ddd0c66a675b1069fc6ebb88123b87895a52882e2dc06a
+  languageName: node
+  linkType: hard
+
+"webpack@npm:5.99.5":
+  version: 5.99.5
+  resolution: "webpack@npm:5.99.5"
+  dependencies:
+    "@types/eslint-scope": "npm:^3.7.7"
+    "@types/estree": "npm:^1.0.6"
+    "@webassemblyjs/ast": "npm:^1.14.1"
+    "@webassemblyjs/wasm-edit": "npm:^1.14.1"
+    "@webassemblyjs/wasm-parser": "npm:^1.14.1"
+    acorn: "npm:^8.14.0"
+    browserslist: "npm:^4.24.0"
+    chrome-trace-event: "npm:^1.0.2"
+    enhanced-resolve: "npm:^5.17.1"
+    es-module-lexer: "npm:^1.2.1"
+    eslint-scope: "npm:5.1.1"
+    events: "npm:^3.2.0"
+    glob-to-regexp: "npm:^0.4.1"
+    graceful-fs: "npm:^4.2.11"
+    json-parse-even-better-errors: "npm:^2.3.1"
+    loader-runner: "npm:^4.2.0"
+    mime-types: "npm:^2.1.27"
+    neo-async: "npm:^2.6.2"
+    schema-utils: "npm:^4.3.0"
+    tapable: "npm:^2.1.1"
+    terser-webpack-plugin: "npm:^5.3.11"
+    watchpack: "npm:^2.4.1"
+    webpack-sources: "npm:^3.2.3"
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 10/7ed5f931520b42063279605bcce56ac23a6880f3714e47d3ad04199d3f74da9ee0e7e7a693a0bf68543f15af8831edb63a05a251aa1047816f4784334bfe25d4
   languageName: node
   linkType: hard
 
