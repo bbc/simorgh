@@ -186,7 +186,7 @@
     "@types/testing-library__react": "10.2.0",
     "@types/url-parse": "^1.4.8",
     "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "8.27.0",
+    "@typescript-eslint/parser": "8.29.1",
     "amphtml-validator": "1.0.38",
     "babel-jest": "29.7.0",
     "babel-loader": "10.0.0",
