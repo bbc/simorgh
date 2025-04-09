@@ -26,9 +26,10 @@ describe('Post', () => {
 
   describe('Timestamp', () => {
     it.each`
-      service       | expectedTime
-      ${'pidgin'}   | ${'28 April 2023'}
-      ${'zhongwen'} | ${'2023年4月28日'}
+      service        | expectedTime
+      ${'pidgin'}    | ${'28 April 2023'}
+      ${'zhongwen'}  | ${'2023年4月28日'}
+      ${'ukrainian'} | ${'28 квітня 2023'}
     `(
       'Shows timestamp in the expected format for $service for articles over 10 hours old.',
       async ({ service, expectedTime }) => {
@@ -54,9 +55,10 @@ describe('Post', () => {
     );
 
     it.each`
-      service       | expectedTime
-      ${'pidgin'}   | ${'2 minutes wey don pass'}
-      ${'zhongwen'} | ${'2 分钟前'}
+      service        | expectedTime
+      ${'pidgin'}    | ${'2 minutes wey don pass'}
+      ${'zhongwen'}  | ${'2 分钟前'}
+      ${'ukrainian'} | ${'2 хвилин(и) тому'}
     `(
       'Shows timestamp as a relative time for $service articles under 10 hours old.',
       async ({ service, expectedTime }) => {
