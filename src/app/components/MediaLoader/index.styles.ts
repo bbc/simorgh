@@ -28,7 +28,7 @@ export default {
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
   portraitFigure:
-    (isEmbedded = false, pageType: string) =>
+    (pageType: string, isEmbedded = false) =>
     ({ mq }: Theme) => [
       !isEmbedded && commonMarginSpacing,
       css({
