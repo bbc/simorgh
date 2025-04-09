@@ -342,7 +342,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/pidgin',
-    runforEnv: ['local', 'live'],
+    runforEnv: ['live'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.page',
     applicationType: 'responsive',
@@ -361,8 +361,8 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin',
-    runforEnv: ['test'],
+    path: '/pidgin?renderer_env=test',
+    runforEnv: ['local', 'test'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.page',
     applicationType: 'responsive',
@@ -372,6 +372,8 @@ const canonicalTestSuites = [
       assertPageView,
       assertBillboardComponentView,
       assertBillboardComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
     ],
   },
   {
