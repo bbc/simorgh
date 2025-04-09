@@ -70,15 +70,12 @@ import isPortraitVideo from './utils/isPortraitVideo';
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    return isPortraitVideo(blocks) ? (
-      <div css={styles.mapPortraitVideoPlayer}>
-        <MediaLoader blocks={blocks as MediaBlock[]} />
-      </div>
-    ) : (
+    return (
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
           isCpsMap && styles.cafMediaPlayer,
+          isPortraitVideo(blocks) && styles.mapPortraitVideoPlayer,
         ]}
       >
         <MediaLoader blocks={blocks as MediaBlock[]} />

@@ -20,61 +20,61 @@ const commonMarginSpacing = ({ mq, spacings }: Theme) =>
 export default {
   figure:
     (isEmbedded = false) =>
-    ({ spacings }: Theme) =>
-      css({
-        position: 'relative',
-        width: '100%',
-        ...(isEmbedded && { margin: '0' }),
-        ...(!isEmbedded && { margin: `0 0 ${spacings.TRIPLE}rem 0` }),
-      }),
+      ({ spacings }: Theme) =>
+        css({
+          position: 'relative',
+          width: '100%',
+          ...(isEmbedded && { margin: '0' }),
+          ...(!isEmbedded && { margin: `0 0 ${spacings.TRIPLE}rem 0` }),
+        }),
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
   portraitFigure:
-    (isEmbedded = false, pageType: string) =>
-    ({ mq }: Theme) => [
-      !isEmbedded && commonMarginSpacing,
-      css({
-        aspectRatio: '9 / 16',
-        display: 'flex',
-        flexDirection: 'column',
-        ...(!isEmbedded && {
-          maxWidth: `${pixelsToRem(185)}rem`,
-          [mq.GROUP_1_ONLY]: {
-            maxWidth: `${pixelsToRem(256)}rem`,
-          },
-          [mq.GROUP_2_ONLY]: {
-            maxWidth: `${pixelsToRem(274)}rem`,
-          },
-          [mq.GROUP_3_ONLY]: {
-            maxWidth: `${pixelsToRem(200)}rem`,
-          },
-          [mq.GROUP_4_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(190)}rem`,
-          },
-        }),
-        ...(pageType === MEDIA_ARTICLE_PAGE && {
-          maxWidth: '100%',
-          marginInline: 0,
-          margin: 0,
-          [mq.GROUP_1_ONLY]: {
+    (pageType: string, isEmbedded = false) =>
+      ({ mq }: Theme) => [
+        !isEmbedded && commonMarginSpacing,
+        css({
+          aspectRatio: '9 / 16',
+          display: 'flex',
+          flexDirection: 'column',
+          ...(!isEmbedded && {
+            maxWidth: `${pixelsToRem(185)}rem`,
+            [mq.GROUP_1_ONLY]: {
+              maxWidth: `${pixelsToRem(256)}rem`,
+            },
+            [mq.GROUP_2_ONLY]: {
+              maxWidth: `${pixelsToRem(274)}rem`,
+            },
+            [mq.GROUP_3_ONLY]: {
+              maxWidth: `${pixelsToRem(200)}rem`,
+            },
+            [mq.GROUP_4_MIN_WIDTH]: {
+              maxWidth: `${pixelsToRem(190)}rem`,
+            },
+          }),
+          ...(pageType === MEDIA_ARTICLE_PAGE && {
             maxWidth: '100%',
             marginInline: 0,
             margin: 0,
-          },
-          [mq.GROUP_2_ONLY]: {
-            maxWidth: '100%',
-            marginInline: 0,
-            margin: 0,
-          },
-          [mq.GROUP_3_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(315)}rem`,
-          },
-          [mq.GROUP_5_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(397)}rem`,
-          },
+            [mq.GROUP_1_ONLY]: {
+              maxWidth: '100%',
+              marginInline: 0,
+              margin: 0,
+            },
+            [mq.GROUP_2_ONLY]: {
+              maxWidth: '100%',
+              marginInline: 0,
+              margin: 0,
+            },
+            [mq.GROUP_3_MIN_WIDTH]: {
+              maxWidth: `${pixelsToRem(315)}rem`,
+            },
+            [mq.GROUP_5_MIN_WIDTH]: {
+              maxWidth: `${pixelsToRem(397)}rem`,
+            },
+          }),
         }),
-      }),
-    ],
+      ],
 
   audioMediaContainer: ({ palette }: Theme) =>
     css({
@@ -100,21 +100,21 @@ export default {
     spacings,
     palette,
   }: Theme) => [
-    css({
-      display: 'block',
-      ...fontSizes.doublePica,
-      ...fontVariants.sansBold,
-      paddingBottom: `${spacings.DOUBLE}rem`,
-      color: palette.BLACK,
-      [mq.GROUP_2_ONLY]: {
-        paddingBottom: `${spacings.TRIPLE}rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
+      css({
+        display: 'block',
+        ...fontSizes.doublePica,
+        ...fontVariants.sansBold,
         paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-    }),
-    commonMarginSpacing,
-  ],
+        color: palette.BLACK,
+        [mq.GROUP_2_ONLY]: {
+          paddingBottom: `${spacings.TRIPLE}rem`,
+        },
+        [mq.GROUP_3_MIN_WIDTH]: {
+          paddingBottom: `${spacings.DOUBLE}rem`,
+        },
+      }),
+      commonMarginSpacing,
+    ],
 
   captionPortrait: ({ mq }: Theme) =>
     css({
