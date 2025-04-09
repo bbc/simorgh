@@ -5,15 +5,7 @@ import {
 } from '../../../components/react-testing-library-with-providers';
 import ContinueReadingButton from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
-
-const mockClickTrackerSpy = jest.fn(); // Rename to mockClickTrackerSpy
-
-jest.mock('../../../hooks/useClickTrackerHandler', () => {
-  return {
-    __esModule: true,
-    default: jest.fn(() => mockClickTrackerSpy), // Use mockClickTrackerSpy
-  };
-});
+import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
 describe('ContinueReadingButton', () => {
   const mockSetShowAllContent = jest.fn();
@@ -144,6 +136,15 @@ describe('ContinueReadingButton', () => {
     });
 
     describe('Click tracking', () => {
+      let clickTrackerSpy: jest.SpyInstance;
+
+      beforeEach(() => {
+        jest.clearAllMocks(); // Clear any previous mocks
+        clickTrackerSpy = jest
+          .spyOn(clickTracking, 'default')
+          .mockImplementation(() => jest.fn());
+      });
+
       it('should register click tracker if event tracking data provided', () => {
         render(
           <ContinueReadingButton
@@ -153,7 +154,7 @@ describe('ContinueReadingButton', () => {
           />,
         );
 
-        expect(mockClickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
       });
 
       it('should handle a click event when button is clicked', () => {
@@ -165,14 +166,14 @@ describe('ContinueReadingButton', () => {
           />,
         );
 
-        const button = getByTestId('read-more-button');
+        const button = getByTestId('read-more-button') as HTMLElement;
         fireEvent.mouseDown(button);
 
         // Verify that the mockSetShowAllContent function is called
         expect(mockSetShowAllContent).toHaveBeenCalledTimes(1);
 
         // Verify that the click tracker handler is called
-        expect(mockClickTrackerSpy).toHaveBeenCalled();
+        expect(clickTrackerSpy).toHaveBeenCalled();
       });
     });
   });
