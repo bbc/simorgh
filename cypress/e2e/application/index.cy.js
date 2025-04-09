@@ -39,7 +39,7 @@ describe('Application', () => {
               const topicPagePath = getTopicPagePath(currentPath);
               const fullPath = `${envConfig.baseUrl}${topicPagePath}`;
               cy.log(fullPath);
-              cy.visit(fullPath);
+              cy.visit(fullPath, { retryOnStatusCodeFailure: true });
             });
           }
         });
