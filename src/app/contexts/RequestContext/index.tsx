@@ -85,7 +85,7 @@ export const RequestContextProvider = ({
   variant = null,
   isUK = null,
 }: PropsWithChildren<RequestProviderProps>) => {
-  let origin = getOriginContext(bbcOrigin).origin;
+  let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
   if (isNextJs && env === 'local') origin = 'http://localhost:7081';
   const formattedIsUK = isUK ?? false;
