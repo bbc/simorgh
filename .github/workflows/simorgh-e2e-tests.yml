@@ -32,26 +32,19 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
-      - name: Install Node Modules
-        run: ./scripts/installNodeModules.sh
-
-      - name: Build Simorgh - Express App
-        run: yarn build:local
-
-      - name: Start Simorgh Server - Express App
-        run: nohup node build/server.js > /dev/null 2>&1 &
-
-      - name: Build Simorgh - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: yarn build:local
-
-      - name: Start Simorgh Server - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: PORT=7081 nohup node build/standalone/ws-nextjs-app/server.js &
-
       - name: Run Simorgh E2Es
-        run: yarn cypress
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          build: yarn build
+          start: yarn start
+          command: yarn cypress
 
       - name: Run Simorgh NextJS E2Es
-        working-directory: ./ws-nextjs-app
-        run: yarn cypress
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          working-directory: ws-nextjs-app
+          build: yarn build
+          start: yarn start
+          command: yarn cypress
