@@ -25,6 +25,12 @@ describe('deriveVariant', () => {
     expect(result).toBe('trad');
   });
 
+  it('returns null if empty string array is passed', () => {
+    const variantParams = [''];
+    const result = deriveVariant(variantParams);
+    expect(result).toBe(null);
+  });
+
   it('returns null if the input is null', () => {
     const variant = null;
     const result = deriveVariant(variant);
