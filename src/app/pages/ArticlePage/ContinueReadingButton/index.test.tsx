@@ -5,7 +5,15 @@ import {
 } from '../../../components/react-testing-library-with-providers';
 import ContinueReadingButton from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
-import * as clickTracking from '../../../hooks/useClickTrackerHandler';
+
+const mockClickTrackerSpy = jest.fn(); // Rename to mockClickTrackerSpy
+
+jest.mock('../../../hooks/useClickTrackerHandler', () => {
+  return {
+    __esModule: true,
+    default: jest.fn(() => mockClickTrackerSpy), // Use mockClickTrackerSpy
+  };
+});
 
 describe('ContinueReadingButton', () => {
   const mockSetShowAllContent = jest.fn();
@@ -136,10 +144,6 @@ describe('ContinueReadingButton', () => {
     });
 
     describe('Click tracking', () => {
-      const clickTrackerSpy = jest
-        .spyOn(clickTracking, 'default')
-        .mockImplementation();
-
       it('should register click tracker if event tracking data provided', () => {
         render(
           <ContinueReadingButton
@@ -149,12 +153,10 @@ describe('ContinueReadingButton', () => {
           />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+        expect(mockClickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
       });
 
       it('should handle a click event when button is clicked', () => {
-        clickTrackerSpy.mockRestore();
-
         const { getByTestId } = render(
           <ContinueReadingButton
             showAllContent={false}
@@ -164,9 +166,13 @@ describe('ContinueReadingButton', () => {
         );
 
         const button = getByTestId('read-more-button');
-        fireEvent.click(button);
+        fireEvent.mouseDown(button);
 
-        expect(button.onclick).toBeTruthy();
+        // Verify that the mockSetShowAllContent function is called
+        expect(mockSetShowAllContent).toHaveBeenCalledTimes(1);
+
+        // Verify that the click tracker handler is called
+        expect(mockClickTrackerSpy).toHaveBeenCalled();
       });
     });
   });

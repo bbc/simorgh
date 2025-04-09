@@ -119,7 +119,7 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 
 const ArticlePage = ({
   pageData,
-  continueReadingEnabled = false,
+  continueReadingEnabled = true, // change to false when finished developing, we can test on storybook
 }: {
   pageData: Article;
   continueReadingEnabled?: boolean;
@@ -255,7 +255,11 @@ const ArticlePage = ({
   })();
 
   const showContinueReadingButton = Boolean(
-    continueReadingButtonVariation && !isAmp && !isLite && !isApp,
+    continueReadingEnabled &&
+      continueReadingButtonVariation &&
+      !isAmp &&
+      !isLite &&
+      !isApp,
   );
 
   const { enabled: showCTA } = useToggle('liteSiteCTA');
