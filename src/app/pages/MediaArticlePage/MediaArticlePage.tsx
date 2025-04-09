@@ -70,7 +70,7 @@ import isPortraitVideo from './utils/isPortraitVideo';
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    console.log(blocks);
+
     return (
       <div
         css={({ spacings }: Theme) => [
