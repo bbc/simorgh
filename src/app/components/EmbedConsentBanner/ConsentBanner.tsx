@@ -186,7 +186,6 @@ const ConsentBanner = ({
   const viewRef = useViewTracker(getEventTrackingData(provider));
 
   return (
-    // @ts-expect-error TODO need help fixing this!
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
