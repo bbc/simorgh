@@ -82,7 +82,7 @@ const Byline = ({
               <React.Fragment>
                 <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
                 <a
-                  css={[BylineCss.link, BylineCss.authorLink]}
+                  css={[BylineCss.link]}
                   href={authorTopicUrl}
                   className="focusIndicatorReducedWidth"
                 >
@@ -105,7 +105,7 @@ const Byline = ({
               <span role="text">
                 <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
                 <Text
-                  css={[BylineCss.author, BylineCss.authorLink]}
+                  css={[BylineCss.author]}
                   size="bodyCopy"
                   fontVariant="sansBold"
                 >

@@ -26,7 +26,7 @@ const pathOrZeroIndexModelBlocks = (
 };
 
 const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
-  const bylineValues = blocks.map(contribBlock => {
+  const bylineValues = blocks.slice(0, 4).map(contribBlock => {
     const bylineBlocks = contribBlock?.model?.blocks || [];
 
     const authorBlock = bylineBlocks.find(block => block.type === 'name');

@@ -4,10 +4,16 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 export default {
   bylineContainer: ({ spacings, mq }: Theme) =>
     css({
-      display: 'flex',
-      flexWrap: 'wrap',
+      display: 'grid',
       paddingInlineStart: `${spacings.FULL}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: { paddingInlineStart: `${spacings.DOUBLE}rem` },
+      [mq.GROUP_1_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(2, auto)',
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
     }),
 
@@ -153,12 +159,6 @@ export default {
     css({
       width: `${pixelsToRem(80)}rem`,
       height: `${pixelsToRem(80)}rem`,
-    }),
-
-  authorLink: () =>
-    css({
-      paddingTop: '1.375rem',
-      paddingBottom: `${pixelsToRem(4)}rem`,
     }),
 
   twitterLink: () =>
