@@ -13,6 +13,7 @@ import {
 import articleData from '../../../../data/hausa/articles/cw43vy8zdjvo.json';
 import tamilArticle from '../../../../data/tamil/articles/c84m2jl4dpzo.json';
 import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';
+import portugueseArticle from '../../../../data/portuguese/articles/cn7v03e37eko.json';
 import arabicLiveTv from '../../../../data/arabic/cpsAssets/media-49522519.json';
 import withPageWrapper from '../../legacy/containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '../../legacy/containers/PageHandlers/withOptimizelyProvider';
@@ -103,3 +104,8 @@ export const MediaArticlePageWithLiveTv = (
     pageType={MEDIA_ASSET_PAGE}
   />
 );
+
+export const MediaArticlePageWithPortraitVideo = (
+  _: StoryArgs,
+  { isLite }: StoryProps,
+) => <ComponentWithContext data={portugueseArticle} isLite={isLite} />;

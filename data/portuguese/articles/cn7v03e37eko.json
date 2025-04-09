@@ -1,0 +1,1166 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Animal~Entertainment~Las+Vegas~Culture",
+          "contentId": "urn:bbc:optimo:asset:cn7v03e37eko",
+          "contentType": "article-sfv",
+          "language": "pt-br",
+          "ldpThingIds": "14745d1f-885d-4b9f-b28a-24540e7beb15~1c3b60a9-14eb-484b-a750-9f5b1aeaac31~3dec6db8-8441-425e-846e-00ce7c900933~6a73afa3-ea6b-45c1-80bb-49060b99f864",
+          "ldpThingLabels": "Animal~Entertainment~Las+Vegas~Culture",
+          "nationsProducer": null,
+          "pageIdentifier": "portuguese.articles.cn7v03e37eko.page",
+          "pageTitle": "Siegfried e Roy: a trágica história da dupla que unia mágica e tigres em Las Vegas",
+          "timePublished": "2025-03-27T20:16:59.429Z",
+          "timeUpdated": "2025-03-27T20:16:59.429Z"
+        },
+        "id": "urn:bbc:ares::article:cn7v03e37eko",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cn7v03e37eko",
+          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cn7v03e37eko"
+        },
+        "type": "article",
+        "createdBy": "Brasil",
+        "language": "pt-br",
+        "firstPublished": 1743106619429,
+        "lastPublished": 1743106619429,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Animal~Entertainment~Las+Vegas~Culture",
+          "page": "portuguese.articles.cn7v03e37eko.page",
+          "irisKeyword": null,
+          "audience_motivation": "Help me understand",
+          "ldp_ids": "14745d1f-885d-4b9f-b28a-24540e7beb15~1c3b60a9-14eb-484b-a750-9f5b1aeaac31~3dec6db8-8441-425e-846e-00ce7c900933~6a73afa3-ea6b-45c1-80bb-49060b99f864",
+          "contentId": "urn:bbc:optimo:asset:cn7v03e37eko",
+          "producer": "Brasil"
+        },
+        "passport": {
+          "language": "pt-br",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/3dec6db8-8441-425e-846e-00ce7c900933#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2025-03-27T20:16:59.429Z"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2025-03-27T20:16:59.429Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                "thingLabel": "Animais",
+                "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+                "thingType": [
+                  "core:Thing",
+                  "core:Theme",
+                  "tagging:TagConcept"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Animal",
+                  "http://www.wikidata.org/entity/Q729"
+                ],
+                "thingEnglishLabel": "Animal",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                "thingLabel": "Entretenimento",
+                "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                "thingType": [
+                  "tagging:AmbiguousTerm",
+                  "tagging:Genre",
+                  "tagging:TagConcept",
+                  "core:Theme",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Entertainment",
+                  "http://www.wikidata.org/entity/Q173799"
+                ],
+                "thingEnglishLabel": "Entertainment",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/3dec6db8-8441-425e-846e-00ce7c900933#id",
+                "thingLabel": "Las Vegas",
+                "thingUri": "http://www.bbc.co.uk/things/3dec6db8-8441-425e-846e-00ce7c900933#id",
+                "thingId": "3dec6db8-8441-425e-846e-00ce7c900933",
+                "thingType": [
+                  "core:Thing",
+                  "core:Place",
+                  "tagging:TagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/5506956/"
+                ],
+                "thingEnglishLabel": "Las Vegas",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "thingLabel": "Cultura",
+                "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                "thingType": [
+                  "tagging:TagConcept",
+                  "core:Theme",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q11042",
+                  "http://dbpedia.org/resource/Culture"
+                ],
+                "thingEnglishLabel": "Culture",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Animais",
+              "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+              "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+              "thingType": [
+                "core:Thing",
+                "core:Theme",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Animal",
+                "http://www.wikidata.org/entity/Q729"
+              ],
+              "topicName": "Animais",
+              "topicId": "cvjp2jwg58zt",
+              "curationList": [
+                {
+                  "curationId": "b567dc1d-7c63-4c78-96d0-0c92cddb8d03",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Animal",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Animal"
+            },
+            {
+              "thingLabel": "Entretenimento",
+              "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+              "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+              "thingType": [
+                "tagging:AmbiguousTerm",
+                "tagging:Genre",
+                "tagging:TagConcept",
+                "core:Theme",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Entertainment",
+                "http://www.wikidata.org/entity/Q173799"
+              ],
+              "topicName": "Entretenimento",
+              "topicId": "cg7267ny40jt",
+              "curationList": [
+                {
+                  "curationId": "27747a91-e8d0-403f-8561-c3acc2357cbd",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Entertainment",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Entertainment"
+            },
+            {
+              "thingLabel": "Las Vegas",
+              "thingUri": "http://www.bbc.co.uk/things/3dec6db8-8441-425e-846e-00ce7c900933#id",
+              "thingId": "3dec6db8-8441-425e-846e-00ce7c900933",
+              "thingType": [
+                "core:Thing",
+                "core:Place",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/5506956/"
+              ],
+              "thingEnglishLabel": "Las Vegas",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Las Vegas"
+            },
+            {
+              "thingLabel": "Cultura",
+              "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+              "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Theme",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q11042",
+                "http://dbpedia.org/resource/Culture"
+              ],
+              "topicName": "Cultura",
+              "topicId": "ckdxnd620g8t",
+              "curationList": [
+                {
+                  "curationId": "e8020d97-3d33-48d7-86bc-1efae7ea5f74",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Culture",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Culture"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "Entretenimento",
+            "topicId": "cg7267ny40jt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "27747a91-e8d0-403f-8561-c3acc2357cbd",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:AmbiguousTerm",
+              "tagging:Genre",
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/cg7267ny40jt"
+          },
+          {
+            "topicName": "Cultura",
+            "topicId": "ckdxnd620g8t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "e8020d97-3d33-48d7-86bc-1efae7ea5f74",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Theme"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/ckdxnd620g8t"
+          },
+          {
+            "topicName": "Animais",
+            "topicId": "cvjp2jwg58zt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "b567dc1d-7c63-4c78-96d0-0c92cddb8d03",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:TagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/cvjp2jwg58zt"
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 1,
+          "wordCount": 104
+        },
+        "isTransliterated": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "14af99dc",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8db768fa",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f59588dc",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                            "blocks": [
+                              {
+                                "id": "90efbb10",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "9eea8935",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0l0sm0w",
+                "blocks": [
+                  {
+                    "id": "98c1e121",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ea99a292",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1319fe5b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "",
+                                  "blocks": [
+                                    {
+                                      "id": "28293769",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "326c14fc",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "b6ceabfb",
+                          "blockId": "urn:bbc:ares::clip:p0l0sm0w",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0l0sm0w",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                            "synopses": {
+                              "short": "Numa noite, o mágico Roy Horn foi abocanhado por um dos animais que participavam do show",
+                              "long": "Por quase 40 anos, os mágicos Roy Horn e Siegfried Fischbacher impressionaram o público em Las Vegas com seus truques que envolviam leões e tigres brancos.\n\nMas, em 2003, o espetáculo no cassino Mirage chegou a um fim dramático quando Roy foi atacado por um tigre chamado Mantacore. Como resultado do ataque, ele ficou parcialmente paralisado.\n\nO treinador de animais Chris Lawrence estava nos bastidores na hora e correu para salvar Roy. Ele relembra momento aterrorizante neste vídeo.\n\n\"Logo que agarrei Mantacore, ele abocanhou o pescoço de Roy\", lembra Lawrence.",
+                              "medium": "Dupla de mágicos fazia apresentações com os animais em um cassino da \"cidade do pecado\" nos EUA."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0l0sm10",
+                                "types": [
+                                  "Portrait"
+                                ],
+                                "duration": 88,
+                                "durationISO8601": "PT1M28S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1743098855000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": [
+                                "default"
+                              ]
+                            },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "2f1e5be5",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e025a1b0",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 252,
+                                  "height": 449,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0l0zkm2.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "8c161e88",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "c3a73c3e",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "66796d1b",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Dupla de mágicos fazia apresentações com os animais em um cassino da \"cidade do pecado\" nos EUA.",
+                                              "blocks": [
+                                                {
+                                                  "id": "fdcc81d2",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Dupla de mágicos fazia apresentações com os animais em um cassino da \"cidade do pecado\" nos EUA.",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              2,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "f77eca59",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "469ad074",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "50e831e0",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                            "blocks": [
+                              {
+                                "id": "066dfc6f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "3752aef0",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1743106619429,
+                "lastPublished": 1743106619429
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "13785818",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "e59b09bd",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Por quase 40 anos, os mágicos Roy Horn e Siegfried Fischbacher impressionaram o público em Las Vegas com seus truques que envolviam leões e tigres brancos.",
+                      "blocks": [
+                        {
+                          "id": "1ee32999",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Por quase 40 anos, os mágicos Roy Horn e Siegfried Fischbacher impressionaram o público em Las Vegas com seus truques que envolviam leões e tigres brancos.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "6f7e068d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Mas, em 2003, o espetáculo no cassino Mirage chegou a um fim dramático quando Roy foi atacado por um tigre chamado Mantacore. Como resultado do ataque, ele ficou parcialmente paralisado.",
+                      "blocks": [
+                        {
+                          "id": "d1959c9f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Mas, em 2003, o espetáculo no cassino Mirage chegou a um fim dramático quando Roy foi atacado por um tigre chamado Mantacore. Como resultado do ataque, ele ficou parcialmente paralisado.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "cb32820e",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "O treinador de animais Chris Lawrence estava nos bastidores na hora e correu para salvar Roy. Ele relembra momento aterrorizante neste vídeo.",
+                      "blocks": [
+                        {
+                          "id": "1eb09bb2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "O treinador de animais Chris Lawrence estava nos bastidores na hora e correu para salvar Roy. Ele relembra momento aterrorizante neste vídeo.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "6e368504",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "\"Logo que agarrei Mantacore, ele abocanhou o pescoço de Roy\", lembra Lawrence.",
+                      "blocks": [
+                        {
+                          "id": "e5962e20",
+                          "type": "fragment",
+                          "model": {
+                            "text": "\"Logo que agarrei Mantacore, ele abocanhou o pescoço de Roy\", lembra Lawrence.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      4
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Siegfried e Roy: a trágica história da dupla que unia mágica e tigres em Las Vegas",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 449,
+                  "locator": "186d/live/17066800-0bb4-11f0-ac9f-c37d6fd89579.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Dupla de mágicos fazia apresentações com os animais em um cassino da 'cidade do pecado' nos EUA",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Dupla de mágicos fazia apresentações com os animais em um cassino da 'cidade do pecado' nos EUA",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Brasil",
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0l0sm0w",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0l0sm0w",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0l0sm0w",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "A trágica história da dupla que unia mágica e tigres em Las Vegas",
+                            "synopses": {
+                              "short": "Numa noite, o mágico Roy Horn foi abocanhado por um dos animais que participavam do show",
+                              "long": "Por quase 40 anos, os mágicos Roy Horn e Siegfried Fischbacher impressionaram o público em Las Vegas com seus truques que envolviam leões e tigres brancos.\n\nMas, em 2003, o espetáculo no cassino Mirage chegou a um fim dramático quando Roy foi atacado por um tigre chamado Mantacore. Como resultado do ataque, ele ficou parcialmente paralisado.\n\nO treinador de animais Chris Lawrence estava nos bastidores na hora e correu para salvar Roy. Ele relembra momento aterrorizante neste vídeo.\n\n\"Logo que agarrei Mantacore, ele abocanhou o pescoço de Roy\", lembra Lawrence.",
+                              "medium": "Dupla de mágicos fazia apresentações com os animais em um cassino da \"cidade do pecado\" nos EUA."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0l0sm10",
+                                "types": [
+                                  "Portrait"
+                                ],
+                                "duration": 88,
+                                "durationISO8601": "PT1M28S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1743098855000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": [
+                                "default"
+                              ]
+                            },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 252,
+                                  "height": 449,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0l0zkm2.jpg",
+                                  "originCode": "mpv"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Dupla de mágicos fazia apresentações com os animais em um cassino da \"cidade do pecado\" nos EUA.",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Dupla de mágicos fazia apresentações com os animais em um cassino da \"cidade do pecado\" nos EUA.",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT5M53S",
+          "isLive": false,
+          "title": "O 'plantador de árvores' que criou floresta no meio do entulho em São Paulo",
+          "firstPublished": "2025-04-07T18:02:43.847Z",
+          "lastPublished": "2025-04-07T18:02:43.847Z",
+          "link": "https://www.bbc.com/portuguese/articles/c24q11e9m9qo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bbe4/live/5f077d50-13da-11f0-ba12-8d27eb561761.jpg.webp",
+          "description": "Em meio ao concreto da Zona Leste de São Paulo, um morador fez surgir uma floresta em uma área onde havia apenas entulho e lixo, no que acabou se tornando o maior parte linear da cidade: o Parque Tiquatira",
+          "imageAlt": "Hélio",
+          "id": "c24q11e9m9qo"
+        },
+        {
+          "type": "video",
+          "duration": "PT17M33S",
+          "isLive": false,
+          "title": "Como as grandes guerras começam - e será que corremos risco em 2025?",
+          "firstPublished": "2025-04-04T08:14:22.132Z",
+          "lastPublished": "2025-04-04T08:14:22.132Z",
+          "link": "https://www.bbc.com/portuguese/articles/cy8q9qn63vdo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c8e1/live/10e76a00-112c-11f0-ac9f-c37d6fd89579.jpg.webp",
+          "description": "Neste vídeo, a repórter Julia Braun conversa com historiadores para mostrar os elementos-chave por trás da Primeira e da Segunda Guerras Mundiais. ",
+          "imageAlt": "Repórter em primeiro plano, com imagem de soldados ao fundo",
+          "id": "cy8q9qn63vdo"
+        },
+        {
+          "type": "video",
+          "duration": "PT10M23S",
+          "isLive": false,
+          "title": "Como Japão foi de país do futuro para preso ao passado",
+          "firstPublished": "2025-04-02T22:27:49.292Z",
+          "lastPublished": "2025-04-02T22:27:49.292Z",
+          "link": "https://www.bbc.com/portuguese/articles/cvgp4npnekeo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a7f9/live/9fa75f00-1011-11f0-b234-07dc7691c360.jpg.webp",
+          "description": "Japão tem a fama de ter sido o berço de várias inovações tecnológicas.",
+          "imageAlt": "Vídeo",
+          "id": "cvgp4npnekeo"
+        },
+        {
+          "type": "video",
+          "duration": "PT7M32S",
+          "isLive": false,
+          "title": "'Adolescência': o estudo britânico que alerta sobre 'meninos em crise' e vulneráveis à radicalização online",
+          "firstPublished": "2025-03-31T10:47:39.748Z",
+          "lastPublished": "2025-04-01T17:12:11.491Z",
+          "link": "https://www.bbc.com/portuguese/articles/cj68264jj1go",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c55d/live/1cd3ac00-0e1d-11f0-ba12-8d27eb561761.jpg.webp",
+          "description": "A série 'Adolescência', da Netflix, bate recordes de audiência e levanta debates globais ao mostrar a trajetória de um jovem de 13 anos acusado de esfaquear e matar uma colega de escola.",
+          "imageAlt": "Série Adolescência",
+          "id": "cj68264jj1go"
+        }
+      ]
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

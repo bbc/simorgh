@@ -54,6 +54,14 @@ export const Portrait = () => (
   />
 );
 
+export const PortraitOnMapPage = () => (
+  <Component
+    service="pidgin"
+    pageType="mediaArticle"
+    blocks={aresMediaPortraitBlocks as MediaBlock[]}
+  />
+);
+
 export const LegacyMediaLoader = () => (
   <Component
     service="pidgin"
