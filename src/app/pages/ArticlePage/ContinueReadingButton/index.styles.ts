@@ -46,7 +46,7 @@ export default {
         display: 'none',
       },
     }),
-  continueReadingButtonB: ({ spacings, palette }: Theme) =>
+  continueReadingButtonB: ({ spacings, palette, mq }: Theme) =>
     css({
       cursor: 'pointer',
       fontWeight: 'bold',
@@ -72,6 +72,11 @@ export default {
         backgroundColor: 'Canvas', // System-defined background color
         color: 'CanvasText', // System-defined text color
         border: `${pixelsToRem(1)}rem solid CanvasText`, // Ensure visibility in high contrast
+      },
+
+      [mq.GROUP_1_MAX_WIDTH]: {
+        margin: `0 ${spacings.FULL}rem -1.5rem ${spacings.FULL}rem`,
+        width: 'calc(100% - 1rem)',
       },
 
       '&:hover, &:focus': {
