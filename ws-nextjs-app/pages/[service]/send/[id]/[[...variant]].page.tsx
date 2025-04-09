@@ -5,7 +5,7 @@ import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import isLitePath from '#app/routes/utils/isLitePath';
 import isAppPath from '#app/routes/utils/isAppPath';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from 'simorgh/src/server/utilities/extractHeaders/extractHeaders';
+import extractHeaders from '../../../../../src/server/utilities/extractHeaders/extractHeaders';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
