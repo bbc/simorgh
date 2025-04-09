@@ -31,7 +31,7 @@ describe('deriveVariant', () => {
     expect(result).toBe(null);
   });
 
-  it('returns the null if the input is undefined', () => {
+  it('returns null if the input is undefined', () => {
     const variant = undefined;
     const result = deriveVariant(variant);
     expect(result).toBe(null);
