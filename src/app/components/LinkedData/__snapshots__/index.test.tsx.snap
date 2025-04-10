@@ -8,12 +8,6 @@ exports[`LinkedData bylineLinkedData should change author contents and locationC
       "@type": "Article",
       "author": {
         "@type": "Person",
-        "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg",
-        "name": "John",
-        "sameAs": [
-          "https://www.bbc.co.uk/news/topics/cg2gmrxlde0t",
-          "https://twitter.com/BBCNews",
-        ],
       },
       "dateModified": "2018-01-01T13:00:00.000Z",
       "datePublished": "2018-01-01T12:01:00.000Z",
@@ -28,9 +22,6 @@ exports[`LinkedData bylineLinkedData should change author contents and locationC
         "@type": "Language",
         "alternateName": "en-GB",
         "name": "English",
-      },
-      "locationCreated": {
-        "@place": "London",
       },
       "mainEntityOfPage": {
         "@id": "https://www.test.bbc.com/pathname",

@@ -56,6 +56,7 @@ const Byline = ({
         css={BylineCss.bylineSection}
         role="region"
         aria-labelledby="article-byline"
+        key={authorName}
       >
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformationTranslated}
@@ -182,7 +183,9 @@ const Byline = ({
 
   return (
     <>
-      <span css={BylineCss.bylineContainer}>{contributors}</span>
+      {contributors[0] && (
+        <span css={BylineCss.bylineContainer}>{contributors}</span>
+      )}
       {children && <span css={BylineCss.timestampLineBreak}>{children}</span>}
     </>
   );

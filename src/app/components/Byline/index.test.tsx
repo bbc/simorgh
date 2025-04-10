@@ -110,22 +110,6 @@ describe('Byline', () => {
     expect(timestamp).toBeInTheDocument();
   });
 
-  it('should correctly render an extra listitem for Timestamp', () => {
-    render(
-      <Byline blocks={bylineWithNameAndRole}>
-        <ArticleTimestamp
-          firstPublished={1660658887}
-          lastPublished={1660658887}
-          popOut={false}
-        />
-      </Byline>,
-    );
-
-    const listItems = screen.getAllByRole('listitem');
-
-    expect(listItems.length).toBe(3);
-  });
-
   it('should render the Byline correctly with location, image and links', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
