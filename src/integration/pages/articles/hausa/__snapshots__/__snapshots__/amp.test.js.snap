@@ -324,15 +324,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
     {
       "@type": "NewsArticle",
       "author": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
-          "width": 1024,
-        },
-        "name": "BBC News Hausa",
-        "noBylinesPolicy": "https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise",
+        "@type": "Person",
       },
       "dateModified": "2019-07-12T13:07:09.639Z",
       "datePublished": "2019-07-12T13:07:09.639Z",

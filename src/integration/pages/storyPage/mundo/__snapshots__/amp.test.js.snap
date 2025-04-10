@@ -402,6 +402,11 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "alternateName": "es",
         "name": "Spanish",
       },
+      "locationCreated": {
+        "@place": [
+          "",
+        ],
+      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
         "@type": "WebPage",

@@ -369,15 +369,7 @@ exports[`AMP Photo Gallery Page SEO Linked data should match text 1`] = `
     {
       "@type": "Article",
       "author": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
-          "width": 1024,
-        },
-        "name": "BBC News ไทย",
-        "noBylinesPolicy": "https://www.bbc.com/thai/institutional-49281839#authorexpertise",
+        "@type": "Person",
       },
       "dateModified": "2019-10-06T05:14:53.000Z",
       "datePublished": "2019-10-06T05:14:53.000Z",

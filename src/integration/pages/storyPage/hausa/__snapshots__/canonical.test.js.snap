@@ -333,6 +333,11 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "alternateName": "ha",
         "name": "Hausa",
       },
+      "locationCreated": {
+        "@place": [
+          "",
+        ],
+      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/hausa/labarai-23246985",
         "@type": "WebPage",

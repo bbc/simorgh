@@ -435,15 +435,7 @@ exports[`AMP Media Article Page SEO Linked data should match text 1`] = `
         },
       ],
       "author": {
-        "@type": "NewsMediaOrganization",
-        "logo": {
-          "@type": "ImageObject",
-          "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-          "width": 1024,
-        },
-        "name": "BBC News Pidgin",
-        "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+        "@type": "Person",
       },
       "dateModified": "2023-01-20T09:43:06.574Z",
       "datePublished": "2023-01-20T09:43:06.574Z",
@@ -531,7 +523,7 @@ exports[`AMP Media Article Page SEO Twitter title 1`] = `"Nigeria 2023 elections
 
 exports[`AMP Media Article Page Timestamp should match text and date 1`] = `
 {
-  "date": "2023-01-20",
-  "text": "20 January 2023",
+  "date": "2023-01-17",
+  "text": "17th January 2023",
 }
 `;
