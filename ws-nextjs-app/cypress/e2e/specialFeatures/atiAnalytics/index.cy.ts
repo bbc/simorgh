@@ -5,13 +5,14 @@ import {
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
 } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/navigation';
+import { assertLiteSiteCTAComponentClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteCta';
 
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
 const canonicalTestSuites = [
   {
     path: '/burmese/live/ckg19998pldt',
-    runforEnv: ['live'],
+    runforEnv: ['local', 'live'],
     service: 'burmese',
     pageIdentifier: 'live_coverage.ckg19998pldt.page',
     applicationType: 'responsive',
@@ -47,6 +48,8 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
       // Exclude component click tests, as component click support is not supported on all components yet
       !test.name.toLowerCase().includes('click'),
   );
+
+  liteSiteTests.push(assertLiteSiteCTAComponentClick);
 
   return {
     ...testSuite,

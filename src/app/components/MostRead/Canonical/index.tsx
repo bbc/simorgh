@@ -57,7 +57,6 @@ const MostRead = ({
               dir={direction}
               key={id}
               columnLayout={columnLayout}
-              // @ts-expect-error TODO need help fixing this!
               ref={viewRef}
             >
               <MostReadRank

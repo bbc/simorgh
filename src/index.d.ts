@@ -1,8 +1,10 @@
 declare module '*.md';
 
+declare module 'intersection-observer';
+
 declare namespace React.JSX {
   interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
-    ref?: ForwardedRef<HTMLDivElement> | null;
+    ref?: Ref<HTMLDivElement> | null;
     placeholder?: string;
     'amp-access'?: string;
     'amp-access-hide'?: string;

@@ -117,14 +117,12 @@ const TopStoriesSection = ({
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
-          // @ts-expect-error TODO need help fixing this!
           ref={viewRef}
           eventTrackingData={eventTrackingData}
         />
       ) : (
         <PromoList css={styles.promoList}>
           {content.map((item, index) =>
-            // @ts-expect-error TODO need help fixing this!
             renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
           )}
         </PromoList>

@@ -1,21 +1,15 @@
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { useContext } from 'react';
-import { ATIEventType, EventTrackingProps } from '../types';
-
-type ExtractTrackingProps = {
-  props: EventTrackingProps;
-  eventType: ATIEventType;
-};
+import { EventTrackingData, EventTrackingProps } from '../types';
 
 export default ({
-  props,
+  eventTrackingData,
   eventType,
-}: ExtractTrackingProps): EventTrackingProps => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+}: EventTrackingProps): EventTrackingData => {
   const eventTrackingContext = useContext(EventTrackingContext);
 
   const {
-    componentName,
+    componentName = '',
     url,
     advertiserID,
     format,
@@ -23,7 +17,7 @@ export default ({
     optimizely,
     optimizelyMetricNameOverride,
     preventNavigation,
-  } = props;
+  } = eventTrackingData || {};
 
   const {
     pageIdentifier,
@@ -33,7 +27,8 @@ export default ({
     producerName,
   } = eventTrackingContext;
 
-  const campaignID = props?.campaignID || eventTrackingContext?.campaignID;
+  const campaignID =
+    eventTrackingData?.campaignID || eventTrackingContext?.campaignID;
 
   return {
     pageIdentifier,

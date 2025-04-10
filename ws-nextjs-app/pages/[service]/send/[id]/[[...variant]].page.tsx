@@ -4,8 +4,9 @@ import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import isLitePath from '#app/routes/utils/isLitePath';
 import isAppPath from '#app/routes/utils/isAppPath';
-import getPageData from '../../../../utilities/pageRequests/getPageData';
+import deriveVariant from '#nextjs/utilities/deriveVariant';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
 
@@ -22,9 +23,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const {
     id,
     service,
-    variant,
+    variant: variantFromUrl,
     renderer_env: rendererEnv,
   } = context.query as PageDataParams;
+
+  const variant = deriveVariant(variantFromUrl);
 
   const { data, toggles } = await getPageData({
     id,
@@ -59,7 +62,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: status ?? 500,
       toggles,
-      variant: variant?.[0] || null,
+      variant,
       timeOnServer: Date.now(), // TODO: check if needed?
       ...extractHeaders(reqHeaders),
     },

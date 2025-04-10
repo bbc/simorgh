@@ -93,7 +93,6 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
-            // @ts-expect-error TODO need help fixing this!
             ref={viewRef}
             eventTrackingData={eventTrackingData}
           />
@@ -101,7 +100,6 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
           {content.map((item, index) =>
-            // @ts-expect-error TODO need help fixing this!
             renderLatestMediaList(item, index, eventTrackingData, viewRef),
           )}
         </PromoList>
