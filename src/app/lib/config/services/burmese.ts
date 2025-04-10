@@ -81,11 +81,11 @@ export const service: DefaultServiceConfig = {
         onboardingMessage: `ဒေတာကုန်ကျမှုလျှော့ချနိုင်ရန်အတွက် ယခုဝက်ဘ်ဆိုက်မှ စာမျက်နှာများကို ရုပ်ပုံမပါ စာသားဖြင့်သာတင်ဆက်ပေးထားပါသည်။ ရုပ်ပုံ ဗီဒီယိုများနှင့် ကြည့်လိုလျှင် မူလစာမျက်နှာတွင်ကြည့်နိုင်ပါသည်။`,
         toMainSite: 'ပင်မဝက်ဘ်ဆိုက်သို့သွားရန်။',
         informationPage:
-          'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဤဝက်ဘ်ဆိုက်အကြောင်းထပ်မံသိလိုလျှင် (In English)',
+          'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဤဝက်ဘ်ဆိုက်အကြောင်းထပ်မံသိလိုလျှင်',
         informationPageLink:
           'https://www.bbc.com/burmese/articles/cwy69wyx71go',
         dataSaving: 'ဒေတာကုန်ကျမှုသက်သာစေသည့် ဝက်ဘ်စာမျက်နှာ',
-        articleDataSavingLinkText: 'စာသား သက်သက်ဖတ်ရန်',
+        articleDataSavingLinkText: 'ဒေတာကုန်ကျမှုသက်သာအောင် စာသားသက်သက်ဖတ်ရန်',
       },
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
@@ -365,6 +365,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ပင်မစာမျက်နှာ',
         url: '/burmese',
+      },
+      {
+        title: 'မြန်မာငလျင်',
+        url: '/burmese/topics/c793wppj0r1t',
       },
       {
         title: 'မြန်မာ့ရေးရာ',

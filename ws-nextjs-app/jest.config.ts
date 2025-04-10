@@ -11,6 +11,10 @@ const canonicalIntegrationTests = {
   testEnvironmentOptions: {
     platform: 'canonical',
   },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
+  },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [
@@ -29,6 +33,10 @@ const ampIntegrationTests = {
   testEnvironment: './integration/IntegrationTestEnvironment.ts',
   testEnvironmentOptions: {
     platform: 'amp',
+  },
+  modulePaths: ['../'],
+  moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptionsPaths),
   },
   setupFilesAfterEnv: ['./setupTests.ts'],
   transform: {

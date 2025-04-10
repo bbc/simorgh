@@ -1,5 +1,6 @@
-export default url => {
-  const getSize = `curl -s '${url}' | gzip | wc -c`;
+export default (url, isCompressed) => {
+  const getSize = `curl -s '${url}' ${isCompressed ? '' : '| gzip'} | wc -c`;
+
   return cy
     .exec(getSize)
     .then(({ stderr }) => {
