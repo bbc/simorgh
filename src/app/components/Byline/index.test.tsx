@@ -130,7 +130,7 @@ describe('Byline', () => {
     expectation         | info                | text
     ${'Author'}         | ${'Author'}         | ${'Author,'}
     ${'Role'}           | ${'Role'}           | ${'Role,'}
-    ${'Twitter'}        | ${'Twitter'}        | ${'Twitter,'}
+    ${'X'}              | ${'X'}              | ${'X,'}
     ${'Reporting from'} | ${'Reporting from'} | ${'Reporting from'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(

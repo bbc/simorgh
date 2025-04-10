@@ -127,9 +127,7 @@ const Byline = ({
                 aria-labelledby="byline-twitter-link"
               >
                 <span role="text" id="byline-twitter-link">
-                  <VisuallyHiddenText lang="en-GB">
-                    {`Twitter, `}
-                  </VisuallyHiddenText>
+                  <VisuallyHiddenText lang="en-GB">{`X, `}</VisuallyHiddenText>
                   <Text
                     className="byline__link-text"
                     css={BylineCss.twitterText}
