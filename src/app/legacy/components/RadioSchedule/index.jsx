@@ -79,7 +79,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
       dir={dir}
       {...schedulesGridProps}
       role="list"
-      ref={viewRef}
+      {...viewRef}
     >
       {schedule.map(({ id, ...program }) => (
         <StyledFlexGrid

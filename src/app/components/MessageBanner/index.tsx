@@ -32,7 +32,7 @@ const Banner = forwardRef(
       eventTrackingData,
       id = 'message-banner-1',
     }: MessageBannerProps,
-    viewRef: ForwardedRef<HTMLDivElement>,
+    viewRef: ForwardedRef<HTMLElement>,
   ) => {
     const { dir } = useContext(ServiceContext);
     const { mq } = useTheme();
@@ -57,7 +57,7 @@ const Banner = forwardRef(
         aria-labelledby={id}
         data-testid={id}
       >
-        <div ref={viewRef} css={styles.card}>
+        <div {...viewRef} css={styles.card}>
           <div css={styles.textWrap}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
               {heading}
@@ -121,6 +121,7 @@ const MessageBanner = ({
       link={link}
       image={image}
       eventTrackingData={eventTrackingData}
+      // @ts-expect-error TODO need help fixing this!
       ref={viewRef}
       id={id}
     />

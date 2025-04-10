@@ -38,7 +38,7 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        clickTrackerHandler={clickTrackerHandler}
+        {...clickTrackerHandler}
         viewRef={viewRef}
       >
         {title}

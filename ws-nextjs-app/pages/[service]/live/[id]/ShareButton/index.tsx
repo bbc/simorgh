@@ -70,7 +70,8 @@ const ShareButton = ({
   };
 
   return (
-    <div ref={viewRef}>
+    // @ts-expect-error TODO need help fixing this!
+    <div {...viewRef} data-e2e="share">
       <button
         type="button"
         ref={focusRef}

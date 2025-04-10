@@ -1,4 +1,4 @@
-import { LITE_ATI_VIEW_TRACKING } from '#app/hooks/useViewTracker';
+import { LITE_ATI_VIEW_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import viewTracking from '.';
 
 jest.useFakeTimers();
@@ -31,5 +31,29 @@ describe('View tracking script', () => {
     expect(
       window.processClientDeviceAndSendLite as jest.Mock,
     ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
+  });
+
+  it('should not call processClientDeviceAndSendLite() more than once for the same url', () => {
+    const anchorElement = document.createElement('a');
+    anchorElement.setAttribute(
+      LITE_ATI_VIEW_TRACKING,
+      'https://logws1363.ati-host.net/?',
+    );
+    const mockElement = { isIntersecting: true, target: anchorElement };
+
+    jest
+      .spyOn(document, 'querySelectorAll')
+      .mockReturnValueOnce([
+        mockElement,
+        mockElement,
+      ] as unknown as NodeListOf<Element>);
+
+    viewTracking();
+    document.dispatchEvent(new Event('triggerMockObserver'));
+    jest.runAllTimers();
+
+    expect(
+      window.processClientDeviceAndSendLite as jest.Mock,
+    ).toHaveBeenCalledTimes(1);
   });
 });

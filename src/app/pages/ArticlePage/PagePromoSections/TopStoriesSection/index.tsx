@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx, useTheme } from '@emotion/react';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -117,12 +117,14 @@ const TopStoriesSection = ({
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
+          // @ts-expect-error TODO need help fixing this!
           ref={viewRef}
           eventTrackingData={eventTrackingData}
         />
       ) : (
         <PromoList css={styles.promoList}>
           {content.map((item, index) =>
+            // @ts-expect-error TODO need help fixing this!
             renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
           )}
         </PromoList>

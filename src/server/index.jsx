@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
@@ -283,7 +284,9 @@ server.get(
           url,
           variant,
         });
-      } catch ({ message }) {
+      } catch (error) {
+        const { message } = error;
+
         status = 500;
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -292,6 +295,7 @@ server.get(
           requestUrl: url,
         });
 
+        console.error(error);
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,
           message,

@@ -10,7 +10,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import useViewTracker, { useLiteViewTracker } from '#hooks/useViewTracker';
+import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const eventTrackingData = {
@@ -41,7 +41,7 @@ const RelatedTopics = ({
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
-  const liteViewTrack = useLiteViewTracker(eventTrackingData);
+
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
   const topicsPath = pathOr('topics', ['topicsPath'], translations);
 
@@ -85,8 +85,7 @@ const RelatedTopics = ({
               name={topics[0].topicName}
               link={getTopicPageUrl(topics[0].topicId)}
               onClick={clickTrackerHandler}
-              ref={viewRef}
-              liteViewTracker={liteViewTrack}
+              {...viewRef}
               key={topics[0].topicId}
             />
           ) : (
@@ -95,8 +94,7 @@ const RelatedTopics = ({
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
                 onClick={clickTrackerHandler}
-                ref={viewRef}
-                liteViewTracker={liteViewTrack}
+                {...viewRef}
                 key={topicId}
               />
             ))

@@ -6,6 +6,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import constructATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
 import {
   AllTheProviders,
   render,
@@ -16,9 +17,7 @@ import {
 import * as serviceContextModule from '../../contexts/ServiceContext';
 
 import pidginData from './fixtureData/tori-51745682.json';
-import useClickTrackerHandler, {
-  useConstructLiteSiteATIEventTrackUrl,
-} from '.';
+import useClickTrackerHandler from '.';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
@@ -610,7 +609,7 @@ describe('Lite Site - Click tracking', () => {
   it('Returns a valid ati tracking url given the input props', () => {
     const { result } = renderHook(
       () =>
-        useConstructLiteSiteATIEventTrackUrl({
+        constructATIUrl({
           props: {
             ...defaultProps,
             campaignID: 'custom-campaign',

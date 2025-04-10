@@ -1,4 +1,3 @@
-import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { assertPageView } from './assertions';
 import {
@@ -68,6 +67,11 @@ import {
   assertTopStoriesComponentClick,
   assertTopStoriesComponentView,
 } from './assertions/topStories';
+import {
+  assertSocialEmbedComponentClick,
+  assertSocialEmbedComponentView,
+} from './assertions/socialEmbed';
+import { getPathWithSuffix } from './helpers';
 
 const canonicalTestSuites = [
   {
@@ -371,6 +375,30 @@ const canonicalTestSuites = [
     ],
   },
   {
+    path: '/pidgin/articles/ce9wk6glg4lo?renderer_env=live',
+    runforEnv: ['local', 'test'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertSocialEmbedComponentView,
+      assertSocialEmbedComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
     path: '/pidgin/articles/cyv3zm4y428o',
     runforEnv: ['live'],
     service: 'pidgin',
@@ -519,44 +547,35 @@ const supportsAmp = ({ contentType }) =>
 const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
     ...testSuite,
-    path: `${testSuite.path}.amp`,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     useReverb: false,
     applicationType: 'amp',
     tests: [assertPageView],
   };
 });
 
-// Most Read & On Demand TV pages do not currently support .lite
-const supportsLite = ({ path, contentType, service }) =>
-  liteEnabledServices.includes(service) &&
-  !path.includes('_tv') &&
-  contentType !== 'list-datadriven';
+const liteTestSuites = canonicalTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+    assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+    assertSocialEmbedComponentView, // Social embeds removed from lite article pages
+  ];
 
-const liteTestSuites = canonicalTestSuites
-  .filter(supportsLite)
-  .map(testSuite => {
-    const liteSiteTests = [assertPageView];
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
 
-    switch (testSuite.contentType) {
-      case 'article':
-        liteSiteTests.push(assertLiteSiteCTAComponentClick);
-        liteSiteTests.push(assertRelatedTopicsComponentView);
-        break;
-      case 'index-home':
-        liteSiteTests.push(assertMostReadComponentClick);
-        break;
-      default:
-        break;
-    }
+  // All lite enabled pages should have the LiteSiteCTA component
+  liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
 
-    return {
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      applicationType: 'lite',
-      useReverb: false,
-      tests: [...liteSiteTests],
-    };
-  });
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    tests: [...liteSiteTests],
+  };
+});
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],

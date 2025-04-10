@@ -13,7 +13,6 @@ import last from 'ramda/src/last';
 import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-
 import useViewTracker from '#hooks/useViewTracker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -195,6 +194,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
+            // @ts-expect-error TODO need help fixing this!
             ref={viewRef}
             eventTrackingData={eventTrackingData}
           />
@@ -206,6 +206,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
               item,
               index,
               eventTrackingData,
+              // @ts-expect-error TODO need help fixing this!
               viewRef,
             }),
           )}

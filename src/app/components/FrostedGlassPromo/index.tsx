@@ -54,7 +54,7 @@ const FrostedGlassPromo = ({
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
 
-  const clickTracker = useClickTrackerHandler({
+  const { onClick: clickTracker } = useClickTrackerHandler({
     ...(eventTrackingData || {}),
     url: relativeUrl,
   });

@@ -16,7 +16,7 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
     const src = item.imageUrl.replace('{width}', '240');
 
     return (
-      <div ref={viewRef} css={styles.promoWrapper}>
+      <div {...viewRef} css={styles.promoWrapper}>
         <Promo
           to={item.link}
           ariaLabelledBy={ariaLabelledBy}

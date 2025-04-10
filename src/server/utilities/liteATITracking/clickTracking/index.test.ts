@@ -1,4 +1,4 @@
-import { LITE_ATI_TRACKING } from '#app/hooks/useClickTrackerHandler';
+import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import clickTracking from '.';
 
 const createAnchor = ({
@@ -13,7 +13,7 @@ const createAnchor = ({
   const anchorElement = document.createElement('a');
   anchorElement.href = href;
   if (isLite) {
-    anchorElement.setAttribute(LITE_ATI_TRACKING, atiUrl);
+    anchorElement.setAttribute(LITE_ATI_CLICK_TRACKING, atiUrl);
   }
   document.body.appendChild(anchorElement);
   return anchorElement;

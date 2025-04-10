@@ -1,29 +1,48 @@
+import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 import { assertATIComponentClickEvent } from '.';
 
 const { LITE_SITE_CTA } = COMPONENTS;
+
+const runIfLiteEnabled = service => {
+  let run = it;
+  let skipReason = '';
+
+  if (!liteEnabledServices.includes(service)) {
+    run = it.skip;
+    skipReason = `- skipped because ${service} does not have lite enabled`;
+  }
+
+  return { run, skipReason };
+};
 
 // eslint-disable-next-line import/prefer-default-export
 export const assertLiteSiteCTAComponentClick = ({
   pageIdentifier,
   contentType,
   path,
+  service,
 }) => {
-  it('should send a click event for the Lite Site CTA component', () => {
-    interceptATIAnalyticsBeacons();
-    cy.visit(path);
+  const { run, skipReason } = runIfLiteEnabled(service);
 
-    cy.get('[data-e2e="to-main-site"]').scrollIntoView({
-      duration: 1000,
-    });
+  run(
+    `should send a click event for the Lite Site CTA component ${skipReason}`,
+    () => {
+      interceptATIAnalyticsBeacons();
+      cy.visit(path);
 
-    // Click on first item
-    cy.get('[data-e2e="to-main-site"]').find('a').first().click();
+      cy.get('[data-e2e="to-main-site"]').scrollIntoView({
+        duration: 1000,
+      });
 
-    assertATIComponentClickEvent({
-      component: LITE_SITE_CTA,
-      pageIdentifier,
-      contentType,
-    });
-  });
+      // Click on first item
+      cy.get('[data-e2e="to-main-site"]').find('a').first().click();
+
+      assertATIComponentClickEvent({
+        component: LITE_SITE_CTA,
+        pageIdentifier,
+        contentType,
+      });
+    },
+  );
 };

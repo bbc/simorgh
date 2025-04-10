@@ -17,7 +17,7 @@ type RelatedContentItemProps = {
   eventTrackingData?: EventTrackingBlock;
 };
 
-const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
+const RelatedContentItem = forwardRef<HTMLElement, RelatedContentItemProps>(
   ({ item, ariaLabelledBy, eventTrackingData = null }, viewRef) => {
     if (!item || isEmpty(item)) return null;
 
@@ -157,7 +157,7 @@ const RelatedContentItem = forwardRef<HTMLDivElement, RelatedContentItemProps>(
     return (
       <div
         css={[styles.wrapper, headlineFirst && styles.promoFullWidth]}
-        ref={viewRef}
+        {...viewRef}
       >
         <Promo
           to={assetUri}

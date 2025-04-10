@@ -87,7 +87,7 @@ const PromoListComponent = ({
         return (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
-            ref={viewRef}
+            {...viewRef}
             border={false}
           >
             <FrostedGlassPromo
@@ -124,7 +124,7 @@ const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
   const viewRef = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <div ref={viewRef}>
+    <div {...viewRef}>
       <FrostedGlassPromo
         item={promo}
         dir={dir}

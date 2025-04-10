@@ -47,7 +47,8 @@ const LiveHeaderMedia = ({
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'live-header-media',
   };
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
 
   let warningLevel = WARNING_LEVELS.NO_WARNING;
@@ -108,7 +109,7 @@ const LiveHeaderMedia = ({
   };
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    clickTrackerHandler(e);
+    if (clickTrackerHandler) clickTrackerHandler(e);
     clickToggleMedia();
   };
 
@@ -141,7 +142,8 @@ const LiveHeaderMedia = ({
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} ref={viewRef}>
+      {/* @ts-expect-error TODO need help fixing this! */}
+      <div css={styles.componentContainer} {...viewRef}>
         <button
           type="button"
           onClick={e => handleClick(e)}

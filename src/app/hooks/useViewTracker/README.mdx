@@ -6,14 +6,14 @@ import { Meta, Markdown } from '@storybook/blocks';
 
 The `useViewTracker` hook handles:
 
-* Tracking when an element is in view
-* Sending the event to ATI
-* Sending the event to Optimizely (If applicable)
+- Tracking when an element is in view
+- Sending the event to ATI
+- Sending the event to Optimizely (If applicable)
 
 A view event is triggered when:
 
-* 50% of the element is in the viewport for more than 1 second
-* Only once per element per page view
+- 50% of the element is in the viewport for more than 1 second
+- Only once per element per page view
 
 `useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event. When a view event is triggered then the hook will send the event data to ATI.
 
@@ -22,8 +22,9 @@ A view event is triggered when:
 A view event is also fired to Optimizely using the same mechanism, but only if the underlying props contain an optimizely object. This method was chosen due to the fact that we don't currently use Optimizely in all of our page types, and the usage of this hook can be found on some page types which don't have Optimizely, so if we imported the optimizely object directly in this hook, we would pollute those page type bundles with the 100KB+ of the Optimizely SDK library.
 
 ### Props
+
 <Markdown>
-{`
+  {`
 | Argument          | Type    | Required | Example                                                                                                                                                                                                                                                                                                                                                                   |
 | ----------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | campaignID        | string  | no       | Provide this to override the \`campaignID\` provided by the \`EventTrackingContext\` component. This is useful for specific campaigns where you want to use a custom campaign ID                                                                                                                                                                                              |
@@ -57,7 +58,7 @@ const Promo = () => {
   });
 
   return (
-    <div ref={ref}>
+    <div {...ref}>
       <a href="promo-link">Promoted content</a>
     </div>
   );
@@ -92,7 +93,7 @@ const TopStories = () => {
   ];
 
   const TopStory = forwardRef(({ link, title }, ref) => (
-    <li ref={ref}>
+    <li {...ref}>
       <a href={link}>{title}</a>
     </li>
   ));
@@ -100,7 +101,7 @@ const TopStories = () => {
   return (
     <ol>
       {topStories.map(({ title, link }) => (
-        <TopStory ref={ref} title={title} link={link} />
+        <TopStory {...ref} title={title} link={link} />
       ))}
     </ol>
   );
@@ -137,7 +138,7 @@ const Recommendations = () => {
     });
 
     return (
-      <li ref={ref}>
+      <li {...ref}>
         <a href={link}>{title}</a>
       </li>
     );
@@ -185,7 +186,7 @@ const Promo = () => {
   });
 
   return (
-    <div ref={ref}>
+    <div {...ref}>
       <a href="promo-link">Promoted content</a>
     </div>
   );

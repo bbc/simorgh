@@ -132,7 +132,7 @@ export const DropdownLi = ({
     .toLowerCase()}`;
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    <StyledDropdownLi role="listitem" ref={viewRef}>
+    <StyledDropdownLi role="listitem" {...viewRef}>
       <StyledDropdownLink
         script={script}
         service={service}

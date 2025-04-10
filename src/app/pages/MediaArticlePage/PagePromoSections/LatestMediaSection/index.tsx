@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { Ref, useContext } from 'react';
 import { jsx } from '@emotion/react';
-
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
@@ -94,6 +93,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
+            // @ts-expect-error TODO need help fixing this!
             ref={viewRef}
             eventTrackingData={eventTrackingData}
           />
@@ -101,6 +101,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
           {content.map((item, index) =>
+            // @ts-expect-error TODO need help fixing this!
             renderLatestMediaList(item, index, eventTrackingData, viewRef),
           )}
         </PromoList>

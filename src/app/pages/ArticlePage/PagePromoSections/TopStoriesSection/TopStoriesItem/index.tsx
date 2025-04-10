@@ -102,7 +102,7 @@ const TopStoriesItem = forwardRef(
     const titleHasContent = titleTag === 'h3';
 
     return (
-      <div css={styles.topStoriesWrapper} ref={viewRef}>
+      <div css={styles.topStoriesWrapper} {...viewRef}>
         <Promo
           to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}

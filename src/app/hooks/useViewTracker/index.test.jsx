@@ -138,7 +138,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const { observe } = getObserverInstance(element);
 
@@ -154,7 +154,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -183,7 +183,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       try {
         getObserverInstance(element);
@@ -243,7 +243,7 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -284,7 +284,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -335,8 +335,8 @@ describe('useViewTracker', () => {
       const elementA = document.createElement('div');
       const elementB = document.createElement('div');
 
-      await result.current(elementA);
-      await result.current(elementB);
+      await result.current.ref(elementA);
+      await result.current.ref(elementB);
 
       const observerInstanceA = getObserverInstance(elementA);
       const observerInstanceB = getObserverInstance(elementB);
@@ -370,7 +370,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -410,8 +410,8 @@ describe('useViewTracker', () => {
       const elementA = document.createElement('div');
       const elementB = document.createElement('div');
 
-      await resultA.current(elementA);
-      await resultB.current(elementB);
+      await resultA.current.ref(elementA);
+      await resultB.current.ref(elementB);
 
       const observerInstanceA = getObserverInstance(elementA);
       const observerInstanceB = getObserverInstance(elementB);
@@ -446,7 +446,7 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
       const { disconnect } = observerInstance;
@@ -474,7 +474,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
       const { disconnect } = observerInstance;
@@ -503,7 +503,7 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -545,7 +545,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -602,7 +602,7 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -653,7 +653,7 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -695,7 +695,7 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
 
@@ -735,7 +735,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       expect(result.error).toBeUndefined();
       expect(typeof global.IntersectionObserver).toEqual('function');
@@ -753,7 +753,7 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       expect(result.error).toBeUndefined();
       expect(global.fetch).not.toHaveBeenCalled();
@@ -773,7 +773,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       expect(result.error).toBeUndefined();
       expect(global.fetch).not.toHaveBeenCalled();
@@ -792,7 +792,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       expect(result.error).toBeUndefined();
       expect(global.fetch).not.toHaveBeenCalled();
@@ -810,7 +810,7 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      await result.current(element);
+      await result.current.ref(element);
 
       expect(result.error).toBeUndefined();
       expect(global.fetch).not.toHaveBeenCalled();
@@ -832,7 +832,7 @@ describe('useViewTracker', () => {
 
       const element = null;
 
-      await result.current(element);
+      await result.current.ref(element);
 
       expect(result.error).toBeUndefined();
       expect(global.IntersectionObserver).not.toHaveBeenCalled();

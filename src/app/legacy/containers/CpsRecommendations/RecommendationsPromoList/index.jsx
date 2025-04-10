@@ -26,7 +26,7 @@ const RecommendationsPromoListItem = forwardRef(
     return (
       <Grid
         item
-        ref={elementRefCallback}
+        {...elementRefCallback}
         columns={{
           group0: 1,
           group1: 1,
@@ -70,7 +70,7 @@ const RecommendationsPromoList = ({ promoItems }) => {
       {promoItems.map((item, index) => (
         <RecommendationsPromoListItem
           key={item.id}
-          ref={blockViewEventTracker}
+          {...blockViewEventTracker}
           index={index}
           item={item}
           optimizely={optimizely}
