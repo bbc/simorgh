@@ -150,6 +150,8 @@ const ArticlePage = ({
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -262,8 +264,6 @@ const ArticlePage = ({
       !isApp,
   );
 
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
-
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -316,12 +316,7 @@ const ArticlePage = ({
             css={[
               styles.mainContent,
               ...(showContinueReadingButton
-                ? [
-                    !showAllContent &&
-                      (liteCTAShows
-                        ? styles.contentHiddenWithLiveCTA
-                        : styles.contentHiddenNoLiveCTA),
-                  ]
+                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
                 : []),
             ]}
             role="main"
