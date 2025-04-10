@@ -13,7 +13,7 @@ import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const useClickTrackerHandler = (props = {}) => {
+const useClickTrackerHandler = (eventTrackingData = {}) => {
   const {
     pageIdentifier,
     producerId,
@@ -29,7 +29,7 @@ const useClickTrackerHandler = (props = {}) => {
     preventNavigation,
     optimizely,
     optimizelyMetricNameOverride,
-  } = extractATITrackingProps({ props, eventType: CLICK_EVENT });
+  } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -137,11 +137,11 @@ const useClickTrackerHandler = (props = {}) => {
   );
 };
 
-export const useATIClickTrackerHandler = (props = {}) => {
+export const useATIClickTrackerHandler = (eventTrackingData = {}) => {
   const { isLite } = useContext(RequestContext);
-  const clickHandler = useClickTrackerHandler(props);
+  const clickHandler = useClickTrackerHandler(eventTrackingData);
   const liteATIUrl = constructLiteSiteATIEventTrackUrl({
-    eventTrackingMetadata: props,
+    eventTrackingData,
     eventType: CLICK_EVENT,
   });
 

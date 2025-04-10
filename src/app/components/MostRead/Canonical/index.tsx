@@ -23,7 +23,7 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size,
   data,
-  eventTrackingData = { componentName: 'most-read' },
+  eventTrackingData,
 }: MostReadProps) => {
   const {
     service,

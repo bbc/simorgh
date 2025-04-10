@@ -603,26 +603,26 @@ describe('useClickTrackerHandler', () => {
       expect(global.fetch).not.toHaveBeenCalled();
     });
   });
-});
 
-describe('Lite Site - Click tracking', () => {
-  it('Returns a valid ati tracking url given the input props', () => {
-    const { result } = renderHook(
-      () =>
-        constructATIUrl({
-          eventTrackingMetadata: {
-            ...defaultProps,
-            campaignID: 'custom-campaign',
-          },
-          eventType: 'click',
-        }),
-      {
-        wrapper,
-      },
-    );
+  describe('Lite Site - Click tracking', () => {
+    it('Returns a valid ati tracking url given the input props', () => {
+      const { result } = renderHook(
+        () =>
+          constructATIUrl({
+            eventTrackingData: {
+              ...defaultProps,
+              campaignID: 'custom-campaign',
+            },
+            eventType: 'click',
+          }),
+        {
+          wrapper,
+        },
+      );
 
-    expect(result.current).toContain(
-      'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
-    );
+      expect(result.current).toContain(
+        'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
+      );
+    });
   });
 });

@@ -53,12 +53,12 @@ With this in mind, here are some examples of how you could setup view tracking f
  */
 
 const Promo = () => {
-  const ref = useViewTracker({
+  const viewRef = useViewTracker({
     componentName: 'promo',
   });
 
   return (
-    <div {...ref}>
+    <div {...viewRef}>
       <a href="promo-link">Promoted content</a>
     </div>
   );

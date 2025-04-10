@@ -28,8 +28,8 @@ export default ({
   link,
   image,
   altText,
-  id = 'billboard-1',
-  eventTrackingData = { componentName: 'billboard-1' },
+  id = 'billboard',
+  eventTrackingData,
   showLiveLabel,
 }: BillboardProps) => {
   const viewRef = useViewTracker(eventTrackingData);

@@ -6,11 +6,10 @@ export default ({
   eventTrackingData,
   eventType,
 }: EventTrackingProps): EventTrackingData => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const eventTrackingContext = useContext(EventTrackingContext);
 
   const {
-    componentName,
+    componentName = '',
     url,
     advertiserID,
     format,

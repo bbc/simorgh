@@ -28,7 +28,7 @@ const MessageBanner = ({
   linkText,
   image,
   id = 'message-banner-1',
-  eventTrackingData = { componentName: 'message-banner-1' },
+  eventTrackingData,
 }: MessageBannerProps) => {
   const viewRef = useViewTracker(eventTrackingData);
 

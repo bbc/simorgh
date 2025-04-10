@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useContext, useEffect, useState, useRef } from 'react';
@@ -18,7 +19,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
-const getViewRef = (eventTrackingData: EventTrackingData) => {
+const getViewRef = (eventTrackingData?: EventTrackingData) => {
   const {
     componentName,
     format,
@@ -179,8 +180,7 @@ const getViewRef = (eventTrackingData: EventTrackingData) => {
   };
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default (eventTrackingData: EventTrackingData): any => {
+export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
   const viewRef = getViewRef(eventTrackingData);
   const liteATIUrl = constructLiteSiteATIEventTrackUrl({
