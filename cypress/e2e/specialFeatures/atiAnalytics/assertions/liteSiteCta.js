@@ -20,6 +20,7 @@ const runIfLiteEnabled = service => {
 export const assertLiteSiteCTAComponentClick = ({
   pageIdentifier,
   contentType,
+  componentTrackingContentType,
   path,
   service,
 }) => {
@@ -35,14 +36,10 @@ export const assertLiteSiteCTAComponentClick = ({
         duration: 1000,
       });
 
-      // Click on first item
-      cy.get('[data-e2e="to-main-site"]').find('a').first().click();
-
-      assertATIComponentClickEvent({
-        component: LITE_SITE_CTA,
-        pageIdentifier,
-        contentType,
-      });
-    },
-  );
+    assertATIComponentClickEvent({
+      component: LITE_SITE_CTA,
+      pageIdentifier,
+      contentType: componentTrackingContentType || contentType,
+    });
+  });
 };
