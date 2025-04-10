@@ -22,6 +22,7 @@ const services = [
   'pashto',
   'persian',
   'pidgin',
+  'polska',
   'portuguese',
   'punjabi',
   'russian',

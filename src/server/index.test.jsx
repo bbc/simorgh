@@ -953,14 +953,14 @@ describe('Server', () => {
 
   describe('Service workers', () => {
     it('should serve a file for existing service workers', async () => {
-      await makeRequest('/news/articles/sw.js');
+      await makeRequest('/gahuza/sw.js');
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
         path.join(__dirname, '/public/sw.js'),
       );
     });
 
     it('should not serve a file for non-existing service workers', async () => {
-      const { statusCode } = await makeRequest('/some-service/articles/sw.js');
+      const { statusCode } = await makeRequest('/news/sw.js');
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
@@ -975,11 +975,9 @@ describe('Server', () => {
 
   describe('Manifest json', () => {
     it.each`
-      manifestPath                         | expectedManifestFile
-      ${'/pidgin/articles/manifest.json'}  | ${'/pidgin/manifest.json'}
-      ${'/pidgin/manifest.json'}           | ${'/pidgin/manifest.json'}
-      ${'/serbian/articles/manifest.json'} | ${'/serbian/manifest.json'}
-      ${'/serbian/manifest.json'}          | ${'/serbian/manifest.json'}
+      manifestPath                | expectedManifestFile
+      ${'/pidgin/manifest.json'}  | ${'/pidgin/manifest.json'}
+      ${'/serbian/manifest.json'} | ${'/serbian/manifest.json'}
     `(
       'should serve a file for $manifestPath',
       async ({ manifestPath, expectedManifestFile }) => {
@@ -997,7 +995,7 @@ describe('Server', () => {
     });
 
     it('should serve a response cache control of 1 day', async () => {
-      const { header } = await makeRequest('/pidgin/articles/manifest.json');
+      const { header } = await makeRequest('/pidgin/manifest.json');
       expect(header['cache-control']).toBe(
         'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
       );

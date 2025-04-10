@@ -28,6 +28,7 @@
       "#contexts/*": ["src/app/contexts/*"],
       "#components/*": ["src/app/legacy/components/*"],
       "#containers/*": ["src/app/legacy/containers/*"],
+      "#cypress/*": ["cypress/*"],
       "#data/*": ["data/*"],
       "#hooks/*": ["src/app/hooks/*"],
       "#lib/*": ["src/app/lib/*"],
