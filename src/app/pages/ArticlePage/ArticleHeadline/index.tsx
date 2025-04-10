@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
-import CallToActionLinkWithChevron from '#app/components/CallToActionLinkWithChevron';
+import CallToActionLink from '#app/components/CallToActionLinkComponent';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
@@ -14,7 +14,6 @@ import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageVie
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
-import CallToActionLink from '#app/components/CallToActionLinkComponent';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite } = useContext(RequestContext);
