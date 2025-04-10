@@ -48,5 +48,9 @@ const styles = {
       fill: 'currentcolor',
       verticalAlign: 'middle',
     }),
+  chevronSpacing: () =>
+    css({
+      marginInlineStart: `${pixelsToRem(12)}rem`,
+    }),
 };
 export default styles;
