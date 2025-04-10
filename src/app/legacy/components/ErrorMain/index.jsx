@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
-import Paragraph from '#psammead/psammead-paragraph/src';
 import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import {
   getCanon,
@@ -10,6 +9,7 @@ import {
 } from '#psammead/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#components/Grid';
+import Text from '../../../components/Text';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')}
@@ -18,6 +18,7 @@ const StatusCode = styled.span`
   font-family: ${GEL_FF_REITH_SANS};
   font-weight: 600;
   padding: 2.5rem 0 0.5rem 0;
+  margin: 0;
 `;
 
 const Heading = styled.h1`
@@ -31,8 +32,8 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: 4rem;
 `;
 
-const CustomParagraph = styled(Paragraph)`
-  padding-top: 0.2rem;
+const StyledText = styled(Text)`
+  padding: 0.2rem 0 1.5rem;
 `;
 
 const ErrorMain = ({
@@ -86,22 +87,22 @@ const ErrorMain = ({
       <Heading id="content" script={script} service={service} tabIndex="-1">
         {title}
       </Heading>
-      <CustomParagraph script={script} service={service}>
+      <StyledText as="p" size="bodyCopy">
         {message}
-      </CustomParagraph>
+      </StyledText>
       <ul>
         {solutions.map(text => (
-          <CustomParagraph
+          <StyledText size="bodyCopy" as="li" key={idSanitiser(text)}>
             script={script}
             service={service}
             as="li"
             key={idSanitiser(text)}
           >
             {text}
-          </CustomParagraph>
+          </StyledText>
         ))}
       </ul>
-      <CustomParagraph script={script} service={service}>
+      <StyledText as="p" size="bodyCopy">
         {callToActionFirst}
         <InlineLink
           href={callToActionLinkUrl}
@@ -110,7 +111,7 @@ const ErrorMain = ({
           {callToActionLinkText}
         </InlineLink>
         {callToActionLast}
-      </CustomParagraph>
+      </StyledText>
     </Grid>
   </StyledGelPageGrid>
 );

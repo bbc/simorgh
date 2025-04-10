@@ -6,8 +6,11 @@ import {
 } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import TextContainer from './index';
 import { paragraphBlock, fragmentBlock } from './fixtures';
+
+jest.mock('../../../components/ThemeProvider');
 
 const defaultToggles = {
   eventTracking: {
@@ -76,7 +79,9 @@ describe('TextContainer', () => {
       const { container } = render(
         <ToggleContextProvider toggles={defaultToggles}>
           <ServiceContextProvider service="news">
-            <TextContainer {...data} />
+            <ThemeProvider service="news" variant="default">
+              <TextContainer {...data} />
+            </ThemeProvider>
           </ServiceContextProvider>
         </ToggleContextProvider>,
       );

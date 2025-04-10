@@ -1,9 +1,12 @@
 import React, { useMemo } from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import ParagraphContainer from '.';
 import getUUID from '../../../lib/utilities/getUUID';
+
+jest.mock('../../../components/ThemeProvider');
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
@@ -71,7 +74,9 @@ const ParagraphContainerWithContext = ({ blocks }) => {
 
   return (
     <ServiceContext.Provider value={memoizedServiceContextValue}>
-      <ParagraphContainer blocks={blocks} />
+      <ThemeProvider service="news" variant="default">
+        <ParagraphContainer blocks={blocks} />
+      </ThemeProvider>
     </ServiceContext.Provider>
   );
 };

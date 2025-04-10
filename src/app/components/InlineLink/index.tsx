@@ -3,6 +3,7 @@
 import { useContext, FC, HTMLAttributes } from 'react';
 import { jsx, Theme } from '@emotion/react';
 import Url from 'url-parse';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -34,6 +35,10 @@ const InlineLink: FC<Props> = ({
   to,
   ...htmlAttributes
 }: Props) => {
+  const clickTrackerHandler = useClickTrackerHandler({
+    componentName: 'InlineLink',
+    advertiserID: to
+  });
   const { externalLinkText } = useContext(ServiceContext);
   const { hostname } = new Url(to);
   const isExternalLink =
@@ -49,11 +54,13 @@ const InlineLink: FC<Props> = ({
       size && fontSizes[size],
       fontVariant && fontVariants[fontVariant],
     ],
+    onClick: clickTrackerHandler,
     ...htmlAttributes,
   };
+  const href = linkProps.locator ? linkProps.locator : to;
 
   return (
-    <a {...linkProps} href={to}>
+    <a {...linkProps} href={href}>
       {text}
     </a>
   );

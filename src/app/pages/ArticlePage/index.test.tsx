@@ -103,28 +103,33 @@ const Context = ({
 
   return (
     <BrowserRouter>
-      <ThemeProvider service={service} variant="default">
-        <ToggleContextProvider
-          toggles={{
-            mostRead: {
-              enabled: mostReadToggledOn,
-            },
-            ads: {
-              enabled: adsToggledOn,
-            },
-            cpsRecommendations: {
-              enabled: true,
-            },
-            podcastPromo: { enabled: promo != null },
-          }}
+      <ToggleContextProvider
+        toggles={{
+          mostRead: {
+            enabled: mostReadToggledOn,
+          },
+          ads: {
+            enabled: adsToggledOn,
+          },
+        }}
+      >
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          pathname="/pathname"
+          service={service}
+          statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
         >
-          <RequestContextProvider {...appInput}>
-            <ServiceContextProvider service={service}>
-              {children}
-            </ServiceContextProvider>
-          </RequestContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
+          <ServiceContextProvider service={service}>
+            <ThemeProvider service={service} variant="default">
+                {children}
+              </ThemeProvider>
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
     </BrowserRouter>
   );
 };

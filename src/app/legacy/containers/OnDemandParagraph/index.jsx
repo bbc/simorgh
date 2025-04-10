@@ -1,32 +1,26 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import ParagraphComponent from '#psammead/psammead-paragraph/src';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import Paragraph from '../../../components/Paragraph';
 
-const StyledParagraphComponent = styled(ParagraphComponent)`
+const StyledParagraph = styled(Paragraph)`
   padding-bottom: 16px;
-  color: ${({ theme }) => !theme.isDarkUi && theme.palette.METAL};
+  color: ${({ theme }) =>
+    theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW};
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-bottom: ${GEL_SPACING};
   }
 `;
 
 const OnDemandParagraphContainer = ({ idAttr = null, text, testid = '' }) => {
-  const { script, service } = useContext(ServiceContext);
 
   if (!text) return null;
 
   return (
-    <StyledParagraphComponent
-      script={script}
-      service={service}
-      id={idAttr}
-      {...(testid && { 'data-testid': testid })}
-    >
+    <StyledParagraph id={idAttr} darkMode={darkMode}>
       {text}
-    </StyledParagraphComponent>
+    </StyledParagraph>
   );
 };
 

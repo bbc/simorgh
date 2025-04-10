@@ -6,6 +6,7 @@ export const getInlineLinkStyles = (palette: Theme['palette']) => ({
   color: palette.EBON,
   borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
   textDecoration: 'none',
+  backgroundColor: 'red',
   '&:visited': {
     color: palette.METAL,
     borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,

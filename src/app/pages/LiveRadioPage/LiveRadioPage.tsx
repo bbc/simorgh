@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Headline } from '#psammead/psammead-headings/src';
-import Paragraph from '#psammead/psammead-paragraph/src';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import MediaLoader from '#app/components/MediaLoader';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ATIAnalytics from '../../components/ATIAnalytics';
+import Paragraph from '../../components/Paragraph';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -90,9 +90,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
             {heading}
           </Headline>
           <Paragraph
-            // @ts-expect-error script is an object
-            script={script}
-            service={service}
+            css={({ spacings }) => ({ paddingBottom: `${spacings.TRIPLE}rem` })}
           >
             {bodySummary}
           </Paragraph>
