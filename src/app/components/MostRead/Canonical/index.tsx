@@ -14,7 +14,7 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
   data: MostReadData;
-  eventTrackingData?: {
+  eventTrackingData: {
     componentName: string;
   };
 }
