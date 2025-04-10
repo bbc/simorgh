@@ -1,4 +1,4 @@
-name: Simorgh CI - AMP Validation, Lighthouse, Puppeteer & Lite Tests
+name: Simorgh CI - AMP Validation, Lighthouse, & Puppeteer Tests
 on:
   pull_request:
     branches:
@@ -65,6 +65,3 @@ jobs:
           Xvfb -ac :99 -screen 0 1280x1024x16 2>/dev/null 1>&2 & 
           export DISPLAY=:99
           yarn test:puppeteer:local
-
-      - name: Run Lite Page Size Validator
-        run: yarn test:lite

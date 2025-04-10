@@ -40,7 +40,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
   });
 
   it.each([
-    { variation: 'control_text_only', expected: 'Nyandiko gusa' },
+    { variation: 'control_text_only', expected: 'Inyandiko gusa' },
     {
       variation: 'variation_a_explore_data_friendly_version',
       expected: 'Koresha uburyo butwara amahera make',
@@ -51,7 +51,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
     },
     {
       variation: 'variation_c_read_data_saving_version',
-      expected: 'Soma mu buryo biziganya amahera',
+      expected: 'Soma mu buryo buziganya amahera',
     },
     { variation: 'variation_d_lite_site', expected: 'Site yoroheje' },
     {
@@ -64,7 +64,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
     },
     {
       variation: 'off',
-      expected: 'Nyandiko gusa',
+      expected: 'Inyandiko gusa',
     },
   ])(
     'Should display $expected when the variation is $variation',

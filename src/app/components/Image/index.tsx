@@ -174,7 +174,7 @@ const Image = ({
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
               alt={alt}
-              loading={lazyLoad ? 'lazy' : undefined}
+              loading={lazyLoad ? 'lazy' : 'eager'}
               width={width}
               height={height}
               css={[

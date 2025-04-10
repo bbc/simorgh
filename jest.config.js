@@ -32,6 +32,7 @@ const ampIntegrationTests = {
   testEnvironmentOptions: {
     platform: 'amp',
   },
+  moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
   testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*canonical\\.test\\.js$'],
@@ -43,6 +44,7 @@ const canonicalIntegrationTests = {
   testEnvironmentOptions: {
     platform: 'canonical',
   },
+  moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
   testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*amp\\.test\\.js$'],
@@ -54,6 +56,7 @@ const liteIntegrationTests = {
   testEnvironmentOptions: {
     platform: 'lite',
   },
+  moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
   testPathIgnorePatterns: ['.*canonical\\.test\\.js$', '.*amp\\.test\\.js$'],
