@@ -115,7 +115,7 @@ export default {
       css({
         marginInline: '0',
         [mq.GROUP_2_ONLY]: {
-         marginInline: '0' 
+          marginInline: '0',
         },
         ...(pageType === MEDIA_ARTICLE_PAGE && {
           marginInline: `${spacings.FULL}rem`,
@@ -124,7 +124,7 @@ export default {
           },
           [mq.GROUP_3_MIN_WIDTH]: {
             marginInline: 0,
-          },      
+          },
         }),
       }),
 };
