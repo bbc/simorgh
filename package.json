@@ -186,6 +186,7 @@
     "@types/react-dom": "19.1.2",
     "@types/react-helmet": "6.1.11",
     "@types/react-lazyload": "^3.2.0",
+    "@types/react-router": "5.1.20",
     "@types/testing-library__react": "10.2.0",
     "@types/url-parse": "^1.4.8",
     "@typescript-eslint/eslint-plugin": "5.62.0",
