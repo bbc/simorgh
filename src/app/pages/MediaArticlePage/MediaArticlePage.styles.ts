@@ -54,14 +54,17 @@ export default {
   mapPortraitVideoPlayer: ({ mq, spacings }: Theme) =>
     css({
       paddingTop: 0,
+      paddingBottom: `${spacings.TRIPLE}rem`,
       [mq.GROUP_3_ONLY]: {
         paddingTop: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_ONLY]: {
         paddingTop: `${spacings.TRIPLE}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         paddingTop: `${spacings.TRIPLE}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
       },
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
