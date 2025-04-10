@@ -369,7 +369,15 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
     {
       "@type": "NewsArticle",
       "author": {
-        "@type": "Person",
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
       },
       "dateModified": "2019-10-04T10:36:45.464Z",
       "datePublished": "2019-10-04T10:36:45.464Z",

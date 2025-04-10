@@ -307,7 +307,15 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
     {
       "@type": "NewsArticle",
       "author": {
-        "@type": "Person",
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "width": 1024,
+        },
+        "name": "BBC News Кыргыз Кызматы",
+        "noBylinesPolicy": "https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise",
       },
       "dateModified": "2020-04-24T14:51:17.000Z",
       "datePublished": "2020-04-24T14:51:17.000Z",

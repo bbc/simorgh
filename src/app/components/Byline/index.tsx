@@ -3,7 +3,6 @@
 /** @jsxFrag */
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -22,7 +21,16 @@ const Byline = ({
 
   const bylineValues = bylineExtractor(blocks);
 
-  const contributors = bylineValues.map(values => {
+  const {
+    byline: {
+      author = 'Author',
+      articleInformation = 'Article Information',
+      reportingFrom = 'Reporting from',
+      role = 'Role',
+    } = {},
+  } = translations ?? {};
+
+  const contributors = bylineValues?.map(values => {
     if (!values) return null;
     const {
       authorName,
@@ -34,23 +42,6 @@ const Byline = ({
       authorTopicUrl,
     } = values;
 
-    const authorTranslated = pathOr(
-      'Author',
-      ['byline', 'author'],
-      translations,
-    );
-    const articleInformationTranslated = pathOr(
-      'Article information',
-      ['byline', 'articleInformation'],
-      translations,
-    );
-    const jobRoleTranslated = pathOr('Role', ['byline', 'role'], translations);
-
-    const reportingFromTranslated = pathOr(
-      'Reporting from',
-      ['byline', 'reportingFrom'],
-      translations,
-    );
     return (
       <section
         css={BylineCss.bylineSection}
@@ -59,7 +50,7 @@ const Byline = ({
         key={authorName}
       >
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
-          {articleInformationTranslated}
+          {articleInformation}
         </VisuallyHiddenText>
         <ul css={BylineCss.bylineList} role="list">
           {authorImage && (
@@ -81,7 +72,7 @@ const Byline = ({
           <li>
             {authorTopicUrl ? (
               <React.Fragment>
-                <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
+                <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
                 <a
                   css={[BylineCss.link]}
                   href={authorTopicUrl}
@@ -104,7 +95,7 @@ const Byline = ({
               </React.Fragment>
             ) : (
               <span role="text">
-                <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
+                <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
                 <Text
                   css={[BylineCss.author]}
                   size="bodyCopy"
@@ -117,9 +108,7 @@ const Byline = ({
           </li>
           <li>
             <span role="text">
-              <VisuallyHiddenText>
-                {`${jobRoleTranslated}, `}{' '}
-              </VisuallyHiddenText>
+              <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
               <Text
                 css={BylineCss.jobRole}
                 fontVariant="sansBold"
@@ -164,7 +153,7 @@ const Byline = ({
                   size="brevier"
                   fontVariant="sansRegularItalic"
                 >
-                  {`${reportingFromTranslated} `}{' '}
+                  {`${reportingFrom} `}{' '}
                 </Text>
                 <Text
                   css={BylineCss.locationText}
@@ -183,7 +172,7 @@ const Byline = ({
 
   return (
     <>
-      {contributors[0] && (
+      {contributors?.[0] && (
         <span css={BylineCss.bylineContainer}>{contributors}</span>
       )}
       {children && <span css={BylineCss.timestampLineBreak}>{children}</span>}

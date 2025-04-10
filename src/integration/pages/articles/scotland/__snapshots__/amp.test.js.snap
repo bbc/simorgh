@@ -268,7 +268,14 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
     {
       "@type": "NewsArticle",
       "author": {
-        "@type": "Person",
+        "@type": "Organization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC",
       },
       "dateModified": "2019-09-13T12:36:29.124Z",
       "datePublished": "2019-09-13T12:36:29.124Z",

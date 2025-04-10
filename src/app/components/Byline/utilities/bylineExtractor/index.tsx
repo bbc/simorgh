@@ -37,7 +37,6 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
 
     const authorName = pathOrZeroIndexModelBlocks(2, 'text', authorBlock);
     const jobRole = pathOrZeroIndexModelBlocks(2, 'text', jobRoleBlock);
-
     if (!authorName) {
       return null;
     }
@@ -70,7 +69,9 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
     };
   });
 
-  return bylineValues;
+  return bylineValues.includes(null) || bylineValues.length === 0
+    ? null
+    : bylineValues.filter(item => item !== null);
 };
 
 export default bylineExtractor;

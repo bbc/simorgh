@@ -1,6 +1,6 @@
-import React, { act } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, act } from '@testing-library/react';
 import CanonicalChartbeatAnalytics from '.';
 import { CanonicalChartbeatConfig } from '../types';
 

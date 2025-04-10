@@ -8,8 +8,7 @@ import {
 
 describe('bylineExtractor', () => {
   it('should return null when authorName is not present', () => {
-    const bylineValues = bylineExtractor(bylineWithNoAuthor)[0];
-
+    const bylineValues = bylineExtractor(bylineWithNoAuthor);
     expect(bylineValues).toBeNull();
   });
 
@@ -79,7 +78,7 @@ describe('bylineExtractor', () => {
   it('should return an object, with an empty string in the image field if no .png extension', () => {
     const bylineValues = bylineExtractor(bylineWithNonPngPhoto);
 
-    const { authorImage } = bylineValues[0] || {};
+    const { authorImage } = bylineValues?.[0] || {};
 
     expect(authorImage).toEqual('');
   });

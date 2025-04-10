@@ -359,11 +359,6 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "alternateName": "rw",
         "name": "Kinyarwanda",
       },
-      "locationCreated": {
-        "@place": [
-          "",
-        ],
-      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
         "@type": "WebPage",

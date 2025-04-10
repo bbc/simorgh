@@ -161,7 +161,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const hasByline = !!bylineLinkedData[0];
+  const hasByline = !!bylineLinkedData;
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)

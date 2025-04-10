@@ -111,16 +111,19 @@ const LinkedData = ({
 
   const hasByline = !!bylineLinkedData;
 
-  const places: (string | undefined)[] = [];
+  const places: string[] = [];
 
-  const getAuthorTagging = (data: BylineLinkedData | null | undefined) => {
+  const getAuthorTagging = (data: BylineLinkedData | null) => {
     const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
       data || {};
 
     const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
-    if (location !== undefined && places.indexOf(location)) {
-      places.push(location);
+    if (location) {
+      if (!places.includes(location)) {
+        places.push(location);
+      }
     }
+
     return {
       '@type': 'Person',
       name: authorName,
@@ -128,13 +131,13 @@ const LinkedData = ({
       ...(authorImage && { image: authorImage }),
     };
   };
-
-  const bylineAuthors =
-    bylineLinkedData?.length !== undefined && bylineLinkedData?.length > 1
-      ? bylineLinkedData?.map(data => {
-          return getAuthorTagging(data);
-        })
-      : getAuthorTagging(bylineLinkedData?.[0]);
+  let bylineAuthors;
+  if (bylineLinkedData) {
+    bylineAuthors =
+      bylineLinkedData?.length > 1
+        ? bylineLinkedData?.map(data => getAuthorTagging(data))
+        : getAuthorTagging(bylineLinkedData?.[0]);
+  }
 
   const locationCreated = { '@place': places };
 

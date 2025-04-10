@@ -405,7 +405,15 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         },
       ],
       "author": {
-        "@type": "Person",
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News",
+        "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
       },
       "dateModified": "2019-05-28T13:38:19.412Z",
       "datePublished": "2019-05-28T13:38:19.412Z",
