@@ -18,12 +18,12 @@ export default {
           fill: 'visitedText',
         },
         '&:active': {
-          fill: 'activeText', // not sure this is required.
+          fill: 'activeText', // check if this is required on HOC
         },
       },
     }),
   alignWithMargin: () =>
     css({
-      display: 'inline-block', // positions link against margin. Otherwise it's centered.
+      display: 'inline-block',
     }),
 };

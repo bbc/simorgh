@@ -23,8 +23,6 @@ const CallToActionLink = ({
   className,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
-  // const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  // const onClick = eventTrackingData ? clickTrackerHandler : () => null; //removed so Message Banner Tests pass
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
