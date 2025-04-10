@@ -202,7 +202,7 @@
     "compression-webpack-plugin": "11.1.0",
     "copy-webpack-plugin": "13.0.0",
     "crypto": "1.0.1",
-    "cypress": "14.2.1",
+    "cypress": "14.3.0",
     "cypress-axe": "1.6.0",
     "cypress-multi-reporters": "2.0.5",
     "cypress-terminal-report": "7.1.0",
