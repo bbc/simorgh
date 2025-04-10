@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import { render } from '../../react-testing-library-with-providers';
@@ -20,11 +20,11 @@ const CanonicalAdWithContext = ({
   // @ts-expect-error require partial data for testing purposes
   requestContext = defaultRequestContextData,
 }: CanonicalAdWithContextProps) => (
-  <BrowserRouter>
+  <MemoryRouter>
     <RequestContext.Provider value={requestContext}>
       <CanonicalAd slotType={slotType} />
     </RequestContext.Provider>
-  </BrowserRouter>
+  </MemoryRouter>
 );
 
 describe('CanonicalAds Ads', () => {

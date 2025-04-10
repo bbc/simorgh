@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { render, waitFor, screen } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
 import { Article } from '#app/models/types/optimo';
@@ -35,7 +35,7 @@ const Context = ({
   mostReadToggledOn = true,
   showAdsBasedOnLocation = false,
 }: PropsWithChildren<ContextProps>) => (
-  <BrowserRouter>
+  <MemoryRouter>
     <ThemeProvider service={service} variant="default">
       <ToggleContextProvider
         toggles={{
@@ -65,7 +65,7 @@ const Context = ({
         </RequestContextProvider>
       </ToggleContextProvider>
     </ThemeProvider>
-  </BrowserRouter>
+  </MemoryRouter>
 );
 
 const fetchMock = fetch as FetchMock;

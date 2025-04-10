@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -102,7 +102,7 @@ const Context = ({
   };
 
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <ThemeProvider service={service} variant="default">
         <ToggleContextProvider
           toggles={{
@@ -125,7 +125,7 @@ const Context = ({
           </RequestContextProvider>
         </ToggleContextProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 

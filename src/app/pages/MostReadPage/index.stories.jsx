@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Url from 'url-parse';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 import MostReadPage from '.';
 
@@ -29,7 +29,7 @@ const Component = ({ service, variant }) => {
   }
 
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <MostReadPage
         pageType={MOST_READ_PAGE}
         isAmp={false}
@@ -39,7 +39,7 @@ const Component = ({ service, variant }) => {
         service={service}
         variant={variant}
       />
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 

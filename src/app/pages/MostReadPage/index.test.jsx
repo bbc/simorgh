@@ -1,6 +1,6 @@
 import React from 'react';
 import { act } from '@testing-library/react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -34,9 +34,9 @@ const MostReadPageWithContext = () => (
         service="pidgin"
         statusCode={200}
       >
-        <BrowserRouter>
+        <MemoryRouter>
           <MostReadPage pageData={pidginMostReadData} />
-        </BrowserRouter>
+        </MemoryRouter>
       </RequestContextProvider>
     </ServiceContextProvider>
   </ToggleContextProvider>

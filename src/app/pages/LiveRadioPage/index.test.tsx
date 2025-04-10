@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -20,7 +20,7 @@ type Props = {
 };
 
 const Page = ({ pageData, service, lang }: Props) => (
-  <BrowserRouter>
+  <MemoryRouter>
     <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
       <ServiceContextProvider service={service} pageLang={lang}>
         <RequestContextProvider
@@ -34,7 +34,7 @@ const Page = ({ pageData, service, lang }: Props) => (
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
-  </BrowserRouter>
+  </MemoryRouter>
 );
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();

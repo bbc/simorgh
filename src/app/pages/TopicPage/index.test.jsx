@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
@@ -204,9 +204,9 @@ describe('Topic Page', () => {
       [false, false],
     ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
       const { container } = render(
-        <BrowserRouter>
+        <MemoryRouter>
           <TopicPage pageData={pidginMultipleItems} />
-        </BrowserRouter>,
+        </MemoryRouter>,
         getOptionParams({ adsToggledOn, showAdsBasedOnLocation }),
       );
 

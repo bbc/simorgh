@@ -20,18 +20,18 @@ describe('ClientApp', () => {
     expect(App).toHaveBeenCalledWith({ initialData: 'someData!' }, undefined);
   });
 
-  it('BrowserRouter should be called with the correct props', () => {
-    const actualBrowserRouter = ReactRouter.BrowserRouter;
-    ReactRouter.BrowserRouter = jest.fn(() => 'Browser Router');
+  it('MemoryRouter should be called with the correct props', () => {
+    const actualMemoryRouter = ReactRouter.MemoryRouter;
+    ReactRouter.MemoryRouter = jest.fn(() => 'Memory Router');
     renderClientApp();
-    expect(ReactRouter.BrowserRouter).toHaveBeenCalledWith(
+    expect(ReactRouter.MemoryRouter).toHaveBeenCalledWith(
       {
         children: expect.anything(),
         data: 'someData!',
       },
       undefined,
     );
-    ReactRouter.BrowserRouter = actualBrowserRouter; //  restore the original (non-mocked) implementation
+    ReactRouter.MemoryRouter = actualMemoryRouter; //  restore the original (non-mocked) implementation
   });
 
   it('should render App component', () => {

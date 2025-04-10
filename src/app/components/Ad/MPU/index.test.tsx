@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { render } from '../../react-testing-library-with-providers';
 import MPU from '.';
 
@@ -12,9 +12,9 @@ const toggles = {
 describe('MPU', () => {
   it('should render without gel margins at all breakpoints and gel padding at smaller breakpoints', async () => {
     const { container } = render(
-      <BrowserRouter>
+      <MemoryRouter>
         <MPU />
-      </BrowserRouter>,
+      </MemoryRouter>,
       { toggles, showAdsBasedOnLocation: true },
     );
 

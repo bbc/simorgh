@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContainer from '.';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 
 const Component = () => (
   <ToggleContextProvider
@@ -11,9 +11,9 @@ const Component = () => (
       },
     }}
   >
-    <BrowserRouter>
+    <MemoryRouter>
       <HeaderContainer />
-    </BrowserRouter>
+    </MemoryRouter>
   </ToggleContextProvider>
 );
 

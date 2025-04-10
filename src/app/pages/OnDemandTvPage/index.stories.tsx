@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
@@ -31,7 +31,7 @@ const matchFixtures = (service: Services) => ({
 
 const Component = ({ service }: StoryProps) => {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <OnDemandTvPage
         match={matchFixtures(service)}
         // @ts-expect-error partial data for testing purposes
@@ -42,7 +42,7 @@ const Component = ({ service }: StoryProps) => {
         error=""
         pageType={TV_PAGE}
       />
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 

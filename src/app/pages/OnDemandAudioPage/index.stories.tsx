@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import { Services } from '#app/models/types/global';
@@ -28,7 +28,7 @@ const matchFixtures = (service: Services) => ({
 
 const Component = ({ service }: StoryProps) => {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <OnDemandAudioPage
         match={matchFixtures(service)}
         // @ts-expect-error partial data for storybook
@@ -39,7 +39,7 @@ const Component = ({ service }: StoryProps) => {
         error=""
         pageType={AUDIO_PAGE}
       />
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 

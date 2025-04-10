@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -33,12 +33,12 @@ const RadioSchedulesWithContext = ({
         timeOnServer={Date.now()}
       >
         <ServiceContextProvider service={service}>
-          <BrowserRouter>
+          <MemoryRouter>
             <RadioScheduleContainer
               initialData={initialData}
               toggleName={toggleName}
             />
-          </BrowserRouter>
+          </MemoryRouter>
         </ServiceContextProvider>
       </RequestContextProvider>
     </ToggleContext.Provider>

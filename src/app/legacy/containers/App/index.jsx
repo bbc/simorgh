@@ -4,7 +4,7 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import { StaticRouter, BrowserRouter } from 'react-router';
+import { StaticRouter, MemoryRouter } from 'react-router';
 import App from './App';
 
 export class ClientApp extends React.Component {
@@ -14,9 +14,9 @@ export class ClientApp extends React.Component {
 
   render() {
     return (
-      <BrowserRouter {...this.props}>
+      <MemoryRouter {...this.props}>
         <App initialData={this.props.data} />
-      </BrowserRouter>
+      </MemoryRouter>
     );
   }
 }

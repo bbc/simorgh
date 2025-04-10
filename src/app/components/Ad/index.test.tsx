@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -178,9 +178,9 @@ describe('Ad Container', () => {
               showAdsBasedOnLocation
             >
               <ToggleContext.Provider value={toggleContextMock}>
-                <BrowserRouter>
+                <MemoryRouter>
                   <AdContainer slotType="leaderboard" />
-                </BrowserRouter>
+                </MemoryRouter>
               </ToggleContext.Provider>
             </RequestContextProvider>
           </ServiceContextProvider>,
@@ -203,9 +203,9 @@ describe('Ad Container', () => {
               showAdsBasedOnLocation
             >
               <ToggleContext.Provider value={toggleContextMock}>
-                <BrowserRouter>
+                <MemoryRouter>
                   <AdContainer slotType="mpu" />
-                </BrowserRouter>
+                </MemoryRouter>
               </ToggleContext.Provider>
             </RequestContextProvider>
           </ServiceContextProvider>,
@@ -404,9 +404,9 @@ describe('Ad Container', () => {
             showAdsBasedOnLocation
           >
             <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
+              <MemoryRouter>
                 <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
+              </MemoryRouter>
             </ToggleContext.Provider>
           </RequestContextProvider>
         </ServiceContext.Provider>,

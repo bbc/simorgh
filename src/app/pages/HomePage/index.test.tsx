@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
 import { data as afriqueHomePageDataFixture } from '#data/afrique/homePage/index.json';
@@ -258,10 +258,10 @@ describe('Home Page', () => {
 
     it('should display ads when ads toggle is enabled and showAdsBased on location is true', () => {
       const { container } = render(
-        <BrowserRouter>
+        <MemoryRouter>
           {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
           <HomePage pageData={homePageData} />
-        </BrowserRouter>,
+        </MemoryRouter>,
         {
           service: 'kyrgyz',
           toggles: {
@@ -278,10 +278,10 @@ describe('Home Page', () => {
     });
     it('should display the MPU ad in the correct location', () => {
       const { container } = render(
-        <BrowserRouter>
+        <MemoryRouter>
           {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
           <HomePage pageData={homePageData} />
-        </BrowserRouter>,
+        </MemoryRouter>,
         {
           service: 'kyrgyz',
           toggles: {
@@ -315,10 +315,10 @@ describe('Home Page', () => {
       'should not display ads because $scenario',
       ({ adsEnabled, showAdsBasedOnLocation }) => {
         const { container } = render(
-          <BrowserRouter>
+          <MemoryRouter>
             {/* @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations */}
             <HomePage pageData={homePageData} />
-          </BrowserRouter>,
+          </MemoryRouter>,
           {
             service: 'kyrgyz',
             toggles: {
