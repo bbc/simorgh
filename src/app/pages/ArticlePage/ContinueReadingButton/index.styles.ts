@@ -14,9 +14,9 @@ export default {
       cursor: 'pointer',
       fontWeight: 'bold',
       display: 'block',
-      width: 'calc(100% - 2rem)',
+      width: `calc(100% - ${spacings.QUADRUPLE}rem)`,
       padding: `${spacings.DOUBLE}rem 0`,
-      margin: `0 ${spacings.DOUBLE}rem -1.5rem  ${spacings.DOUBLE}rem`,
+      margin: `0 ${spacings.DOUBLE}rem -${spacings.TRIPLE}rem  ${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_10,
       border: 'none',
 
@@ -31,8 +31,8 @@ export default {
       },
 
       [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem -1.5rem ${spacings.FULL}rem`,
-        width: 'calc(100% - 1rem)',
+        margin: `0 ${spacings.FULL}rem -${spacings.TRIPLE}rem ${spacings.FULL}rem`,
+        width: `calc(100% - ${spacings.DOUBLE}rem)`,
       },
 
       '&:hover, &:focus': {
@@ -51,15 +51,15 @@ export default {
       cursor: 'pointer',
       fontWeight: 'bold',
       display: 'block',
-      width: 'calc(100% - 2rem)',
+      width: `calc(100% - ${spacings.QUADRUPLE}rem)`,
       padding: `${spacings.DOUBLE}rem 0`,
-      margin: `0 ${spacings.DOUBLE}rem -0.5rem ${spacings.DOUBLE}rem`,
+      margin: `0 ${spacings.DOUBLE}rem -${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_2,
       color: palette.GREY_10,
       textAlign: 'start',
       border: 'none',
       borderBottom: `${pixelsToRem(1)}rem solid #B0B2B4`,
-      paddingBottom: `calc(${spacings.DOUBLE}rem + 0.5rem)`,
+      paddingBottom: `calc(${spacings.DOUBLE}rem + ${spacings.FULL}rem)`,
 
       svg: {
         fill: 'currentColor',
@@ -75,8 +75,8 @@ export default {
       },
 
       [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem -1.5rem ${spacings.FULL}rem`,
-        width: 'calc(100% - 1rem)',
+        margin: `0 ${spacings.FULL}rem -${spacings.TRIPLE}rem ${spacings.FULL}rem`,
+        width: `calc(100% - ${spacings.DOUBLE}rem)`,
       },
 
       '&:hover, &:focus': {
