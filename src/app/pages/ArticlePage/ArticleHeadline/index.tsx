@@ -48,18 +48,18 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       />
       {showLiteCTAOnCanonical && (
         <>
-          {/* <div
+          <div
             css={[
               styles.loadingContainer,
               styles.liteCTAContainer,
               titleVariation && styles.displayNone,
             ]}
             data-e2e="to-lite-site-loading"
-          /> */}
+          />
           <div
             css={[
               styles.liteCTAContainer,
-              // !titleVariation && styles.displayNone,
+              !titleVariation && styles.displayNone,
             ]}
             ref={viewRef}
             data-e2e="to-lite-site"
