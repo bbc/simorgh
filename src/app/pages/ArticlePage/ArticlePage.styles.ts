@@ -42,9 +42,15 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
-  mainContent: ({ spacings }: Theme) =>
+  mainContent: ({ palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
+
+      '.continueReadingFocusedElement': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
+      },
     }),
   contentHidden:
     (liteCTAShows: boolean) =>

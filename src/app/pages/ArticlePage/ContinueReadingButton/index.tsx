@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import React, { use, useEffect } from 'react';
-import { jsx, css, useTheme } from '@emotion/react';
+import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles, { customFocusStyle } from './index.styles';
+import styles from './index.styles';
 
 type Props = {
   showAllContent: boolean;
@@ -49,7 +49,6 @@ const ContinueReadingButton = ({
     clickTrackerHandler(event as React.MouseEvent<HTMLButtonElement>);
     setShowAllContent();
   };
-  const theme = useTheme();
 
   useEffect(() => {
     if (showAllContent) {
@@ -59,18 +58,15 @@ const ContinueReadingButton = ({
         main?.querySelectorAll<HTMLElement>(':scope > *')[liteCTAShows ? 8 : 7];
 
       if (nthElement) {
-        nthElement.tabIndex = 0;
-
-        // Generate the custom focus style using the theme
-        const focusStyle = css(customFocusStyle(theme)).styles;
-
         // Apply the custom focus style dynamically
-        nthElement.setAttribute('style', focusStyle);
+        nthElement.tabIndex = 0;
         nthElement.focus();
+        nthElement.classList.add('continueReadingFocusedElement');
 
         const handleBlur = () => {
+          // Remove the custom focus style
           nthElement.removeAttribute('tabindex');
-          nthElement.removeAttribute('style'); // Remove the custom focus style
+          nthElement.classList.remove('continueReadingFocusedElement');
         };
 
         nthElement.addEventListener('blur', handleBlur);
