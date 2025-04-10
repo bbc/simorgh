@@ -5,7 +5,7 @@ import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
-import { LinkedDataProps } from './types';
+import { BylineLinkedData, LinkedDataProps } from './types';
 
 const LinkedData = ({
   showAuthor = false,
@@ -111,9 +111,9 @@ const LinkedData = ({
 
   const hasByline = !!bylineLinkedData;
 
-  const places: string[] = [];
+  const places: (string | undefined)[] = [];
 
-  const bylineAuthors = bylineLinkedData?.map(data => {
+  const getAuthorTagging = (data: BylineLinkedData | null | undefined) => {
     const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
       data || {};
 
@@ -127,7 +127,14 @@ const LinkedData = ({
       ...(sameAs.length && { sameAs }),
       ...(authorImage && { image: authorImage }),
     };
-  });
+  };
+
+  const bylineAuthors =
+    bylineLinkedData?.length !== undefined && bylineLinkedData?.length > 1
+      ? bylineLinkedData?.map(data => {
+          return getAuthorTagging(data);
+        })
+      : getAuthorTagging(bylineLinkedData?.[0]);
 
   const locationCreated = { '@place': places };
 

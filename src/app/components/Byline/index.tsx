@@ -183,9 +183,7 @@ const Byline = ({
   return (
     <>
       <span css={BylineCss.bylineContainer}>{contributors}</span>
-      {children ? (
-        <span css={BylineCss.timestampLineBreak}>{children}</span>
-      ) : null}
+      {children && <span css={BylineCss.timestampLineBreak}>{children}</span>}
     </>
   );
 };

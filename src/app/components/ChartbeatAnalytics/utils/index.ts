@@ -203,7 +203,7 @@ export interface GetConfigProps {
   mediaPageType?: string;
   categoryName?: string;
   title: string;
-  authors?: (string | undefined)[];
+  authors?: string;
   taggings?: MetadataTaggings;
   contentType?: string;
   producer?: string;

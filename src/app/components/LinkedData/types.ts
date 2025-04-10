@@ -10,7 +10,7 @@ export interface Tag {
   'skos:altLabel'?: string;
 }
 
-interface BylineLinkedData {
+export interface BylineLinkedData {
   authorName: string;
   jobRole: string;
   twitterText: string;

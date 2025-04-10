@@ -6,7 +6,7 @@ type ChartbeatConfig = {
   sections: string;
   uid: number;
   title: string;
-  authors?: (string | undefined)[];
+  authors?: string;
   virtualReferrer: string | null;
   idSync?: {
     // eslint-disable-next-line camelcase
@@ -39,7 +39,7 @@ export interface ChartbeatProps {
   categoryName?: string; // required for STY and MAP pages
   mediaPageType?: 'Radio' | 'TV' | 'Podcasts'; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
   title: string;
-  authors?: (string | undefined)[];
+  authors?: string;
   taggings?: MetadataTaggings; // required for Media Article Pages
   contentType?: ContentType; // required for Live & On Demand Radio, Podcasts & On Demand TV pages
   producer?: Services | string; // required for Media Article, STY, MAP, Live & On Demand Radio, Podcasts & On Demand TV pages, if available
