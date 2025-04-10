@@ -14,7 +14,7 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
   data: MostReadData;
-  eventTrackingData: {
+  eventTrackingData?: {
     componentName: string;
   };
 }
@@ -23,7 +23,7 @@ const MostRead = ({
   columnLayout = 'multiColumn',
   size,
   data,
-  eventTrackingData,
+  eventTrackingData = { componentName: 'most-read' },
 }: MostReadProps) => {
   const {
     service,

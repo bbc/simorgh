@@ -167,7 +167,7 @@ const getViewRef = (eventTrackingData: EventTrackingData) => {
     useReverb,
   ]);
 
-  return async (element: HTMLElement) => {
+  return async (element: HTMLDivElement) => {
     if (!element || !trackingIsEnabled || eventSent) {
       return;
     }
@@ -179,7 +179,8 @@ const getViewRef = (eventTrackingData: EventTrackingData) => {
   };
 };
 
-export default (eventTrackingData: EventTrackingData) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default (eventTrackingData: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
   const viewRef = getViewRef(eventTrackingData);
   const liteATIUrl = constructLiteSiteATIEventTrackUrl({

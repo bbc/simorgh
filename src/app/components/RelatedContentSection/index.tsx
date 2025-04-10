@@ -5,7 +5,6 @@ import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
-import path from 'ramda/src/path';
 import tail from 'ramda/src/tail';
 import slice from 'ramda/src/slice';
 import identity from 'ramda/src/identity';
@@ -22,6 +21,7 @@ import PromoList from '../../legacy/components/OptimoPromos/PromoList';
 import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { OptimoBlock } from '../../models/types/optimo';
+import { ViewRef } from '#app/lib/analyticsUtils/types';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
@@ -42,7 +42,7 @@ type RelatedContentListProps = {
   item: object;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewRef: React.Ref<HTMLDivElement>;
+  viewRef: ViewRef;
 };
 
 const renderRelatedContentList = ({
@@ -85,7 +85,7 @@ const renderRelatedContentList = ({
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
+        viewRef={viewRef}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -115,8 +115,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
       }),
     },
   };
-  const eventTrackingDataSend = path<object>(['block'], eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingDataSend);
+  const viewRef = useViewTracker(eventTrackingData.block);
 
   if (!pathEq('relatedContent', ['type'], blocks)) return null;
 
@@ -194,7 +193,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
-            ref={viewRef}
+            viewRef={viewRef}
             eventTrackingData={eventTrackingData}
           />
         </div>

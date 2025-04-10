@@ -159,7 +159,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const { observe } = getObserverInstance(element);
@@ -173,7 +172,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -202,7 +200,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       try {
@@ -259,7 +256,6 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -297,7 +293,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -345,9 +340,7 @@ describe('useViewTracker', () => {
       const elementA = document.createElement('div');
       const elementB = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(elementA);
-      // @ts-expect-error current ref will be defined
       await result.current.ref(elementB);
 
       const observerInstanceA = getObserverInstance(elementA);
@@ -377,7 +370,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -412,9 +404,7 @@ describe('useViewTracker', () => {
       const elementA = document.createElement('div');
       const elementB = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await resultA.current.ref(elementA);
-      // @ts-expect-error current ref will be defined
       await resultB.current.ref(elementB);
 
       const observerInstanceA = getObserverInstance(elementA);
@@ -445,7 +435,6 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -472,7 +461,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -500,7 +488,6 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -538,7 +525,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -591,7 +577,6 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -639,7 +624,6 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -682,7 +666,6 @@ describe('useViewTracker', () => {
       );
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -723,7 +706,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       expect(result).not.toHaveProperty('error');
@@ -741,7 +723,6 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       expect(result).not.toHaveProperty('error');
@@ -762,7 +743,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       expect(result).not.toHaveProperty('error');
@@ -781,7 +761,6 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       expect(result).not.toHaveProperty('error');
@@ -799,7 +778,6 @@ describe('useViewTracker', () => {
 
       const element = document.createElement('div');
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       expect(result).not.toHaveProperty('error');
@@ -820,7 +798,6 @@ describe('useViewTracker', () => {
 
       const element = null;
 
-      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       expect(result).not.toHaveProperty('error');

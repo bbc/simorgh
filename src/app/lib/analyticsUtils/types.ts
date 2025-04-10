@@ -8,7 +8,7 @@ import {
 
 export type ATIEventType = typeof VIEW_EVENT | typeof CLICK_EVENT;
 
-export type EventTrackingData = ATIEventTrackingProps & EventTrackingMetadata;
+export type EventTrackingData = EventTrackingMetadata & ATIEventTrackingProps;
 
 export type EventTrackingProps = {
   eventTrackingData: EventTrackingData;
@@ -16,6 +16,7 @@ export type EventTrackingProps = {
 };
 
 export type ViewRef = {
-  ref?: React.Ref<HTMLDivElement>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ref?: any;
   [LITE_ATI_VIEW_TRACKING]?: string;
 };
