@@ -715,7 +715,6 @@ describe('useViewTracker', () => {
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
       const trackingData = undefined;
 
-      // @ts-expect-error partial data required for tests
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
