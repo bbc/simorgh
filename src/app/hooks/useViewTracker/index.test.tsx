@@ -1,20 +1,19 @@
 /* eslint-disable no-console */
 
-import React, { createContext } from 'react';
+import React, { createContext, ReactNode } from 'react';
 import {
   renderHook,
   act,
 } from '#app/components/react-testing-library-with-providers';
-
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+import { Toggles } from '#app/models/types/global';
 import * as serviceContextModule from '../../contexts/ServiceContext';
-
 import useViewTracker from '.';
-
 import fixtureData from './fixtureData.json';
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
@@ -41,8 +40,9 @@ const IntersectionObserver = jest.fn(cb => {
   return instance;
 });
 
-const getObserverInstance = element => {
+const getObserverInstance = (element: HTMLElement) => {
   try {
+    // @ts-expect-error required for testing purposes
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );
@@ -53,7 +53,13 @@ const getObserverInstance = element => {
   }
 };
 
-const triggerIntersection = ({ changes, observer }) => {
+const triggerIntersection = ({
+  changes,
+  observer,
+}: {
+  changes: Partial<IntersectionObserverEntry>[];
+  observer: IntersectionObserver;
+}) => {
   const item = observers.get(observer);
 
   item.callback(changes);
@@ -65,15 +71,22 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
 
+const {
+  metadata: { atiAnalytics },
+} = fixtureData;
+
 beforeEach(() => {
   jest.clearAllMocks();
   jest.useFakeTimers();
   console.error = jest.fn();
+
+  // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
 
   jest.replaceProperty(
     serviceContextModule,
     'ServiceContext',
+    // @ts-expect-error override service context for tests
     createContext({
       atiAnalyticsProducerId: '70',
       atiAnalyticsProducerName: 'PIDGIN',
@@ -90,7 +103,7 @@ afterEach(() => {
   observers.clear();
 });
 
-const urlToObject = url => {
+const urlToObject = (url: string) => {
   const { origin, pathname, searchParams } = new URL(url);
 
   return {
@@ -106,7 +119,15 @@ const defaultToggles = {
   },
 };
 
-const wrapper = ({ pageData, atiData, children, toggles = defaultToggles }) => (
+const wrapper = ({
+  atiData,
+  children,
+  toggles = defaultToggles,
+}: {
+  atiData?: ATIData;
+  children?: ReactNode | null;
+  toggles?: Toggles;
+}) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
@@ -116,7 +137,7 @@ const wrapper = ({ pageData, atiData, children, toggles = defaultToggles }) => (
   >
     <serviceContextModule.ServiceContextProvider service="pidgin">
       <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider data={pageData} atiData={atiData}>
+        <EventTrackingContextProvider atiData={atiData}>
           {children}
         </EventTrackingContextProvider>
       </ToggleContextProvider>
@@ -138,6 +159,7 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const { observe } = getObserverInstance(element);
@@ -148,12 +170,10 @@ describe('useViewTracker', () => {
     it('should not send event to ATI when element is not in view', async () => {
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -177,19 +197,20 @@ describe('useViewTracker', () => {
         wrapper: props =>
           wrapper({
             ...props,
-            pageData: fixtureData,
             toggles: { eventTracking: { enabled: false } },
           }),
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       try {
         getObserverInstance(element);
 
         throw new Error('IntersectionObserver was initialised.');
-      } catch ({ message }) {
+      } catch (err) {
+        const { message } = err as Error;
         expect(message).toEqual(
           'Failed to find IntersectionObserver for element.',
         );
@@ -203,7 +224,6 @@ describe('useViewTracker', () => {
       renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {
-          pageData: fixtureData,
           toggles: {
             eventTracking: {
               enabled: true,
@@ -230,19 +250,16 @@ describe('useViewTracker', () => {
         optimizelyMetricNameOverride: 'myEvent',
       };
 
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(
+        // @ts-expect-error partial data required for tests
         () => useViewTracker({ ...trackingData, ...mockOptimizely }),
         {
-          wrapper: props =>
-            wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -258,7 +275,8 @@ describe('useViewTracker', () => {
         jest.advanceTimersByTime(1100);
       });
 
-      const [[, options]] = global.IntersectionObserver.mock.calls;
+      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+        .calls;
 
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
       expect(options).toEqual({ threshold: [0.5] });
@@ -274,16 +292,12 @@ describe('useViewTracker', () => {
     });
 
     it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props =>
-          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -299,8 +313,9 @@ describe('useViewTracker', () => {
         jest.advanceTimersByTime(1100);
       });
 
-      const [[, options]] = global.IntersectionObserver.mock.calls;
-      const [[viewEventUrl]] = global.fetch.mock.calls;
+      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+        .calls;
+      const [[viewEventUrl]] = (global.fetch as jest.Mock).mock.calls;
 
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
       expect(options).toEqual({ threshold: [0.5] });
@@ -324,18 +339,15 @@ describe('useViewTracker', () => {
     });
 
     it('should only send one view event when mutiple elements are viewed', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props =>
-          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const elementA = document.createElement('div');
       const elementB = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(elementA);
+      // @ts-expect-error current ref will be defined
       await result.current.ref(elementB);
 
       const observerInstanceA = getObserverInstance(elementA);
@@ -360,16 +372,12 @@ describe('useViewTracker', () => {
     });
 
     it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props =>
-          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -389,28 +397,24 @@ describe('useViewTracker', () => {
     });
 
     it('should send multiple view events for multiple hook instances', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result: resultA } = renderHook(
         () => useViewTracker(trackingData),
         {
-          wrapper: props =>
-            wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const { result: resultB } = renderHook(
         () => useViewTracker(trackingData),
         {
-          wrapper: props =>
-            wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const elementA = document.createElement('div');
       const elementB = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await resultA.current.ref(elementA);
+      // @ts-expect-error current ref will be defined
       await resultB.current.ref(elementB);
 
       const observerInstanceA = getObserverInstance(elementA);
@@ -435,17 +439,13 @@ describe('useViewTracker', () => {
     });
 
     it('should disconnect IntersectionObserver after event is sent', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props =>
-          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
 
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -468,12 +468,11 @@ describe('useViewTracker', () => {
     it('should not disconnect IntersectionObserver before event is sent', async () => {
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -496,13 +495,12 @@ describe('useViewTracker', () => {
     it('should not send event to ATI when element is in view for less than 1 second', async () => {
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
 
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -535,16 +533,12 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props =>
-          wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -581,27 +575,23 @@ describe('useViewTracker', () => {
         jest.advanceTimersByTime(1100);
       });
 
-      const [[viewEventUrl]] = global.fetch.mock.calls;
+      const [[viewEventUrl]] = (global.fetch as jest.Mock).mock.calls;
 
       expect(viewEventUrl).toMatch('https://logws1363.ati-host.net');
       expect(global.fetch).toHaveBeenCalledTimes(1);
     });
 
     it('should be able to override the campaignID that is sent to ATI', async () => {
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(
         () =>
           useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
         {
-          wrapper: props =>
-            wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -617,7 +607,7 @@ describe('useViewTracker', () => {
         jest.advanceTimersByTime(1100);
       });
 
-      const [[viewEventUrl]] = global.fetch.mock.calls;
+      const [[viewEventUrl]] = (global.fetch as jest.Mock).mock.calls;
 
       expect(urlToObject(viewEventUrl).searchParams.ati).toEqual(
         'PUB-[custom-campaign]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
@@ -640,19 +630,16 @@ describe('useViewTracker', () => {
         },
       };
 
-      const {
-        metadata: { atiAnalytics },
-      } = fixtureData;
-
       const { result } = renderHook(
+        // @ts-expect-error partial data for tests
         () => useViewTracker({ ...trackingData, ...mockOptimizely }),
         {
-          wrapper: props =>
-            wrapper({ ...props, pageData: fixtureData, atiData: atiAnalytics }),
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -668,7 +655,8 @@ describe('useViewTracker', () => {
         jest.advanceTimersByTime(1100);
       });
 
-      const [[, options]] = global.IntersectionObserver.mock.calls;
+      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+        .calls;
 
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
       expect(options).toEqual({ threshold: [0.5] });
@@ -685,16 +673,16 @@ describe('useViewTracker', () => {
       const mockOptimizely = undefined;
 
       const { result } = renderHook(
+        // @ts-expect-error partial data for tests
         () => useViewTracker({ ...trackingData, ...mockOptimizely }),
         {
           wrapper,
-          initialProps: {
-            pageData: fixtureData,
-          },
+          initialProps: {},
         },
       );
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
       const observerInstance = getObserverInstance(element);
@@ -710,7 +698,8 @@ describe('useViewTracker', () => {
         jest.advanceTimersByTime(1100);
       });
 
-      const [[, options]] = global.IntersectionObserver.mock.calls;
+      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+        .calls;
 
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
       expect(options).toEqual({ threshold: [0.5] });
@@ -720,6 +709,7 @@ describe('useViewTracker', () => {
 
   describe('Error handling', () => {
     it('should load polyfill and not throw error if IntersectionObserver is not supported', async () => {
+      // @ts-expect-error required for testing purposes
       delete global.IntersectionObserver;
 
       const trackingData = {
@@ -729,33 +719,32 @@ describe('useViewTracker', () => {
       };
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
-      expect(result.error).toBeUndefined();
+      expect(result).not.toHaveProperty('error');
       expect(typeof global.IntersectionObserver).toEqual('function');
     });
 
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
       const trackingData = undefined;
 
+      // @ts-expect-error partial data required for tests
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
 
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
-      expect(result.error).toBeUndefined();
+      expect(result).not.toHaveProperty('error');
       expect(global.fetch).not.toHaveBeenCalled();
     });
 
@@ -773,9 +762,10 @@ describe('useViewTracker', () => {
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
-      expect(result.error).toBeUndefined();
+      expect(result).not.toHaveProperty('error');
       expect(global.fetch).not.toHaveBeenCalled();
     });
 
@@ -784,35 +774,35 @@ describe('useViewTracker', () => {
         foo: 'bar',
       };
 
+      // @ts-expect-error partial data for tests
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
-      expect(result.error).toBeUndefined();
+      expect(result).not.toHaveProperty('error');
       expect(global.fetch).not.toHaveBeenCalled();
     });
 
     it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
       const trackingData = ['unexpected data type'];
 
+      // @ts-expect-error partial data for tests
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
 
       const element = document.createElement('div');
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
-      expect(result.error).toBeUndefined();
+      expect(result).not.toHaveProperty('error');
       expect(global.fetch).not.toHaveBeenCalled();
     });
 
@@ -825,16 +815,15 @@ describe('useViewTracker', () => {
 
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
-        initialProps: {
-          pageData: fixtureData,
-        },
+        initialProps: {},
       });
 
       const element = null;
 
+      // @ts-expect-error current ref will be defined
       await result.current.ref(element);
 
-      expect(result.error).toBeUndefined();
+      expect(result).not.toHaveProperty('error');
       expect(global.IntersectionObserver).not.toHaveBeenCalled();
       expect(global.fetch).not.toHaveBeenCalled();
     });

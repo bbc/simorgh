@@ -141,7 +141,7 @@ export const useATIClickTrackerHandler = (props = {}) => {
   const { isLite } = useContext(RequestContext);
   const clickHandler = useClickTrackerHandler(props);
   const liteATIUrl = constructLiteSiteATIEventTrackUrl({
-    props,
+    eventTrackingMetadata: props,
     eventType: CLICK_EVENT,
   });
 

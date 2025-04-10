@@ -610,7 +610,7 @@ describe('Lite Site - Click tracking', () => {
     const { result } = renderHook(
       () =>
         constructATIUrl({
-          props: {
+          eventTrackingMetadata: {
             ...defaultProps,
             campaignID: 'custom-campaign',
           },

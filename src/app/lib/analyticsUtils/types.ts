@@ -8,7 +8,12 @@ import {
 
 export type ATIEventType = typeof VIEW_EVENT | typeof CLICK_EVENT;
 
-export type EventTrackingProps = ATIEventTrackingProps & EventTrackingMetadata;
+export type EventTrackingData = ATIEventTrackingProps & EventTrackingMetadata;
+
+export type EventTrackingProps = {
+  eventTrackingData: EventTrackingData;
+  eventType: ATIEventType;
+};
 
 export type ViewRef = {
   ref?: React.Ref<HTMLDivElement>;
