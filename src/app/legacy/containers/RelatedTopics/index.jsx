@@ -84,7 +84,7 @@ const RelatedTopics = ({
             <TopicTag
               name={topics[0].topicName}
               link={getTopicPageUrl(topics[0].topicId)}
-              onClick={clickTrackerHandler}
+              {...clickTrackerHandler}
               {...viewRef}
               key={topics[0].topicId}
             />
@@ -93,7 +93,7 @@ const RelatedTopics = ({
               <TopicTag
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
-                onClick={clickTrackerHandler}
+                {...clickTrackerHandler}
                 {...viewRef}
                 key={topicId}
               />

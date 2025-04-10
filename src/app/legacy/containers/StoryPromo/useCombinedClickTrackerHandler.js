@@ -6,13 +6,13 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
   const linkData = path(['link'], eventTrackingData);
   const optimizely = path(['block', 'optimizely'], eventTrackingData);
-  const handleBlockLevelClick = useClickTrackerHandler({
+  const { onClick: handleBlockLevelClick } = useClickTrackerHandler({
     ...(blockData && {
       ...blockData,
       preventNavigation: true,
     }),
   });
-  const handleLinkLevelClick = useClickTrackerHandler({
+  const { onClick: handleLinkLevelClick } = useClickTrackerHandler({
     ...(linkData && {
       ...linkData,
       preventNavigation: true,
@@ -23,10 +23,10 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     const nextPageUrl =
       path(['target', 'href'], event) || path(['url'], eventTrackingData);
 
-    if (blockData) {
+    if (blockData && handleBlockLevelClick) {
       await handleBlockLevelClick(event);
     }
-    if (linkData) {
+    if (linkData && handleLinkLevelClick) {
       await handleLinkLevelClick(event);
     }
     if (nextPageUrl) {

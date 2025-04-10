@@ -251,7 +251,7 @@ const Promo = () => {
               <strong>
                 <StyledCardLink
                   href={url}
-                  onClick={clickTrackerRef}
+                  {...clickTrackerRef}
                   script={script}
                   service={service}
                 >
