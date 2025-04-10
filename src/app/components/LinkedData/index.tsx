@@ -139,7 +139,9 @@ const LinkedData = ({
         : getAuthorTagging(bylineLinkedData?.[0]);
   }
 
-  const locationCreated = { '@place': places };
+  const locationCreated = {
+    '@place': places.length === 1 ? places[0] : places,
+  };
 
   const orgAuthor = {
     '@type': ORG_TYPE,
