@@ -27,19 +27,19 @@ exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
       data-e2e="to-main-site"
     >
       <a
-        class="bbc-16f79jf"
+        class="bbc-y2sji4"
         data-ignore-lite="true"
         data-lite-ati-tracking="https://logws1363.ati-host.net?s=598285&atc=PUB-[]-[lite-site-cta]-[]-[]-[]-[]-[]-[]&type=AT"
         href="http://localhost:7080/gahuza/articles/cey23zx8wx8o"
       >
         <span
-          class="bbc-x7bqmd"
+          class="bbc-1kzs7zk"
         >
           Njana ku rubuga nyamukuru canke aho gusoma gusa
         </span>
         <svg
           aria-hidden="true"
-          class="bbc-2wok52"
+          class="bbc-1xkt713"
           focusable="false"
           height="12"
           viewBox="0 0 32 32"
@@ -56,11 +56,11 @@ exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
       data-e2e="information-page"
     >
       <a
-        class="bbc-gcewl8"
+        class="bbc-1ufi7i1"
         href="https://www.bbc.com/gahuza/articles/cn7y7pvem0vo.lite"
       >
         <span
-          class="bbc-1qfjcgd"
+          class="bbc-b00bw5"
         >
           Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke
         </span>
