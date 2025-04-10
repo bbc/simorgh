@@ -54,10 +54,11 @@ export default {
           maxWidth: '100%',
           marginInline: 0,
           margin: 0,
-          [mq.GROUP_3_MIN_WIDTH]: {
-            [mq.GROUP_3_MAX_WIDTH]: {
-              marginInline: `${spacings.DOUBLE}rem`,
-            },
+          [mq.GROUP_3_ONLY]: {
+            marginInline: `${spacings.DOUBLE}rem`,
+            maxWidth: `${pixelsToRem(325)}rem`,
+          },
+          [mq.GROUP_4_ONLY]: {
             maxWidth: `${pixelsToRem(315)}rem`,
           },
           [mq.GROUP_5_MIN_WIDTH]: {

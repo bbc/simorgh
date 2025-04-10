@@ -1,7 +1,7 @@
 import { OptimoBlock } from '#app/models/types/optimo';
 import isPortraitVideo from '.';
 
-const videoBlockWithPV: OptimoBlock[] = [
+const mediaBlockWithPV: OptimoBlock[] = [
   {
     id: '326c14fc',
     type: 'aresMedia',
@@ -52,7 +52,7 @@ const videoBlockWithPV: OptimoBlock[] = [
   },
 ];
 
-const videoBlockWithoutPV: OptimoBlock[] = [
+const mediaBlockWithoutPV: OptimoBlock[] = [
   {
     id: '326c14fc',
     type: 'aresMedia',
@@ -104,15 +104,15 @@ const videoBlockWithoutPV: OptimoBlock[] = [
 ];
 
 describe('isPortraitVideo', () => {
-  it('Should return true if video block includes a portrait video', () => {
-    expect(isPortraitVideo(videoBlockWithPV)).toBe(true);
+  it('Should return true if media block includes a portrait video', () => {
+    expect(isPortraitVideo(mediaBlockWithPV)).toBe(true);
   });
 
-  it('Should return false if video block does not include a portrait video', () => {
-    expect(isPortraitVideo(videoBlockWithoutPV)).toBe(false);
+  it('Should return false if media block does not include a portrait video', () => {
+    expect(isPortraitVideo(mediaBlockWithoutPV)).toBe(false);
   });
 
-  it('Should return false if video block does not include an Ares media block', () => {
+  it('Should return false if media block does not include an Ares media block', () => {
     expect(isPortraitVideo([])).toBe(false);
   });
 });

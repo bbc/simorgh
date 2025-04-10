@@ -58,11 +58,7 @@ export default {
       [mq.GROUP_3_ONLY]: {
         paddingTop: `${spacings.DOUBLE}rem`,
       },
-      [mq.GROUP_4_ONLY]: {
-        paddingTop: `${spacings.TRIPLE}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_5_MIN_WIDTH]: {
+      [mq.GROUP_4_MIN_WIDTH]: {
         paddingTop: `${spacings.TRIPLE}rem`,
         paddingBottom: `${spacings.DOUBLE}rem`,
       },
