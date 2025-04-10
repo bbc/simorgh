@@ -73,7 +73,7 @@ const Banner = forwardRef(
                 <CallToActionLink.Text
                   size="pica"
                   fontVariant="sansBold"
-                  overrideBottomBorder
+                  overrideInteractionStyles
                 >
                   {linkText}
                   <CallToActionLink.Chevron />

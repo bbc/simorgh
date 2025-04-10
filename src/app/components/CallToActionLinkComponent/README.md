@@ -36,7 +36,7 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
     <CallToActionLink.Text
       size="pica"
       fontVariant="sansBold"
-      overrideBottomBorder
+      overrideInteractionStyles
     >
       I am a link
       <CallToActionLink.Chevron size="pica" />
@@ -64,4 +64,53 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
     I am a link
   </CallToActionLink.Text>
 </CallToActionLink>
+```
+
+## Styles
+
+Custom spacing and colours can be applied when using the component. For example:
+
+```javascript
+<CallToActionLink
+  to={link}
+  className="focusIndicatorInvert"
+  eventTrackingData={eventTrackingData}
+  css={styles.callToActionLink}
+>
+  <CallToActionLink.FlexWrapper>
+    <CallToActionLink.Text
+      size="pica"
+      fontVariant="sansBold"
+      overrideInteractionStyles
+    >
+      {linkText}
+      <CallToActionLink.Chevron />
+    </CallToActionLink.Text>
+  </CallToActionLink.FlexWrapper>
+</CallToActionLink>
+```
+
+```javascript
+calltoactionlink: ({mq, palette}: Theme) =>
+  css(
+    {
+    padding: '1rem',
+    backgroundColor: palette.WHITE,
+    margin: '0 1rem 1rem 1rem',
+    width: '100%',
+    color: palette.BLACK,
+    '&:hover, &:focus': {backgroundColor: '#F6F6F6',
+    color: palette.BLACK,
+    },
+    [mq.GROUP_3_MIN_WIDTH]: {
+    width: 'auto',
+    maxWidth: 'calc(100% - 240px)',
+    margin: '0 0 1.5rem 0',
+    paddingBottom: '1rem',
+    },
+    '& span': {
+      paddingInlineStart: '0.5rem',
+    },
+    }
+  );
 ```

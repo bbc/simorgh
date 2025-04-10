@@ -98,7 +98,7 @@ const Uploader = ({ blocks }: UploaderProps) => {
               <CallToActionLink.Text
                 size="pica"
                 fontVariant="sansBold"
-                overrideBottomBorder
+                overrideInteractionStyles
               >
                 {linkText}
                 <CallToActionLink.Chevron css={styles.chevronSpacing} />

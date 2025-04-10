@@ -78,14 +78,6 @@ const styles = {
         paddingInlineStart: '0.5rem',
       },
     }),
-  chevron: () =>
-    css({
-      marginInlineStart: '0.5rem',
-      width: '1rem',
-      height: '1rem',
-      verticalAlign: 'middle',
-      fill: 'currentcolor',
-    }),
   flex: ({ mq }: Theme) =>
     css({
       display: 'flex',

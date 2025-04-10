@@ -4,17 +4,18 @@ import pixelsToRem from '../../../utilities/pixelsToRem';
 export default {
   text: () =>
     css({
-      // verticalAlign: 'middle', // canomiocal to lite site CTA does not have this
       color: 'inherit',
     }),
-  bottomBorder: ({ palette }: Theme) =>
+  defaultTextStyles: ({ palette }: Theme) =>
     css({
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`, // with Chevron
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_10}`,
       'a:visited &': {
-        borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`, // with Chevron
+        color: palette.METAL,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,
       },
       'a:focus &, a:hover &': {
-        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`, // with Chevron
+        color: palette.POSTBOX,
+        borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
       },
     }),
   underlineOnHoverFocus: () =>

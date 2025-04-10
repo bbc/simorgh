@@ -5,7 +5,6 @@ export default {
   chevron: () =>
     css({
       verticalAlign: 'middle',
-      color: 'inherit',
       fill: 'currentColor',
     }),
   brevierSize: ({ spacings }: Theme) =>
@@ -16,7 +15,7 @@ export default {
     }),
   picaSize: ({ spacings }: Theme) =>
     css({
-      marginInlineStart: `${spacings.FULL}rem`, // Note for PR: Reducing uploader from 12 pixels to 8 pixels (1 rem)`${pixelsToRem(12)}rem`,
+      marginInlineStart: `${spacings.FULL}rem`,
       width: `${spacings.DOUBLE}rem`,
       height: `${spacings.DOUBLE}rem`,
     }),

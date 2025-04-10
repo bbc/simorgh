@@ -15,10 +15,10 @@ export const Example = () => {
   );
 };
 
-export const ExampleChevronInTextAndOverrideBottomBorder = () => {
+export const ExampleChevronInTextAndOverrideInteractionStyles = () => {
   return (
     <CallToActionLink to="https://www.bbc.com/ws/languages">
-      <CallToActionLink.Text overrideBottomBorder>
+      <CallToActionLink.Text overrideInteractionStyles>
         Hello
         <CallToActionLink.Chevron />
       </CallToActionLink.Text>
@@ -37,18 +37,19 @@ export const ExampleWithFlex = () => {
   );
 };
 
-export const ExampleWithFlexAndChevronInTextAndOverrideBottomBorder = () => {
-  return (
-    <CallToActionLink to="https://www.bbc.com/ws/languages">
-      <CallToActionLink.FlexWrapper>
-        <CallToActionLink.Text overrideBottomBorder>
-          Hello
-          <CallToActionLink.Chevron />
-        </CallToActionLink.Text>
-      </CallToActionLink.FlexWrapper>
-    </CallToActionLink>
-  );
-};
+export const ExampleWithFlexAndChevronInTextAndOverrideInteractionStyles =
+  () => {
+    return (
+      <CallToActionLink to="https://www.bbc.com/ws/languages">
+        <CallToActionLink.FlexWrapper>
+          <CallToActionLink.Text overrideInteractionStyles>
+            Hello
+            <CallToActionLink.Chevron />
+          </CallToActionLink.Text>
+        </CallToActionLink.FlexWrapper>
+      </CallToActionLink>
+    );
+  };
 
 export const MessageBannerCTA = () => {
   return (
@@ -57,7 +58,7 @@ export const MessageBannerCTA = () => {
         <CallToActionLink.Text
           size="pica"
           fontVariant="sansBold"
-          overrideBottomBorder
+          overrideInteractionStyles
         >
           Hello
           <CallToActionLink.Chevron size="pica" />
@@ -73,7 +74,7 @@ export const UploaderEmbedCTA = () => {
         <CallToActionLink.Text
           size="pica"
           fontVariant="sansBold"
-          overrideBottomBorder
+          overrideInteractionStyles
         >
           Hello
           <CallToActionLink.Chevron size="pica" />
