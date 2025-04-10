@@ -13,6 +13,7 @@ type CallToActionLinkProps = {
   className?: string;
   eventTrackingData?: EventTrackingMetadata;
   alignWithMargin?: boolean;
+  download?: boolean;
 };
 
 const CallToActionLink = ({
@@ -20,6 +21,7 @@ const CallToActionLink = ({
   children,
   eventTrackingData,
   alignWithMargin,
+  download = false,
   className,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
@@ -30,6 +32,7 @@ const CallToActionLink = ({
       href={to}
       onClick={clickTrackerHandler}
       className={className}
+      download={download}
       {...htmlAttributes}
       css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >

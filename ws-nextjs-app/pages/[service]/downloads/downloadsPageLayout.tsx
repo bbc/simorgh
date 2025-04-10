@@ -6,7 +6,7 @@ import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Metadata from '#app/components/Metadata';
-import CallToActionLink from '#app/components/CallToActionLink';
+import CallToActionLink from '#app/components/CallToActionLinkComponent';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import styles from './styles';
@@ -64,7 +64,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                   />
                   <CallToActionLink
                     css={styles.cta}
-                    href={item.files[0].fileLink}
+                    to={item.files[0].fileLink}
                     download
                     eventTrackingData={{
                       componentName: 'koreanDownloads',
@@ -81,13 +81,16 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     >
                       <path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2" />
                     </svg>
-                    <span>
+                    <CallToActionLink.Text
+                      overrideInteractionStyles
+                      fontVariant="sansBold"
+                    >
                       {item.files[0].fileName}
                       <span>
                         {' '}
                         {(item.files[0].fileSize / 1000000).toFixed(1)}Mb
                       </span>
-                    </span>
+                    </CallToActionLink.Text>
                   </CallToActionLink>
                 </li>
               ))}

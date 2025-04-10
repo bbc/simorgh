@@ -1,5 +1,5 @@
 import { Theme, css } from '@emotion/react';
-import pixelsToRem from '../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
   grid: ({ mq, gridWidths, spacings }: Theme) =>
@@ -55,10 +55,8 @@ export default {
       },
       a: {
         color: palette.RHINO,
-        textDecoration: 'none',
-        '&:hover': {
-          textDecoration: 'underline',
-          color: palette.POSTBOX,
+        '&:focus': {
+          color: palette.RHINO, // resets to mirror current experience. Link doesn't stay coloured after download but does remain underlined. Not sure this is best A11y ux.
         },
       },
     }),

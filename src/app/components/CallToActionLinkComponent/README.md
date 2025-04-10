@@ -25,6 +25,7 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
 | className?         | string                         | Permits `css` prop to be applied                                                                                               |
 | htmlAttributes?    | string                         | Permits custom html attributes to be applied. E.g. `data-ignore-lite` for .lite                                                |
 | eventTrackingData? | shape({componentName: string}) | Tracking data needed for ati to track view and click of the Call to Action Link                                                |
+| download?          | boolean                        | Permits download                                                                                                               |
 
 ## Example ltr/rtl
 
