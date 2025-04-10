@@ -14,6 +14,7 @@ import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageVie
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
+import CallToActionLink from '#app/components/CallToActionLinkComponent';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite } = useContext(RequestContext);
@@ -64,13 +65,17 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
             ref={viewRef}
             data-e2e="to-lite-site"
           >
-            <CallToActionLinkWithChevron
+            <CallToActionLink
+              to={`${pathname}.lite`}
               eventTrackingData={eventTrackingData}
-              href={`${pathname}.lite`}
-              css={styles.liteCTA}
+              css={styles.canonicalToLiteSiteCTA}
+              alignWithMargin
             >
-              {articleDataSavingLinkText}
-            </CallToActionLinkWithChevron>
+              <CallToActionLink.Text size="brevier" fontVariant="sansBold">
+                {articleDataSavingLinkText}
+              </CallToActionLink.Text>
+              <CallToActionLink.Chevron size="brevier" />
+            </CallToActionLink>
             <OptimizelyPageViewTracking />
           </div>
         </>

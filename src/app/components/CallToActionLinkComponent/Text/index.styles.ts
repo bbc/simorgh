@@ -4,7 +4,7 @@ import pixelsToRem from '../../../utilities/pixelsToRem';
 export default {
   text: () =>
     css({
-      verticalAlign: 'middle',
+      // verticalAlign: 'middle', // canomiocal to lite site CTA does not have this
       color: 'inherit',
     }),
   bottomBorder: ({ palette }: Theme) =>

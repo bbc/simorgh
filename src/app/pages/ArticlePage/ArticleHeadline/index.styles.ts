@@ -13,9 +13,9 @@ export default {
     css({
       height: `${pixelsToRem(44)}rem`,
     }),
-  liteCTA: ({ spacings, mq }: Theme) =>
+  canonicalToLiteSiteCTA: ({ spacings, mq }: Theme) =>
     css({
-      display: 'inline-block',
+      padding: `${pixelsToRem(13)}rem 0 ${pixelsToRem(13)}rem`,
       marginInlineStart: `${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
