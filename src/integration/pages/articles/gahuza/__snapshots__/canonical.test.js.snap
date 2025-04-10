@@ -195,6 +195,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
   class="bbc-139onq"
   height="864"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 800w"

@@ -19,7 +19,7 @@
     "test": "jest --ci --colors --selectProjects='Unit Tests'",
     "test:integration": "jest --ci --colors --selectProjects='Integration Tests - Canonical'",
     "test:integration:amp": "jest --ci --colors --selectProjects='Integration Tests - AMP'",
-    "cypress": "cypress run",
+    "cypress": "cypress run --browser chrome",
     "cypress:interactive": "cypress open",
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress -- --e2e",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"

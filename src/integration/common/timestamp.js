@@ -1,8 +1,6 @@
 export default () => {
   describe('Timestamp', () => {
-    console.log('DOC', document);
     const timestampEl = document.querySelector('time');
-    console.log('timestamp', timestampEl);
     const date = timestampEl.getAttribute('datetime');
     const text = timestampEl.textContent;
 
