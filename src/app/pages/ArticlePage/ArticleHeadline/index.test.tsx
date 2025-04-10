@@ -83,7 +83,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
       });
 
       const titleSpan = (container as unknown as HTMLElement).querySelector(
-        'div[data-e2e="to-lite-site"] div span span',
+        'div[data-e2e="to-lite-site"] span',
       );
 
       expect(titleSpan?.innerHTML).toBe(expected);
