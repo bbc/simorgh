@@ -119,7 +119,7 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 
 const ArticlePage = ({
   pageData,
-  continueReadingEnabled = true, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
+  continueReadingEnabled = false, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
 }: {
   pageData: Article;
   continueReadingEnabled?: boolean;
