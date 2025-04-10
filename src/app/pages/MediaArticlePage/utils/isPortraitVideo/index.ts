@@ -15,7 +15,7 @@ const isPortraitVideo = (videoBlock: OptimoBlock[]) => {
   const { model: aresMedia }: AresMediaBlock =
     filterForBlockType(videoBlock, 'aresMedia') ?? {};
 
-  if (!aresMedia) return false; 
+  if (!aresMedia) return false;
 
   const { model: aresMediaMetadata }: AresMediaMetadataBlock =
     filterForBlockType(aresMedia?.blocks, 'aresMediaMetadata') ?? {};
