@@ -19,7 +19,7 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
 
 | Name               | type                           | Description                                                                                                                    |
 | ------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| to                 | string                         | The url for the Call to Action Link                                                                                            |
+| to?                | string                         | The url for the Call to Action Link                                                                                            |
 | children?          | node                           | The content included between the opening and closing tags of the Call to Action Link                                           |
 | alignWithMargin?   | boolean                        | Applies display styling to align link with text. (Left margin for LTR, right margin for RTL). Component is centered by default |
 | className?         | string                         | Permits `css` prop to be applied                                                                                               |

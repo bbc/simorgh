@@ -9,7 +9,7 @@ import Text from './Text';
 import styles from './index.styles';
 
 type CallToActionLinkProps = {
-  to: string;
+  to?: string;
   className?: string;
   eventTrackingData?: EventTrackingMetadata;
   alignWithMargin?: boolean;
@@ -23,13 +23,14 @@ const CallToActionLink = ({
   className,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
+  // const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  // const onClick = eventTrackingData ? clickTrackerHandler : () => null; //removed so Message Banner Tests pass
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const onClick = eventTrackingData ? clickTrackerHandler : () => null;
 
   return (
     <a
       href={to}
-      onClick={onClick}
+      onClick={clickTrackerHandler}
       className={className}
       {...htmlAttributes}
       css={[styles.link, alignWithMargin && styles.alignWithMargin]}
