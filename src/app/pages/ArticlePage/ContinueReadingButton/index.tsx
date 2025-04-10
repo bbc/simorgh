@@ -26,9 +26,6 @@ const ContinueReadingButton = ({
     componentName: 'read-more-button',
   };
 
-  const {
-    translations: { continueReading = 'Continue reading' },
-  } = use(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
@@ -85,6 +82,10 @@ const ContinueReadingButton = ({
 
   // Hide button when all content is shown
   if (showAllContent || !variation) return null;
+
+  const {
+    translations: { continueReading = 'Continue reading' },
+  } = use(ServiceContext);
 
   // Display variations of button based on variation
   const buttonStyle =
