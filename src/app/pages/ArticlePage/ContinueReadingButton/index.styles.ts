@@ -58,7 +58,7 @@ export default {
       color: palette.GREY_10,
       textAlign: 'start',
       border: 'none',
-      borderBottom: `${pixelsToRem(1)}rem solid #B0B2B4`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_4}`,
       paddingBottom: `calc(${spacings.DOUBLE}rem + ${spacings.FULL}rem)`,
 
       svg: {
