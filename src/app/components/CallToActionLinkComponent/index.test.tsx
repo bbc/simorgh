@@ -11,10 +11,12 @@ describe('Call To Action Link', () => {
   it('should render child elements', () => {
     const { container } = render(
       <CallToActionLink to="https://www.bbc.com/ws/languages">
-        <CallToActionLink.Text size="brevier" fontVariant="sansBold">
-          My Link Text
-        </CallToActionLink.Text>
-        <CallToActionLink.Chevron />
+        <CallToActionLink.FlexWrapper>
+          <CallToActionLink.Text size="brevier" fontVariant="sansBold">
+            My Link Text
+          </CallToActionLink.Text>
+          <CallToActionLink.Chevron />
+        </CallToActionLink.FlexWrapper>
       </CallToActionLink>,
     );
     const link = screen.getByText('My Link Text');
@@ -48,35 +50,12 @@ describe('Call To Action Link', () => {
       >
         <CallToActionLink.Text size="brevier" fontVariant="sansBold">
           My Link Text
+          <CallToActionLink.Chevron />
         </CallToActionLink.Text>
-        <CallToActionLink.Chevron />
       </CallToActionLink>,
     );
 
     expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
-  });
-
-  // bad test - for development - remove or update?
-  it(`Should permit lite site click tracking through html attributes`, () => {
-    const atiClickTrackerHandler = {
-      'data-lite-ati-tracking': 'lite-site-cta',
-    };
-    const { container } = render(
-      <CallToActionLink
-        to="https://www.bbc.com/ws/languages"
-        {...atiClickTrackerHandler}
-      >
-        <CallToActionLink.Text size="brevier" fontVariant="sansBold">
-          My Link Text
-        </CallToActionLink.Text>
-        <CallToActionLink.Chevron />
-      </CallToActionLink>,
-    );
-
-    const [ctaLink] = container.querySelectorAll('a');
-    const atiUrl = ctaLink.getAttribute('data-lite-ati-tracking');
-
-    expect(atiUrl).toContain('lite-site-cta');
   });
 
   it(`Should permit custom attributes through html attributes`, () => {

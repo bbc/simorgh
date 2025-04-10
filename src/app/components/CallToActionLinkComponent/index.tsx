@@ -9,7 +9,7 @@ import Text from './Text';
 import styles from './index.styles';
 
 type CallToActionLinkProps = {
-  to?: string;
+  to: string;
   className?: string;
   eventTrackingData?: EventTrackingMetadata;
   alignWithMargin?: boolean;
@@ -20,7 +20,8 @@ const CallToActionLink = ({
   children,
   eventTrackingData,
   alignWithMargin,
-  ...htmlAttributes // handles LiteSiteCta
+  className,
+  ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const onClick = eventTrackingData ? clickTrackerHandler : () => null;
@@ -29,6 +30,7 @@ const CallToActionLink = ({
     <a
       href={to}
       onClick={onClick}
+      className={className}
       {...htmlAttributes}
       css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >
