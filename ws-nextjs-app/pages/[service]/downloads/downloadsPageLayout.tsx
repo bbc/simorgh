@@ -49,7 +49,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
             <Heading level={1}>{title}</Heading>
             <ol css={styles.orderedList}>
               {pageData.downloadData?.map((item, index) => (
-                <li css={styles.listItem} key={index}>
+                <li css={styles.listItem} key={item.fileCreated}>
                   <TimeStampContainer
                     timestamp={item.fileCreated}
                     dateTimeFormat="DD MMMM YYYY"
@@ -69,7 +69,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     eventTrackingData={{
                       componentName: 'koreanDownloads',
                       campaignID: 'korean_downloads',
-                      advertiserID: index,
+                      advertiserID: `${index}`,
                     }}
                   >
                     <svg
