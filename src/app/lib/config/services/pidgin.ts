@@ -35,9 +35,9 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Wetin we call am, ',
     imageCopyrightOffscreenText: 'Wia dis foto come from, ',
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/pidgin/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Domot',
+    homePageTitle: 'Domot',
     noBylinesPolicy:
       'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',

@@ -36,8 +36,9 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCNewsround',
     isTrustProjectParticipant: false,
     script: latin,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Home',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {

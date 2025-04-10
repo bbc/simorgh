@@ -10,14 +10,14 @@ import defaultToggles from '#lib/config/toggles';
 // mock data
 import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
-import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import liveRadioPageJson from '#data/afrique/bbc_afrique_radio/liveradio.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
-import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 // eslint-disable-next-line import/order
@@ -115,7 +115,7 @@ describe('Routes', () => {
     });
 
     it('should route to and render live radio page', async () => {
-      const pathname = '/korean/bbc_korean_radio/liveradio';
+      const pathname = '/afrique/bbc_afrique_radio/liveradio';
       fetch.mockResponseOnce(JSON.stringify(liveRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -133,7 +133,7 @@ describe('Routes', () => {
         pageType,
         service: 'korean',
       });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Afrique Radio';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -364,7 +364,7 @@ describe('Routes', () => {
       });
       await renderRouter({
         pathname,
-        pageType: FRONT_PAGE,
+        pageType: HOME_PAGE,
         service: 'afrique',
         error: {
           message: error,

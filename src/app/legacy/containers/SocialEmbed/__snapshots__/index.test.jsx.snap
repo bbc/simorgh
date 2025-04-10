@@ -377,7 +377,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r8:"
+        aria-describedby="«r8»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
@@ -431,7 +431,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
         </div>
         <small
           class="emotion-14 emotion-15"
-          id=":r8:"
+          id="«r8»"
         >
           Warning: The BBC is not responsible for the content of external sites.
         </small>
@@ -712,7 +712,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r4:"
+        aria-describedby="«r4»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
@@ -767,7 +767,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
         </div>
         <small
           class="emotion-12 emotion-13"
-          id=":r4:"
+          id="«r4»"
         >
           Warning: The BBC is not responsible for the content of external sites.
         </small>
@@ -1047,7 +1047,7 @@ min-height:55.5rem .no-js .emotion-2 {
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r5:"
+        aria-describedby="«r5»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
@@ -1099,7 +1099,7 @@ min-height:55.5rem .no-js .emotion-2 {
         </div>
         <small
           class="emotion-12 emotion-13"
-          id=":r5:"
+          id="«r5»"
         >
           Warning: The BBC is not responsible for the content of external sites.
         </small>
@@ -1494,7 +1494,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r3:"
+        aria-describedby="«r3»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-tiktok-content"
       >
@@ -1548,7 +1548,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
         </div>
         <small
           class="emotion-14 emotion-15"
-          id=":r3:"
+          id="«r3»"
         >
           Warning: The BBC is not responsible for the content of external sites. TikTok content may contain adverts
         </small>
@@ -1819,7 +1819,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r0:"
+        aria-describedby="«r0»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
@@ -1859,7 +1859,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
         </div>
         <small
           class="emotion-12 emotion-13"
-          id=":r0:"
+          id="«r0»"
         >
           Warning: The BBC is not responsible for the content of external sites.
         </small>
@@ -2253,7 +2253,7 @@ min-height:7.0625rem .no-js .emotion-2 {
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r2:"
+        aria-describedby="«r2»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-youtube-content"
       >
@@ -2307,7 +2307,7 @@ min-height:7.0625rem .no-js .emotion-2 {
         </div>
         <small
           class="emotion-14 emotion-15"
-          id=":r2:"
+          id="«r2»"
         >
           Warning: The BBC is not responsible for the content of external sites. YouTube content may contain adverts
         </small>
@@ -2575,7 +2575,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
       class="emotion-4 emotion-5"
     >
       <a
-        aria-describedby=":r1:"
+        aria-describedby="«r1»"
         class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-instagram-content-1"
       >
@@ -2611,7 +2611,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
         </div>
         <small
           class="emotion-12 emotion-13"
-          id=":r1:"
+          id="«r1»"
         >
           Warning: The BBC is not responsible for the content of external sites.
         </small>

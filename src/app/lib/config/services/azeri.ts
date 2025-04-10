@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/azeri/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
+    homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/hindi/institutional-50223932',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/hindi/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -472,7 +472,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'पॉडकास्ट',
-        url: '/hindi/institutional-61824775',
+        url: '/hindi/topics/cv22x3pmrvmt',
       },
     ],
   },

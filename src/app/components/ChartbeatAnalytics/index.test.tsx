@@ -9,7 +9,6 @@ import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
 import { localBaseUrl } from '../../../testHelpers/config';
-import { data as frontPageData } from '../../../../data/news/frontpage/index.json';
 import { PageTypes, Platforms } from '../../models/types/global';
 
 const defaultToggleState = {
@@ -17,10 +16,8 @@ const defaultToggleState = {
     enabled: false,
   },
 };
-
 const mockToggleDispatch = jest.fn();
 const sendCanonicalChartbeatBeacon = jest.fn();
-
 interface Props {
   pageType: PageTypes;
   platform: Platforms;
@@ -32,7 +29,6 @@ interface Props {
     };
   };
 }
-
 const ContextWrap = ({
   pageType,
   platform,
@@ -44,7 +40,6 @@ const ContextWrap = ({
     () => ({ toggleState, toggleDispatch: mockToggleDispatch }),
     [toggleState],
   );
-
   const memoizedUserContextValue = useMemo(
     () => ({ sendCanonicalChartbeatBeacon }),
     [],
@@ -72,7 +67,6 @@ const ContextWrap = ({
     </RequestContextProvider>
   );
 };
-
 describe('Charbeats Analytics Container', () => {
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
     process.env.SIMORGH_APP_ENV = 'live';
@@ -90,17 +84,14 @@ describe('Charbeats Analytics Container', () => {
       virtualReferrer: '/some-path',
       title: 'This is an article',
     };
-
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     // @ts-expect-error requires mocking for testing purposes
     testUtils.getConfig = mockGetConfig;
-
     const toggleState = {
       chartbeatAnalytics: {
         enabled: true,
       },
     };
-
     const { container } = render(
       <ContextWrap
         platform="amp"
@@ -108,10 +99,7 @@ describe('Charbeats Analytics Container', () => {
         origin="bbc.com"
         toggleState={toggleState}
       >
-        <ChartbeatAnalytics
-          title={frontPageData?.article?.metadata?.title}
-          sectionName={frontPageData?.article?.relatedContent?.section?.name}
-        />
+        <ChartbeatAnalytics title="Home" sectionName="Home" />
       </ContextWrap>,
     );
     expect(mockAmp).toHaveBeenCalledTimes(1);
@@ -125,7 +113,6 @@ describe('Charbeats Analytics Container', () => {
     expect(container.firstChild).not.toBeNull();
     expect(container.firstChild?.textContent).toEqual('amp-return-value');
   });
-
   it('should return null when toggle is disbaled for live', () => {
     const toggleState = {
       chartbeatAnalytics: {
@@ -139,16 +126,12 @@ describe('Charbeats Analytics Container', () => {
         origin="bbc.com"
         toggleState={toggleState}
       >
-        <ChartbeatAnalytics
-          title={frontPageData?.article?.metadata?.title}
-          sectionName={frontPageData?.article?.relatedContent?.section?.name}
-        />
+        <ChartbeatAnalytics title="Home" sectionName="Home" />
       </ContextWrap>,
     );
 
     expect(container.firstChild).toBeNull();
   });
-
   it('should return null when toggle is disbaled for localhost', () => {
     process.env.SIMORGH_APP_ENV = 'local';
     const { container } = render(
@@ -157,22 +140,17 @@ describe('Charbeats Analytics Container', () => {
         pageType={ARTICLE_PAGE}
         origin={localBaseUrl}
       >
-        <ChartbeatAnalytics
-          title={frontPageData?.article?.metadata?.title}
-          sectionName={frontPageData?.article?.relatedContent?.section?.name}
-        />
+        <ChartbeatAnalytics title="Home" sectionName="Home" />
       </ContextWrap>,
     );
 
     expect(container.firstChild).toBeNull();
   });
-
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test', () => {
     process.env.SIMORGH_APP_ENV = 'test';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     // @ts-expect-error requires mocking for testing purposes
     amp.default = mockAmp;
-
     const expectedConfig = {
       uid: 50924,
       domain: 'test-domain',
@@ -186,13 +164,11 @@ describe('Charbeats Analytics Container', () => {
       useCanonical: true,
       virtualReferrer: '/some-path',
     };
-
     const toggleState = {
       chartbeatAnalytics: {
         enabled: true,
       },
     };
-
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     // @ts-expect-error requires mocking for testing purposes
     testUtils.getConfig = mockGetConfig;
@@ -203,10 +179,7 @@ describe('Charbeats Analytics Container', () => {
         origin="test.bbc.com"
         toggleState={toggleState}
       >
-        <ChartbeatAnalytics
-          title={frontPageData?.article?.metadata?.title}
-          sectionName={frontPageData?.article?.relatedContent?.section?.name}
-        />
+        <ChartbeatAnalytics title="Home" sectionName="Home" />
       </ContextWrap>,
     );
 

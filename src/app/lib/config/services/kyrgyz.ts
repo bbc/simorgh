@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
     script: cyrillic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/kyrgyz/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
+    homePageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

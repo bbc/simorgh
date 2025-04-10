@@ -12,7 +12,6 @@ export default ({
   let dataPath;
 
   switch (pageType) {
-    case 'frontpage':
     case 'homePage':
     case 'mostRead':
     case 'secondaryColumn':

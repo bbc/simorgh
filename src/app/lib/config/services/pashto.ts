@@ -43,9 +43,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/pashto/institutional-49283007',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/pashto/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'کور پاڼه',
+    homePageTitle: 'کور پاڼه',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

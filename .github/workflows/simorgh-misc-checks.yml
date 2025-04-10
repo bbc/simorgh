@@ -65,6 +65,7 @@ jobs:
 
       - name: Get Storybook Branch Permalink
         uses: actions/github-script@v7
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
         id: get-storybook-permalink
         with:
           script: |
@@ -73,7 +74,7 @@ jobs:
             core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
 
       - name: Publish Storybook Branch Permalink
-        if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
         run: |
           curl \
           -X POST \
@@ -90,10 +91,13 @@ jobs:
           --fail
 
       - name: Duplicate Dependency Checker
+        if: github.ref != 'refs/heads/latest'
         run: yarn test:dependencies
 
       - name: Linting
+        if: github.ref != 'refs/heads/latest'
         run: yarn build && yarn test:lint
 
       - name: NPM Audit
+        if: github.ref != 'refs/heads/latest'
         run: yarn npm audit --all --severity low --no-deprecations

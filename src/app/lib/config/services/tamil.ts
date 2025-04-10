@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/tamil/institutional-50288575',
     isTrustProjectParticipant: true,
     script: tamil,
-    manifestPath: '/manifest.json',
+    manifestPath: '/tamil/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'முகப்பு',
+    homePageTitle: 'முகப்பு',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -428,6 +428,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'இலங்கை',
         url: '/tamil/topics/cz74k7p3qw7t',
+      },
+      {
+        title: 'உடல்நலம்',
+        url: '/tamil/topics/cyx5kxzdn9dt',
+      },
+      {
+        title: 'வரலாறு',
+        url: '/tamil/topics/cxnyknvykxjt',
       },
       {
         title: 'விளையாட்டு',

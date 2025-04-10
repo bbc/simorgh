@@ -6,10 +6,10 @@ import {
   runMediaPlayerAudioTests,
 } from '../../common';
 
-export default service => {
+export default ({ service, pageType }) => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
-  runRadioScheduleTests({ isAmp: false });
+  runRadioScheduleTests(pageType);
   runCommonCrossPlatformTests(service);
   runMediaPlayerAudioTests();
 

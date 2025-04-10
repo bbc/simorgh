@@ -13,12 +13,12 @@ const {
   AUDIO_PAGE,
   INDEX_PAGE,
   ARTICLE_PAGE,
-  FRONT_PAGE,
   LIVE_RADIO_PAGE,
   MEDIA_ASSET_PAGE,
   HOME_PAGE,
   TOPIC_PAGE,
   TV_PAGE,
+  ERROR_PAGE,
 } = PAGE_TYPES;
 
 const defaultToggleState = {
@@ -54,16 +54,6 @@ describe(`Header`, () => {
         renderOptions: {
           pageType: ARTICLE_PAGE,
           service: 'news',
-        },
-      });
-
-      expect(container.firstChild).toMatchSnapshot();
-    });
-
-    it('should render correctly for WS frontpage', () => {
-      const { container } = HeaderContainerWithContext({
-        renderOptions: {
-          pageType: FRONT_PAGE,
         },
       });
 
@@ -123,7 +113,7 @@ describe(`Header`, () => {
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       HeaderContainerWithContext({
         renderOptions: {
-          pageType: FRONT_PAGE,
+          pageType: HOME_PAGE,
         },
       });
 
@@ -136,7 +126,7 @@ describe(`Header`, () => {
     it('should not render script link for a service without variants', () => {
       HeaderContainerWithContext({
         renderOptions: {
-          pageType: FRONT_PAGE,
+          pageType: HOME_PAGE,
           service: 'pidgin',
         },
       });
@@ -146,7 +136,7 @@ describe(`Header`, () => {
     it('should render script link for a service with variants', () => {
       const { container } = HeaderContainerWithContext({
         renderOptions: {
-          pageType: FRONT_PAGE,
+          pageType: HOME_PAGE,
           service: 'serbian',
           variant: 'cyr',
         },
@@ -157,7 +147,12 @@ describe(`Header`, () => {
 
     describe('when service is uzbek', () => {
       describe.each(['cyr', 'lat'])('and variant is %s', variant => {
-        const supportedUzbekPageTypes = [ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE];
+        const supportedUzbekPageTypes = [
+          ARTICLE_PAGE,
+          HOME_PAGE,
+          TOPIC_PAGE,
+          ERROR_PAGE,
+        ];
         const unsupportedUzbekPageTypes = Object.values(PAGE_TYPES).filter(
           pageType => !supportedUzbekPageTypes.includes(pageType),
         );

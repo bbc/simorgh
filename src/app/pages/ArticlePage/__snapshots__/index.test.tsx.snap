@@ -845,7 +845,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
             dir="ltr"
           >
             <h1
-              class="emotion-6 emotion-7"
+              class="article-heading emotion-6 emotion-7"
               id="content"
               tabindex="-1"
             >
@@ -2238,7 +2238,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             dir="ltr"
           >
             <h1
-              class="emotion-6 emotion-7"
+              class="article-heading emotion-6 emotion-7"
               id="content"
               tabindex="-1"
             >
@@ -3111,7 +3111,7 @@ exports[`Article Page should render a news article with headline in the middle c
             dir="ltr"
           >
             <strong
-              class="emotion-11 emotion-12"
+              class="article-heading emotion-11 emotion-12"
             >
               Article Headline
             </strong>
@@ -4419,7 +4419,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             dir="rtl"
           >
             <h1
-              class="emotion-6 emotion-7"
+              class="article-heading emotion-6 emotion-7"
               id="content"
               tabindex="-1"
             >

@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/gujarati/institutional-50409883',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/gujarati/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'સમાચાર',
+    homePageTitle: 'સમાચાર',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {

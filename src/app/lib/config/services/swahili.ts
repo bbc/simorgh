@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/swahili/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Swahili',
+    homePageTitle: 'Swahili',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

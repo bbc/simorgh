@@ -56,9 +56,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/yoruba/institutional-48528718',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/yoruba/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Àbáwọlé',
+    homePageTitle: 'Àbáwọlé',
     translations: {
       pagination: {
         previousPage: 'Ìṣájú',

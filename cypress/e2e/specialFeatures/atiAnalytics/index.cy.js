@@ -15,6 +15,10 @@ import {
 } from './assertions/latestMedia';
 import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
 import {
+  assertCanonicalToLiteSiteCTAComponentClick,
+  assertCanonicalToLiteSiteCTAComponentView,
+} from './assertions/canonicalLiteSiteCta';
+import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
 } from './assertions/messageBanner';
@@ -67,6 +71,42 @@ import {
 
 const canonicalTestSuites = [
   {
+    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
+    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/afrique/bbc_afrique_tv/tv/w3ct05mp',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv.w3ct05mp.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
     path: '/gahuza',
     runforEnv: ['local', 'live'],
     service: 'gahuza',
@@ -108,6 +148,50 @@ const canonicalTestSuites = [
       assertRelatedContentComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
+      assertCanonicalToLiteSiteCTAComponentView,
+      assertCanonicalToLiteSiteCTAComponentClick,
+    ],
+  },
+  {
+    path: '/gahuza/popular/read',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.popular.read.page',
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
     ],
   },
   {
@@ -143,69 +227,12 @@ const canonicalTestSuites = [
     pageIdentifier: 'hausa.bbc_hausa_radio.liveradio.page',
     applicationType: 'responsive',
     contentType: 'player-live',
+    useReverb: true,
     tests: [
       assertPageView,
       assertRadioScheduleComponentView,
       assertRadioScheduleComponentClick,
     ],
-  },
-  {
-    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-      assertRadioScheduleComponentView,
-      assertRadioScheduleComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertPodcastLinksComponentView,
-      assertPodcastLinksComponentClick,
-      assertRecentAudioEpisodesComponentView,
-      assertRecentAudioEpisodesComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza/popular/read',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.popular.read.page',
-    applicationType: 'responsive',
-    contentType: 'list-datadriven',
-    useReverb: true,
-    tests: [assertPageView],
   },
   {
     path: '/hausa/articles/cw43vy8zdjvo',
@@ -214,44 +241,13 @@ const canonicalTestSuites = [
     pageIdentifier: 'hausa.articles.cw43vy8zdjvo.page',
     applicationType: 'responsive',
     contentType: 'article-sfv',
+    useReverb: true,
     tests: [
       assertPageView,
       assertLatestMediaComponentView,
       assertLatestMediaComponentClick,
     ],
   },
-  {
-    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page',
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
-    path: '/afrique/bbc_afrique_tv/tv/w3ct05mp',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'afrique',
-    pageIdentifier: 'afrique.bbc_afrique_tv.tv.w3ct05mp.page',
-    applicationType: 'responsive',
-    contentType: 'player-episode',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
-    path: '/marathi/topics/c1wmk63rjkvt',
-    runforEnv: ['live'],
-    service: 'marathi',
-    pageIdentifier: 'marathi.topics.c1wmk63rjkvt.page',
-    applicationType: 'responsive',
-    contentType: 'index-category',
-    useReverb: true,
-    componentTrackingContentType: 'topic-page',
-    tests: [assertPageView],
-  },
-  // Pages with Reverb
   {
     path: '/indonesia',
     runforEnv: ['local', 'live'],
@@ -283,6 +279,17 @@ const canonicalTestSuites = [
       assertMostReadComponentView,
       assertMostReadComponentClick,
     ],
+  },
+  {
+    path: '/marathi/topics/c1wmk63rjkvt',
+    runforEnv: ['live'],
+    service: 'marathi',
+    pageIdentifier: 'marathi.topics.c1wmk63rjkvt.page',
+    applicationType: 'responsive',
+    contentType: 'index-category',
+    useReverb: true,
+    componentTrackingContentType: 'topic-page',
+    tests: [assertPageView],
   },
   {
     path: '/nepali',
@@ -362,6 +369,58 @@ const canonicalTestSuites = [
       assertBillboardComponentView,
       assertBillboardComponentClick,
     ],
+  },
+  {
+    path: '/pidgin/articles/cyv3zm4y428o',
+    runforEnv: ['live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.cyv3zm4y428o.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertScrollablePromoComponentClick,
+      assertScrollablePromoComponentView,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/articles/cw0x29n2pvqo',
+    runforEnv: ['local', 'live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.cw0x29n2pvqo.page',
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertLatestMediaComponentClick,
+      assertLatestMediaComponentView,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/popular/read',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.popular.read.page',
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+    useReverb: true,
+    tests: [assertPageView],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',
@@ -450,60 +509,6 @@ const canonicalTestSuites = [
       assertMostReadComponentClick,
     ],
   },
-  // Article
-  {
-    path: '/pidgin/articles/cyv3zm4y428o',
-    runforEnv: ['live'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.articles.cyv3zm4y428o.page',
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertTopStoriesComponentView,
-      assertTopStoriesComponentClick,
-      assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
-      assertScrollablePromoComponentClick,
-      assertScrollablePromoComponentView,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertRelatedContentComponentView,
-      assertRelatedContentComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  // Media Article
-  {
-    path: '/pidgin/articles/cw0x29n2pvqo',
-    runforEnv: ['local', 'live'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.articles.cw0x29n2pvqo.page',
-    applicationType: 'responsive',
-    contentType: 'article-sfv',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertLatestMediaComponentClick,
-      assertLatestMediaComponentView,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertRelatedContentComponentView,
-      assertRelatedContentComponentClick,
-    ],
-  },
-  {
-    path: '/pidgin/popular/read',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.popular.read.page',
-    applicationType: 'responsive',
-    contentType: 'list-datadriven',
-    useReverb: true,
-    tests: [assertPageView],
-  },
 ];
 
 const supportsAmp = ({ contentType }) =>
@@ -521,11 +526,9 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   };
 });
 
-// Most Read & On Demand TV pages do not currently support .lite
-const supportsLite = ({ path, contentType, service }) =>
-  liteEnabledServices.includes(service) &&
-  !path.includes('_tv') &&
-  contentType !== 'list-datadriven';
+// Most Read pages do not currently support .lite
+const supportsLite = ({ contentType, service }) =>
+  liteEnabledServices.includes(service) && contentType !== 'list-datadriven';
 
 const liteTestSuites = canonicalTestSuites
   .filter(supportsLite)
@@ -555,4 +558,5 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+  testIsolation: true,
 });

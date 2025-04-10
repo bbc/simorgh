@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/somali/hayadeed-49283375',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/somali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Somali',
+    homePageTitle: 'Somali',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

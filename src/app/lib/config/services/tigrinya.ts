@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/tigrinya/institutional-49283259',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/tigrinya/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ዜና',
+    homePageTitle: 'ዜና',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {

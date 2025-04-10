@@ -30,6 +30,7 @@ const RELATED_CONTENT = 'related-content';
 const RELATED_TOPICS = 'topics';
 const PODCAST_PROMO = 'promo-podcast';
 const LITE_SITE_CTA = 'lite-site-cta';
+const CANONICAL_LITE_CTA = 'canonical-lite-cta';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
@@ -49,6 +50,7 @@ export const COMPONENTS = {
   RELATED_TOPICS,
   PODCAST_PROMO,
   LITE_SITE_CTA,
+  CANONICAL_LITE_CTA,
   RECENT_AUDIO_EPISODES,
   PODCAST_LINKS,
   LATEST_MEDIA,

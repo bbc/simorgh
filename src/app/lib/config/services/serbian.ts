@@ -22,7 +22,7 @@ const baseServiceConfig = {
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
   isTrustProjectParticipant: true,
-  manifestPath: '/manifest.json',
+  manifestPath: '/serbian/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
@@ -44,7 +44,7 @@ export const service: SerbianConfig = {
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
     externalLinkText: ', spoljna',
-    frontPageTitle: 'Glavna stranica',
+    homePageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -442,7 +442,7 @@ export const service: SerbianConfig = {
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
     externalLinkText: ', спољна',
-    frontPageTitle: 'Главна страница',
+    homePageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405

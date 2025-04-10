@@ -10,11 +10,6 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 import CpsRecommendations from '.';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
-
 const parentColumns = {
   group0: 8,
   group1: 8,

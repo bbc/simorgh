@@ -218,14 +218,14 @@ export const buildATIPageTrackPath = ({
       ? [
           {
             key: 'mv_test',
-            description: 'Data driven OJs experiment',
-            value: 'Data driven OJs experiment',
+            description: 'Lite Site Promotion experiment',
+            value: 'Lite_Site_Promotion_experiment',
             wrap: false,
             disableEncoding: true,
           },
           {
             key: 'mv_creation',
-            description: 'Data driven OJs variant',
+            description: 'Lite Site Promotion variant',
             value: `${experimentVariant}`,
             wrap: false,
             disableEncoding: true,
@@ -370,14 +370,14 @@ export const buildATIEventTrackUrl = ({
       ? [
           {
             key: 'mv_test',
-            description: 'Data driven OJs experiment',
-            value: 'Data driven OJs experiment',
+            description: 'Top Bar OJs experiment',
+            value: 'Top Bar OJs experiment',
             wrap: false,
             disableEncoding: true,
           },
           {
             key: 'mv_creation',
-            description: 'Data driven OJs variant',
+            description: 'Top Bar OJs variant',
             value: `${experimentVariant}`,
             wrap: false,
             disableEncoding: true,

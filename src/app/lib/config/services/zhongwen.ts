@@ -13,6 +13,7 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   atiAnalyticsProducerName: 'CHINESE',
+  useReverb: true,
   chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',
@@ -27,7 +28,7 @@ const baseServiceConfig = {
   twitterSite: '@bbcchinese',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
-  manifestPath: '/manifest.json',
+  manifestPath: '/zhongwen/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
@@ -59,7 +60,7 @@ export const service: ZhongwenConfig = {
   simp: {
     ...baseServiceConfig,
     externalLinkText: ', 外部',
-    frontPageTitle: '主页',
+    homePageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -372,7 +373,7 @@ export const service: ZhongwenConfig = {
     isoLang: 'zh-Hant',
     datetimeLocale: 'zh-tw',
     externalLinkText: ', 外部',
-    frontPageTitle: '主頁',
+    homePageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
     videoCaptionOffscreenText: '音頻加註文字，',

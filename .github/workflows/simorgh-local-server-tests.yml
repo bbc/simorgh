@@ -1,8 +1,8 @@
-name: Simorgh CI - AMP Validation, Lighthouse & Puppeteer Tests
+name: Simorgh CI - AMP Validation, Lighthouse, & Puppeteer Tests
 on:
   pull_request:
     branches:
-      - '**'
+      - "**"
 permissions:
   contents: read
 
@@ -14,8 +14,8 @@ jobs:
         node-version: [22.x]
     env:
       CI: true
-      LOG_LEVEL: 'error'
-      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
+      LOG_LEVEL: "error"
+      BFF_PATH: "https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff"
       LIGHTHOUSE_BUILD: true
 
     steps:
@@ -60,6 +60,8 @@ jobs:
 
       - name: Run Puppeteer Tests
         run: |
-          yarn add puppeteer@18.0.5
-          yarn test:puppeteer
-          yarn remove puppeteer
+          npx puppeteer browsers install chrome
+          sudo apt-get install -y xvfb
+          Xvfb -ac :99 -screen 0 1280x1024x16 2>/dev/null 1>&2 & 
+          export DISPLAY=:99
+          yarn test:puppeteer:local

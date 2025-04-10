@@ -2,6 +2,6 @@ import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOpti
 import ArticlePage from './ArticlePage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-const ArticlePageWithOptimizely = withOptimizelyProvider(ArticlePage);
-
-export default applyBasicPageHandlers(ArticlePageWithOptimizely);
+export default applyBasicPageHandlers(ArticlePage, {
+  handlerBeforeContexts: withOptimizelyProvider,
+});

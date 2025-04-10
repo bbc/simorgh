@@ -69,54 +69,36 @@ export const assertPageView = ({
   applicationType,
   contentType,
   service,
+  path,
 }) => {
   it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, application type = ${applicationType} and content type = ${contentType}`, () => {
-    cy.url().then(url => {
-      interceptATIAnalyticsBeacons();
-      cy.visit(url);
+    interceptATIAnalyticsBeacons();
+    cy.visit(path, { retryOnStatusCodeFailure: true });
 
-      console.log(
-        'url in assertPageView just after cy.visit in assertPageView',
-        url,
-      );
-      cy.log('url in assertPageView just after cy.visit assertPageView', url);
-      const atiPageViewAlias = useReverb ? ATI_PAGE_VIEW_REVERB : ATI_PAGE_VIEW;
+    const atiPageViewAlias = useReverb ? ATI_PAGE_VIEW_REVERB : ATI_PAGE_VIEW;
 
-      cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
-        const params = getATIParamsFromURL(request.url);
-        console.log(
-          'p param from getATIParamsFromUrl assertPageView',
-          params.p,
-          'for URL',
-          request.url,
-        );
+    cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
+      const params = getATIParamsFromURL(request.url);
 
-        cy.log(
-          'p param from getATIParamsFromUrl assertPageView',
-          params.p,
-          'for URL',
-          request.url,
-        );
-        assertATIPageViewEventParamsExist({
-          params,
-          contentType,
-          applicationType,
-        });
-
-        expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-        expect(params.x2).to.equal(
-          `[${applicationType}]`,
-          'params.x2 (application type)',
-        );
-        expect(params.x3).to.equal(
-          `[news-${service}]`,
-          'params.x3 (application name)',
-        );
-        expect(params.x7).to.equal(
-          `[${contentType}]`,
-          'params.x7 (content type)',
-        );
+      assertATIPageViewEventParamsExist({
+        params,
+        contentType,
+        applicationType,
       });
+
+      expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
+      expect(params.x2).to.equal(
+        `[${applicationType}]`,
+        'params.x2 (application type)',
+      );
+      expect(params.x3).to.equal(
+        `[news-${service}]`,
+        'params.x3 (application name)',
+      );
+      expect(params.x7).to.equal(
+        `[${contentType}]`,
+        'params.x7 (content type)',
+      );
     });
   });
 };

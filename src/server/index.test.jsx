@@ -10,7 +10,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#lib/logger.const';
-import { FRONT_PAGE, LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE, LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
 import * as renderDocument from './Document';
@@ -174,7 +174,7 @@ const assertNon200ResponseCustomMetrics = ({
   });
 };
 
-const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
+const testHomePages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const isApp = platform === 'app';
   const extension =
@@ -186,7 +186,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     variant ? `/${variant}` : ''
   }${extension}${queryString}`;
 
-  describe(`Front Page: ${serviceURL}`, () => {
+  describe(`Home Page: ${serviceURL}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -228,7 +228,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       });
 
       describe('404 status code', () => {
-        const pageType = 'Front Page';
+        const pageType = 'Home Page';
         beforeEach(() => {
           mockRouteProps({
             service,
@@ -257,7 +257,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
-      const pageType = FRONT_PAGE;
+      const pageType = HOME_PAGE;
       beforeEach(() => {
         mockRouteProps({
           service,
@@ -953,14 +953,14 @@ describe('Server', () => {
 
   describe('Service workers', () => {
     it('should serve a file for existing service workers', async () => {
-      await makeRequest('/news/articles/sw.js');
+      await makeRequest('/gahuza/sw.js');
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
         path.join(__dirname, '/public/sw.js'),
       );
     });
 
     it('should not serve a file for non-existing service workers', async () => {
-      const { statusCode } = await makeRequest('/some-service/articles/sw.js');
+      const { statusCode } = await makeRequest('/news/sw.js');
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
@@ -974,12 +974,19 @@ describe('Server', () => {
   });
 
   describe('Manifest json', () => {
-    it('should serve a file for valid service paths', async () => {
-      await makeRequest('/news/articles/manifest.json');
-      expect(sendFileSpy.mock.calls[0][0]).toEqual(
-        path.join(__dirname, '/public/news/manifest.json'),
-      );
-    });
+    it.each`
+      manifestPath                | expectedManifestFile
+      ${'/pidgin/manifest.json'}  | ${'/pidgin/manifest.json'}
+      ${'/serbian/manifest.json'} | ${'/serbian/manifest.json'}
+    `(
+      'should serve a file for $manifestPath',
+      async ({ manifestPath, expectedManifestFile }) => {
+        await makeRequest(manifestPath);
+        expect(sendFileSpy.mock.calls[0][0]).toEqual(
+          path.join(__dirname, `/public/${expectedManifestFile}`),
+        );
+      },
+    );
 
     it('should not serve a manifest file for non-existing services', async () => {
       const { statusCode } = await makeRequest('/some-service/manifest.json');
@@ -987,10 +994,10 @@ describe('Server', () => {
       expect(statusCode).toEqual(500);
     });
 
-    it('should serve a response cache control of 7 days', async () => {
-      const { header } = await makeRequest('/news/articles/manifest.json');
+    it('should serve a response cache control of 1 day', async () => {
+      const { header } = await makeRequest('/pidgin/manifest.json');
       expect(header['cache-control']).toBe(
-        'public, stale-if-error=1209600, stale-while-revalidate=1209600, max-age=604800',
+        'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
       );
     });
   });
@@ -1240,31 +1247,31 @@ describe('Server', () => {
     });
   });
 
-  testFrontPages({ platform: 'canonical', service: 'igbo' });
-  testFrontPages({
+  testHomePages({ platform: 'canonical', service: 'igbo' });
+  testHomePages({
     platform: 'canonical',
     service: 'igbo',
     queryString: QUERY_STRING,
   });
-  testFrontPages({ platform: 'amp', service: 'igbo' });
-  testFrontPages({
+  testHomePages({ platform: 'amp', service: 'igbo' });
+  testHomePages({
     platform: 'amp',
     service: 'igbo',
     queryString: QUERY_STRING,
   });
-  testFrontPages({
+  testHomePages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
   });
-  testFrontPages({
+  testHomePages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
     queryString: QUERY_STRING,
   });
-  testFrontPages({ platform: 'amp', service: 'serbian', variant: 'lat' });
-  testFrontPages({
+  testHomePages({ platform: 'amp', service: 'serbian', variant: 'lat' });
+  testHomePages({
     platform: 'amp',
     service: 'serbian',
     variant: 'lat',

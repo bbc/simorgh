@@ -10,15 +10,6 @@ export default {
         'modern.shared-3333.js',
       ];
     }
-    if (pageType === 'FrontPage') {
-      return [
-        'modern.FrontPage-31ecd969.bbf7a07e.js',
-        'modern.commons-1111.js',
-        'modern.commons-2222.js',
-        'modern.1111-lib-1111.js',
-        'modern.shared-1111.js',
-      ];
-    }
     if (pageType === 'HomePage') {
       return [
         'modern.HomePage-31ecd969.0d59dc5c.js',

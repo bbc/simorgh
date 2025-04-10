@@ -6,7 +6,6 @@ import onClient from '../../../lib/utilities/onClient';
 import { getReferrer } from '../../../lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
   MOST_READ_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -46,11 +45,8 @@ const buildSectionItem = (service: Services | string, type: string) => [
 export const getSylphidCookie = () =>
   onClient() ? Cookie.get(ID_COOKIE) : null;
 
-export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
+export const getType = (pageType: PageTypes, shorthand = false) => {
   switch (pageType) {
-    case FRONT_PAGE:
-    case 'index':
-      return shorthand ? 'IDX' : 'Index';
     case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
     case MEDIA_ARTICLE_PAGE:
@@ -178,7 +174,6 @@ interface GetTitleProps {
 
 export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
   switch (pageType) {
-    case FRONT_PAGE:
     case MOST_READ_PAGE:
     case TOPIC_PAGE:
     case LIVE_PAGE:

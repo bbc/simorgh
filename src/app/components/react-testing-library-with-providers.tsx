@@ -36,7 +36,6 @@ interface Props extends PropsWithChildren {
 
 const AllTheProviders: FC<Props> = ({
   children,
-  pageData,
   atiData,
   id = null,
   isAmp = false,
@@ -80,7 +79,7 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <EventTrackingContextProvider data={pageData} atiData={atiData}>
+          <EventTrackingContextProvider atiData={atiData}>
             <UserContextProvider>
               <ThemeProvider service={service} variant={variant}>
                 {children}

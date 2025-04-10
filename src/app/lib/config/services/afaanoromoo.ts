@@ -43,9 +43,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/afaanoromoo/institutional-49281861',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/afaanoromoo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Oduu',
+    homePageTitle: 'Oduu',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {

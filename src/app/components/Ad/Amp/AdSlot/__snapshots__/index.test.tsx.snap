@@ -32,21 +32,3 @@ exports[`Amp AdSlot Snapshots should correctly render a leaderboard AdSlot 1`] =
   />
 </div>
 `;
-
-exports[`Amp AdSlot Snapshots should correctly render a mpu AdSlot 1`] = `
-<div>
-  <amp-ad
-    data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-    data-amp-slot-index="0"
-    data-block-on-consent="default"
-    data-multi-size="300x250"
-    data-multi-size-validation="false"
-    data-npa-on-unknown-consent="true"
-    data-slot="/4817/bbccom.test.site.amp.news"
-    height="250"
-    json="{"targeting":{"slot":"mpu","asset_type":"index","channel":"mundo"}}"
-    type="doubleclick"
-    width="300"
-  />
-</div>
-`;

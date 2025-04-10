@@ -109,7 +109,7 @@ describe('Curation', () => {
         {
           toggles: {
             mostRead: { enabled: true },
-            frontPageRadioSchedule: { enabled: true },
+            homePageRadioSchedule: { enabled: true },
           },
           service: 'afrique',
         },

@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/korean/institutional-49283197',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/korean/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: '홈페이지',
+    homePageTitle: '홈페이지',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {

@@ -1,5 +1,3 @@
-import isLive from '#app/lib/utilities/isLive';
-
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const appRegex = '.app';
@@ -24,88 +22,32 @@ export const getArticleRegex = services => {
   return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:nonCanonicalArticleRenderPlatform(${nonCanonicalArticleRenderPlatform})?`;
 };
 
-export const getArticleSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/sw.js`;
-};
+const getWorldServices = services => {
+  const publicServices = [
+    'news',
+    'sport',
+    'newsround',
+    'cymrufyw',
+    'naidheachdan',
+    'archive',
+    'scotland',
+  ];
 
-export const getArticleManifestRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
-};
-
-const homePageServices = [
-  'afaanoromoo',
-  'afrique',
-  'amharic',
-  'arabic',
-  'azeri',
-  'bengali',
-  'burmese',
-  'gahuza',
-  'gujarati',
-  'hausa',
-  'hindi',
-  'igbo',
-  'indonesia',
-  'japanese',
-  'kyrgyz',
-  'korean',
-  'marathi',
-  'mundo',
-  'nepali',
-  'pashto',
-  'persian',
-  'pidgin',
-  'portuguese',
-  'punjabi',
-  'russian',
-  'serbian',
-  'sinhala',
-  'somali',
-  'swahili',
-  'tamil',
-  'telugu',
-  'thai',
-  'tigrinya',
-  'turkce',
-  'ukrainian',
-  'urdu',
-  'uzbek',
-  'vietnamese',
-  'yoruba',
-  'zhongwen',
-];
-
-export const getFrontPageRegex = services => {
-  let frontPages = services;
-  if (isLive()) {
-    frontPages = services.filter(
-      service => !homePageServices.includes(service),
-    );
-  } else {
-    frontPages = [];
-  }
-  const serviceRegex = getServiceRegex(frontPages);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?:lite(${liteRegex})?`;
+  return services.filter(service => !publicServices.includes(service));
 };
 
 export const getHomePageRegex = services => {
-  let homePages = services;
-  if (isLive()) {
-    homePages = services.filter(service => homePageServices.includes(service));
-  }
-  const homePageServiceRegex = getServiceRegex(homePages);
+  const homePageServiceRegex = getServiceRegex(services);
   return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:lite(${liteRegex})?`;
 };
 
 export const getSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  const serviceRegex = getServiceRegex(getWorldServices(services));
   return `/:service(${serviceRegex})/sw.js`;
 };
 
 export const getManifestRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  const serviceRegex = getServiceRegex(getWorldServices(services));
   return `/:service(${serviceRegex})/manifest.json`;
 };
 

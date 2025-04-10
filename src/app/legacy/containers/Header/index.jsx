@@ -7,6 +7,7 @@ import {
   ARTICLE_PAGE,
   HOME_PAGE,
   TOPIC_PAGE,
+  ERROR_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteCta from '#app/components/LiteSiteCta';
 import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
@@ -77,7 +78,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
   if (scriptLink) {
     switch (true) {
       case service === 'uzbek' &&
-        ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE].includes(pageType):
+        ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;
         break;
       default:

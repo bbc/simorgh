@@ -1940,7 +1940,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    aria-describedby=":r9:"
+    aria-describedby="«r9»"
     class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
@@ -1965,7 +1965,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
     </div>
     <small
       class="emotion-8 emotion-9"
-      id=":r9:"
+      id="«r9»"
     >
       undefined
     </small>

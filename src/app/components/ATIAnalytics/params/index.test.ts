@@ -2,19 +2,16 @@
 import * as analyticsUtils from '../../../lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
-  ERROR_PAGE,
-  LIVE_PAGE,
 } from '../../../routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as buildPageATIFunctionImports from './buildParams';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
-import { ATIData, PageData } from '../types';
+import { ATIData } from '../types';
 
 (analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
@@ -43,20 +40,6 @@ const serviceContext: ServiceConfig = {
   service: 'pidgin',
   brandName: 'brandName',
   lang: 'pcm',
-};
-
-const frontPage: PageData = {
-  metadata: {
-    analyticsLabels: {
-      counterName: 'service.page',
-    },
-    locators: {
-      curie:
-        'http://www.bbc.co.uk/asset/00000000-0000-0000-0000-000000000000/desktop/domestic',
-    },
-    language: 'language',
-    title: 'title',
-  },
 };
 
 const homePageAnalyticsData: ATIData = {
@@ -218,40 +201,6 @@ describe('ATIAnalytics params', () => {
         x14: '[0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~103fc7e4-3a8d-491c-9a75-3c37c299d48f~12e69b92-a7ba-4463-84e0-be107b9805d0~5a08f030-710f-4168-acee-67294a90fc75~9b16a6c2-7c16-42b7-bff7-6549579622e8]',
         x17: '[Environment~Narendra+Modi~Nature~India~Severe+weather]',
         ref: 'https://www.example.com',
-      });
-    });
-
-    it('should return the correct frontPage url', () => {
-      const url = buildATIUrl({
-        requestContext: { ...requestContext, pageType: FRONT_PAGE },
-        data: frontPage,
-        serviceContext,
-      });
-
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(url as string),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598285',
-        s2: 'atiAnalyticsProducerId',
-        p: 'service.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        ref: 'https://www.example.com',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:00000000-0000-0000-0000-000000000000]',
-        x2: '[responsive]',
-        x3: '[atiAnalyticsAppName]',
-        x4: '[language]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x6: '[https%3A%2F%2Fwww.example.com]',
-        x7: '[index-home]',
-        x8: '[simorgh]',
-        x9: '[title%20-%20brandName]',
-        x11: '[1970-01-01T00:00:00.000Z]',
-        x12: '[1970-01-01T00:00:00.000Z]',
       });
     });
 
@@ -433,29 +382,7 @@ describe('ATIAnalytics params', () => {
           }),
         );
       });
-
-      it('should not invoke buildPageATIUrl for an unmigrated page type with no atiData', () => {
-        buildATIUrl({
-          requestContext: { ...requestContext, pageType: FRONT_PAGE },
-          atiData: undefined,
-          serviceContext,
-        });
-
-        expect(buildPageATIUrlSpy).not.toHaveBeenCalled();
-      });
     });
-
-    it.each([HOME_PAGE, ERROR_PAGE, LIVE_PAGE])(
-      'should return empty object {} because %s page type is not supported',
-      pageType => {
-        const url = buildATIUrl({
-          requestContext: { ...requestContext, pageType },
-          data: {},
-          serviceContext,
-        });
-        expect(url).toStrictEqual({});
-      },
-    );
   });
 
   describe('buildATIEventTrackingParams', () => {
@@ -516,29 +443,6 @@ describe('ATIAnalytics params', () => {
         statsDestination: 'statsDestination',
         timePublished: '2023-07-11T17:42:48.771Z',
         timeUpdated: '2023-07-11T17:42:48.771Z',
-      });
-    });
-
-    it('should return the correct frontPage params', () => {
-      const params = buildATIEventTrackingParams({
-        requestContext: { ...requestContext, pageType: FRONT_PAGE },
-        data: frontPage,
-        serviceContext,
-      });
-      expect(params).toEqual({
-        appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:cps:00000000-0000-0000-0000-000000000000',
-        contentType: 'index-home',
-        language: 'language',
-        pageIdentifier: 'service.page',
-        pageTitle: 'title - brandName',
-        libraryVersion: 'simorgh',
-        platform: 'canonical',
-        producerId: 'atiAnalyticsProducerId',
-        service: 'pidgin',
-        statsDestination: 'statsDestination',
-        timePublished: '1970-01-01T00:00:00.000Z',
-        timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
 
@@ -674,16 +578,6 @@ describe('ATIAnalytics params', () => {
             serviceContext,
           }),
         );
-      });
-
-      it('should not invoke buildPageATIParams for an unmigrated page type with no atiData', () => {
-        buildATIEventTrackingParams({
-          requestContext: { ...requestContext, pageType: FRONT_PAGE },
-          atiData: undefined,
-          serviceContext,
-        });
-
-        expect(buildPageATIParamsSpy).not.toHaveBeenCalled();
       });
     });
   });

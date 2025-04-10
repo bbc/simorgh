@@ -38,8 +38,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Newyddion a mwy',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Newyddion a mwy',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {

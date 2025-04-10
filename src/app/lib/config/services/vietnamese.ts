@@ -43,9 +43,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/vietnamese/institutional-49283563',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/vietnamese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Tin chính',
+    homePageTitle: 'Tin chính',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

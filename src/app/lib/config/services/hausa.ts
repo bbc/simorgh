@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     atiAnalyticsProducerName: 'HAUSA',
+    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/hausa/game-da-mu-49283501',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/hausa/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Labaran Duniya',
+    homePageTitle: 'Labaran Duniya',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -427,7 +428,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Cikakkun Rahotanni',
-        url: '/hausa/52140979',
+        url: '/hausa/topics/cnl7wd77wj2t',
       },
       {
         title: 'Bidiyo',
@@ -435,7 +436,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'Shirye-shirye na Musamman',
-        url: '/hausa/shirye-shirye-na-musamman-54712348',
+        url: '/hausa/topics/cnl7wd9pddlt',
       },
       {
         title: 'Shirye-shiryen rediyo',

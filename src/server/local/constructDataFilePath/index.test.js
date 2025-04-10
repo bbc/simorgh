@@ -5,29 +5,20 @@ describe('constructDataFilePath', () => {
   const spy = jest.spyOn(process, 'cwd');
   spy.mockReturnValue(DATA_PATH);
 
-  describe('Front Page', () => {
-    it('should construct correct data file path', () => {
-      expect(
-        constructDataFilePath({ pageType: 'frontpage', service: 'igbo' }),
-      ).toEqual(`${DATA_PATH}/data/igbo/frontpage/index.json`);
-    });
-
-    it('should construct correct data file path with variant', () => {
-      expect(
-        constructDataFilePath({
-          pageType: 'frontpage',
-          service: 'ukchina',
-          variant: '/simp',
-        }),
-      ).toEqual(`${DATA_PATH}/data/ukchina/frontpage/simp.json`);
-    });
-  });
-
   describe('Home Page', () => {
     it('should construct correct data file path', () => {
       expect(
         constructDataFilePath({ pageType: 'homePage', service: 'kyrgyz' }),
       ).toEqual(`${DATA_PATH}/data/kyrgyz/homePage/index.json`);
+    });
+    it('should construct correct data file path with variant', () => {
+      expect(
+        constructDataFilePath({
+          pageType: 'homePage',
+          service: 'ukchina',
+          variant: '/simp',
+        }),
+      ).toEqual(`${DATA_PATH}/data/ukchina/homePage/simp.json`);
     });
   });
 

@@ -166,39 +166,54 @@ describe('ScrollablePromo', () => {
   });
 
   describe('OJ Top Bar ScrollablePromo', () => {
-    it('it should display Top Stories label when experimentVariant is A', () => {
+    it('it should display Top Stories label when experimentVariant is top_bar_top_stories', () => {
       const { getByText, queryByText } = render(
-        <ScrollablePromo blocks={topStoriesBlocks} experimentVariant="A" />,
+        <ScrollablePromo
+          blocks={topStoriesBlocks}
+          experimentVariant="top_bar_top_stories"
+        />,
       );
       expect(getByText('Top Stories')).toBeVisible();
       expect(queryByText('Most read')).toBeNull();
     });
 
-    it('it should display Most Read label when experimentVariant is B', () => {
+    it('it should display Most Read label when experimentVariant is top_bar_most_read', () => {
       const { getByText, queryByText } = render(
-        <ScrollablePromo blocks={mostReadBlocks} experimentVariant="B" />,
+        <ScrollablePromo
+          blocks={mostReadBlocks}
+          experimentVariant="top_bar_most_read"
+        />,
       );
       expect(getByText('Most read')).toBeVisible();
       expect(queryByText('Top Stories')).toBeNull();
     });
 
-    it('it should display 3 promo items with Top Stories when experimentVariant is A', () => {
+    it('it should display 3 promo items with Top Stories when experimentVariant is top_bar_top_stories', () => {
       const { getAllByRole } = render(
-        <ScrollablePromo blocks={topStoriesBlocks} experimentVariant="A" />,
+        <ScrollablePromo
+          blocks={topStoriesBlocks}
+          experimentVariant="top_bar_top_stories"
+        />,
       );
       expect(getAllByRole('listitem')).toHaveLength(3);
     });
 
-    it('it should display 5 promo items with Most Read when experimentVariant is B', () => {
+    it('it should display 5 promo items with Most Read when experimentVariant is top_bar_most_read', () => {
       const { getAllByRole } = render(
-        <ScrollablePromo blocks={mostReadBlocks} experimentVariant="B" />,
+        <ScrollablePromo
+          blocks={mostReadBlocks}
+          experimentVariant="top_bar_most_read"
+        />,
       );
       expect(getAllByRole('listitem')).toHaveLength(5);
     });
 
-    it('it should display Top Stories content when experimentVariant is A', () => {
+    it('it should display Top Stories content when experimentVariant is top_bar_top_stories', () => {
       const { getAllByRole } = render(
-        <ScrollablePromo blocks={topStoriesBlocks} experimentVariant="A" />,
+        <ScrollablePromo
+          blocks={topStoriesBlocks}
+          experimentVariant="top_bar_top_stories"
+        />,
       );
       const expectedFirstHeadline =
         topStoriesBlocks[0].headlines.promoHeadline.blocks[0].model.blocks[0]
@@ -208,9 +223,12 @@ describe('ScrollablePromo', () => {
       );
     });
 
-    it('it should display Most Read content when experimentVariant is B', () => {
+    it('it should display Most Read content when experimentVariant is top_bar_most_read', () => {
       const { getAllByRole } = render(
-        <ScrollablePromo blocks={mostReadBlocks} experimentVariant="B" />,
+        <ScrollablePromo
+          blocks={mostReadBlocks}
+          experimentVariant="top_bar_most_read"
+        />,
       );
       const expectedFirstHeadline = mostReadBlocks[0].title;
       expect(getAllByRole('listitem')[0]).toHaveTextContent(

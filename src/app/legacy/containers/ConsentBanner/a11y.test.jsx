@@ -2,7 +2,7 @@ import React, { createRef, useMemo } from 'react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import Cookies from 'js-cookie';
 import {
   render,
@@ -34,7 +34,7 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
   return (
     <RequestContextProvider
       isAmp
-      pageType={FRONT_PAGE}
+      pageType={HOME_PAGE}
       pathname="/"
       service={service}
     >

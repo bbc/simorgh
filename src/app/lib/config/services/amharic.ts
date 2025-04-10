@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/amharic/institutional-49283133',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/amharic/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ዜና',
+    homePageTitle: 'ዜና',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {

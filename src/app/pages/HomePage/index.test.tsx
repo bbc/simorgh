@@ -45,7 +45,7 @@ describe('Home Page', () => {
       service: 'afrique',
       toggles: {
         mostRead: { enabled: true },
-        frontPageRadioSchedule: { enabled: true },
+        homePageRadioSchedule: { enabled: true },
       },
     });
     const curationsWithSummaries = afriqueHomePageDataFixture.curations.filter(
@@ -217,7 +217,7 @@ describe('Home Page', () => {
         const src = image.getAttribute('src') || '';
 
         if (index === 0 || nonLazyLoadImages.includes(src)) {
-          expect(image.getAttribute('loading')).toBeNull();
+          expect(image.getAttribute('loading')).toBe('eager');
         } else {
           expect(image.getAttribute('loading')).toBe('lazy');
         }

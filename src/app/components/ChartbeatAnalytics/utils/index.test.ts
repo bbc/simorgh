@@ -2,7 +2,6 @@ import Cookie from 'js-cookie';
 import onClient from '../../../lib/utilities/onClient';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
   MOST_READ_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -146,7 +145,7 @@ describe('Chartbeat utilities', () => {
 
   interface SectionFixtures {
     service: Services;
-    pageType: PageTypes | 'index';
+    pageType: PageTypes;
     sectionName?: string;
     categoryName?: string;
     mediaPageType?: string;
@@ -166,15 +165,6 @@ describe('Chartbeat utilities', () => {
         description: 'should add chapter and producer to article type',
         expected:
           'News, News - ART, News - wales, News - wales - ART, News - election 2017, News - election 2017 - ART',
-      },
-      {
-        service: 'news',
-        producer: 'business',
-        chapter: 'market data',
-        pageType: 'index',
-        description: 'should add chapter and producer to index type',
-        expected:
-          'News, News - IDX, News - business, News - business - IDX, News - market data, News - market data - IDX',
       },
       {
         service: 'persian',
@@ -277,7 +267,6 @@ describe('Chartbeat utilities', () => {
           expect(
             buildSections({
               service,
-              // @ts-expect-error allows testing of pageType = index
               pageType,
               // @ts-expect-error allows testing of null producer
               producer,
@@ -296,13 +285,11 @@ describe('Chartbeat utilities', () => {
   describe('Chartbeat Title', () => {
     test.each`
       pageType          | title                     | brandName            | expected
-      ${FRONT_PAGE}     | ${'Front Page Title'}     | ${'BBC News Pidgin'} | ${'Front Page Title - BBC News Pidgin'}
       ${MOST_READ_PAGE} | ${'Most Read Page Title'} | ${'BBC News Pidgin'} | ${'Most Read Page Title - BBC News Pidgin'}
       ${TOPIC_PAGE}     | ${'Topic Page Title'}     | ${'BBC News Pidgin'} | ${'Topic Page Title - BBC News Pidgin'}
       ${LIVE_PAGE}      | ${'Live Page Title'}      | ${'BBC News Pidgin'} | ${'Live Page Title - BBC News Pidgin'}
       ${AUDIO_PAGE}     | ${'Audio Page Title'}     | ${'BBC News Pidgin'} | ${'Audio Page Title - BBC News Pidgin'}
       ${TV_PAGE}        | ${'TV Page Title'}        | ${'BBC News Pidgin'} | ${'TV Page Title - BBC News Pidgin'}
-      ${'index'}        | ${'index Page Title'}     | ${'BBC News Pidgin'} | ${'index Page Title - BBC News Pidgin'}
     `(
       'should return correct title when pageType is $pageType and brandName is $brandName',
       ({ pageType, title, brandName, expected }) => {
@@ -351,40 +338,6 @@ describe('Chartbeat utilities', () => {
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
       };
-
-      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
-    });
-
-    it('should return config for canonical pages when page type is frontPage and env is not live', () => {
-      const fixtureData: GetConfigProps = {
-        isAmp: false,
-        platform: 'canonical',
-        pageType: FRONT_PAGE,
-        title: 'This is an index page title',
-        brandName: 'BBC-News',
-        chartbeatDomain: 'bbc.co.uk',
-        env: 'test',
-        service: 'news',
-      };
-
-      const expectedConfig = {
-        domain: 'test.bbc.co.uk',
-        idSync: {
-          bbc_hid: 'foobar',
-        },
-        path: '/',
-        sections: 'News, News - IDX',
-        title: 'This is an index page title - BBC-News',
-        type: 'Index',
-        uid: 50924,
-        useCanonical: true,
-        virtualReferrer: null,
-      };
-
-      const expectedCookieValue = 'foobar';
-      (jest.spyOn(Cookie, 'get') as jest.Mock).mockImplementation(
-        () => expectedCookieValue,
-      );
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
@@ -860,7 +813,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData: GetConfigProps = {
         isAmp: false,
         platform: 'canonical',
-        pageType: FRONT_PAGE,
+        pageType: ARTICLE_PAGE,
         brandName: 'BBC-News',
         chartbeatDomain: 'bbc.co.uk',
         env: 'test',

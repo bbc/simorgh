@@ -1,9 +1,6 @@
 import services from '../../../lib/config/services/loadableConfig';
 import {
   getArticleRegex,
-  getArticleSwRegex,
-  getArticleManifestRegex,
-  getFrontPageRegex,
   getHomePageRegex,
   getSwRegex,
   getManifestRegex,
@@ -28,15 +25,8 @@ const allServices = Object.keys(services);
 export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
 
-export const articleSwPath = getArticleSwRegex(allServices);
-export const articleManifestPath = getArticleManifestRegex(allServices);
-
-export const frontPagePath = getFrontPageRegex(allServices);
-export const frontPageDataPath = `${frontPagePath}.json`;
-
-export const frontPageSwPath = getSwRegex(allServices);
-export const frontPageManifestPath = getManifestRegex(allServices);
-
+export const homePageSwPath = getSwRegex(allServices);
+export const homePageManifestPath = getManifestRegex(allServices);
 export const homePagePath = getHomePageRegex(allServices);
 export const homePageDataPath = `${homePagePath}.json`;
 

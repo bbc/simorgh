@@ -41,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/thai/institutional-49281839',
     isTrustProjectParticipant: true,
     script: thai,
-    manifestPath: '/manifest.json',
+    manifestPath: '/thai/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
+    homePageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {

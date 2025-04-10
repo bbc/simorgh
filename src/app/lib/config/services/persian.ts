@@ -43,9 +43,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/persian/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'صفحه اول',
+    homePageTitle: 'صفحه اول',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -456,7 +456,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'تلویزیون',
-        url: '/persian/tv-and-radio-37434377',
+        url: '/persian/topics/cw9qgeqd1zqt',
       },
       {
         title: 'ايران',

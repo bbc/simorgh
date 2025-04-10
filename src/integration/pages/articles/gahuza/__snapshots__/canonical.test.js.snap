@@ -1,0 +1,462 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "40",
+  },
+  {
+    "p": "gahuza.articles.c5y51yxeg53o.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:c5y51yxeg53o]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-gahuza]",
+  },
+  {
+    "x4": "[rw]",
+  },
+  {
+    "x7": "[article]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Russia:%20Yulia%20Navalnaya%20yabwiye%20BBC%20ko%20afite%20intego%20yo%20kuziyamamariza%20kuba%20Perezida]",
+  },
+  {
+    "x11": "[2024-10-21T09:23:49.476Z]",
+  },
+  {
+    "x12": "[2024-10-21T09:23:49.476Z]",
+  },
+  {
+    "x13": "[Russia~Politics]",
+  },
+  {
+    "x14": "[39267b85-1784-4f4b-80ed-f8cb4a35f337~75612fa6-147c-4a43-97fa-fcf70d9cced3]",
+  },
+  {
+    "x17": "[Russia~Politics]",
+  },
+]
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Gahuza",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
+{
+  "text": "Igituma ushobora kwizera BBC News",
+  "url": "https://www.bbc.com/gahuza/institutional-49283343",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
+{
+  "text": "Ingingo zo gukoresha urubuga",
+  "url": "https://www.bbc.com/gahuza/institutional-35754053",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
+{
+  "text": "Ibijanye na BBC",
+  "url": "https://www.bbc.com/gahuza/institutional-35754055",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
+{
+  "text": "Ibigenga n'ubuzima bwite",
+  "url": "https://www.bbc.com/gahuza/institutional-35754059",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
+{
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
+{
+  "text": "Vugana na BBC",
+  "url": "https://www.bbc.co.uk/gahuza/send/u50853291",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
+{
+  "text": "Bona amakuru mu zindi ndimi",
+  "url": "https://www.bbc.com/ws/languages?xtor=CS1-13-[wsgahuza~N~A39~MBC]-[Owned]&utm_source=mktg",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
+  "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
+}
+`;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `
+{
+  "text": "Urupapuro rw'itangiriro",
+  "url": "/gahuza",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
+{
+  "text": "Ibitero bya M23 muri Congo",
+  "url": "/gahuza/topics/cx2qn9pqx4yt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
+  "text": "Ibiyaga binini",
+  "url": "/gahuza/topics/c06gq67y3w5t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+{
+  "text": "Afrika",
+  "url": "/gahuza/topics/crvnv566zx9t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+{
+  "text": "Mpuzamahanga",
+  "url": "/gahuza/topics/c9dvd93jjkkt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ubuzima",
+  "url": "/gahuza/topics/cnq68qp4kxjt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+{
+  "text": "Imikino",
+  "url": "/gahuza/topics/c5qvpq0jzy7t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Amajwi n’amashusho",
+  "url": "/gahuza/topics/crldzm936jmt",
+}
+`;
+
+exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'isanamu, Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
+
+exports[`Canonical Articles Image should match snapshot 1`] = `
+<img
+  alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
+  class="bbc-139onq"
+  height="864"
+  loading="eager"
+  sizes="(min-width: 1008px) 760px, 100vw"
+  src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp"
+  srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg.webp 800w"
+  style="aspect-ratio:1536 / 864"
+  width="1536"
+/>
+`;
+
+exports[`Canonical Articles Main heading should match text 1`] = `"‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny"`;
+
+exports[`Canonical Articles Most Read has item with rank 1`] = `
+{
+  "text": "M23 'yinjiye muri Teritwari ya Walikale'",
+  "url": "https://www.bbc.com/gahuza/articles/cn03d60pp08o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 2`] = `
+{
+  "text": "‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny",
+  "url": "https://www.bbc.com/gahuza/articles/c5y51yxeg53o",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 3`] = `
+{
+  "text": "Amerika iri gukora iperereza ku itangazwa rya gahunda y'ibanga ya Israel yo gutera Iran ",
+  "url": "https://www.bbc.com/gahuza/articles/c4gln7xlrdxo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 4`] = `
+{
+  "text": "Misiri yatangajwe ko nta malaria ikiyirangwamo nyuma y'umuhate umaze imyaka 100 ",
+  "url": "https://www.bbc.com/gahuza/articles/cn4ze4382jzo",
+}
+`;
+
+exports[`Canonical Articles Most Read has item with rank 5`] = `
+{
+  "text": "Hamas: Ni ibiki byabaye ku bayobozi bakuru bayo?",
+  "url": "https://www.bbc.com/gahuza/articles/cgxqxnxylgzo",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "72x72",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "96x96",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "128x128",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "144x144",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 6`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 7`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 8`] = `
+{
+  "sizes": "192x192",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 9`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/gahuza/articles/c5y51yxeg53o"`;
+
+exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Articles SEO Heading level 1 1`] = `"‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny"`;
+
+exports[`Canonical Articles SEO Lang attribute 1`] = `"rw"`;
+
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "ReportageNewsArticle",
+      "about": [
+        {
+          "@type": "Place",
+          "name": "Uburusiya",
+        },
+        {
+          "@type": "Thing",
+          "name": "Politike",
+          "sameAs": [
+            "http://dbpedia.org/resource/Politics",
+          ],
+        },
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Katie Razzall",
+      },
+      "dateModified": "2024-10-21T09:23:49.476Z",
+      "datePublished": "2024-10-21T09:23:49.476Z",
+      "description": "Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. ",
+      "headline": "Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "rw",
+        "name": "Kinyarwanda",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
+        "@type": "WebPage",
+        "name": "Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+          "width": 1024,
+        },
+        "name": "BBC News Gahuza",
+        "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg",
+      "url": "http://localhost:7080/gahuza/articles/c5y51yxeg53o",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Articles SEO OG description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. "`;
+
+exports[`Canonical Articles SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
+
+exports[`Canonical Articles SEO OG image alt 1`] = `"Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
+
+exports[`Canonical Articles SEO OG locale 1`] = `"rw-RW"`;
+
+exports[`Canonical Articles SEO OG site name 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical Articles SEO OG title 1`] = `"Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida - BBC News Gahuza"`;
+
+exports[`Canonical Articles SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/gahuza/articles/c5y51yxeg53o"`;
+
+exports[`Canonical Articles SEO Page title 1`] = `"Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida - BBC News Gahuza"`;
+
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Articles SEO Twitter creator 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical Articles SEO Twitter description 1`] = `"Yulia Navalnaya yavuze ibi mu kumurika igitabo umugabo we Alexei Navalny yandikaga ari muri gereza mbere y'uko apfa. "`;
+
+exports[`Canonical Articles SEO Twitter image alt 1`] = `"Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
+
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_gahuza/8654/live/6fd0abe0-8f8a-11ef-8e6d-e3e64e16c628.jpg"`;
+
+exports[`Canonical Articles SEO Twitter site 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical Articles SEO Twitter title 1`] = `"Russia: Yulia Navalnaya yabwiye BBC ko afite intego yo kuziyamamariza kuba Perezida - BBC News Gahuza"`;
+
+exports[`Canonical Articles Timestamp should match text and date 1`] = `
+{
+  "date": "2024-10-21",
+  "text": "21 Ukw'icumi 2024",
+}
+`;
+
+exports[`Canonical Articles canonical Lite Site CTA should match snapshot 1`] = `
+<div
+  class="bbc-oa1h7m"
+  data-e2e="to-lite-site"
+>
+  <a
+    class="bbc-ellgq8"
+    href="/gahuza/articles/c5y51yxeg53o.lite"
+  >
+    <div
+      class="bbc-1vp8jwk"
+    >
+      <span
+        class="bbc-kjero8"
+      >
+        <span
+          class="bbc-jqq4rs"
+        >
+          Inyandiko gusa
+        </span>
+        <svg
+          aria-hidden="true"
+          class="bbc-1rykoo5"
+          focusable="false"
+          height="12"
+          viewBox="0 0 32 32"
+          width="12"
+        >
+          <path
+            d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+          />
+        </svg>
+      </span>
+    </div>
+  </a>
+</div>
+`;

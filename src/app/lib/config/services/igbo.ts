@@ -35,9 +35,9 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
     imageCopyrightOffscreenText: 'Ebe foto si, ',
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/igbo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Ogbako',
+    homePageTitle: 'Ogbako',
     noBylinesPolicy:
       'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',
