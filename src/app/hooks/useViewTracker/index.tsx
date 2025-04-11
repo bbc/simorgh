@@ -168,7 +168,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     useReverb,
   ]);
 
-  return async (element: HTMLDivElement) => {
+  return async (element: HTMLElement) => {
     if (!element || !trackingIsEnabled || eventSent) {
       return;
     }
