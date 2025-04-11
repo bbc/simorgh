@@ -7,7 +7,7 @@ import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
-import { ViewRef } from '#app/lib/analyticsUtils/types';
+import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
 import { EventTrackingBlock } from '../../../models/types/eventTracking';
 
@@ -15,14 +15,14 @@ type RelatedContentItemProps = {
   item: object;
   ariaLabelledBy: string;
   eventTrackingData?: EventTrackingBlock;
-  viewRef?: ViewRef;
+  viewTracker?: ViewTracker;
 };
 
 const RelatedContentItem = ({
   item,
   ariaLabelledBy,
   eventTrackingData,
-  viewRef,
+  viewTracker,
 }: RelatedContentItemProps) => {
   if (!item || isEmpty(item)) return null;
 
@@ -162,7 +162,7 @@ const RelatedContentItem = ({
   return (
     <div
       css={[styles.wrapper, headlineFirst && styles.promoFullWidth]}
-      {...viewRef}
+      {...viewTracker}
     >
       <Promo
         to={assetUri}
