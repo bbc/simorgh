@@ -48,7 +48,7 @@ const LiveHeaderMedia = ({
     componentName: 'live-header-media',
   };
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   let warningLevel = WARNING_LEVELS.NO_WARNING;
 
@@ -141,7 +141,7 @@ const LiveHeaderMedia = ({
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} {...viewRef}>
+      <div css={styles.componentContainer} {...viewTracker}>
         <button
           type="button"
           onClick={e => handleClick(e)}

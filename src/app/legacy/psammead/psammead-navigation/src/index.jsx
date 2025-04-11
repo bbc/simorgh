@@ -165,11 +165,11 @@ export const NavigationLi = ({
   active = false,
   service,
   dir = 'ltr',
-  viewRef = null,
+  viewTracker = null,
   ...props
 }) => {
   return (
-    <StyledListItem dir={dir} role="listitem" {...viewRef}>
+    <StyledListItem dir={dir} role="listitem" {...viewTracker}>
       {active && currentPageText ? (
         <StyledLink
           href={url}

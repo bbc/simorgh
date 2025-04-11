@@ -13,7 +13,7 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
-import { ViewRef } from '#app/lib/analyticsUtils/types';
+import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
@@ -42,14 +42,14 @@ type RelatedContentListProps = {
   item: object;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewRef: ViewRef;
+  viewTracker: ViewTracker;
 };
 
 const renderRelatedContentList = ({
   item,
   index,
   eventTrackingData,
-  viewRef,
+  viewTracker,
 }: RelatedContentListProps) => {
   const assetUri = pathOr(
     '',
@@ -85,7 +85,7 @@ const renderRelatedContentList = ({
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        viewRef={viewRef}
+        viewTracker={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -115,7 +115,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
       }),
     },
   };
-  const viewRef = useViewTracker(eventTrackingData.block);
+  const viewTracker = useViewTracker(eventTrackingData.block);
 
   if (!pathEq('relatedContent', ['type'], blocks)) return null;
 
@@ -193,7 +193,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
-            viewRef={viewRef}
+            viewTracker={viewTracker}
             eventTrackingData={eventTrackingData}
           />
         </div>
@@ -204,7 +204,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
               item,
               index,
               eventTrackingData,
-              viewRef,
+              viewTracker,
             }),
           )}
         </PromoList>
