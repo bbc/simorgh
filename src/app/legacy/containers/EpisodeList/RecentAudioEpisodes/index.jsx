@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -52,7 +52,7 @@ const RecentAudioEpisodes = ({
   pageType,
 }) => {
   const { translations, service, script, dir, timezone, datetimeLocale } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const eventTrackingData = {
     componentName: 'episodes-audio',
     campaignID:
@@ -63,7 +63,7 @@ const RecentAudioEpisodes = ({
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const { variant } = useContext(RequestContext);
+  const { variant } = use(RequestContext);
 
   if (!episodes.length) return null;
 

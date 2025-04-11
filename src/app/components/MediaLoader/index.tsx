@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -179,8 +179,8 @@ type Props = {
 };
 
 const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
-  const { pageIdentifier } = useContext(EventTrackingContext);
+  const { lang, translations } = use(ServiceContext);
+  const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
   const {
@@ -191,7 +191,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-  } = useContext(RequestContext);
+  } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),

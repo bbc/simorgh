@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { useContext, PropsWithChildren } from 'react';
+import React, { use, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -16,7 +16,7 @@ const Byline = ({
   blocks,
   children = null,
 }: PropsWithChildren<OptimoBylineBlock['model']>) => {
-  const { translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
   const bylineValues = bylineExtractor(blocks);

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
@@ -114,12 +114,12 @@ const MostRead = ({
   className = '',
   sendOptimizelyEvents = false,
 }: MostReadProps) => {
-  const { isAmp, pageType, variant } = useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { isAmp, pageType, variant } = use(RequestContext);
+  const { optimizely } = use(OptimizelyContext);
   const {
     service,
     mostRead: { hasMostRead },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
 

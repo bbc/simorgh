@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx, useTheme } from '@emotion/react';
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -60,8 +60,8 @@ const TopStoriesSection = ({
   content: TopStoryItem[];
   sendOptimizelyEvents?: boolean;
 }) => {
-  const { translations, script, service } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { translations, script, service } = use(ServiceContext);
+  const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingData = {
     block: {

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import { css, jsx, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -36,8 +36,8 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
 }: CurationGridProps) => {
-  const { isAmp } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { isAmp } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);

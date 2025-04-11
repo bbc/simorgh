@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-} from 'react';
+import React, { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -93,10 +88,10 @@ export const EventTrackingContextProvider = ({
   children,
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
-  const requestContext = useContext(RequestContext);
+  const requestContext = use(RequestContext);
   const { pageType } = requestContext;
 
-  const serviceContext = useContext(ServiceContext);
+  const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');

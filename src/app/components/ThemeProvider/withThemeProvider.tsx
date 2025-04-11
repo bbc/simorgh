@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   Global,
   ThemeProvider as EmotionThemeProvider,
@@ -295,7 +295,7 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, isLite, pageType } = useContext(RequestContext);
+    const { isAmp, isLite, pageType } = use(RequestContext);
 
     const theme = {
       ...themeConfig,

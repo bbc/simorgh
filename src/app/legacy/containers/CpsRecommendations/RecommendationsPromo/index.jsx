@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -96,8 +96,8 @@ const StyledHeadline = styled.div`
 `;
 
 const RecommendationsPromo = ({ promo, eventTrackingData = null }) => {
-  const { script, service } = useContext(ServiceContext);
-  const { isLite } = useContext(RequestContext);
+  const { script, service } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const { headline, url, indexImage } = extractPromoData({ promo });

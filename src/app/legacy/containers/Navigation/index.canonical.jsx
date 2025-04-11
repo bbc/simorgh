@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, use } from 'react';
 import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
@@ -46,7 +46,7 @@ const CanonicalNavigationContainer = ({
   blocks,
   experimentVariant,
 }) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
   const [isOpen, setIsOpen] = useState(false);
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {

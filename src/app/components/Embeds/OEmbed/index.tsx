@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { memo, useContext } from 'react';
+import { memo, use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -12,8 +12,8 @@ import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
-  const { isAmp, isLite, canonicalLink } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { isAmp, isLite, canonicalLink } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   if (isLite) return null;
 

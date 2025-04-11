@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { useContext, useCallback, useState } from 'react';
+import { use, useCallback, useState } from 'react';
 import { buildATIEventTrackUrl } from '#app/components/ATIAnalytics/atiUrl';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
@@ -14,7 +14,7 @@ export const LITE_ATI_TRACKING = 'data-lite-ati-tracking';
 
 const extractTrackingProps = (props = {}, eventType = null) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const eventTrackingContext = useContext(EventTrackingContext);
+  const eventTrackingContext = use(EventTrackingContext);
 
   const { componentName, url, advertiserID, format, detailedPlacement } = props;
   const {
@@ -65,7 +65,7 @@ const useClickTrackerHandler = (props = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
 
-  const { service, useReverb } = useContext(ServiceContext);
+  const { service, useReverb } = use(ServiceContext);
 
   return useCallback(
     async event => {
@@ -177,7 +177,7 @@ export const useConstructLiteSiteATIEventTrackUrl = ({
 };
 
 export const useATIClickTrackerHandler = (props = {}) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(props);
   const liteHandler = useConstructLiteSiteATIEventTrackUrl({
     props,

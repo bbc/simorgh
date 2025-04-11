@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
@@ -50,7 +50,7 @@ const ImageWithCaption = ({
   sizes,
   shouldPreload,
 }: Props) => {
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
 
   if (isLite) return null;
   if (!blocks) return null;

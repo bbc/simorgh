@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useRef } from 'react';
+import { use, useEffect, useState, useRef } from 'react';
 import prop from 'ramda/src/prop';
 
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -32,7 +32,7 @@ const useViewTracker = (props = {}) => {
   const [isInView, setIsInView] = useState();
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
-  const eventTrackingContext = useContext(EventTrackingContext);
+  const eventTrackingContext = use(EventTrackingContext);
 
   const {
     pageIdentifier,
@@ -43,7 +43,7 @@ const useViewTracker = (props = {}) => {
   } = eventTrackingContext;
   const campaignID = props?.campaignID || eventTrackingContext?.campaignID;
 
-  const { service, useReverb } = useContext(ServiceContext);
+  const { service, useReverb } = use(ServiceContext);
 
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
@@ -171,7 +171,7 @@ const useViewTracker = (props = {}) => {
 };
 
 export const useLiteViewTracker = (props = {}) => {
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
   const liteHandler = useConstructLiteSiteATIEventTrackUrl({
     props,
     eventType: VIEW_EVENT,

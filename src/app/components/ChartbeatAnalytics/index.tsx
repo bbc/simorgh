@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { use, useEffect } from 'react';
 import useToggle from '../../hooks/useToggle';
 import { UserContext } from '../../contexts/UserContext';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -18,10 +18,10 @@ const ChartbeatAnalytics = ({
   producer,
   chapter,
 }: ChartbeatProps) => {
-  const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
-  const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
+  const { service, brandName, chartbeatDomain } = use(ServiceContext);
+  const { sendCanonicalChartbeatBeacon } = use(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
-  const { env, isAmp, platform, pageType } = useContext(RequestContext);
+  const { env, isAmp, platform, pageType } = use(RequestContext);
   const isAmpAndEnabled = isAmp && enabled;
   const isCanonicalAndEnabled = !isAmp && enabled;
 

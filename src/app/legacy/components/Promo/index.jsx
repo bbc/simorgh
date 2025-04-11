@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { use, useMemo } from 'react';
 import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
 
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `;
 
 const Promo = ({ children, className }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service } = use(ServiceContext);
 
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(

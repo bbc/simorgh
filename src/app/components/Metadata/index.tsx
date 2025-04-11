@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -67,7 +67,7 @@ const MetadataContainer = ({
     pathname,
     isUK,
     isLite,
-  } = useContext(RequestContext);
+  } = use(RequestContext);
 
   const {
     service,
@@ -82,7 +82,7 @@ const MetadataContainer = ({
     iTunesAppId,
     googleSiteVerification,
     translations,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const {
     palette: { BRAND_BACKGROUND },
   } = useTheme();

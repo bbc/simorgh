@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { getMinion } from '#psammead/gel-foundations/src/typography';
@@ -86,7 +86,7 @@ export const StartTimestamp = ({
 };
 
 const StartTime = ({ timestamp }) => {
-  const { script, locale, service, timezone, dir } = useContext(ServiceContext);
+  const { script, locale, service, timezone, dir } = use(ServiceContext);
   return (
     <Wrapper>
       <ClockIcon dir={dir} />

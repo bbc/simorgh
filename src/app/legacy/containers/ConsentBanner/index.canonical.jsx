@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 
 import { UserContext } from '#contexts/UserContext';
 import Banner from './Banner/index.canonical';
@@ -6,8 +6,8 @@ import useConsentBanners from './useConsentBanners';
 import { RequestContext } from '../../../contexts/RequestContext';
 
 const Canonical = ({ onDismissFocusRef = null }) => {
-  const { updateCookiePolicy } = useContext(UserContext);
-  const { isUK, showCookieBannerBasedOnCountry } = useContext(RequestContext);
+  const { updateCookiePolicy } = use(UserContext);
+  const { isUK, showCookieBannerBasedOnCountry } = use(RequestContext);
 
   const {
     showPrivacyBanner,

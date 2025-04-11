@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
@@ -50,7 +50,7 @@ const FrostedGlassPromo = ({
   minimumContrast = 8,
   paletteSize = 10,
 }: PropsWithChildren<FrostedGlassPromoProps>) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
 

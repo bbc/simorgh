@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
@@ -130,7 +130,7 @@ const CpsOnwardJourney = ({
   eventTrackingData = null,
   sendOptimizelyEvents = false,
 }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir } = use(ServiceContext);
 
   const a11yAttributes = {
     as: 'section',

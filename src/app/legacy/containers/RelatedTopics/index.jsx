@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -37,8 +37,8 @@ const RelatedTopics = ({
   backgroundColour = '',
   tagBackgroundColour = '',
 }) => {
-  const { service, script, translations, dir } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+  const { service, script, translations, dir } = use(ServiceContext);
+  const { variant } = use(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const liteViewTrack = useLiteViewTracker(eventTrackingData);

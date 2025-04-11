@@ -1,4 +1,4 @@
-import React, { useContext, Fragment } from 'react';
+import React, { use, Fragment } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
@@ -76,7 +76,7 @@ const extractAssetPromoData = item => {
 const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
   const {
     translations: { media: mediaTranslations, relatedContent },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const IndexAlsosWrapper = alsoItems.length > 1 ? IndexAlsosUl : Fragment;
   const IndexAlsoItem = alsoItems.length > 1 ? IndexAlsosLi : IndexAlso;

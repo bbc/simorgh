@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, use } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
@@ -13,8 +13,8 @@ const getScrollDepth = () =>
   );
 
 const useOptimizelyScrollDepth = () => {
-  const { isAmp } = useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { isAmp } = use(RequestContext);
+  const { optimizely } = use(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [scrollTwentyFive, setScrollTwentyFive] = useState(false);
   const [scrollFifty, setScrollFifty] = useState(false);

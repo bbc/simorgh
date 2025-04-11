@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import { useATIClickTrackerHandler } from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
@@ -58,8 +58,8 @@ const CtaLink = ({
 };
 
 const LiteSiteCta = () => {
-  const { dir, translations } = useContext(ServiceContext);
-  const { canonicalLink } = useContext(RequestContext);
+  const { dir, translations } = use(ServiceContext);
+  const { canonicalLink } = use(RequestContext);
   const isRtl = dir === 'rtl';
   const { liteSite = defaultTranslations } = translations;
   const {

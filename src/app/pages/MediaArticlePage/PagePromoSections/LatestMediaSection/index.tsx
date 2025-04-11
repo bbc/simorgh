@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Ref, useContext } from 'react';
+import { Ref, use } from 'react';
 import { jsx } from '@emotion/react';
 
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -41,7 +41,7 @@ const renderLatestMediaList = (
 };
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations, script } = useContext(ServiceContext);
+  const { service, dir, translations, script } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {

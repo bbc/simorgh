@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
@@ -96,7 +96,7 @@ const CanonicalRadioSchedule = ({
     script,
     dir,
     radioSchedule: radioScheduleConfig = {},
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
     radioScheduleConfig;

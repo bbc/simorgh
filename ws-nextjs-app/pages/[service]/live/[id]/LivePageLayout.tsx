@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
@@ -59,9 +59,8 @@ export type ComponentProps = {
 };
 
 const LivePage = ({ pageData }: ComponentProps) => {
-  const { lang, translations, defaultImage, brandName } =
-    useContext(ServiceContext);
-  const { canonicalNonUkLink } = useContext(RequestContext);
+  const { lang, translations, defaultImage, brandName } = use(ServiceContext);
+  const { canonicalNonUkLink } = use(RequestContext);
   const {
     title,
     description,

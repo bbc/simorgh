@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -49,9 +49,9 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
 };
 
 const HeaderContainer = ({ propsForOJExperiment }) => {
-  const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
+  const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const { skipLinkText } = translations;
 
   const isOperaMini = useOperaMiniDetection();

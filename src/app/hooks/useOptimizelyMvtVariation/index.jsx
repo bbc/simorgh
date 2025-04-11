@@ -1,11 +1,11 @@
-import { useContext } from 'react';
+import { use } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import activateExperiment from './activateExperiment';
 
 const useOptimizelyMvtVariation = id => {
-  const { optimizely } = useContext(OptimizelyContext);
-  const { mvtExperiments } = useContext(RequestContext);
+  const { optimizely } = use(OptimizelyContext);
+  const { mvtExperiments } = use(RequestContext);
 
   if (!mvtExperiments || mvtExperiments.length === 0 || id === null) {
     return null;

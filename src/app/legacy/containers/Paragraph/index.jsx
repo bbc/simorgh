@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
@@ -22,7 +22,7 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const ParagraphContainer = ({ blocks, className }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir } = use(ServiceContext);
 
   return (
     <GridItemMedium>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -58,7 +58,7 @@ const getErrorMessage = (status, translations) => {
 };
 
 const ErrorMessage = ({ episodeAvailability, skin = 'video' }) => {
-  const { service, translations } = useContext(ServiceContext);
+  const { service, translations } = use(ServiceContext);
   const Wrapper = skin === 'audio' ? AudioErrorWrapper : VideoErrorWrapper;
 
   return (

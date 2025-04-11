@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import pathOr from 'ramda/src/pathOr';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
@@ -9,7 +9,7 @@ import fragment from '../Fragment';
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
-  const { externalLinkText } = useContext(ServiceContext);
+  const { externalLinkText } = use(ServiceContext);
 
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
   return (

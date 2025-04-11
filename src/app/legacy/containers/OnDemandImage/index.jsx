@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import {
@@ -33,7 +33,7 @@ const mediumImageSize = 256;
 const largeImageSize = 480;
 
 const OnDemandImage = ({ imageUrl, alt: altFromProps, dir = 'ltr' }) => {
-  const { defaultImageAltText } = useContext(ServiceContext);
+  const { defaultImageAltText } = use(ServiceContext);
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import useToggle from '../../../hooks/useToggle';
 import CanonicalChartbeatBeacon from '../../../components/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
@@ -10,7 +10,7 @@ const Chartbeat = ({
   config: CanonicalChartbeatConfig | null;
 }) => {
   const { enabled } = useToggle('chartbeatAnalytics');
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
 
   if (!enabled || !config || isAmp) {
     return null;

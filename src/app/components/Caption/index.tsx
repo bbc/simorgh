@@ -2,7 +2,7 @@
 /** @jsxRuntime classic */
 /** @jsx  jsx  */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Blocks from '#app/legacy/containers/Blocks';
@@ -84,7 +84,7 @@ const CaptionContainer = ({ block, type, className }: Props) => {
     defaultCaptionOffscreenText,
     audioCaptionOffscreenText,
     dir,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const offscreenText = chooseOffscreenText(
     type,

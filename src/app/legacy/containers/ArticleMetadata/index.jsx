@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Metadata from '../../../components/Metadata';
@@ -19,7 +19,7 @@ const ArticleMetadata = ({
   imageAltText = '',
   hasAmpPage = true,
 }) => {
-  const { service } = useContext(ServiceContext);
+  const { service } = use(ServiceContext);
   const brandedImage = imageLocator
     ? getBrandedImage(imageLocator, service)
     : null;

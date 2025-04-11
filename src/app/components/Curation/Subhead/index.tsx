@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { Fragment, PropsWithChildren, useContext } from 'react';
+import { Fragment, PropsWithChildren, use } from 'react';
 
 import styles from './index.styles';
 
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const Subhead = ({ children, link, id }: PropsWithChildren<Props>) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
 
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -122,7 +122,7 @@ const OnDemandAudioPage = ({
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const { dir, serviceName } = useContext(ServiceContext);
+  const { dir, serviceName } = use(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);

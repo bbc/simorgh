@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
@@ -16,9 +16,9 @@ import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
-  const { pathname, isLite } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { pathname, isLite } = use(RequestContext);
+  const { translations } = use(ServiceContext);
+  const { optimizely } = use(OptimizelyContext);
   const eventTrackingData = { componentName: 'canonical-lite-cta', optimizely };
   const { enabled: showCTA } = useToggle('liteSiteCTA');
   const viewRef = useViewTracker(eventTrackingData);

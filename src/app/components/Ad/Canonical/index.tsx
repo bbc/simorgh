@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import useLocation from '#hooks/useLocation';
@@ -38,7 +38,7 @@ export const getBootstrapSrc = (queryString: string, useLegacy = false) => {
 const CanonicalAd = ({ slotType, className }: AdProps) => {
   const location = useLocation();
   const queryString = location.search;
-  const { translations, dir } = useContext(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],

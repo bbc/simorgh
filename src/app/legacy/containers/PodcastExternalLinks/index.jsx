@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
@@ -83,7 +83,7 @@ const StyledListItem = styled.li`
 `;
 
 const PodcastExternalLink = ({ linkUrl, children, aria }) => {
-  const { service, script, dir } = useContext(ServiceContext);
+  const { service, script, dir } = use(ServiceContext);
   const eventTrackingData = {
     componentName: 'third-party',
     campaignID: 'player-episode-podcast',
@@ -106,9 +106,8 @@ const PodcastExternalLink = ({ linkUrl, children, aria }) => {
 };
 
 const PodcastExternalLinks = ({ brandTitle, links }) => {
-  const { translations, service, script, dir, lang } =
-    useContext(ServiceContext);
-  const { externalLinkText } = useContext(ServiceContext);
+  const { translations, service, script, dir, lang } = use(ServiceContext);
+  const { externalLinkText } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: 'third-party',

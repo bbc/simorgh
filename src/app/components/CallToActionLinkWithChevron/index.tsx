@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { PropsWithChildren, useContext } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { CallToActionLinkProps } from '../CallToActionLink/types';
@@ -14,7 +14,7 @@ const CallToActionLinkWithChevron = ({
   children,
   eventTrackingData,
 }: PropsWithChildren<CallToActionLinkProps>) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
   return (

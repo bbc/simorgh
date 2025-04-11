@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -86,7 +86,7 @@ const PromoList = ({
   onClick,
   ...a11yAttributes
 }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks =
     experimentVariant === 'top_bar_most_read'

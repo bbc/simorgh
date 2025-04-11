@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
-import { useContext, useRef } from 'react';
+import { use, useRef } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -43,7 +43,7 @@ const ShareButton = ({
     translations: {
       liveExperiencePage: { shareButtonText = 'Share' },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
     clickTrackerHandler(event);

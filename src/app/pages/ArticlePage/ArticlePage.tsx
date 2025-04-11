@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -117,14 +117,14 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp } = useContext(RequestContext);
+  const { isApp } = use(RequestContext);
 
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 

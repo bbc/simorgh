@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import {
@@ -65,7 +65,7 @@ const programGridProps = {
 };
 
 const RadioSchedule = ({ schedule, ...props }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: 'radio-schedule',

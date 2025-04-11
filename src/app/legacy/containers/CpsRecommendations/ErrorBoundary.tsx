@@ -1,4 +1,4 @@
-import { useContext, PropsWithChildren } from 'react';
+import { use, PropsWithChildren } from 'react';
 import { Recommendation } from '#app/models/types/optimo';
 import nodeLogger from '../../../lib/logger.node';
 import { RECOMMENDATIONS_MISSING_DATA } from '../../../lib/logger.const';
@@ -17,7 +17,7 @@ function ErrorBoundary({
   recommendations,
   children,
 }: PropsWithChildren<{ recommendations: Recommendation[] }>) {
-  const { pathname } = useContext(RequestContext);
+  const { pathname } = use(RequestContext);
 
   const isValidRecommendations = checkRecommendations(recommendations);
 

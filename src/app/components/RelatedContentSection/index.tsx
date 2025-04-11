@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
@@ -99,8 +99,8 @@ type Props = {
 };
 
 const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
-  const { translations, script, service } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { translations, script, service } = use(ServiceContext);
+  const { optimizely } = use(OptimizelyContext);
 
   const {
     palette: { GREY_2 },

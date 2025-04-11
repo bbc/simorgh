@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { forwardRef, use } from 'react';
 import {
   StoryPromoLiBase,
   StoryPromoUl,
@@ -49,7 +49,7 @@ const RecommendationsPromoListItem = forwardRef(
 );
 
 const RecommendationsPromoList = ({ promoItems }) => {
-  const { optimizely } = useContext(OptimizelyContext);
+  const { optimizely } = use(OptimizelyContext);
 
   const eventTrackingData = getEventTrackingData({ optimizely });
   const blockViewEventTracker = useViewTracker(eventTrackingData.block);

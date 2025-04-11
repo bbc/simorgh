@@ -73,7 +73,7 @@ If a user navigates to a url with a variant, and variant is set in cookie, the c
 
 #### withContexts
 
-The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the useContexts hook.
+The withContexts HOC is a wrapper that provides access to the different context providers available in the application. Any child component inside of these context providers has access to the context data via the `use` hook.
 
 #### withPageWrapper
 

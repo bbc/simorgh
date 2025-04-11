@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext, useEffect } from 'react';
+import React, { use, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
@@ -36,8 +36,8 @@ const AmpServiceWorker = ({
 );
 
 export default () => {
-  const { swPath, service } = useContext(ServiceContext);
-  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { swPath, service } = use(ServiceContext);
+  const { isAmp, canonicalLink } = use(RequestContext);
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
 
   useEffect(() => {

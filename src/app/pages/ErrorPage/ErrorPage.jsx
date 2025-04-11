@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';
@@ -35,7 +35,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 
 const ErrorPage = ({ errorCode }) => {
   const { brandName, dir, lang, script, service, translations } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
   const {

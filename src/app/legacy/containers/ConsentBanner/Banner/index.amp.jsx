@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { navigationIcons } from '#app/legacy/psammead/psammead-assets/src/svgs';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
@@ -44,7 +44,7 @@ const AmpConsentBannerContainer = ({
   promptId,
   hidden = null,
 }) => {
-  const { dir, translations, script, service } = useContext(ServiceContext);
+  const { dir, translations, script, service } = use(ServiceContext);
 
   const dataAttribute = getDataAttribute(type);
   return type === 'cookie' ? (

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
@@ -16,7 +16,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations, brandName } = useContext(ServiceContext);
+  const { lang, translations, brandName } = use(ServiceContext);
   const {
     title,
     description,

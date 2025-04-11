@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -22,8 +22,8 @@ const MaskedImage = ({
   altText?: string;
   showPlaceholder?: boolean;
 }) => {
-  const { dir } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
+  const { dir } = use(ServiceContext);
+  const { isAmp } = use(RequestContext);
 
   const isRtl = dir === 'rtl';
 

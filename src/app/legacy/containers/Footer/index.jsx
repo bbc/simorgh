@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_B_MIN_WIDTH,
@@ -30,8 +30,8 @@ const StyledFooter = styled.footer`
 `;
 
 const FooterContainer = () => {
-  const { isApp } = useContext(RequestContext);
-  const { footer, serviceLang } = useContext(ServiceContext);
+  const { isApp } = use(RequestContext);
+  const { footer, serviceLang } = use(ServiceContext);
 
   if (isApp || !footer) return null;
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { Headline } from '#psammead/psammead-headings/src';
 import {
@@ -56,8 +56,7 @@ const OnDemandHeadingContainer = ({
   ariaHidden = false,
   className = '',
 }) => {
-  const { script, service, timezone, datetimeLocale } =
-    useContext(ServiceContext);
+  const { script, service, timezone, datetimeLocale } = use(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,

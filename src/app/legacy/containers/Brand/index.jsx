@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
@@ -22,8 +22,8 @@ const BrandContainer = ({
   brandRef = null,
   ...props
 }) => {
-  const { product, serviceLocalizedName, service } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+  const { product, serviceLocalizedName, service } = use(ServiceContext);
+  const { variant } = use(RequestContext);
 
   const { brandSVG } = useTheme();
   const svgMaxHeight = 24;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
@@ -28,7 +28,7 @@ const Paragraph = styled.p`
 `;
 
 const TopicDescription = ({ children }) => {
-  const { service, script } = useContext(ServiceContext);
+  const { service, script } = use(ServiceContext);
 
   return (
     <Paragraph service={service} script={script}>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import { getPica } from '#psammead/gel-foundations/src/typography';
@@ -102,7 +102,7 @@ const TimeStamp = styled(PromoTimestamp)`
 `;
 
 const Promo = ({ block, experimentVariant, onClick }) => {
-  const { script, service, serviceDatetimeLocale } = useContext(ServiceContext);
+  const { script, service, serviceDatetimeLocale } = use(ServiceContext);
   let title;
   let href;
   let textBlock;

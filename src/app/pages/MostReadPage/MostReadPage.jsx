@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -82,7 +82,7 @@ const MostReadPage = ({ pageData }) => {
     brandName,
     lang,
     mostRead: { header },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const {
     metadata: { atiAnalytics },

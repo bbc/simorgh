@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -28,7 +28,7 @@ const optimizely = createInstance({
 
 const withOptimizelyProvider = Component => {
   return props => {
-    const { service } = useContext(ServiceContext);
+    const { service } = use(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
     const disableOptimizely = isStoryBook || isInCypress;
 

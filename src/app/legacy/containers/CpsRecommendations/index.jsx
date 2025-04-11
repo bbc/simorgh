@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
@@ -46,7 +46,7 @@ const LabelComponent = styled(SectionLabel)`
 
 const CpsRecommendations = ({ items }) => {
   const { recommendations, translations, script, service, dir } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const {

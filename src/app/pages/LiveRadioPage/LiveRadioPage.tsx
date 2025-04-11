@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { Headline } from '#psammead/psammead-headings/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -23,7 +23,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
     radioScheduleData,
     mediaBlock,
   } = pageData;
-  const { script, service } = useContext(ServiceContext);
+  const { script, service } = use(ServiceContext);
 
   const hasRadioScheduleData = Boolean(radioScheduleData);
   return (

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react';
+import { use } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
@@ -23,7 +23,7 @@ type UploaderBlock = {
 };
 
 const Uploader = ({ blocks }: UploaderProps) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
   if (!blocks || !blocks.length) return null;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import IMAGE from '../../../../components/Image';
 
@@ -10,7 +10,7 @@ const Image = ({
   width,
   height,
 }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
   const ASPECT_RATIO = [16, 9];
 
   return (

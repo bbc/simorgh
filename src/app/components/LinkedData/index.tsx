@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
@@ -32,8 +32,8 @@ const LinkedData = ({
     service,
     languageName,
     lang,
-  } = useContext(ServiceContext);
-  const { canonicalNonUkLink } = useContext(RequestContext);
+  } = use(ServiceContext);
+  const { canonicalNonUkLink } = use(RequestContext);
   const IMG_TYPE = 'ImageObject';
   const ORG_TYPE = isTrustProjectParticipant
     ? 'NewsMediaOrganization'

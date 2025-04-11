@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 
@@ -52,8 +52,8 @@ const PageLayoutWrapper = ({
   pageData,
   status,
 }: PropsWithChildren<Props>) => {
-  const { service } = useContext(ServiceContext);
-  const { isLite, isAmp } = useContext(RequestContext);
+  const { service } = use(ServiceContext);
+  const { isLite, isAmp } = use(RequestContext);
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;

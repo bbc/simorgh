@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
@@ -36,7 +36,7 @@ const CaptionWrapper = ({
   additionalText = null,
   describedById = null,
 }) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const isLive = pageType === LIVE_PAGE;
 
   return (

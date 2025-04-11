@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, use, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
@@ -6,8 +6,8 @@ import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const OptimizelyPageViewTracking = () => {
-  const { isAmp } = useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { isAmp } = use(RequestContext);
+  const { optimizely } = use(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
   const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);

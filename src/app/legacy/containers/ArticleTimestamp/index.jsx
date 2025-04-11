@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -29,7 +29,7 @@ const ArticleTimestamp = ({
     service,
     timezone,
     altCalendar,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
