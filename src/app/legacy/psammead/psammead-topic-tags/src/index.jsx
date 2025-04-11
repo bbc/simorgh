@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { LUNAR } from '#app/components/ThemeProvider/palette';
 import {
@@ -60,12 +60,10 @@ const SingleTopicTagItem = styled.div`
   }
 `;
 
-export const TopicTag = forwardRef(
-  ({ name, link, onClick = null, ...viewTracker }, ref) => (
-    <a href={link} onClick={onClick} ref={ref} {...viewTracker}>
-      {name}
-    </a>
-  ),
+export const TopicTag = ({ name, link, onClick = null, viewTracker }) => (
+  <a href={link} onClick={onClick} {...viewTracker}>
+    {name}
+  </a>
 );
 
 export const TopicTags = ({

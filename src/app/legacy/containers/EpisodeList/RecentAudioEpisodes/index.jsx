@@ -61,7 +61,7 @@ const RecentAudioEpisodes = ({
         : 'player-episode-radio',
   };
 
-  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { variant } = useContext(RequestContext);
 
@@ -118,7 +118,7 @@ const RecentAudioEpisodes = ({
         liProps={liProps}
       >
         {episodes.map((episode, index) => (
-          <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
+          <EpisodeList.Episode key={episode.id} viewTracker={viewTracker}>
             <EpisodeList.Link
               href={getUrl(episode.id)}
               onClick={clickTrackerHandler}

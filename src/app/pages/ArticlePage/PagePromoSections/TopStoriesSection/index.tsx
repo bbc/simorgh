@@ -72,8 +72,7 @@ const TopStoriesSection = ({
       }),
     },
   };
-  const eventTrackingDataSend = eventTrackingData?.block;
-  const viewTracker = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(eventTrackingData?.block);
 
   const {
     palette: { GREY_2 },
@@ -117,11 +116,11 @@ const TopStoriesSection = ({
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
-          ref={viewTracker}
+          {...viewTracker}
           eventTrackingData={eventTrackingData}
         />
       ) : (
-        <PromoList css={styles.promoList}>
+        <PromoList css={styles.promoList} {...viewTracker}>
           {content.map((item, index) =>
             renderTopStoriesList({
               item,

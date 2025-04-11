@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { Ref, useContext } from 'react';
+import { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
+import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
@@ -16,7 +17,7 @@ const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
   eventTrackingData: EventTrackingBlock,
-  viewTracker: Ref<HTMLDivElement>,
+  viewTracker: ViewTracker,
 ) => {
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -32,7 +33,7 @@ const renderLatestMediaList = (
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewTracker}
+        viewTracker={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -89,16 +90,15 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         {translations.latestMediaTitle ?? 'Latest'}
       </SectionLabel>
       {hasSingleItem ? (
-        <div css={styles.latestMediaPromoBorderAndWidth}>
+        <div css={styles.latestMediaPromoBorderAndWidth} {...viewTracker}>
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
-            ref={viewTracker}
             eventTrackingData={eventTrackingData}
           />
         </div>
       ) : (
-        <PromoList css={styles.latestMediaGridWrapper}>
+        <PromoList css={styles.latestMediaGridWrapper} {...viewTracker}>
           {content.map((item, index) =>
             renderLatestMediaList(item, index, eventTrackingData, viewTracker),
           )}

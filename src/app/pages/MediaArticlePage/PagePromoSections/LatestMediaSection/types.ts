@@ -1,3 +1,4 @@
+import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { EventTrackingBlock } from '../../../../models/types/eventTracking';
 
 export type Media = 'video' | 'audio';
@@ -17,7 +18,7 @@ export type LatestMedia = {
 export type LatestMediaItemProp = {
   item: LatestMedia;
   ariaLabelledBy: string;
-  ref: () => Promise<void>;
+  viewTracker?: ViewTracker;
   eventTrackingData: EventTrackingBlock;
 };
 

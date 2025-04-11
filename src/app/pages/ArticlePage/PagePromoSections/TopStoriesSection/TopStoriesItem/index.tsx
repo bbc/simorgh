@@ -1,7 +1,6 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/react';
-import { ForwardedRef, forwardRef } from 'react';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
@@ -70,80 +69,79 @@ type TopStoriesItemProps = {
   eventTrackingData?: EventTrackingBlock | null;
 };
 
-const TopStoriesItem = forwardRef(
-  (
-    { item, ariaLabelledBy, eventTrackingData = null }: TopStoriesItemProps,
-    viewTracker: ForwardedRef<HTMLDivElement>,
-  ) => {
-    if (!item || Object.keys(item).length === 0) return null;
+const TopStoriesItem = ({
+  item,
+  ariaLabelledBy,
+  eventTrackingData = null,
+}: TopStoriesItemProps) => {
+  if (!item || Object.keys(item).length === 0) return null;
 
-    const itemExtractor = {
-      optimo: getArticleTopStoryItem,
-      cps: getArticleTopStoryItem,
-      link: getArticleTopStoryItem,
-      'tipo-live': getLiveTopStoryItem,
-    }[item?.type];
+  const itemExtractor = {
+    optimo: getArticleTopStoryItem,
+    cps: getArticleTopStoryItem,
+    link: getArticleTopStoryItem,
+    'tipo-live': getLiveTopStoryItem,
+  }[item?.type];
 
-    if (!itemExtractor) return null;
+  if (!itemExtractor) return null;
 
-    const {
-      assetUri,
-      canonicalUrl,
-      headline,
-      isLive,
-      isPhotoGallery,
-      mediaType,
-      mediaDuration,
-      timestamp,
-      uri,
-    } = itemExtractor(item);
+  const {
+    assetUri,
+    canonicalUrl,
+    headline,
+    isLive,
+    isPhotoGallery,
+    mediaType,
+    mediaDuration,
+    timestamp,
+    uri,
+  } = itemExtractor(item);
 
-    const titleTag = timestamp || isLive ? 'h3' : 'div';
-    const titleHasContent = titleTag === 'h3';
+  const titleTag = timestamp || isLive ? 'h3' : 'div';
+  const titleHasContent = titleTag === 'h3';
 
-    return (
-      <div css={styles.topStoriesWrapper} {...viewTracker}>
-        <Promo
-          to={assetUri || uri || canonicalUrl}
-          ariaLabelledBy={ariaLabelledBy}
-          mediaType={mediaType}
-          eventTrackingData={eventTrackingData}
-        >
-          <Promo.ContentWrapper>
-            <Promo.Title
-              css={titleHasContent ? styles.titleWithContent : styles.title}
-              as={titleTag}
-            >
-              <Promo.Link>
-                {mediaType && <Promo.MediaIndicator />}
-                {isLive ? (
-                  <Promo.LiveLabel id={ariaLabelledBy}>
-                    <Promo.Content
-                      mediaDuration={mediaDuration}
-                      headline={headline}
-                      isPhotoGallery={isPhotoGallery}
-                      isLive={isLive}
-                    />
-                  </Promo.LiveLabel>
-                ) : (
+  return (
+    <div css={styles.topStoriesWrapper}>
+      <Promo
+        to={assetUri || uri || canonicalUrl}
+        ariaLabelledBy={ariaLabelledBy}
+        mediaType={mediaType}
+        eventTrackingData={eventTrackingData}
+      >
+        <Promo.ContentWrapper>
+          <Promo.Title
+            css={titleHasContent ? styles.titleWithContent : styles.title}
+            as={titleTag}
+          >
+            <Promo.Link>
+              {mediaType && <Promo.MediaIndicator />}
+              {isLive ? (
+                <Promo.LiveLabel id={ariaLabelledBy}>
                   <Promo.Content
                     mediaDuration={mediaDuration}
                     headline={headline}
                     isPhotoGallery={isPhotoGallery}
+                    isLive={isLive}
                   />
-                )}
-              </Promo.Link>
-            </Promo.Title>
-            {timestamp && (
-              <Promo.Timestamp css={styles.timestamp}>
-                {timestamp}
-              </Promo.Timestamp>
-            )}
-          </Promo.ContentWrapper>
-        </Promo>
-      </div>
-    );
-  },
-);
+                </Promo.LiveLabel>
+              ) : (
+                <Promo.Content
+                  mediaDuration={mediaDuration}
+                  headline={headline}
+                  isPhotoGallery={isPhotoGallery}
+                />
+              )}
+            </Promo.Link>
+          </Promo.Title>
+          {timestamp && (
+            <Promo.Timestamp css={styles.timestamp}>
+              {timestamp}
+            </Promo.Timestamp>
+          )}
+        </Promo.ContentWrapper>
+      </Promo>
+    </div>
+  );
+};
 
 export default TopStoriesItem;

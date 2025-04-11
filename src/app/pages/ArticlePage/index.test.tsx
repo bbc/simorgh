@@ -701,7 +701,7 @@ describe('Article Page', () => {
   });
 
   it('should render WSOJ recommendations when passed', async () => {
-    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
+    suppressPropWarnings(['optimizely', 'null']);
     const pageDataWithSecondaryColumn = {
       ...articleDataNews,
       recommendations: sampleRecommendations,

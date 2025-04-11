@@ -50,6 +50,7 @@ export type InvalidMessageBoxProps = {
   isErrorSummary?: boolean;
   suffix?: string;
   validationCriteria?: ValidationConditions;
+  ref: any;
 };
 
 export type FetchParameters = {

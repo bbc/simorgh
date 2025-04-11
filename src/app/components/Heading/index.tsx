@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes } from 'react';
+import React, { FC, HTMLAttributes, Ref } from 'react';
 import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
@@ -12,6 +12,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
   fontVariant?: FontVariant;
   level: 1 | 2 | 3 | 4;
   size?: GelFontSize;
+  ref?: Ref<HTMLElement>;
 }
 
 type Element = 'h1' | 'h2' | 'h3' | 'h4';
@@ -36,6 +37,7 @@ const Heading: FC<Props> = ({
   fontVariant = 'sansBold',
   level,
   size,
+  ref,
   ...htmlAttributes
 }: Props) => {
   const element: Element = `h${level}`;
@@ -57,6 +59,7 @@ const Heading: FC<Props> = ({
          */
         margin: 0,
       }}
+      {...(ref && { ref })}
       {...htmlAttributes}
     >
       {children}

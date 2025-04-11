@@ -1,6 +1,10 @@
 /** @jsx jsx */
 
-import { ElementType, ComponentPropsWithoutRef } from 'react';
+import {
+  ElementType,
+  ComponentPropsWithoutRef,
+  PropsWithChildren,
+} from 'react';
 import { jsx, Theme } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
@@ -19,11 +23,14 @@ const Text = function Text<T extends ElementType = 'span'>({
   className,
   size = 'pica',
   fontVariant = 'sansRegular',
+  ref,
   ...htmlAttributes
-}: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>) {
+}: PropsWithChildren<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof PropsWithChildren<T>>) {
   const Component: React.ElementType = as || 'span';
   return (
     <Component
+      {...(ref && { ref })}
       css={({ fontSizes, fontVariants, palette }: Theme) => [
         {
           color: palette.GREY_10,

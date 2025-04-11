@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, forwardRef } from 'react';
+import React, { Children, cloneElement } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import tail from 'ramda/src/tail';
@@ -28,11 +28,11 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Episode = forwardRef(({ children, dir }, ref) => {
+const Episode = ({ children, dir, viewTracker }) => {
   const showMediaIndicator = pathOr({}, '0', children).type !== Image;
 
   return (
-    <Wrapper dir={dir} showMediaIndicator={showMediaIndicator} {...ref}>
+    <Wrapper dir={dir} showMediaIndicator={showMediaIndicator} {...viewTracker}>
       {showMediaIndicator ? (
         Children.toArray(children)
           .filter(Boolean)
@@ -45,6 +45,6 @@ const Episode = forwardRef(({ children, dir }, ref) => {
       )}
     </Wrapper>
   );
-});
+};
 
 export default withEpisodeContext(Episode);

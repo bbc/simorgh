@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { useContext, PropsWithChildren } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
@@ -46,64 +46,60 @@ const formatValidationMessage = (
   return message;
 };
 
-const InvalidMessageBox = forwardRef(
-  (
-    {
-      id,
-      messageCode,
-      hasArrowStyle = true,
-      isErrorSummary = false,
-      suffix,
-      validationCriteria,
-      children,
-    }: PropsWithChildren<InvalidMessageBoxProps>,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const {
-      translations: { ugc = fallbackTranslations },
-    } = useContext(ServiceContext);
+const InvalidMessageBox = ({
+  id,
+  messageCode,
+  hasArrowStyle = true,
+  isErrorSummary = false,
+  suffix,
+  validationCriteria,
+  children,
+  ref,
+}: PropsWithChildren<InvalidMessageBoxProps>) => {
+  const {
+    translations: { ugc = fallbackTranslations },
+  } = useContext(ServiceContext);
 
-    const message = formatValidationMessage(
-      ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
-      validationCriteria,
-    );
+  const message = formatValidationMessage(
+    ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',
+    validationCriteria,
+  );
 
-    // We only include visually hidden text on generic error messages.
-    const includeVisuallyHiddenText =
-      !isErrorSummary && message === ugc[InvalidMessageCodes.FieldRequired];
+  // We only include visually hidden text on generic error messages.
+  const includeVisuallyHiddenText =
+    !isErrorSummary && message === ugc[InvalidMessageCodes.FieldRequired];
 
-    return (
-      <>
-        {hasArrowStyle && <div css={styles.errorArrow} />}
-        <div
-          css={[
-            styles.errorMessageBox,
-            !hasArrowStyle && styles.hasArrowStyle,
-            isErrorSummary && styles.focusIndicatorErrorSummary,
-          ]}
-          {...(isErrorSummary && { tabIndex: -1 })}
-          {...(ref && { ref })}
-        >
-          <span css={styles.strongWrapper}>
-            <ErrorSymbol />
-            <Text
-              id={id}
-              css={styles.errorText}
-              fontVariant="sansBold"
-              size="minion"
-              as="strong"
-            >
-              {message}
-              {includeVisuallyHiddenText && (
-                <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
-              )}
-            </Text>
-          </span>
-          {children}
-        </div>
-      </>
-    );
-  },
-);
+  return (
+    <>
+      {hasArrowStyle && <div css={styles.errorArrow} />}
+      <div
+        css={[
+          styles.errorMessageBox,
+          !hasArrowStyle && styles.hasArrowStyle,
+          isErrorSummary && styles.focusIndicatorErrorSummary,
+        ]}
+        {...(isErrorSummary && { tabIndex: -1 })}
+        {...(ref && { ref })}
+      >
+        <span css={styles.strongWrapper}>
+          <ErrorSymbol />
+          <Text
+            id={id}
+            css={styles.errorText}
+            fontVariant="sansBold"
+            size="minion"
+            as="strong"
+          >
+            {message}
+            {includeVisuallyHiddenText && (
+              <VisuallyHiddenText>{` ${suffix}`}</VisuallyHiddenText>
+            )}
+          </Text>
+        </span>
+        {children}
+      </div>
+    </>
+  );
+};
 
 export default InvalidMessageBox;
