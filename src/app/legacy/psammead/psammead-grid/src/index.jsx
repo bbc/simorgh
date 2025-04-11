@@ -291,7 +291,7 @@ const Grid = ({
   },
   item = false,
   parentColumns = null,
-  viewRef,
+  viewTracker,
   ...otherProps
 }) => {
   const renderChildren = () =>
@@ -319,7 +319,7 @@ const Grid = ({
       margins={margins}
       parentColumns={parentColumns}
       gridStartOffset={gridStartOffset}
-      {...viewRef}
+      {...viewTracker}
     >
       {renderChildren()}
     </GridComponent>

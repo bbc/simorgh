@@ -12,14 +12,13 @@ const MostReadList = ({
   dir = 'ltr',
   columnLayout: initialColumnLayout = 'multiColumn',
   children,
-  viewRef,
+  viewTracker,
 }: PropsWithChildren<MostReadBaseProps>) => {
   const { service } = useContext(ServiceContext);
   const columnLayout =
     service === 'burmese' ? 'oneColumn' : initialColumnLayout;
 
   return (
-    // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
     <Grid
       css={[
         styles[columnLayout],
@@ -32,7 +31,7 @@ const MostReadList = ({
       numberOfItems={numberOfItems}
       as="ol"
       role="list"
-      viewRef={viewRef}
+      viewTracker={viewTracker}
     >
       {children}
     </Grid>
