@@ -6,28 +6,25 @@ const Clearer = styled.div`
   clear: both;
 `;
 
-const Blocks = ({ blocks, componentsToRender }) => {
-  return blocks.map((block, index) => {
+const Blocks = ({ blocks, componentsToRender }) =>
+  blocks.map((block, index) => {
     const { type, model, id, position, blockGroupType, blockGroupIndex } =
       block;
 
     if (!componentsToRender || !type) {
       return null;
     }
-
     const Block = componentsToRender[type];
 
     if (!Block) {
       return null;
     }
 
-    // Dynamically choose the Wrapper component
     const Wrapper = path(['simorghMetadata', 'clear'], block)
       ? Clearer
       : Fragment;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
-
     return (
       <Wrapper key={id}>
         <Block
@@ -41,6 +38,5 @@ const Blocks = ({ blocks, componentsToRender }) => {
       </Wrapper>
     );
   });
-};
 
 export default Blocks;
