@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import { buildATIEventTrackUrl } from '#app/components/ATIAnalytics/atiUrl';
-import { RequestContext } from '#app/contexts/RequestContext';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
@@ -57,7 +56,6 @@ const useClickTrackerHandler = (props = {}) => {
     detailedPlacement,
     producerName,
   } = extractTrackingProps(props);
-
   const preventNavigation = props?.preventNavigation;
   const optimizely = props?.optimizely;
   const optimizelyMetricNameOverride = props?.optimizelyMetricNameOverride;
@@ -89,6 +87,8 @@ const useClickTrackerHandler = (props = {}) => {
         ].every(Boolean);
         if (shouldSendEvent) {
           const nextPageUrl = event?.currentTarget?.href;
+
+          console.log(`useClickTrackerHandler - shouldSendEvent`);
 
           event.stopPropagation();
           event.preventDefault();
@@ -177,16 +177,14 @@ export const useConstructLiteSiteATIEventTrackUrl = ({
 };
 
 export const useATIClickTrackerHandler = (props = {}) => {
-  const { isLite } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(props);
   const liteHandler = useConstructLiteSiteATIEventTrackUrl({
     props,
     eventType: CLICK_EVENT,
   });
 
-  return isLite
-    ? { [LITE_ATI_TRACKING]: liteHandler }
-    : { onClick: clickTrackerHandler };
+  // Note: Review if it's possible to assign LITE_ATI only on isLite and Opera Mini devices
+  return { [LITE_ATI_TRACKING]: liteHandler, onClick: clickTrackerHandler };
 };
 
 export default useClickTrackerHandler;

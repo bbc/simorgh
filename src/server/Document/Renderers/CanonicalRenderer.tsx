@@ -6,6 +6,7 @@ import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
+import LiteTrackingScripts from './LiteTrackingScripts';
 
 interface Props extends BaseRendererProps {
   data: Record<string, unknown>;
@@ -52,6 +53,7 @@ export default function CanonicalRenderer({
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
         />
+        <LiteTrackingScripts trackClicks trackViews={false} onlyOperaMini />
       </head>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />

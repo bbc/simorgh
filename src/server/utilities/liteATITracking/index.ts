@@ -1,5 +1,11 @@
 export default () => {
   window.processClientDeviceAndSendLite = atiURL => {
+    const debugMessage = `✅ processClientDeviceAndSendLite: ${atiURL}`;
+    // eslint-disable-next-line no-console
+    console.log(debugMessage);
+    // eslint-disable-next-line no-alert
+    alert(debugMessage);
+
     if (atiURL) {
       const {
         screen: { width, height, colorDepth, pixelDepth },
