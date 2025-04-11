@@ -46,11 +46,7 @@ describe('Optimo Top Stories Promo Item', () => {
   });
 
   it('should render Top Stories item when data is from Tipo', () => {
-    suppressPropWarnings([
-      'item.headlines.headline',
-      'ForwardRef',
-      'undefined',
-    ]);
+    suppressPropWarnings(['item.headlines.headline', 'undefined']);
 
     render(
       <TopStoriesItemFixture

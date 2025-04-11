@@ -276,60 +276,56 @@ const GridComponent = styled.div`
   }
 `;
 
-const Grid = React.forwardRef(
-  (
-    {
-      children,
-      startOffset: gridStartOffset = {}, // alias this prop to prevent it rendering as an element attribute e.g. <div startoffset="[object Object]">
-      dir = 'ltr',
-      enableGelGutters = false,
-      enableNegativeGelMargins = false,
-      margins = {
-        group1: false,
-        group2: false,
-        group3: false,
-        group4: false,
-        group5: false,
-      },
-      item = false,
-      parentColumns = null,
-      ...otherProps
-    },
-    ref,
-  ) => {
-    const renderChildren = () =>
-      React.Children.map(children, child => {
-        if (child) {
-          const isNestedGridComponent = child.type === Grid;
-
-          if (isNestedGridComponent) {
-            return React.cloneElement(child, {
-              parentColumns: otherProps.columns,
-              parentEnableGelGutters: enableGelGutters,
-            });
-          }
-        }
-        return child;
-      });
-
-    const renderGridComponent = () => (
-      <GridComponent
-        {...otherProps}
-        item={item}
-        dir={dir}
-        enableGelGutters={enableGelGutters}
-        enableNegativeGelMargins={enableNegativeGelMargins}
-        margins={margins}
-        parentColumns={parentColumns}
-        gridStartOffset={gridStartOffset}
-        ref={ref}
-      >
-        {renderChildren()}
-      </GridComponent>
-    );
-
-    return renderGridComponent();
+const Grid = ({
+  children,
+  startOffset: gridStartOffset = {}, // alias this prop to prevent it rendering as an element attribute e.g. <div startoffset="[object Object]">
+  dir = 'ltr',
+  enableGelGutters = false,
+  enableNegativeGelMargins = false,
+  margins = {
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: false,
+    group5: false,
   },
-);
+  item = false,
+  parentColumns = null,
+  viewRef,
+  ...otherProps
+}) => {
+  const renderChildren = () =>
+    React.Children.map(children, child => {
+      if (child) {
+        const isNestedGridComponent = child.type === Grid;
+
+        if (isNestedGridComponent) {
+          return React.cloneElement(child, {
+            parentColumns: otherProps.columns,
+            parentEnableGelGutters: enableGelGutters,
+          });
+        }
+      }
+      return child;
+    });
+
+  const renderGridComponent = () => (
+    <GridComponent
+      {...otherProps}
+      item={item}
+      dir={dir}
+      enableGelGutters={enableGelGutters}
+      enableNegativeGelMargins={enableNegativeGelMargins}
+      margins={margins}
+      parentColumns={parentColumns}
+      gridStartOffset={gridStartOffset}
+      {...viewRef}
+    >
+      {renderChildren()}
+    </GridComponent>
+  );
+
+  return renderGridComponent();
+};
 
 export default Grid;

@@ -17,11 +17,11 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const Grid = React.forwardRef((props, ref) => {
+const Grid = (props, viewRef) => {
   const { dir } = useContext(ServiceContext);
 
-  return <GRID dir={dir} {...props} {...ref} />;
-});
+  return <GRID dir={dir} {...props} {...viewRef} />;
+};
 
 const fourOfSixColumnsMaxWidthGroup4 = `30rem`;
 /* (group4ColWidth 6.75rem * 4) + (3 * 16px gutters) = 27rem + 3rem = 30rem */

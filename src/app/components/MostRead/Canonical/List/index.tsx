@@ -12,6 +12,7 @@ const MostReadList = ({
   dir = 'ltr',
   columnLayout: initialColumnLayout = 'multiColumn',
   children,
+  viewRef,
 }: PropsWithChildren<MostReadBaseProps>) => {
   const { service } = useContext(ServiceContext);
   const columnLayout =
@@ -31,6 +32,7 @@ const MostReadList = ({
       numberOfItems={numberOfItems}
       as="ol"
       role="list"
+      viewRef={viewRef}
     >
       {children}
     </Grid>

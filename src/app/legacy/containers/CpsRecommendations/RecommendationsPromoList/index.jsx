@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
   StoryPromoLiBase,
   StoryPromoUl,
@@ -9,44 +9,38 @@ import Grid from '../../../components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
 import getEventTrackingData from './getEventTrackingData';
 
-const RecommendationsPromoListItem = forwardRef(
-  ({ item, index, optimizely }, forwardedRef) => {
-    const eventTrackingData = getEventTrackingData({
-      item,
-      index,
-      optimizely,
-    });
+const RecommendationsPromoListItem = ({ item, index, optimizely }) => {
+  const eventTrackingData = getEventTrackingData({
+    item,
+    index,
+    optimizely,
+  });
 
-    const linkViewEventTracker = useViewTracker(eventTrackingData.link);
-    const elementRefCallback = element => {
-      linkViewEventTracker(element);
-      forwardedRef(element);
-    };
+  const linkViewEventTracker = useViewTracker(eventTrackingData.link);
 
-    return (
-      <Grid
-        item
-        {...elementRefCallback}
-        columns={{
-          group0: 1,
-          group1: 1,
-          group2: 1,
-          group3: 1,
-          group4: 1,
-          group5: 1,
-        }}
-        as={StoryPromoLiBase}
-        border={false}
-        key={item.id || item.uri}
-      >
-        <RecommendationsPromo
-          promo={item}
-          eventTrackingData={eventTrackingData}
-        />
-      </Grid>
-    );
-  },
-);
+  return (
+    <Grid
+      item
+      viewRef={linkViewEventTracker}
+      columns={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 1,
+        group5: 1,
+      }}
+      as={StoryPromoLiBase}
+      border={false}
+      key={item.id || item.uri}
+    >
+      <RecommendationsPromo
+        promo={item}
+        eventTrackingData={eventTrackingData}
+      />
+    </Grid>
+  );
+};
 
 const RecommendationsPromoList = ({ promoItems }) => {
   const { optimizely } = useContext(OptimizelyContext);
@@ -66,6 +60,7 @@ const RecommendationsPromoList = ({ promoItems }) => {
       }}
       as={StoryPromoUl}
       enableGelGutters
+      viewRef={blockViewEventTracker}
     >
       {promoItems.map((item, index) => (
         <RecommendationsPromoListItem

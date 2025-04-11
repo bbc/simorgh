@@ -48,6 +48,7 @@ const MostRead = ({
       numberOfItems={items.length}
       dir={direction}
       columnLayout={columnLayout}
+      viewRef={viewRef}
     >
       {items.map(
         ({ id, timestamp, title, href }, i) =>
@@ -57,7 +58,6 @@ const MostRead = ({
               dir={direction}
               key={id}
               columnLayout={columnLayout}
-              ref={viewRef}
             >
               <MostReadRank
                 service={service}

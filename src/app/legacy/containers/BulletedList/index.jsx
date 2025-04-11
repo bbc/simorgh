@@ -37,7 +37,7 @@ const BulletedListContainer = ({
     <StyledGridItemMedium {...(className ? { className } : undefined)}>
       <BulletedList
         {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
-        {...viewTracker}
+        viewRef={viewTracker}
       >
         <Blocks
           blocks={blocks}
