@@ -90,6 +90,8 @@ const useClickTrackerHandler = (props = {}) => {
 
           console.log(`useClickTrackerHandler - shouldSendEvent`);
 
+          alert(`useClickTrackerHandler - shouldSendEvent`);
+
           event.stopPropagation();
           event.preventDefault();
 
