@@ -36,6 +36,7 @@ import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import serviceConfigs from './utilities/serviceConfigs';
+import isLocal from '#app/lib/utilities/isLocal';
 
 const morgan = require('morgan');
 
@@ -295,7 +296,10 @@ server.get(
           requestUrl: url,
         });
 
-        console.error(error);
+        if (isLocal()) {
+          console.error(error);
+        }
+
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,
           message,
