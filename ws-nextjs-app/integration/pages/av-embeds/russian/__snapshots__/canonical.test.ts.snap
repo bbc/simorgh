@@ -4,19 +4,9 @@ exports[`Canonical Av-embeds Media Loader a11y assistive technology can read the
 
 exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 <div
-  class="css-145siv3"
+  class="placeholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
-  <div
-    class="css-6bu8o5"
-    data-e2e="media-player__guidance"
-  >
-    <noscript
-      class="css-lllaou"
-    >
-      &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
-    </noscript>
-  </div>
   <button
     class="focusIndicatorRemove css-c2c21w"
     type="button"
@@ -61,6 +51,9 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
       02:53
     </time>
   </button>
+  <noscript>
+    &lt;div class="css-kvi82l"&gt;&lt;p class="css-eqbegv"&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/p&gt;&lt;/div&gt;
+  </noscript>
   <div
     class="css-lgx6cw"
     style="padding-bottom:0;overflow:hidden"
@@ -79,19 +72,9 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 <div
-  class="css-145siv3"
+  class="placeholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
-  <div
-    class="css-6bu8o5"
-    data-e2e="media-player__guidance"
-  >
-    <noscript
-      class="css-lllaou"
-    >
-      &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
-    </noscript>
-  </div>
   <button
     class="focusIndicatorRemove css-c2c21w"
     type="button"
@@ -136,6 +119,9 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
       02:53
     </time>
   </button>
+  <noscript>
+    &lt;div class="css-kvi82l"&gt;&lt;p class="css-eqbegv"&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/p&gt;&lt;/div&gt;
+  </noscript>
   <div
     class="css-lgx6cw"
     style="padding-bottom:0;overflow:hidden"
@@ -154,23 +140,13 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
 <figure
-  class="css-1kswlui"
+  class="css-16mdid8"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-145siv3"
+    class="placeholder css-1r8vrs6"
     data-e2e="media-loader__placeholder"
   >
-    <div
-      class="css-6bu8o5"
-      data-e2e="media-player__guidance"
-    >
-      <noscript
-        class="css-lllaou"
-      >
-        &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
-      </noscript>
-    </div>
     <button
       class="focusIndicatorRemove css-c2c21w"
       type="button"
@@ -215,6 +191,9 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
         02:53
       </time>
     </button>
+    <noscript>
+      &lt;div class="css-kvi82l"&gt;&lt;p class="css-eqbegv"&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/p&gt;&lt;/div&gt;
+    </noscript>
     <div
       class="css-lgx6cw"
       style="padding-bottom:0;overflow:hidden"
