@@ -33,61 +33,46 @@ describe('MediaLoader', () => {
   });
 
   describe('Portrait title', () => {
-    it('Renders a title', async () => {
-      await act(async () => {
-        render(
-          <MediaPlayer blocks={aresMediaPortraitBlocks as MediaBlock[]} />,
-          {
-            id: 'testId',
-            pageType: TV_PAGE,
-          },
-        );
-      });
+    it('Is rendered when video is portrait, pageType is not mediaArticle, and embedded prop is false', () => {
+      render(
+        <MediaPlayer
+          blocks={aresMediaPortraitBlocks as MediaBlock[]}
+          embedded={false}
+        />,
+        {
+          id: 'testId',
+          pageType: TV_PAGE,
+        },
+      );
 
       const title = screen.getByRole('strong');
       expect(title).toBeInTheDocument();
       expect(title.textContent).toEqual('Watch Moments');
     });
 
-    it('Does not render a title when the page type is MAP', async () => {
-      await act(async () => {
+    test.each`
+      blocks                     | orientation    | pageType              | isEmbedded | expected
+      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${null}
+      ${aresMediaBlocks}         | ${'landscape'} | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${null}
+      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${true}    | ${null}
+    `(
+      'Is not rendered when video is $orientation, pageType is $pageType, and embedded prop is $isEmbedded  ',
+      ({ pageType, isEmbedded, expected }) => {
         render(
-          <MediaPlayer blocks={aresMediaPortraitBlocks as MediaBlock[]} />,
+          <MediaPlayer
+            blocks={aresMediaPortraitBlocks as MediaBlock[]}
+            embedded={isEmbedded}
+          />,
           {
             id: 'testId',
-            pageType: MEDIA_ARTICLE_PAGE,
+            pageType,
           },
         );
-      });
 
-      const title = screen.queryByRole('strong');
-      expect(title).toBe(null);
-    });
-
-    it('Does not render a title when the video orientation is landscape', async () => {
-      await act(async () => {
-        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
-          id: 'testId',
-        });
-      });
-
-      const title = screen.queryByRole('strong');
-      expect(title).toBe(null);
-    });
-
-    it('Does not render a title when the video is embedded', async () => {
-      await act(async () => {
-        render(
-          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded />,
-          {
-            id: 'testId',
-          },
-        );
-      });
-
-      const title = screen.queryByRole('strong');
-      expect(title).toBe(null);
-    });
+        const title = screen.queryByRole('strong');
+        expect(title).toBe(expected);
+      },
+    );
   });
 
   describe('BUMP Loader', () => {

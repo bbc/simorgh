@@ -1,4 +1,3 @@
-import { OptimoBlock } from '#app/models/types/optimo';
 import isPortraitVideo from '.';
 import { mediaBlockWithPV, mediaBlockWithoutPV } from './data';
 
