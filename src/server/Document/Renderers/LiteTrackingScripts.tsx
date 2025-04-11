@@ -5,14 +5,6 @@ import clickTracking from '#src/server/utilities/liteATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import viewTracking from '#src/server/utilities/liteATITracking/viewTracking';
 
-/**
- * Considerations:
- * 1. Is it OK to use liteATITracking scripts for Canonical? Should the name/concept be abstracted?
- *
- * Note:
- * - Evaluated on the client side; isOperaProxy is available there
- * - Is isOperaProxy proxy accurate?
- */
 const liteTrackingScripts = ({
   onlyOperaMini = false,
   trackViews = true,
