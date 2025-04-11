@@ -12,7 +12,6 @@ type Props = {
   showAllContent: boolean;
   setShowAllContent: () => void;
   variation: 'A' | 'B' | null;
-  eventTrackingData?: EventTrackingMetadata;
   liteCTAShows?: boolean;
 };
 
