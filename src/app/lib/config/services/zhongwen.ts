@@ -112,7 +112,7 @@ export const service: ZhongwenConfig = {
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: '最多人看',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,
@@ -427,7 +427,7 @@ export const service: ZhongwenConfig = {
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: '最多人看',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: true,

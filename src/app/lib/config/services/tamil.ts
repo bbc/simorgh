@@ -350,7 +350,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'அதிகம் வாசிக்கப்பட்டவை',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 10,
       hasMostRead: true,
