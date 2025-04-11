@@ -15,12 +15,11 @@ describe('View tracking script', () => {
   it('LITE_ATI_VIEW_TRACKING tracking variable is correct', () => {
     const viewTrackerString = viewTracker.toString();
 
-    const liteAtiViewTracking = viewTrackerString
-      .split('LITE_ATI_VIEW_TRACKING = ')[1]
-      .split(';')[0]
-      .replaceAll(`'`, '');
+    const pattern = /LITE_ATI_VIEW_TRACKING = '([^']+)'/;
 
-    // LITE_ATI_VIEW_TRACKING in ./index.ts must to match the value of LITE_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
+    const [, liteAtiViewTracking] = viewTrackerString.match(pattern) || [];
+
+    // LITE_ATI_VIEW_TRACKING in ./index.ts must match the value of LITE_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
     expect(liteAtiViewTracking).toBe(LITE_ATI_VIEW_TRACKING);
   });
 
