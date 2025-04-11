@@ -1,5 +1,5 @@
 import { LITE_ATI_VIEW_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
-import viewTracking from '.';
+import viewTracker from '.';
 
 jest.useFakeTimers();
 
@@ -10,6 +10,17 @@ describe('View tracking script', () => {
       document.body.removeChild(document.body.firstChild);
     }
     window.processClientDeviceAndSendLite = jest.fn();
+  });
+
+  it('LITE_ATI_VIEW_TRACKING tracking variable is correct', () => {
+    const viewTrackerString = viewTracker.toString();
+
+    const pattern = /LITE_ATI_VIEW_TRACKING = '([^']+)'/;
+
+    const [, liteAtiViewTracking] = viewTrackerString.match(pattern) || [];
+
+    // LITE_ATI_VIEW_TRACKING in ./index.ts must match the value of LITE_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
+    expect(liteAtiViewTracking).toBe(LITE_ATI_VIEW_TRACKING);
   });
 
   it('Calls processClientDeviceAndSendLite() when the IntersectionObserver marks it as intersecting.', () => {
@@ -24,7 +35,7 @@ describe('View tracking script', () => {
       .spyOn(document, 'querySelectorAll')
       .mockReturnValueOnce([mockElement] as unknown as NodeListOf<Element>);
 
-    viewTracking();
+    viewTracker();
     document.dispatchEvent(new Event('triggerMockObserver'));
     jest.runAllTimers();
 
@@ -48,7 +59,7 @@ describe('View tracking script', () => {
         mockElement,
       ] as unknown as NodeListOf<Element>);
 
-    viewTracking();
+    viewTracker();
     document.dispatchEvent(new Event('triggerMockObserver'));
     jest.runAllTimers();
 

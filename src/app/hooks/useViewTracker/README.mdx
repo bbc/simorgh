@@ -53,12 +53,12 @@ With this in mind, here are some examples of how you could setup view tracking f
  */
 
 const Promo = () => {
-  const viewRef = useViewTracker({
+  const viewTracker = useViewTracker({
     componentName: 'promo',
   });
 
   return (
-    <div {...viewRef}>
+    <div {...viewTracker}>
       <a href="promo-link">Promoted content</a>
     </div>
   );
@@ -72,7 +72,7 @@ const Promo = () => {
  */
 
 const TopStories = () => {
-  const viewRef = useViewTracker({
+  const viewTracker = useViewTracker({
     componentName: 'top-stories',
   });
 
@@ -91,8 +91,8 @@ const TopStories = () => {
     },
   ];
 
-  const TopStory = ({ link, title, viewRef }) => (
-    <li {...viewRef}>
+  const TopStory = ({ link, title, viewTracker }) => (
+    <li {...viewTracker}>
       <a href={link}>{title}</a>
     </li>
   );
@@ -100,7 +100,7 @@ const TopStories = () => {
   return (
     <ol>
       {topStories.map(({ title, link }) => (
-        <TopStory {...viewRef} title={title} link={link} />
+        <TopStory {...viewTracker} title={title} link={link} />
       ))}
     </ol>
   );
@@ -132,12 +132,12 @@ const Recommendations = () => {
     },
   ];
   const Recommendation = ({ title, link }) => {
-    const viewRef = useViewTracker({
+    const viewTracker = useViewTracker({
       componentName: 'recommendations',
     });
 
     return (
-      <li {...viewRef}>
+      <li {...viewTracker}>
         <a href={link}>{title}</a>
       </li>
     );
@@ -179,13 +179,13 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const Promo = () => {
   const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker({
+  const viewTracker = useViewTracker({
     componentName: 'promo',
     optimizely,
   });
 
   return (
-    <div {...viewRef}>
+    <div {...viewTracker}>
       <a href="promo-link">Promoted content</a>
     </div>
   );

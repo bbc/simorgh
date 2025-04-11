@@ -30,7 +30,7 @@ const MessageBanner = ({
   id = 'message-banner-1',
   eventTrackingData,
 }: MessageBannerProps) => {
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const { dir } = useContext(ServiceContext);
   const { mq } = useTheme();
@@ -54,7 +54,7 @@ const MessageBanner = ({
       aria-labelledby={id}
       data-testid={id}
     >
-      <div {...viewRef} css={styles.card}>
+      <div {...viewTracker} css={styles.card}>
         <div css={styles.textWrap}>
           <Heading level={2} size="paragon" css={styles.heading} id={id}>
             {heading}

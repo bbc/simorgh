@@ -34,7 +34,7 @@ const MostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -48,7 +48,7 @@ const MostRead = ({
       numberOfItems={items.length}
       dir={direction}
       columnLayout={columnLayout}
-      viewRef={viewRef}
+      viewTracker={viewTracker}
     >
       {items.map(
         ({ id, timestamp, title, href }, i) =>

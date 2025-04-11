@@ -19,7 +19,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
-const getViewRef = (eventTrackingData?: EventTrackingData) => {
+const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
     componentName,
     format,
@@ -168,7 +168,7 @@ const getViewRef = (eventTrackingData?: EventTrackingData) => {
     useReverb,
   ]);
 
-  return async (element: HTMLDivElement) => {
+  return async (element: HTMLElement) => {
     if (!element || !trackingIsEnabled || eventSent) {
       return;
     }
@@ -182,7 +182,7 @@ const getViewRef = (eventTrackingData?: EventTrackingData) => {
 
 export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
-  const viewRef = getViewRef(eventTrackingData);
+  const viewTracker = getComponentViewTracker(eventTrackingData);
   const liteATIUrl = constructLiteSiteATIEventTrackUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -191,6 +191,6 @@ export default (eventTrackingData?: EventTrackingData): any => {
   return isLite
     ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
     : {
-        ref: viewRef,
+        ref: viewTracker,
       };
 };

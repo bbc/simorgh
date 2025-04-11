@@ -16,7 +16,7 @@ export type EventTrackingProps = {
   eventType: ATIEventType;
 };
 
-export type ViewRef = {
+export type ViewTracker = {
   ref?: any;
   [LITE_ATI_VIEW_TRACKING]?: string;
 };
