@@ -374,7 +374,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,

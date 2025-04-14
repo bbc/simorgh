@@ -268,7 +268,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Èyítí A Ń Kà Jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
       numberOfItems: 10,
       hasMostRead: true,

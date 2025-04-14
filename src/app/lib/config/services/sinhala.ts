@@ -264,7 +264,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'ජනප්‍රිය ලිපි',
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,

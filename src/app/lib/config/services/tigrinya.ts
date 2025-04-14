@@ -263,7 +263,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ናይ መወዳእታ',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'ብብዝሒ ዝተነበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 10,
       hasMostRead: true,

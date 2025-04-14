@@ -282,7 +282,7 @@ const baseServiceConfig = {
     ...secondaryColumnTranslations,
   },
   mostRead: {
-    header: 'Popular Reads',
+    header: 'Найбільше читають',
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,

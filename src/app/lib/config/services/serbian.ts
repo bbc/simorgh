@@ -103,7 +103,7 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Najpopularnije',
       lastUpdated: 'Poslednji put ažurirano ',
       numberOfItems: 10,
       hasMostRead: true,
@@ -508,7 +508,7 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. ББЦ није одговоран за садржај других сајтова.',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Најпопуларније',
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 10,
       hasMostRead: true,

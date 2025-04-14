@@ -40,7 +40,7 @@ exports[`Canonical Most Read Page Analytics ATI tracking pixel search params 1`]
     "x8": "[simorgh-nojs]",
   },
   {
-    "x9": "[Popular%20Reads%20-%20BBC%20News%20Mundo]",
+    "x9": "[Lecturas%20más%20populares%20-%20BBC%20News%20Mundo]",
   },
   {
     "x11": "[2023-06-19T14:41:00Z]",
@@ -183,7 +183,7 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 }
 `;
 
-exports[`Canonical Most Read Page I can see the headline 1`] = `"Popular Reads"`;
+exports[`Canonical Most Read Page I can see the headline 1`] = `"Lecturas más populares"`;
 
 exports[`Canonical Most Read Page I can see the list items 1`] = `"1"Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidadesÚltima actualización: 19 junio 2023"`;
 
@@ -205,7 +205,7 @@ exports[`Canonical Most Read Page I can see the list items 9`] = `"9Entender si 
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10La deliciosa receta ancestral de Natalia Vallejo, la primera puertorriqueña en ganar el "Oscar" de la gastronomíaÚltima actualización: 19 junio 2023"`;
 
-exports[`Canonical Most Read Page Main heading should match text 1`] = `"Popular Reads"`;
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Lecturas más populares"`;
 
 exports[`Canonical Most Read Page Most Read has item with rank 1`] = `
 {
@@ -353,7 +353,7 @@ exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Popular Reads"`;
+exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Lecturas más populares"`;
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"es"`;
 
@@ -377,7 +377,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/mundo/popular/read",
         "@type": "WebPage",
-        "name": "Popular Reads",
+        "name": "Lecturas más populares",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -397,7 +397,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 }
 `;
 
-exports[`Canonical Most Read Page SEO OG description 1`] = `"Popular Reads - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO OG description 1`] = `"Lecturas más populares - BBC News Mundo"`;
 
 exports[`Canonical Most Read Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
 
@@ -407,13 +407,13 @@ exports[`Canonical Most Read Page SEO OG locale 1`] = `"es-005"`;
 
 exports[`Canonical Most Read Page SEO OG site name 1`] = `"BBC News Mundo"`;
 
-exports[`Canonical Most Read Page SEO OG title 1`] = `"Popular Reads - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO OG title 1`] = `"Lecturas más populares - BBC News Mundo"`;
 
 exports[`Canonical Most Read Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7080/mundo/popular/read"`;
 
-exports[`Canonical Most Read Page SEO Page title 1`] = `"Popular Reads - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO Page title 1`] = `"Lecturas más populares - BBC News Mundo"`;
 
 exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -421,7 +421,7 @@ exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`
 
 exports[`Canonical Most Read Page SEO Twitter creator 1`] = `"@bbcmundo"`;
 
-exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Popular Reads - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Lecturas más populares - BBC News Mundo"`;
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Mundo"`;
 
@@ -429,4 +429,4 @@ exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.fil
 
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
-exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Popular Reads - BBC News Mundo"`;
+exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Lecturas más populares - BBC News Mundo"`;

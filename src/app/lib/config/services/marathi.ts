@@ -283,7 +283,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'नवीनतम',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'लोकप्रिय',
       lastUpdated: 'शेवटचा अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,

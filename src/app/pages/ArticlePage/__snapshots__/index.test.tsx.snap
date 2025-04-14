@@ -892,7 +892,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
                 dir="ltr"
                 id="Most-Read"
               >
-                Popular Reads
+                Di one wey dem dey read well well
               </span>
             </span>
           </span>
@@ -4466,7 +4466,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
                 dir="rtl"
                 id="Most-Read"
               >
-                Popular Reads
+                مطالب پرخواننده
               </span>
             </span>
           </span>

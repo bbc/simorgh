@@ -291,7 +291,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Terbaru',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Artikel terpopuler',
       lastUpdated: 'Terakhir diperbarui:',
       numberOfItems: 5,
       hasMostRead: true,

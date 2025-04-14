@@ -272,7 +272,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Эң көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,

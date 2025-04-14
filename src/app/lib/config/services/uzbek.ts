@@ -280,7 +280,7 @@ const defaultCyrillicConfig = {
     latestMediaTitle: 'Сўнгги',
   },
   mostRead: {
-    header: 'Энг кўп ўқилган',
+    header: 'Оммабоп мақолалар',
     lastUpdated: 'Сўнгги янгиланиш:',
     numberOfItems: 5,
     hasMostRead: true,
@@ -622,7 +622,7 @@ export const service: UzbekConfig = {
       latestMediaTitle: 'So‘nggi',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Ommabop maqolalar',
       lastUpdated: 'So‘nggi yangilanish:',
       numberOfItems: 5,
       hasMostRead: true,

@@ -354,7 +354,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Labaran da suka fi shahara',
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
       hasMostRead: true,

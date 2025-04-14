@@ -253,7 +253,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: '注目の記事',
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,

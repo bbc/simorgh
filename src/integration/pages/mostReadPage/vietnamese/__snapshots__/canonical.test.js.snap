@@ -40,7 +40,7 @@ exports[`Canonical Most Read Page Analytics ATI tracking pixel search params 1`]
     "x8": "[simorgh-nojs]",
   },
   {
-    "x9": "[Popular%20Reads%20-%20BBC%20News%20Tiếng%20Việt]",
+    "x9": "[Đọc%20nhiều%20or%20Phổ%20biến%20-%20BBC%20News%20Tiếng%20Việt]",
   },
   {
     "x11": "[2023-06-19T14:57:00Z]",
@@ -162,7 +162,7 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 }
 `;
 
-exports[`Canonical Most Read Page I can see the headline 1`] = `"Popular Reads"`;
+exports[`Canonical Most Read Page I can see the headline 1`] = `"Đọc nhiều or Phổ biến"`;
 
 exports[`Canonical Most Read Page I can see the list items 1`] = `"1Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?Cập nhật gần nhất: 19 tháng 6 năm 2023"`;
 
@@ -184,7 +184,7 @@ exports[`Canonical Most Read Page I can see the list items 9`] = `"9Người Vi�
 
 exports[`Canonical Most Read Page I can see the list items 10`] = `"10Bạo lực gia đình: 'Vợ tôi hãm hiếp tôi 10 năm'Cập nhật gần nhất: 19 tháng 5 năm 2020"`;
 
-exports[`Canonical Most Read Page Main heading should match text 1`] = `"Popular Reads"`;
+exports[`Canonical Most Read Page Main heading should match text 1`] = `"Đọc nhiều or Phổ biến"`;
 
 exports[`Canonical Most Read Page Most Read has item with rank 1`] = `
 {
@@ -332,7 +332,7 @@ exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Popular Reads"`;
+exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều or Phổ biến"`;
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"vi"`;
 
@@ -356,7 +356,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/vietnamese/popular/read",
         "@type": "WebPage",
-        "name": "Popular Reads",
+        "name": "Đọc nhiều or Phổ biến",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -376,7 +376,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 }
 `;
 
-exports[`Canonical Most Read Page SEO OG description 1`] = `"Popular Reads - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO OG description 1`] = `"Đọc nhiều or Phổ biến - BBC News Tiếng Việt"`;
 
 exports[`Canonical Most Read Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
 
@@ -386,13 +386,13 @@ exports[`Canonical Most Read Page SEO OG locale 1`] = `"vi-VN"`;
 
 exports[`Canonical Most Read Page SEO OG site name 1`] = `"BBC News Tiếng Việt"`;
 
-exports[`Canonical Most Read Page SEO OG title 1`] = `"Popular Reads - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO OG title 1`] = `"Đọc nhiều or Phổ biến - BBC News Tiếng Việt"`;
 
 exports[`Canonical Most Read Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
 
-exports[`Canonical Most Read Page SEO Page title 1`] = `"Popular Reads - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO Page title 1`] = `"Đọc nhiều or Phổ biến - BBC News Tiếng Việt"`;
 
 exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -400,7 +400,7 @@ exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`
 
 exports[`Canonical Most Read Page SEO Twitter creator 1`] = `"@bbcvietnamese"`;
 
-exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Popular Reads - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Đọc nhiều or Phổ biến - BBC News Tiếng Việt"`;
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Tiếng Việt"`;
 
@@ -408,4 +408,4 @@ exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.fil
 
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcvietnamese"`;
 
-exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Popular Reads - BBC News Tiếng Việt"`;
+exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Đọc nhiều or Phổ biến - BBC News Tiếng Việt"`;

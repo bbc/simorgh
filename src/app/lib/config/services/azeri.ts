@@ -277,7 +277,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Geniş oxunanlar',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,

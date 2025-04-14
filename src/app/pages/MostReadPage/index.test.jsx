@@ -59,7 +59,9 @@ describe('Most Read Page Main', () => {
       }).container;
     });
 
-    expect(container.querySelector('h1').textContent).toEqual('Popular Reads');
+    expect(container.querySelector('h1').textContent).toEqual(
+      'Di one wey dem dey read well well',
+    );
     expect(container.querySelector('ol')).toBeInTheDocument();
     expect(container.querySelectorAll('li a').length).toEqual(5);
   });

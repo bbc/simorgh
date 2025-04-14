@@ -255,7 +255,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'บทความยอดนิยม',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,

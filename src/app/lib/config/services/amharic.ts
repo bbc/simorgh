@@ -334,7 +334,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'በስፋት የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
       hasMostRead: true,
