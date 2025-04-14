@@ -6,6 +6,7 @@ const { MESSAGE_BANNER } = COMPONENTS;
 export const assertMessageBannerComponentView = ({
   pageIdentifier,
   contentType,
+  componentTrackingContentType,
   useReverb,
   path,
 }) => {
@@ -20,7 +21,7 @@ export const assertMessageBannerComponentView = ({
     assertATIComponentViewEvent({
       component: MESSAGE_BANNER,
       pageIdentifier,
-      contentType,
+      contentType: componentTrackingContentType || contentType,
       useReverb,
     });
   });
@@ -29,6 +30,7 @@ export const assertMessageBannerComponentView = ({
 export const assertMessageBannerComponentClick = ({
   pageIdentifier,
   contentType,
+  componentTrackingContentType,
   useReverb,
   path,
 }) => {
@@ -46,7 +48,7 @@ export const assertMessageBannerComponentClick = ({
     assertATIComponentClickEvent({
       component: MESSAGE_BANNER,
       pageIdentifier,
-      contentType,
+      contentType: componentTrackingContentType || contentType,
       useReverb,
     });
   });
