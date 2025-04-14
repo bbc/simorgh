@@ -57,7 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
@@ -265,7 +264,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
-      header: 'Đọc nhiều nhất',
+      header: 'Đọc nhiều or Phổ biến',
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -274,7 +273,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Đọc nhiều nhất',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

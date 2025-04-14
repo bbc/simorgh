@@ -55,8 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Reklam',
       },
-      recommendationTitle: 'Önerilen haberler',
-      splitRecommendationTitle: 'Daha fazla önerilen hikaye',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       currentPage: 'Bulunduğunuz sayfa',
@@ -266,7 +264,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Seçtiklerimiz',
     },
     mostRead: {
-      header: 'En çok okunanlar',
+      header: 'Popüler haberler',
       lastUpdated: 'Son güncelleme:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -275,7 +273,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'En çok okunanlar',
       skipLink: {
         text: 'Haberin başlığını atlayın ve okumaya devam edin',
         endTextVisuallyHidden: 'Haberin sonu',
