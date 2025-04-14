@@ -9,15 +9,15 @@ const RecommendationsImage = ({
   image,
   lazyLoad = false,
 }: {
-  image: Recommendation['image'];
+  image?: Recommendation['image'] | null;
   lazyLoad?: boolean;
 }) => {
   const { isAmp } = useContext(RequestContext);
 
+  if (!image) return null;
+
   const { height, width, altText, copyrightHolder, originCode, locator } =
     image;
-
-  if (!originCode || !locator || !altText) return null;
 
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const { primarySrcset, fallbackSrcset } = createSrcsets({

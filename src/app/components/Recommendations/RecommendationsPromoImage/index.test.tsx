@@ -28,17 +28,8 @@ describe('RecommendationsImage', () => {
     ).toEqual('dolar TL');
   });
 
-  it('should not render an image if critical metadata does not exist', () => {
-    const invalidImage = {
-      locator: '',
-      originCode: '',
-      altText: '',
-    };
-
-    const { container } = render(
-      // @ts-expect-error - passing an invalid image prop to test the fallback
-      <RecommendationsImage image={invalidImage} />,
-    );
+  it('should not render an image if image object does not exist', () => {
+    const { container } = render(<RecommendationsImage image={null} />);
 
     const image = container.querySelector('img');
 
