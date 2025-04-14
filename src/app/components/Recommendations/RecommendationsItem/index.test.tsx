@@ -18,6 +18,26 @@ describe('RecommendationsItem', () => {
     );
   });
 
+  it('should not render an image if critical metadata does not exist', () => {
+    const recommendationWithoutImage = {
+      ...recommendationsFixtures[0],
+      image: {
+        locator: '',
+        originCode: '',
+        altText: '',
+      },
+    };
+
+    const { container } = render(
+      // @ts-expect-error - passing an invalid image prop to test the fallback
+      <RecommendationsItem recommendation={recommendationWithoutImage} />,
+    );
+
+    const image = container.querySelector('img');
+
+    expect(image).not.toBeInTheDocument();
+  });
+
   it('should not render if no recommendation is provided', () => {
     const { container } = render(<RecommendationsItem recommendation={null} />);
 

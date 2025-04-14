@@ -25,9 +25,11 @@ const RecommendationsItem = ({
 
   const { title, image, href } = recommendation;
 
+  const hasImage = image && image.locator && image.originCode && image.altText;
+
   return (
     <div css={styles.promoWrapper} data-e2e="recommendations-wrapper">
-      {!isLite && (
+      {hasImage && !isLite && (
         <div css={styles.imageWrapper}>
           <RecommendationsImage image={image} lazyLoad />
         </div>
