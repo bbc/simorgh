@@ -11,7 +11,7 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 > - Text
 > - Chevron
 
-> ### Components outside this folders:
+> ### Components outside this folder:
 >
 > - Text
 

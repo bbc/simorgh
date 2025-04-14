@@ -10,13 +10,11 @@ describe('Call To Action Link', () => {
 
   it('should render child elements', () => {
     const { container } = render(
-      <CallToActionLink to="https://www.bbc.com/ws/languages">
-        <CallToActionLink.FlexWrapper>
-          <CallToActionLink.Text size="brevier" fontVariant="sansBold">
-            My Link Text
-          </CallToActionLink.Text>
+      <CallToActionLink url="https://www.bbc.com/ws/languages">
+        <CallToActionLink.ButtonLikeWrapper>
+          <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
           <CallToActionLink.Chevron />
-        </CallToActionLink.FlexWrapper>
+        </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>,
     );
     const link = screen.getByText('My Link Text');
@@ -27,10 +25,8 @@ describe('Call To Action Link', () => {
 
   it('should render a link with the correct href', () => {
     render(
-      <CallToActionLink to="https://www.bbc.com/ws/languages">
-        <CallToActionLink.Text size="brevier" fontVariant="sansBold">
-          My Link Text
-        </CallToActionLink.Text>
+      <CallToActionLink url="https://www.bbc.com/ws/languages">
+        <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
       </CallToActionLink>,
     );
     const link = screen.getByRole('link');
@@ -39,16 +35,26 @@ describe('Call To Action Link', () => {
     );
   });
 
+  it('should not render if no url is supplied', () => {
+    const { container } = render(
+      // @ts-expect-error Missing attributes
+      <CallToActionLink>
+        <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
+      </CallToActionLink>,
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
+
   it('should register click tracker if event tracking data provided', () => {
     const eventTrackingData = { componentName: 'call-to-action-link' };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
     render(
       <CallToActionLink
-        to="https://www.bbc.com/ws/languages"
+        url="https://www.bbc.com/ws/languages"
         eventTrackingData={eventTrackingData}
       >
-        <CallToActionLink.Text size="brevier" fontVariant="sansBold">
+        <CallToActionLink.Text>
           My Link Text
           <CallToActionLink.Chevron />
         </CallToActionLink.Text>
@@ -61,12 +67,10 @@ describe('Call To Action Link', () => {
   it(`Should permit custom attributes through html attributes`, () => {
     render(
       <CallToActionLink
-        to="https://www.bbc.com/ws/languages"
+        url="https://www.bbc.com/ws/languages"
         {...{ 'data-ignore-lite': true }}
       >
-        <CallToActionLink.Text size="brevier" fontVariant="sansBold">
-          My Link Text
-        </CallToActionLink.Text>
+        <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
         <CallToActionLink.Chevron />
       </CallToActionLink>,
     );

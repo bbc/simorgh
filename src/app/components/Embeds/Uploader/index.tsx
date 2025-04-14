@@ -93,17 +93,13 @@ const Uploader = ({ blocks }: UploaderProps) => {
         </Text>
         <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          <CallToActionLink to={linkAddress} css={styles.callToActionLink}>
-            <CallToActionLink.FlexWrapper>
-              <CallToActionLink.Text
-                size="pica"
-                fontVariant="sansBold"
-                overrideInteractionStyles
-              >
+          <CallToActionLink url={linkAddress} css={styles.callToActionLink}>
+            <CallToActionLink.ButtonLikeWrapper>
+              <CallToActionLink.Text overrideInteractionStyles>
                 {linkText}
                 <CallToActionLink.Chevron css={styles.chevronSpacing} />
               </CallToActionLink.Text>
-            </CallToActionLink.FlexWrapper>
+            </CallToActionLink.ButtonLikeWrapper>
           </CallToActionLink>
         </div>
       </div>

@@ -64,7 +64,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                   />
                   <CallToActionLink
                     css={styles.cta}
-                    to={item.files[0].fileLink}
+                    url={item.files[0].fileLink}
                     download
                     eventTrackingData={{
                       componentName: 'koreanDownloads',
@@ -81,10 +81,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     >
                       <path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2" />
                     </svg>
-                    <CallToActionLink.Text
-                      overrideInteractionStyles
-                      fontVariant="sansBold"
-                    >
+                    <CallToActionLink.Text overrideInteractionStyles>
                       {item.files[0].fileName}
                       <span>
                         {' '}

@@ -16,8 +16,8 @@ type TextProps = {
 
 const Text = ({
   as,
-  size,
-  fontVariant,
+  size = 'pica',
+  fontVariant = 'sansBold',
   children,
   className,
   overrideInteractionStyles,

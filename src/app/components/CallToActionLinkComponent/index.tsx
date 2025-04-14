@@ -4,12 +4,12 @@ import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Chevron from './Chevron';
-import FlexWrapper from './FlexWrapper';
+import ButtonLikeWrapper from './ButtonLikeWrapper';
 import Text from './Text';
 import styles from './index.styles';
 
 type CallToActionLinkProps = {
-  to?: string;
+  url: string;
   className?: string;
   eventTrackingData?: EventTrackingMetadata;
   alignWithMargin?: boolean;
@@ -17,7 +17,7 @@ type CallToActionLinkProps = {
 };
 
 const CallToActionLink = ({
-  to,
+  url,
   children,
   eventTrackingData,
   alignWithMargin,
@@ -27,9 +27,11 @@ const CallToActionLink = ({
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
+  if (!url) return null;
+
   return (
     <a
-      href={to}
+      href={url}
       onClick={clickTrackerHandler}
       className={className}
       download={download}
@@ -42,7 +44,7 @@ const CallToActionLink = ({
 };
 
 CallToActionLink.Chevron = Chevron;
-CallToActionLink.FlexWrapper = FlexWrapper;
+CallToActionLink.ButtonLikeWrapper = ButtonLikeWrapper;
 CallToActionLink.Text = Text;
 
 export default CallToActionLink;

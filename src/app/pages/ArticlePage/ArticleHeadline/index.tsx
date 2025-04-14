@@ -65,12 +65,12 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
             data-e2e="to-lite-site"
           >
             <CallToActionLink
-              to={`${pathname}.lite`}
+              url={`${pathname}.lite`}
               eventTrackingData={eventTrackingData}
               css={styles.canonicalToLiteSiteCTA}
               alignWithMargin
             >
-              <CallToActionLink.Text size="brevier" fontVariant="sansBold">
+              <CallToActionLink.Text size="brevier">
                 {articleDataSavingLinkText}
               </CallToActionLink.Text>
               <CallToActionLink.Chevron size="brevier" />

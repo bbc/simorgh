@@ -42,13 +42,13 @@ const LiteSiteCta = () => {
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
-            to={canonicalLink}
+            url={canonicalLink}
             {...{ 'data-ignore-lite': true }}
             {...atiClickTrackerHandler}
             css={styles.topLinkSpacing}
             alignWithMargin
           >
-            <CallToActionLink.Text size="brevier" fontVariant="sansBold">
+            <CallToActionLink.Text size="brevier">
               {toMainSite}
             </CallToActionLink.Text>
             <CallToActionLink.Chevron size="brevier" />
@@ -56,11 +56,11 @@ const LiteSiteCta = () => {
         </Paragraph>
         <Paragraph data-e2e="information-page">
           <CallToActionLink
-            to={informationPageLink}
+            url={informationPageLink}
             css={styles.bottomLinkSpacing}
             alignWithMargin
           >
-            <CallToActionLink.Text size="brevier">
+            <CallToActionLink.Text size="brevier" fontVariant="sansRegular">
               {informationPage}
             </CallToActionLink.Text>
           </CallToActionLink>

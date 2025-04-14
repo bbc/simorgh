@@ -12,7 +12,7 @@ import CallToActionLink from '../CallToActionLinkComponent';
 interface MessageBannerProps {
   heading: string;
   description?: string;
-  link?: string;
+  link: string;
   linkText: string;
   image?: string;
   id?: string;
@@ -64,21 +64,17 @@ const Banner = forwardRef(
           </div>
           <div css={styles.flex}>
             <CallToActionLink
-              to={link}
+              url={link}
               className="focusIndicatorInvert"
               eventTrackingData={eventTrackingData}
               css={styles.callToActionLink}
             >
-              <CallToActionLink.FlexWrapper>
-                <CallToActionLink.Text
-                  size="pica"
-                  fontVariant="sansBold"
-                  overrideInteractionStyles
-                >
+              <CallToActionLink.ButtonLikeWrapper>
+                <CallToActionLink.Text overrideInteractionStyles>
                   {linkText}
                   <CallToActionLink.Chevron />
                 </CallToActionLink.Text>
-              </CallToActionLink.FlexWrapper>
+              </CallToActionLink.ButtonLikeWrapper>
             </CallToActionLink>
             {image && (
               <div css={styles.image}>
