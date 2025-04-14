@@ -55,20 +55,17 @@ export default {
     css({
       paddingTop: 0,
       paddingBottom: `${spacings.TRIPLE}rem`,
-      [mq.GROUP_3_ONLY]: {
-        paddingTop: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        paddingTop: `${spacings.TRIPLE}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-      //-----
       maxWidth: '100%',
       marginInline: 0,
       margin: 0,
       [mq.GROUP_3_ONLY]: {
+        paddingTop: `${spacings.DOUBLE}rem`,
         marginInline: `${spacings.DOUBLE}rem`,
         maxWidth: `${pixelsToRem(325)}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingTop: `${spacings.TRIPLE}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_ONLY]: {
         maxWidth: `${pixelsToRem(315)}rem`,
