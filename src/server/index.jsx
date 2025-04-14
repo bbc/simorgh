@@ -20,6 +20,7 @@ import {
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import isLocal from '#app/lib/utilities/isLocal';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -295,7 +296,10 @@ server.get(
           requestUrl: url,
         });
 
-        console.error(error);
+        if (isLocal()) {
+          console.error(error);
+        }
+
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,
           message,

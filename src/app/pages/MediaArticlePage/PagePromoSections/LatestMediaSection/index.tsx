@@ -16,7 +16,7 @@ const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
   eventTrackingData: EventTrackingBlock,
-  viewRef: Ref<HTMLDivElement>,
+  viewTracker: Ref<HTMLDivElement>,
 ) => {
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -32,7 +32,7 @@ const renderLatestMediaList = (
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
+        ref={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -50,7 +50,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
 
   const eventTrackingDataSend = eventTrackingData?.block;
 
-  const viewRef = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(eventTrackingDataSend);
   const LABEL_ID = 'latest-media-heading';
 
   if (!content || content?.length === 0) return null;
@@ -93,16 +93,14 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
           <LatestMediaItem
             item={singleItem}
             ariaLabelledBy={ariaLabelledBy}
-            // @ts-expect-error TODO need help fixing this!
-            ref={viewRef}
+            ref={viewTracker}
             eventTrackingData={eventTrackingData}
           />
         </div>
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
           {content.map((item, index) =>
-            // @ts-expect-error TODO need help fixing this!
-            renderLatestMediaList(item, index, eventTrackingData, viewRef),
+            renderLatestMediaList(item, index, eventTrackingData, viewTracker),
           )}
         </PromoList>
       )}

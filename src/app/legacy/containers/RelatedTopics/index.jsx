@@ -40,7 +40,7 @@ const RelatedTopics = ({
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
   const topicsPath = pathOr('topics', ['topicsPath'], translations);
@@ -85,7 +85,7 @@ const RelatedTopics = ({
               name={topics[0].topicName}
               link={getTopicPageUrl(topics[0].topicId)}
               {...clickTrackerHandler}
-              {...viewRef}
+              {...viewTracker}
               key={topics[0].topicId}
             />
           ) : (
@@ -94,7 +94,7 @@ const RelatedTopics = ({
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
                 {...clickTrackerHandler}
-                {...viewRef}
+                {...viewTracker}
                 key={topicId}
               />
             ))

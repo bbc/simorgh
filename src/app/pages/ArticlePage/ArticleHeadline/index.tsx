@@ -21,7 +21,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { optimizely } = useContext(OptimizelyContext);
   const eventTrackingData = { componentName: 'canonical-lite-cta', optimizely };
   const { enabled: showCTA } = useToggle('liteSiteCTA');
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const titleVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
 
   let articleDataSavingLinkText =
@@ -56,13 +56,12 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
             ]}
             data-e2e="to-lite-site-loading"
           />
-          {/* @ts-expect-error TODO need help fixing this! */}
           <div
             css={[
               styles.liteCTAContainer,
               !titleVariation && styles.displayNone,
             ]}
-            {...viewRef}
+            {...viewTracker}
             data-e2e="to-lite-site"
           >
             <CallToActionLinkWithChevron

@@ -183,10 +183,9 @@ const ConsentBanner = ({
     externalLinkText,
   );
 
-  const viewRef = useViewTracker(getEventTrackingData(provider));
+  const viewTracker = useViewTracker(getEventTrackingData(provider));
 
   return (
-    // @ts-expect-error TODO need help fixing this!
     <div
       data-testid="consentBanner"
       id={`consentBanner${id ? `-${id}` : ''}`}
@@ -194,7 +193,7 @@ const ConsentBanner = ({
         consentBannerCss.parent,
         isLive && consentBannerCss.tranparentBorder,
       ]}
-      {...viewRef}
+      {...viewTracker}
     >
       <Text
         as="strong"

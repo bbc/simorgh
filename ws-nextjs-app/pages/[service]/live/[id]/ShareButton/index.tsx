@@ -36,7 +36,7 @@ const ShareButton = ({
   };
   headline: string;
 }) => {
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
   const { onClick: clickTrackerHandler } =
     useClickTrackerHandler(eventTrackingData);
@@ -71,8 +71,7 @@ const ShareButton = ({
   };
 
   return (
-    // @ts-expect-error TODO need help fixing this!
-    <div {...viewRef} data-e2e="share">
+    <div {...viewTracker} data-e2e="share">
       <button
         type="button"
         ref={focusRef}

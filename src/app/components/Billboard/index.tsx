@@ -32,12 +32,12 @@ export default ({
   eventTrackingData,
   showLiveLabel,
 }: BillboardProps) => {
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
-      <div css={styles.headerContainer} {...viewRef}>
+      <div css={styles.headerContainer} {...viewTracker}>
         <div css={styles.backgroundContainer} />
         <div css={styles.contentContainer}>
           <MaskedImage

@@ -28,16 +28,17 @@ const BulletedListContainer = ({
     componentName: `bullet${blockGroupIndex}`,
     format: 'CHD=bullet',
   };
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
   const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
-  const viewTracker = blockGroupType === 'listWithLink' ? viewRef : null;
+  const listWithLinkViewTracker =
+    blockGroupType === 'listWithLink' ? viewTracker : null;
 
   return (
     <StyledGridItemMedium {...(className ? { className } : undefined)}>
       <BulletedList
         {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
-        {...viewTracker}
+        {...listWithLinkViewTracker}
       >
         <Blocks
           blocks={blocks}

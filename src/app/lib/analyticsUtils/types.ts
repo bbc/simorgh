@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ATIEventTrackingProps } from '#app/components/ATIAnalytics/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import {
@@ -8,9 +9,14 @@ import {
 
 export type ATIEventType = typeof VIEW_EVENT | typeof CLICK_EVENT;
 
-export type EventTrackingProps = ATIEventTrackingProps & EventTrackingMetadata;
+export type EventTrackingData = EventTrackingMetadata & ATIEventTrackingProps;
 
-export type ViewRef = {
-  ref?: React.Ref<HTMLElement>;
+export type EventTrackingProps = {
+  eventTrackingData?: EventTrackingData;
+  eventType: ATIEventType;
+};
+
+export type ViewTracker = {
+  ref?: any;
   [LITE_ATI_VIEW_TRACKING]?: string;
 };

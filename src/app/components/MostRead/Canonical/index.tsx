@@ -34,7 +34,7 @@ const MostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -57,8 +57,7 @@ const MostRead = ({
               dir={direction}
               key={id}
               columnLayout={columnLayout}
-              // @ts-expect-error TODO need help fixing this!
-              ref={viewRef}
+              ref={viewTracker}
             >
               <MostReadRank
                 service={service}

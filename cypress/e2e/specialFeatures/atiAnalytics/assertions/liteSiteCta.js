@@ -20,6 +20,7 @@ const runIfLiteEnabled = service => {
 export const assertLiteSiteCTAComponentClick = ({
   pageIdentifier,
   contentType,
+  componentTrackingContentType,
   path,
   service,
 }) => {
@@ -41,7 +42,7 @@ export const assertLiteSiteCTAComponentClick = ({
       assertATIComponentClickEvent({
         component: LITE_SITE_CTA,
         pageIdentifier,
-        contentType,
+        contentType: componentTrackingContentType || contentType,
       });
     },
   );
