@@ -53,6 +53,7 @@ const MediaIcon = ({
       service={service}
       aria-hidden="true"
       className={className}
+      data-e2e="media-icon"
     >
       {mediaIcons[type]}
       {formatChildren(children)}

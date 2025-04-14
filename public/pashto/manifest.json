@@ -1,7 +1,7 @@
 {
   "name": "BBC News پښتو",
   "short_name": "BBC پښتو",
-  "scope": "/pashto/",
+  "scope": "/pashto",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

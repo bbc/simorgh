@@ -953,14 +953,14 @@ describe('Server', () => {
 
   describe('Service workers', () => {
     it('should serve a file for existing service workers', async () => {
-      await makeRequest('/news/articles/sw.js');
+      await makeRequest('/gahuza/sw.js');
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
         path.join(__dirname, '/public/sw.js'),
       );
     });
 
     it('should not serve a file for non-existing service workers', async () => {
-      const { statusCode } = await makeRequest('/some-service/articles/sw.js');
+      const { statusCode } = await makeRequest('/news/sw.js');
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
@@ -975,11 +975,9 @@ describe('Server', () => {
 
   describe('Manifest json', () => {
     it.each`
-      manifestPath                         | expectedManifestFile
-      ${'/pidgin/articles/manifest.json'}  | ${'/pidgin/manifest.json'}
-      ${'/pidgin/manifest.json'}           | ${'/pidgin/manifest.json'}
-      ${'/serbian/articles/manifest.json'} | ${'/serbian/manifest.json'}
-      ${'/serbian/manifest.json'}          | ${'/serbian/manifest.json'}
+      manifestPath                | expectedManifestFile
+      ${'/pidgin/manifest.json'}  | ${'/pidgin/manifest.json'}
+      ${'/serbian/manifest.json'} | ${'/serbian/manifest.json'}
     `(
       'should serve a file for $manifestPath',
       async ({ manifestPath, expectedManifestFile }) => {
@@ -997,7 +995,7 @@ describe('Server', () => {
     });
 
     it('should serve a response cache control of 1 day', async () => {
-      const { header } = await makeRequest('/pidgin/articles/manifest.json');
+      const { header } = await makeRequest('/pidgin/manifest.json');
       expect(header['cache-control']).toBe(
         'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
       );
@@ -1047,40 +1045,6 @@ describe('Server', () => {
     it('should respond with a 500 for non-existing services', async () => {
       const { statusCode } = await makeRequest(
         '/some-service/sty-secondary-column.json',
-      );
-      expect(statusCode).toEqual(500);
-    });
-  });
-
-  describe('Recommendations json', () => {
-    // This is being skipped due to variants not needing recommendations
-    it.skip('should serve a file for valid service paths with variants', async () => {
-      const { body } = await makeRequest(
-        '/zhongwen/uk-23283128/recommendations/trad.json',
-      );
-      expect(body).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            headlines: expect.any(Object),
-          }),
-        ]),
-      );
-    });
-    it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest(
-        '/mundo/23263889/recommendations.json',
-      );
-      expect(body).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            headlines: expect.any(Object),
-          }),
-        ]),
-      );
-    });
-    it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest(
-        '/some-service/recommendations.json',
       );
       expect(statusCode).toEqual(500);
     });

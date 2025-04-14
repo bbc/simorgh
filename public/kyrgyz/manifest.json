@@ -1,7 +1,7 @@
 {
   "name": "BBC News Кыргыз КызMATы",
   "short_name": "BBC Кыргыз КызMATы",
-  "scope": "/kyrgyz/",
+  "scope": "/kyrgyz",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

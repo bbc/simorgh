@@ -1,7 +1,7 @@
 {
   "name": "BBC News ગુજરાતી",
   "short_name": "BBC ગુજરાતી",
-  "scope": "/gujarati/",
+  "scope": "/gujarati",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

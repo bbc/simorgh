@@ -1,7 +1,7 @@
 {
   "name": "BBC News አማርኛ",
   "short_name": "BBC አማርኛ",
-  "scope": "/amharic/",
+  "scope": "/amharic",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

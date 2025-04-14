@@ -7,6 +7,7 @@ const { LITE_SITE_CTA } = COMPONENTS;
 export const assertLiteSiteCTAComponentClick = ({
   pageIdentifier,
   contentType,
+  componentTrackingContentType,
   path,
 }) => {
   it('should send a click event for the Lite Site CTA component', () => {
@@ -23,7 +24,7 @@ export const assertLiteSiteCTAComponentClick = ({
     assertATIComponentClickEvent({
       component: LITE_SITE_CTA,
       pageIdentifier,
-      contentType,
+      contentType: componentTrackingContentType || contentType,
     });
   });
 };

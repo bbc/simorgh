@@ -1,7 +1,7 @@
 {
   "name": "BBC News Afaan Oromoo",
   "short_name": "BBC Afaan Oromoo",
-  "scope": "/afaanoromoo/",
+  "scope": "/afaanoromoo",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

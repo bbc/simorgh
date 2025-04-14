@@ -56,7 +56,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'விளம்பரம்',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
       currentPage: 'தற்போதுள்ள பக்கம்',
@@ -351,7 +350,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'அதிகம் படிக்கப்பட்டது',
+      header: 'மனதை தொட்டவை',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -360,7 +359,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'அதிகம் படிக்கப்பட்டது',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -428,6 +427,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'இலங்கை',
         url: '/tamil/topics/cz74k7p3qw7t',
+      },
+      {
+        title: 'உடல்நலம்',
+        url: '/tamil/topics/cyx5kxzdn9dt',
+      },
+      {
+        title: 'வரலாறு',
+        url: '/tamil/topics/cxnyknvykxjt',
       },
       {
         title: 'விளையாட்டு',

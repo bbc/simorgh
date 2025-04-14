@@ -75,7 +75,7 @@ const CanonicalNavigationContainer = ({
       <Divider />
       {isLiveEnv() === false &&
         experimentVariant &&
-        experimentVariant !== 'none' && (
+        experimentVariant !== 'off' && (
           <ScrollablePromo
             blocks={blocks}
             experimentVariant={experimentVariant}

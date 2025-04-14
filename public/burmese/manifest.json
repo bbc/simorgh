@@ -1,7 +1,7 @@
 {
   "name": "BBC News မြန်မာ",
   "short_name": "BBC မြန်မာ",
-  "scope": "/burmese/",
+  "scope": "/burmese",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

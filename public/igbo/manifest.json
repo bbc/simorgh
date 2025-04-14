@@ -1,7 +1,7 @@
 {
   "name": "BBC News Ìgbò",
   "short_name": "BBC Ìgbò",
-  "scope": "/igbo/",
+  "scope": "/igbo",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

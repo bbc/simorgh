@@ -282,7 +282,7 @@ const baseServiceConfig = {
     ...secondaryColumnTranslations,
   },
   mostRead: {
-    header: 'Найпопулярніше',
+    header: 'Найбільше читають',
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,
@@ -291,7 +291,11 @@ const baseServiceConfig = {
     hasRadioSchedule: false,
   },
   recommendations: {
-    hasStoryRecommendations: false,
+    header: 'Найпопулярніше',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -344,11 +348,11 @@ const baseServiceConfig = {
     },
     {
       title: 'Історії',
-      url: '/ukrainian/53725237',
+      url: '/ukrainian/topics/czrxg3vzy44t',
     },
     {
       title: 'Відео',
-      url: '/ukrainian/55425840',
+      url: '/ukrainian/topics/c44vmzqkzqqt',
     },
     {
       title: 'Книга року BBC',

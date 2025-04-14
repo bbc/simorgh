@@ -76,8 +76,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'آگهی',
       },
-      recommendationTitle: 'مطالب پیشنهادی',
-      splitRecommendationTitle: 'مطالب پیشنهادی دیگر',
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       currentPage: 'صفحه فعلی',
@@ -376,7 +374,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'پربیننده‌ترین‌ها',
+      header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
@@ -387,7 +385,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'پربیننده‌ترین‌ها',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -456,7 +454,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'تلویزیون',
-        url: '/persian/tv-and-radio-37434377',
+        url: '/persian/topics/cw9qgeqd1zqt',
       },
       {
         title: 'ايران',

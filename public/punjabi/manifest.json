@@ -1,7 +1,7 @@
 {
   "name": "BBC News ਖ਼ਬਰਾਂ",
   "short_name": "BBC ਖ਼ਬਰਾਂ",
-  "scope": "/punjabi/",
+  "scope": "/punjabi",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

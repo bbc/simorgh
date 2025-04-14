@@ -27,9 +27,6 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
-  recommendations: {
-    hasStoryRecommendations: false,
-  },
   showAdPlaceholder: false,
   showRelatedTopics: true,
   timezone: 'GMT',
@@ -106,10 +103,17 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
     mostRead: {
-      header: 'Najčitanije',
+      header: 'Najpopularnije',
       lastUpdated: 'Poslednji put ažurirano ',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Najčitanije',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -504,10 +508,17 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. ББЦ није одговоран за садржај других сајтова.',
     },
     mostRead: {
-      header: 'Најчитаније',
+      header: 'Најпопуларније',
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Најчитаније',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {

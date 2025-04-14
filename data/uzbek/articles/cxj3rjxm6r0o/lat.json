@@ -6,7 +6,7 @@
           "categoryName": null,
           "contentId": "urn:bbc:optimo:asset:cxj3rjxm6r0o",
           "contentType": "article",
-          "language": "uz-cyrl",
+          "language": "uz-latn",
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
@@ -19,7 +19,7 @@
         "locators": { "optimoUrn": "urn:bbc:optimo:asset:cxj3rjxm6r0o" },
         "type": "article",
         "createdBy": "Uzbek",
-        "language": "uz-cyrl",
+        "language": "uz-latn",
         "firstPublished": 1562942064846,
         "lastPublished": 1562942064846,
         "analyticsLabels": {
@@ -28,7 +28,7 @@
           "irisKeyword": null
         },
         "passport": {
-          "language": "uz-cyrl",
+          "language": "uz-latn",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
           "taggings": []
         },

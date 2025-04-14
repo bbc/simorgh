@@ -1,7 +1,7 @@
 {
   "name": "BBC News Türkçe",
   "short_name": "BBC Türkçe",
-  "scope": "/turkce/",
+  "scope": "/turkce",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

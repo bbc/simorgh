@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
 import { TestEnvironment } from 'jest-environment-jsdom';
 import type {
@@ -57,6 +58,7 @@ class CustomTestEnvirnoment extends TestEnvironment {
         service: { value: this.service },
         window: { value: dom.window },
         document: { value: dom.window.document },
+        fetch: { value: fetch },
       });
     } catch (e) {
       console.error(e);

@@ -1,7 +1,7 @@
 {
   "name": "BBC News Gahuza",
   "short_name": "BBC Gahuza",
-  "scope": "/gahuza/",
+  "scope": "/gahuza",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

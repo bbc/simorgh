@@ -1,7 +1,7 @@
 {
   "name": "BBC News Hausa",
   "short_name": "BBC Hausa",
-  "scope": "/hausa/",
+  "scope": "/hausa",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

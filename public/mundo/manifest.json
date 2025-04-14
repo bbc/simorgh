@@ -1,7 +1,7 @@
 {
   "name": "BBC News Mundo",
   "short_name": "BBC Mundo",
-  "scope": "/mundo/",
+  "scope": "/mundo",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

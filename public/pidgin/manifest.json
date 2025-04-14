@@ -1,7 +1,7 @@
 {
   "name": "BBC News Pidgin",
   "short_name": "BBC Pidgin",
-  "scope": "/pidgin/",
+  "scope": "/pidgin",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

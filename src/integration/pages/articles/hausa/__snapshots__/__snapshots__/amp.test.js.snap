@@ -194,7 +194,7 @@ exports[`AMP Articles Header Navigation link should match text and url 3`] = `
 exports[`AMP Articles Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
-  "url": "/hausa/52140979",
+  "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
@@ -208,7 +208,7 @@ exports[`AMP Articles Header Navigation link should match text and url 5`] = `
 exports[`AMP Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+  "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 

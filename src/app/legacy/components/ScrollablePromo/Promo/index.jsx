@@ -109,8 +109,9 @@ const Promo = ({ block, experimentVariant, onClick }) => {
   let aresLinkBlock;
   let timestamp;
   let isLive;
+
   switch (experimentVariant) {
-    case 'A': {
+    case 'top_bar_top_stories': {
       const overtypedHeadline = block?.headlines?.overtyped ?? '';
       const mainHeadline = block?.headlines?.headline ?? '';
       const headlineBlockText =
@@ -140,7 +141,7 @@ const Promo = ({ block, experimentVariant, onClick }) => {
       isLive = block.isLive;
       break;
     }
-    case 'B':
+    case 'top_bar_most_read':
       title = block.title;
       href = block.href;
       break;

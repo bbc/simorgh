@@ -1,7 +1,7 @@
 {
   "name": "BBC News فارسی",
   "short_name": "BBC فارسی",
-  "scope": "/persian/",
+  "scope": "/persian",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

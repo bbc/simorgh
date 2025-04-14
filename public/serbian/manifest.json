@@ -1,7 +1,7 @@
 {
   "name": "BBC News na srpskom",
   "short_name": "BBC na srpskom",
-  "scope": "/serbian/",
+  "scope": "/serbian",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

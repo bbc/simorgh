@@ -102,7 +102,7 @@ export default function App({ Component, pageProps }: Props) {
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >
-          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
+          <EventTrackingContextProvider atiData={atiAnalytics}>
             {isAvEmbeds ? (
               <ThemeProvider service={service} variant={variant}>
                 {RenderChildrenOrError}

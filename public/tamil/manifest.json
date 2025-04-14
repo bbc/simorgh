@@ -1,7 +1,7 @@
 {
   "name": "BBC News தமிழ்",
   "short_name": "BBC தமிழ்",
-  "scope": "/tamil/",
+  "scope": "/tamil",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

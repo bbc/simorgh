@@ -12,7 +12,6 @@ import {
   articleDataPidginWithAds,
   articleDataPidginWithByline,
   promoSample,
-  sampleRecommendations,
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
@@ -29,6 +28,9 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 
 import { Article } from '#app/models/types/optimo';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import * as viewTracking from '#app/hooks/useViewTracker';
+import * as useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   render,
   screen,
@@ -55,6 +57,8 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
+
+const useDecisionSpy = jest.spyOn(useOptimizelyVariation, 'default');
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -107,9 +111,6 @@ const Context = ({
             ads: {
               enabled: adsToggledOn,
             },
-            cpsRecommendations: {
-              enabled: true,
-            },
             podcastPromo: { enabled: promo != null },
           }}
         >
@@ -141,6 +142,64 @@ afterAll(() => {
 });
 
 describe('Article Page', () => {
+  it.each([
+    {
+      testScenario:
+        'should show the CTA on non Lite Site pages, when the toggle is enabled',
+      isLite: false,
+      toggleEnabled: true,
+      shouldBeDisplayed: true,
+    },
+    {
+      testScenario:
+        'should not show the CTA on non Lite Site pages, when the toggle is false',
+      isLite: false,
+      toggleEnabled: false,
+      shouldBeDisplayed: false,
+    },
+    {
+      testScenario:
+        'should not show the CTA on Lite Site pages, regardless of the toggle',
+      isLite: true,
+      toggleEnabled: true,
+      shouldBeDisplayed: false,
+    },
+  ])('$testScenario', ({ isLite, toggleEnabled, shouldBeDisplayed }) => {
+    useDecisionSpy.mockReturnValueOnce('off' as unknown as true);
+
+    render(<ArticlePage pageData={articleDataPersian} />, {
+      service: 'gahuza',
+      isLite,
+      toggles: { liteSiteCTA: { enabled: toggleEnabled } },
+    });
+
+    const liteCTA = screen.queryByRole('link', { name: /Nyandiko gusa/i });
+
+    if (shouldBeDisplayed) {
+      expect(liteCTA).toBeInTheDocument();
+    } else {
+      expect(liteCTA).not.toBeInTheDocument();
+    }
+  });
+
+  it('should apply click and view tracking data on lite site cta link', () => {
+    const eventTrackingData = {
+      componentName: 'canonical-lite-cta',
+      optimizely: null,
+    };
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    render(<ArticlePage pageData={articleDataPersian} />, {
+      service: 'gahuza',
+      isLite: false,
+      toggles: { liteSiteCTA: { enabled: true } },
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+  });
+
   it('should use headline for meta description if summary does not exist', async () => {
     const articleDataNewsWithSummary = mergeDeepLeft(
       {
@@ -635,22 +694,6 @@ describe('Article Page', () => {
         expect(adElement).not.toBeInTheDocument();
       }
     });
-  });
-
-  it('should render WSOJ recommendations when passed', async () => {
-    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-    const pageDataWithSecondaryColumn = {
-      ...articleDataNews,
-      recommendations: sampleRecommendations,
-    };
-    const { getByText } = render(
-      <Context service="turkce">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
-      </Context>,
-      { service: 'turkce' },
-    );
-
-    expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
   });
 
   it('should render PodcastPromos when passed', async () => {

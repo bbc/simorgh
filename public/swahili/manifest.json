@@ -1,7 +1,7 @@
 {
   "name": "BBC News Swahili",
   "short_name": "BBC Swahili",
-  "scope": "/swahili/",
+  "scope": "/swahili",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

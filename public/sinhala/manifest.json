@@ -1,7 +1,7 @@
 {
   "name": "BBC News සිංහල",
   "short_name": "BBC සිංහල",
-  "scope": "/sinhala/",
+  "scope": "/sinhala",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

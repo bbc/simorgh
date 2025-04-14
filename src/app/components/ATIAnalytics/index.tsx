@@ -6,7 +6,7 @@ import AmpATIAnalytics from './amp';
 import { ATIProps } from './types';
 import { buildATIUrl, buildReverbParams } from './params';
 
-const ATIAnalytics = ({ data, atiData }: ATIProps) => {
+const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
@@ -15,7 +15,6 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
   const urlPageViewParams = buildATIUrl({
     requestContext,
     serviceContext,
-    data,
     atiData,
   }) as string;
 
@@ -23,7 +22,7 @@ const ATIAnalytics = ({ data, atiData }: ATIProps) => {
     ? buildReverbParams({
         requestContext,
         serviceContext,
-        atiData: atiData || {},
+        atiData,
       })
     : null;
 

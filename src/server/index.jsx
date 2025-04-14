@@ -23,8 +23,6 @@ import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
 import {
-  articleManifestPath,
-  articleSwPath,
   homePageManifestPath,
   homePageSwPath,
 } from '../app/routes/utils/regex';
@@ -112,7 +110,7 @@ server
  * Application env routes
  */
 server
-  .get([articleSwPath, homePageSwPath], (req, res) => {
+  .get(homePageSwPath, (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.set(
       `Cache-Control`,
@@ -125,7 +123,7 @@ server
       }
     });
   })
-  .get([articleManifestPath, homePageManifestPath], async ({ params }, res) => {
+  .get(homePageManifestPath, async ({ params }, res) => {
     const { service } = params;
     const variant = defaultServiceVariants[service] || 'default';
     const manifestPath = `${__dirname}/public${serviceConfigs[service][variant].manifestPath}`;

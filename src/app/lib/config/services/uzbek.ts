@@ -27,9 +27,6 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
-  recommendations: {
-    hasStoryRecommendations: false,
-  },
   showAdPlaceholder: true,
   showRelatedTopics: true,
   timezone: 'GMT',
@@ -45,8 +42,8 @@ const defaultCyrillicConfig = {
   datetimeLocale: `uz`,
   externalLinkText: ', ташқи',
   homePageTitle: 'Бош саҳифа',
-  lang: `uz-Cyrl`,
-  locale: `uz-UZ`,
+  lang: 'uz-cyrl',
+  locale: 'uz-UZ',
   // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'uz',
   noBylinesPolicy:
@@ -283,10 +280,17 @@ const defaultCyrillicConfig = {
     latestMediaTitle: 'Сўнгги',
   },
   mostRead: {
-    header: 'Энг кўп ўқилган',
+    header: 'Оммабоп мақолалар',
     lastUpdated: 'Сўнгги янгиланиш:',
     numberOfItems: 5,
     hasMostRead: true,
+  },
+  recommendations: {
+    header: 'Энг кўп ўқилган',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -381,8 +385,8 @@ export const service: UzbekConfig = {
     datetimeLocale: `uz-latn`,
     externalLinkText: ', tashqi',
     homePageTitle: 'Bosh sahifa',
-    lang: `uz-Cyrl`,
-    locale: `uz-UZ`,
+    lang: 'uz-latn',
+    locale: 'uz-UZ',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uz',
     noBylinesPolicy:
@@ -618,10 +622,17 @@ export const service: UzbekConfig = {
       latestMediaTitle: 'So‘nggi',
     },
     mostRead: {
-      header: 'Eng ko‘p o‘qilgan',
+      header: 'Ommabop maqolalar',
       lastUpdated: 'So‘nggi yangilanish:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Eng ko‘p o‘qilgan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

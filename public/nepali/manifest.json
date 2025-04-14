@@ -1,7 +1,7 @@
 {
   "name": "BBC News नेपाली",
   "short_name": "BBC नेपाली",
-  "scope": "/nepali/",
+  "scope": "/nepali",
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",

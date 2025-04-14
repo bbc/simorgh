@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.2.2';
+const version = 'v0.2.4';
 const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
@@ -16,6 +16,12 @@ self.addEventListener('install', event => {
     if (hasOfflinePageFunctionality) await cache.add(OFFLINE_PAGE);
   });
 });
+
+// versioned JS files
+const cacheableFiles = [
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+];
 
 const fetchEventHandler = async event => {
   if (
@@ -46,8 +52,8 @@ const fetchEventHandler = async event => {
       );
     }
   } else if (
-    self.location.hostname !== 'localhost' &&
-    /((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
+    cacheableFiles.includes(event.request.url) ||
+    /((\.woff2$)|(^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
       event.request.url,
     )
   ) {
