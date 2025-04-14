@@ -50,21 +50,6 @@ export default {
               maxWidth: `${pixelsToRem(190)}rem`,
             },
           }),
-        ...(pageType === MEDIA_ARTICLE_PAGE && {
-          maxWidth: '100%',
-          marginInline: 0,
-          margin: 0,
-          [mq.GROUP_3_ONLY]: {
-            marginInline: `${spacings.DOUBLE}rem`,
-            maxWidth: `${pixelsToRem(325)}rem`,
-          },
-          [mq.GROUP_4_ONLY]: {
-            maxWidth: `${pixelsToRem(315)}rem`,
-          },
-          [mq.GROUP_5_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(397)}rem`,
-          },
-        }),
       }),
       !isEmbedded && pageType !== MEDIA_ARTICLE_PAGE && commonMarginSpacing,
     ],
