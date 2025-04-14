@@ -67,6 +67,13 @@ import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 
+const serviceMapping: Record<string, 'A' | 'B'> = {
+  pidgin: 'A',
+  urdu: 'A',
+  mundo: 'B',
+  arabic: 'B',
+};
+
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -119,7 +126,7 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 
 const ArticlePage = ({
   pageData,
-  continueReadingEnabled = false, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
+  continueReadingEnabled = true, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
 }: {
   pageData: Article;
   continueReadingEnabled?: boolean;
@@ -245,16 +252,7 @@ const ArticlePage = ({
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
-  const continueReadingButtonVariation = (() => {
-    if (service === 'pidgin' || service === 'urdu') {
-      return 'A';
-    }
-    if (service === 'mundo' || service === 'arabic') {
-      return 'B';
-    }
-
-    return null;
-  })();
+  const continueReadingButtonVariation = serviceMapping[service] ?? null;
 
   const showContinueReadingButton = Boolean(
     continueReadingEnabled &&
