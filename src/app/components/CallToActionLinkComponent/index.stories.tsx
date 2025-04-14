@@ -36,15 +36,11 @@ export const ExampleWithoutChevronAlignedWithText = () => {
 export const ExampleWithFlexAndChevronInTextAndOverrideInteractionStyles =
   () => {
     return (
-      <CallToActionLink
-        url="https://www.bbc.com/ws/languages"
-        size="brevier"
-        fontVariant="sansBold"
-      >
+      <CallToActionLink url="https://www.bbc.com/ws/languages">
         <CallToActionLink.ButtonLikeWrapper>
-          <CallToActionLink.Text overrideInteractionStyles>
+          <CallToActionLink.Text overrideInteractionStyles size="brevier">
             Hello
-            <CallToActionLink.Chevron />
+            <CallToActionLink.Chevron size="brevier" />
           </CallToActionLink.Text>
         </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>
