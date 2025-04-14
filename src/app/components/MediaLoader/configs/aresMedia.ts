@@ -4,6 +4,7 @@ import {
   OptimoImageBlock,
   OptimoRawImageBlock,
 } from '#app/models/types/optimo';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
   AresMediaBlock,
   AresMediaMetadataBlock,
@@ -112,17 +113,20 @@ export default ({
 
   if (showAds) items.unshift({ kind: 'advert' });
 
-  const placeholderConfig = buildPlaceholderConfig({
-    title,
-    type: actualFormat || 'video',
-    duration: rawDuration,
-    durationISO8601: versionsBlock?.durationISO8601,
-    guidanceMessage,
-    holdingImageURL,
-    translations,
-    placeholderImageOriginCode: originCode,
-    placeholderImageLocator: locator,
-  });
+  const placeholderConfig =
+    actualFormat === 'audio'
+      ? undefined
+      : buildPlaceholderConfig({
+          title,
+          type: actualFormat || 'video',
+          duration: rawDuration,
+          durationISO8601: versionsBlock?.durationISO8601,
+          guidanceMessage,
+          holdingImageURL,
+          translations,
+          placeholderImageOriginCode: originCode,
+          placeholderImageLocator: locator,
+        });
 
   const ampIframeUrl = getAmpIframeUrl({ id, versionID, lang });
 
@@ -134,7 +138,7 @@ export default ({
       ...basePlayerConfig,
       ...(embedded && { insideIframe: true, embeddedOffsite: true }),
       ...(externalEmbedUrl && { externalEmbedUrl }),
-      autoplay: pageType !== 'mediaArticle',
+      autoplay: pageType === MEDIA_ARTICLE_PAGE,
       playlistObject: {
         title,
         summary: caption || '',
