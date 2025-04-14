@@ -70,7 +70,7 @@ const Banner = forwardRef(
               css={styles.callToActionLink}
             >
               <CallToActionLink.ButtonLikeWrapper>
-                <CallToActionLink.Text overrideInteractionStyles>
+                <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                   {linkText}
                   <CallToActionLink.Chevron />
                 </CallToActionLink.Text>

@@ -95,7 +95,7 @@ const Uploader = ({ blocks }: UploaderProps) => {
         <div css={styles.linkContainer}>
           <CallToActionLink url={linkAddress} css={styles.callToActionLink}>
             <CallToActionLink.ButtonLikeWrapper>
-              <CallToActionLink.Text overrideInteractionStyles>
+              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                 {linkText}
                 <CallToActionLink.Chevron css={styles.chevronSpacing} />
               </CallToActionLink.Text>

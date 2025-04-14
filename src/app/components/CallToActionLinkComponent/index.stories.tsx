@@ -33,16 +33,15 @@ export const ExampleWithoutChevronAlignedWithText = () => {
   );
 };
 
-export const ExampleWithFlexAndChevronInTextAndOverrideInteractionStyles =
-  () => {
-    return (
-      <CallToActionLink url="https://www.bbc.com/ws/languages" size="brevier">
-        <CallToActionLink.ButtonLikeWrapper>
-          <CallToActionLink.Text overrideInteractionStyles>
-            Hello
-          </CallToActionLink.Text>
-          <CallToActionLink.Chevron />
-        </CallToActionLink.ButtonLikeWrapper>
-      </CallToActionLink>
-    );
-  };
+export const ExampleWithFlexAndChevronInTextAndUnderline = () => {
+  return (
+    <CallToActionLink url="https://www.bbc.com/ws/languages" size="brevier">
+      <CallToActionLink.ButtonLikeWrapper>
+        <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+          Hello
+        </CallToActionLink.Text>
+        <CallToActionLink.Chevron />
+      </CallToActionLink.ButtonLikeWrapper>
+    </CallToActionLink>
+  );
+};

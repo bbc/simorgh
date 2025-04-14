@@ -9,14 +9,14 @@ import styles from './index.styles';
 type TextProps = {
   as?: string;
   className?: string;
-  overrideInteractionStyles?: boolean;
+  shouldUnderlineOnHoverFocus?: boolean;
 };
 
 const Text = ({
   as,
   children,
   className,
-  overrideInteractionStyles,
+  shouldUnderlineOnHoverFocus,
 }: PropsWithChildren<TextProps>) => {
   const { fontVariant, size } = useContext(CallToActionLinkContext);
   return (
@@ -26,7 +26,7 @@ const Text = ({
       fontVariant={fontVariant || 'sansBold'}
       css={[
         styles.text,
-        overrideInteractionStyles
+        shouldUnderlineOnHoverFocus
           ? styles.underlineOnHoverFocus
           : styles.defaultTextStyles,
       ]}
