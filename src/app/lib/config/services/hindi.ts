@@ -75,8 +75,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
-      recommendationTitle: 'ये भी पढ़ें',
-      splitRecommendationTitle: 'कुछ और जानिए',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
@@ -371,7 +369,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'सबसे अधिक पढ़ी गईं',
+      header: 'सबसे अधिक लोकप्रिय',
       lastUpdated: 'अंतिम अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -380,7 +378,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'सबसे अधिक पढ़ी गईं',
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
         endTextVisuallyHidden: 'समाप्त',

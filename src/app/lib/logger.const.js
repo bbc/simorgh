@@ -83,9 +83,6 @@ const logCodes = {
   // Toggle API
   TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
 
-  // Recommendations
-  RECOMMENDATIONS_MISSING_DATA: 'recommendations_missing_data',
-
   // Logging
   ATI_LOGGING_ERROR: 'ati_logging_error',
 };

@@ -274,7 +274,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብብዝሒ ዝተነበ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -55,8 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'โฆษณา',
       },
-      recommendationTitle: 'เรื่องแนะนำ',
-      splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
@@ -257,7 +255,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     mostRead: {
-      header: 'ได้รับความนิยมสูงสุด',
+      header: 'บทความยอดนิยม',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,
@@ -266,7 +264,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'ได้รับความนิยมสูงสุด',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
