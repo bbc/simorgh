@@ -3,7 +3,7 @@
 ## Description
 
 A component following the `Compound Component` pattern to build Call to Action links.
-The Compound Component pattern can be found inside the `index.jsx` entry point with the following Primitive Components:
+The Compound Component pattern can be found inside the `index.tsx` entry point with the following Primitive Components:
 
 > ### Components in this folder:
 >
@@ -34,13 +34,9 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
 ```javascript
 <CallToActionLink to="https://www.bbc.com/ws/languages">
   <CallToActionLink.FlexWrapper>
-    <CallToActionLink.Text
-      size="pica"
-      fontVariant="sansBold"
-      overrideInteractionStyles
-    >
+    <CallToActionLink.Text>
       I am a link
-      <CallToActionLink.Chevron size="pica" />
+      <CallToActionLink.Chevron />
     </CallToActionLink.Text>
   </CallToActionLink.FlexWrapper>
 </CallToActionLink>
@@ -48,28 +44,30 @@ The Compound Component pattern can be found inside the `index.jsx` entry point w
 
 ### Call to Action Link with Text and Chevron
 
+The Chevron can be inside or outside of the Text component.
+
 ```javascript
-<CallToActionLink to="https://www.bbc.com/ws/languages" alignWithMargin>
-  <CallToActionLink.Text size="brevier" fontVariant="sansBold">
-    I am a link
-  </CallToActionLink.Text>
-  <CallToActionLink.Chevron size="brevier" />
+<CallToActionLink to="https://www.bbc.com/ws/languages">
+  <CallToActionLink.Text>I am a link</CallToActionLink.Text>
+  <CallToActionLink.Chevron />
 </CallToActionLink>
 ```
 
 ### Call to Action Link with Text
 
 ```javascript
-<CallToActionLink to="https://www.bbc.com/ws/languages" alignWithMargin>
-  <CallToActionLink.Text size="brevier" fontVariant="sansRegular">
-    I am a link
-  </CallToActionLink.Text>
+<CallToActionLink to="https://www.bbc.com/ws/languages">
+  <CallToActionLink.Text>I am a link</CallToActionLink.Text>
 </CallToActionLink>
 ```
 
 ## Styles
 
-Custom spacing and colours can be applied when using the component. For example:
+The `alignWithMargin` prop applies `display: 'inline-block'` styles. Otherwise the link renders inline by default.
+
+Interaction state (`hover`, `focus` and `visited`) styles are applied by default to ensure the component is accessible out of the box.
+
+The css prop can be used to apply further styles, such as spacing and colours. These can be applied to interaction states. For example:
 
 ```javascript
 <CallToActionLink
@@ -79,11 +77,7 @@ Custom spacing and colours can be applied when using the component. For example:
   css={styles.callToActionLink}
 >
   <CallToActionLink.FlexWrapper>
-    <CallToActionLink.Text
-      size="pica"
-      fontVariant="sansBold"
-      overrideInteractionStyles
-    >
+    <CallToActionLink.Text>
       {linkText}
       <CallToActionLink.Chevron />
     </CallToActionLink.Text>
@@ -92,7 +86,7 @@ Custom spacing and colours can be applied when using the component. For example:
 ```
 
 ```javascript
-calltoactionlink: ({mq, palette}: Theme) =>
+calltoactionlink: ({palette}: Theme) =>
   css(
     {
     padding: '1rem',
@@ -100,18 +94,11 @@ calltoactionlink: ({mq, palette}: Theme) =>
     margin: '0 1rem 1rem 1rem',
     width: '100%',
     color: palette.BLACK,
-    '&:hover, &:focus': {backgroundColor: '#F6F6F6',
-    color: palette.BLACK,
-    },
-    [mq.GROUP_3_MIN_WIDTH]: {
-    width: 'auto',
-    maxWidth: 'calc(100% - 240px)',
-    margin: '0 0 1.5rem 0',
-    paddingBottom: '1rem',
-    },
-    '& span': {
-      paddingInlineStart: '0.5rem',
-    },
+    '&:hover, &:focus':
+      {
+        backgroundColor: '#F6F6F6',
+        color: palette.BLACK,
+      }
     }
   );
 ```

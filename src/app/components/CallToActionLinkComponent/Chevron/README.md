@@ -30,3 +30,27 @@ This is a Call to Action Link component that returns a Chevron SVG.
 ```javascript
 <CallToActionLink.Chevron />
 ```
+
+## Styles
+
+The Chevron is configured to render in brevier and pica sizes. Further sizes can be added as required.
+
+The css prop can be used to apply further styles. For example:
+
+```javascript
+<CallToActionLink>
+  <CallToActionLink.FlexWrapper>
+    <CallToActionLink.Text>
+      {linkText}
+      <CallToActionLink.Chevron css={styles.chevronSpacing} />
+    </CallToActionLink.Text>
+  </CallToActionLink.FlexWrapper>
+</CallToActionLink>
+```
+
+```javascript
+  chevronSpacing: () =>
+    css({
+      marginInlineStart: `${pixelsToRem(12)}rem`,
+    }),
+```

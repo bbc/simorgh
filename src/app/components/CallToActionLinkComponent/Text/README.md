@@ -2,7 +2,7 @@
 
 ## Description
 
-A component that uses the Text component. This component exists to apply styles.
+A component that uses the Text component. This CallToAction.Link component can be used to apply sets of custom styles.
 
 ## Props
 
@@ -49,4 +49,51 @@ A component that uses the Text component. This component exists to apply styles.
 
 ## Styles
 
-TODO
+The default text styles mirror the default interaction state (`hover`, `focus` and `visited`) styles applied by the CallToActionLink and adds a thicker bottom border. (Some styles are duplicated to avoid issues with inheritance.)
+
+The `overrideInteractionStyles` prop can be used to override these default styles. This means that colour and bottom border styles are not applied. Instead `textDecoration: 'underline'` is applied to `hover` and `focus` states.
+
+The css prop can be used to apply further styles. This can be applied to the Text component directly. Or applied to a parent/ ancestor and targeted using nested selectors. For example:
+
+For example:
+
+```javascript
+<CallToActionLink
+  to={link}
+  className="focusIndicatorInvert"
+  eventTrackingData={eventTrackingData}
+  css={styles.callToActionLink}
+>
+  <CallToActionLink.FlexWrapper>
+    <CallToActionLink.Text
+      size="pica"
+      fontVariant="sansBold"
+      overrideInteractionStyles
+    >
+      {linkText}
+      <CallToActionLink.Chevron />
+    </CallToActionLink.Text>
+  </CallToActionLink.FlexWrapper>
+</CallToActionLink>
+```
+
+```javascript
+  callToActionLink: ({ mq, palette }: Theme) =>
+    css({
+      padding: '1rem',
+      backgroundColor: palette.WHITE,
+      margin: '0 1rem 1rem 1rem',
+      width: '100%',
+      color: palette.BLACK,
+      '&:hover, &:focus':
+      {
+        backgroundColor: '#F6F6F6',
+        color: palette.BLACK,
+      },
+      '& span':
+      {
+        paddingInlineStart: '0.5rem',
+      },
+    }),
+
+```
