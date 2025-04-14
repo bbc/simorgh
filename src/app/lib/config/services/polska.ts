@@ -62,7 +62,6 @@ export const service: DefaultServiceConfig = {
         reportingFrom: 'Reporting from',
         role: 'Role',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'See all',
       home: 'Home',
       currentPage: 'Current page',
@@ -330,7 +329,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -339,7 +338,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Most read',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

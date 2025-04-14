@@ -235,12 +235,6 @@ No BFF_PATH set as environment variable, you will not have access to topics
 
 Internal developers who need to work on topic pages locally should contact the team for access.
 
-### Recommendations
-
-Recommendations in story pages also use internal BBC data labs API's. It requires adding the key/value pair in `envConfig/secret.env` file for them to appear locally.
-
-Internal developers who need to work on article pages locally should contact the team for access.
-
 ### Other page types
 
 You can find other pages types by looking through our routes and their associates regexes, but we suggest you start with the above then have a look at the core of the application to understand and find the other routes.

@@ -253,7 +253,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
     },
     mostRead: {
-      header: '読まれた記事ランキング',
+      header: '注目の記事',
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -262,7 +262,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: '読まれた記事ランキング',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
