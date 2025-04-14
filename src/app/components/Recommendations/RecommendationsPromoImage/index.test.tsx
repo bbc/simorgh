@@ -27,4 +27,21 @@ describe('RecommendationsImage', () => {
       container.getElementsByTagName('img')[0].getAttribute('alt'),
     ).toEqual('dolar TL');
   });
+
+  it('should not render an image if critical metadata does not exist', () => {
+    const invalidImage = {
+      locator: '',
+      originCode: '',
+      altText: '',
+    };
+
+    const { container } = render(
+      // @ts-expect-error - passing an invalid image prop to test the fallback
+      <RecommendationsImage image={invalidImage} />,
+    );
+
+    const image = container.querySelector('img');
+
+    expect(image).not.toBeInTheDocument();
+  });
 });
