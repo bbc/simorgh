@@ -13,10 +13,10 @@ export default ({ item, index, optimizely } = {}) => {
   if ([headline, url, advertiserID, index >= 0].every(Boolean)) {
     const link = {
       campaignID: 'cps_wsoj',
-      componentName: encodeURIComponent(headline),
+      componentName: headline,
       advertiserID,
       url: `${getEnvConfig().SIMORGH_BASE_URL}${url}`,
-      format: `CHD=promo::${index + 1}`,
+      format: { CHD: `promo::${index + 1}` },
       ...(optimizely && { optimizely }),
     };
 
