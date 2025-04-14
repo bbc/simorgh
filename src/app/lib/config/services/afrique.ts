@@ -57,7 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
       continueReading: 'Continuer la lecture',
@@ -274,7 +273,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
     mostRead: {
-      header: 'Les plus lus',
+      header: 'Les plus populaires',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -285,7 +284,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Les plus lus',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

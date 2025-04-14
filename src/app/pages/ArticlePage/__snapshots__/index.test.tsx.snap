@@ -898,7 +898,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
                 dir="ltr"
                 id="Most-Read"
               >
-                Di one wey oda users dey read well well
+                Di one wey dem dey read well well
               </span>
             </span>
           </span>
@@ -2341,7 +2341,7 @@ exports[`Article Page should render a news article correctly 1`] = `
                 dir="ltr"
                 id="Most-Read"
               >
-                Most read
+                Popular Reads
               </span>
             </span>
           </span>
@@ -4496,7 +4496,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
                 dir="rtl"
                 id="Most-Read"
               >
-                پربیننده‌ترین‌ها
+                مطالب پرخواننده
               </span>
             </span>
           </span>

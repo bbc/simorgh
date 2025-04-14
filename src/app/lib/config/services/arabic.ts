@@ -76,8 +76,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'إعلان',
       },
-      recommendationTitle: 'قصص مقترحة',
-      splitRecommendationTitle: 'مزيد من القصص المقترحة',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       continueReading: 'واصل القراءة',
@@ -354,7 +352,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'الأكثر قراءة',
+      header: 'تفضيلات القراء',
       lastUpdated: 'آخر تحديث',
       numberOfItems: 10,
       hasMostRead: true,
@@ -367,7 +365,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'المدة %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'الأكثر قراءة',
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
         endTextVisuallyHidden: '%title% نهاية',

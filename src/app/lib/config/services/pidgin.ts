@@ -55,7 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Tori we dem pay for',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'See everitin',
       home: 'Home',
       continueReading: 'Continue reading',
@@ -262,7 +261,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'New things',
     },
     mostRead: {
-      header: 'Di one wey oda users dey read well well',
+      header: 'Di one wey dem dey read well well',
       lastUpdated: 'De one we dem update for:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -271,7 +270,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Di one wey oda users dey read well well',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

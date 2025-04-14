@@ -274,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
-      header: 'ఎక్కువమంది చదివినవి',
+      header: 'Popular Reads',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -283,7 +283,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ఎక్కువమంది చదివినవి',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

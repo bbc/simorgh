@@ -77,8 +77,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Matérias recomendadas',
-      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -359,7 +357,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mais lidas',
+      header: 'Mais clicadas',
       lastUpdated: 'Última atualização:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -368,7 +366,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Mais lidas',
       skipLink: {
         text: 'Pule %title% e continue lendo',
         endTextVisuallyHidden: 'Fim do %title%',
