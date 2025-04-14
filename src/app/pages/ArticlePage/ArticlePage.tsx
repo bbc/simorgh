@@ -149,7 +149,6 @@ const ArticlePage = ({
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
-    service,
   } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
