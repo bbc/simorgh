@@ -58,6 +58,44 @@ describe('sendBeacon', () => {
       },
     };
 
+    const reverbConfigComponentView = {
+      params: {
+        page: 'page',
+        user: '1234-5678',
+      },
+      eventDetails: {
+        eventName: 'sectionView',
+        eventPublisher: 'impression',
+        componentName: 'scrollable-navigation',
+        container: '1234',
+        attribute: 'scrollable-navigation',
+        metadata: 'format',
+        placement: 'pageIdentifier',
+        source: 'advertiserID',
+        result: 'http://localhost',
+        isClick: false,
+      },
+    };
+
+    const reverbConfigComponentClick = {
+      params: {
+        page: 'page',
+        user: '1234-5678',
+      },
+      eventDetails: {
+        eventName: 'sectionClick',
+        eventPublisher: 'click',
+        componentName: 'scrollable-navigation',
+        container: '1234',
+        attribute: 'scrollable-navigation',
+        metadata: 'format',
+        placement: 'pageIdentifier',
+        source: 'advertiserID',
+        result: 'http://localhost',
+        isClick: true,
+      },
+    };
+
     // Simulates reverbBeaconConfig set to null in ATIAnalytics and sendEventBeacon
     // in the event useReverb resolves to 'false'
     const reverbConfigWhenReverbIsDisabled = null;
@@ -77,6 +115,46 @@ describe('sendBeacon', () => {
         await sendBeacon('https://foobar.com', reverbConfig);
 
         expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
+      });
+
+      it('should call Reverb userActionEvent if Reverb config is passed for a component view event', async () => {
+        await sendBeacon('https://foobar.com', reverbConfigComponentView);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'impression',
+          'scrollable-navigation',
+          {
+            container: '1234',
+            attribute: 'scrollable-navigation',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          false,
+        );
+      });
+
+      it('should call Reverb userActionEvent if Reverb config is passed for a component click event', async () => {
+        await sendBeacon('https://foobar.com', reverbConfigComponentClick);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'click',
+          'scrollable-navigation',
+          {
+            container: '1234',
+            attribute: 'scrollable-navigation',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          true,
+        );
       });
 
       it('should not call Reverb viewEvent if Reverb is not enabled for a service', async () => {
@@ -106,6 +184,46 @@ describe('sendBeacon', () => {
         expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
       });
 
+      it('should call Reverb userActionEvent if Reverb config is passed for a component view event', async () => {
+        await sendBeacon('https://foobar.com', reverbConfigComponentView);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'impression',
+          'scrollable-navigation',
+          {
+            container: '1234',
+            attribute: 'scrollable-navigation',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          false,
+        );
+      });
+
+      it('should call Reverb userActionEvent if Reverb config is passed for a component click event', async () => {
+        await sendBeacon('https://foobar.com', reverbConfigComponentClick);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'click',
+          'scrollable-navigation',
+          {
+            container: '1234',
+            attribute: 'scrollable-navigation',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          true,
+        );
+      });
+
       it('should not call Reverb viewEvent if Reverb is not enabled for a service', async () => {
         await sendBeacon(
           'https://foobar.com',
@@ -131,6 +249,46 @@ describe('sendBeacon', () => {
         await sendBeacon('https://foobar.com', reverbConfig);
 
         expect(reverbMock.viewEvent).toHaveBeenCalled();
+      });
+
+      it('should call Reverb userActionEvent if Reverb config is passed for a component view event', async () => {
+        await sendBeacon('https://foobar.com', reverbConfigComponentView);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'impression',
+          'scrollable-navigation',
+          {
+            container: '1234',
+            attribute: 'scrollable-navigation',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          false,
+        );
+      });
+
+      it('should call Reverb userActionEvent if Reverb config is passed for a component click event', async () => {
+        await sendBeacon('https://foobar.com', reverbConfigComponentClick);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'click',
+          'scrollable-navigation',
+          {
+            container: '1234',
+            attribute: 'scrollable-navigation',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          true,
+        );
       });
 
       it('should not call Reverb viewEvent if Reverb is not enabled for a service', async () => {

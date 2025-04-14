@@ -9,6 +9,12 @@ Object.defineProperties(globalThis, {
   ReadableStream: { value: ReadableStream },
   MessageChannel: { value: MessageChannel },
   MessagePort: { value: MessagePort },
+  crypto: {
+    value: {
+      randomUUID: jest.fn(),
+      getRandomValues: jest.fn(),
+    },
+  },
 });
 
 global.console = {

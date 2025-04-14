@@ -12,13 +12,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .emotion-68::after {
@@ -851,13 +853,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   }
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .emotion-65::after {
@@ -1589,13 +1593,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   }
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .emotion-65::after {
@@ -2321,13 +2327,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   background-color: #FFFFFF;
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .emotion-16::after {
@@ -2736,6 +2744,35 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   padding-left: 0.5rem;
 }
 
+.emotion-113 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-113 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-113::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-113 {
+    display: none;
+  }
+}
+
 <div>
   <nav
     class="emotion-0 emotion-1"
@@ -3123,6 +3160,9 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-113 emotion-114"
+      />
     </div>
   </nav>
 </div>
@@ -3134,13 +3174,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
   background-color: #FFFFFF;
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .emotion-16::after {
@@ -3466,6 +3508,35 @@ exports[`Navigation Container should correctly render canonical navigation on no
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
+}
+
+.emotion-107 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-107 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-107::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-107 {
+    display: none;
+  }
 }
 
 <div>
@@ -3835,6 +3906,9 @@ exports[`Navigation Container should correctly render canonical navigation on no
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-107 emotion-108"
+      />
     </div>
   </nav>
 </div>
@@ -3846,13 +3920,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
   background-color: #FFFFFF;
 }
 
-.emotion-0::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-0 .emotion-16::after {
@@ -4178,6 +4254,35 @@ exports[`Navigation Container should correctly render canonical navigation on no
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
+}
+
+.emotion-107 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-107 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-107::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-107 {
+    display: none;
+  }
 }
 
 <div>
@@ -4547,6 +4652,9 @@ exports[`Navigation Container should correctly render canonical navigation on no
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-107 emotion-108"
+      />
     </div>
   </nav>
 </div>

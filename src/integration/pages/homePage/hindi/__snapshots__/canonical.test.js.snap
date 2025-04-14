@@ -128,22 +128,22 @@ exports[`Canonical Home Page Header Navigation link should match text and url 1`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
 {
-  "text": "दिल्ली विधानसभा चुनाव",
-  "url": "/hindi/topics/c8dqegnm6d9t",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
-{
   "text": "भारत",
   "url": "/hindi/topics/ckdxnkz7607t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "हेल्थ",
+  "url": "/hindi/topics/cr50ykdx5wqt",
 }
 `;
 
@@ -185,7 +185,7 @@ exports[`Canonical Home Page Header Navigation link should match text and url 9`
 exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "पॉडकास्ट",
-  "url": "/hindi/institutional-61824775",
+  "url": "/hindi/topics/cv22x3pmrvmt",
 }
 `;
 

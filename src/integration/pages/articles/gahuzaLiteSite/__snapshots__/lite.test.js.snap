@@ -29,6 +29,7 @@ exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
       <a
         class="bbc-16f79jf"
         data-ignore-lite="true"
+        data-lite-ati-tracking="https://logws1363.ati-host.net?s=598285&atc=PUB-[]-[lite-site-cta]-[]-[]-[]-[]-[]-[]&type=AT"
         href="http://localhost:7080/gahuza/articles/cey23zx8wx8o"
       >
         <span

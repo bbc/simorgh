@@ -1,6 +1,11 @@
 import { css, Theme } from '@emotion/react';
 
+const IMAGE_WIDTH = 184;
+const IMAGE_WIDTH_GROUP_3_MIN_WIDTH = 224;
+
 const styles = {
+  IMAGE_WIDTH,
+  IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
   container: () =>
     css({
       paddingTop: '2rem',
@@ -41,27 +46,15 @@ const styles = {
       paddingBottom: '1rem',
       color: palette.WHITE,
     }),
-  imageLtr: ({ mq }: Theme) =>
+  image: ({ mq }: Theme) =>
     css({
-      maxWidth: '184px',
+      maxWidth: `${IMAGE_WIDTH}px`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        maxWidth: '224px',
-        bottom: 0,
-        right: 0,
+        maxWidth: `${IMAGE_WIDTH_GROUP_3_MIN_WIDTH}px`,
+        insetInlineEnd: 0,
         position: 'absolute',
       },
 
-      img: { objectPosition: 'top' },
-    }),
-  imageRtl: ({ mq }: Theme) =>
-    css({
-      maxWidth: '184px',
-      [mq.GROUP_3_MIN_WIDTH]: {
-        maxWidth: '224px',
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-      },
       img: { objectPosition: 'top' },
     }),
   callToActionLink: ({ mq, palette }: Theme) =>

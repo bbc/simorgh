@@ -38,6 +38,10 @@ const DummyComponentWithContext = () => (
   </UserContextProvider>
 );
 
+jest.mock('#app/lib/utilities/getUUID', () =>
+  jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
+);
+
 describe('UserContext', () => {
   beforeEach(() => {
     (getCookiePolicy as jest.Mock).mockReturnValue('111');

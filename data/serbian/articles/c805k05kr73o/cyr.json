@@ -249,7 +249,7 @@
         "atiAnalytics": {
           "categoryName": null,
           "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
-          "language": "sr-latn",
+          "language": "sr-cyrl",
           "ldpThingIds": null,
           "ldpThingLabels": null,
           "nationsProducer": null,
@@ -263,7 +263,7 @@
         },
         "type": "article",
         "createdBy": "Serbian",
-        "language": "sr-latn",
+        "language": "sr-cyrl",
         "firstPublished": 1562943337219,
         "lastPublished": 1562943337219,
         "analyticsLabels": {
@@ -271,7 +271,7 @@
           "producer": "Serbian"
         },
         "passport": {
-          "language": "sr-latn",
+          "language": "sr-cyrl",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
           "taggings": []
         },

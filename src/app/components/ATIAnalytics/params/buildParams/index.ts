@@ -7,8 +7,7 @@ export const buildPageATIParams = ({
   requestContext,
   serviceContext,
 }: ATIDataWithContexts) => {
-  const { isUK, origin, platform, previousPath, statsDestination } =
-    requestContext;
+  const { isUK, platform, statsDestination } = requestContext;
   const {
     atiAnalyticsAppName,
     atiAnalyticsProducerId,
@@ -46,11 +45,9 @@ export const buildPageATIParams = ({
     ldpThingLabels,
     libraryVersion: LIBRARY_VERSION,
     nationsProducer,
-    origin,
     pageIdentifier,
     pageTitle,
     platform,
-    previousPath,
     producerId: producerId || atiAnalyticsProducerId,
     producerName: atiAnalyticsProducerName,
     service,

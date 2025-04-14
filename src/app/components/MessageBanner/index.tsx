@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useContext, forwardRef, ForwardedRef } from 'react';
-import { jsx } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import Paragraph from '../Paragraph';
@@ -35,7 +35,20 @@ const Banner = forwardRef(
     viewRef: ForwardedRef<HTMLDivElement>,
   ) => {
     const { dir } = useContext(ServiceContext);
+    const { mq } = useTheme();
     const isRtl = dir === 'rtl';
+
+    const IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH = styles.IMAGE_WIDTH * 2;
+    const IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH =
+      styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH * 2;
+
+    const replaceWidth = (width: number) =>
+      image?.replace('{width}', `${width}`);
+
+    const imgSrcSmall = replaceWidth(styles.IMAGE_WIDTH);
+    const imgSrcSmall2x = replaceWidth(IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH);
+    const imgSrcLarge = replaceWidth(styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH);
+    const imgSrcLarge2x = replaceWidth(IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH);
 
     return (
       <section
@@ -68,10 +81,15 @@ const Banner = forwardRef(
               )}
             </CallToActionLink>
             {image && (
-              <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
+              <div css={styles.image}>
                 <Image
                   alt=""
-                  src={`${image.replace('{width}', '240')}`}
+                  src={imgSrcLarge as string}
+                  srcSet={`${imgSrcSmall} ${styles.IMAGE_WIDTH}w, 
+                          ${imgSrcSmall2x} ${IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH}w, 
+                          ${imgSrcLarge} ${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}w, 
+                          ${imgSrcLarge2x} ${IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH}w`}
+                  sizes={`${mq.GROUP_2_MAX_WIDTH.replace('@media ', '')} ${styles.IMAGE_WIDTH}px, ${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}px`}
                   placeholder={false}
                   aspectRatio={[16, 9]}
                 />

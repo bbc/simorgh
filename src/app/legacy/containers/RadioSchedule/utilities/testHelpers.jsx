@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RadioScheduleContainer from '..';
 
@@ -27,7 +27,7 @@ const RadioSchedulesWithContext = ({
     <ToggleContext.Provider value={toggleContextValue}>
       <RequestContextProvider
         isAmp={isAmp}
-        pageType={FRONT_PAGE}
+        pageType={HOME_PAGE}
         service={service}
         pathname={`/${service}`}
         timeOnServer={Date.now()}

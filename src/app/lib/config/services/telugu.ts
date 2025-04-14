@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
     atiAnalyticsProducerName: 'TELUGU',
+    useReverb: true,
     chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/telugu/institutional-50420343',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/telugu/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'వార్తలు',
+    homePageTitle: 'వార్తలు',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -228,6 +229,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'వినండి',
         watch: 'చూడండి',
+        watchMoments: 'షార్ట్ వీడియో చూడండి',
         listenLive: 'లైవ్ వినండి',
         liveLabel: 'లైవ్',
         nextLabel: 'NEXT',
@@ -272,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
-      header: 'ఎక్కువమంది చదివినవి',
+      header: 'Popular Reads',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -281,7 +283,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ఎక్కువమంది చదివినవి',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

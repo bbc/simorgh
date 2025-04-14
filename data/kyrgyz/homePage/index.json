@@ -13,7 +13,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=10",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/fc68/test/de0a79e0-40b9-11ee-ab8d-9d4cf3ebd5e5.png.webp",
             "description": "this is the description property",
             "imageAlt": "bbc",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
@@ -31,13 +31,33 @@
       {
         "summaries": [
           {
-            "type": "commentary",
-            "isLive": true,
+            "type": "link",
+            "isLive": false,
+            "title": "Test promo overtype URL",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/sounds/play/live:bbc_sounds_mundo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fsounds%2Fplay%2Flive%3Abbc_sounds_news"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Overtyped headline",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/send/pepe",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fsend%2Fu188759689"
+          },
+          {
+            "type": "article",
+            "isLive": false,
             "title": "Overtyped Headline - Tipo Live Page (was photography)",
             "firstPublished": "",
             "lastPublished": "2024-03-08T00:00:00.000Z",
             "link": "https://www.bbc.com/news/topics/c77jz3mdmyvt",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/a040/test/881f76c0-c089-11ee-9cfe-dd6b961b2ea5.jpg",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/a040/test/881f76c0-c089-11ee-9cfe-dd6b961b2ea5.jpg.webp",
             "description": "Overtyped summary",
             "imageAlt": "Overtyped Alt desc",
             "id": "cp4vqze8qznxt"
@@ -49,7 +69,7 @@
             "firstPublished": "2023-01-06T08:36:03.306Z",
             "lastPublished": "2023-03-28T13:53:21.841Z",
             "link": "https://www.bbc.com/weather/videos/cxvdd15r56do",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/acdd/test/57453f80-c129-11ee-9cfe-dd6b961b2ea5.jpg",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/acdd/test/57453f80-c129-11ee-9cfe-dd6b961b2ea5.jpg.webp",
             "description": "Overtyped summary",
             "imageAlt": "Mountains",
             "id": "cxvdd15r56do"
@@ -61,7 +81,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/sport/live/c3jl8r5kpe2t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/d12c/test/26da99e0-b39a-11ee-9627-8141b3381959.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d12c/test/26da99e0-b39a-11ee-9627-8141b3381959.jpg.webp",
             "description": "Puppies",
             "imageAlt": "Photo of Puppies",
             "id": "c3jl8r5kpe2t"
@@ -74,7 +94,7 @@
             "firstPublished": "2023-03-02T12:37:35.109Z",
             "lastPublished": "2023-03-02T12:37:35.109Z",
             "link": "https://www.bbc.com/sport/videos/c1ldm3kjnwyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "c1ldm3kjnwyo"
           },
           {
@@ -82,9 +102,9 @@
             "isLive": false,
             "title": "Italy v Wales: Crunch match preview",
             "firstPublished": "2023-04-26T10:51:39.427Z",
-            "lastPublished": "2023-05-03T13:13:04.029Z",
+            "lastPublished": "2024-12-09T11:33:59.243Z",
             "link": "https://www.bbc.com/sport/rugby-union/articles/cr2ky03md5do",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8426/test/3bd2ae30-e421-11ed-b736-4f0da621418b.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/8426/test/3bd2ae30-e421-11ed-b736-4f0da621418b.jpg.webp",
             "imageAlt": "Rugby try",
             "id": "cr2ky03md5do"
           },
@@ -96,7 +116,7 @@
             "firstPublished": "",
             "lastPublished": "2022-10-29T19:00:00.000Z",
             "link": "https://www.bbc.com/sounds/play/m001dmln",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/7bd5/test/aba7b010-c1bc-11ee-9cfe-dd6b961b2ea5.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/7bd5/test/aba7b010-c1bc-11ee-9cfe-dd6b961b2ea5.png.webp",
             "description": "Actor Florence Pugh talks to John Wilson about her career and formative influences.",
             "imageAlt": "Overtyped promo desc.",
             "id": "m001dmln"
@@ -108,7 +128,7 @@
             "firstPublished": "2022-11-04T14:37:23.000Z",
             "lastPublished": "2022-11-04T14:37:23.000Z",
             "link": "https://www.bbc.com/sport/rugby-union/23537091",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/806B/test/_63957823__127022736_wales_v_scotland_073.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/806B/test/_63957823__127022736_wales_v_scotland_073.jpg.webp",
             "description": "Scotland lose to Wales at the death",
             "imageAlt": "Keira Bevan",
             "id": "eb5cc123-4d94-424e-8dca-61eef4faae24"
@@ -120,7 +140,7 @@
             "firstPublished": "2023-07-06T15:18:21.686Z",
             "lastPublished": "2023-07-06T15:18:21.686Z",
             "link": "https://www.bbc.com/sport/articles/c5w90rmn69yo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "c5w90rmn69yo"
           },
           {
@@ -130,7 +150,7 @@
             "firstPublished": "2023-07-07T11:41:27.330Z",
             "lastPublished": "2023-07-07T11:41:27.330Z",
             "link": "https://www.bbc.com/sport/articles/cvl5vjypeveo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cvl5vjypeveo"
           },
           {
@@ -140,22 +160,10 @@
             "firstPublished": "2022-10-28T13:56:14.723Z",
             "lastPublished": "2023-06-20T06:11:44.857Z",
             "link": "https://www.bbc.com/articles/cem4313m1ldo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d021/test/ce1dd100-0b6f-11ee-add0-c7c64fc8119c.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d021/test/ce1dd100-0b6f-11ee-add0-c7c64fc8119c.jpg.webp",
             "description": "Stuff goes here",
             "imageAlt": "Cenotaph",
             "id": "cem4313m1ldo"
-          },
-          {
-            "type": "link",
-            "isLive": false,
-            "title": "BBC 100 Women 2023: Quem está na lista de mulheres mais inspiradoras este ano?",
-            "firstPublished": "",
-            "lastPublished": "2023-11-20T00:00:00.000Z",
-            "link": "https://www.bbc.com/portuguese/resources/idt-02d9060e-15dc-426c-bfe0-86a6437e5234",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3167/test/a2d159c0-eaa0-11ee-9173-83ca10832ce2.png",
-            "description": "BBC 100 Women 2023: Quem está na lista de mulheres mais inspiradoras este ano?",
-            "imageAlt": "100 Women",
-            "id": "https%3A%2F%2Fwww.bbc.com%2Fportuguese%2Fresources%2Fidt-02d9060e-15dc-426c-bfe0-86a6437e5234"
           }
         ],
         "activePage": 1,
@@ -200,7 +208,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/resources/idt-02d9060e-15dc-426c-bfe0-86a6437e5234",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fresources%2Fidt-02d9060e-15dc-426c-bfe0-86a6437e5234"
           },
           {
@@ -210,7 +218,7 @@
             "firstPublished": "2023-02-02T10:06:57.156Z",
             "lastPublished": "2023-02-02T10:06:57.156Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cemg3359nwro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cemg3359nwro"
           },
@@ -221,7 +229,7 @@
             "firstPublished": "2023-02-02T10:06:00.977Z",
             "lastPublished": "2023-02-02T10:06:00.977Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cy0pvvd9jvpo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cy0pvvd9jvpo"
           },
@@ -232,7 +240,7 @@
             "firstPublished": "2023-03-06T13:10:39.425Z",
             "lastPublished": "2023-03-06T13:10:39.425Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c1ldk6kl66wo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/81e4/test/a035c580-bc1f-11ed-a129-59679bbc34c6.jpg.webp",
             "description": "summary of article",
             "imageAlt": "test",
             "id": "c1ldk6kl66wo"
@@ -244,7 +252,7 @@
             "firstPublished": "2023-02-02T11:41:09.361Z",
             "lastPublished": "2023-02-02T11:41:09.361Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cmel5j6wwk2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cmel5j6wwk2o"
           },
@@ -255,7 +263,7 @@
             "firstPublished": "2023-02-02T11:41:54.105Z",
             "lastPublished": "2023-02-02T11:41:54.105Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cd0x1jwnw66o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cd0x1jwnw66o"
           },
@@ -266,7 +274,7 @@
             "firstPublished": "2023-02-02T11:42:38.776Z",
             "lastPublished": "2023-02-02T11:42:38.776Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c65eglnzz1vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "c65eglnzz1vo"
           },
@@ -277,7 +285,7 @@
             "firstPublished": "2023-02-02T11:43:14.865Z",
             "lastPublished": "2023-02-02T11:43:14.865Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cj2r5lzp6k0o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cj2r5lzp6k0o"
           },
@@ -288,7 +296,7 @@
             "firstPublished": "2023-02-02T11:43:47.440Z",
             "lastPublished": "2023-02-02T11:43:47.440Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c2qz8l2zn5eo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "c2qz8l2zn5eo"
           },
@@ -299,7 +307,7 @@
             "firstPublished": "2023-02-02T11:44:19.096Z",
             "lastPublished": "2023-02-02T11:44:19.096Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cm18pzwq691o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cm18pzwq691o"
           },
@@ -310,7 +318,7 @@
             "firstPublished": "2023-02-02T11:45:03.037Z",
             "lastPublished": "2023-02-02T11:45:03.037Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cr89pqv3el2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fedf/test/679106e0-a2ed-11ed-9015-6935ab4fa6ca.jpg.webp",
             "imageAlt": "test",
             "id": "cr89pqv3el2o"
           }
@@ -333,7 +341,7 @@
             "firstPublished": "2023-02-06T13:36:00.218Z",
             "lastPublished": "2023-02-06T13:36:00.218Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cr9p5rw62j7o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "cr9p5rw62j7o"
@@ -345,7 +353,7 @@
             "firstPublished": "2023-02-06T13:37:11.912Z",
             "lastPublished": "2023-02-06T13:37:11.912Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cnk23wye4kyo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "cnk23wye4kyo"
@@ -357,7 +365,7 @@
             "firstPublished": "2023-02-06T13:37:48.118Z",
             "lastPublished": "2023-02-06T13:37:48.118Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c0n89302mwdo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "c0n89302mwdo"
@@ -369,7 +377,7 @@
             "firstPublished": "2023-02-06T13:38:21.709Z",
             "lastPublished": "2023-02-06T13:38:21.709Z",
             "link": "https://www.bbc.com/kyrgyz/articles/clygdvn0vepo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "clygdvn0vepo"
@@ -381,7 +389,7 @@
             "firstPublished": "2023-02-06T13:38:53.193Z",
             "lastPublished": "2023-02-06T13:38:53.193Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c0n2glkxx13o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "c0n2glkxx13o"
@@ -393,7 +401,7 @@
             "firstPublished": "2023-02-06T13:39:22.009Z",
             "lastPublished": "2023-02-06T13:39:22.009Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmwkw5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "c85pqkmwkw5o"
@@ -405,7 +413,7 @@
             "firstPublished": "2023-02-06T13:39:55.607Z",
             "lastPublished": "2023-02-06T13:39:55.607Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c85pqkmz8e2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "c85pqkmz8e2o"
@@ -417,7 +425,7 @@
             "firstPublished": "2023-02-06T13:40:23.909Z",
             "lastPublished": "2023-02-06T13:40:23.909Z",
             "link": "https://www.bbc.com/kyrgyz/articles/ck42g152vl6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9c84/test/00e66a00-a623-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Өзбекстандын президенти Шавкат Мирзиёев 26-27-январь күндөрү Кыргызстанга мамлекеттик сапар менен келет.",
             "imageAlt": "test",
             "id": "ck42g152vl6o"
@@ -442,7 +450,7 @@
             "firstPublished": "2023-02-06T13:45:17.207Z",
             "lastPublished": "2023-02-06T13:45:17.207Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c6x9vjk8zy2o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "c6x9vjk8zy2o"
@@ -454,7 +462,7 @@
             "firstPublished": "2023-02-06T13:47:06.980Z",
             "lastPublished": "2023-02-06T13:47:06.980Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cw1kzjme384o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "cw1kzjme384o"
@@ -466,7 +474,7 @@
             "firstPublished": "2023-02-06T13:47:34.717Z",
             "lastPublished": "2023-02-06T13:47:34.717Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c3d1vyrdx21o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "c3d1vyrdx21o"
@@ -478,7 +486,7 @@
             "firstPublished": "2023-02-06T13:48:04.311Z",
             "lastPublished": "2023-02-06T13:48:04.311Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c86jzl31jm5o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "c86jzl31jm5o"
@@ -490,7 +498,7 @@
             "firstPublished": "2023-02-06T13:48:35.778Z",
             "lastPublished": "2023-02-06T13:48:35.778Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cp567nq7kx6o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "cp567nq7kx6o"
@@ -502,7 +510,7 @@
             "firstPublished": "2023-02-06T13:49:01.557Z",
             "lastPublished": "2023-02-06T13:49:01.557Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cv748vmk2pno",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "cv748vmk2pno"
@@ -514,7 +522,7 @@
             "firstPublished": "2023-02-06T13:49:31.970Z",
             "lastPublished": "2023-02-06T13:49:31.970Z",
             "link": "https://www.bbc.com/kyrgyz/articles/ck9yxzvv7deo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "ck9yxzvv7deo"
@@ -526,7 +534,7 @@
             "firstPublished": "2023-02-06T13:50:08.108Z",
             "lastPublished": "2023-02-06T13:50:08.108Z",
             "link": "https://www.bbc.com/kyrgyz/articles/c380rxlx2z9o",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/1ce1/test/49d62d80-a624-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "Кытайда кайрадан чоң өзгөрүүлөр орун алууда. КЭРдин төрагасы Си Цзиньпин бир нече жылга созулган катаал саясий нуктан кайра баш тартууда. ",
             "imageAlt": "test",
             "id": "c380rxlx2z9o"
@@ -551,7 +559,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp",
             "description": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
             "imageAlt": "Microphone",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
@@ -576,7 +584,7 @@
             "firstPublished": "2023-02-07T14:51:20.980Z",
             "lastPublished": "2023-02-07T14:51:20.980Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cr91pzee4dro",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
             "imageAlt": "test",
             "id": "cr91pzee4dro"
@@ -600,7 +608,7 @@
             "firstPublished": "2023-02-07T14:52:44.188Z",
             "lastPublished": "2023-02-07T14:52:44.188Z",
             "link": "https://www.bbc.com/kyrgyz/articles/czmnz5184jeo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
             "imageAlt": "test",
             "id": "czmnz5184jeo"
@@ -612,7 +620,7 @@
             "firstPublished": "2023-02-07T14:52:16.175Z",
             "lastPublished": "2023-02-07T14:52:16.175Z",
             "link": "https://www.bbc.com/kyrgyz/articles/cd0nevdy25vo",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/ae4d/test/a12d7570-a6f6-11ed-9015-6935ab4fa6ca.jpg.webp",
             "description": "\"Эмне үчүн бизди жок кылгысы келди? Бизге эмнеге кыргын салышты?\" - деп суроо салат 83 жаштагы \"цыган Холокостунан\" аман калган Хинта Георге.",
             "imageAlt": "test",
             "id": "cd0nevdy25vo"
@@ -637,7 +645,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "http://www.bbc.com/russian",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/160c/test/96297a80-a308-11ed-9015-6935ab4fa6ca.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/160c/test/96297a80-a308-11ed-9015-6935ab4fa6ca.png.webp",
             "imageAlt": "BBC Russian",
             "id": "http%3A%2F%2Fwww.bbc.com%2Frussian"
           },
@@ -648,7 +656,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "http://www.bbc.com/azeri",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9f48/test/b6866400-a308-11ed-9015-6935ab4fa6ca.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9f48/test/b6866400-a308-11ed-9015-6935ab4fa6ca.png.webp",
             "imageAlt": "BBC Azeri",
             "id": "http%3A%2F%2Fwww.bbc.com%2Fazeri"
           },
@@ -659,7 +667,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "http://www.bbc.com/uzbek",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/6adf/test/eb7c2140-a308-11ed-9015-6935ab4fa6ca.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/6adf/test/eb7c2140-a308-11ed-9015-6935ab4fa6ca.png.webp",
             "imageAlt": "BBC Uzbek",
             "id": "http%3A%2F%2Fwww.bbc.com%2Fuzbek"
           },
@@ -670,7 +678,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "http://www.bbc.com/turkce",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/593b/test/010c4d50-a309-11ed-9015-6935ab4fa6ca.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/593b/test/010c4d50-a309-11ed-9015-6935ab4fa6ca.png.webp",
             "imageAlt": "BBC Turkce",
             "id": "http%3A%2F%2Fwww.bbc.com%2Fturkce"
           }
@@ -693,7 +701,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/punjabi/topics/cz74k76n1jxt",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8702/test/583b0300-4039-11ee-ab8d-9d4cf3ebd5e5.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/8702/test/583b0300-4039-11ee-ab8d-9d4cf3ebd5e5.png.webp",
             "imageAlt": "Hay festival group 4",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
           }
@@ -717,7 +725,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/pidgin/live/cemy52djeq5t",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9fa2/test/bfedb3c0-0245-11ef-809e-875661f61499.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9fa2/test/bfedb3c0-0245-11ef-809e-875661f61499.png.webp",
             "description": "this is the description property",
             "imageAlt": "alt text",
             "id": "cemy52djeq5t"
@@ -729,7 +737,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=6",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ba6f/test/7ec8c0f0-40b8-11ee-ab8d-9d4cf3ebd5e5.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/ba6f/test/7ec8c0f0-40b8-11ee-ab8d-9d4cf3ebd5e5.png.webp",
             "description": "this is the description property",
             "imageAlt": "hay festival_group 0&1&2&3",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
@@ -753,7 +761,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=8",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/374e/test/33501dc0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/374e/test/33501dc0-40b9-11ee-ab8d-9d4cf3ebd5e5.png.webp",
             "description": "this is the description property",
             "imageAlt": "BBC microphone",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
@@ -773,12 +781,12 @@
           {
             "type": "link",
             "isLive": false,
-            "title": "radio_group 4",
+            "title": "Access the lite site",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=7",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/75cf/test/b7344400-40b8-11ee-ab8d-9d4cf3ebd5e5.png",
-            "imageAlt": "BBC microphone radio_group 4",
+            "link": "https://www.test.bbc.com/kyrgyz.lite",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/7493/test/cb547070-e9f6-11ef-ad21-9330755eccb7.png.webp",
+            "imageAlt": "Feather Lite Site",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
           }
         ],
@@ -787,7 +795,7 @@
         "curationId": "urn:bbc:tipo:list:b42365ef-1ee6-49ff-af7e-7eff7472e315",
         "curationType": "tipo-curation",
         "position": 13,
-        "title": "radio_group 4",
+        "title": "BBC News Kyrgyz - lite version",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       },
@@ -800,7 +808,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=9",
-            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/a43e/test/86175eb0-40b9-11ee-ab8d-9d4cf3ebd5e5.png",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/a43e/test/86175eb0-40b9-11ee-ab8d-9d4cf3ebd5e5.png.webp",
             "imageAlt": "BBC",
             "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
           }
@@ -823,7 +831,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://flo.uri.sh/story/2070814/embed",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fflo.uri.sh%2Fstory%2F2070814%2Fembed"
           }
         ],
@@ -845,7 +853,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.bbc.com/",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp",
             "description": "Summary / description",
             "imageAlt": "The description of the image",
             "id": "cymew11pmlg6t"
@@ -857,7 +865,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://news.files.bbci.com/include/vjsthasia/403-india_election_results_day/hindi/tally-include/embed",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fnews.files.bbci.co.uk%2Finclude%2Fvjsthasia%2F403-india_election_results_day%2Fhindi%2Ftally-include%2Fembed"
           }
         ],
@@ -879,7 +887,7 @@
         "visualStyle": "RANKED",
         "link": "https://www.bbc.com/kyrgyz/popular/read",
         "mostRead": {
-          "generated": "2024-05-21T10:12:57.452Z",
+          "generated": "2025-02-13T10:42:56.526Z",
           "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
           "firstRecordTimeStamp": "2021-05-04T05:53:00Z",
           "items": [
@@ -965,7 +973,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/c7p765ynk9qt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "description": "The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering",
             "id": "c7p765ynk9qt"
           },
@@ -976,7 +984,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cgl2vz8d587t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cgl2vz8d587t"
           },
           {
@@ -986,7 +994,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cy0mg3kvxnlt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cy0mg3kvxnlt"
           },
           {
@@ -996,7 +1004,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cly58zvmwygt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cly58zvmwygt"
           }
         ],
@@ -1018,7 +1026,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cemy52djeq5t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cemy52djeq5t"
           },
           {
@@ -1028,7 +1036,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/c65nm48pr8et",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "c65nm48pr8et"
           },
           {
@@ -1038,7 +1046,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cpvg17j60m7t",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cpvg17j60m7t"
           },
           {
@@ -1048,7 +1056,7 @@
             "firstPublished": "",
             "lastPublished": "",
             "link": "https://www.test.bbc.com/pidgin/live/cg2pr8l7j3nt",
-            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "cg2pr8l7j3nt"
           }
         ],

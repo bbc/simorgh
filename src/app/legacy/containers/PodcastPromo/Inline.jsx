@@ -209,7 +209,11 @@ const Promo = () => {
   };
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
+    <ResponsivePodcastPromoWrapper
+      ref={viewTrackerRef}
+      dir={dir}
+      data-e2e="podcast-promo"
+    >
       <StyledPromoComponent
         script={script}
         service={service}

@@ -3,12 +3,25 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.2.0';
+const version = 'v0.2.4';
 const cacheName = 'simorghCache_v1';
 
+const service = self.location.pathname.split('/')[1];
+const hasOfflinePageFunctionality = false;
+const OFFLINE_PAGE = `/${service}/offline`;
+
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(cacheName));
+  event.waitUntil(async () => {
+    const cache = await caches.open(cacheName);
+    if (hasOfflinePageFunctionality) await cache.add(OFFLINE_PAGE);
+  });
 });
+
+// versioned JS files
+const cacheableFiles = [
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+];
 
 const fetchEventHandler = async event => {
   if (
@@ -35,19 +48,37 @@ const fetchEventHandler = async event => {
       );
     }
   } else if (
-    /((\/cwr\.js$)|(\.woff2$)|(modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$))/.test(
+    cacheableFiles.includes(event.request.url) ||
+    /((\.woff2$)|(^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$)|(\/moment-lib+.*?\.js$)|(\/images\/icons\/icon-.*?\.png\??v?=?\d*$))/.test(
       event.request.url,
     )
   ) {
-    const cache = await caches.open(cacheName);
-    let response = await cache.match(event.request);
-
-    if (!response) {
-      response = await fetch(event.request.url);
-      cache.put(event.request, response.clone());
-    }
-
-    event.respondWith(response);
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(cacheName);
+        let response = await cache.match(event.request);
+        if (!response) {
+          response = await fetch(event.request.url);
+          cache.put(event.request, response.clone());
+        }
+        return response;
+      })(),
+    );
+  } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {
+    event.respondWith(async () => {
+      try {
+        const preloadResponse = await event.preloadResponse;
+        if (preloadResponse) {
+          return preloadResponse;
+        }
+        const networkResponse = await fetch(event.request);
+        return networkResponse;
+      } catch (error) {
+        const cache = await caches.open(cacheName);
+        const cachedResponse = await cache.match(OFFLINE_PAGE);
+        return cachedResponse;
+      }
+    });
   }
   return;
 };

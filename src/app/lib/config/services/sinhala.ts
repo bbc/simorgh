@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     atiAnalyticsProducerName: 'SINHALA',
+    useReverb: true,
     chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/sinhala/institutional-50288553',
     isTrustProjectParticipant: true,
     script: sinhalese,
-    manifestPath: '/manifest.json',
+    manifestPath: '/sinhala/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'මුල් පිටුව',
+    homePageTitle: 'ප්‍රධාන පුවත්',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -56,7 +57,7 @@ export const service: DefaultServiceConfig = {
         advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
       },
       seeAll: 'සියල්ල දැකගන්න',
-      home: 'මුල් පිටුව',
+      home: 'ප්‍රධාන පුවත්',
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
@@ -263,16 +264,20 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
-      header: 'වැඩිපුරම කියැවූ',
+      header: 'ජනප්‍රිය ලිපි',
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
     },
+    recommendations: {
+      header: 'වැඩිපුරම කියැවූ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
+    },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -316,7 +321,7 @@ export const service: DefaultServiceConfig = {
     timezone: 'GMT',
     navigation: [
       {
-        title: 'මුල් පිටුව',
+        title: 'ප්‍රධාන පුවත්',
         url: '/sinhala',
       },
       {
@@ -332,8 +337,12 @@ export const service: DefaultServiceConfig = {
         url: '/sinhala/topics/crldzm9n2lnt',
       },
       {
-        title: 'කලා',
-        url: '/sinhala/topics/c7zp5zxk8jxt',
+        title: 'ක්‍රීඩා',
+        url: '/sinhala/topics/cvjp2jy9g2qt',
+      },
+      {
+        title: 'සෞඛ්‍ය',
+        url: '/sinhala/topics/cz74k723j57t',
       },
     ],
   },

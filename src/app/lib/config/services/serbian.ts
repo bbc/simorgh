@@ -12,6 +12,7 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-serbian',
   atiAnalyticsProducerId: '81',
   atiAnalyticsProducerName: 'SERBIAN',
+  useReverb: true,
   chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
@@ -21,13 +22,10 @@ const baseServiceConfig = {
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
   isTrustProjectParticipant: true,
-  manifestPath: '/manifest.json',
+  manifestPath: '/serbian/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
-  },
-  recommendations: {
-    hasStoryRecommendations: false,
   },
   showAdPlaceholder: false,
   showRelatedTopics: true,
@@ -43,7 +41,7 @@ export const service: SerbianConfig = {
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
     externalLinkText: ', spoljna',
-    frontPageTitle: 'Glavna stranica',
+    homePageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -105,10 +103,17 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
     mostRead: {
-      header: 'Najčitanije',
+      header: 'Najpopularnije',
       lastUpdated: 'Poslednji put ažurirano ',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Najčitanije',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -441,7 +446,7 @@ export const service: SerbianConfig = {
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
     externalLinkText: ', спољна',
-    frontPageTitle: 'Главна страница',
+    homePageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -503,10 +508,17 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. ББЦ није одговоран за садржај других сајтова.',
     },
     mostRead: {
-      header: 'Најчитаније',
+      header: 'Најпопуларније',
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Најчитаније',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {

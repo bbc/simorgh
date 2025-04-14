@@ -15,6 +15,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     atiAnalyticsProducerName: 'PASHTO',
+    useReverb: true,
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
@@ -42,9 +43,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/pashto/institutional-49283007',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/pashto/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'کور پاڼه',
+    homePageTitle: 'کور پاڼه',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -277,7 +278,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
     mostRead: {
-      header: 'ډېر لوستل شوي',
+      header: 'تر ټولو ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
       hasMostRead: true,
@@ -290,7 +291,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% موده',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ډېر لوستل شوي',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -362,20 +367,16 @@ export const service: DefaultServiceConfig = {
         url: '/pashto/topics/cr50y59q860t',
       },
       {
-        title: 'ويډيوګانې',
-        url: '/pashto/topics/c2m45zyk0mmt',
+        title: 'اقتصاد او سوداګري',
+        url: '/pashto/topics/cy087kqvl1yt',
       },
       {
-        title: 'ځانګړې پاڼې',
-        url: '/pashto/topics/c6pxyz4e0ryt',
+        title: 'ساینس او ټکنالوژي',
+        url: '/pashto/topics/ckgrvled11kt',
       },
       {
-        title: 'کالم',
-        url: '/pashto/topics/cq57nwne9lzt',
-      },
-      {
-        title: 'پر سټلایت خپرونې',
-        url: '/pashto/articles/c4n55eygdn0o',
+        title: 'هنر او ادب',
+        url: '/pashto/topics/c8xqkd91knnt',
       },
       {
         title: 'راډیویي خپرونې',

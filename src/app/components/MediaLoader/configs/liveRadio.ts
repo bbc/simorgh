@@ -45,6 +45,7 @@ export default ({
         ...basePlayerConfig.ui,
         ...AUDIO_UI_CONFIG,
       },
+      superResponsive: false,
     },
     mediaType: 'liveRadio',
     showAds: false,

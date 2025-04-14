@@ -60,9 +60,12 @@ export default ({
   // Referred to as 'vPID' or 'version PID'
   const versionPID = versionsBlock?.versionId ?? '';
 
-  const orientation =
-    ORIENTATION_MAPPING[versionsBlock?.types?.[0]] ??
-    ORIENTATION_MAPPING.Original;
+  const orientationType =
+    versionsBlock?.types?.find(type =>
+      Object.keys(ORIENTATION_MAPPING).includes(type),
+    ) ?? 'Original';
+
+  const orientation = ORIENTATION_MAPPING[orientationType];
 
   const format = aresMediaMetadata?.format;
 

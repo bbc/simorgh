@@ -40,7 +40,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     translations,
     product,
     serviceLocalizedName,
-    frontPageTitle,
+    homePageTitle,
     lang,
     brandName,
   } = useContext(ServiceContext);
@@ -56,7 +56,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={frontPageTitle}
+        title={homePageTitle}
         lang={lang}
         description={description}
         openGraphType="website"
@@ -122,6 +122,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       embed={embed}
                     />
+
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
                 );

@@ -6,7 +6,7 @@ import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
-import headings from '#containers/Headings';
+import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
@@ -15,11 +15,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
-import {
-  ARTICLE_PAGE,
-  PHOTO_GALLERY_PAGE,
-  STORY_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import {
   getArticleId,
@@ -35,15 +31,18 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
-  Recommendation,
 } from '#app/models/types/optimo';
+import { Recommendation } from '#app/models/types/onwardJourney';
+
 import ScrollablePromo from '#components/ScrollablePromo';
+import { Services } from '#app/models/types/global';
+import Recommendations from '#app/components/Recommendations';
+import SERVICES_WITH_NEW_RECOMMENDATIONS from '#app/components/Recommendations/config';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -68,6 +67,7 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
+import ArticleHeadline from './ArticleHeadline';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -103,10 +103,16 @@ const getMpuComponent =
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
 const getWsojComponent =
-  (recommendationsData: Recommendation[]) =>
-  (props: ComponentToRenderProps) => (
-    <CpsRecommendations {...props} items={recommendationsData} />
-  );
+  (service: Services) =>
+  (props: ComponentToRenderProps & { data: Recommendation[] }) => {
+    // TODO: Remove this when the new recommendations are rolled out to all services
+    if (SERVICES_WITH_NEW_RECOMMENDATIONS.includes(service)) {
+      const { data } = props;
+      return <Recommendations data={data} />;
+    }
+
+    return null;
+  };
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -115,10 +121,15 @@ const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
 const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
   podcastPromoEnabled ? <InlinePodcastPromo /> : null;
 
+const getHeadlineComponent = (props: ComponentToRenderProps) => (
+  <ArticleHeadline {...props} />
+);
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { isApp, pageType, service } = useContext(RequestContext);
+  const { isApp } = useContext(RequestContext);
 
   const {
+    service,
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
@@ -133,7 +144,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
-  const isUzbekArticle = service === 'uzbek' && pageType === ARTICLE_PAGE;
+
+  const {
+    metadata: { atiAnalytics },
+    mostRead: mostReadInitialData,
+  } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const headline = getHeadline(pageData) ?? '';
@@ -161,19 +176,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-  const recommendationsData = pageData?.recommendations ?? [];
-
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
   const isCPS = isPGL || isSTY;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
-
-  const {
-    metadata: { atiAnalytics },
-    mostRead: mostReadInitialData,
-  } = pageData;
 
   const atiData = {
     ...atiAnalytics,
@@ -182,8 +190,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const componentsToRender = {
     visuallyHiddenHeadline,
-    headline: headings,
-    subheadline: headings,
+    headline: getHeadlineComponent,
+    subheadline: Headings,
     audio: MediaLoader,
     video: MediaLoader,
     text,
@@ -203,7 +211,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent(recommendationsData),
+    wsoj: getWsojComponent(service),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
   };
@@ -232,9 +240,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(
-    showRelatedTopics && topics.length > 0 && !isUzbekArticle,
-  );
+  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
   return (
     <div css={styles.pageWrapper}>

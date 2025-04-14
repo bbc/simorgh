@@ -48,9 +48,9 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = () => {
+const NavigationContainer = ({ propsForOJExperiment }) => {
   const { isAmp, isLite } = useContext(RequestContext);
-
+  const { blocks, experimentVariant } = propsForOJExperiment || {};
   const { script, translations, navigation, service, dir } =
     useContext(ServiceContext);
 
@@ -128,6 +128,8 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
+      blocks={blocks}
+      experimentVariant={experimentVariant}
     />
   );
 };

@@ -60,11 +60,13 @@ const SingleTopicTagItem = styled.div`
   }
 `;
 
-export const TopicTag = forwardRef(({ name, link, onClick = null }, ref) => (
-  <a href={link} onClick={onClick} ref={ref}>
-    {name}
-  </a>
-));
+export const TopicTag = forwardRef(
+  ({ name, link, onClick = null, liteViewTracker = null }, ref) => (
+    <a href={link} onClick={onClick} ref={ref} {...liteViewTracker}>
+      {name}
+    </a>
+  ),
+);
 
 export const TopicTags = ({
   children = [],
@@ -78,7 +80,6 @@ export const TopicTags = ({
     <TopicsList role="list" service={service} script={script}>
       {children.map((child, index) => {
         if (child.type !== TopicTag) return null;
-
         return (
           <SingleTopicTagItem
             as="li"

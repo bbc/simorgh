@@ -62,27 +62,53 @@ describe('beacon', () => {
     });
 
     describe('Reverb', () => {
-      it('should call reverb view event exactly once', async () => {
+      it('should call reverb userActionEvent exactly once for a view event', async () => {
         await sendEventBeacon({
           type: 'view',
           service: 'news',
-          componentName: 'component',
           pageIdentifier: 'pageIdentifier',
+          producerName: 'producer',
+          statsDestination: 'statsDestination',
+          componentName: 'component',
+          campaignID: 'campaign1',
+          format: 'format',
+          advertiserID: 'advertiserID',
+          url: 'http://localhost',
           detailedPlacement: 'detailedPlacement',
           useReverb: true,
         });
         expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
 
-        expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'impression',
+          'component',
+          {
+            container: 'campaign1',
+            attribute: 'component',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
+          false,
+        );
       });
 
-      it('should call reverb click event exactly once', async () => {
+      it('should call reverb click event exactly once for a click event', async () => {
         await sendEventBeacon({
           type: 'click',
           service: 'news',
+          pageIdentifier: 'pageIdentifier',
+          producerName: 'producer',
+          statsDestination: 'statsDestination',
           componentName: 'component',
           campaignID: 'campaign1',
-          pageIdentifier: 'pageIdentifier',
+          format: 'format',
+          advertiserID: 'advertiserID',
+          url: 'http://localhost',
           detailedPlacement: 'detailedPlacement',
           useReverb: true,
         });
@@ -93,9 +119,15 @@ describe('beacon', () => {
         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
           'click',
           'component',
-          { container: 'campaign1' },
-          {},
-          {},
+          {
+            container: 'campaign1',
+            attribute: 'component',
+            placement: 'pageIdentifier',
+            source: 'advertiserID',
+            result: 'http://localhost',
+          },
+          undefined,
+          undefined,
           true,
         );
       });

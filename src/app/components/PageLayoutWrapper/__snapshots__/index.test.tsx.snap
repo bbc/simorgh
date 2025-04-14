@@ -498,13 +498,15 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   background-color: #FFFFFF;
 }
 
-.emotion-29::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-29::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-29 .emotion-45::after {
@@ -822,6 +824,35 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-136 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-136 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-136::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-136 {
+    display: none;
+  }
+}
+
+.emotion-138 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -829,36 +860,36 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   position: relative;
 }
 
-.emotion-137 {
+.emotion-139 {
   content-visibility: auto;
   contain-intrinsic-size: 33.125rem;
 }
 
 @media (min-width: 15rem) {
-  .emotion-137 {
+  .emotion-139 {
     contain-intrinsic-size: 26.563rem;
   }
 }
 
 @media (min-width: 20) {
-  .emotion-137 {
+  .emotion-139 {
     contain-intrinsic-size: 23.438rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-137 {
+  .emotion-139 {
     contain-intrinsic-size: 21.875rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-137 {
+  .emotion-139 {
     contain-intrinsic-size: 17.188rem;
   }
 }
 
-.emotion-140 {
+.emotion-142 {
   background-color: #B80000;
   height: 2.75rem;
   width: 100%;
@@ -869,36 +900,36 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 15rem) {
-  .emotion-140 {
+  .emotion-142 {
     height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-140 {
+  .emotion-142 {
     height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-140 {
+  .emotion-142 {
     height: 4rem;
   }
 }
 
-.emotion-140 svg {
+.emotion-142 svg {
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-140 svg {
+  .emotion-142 svg {
     fill: linkText;
   }
 }
 
-.emotion-149 {
+.emotion-151 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -909,32 +940,32 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-149 {
+  .emotion-151 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-149 {
+  .emotion-151 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-149 {
+  .emotion-151 {
     padding: 0 0.5rem;
   }
 }
 
-.emotion-150 {
+.emotion-152 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-151 {
+.emotion-153 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -944,14 +975,14 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-151 {
+  .emotion-153 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -959,7 +990,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-count: 2;
@@ -968,7 +999,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     -webkit-column-count: 3;
@@ -977,7 +1008,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     -webkit-column-count: 4;
@@ -986,7 +1017,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 80rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     -webkit-column-count: 5;
@@ -994,7 +1025,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   }
 }
 
-.emotion-151>li:first-of-type {
+.emotion-153>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -1005,37 +1036,37 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-template-rows: repeat(4, auto);
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-151 {
+  .emotion-153 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
-.emotion-152 {
+.emotion-154 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-153 {
+.emotion-155 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1046,23 +1077,23 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   display: block;
 }
 
-.emotion-153:hover,
-.emotion-153:focus {
+.emotion-155:hover,
+.emotion-155:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-160 {
+.emotion-162 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-160 a {
+.emotion-162 a {
   padding: 0;
 }
 
-.emotion-161 {
+.emotion-163 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1073,8 +1104,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   display: inline;
 }
 
-.emotion-161:hover,
-.emotion-161:focus {
+.emotion-163:hover,
+.emotion-163:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -1104,13 +1135,20 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
                 dir="ltr"
                 tabindex="-1"
               >
-                We've updated our Privacy and Cookies Policy
+                Let us know you agree to cookies
               </h2>
               <p
                 class="emotion-9 emotion-10"
                 dir="ltr"
               >
-                We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+                We use 
+                <a
+                  class="focusIndicatorReducedWidth"
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+                >
+                  cookies
+                </a>
+                 to give you the best online experience. Please let us know if you agree to all of these cookies.
               </p>
               <ul
                 class="emotion-11 emotion-12"
@@ -1122,10 +1160,10 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
                   dir="ltr"
                 >
                   <button
-                    data-terms-banner="accept"
+                    data-cookie-banner="accept"
                     type="button"
                   >
-                    OK
+                    Yes, I agree
                   </button>
                 </li>
                 <li
@@ -1134,10 +1172,10 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
                 >
                   <span>
                     <a
-                      data-terms-banner="reject"
-                      href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
+                      data-cookie-banner="reject"
+                      href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                     >
-                      Find out what's changed
+                      No, take me to settings
                     </a>
                   </span>
                 </li>
@@ -1562,22 +1600,25 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
               </li>
             </ul>
           </div>
+          <div
+            class="emotion-136 emotion-137"
+          />
         </div>
       </nav>
     </header>
     <div
-      class="emotion-136"
+      class="emotion-138"
     >
       <h2>
         Child element
       </h2>
     </div>
     <footer
-      class="emotion-137 emotion-138"
+      class="emotion-139 emotion-140"
       role="contentinfo"
     >
       <div
-        class="emotion-17 emotion-140 emotion-19"
+        class="emotion-17 emotion-142 emotion-19"
       >
         <div
           class="emotion-20 emotion-21"
@@ -1618,20 +1659,20 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
         </div>
       </div>
       <div
-        class="emotion-149"
+        class="emotion-151"
       >
         <div
-          class="emotion-150"
+          class="emotion-152"
         >
           <ul
-            class="emotion-151"
+            class="emotion-153"
             role="list"
           >
             <li
-              class="emotion-152"
+              class="emotion-154"
             >
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.com/news/help-41670342"
               >
                 Why you can trust the BBC
@@ -1639,7 +1680,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.com/terms"
               >
                 Terms of Use
@@ -1647,7 +1688,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.co.uk/aboutthebbc/"
               >
                 About the BBC
@@ -1655,7 +1696,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.com/privacy/"
               >
                 Privacy Policy
@@ -1663,7 +1704,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.com/usingthebbc/cookies/"
               >
                 Cookies
@@ -1671,7 +1712,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.com/accessibility/"
               >
                 Accessibility Help
@@ -1679,7 +1720,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-153"
+                class="focusIndicatorInvert emotion-155"
                 href="https://www.bbc.com/contact/"
               >
                 Contact the BBC
@@ -1687,7 +1728,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             </li>
           </ul>
           <p
-            class="emotion-160"
+            class="emotion-162"
           >
             <span
               lang="en-GB"
@@ -1698,7 +1739,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
             2025 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="focusIndicatorInvert emotion-161"
+              class="focusIndicatorInvert emotion-163"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.

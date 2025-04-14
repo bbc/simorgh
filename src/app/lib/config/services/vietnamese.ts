@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     atiAnalyticsProducerName: 'VIETNAMESE',
+    useReverb: true,
     chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
@@ -42,9 +43,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/vietnamese/institutional-49283563',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/vietnamese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Tin chính',
+    homePageTitle: 'Tin chính',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -56,7 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
@@ -264,7 +264,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
-      header: 'Đọc nhiều nhất',
+      header: 'Đọc nhiều or Phổ biến',
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -273,7 +273,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Đọc nhiều nhất',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

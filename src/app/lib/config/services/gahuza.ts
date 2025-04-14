@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     atiAnalyticsProducerName: 'GAHUZA',
+    useReverb: true,
     chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
@@ -40,22 +41,22 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/gahuza/institutional-49283343',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/gahuza/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: "Urupapuro rw'itangiriro",
+    homePageTitle: "Urupapuro rw'itangiriro",
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Ikiganiro cy’abagore',
-      brandDescription: 'Ikiganiro cy’abagore kuri BBC Gahuzamiryango',
+      title: 'Whatsapp',
+      brandTitle: 'WhatsApp channel ya BBC Gahuza ',
+      brandDescription: 'Amakuru ya BBC Gahuza ako kanya kuri WhatsApp yawe',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p082wkdq.jpg',
-        alt: 'Ikiganiro cy’abagore',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kqymfd.png',
+        alt: 'BBC Gahuza WhatsApp',
       },
       linkLabel: {
-        text: 'Inkurikirane',
-        href: 'https://www.bbc.com/gahuza/podcasts/p07yjlmf',
+        text: 'Kanda hano ujyeho',
+        href: 'https://www.whatsapp.com/channel/0029VataD35JuyADtKHXNk0N',
       },
     },
     translations: {
@@ -81,6 +82,18 @@ export const service: DefaultServiceConfig = {
           'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
         informationPageLink: 'https://www.bbc.com/gahuza/articles/cn7y7pvem0vo',
         dataSaving: 'Ahagusaba uburyo (ama mega) buke',
+        articleDataSavingLinkText: 'Inyandiko gusa',
+        experiment: {
+          control_text_only: 'Inyandiko gusa',
+          variation_a_explore_data_friendly_version:
+            'Koresha uburyo butwara amahera make',
+          variation_b_data_saving_version: 'Uburyo buziganya amahera',
+          variation_c_read_data_saving_version:
+            'Soma mu buryo buziganya amahera',
+          variation_d_lite_site: 'Site yoroheje',
+          variation_e_2g_optimised_version: '2G Ukoresheje uburyo busanzwe',
+          variation_f_low_data_version: 'Uburyo butwara amahera make',
+        },
       },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',
@@ -292,7 +305,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Ibiheruka',
     },
     mostRead: {
-      header: 'Ibisomwa cane',
+      header: 'Izisomwa na benshi',
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -303,7 +316,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Umwanya bimara %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ibisomwa cane',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -369,6 +386,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Mpuzamahanga',
         url: '/gahuza/topics/c9dvd93jjkkt',
+      },
+      {
+        title: 'Ubuzima',
+        url: '/gahuza/topics/cnq68qp4kxjt',
       },
       {
         title: 'Imikino',

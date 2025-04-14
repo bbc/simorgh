@@ -38,8 +38,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Dachaigh',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Dachaigh',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -323,16 +324,13 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'As motha leughte',
+      header: 'Popular Reads',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

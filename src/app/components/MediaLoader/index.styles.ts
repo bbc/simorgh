@@ -31,6 +31,8 @@ export default {
     ({ mq }: Theme) => [
       css({
         aspectRatio: '9 / 16',
+        display: 'flex',
+        flexDirection: 'column',
         ...(!isEmbedded && {
           maxWidth: `${pixelsToRem(185)}rem`,
           [mq.GROUP_1_ONLY]: {

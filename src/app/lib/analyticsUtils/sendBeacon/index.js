@@ -55,23 +55,34 @@ const reverbPageViews = async ({ reverbInstance }) => {
   reverbInstance.viewEvent();
 };
 
-const reverbLinkClick = async ({ reverbInstance, eventDetails }) => {
-  const { componentName, container } = eventDetails;
+const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
+  const {
+    eventPublisher,
+    componentName,
+    container,
+    attribute,
+    placement,
+    source,
+    result,
+    anchorElement,
+    originalEvent,
+    isClick,
+  } = eventDetails;
 
   return reverbInstance.userActionEvent(
-    'click',
+    eventPublisher,
     componentName,
-    { container },
-    {},
-    {},
-    true,
+    { container, attribute, placement, source, result },
+    anchorElement,
+    originalEvent,
+    isClick,
   );
 };
 
 const reverbHandlers = {
   pageView: reverbPageViews,
-  sectionView: reverbPageViews,
-  sectionClick: reverbLinkClick,
+  sectionView: reverbComponentTracking,
+  sectionClick: reverbComponentTracking,
 };
 
 const callReverb = async eventDetails => {

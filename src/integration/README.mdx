@@ -25,7 +25,7 @@ yarn test:integration --pageTypes=articles --watch
 To run tests for multiple page types:
 
 ```
-yarn test:integration --pageTypes=articles,frontPage
+yarn test:integration --pageTypes=articles,topics
 ```
 
 To run tests for a single page type with the watch task and webpack hot reloading of application code:
@@ -154,17 +154,16 @@ Before our tests run, the test environment [setup file](https://github.com/bbc/s
 
 Note we have also specified a `service` docblock pragma. The service is parsed and added to the global scope of every test file. This can come in handy for tests where you need to know the service. There are other useful variables added to the global scope:
 
-* `pageType` - The page type which is parsed from the test file path.
-* `service` - The service of the currently running page test.
-* `document` - The `document` object of the current page. You can use this to query the DOM and assert the correct things are in the page.
+- `pageType` - The page type which is parsed from the test file path.
+- `service` - The service of the currently running page test.
+- `document` - The `document` object of the current page. You can use this to query the DOM and assert the correct things are in the page.
 
 Tests for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
 
 ```
 ├── pages
 |  ├── articles
-|  ├── featureIdxPage
-|  ├── frontPage
+|  ├── homePage
 |  ├── liveRadio
 |  ├── mediaAssetPage
 |  ├── mostReadPage
@@ -289,10 +288,10 @@ Cypress is a JavaScript-based end-to-end testing framework. Our Cypress tests ca
 
 Here are some possible answers:
 
-* ### The thing I am testing is not in the DOM
+- ### The thing I am testing is not in the DOM
 
   The feature you are trying to test may be rendered on the client side instead of on the server so does not exist in the DOM you are testing. We do not currently have client side rendering working with JSDOM but this is something we want to add in the future.
 
-* ### Content in an iframe I want to test is not in the DOM
+- ### Content in an iframe I want to test is not in the DOM
 
   This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as [Cypress](what-is-cypress).

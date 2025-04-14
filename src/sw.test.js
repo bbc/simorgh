@@ -1,12 +1,14 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable import/no-unresolved */
-/* eslint-disable import/first */
 import fs from 'fs';
 import { join, resolve } from 'path';
+import fetchMock from 'jest-fetch-mock';
+import { createHash } from 'crypto';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 
 const serviceWorkerCode = `${serviceWorker.toString()}
-export { fetchEventHandler };
+export { fetchEventHandler, version };
 `;
 
 fs.writeFileSync(
@@ -14,14 +16,24 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
+Object.defineProperty(self, 'location', {
+  writable: true,
+  value: { assign: jest.fn() },
+});
+
 describe('Service Worker', () => {
-  const originalFetch = global.fetch;
-  const fetchSpy = jest.spyOn(global, 'fetch');
   let fetchEventHandler;
 
+  beforeEach(() => {
+    global.self.location = {
+      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
+      hostname: 'www.bbc.com',
+    };
+  });
+
   afterEach(() => {
-    jest.resetAllMocks();
-    global.fetch = originalFetch;
+    jest.clearAllMocks();
+    fetchMock.resetMocks();
   });
 
   describe('webp', () => {
@@ -69,7 +81,7 @@ describe('Service Worker', () => {
           await fetchEventHandler(event);
 
           expect(event.respondWith).toHaveBeenCalled();
-          expect(fetchSpy).toHaveBeenCalledWith(expectedUrl, {
+          expect(fetchMock).toHaveBeenCalledWith(expectedUrl, {
             mode: 'no-cors',
           });
         },
@@ -127,7 +139,7 @@ describe('Service Worker', () => {
         await fetchEventHandler(event);
 
         expect(event.respondWith).not.toHaveBeenCalled();
-        expect(fetchSpy).not.toHaveBeenCalled();
+        expect(fetchMock).not.toHaveBeenCalled();
       });
     });
   });
@@ -152,48 +164,61 @@ describe('Service Worker', () => {
       global.caches = {
         open: () => Promise.resolve(serviceWorkerCache),
       };
+      global.self.location = {
+        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
+        hostname: 'www.bbc.com',
+      };
     });
 
     describe('when url is not cacheable', () => {
       it.each`
-        assetUrl        | reason
-        ${'cwr.js'}     | ${'url is missing leading /'}
-        ${'woff2'}      | ${'url is missing leading .'}
-        ${'not-cached'} | ${'url is not in the allow list of cacheable urls'}
+        assetUrl                  | reason
+        ${'woff2'}                | ${'url is missing leading .'}
+        ${'modern.frosted_promo'} | ${'full static files path is missing'}
+        ${'not-cached'}           | ${'url is not in the allow list of cacheable urls'}
       `(
         `should not fetch or return a cached response for $assetUrl because $reason`,
         async ({ assetUrl }) => {
           ({ fetchEventHandler } = await import('./service-worker-test'));
 
           const event = {
-            request: new Request(assetUrl),
+            request: new Request(assetUrl, {
+              mode: 'same-origin',
+            }),
             respondWith: jest.fn(),
           };
 
           await fetchEventHandler(event);
 
-          expect(global.fetch).not.toHaveBeenCalled();
+          expect(fetchMock).not.toHaveBeenCalled();
           expect(event.respondWith).not.toHaveBeenCalled();
         },
       );
     });
 
+    const cacheableAssets = [
+      // Fonts
+      'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff2',
+      'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
+      // Moment-lib - local, test & live
+      'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
+      // Frosted_promo - test & live
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      // PWA Icons - test & live
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
+      // Reverb
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+    ];
+
     describe('when cache contains asset', () => {
-      it.each`
-        assetUrl
-        ${'/cwr.js'}
-        ${'reith.woff2'}
-        ${'modern.frosted_promo.32caa641.js'}
-        ${'modern.frosted_promo.js'}
-        ${'http://localhost:7080/modern.frosted_promo.js'}
-        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.32caa641.js'}
-        ${'/moment-lib.dfdb34b8.js'}
-        ${'/moment-lib.js'}
-        ${'http://localhost:7080/moment-lib.js'}
-        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.dfdb34b8.js'}
-      `(
-        `should return a cached response for $assetUrl`,
-        async ({ assetUrl }) => {
+      it.each(cacheableAssets)(
+        `should return a cached response for %s`,
+        async assetUrl => {
           ({ fetchEventHandler } = await import('./service-worker-test'));
 
           const event = {
@@ -205,8 +230,11 @@ describe('Service Worker', () => {
 
           expect(event.respondWith).toHaveBeenCalled();
 
-          const [response] = event.respondWith.mock.calls[0];
-          const responseBody = response.body.toString();
+          const [eventResponse] = event.respondWith.mock.calls[0];
+
+          const response = await Promise.resolve(eventResponse);
+
+          const responseBody = response.body?.toString();
 
           expect(responseBody).toBe(`${assetUrl}-cached`);
         },
@@ -223,28 +251,56 @@ describe('Service Worker', () => {
         fetchedCache = {};
       });
 
-      it.each`
-        assetUrl
-        ${'/cwr.js'}
-        ${'reith.woff2'}
-        ${'modern.frosted_promo.32caa641.js'}
-        ${'/moment-lib.dfdb34b8.js'}
-      `(`should fetch $assetUrl and cache it`, async ({ assetUrl }) => {
-        ({ fetchEventHandler } = await import('./service-worker-test'));
+      it.each(cacheableAssets)(
+        `should fetch %s and cache it`,
+        async assetUrl => {
+          ({ fetchEventHandler } = await import('./service-worker-test'));
 
-        const event = {
-          request: new Request(assetUrl),
-          respondWith: jest.fn(),
-        };
+          const event = {
+            request: new Request(assetUrl, {
+              mode: 'same-origin',
+            }),
+            respondWith: jest.fn(),
+          };
 
-        const response = new Response(assetUrl);
-        global.fetch.mockImplementationOnce(() => response);
+          const mockResponse = new Response(assetUrl);
+          fetchMock.mockImplementationOnce(() => mockResponse);
 
-        await fetchEventHandler(event);
+          await fetchEventHandler(event);
 
-        expect(fetchSpy).toHaveBeenCalledWith(assetUrl);
-        expect(fetchedCache[event.request]).toStrictEqual(response.clone());
-      });
+          expect(event.respondWith).toHaveBeenCalled();
+
+          const [eventResponse] = event.respondWith.mock.calls[0];
+          await Promise.resolve(eventResponse);
+
+          expect(fetchMock).toHaveBeenCalledWith(assetUrl);
+          expect(fetchedCache[event.request]).toStrictEqual(
+            mockResponse.clone(),
+          );
+        },
+      );
+    });
+  });
+
+  describe('version', () => {
+    const CURRENT_VERSION = {
+      number: 'v0.2.4',
+      fileContentHash: '2f4642c4441960016d1508656b7f1322',
+    };
+
+    it(`version number should be ${CURRENT_VERSION.number}`, async () => {
+      const { version } = await import('./service-worker-test');
+
+      expect(CURRENT_VERSION.number).toBe(version);
+    });
+
+    it(`version number should match file content`, async () => {
+      const hash = createHash('md5')
+        .update(serviceWorker.toString())
+        .digest('hex');
+
+      // On failure: increment the version number in ../public/sw.js & update values in CURRENT_VERSION
+      expect(CURRENT_VERSION.fileContentHash).toBe(hash);
     });
   });
 });

@@ -47,10 +47,14 @@ describe('Canonical ATI Analytics', () => {
 
     expect(helmet.scriptTags).toHaveLength(1);
     expect(helmet.scriptTags[0].innerHTML).toEqual(`
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "${expectedUrl}", true);
-    xhr.withCredentials = true;
-    xhr.send();
+    function sendBeaconLite (atiPageViewUrlString) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", atiPageViewUrlString, true);
+        xhr.withCredentials = true;
+        xhr.send();
+    }
+    
+    sendBeaconLite("${expectedUrl}");
 `);
   });
 

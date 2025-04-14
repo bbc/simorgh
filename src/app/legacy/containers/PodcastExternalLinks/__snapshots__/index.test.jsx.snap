@@ -128,6 +128,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   <aside
     aria-labelledby="third-party-links"
     class="emotion-0 emotion-1"
+    data-e2e="podcast-links"
     role="complementary"
   >
     <h2

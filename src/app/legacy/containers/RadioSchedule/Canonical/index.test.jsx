@@ -1,7 +1,7 @@
 import React from 'react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   render,
   act,
@@ -13,7 +13,7 @@ import processRadioSchedule from '../utilities/processRadioSchedule';
 const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
   <RequestContextProvider
     isAmp={false}
-    pageType={FRONT_PAGE}
+    pageType={HOME_PAGE}
     service="arabic"
     pathname="/arabic"
     timeOnServer={Date.now()}

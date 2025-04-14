@@ -15,9 +15,6 @@ updates:
         update-types: ['version-update:semver-major']
       - dependency-name: '@typescript-eslint/eslint-plugin'
         update-types: ['version-update:semver-major']
-      # Opera Mini unsupported packages
-      - dependency-name: 'uuid' # https://github.com/bbc/simorgh/pull/11840
-      - dependency-name: '@types/uuid' # https://github.com/bbc/simorgh/pull/11840
       # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-1478 react-router & react-router-dom
       - dependency-name: 'react-router-dom'
       - dependency-name: 'react-router'

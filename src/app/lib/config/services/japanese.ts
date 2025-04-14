@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     atiAnalyticsProducerName: 'JAPANESE',
+    useReverb: true,
     chartbeatDomain: 'japanese.bbc.co.uk',
     brandName: 'BBCニュース',
     product: 'BBC News',
@@ -41,9 +42,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/japanese/help-49677253',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/japanese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: '最新ニュース',
+    homePageTitle: '最新ニュース',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -252,7 +253,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '読み物・解説',
     },
     mostRead: {
-      header: '読まれた記事ランキング',
+      header: '注目の記事',
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -261,7 +262,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: '読まれた記事ランキング',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

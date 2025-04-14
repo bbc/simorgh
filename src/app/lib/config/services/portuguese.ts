@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     atiAnalyticsProducerName: 'BRASIL',
+    useReverb: true,
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
@@ -42,9 +43,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/portuguese/institutional-50054434',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/portuguese/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
+    homePageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -76,8 +77,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
-      recommendationTitle: 'Matérias recomendadas',
-      splitRecommendationTitle: 'Mais matérias recomendadas',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
@@ -239,6 +238,7 @@ export const service: DefaultServiceConfig = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
+        watchMoments: 'Assista',
         listenLive: 'Ouça ao vivo',
         listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
@@ -357,7 +357,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mais lidas',
+      header: 'Mais clicadas',
       lastUpdated: 'Última atualização:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -366,7 +366,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Mais lidas',
       skipLink: {
         text: 'Pule %title% e continue lendo',
         endTextVisuallyHidden: 'Fim do %title%',
@@ -451,8 +451,8 @@ export const service: DefaultServiceConfig = {
         url: '/portuguese/topics/c9y2j35dn2zt',
       },
       {
-        title: 'BBC Lê',
-        url: '/portuguese/topics/cxndrr1qgllt',
+        title: 'Podcasts',
+        url: '/portuguese/topics/cx2ggnx4j72t',
       },
     ],
   },

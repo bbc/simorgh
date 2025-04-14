@@ -7,7 +7,7 @@ interface BaseSummary {
   imageUrl: string;
   link: string;
   imageAlt: string;
-  description: string;
+  description?: string;
   title: string;
   id?: string;
   type: string;

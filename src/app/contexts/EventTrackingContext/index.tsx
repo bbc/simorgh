@@ -9,9 +9,7 @@ import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
   MOST_READ_PAGE,
-  FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -35,7 +33,6 @@ import { ServiceContext } from '../ServiceContext';
 import {
   ATIData,
   ATIEventTrackingProps,
-  PageData,
 } from '../../components/ATIAnalytics/types';
 
 type EventTrackingContextProps =
@@ -58,9 +55,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
-    [FRONT_PAGE]: 'index-home',
     [MOST_READ_PAGE]: 'list-datadriven-read',
-    [FEATURE_INDEX_PAGE]: 'index-section-fix',
     [MEDIA_ASSET_PAGE]: 'article-media-asset',
     [STORY_PAGE]: 'article-sty',
     [PHOTO_GALLERY_PAGE]: 'article-photo-gallery',
@@ -91,13 +86,11 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
 const NO_TRACKING_PROPS = {};
 
 type EventTrackingProviderProps = {
-  data?: PageData;
   atiData?: ATIData;
 };
 
 export const EventTrackingContextProvider = ({
   children,
-  data,
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = useContext(RequestContext);
@@ -109,14 +102,13 @@ export const EventTrackingContextProvider = ({
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
-    if (eventTrackingIsEnabled || (data && atiData)) {
+    if (eventTrackingIsEnabled && atiData) {
       const campaignID = getCampaignID(pageType as CampaignPageTypes);
 
       const { pageIdentifier, platform, statsDestination } =
         buildATIEventTrackingParams({
           requestContext,
           serviceContext,
-          data,
           atiData,
         }) as ATIEventTrackingProps;
 
@@ -134,14 +126,13 @@ export const EventTrackingContextProvider = ({
     atiAnalyticsProducerId,
     atiAnalyticsProducerName,
     atiData,
-    data,
     eventTrackingIsEnabled,
     pageType,
     requestContext,
     serviceContext,
   ]);
 
-  if (!eventTrackingIsEnabled || (!data && !atiData)) {
+  if (!eventTrackingIsEnabled || !atiData) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}

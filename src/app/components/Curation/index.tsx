@@ -92,7 +92,7 @@ export default ({
           <div css={styles.billboardContainer}>
             <Billboard
               heading={firstSummary.title}
-              description={description}
+              description={description as string}
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
@@ -138,7 +138,7 @@ export default ({
       return (
         <RadioSchedule
           initialData={radioSchedule}
-          toggleName="frontPageRadioSchedule"
+          toggleName="homePageRadioSchedule"
         />
       );
     case EMBED:
@@ -161,6 +161,7 @@ export default ({
             <GridComponent
               summaries={summaries}
               headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
+              isFirstCuration={isFirstCuration}
             />
           </section>
         ) : (

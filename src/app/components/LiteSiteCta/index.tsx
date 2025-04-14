@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import { useATIClickTrackerHandler } from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { LeftChevron, RightChevron } from '../icons';
@@ -17,6 +18,7 @@ type CtaLinkProps = {
   showChevron?: boolean;
   ignoreLiteExtension?: boolean;
   className?: string;
+  useClickHandler?: boolean;
 };
 
 const CtaLink = ({
@@ -26,8 +28,13 @@ const CtaLink = ({
   fontVariant = 'sansRegular',
   showChevron = false,
   ignoreLiteExtension = false,
+  useClickHandler = false,
   className,
 }: CtaLinkProps) => {
+  const atiClickTrackerHandler = useATIClickTrackerHandler({
+    componentName: 'lite-site-cta',
+  });
+
   const chevron = isRtl ? (
     <LeftChevron css={styles.chevron} />
   ) : (
@@ -40,6 +47,7 @@ const CtaLink = ({
       className={className}
       css={styles.link}
       {...(ignoreLiteExtension && { 'data-ignore-lite': true })}
+      {...(useClickHandler && atiClickTrackerHandler)}
     >
       <Text size="brevier" fontVariant={fontVariant} css={styles.linkText}>
         {text}
@@ -85,6 +93,7 @@ const LiteSiteCta = () => {
             text={toMainSite}
             css={styles.topLinkSpacing}
             ignoreLiteExtension
+            useClickHandler
             showChevron
           />
         </Paragraph>

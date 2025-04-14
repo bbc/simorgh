@@ -74,9 +74,9 @@ export type ServiceConfig = {
   publishingPrinciples?: string | null;
   isTrustProjectParticipant: boolean;
   script: object;
-  manifestPath: string;
+  manifestPath?: string;
   swPath?: string;
-  frontPageTitle: string;
+  homePageTitle: string;
   passportHomes?: string[];
   iTunesAppId?: number;
   showAdPlaceholder: boolean;
@@ -148,7 +148,7 @@ export interface RadioSchedule {
 }
 
 export interface Recommendations {
-  hasStoryRecommendations: boolean;
+  header?: string;
   skipLink?: {
     text: string;
     endTextVisuallyHidden: string;

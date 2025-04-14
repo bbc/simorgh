@@ -89,8 +89,7 @@ export interface ATIDataWithContexts {
 export interface ATIConfigurationDetailsProviders {
   requestContext: RequestContextProps;
   serviceContext: ServiceConfig;
-  data?: PageData;
-  atiData?: ATIData;
+  atiData: ATIData;
 }
 
 export interface ReverbDetailsProviders {
@@ -140,8 +139,6 @@ export interface ATIPageTrackingProps {
   statsDestination?: string;
   timePublished?: string | null;
   timeUpdated?: string | null;
-  origin?: string;
-  previousPath?: string | null;
   categoryName?: string | null;
   campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
@@ -150,6 +147,5 @@ export interface ATIPageTrackingProps {
 }
 
 export interface ATIProps {
-  data?: PageData;
   atiData?: ATIData;
 }

@@ -158,7 +158,10 @@ describe('MostRead Canonical', () => {
     });
 
     it('should call the click tracking hook with the correct params', () => {
-      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      const clickTrackerSpy = jest.spyOn(
+        clickTracking,
+        'useATIClickTrackerHandler',
+      );
       render(
         <MostReadCanonicalWithContext
           service="pidgin"

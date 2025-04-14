@@ -4,14 +4,13 @@ import { useContext } from 'react';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import { Tag } from '#app/components/LinkedData/types';
 import {
   Article,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { RequestContext } from '#app/contexts/RequestContext';
 import { MediaOverrides } from '#app/models/types/media';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -134,7 +133,6 @@ const getTimestampComponent =
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { pageType, service } = useContext(RequestContext);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -188,8 +186,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCpsMap && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  const isUzbekArticle = service === 'uzbek' && pageType === ARTICLE_PAGE;
-
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
@@ -205,9 +201,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(
-    showRelatedTopics && topics.length > 0 && !isUzbekArticle,
-  );
+  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
 
   const isLiveMedia = checkIsLiveMedia(blocks);
 
@@ -254,8 +248,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
         title={headline}
         author={articleAuthor}
         twitterHandle={articleAuthorTwitterHandle}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
+        firstPublished={!isLiveMedia && firstPublished}
+        lastPublished={!isLiveMedia && lastPublished}
         section={getArticleSection(pageData)}
         aboutTags={aboutTags}
         mentionsTags={getMentions(pageData)}

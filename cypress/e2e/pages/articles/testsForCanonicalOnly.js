@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
@@ -68,6 +69,22 @@ export default ({ service, pageType, variant = 'default' }) =>
                 });
             }
           });
+        });
+      });
+    }
+
+    if (liteEnabledServices.includes(service)) {
+      describe('Canonical Lite Site CTA', () => {
+        it.skip('should have a lite site CTA', () => {
+          cy.get('[data-e2e="to-lite-site"]').within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .then($href => {
+                cy.get('a').click();
+                cy.url().should('contain', $href).should('contain', '.lite');
+              });
+          });
+          cy.go('back');
         });
       });
     }

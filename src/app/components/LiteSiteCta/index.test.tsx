@@ -29,4 +29,14 @@ describe('LiteSiteCTA', () => {
     );
     expect(ctaLink).toBeTruthy();
   });
+
+  it(`Should have click tracking on the 'Back to canonical' link.`, () => {
+    process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
+    const { container } = render(<LiteSiteCta />, { isLite: true });
+
+    const [ctaLink] = container.querySelectorAll('a');
+    const atiUrl = ctaLink.getAttribute('data-lite-ati-tracking');
+
+    expect(atiUrl).toContain('lite-site-cta');
+  });
 });

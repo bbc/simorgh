@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     atiAnalyticsProducerName: 'SOMALI',
+    useReverb: true,
     chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/somali/hayadeed-49283375',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/somali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Somali',
+    homePageTitle: 'Somali',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -272,7 +273,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
-      header: 'Ugu akhris badan',
+      header: 'Popular Reads',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -283,7 +284,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muddada %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ugu akhris badan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

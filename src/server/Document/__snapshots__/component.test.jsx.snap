@@ -87,6 +87,18 @@ exports[`Document Component should render APP version correctly 1`] = `
       async=""
       src="https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js"
     />
+    <link
+      href="modern.main.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulepreload"
+    />
     <meta
       content="noindex"
       name="robots"
@@ -101,18 +113,6 @@ exports[`Document Component should render APP version correctly 1`] = `
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
-    <link
-      href="modern.main.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.vendor.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.igbo.js"
-      rel="modulepreload"
-    />
     <script>
       
             window.__reverb = {};
@@ -120,7 +120,6 @@ exports[`Document Component should render APP version correctly 1`] = `
               window.__reverb.__resolveReverbLoaded = resolve;
               window.__reverb.__rejectReverbLoaded = reject;
             });
-
             window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
@@ -205,6 +204,21 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <style>
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
+    <script>
+      
+  window.addEventListener('load', function (){
+    (function liteATIClickTracking() {
+    return 'Tracking script placeholder';
+  })();
+    (function liteATIClickTracking() {
+    return 'Click script placeholder';
+  })();
+    (function liteATIClickTracking() {
+    return 'View script placeholder';
+  })();
+  });
+
+    </script>
   </head>
   <body>
     <div>
@@ -231,16 +245,6 @@ exports[`Document Component should render correctly 1`] = `
       async=""
       src="https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js"
     />
-    <title
-      data-react-helmet="true"
-    >
-      Test title
-    </title>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
-    />
     <link
       href="modern.main.js"
       rel="modulepreload"
@@ -253,6 +257,16 @@ exports[`Document Component should render correctly 1`] = `
       href="modern.igbo.js"
       rel="modulepreload"
     />
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
     <script>
       
             window.__reverb = {};
@@ -260,7 +274,6 @@ exports[`Document Component should render correctly 1`] = `
               window.__reverb.__resolveReverbLoaded = resolve;
               window.__reverb.__rejectReverbLoaded = reject;
             });
-
             window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
               window.__reverb.__rejectReverbLoaded();
             }, 5000);

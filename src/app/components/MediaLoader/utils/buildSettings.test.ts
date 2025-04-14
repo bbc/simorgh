@@ -488,6 +488,54 @@ describe('buildSettings', () => {
       expect(result?.orientation).toEqual('portrait');
     });
 
+    it('Should process an AresMedia block with portrait video as the orientation when type is editorial and portrait', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Editorial', 'Portrait'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('portrait');
+    });
+
+    it('Should process an AresMedia block with landscape video as the orientation when type is editorial', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Editorial'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('landscape');
+    });
+
     it('Should process an AresMedia block with landscape video as the orientation if nothing exists in types', () => {
       const myFixture = [
         {
@@ -880,7 +928,6 @@ describe('buildSettings', () => {
           appType: 'responsive',
           autoplay: false,
           counterName: 'hausa.bbc_hausa_radio.liveradio.page',
-          superResponsive: true,
           playlistObject: {
             items: [
               {
@@ -918,6 +965,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
           },
+          superResponsive: false,
         },
         mediaType: 'liveRadio',
         showAds: false,
@@ -963,7 +1011,7 @@ describe('buildSettings', () => {
           autoplay: false,
           appName: 'news-afrique',
           counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
-          superResponsive: true,
+          superResponsive: false,
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'AFRIQUE',

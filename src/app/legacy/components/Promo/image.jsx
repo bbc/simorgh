@@ -58,7 +58,13 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
 };
 
 const Image = props => {
-  const { children = null, src, useLargeImages = false, ...rest } = props;
+  const {
+    children = null,
+    src,
+    useLargeImages = false,
+    className,
+    ...rest
+  } = props;
   const isProgrammeImage = src.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
@@ -83,7 +89,9 @@ const Image = props => {
         sizes={sizes}
         aspectRatio={[16, 9]}
       />
-      {children && <ChildWrapper>{children}</ChildWrapper>}
+      {children && (
+        <ChildWrapper className={className}>{children}</ChildWrapper>
+      )}
     </Wrapper>
   );
 };

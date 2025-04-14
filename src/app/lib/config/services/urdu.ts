@@ -14,6 +14,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     atiAnalyticsProducerName: 'URDU',
+    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/urdu/institutional-49282935',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/urdu/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -352,7 +353,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'سب سے زیادہ پڑھی جانے والی',
+      header: 'مقبول خبریں',
       lastUpdated: 'آخری اپ ڈیٹ',
       numberOfItems: 10,
       hasMostRead: true,
@@ -363,7 +364,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% دورانیہ',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'سب سے زیادہ پڑھی جانے والی',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

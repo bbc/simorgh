@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
     atiAnalyticsProducerName: 'BENGALI',
+    useReverb: true,
     chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
     script: bengali,
-    manifestPath: '/manifest.json',
+    manifestPath: '/bengali/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -57,7 +58,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
@@ -266,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
-      header: 'সর্বাধিক পঠিত',
+      header: 'পাঠকপ্রিয় খবর',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -277,7 +277,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'সর্বাধিক পঠিত',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

@@ -3,7 +3,7 @@ import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
-import serbianFrontPageData from '#data/serbian/frontpage/lat.json';
+import serbianHomePageData from '#data/serbian/homePage/lat.json';
 import WithData from '.';
 import { render } from '../../../../components/react-testing-library-with-providers';
 
@@ -49,8 +49,8 @@ describe('withData HOC', () => {
     location: {},
   };
 
-  const validFrontPagesProps = {
-    pageData: serbianFrontPageData,
+  const validHomePagesProps = {
+    pageData: serbianHomePageData,
     status: 200,
     location: {},
   };
@@ -84,9 +84,9 @@ describe('withData HOC', () => {
     });
   });
 
-  describe('with valid front-pages data', () => {
+  describe('with valid home-pages data', () => {
     it('should return the passed in component', () => {
-      const { container } = render(<WithDataHOC {...validFrontPagesProps} />);
+      const { container } = render(<WithDataHOC {...validHomePagesProps} />);
       expect(container).toMatchSnapshot();
     });
   });

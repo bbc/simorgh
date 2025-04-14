@@ -11,11 +11,12 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
+import isCypress from './isCypress';
 
-// 004_brasil_recommendations_experiment
-const isCypress = onClient() && window.Cypress;
+const isInCypress = isCypress();
+const TIMEOUT_INTERVAL = 5000;
 
-if (isLive() || isCypress) {
+if (isLive() || isInCypress) {
   setLogger(null);
 }
 
@@ -29,7 +30,10 @@ const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
-    const disableOptimizely = isStoryBook;
+    const disableOptimizely = isStoryBook || isInCypress;
+
+    if (disableOptimizely) return <Component {...props} />;
+
     let mobile;
 
     const getUserId = () => {
@@ -54,7 +58,7 @@ const withOptimizelyProvider = Component => {
       <OptimizelyProvider
         optimizely={optimizely}
         isServerSide
-        timeout={1000}
+        timeout={TIMEOUT_INTERVAL}
         user={{
           id: getUserId(),
           attributes: {

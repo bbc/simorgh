@@ -84,7 +84,7 @@ const HiearchicalGrid = ({
                 getStyles(promoItems.length, i, mq),
               ]}
             >
-              <Promo>
+              <Promo className="">
                 <Promo.Image
                   useLargeImages={useLargeImages}
                   src={promo.imageUrl || null}

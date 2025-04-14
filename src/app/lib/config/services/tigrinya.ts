@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     atiAnalyticsProducerName: 'TIGRINYA',
+    useReverb: true,
     chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
@@ -40,11 +41,28 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/tigrinya/institutional-49283259',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/tigrinya/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ዜና',
+    homePageTitle: 'ዜና',
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'መወዓውዒ ዋትስኣፕ ቻነል',
+      brandTitle: 'ዋትስኣፕ ቻነል ቢቢሲ ትግርኛ',
+      brandDescription: 'ዜና፡ ትንታነን ታሪኻትን ብቐጥታ ኣብ ዋትስኣፕ ንምርካብ',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kxgny2.png',
+        alt: 'ቢቢሲ ትግርኛ ኣብ ዋትስኣፕ ቻነል',
+      },
+      linkLabel: {
+        text: 'ነዚ መላግቦ ብምጥዋቕ ኣባል ቻነልና ኵኑ!',
+        href: 'https://www.whatsapp.com/channel/0029VasPgatEVccGCsD4B42n',
+      },
+      skipLink: {
+        text: 'መወዓውዒ ስገሮ፣ ንባብካ ቀጽል',
+        endTextVisuallyHidden: 'መዛዘሚ መወዓውዒ ዋትስኣፕ ቻነል',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'ናይ ሕሉፍ',
@@ -256,7 +274,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብብዝሒ ዝተነበ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -159,7 +159,7 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
 {
-  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
 `;
@@ -201,7 +201,7 @@ exports[`AMP Articles Header Navigation link should match text and url 4`] = `
 exports[`AMP Articles Header Navigation link should match text and url 5`] = `
 {
   "text": "تلویزیون",
-  "url": "/persian/tv-and-radio-37434377",
+  "url": "/persian/topics/cw9qgeqd1zqt",
 }
 `;
 

@@ -154,12 +154,19 @@ exports[`Canonical Live Radio Header Navigation link should match text and url 5
 
 exports[`Canonical Live Radio Header Navigation link should match text and url 6`] = `
 {
+  "text": "Ubuzima",
+  "url": "/gahuza/topics/cnq68qp4kxjt",
+}
+`;
+
+exports[`Canonical Live Radio Header Navigation link should match text and url 7`] = `
+{
   "text": "Imikino",
   "url": "/gahuza/topics/c5qvpq0jzy7t",
 }
 `;
 
-exports[`Canonical Live Radio Header Navigation link should match text and url 7`] = `
+exports[`Canonical Live Radio Header Navigation link should match text and url 8`] = `
 {
   "text": "Amajwi n’amashusho",
   "url": "/gahuza/topics/crldzm936jmt",

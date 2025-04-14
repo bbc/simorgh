@@ -29,6 +29,14 @@ const afriqueHomePageData = {
   },
 };
 
+const pidginHomePageData = {
+  ...pidginHomePageDataFixture,
+  metadata: {
+    ...pidginHomePageDataFixture.metadata,
+    type: 'home',
+  },
+};
+
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
@@ -37,7 +45,7 @@ describe('Home Page', () => {
       service: 'afrique',
       toggles: {
         mostRead: { enabled: true },
-        frontPageRadioSchedule: { enabled: true },
+        homePageRadioSchedule: { enabled: true },
       },
     });
     const curationsWithSummaries = afriqueHomePageDataFixture.curations.filter(
@@ -51,14 +59,11 @@ describe('Home Page', () => {
   });
 
   it('should have h2s for curation heading levels and h3 for summary heading levels', () => {
-    const { container } = render(
-      <HomePage pageData={pidginHomePageDataFixture} />,
-      {
-        service: 'pidgin',
-      },
-    );
-    expect(container.querySelectorAll('h2').length).toBe(5);
-    expect(container.querySelectorAll('h3').length).toBe(27);
+    const { container } = render(<HomePage pageData={pidginHomePageData} />, {
+      service: 'pidgin',
+    });
+    expect(container.querySelectorAll('h2').length).toBe(8);
+    expect(container.querySelectorAll('h3').length).toBe(36);
   });
 
   it('should apply provided margin size to the main element', () => {
@@ -133,30 +138,31 @@ describe('Home Page', () => {
   });
 
   it('should render images with the .webp image extension', () => {
-    const path =
-      homePageData.curations[1].summaries?.[0].imageUrl?.split('{width}')[1];
+    const path = homePageData.curations[1].summaries?.[0].imageUrl
+      ?.split('{width}')[1]
+      .slice(0, -5);
 
-    const imageURL = `https://ichef.test.bbci.co.uk/ace/standard/240${path}`;
+    const imageURL = `https://ichef.bbci.co.uk/ace/ws/240${path}.webp`;
     const expectedWebpSrcSetURLs = [
-      `https://ichef.test.bbci.co.uk/ace/standard/85${path}.webp 85w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/120${path}.webp 120w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/170${path}.webp 170w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/232${path}.webp 232w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/325${path}.webp 325w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/450${path}.webp 450w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/660${path}.webp 660w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/800${path}.webp 800w`,
+      `https://ichef.bbci.co.uk/ace/ws/85${path}.webp 85w`,
+      `https://ichef.bbci.co.uk/ace/ws/120${path}.webp 120w`,
+      `https://ichef.bbci.co.uk/ace/ws/170${path}.webp 170w`,
+      `https://ichef.bbci.co.uk/ace/ws/232${path}.webp 232w`,
+      `https://ichef.bbci.co.uk/ace/ws/325${path}.webp 325w`,
+      `https://ichef.bbci.co.uk/ace/ws/450${path}.webp 450w`,
+      `https://ichef.bbci.co.uk/ace/ws/660${path}.webp 660w`,
+      `https://ichef.bbci.co.uk/ace/ws/800${path}.webp 800w`,
     ].join(', ');
 
-    const expectedJPGSrcSetURLs = [
-      `https://ichef.test.bbci.co.uk/ace/standard/85${path} 85w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/120${path} 120w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/170${path} 170w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/232${path} 232w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/325${path} 325w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/450${path} 450w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/660${path} 660w`,
-      `https://ichef.test.bbci.co.uk/ace/standard/800${path} 800w`,
+    const expectedPNGSrcSetURLs = [
+      `https://ichef.bbci.co.uk/ace/ws/85${path} 85w`,
+      `https://ichef.bbci.co.uk/ace/ws/120${path} 120w`,
+      `https://ichef.bbci.co.uk/ace/ws/170${path} 170w`,
+      `https://ichef.bbci.co.uk/ace/ws/232${path} 232w`,
+      `https://ichef.bbci.co.uk/ace/ws/325${path} 325w`,
+      `https://ichef.bbci.co.uk/ace/ws/450${path} 450w`,
+      `https://ichef.bbci.co.uk/ace/ws/660${path} 660w`,
+      `https://ichef.bbci.co.uk/ace/ws/800${path} 800w`,
     ].join(', ');
 
     // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
@@ -167,14 +173,14 @@ describe('Home Page', () => {
 
     const promoImage = container.querySelectorAll('div.promo-image picture')[0];
 
-    const [webpSource, jpgSource, img] = promoImage.childNodes as unknown as [
+    const [webpSource, pngSource, img] = promoImage.childNodes as unknown as [
       HTMLSourceElement,
       HTMLSourceElement,
       HTMLImageElement,
     ];
 
     expect(webpSource.srcset).toEqual(expectedWebpSrcSetURLs);
-    expect(jpgSource.srcset).toEqual(expectedJPGSrcSetURLs);
+    expect(pngSource.srcset).toEqual(expectedPNGSrcSetURLs);
     expect(img.src).toEqual(imageURL);
   });
 
@@ -211,7 +217,7 @@ describe('Home Page', () => {
         const src = image.getAttribute('src') || '';
 
         if (index === 0 || nonLazyLoadImages.includes(src)) {
-          expect(image.getAttribute('loading')).toBeNull();
+          expect(image.getAttribute('loading')).toBe('eager');
         } else {
           expect(image.getAttribute('loading')).toBe('lazy');
         }

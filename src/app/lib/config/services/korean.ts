@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     atiAnalyticsProducerName: 'KOREAN',
+    useReverb: true,
     chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/korean/institutional-49283197',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/korean/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: '홈페이지',
+    homePageTitle: '홈페이지',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -54,7 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: '광고',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
@@ -264,7 +264,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: '최신 뉴스',
     },
     mostRead: {
-      header: 'TOP 뉴스',
+      header: '많이 본 뉴스',
       lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
@@ -275,7 +275,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '방송 길이 %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'TOP 뉴스',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

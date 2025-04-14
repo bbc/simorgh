@@ -79,6 +79,9 @@ export const themes = {
   pidgin: loadable(
     () => import(/* webpackChunkName: "themes-pidgin" */ './pidgin'),
   ),
+  polska: loadable(
+    () => import(/* webpackChunkName: "themes-polska" */ './polska'),
+  ),
   portuguese: loadable(
     () => import(/* webpackChunkName: "themes-portuguese" */ './portuguese'),
   ),

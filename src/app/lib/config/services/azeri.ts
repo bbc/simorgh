@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     atiAnalyticsProducerName: 'AZERI',
+    useReverb: true,
     chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
@@ -40,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/azeri/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
+    homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -261,9 +262,22 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Digər xəbərlər',
       featuresAnalysisTitle: 'Bunları da oxuyun',
+      ugc: {
+        // Optional
+        optional: 'vacib deyil',
+
+        // File upload
+        fileUploadButton: 'Faylı seçin',
+
+        // Submit button
+        submitButton: 'Göndərin',
+
+        // Form Screen
+        dataPolicyHeading: 'Bizim informasiya siyasə timiz',
+      },
     },
     mostRead: {
-      header: 'Ən çox oxunan',
+      header: 'Geniş oxunanlar',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -272,7 +286,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ən çox oxunan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
