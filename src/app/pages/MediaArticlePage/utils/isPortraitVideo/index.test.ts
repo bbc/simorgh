@@ -1,5 +1,5 @@
 import isPortraitVideo from '.';
-import { mediaBlockWithPV, mediaBlockWithoutPV } from './data';
+import { mediaBlockWithPV, mediaBlockWithoutPV } from './fixtures';
 
 describe('isPortraitVideo', () => {
   it('Should return true if media block includes a portrait video', () => {
