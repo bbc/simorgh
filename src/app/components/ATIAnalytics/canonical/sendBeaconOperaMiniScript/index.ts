@@ -12,13 +12,6 @@ const sendBeaconOperaMiniScript = (atiPageViewUrlString: string) => `
       xhr.withCredentials = true;
       xhr.send();
     }
-
-    function sendBeaconLite (atiPageViewUrlString) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", atiPageViewUrlString, true);
-        xhr.withCredentials = true;
-        xhr.send();
-    }
 `;
 
 export default sendBeaconOperaMiniScript;
