@@ -14,17 +14,18 @@ const liteTrackingScripts = ({
     window.addEventListener('load', function () {
       const isOperaMini = ${isOperaProxy.toString()}();
 
-      // TODO - temp
+      // TODO - temp comment
       const alertMessage = ['liteTrackingScripts:', 'isOperaMini:', isOperaMini].join(' ')
       alert(alertMessage);
       
       const isLiteTrackingEnabled = ${onlyOperaMini} ? isOperaMini : true;
       
-      // TODO - temp
+      // TODO - temp comment
       console.log('liteTrackingScripts: onlyOperaMini:', ${onlyOperaMini}, 'isOpera:', isOperaMini, "isLiteTrackingEnabled:", isLiteTrackingEnabled);
 
 
       if (!isLiteTrackingEnabled) {
+      // TODO - temp comment
         console.log('liteTrackingScripts: NOT LOADED');
         return;
       }
@@ -42,7 +43,7 @@ const liteTrackingScripts = ({
   `;
 };
 
-const LiteTrackingScripts = ({
+const LiteTrackingTemplate = ({
   onlyOperaMini = false,
   trackViews = true,
   trackClicks = true,
@@ -61,4 +62,4 @@ const LiteTrackingScripts = ({
   );
 };
 
-export default LiteTrackingScripts;
+export default LiteTrackingTemplate;
