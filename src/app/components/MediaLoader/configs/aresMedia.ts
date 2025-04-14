@@ -16,6 +16,7 @@ import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import { getAmpIframeUrl, getExternalEmbedUrl } from '../utils/urlConstructors';
+import AUDIO_UI_CONFIG from './constants';
 
 const DEFAULT_WIDTH = 512;
 
@@ -142,6 +143,10 @@ export default ({
         ...(guidanceMessage && { guidance: guidanceMessage }),
         ...(embeddingAllowed && { embedRights: 'allowed' }),
         ...(isLive && { simulcast: true }),
+      },
+      ui: {
+        ...basePlayerConfig.ui,
+        ...(actualFormat === 'audio' && AUDIO_UI_CONFIG),
       },
       ...(pageType === 'mediaArticle' && { preload: 'high' }),
       statsObject: {
