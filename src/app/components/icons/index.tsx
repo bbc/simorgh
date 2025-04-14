@@ -157,3 +157,15 @@ export const Play = ({ className }: { className?: string }) => (
     <path d="M29 16 5.8 1v30z" />
   </svg>
 );
+
+export const TriangleDown = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4z" />
+  </svg>
+);

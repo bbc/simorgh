@@ -2,6 +2,7 @@
 import React, { use, useEffect } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
+import { TriangleDown } from '#app/components/icons';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -103,16 +104,7 @@ const ContinueReadingButton = ({
       ref={viewRef}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>
-      {variation === 'B' && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 32 32"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path d="M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4z" />
-        </svg>
-      )}
+      {variation === 'B' && <TriangleDown />}
     </button>
   );
 };
