@@ -9,9 +9,6 @@ exports[`Toggles Config when application environment is live should contain corr
   "chartbeatAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": {
-    "enabled": false,
-  },
   "enableFetchingToggles": {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
@@ -59,9 +56,6 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
   },
   "comscoreAnalytics": {
-    "enabled": true,
-  },
-  "cpsRecommendations": {
     "enabled": true,
   },
   "electionBanner": {
@@ -117,9 +111,6 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": false,
   },
   "chartbeatAnalytics": {
-    "enabled": true,
-  },
-  "cpsRecommendations": {
     "enabled": true,
   },
   "enableFetchingToggles": {

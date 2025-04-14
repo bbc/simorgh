@@ -10,7 +10,6 @@ import {
   onDemandRadioDataPath,
   onDemandTvDataPath,
   topicDataPath,
-  recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
   liveRadioDataPath,
@@ -180,16 +179,6 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'secondaryColumn',
-        service,
-        variant,
-      });
-
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(recommendationsDataRegex, async ({ params }, res, next) => {
-      const { service, variant } = params;
-      const dataFilePath = constructDataFilePath({
-        pageType: 'recommendations',
         service,
         variant,
       });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render } from '#app/components/react-testing-library-with-providers';
 import RecommendationsImage from '.';
 
 const indexFixtureData = {
@@ -14,7 +14,7 @@ const indexFixtureData = {
 describe('RecommendationsImage', () => {
   it('should render one image with src & alt attributes', () => {
     const { container } = render(
-      <RecommendationsImage indexImage={indexFixtureData} />,
+      <RecommendationsImage image={indexFixtureData} />,
     );
 
     expect(container.getElementsByTagName('img').length).toEqual(1);
