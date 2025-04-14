@@ -56,7 +56,7 @@ export default {
       a: {
         color: palette.RHINO,
         '&:focus': {
-          color: palette.RHINO, // resets to mirror current experience. Link doesn't stay coloured after download but does remain underlined. Not sure this is best A11y ux.
+          color: palette.RHINO,
         },
       },
     }),

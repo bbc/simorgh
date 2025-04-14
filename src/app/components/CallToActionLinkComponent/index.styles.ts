@@ -18,7 +18,7 @@ export default {
           fill: 'visitedText',
         },
         '&:active': {
-          fill: 'activeText', // check if this is required on HOC
+          fill: 'activeText',
         },
       },
     }),
