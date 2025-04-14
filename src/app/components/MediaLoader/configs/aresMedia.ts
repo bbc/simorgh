@@ -113,20 +113,17 @@ export default ({
 
   if (showAds) items.unshift({ kind: 'advert' });
 
-  const placeholderConfig =
-    actualFormat === 'audio'
-      ? undefined
-      : buildPlaceholderConfig({
-          title,
-          type: actualFormat || 'video',
-          duration: rawDuration,
-          durationISO8601: versionsBlock?.durationISO8601,
-          guidanceMessage,
-          holdingImageURL,
-          translations,
-          placeholderImageOriginCode: originCode,
-          placeholderImageLocator: locator,
-        });
+  const placeholderConfig = buildPlaceholderConfig({
+    title,
+    type: actualFormat || 'video',
+    duration: rawDuration,
+    durationISO8601: versionsBlock?.durationISO8601,
+    guidanceMessage,
+    holdingImageURL,
+    translations,
+    placeholderImageOriginCode: originCode,
+    placeholderImageLocator: locator,
+  });
 
   const ampIframeUrl = getAmpIframeUrl({ id, versionID, lang });
 
