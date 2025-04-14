@@ -77,6 +77,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
+  isLite?: boolean;
   id?: string | null;
 };
 
@@ -89,6 +90,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
+  isLite = false,
   id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
@@ -97,6 +99,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
+    isLite,
     id,
   };
 
@@ -911,6 +914,63 @@ describe('Article Page', () => {
         },
         undefined,
       );
+    });
+  });
+  describe('Continue Reading Button', () => {
+    it.each([
+      {
+        testScenario:
+          'should render the button for service "pidgin" when all conditions are met',
+        service: 'pidgin',
+        isLite: false,
+        isAmp: false,
+        isApp: false,
+      },
+      {
+        testScenario: 'should not render the button when `isLite` is true',
+        service: 'pidgin',
+        isLite: true,
+        isAmp: false,
+        isApp: false,
+      },
+      {
+        testScenario: 'should not render the button when `isAmp` is true',
+        service: 'pidgin',
+        isLite: false,
+        isAmp: true,
+        isApp: false,
+      },
+      {
+        testScenario: 'should not render the button when `isApp` is true',
+        service: 'pidgin',
+        isLite: false,
+        isAmp: false,
+        isApp: true,
+      },
+    ])('$testScenario', ({ service, isLite, isAmp, isApp }) => {
+      render(
+        <Context
+          service={service as Services}
+          isLite={isLite}
+          isAmp={isAmp}
+          isApp={isApp}
+        >
+          <ArticlePage pageData={articleDataPidgin} continueReadingEnabled />
+        </Context>,
+      );
+
+      const continueReadingButton = screen.queryByTestId('read-more-button');
+
+      if (
+        !isLite &&
+        !isAmp &&
+        !isApp &&
+        ['pidgin', 'urdu', 'mundo', 'arabic'].includes(service)
+      ) {
+        expect(continueReadingButton).toBeInTheDocument();
+      } else {
+        expect(continueReadingButton).not.toBeInTheDocument();
+      }
     });
   });
 });
