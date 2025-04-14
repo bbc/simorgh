@@ -94,7 +94,7 @@ const RelatedTopics = ({
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
                 onClick={clickTrackerHandler}
-                {...viewTracker}
+                viewTracker={viewTracker}
                 key={topicId}
               />
             ))

@@ -17,10 +17,10 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const Grid = (props, viewRef) => {
+const Grid = props => {
   const { dir } = useContext(ServiceContext);
 
-  return <GRID dir={dir} {...props} {...viewRef} />;
+  return <GRID dir={dir} {...props} />;
 };
 
 const fourOfSixColumnsMaxWidthGroup4 = `30rem`;

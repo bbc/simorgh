@@ -17,7 +17,6 @@ const renderLatestMediaList = (
   item: LatestMedia,
   index: number,
   eventTrackingData: EventTrackingBlock,
-  viewTracker: ViewTracker,
 ) => {
   const ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
@@ -33,7 +32,6 @@ const renderLatestMediaList = (
       <LatestMediaItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        viewTracker={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -100,7 +98,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       ) : (
         <PromoList css={styles.latestMediaGridWrapper} {...viewTracker}>
           {content.map((item, index) =>
-            renderLatestMediaList(item, index, eventTrackingData, viewTracker),
+            renderLatestMediaList(item, index, eventTrackingData),
           )}
         </PromoList>
       )}

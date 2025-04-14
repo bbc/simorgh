@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes, Ref } from 'react';
+import React, { FC, HTMLAttributes } from 'react';
 import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
@@ -12,7 +12,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
   fontVariant?: FontVariant;
   level: 1 | 2 | 3 | 4;
   size?: GelFontSize;
-  ref?: Ref<HTMLElement>;
+  ref?: HTMLElement;
 }
 
 type Element = 'h1' | 'h2' | 'h3' | 'h4';

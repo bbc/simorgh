@@ -1,5 +1,4 @@
 import { OptimoBlock } from '#app/models/types/optimo';
-import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { Services, Direction } from '../../models/types/global';
 
 export type Size = 'default' | 'small';
@@ -10,7 +9,6 @@ export interface MostReadBaseProps {
   dir?: Direction;
   columnLayout?: ColumnLayout;
   numberOfItems: number;
-  viewTracker?: ViewTracker;
 }
 
 export interface MostReadItemProps {

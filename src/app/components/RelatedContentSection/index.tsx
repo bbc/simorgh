@@ -13,7 +13,6 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
-import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
@@ -42,14 +41,12 @@ type RelatedContentListProps = {
   item: object;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewTracker: ViewTracker;
 };
 
 const renderRelatedContentList = ({
   item,
   index,
   eventTrackingData,
-  viewTracker,
 }: RelatedContentListProps) => {
   const assetUri = pathOr(
     '',
@@ -85,7 +82,6 @@ const renderRelatedContentList = ({
       <RelatedContentItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        viewTracker={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -189,22 +185,21 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
               ? styles.singleItemWrapperFullWidth
               : styles.singleItemWrapper
           }
+          {...viewTracker}
         >
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
-            viewTracker={viewTracker}
             eventTrackingData={eventTrackingData}
           />
         </div>
       ) : (
-        <PromoList css={styles.relatedContentGrid}>
+        <PromoList css={styles.relatedContentGrid} {...viewTracker}>
           {reducedStoryPromoItems.map((item, index) =>
             renderRelatedContentList({
               item,
               index,
               eventTrackingData,
-              viewTracker,
             }),
           )}
         </PromoList>

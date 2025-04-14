@@ -18,14 +18,12 @@ type TopStoriesListProps = {
   item: TopStoryItem;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewTracker: React.Ref<HTMLDivElement>;
 };
 
 const renderTopStoriesList = ({
   item,
   index,
   eventTrackingData,
-  viewTracker,
 }: TopStoriesListProps) => {
   const contentType = item?.contentType ?? '';
   const assetUri = item?.locators?.assetUri ?? '';
@@ -46,7 +44,6 @@ const renderTopStoriesList = ({
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
@@ -112,25 +109,25 @@ const TopStoriesSection = ({
         {title}
       </SectionLabel>
 
-      {hasSingleContent ? (
-        <TopStoriesItem
-          item={content[0]}
-          ariaLabelledBy={ariaLabelledBy}
-          {...viewTracker}
-          eventTrackingData={eventTrackingData}
-        />
-      ) : (
-        <PromoList css={styles.promoList} {...viewTracker}>
-          {content.map((item, index) =>
-            renderTopStoriesList({
-              item,
-              index,
-              eventTrackingData,
-              viewTracker,
-            }),
-          )}
-        </PromoList>
-      )}
+      <div {...viewTracker}>
+        {hasSingleContent ? (
+          <TopStoriesItem
+            item={content[0]}
+            ariaLabelledBy={ariaLabelledBy}
+            eventTrackingData={eventTrackingData}
+          />
+        ) : (
+          <PromoList css={styles.promoList}>
+            {content.map((item, index) =>
+              renderTopStoriesList({
+                item,
+                index,
+                eventTrackingData,
+              }),
+            )}
+          </PromoList>
+        )}
+      </div>
     </section>
   );
 };

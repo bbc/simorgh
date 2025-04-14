@@ -74,35 +74,36 @@ const RadioSchedule = ({ schedule, ...props }) => {
   const viewTracker = useViewTracker(eventTrackingData);
 
   return (
-    <StyledGrid
-      forwardedAs="ul"
-      dir={dir}
-      {...schedulesGridProps}
-      role="list"
-      {...viewTracker}
-    >
-      {schedule.map(({ id, ...program }) => (
-        <StyledFlexGrid
-          dir={dir}
-          parentColumns={schedulesGridProps.columns}
-          parentEnableGelGutters
-          {...programGridProps}
-          key={id}
-          as="li"
-          data-e2e={program.state}
-          role="listitem"
-        >
-          <StartTimeWrapper>
-            <StartTime timestamp={program.startTime} />
-          </StartTimeWrapper>
-          <ProgramCard
-            {...props}
-            program={program}
-            id={id} // This ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          />
-        </StyledFlexGrid>
-      ))}
-    </StyledGrid>
+    <div {...viewTracker}>
+      <StyledGrid
+        forwardedAs="ul"
+        dir={dir}
+        {...schedulesGridProps}
+        role="list"
+      >
+        {schedule.map(({ id, ...program }) => (
+          <StyledFlexGrid
+            dir={dir}
+            parentColumns={schedulesGridProps.columns}
+            parentEnableGelGutters
+            {...programGridProps}
+            key={id}
+            as="li"
+            data-e2e={program.state}
+            role="listitem"
+          >
+            <StartTimeWrapper>
+              <StartTime timestamp={program.startTime} />
+            </StartTimeWrapper>
+            <ProgramCard
+              {...props}
+              program={program}
+              id={id} // This ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+            />
+          </StyledFlexGrid>
+        ))}
+      </StyledGrid>
+    </div>
   );
 };
 
