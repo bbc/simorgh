@@ -91,6 +91,7 @@ export type ServicesWithNoVariants = {
     | 'pashto'
     | 'persian'
     | 'pidgin'
+    | 'polska'
     | 'portuguese'
     | 'punjabi'
     | 'russian'

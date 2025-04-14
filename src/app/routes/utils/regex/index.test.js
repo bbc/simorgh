@@ -1,9 +1,7 @@
 import { matchPath } from 'react-router-dom';
 import {
   articleDataPath,
-  articleManifestPath,
   articlePath,
-  articleSwPath,
   cpsAssetPageDataPath,
   cpsAssetPagePath,
   homePagePath,
@@ -18,7 +16,6 @@ import {
   onDemandTvPath,
   podcastBrandPath,
   podcastEpisodePath,
-  recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   topicPath,
 } from './index';
@@ -124,55 +121,16 @@ describe('homePageDataPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
 });
 
-describe('articleSwPath', () => {
-  const validRoutes = [
-    '/news/articles/sw.js',
-    '/persian/articles/sw.js',
-    '/cymrufyw/erthyglau/sw.js',
-  ];
-  shouldMatchValidRoutes(validRoutes, articleSwPath);
-
-  const invalidRoutes = [
-    '/news/sw.js',
-    '/persian/articles/sw',
-    '/news/trad/sw.js',
-    '/cymrufyw/sw.js',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, articleSwPath);
-});
-
-describe('articleManifestPath', () => {
-  const validRoutes = [
-    '/persian/articles/manifest.json',
-    '/serbian/articles/manifest.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, articleManifestPath);
-
-  const invalidRoutes = [
-    '/news/articles/manifest.json',
-    '/sport/articles/manifest.json',
-    '/naidheachdan/sgeulachdan/manifest.json',
-    '/cymrufyw/erthyglau/manifest.json',
-    '/newsround/articles/manifest.json',
-    '/news/manifest.json',
-    '/sport/manifest.json',
-    '/naidheachdan/manifest.json',
-    '/cymrufyw/manifest.json',
-    '/newsround/manifest.json',
-    '/persian/articles/manifest',
-    '/news/simp/sw.js',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, articleManifestPath);
-});
-
 describe('homePageSwPath', () => {
-  const validRoutes = ['/news/sw.js', '/persian/sw.js'];
+  const validRoutes = ['/gahuza/sw.js', '/persian/sw.js'];
   shouldMatchValidRoutes(validRoutes, homePageSwPath);
 
   const invalidRoutes = [
+    '/news/sw.js',
     '/news/articles/sw.js',
     '/persian/sw',
     '/persian/simp/sw.js',
+    '/gahuza/articles/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageSwPath);
 });
@@ -190,6 +148,8 @@ describe('homePageManifestPath', () => {
     '/foobar/manifest.json',
     '/foobar/manifest',
     '/news/trad/sw.js',
+    '/persian/articles/manifest.json',
+    '/serbian/articles/manifest.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageManifestPath);
 });
@@ -297,24 +257,6 @@ describe('secondaryColumnDataRegexPath', () => {
     '/news/trad/sty-secondary-column.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, secondaryColumnDataRegexPath);
-});
-
-describe('recommendationsDataRegex', () => {
-  const validRoutes = [
-    '/mundo/23263889/recommendations.json',
-    '/zhongwen/uk-23283128/recommendations/simp.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, recommendationsDataRegex);
-
-  const invalidRoutes = [
-    '/foobar/23124/recommendations.json',
-    '/foobar/recommendations.json',
-    '/foobar/recommendations',
-    '/foobar/recommendations.js',
-    '/zhongwen/trad/recommendations.json',
-    '/zhongwen/12322/trad/recommendations.json',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, recommendationsDataRegex);
 });
 
 describe('onDemandTvPath', () => {

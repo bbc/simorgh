@@ -268,7 +268,7 @@ describe('useViewTracker', () => {
         mockUserId,
         {
           foo: 'bar',
-          viewed_wsoj: true,
+          'viewed_canonical-lite-cta': true,
         },
       );
     });

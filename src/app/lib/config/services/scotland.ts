@@ -38,7 +38,6 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: null,
     isTrustProjectParticipant: false,
     script: latin,
-    swPath: '/articles/sw.js',
     homePageTitle: 'Home',
     passportHomes: ['BBCScotland'],
     showAdPlaceholder: false,
@@ -208,16 +207,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

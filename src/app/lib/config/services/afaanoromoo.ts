@@ -284,7 +284,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Haaraa',
     },
     mostRead: {
-      header: "Baay'ee kan dubbifame",
+      header: `Baay'ee kan jaalatame`,
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -295,7 +295,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Turtii %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: "Baay'ee kan dubbifame",
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

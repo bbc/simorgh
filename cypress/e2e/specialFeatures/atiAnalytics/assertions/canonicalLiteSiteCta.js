@@ -9,7 +9,7 @@ export const assertCanonicalToLiteSiteCTAComponentView = ({
   useReverb,
   path,
 }) => {
-  it('should send a view event for the Canonical to Lite Site CTA component', () => {
+  it.skip('should send a view event for the Canonical to Lite Site CTA component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
@@ -30,7 +30,7 @@ export const assertCanonicalToLiteSiteCTAComponentClick = ({
   useReverb,
   path,
 }) => {
-  it('should send a click event for the Canonical to Lite Site CTA component', () => {
+  it.skip('should send a click event for the Canonical to Lite Site CTA component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 

@@ -22,11 +22,6 @@ export const getArticleRegex = services => {
   return `/:service(${serviceRegex})?:discipline(${sportDisciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:nonCanonicalArticleRenderPlatform(${nonCanonicalArticleRenderPlatform})?`;
 };
 
-export const getArticleSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/sw.js`;
-};
-
 const getWorldServices = services => {
   const publicServices = [
     'news',
@@ -35,14 +30,10 @@ const getWorldServices = services => {
     'cymrufyw',
     'naidheachdan',
     'archive',
+    'scotland',
   ];
 
   return services.filter(service => !publicServices.includes(service));
-};
-
-export const getArticleManifestRegex = services => {
-  const serviceRegex = getServiceRegex(getWorldServices(services));
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
 };
 
 export const getHomePageRegex = services => {
@@ -51,7 +42,7 @@ export const getHomePageRegex = services => {
 };
 
 export const getSwRegex = services => {
-  const serviceRegex = getServiceRegex(services);
+  const serviceRegex = getServiceRegex(getWorldServices(services));
   return `/:service(${serviceRegex})/sw.js`;
 };
 
@@ -118,11 +109,6 @@ export const getMostReadDataRegex = services => {
 export const getSecondaryColumnDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
-};
-
-export const getRecommendationsDataRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:assetUri(${assetUriRegex})/recommendations:variant(${variantRegex})?.json`;
 };
 
 export const getAfricaEyeTVPageRegex = () => {
