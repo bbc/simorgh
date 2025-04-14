@@ -6,7 +6,11 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ARTICLE_PAGE,
+  TV_PAGE,
+  ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -41,7 +45,7 @@ describe('MediaLoader', () => {
         />,
         {
           id: 'testId',
-          pageType: TV_PAGE,
+          pageType: ARTICLE_PAGE,
         },
       );
 
