@@ -69,8 +69,8 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {isLite && addLiteScript(atiPageViewUrlString)}
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
+      {addLiteScript(atiPageViewUrlString)}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );
