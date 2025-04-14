@@ -17,7 +17,8 @@ describe('View tracking script', () => {
 
     const pattern = /LITE_ATI_VIEW_TRACKING = '([^']+)'/;
 
-    const [, liteAtiViewTracking] = viewTrackerString.match(pattern) || [];
+    const matches = viewTrackerString.match(pattern) || [];
+    const [, liteAtiViewTracking] = matches;
 
     // LITE_ATI_VIEW_TRACKING in ./index.ts must match the value of LITE_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
     expect(liteAtiViewTracking).toBe(LITE_ATI_VIEW_TRACKING);

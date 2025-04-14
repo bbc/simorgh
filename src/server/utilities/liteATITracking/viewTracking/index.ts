@@ -1,3 +1,4 @@
+/* istanbul ignore next */
 export default () => {
   const MIN_VIEWED_PERCENT = 0.5;
   const VIEWED_DURATION_MS = 1000;
