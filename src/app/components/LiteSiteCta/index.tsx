@@ -47,11 +47,10 @@ const LiteSiteCta = () => {
             {...atiClickTrackerHandler}
             css={styles.topLinkSpacing}
             alignWithMargin
+            size="brevier"
           >
-            <CallToActionLink.Text size="brevier">
-              {toMainSite}
-            </CallToActionLink.Text>
-            <CallToActionLink.Chevron size="brevier" />
+            <CallToActionLink.Text>{toMainSite}</CallToActionLink.Text>
+            <CallToActionLink.Chevron />
           </CallToActionLink>
         </Paragraph>
         <Paragraph data-e2e="information-page">
@@ -59,10 +58,10 @@ const LiteSiteCta = () => {
             url={informationPageLink}
             css={styles.bottomLinkSpacing}
             alignWithMargin
+            size="brevier"
+            fontVariant="sansRegular"
           >
-            <CallToActionLink.Text size="brevier" fontVariant="sansRegular">
-              {informationPage}
-            </CallToActionLink.Text>
+            <CallToActionLink.Text>{informationPage}</CallToActionLink.Text>
           </CallToActionLink>
         </Paragraph>
       </div>

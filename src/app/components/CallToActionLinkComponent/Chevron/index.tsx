@@ -3,15 +3,14 @@ import { jsx } from '@emotion/react';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
-import { GelFontSize } from '../../../models/types/theming';
+import CallToActionLinkContext from '../CallToActionLinkContext';
 import styles from './index.styles';
 
 type ChevronProps = {
-  size?: GelFontSize;
   className?: string;
 };
 
-const getChevronCss = (size: GelFontSize) => {
+const getChevronCss = (size = 'pica') => {
   const chevronCss = [];
 
   if (size === 'brevier') {
@@ -25,7 +24,8 @@ const getChevronCss = (size: GelFontSize) => {
   return chevronCss;
 };
 
-const Chevron = ({ size = 'pica', className }: ChevronProps) => {
+const Chevron = ({ className }: ChevronProps) => {
+  const { size } = useContext(CallToActionLinkContext);
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
   return isRtl ? (

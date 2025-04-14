@@ -1,12 +1,14 @@
 /** @jsx jsx */
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useMemo } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
 import Text from './Text';
 import styles from './index.styles';
+import CallToActionLinkContext from './CallToActionLinkContext';
 
 type CallToActionLinkProps = {
   url: string;
@@ -14,6 +16,8 @@ type CallToActionLinkProps = {
   eventTrackingData?: EventTrackingMetadata;
   alignWithMargin?: boolean;
   download?: boolean;
+  fontVariant?: FontVariant;
+  size?: GelFontSize;
 };
 
 const CallToActionLink = ({
@@ -23,9 +27,19 @@ const CallToActionLink = ({
   alignWithMargin,
   download = false,
   className,
+  fontVariant,
+  size,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  const callToActionLinkContextValue = useMemo(
+    () => ({
+      fontVariant,
+      size,
+    }),
+    [fontVariant, size],
+  );
 
   if (!url) return null;
 
@@ -38,7 +52,9 @@ const CallToActionLink = ({
       {...htmlAttributes}
       css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >
-      {children}
+      <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>
+        {children}
+      </CallToActionLinkContext.Provider>
     </a>
   );
 };

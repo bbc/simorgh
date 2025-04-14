@@ -48,19 +48,16 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       />
       {showLiteCTAOnCanonical && (
         <>
-          <div
+          {/* <div
             css={[
               styles.loadingContainer,
               styles.liteCTAContainer,
               titleVariation && styles.displayNone,
             ]}
             data-e2e="to-lite-site-loading"
-          />
+          /> */}
           <div
-            css={[
-              styles.liteCTAContainer,
-              !titleVariation && styles.displayNone,
-            ]}
+            css={[styles.liteCTAContainer]}
             ref={viewRef}
             data-e2e="to-lite-site"
           >
@@ -69,11 +66,12 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
               eventTrackingData={eventTrackingData}
               css={styles.canonicalToLiteSiteCTA}
               alignWithMargin
+              size="brevier"
             >
-              <CallToActionLink.Text size="brevier">
+              <CallToActionLink.Text>
                 {articleDataSavingLinkText}
               </CallToActionLink.Text>
-              <CallToActionLink.Chevron size="brevier" />
+              <CallToActionLink.Chevron />
             </CallToActionLink>
             <OptimizelyPageViewTracking />
           </div>

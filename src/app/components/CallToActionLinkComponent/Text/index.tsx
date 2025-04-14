@@ -1,32 +1,29 @@
 /** @jsx jsx */
 
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
 import TEXT from '#app/components/Text';
-import { FontVariant, GelFontSize } from '../../../models/types/theming';
+import CallToActionLinkContext from '../CallToActionLinkContext';
 import styles from './index.styles';
 
 type TextProps = {
   as?: string;
-  fontVariant?: FontVariant;
-  size?: GelFontSize;
   className?: string;
   overrideInteractionStyles?: boolean;
 };
 
 const Text = ({
   as,
-  size = 'pica',
-  fontVariant = 'sansBold',
   children,
   className,
   overrideInteractionStyles,
 }: PropsWithChildren<TextProps>) => {
+  const { fontVariant, size } = useContext(CallToActionLinkContext);
   return (
     <TEXT
       as={as}
-      size={size}
-      fontVariant={fontVariant}
+      size={size || 'pica'}
+      fontVariant={fontVariant || 'sansBold'}
       css={[
         styles.text,
         overrideInteractionStyles
