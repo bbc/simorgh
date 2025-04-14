@@ -68,7 +68,7 @@ import checkIsLiveMedia from './utils/checkIsLiveMedia';
 import isPortraitVideo from './utils/isPortraitVideo';
 
 const getAudioVideoComponent =
-  (embedded isCpsMap: boolean) => (props: ComponentToRenderProps) => {
+  (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
 
     return (
