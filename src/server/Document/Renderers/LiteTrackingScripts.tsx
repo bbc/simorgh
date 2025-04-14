@@ -12,24 +12,15 @@ const liteTrackingScripts = ({
 } = {}) => {
   return `
     window.addEventListener('load', function () {
-
-      // <Temp>
-      // class OperaMiniMock {
-      //     get [Symbol.toStringTag]() {
-      //       return 'OperaMini';
-      //     }
-      //   }
-      // window.operamini = new OperaMiniMock();
-      // </Temp>
-
       const isOperaMini = ${isOperaProxy.toString()}();
 
+      // TODO - temp
       const alertMessage = ['liteTrackingScripts:', 'isOperaMini:', isOperaMini].join(' ')
-      
       alert(alertMessage);
       
       const isLiteTrackingEnabled = ${onlyOperaMini} ? isOperaMini : true;
       
+      // TODO - temp
       console.log('liteTrackingScripts: onlyOperaMini:', ${onlyOperaMini}, 'isOpera:', isOperaMini, "isLiteTrackingEnabled:", isLiteTrackingEnabled);
 
 
@@ -41,12 +32,10 @@ const liteTrackingScripts = ({
       (${processClientDeviceAndSendLite.toString()})();
 
       if (${trackViews}) {
-        console.log('liteTrackingScripts: Load - trackViews');
         (${viewTracking.toString()})();
       }
 
       if (${trackClicks}) {
-        console.log('liteTrackingScripts: Load - trackClicks');
         (${clickTracking.toString()})();
       }
     });

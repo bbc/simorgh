@@ -1,10 +1,8 @@
 export default () => {
   window.processClientDeviceAndSendLite = atiURL => {
-    const debugMessage = `✅ processClientDeviceAndSendLite: ${atiURL}`;
-    // eslint-disable-next-line no-console
-    console.log(debugMessage);
+    // TODO: Temp - used for testing
     // eslint-disable-next-line no-alert
-    alert(debugMessage);
+    alert(`✅ processClientDeviceAndSendLite: ${atiURL}`);
 
     if (atiURL) {
       const {
