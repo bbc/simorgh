@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 
 import styled from '@emotion/styled';
 import {
@@ -66,14 +66,14 @@ const CenterWrapper = styled.div`
   }
 `;
 
-const FocusableH2 = forwardRef(({ className, children, dir }, ref) => {
+const FocusableH2 = ({ className, children, dir, ref }) => {
   // tabIndex="-1" enables the h2 to be focussed
   return (
     <h2 className={className} dir={dir} tabIndex="-1" ref={ref}>
       {children}
     </h2>
   );
-});
+};
 
 const Title = styled(FocusableH2)`
   ${({ script }) => script && getDoublePica(script)};

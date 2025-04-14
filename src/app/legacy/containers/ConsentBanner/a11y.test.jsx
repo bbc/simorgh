@@ -49,31 +49,34 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
   );
 };
 
-const CanonicalBannerWithContext = React.forwardRef(
-  ({ serviceConfig, variant, toggleStateOverride }, ref) => {
-    const toggleContextValue = useMemo(
-      () => ({
-        toggleState: { ...defaultToggleState, ...(toggleStateOverride || {}) },
-        toggleDispatch: mockToggleDispatch,
-      }),
-      [toggleStateOverride],
-    );
-    return (
-      <>
-        <div ref={ref}>
-          <a href="/">BBC Brand</a>
-        </div>
-        <ToggleContext.Provider value={toggleContextValue}>
-          <UserContextProvider>
-            <ServiceContext.Provider value={serviceConfig[variant]}>
-              <ConsentBanner onDismissFocusRef={ref} />
-            </ServiceContext.Provider>
-          </UserContextProvider>
-        </ToggleContext.Provider>
-      </>
-    );
-  },
-);
+const CanonicalBannerWithContext = ({
+  serviceConfig,
+  variant,
+  toggleStateOverride,
+  ref,
+}) => {
+  const toggleContextValue = useMemo(
+    () => ({
+      toggleState: { ...defaultToggleState, ...(toggleStateOverride || {}) },
+      toggleDispatch: mockToggleDispatch,
+    }),
+    [toggleStateOverride],
+  );
+  return (
+    <>
+      <div ref={ref}>
+        <a href="/">BBC Brand</a>
+      </div>
+      <ToggleContext.Provider value={toggleContextValue}>
+        <UserContextProvider>
+          <ServiceContext.Provider value={serviceConfig[variant]}>
+            <ConsentBanner onDismissFocusRef={ref} />
+          </ServiceContext.Provider>
+        </UserContextProvider>
+      </ToggleContext.Provider>
+    </>
+  );
+};
 
 describe('canonical', () => {
   beforeEach(() => {

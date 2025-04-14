@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -176,7 +176,7 @@ const StyledBrand = ({
   ) : null;
 };
 
-const Brand = forwardRef((props, ref) => {
+const Brand = (props, ref) => {
   const {
     svgHeight,
     maxWidth,
@@ -219,6 +219,6 @@ const Brand = forwardRef((props, ref) => {
       </SvgWrapper>
     </Banner>
   );
-});
+};
 
 export default Brand;
