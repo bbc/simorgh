@@ -4,10 +4,7 @@ export const getATIParamsFromURL = atiAnalyticsURL => {
   const url = new URL(atiAnalyticsURL);
 
   const objectFromEntries = Object.fromEntries(new URLSearchParams(url.search));
-  console.log(
-    'objectFromEntries p value in getATIParamsFromURL',
-    objectFromEntries.p,
-  );
+
   cy.log(
     'objectFromEntries p value in getATIParamsFromURL',
     objectFromEntries.p,
@@ -34,7 +31,7 @@ const CANONICAL_LITE_CTA = 'canonical-lite-cta';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
-const RECOMMENDATIONS = 'wsoj';
+const RECOMMENDATIONS = 'midarticle-mostread';
 const SCROLLABLE_PROMO = 'edoj';
 const BILLBOARD = 'billboard';
 

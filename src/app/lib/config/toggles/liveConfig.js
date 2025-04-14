@@ -6,9 +6,6 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
-  cpsRecommendations: {
-    enabled: false,
-  },
   enableFetchingToggles: {
     enabled: true,
     value:

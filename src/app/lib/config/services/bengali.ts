@@ -58,7 +58,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
@@ -267,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
-      header: 'সর্বাধিক পঠিত',
+      header: 'পাঠকপ্রিয় খবর',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -278,7 +277,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'সর্বাধিক পঠিত',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

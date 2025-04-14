@@ -12,9 +12,6 @@ export default {
   comscoreAnalytics: {
     enabled: true,
   },
-  cpsRecommendations: {
-    enabled: true,
-  },
   enableFetchingToggles: {
     enabled: true,
     value:
