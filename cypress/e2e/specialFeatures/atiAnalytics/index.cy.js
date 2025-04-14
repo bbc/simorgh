@@ -199,8 +199,8 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/hindi/articles/c9w59wnx27ro',
-    runforEnv: ['live'],
+    path: '/hindi/articles/c9w59wnx27ro?renderer_env=live',
+    runforEnv: ['local', 'live'],
     service: 'hindi',
     pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
     applicationType: 'responsive',
