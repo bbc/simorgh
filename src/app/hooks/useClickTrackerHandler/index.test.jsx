@@ -64,7 +64,7 @@ const TestComponent = ({ hookProps }) => {
   const handleClick = useClickTrackerHandler(hookProps);
 
   return (
-    <div data-testid="test-component" onClick={handleClick}>
+    <div data-testid="test-component" {...handleClick}>
       <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
     </div>
@@ -76,7 +76,7 @@ const TestComponentSingleLink = ({ hookProps }) => {
 
   return (
     <div data-testid="test-component">
-      <a href="https://bbc.com/pidgin" onClick={handleClick}>
+      <a href="https://bbc.com/pidgin" {...handleClick}>
         Link
       </a>
     </div>
@@ -123,7 +123,9 @@ describe('useClickTrackerHandler', () => {
         },
       );
 
-      expect(result.current).toBeInstanceOf(Function);
+      const { onClick } = result.current;
+
+      expect(onClick).toBeInstanceOf(Function);
     });
 
     it('should send a single tracking request on click', async () => {
@@ -248,7 +250,7 @@ describe('useClickTrackerHandler', () => {
         const handleClick = useClickTrackerHandler(parentHookProps);
 
         return (
-          <div onClick={handleClick}>
+          <div {...handleClick}>
             <TestComponent hookProps={defaultProps} />
           </div>
         );
