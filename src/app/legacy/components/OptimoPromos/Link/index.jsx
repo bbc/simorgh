@@ -14,7 +14,7 @@ const Link = ({ className = '', children }) => {
       className={`${className} focusIndicatorDisplayInlineBlock`}
       href={makeRelativeUrlPath(to)}
       aria-labelledby={ariaLabelledBy}
-      onClick={eventTrackingData ? handleClickTracking : null}
+      {...(eventTrackingData && handleClickTracking)}
     >
       {children}
     </StyledLink>

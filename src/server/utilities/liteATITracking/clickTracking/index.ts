@@ -1,5 +1,5 @@
 export default () => {
-  const clicktrackingFiredUrls: string[] = [];
+  const clickTrackingFiredUrls: string[] = [];
 
   document.addEventListener('click', (event: MouseEvent) => {
     let targetElement;
@@ -22,9 +22,9 @@ export default () => {
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
-      if (atiURL && !clicktrackingFiredUrls.includes(atiURL)) {
+      if (atiURL && !clickTrackingFiredUrls.includes(atiURL)) {
         window.processClientDeviceAndSendLite(atiURL as string);
-        clicktrackingFiredUrls.push(atiURL);
+        clickTrackingFiredUrls.push(atiURL);
       }
 
       window.location.assign(nextPageUrl);

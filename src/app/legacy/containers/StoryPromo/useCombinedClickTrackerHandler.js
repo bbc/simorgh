@@ -5,20 +5,14 @@ import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
-  const linkData = path(['link'], eventTrackingData);
   const optimizely = path(['block', 'optimizely'], eventTrackingData);
-  const { onClick: handleBlockLevelClick } = useClickTrackerHandler({
+
+  const {
+    onClick: handleBlockLevelClick,
+    [LITE_ATI_CLICK_TRACKING]: staticTrackingInfo,
+  } = useClickTrackerHandler({
     ...(blockData && {
       ...blockData,
-      preventNavigation: true,
-    }),
-  });
-  const {
-    [LITE_ATI_CLICK_TRACKING]: staticTrackingInfo,
-    onClick: handleLinkLevelClick,
-  } = useClickTrackerHandler({
-    ...(linkData && {
-      ...linkData,
       preventNavigation: true,
     }),
   });
@@ -29,9 +23,6 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
 
     if (blockData && handleBlockLevelClick) {
       await handleBlockLevelClick(event);
-    }
-    if (linkData && handleLinkLevelClick) {
-      await handleLinkLevelClick(event);
     }
     if (nextPageUrl) {
       if (optimizely) optimizely.close();
