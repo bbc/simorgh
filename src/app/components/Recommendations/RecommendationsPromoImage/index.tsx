@@ -9,10 +9,13 @@ const RecommendationsImage = ({
   image,
   lazyLoad = false,
 }: {
-  image: Recommendation['image'];
+  image?: Recommendation['image'] | null;
   lazyLoad?: boolean;
 }) => {
   const { isAmp } = useContext(RequestContext);
+
+  if (!image) return null;
+
   const { height, width, altText, copyrightHolder, originCode, locator } =
     image;
 
