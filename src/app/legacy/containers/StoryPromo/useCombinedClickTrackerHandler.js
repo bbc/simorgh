@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
@@ -12,14 +13,17 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
       preventNavigation: true,
     }),
   });
-  const { onClick: handleLinkLevelClick } = useClickTrackerHandler({
+  const {
+    [LITE_ATI_CLICK_TRACKING]: staticTrackingInfo,
+    onClick: handleLinkLevelClick,
+  } = useClickTrackerHandler({
     ...(linkData && {
       ...linkData,
       preventNavigation: true,
     }),
   });
 
-  return async event => {
+  const combinedClickTacker = async event => {
     const nextPageUrl =
       path(['target', 'href'], event) || path(['url'], eventTrackingData);
 
@@ -33,6 +37,11 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
       if (optimizely) optimizely.close();
       window.location.assign(nextPageUrl);
     }
+  };
+
+  return {
+    onClick: combinedClickTacker,
+    [LITE_ATI_CLICK_TRACKING]: staticTrackingInfo,
   };
 };
 
