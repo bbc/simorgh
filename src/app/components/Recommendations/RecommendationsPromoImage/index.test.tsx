@@ -27,4 +27,12 @@ describe('RecommendationsImage', () => {
       container.getElementsByTagName('img')[0].getAttribute('alt'),
     ).toEqual('dolar TL');
   });
+
+  it('should not render an image if image object does not exist', () => {
+    const { container } = render(<RecommendationsImage image={null} />);
+
+    const image = container.querySelector('img');
+
+    expect(image).not.toBeInTheDocument();
+  });
 });
