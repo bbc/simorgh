@@ -32,7 +32,7 @@ export interface LinkedDataProps {
   aboutTags?: Tag[];
   entities?: object[];
   imageLocator?: string;
-  bylineLinkedData?: BylineLinkedData[] | null;
+  bylineLinkedData?: (BylineLinkedData | null)[];
   coverageStartTime?: string;
   coverageEndTime?: string;
 }

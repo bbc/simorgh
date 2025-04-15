@@ -133,10 +133,7 @@ const LinkedData = ({
   };
   let bylineAuthors;
   if (bylineLinkedData) {
-    bylineAuthors =
-      bylineLinkedData?.length > 1
-        ? bylineLinkedData?.map(data => getAuthorTagging(data))
-        : getAuthorTagging(bylineLinkedData?.[0]);
+    bylineAuthors = bylineLinkedData?.map(data => getAuthorTagging(data));
   }
 
   const locationCreated = {
@@ -154,8 +151,12 @@ const LinkedData = ({
     },
     ...(isTrustProjectParticipant && { noBylinesPolicy }),
   };
-
-  const author = hasByline ? bylineAuthors : orgAuthor;
+  let author;
+  if (hasByline && bylineAuthors) {
+    author = bylineAuthors.length === 1 ? bylineAuthors?.[0] : bylineAuthors;
+  } else {
+    author = orgAuthor;
+  }
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,

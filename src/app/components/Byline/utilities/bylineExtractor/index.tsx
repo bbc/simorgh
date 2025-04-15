@@ -26,52 +26,61 @@ const pathOrZeroIndexModelBlocks = (
 };
 
 const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
-  const bylineValues = blocks.slice(0, 4).map(contribBlock => {
-    const bylineBlocks = contribBlock?.model?.blocks || [];
+  return blocks
+    .slice(0, 4)
+    .map(contribBlock => {
+      const bylineBlocks = contribBlock?.model?.blocks || [];
 
-    const authorBlock = bylineBlocks.find(block => block.type === 'name');
-    const jobRoleBlock = bylineBlocks.find(block => block.type === 'role');
-    const twitterBlock = bylineBlocks.find(block => block.type === 'link');
-    const locationBlock = bylineBlocks.find(block => block.type === 'location');
-    const imagesBlock = bylineBlocks.find(block => block.type === 'images');
+      const authorBlock = bylineBlocks.find(block => block.type === 'name');
+      const jobRoleBlock = bylineBlocks.find(block => block.type === 'role');
+      const twitterBlock = bylineBlocks.find(block => block.type === 'link');
+      const locationBlock = bylineBlocks.find(
+        block => block.type === 'location',
+      );
+      const imagesBlock = bylineBlocks.find(block => block.type === 'images');
 
-    const authorName = pathOrZeroIndexModelBlocks(2, 'text', authorBlock);
-    const jobRole = pathOrZeroIndexModelBlocks(2, 'text', jobRoleBlock);
-    if (!authorName) {
-      return null;
-    }
+      const authorName = pathOrZeroIndexModelBlocks(2, 'text', authorBlock);
+      const jobRole = pathOrZeroIndexModelBlocks(2, 'text', jobRoleBlock);
+      if (!authorName) {
+        return null;
+      }
 
-    const twitterText = pathOrZeroIndexModelBlocks(2, 'text', twitterBlock);
-    const twitterLink = pathOrZeroIndexModelBlocks(3, 'locator', twitterBlock);
-    const location = pathOrZeroIndexModelBlocks(2, 'text', locationBlock);
-    const locator = pathOrZeroIndexModelBlocks(2, 'locator', imagesBlock);
-    const originCode = pathOrZeroIndexModelBlocks(2, 'originCode', imagesBlock);
+      const twitterText = pathOrZeroIndexModelBlocks(2, 'text', twitterBlock);
+      const twitterLink = pathOrZeroIndexModelBlocks(
+        3,
+        'locator',
+        twitterBlock,
+      );
+      const location = pathOrZeroIndexModelBlocks(2, 'text', locationBlock);
+      const locator = pathOrZeroIndexModelBlocks(2, 'locator', imagesBlock);
+      const originCode = pathOrZeroIndexModelBlocks(
+        2,
+        'originCode',
+        imagesBlock,
+      );
 
-    let authorImage = buildIChefURL({
-      originCode,
-      locator,
-      resolution: 160,
-    });
+      let authorImage = buildIChefURL({
+        originCode,
+        locator,
+        resolution: 160,
+      });
 
-    if (!authorImage.endsWith('.png.webp')) authorImage = '';
+      if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
-    const contributorBlock = blocks?.[0] ?? [];
-    const authorTopicUrl = contributorBlock?.model?.topicUrl ?? '';
+      const contributorBlock = blocks?.[0] ?? [];
+      const authorTopicUrl = contributorBlock?.model?.topicUrl ?? '';
 
-    return {
-      authorName,
-      jobRole,
-      twitterText,
-      twitterLink,
-      authorImage,
-      location,
-      authorTopicUrl,
-    };
-  });
-
-  return bylineValues.includes(null) || bylineValues.length === 0
-    ? null
-    : bylineValues.filter(item => item !== null);
+      return {
+        authorName,
+        jobRole,
+        twitterText,
+        twitterLink,
+        authorImage,
+        location,
+        authorTopicUrl,
+      };
+    })
+    .filter(Boolean);
 };
 
 export default bylineExtractor;
