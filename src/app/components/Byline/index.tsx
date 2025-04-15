@@ -30,151 +30,154 @@ const Byline = ({
     } = {},
   } = translations ?? {};
 
-  const contributors = bylineValues?.map(values => {
-    if (!values) return null;
-    const {
-      authorName,
-      jobRole,
-      twitterText,
-      twitterLink,
-      authorImage,
-      location,
-      authorTopicUrl,
-    } = values;
+  const contributors =
+    bylineValues.length === 0
+      ? null
+      : bylineValues?.map(values => {
+          if (!values) return null;
 
-    return (
-      <section
-        css={BylineCss.bylineSection}
-        role="region"
-        aria-labelledby="article-byline"
-        key={authorName}
-      >
+          const {
+            authorName,
+            jobRole,
+            twitterText,
+            twitterLink,
+            authorImage,
+            location,
+            authorTopicUrl,
+          } = values;
+
+          return (
+            <ul
+              css={[BylineCss.bylineList, BylineCss.bylineSection]}
+              role="list"
+              key={authorName}
+            >
+              {authorImage && (
+                <li
+                  css={[
+                    BylineCss.ImageWrapper,
+                    isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
+                  ]}
+                >
+                  <Image
+                    css={BylineCss.imageSrc}
+                    src={authorImage}
+                    alt=""
+                    placeholder={false}
+                    aspectRatio={[1, 1]}
+                  />
+                </li>
+              )}
+              <li>
+                {authorTopicUrl ? (
+                  <React.Fragment>
+                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                    <a
+                      css={[BylineCss.link]}
+                      href={authorTopicUrl}
+                      className="focusIndicatorReducedWidth"
+                    >
+                      <Text
+                        className="byline__link-text"
+                        size="bodyCopy"
+                        fontVariant="sansBold"
+                        css={BylineCss.author}
+                      >
+                        {authorName}
+                      </Text>
+                      {isRtl ? (
+                        <LeftChevron css={BylineCss.authorChevron} />
+                      ) : (
+                        <RightChevron css={BylineCss.authorChevron} />
+                      )}
+                    </a>
+                  </React.Fragment>
+                ) : (
+                  <span role="text">
+                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                    <Text
+                      css={[BylineCss.author]}
+                      size="bodyCopy"
+                      fontVariant="sansBold"
+                    >
+                      {authorName}
+                    </Text>
+                  </span>
+                )}
+              </li>
+              <li>
+                <span role="text">
+                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                  <Text
+                    css={BylineCss.jobRole}
+                    fontVariant="sansBold"
+                    size="brevier"
+                  >
+                    {jobRole}
+                  </Text>
+                </span>
+              </li>
+              {twitterLink ? (
+                <li>
+                  <a
+                    css={[BylineCss.link, BylineCss.twitterLink]}
+                    className="focusIndicatorReducedWidth"
+                    href={twitterLink}
+                    aria-labelledby="byline-twitter-link"
+                  >
+                    <span role="text" id="byline-twitter-link">
+                      <VisuallyHiddenText lang="en-GB">{`X, `}</VisuallyHiddenText>
+                      <Text
+                        className="byline__link-text"
+                        css={BylineCss.twitterText}
+                        size="brevier"
+                        fontVariant="sansBold"
+                      >{`@${twitterText}`}</Text>
+                      {isRtl ? (
+                        <LeftChevron css={BylineCss.twitterChevron} />
+                      ) : (
+                        <RightChevron css={BylineCss.twitterChevron} />
+                      )}
+                    </span>
+                  </a>
+                </li>
+              ) : null}
+              {location ? (
+                <li>
+                  <span role="text" css={BylineCss.location}>
+                    <Text
+                      css={BylineCss.reportingFromText}
+                      size="brevier"
+                      fontVariant="sansRegularItalic"
+                    >
+                      {`${reportingFrom} `}{' '}
+                    </Text>
+                    <Text
+                      css={BylineCss.locationText}
+                      size="brevier"
+                      fontVariant="sansRegular"
+                    >
+                      {location}
+                    </Text>
+                  </span>
+                </li>
+              ) : null}
+            </ul>
+          );
+        });
+
+  return (
+    contributors?.[0] && (
+      <section role="region" aria-labelledby="article-byline">
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>
-        <ul css={BylineCss.bylineList} role="list">
-          {authorImage && (
-            <li
-              css={[
-                BylineCss.ImageWrapper,
-                isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
-              ]}
-            >
-              <Image
-                css={BylineCss.imageSrc}
-                src={authorImage}
-                alt=""
-                placeholder={false}
-                aspectRatio={[1, 1]}
-              />
-            </li>
-          )}
-          <li>
-            {authorTopicUrl ? (
-              <React.Fragment>
-                <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                <a
-                  css={[BylineCss.link]}
-                  href={authorTopicUrl}
-                  className="focusIndicatorReducedWidth"
-                >
-                  <Text
-                    className="byline__link-text"
-                    size="bodyCopy"
-                    fontVariant="sansBold"
-                    css={BylineCss.author}
-                  >
-                    {authorName}
-                  </Text>
-                  {isRtl ? (
-                    <LeftChevron css={BylineCss.authorChevron} />
-                  ) : (
-                    <RightChevron css={BylineCss.authorChevron} />
-                  )}
-                </a>
-              </React.Fragment>
-            ) : (
-              <span role="text">
-                <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                <Text
-                  css={[BylineCss.author]}
-                  size="bodyCopy"
-                  fontVariant="sansBold"
-                >
-                  {authorName}
-                </Text>
-              </span>
-            )}
-          </li>
-          <li>
-            <span role="text">
-              <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-              <Text
-                css={BylineCss.jobRole}
-                fontVariant="sansBold"
-                size="brevier"
-              >
-                {jobRole}
-              </Text>
-            </span>
-          </li>
-          {twitterLink ? (
-            <li>
-              <a
-                css={[BylineCss.link, BylineCss.twitterLink]}
-                className="focusIndicatorReducedWidth"
-                href={twitterLink}
-                aria-labelledby="byline-twitter-link"
-              >
-                <span role="text" id="byline-twitter-link">
-                  <VisuallyHiddenText lang="en-GB">{`X, `}</VisuallyHiddenText>
-                  <Text
-                    className="byline__link-text"
-                    css={BylineCss.twitterText}
-                    size="brevier"
-                    fontVariant="sansBold"
-                  >{`@${twitterText}`}</Text>
-                  {isRtl ? (
-                    <LeftChevron css={BylineCss.twitterChevron} />
-                  ) : (
-                    <RightChevron css={BylineCss.twitterChevron} />
-                  )}
-                </span>
-              </a>
-            </li>
-          ) : null}
-          {location ? (
-            <li>
-              <span role="text" css={BylineCss.location}>
-                <Text
-                  css={BylineCss.reportingFromText}
-                  size="brevier"
-                  fontVariant="sansRegularItalic"
-                >
-                  {`${reportingFrom} `}{' '}
-                </Text>
-                <Text
-                  css={BylineCss.locationText}
-                  size="brevier"
-                  fontVariant="sansRegular"
-                >
-                  {location}
-                </Text>
-              </span>
-            </li>
-          ) : null}
+        <ul css={BylineCss.bylineList}>
+          <li css={BylineCss.bylineContainer}>{contributors}</li>
+          {children && <li css={BylineCss.timestampLineBreak}>{children}</li>}
         </ul>
       </section>
-    );
-  });
-
-  return (
-    <>
-      {contributors?.[0] && (
-        <span css={BylineCss.bylineContainer}>{contributors}</span>
-      )}
-      {children && <span css={BylineCss.timestampLineBreak}>{children}</span>}
-    </>
+    )
   );
 };
 

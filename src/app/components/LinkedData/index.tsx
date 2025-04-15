@@ -154,9 +154,7 @@ const LinkedData = ({
   let author;
   if (hasByline && bylineAuthors) {
     author = bylineAuthors.length === 1 ? bylineAuthors?.[0] : bylineAuthors;
-  } else {
-    author = orgAuthor;
-  }
+  } else author = orgAuthor;
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,

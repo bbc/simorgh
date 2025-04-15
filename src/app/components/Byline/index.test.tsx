@@ -1,6 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
-import { render, screen } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  within,
+} from '../react-testing-library-with-providers';
 import Byline from '.';
 import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
 import {
@@ -54,17 +58,20 @@ describe('Byline', () => {
   it('should render a list when required data is passed correctly', () => {
     render(<Byline blocks={bylineWithNameAndRole} />);
 
-    const list = screen.getByRole('list');
+    const list = screen.getAllByRole('list');
 
-    expect(list).toBeInTheDocument();
+    expect(list[0]).toBeInTheDocument();
   });
 
   it('should render all listitems correctly', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const listItems = screen.getAllByRole('listitem');
+    const contributorList = screen.getAllByRole('listitem');
+    const contributorDetails = within(contributorList[0]).getAllByRole(
+      'listitem',
+    );
 
-    expect(listItems.length).toBe(5);
+    expect(contributorDetails.length).toBe(5);
   });
 
   it('should correctly use the buildIChefURL function to create the image url', () => {
@@ -108,6 +115,21 @@ describe('Byline', () => {
     const timestamp = screen.getByText('20 January 1970');
 
     expect(timestamp).toBeInTheDocument();
+  });
+  it('should correctly render an extra listitem for Timestamp', () => {
+    render(
+      <Byline blocks={bylineWithNameAndRole}>
+        <ArticleTimestamp
+          firstPublished={1660658887}
+          lastPublished={1660658887}
+          popOut={false}
+        />
+      </Byline>,
+    );
+
+    const listItems = screen.getAllByRole('listitem');
+
+    expect(listItems.length).toBe(4);
   });
 
   it('should render the Byline correctly with location, image and links', () => {

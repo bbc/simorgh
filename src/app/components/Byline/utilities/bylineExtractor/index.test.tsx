@@ -7,9 +7,9 @@ import {
 } from '../../../../pages/ArticlePage/fixtureData';
 
 describe('bylineExtractor', () => {
-  it('should return null when authorName is not present', () => {
+  it('should return an empty array when authorName is not present', () => {
     const bylineValues = bylineExtractor(bylineWithNoAuthor);
-    expect(bylineValues).toBeNull();
+    expect(bylineValues).toHaveLength(0);
   });
 
   it('should return an array with a maximum of 4 objects containing all byline data', () => {
