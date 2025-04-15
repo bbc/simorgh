@@ -14,7 +14,6 @@ import {
   articleDataPidginWithPV,
   articleDataPortugueseWithPV,
   promoSample,
-  sampleRecommendations,
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
@@ -113,9 +112,6 @@ const Context = ({
             },
             ads: {
               enabled: adsToggledOn,
-            },
-            cpsRecommendations: {
-              enabled: true,
             },
             podcastPromo: { enabled: promo != null },
           }}
@@ -700,22 +696,6 @@ describe('Article Page', () => {
         expect(adElement).not.toBeInTheDocument();
       }
     });
-  });
-
-  it('should render WSOJ recommendations when passed', async () => {
-    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-    const pageDataWithSecondaryColumn = {
-      ...articleDataNews,
-      recommendations: sampleRecommendations,
-    };
-    const { getByText } = render(
-      <Context service="turkce">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
-      </Context>,
-      { service: 'turkce' },
-    );
-
-    expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
   });
 
   it('should render PodcastPromos when passed', async () => {

@@ -277,7 +277,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Ən çox oxunan',
+      header: 'Geniş oxunanlar',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -286,7 +286,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ən çox oxunan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

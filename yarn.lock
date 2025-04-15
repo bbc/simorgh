@@ -6817,9 +6817,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:14.2.1":
-  version: 14.2.1
-  resolution: "cypress@npm:14.2.1"
+"cypress@npm:14.3.0":
+  version: 14.3.0
+  resolution: "cypress@npm:14.3.0"
   dependencies:
     "@cypress/request": "npm:^3.0.8"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -6866,7 +6866,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/0691252e00639d1a133db2429ec9d90274ab3ea60734524da2337f9c0ad878fb3c32cf28309d23f720ae75c04adf2bfce123d99e9e0f1c81364f524d37037a58
+  checksum: 10/30b9395c6e4ee9e020428d50d171fe2442e39db20f4d094adb3a232d7b749277f9ab7123e7285b413eaf703f15dd10e59f388a33d71293a339a54972ca2a28a9
   languageName: node
   linkType: hard
 
@@ -14618,7 +14618,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.6.3"
     "@testing-library/react": "npm:16.2.0"
     babel-plugin-transform-rename-import: "npm:2.3.0"
-    cypress: "npm:14.2.1"
+    cypress: "npm:14.3.0"
     cypress-axe: "npm:^1.6.0"
     cypress-terminal-report: "npm:7.1.0"
     jest: "npm:^29.7.0"
@@ -14712,7 +14712,7 @@ __metadata:
     copy-webpack-plugin: "npm:13.0.0"
     core-js: "npm:3.41.0"
     crypto: "npm:1.0.1"
-    cypress: "npm:14.2.1"
+    cypress: "npm:14.3.0"
     cypress-axe: "npm:1.6.0"
     cypress-multi-reporters: "npm:2.0.5"
     cypress-terminal-report: "npm:7.1.0"
@@ -14776,7 +14776,7 @@ __metadata:
     ts-jest: "npm:29.3.0"
     ts-loader: "npm:9.5.2"
     typescript: "npm:5.8.2"
-    undici: "npm:7.5.0"
+    undici: "npm:7.8.0"
     url-parse: "npm:1.5.10"
     wait-on: "npm:8.0.3"
     webpack: "npm:5.99.5"
@@ -16136,10 +16136,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:7.5.0":
-  version: 7.5.0
-  resolution: "undici@npm:7.5.0"
-  checksum: 10/66b84d69f7648c2fef5d213492d037ef337c74c817c61589aa6abf51bff75ad9c97aba55139724471e967e3efcbce3e9748a72271db4d3421bdfc0ee8143dbe9
+"undici@npm:7.8.0":
+  version: 7.8.0
+  resolution: "undici@npm:7.8.0"
+  checksum: 10/bbd1fd9e63f0842196fc0210ffb36c29eed2841f1499e149718b96e52e195afe3ccaaa2da76aae4253cd5cc58a26b20836f7a98db11f335b594009603cc72eec
   languageName: node
   linkType: hard
 
