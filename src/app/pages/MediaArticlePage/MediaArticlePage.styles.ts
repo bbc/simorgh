@@ -82,6 +82,10 @@ export default {
           maxWidth: `${pixelsToRem(397)}rem`,
         },
       },
+      '.portrait-caption': {
+        maxWidth: '100%',
+        padding: '400px',
+      },
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
