@@ -134,12 +134,12 @@ const getVideoComponent =
     const title = translations.media.watchMoments || 'Watch Moments';
 
     return (
-      <React.Fragment>
+      <>
         {showPortraitTitle && (
           <strong css={styles.portraitVideoTitle}>{title}</strong>
         )}
         <MediaLoader blocks={blocks as MediaBlock[]} />
-      </React.Fragment>
+      </>
     );
   };
 
