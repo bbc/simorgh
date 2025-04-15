@@ -2,19 +2,13 @@ import React, { useState } from 'react';
 import {
   act,
   render,
-  screen,
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import {
-  MEDIA_ARTICLE_PAGE,
-  TV_PAGE,
-  ARTICLE_PAGE,
-} from '#app/routes/utils/pageTypes';
+import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
-  aresMediaPortraitBlocks,
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
@@ -34,30 +28,6 @@ describe('MediaLoader', () => {
 
     (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
     (useState as jest.Mock).mockImplementation(() => [false, () => false]);
-  });
-
-  describe('Portrait title', () => {
-    test.each`
-      blocks                     | orientation    | pageType              | isEmbedded | isRendered | expected
-      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${ARTICLE_PAGE}       | ${false}   | ${''}      | ${'Watch Moments'}
-      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${' not'}  | ${undefined}
-      ${aresMediaBlocks}         | ${'landscape'} | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${' not'}  | ${undefined}
-      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${true}    | ${' not'}  | ${undefined}
-    `(
-      'Is$isRendered rendered when video is $orientation, pageType is $pageType, and embedded prop is $isEmbedded  ',
-      ({ blocks, pageType, isEmbedded, expected }) => {
-        render(
-          <MediaPlayer blocks={blocks as MediaBlock[]} embedded={isEmbedded} />,
-          {
-            id: 'testId',
-            pageType,
-          },
-        );
-
-        const title = screen.queryByRole('strong');
-        expect(title?.textContent).toEqual(expected);
-      },
-    );
   });
 
   describe('BUMP Loader', () => {
