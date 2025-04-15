@@ -43,7 +43,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
         className="article-heading"
         {...props}
         {...(showLiteCTAOnCanonical && {
-          css: styles.headlineStylesOverride,
+          css: styles.reducePaddingForCTA,
         })}
       />
       {showLiteCTAOnCanonical && (

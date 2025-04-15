@@ -25,7 +25,7 @@ export default {
         marginInlineStart: 0,
       },
     }),
-  headlineStylesOverride: ({ spacings, mq }: Theme) =>
+  reducePaddingForCTA: ({ spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.HALF}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
