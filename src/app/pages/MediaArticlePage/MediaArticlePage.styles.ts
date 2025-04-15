@@ -71,8 +71,7 @@ export default {
         maxWidth: '100%',
         marginInline: 0,
         margin: 0,
-        [mq.GROUP_3_ONLY]: {
-          marginInline: `${spacings.DOUBLE}rem`,
+        [mq.GROUP_3_ONLY]: {      
           maxWidth: `${pixelsToRem(325)}rem`,
         },
         [mq.GROUP_4_ONLY]: {
@@ -81,6 +80,7 @@ export default {
         [mq.GROUP_5_MIN_WIDTH]: {
           maxWidth: `${pixelsToRem(397)}rem`,
         },
+        
       },
       '.portrait-caption': {
         marginInline: `${spacings.FULL}rem`,
