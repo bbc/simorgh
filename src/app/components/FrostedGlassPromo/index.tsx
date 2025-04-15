@@ -54,12 +54,10 @@ const FrostedGlassPromo = ({
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
 
-  const { onClick: clickTracker } = useClickTrackerHandler({
+  const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
     url: relativeUrl,
   });
-
-  const onClick = eventTrackingData ? clickTracker : () => null;
 
   const promoText = (
     <React.Fragment>
@@ -76,7 +74,7 @@ const FrostedGlassPromo = ({
             },
           ]}
           href={relativeUrl}
-          onClick={onClick}
+          {...(eventTrackingData && clickTracker)}
         >
           {children}
         </a>
@@ -93,7 +91,7 @@ const FrostedGlassPromo = ({
       <a
         css={styles.clickableArea}
         href={relativeUrl}
-        onClick={onClick}
+        {...(eventTrackingData && clickTracker)}
         aria-hidden="true"
         tabIndex={-1}
       />
