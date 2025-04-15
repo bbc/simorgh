@@ -149,15 +149,9 @@ export default ({
       if (summaries.length > 0) {
         return curationLength > 1 && (title || isFirstCuration) ? (
           <section aria-labelledby={id} role="region">
-            {isFirstCuration ? (
-              <VisuallyHiddenText id={id} as="h2">
-                {curationSubheading}
-              </VisuallyHiddenText>
-            ) : (
-              <Subheading id={id} link={link}>
-                {curationSubheading}
-              </Subheading>
-            )}
+            <Subheading id={id} link={link}>
+              {curationSubheading}
+            </Subheading>
             <GridComponent
               summaries={summaries}
               headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
