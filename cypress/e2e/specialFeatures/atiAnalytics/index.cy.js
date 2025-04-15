@@ -472,9 +472,7 @@ const liteTestSuites = canonicalTestSuites
     ];
 
     const liteSiteTests = testSuite.tests.filter(
-      test =>
-        test.name !== assertMostReadComponentClick.name &&
-        !excludedLiteTests.includes(test),
+      test => !excludedLiteTests.includes(test),
     );
 
     // All lite enabled pages should have the LiteSiteCTA component

@@ -39,7 +39,7 @@ const renderListItems = (
         service={service}
         dir={dir}
         {...clickTrackerHandler}
-        viewRef={viewTracker}
+        viewTracker={viewTracker}
       >
         {title}
       </Li>
