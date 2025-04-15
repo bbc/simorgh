@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
+    atiAnalyticsProducerName: 'TURKISH',
+    useReverb: true,
     chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/turkce/kurumsal-50221017',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/turkce/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Haberler',
+    homePageTitle: 'Haberler',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -53,8 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Reklam',
       },
-      recommendationTitle: 'Önerilen haberler',
-      splitRecommendationTitle: 'Daha fazla önerilen hikaye',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       currentPage: 'Bulunduğunuz sayfa',
@@ -228,6 +228,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
+        closeVideo: 'Çıkış',
       },
       socialEmbed: {
         caption: {
@@ -263,7 +264,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Seçtiklerimiz',
     },
     mostRead: {
-      header: 'En çok okunanlar',
+      header: 'Popüler haberler',
       lastUpdated: 'Son güncelleme:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -272,7 +273,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'En çok okunanlar',
       skipLink: {
         text: 'Haberin başlığını atlayın ve okumaya devam edin',
         endTextVisuallyHidden: 'Haberin sonu',

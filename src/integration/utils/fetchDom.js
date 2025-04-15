@@ -8,6 +8,8 @@ dns.setDefaultResultOrder('ipv4first');
 const { JSDOM } = require('jsdom');
 const retry = require('retry');
 
+const CustomResourceLoader = require('./customResourceLoader');
+
 const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
@@ -31,7 +33,12 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
         const html = await response.text();
         const dom = new JSDOM(html, {
           url,
-          ...(runScripts ? { runScripts: 'dangerously' } : {}),
+          ...(runScripts
+            ? {
+                runScripts: 'dangerously',
+                resources: new CustomResourceLoader(),
+              }
+            : {}),
         });
 
         resolve(dom);

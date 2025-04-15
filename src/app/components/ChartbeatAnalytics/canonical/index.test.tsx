@@ -31,6 +31,7 @@ describe('CanonicalChartbeatAnalytics', () => {
       useCanonical: true,
       virtualReferrer: '/page-A',
       title: 'Page B',
+      authors: 'Neil Donohue',
       uid: 123,
     },
   };
@@ -100,6 +101,7 @@ describe('CanonicalChartbeatAnalytics', () => {
             useCanonical: true,
             virtualReferrer: '/page-A',
             title: 'Page B',
+            authors: 'Neil Donohue',
             uid: 123,
           }}
           chartbeatSource="//chartbeat.js"
@@ -122,6 +124,7 @@ describe('CanonicalChartbeatAnalytics', () => {
       useCanonical: true,
       virtualReferrer: '/page-A',
       title: 'Page B',
+      authors: 'Neil Donohue',
       uid: 123,
     });
   });

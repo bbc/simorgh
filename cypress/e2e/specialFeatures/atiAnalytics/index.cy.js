@@ -1,0 +1,497 @@
+import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import { assertPageView } from './assertions';
+import {
+  assertBillboardComponentClick,
+  assertBillboardComponentView,
+} from './assertions/billboard';
+import {
+  assertFeaturesAnalysisComponentClick,
+  assertFeaturesAnalysisComponentView,
+} from './assertions/featuresAnalysis';
+import {
+  assertLatestMediaComponentClick,
+  assertLatestMediaComponentView,
+} from './assertions/latestMedia';
+import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
+import {
+  assertCanonicalToLiteSiteCTAComponentClick,
+  assertCanonicalToLiteSiteCTAComponentView,
+} from './assertions/canonicalLiteSiteCta';
+import {
+  assertMessageBannerComponentClick,
+  assertMessageBannerComponentView,
+} from './assertions/messageBanner';
+import {
+  assertMostReadComponentClick,
+  assertMostReadComponentView,
+} from './assertions/mostRead';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from './assertions/navigation';
+import {
+  assertPodcastLinksComponentClick,
+  assertPodcastLinksComponentView,
+} from './assertions/podcastLinks';
+import {
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from './assertions/podcastPromo';
+import {
+  assertRadioScheduleComponentClick,
+  assertRadioScheduleComponentView,
+} from './assertions/radioSchedule';
+import {
+  assertRecentAudioEpisodesComponentClick,
+  assertRecentAudioEpisodesComponentView,
+} from './assertions/recentAudioEpisodes';
+import {
+  assertRecommendationsComponentClick,
+  assertRecommendationsComponentView,
+} from './assertions/recommendations';
+import {
+  assertRelatedContentComponentClick,
+  assertRelatedContentComponentView,
+} from './assertions/relatedContent';
+import {
+  assertRelatedTopicsComponentClick,
+  assertRelatedTopicsComponentView,
+} from './assertions/relatedTopics';
+import {
+  assertScrollablePromoComponentClick,
+  assertScrollablePromoComponentView,
+} from './assertions/scrollablePromo';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from './assertions/topStories';
+import {
+  assertSocialEmbedComponentClick,
+  assertSocialEmbedComponentView,
+} from './assertions/socialEmbed';
+import { getPathWithSuffix } from './helpers';
+
+const canonicalTestSuites = [
+  {
+    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
+    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/afrique/bbc_afrique_tv/tv/w3ct05mp',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv.w3ct05mp.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/gahuza/articles/c5y51yxeg53o',
+    runforEnv: ['local'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.articles.c5y51yxeg53o.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertPodcastPromoComponentView,
+      assertPodcastPromoComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+      assertCanonicalToLiteSiteCTAComponentView,
+      assertCanonicalToLiteSiteCTAComponentClick,
+    ],
+  },
+  {
+    path: '/gahuza/popular/read',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.popular.read.page',
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+  {
+    path: '/hausa/bbc_hausa_radio/liveradio',
+    runforEnv: ['local', 'live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.bbc_hausa_radio.liveradio.page',
+    applicationType: 'responsive',
+    contentType: 'player-live',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
+    path: '/hausa/articles/cw43vy8zdjvo',
+    runforEnv: ['local', 'live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.articles.cw43vy8zdjvo.page',
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertLatestMediaComponentView,
+      assertLatestMediaComponentClick,
+    ],
+  },
+  {
+    path: '/hindi/articles/c9w59wnx27ro?renderer_env=live',
+    runforEnv: ['local', 'live'],
+    service: 'hindi',
+    pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertRecommendationsComponentView,
+      assertRecommendationsComponentClick,
+      assertPodcastPromoComponentView,
+      assertPodcastPromoComponentClick,
+      assertScrollablePromoComponentView,
+      assertScrollablePromoComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/kyrgyz',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'kyrgyz',
+    pageIdentifier: 'kyrgyz.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertScrollableNavigationComponentView,
+      assertScrollableNavigationComponentClick,
+      assertDropdownNavigationComponentView,
+      assertDropdownNavigationComponentClick,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/marathi/topics/c1wmk63rjkvt?renderer_env=live',
+    runforEnv: ['local', 'live'],
+    service: 'marathi',
+    pageIdentifier: 'marathi.topics.c1wmk63rjkvt.page',
+    applicationType: 'responsive',
+    contentType: 'index-category',
+    useReverb: true,
+    componentTrackingContentType: 'topic-page',
+    tests: [assertPageView],
+  },
+  {
+    path: '/pashto',
+    runforEnv: ['local', 'live'],
+    service: 'pashto',
+    pageIdentifier: 'pashto.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
+    path: '/persian/afghanistan',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'persian',
+    pageIdentifier: 'persian.topics.crezq2dg9zwt.page',
+    applicationType: 'responsive',
+    contentType: 'index-category',
+    componentTrackingContentType: 'topic-page',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertScrollableNavigationComponentView,
+      assertScrollableNavigationComponentClick,
+      assertDropdownNavigationComponentView,
+      assertDropdownNavigationComponentClick,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin?renderer_env=test',
+    runforEnv: ['local', 'test'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertBillboardComponentView,
+      assertBillboardComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/articles/ce9wk6glg4lo?renderer_env=live',
+    runforEnv: ['local', 'test'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertSocialEmbedComponentView,
+      assertSocialEmbedComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/articles/cyv3zm4y428o',
+    runforEnv: ['live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.cyv3zm4y428o.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertScrollablePromoComponentClick,
+      assertScrollablePromoComponentView,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/articles/cw0x29n2pvqo',
+    runforEnv: ['local', 'live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.cw0x29n2pvqo.page',
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertLatestMediaComponentClick,
+      assertLatestMediaComponentView,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+    ],
+  },
+  {
+    path: '/portuguese/podcasts/p07r3r3t',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+  {
+    path: '/serbian/lat',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'serbian',
+    pageIdentifier: 'serbianlat.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+  {
+    path: '/ukrainian/podcasts/p09jsy3h',
+    runforEnv: ['test', 'live'],
+    service: 'ukrainian',
+    pageIdentifier:
+      'ukrainian.bbc_ukrainian_audio.podcasts.programmes.p09jsy3h.page',
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertPodcastLinksComponentView,
+      assertPodcastLinksComponentClick,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+    ],
+  },
+  {
+    path: '/uzbek/cyr',
+    runforEnv: ['test', 'live'],
+    service: 'uzbek',
+    pageIdentifier: 'uzbekcyr.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+    ],
+  },
+];
+
+const supportsAmp = ({ contentType }) =>
+  !['index-home', 'player-live', 'player-episode', 'index-category'].includes(
+    contentType,
+  );
+
+const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+    useReverb: false,
+    applicationType: 'amp',
+    tests: [assertPageView],
+  };
+});
+
+const supportsLite = ({ path }) => !path.startsWith('/persian/afghanistan');
+
+const liteTestSuites = canonicalTestSuites
+  .filter(supportsLite)
+  .map(testSuite => {
+    const excludedLiteTests = [
+      assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+      assertSocialEmbedComponentView, // Social embeds removed from lite article pages
+      assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
+      assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
+    ];
+
+    const liteSiteTests = testSuite.tests.filter(
+      test =>
+        test.name !== assertMostReadComponentClick.name &&
+        // Exclude component click tests, as component click support is not supported on all components yet
+        !test.name.toLowerCase().includes('click') &&
+        !excludedLiteTests.includes(test),
+    );
+
+    // All lite enabled pages should have the LiteSiteCTA component
+    liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
+
+    return {
+      ...testSuite,
+      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+      applicationType: 'lite',
+      useReverb: false,
+      tests: [...liteSiteTests],
+    };
+  });
+
+runTestsForPage({
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+  testIsolation: true,
+});

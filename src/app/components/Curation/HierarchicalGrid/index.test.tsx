@@ -82,7 +82,7 @@ describe('Hierarchical Grid Curation', () => {
 
   it('should render the last published date', async () => {
     const { getByText } = render(
-      <HierarchicalGrid summaries={mediaFixture} />,
+      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
       {
         service: 'mundo',
       },
@@ -109,16 +109,22 @@ describe('Hierarchical Grid Curation', () => {
   });
 
   it('should display LiveLabel on a Live Promo', () => {
-    const container = render(<HierarchicalGrid summaries={mediaFixture} />, {
-      service: 'mundo',
-    });
+    const container = render(
+      <HierarchicalGrid headingLevel={headingLevel} summaries={mediaFixture} />,
+      {
+        service: 'mundo',
+      },
+    );
     expect(container.getByText('EN VIVO')).toBeInTheDocument();
   });
 
   it('should not display a timestamp on a Live Promo', () => {
-    const container = render(<HierarchicalGrid summaries={liveFixtures} />, {
-      service: 'mundo',
-    });
+    const container = render(
+      <HierarchicalGrid headingLevel={headingLevel} summaries={liveFixtures} />,
+      {
+        service: 'mundo',
+      },
+    );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
   });
 });

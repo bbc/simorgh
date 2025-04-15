@@ -1,10 +1,9 @@
-/* eslint-disable import/prefer-default-export */
 import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 
-export const testsForLiteOnly = ({ service, pageType }) => {
-  describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {
-    describe('CTA: Lite', () => {
-      if (liteEnabledServices.includes(service)) {
+export default ({ service, pageType }) => {
+  if (liteEnabledServices.includes(service)) {
+    describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {
+      describe('CTA: Lite', () => {
         it('Clicking the link to the main site should navigate to canonical site', () => {
           cy.get('[data-e2e="to-main-site"]').within(() => {
             cy.get('a')
@@ -29,7 +28,7 @@ export const testsForLiteOnly = ({ service, pageType }) => {
           });
           cy.go('back');
         });
-      }
+      });
     });
-  });
+  }
 };

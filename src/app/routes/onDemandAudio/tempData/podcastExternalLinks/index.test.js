@@ -7,7 +7,6 @@ describe('getPodcastExternalLinks', () => {
     const links = await getPodcastExternalLinks(
       'hausa',
       'p08mlgcb',
-      'default',
       'p0967t2j',
     );
     const expectedLinks = [
@@ -38,12 +37,7 @@ describe('getPodcastExternalLinks', () => {
   });
 
   it('should return rss feed when brand is not found', async () => {
-    const otherLinks = await getPodcastExternalLinks(
-      'hausa',
-      'bar',
-      'default',
-      'h455a',
-    );
+    const otherLinks = await getPodcastExternalLinks('hausa', 'bar', 'h455a');
     expect(otherLinks).toEqual([
       {
         linkText: 'RSS',
@@ -63,8 +57,8 @@ describe('getPodcastExternalLinks', () => {
     const links = await getPodcastExternalLinks(
       'zhongwen',
       'p02pc9xp',
-      'simp',
       'p0967t2j',
+      'simp',
     );
     const expectedLinks = [
       ...zhongwenExternalLinks.simp.p02pc9xp,
@@ -87,8 +81,8 @@ describe('getPodcastExternalLinks', () => {
     const links = await getPodcastExternalLinks(
       'burmese',
       'p02pc9lh',
-      undefined,
       'p0967t2j',
+      undefined,
     );
     expect(links[3].linkUrl).toEqual(
       'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p0967t2j.mp3',

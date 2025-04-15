@@ -1,4 +1,4 @@
-export const fragmentBlock = (id = null, text, attributes = []) => ({
+export const fragmentBlock = (id, text, attributes = []) => ({
   id,
   type: 'fragment',
   model: {
@@ -7,7 +7,7 @@ export const fragmentBlock = (id = null, text, attributes = []) => ({
   },
 });
 
-export const paragraphBlock = (id = null, blocks) => ({
+export const paragraphBlock = (id, blocks) => ({
   id,
   type: 'paragraph',
   model: {

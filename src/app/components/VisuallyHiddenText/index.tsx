@@ -7,6 +7,8 @@ interface VisuallyHiddenTextProps<T extends React.ElementType> {
   id?: string;
   tabIndex?: number;
   as?: T;
+  lang?: string;
+  children?: React.ReactNode;
 }
 
 const VisuallyHiddenText = <T extends React.ElementType>({
@@ -17,7 +19,7 @@ const VisuallyHiddenText = <T extends React.ElementType>({
   ...htmlAttributes
 }: VisuallyHiddenTextProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof VisuallyHiddenTextProps<T>>) => {
-  const Component = as || 'span';
+  const Component: React.ElementType = as || 'span';
   return (
     <Component
       css={styles.visuallyHiddenText}

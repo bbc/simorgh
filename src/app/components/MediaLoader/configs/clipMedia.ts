@@ -30,7 +30,7 @@ export default ({
     'clipMedia',
   );
 
-  const { images, video, type } = clipMediaBlock?.model;
+  const { images, video, type } = clipMediaBlock?.model || {};
 
   const { source, urlTemplate: locator } = images?.[1] ?? {};
 

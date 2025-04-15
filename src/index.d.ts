@@ -1,11 +1,14 @@
 declare module '*.md';
 
-declare namespace JSX {
+declare module 'intersection-observer';
+
+declare namespace React.JSX {
   interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
-    ref?: ForwardedRef<HTMLDivElement> | null;
+    ref?: Ref<HTMLDivElement> | null;
     placeholder?: string;
     'amp-access'?: string;
     'amp-access-hide'?: string;
+    'data-lite-ati-view'?: string;
   }
 
   interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {

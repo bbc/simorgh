@@ -74,7 +74,7 @@ const OnDemandHeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
-      {...(className && { className })}
+      {...(className ? { className } : undefined)}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >

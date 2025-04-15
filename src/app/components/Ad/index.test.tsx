@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
 import { render } from '../react-testing-library-with-providers';
 import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
@@ -68,7 +68,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -94,7 +94,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -120,7 +120,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -146,7 +146,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -171,7 +171,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp={false}
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -196,7 +196,7 @@ describe('Ad Container', () => {
               id="c0000000000o"
               isAmp={false}
               isApp={false}
-              pageType={FRONT_PAGE}
+              pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
@@ -239,7 +239,7 @@ describe('Ad Container', () => {
             id="c0000000000o"
             isAmp
             isApp={false}
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -263,7 +263,7 @@ describe('Ad Container', () => {
             isAmp={false}
             isApp={false}
             id="c0000000000o"
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -303,7 +303,7 @@ describe('Ad Container', () => {
             id="c0000000000o"
             isAmp
             isApp={false}
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -327,7 +327,7 @@ describe('Ad Container', () => {
             isAmp={false}
             isApp={false}
             id="c0000000000o"
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -372,7 +372,7 @@ describe('Ad Container', () => {
             id="c0000000000o"
             isAmp
             isApp={false}
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
@@ -397,7 +397,7 @@ describe('Ad Container', () => {
             isAmp={false}
             isApp={false}
             id="c0000000000o"
-            pageType={FRONT_PAGE}
+            pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"

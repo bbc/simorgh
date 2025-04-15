@@ -32,6 +32,12 @@ const KNOWN_ERRORS = [
   `Cannot read properties of undefined (reading 'digest')`,
   `Cannot read properties of undefined (reading 'notUkIp')`,
   `NGAS load timeout`,
+  // Catches an error that is reported when the test linked below clicks on the link
+  // on the Message Banner.
+  // https://github.com/bbc/simorgh/blob/e18f5b4da935cf2a8aad32991d6a76dcd5c8dcae/cypress/e2e/specialFeatures/atiAnalytics/assertions/messageBanner.js#L45
+  // This link then navigates the test to the BBC News Pidgin WhatsApp channel
+  // https://www.whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j
+  'requireLazy is not defined',
 ];
 
 // eslint-disable-next-line consistent-return

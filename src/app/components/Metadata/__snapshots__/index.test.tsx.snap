@@ -2090,7 +2090,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
 }
 `;
 
-exports[`Metadata Snapshot should match for WS Frontpages 1`] = `
+exports[`Metadata Snapshot should match for WS Homepages 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},

@@ -46,21 +46,7 @@ const mediaEmbedErrorsToSuppress = [
   "Button has no text: //div[@id='p_audioui_container']/div[4]/button",
 ];
 
-const advertisementErrorsToSuppress = [
-  // Principles: All documents must have a W3C recommended doctype
-  // Editorial: Indicating language: Html must have lang attribute
-  '/iframe',
-
-  // Design: Content resizing: Text must be styled with units that are resizable in all browsers
-  "//div[@id='dotcom-leaderboard']/div/div[1]/a",
-  "//div[@id='dotcom-mpu']/div/div[1]/a",
-];
-
 const pageTypes = {
-  frontPage: [
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-    ...advertisementErrorsToSuppress,
-  ],
   articles: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   liveRadio: [
     ...mediaEmbedErrorsToSuppress,
@@ -84,7 +70,6 @@ const pageTypes = {
   ],
   onDemandTV: ['/iframe'],
   mediaAssetPage: [...mediaEmbedErrorsToSuppress, '/iframe'],
-  featureIndexPage: [],
   topicPage: [],
 };
 

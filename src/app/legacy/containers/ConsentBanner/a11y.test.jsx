@@ -2,7 +2,7 @@ import React, { createRef, useMemo } from 'react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import Cookies from 'js-cookie';
 import {
   render,
@@ -15,6 +15,10 @@ import ConsentBanner from './index';
 const defaultToggleState = {
   chartbeatAnalytics: {
     enabled: false,
+  },
+  privacyPolicy: {
+    enabled: true,
+    value: 'july2019',
   },
 };
 const mockToggleDispatch = jest.fn();
@@ -30,7 +34,7 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
   return (
     <RequestContextProvider
       isAmp
-      pageType={FRONT_PAGE}
+      pageType={HOME_PAGE}
       pathname="/"
       service={service}
     >
@@ -46,13 +50,13 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
 };
 
 const CanonicalBannerWithContext = React.forwardRef(
-  ({ serviceConfig, variant }, ref) => {
+  ({ serviceConfig, variant, toggleStateOverride }, ref) => {
     const toggleContextValue = useMemo(
       () => ({
-        toggleState: defaultToggleState,
+        toggleState: { ...defaultToggleState, ...(toggleStateOverride || {}) },
         toggleDispatch: mockToggleDispatch,
       }),
-      [],
+      [toggleStateOverride],
     );
     return (
       <>
@@ -77,7 +81,8 @@ describe('canonical', () => {
       Cookies.remove(cookieName);
     });
   });
-  it('should focus on canonical consent banner heading on mount on canonical', () => {
+
+  it('should focus on canonical consent privacy banner heading on mount on canonical', () => {
     const { getByText } = render(
       <CanonicalBannerWithContext
         serviceConfig={pidginServiceConfig}
@@ -88,6 +93,25 @@ describe('canonical', () => {
       pidginServiceConfig.default.translations.consentBanner.privacy.title;
 
     expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
+  });
+
+  it('should focus on canonical consent cookie banner heading on mount on canonical when privacy policy toggle is disabled', () => {
+    const { getByText } = render(
+      <CanonicalBannerWithContext
+        serviceConfig={pidginServiceConfig}
+        variant="default"
+        toggleStateOverride={{
+          privacyPolicy: {
+            enabled: false,
+          },
+        }}
+      />,
+    );
+    const pidginCookieHeading =
+      pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+        .title;
+
+    expect(document.activeElement).toBe(getByText(pidginCookieHeading));
   });
 
   it('should focus on the link within the referenced element after cookie accept on canonical', () => {

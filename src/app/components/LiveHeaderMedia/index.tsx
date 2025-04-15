@@ -8,6 +8,9 @@ import MediaLoader from '#app/components/MediaLoader';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import styles from './index.styles';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
@@ -21,7 +24,7 @@ type WarningItem = {
   short_description: string;
 };
 
-type Props = {
+type LiveHeaderMediaProps = {
   mediaCollection: MediaCollection[] | null;
   clickCallback?: () => void;
 };
@@ -36,10 +39,16 @@ const MemoizedMediaPlayer = memo(MediaLoader);
 const LiveHeaderMedia = ({
   mediaCollection,
   clickCallback = () => null,
-}: Props) => {
+}: LiveHeaderMediaProps) => {
   const { translations } = useContext(ServiceContext);
   const { isLite } = useContext(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
+
+  const eventTrackingData: EventTrackingMetadata = {
+    componentName: 'live-header-media',
+  };
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   let warningLevel = WARNING_LEVELS.NO_WARNING;
 
@@ -83,7 +92,7 @@ const LiveHeaderMedia = ({
 
   const titleHasPunctuation = short.slice(-1).match(regexPunctuationSymbols);
 
-  const handleClick = () => {
+  const clickToggleMedia = () => {
     const mediaPlayer = window.mediaPlayers?.[vpid];
     if (showMedia) {
       mediaPlayer?.pause();
@@ -98,31 +107,32 @@ const LiveHeaderMedia = ({
     clickCallback();
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    clickTrackerHandler(e);
+    clickToggleMedia();
+  };
+
   const description = (
-    <>
-      <Text
-        size="pica"
-        fontVariant="sansBold"
-        as="span"
-        css={[
-          styles.mediaDescription,
-          showMedia
-            ? styles.closeMediaDescription
-            : styles.openMediaDescription,
-        ]}
-        className="hoverStylesText"
-      >
-        {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
-        <Text size="pica" fontVariant="sansBold" as="span">
-          {short}
-          {!titleHasPunctuation && ','}
-        </Text>
-        <Text size="pica" fontVariant="sansRegular" as="span">
-          {' '}
-          {networkName}
-        </Text>
+    <Text
+      size="pica"
+      fontVariant="sansBold"
+      as="span"
+      css={[
+        styles.mediaDescription,
+        showMedia ? styles.closeMediaDescription : styles.openMediaDescription,
+      ]}
+      className="hoverStylesText"
+    >
+      {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
+      <Text size="pica" fontVariant="sansBold" as="span">
+        {short}
+        {!titleHasPunctuation && ','}
       </Text>
-    </>
+      <Text size="pica" fontVariant="sansRegular" as="span">
+        {' '}
+        {networkName}
+      </Text>
+    </Text>
   );
 
   return (
@@ -131,10 +141,10 @@ const LiveHeaderMedia = ({
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer}>
+      <div css={styles.componentContainer} {...viewTracker}>
         <button
           type="button"
-          onClick={() => handleClick()}
+          onClick={e => handleClick(e)}
           data-testid="watch-now-close-button"
           className="focusIndicatorInvert"
           css={[

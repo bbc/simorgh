@@ -12,6 +12,7 @@ import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import isLitePath from '#app/routes/utils/isLitePath';
 import PageDataParams from '#app/models/types/pageDataParams';
+import deriveVariant from '#nextjs/utilities/deriveVariant';
 
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
 import isValidPageNumber from '../../../../utilities/pageQueryValidator';
@@ -38,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const {
     id,
     service,
-    variant,
+    variant: variantFromUrl,
     renderer_env: rendererEnv,
     page = '1',
   } = context.query as PageDataParams;
@@ -47,6 +48,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const isApp = isAppPath(context.resolvedUrl);
   const isLite = isLitePath(context.resolvedUrl);
+
+  const variant = deriveVariant(variantFromUrl);
 
   if (!isValidPageNumber(page)) {
     context.res.statusCode = 404;
@@ -66,7 +69,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
         service,
         status: 404,
         timeOnServer: Date.now(),
-        variant: variant?.[0] || null,
+        variant,
         ...extractHeaders(reqHeaders),
       },
     };
@@ -119,7 +122,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
-      variant: variant?.[0] || null,
+      variant,
       ...extractHeaders(reqHeaders),
     },
   };

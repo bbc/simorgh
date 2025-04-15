@@ -4,15 +4,12 @@ import expressStaticGzip from 'express-static-gzip';
 import {
   articleDataPath,
   cpsAssetPageDataPath,
-  frontPageDataPath,
   homePageDataPath,
-  tipoHomeDataPath,
   legacyAssetPageDataPath,
   mostReadDataRegexPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
   topicDataPath,
-  recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
   liveRadioDataPath,
@@ -65,31 +62,17 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(frontPageDataPath, async ({ params }, res, next) => {
+    .get(homePageDataPath, async ({ params }, res, next) => {
       const { service, variant } = params;
 
       const dataFilePath = constructDataFilePath({
-        pageType: 'frontpage',
+        pageType: 'homePage',
         service,
         variant,
       });
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(
-      [homePageDataPath, tipoHomeDataPath],
-      async ({ params }, res, next) => {
-        const { service, variant } = params;
-
-        const dataFilePath = constructDataFilePath({
-          pageType: 'homePage',
-          service,
-          variant,
-        });
-
-        sendDataFile(res, dataFilePath, next);
-      },
-    )
 
     .get(mostReadDataRegexPath, async ({ params }, res, next) => {
       const { service, variant } = params;
@@ -174,9 +157,9 @@ export default server => {
         process.cwd(),
         'data',
         service,
-        variant,
         'topics',
         id,
+        variant,
       );
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
@@ -196,16 +179,6 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'secondaryColumn',
-        service,
-        variant,
-      });
-
-      sendDataFile(res, dataFilePath, next);
-    })
-    .get(recommendationsDataRegex, async ({ params }, res, next) => {
-      const { service, variant } = params;
-      const dataFilePath = constructDataFilePath({
-        pageType: 'recommendations',
         service,
         variant,
       });

@@ -1,0 +1,223 @@
+[
+  {
+    "headlines":{
+      "shortHeadline":"PL das fake news pode acirrar polarização política, diz pesquisador",
+      "headline":"PL das fake news pode acirrar polarização política, diz pesquisador"
+    },
+    "locators":{
+      "assetUri":"/portuguese/brasil-53418555",
+      "cpsUrn":"urn:bbc:content:assetUri:portuguese/brasil-53418555",
+      "curie":"http://www.bbc.co.uk/asset/ee63ad3c-400f-4b0b-8e83-f421e38af54b",
+      "assetId":"53418555"
+    },
+    "summary":"Diretor do InternetLab, Francisco Brito Cruz vê perigos em projeto de lei aprovado 'na correria'; depois de passar pelo Senado, texto agora tramita na Câmara.",
+    "timestamp":1594976485000,
+    "language":"pt-BR",
+    "byline":{
+      "name":"Juliana Gragnani - @julianagragnani",
+      "title":"Da BBC News Brasil em Londres",
+      "persons":[
+        {
+          "name":"Juliana Gragnani",
+          "function":"Da BBC News Brasil em Londres",
+          "twitterName":"julianagragnani"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"113174534",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/AA1B/production/_113174534_gettyimages-1209693436.jpg",
+      "path":"/cpsprodpb/AA1B/production/_113174534_gettyimages-1209693436.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Pessoas mexendo em seus celulares",
+      "caption":"Caso seja aprovado pelos deputados e sancionada por Bolsonaro, o projeto criará a Lei Brasileira de Liberdade, Responsabilidade e Transparência na Internet",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:portuguese/brasil-53418555",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"Críticas sobre suposta 'censura' e 'falta de transparência' do Facebook unem petistas e bolsonaristas",
+      "headline":"Críticas sobre suposta 'censura' e 'falta de transparência' do Facebook unem petistas e bolsonaristas"
+    },
+    "locators":{
+      "assetUri":"/portuguese/brasil-53364255",
+      "cpsUrn":"urn:bbc:content:assetUri:portuguese/brasil-53364255",
+      "curie":"http://www.bbc.co.uk/asset/44b8d983-c228-4ad0-998c-1fdebc0b61b9",
+      "assetId":"53364255"
+    },
+    "summary":"Contas ligadas a assessores da família Bolsonaro e de apoiadores foram derrubadas na rede social, depois de terem sido acusadas de agir para 'para enganar o público'; PT diz ter tido nove contas desativadas no WhatsApp.",
+    "timestamp":1594405557000,
+    "language":"pt-BR",
+    "byline":{
+      "name":"Ricardo Senra - @ricksenra",
+      "title":"Da BBC News Brasil em Londres",
+      "persons":[
+        {
+          "name":"Ricardo Senra",
+          "function":"BBC News Brasil"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3e39461b000e9dabfb",
+          "campaignName":"WS - Keep me on trend"
+        },
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"WS - Update me"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"113324881",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/499A/production/_113324881_untitledcollage.jpg",
+      "path":"/cpsprodpb/499A/production/_113324881_untitledcollage.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Eduardo Bolsonaro e Gleisi",
+      "caption":"Bolsonaristas e petistas foram atingidos de formas distintas por investigações recentes do Facebook",
+      "copyrightHolder":"AFP/Agência Brasil",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:portuguese/brasil-53364255",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"Senado adia votação do PL das Fake News, alvo de críticas de bolsonaristas a organizações de direito digital; entenda",
+      "headline":"Senado adia votação do PL das Fake News, alvo de críticas de bolsonaristas a organizações de direito digital; entenda"
+    },
+    "locators":{
+      "assetUri":"/portuguese/brasil-52888697",
+      "cpsUrn":"urn:bbc:content:assetUri:portuguese/brasil-52888697",
+      "curie":"http://www.bbc.co.uk/asset/9d320d55-e016-4388-b195-b049f5f4257d",
+      "assetId":"52888697"
+    },
+    "summary":"Autores da proposta negam que projeto de lei provoque censura, mas críticos apontam ameaça à liberdade de expressão",
+    "timestamp":1591095974000,
+    "language":"pt-BR",
+    "byline":{
+      "name":"Mariana Schreiber - @marischreiber",
+      "title":"Da BBC News Brasil em Brasília",
+      "persons":[
+        {
+          "name":"Mariana Schreiber - @marischreiber",
+          "function":"Da BBC News Brasil em Brasília"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"105158368",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/15171/production/_105158368_fake.jpg",
+      "path":"/cpsprodpb/15171/production/_105158368_fake.jpg",
+      "height":371,
+      "width":660,
+      "altText":"Celulares",
+      "caption":"Pesquisadores estão tentando medir o impacto que disseminação de notícias falsas teve em eleições recentes",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:portuguese/brasil-52888697",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"O avanço das escolas cívico-militares na rede particular de ensino",
+      "headline":"O avanço das escolas cívico-militares na rede particular de ensino"
+    },
+    "locators":{
+      "assetUri":"/portuguese/brasil-51822924",
+      "cpsUrn":"urn:bbc:content:assetUri:portuguese/brasil-51822924",
+      "curie":"http://www.bbc.co.uk/asset/7ea59781-4876-fb43-b08f-2b82489c388f",
+      "assetId":"51822924"
+    },
+    "summary":"Administrados por policiais ou empresários que viram o avanço do conservadorismo como oportunidade de negócio, elas incentivam a 'disciplina e o respeito à hierarquia' como método para melhorar o desempenho escolar.",
+    "timestamp":1592157829000,
+    "language":"pt-BR",
+    "byline":{
+      "name":"Camilla Veras Mota e Leandro Machado",
+      "title":"Da BBC News Brasil em São Paulo",
+      "persons":[
+        {
+          "name":"Leandro Machado",
+          "function":"BBC Brasil, Sao Paulo"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"111754340",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/10F9/production/_111754340_dsc_0999.jpg",
+      "path":"/cpsprodpb/10F9/production/_111754340_dsc_0999.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Militar colocando uma boina vermelha em uma aluna do colégio Vila Militar, de Curitiba",
+      "caption":"Em Curitiba, pais de estudantes do Colégio Vila Militar elogiam método de ensino da unidade",
+      "copyrightHolder":"Colégio Vila Militar/Divulgação",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:portuguese/brasil-51822924",
+    "type":"cps"
+  }
+]

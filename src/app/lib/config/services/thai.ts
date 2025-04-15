@@ -14,6 +14,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
+    atiAnalyticsProducerName: 'THAI',
+    useReverb: true,
     chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/thai/institutional-49281839',
     isTrustProjectParticipant: true,
     script: thai,
-    manifestPath: '/manifest.json',
+    manifestPath: '/thai/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
+    homePageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -53,8 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'โฆษณา',
       },
-      recommendationTitle: 'เรื่องแนะนำ',
-      splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
@@ -220,6 +220,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'รายการวิทยุก่อนหน้า',
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
+        closeVideo: 'ออก',
       },
       socialEmbed: {
         caption: {
@@ -254,7 +255,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     mostRead: {
-      header: 'ได้รับความนิยมสูงสุด',
+      header: 'บทความยอดนิยม',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,
@@ -263,7 +264,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'ได้รับความนิยมสูงสุด',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',

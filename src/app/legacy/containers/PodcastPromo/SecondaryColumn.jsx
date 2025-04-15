@@ -50,7 +50,7 @@ const Promo = () => {
   }
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef}>
+    <ResponsivePodcastPromoWrapper {...viewTrackerRef} data-e2e="podcast-promo">
       <PromoComponent
         script={script}
         service={service}

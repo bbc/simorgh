@@ -31,6 +31,7 @@ import { service as news } from '../../../app/lib/config/services/news';
 import { service as pashto } from '../../../app/lib/config/services/pashto';
 import { service as persian } from '../../../app/lib/config/services/persian';
 import { service as pidgin } from '../../../app/lib/config/services/pidgin';
+import { service as polska } from '../../../app/lib/config/services/polska';
 import { service as portuguese } from '../../../app/lib/config/services/portuguese';
 import { service as punjabi } from '../../../app/lib/config/services/punjabi';
 import { service as russian } from '../../../app/lib/config/services/russian';
@@ -58,8 +59,8 @@ import { Services, Variants } from '../../../app/models/types/global';
 import { ServiceConfig } from '../../../app/models/types/serviceConfig';
 
 type AllServices = {
-  [s in Services]: {
-    [v in Variants]: ServiceConfig;
+  [_service in Services]: {
+    [_variant in Variants]: ServiceConfig;
   };
 };
 
@@ -90,6 +91,7 @@ export default {
   pashto,
   persian,
   pidgin,
+  polska,
   portuguese,
   punjabi,
   russian,

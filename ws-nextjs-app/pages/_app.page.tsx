@@ -36,7 +36,6 @@ interface Props extends AppProps {
     pageLang?: string;
     pageType: PageTypes;
     pathname: string;
-    previousPath?: string;
     service: Services;
     showAdsBasedOnLocation: boolean;
     status: number;
@@ -61,7 +60,6 @@ export default function App({ Component, pageProps }: Props) {
     pageLang = '',
     pageType,
     pathname,
-    previousPath = '',
     service,
     showAdsBasedOnLocation,
     status,
@@ -97,7 +95,6 @@ export default function App({ Component, pageProps }: Props) {
           service={service}
           statusCode={status}
           pathname={pathname}
-          previousPath={previousPath}
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
@@ -105,7 +102,7 @@ export default function App({ Component, pageProps }: Props) {
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >
-          <EventTrackingContextProvider atiData={atiAnalytics} data={pageData}>
+          <EventTrackingContextProvider atiData={atiAnalytics}>
             {isAvEmbeds ? (
               <ThemeProvider service={service} variant={variant}>
                 {RenderChildrenOrError}

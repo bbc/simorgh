@@ -70,7 +70,7 @@ const ArticleTimestamp = ({
   });
 
   return (
-    <GridWrapper {...(className && { className })}>
+    <GridWrapper {...(className ? { className } : undefined)}>
       <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554

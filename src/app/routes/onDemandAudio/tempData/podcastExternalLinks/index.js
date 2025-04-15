@@ -38,8 +38,8 @@ const getDownloadLink = versionId => ({
 export const getPodcastExternalLinks = async (
   service,
   brandPid,
-  variant = 'default',
   versionId,
+  variant = 'default',
 ) => {
   try {
     const linkData = await podcastExternalLinks[service]();

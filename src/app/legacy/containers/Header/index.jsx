@@ -7,6 +7,7 @@ import {
   ARTICLE_PAGE,
   HOME_PAGE,
   TOPIC_PAGE,
+  ERROR_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteCta from '#app/components/LiteSiteCta';
 import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
@@ -47,10 +48,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({
-  scriptSwitchId = '',
-  renderScriptSwitch = true,
-}) => {
+const HeaderContainer = ({ propsForOJExperiment }) => {
   const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
@@ -77,17 +75,17 @@ const HeaderContainer = ({
 
   let shouldRenderScriptSwitch = false;
 
-  if (scriptLink && renderScriptSwitch) {
-    if (
-      service === 'uzbek' &&
-      ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE].includes(pageType)
-    ) {
-      shouldRenderScriptSwitch = false;
-    } else {
-      shouldRenderScriptSwitch = true;
+  if (scriptLink) {
+    switch (true) {
+      case service === 'uzbek' &&
+        ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
+        shouldRenderScriptSwitch = false;
+        break;
+      default:
+        shouldRenderScriptSwitch = true;
+        break;
     }
   }
-
   const renderLiteSiteCTA = isLite && liteEnabledServices.includes(service);
 
   if (isApp) return null;
@@ -98,25 +96,17 @@ const HeaderContainer = ({
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink scriptSwitchId={scriptSwitchId} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink scriptSwitchId={scriptSwitchId} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       )}
       {renderLiteSiteCTA && <LiteSiteCta />}
-      <NavigationContainer />
+      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
     </header>
   );
 };

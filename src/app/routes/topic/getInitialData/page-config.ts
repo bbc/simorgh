@@ -3,7 +3,7 @@ import { Environments } from '../../../models/types/global';
 export type TopicPagePaths = '/persian/afghanistan';
 
 export const TOPIC_PAGE_CONFIG: {
-  [path in TopicPagePaths]: { [env in Environments]: string };
+  [_path in TopicPagePaths]: { [_env in Environments]: string };
 } = {
   '/persian/afghanistan': {
     local: 'crezq2dg9zwt',

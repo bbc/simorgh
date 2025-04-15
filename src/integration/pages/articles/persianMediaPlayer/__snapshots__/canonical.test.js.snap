@@ -136,82 +136,75 @@ exports[`Canonical Articles Header Navigation link should match text and url 2`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
 {
-  "text": "انتخابات آمریکا",
-  "url": "/persian/topics/cj1gj22k6z6t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-{
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 {
   "text": "ویدیو",
   "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 {
   "text": "تلویزیون",
-  "url": "/persian/tv-and-radio-37434377",
+  "url": "/persian/topics/cw9qgeqd1zqt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
 {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
 {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
 {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
 {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
 {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 14`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
 {
   "text": "فراتر از خبر",
   "url": "/persian/topics/cxr3ex12k6et",
@@ -226,6 +219,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 "
   class="bbc-139onq"
   height="549"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsdevpb/0d65/test/e28c1b30-e691-11e9-88d6-81aa2ccc6d4c.jpg.webp 800w"
@@ -304,6 +298,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
       style="aspect-ratio:auto"
@@ -378,6 +373,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
       style="aspect-ratio:auto"
@@ -456,6 +452,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       <img
         alt=""
         class="bbc-ipdj63"
+        loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
         style="aspect-ratio:auto"

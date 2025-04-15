@@ -1,53 +1,32 @@
 import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
+import getAppEnv from '../../../support/helpers/getAppEnv';
+import serviceConfigs from '../../../../src/server/utilities/serviceConfigs';
 
 export default ({ service, pageType, variant, currentPath }) => {
   let topicId;
-  let variantTopicId;
   let topicTitle;
   let firstItemHeadline;
   let pageCount;
   let numberOfItems;
   let messageBanner;
-  const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
-  let otherVariant;
+  const otherVariant = serviceConfigs[service][variant]?.scriptLink?.variant;
 
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
-      cy.log(Cypress.env('currentPath'));
-      cy.log(service);
-      const env = Cypress.env('APP_ENV');
-      if (env !== 'local') {
-        // eslint-disable-next-line prefer-destructuring
-        topicId = Cypress.env('currentPath')
-          .split('topics/')
-          .pop()
-          .split('?')[0];
+      topicId = Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
-        if (scriptSwitchServices.includes(service)) {
-          if (service === 'serbian') {
-            otherVariant = variant === 'lat' ? 'cyr' : 'lat';
-          }
-          if (service === 'ukchina' || service === 'zhongwen') {
-            otherVariant = variant === 'simp' ? 'trad' : 'simp';
-          }
-        }
-        // Gets the topic page data for all the tests
-        cy.getPageDataFromWindow().then(data => {
-          const { pageData } = data;
-          topicTitle = pageData.title;
-          variantTopicId = pageData.scriptSwitchId;
-          pageCount = pageData.pageCount;
-          numberOfItems = pageData.curations?.[0]?.summaries.length;
-          firstItemHeadline = pageData.curations?.[0]?.summaries?.[0]?.title;
-          messageBanner = pageData.curations?.find(
-            curation =>
-              curation.visualProminence === 'NORMAL' &&
-              curation.visualStyle === 'BANNER',
-          );
-        });
-
-        cy.log(`topic id ${topicId}`);
-      }
+      // Gets the topic page data for all the tests
+      cy.getPageDataFromWindow().then(({ pageData }) => {
+        topicTitle = pageData.title;
+        pageCount = pageData.pageCount;
+        numberOfItems = pageData.curations?.[0]?.summaries.length;
+        firstItemHeadline = pageData.curations?.[0]?.summaries?.[0]?.title;
+        messageBanner = pageData.curations?.find(
+          curation =>
+            curation.visualProminence === 'NORMAL' &&
+            curation.visualStyle === 'BANNER',
+        );
+      });
     });
 
     describe(`Page content`, () => {
@@ -57,7 +36,6 @@ export default ({ service, pageType, variant, currentPath }) => {
         cy.visit(currentPath);
       });
       it('should render a H1, which contains/displays topic title', () => {
-        cy.log(Cypress.env('currentPath'));
         cy.get('h1').should('contain', topicTitle);
       });
 
@@ -163,63 +141,73 @@ export default ({ service, pageType, variant, currentPath }) => {
         }
       });
 
-      it('Page 2 button navigates to 2nd page', () => {
-        if (pageCount > 1) {
-          cy.get('[data-testid="topic-pagination"] > ul > li')
-            .first()
-            .next()
-            .click();
-          cy.url().should('include', '?page=2');
-          cy.get('[data-testid="topic-promos"] li');
-        } else {
-          cy.log('No pagination as there is only one page');
-        }
-      });
-
-      it('Page 2 does not have a fallback response', () => {
-        const expectedContentType = 'text/html';
-        const isErrorPage = pageType.includes('error');
-        const expectedStatus = isErrorPage ? 404 : 200;
-        // const failOnStatusCode = !isErrorPage;
-        cy.url().then(url => {
-          const path = url;
-          cy.testResponseCodeAndType({
-            path,
-            responseCode: expectedStatus,
-            type: expectedContentType,
+      describe('navigation', () => {
+        if (getAppEnv() !== 'local') {
+          it('Page 2 button navigates to 2nd page', () => {
+            if (pageCount > 1) {
+              cy.get('[data-testid="topic-pagination"] > ul > li')
+                .first()
+                .next()
+                .click();
+              cy.url().should('include', '?page=2');
+              cy.get('[data-testid="topic-promos"] li');
+            } else {
+              cy.log('No pagination as there is only one page');
+            }
           });
-        });
-      });
 
-      it('Next button navigates to next page (3)', () => {
-        if (pageCount > 2) {
-          cy.get('[id="pagination-next-page"]').click();
-          cy.url().should('include', `?page=3`);
-          cy.get('[data-testid="topic-promos"] li');
-        } else {
-          cy.log('No next button when on page 2 of 2');
-        }
-      });
+          it('Page 2 does not have a fallback response', () => {
+            const expectedContentType = 'text/html';
+            const isErrorPage = pageType.includes('error');
+            const expectedStatus = isErrorPage ? 404 : 200;
+            // const failOnStatusCode = !isErrorPage;
+            cy.url().then(url => {
+              const path = url;
+              cy.testResponseCodeAndType({
+                path,
+                responseCode: expectedStatus,
+                type: expectedContentType,
+              });
+            });
+          });
 
-      it('Last page number button navigates to last page', () => {
-        if (pageCount > 1) {
-          cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
-          cy.url().should('include', `?page=${pageCount}`);
-          cy.get('[data-testid="curation-grid-normal"]');
-        } else {
-          cy.log('No pagination as there is only one page');
-        }
-      });
+          it('Next button navigates to next page (3)', () => {
+            if (pageCount > 2) {
+              cy.get('[id="pagination-next-page"]').click();
+              cy.url().should('include', `?page=3`);
+              cy.get('[data-testid="topic-promos"] li');
+            } else {
+              cy.log('No next button when on page 2 of 2');
+            }
+          });
 
-      it('Previous page button navigates to previous page (second to last)', () => {
-        if (pageCount > 1) {
-          cy.get('[data-testid="topic-pagination"] > span > a').click();
-          cy.url().should('include', `?page=${pageCount - 1}`);
-          cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
-          cy.url().should('include', `?page=1`);
-          cy.get('[data-testid="topic-promos"] li');
+          it('Last page number button navigates to last page', () => {
+            if (pageCount > 1) {
+              cy.get('[data-testid="topic-pagination"] > ul > li')
+                .last()
+                .click();
+              cy.url().should('include', `?page=${pageCount}`);
+              cy.get('[data-testid="curation-grid-normal"]');
+            } else {
+              cy.log('No pagination as there is only one page');
+            }
+          });
+
+          it('Previous page button navigates to previous page (second to last)', () => {
+            if (pageCount > 1) {
+              cy.get('[data-testid="topic-pagination"] > span > a').click();
+              cy.url().should('include', `?page=${pageCount - 1}`);
+              cy.get('[data-testid="topic-pagination"] > ul > li')
+                .first()
+                .click();
+              cy.url().should('include', `?page=1`);
+              cy.get('[data-testid="topic-promos"] li');
+            } else {
+              cy.log('No pagination as there is only one page');
+            }
+          });
         } else {
-          cy.log('No pagination as there is only one page');
+          it.skip('not available on local');
         }
       });
 
@@ -255,33 +243,26 @@ export default ({ service, pageType, variant, currentPath }) => {
       });
     });
 
-    describe(`Script switch`, () => {
-      it('Pages with 2 scripts should have a script switch button with correct other variant', () => {
-        if (scriptSwitchServices.includes(service)) {
+    if (otherVariant) {
+      describe(`Script switch`, () => {
+        it('Pages with 2 scripts should have a script switch button with correct other variant', () => {
           cy.get(`[data-variant="${otherVariant}"]`).should('be.visible');
-        } else {
-          cy.log('Not a script switch service');
-        }
-        cy.log(Cypress.env('currentPath'));
-      });
+        });
 
-      it('Script switch button switches the script', () => {
-        if (scriptSwitchServices.includes(service)) {
+        it('Script switch button switches the script', () => {
           cy.get(`[data-variant="${otherVariant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', otherVariant);
           // URL contains the correct topic ID
-          cy.url().should('contain', variantTopicId);
+          cy.url().should('contain', topicId);
           // clicks script switch
           cy.get(`[data-variant="${variant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', variant);
           // URL contains the correct topic ID
           cy.url().should('contain', topicId);
-        } else {
-          cy.log('Not a script switch service');
-        }
+        });
       });
-    });
+    }
   });
 };

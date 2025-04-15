@@ -5,11 +5,11 @@ import React, {
   SetStateAction,
   useMemo,
 } from 'react';
-import { v4 as uuid } from 'uuid';
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import setCookie from '#app/lib/utilities/setCookie';
+import getUUID from '#app/lib/utilities/getUUID';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 import Chartbeat from './Chartbeat';
 
@@ -29,7 +29,7 @@ const cknsMvtCookie = () => {
   const cookieValue = Cookie.get(cookieName);
 
   if (!cookieValue) {
-    const cookieUuid = uuid();
+    const cookieUuid = getUUID();
     setCookie({ name: cookieName, value: cookieUuid });
   }
 };

@@ -117,6 +117,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
 exports[`AMP Story Page Analytics chartbeat 1`] = `
 {
   "vars": {
+    "authors": "Redacción  ",
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
     "sections": "Mundo, Mundo - STY",
@@ -203,7 +204,7 @@ exports[`AMP Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Story Page Footer Cookie Settings Button should match text and on handler 1`] = `
 {
-  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
 `;

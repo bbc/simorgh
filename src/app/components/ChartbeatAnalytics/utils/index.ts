@@ -6,9 +6,7 @@ import onClient from '../../../lib/utilities/onClient';
 import { getReferrer } from '../../../lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
   MOST_READ_PAGE,
-  FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
@@ -33,7 +31,7 @@ export const chartbeatUID = 50924;
 export const useCanonical = true;
 export const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
 
-const capitalize = (s: string) => s?.charAt(0).toUpperCase() + s?.slice(1);
+const capitalize = (s = '') => `${s?.charAt(0).toUpperCase()}${s?.slice(1)}`;
 
 const buildSectionArr = (service: Services, value: string, type: string) => [
   `${capitalize(service)} - ${value}`,
@@ -47,11 +45,8 @@ const buildSectionItem = (service: Services | string, type: string) => [
 export const getSylphidCookie = () =>
   onClient() ? Cookie.get(ID_COOKIE) : null;
 
-export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
+export const getType = (pageType: PageTypes, shorthand = false) => {
   switch (pageType) {
-    case FRONT_PAGE:
-    case 'index':
-      return shorthand ? 'IDX' : 'Index';
     case ARTICLE_PAGE:
       return shorthand ? 'ART' : 'New Article';
     case MEDIA_ARTICLE_PAGE:
@@ -69,8 +64,6 @@ export const getType = (pageType: PageTypes | 'index', shorthand = false) => {
       return STORY_PAGE;
     case PHOTO_GALLERY_PAGE:
       return PHOTO_GALLERY_PAGE;
-    case FEATURE_INDEX_PAGE:
-      return FEATURE_INDEX_PAGE;
     case TOPIC_PAGE:
       return 'Topics';
     case LIVE_PAGE:
@@ -181,8 +174,6 @@ interface GetTitleProps {
 
 export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
   switch (pageType) {
-    case FRONT_PAGE:
-    case FEATURE_INDEX_PAGE:
     case MOST_READ_PAGE:
     case TOPIC_PAGE:
     case LIVE_PAGE:
@@ -207,13 +198,12 @@ export interface GetConfigProps {
   brandName: string;
   env: Environments;
   service: Services;
-  origin: string;
-  previousPath: string | null;
   chartbeatDomain: string;
   sectionName?: string;
   mediaPageType?: string;
   categoryName?: string;
   title: string;
+  authors?: string;
   taggings?: MetadataTaggings;
   contentType?: string;
   producer?: string;
@@ -227,20 +217,18 @@ export const getConfig = ({
   brandName,
   env,
   service,
-  origin,
-  previousPath,
   chartbeatDomain,
   mediaPageType,
   sectionName,
   categoryName,
   title,
+  authors,
   taggings,
   contentType,
   producer,
   chapter,
 }: GetConfigProps) => {
-  const referrer =
-    previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
+  const referrer = isAmp ? getReferrer(platform) : null;
 
   const analyticsTitle = getTitle({
     pageType,
@@ -272,6 +260,7 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title: analyticsTitle,
+    ...(authors && { authors }),
     virtualReferrer: referrer,
     ...(isAmp && { contentType: analyticsContentType }),
     ...(!isAmp && {

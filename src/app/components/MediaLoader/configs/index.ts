@@ -25,7 +25,7 @@ const BLOCK_TYPES = [
 
 const blockTypeMapping: Record<
   (typeof BLOCK_TYPES)[number],
-  (arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
+  (_arg0: ConfigBuilderProps) => ConfigBuilderReturnProps
 > = {
   aresMedia,
   clipMedia,

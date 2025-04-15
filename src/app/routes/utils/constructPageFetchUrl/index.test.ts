@@ -87,22 +87,21 @@ describe('constructPageFetchUrl', () => {
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/23263889'}                              | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/23263889'}                              | ${'https://mock-bff-path/?id=ukrainian%2F23263889&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}       | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian'}                                       | ${'http://localhost/ukrainian'}
-    ${CPS_ASSET}       | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian'}                                       | ${'https://mock-bff-path/?id=ukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=test'}
-    ${CPS_ASSET}       | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian'}                                       | ${'https://mock-bff-path/?id=ukrainian%2Ffront_page&service=ukrainian&pageType=cpsAsset&serviceEnv=live'}
     ${CPS_ASSET}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'/serbian/cyr'}                                     | ${'http://localhost/serbian/cyr'}
-    ${CPS_ASSET}       | ${'serbian'}    | ${'cyr'}   | ${'test'}   | ${'/serbian/cyr'}                                     | ${'https://mock-bff-path/?id=serbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=test'}
-    ${CPS_ASSET}       | ${'serbian'}    | ${'cyr'}   | ${'live'}   | ${'/serbian/cyr'}                                     | ${'https://mock-bff-path/?id=serbian%2Fcyr%2Ffront_page&service=serbian&pageType=cpsAsset&variant=cyr&serviceEnv=live'}
-    ${HOME_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/ukrainian/tipohome'}
     ${HOME_PAGE}       | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=cl13j7792ljt&service=ukrainian&pageType=home&serviceEnv=test'}
     ${HOME_PAGE}       | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c3eg5kglplrt&service=ukrainian&pageType=home&serviceEnv=live'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/api/local/ukrainian/live/c0000000000t'}
+    ${LIVE_PAGE}       | ${null}         | ${null}    | ${'local'}  | ${'c0000000000t.lite'}                                | ${'http://localhost/api/local/ukrainian/live/c0000000000t'}
     ${LIVE_PAGE}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'c0000000000t'}                                     | ${'http://localhost/api/local/serbian/live/c0000000000t/cyr'}
+    ${LIVE_PAGE}       | ${'serbian'}    | ${'cyr'}   | ${'local'}  | ${'c0000000000t.lite'}                                | ${'http://localhost/api/local/serbian/live/c0000000000t/cyr'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live&serviceEnv=test'}
     ${LIVE_PAGE}       | ${'zhongwen'}   | ${'trad'}  | ${'test'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c0000000000t&service=zhongwen&pageType=live&variant=trad&serviceEnv=test'}
     ${LIVE_PAGE}       | ${null}         | ${null}    | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=live&serviceEnv=live'}
     ${LIVE_PAGE}       | ${'serbian'}    | ${'cyr'}   | ${'live'}   | ${'c0000000000t'}                                     | ${'https://mock-bff-path/?id=c0000000000t&service=serbian&pageType=live&variant=cyr&serviceEnv=live'}
     ${LIVE_PAGE}       | ${'arabic'}     | ${null}    | ${'local'}  | ${'67574192'}                                         | ${'http://localhost/api/local/arabic/live/67574192'}
+    ${LIVE_PAGE}       | ${'arabic'}     | ${null}    | ${'local'}  | ${'67574192.lite'}                                    | ${'http://localhost/api/local/arabic/live/67574192'}
     ${LIVE_PAGE}       | ${'zhongwen'}   | ${'trad'}  | ${'local'}  | ${'uk-69168527'}                                      | ${'http://localhost/api/local/zhongwen/live/uk-69168527/trad'}
+    ${LIVE_PAGE}       | ${'zhongwen'}   | ${'trad'}  | ${'local'}  | ${'uk-69168527.lite'}                                 | ${'http://localhost/api/local/zhongwen/live/uk-69168527/trad'}
     ${LIVE_PAGE}       | ${'arabic'}     | ${null}    | ${'test'}   | ${'67574192'}                                         | ${'https://mock-bff-path/?id=%2Farabic%2Flive%2F67574192&service=arabic&pageType=live&serviceEnv=test'}
     ${LIVE_PAGE}       | ${'serbian'}    | ${'lat'}   | ${'test'}   | ${'media-23179005'}                                   | ${'https://mock-bff-path/?id=%2Fserbian%2Flat%2Flive%2Fmedia-23179005&service=serbian&pageType=live&variant=lat&serviceEnv=test'}
     ${LIVE_PAGE}       | ${'arabic'}     | ${null}    | ${'live'}   | ${'67574192'}                                         | ${'https://mock-bff-path/?id=%2Farabic%2Flive%2F67574192&service=arabic&pageType=live&serviceEnv=live'}
@@ -110,7 +109,7 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}      | ${null}         | ${null}    | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}                   | ${'http://localhost/ukrainian/topics/c0000000000t'}
     ${TOPIC_PAGE}      | ${null}         | ${null}    | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}                   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&serviceEnv=test'}
     ${TOPIC_PAGE}      | ${null}         | ${null}    | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}                   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&serviceEnv=live'}
-    ${TOPIC_PAGE}      | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}                   | ${'http://localhost/ukrainian/ru-UA/topics/c0000000000t'}
+    ${TOPIC_PAGE}      | ${null}         | ${'ru-UA'} | ${'local'}  | ${'/ukrainian/topics/c0000000000t'}                   | ${'http://localhost/ukrainian/topics/c0000000000t/ru-UA'}
     ${TOPIC_PAGE}      | ${null}         | ${'ru-UA'} | ${'test'}   | ${'/ukrainian/topics/c0000000000t'}                   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA&serviceEnv=test'}
     ${TOPIC_PAGE}      | ${null}         | ${'ru-UA'} | ${'live'}   | ${'/ukrainian/topics/c0000000000t'}                   | ${'https://mock-bff-path/?id=c0000000000t&service=ukrainian&pageType=topic&variant=ru-UA&serviceEnv=live'}
     ${TOPIC_PAGE}      | ${'persian'}    | ${null}    | ${'local'}  | ${'/persian/afghanistan'}                             | ${'http://localhost/persian/topics/crezq2dg9zwt'}
@@ -122,6 +121,12 @@ describe('constructPageFetchUrl', () => {
     ${TOPIC_PAGE}      | ${'persian'}    | ${null}    | ${'local'}  | ${'/persian/topics/c00000000000t'}                    | ${'http://localhost/persian/topics/c00000000000t'}
     ${TOPIC_PAGE}      | ${'persian'}    | ${null}    | ${'test'}   | ${'/persian/topics/c00000000000t'}                    | ${'https://mock-bff-path/?id=c00000000000t&service=persian&pageType=topic&serviceEnv=test'}
     ${TOPIC_PAGE}      | ${'persian'}    | ${null}    | ${'live'}   | ${'/persian/topics/c00000000000t'}                    | ${'https://mock-bff-path/?id=c00000000000t&service=persian&pageType=topic&serviceEnv=live'}
+    ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'trad'}  | ${'local'}  | ${'/zhongwen/topics/cpydz21p02et/trad'}               | ${'http://localhost/zhongwen/topics/cpydz21p02et/trad'}
+    ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'simp'}  | ${'local'}  | ${'/zhongwen/topics/c4vmr03pyn6t/simp'}               | ${'http://localhost/zhongwen/topics/c4vmr03pyn6t/simp'}
+    ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'trad'}  | ${'test'}   | ${'/zhongwen/topics/cpydz21p02et/trad'}               | ${'https://mock-bff-path/?id=cpydz21p02et&service=zhongwen&pageType=topic&variant=trad&serviceEnv=test'}
+    ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'simp'}  | ${'test'}   | ${'/zhongwen/topics/c4vmr03pyn6t/simp'}               | ${'https://mock-bff-path/?id=c4vmr03pyn6t&service=zhongwen&pageType=topic&variant=simp&serviceEnv=test'}
+    ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'trad'}  | ${'live'}   | ${'/zhongwen/topics/cpydz21p02et/trad'}               | ${'https://mock-bff-path/?id=cpydz21p02et&service=zhongwen&pageType=topic&variant=trad&serviceEnv=live'}
+    ${TOPIC_PAGE}      | ${'zhongwen'}   | ${'simp'}  | ${'live'}   | ${'/zhongwen/topics/c4vmr03pyn6t/simp'}               | ${'https://mock-bff-path/?id=c4vmr03pyn6t&service=zhongwen&pageType=topic&variant=simp&serviceEnv=live'}
     ${UGC_PAGE}        | ${'mundo'}      | ${null}    | ${'local'}  | ${'/u50853489'}                                       | ${'http://localhost/api/local/mundo/send/u50853489'}
     ${TV_PAGE}         | ${'hausa'}      | ${null}    | ${'local'}  | ${'/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p'}           | ${'http://localhost/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p'}
     ${TV_PAGE}         | ${'hindi'}      | ${null}    | ${'local'}  | ${'/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}       | ${'http://localhost/hindi/bbc_hindi_tv/tv_programmes/w13xttlw'}

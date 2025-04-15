@@ -38,7 +38,7 @@ const OptimizelyArticleCompleteTracking = () => {
 
   useEffect(() => {
     if (sendPageCompleteEvent) {
-      optimizely.onReady().then(() => {
+      optimizely?.onReady().then(() => {
         optimizely.track('article_completes');
         setPageCompleteSent(true);
       });

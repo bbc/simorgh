@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
+    atiAnalyticsProducerName: 'SCOTLAND',
+    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
@@ -36,9 +38,7 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: null,
     isTrustProjectParticipant: false,
     script: latin,
-    manifestPath: '/articles/manifest.json',
-    swPath: '/articles/sw.js',
-    frontPageTitle: 'Home',
+    homePageTitle: 'Home',
     passportHomes: ['BBCScotland'],
     showAdPlaceholder: false,
     showRelatedTopics: true,
@@ -207,16 +207,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

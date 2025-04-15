@@ -25,12 +25,10 @@ const EpisodesText = styled.p`
 `;
 
 const CardEpisodesText = ({ children, ...props }) => (
-  <>
-    <EpisodesText {...props}>
-      {mediaIcons.seriesstack}
-      {children}
-    </EpisodesText>
-  </>
+  <EpisodesText {...props}>
+    {mediaIcons.seriesstack}
+    {children}
+  </EpisodesText>
 );
 
 export default CardEpisodesText;

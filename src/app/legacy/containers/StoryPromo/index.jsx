@@ -50,9 +50,9 @@ const extractAltText = blocks => {
     if (block.model && block.model.blocks) {
       return extractAltText(block.model.blocks);
     }
-    return '';
   }
 };
+
 const getBlockByType = (blocks, blockType) => {
   let blockData;
   blocks.forEach(block => {

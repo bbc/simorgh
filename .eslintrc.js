@@ -51,15 +51,18 @@ module.exports = {
           'custom-element',
           'custom-template',
           'fallback',
-          'fetchpriority',
-          'imagesizes',
-          'imagesrcset',
         ],
       },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'import/no-import-module-exports': [
+      'error',
+      {
+        exceptions: ['**/*/startServer.js'],
+      },
+    ],
     'import/no-extraneous-dependencies': [
       'off',
       {
@@ -97,6 +100,14 @@ module.exports = {
         // adds support for type, interface and enum declarations https://typescript-eslint.io/rules/no-use-before-define/#how-to-use
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error'],
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+            caughtErrorsIgnorePattern: '^_',
+          },
+        ],
         'react/require-default-props': 'off',
         'react/no-unused-prop-types': 'off',
       },

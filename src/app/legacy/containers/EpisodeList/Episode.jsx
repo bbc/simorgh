@@ -32,11 +32,7 @@ const Episode = forwardRef(({ children, dir }, ref) => {
   const showMediaIndicator = pathOr({}, '0', children).type !== Image;
 
   return (
-    <Wrapper
-      dir={dir}
-      showMediaIndicator={showMediaIndicator}
-      {...(ref && { ref })}
-    >
+    <Wrapper dir={dir} showMediaIndicator={showMediaIndicator} {...ref}>
       {showMediaIndicator ? (
         Children.toArray(children)
           .filter(Boolean)

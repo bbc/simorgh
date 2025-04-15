@@ -1,6 +1,6 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import FigureContainer from '.';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -20,7 +20,7 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
         service="news"
         statusCode={200}
         pathname="/pathname"
-        pageType={FRONT_PAGE}
+        pageType={HOME_PAGE}
       >
         <FigureContainer {...otherProps} />
       </RequestContextProvider>

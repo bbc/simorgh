@@ -20,7 +20,7 @@ const renderListItems = (
   dir,
   activeIndex,
   clickTrackerHandler,
-  viewRef,
+  viewTracker,
   isLite,
 ) =>
   navigation.reduce((listAcc, item, index) => {
@@ -39,7 +39,7 @@ const renderListItems = (
         service={service}
         dir={dir}
         clickTrackerHandler={clickTrackerHandler}
-        viewRef={viewRef}
+        viewTracker={viewTracker}
       >
         {title}
       </Li>
@@ -48,9 +48,9 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = () => {
+const NavigationContainer = ({ propsForOJExperiment }) => {
   const { isAmp, isLite } = useContext(RequestContext);
-
+  const { blocks, experimentVariant } = propsForOJExperiment || {};
   const { script, translations, navigation, service, dir } =
     useContext(ServiceContext);
 
@@ -73,9 +73,11 @@ const NavigationContainer = () => {
     dropdownNavEventTrackingData,
   );
 
-  const scrollableNavViewRef = useViewTracker(scrollableNavEventTrackingData);
+  const scrollableNavViewTracker = useViewTracker(
+    scrollableNavEventTrackingData,
+  );
 
-  const dropdownNavViewRef = useViewTracker(dropdownNavEventTrackingData);
+  const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -96,7 +98,7 @@ const NavigationContainer = () => {
         dir,
         activeIndex,
         scrollableNavClickTrackerHandler,
-        scrollableNavViewRef,
+        scrollableNavViewTracker,
         isLite,
       )}
     </NavigationUl>
@@ -113,7 +115,7 @@ const NavigationContainer = () => {
         dir,
         activeIndex,
         dropdownNavClickTrackerHandler,
-        dropdownNavViewRef,
+        dropdownNavViewTracker,
       )}
     </DropdownUl>
   );
@@ -128,6 +130,8 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
+      blocks={blocks}
+      experimentVariant={experimentVariant}
     />
   );
 };

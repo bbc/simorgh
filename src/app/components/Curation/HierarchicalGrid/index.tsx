@@ -84,13 +84,13 @@ const HiearchicalGrid = ({
                 getStyles(promoItems.length, i, mq),
               ]}
             >
-              <Promo>
+              <Promo className="">
                 <Promo.Image
                   useLargeImages={useLargeImages}
-                  src={promo.imageUrl || ''}
+                  src={promo.imageUrl || null}
                   alt={promo.imageAlt}
                   lazyLoad={lazyLoadImages}
-                  fetchpriority={fetchpriority}
+                  fetchPriority={fetchpriority}
                   isAmp={isAmp}
                 >
                   {isMedia && (
@@ -107,11 +107,7 @@ const HiearchicalGrid = ({
                   })}
                 >
                   {isMedia ? (
-                    <Promo.A
-                      href={promo.link}
-                      aria-labelledby={promo.id}
-                      className="focusIndicatorDisplayBlock"
-                    >
+                    <Promo.A href={promo.link} aria-labelledby={promo.id}>
                       <span id={promo.id} role="text">
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
@@ -125,15 +121,14 @@ const HiearchicalGrid = ({
                       </span>
                     </Promo.A>
                   ) : (
-                    <Promo.A
-                      href={promo.link}
-                      className="focusIndicatorDisplayBlock"
-                    >
+                    <Promo.A href={promo.link}>
                       {isLive ? (
                         <LiveLabel
-                          {...(isFirstPromo && {
-                            className: 'first-promo',
-                          })}
+                          {...(isFirstPromo
+                            ? {
+                                className: 'first-promo',
+                              }
+                            : undefined)}
                         >
                           {promo.title}
                         </LiveLabel>

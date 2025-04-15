@@ -238,6 +238,25 @@ const externalLinks = {
         linkType: 'gaana',
       },
     ],
+    p0kjf03y: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/33zf2Pgpq1w0BXp1Vhe9vz',
+        linkType: 'spotify',
+      },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/the-lens-मुकेश-शर्मा-के-साथ/id1791099679',
+        linkType: 'apple',
+      },
+      {
+        linkText: 'Jio Saavn',
+        linkUrl:
+          'https://www.jiosaavn.com/shows/the-lens-%e0%a4%ae%e0%a5%81%e0%a4%95%e0%a5%87%e0%a4%b6-%e0%a4%b6%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b8%e0%a4%be%e0%a4%a5/1/ESz7PpxJiiA_',
+        linkType: 'gaana',
+      },
+    ],
   },
 };
 

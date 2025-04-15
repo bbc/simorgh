@@ -483,13 +483,15 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   background-color: #FFFFFF;
 }
 
-.emotion-28::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-28::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-28 .emotion-44::after {
@@ -806,6 +808,35 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   text-decoration-color: #B80000;
 }
 
+.emotion-135 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-135 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-135::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-135 {
+    display: none;
+  }
+}
+
 <header
   role="banner"
 >
@@ -826,13 +857,20 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             dir="ltr"
             tabindex="-1"
           >
-            We've updated our Privacy and Cookies Policy
+            Let us know you agree to cookies
           </h2>
           <p
             class="emotion-8 emotion-9"
             dir="ltr"
           >
-            We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+            We use 
+            <a
+              class="focusIndicatorReducedWidth"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            >
+              cookies
+            </a>
+             to give you the best online experience. Please let us know if you agree to all of these cookies.
           </p>
           <ul
             class="emotion-10 emotion-11"
@@ -844,10 +882,10 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
               dir="ltr"
             >
               <button
-                data-terms-banner="accept"
+                data-cookie-banner="accept"
                 type="button"
               >
-                OK
+                Yes, I agree
               </button>
             </li>
             <li
@@ -856,10 +894,10 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
             >
               <span>
                 <a
-                  data-terms-banner="reject"
-                  href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
+                  data-cookie-banner="reject"
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                 >
-                  Find out what's changed
+                  No, take me to settings
                 </a>
               </span>
             </li>
@@ -1284,1295 +1322,9 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
-</header>
-`;
-
-exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
-.emotion-0 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2147483647;
-}
-
-.emotion-2 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  border-top: solid 0.0625rem transparent;
-}
-
-.emotion-4 {
-  max-width: 37.4375rem;
-  margin: 0 auto;
-}
-
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: solid 0.0625rem #AEAEB5;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
-.emotion-4 a:hover,
-.emotion-4 a:focus {
-  border-bottom: solid 0.125rem transparent;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-4 {
-    padding: 2.75rem 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
-    padding: 2.75rem 1rem 0.5rem 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
-  }
-}
-
-.emotion-6 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding-top: 1rem;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-6 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.emotion-6:focus {
-  outline: none;
-}
-
-.emotion-8 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  color: #BEBEBE;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    margin-top: 1.5rem;
-  }
-}
-
-.emotion-10 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-10 li+li {
-  margin-top: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-  }
-
-  .emotion-10 li+li {
-    margin-top: 0;
-  }
-}
-
-.emotion-12 {
-  text-align: center;
-  width: 100%;
-  word-break: break-word;
-}
-
-.emotion-12 button {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  min-height: 2.75rem;
-  color: #222222;
-  font-weight: bold;
-  background-color: #FDFDFD;
-  border: solid 0.0625rem transparent;
-  margin: 0;
-  cursor: pointer;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 button {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 button {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-12 button:focus,
-.emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
-.emotion-12 button:hover,
-.emotion-12 button:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-12 button:focus-visible {
-  outline: 0.1875rem solid #000000;
-}
-
-@media (min-width: 25rem) {
-  .emotion-12 {
-    width: 17.3125rem;
-  }
-}
-
-.emotion-12.hide {
-  width: 2.75rem;
-  height: 2.75rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-12.hide button {
-  width: 2.75rem;
-  height: 2.75rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.emotion-12.hide button:focus::after,
-.emotion-12.hide button:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: 0.1875rem solid #FFFFFF;
-}
-
-.emotion-12.hide button:focus-visible::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: 0.1875rem solid #000000;
-  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
-}
-
-.emotion-12.hide svg {
-  color: white;
-  fill: currentColor;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.emotion-17 {
-  background-color: #B80000;
-  height: 2.75rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 15rem) {
-  .emotion-17 {
-    height: 3.75rem;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-17 {
-    height: 3.75rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    height: 4rem;
-  }
-}
-
-.emotion-17 svg {
-  fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-17 svg {
-    fill: linkText;
-  }
-}
-
-.emotion-19 {
-  height: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 63rem;
-  margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-19 {
-    display: block;
-  }
-}
-
-.emotion-21 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
-}
-
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.emotion-21:focus-visible::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
-  outline: 0.25rem solid #FFFFFF;
-}
-
-.emotion-23 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.25rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-23 {
-    height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    height: 1.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active),print {
-  .emotion-23 {
-    fill: windowText;
-  }
-}
-
-.emotion-25 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-26 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #FFFFFF;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-26:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: 0;
-  left: 0;
-}
-
-@media (min-width: 25rem) {
-  .emotion-26:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-26 {
-    padding: 0.5rem;
-  }
-}
-
-.emotion-28 {
-  position: relative;
-  background-color: #FFFFFF;
-}
-
-.emotion-28::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
-}
-
-.emotion-28 .emotion-44::after {
-  left: 0;
-}
-
-.emotion-30 {
-  position: relative;
-  max-width: 63.4rem;
-  margin: 0;
-  background-color: #FFFFFF;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-30 {
-    margin: 0 0.8rem;
-  }
-}
-
-@media (min-width: 66rem) {
-  .emotion-30 {
-    margin: 0 auto;
-  }
-}
-
-.emotion-32 {
-  position: relative;
-}
-
-.emotion-34 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-  float: left;
-  height: 2.75rem;
-  width: 2.75rem;
-}
-
-.emotion-34:hover,
-.emotion-34:focus {
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
-}
-
-.emotion-34:hover::after,
-.emotion-34:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border: 0.25rem solid #000000;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-34 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 20rem) {
-  .emotion-34 {
-    height: 2.75rem;
-    width: 2.75rem;
-  }
-}
-
-.emotion-34 svg {
-  vertical-align: middle;
-}
-
-.emotion-36 {
-  color: #000000;
-  fill: currentColor;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-36 {
-    fill: linkText;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-39 {
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-39::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-39:focus-visible {
-    outline: none;
-  }
-
-  .emotion-39:focus-visible::after {
-    outline: 0.1875rem solid #000000;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .emotion-39:after {
-    content: ' ';
-    height: 100%;
-    width: 3rem;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    overflow: hidden;
-    pointer-events: none;
-    background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
-          );
-  }
-
-  @media (min-width: 25rem) {
-    .emotion-39:after {
-      width: 6rem;
-    }
-  }
-}
-
-.emotion-41 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-41 {
-    overflow: hidden;
-  }
-}
-
-.emotion-43 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-43:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-43::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #E6E8EA;
-    z-index: -1;
-  }
-}
-
-.emotion-45 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #141414;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem 0.25rem;
-  outline: none;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-45 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-45 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-.emotion-45:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-}
-
-.emotion-45:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-45:focus-visible::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-87 {
-  background-color: #FFFFFF;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-  visibility: hidden;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-87 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-87 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-.emotion-89 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid #E6E8EA;
-}
-
-.emotion-91 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
-}
-
-.emotion-91:last-child {
-  padding-bottom: 0.25rem;
-  border: 0;
-}
-
-.emotion-93 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #141414;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-93 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-93 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-93:hover,
-.emotion-93:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
-}
-
-<header
-  role="banner"
->
-  <div>
-    <div
-      class="emotion-0 emotion-1"
-    >
       <div
-        class="emotion-2 emotion-3"
-        dir="ltr"
-      >
-        <div
-          class="emotion-4 emotion-5"
-          dir="ltr"
-        >
-          <h2
-            class="emotion-6 emotion-7"
-            dir="ltr"
-            tabindex="-1"
-          >
-            We've updated our Privacy and Cookies Policy
-          </h2>
-          <p
-            class="emotion-8 emotion-9"
-            dir="ltr"
-          >
-            We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
-          </p>
-          <ul
-            class="emotion-10 emotion-11"
-            dir="ltr"
-            role="list"
-          >
-            <li
-              class="emotion-12 emotion-13"
-              dir="ltr"
-            >
-              <button
-                data-terms-banner="accept"
-                type="button"
-              >
-                OK
-              </button>
-            </li>
-            <li
-              class="emotion-12 emotion-13"
-              dir="ltr"
-            >
-              <span>
-                <a
-                  data-terms-banner="reject"
-                  href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
-                >
-                  Find out what's changed
-                </a>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div
-      class="emotion-16 emotion-17 emotion-18"
-    >
-      <div
-        class="emotion-19 emotion-20"
-      >
-        <a
-          aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
-          href="/news"
-          id="topPage"
-        >
-          <svg
-            aria-hidden="true"
-            class="emotion-23 emotion-24"
-            focusable="false"
-            height="32"
-            id="brandSvgHeader"
-            viewBox="0 0 980 142"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill-rule="evenodd"
-              stroke="#000"
-              stroke-width=".335"
-              style="stroke: #fff;"
-            >
-              <path
-                d="M0 0v141.732h141.732V0Zm98.839 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787H40.571V31.004h29.92q13.224 0 20.489 5.296 7.261 5.296 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.186 20.186 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.272-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H56.724v19.847h12.249q6.287 0 9.594-2.732Zm-7.534 15.22H56.724v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927ZM177.166 0v141.732h141.732V0Zm98.838 100.024a23.16 23.16 0 0 1-10.352 7.917 42.088 42.088 0 0 1-16.153 2.787h-31.763V31.004h29.92q13.224 0 20.489 5.296 7.261 5.298 7.263 15.22a18.29 18.29 0 0 1-2.602 9.868 17.917 17.917 0 0 1-7.697 6.634 21.248 21.248 0 0 1 10.786 7.415 20.187 20.187 0 0 1 3.74 12.32 20.663 20.663 0 0 1-3.631 12.267Zm-20.271-38.97a9.358 9.358 0 0 0 3.307-7.638q0-9.476-12.901-9.477H233.89v19.847h12.249q6.287 0 9.594-2.732Zm-7.535 15.22h-14.309v21.52h14.093q7.261 0 11.166-2.732a9.01 9.01 0 0 0 3.903-7.861q-.001-10.926-14.853-10.927Zm106.133 65.459h141.732V0H354.331Zm101.793-36.057a46.238 46.238 0 0 1-11.478 4.316 58.045 58.045 0 0 1-13.729 1.585 50.05 50.05 0 0 1-17.217-2.787 35.175 35.175 0 0 1-12.941-8.033 34.802 34.802 0 0 1-8.102-12.842 48.987 48.987 0 0 1-2.814-17.104 45.738 45.738 0 0 1 2.926-16.776 35.83 35.83 0 0 1 8.44-12.842 37.18 37.18 0 0 1 13.222-8.197 49.66 49.66 0 0 1 17.274-2.842 55.607 55.607 0 0 1 12.547 1.366 46.64 46.64 0 0 1 10.972 3.989v15.519a36.756 36.756 0 0 0-10.016-4.645 40.183 40.183 0 0 0-11.365-1.585 29.66 29.66 0 0 0-14.01 3.06 20.959 20.959 0 0 0-8.89 8.853 29.58 29.58 0 0 0-3.094 14.098 30.845 30.845 0 0 0 2.982 14.154 20.367 20.367 0 0 0 8.664 8.907 28.727 28.727 0 0 0 13.785 3.06 42.724 42.724 0 0 0 22.844-6.448Zm162.072 18.34q-11.596-18.582-23.49-37.242-11.897-18.656-23.49-36.2v73.442h-22.003V17.718h23.192q12.042 17.99 23.713 36.052 11.668 18.063 23.266 36.646V17.718h22.003v106.298Zm44.258-106.298h73.145v19.029h-50.25V59.79h44.601V78.82h-44.601v26.166h53.075v19.03h-75.97Zm177.915 106.298q-5.055-17.987-9.886-35.978-4.833-17.987-9.441-35.978-4.46 17.99-9.217 35.978-4.76 17.99-9.812 35.978H777.78Q770.198 98 763.21 71.386q-6.99-26.61-13.231-53.67h24.976q3.715 20.666 7.88 41.33 4.16 20.668 8.771 40.587 9.959-38.802 18.881-77.456h22.3q4.461 19.032 9.143 37.985 4.683 18.955 9.589 37.836 4.46-19.625 8.623-39.843 4.16-20.216 7.73-40.438h24.531q-6.244 27.06-13.231 53.67-6.99 26.613-14.57 52.629Zm95.37 2.23a78.37 78.37 0 0 1-17.32-1.933 66.24 66.24 0 0 1-16.428-6.096V97.7a63.933 63.933 0 0 0 33.748 9.664q10.109 0 15.387-3.42a10.75 10.75 0 0 0 5.278-9.514 9.755 9.755 0 0 0-2.601-7.211 18.56 18.56 0 0 0-6.913-4.163 99.45 99.45 0 0 0-9.663-2.9 110.65 110.65 0 0 1-15.462-4.756 45.068 45.068 0 0 1-11.299-6.32 23.846 23.846 0 0 1-6.987-8.77 28.942 28.942 0 0 1-2.379-12.265 29.446 29.446 0 0 1 5.129-17.395 32.716 32.716 0 0 1 14.496-11.225q9.366-3.938 22.3-3.94a72.223 72.223 0 0 1 16.651 1.934 67.688 67.688 0 0 1 14.718 5.204v20.219a56.134 56.134 0 0 0-14.792-6.244 63.276 63.276 0 0 0-16.577-2.231q-9.07 0-14.049 3.122a9.935 9.935 0 0 0-4.981 8.92 9.093 9.093 0 0 0 2.379 6.616 17.36 17.36 0 0 0 6.765 4.014q4.383 1.561 10.332 3.048 7.583 1.935 14.124 4.237a45.864 45.864 0 0 1 11.521 5.872 24.459 24.459 0 0 1 7.731 9.069 30.061 30.061 0 0 1 2.75 13.529q0 10.558-5.203 18.063a32.29 32.29 0 0 1-15.016 11.447q-9.813 3.939-23.639 3.94Z"
-              />
-            </g>
-          </svg>
-          <span
-            class="emotion-25"
-            id="BrandLink-topPage"
-          >
-            BBC News
-          </span>
-        </a>
-        <a
-          class="focusIndicatorRemove emotion-26 emotion-27"
-          dir="ltr"
-          href="#content"
-        >
-          <div>
-            Skip to content
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <nav
-    class="emotion-28 emotion-29"
-    dir="ltr"
-    role="navigation"
-  >
-    <div
-      class="emotion-30 emotion-31"
-    >
-      <div
-        class="emotion-32 emotion-33"
-      >
-        <button
-          aria-expanded="false"
-          class="focusIndicatorRemove emotion-34 emotion-35"
-          dir="ltr"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="emotion-36 emotion-37"
-            focusable="false"
-            height="2.75rem"
-            viewBox="0 0 44 44"
-            width="2.75rem"
-          >
-            <path
-              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-            />
-          </svg>
-          <span
-            class="emotion-25"
-          >
-            Sections
-          </span>
-        </button>
-        <div
-          class="emotion-39 emotion-40"
-          data-e2e="scrollable-nav"
-          dir="ltr"
-        >
-          <ul
-            class="emotion-41 emotion-42"
-            role="list"
-          >
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/uk"
-              >
-                UK
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/world"
-              >
-                World
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/business"
-              >
-                Business
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/politics"
-              >
-                Politics
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/technology"
-              >
-                Tech
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/science_and_environment"
-              >
-                Science
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/health"
-              >
-                Health
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/education"
-              >
-                Family & Education
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/entertainment_and_arts"
-              >
-                Entertainment & Arts
-              </a>
-            </li>
-            <li
-              class="emotion-43 emotion-44"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="focusIndicatorRemove emotion-45 emotion-46"
-                href="/news/stories"
-              >
-                Stories
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        class="emotion-87 emotion-88"
-        data-e2e="dropdown-nav"
-        height="0"
-      >
-        <ul
-          class="emotion-89 emotion-90"
-          role="list"
-        >
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-home"
-              class="emotion-93 emotion-94"
-              href="/news"
-            >
-              <span
-                id="dropdownNavigation-home"
-              >
-                Home
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-uk"
-              class="emotion-93 emotion-94"
-              href="/news/uk"
-            >
-              <span
-                id="dropdownNavigation-uk"
-              >
-                UK
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-world"
-              class="emotion-93 emotion-94"
-              href="/news/world"
-            >
-              <span
-                id="dropdownNavigation-world"
-              >
-                World
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-business"
-              class="emotion-93 emotion-94"
-              href="/news/business"
-            >
-              <span
-                id="dropdownNavigation-business"
-              >
-                Business
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-politics"
-              class="emotion-93 emotion-94"
-              href="/news/politics"
-            >
-              <span
-                id="dropdownNavigation-politics"
-              >
-                Politics
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-tech"
-              class="emotion-93 emotion-94"
-              href="/news/technology"
-            >
-              <span
-                id="dropdownNavigation-tech"
-              >
-                Tech
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-science"
-              class="emotion-93 emotion-94"
-              href="/news/science_and_environment"
-            >
-              <span
-                id="dropdownNavigation-science"
-              >
-                Science
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-health"
-              class="emotion-93 emotion-94"
-              href="/news/health"
-            >
-              <span
-                id="dropdownNavigation-health"
-              >
-                Health
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-family-&-education"
-              class="emotion-93 emotion-94"
-              href="/news/education"
-            >
-              <span
-                id="dropdownNavigation-family-&-education"
-              >
-                Family & Education
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-entertainment-&-arts"
-              class="emotion-93 emotion-94"
-              href="/news/entertainment_and_arts"
-            >
-              <span
-                id="dropdownNavigation-entertainment-&-arts"
-              >
-                Entertainment & Arts
-              </span>
-            </a>
-          </li>
-          <li
-            class="emotion-91 emotion-92"
-            role="listitem"
-          >
-            <a
-              aria-labelledby="dropdownNavigation-stories"
-              class="emotion-93 emotion-94"
-              href="/news/stories"
-            >
-              <span
-                id="dropdownNavigation-stories"
-              >
-                Stories
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+        class="emotion-135 emotion-136"
+      />
     </div>
   </nav>
 </header>
@@ -3061,13 +1813,15 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   background-color: #FFFFFF;
 }
 
-.emotion-28::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-28::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-28 .emotion-44::after {
@@ -3384,6 +2138,35 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   text-decoration-color: #B80000;
 }
 
+.emotion-135 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-135 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-135::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-135 {
+    display: none;
+  }
+}
+
 <header
   role="banner"
 >
@@ -3404,13 +2187,20 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             dir="ltr"
             tabindex="-1"
           >
-            We've updated our Privacy and Cookies Policy
+            Let us know you agree to cookies
           </h2>
           <p
             class="emotion-8 emotion-9"
             dir="ltr"
           >
-            We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+            We use 
+            <a
+              class="focusIndicatorReducedWidth"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            >
+              cookies
+            </a>
+             to give you the best online experience. Please let us know if you agree to all of these cookies.
           </p>
           <ul
             class="emotion-10 emotion-11"
@@ -3422,10 +2212,10 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
               dir="ltr"
             >
               <button
-                data-terms-banner="accept"
+                data-cookie-banner="accept"
                 type="button"
               >
-                OK
+                Yes, I agree
               </button>
             </li>
             <li
@@ -3434,10 +2224,10 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
             >
               <span>
                 <a
-                  data-terms-banner="reject"
-                  href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
+                  data-cookie-banner="reject"
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                 >
-                  Find out what's changed
+                  No, take me to settings
                 </a>
               </span>
             </li>
@@ -3862,6 +2652,9 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-135 emotion-136"
+      />
     </div>
   </nav>
 </header>
@@ -4350,13 +3143,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   background-color: #FFFFFF;
 }
 
-.emotion-28::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-28::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-28 .emotion-44::after {
@@ -4673,6 +3468,35 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   text-decoration-color: #B80000;
 }
 
+.emotion-135 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-135 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-135::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-135 {
+    display: none;
+  }
+}
+
 <header
   role="banner"
 >
@@ -4693,13 +3517,20 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             dir="ltr"
             tabindex="-1"
           >
-            We've updated our Privacy and Cookies Policy
+            Let us know you agree to cookies
           </h2>
           <p
             class="emotion-8 emotion-9"
             dir="ltr"
           >
-            We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+            We use 
+            <a
+              class="focusIndicatorReducedWidth"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            >
+              cookies
+            </a>
+             to give you the best online experience. Please let us know if you agree to all of these cookies.
           </p>
           <ul
             class="emotion-10 emotion-11"
@@ -4711,10 +3542,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               dir="ltr"
             >
               <button
-                data-terms-banner="accept"
+                data-cookie-banner="accept"
                 type="button"
               >
-                OK
+                Yes, I agree
               </button>
             </li>
             <li
@@ -4723,10 +3554,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             >
               <span>
                 <a
-                  data-terms-banner="reject"
-                  href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
+                  data-cookie-banner="reject"
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                 >
-                  Find out what's changed
+                  No, take me to settings
                 </a>
               </span>
             </li>
@@ -5151,6 +3982,9 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-135 emotion-136"
+      />
     </div>
   </nav>
 </header>
@@ -5639,13 +4473,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   background-color: #FFFFFF;
 }
 
-.emotion-28::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-bottom: 0.0625rem solid #E6E8EA;
+@media (min-width: 62.9375rem) {
+  .emotion-28::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
 }
 
 .emotion-28 .emotion-44::after {
@@ -5962,6 +4798,35 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   text-decoration-color: #B80000;
 }
 
+.emotion-135 {
+  position: absolute;
+  width: calc(100vw - 0.8rem);
+  left: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-135 {
+    width: calc(100vw + 0.8rem);
+    left: calc(-1 * (100vw - 1014px) / 2);
+  }
+}
+
+.emotion-135::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: -0.8rem;
+  width: calc(100% + 0.8rem);
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+@media (min-width: 1008px) {
+  .emotion-135 {
+    display: none;
+  }
+}
+
 <header
   role="banner"
 >
@@ -5982,13 +4847,20 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             dir="ltr"
             tabindex="-1"
           >
-            We've updated our Privacy and Cookies Policy
+            Let us know you agree to cookies
           </h2>
           <p
             class="emotion-8 emotion-9"
             dir="ltr"
           >
-            We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+            We use 
+            <a
+              class="focusIndicatorReducedWidth"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+            >
+              cookies
+            </a>
+             to give you the best online experience. Please let us know if you agree to all of these cookies.
           </p>
           <ul
             class="emotion-10 emotion-11"
@@ -6000,10 +4872,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               dir="ltr"
             >
               <button
-                data-terms-banner="accept"
+                data-cookie-banner="accept"
                 type="button"
               >
-                OK
+                Yes, I agree
               </button>
             </li>
             <li
@@ -6012,10 +4884,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             >
               <span>
                 <a
-                  data-terms-banner="reject"
-                  href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
+                  data-cookie-banner="reject"
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                 >
-                  Find out what's changed
+                  No, take me to settings
                 </a>
               </span>
             </li>
@@ -6440,6 +5312,9 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </li>
         </ul>
       </div>
+      <div
+        class="emotion-135 emotion-136"
+      />
     </div>
   </nav>
 </header>

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
+    atiAnalyticsProducerName: 'IGBO',
+    useReverb: true,
     chartbeatDomain: 'igbo.bbc.co.uk',
     brandName: 'BBC News Ìgbò',
     product: 'BBC News',
@@ -33,9 +35,9 @@ export const service: DefaultServiceConfig = {
     defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
     imageCopyrightOffscreenText: 'Ebe foto si, ',
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/igbo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Ogbako',
+    homePageTitle: 'Ogbako',
     noBylinesPolicy:
       'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',
@@ -231,6 +233,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        closeVideo: 'Wepu',
       },
       socialEmbed: {
         caption: {
@@ -267,7 +270,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Kachasị ọhụrụ',
     },
     mostRead: {
-      header: 'Akachasị Gụọ',
+      header: 'Akụkọ akachasị gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -276,7 +279,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Akachasị Gụọ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {

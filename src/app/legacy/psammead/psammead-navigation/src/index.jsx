@@ -8,6 +8,7 @@ import {
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { getPica } from '#psammead/gel-foundations/src/typography';
@@ -137,18 +138,16 @@ const CurrentLink = ({
   script,
   currentPageText = null,
 }) => (
-  <>
-    <StyledSpan
-      // eslint-disable-next-line jsx-a11y/aria-role
-      role="text"
-      script={script}
-      // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-      id={`NavigationLinks-${linkId}`}
-    >
-      <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
-      {link}
-    </StyledSpan>
-  </>
+  <StyledSpan
+    // eslint-disable-next-line jsx-a11y/aria-role
+    role="text"
+    script={script}
+    // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+    id={`NavigationLinks-${linkId}`}
+  >
+    <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
+    {link}
+  </StyledSpan>
 );
 
 export const NavigationUl = ({ children, ...props }) => (
@@ -166,11 +165,11 @@ export const NavigationLi = ({
   active = false,
   service,
   dir = 'ltr',
-  viewRef = null,
+  viewTracker = null,
   ...props
 }) => {
   return (
-    <StyledListItem dir={dir} role="listitem" ref={viewRef}>
+    <StyledListItem dir={dir} role="listitem" {...viewTracker}>
       {active && currentPageText ? (
         <StyledLink
           href={url}
@@ -224,16 +223,16 @@ const StyledNav = styled.nav`
         }
       }
     `}
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
+    }
   }
-
   ${StyledListItem} {
     ${({ dir }) => `
       &::after {

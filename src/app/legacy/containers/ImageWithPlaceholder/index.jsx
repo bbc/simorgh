@@ -78,8 +78,8 @@ const ImageWithPlaceholder = ({
             rel="preload"
             as="image"
             href={src}
-            imagesrcset={fallbackSrcset}
-            imagesizes={sizes}
+            imageSrcSet={fallbackSrcset}
+            imageSizes={sizes}
           />
         </Helmet>
       )}

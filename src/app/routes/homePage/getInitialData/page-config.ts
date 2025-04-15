@@ -3,7 +3,7 @@ import { Services } from '../../../models/types/global';
 type Envs = 'test' | 'live';
 
 export const HOME_PAGE_CONFIG: {
-  [service in Services]: { [env in Envs]: string };
+  [_service in Services]: { [_env in Envs]: string };
 } = {
   kyrgyz: {
     test: 'cm7682qz7v1t',
@@ -112,6 +112,10 @@ export const HOME_PAGE_CONFIG: {
   pidgin: {
     test: 'c93v2kkz841t',
     live: 'ck3yk9nz25qt',
+  },
+  polska: {
+    test: 'cpqr492886k4t',
+    live: '',
   },
   portuguese: {
     test: 'c7pe2jj9l7mt',

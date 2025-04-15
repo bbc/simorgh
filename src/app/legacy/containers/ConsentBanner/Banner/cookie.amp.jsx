@@ -22,6 +22,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
+import useToggle from '#hooks/useToggle';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const BANNER_MAX_HEIGHT = '75vh';
@@ -230,18 +231,23 @@ const ContentWrapper = styled.div`
  * the Manage Cookie Settings banner.
  */
 
-export const AmpCookieSettingsButton = ({ children, lang, className }) => (
-  <button
-    // eslint-disable-next-line react/no-unknown-property
-    on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
-    type="button"
-    data-testid="amp-cookie-settings-button"
-    lang={lang}
-    className={className}
-  >
-    {children}
-  </button>
-);
+export const AmpCookieSettingsButton = ({ children, lang, className }) => {
+  const { enabled } = useToggle('privacyPolicy');
+  const on = `tap:consent.prompt, ${enabled ? 'privacy.hide, ' : ''}cookie.show, AMP.setState({ isManagingSettings: true })`;
+
+  return (
+    <button
+      // eslint-disable-next-line react/no-unknown-property
+      on={on}
+      type="button"
+      data-testid="amp-cookie-settings-button"
+      lang={lang}
+      className={className}
+    >
+      {children}
+    </button>
+  );
+};
 
 const AmpCookieBanner = ({
   id = null,

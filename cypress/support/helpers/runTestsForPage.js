@@ -10,6 +10,7 @@ import ampOnlyServices from './ampOnlyServices';
 import visitPage from './visitPage';
 import getAmpUrl from './getAmpUrl';
 import getLiteUrl from './getLiteUrl';
+import getOptimizelyKey from './getOptimizelyKey';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -40,26 +41,11 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
-
-            const optimizelyKey =
-              Cypress.env('APP_ENV') === 'live'
-                ? '4Rje1JY7YY1FhaiHJ88Zi'
-                : 'LptPKDnHyAFu9V12s5xCz';
-
-            if (pageType === 'articles') {
-              cy.intercept(
-                {
-                  method: 'GET',
-                  pathname: `/datafiles/${optimizelyKey}.json`,
-                },
-                { statusCode: 404 },
-              );
-            }
             if (pageType === 'storyPage') {
               cy.intercept(
                 {
                   method: 'GET',
-                  pathname: `/datafiles/${optimizelyKey}.json`,
+                  pathname: `/datafiles/${getOptimizelyKey()}.json`,
                 },
                 { foo: '123' },
               );

@@ -60,11 +60,13 @@ const SingleTopicTagItem = styled.div`
   }
 `;
 
-export const TopicTag = forwardRef(({ name, link, onClick = null }, ref) => (
-  <a href={link} onClick={onClick} ref={ref}>
-    {name}
-  </a>
-));
+export const TopicTag = forwardRef(
+  ({ name, link, onClick = null, ...viewTracker }, ref) => (
+    <a href={link} onClick={onClick} ref={ref} {...viewTracker}>
+      {name}
+    </a>
+  ),
+);
 
 export const TopicTags = ({
   children = [],
@@ -74,38 +76,33 @@ export const TopicTags = ({
 }) => {
   const hasMultipleChildren = children.length > 1;
 
-  return (
-    <>
-      {hasMultipleChildren ? (
-        <TopicsList role="list" service={service} script={script}>
-          {children.map((child, index) => {
-            if (child.type !== TopicTag) return null;
-
-            return (
-              <SingleTopicTagItem
-                as="li"
-                backgroundColour={tagBackgroundColour}
-                // eslint-disable-next-line react/no-array-index-key
-                key={index}
-                service={service}
-                script={script}
-              >
-                {child}
-              </SingleTopicTagItem>
-            );
-          })}
-        </TopicsList>
-      ) : (
-        <SingleTopicTagContainer service={service} script={script}>
+  return hasMultipleChildren ? (
+    <TopicsList role="list" service={service} script={script}>
+      {children.map((child, index) => {
+        if (child.type !== TopicTag) return null;
+        return (
           <SingleTopicTagItem
+            as="li"
+            backgroundColour={tagBackgroundColour}
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
             service={service}
             script={script}
-            backgroundColour={tagBackgroundColour}
           >
-            {children.type === TopicTag && children}
+            {child}
           </SingleTopicTagItem>
-        </SingleTopicTagContainer>
-      )}
-    </>
+        );
+      })}
+    </TopicsList>
+  ) : (
+    <SingleTopicTagContainer service={service} script={script}>
+      <SingleTopicTagItem
+        service={service}
+        script={script}
+        backgroundColour={tagBackgroundColour}
+      >
+        {children.type === TopicTag && children}
+      </SingleTopicTagItem>
+    </SingleTopicTagContainer>
   );
 };

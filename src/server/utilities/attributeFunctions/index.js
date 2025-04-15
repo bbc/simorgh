@@ -7,8 +7,9 @@ export const getScriptAttributes = bundleType => chunk => {
     const { url } = chunk;
 
     return {
-      crossOrigin,
+      async: false,
       defer: true,
+      crossOrigin,
       ...(url && { src: encodeChunkFilename(chunk) }),
       ...(bundleType === 'modern' && { type: 'module' }),
       ...(bundleType === 'legacy' && { noModule: true }),

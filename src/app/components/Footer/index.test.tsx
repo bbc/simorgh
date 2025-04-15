@@ -21,6 +21,14 @@ describe('Footer', () => {
         '#',
       );
     });
+
+    it('should not render an empty list item when the "Do not share or sell my info" link is not present', () => {
+      render(<Footer />, { showAdsBasedOnLocation: false });
+      const listItems = screen.getAllByRole('listitem');
+      listItems.forEach(listItem => {
+        expect(listItem).not.toBeEmptyDOMElement();
+      });
+    });
   });
 
   describe('Collective News Text', () => {

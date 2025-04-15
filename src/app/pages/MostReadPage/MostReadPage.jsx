@@ -36,53 +36,53 @@ const MarginWrapper = styled.div`
   }
 `;
 
+const MostReadWrapper = ({ children, header }) => (
+  <>
+    <IndexHeading id="content">{header}</IndexHeading>
+    <MarginWrapper>
+      <GelPageGrid
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+      >
+        <Grid
+          item
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 1,
+            group5: 3,
+          }}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 6,
+            group5: 11,
+          }}
+        >
+          {children}
+        </Grid>
+      </GelPageGrid>
+    </MarginWrapper>
+  </>
+);
+
 const MostReadPage = ({ pageData }) => {
   const {
     brandName,
     lang,
     mostRead: { header },
   } = useContext(ServiceContext);
-
-  const MostReadWrapper = ({ children }) => (
-    <>
-      <IndexHeading id="content">{header}</IndexHeading>
-      <MarginWrapper>
-        <GelPageGrid
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 8,
-            group5: 20,
-          }}
-          enableGelGutters
-        >
-          <Grid
-            item
-            startOffset={{
-              group0: 1,
-              group1: 1,
-              group2: 1,
-              group3: 1,
-              group4: 1,
-              group5: 3,
-            }}
-            columns={{
-              group0: 6,
-              group1: 6,
-              group2: 6,
-              group3: 6,
-              group4: 6,
-              group5: 11,
-            }}
-          >
-            {children}
-          </Grid>
-        </GelPageGrid>
-      </MarginWrapper>
-    </>
-  );
 
   const {
     metadata: { atiAnalytics },
@@ -104,7 +104,7 @@ const MostReadPage = ({ pageData }) => {
       <LinkedData type="WebPage" seoTitle={header} />
       <main role="main" data-e2e="most-read">
         <IndexPageContainer>
-          <MostReadWrapper>
+          <MostReadWrapper header={header}>
             <MostRead data={pageData} columnLayout="oneColumn" size="default" />
           </MostReadWrapper>
         </IndexPageContainer>

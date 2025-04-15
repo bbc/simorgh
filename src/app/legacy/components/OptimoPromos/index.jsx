@@ -34,7 +34,7 @@ const Promo = ({
   );
 
   return (
-    <PromoWrapper {...(className && { className })}>
+    <PromoWrapper {...(className ? { className } : undefined)}>
       <PromoContext.Provider value={promoContextValue}>
         {children}
       </PromoContext.Provider>

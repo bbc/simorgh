@@ -1,0 +1,852 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Nigeria~Ramadan~Woman",
+          "contentId": "urn:bbc:optimo:asset:c4nvy27mervo",
+          "contentType": "article-sfv",
+          "language": "ha",
+          "ldpThingIds": "3d5d5e30-dd50-4041-96d5-c970b20005b9~60654568-0b87-4dcd-99d9-b9f80630d2c5~e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "ldpThingLabels": "Nigeria~Ramadan~Woman",
+          "nationsProducer": null,
+          "pageIdentifier": "hausa.articles.c4nvy27mervo.page",
+          "pageTitle": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+          "timePublished": "2023-04-10T18:04:00.460Z",
+          "timeUpdated": "2023-04-10T18:04:00.460Z"
+        },
+        "id": "urn:bbc:ares::article:c4nvy27mervo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c4nvy27mervo",
+          "canonicalUrl": "https://www.bbc.com/hausa/articles/c4nvy27mervo"
+        },
+        "type": "article",
+        "createdBy": "Hausa",
+        "language": "ha",
+        "firstPublished": 1681149840460,
+        "lastPublished": 1681149840460,
+        "analyticsLabels": {
+          "ldp_tags": "Nigeria~Ramadan~Woman",
+          "page": "hausa.articles.c4nvy27mervo.page",
+          "irisKeyword": null,
+          "audience_motivation": "Help me learn",
+          "ldp_ids": "3d5d5e30-dd50-4041-96d5-c970b20005b9~60654568-0b87-4dcd-99d9-b9f80630d2c5~e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "contentId": "urn:bbc:optimo:asset:c4nvy27mervo",
+          "producer": "Hausa"
+        },
+        "passport": {
+          "language": "ha",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/60654568-0b87-4dcd-99d9-b9f80630d2c5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/310b90d4-4ece-4866-8061-78d51e3ae044#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/310b90d4-4ece-4866-8061-78d51e3ae044#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "ha",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "thingLabel": "Najeriya",
+                "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q1033",
+                  "http://sws.geonames.org/2328926/"
+                ],
+                "thingEnglishLabel": "Nigeria",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/60654568-0b87-4dcd-99d9-b9f80630d2c5#id",
+                "thingLabel": " Ramadan",
+                "thingUri": "http://www.bbc.co.uk/things/60654568-0b87-4dcd-99d9-b9f80630d2c5#id",
+                "thingId": "60654568-0b87-4dcd-99d9-b9f80630d2c5",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q41662",
+                  "http://dbpedia.org/resource/Ramadan"
+                ],
+                "thingEnglishLabel": "Ramadan",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                "thingLabel": "Mata",
+                "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Woman",
+                  "http://www.wikidata.org/entity/Q467"
+                ],
+                "thingEnglishLabel": "Woman",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Najeriya",
+              "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+              "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+              "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q1033",
+                "http://sws.geonames.org/2328926/"
+              ],
+              "topicName": "Najeriya",
+              "topicId": "c340qrd0njgt",
+              "curationList": [
+                {
+                  "curationId": "48cacb5f-809f-4e91-bf40-1bff710e4db3",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Nigeria",
+              "thingLabelLanguage": "ha",
+              "thingPreferredLabel": "Nigeria"
+            },
+            {
+              "thingLabel": " Ramadan",
+              "thingUri": "http://www.bbc.co.uk/things/60654568-0b87-4dcd-99d9-b9f80630d2c5#id",
+              "thingId": "60654568-0b87-4dcd-99d9-b9f80630d2c5",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q41662",
+                "http://dbpedia.org/resource/Ramadan"
+              ],
+              "topicName": " Ramadan",
+              "topicId": "c5qvpxkyj2qt",
+              "curationList": [
+                {
+                  "curationId": "c4efd4ba-77dd-433a-a4cc-d2104a0b6300",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Ramadan",
+              "thingLabelLanguage": "ha",
+              "thingPreferredLabel": "Ramadan"
+            },
+            {
+              "thingLabel": "Mata",
+              "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+              "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Woman",
+                "http://www.wikidata.org/entity/Q467"
+              ],
+              "topicName": "Mata",
+              "topicId": "cnq68kdjkxdt",
+              "curationList": [
+                {
+                  "curationId": "2d508aa4-a247-4dca-a4d4-5b9d03c117a7",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Woman",
+              "thingLabelLanguage": "ha",
+              "thingPreferredLabel": "Woman"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "topics": [
+          {
+            "topicName": "Najeriya",
+            "topicId": "c340qrd0njgt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "48cacb5f-809f-4e91-bf40-1bff710e4db3",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+            "topicUrl": "/hausa/topics/c340qrd0njgt"
+          },
+          {
+            "topicName": " Ramadan",
+            "topicId": "c5qvpxkyj2qt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/60654568-0b87-4dcd-99d9-b9f80630d2c5#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "c4efd4ba-77dd-433a-a4cc-d2104a0b6300",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+            "topicUrl": "/hausa/topics/c5qvpxkyj2qt"
+          },
+          {
+            "topicName": "Mata",
+            "topicId": "cnq68kdjkxdt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "2d508aa4-a247-4dca-a4d4-5b9d03c117a7",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+            "topicUrl": "/hausa/topics/cnq68kdjkxdt"
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "1f5cea6d",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "24aa1619",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8b7440b8",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+                            "blocks": [
+                              {
+                                "id": "75ca9be0",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "5a5ee9a4",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0ffwhlb",
+                "blocks": [
+                  {
+                    "id": "24e866cf",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7fd3a079",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "de36eb63",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Danna lasifikar da ke sama domin kallon bidiyon",
+                                  "blocks": [
+                                    {
+                                      "id": "24c9171e",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Danna lasifikar da ke sama domin kallon bidiyon",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "95ce921a",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "347c7da6",
+                          "blockId": "urn:bbc:ares::clip:p0ffwhlb",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0ffwhlb",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" tare da Maamah Kanti.",
+                            "synopses": {
+                              "short": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" tare da Maamah Kanti.",
+                              "medium": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" tare da Maamah Kanti."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0ffwhzl.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0ffwhlg",
+                                "types": ["Original"],
+                                "duration": 73,
+                                "durationISO8601": "PT1M13S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1681145392000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "244dc88e",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8d3f897a",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0ffwhzl.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "42416ca3",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "e09f44b6",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "72174082",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #4",
+                                              "blocks": [
+                                                {
+                                                  "id": "966d2981",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #4",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "0ad33bb2",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d9fda773",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1138f9f5",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+                            "blocks": [
+                              {
+                                "id": "2c6e77c6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "f07aee1a",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1681149840460,
+                "lastPublished": 1681149840460
+              },
+              "position": [4]
+            },
+            {
+              "id": "6f5db595",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9554526e",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Wannan wani shiri ne da BBC Hausa take kawo muku kullum a watan azumi, don bai wa mata damar gwangwaje basirarsu ta girki. ",
+                      "blocks": [
+                        {
+                          "id": "fb0e498c",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Wannan wani shiri ne da BBC Hausa take kawo muku kullum a watan azumi, don bai wa mata damar gwangwaje basirarsu ta girki. ",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "d17d594b",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "A yau, za ku kalli bidiyon Maamah Kanti wadda ta nuna mana yadda ake yin cilantro soup. ",
+                      "blocks": [
+                        {
+                          "id": "a2e21a19",
+                          "type": "fragment",
+                          "model": {
+                            "text": "A yau, za ku kalli bidiyon Maamah Kanti wadda ta nuna mana yadda ake yin cilantro soup. ",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "dba136af",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [6]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Wannan wani shiri ne da BBC Hausa take kawo muku kullum a watan azumi, don bai wa mata damar gwangwaje basirarsu ta girki. ",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Wannan wani shiri ne da BBC Hausa take kawo muku kullum a watan azumi, don bai wa mata damar gwangwaje basirarsu ta girki. ",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0ffwhlb",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Danna lasifikar da ke sama domin kallon bidiyon",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Danna lasifikar da ke sama domin kallon bidiyon",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0ffwhlb",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0ffwhlb",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" tare da Maamah Kanti.",
+                            "synopses": {
+                              "short": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" tare da Maamah Kanti.",
+                              "medium": "Girke-girken Ramadan: Yadda ake yin \"cilantro soup\" tare da Maamah Kanti."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0ffwhzl.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0ffwhlg",
+                                "types": ["Original"],
+                                "duration": 73,
+                                "durationISO8601": "PT1M13S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1681145392000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0ffwhzl.jpg",
+                                  "originCode": "mpv"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #4",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #4",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT9M6S",
+          "isLive": false,
+          "title": "Ku San Malamanku tare da Farfesa Yahuza Abdullahi Muhammad",
+          "firstPublished": "2025-02-14T04:14:42.847Z",
+          "lastPublished": "2025-02-14T04:14:42.847Z",
+          "link": "https://www.bbc.com/hausa/articles/cd9q37k22j5o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/58fe/live/5c36e840-ea45-11ef-a319-fb4e7360c4ec.png.webp",
+          "description": "A wannan makon za mu kawo muku Sheikh Farfesa Yahuza Abdullahi Muhammad a filinmu na Ku San Malamanku wanda malami ne a birnin Maiduguri.",
+          "imageAlt": "Sheikh Yahuza",
+          "id": "cd9q37k22j5o"
+        },
+        {
+          "type": "video",
+          "duration": "PT5M46S",
+          "isLive": false,
+          "title": "... Daga Bakin Mai Ita tare da Gundura Zaria",
+          "firstPublished": "2025-02-13T04:09:09.509Z",
+          "lastPublished": "2025-02-13T04:09:09.509Z",
+          "link": "https://www.bbc.com/hausa/articles/c9d5w8qpgw4o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d8c1/live/35fc99c0-e97f-11ef-bd1b-d536627785f2.png.webp",
+          "description": "Ya samo sunan Gundura tun yana jam'iar Ahmadu Bello da ke Zaria, saboda yadda mutanen suke matsa masa cewar ya takura musu, ya gundire su, daga nan ya sami sunan, kuma ya bishi.",
+          "imageAlt": ".",
+          "id": "c9d5w8qpgw4o"
+        },
+        {
+          "type": "video",
+          "duration": "PT2M38S",
+          "isLive": false,
+          "title": "Langa: Wasan gargajiyar Bahaushe da ke siffanta yaƙi da jarumta",
+          "firstPublished": "2025-02-09T14:14:08.596Z",
+          "lastPublished": "2025-02-09T14:14:08.596Z",
+          "link": "https://www.bbc.com/hausa/articles/ce3npev437eo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c13a/live/37088ea0-e565-11ef-a819-277e390a7a08.jpg.webp",
+          "description": "Langa wasa ne da ke nuna juriya da ƙwazo da kuma tunani mai zurfi. \"Al'ummar Hausawa na yi wa langa kallon wasan masu ƙarfi, kuma jarumai,'' kamar yadda Khalid Hussein, shugaban ƙungiyar masu wasan Langa ta jihar Kano ya shaida wa sashen wasanni na BBC.",
+          "imageAlt": "...",
+          "id": "ce3npev437eo"
+        },
+        {
+          "type": "video",
+          "duration": "PT6M33S",
+          "isLive": false,
+          "title": "Ku San Malamanku tare da Sheikh Sabo Ibrahim Sani",
+          "firstPublished": "2025-02-07T04:11:55.566Z",
+          "lastPublished": "2025-02-07T04:11:55.566Z",
+          "link": "https://www.bbc.com/hausa/articles/c2k52vnndx9o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/53bf/live/e08ed4a0-e4c2-11ef-a819-277e390a7a08.png.webp",
+          "description": "A wannan makon za mu kawo shugaban makarantar Sabilarrashad a jihar Nasarawa, Sheikh Sabo Ibrahim Sani.",
+          "imageAlt": "Sheikh",
+          "id": "c2k52vnndx9o"
+        }
+      ]
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

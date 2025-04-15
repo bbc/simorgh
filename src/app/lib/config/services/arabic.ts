@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
+    atiAnalyticsProducerName: 'ARABIC',
+    useReverb: true,
     chartbeatDomain: 'arabic.bbc.co.uk',
     brandName: 'BBC News عربي',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/arabic/institutional-49283069',
     isTrustProjectParticipant: true,
     script: arabic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/arabic/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'الرئيسية',
+    homePageTitle: 'الرئيسية',
     iTunesAppId: 558497376,
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -74,8 +76,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'إعلان',
       },
-      recommendationTitle: 'قصص مقترحة',
-      splitRecommendationTitle: 'مزيد من القصص المقترحة',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
@@ -251,6 +251,7 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'البرامج السابقة',
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
         download: 'تحميل الحلقة',
+        closeVideo: 'خروج',
       },
       socialEmbed: {
         caption: {
@@ -350,7 +351,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'الأكثر قراءة',
+      header: 'تفضيلات القراء',
       lastUpdated: 'آخر تحديث',
       numberOfItems: 10,
       hasMostRead: true,
@@ -363,7 +364,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'المدة %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'الأكثر قراءة',
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
         endTextVisuallyHidden: '%title% نهاية',

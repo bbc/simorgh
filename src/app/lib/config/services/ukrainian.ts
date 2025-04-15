@@ -16,6 +16,8 @@ const baseServiceConfig = {
   articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
+  atiAnalyticsProducerName: 'UKRAINIAN',
+  useReverb: true,
   chartbeatDomain: 'ukrainian.bbc.co.uk',
   brandName: 'BBC News Україна',
   product: 'BBC News',
@@ -38,22 +40,22 @@ const baseServiceConfig = {
   publishingPrinciples: 'https://www.bbc.com/ukrainian/institutional-50170368',
   isTrustProjectParticipant: true,
   script: cyrillic,
-  manifestPath: '/manifest.json',
+  manifestPath: '/ukrainian/manifest.json',
   swPath: '/sw.js',
-  frontPageTitle: 'Новини',
+  homePageTitle: 'Новини',
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'подкаст',
-    brandTitle: 'Що це було',
-    brandDescription: 'Головна історія тижня, яку пояснюють наші журналісти',
+    title: 'WhatsApp',
+    brandTitle: 'BBC Україна тепер у WhatsApp',
+    brandDescription: 'Головне про Україну та світ - у нашому WhatsApp-каналі',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09jrvvq.jpg',
-      alt: 'Що це було',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kv11pb.png',
+      alt: 'BBC News Україна підписуйтеся на наш WhatsApp',
     },
     linkLabel: {
-      text: 'Випуски',
-      href: 'https://www.bbc.com/ukrainian/podcasts/p09jsy3h',
+      text: 'Клікніть тут, щоб підписатися',
+      href: 'https://www.whatsapp.com/channel/0029Vau5deM0QeaqQRTPVs2e',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -243,6 +245,7 @@ const baseServiceConfig = {
       recentEpisodes: 'Більше',
       podcastExternalLinks: 'Цей подкаст доступний у',
       download: 'Завантажити епізод',
+      closeVideo: 'Вийти',
     },
     socialEmbed: {
       caption: {
@@ -279,7 +282,7 @@ const baseServiceConfig = {
     ...secondaryColumnTranslations,
   },
   mostRead: {
-    header: 'Найпопулярніше',
+    header: 'Найбільше читають',
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,
@@ -288,7 +291,11 @@ const baseServiceConfig = {
     hasRadioSchedule: false,
   },
   recommendations: {
-    hasStoryRecommendations: false,
+    header: 'Найпопулярніше',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -341,11 +348,11 @@ const baseServiceConfig = {
     },
     {
       title: 'Історії',
-      url: '/ukrainian/53725237',
+      url: '/ukrainian/topics/czrxg3vzy44t',
     },
     {
       title: 'Відео',
-      url: '/ukrainian/55425840',
+      url: '/ukrainian/topics/c44vmzqkzqqt',
     },
     {
       title: 'Книга року BBC',

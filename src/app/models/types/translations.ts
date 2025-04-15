@@ -9,8 +9,6 @@ export interface Translations {
   ads: {
     advertisementLabel: string;
   };
-  recommendationTitle?: string;
-  splitRecommendationTitle?: string;
   seeAll?: string;
   home: string;
   currentPage: string;
@@ -25,18 +23,13 @@ export interface Translations {
     informationPage: string;
     informationPageLink: string;
     dataSaving: string;
+    articleDataSavingLinkText: string;
+    experiment?: Record<string, string>;
   };
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
     videoPlayer: string;
-  };
-  articlePage?: {
-    jumpToTitle: {
-      variation_1: string;
-      variation_2: string;
-      variation_3: string;
-    };
   };
   liveExperiencePage: {
     liveLabel: string;

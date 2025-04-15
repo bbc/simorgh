@@ -10,13 +10,16 @@ updates:
       - dependency-name: 'webpack'
         update-types: ['version-update:semver-major']
       - dependency-name: 'winston'
+      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2185: Latest version of eslint has breaking changes
       - dependency-name: eslint
         update-types: ['version-update:semver-major']
-      # Latest version of Emotion contains a memory leak that needs resolved: https://github.com/emotion-js/emotion/issues/3221
-      - dependency-name: '@emotion/*'
-      # Opera Mini unsupported packages
-      - dependency-name: 'uuid' # https://github.com/bbc/simorgh/pull/11840
-      - dependency-name: '@types/uuid' # https://github.com/bbc/simorgh/pull/11840
+      - dependency-name: '@typescript-eslint/eslint-plugin'
+        update-types: ['version-update:semver-major']
+      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-1478 react-router & react-router-dom
+      - dependency-name: 'react-router-dom'
+      - dependency-name: 'react-router'
+      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2099: Delete path-to-regexp dependency
+      - dependency-name: 'path-to-regexp'
     labels:
       - 'dependencies'
     groups:
@@ -24,6 +27,9 @@ updates:
         patterns:
           - '@babel/*'
           - 'babel-*'
+      bbc:
+        patterns:
+          - '@bbc/*'
       emotion:
         patterns:
           - '@emotion/*'
@@ -32,17 +38,21 @@ updates:
           - '@next/*'
           - 'next'
           - 'next-*'
+          - '@img-sharp-*'
+      loadable-minor-patch:
+        patterns:
+          - '@loadable/*'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom'
       storybook:
         patterns:
           - '@storybook/*'
           - 'storybook'
           - '@esbuild/*'
-      bbc:
-        patterns:
-          - '@bbc/*'
-      loadable-minor-patch:
-        patterns:
-          - '@loadable/*'
       webpack-minor-patch:
         patterns:
           - 'webpack'

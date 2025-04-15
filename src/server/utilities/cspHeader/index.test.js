@@ -134,6 +134,7 @@ describe('cspHeader', () => {
         'data:',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
         'https://fonts.gstatic.com',
+        'https://*.teads.tv',
       ].sort(),
       frameSrcExpectation: [
         ...bbcDomains,
@@ -324,6 +325,7 @@ describe('cspHeader', () => {
         'data:',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
         'https://fonts.gstatic.com',
+        'https://*.teads.tv',
       ].sort(),
       frameSrcExpectation: [
         ...bbcDomains,

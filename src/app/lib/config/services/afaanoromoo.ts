@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
+    atiAnalyticsProducerName: 'AFAAN_OROMOO',
+    useReverb: true,
     chartbeatDomain: 'afaanoromoo.bbc.co.uk',
     brandName: 'BBC News Afaan Oromoo',
     product: 'BBC News',
@@ -41,11 +43,25 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/afaanoromoo/institutional-49281861',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/afaanoromoo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Oduu',
+    homePageTitle: 'Oduu',
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Chaanaalii WhatsApp BBC Afaan Oromoo',
+      brandDescription:
+        'Oduu, xiinxalaafi odeessa adda addaa kallattiin argachuuf',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0kthbd3.png',
+        alt: 'BBC News Afaan Oromo WhatsApp irrati argadhaa',
+      },
+      linkLabel: {
+        text: 'Asiin seenaa',
+        href: 'https://bit.ly/4hIe50g',
+      },
+    },
     translations: {
       pagination: {
         previousPage: 'Kan duraa',
@@ -232,6 +248,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Sagantaa raadiyoo itti aanu',
         duration: 'Turtii',
         recentEpisodes: 'Sagantaawwan darban',
+        closeVideo: 'Bahi',
       },
       socialEmbed: {
         caption: {
@@ -267,7 +284,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Haaraa',
     },
     mostRead: {
-      header: "Baay'ee kan dubbifame",
+      header: `Baay'ee kan jaalatame`,
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -278,7 +295,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Turtii %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: "Baay'ee kan dubbifame",
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -334,8 +355,24 @@ export const service: DefaultServiceConfig = {
         url: '/afaanoromoo/topics/c2dwqdy81y1t',
       },
       {
+        title: 'Ispoortii',
+        url: '/afaanoromoo/topics/c06gq6440j8t',
+      },
+      {
         title: 'Viidiyoo',
         url: '/afaanoromoo/topics/ck0dg7dpjwwt',
+      },
+      {
+        title: 'Siyaasa',
+        url: '/afaanoromoo/topics/c2dwqdynwwrt',
+      },
+      {
+        title: 'Dubartoota',
+        url: '/afaanoromoo/topics/c8y94yq185dt',
+      },
+      {
+        title: 'Baha Jidduugalaa',
+        url: '/afaanoromoo/topics/c8y94yzd049t',
       },
       {
         title: 'Jajjaboo',

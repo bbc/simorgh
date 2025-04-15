@@ -2,7 +2,6 @@ import React, {
   createContext,
   useReducer,
   Dispatch,
-  ReducerAction,
   PropsWithChildren,
   useMemo,
 } from 'react';
@@ -15,7 +14,7 @@ const environment = (getEnvConfig().SIMORGH_APP_ENV || 'local') as Environments;
 
 type ToggleContextProps = {
   toggleState: Toggles;
-  toggleDispatch: Dispatch<ReducerAction<typeof toggleReducer>>;
+  toggleDispatch: Dispatch<{ type: string; data: { toggles: Toggles } }>;
 };
 
 const ToggleContext = createContext<ToggleContextProps>(

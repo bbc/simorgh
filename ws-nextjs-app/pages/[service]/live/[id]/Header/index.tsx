@@ -29,6 +29,7 @@ const Header = ({
 }) => {
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
+  const isWithImageLayout = isHeaderImage || !!mediaCollections;
 
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
@@ -36,7 +37,7 @@ const Header = ({
 
   const Title = (
     <span
-      css={isHeaderImage ? styles.titleWithImage : styles.titleWithoutImage}
+      css={isWithImageLayout ? styles.titleWithImage : styles.titleWithoutImage}
     >
       {title}
     </span>
@@ -48,18 +49,20 @@ const Header = ({
         <div css={styles.backgroundColor} />
       </div>
       <div css={styles.contentContainer}>
-        {isHeaderImage ? (
-          <MaskedImage
-            imageUrl={imageUrl}
-            imageUrlTemplate={imageUrlTemplate}
-            imageWidth={imageWidth}
-          />
-        ) : null}
+        <div css={[isMediaOpen && styles.hideMaskedImage]}>
+          {isHeaderImage ? (
+            <MaskedImage
+              imageUrl={imageUrl}
+              imageUrlTemplate={imageUrlTemplate}
+              imageWidth={imageWidth}
+            />
+          ) : null}
+        </div>
         <div
           css={[
-            isHeaderImage && styles.textContainerWithImage,
-            !isHeaderImage && styles.textContainerWithoutImage,
-            isMediaOpen && styles.textContainerMediaOpen,
+            isWithImageLayout && styles.textContainerWithImage,
+            !isWithImageLayout && styles.textContainerWithoutImage,
+            mediaCollections && styles.fixedHeight,
           ]}
         >
           <Heading
@@ -70,7 +73,7 @@ const Header = ({
             css={styles.heading}
           >
             {showLiveLabel ? (
-              <LiveLabelHeader isHeaderImage={isHeaderImage}>
+              <LiveLabelHeader isHeaderImage={isWithImageLayout}>
                 {Title}
               </LiveLabelHeader>
             ) : (
@@ -83,20 +86,22 @@ const Header = ({
               css={[
                 styles.description,
                 showLiveLabel &&
-                  !isHeaderImage &&
+                  !isWithImageLayout &&
                   styles.layoutWithLiveLabelNoImage,
               ]}
             >
               {description}
             </Text>
           )}
-          {mediaCollections && (
+        </div>
+        {mediaCollections && (
+          <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
             <LiveHeaderMedia
               mediaCollection={mediaCollections}
               clickCallback={watchVideoClickHandler}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

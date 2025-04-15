@@ -11,6 +11,8 @@ const baseServiceConfig = {
   articleTimestampSuffix: '',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
+  atiAnalyticsProducerName: 'UK_CHINA',
+  useReverb: true,
   chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
@@ -26,7 +28,7 @@ const baseServiceConfig = {
   twitterSite: '@BBCChina',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
-  manifestPath: '/manifest.json',
+  manifestPath: '/ukchina/manifest.json',
   swPath: '/sw.js',
   showAdPlaceholder: true,
   showRelatedTopics: true,
@@ -37,7 +39,7 @@ export const service: ChineseConfig = {
   simp: {
     ...baseServiceConfig,
     externalLinkText: ', 外部',
-    frontPageTitle: '主页',
+    homePageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -87,7 +89,7 @@ export const service: ChineseConfig = {
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
     },
     mostRead: {
-      header: '热读',
+      header: 'Popular Reads',
       lastUpdated: '最近更新: ',
       numberOfItems: 10,
       hasMostRead: true,
@@ -96,7 +98,11 @@ export const service: ChineseConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: '熱讀',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -275,6 +281,7 @@ export const service: ChineseConfig = {
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
         recentEpisodes: '存档节目',
+        closeVideo: '退出',
       },
       socialEmbed: {
         caption: {
@@ -308,7 +315,7 @@ export const service: ChineseConfig = {
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     externalLinkText: ', 外部',
-    frontPageTitle: '主頁',
+    homePageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字, ',
     audioCaptionOffscreenText: '音頻加註文字，',
     videoCaptionOffscreenText: '視頻加註文字，',
@@ -354,13 +361,17 @@ export const service: ChineseConfig = {
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
     mostRead: {
-      header: '熱讀',
+      header: 'Popular Reads',
       lastUpdated: '最近更新: ',
       numberOfItems: 10,
       hasMostRead: true,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: '熱讀',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -539,6 +550,7 @@ export const service: ChineseConfig = {
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
         recentEpisodes: '存档节目',
+        closeVideo: '退出',
       },
       socialEmbed: {
         caption: {

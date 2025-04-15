@@ -175,8 +175,8 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 
 exports[`Canonical Podcast Page Header Navigation link should match text and url 9`] = `
 {
-  "text": "BBC Lê",
-  "url": "/portuguese/topics/cxndrr1qgllt",
+  "text": "Podcasts",
+  "url": "/portuguese/topics/cx2ggnx4j72t",
 }
 `;
 

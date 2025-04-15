@@ -175,22 +175,6 @@
               "position": [4]
             },
             {
-              "type": "jumpTo",
-              "model": {
-                "jumpToHeadings": [
-                  {
-                    "heading": "Queen Victoria’s myrtle"
-                  },
-                  {
-                    "heading": "The origins of the tradition"
-                  },
-                  {
-                    "heading": "What is the tomb of the unknown warrior?"
-                  }
-                ]
-              }
-            },
-            {
               "id": "23e2dbc0",
               "type": "mpu",
               "model": {},
@@ -1241,8 +1225,7 @@
           "rawImage",
           "urlLink",
           "subheadline",
-          "caption",
-          "jumpTo"
+          "caption"
         ],
         "topics": [
           {

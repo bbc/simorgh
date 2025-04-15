@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
+    atiAnalyticsProducerName: 'HINDI',
+    useReverb: true,
     chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
@@ -39,25 +41,25 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/hindi/institutional-50223932',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/hindi/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
+      brandTitle: 'दुनिया जहान',
       brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+        'दुनिया जहान: अंतरराष्ट्रीय विषयों की गहन पड़ताल करता कार्यक्रम.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
-        alt: 'दिनभर',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09krv89.jpg',
+        alt: 'मुकेश शर्मा',
       },
       linkLabel: {
         text: 'दिनभर: पूरा दिन,पूरी ख़बर',
-        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
+        href: 'https://www.bbc.com/hindi/podcasts/p05525mc',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -73,8 +75,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
-      recommendationTitle: 'ये भी पढ़ें',
-      splitRecommendationTitle: 'कुछ और जानिए',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
@@ -86,13 +86,6 @@ export const service: DefaultServiceConfig = {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
         videoPlayer: 'वीडियो प्लेयर',
-      },
-      articlePage: {
-        jumpToTitle: {
-          variation_1: 'इस पर जाएं',
-          variation_2: 'बीबीसी न्यूज़ हिंदी  से और अधिक जानें',
-          variation_3: 'बीबीसी न्यूज़ हिंदी से और ख़बरें पढ़ें',
-        },
       },
       liveExperiencePage: {
         liveLabel: 'लाइव',
@@ -259,6 +252,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'सुनिए',
         watch: 'देखिए',
+        watchMoments: 'शॉर्ट वीडियो देखिए',
         listenLive: 'लाइव सुनें',
         listenNext: 'इसके बाद सुनिए',
         liveLabel: 'लाइव',
@@ -269,6 +263,7 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'प्रसारण का समय',
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
         download: 'एपिसोड डाउनलोड करें',
+        closeVideo: 'बाहर निकलें',
       },
       socialEmbed: {
         caption: {
@@ -374,7 +369,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'सबसे अधिक पढ़ी गईं',
+      header: 'सबसे अधिक लोकप्रिय',
       lastUpdated: 'अंतिम अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -383,7 +378,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'सबसे अधिक पढ़ी गईं',
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
         endTextVisuallyHidden: 'समाप्त',
@@ -450,6 +445,10 @@ export const service: DefaultServiceConfig = {
         url: '/hindi/topics/c9wpm0en87xt',
       },
       {
+        title: 'हेल्थ',
+        url: '/hindi/topics/cr50ykdx5wqt',
+      },
+      {
         title: 'मनोरंजन',
         url: '/hindi/topics/c06gq3n0pp7t',
       },
@@ -471,7 +470,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'पॉडकास्ट',
-        url: '/hindi/institutional-61824775',
+        url: '/hindi/topics/cv22x3pmrvmt',
       },
     ],
   },

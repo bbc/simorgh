@@ -59,8 +59,8 @@ export default async ({
       ? await getPodcastExternalLinks(
           service,
           brandId,
-          variant,
           externalLinkVersionId,
+          variant,
         )
       : [];
     return {

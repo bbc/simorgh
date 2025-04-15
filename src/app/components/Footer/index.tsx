@@ -29,36 +29,38 @@ export default () => {
     collectiveNewsroomText,
   } = footer;
 
-  const elements = links?.map(({ id, text, href, lang }) => {
-    if (id === 'COOKIE_SETTINGS') {
-      if (isAmp) {
-        return (
-          // @ts-expect-error we do not have a className
-          <AmpCookieSettingsButton
-            lang={lang}
-            css={styles.ampCookieSettingButton}
-          >
-            {text}
-          </AmpCookieSettingsButton>
-        );
-      }
+  const elements = links
+    ?.map(({ id, text, href, lang }) => {
+      if (id === 'COOKIE_SETTINGS') {
+        if (isAmp) {
+          return (
+            // @ts-expect-error we do not have a className
+            <AmpCookieSettingsButton
+              lang={lang}
+              css={styles.ampCookieSettingButton}
+            >
+              {text}
+            </AmpCookieSettingsButton>
+          );
+        }
 
-      if (showAdsBasedOnLocation) {
-        return (
-          <Link
-            text={text}
-            href={href}
-            lang={lang}
-            onClick={openPrivacyManagerModal}
-            onlyShowIfJSenabled
-          />
-        );
+        if (showAdsBasedOnLocation) {
+          return (
+            <Link
+              text={text}
+              href={href}
+              lang={lang}
+              onClick={openPrivacyManagerModal}
+              onlyShowIfJSenabled
+            />
+          );
+        }
+      } else {
+        return <Link text={text} href={href} lang={lang} />;
       }
-    } else {
-      return <Link text={text} href={href} lang={lang} />;
-    }
-    return null;
-  });
+      return null;
+    })
+    .filter(Boolean);
 
   return (
     <div css={styles.siteWideLinksWrapper}>

@@ -171,33 +171,26 @@ exports[`Canonical Pashto On Demand TV Page Header Navigation link should match 
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 7`] = `
 {
-  "text": "ويډيوګانې",
-  "url": "/pashto/topics/c2m45zyk0mmt",
+  "text": "اقتصاد او سوداګري",
+  "url": "/pashto/topics/cy087kqvl1yt",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 8`] = `
 {
-  "text": "ځانګړې پاڼې",
-  "url": "/pashto/topics/c6pxyz4e0ryt",
+  "text": "ساینس او ټکنالوژي",
+  "url": "/pashto/topics/ckgrvled11kt",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 9`] = `
 {
-  "text": "کالم",
-  "url": "/pashto/topics/cq57nwne9lzt",
+  "text": "هنر او ادب",
+  "url": "/pashto/topics/c8xqkd91knnt",
 }
 `;
 
 exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 10`] = `
-{
-  "text": "پر سټلایت خپرونې",
-  "url": "/pashto/articles/c4n55eygdn0o",
-}
-`;
-
-exports[`Canonical Pashto On Demand TV Page Header Navigation link should match text and url 11`] = `
 {
   "text": "راډیویي خپرونې",
   "url": "/pashto/topics/c9xz1ekw79nt",

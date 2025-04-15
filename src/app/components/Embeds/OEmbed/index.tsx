@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { memo, useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -58,4 +58,4 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   return <EmbedHtml embeddableContent={html} />;
 };
 
-export default OEmbedLoader;
+export default memo(OEmbedLoader);

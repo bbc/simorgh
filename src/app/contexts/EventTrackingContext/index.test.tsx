@@ -5,7 +5,7 @@ import {
   screen,
 } from '../../components/react-testing-library-with-providers';
 
-import { STORY_PAGE, HOME_PAGE } from '../../routes/utils/pageTypes';
+import { STORY_PAGE, HOME_PAGE, LIVE_PAGE } from '../../routes/utils/pageTypes';
 import { EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
 
@@ -43,7 +43,6 @@ describe('Expected use', () => {
     } = fixtureData;
 
     render(<TestComponent />, {
-      pageData: fixtureData,
       atiData: atiAnalytics,
       service: 'pidgin',
       toggles: defaultToggles,
@@ -59,6 +58,7 @@ describe('Expected use', () => {
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
       producerId: '70',
+      producerName: 'PIDGIN',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
     });
   });
@@ -80,6 +80,7 @@ describe('Expected use', () => {
       pageIdentifier: 'kyrgyz.page',
       platform: 'canonical',
       producerId: '58',
+      producerName: 'KYRGYZ',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
     });
   });
@@ -92,7 +93,7 @@ describe('Expected use', () => {
     };
 
     render(<TestComponent />, {
-      pageData: fixtureData,
+      atiData: defaultATIData,
       toggles: eventTrackingToggle,
     });
 
@@ -102,7 +103,7 @@ describe('Expected use', () => {
     expect(trackingData).toEqual({});
   });
 
-  it('should provide an empty object if pageData and atiData are missing and eventTracking toggle is disabled', () => {
+  it('should provide an empty object if atiData is missing and eventTracking toggle is disabled', () => {
     const eventTrackingToggle = {
       eventTracking: {
         enabled: false,
@@ -119,21 +120,9 @@ describe('Expected use', () => {
     expect(trackingData).toEqual({});
   });
 
-  it('should provide an empty object for NextJS pages if pageData and atiData are missing', () => {
+  it('should provide an empty object for NextJS pages if atiData is missing', () => {
     render(<TestComponent />, {
       isNextJs: true,
-    });
-
-    const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent as string);
-
-    expect(trackingData).toEqual({});
-  });
-
-  it('should provide an empty object for NextJS pages if pageData is provided', () => {
-    render(<TestComponent />, {
-      isNextJs: true,
-      pageData: fixtureData,
     });
 
     const testEl = screen.getByTestId('test-component');
@@ -146,8 +135,8 @@ describe('Expected use', () => {
     render(<TestComponent />, {
       isNextJs: true,
       atiData: defaultATIData,
-      pageType: HOME_PAGE,
-      pathname: '/kyrgyz',
+      pageType: LIVE_PAGE,
+      pathname: '/kyrgyz/live/c000000000o',
       service: 'kyrgyz',
     });
 
@@ -157,7 +146,7 @@ describe('Expected use', () => {
     expect(trackingData).toEqual({});
   });
 
-  it('should provide an empty object if pageData and atiData are missing - 1', () => {
+  it('should provide an empty object if atiData is missing', () => {
     render(<TestComponent />, {
       toggles: defaultToggles,
     });
@@ -182,34 +171,11 @@ describe('Expected use', () => {
 });
 
 describe('Error handling', () => {
-  it('should not throw error and not log error when no pageData is passed into context provider', async () => {
-    let errorMessage;
-
-    try {
-      render(<TestComponent />, {
-        pageType: STORY_PAGE,
-        pathname: '/pidgin/tori-51745682',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      });
-    } catch (error: unknown) {
-      const { message } = error as Error;
-      errorMessage = message;
-    }
-
-    const testEl = screen.getByTestId('test-component');
-    const trackingData = JSON.parse(testEl.textContent as string);
-
-    expect(trackingData).toEqual({});
-    expect(errorMessage).toBeUndefined();
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-
   it('should not provide tracking props when there is no page type campaign ID', async () => {
     let errorMessage;
     try {
       render(<TestComponent />, {
-        pageData: fixtureData,
+        atiData: defaultATIData,
         // @ts-expect-error - testing handling of a page type that doesn't exist
         pageType: 'funky-page-type',
         toggles: defaultToggles,

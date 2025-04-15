@@ -1,4 +1,5 @@
 import React from 'react';
+import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { render } from '../react-testing-library-with-providers';
 import LiteSiteCta from '.';
 
@@ -28,5 +29,15 @@ describe('LiteSiteCTA', () => {
       'Find out more about this data-saving version',
     );
     expect(ctaLink).toBeTruthy();
+  });
+
+  it(`Should have click tracking on the 'Back to canonical' link.`, () => {
+    process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
+    const { container } = render(<LiteSiteCta />, { isLite: true });
+
+    const [ctaLink] = container.querySelectorAll('a');
+    const atiUrl = ctaLink.getAttribute(LITE_ATI_CLICK_TRACKING);
+
+    expect(atiUrl).toContain('lite-site-cta');
   });
 });

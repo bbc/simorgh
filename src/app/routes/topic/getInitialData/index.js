@@ -35,8 +35,6 @@ export default async ({ service, path: pathname, variant, page, getAgent }) => {
 
     const imageData = data.imageData || null;
 
-    const scriptSwitchId = data.variantTopicId;
-
     return {
       status,
       pageData: {
@@ -46,8 +44,6 @@ export default async ({ service, path: pathname, variant, page, getAgent }) => {
         curations: data.curations,
         activePage: data.activePage || 1,
         pageCount: data.pageCount,
-        scriptSwitchId,
-        renderScriptSwitch: Boolean(scriptSwitchId),
         metadata: {
           ...data.metadata,
           type: 'Topic',
