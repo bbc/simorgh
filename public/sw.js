@@ -17,29 +17,29 @@ self.addEventListener('install', event => {
   });
 });
 
-const fetchEventHandler = async event => {
-  const cacheableFiles = [
-    // Reverb
-    'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
-    'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
-    // Fonts
-    /\.woff2$/,
-    // Frosted Promo (test and live environments only)
-    /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
-    // Moment
-    /\/moment-lib+.*?\.js$/,
-    // PWA Icons
-    /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
-  ];
+const CACHEABLE_FILES = [
+  // Reverb
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+  // Fonts
+  /\.woff2$/,
+  // Frosted Promo (test and live environments only)
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
+  // Moment
+  /\/moment-lib+.*?\.js$/,
+  // PWA Icons
+  /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
+];
 
-  const isRequestForCacheableFile = cacheableFiles.some(cacheableFile =>
+const WEBP_IMAGE =
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+
+const fetchEventHandler = async event => {
+  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
 
-  const isRequestForWebpImage =
-    /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/.test(
-      event.request.url,
-    );
+  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
