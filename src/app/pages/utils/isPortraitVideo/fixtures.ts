@@ -77,7 +77,7 @@ export const mediaBlockWithMultipleVersionsTypes: OptimoBlock[] = [
             versions: [
               {
                 versionId: 'p0l0sm10',
-                types: ['Editorial', 'Some Invalid Type', 'Portrait'],
+                types: ['Editorial', 'Portrait'],
                 duration: 88,
                 durationISO8601: 'PT1M28S',
                 warnings: {},

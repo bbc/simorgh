@@ -231,6 +231,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
+  const isPortraitVideo = orientation === 'portrait';
 
   const {
     placeholderSrc,
@@ -291,7 +292,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         )}
         {captionBlock && (
           <Caption
-            className={orientation === 'portrait' ? 'portrait-caption' : ''}
+            className={isPortraitVideo ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
             css={orientation === 'portrait' && styles.captionPortrait}
