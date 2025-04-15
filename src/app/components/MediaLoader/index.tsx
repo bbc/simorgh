@@ -291,7 +291,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         )}
         {captionBlock && (
           <Caption
-            className={'portrait-caption'}
+            className={orientation === 'portrait' ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
             css={orientation === 'portrait' && styles.captionPortrait}
