@@ -6,7 +6,11 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
-import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ARTICLE_PAGE,
+  TV_PAGE,
+  ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import MediaPlayer from '.';
 import {
   aresMediaBlocks,
@@ -33,36 +37,17 @@ describe('MediaLoader', () => {
   });
 
   describe('Portrait title', () => {
-    it('Is rendered when video is portrait, pageType is not mediaArticle, and embedded prop is false', () => {
-      render(
-        <MediaPlayer
-          blocks={aresMediaPortraitBlocks as MediaBlock[]}
-          embedded={false}
-        />,
-        {
-          id: 'testId',
-          pageType: TV_PAGE,
-        },
-      );
-
-      const title = screen.getByRole('strong');
-      expect(title).toBeInTheDocument();
-      expect(title.textContent).toEqual('Watch Moments');
-    });
-
     test.each`
-      blocks                     | orientation    | pageType              | isEmbedded | expected
-      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${null}
-      ${aresMediaBlocks}         | ${'landscape'} | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${null}
-      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${true}    | ${null}
+      blocks                     | orientation    | pageType              | isEmbedded | isRendered | expected
+      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${ARTICLE_PAGE}       | ${false}   | ${''}      | ${'Watch Moments'}
+      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${' not'}  | ${undefined}
+      ${aresMediaBlocks}         | ${'landscape'} | ${MEDIA_ARTICLE_PAGE} | ${false}   | ${' not'}  | ${undefined}
+      ${aresMediaPortraitBlocks} | ${'portrait'}  | ${MEDIA_ARTICLE_PAGE} | ${true}    | ${' not'}  | ${undefined}
     `(
-      'Is not rendered when video is $orientation, pageType is $pageType, and embedded prop is $isEmbedded  ',
-      ({ pageType, isEmbedded, expected }) => {
+      'Is$isRendered rendered when video is $orientation, pageType is $pageType, and embedded prop is $isEmbedded  ',
+      ({ blocks, pageType, isEmbedded, expected }) => {
         render(
-          <MediaPlayer
-            blocks={aresMediaPortraitBlocks as MediaBlock[]}
-            embedded={isEmbedded}
-          />,
+          <MediaPlayer blocks={blocks as MediaBlock[]} embedded={isEmbedded} />,
           {
             id: 'testId',
             pageType,
@@ -70,7 +55,7 @@ describe('MediaLoader', () => {
         );
 
         const title = screen.queryByRole('strong');
-        expect(title).toBe(expected);
+        expect(title?.textContent).toEqual(expected);
       },
     );
   });
