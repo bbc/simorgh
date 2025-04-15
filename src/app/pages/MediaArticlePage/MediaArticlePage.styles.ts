@@ -83,8 +83,13 @@ export default {
         },
       },
       '.portrait-caption': {
-        maxWidth: '100%',
-        padding: '400px',
+        marginInline: `${spacings.FULL}rem`,
+          [mq.GROUP_2_MIN_WIDTH]: {
+            marginInline: `${spacings.DOUBLE}rem`,
+          },
+          [mq.GROUP_3_MIN_WIDTH]: {
+            marginInline: 0,
+          },
       },
     }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
