@@ -56,33 +56,15 @@ const reverbPageViews = async ({ reverbInstance }) => {
 };
 
 const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
-  // const {
-  //   eventPublisher,
-  //   componentName,
-  //   container,
-  //   attribute,
-  //   placement,
-  //   source,
-  //   result,
-  //   anchorElement,
-  //   originalEvent,
-  //   isClick,
-  // } = eventDetails;
-
-  // return reverbInstance.userActionEvent(
-  //   eventPublisher,
-  //   componentName,
-  //   { container, attribute, placement, source, result },
-  //   anchorElement,
-  //   originalEvent,
-  //   isClick,
-  // );
-
   const {
     eventPublisher,
-    item,
-    group,
-    event,
+    componentName,
+    container,
+    attribute,
+    metadata,
+    placement,
+    source,
+    result,
     anchorElement,
     originalEvent,
     isClick,
@@ -90,12 +72,31 @@ const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
 
   return reverbInstance.userActionEvent(
     eventPublisher,
-    '',
-    { item, group, event },
+    componentName,
+    { container, attribute, metadata, placement, source, result },
     anchorElement,
     originalEvent,
     isClick,
   );
+
+  // const {
+  //   eventPublisher,
+  //   item,
+  //   group,
+  //   event,
+  //   anchorElement,
+  //   originalEvent,
+  //   isClick,
+  // } = eventDetails;
+
+  // return reverbInstance.userActionEvent(
+  //   eventPublisher,
+  //   '',
+  //   { item, group, event },
+  //   anchorElement,
+  //   originalEvent,
+  //   isClick,
+  // );
 };
 
 const reverbHandlers = {
