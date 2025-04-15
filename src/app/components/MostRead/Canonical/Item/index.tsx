@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import { useATIClickTrackerHandler } from '#hooks/useClickTrackerHandler';
 import styles from './index.styles';

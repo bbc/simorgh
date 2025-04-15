@@ -46,9 +46,7 @@ const getGroups = (
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const PageGrid = ({ children }: any) => (
-  // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
   <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
-    {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
     <Grid
       item
       startOffset={getGroups(1, 1, 1, 1, 2, 5)}
@@ -157,28 +155,24 @@ const OnDemandAudioPage = ({
         {...metadataImageProps}
         hasAmpPage={false}
       />
-      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
       <GelPageGrid
         as="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
-        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
           <GelPageGrid
             dir={oppDir}
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
             css={styles.wrapper}
           >
-            {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
             <Grid
               item
               columns={getGroups(6, 6, 4, 4, 4, 4)}
@@ -198,7 +192,6 @@ const OnDemandAudioPage = ({
                 <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
               )}
             </Grid>
-            {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
             <Grid
               item
               columns={getGroups(0, 0, 2, 2, 2, 2)}

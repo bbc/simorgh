@@ -60,8 +60,8 @@ const SingleTopicTagItem = styled.div`
   }
 `;
 
-export const TopicTag = ({ name, link, onClick = null, viewTracker }) => (
-  <a href={link} onClick={onClick} {...viewTracker}>
+export const TopicTag = ({ name, link, onClick = null }) => (
+  <a href={link} onClick={onClick}>
     {name}
   </a>
 );

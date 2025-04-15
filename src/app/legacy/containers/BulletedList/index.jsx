@@ -35,22 +35,23 @@ const BulletedListContainer = ({
     blockGroupType === 'listWithLink' ? viewTracker : null;
 
   return (
-    <StyledGridItemMedium {...(className ? { className } : undefined)}>
-      <BulletedList
-        {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
-        viewTracker={listWithLinkViewTracker}
-      >
-        <Blocks
-          blocks={blocks}
-          componentsToRender={{
-            listItem:
-              blockGroupType === 'listWithLink'
-                ? withClickHandler(listItem, handleClickTracking)
-                : listItem,
-          }}
-        />
-      </BulletedList>
-    </StyledGridItemMedium>
+    <div {...listWithLinkViewTracker}>
+      <StyledGridItemMedium {...(className ? { className } : undefined)}>
+        <BulletedList
+          {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
+        >
+          <Blocks
+            blocks={blocks}
+            componentsToRender={{
+              listItem:
+                blockGroupType === 'listWithLink'
+                  ? withClickHandler(listItem, handleClickTracking)
+                  : listItem,
+            }}
+          />
+        </BulletedList>
+      </StyledGridItemMedium>
+    </div>
   );
 };
 

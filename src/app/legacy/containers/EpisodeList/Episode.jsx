@@ -28,11 +28,11 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Episode = ({ children, dir, viewTracker }) => {
+const Episode = ({ children, dir }) => {
   const showMediaIndicator = pathOr({}, '0', children).type !== Image;
 
   return (
-    <Wrapper dir={dir} showMediaIndicator={showMediaIndicator} {...viewTracker}>
+    <Wrapper dir={dir} showMediaIndicator={showMediaIndicator}>
       {showMediaIndicator ? (
         Children.toArray(children)
           .filter(Boolean)

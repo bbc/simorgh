@@ -45,7 +45,6 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
         hasAmpPage={false}
       />
       <LinkedData type="RadioChannel" seoTitle={name} />
-      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
       <GelPageGrid
         as="main"
         role="main"
@@ -59,7 +58,6 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
         }}
         enableGelGutters
       >
-        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           startOffset={{

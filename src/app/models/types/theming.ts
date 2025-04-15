@@ -421,7 +421,7 @@ export type GelFontSize =
   | 'brevier'
   | 'minion';
 
-type FontSize = {
+export type FontSize = {
   [x: string]:
     | string
     | {

@@ -110,70 +110,74 @@ const RecentAudioEpisodes = ({
       >
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList
-        script={script}
-        service={service}
-        dir={dir}
-        ulProps={ulProps}
-        liProps={liProps}
-      >
-        {episodes.map((episode, index) => (
-          <EpisodeList.Episode key={episode.id} viewTracker={viewTracker}>
-            <EpisodeList.Link
-              href={getUrl(episode.id)}
-              onClick={clickTrackerHandler}
-              index={index}
-            >
-              {/* these must be concatenated for screen reader UX */}
-              <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
-              <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
-                {episode.brandTitle}
-              </EpisodeList.Title>
-              <VisuallyHiddenText>, </VisuallyHiddenText>
-              <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
-                {episode.episodeTitle ||
-                  `${formattedTimestamp({
-                    timestamp: episode.timestamp,
-                    format: 'LL',
-                  })}`}
-              </EpisodeList.Description>
-              <VisuallyHiddenText>, </VisuallyHiddenText>
-              <VisuallyHiddenText>
-                {` ${durationLabel} ${formatDuration({
-                  duration: episode.duration,
-                  format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
-                  locale: datetimeLocale,
-                })} `}
-              </VisuallyHiddenText>
-              <EpisodeList.DateTimeDuration>
-                <span aria-hidden="true">
+      <div {...viewTracker}>
+        <EpisodeList
+          script={script}
+          service={service}
+          dir={dir}
+          ulProps={ulProps}
+          liProps={liProps}
+        >
+          {episodes.map((episode, index) => (
+            <EpisodeList.Episode key={episode.id}>
+              <EpisodeList.Link
+                href={getUrl(episode.id)}
+                onClick={clickTrackerHandler}
+                index={index}
+              >
+                {/* these must be concatenated for screen reader UX */}
+                <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
+                <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
+                  {episode.brandTitle}
+                </EpisodeList.Title>
+                <VisuallyHiddenText>, </VisuallyHiddenText>
+                <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
+                  {episode.episodeTitle ||
+                    `${formattedTimestamp({
+                      timestamp: episode.timestamp,
+                      format: 'LL',
+                    })}`}
+                </EpisodeList.Description>
+                <VisuallyHiddenText>, </VisuallyHiddenText>
+                <VisuallyHiddenText>
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
+                    format: episode.duration.includes('H')
+                      ? 'h,mm,ss'
+                      : 'mm,ss',
                     locale: datetimeLocale,
-                  })}`}
-                </span>
-              </EpisodeList.DateTimeDuration>
-              {episode.episodeTitle && (
-                <InlineDiv>
-                  <EpisodeList.DateTimeDuration
-                    hasBorder
-                    dir={dir}
-                    as={StyledTimestamp}
-                    timestamp={episode.timestamp}
-                    format="LL"
-                    dateTimeFormat="YYYY-MM-DD"
-                    padding={false}
-                    script={script}
-                    locale={datetimeLocale}
-                    service={service}
-                    timezone={timezone}
-                  />
-                </InlineDiv>
-              )}
-            </EpisodeList.Link>
-          </EpisodeList.Episode>
-        ))}
-      </EpisodeList>
+                  })} `}
+                </VisuallyHiddenText>
+                <EpisodeList.DateTimeDuration>
+                  <span aria-hidden="true">
+                    {` ${durationLabel} ${formatDuration({
+                      duration: episode.duration,
+                      locale: datetimeLocale,
+                    })}`}
+                  </span>
+                </EpisodeList.DateTimeDuration>
+                {episode.episodeTitle && (
+                  <InlineDiv>
+                    <EpisodeList.DateTimeDuration
+                      hasBorder
+                      dir={dir}
+                      as={StyledTimestamp}
+                      timestamp={episode.timestamp}
+                      format="LL"
+                      dateTimeFormat="YYYY-MM-DD"
+                      padding={false}
+                      script={script}
+                      locale={datetimeLocale}
+                      service={service}
+                      timezone={timezone}
+                    />
+                  </InlineDiv>
+                )}
+              </EpisodeList.Link>
+            </EpisodeList.Episode>
+          ))}
+        </EpisodeList>
+      </div>
     </Spacer>
   );
 };

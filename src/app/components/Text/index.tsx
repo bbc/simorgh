@@ -1,10 +1,6 @@
 /** @jsx jsx */
 
-import {
-  ElementType,
-  ComponentPropsWithoutRef,
-  PropsWithChildren,
-} from 'react';
+import { ElementType, PropsWithChildren } from 'react';
 import { jsx, Theme } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
@@ -14,6 +10,7 @@ interface Props<T extends React.ElementType> {
   className?: string;
   size?: GelFontSize;
   fontVariant?: FontVariant;
+  ref?: HTMLElement;
 }
 
 // This is a strongly typed polymorphic component inspired by https://itnext.io/react-polymorphic-components-with-typescript-f7ce72ea7af2
@@ -25,9 +22,9 @@ const Text = function Text<T extends ElementType = 'span'>({
   fontVariant = 'sansRegular',
   ref,
   ...htmlAttributes
-}: PropsWithChildren<T> &
-  Omit<ComponentPropsWithoutRef<T>, keyof PropsWithChildren<T>>) {
+}: PropsWithChildren<Props<T>>) {
   const Component: React.ElementType = as || 'span';
+
   return (
     <Component
       {...(ref && { ref })}

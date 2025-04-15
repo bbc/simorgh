@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { FC, PropsWithChildren, HTMLAttributes } from 'react';
-import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { SHADOW } from '../ThemeProvider/palette';
 import styles from './index.styles';
 
@@ -13,7 +12,6 @@ interface ListProps extends HTMLAttributes<HTMLUListElement> {
   bulletPointShape?: string;
   bulletPointColour?: string;
   className?: string;
-  viewTracker?: ViewTracker;
 }
 
 export const BulletedListItem = ({
@@ -38,7 +36,6 @@ export const BulletedList: FC<ListProps> = ({
   bulletPointColour = SHADOW,
   className,
   children,
-  viewTracker,
 }: PropsWithChildren<ListProps>) => {
   const showBulletPoints = bulletPointShape !== 'hidden';
   return (
@@ -57,7 +54,6 @@ export const BulletedList: FC<ListProps> = ({
           },
         },
       ]}
-      {...viewTracker}
     >
       {children}
     </ul>

@@ -134,7 +134,6 @@ const OnDemandTvPage = ({
             : []
         }
       />
-      {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
       <GelPageGrid
         as="main"
         role="main"
@@ -142,7 +141,6 @@ const OnDemandTvPage = ({
         enableGelGutters
         css={styles.pageGrid}
       >
-        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
@@ -170,7 +168,6 @@ const OnDemandTvPage = ({
             ariaHidden
           />
         </Grid>
-        {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
           item
           columns={getGroups(6, 6, 6, 6, 5, 10)}
@@ -187,13 +184,11 @@ const OnDemandTvPage = ({
       </GelPageGrid>
 
       {hasRecentEpisodes && (
-        // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
         <GelPageGrid
           columns={getGroups(6, 6, 6, 6, 8, 20)}
           enableGelGutters
           css={styles.pageGrid}
         >
-          {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
           <Grid
             item
             startOffset={getGroups(1, 1, 1, 1, 2, 5)}

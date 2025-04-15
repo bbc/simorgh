@@ -75,31 +75,31 @@ const RelatedTopics = ({
         >
           {heading}
         </StyledSectionLabel>
-        <TopicTags
-          service={service}
-          script={script}
-          {...(tagBackgroundColour && { tagBackgroundColour })}
-        >
-          {topics.length === 1 ? (
-            <TopicTag
-              name={topics[0].topicName}
-              link={getTopicPageUrl(topics[0].topicId)}
-              onClick={clickTrackerHandler}
-              viewTracker={viewTracker}
-              key={topics[0].topicId}
-            />
-          ) : (
-            topics.map(({ topicName, topicId }) => (
+        <div {...viewTracker}>
+          <TopicTags
+            service={service}
+            script={script}
+            {...(tagBackgroundColour && { tagBackgroundColour })}
+          >
+            {topics.length === 1 ? (
               <TopicTag
-                name={topicName}
-                link={getTopicPageUrl(topicId)}
+                name={topics[0].topicName}
+                link={getTopicPageUrl(topics[0].topicId)}
                 onClick={clickTrackerHandler}
-                viewTracker={viewTracker}
-                key={topicId}
+                key={topics[0].topicId}
               />
-            ))
-          )}
-        </TopicTags>
+            ) : (
+              topics.map(({ topicName, topicId }) => (
+                <TopicTag
+                  name={topicName}
+                  link={getTopicPageUrl(topicId)}
+                  onClick={clickTrackerHandler}
+                  key={topicId}
+                />
+              ))
+            )}
+          </TopicTags>
+        </div>
       </StyledTopicsWrapper>
     )
   );
