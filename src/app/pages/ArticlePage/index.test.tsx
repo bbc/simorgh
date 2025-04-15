@@ -127,10 +127,12 @@ const Context = ({
 
 beforeEach(() => {
   process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+  process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 });
 
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
+  delete process.env.SIMORGH_ATI_BASE_URL;
 
   (ATIAnalytics as jest.Mock).mockImplementation(
     jest.requireActual('../../components/ATIAnalytics').default,
@@ -877,7 +879,7 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
+      const schemaType = JSON.parse(helmetContent.scriptTags[2].innerHTML)[
         '@graph'
       ][0]['@type'];
 

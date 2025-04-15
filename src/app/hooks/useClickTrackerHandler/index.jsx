@@ -58,7 +58,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
         if (shouldSendEvent) {
           const nextPageUrl = event?.currentTarget?.href;
           // TODO: Temp - used for testing
-          alert(`useClickTrackerHandler - shouldSendEvent`);
+          // alert(`useClickTrackerHandler - shouldSendEvent`);
 
           event.stopPropagation();
           event.preventDefault();

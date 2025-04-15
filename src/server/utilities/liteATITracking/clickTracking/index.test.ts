@@ -46,7 +46,7 @@ describe('Click tracking script', () => {
     while (document.body.firstChild) {
       document.body.removeChild(document.body.firstChild);
     }
-    window.processClientDeviceAndSendLite = jest.fn();
+    window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
   afterAll(() => {
@@ -69,13 +69,13 @@ describe('Click tracking script', () => {
     expect(nextPageUrl).toContain('/gahuza');
   });
 
-  it('Calls processClientDeviceAndSendLite() with the right parameters', () => {
+  it('Calls processClientDeviceAndSendStaticBeacon() with the right parameters', () => {
     const anchorElement = createAnchor();
 
     dispatchClick(anchorElement);
 
     expect(
-      window.processClientDeviceAndSendLite as jest.Mock,
+      window.processClientDeviceAndSendStaticBeacon as jest.Mock,
     ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
   });
 });

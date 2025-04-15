@@ -9,7 +9,7 @@ describe('View tracking script', () => {
     while (document.body.firstChild) {
       document.body.removeChild(document.body.firstChild);
     }
-    window.processClientDeviceAndSendLite = jest.fn();
+    window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
   it('LITE_ATI_VIEW_TRACKING tracking variable is correct', () => {
@@ -24,7 +24,7 @@ describe('View tracking script', () => {
     expect(liteAtiViewTracking).toBe(LITE_ATI_VIEW_TRACKING);
   });
 
-  it('Calls processClientDeviceAndSendLite() when the IntersectionObserver marks it as intersecting.', () => {
+  it('Calls processClientDeviceAndSendStaticBeacon() when the IntersectionObserver marks it as intersecting.', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
       LITE_ATI_VIEW_TRACKING,
@@ -41,11 +41,11 @@ describe('View tracking script', () => {
     jest.runAllTimers();
 
     expect(
-      window.processClientDeviceAndSendLite as jest.Mock,
+      window.processClientDeviceAndSendStaticBeacon as jest.Mock,
     ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
   });
 
-  it('should not call processClientDeviceAndSendLite() more than once for the same url', () => {
+  it('should not call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
       LITE_ATI_VIEW_TRACKING,
@@ -65,7 +65,7 @@ describe('View tracking script', () => {
     jest.runAllTimers();
 
     expect(
-      window.processClientDeviceAndSendLite as jest.Mock,
+      window.processClientDeviceAndSendStaticBeacon as jest.Mock,
     ).toHaveBeenCalledTimes(1);
   });
 });

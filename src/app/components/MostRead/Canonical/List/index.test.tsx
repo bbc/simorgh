@@ -4,6 +4,14 @@ import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities/testHelpers';
 
 describe('MostReadList', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_ATI_BASE_URL;
+  });
+
   it('should render with ltr news items with correct dir', () => {
     const { container } = render(
       <MostReadList numberOfItems={10}>

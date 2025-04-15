@@ -1,6 +1,6 @@
 import React from 'react';
 
-import processClientDeviceAndSendLite from '#src/server/utilities/liteATITracking';
+import processClientDeviceAndSendStaticBeacon from '#src/server/utilities/liteATITracking';
 import clickTracking from '#src/server/utilities/liteATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import viewTracking from '#src/server/utilities/liteATITracking/viewTracking';
@@ -16,7 +16,7 @@ const trackingScripts = ({
 
       // TODO - temp comment 
       const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
-      alert(alertMessage);
+      // alert(alertMessage);
       console.log('liteTrackingScripts: trackOnlyStaticCanonical:', ${trackOnlyStaticCanonical}, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
       
       
@@ -24,7 +24,7 @@ const trackingScripts = ({
         return;
       }
 
-      (${processClientDeviceAndSendLite.toString()})();
+      (${processClientDeviceAndSendStaticBeacon.toString()})();
 
       if (${trackComponentViews}) {
         (${viewTracking.toString()})();

@@ -20,7 +20,7 @@ export default () => {
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
-      window.processClientDeviceAndSendLite(atiURL as string);
+      window.processClientDeviceAndSendStaticBeacon(atiURL as string);
       window.location.assign(nextPageUrl);
     }
   });

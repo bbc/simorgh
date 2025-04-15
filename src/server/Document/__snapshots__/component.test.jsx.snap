@@ -132,6 +132,41 @@ exports[`Document Component should render APP version correctly 1`] = `
     <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
     </script>
+    <script>
+      
+    window.addEventListener('load', function () {
+      const isOperaMini = function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}();
+      const isComponentTrackingEnabled = true ? isOperaMini : true;
+
+      // TODO - temp comment 
+      const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
+      // alert(alertMessage);
+      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', true, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      
+      
+      if (!isComponentTrackingEnabled) {
+        return;
+      }
+
+      (function liteATIClickTracking() {
+    return 'Tracking script placeholder';
+  })();
+
+      if (false) {
+        (function liteATIClickTracking() {
+    return 'View script placeholder';
+  })();
+      }
+
+      (function liteATIClickTracking() {
+    return 'Click script placeholder';
+  })();
+
+    });
+  
+    </script>
   </head>
   <body>
     <div
@@ -206,18 +241,38 @@ exports[`Document Component should render LITE version correctly 1`] = `
     </style>
     <script>
       
-  window.addEventListener('load', function (){
-    (function liteATIClickTracking() {
+    window.addEventListener('load', function () {
+      const isOperaMini = function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}();
+      const isComponentTrackingEnabled = false ? isOperaMini : true;
+
+      // TODO - temp comment 
+      const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
+      // alert(alertMessage);
+      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', false, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      
+      
+      if (!isComponentTrackingEnabled) {
+        return;
+      }
+
+      (function liteATIClickTracking() {
     return 'Tracking script placeholder';
   })();
-    (function liteATIClickTracking() {
-    return 'Click script placeholder';
-  })();
-    (function liteATIClickTracking() {
+
+      if (true) {
+        (function liteATIClickTracking() {
     return 'View script placeholder';
   })();
-  });
+      }
 
+      (function liteATIClickTracking() {
+    return 'Click script placeholder';
+  })();
+
+    });
+  
     </script>
   </head>
   <body>
@@ -285,6 +340,41 @@ exports[`Document Component should render correctly 1`] = `
     </style>
     <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+    </script>
+    <script>
+      
+    window.addEventListener('load', function () {
+      const isOperaMini = function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}();
+      const isComponentTrackingEnabled = true ? isOperaMini : true;
+
+      // TODO - temp comment 
+      const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
+      // alert(alertMessage);
+      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', true, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      
+      
+      if (!isComponentTrackingEnabled) {
+        return;
+      }
+
+      (function liteATIClickTracking() {
+    return 'Tracking script placeholder';
+  })();
+
+      if (false) {
+        (function liteATIClickTracking() {
+    return 'View script placeholder';
+  })();
+      }
+
+      (function liteATIClickTracking() {
+    return 'Click script placeholder';
+  })();
+
+    });
+  
     </script>
   </head>
   <body>

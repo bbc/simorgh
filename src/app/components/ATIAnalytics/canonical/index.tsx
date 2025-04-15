@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
-import sendBeaconLite from './sendBeaconLite';
+import sendStaticBeacon from './sendStaticBeacon';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -41,7 +41,7 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
 };
 
 const addLiteScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconLite(atiPageViewUrlString);
+  const script = sendStaticBeacon(atiPageViewUrlString);
 
   return (
     <Helmet>

@@ -1,9 +1,9 @@
 /* eslint-disable no-eval */
-import sendBeaconLite from './sendBeaconLite';
+import sendStaticBeacon from './sendStaticBeacon';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
 
-describe('sendBeaconLite', () => {
+describe('sendStaticBeacon', () => {
   const XMLHttpRequestMock: Partial<XMLHttpRequest> = {
     open: jest.fn(),
     withCredentials: false,
@@ -24,7 +24,7 @@ describe('sendBeaconLite', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    eval(sendBeaconLite('https://foobar.com'));
+    eval(sendStaticBeacon('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
       'GET',

@@ -1,6 +1,6 @@
-import processClientDeviceAndSendLite from '.';
+import processClientDeviceAndSendStaticBeacon from '.';
 
-describe('processClientDeviceAndSendLite script', () => {
+describe('processClientDeviceAndSendStaticBeacon script', () => {
   const originalWindowLocation = window.location;
   const testSystemTime = new Date('2024-11-13T16:30:02.000Z');
   const testHour = testSystemTime.getHours();
@@ -18,7 +18,7 @@ describe('processClientDeviceAndSendLite script', () => {
         mockCookie = cookieValue;
       },
     });
-    processClientDeviceAndSendLite();
+    processClientDeviceAndSendStaticBeacon();
   });
 
   beforeEach(() => {
@@ -27,7 +27,7 @@ describe('processClientDeviceAndSendLite script', () => {
     while (document.body.firstChild) {
       document.body.removeChild(document.body.firstChild);
     }
-    window.sendBeaconLite = jest.fn();
+    window.sendStaticBeacon = jest.fn();
   });
 
   afterAll(() => {
@@ -39,8 +39,8 @@ describe('processClientDeviceAndSendLite script', () => {
   });
 
   it('Does not call sendBeacon if the event has no data-ati-tracking parameter', () => {
-    window.processClientDeviceAndSendLite('');
-    expect(window.sendBeaconLite).toHaveBeenCalledTimes(0);
+    window.processClientDeviceAndSendStaticBeacon('');
+    expect(window.sendStaticBeacon).toHaveBeenCalledTimes(0);
   });
 
   it('Does not add userId cookie if crypto is unsupported, but still calls sendBeacon', () => {
@@ -50,8 +50,10 @@ describe('processClientDeviceAndSendLite script', () => {
       value: undefined,
     });
 
-    window.processClientDeviceAndSendLite('https://logws1363.ati-host.net/?');
-    const callParam = (window.sendBeaconLite as jest.Mock).mock.calls[0][0];
+    window.processClientDeviceAndSendStaticBeacon(
+      'https://logws1363.ati-host.net/?',
+    );
+    const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     const parsedATIParams = Object.fromEntries(new URLSearchParams(callParam));
     expect(parsedATIParams.idclient).toBeUndefined();
 
@@ -61,9 +63,11 @@ describe('processClientDeviceAndSendLite script', () => {
   it('Sets a new cookie if there is no atuserid cookie on the user browser', () => {
     (crypto.randomUUID as jest.Mock).mockReturnValueOnce('randomUniqueId');
 
-    window.processClientDeviceAndSendLite('https://logws1363.ati-host.net/?');
+    window.processClientDeviceAndSendStaticBeacon(
+      'https://logws1363.ati-host.net/?',
+    );
 
-    const callParam = (window.sendBeaconLite as jest.Mock).mock.calls[0][0];
+    const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(document.cookie).toBe(
       'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=397; Secure;',
     );
@@ -74,9 +78,11 @@ describe('processClientDeviceAndSendLite script', () => {
     const oldCookieId = 'oldCookieId';
     document.cookie = `atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22${oldCookieId}%22%2C%22options%22%3A%7B%22end%22%3A%222026-03-11T10%3A23%3A55.442Z%22%2C%22path%22%3A%22%2F%22%7D%7D; path=/; max-age=397; Secure;`;
     (crypto.randomUUID as jest.Mock).mockReturnValueOnce('newCookieId');
-    window.processClientDeviceAndSendLite('https://logws1363.ati-host.net/?');
+    window.processClientDeviceAndSendStaticBeacon(
+      'https://logws1363.ati-host.net/?',
+    );
 
-    const callParam = (window.sendBeaconLite as jest.Mock).mock.calls[0][0];
+    const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(document.cookie).toBe(
       `atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22${oldCookieId}%22%2C%22options%22%3A%7B%22end%22%3A%222026-03-11T10%3A23%3A55.442Z%22%2C%22path%22%3A%22%2F%22%7D%7D; path=/; max-age=397; Secure;`,
     );
@@ -87,13 +93,15 @@ describe('processClientDeviceAndSendLite script', () => {
     document.cookie =
       'atuserid={"val":"oldCookieId"}; path=/; max-age=397; Secure;';
     (crypto.randomUUID as jest.Mock).mockReturnValueOnce('newCookieId');
-    window.processClientDeviceAndSendLite('https://logws1363.ati-host.net/?');
+    window.processClientDeviceAndSendStaticBeacon(
+      'https://logws1363.ati-host.net/?',
+    );
 
-    const callParam = (window.sendBeaconLite as jest.Mock).mock.calls[0][0];
+    const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(callParam).toContain('idclient=oldCookieId');
   });
 
-  it('Calls sendBeaconLite() with the correct url', () => {
+  it('Calls sendStaticBeacon() with the correct url', () => {
     document.cookie =
       'atuserid={"val":"userCookieId"}; path=/; max-age=397; Secure;';
 
@@ -117,9 +125,11 @@ describe('processClientDeviceAndSendLite script', () => {
       },
     });
 
-    window.processClientDeviceAndSendLite('https://logws1363.ati-host.net/?');
+    window.processClientDeviceAndSendStaticBeacon(
+      'https://logws1363.ati-host.net/?',
+    );
 
-    const callParam = (window.sendBeaconLite as jest.Mock).mock.calls[0][0];
+    const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     const parsedATIParams = Object.fromEntries(new URLSearchParams(callParam));
     expect(parsedATIParams).toMatchObject({
       idclient: 'userCookieId',

@@ -14,7 +14,7 @@ export default () => {
           const atiURL = target.getAttribute(LITE_ATI_VIEW_TRACKING) as string;
           setTimeout(() => {
             if (!firedURLs.includes(atiURL)) {
-              window.processClientDeviceAndSendLite(atiURL);
+              window.processClientDeviceAndSendStaticBeacon(atiURL);
               firedURLs.push(atiURL);
             }
             observer.unobserve(target);

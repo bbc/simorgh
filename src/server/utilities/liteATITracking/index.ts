@@ -1,7 +1,7 @@
 export default () => {
-  window.processClientDeviceAndSendLite = atiURL => {
+  window.processClientDeviceAndSendStaticBeacon = atiURL => {
     // TODO: Temp - used for testing
-    alert(`✅ processClientDeviceAndSendLite: ${atiURL}`);
+    // alert(`✅ processClientDeviceAndSendStaticBeacon: ${atiURL}`);
 
     if (atiURL) {
       const {
@@ -71,7 +71,7 @@ export default () => {
         .map(key => `${key}=${params[key]}`)
         .join('&');
 
-      window.sendBeaconLite(`${atiURL}&${paramValues}`);
+      window.sendStaticBeacon(`${atiURL}&${paramValues}`);
     }
   };
 };
