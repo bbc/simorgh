@@ -1,5 +1,5 @@
 import { OptimoBlock } from '#app/models/types/optimo';
-import isPortraitVideo from '.';
+import getVideoOrientation from '.';
 
 const mediaBlockWithPV: OptimoBlock[] = [
   {
@@ -103,16 +103,16 @@ const mediaBlockWithoutPV: OptimoBlock[] = [
   },
 ];
 
-describe('isPortraitVideo', () => {
+describe('getVideoOrientation', () => {
   it('Should return true if media block includes a portrait video', () => {
-    expect(isPortraitVideo(mediaBlockWithPV)).toBe(true);
+    expect(getVideoOrientation(mediaBlockWithPV)).toBe(true);
   });
 
   it('Should return false if media block does not include a portrait video', () => {
-    expect(isPortraitVideo(mediaBlockWithoutPV)).toBe(false);
+    expect(getVideoOrientation(mediaBlockWithoutPV)).toBe(false);
   });
 
   it('Should return false if media block does not include an Ares media block', () => {
-    expect(isPortraitVideo([])).toBe(false);
+    expect(getVideoOrientation([])).toBe(false);
   });
 });

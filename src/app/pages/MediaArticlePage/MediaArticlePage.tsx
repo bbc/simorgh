@@ -65,21 +65,23 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
-import isPortraitVideo from './utils/isPortraitVideo';
+import getVideoOrientation from '../utils/getVideoOrientation';
 
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
+    const isPortraitVideo = getVideoOrientation(blocks) === 'Portrait';
+    const className = isPortraitVideo ? 'portrait-media-loader' : '';
 
     return (
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
           isCpsMap && styles.cafMediaPlayer,
-          isPortraitVideo(blocks) && styles.mapPortraitVideoPlayer,
+          isPortraitVideo && styles.mapPortraitVideoPlayer,
         ]}
       >
-        <MediaLoader blocks={blocks as MediaBlock[]} />
+        <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
       </div>
     );
   };

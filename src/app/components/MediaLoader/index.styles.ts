@@ -28,45 +28,29 @@ export default {
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
   portraitFigure:
-    (pageType: string, isEmbedded = false) =>
-    ({ mq, spacings }: Theme) => [
+    (isEmbedded = false) =>
+    ({ mq }: Theme) => [
       css({
         aspectRatio: '9 / 16',
         display: 'flex',
         flexDirection: 'column',
-        ...(!isEmbedded &&
-          pageType !== MEDIA_ARTICLE_PAGE && {
-            maxWidth: `${pixelsToRem(185)}rem`,
-            [mq.GROUP_1_ONLY]: {
-              maxWidth: `${pixelsToRem(256)}rem`,
-            },
-            [mq.GROUP_2_ONLY]: {
-              maxWidth: `${pixelsToRem(274)}rem`,
-            },
-            [mq.GROUP_3_ONLY]: {
-              maxWidth: `${pixelsToRem(200)}rem`,
-            },
-            [mq.GROUP_4_MIN_WIDTH]: {
-              maxWidth: `${pixelsToRem(190)}rem`,
-            },
-          }),
-        ...(pageType === MEDIA_ARTICLE_PAGE && {
-          maxWidth: '100%',
-          marginInline: 0,
-          margin: 0,
+        ...(!isEmbedded && {
+          maxWidth: `${pixelsToRem(185)}rem`,
+          [mq.GROUP_1_ONLY]: {
+            maxWidth: `${pixelsToRem(256)}rem`,
+          },
+          [mq.GROUP_2_ONLY]: {
+            maxWidth: `${pixelsToRem(274)}rem`,
+          },
           [mq.GROUP_3_ONLY]: {
-            marginInline: `${spacings.DOUBLE}rem`,
-            maxWidth: `${pixelsToRem(325)}rem`,
+            maxWidth: `${pixelsToRem(200)}rem`,
           },
-          [mq.GROUP_4_ONLY]: {
-            maxWidth: `${pixelsToRem(315)}rem`,
-          },
-          [mq.GROUP_5_MIN_WIDTH]: {
-            maxWidth: `${pixelsToRem(397)}rem`,
+          [mq.GROUP_4_MIN_WIDTH]: {
+            maxWidth: `${pixelsToRem(190)}rem`,
           },
         }),
       }),
-      !isEmbedded && pageType !== MEDIA_ARTICLE_PAGE && commonMarginSpacing,
+      !isEmbedded && commonMarginSpacing,
     ],
 
   audioMediaContainer: ({ palette }: Theme) =>

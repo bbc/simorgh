@@ -241,9 +241,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
-  const showPortraitTitle =
-    orientation === 'portrait' && pageType !== MEDIA_ARTICLE_PAGE && !embedded;
-
   return (
     <>
       {
@@ -252,19 +249,13 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
-      {showPortraitTitle && (
-        <strong css={styles.titlePortrait}>
-          {translations.media.watchMoments || 'Watch Moments'}
-        </strong>
-      )}
       <figure
         data-e2e="media-loader__container"
         className={className}
         css={[
           styles.figure(embedded),
           playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' &&
-              styles.portraitFigure(pageType, embedded),
+            orientation === 'portrait' && styles.portraitFigure(embedded),
             orientation === 'landscape' && styles.landscapeFigure,
           ],
         ]}
