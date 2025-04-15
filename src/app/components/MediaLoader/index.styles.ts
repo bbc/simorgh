@@ -91,7 +91,7 @@ export default {
     }),
     commonMarginSpacing,
   ],
-  
+
   captionPortrait: ({ mq }: Theme) =>
     css({
       marginInline: '0',
