@@ -41,7 +41,7 @@
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
     "babel-plugin-transform-rename-import": "2.3.0",
-    "cypress": "14.2.1",
+    "cypress": "14.3.0",
     "cypress-axe": "^1.6.0",
     "cypress-terminal-report": "7.1.0",
     "jest": "^29.7.0",
