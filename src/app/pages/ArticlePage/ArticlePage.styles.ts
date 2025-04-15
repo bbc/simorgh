@@ -1,20 +1,19 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
-const commonMarginSpacing = ({ mq, spacings }: Theme) =>
-  css({
-    marginInline: `${spacings.FULL}rem`,
-    [mq.GROUP_2_MIN_WIDTH]: {
-      [mq.GROUP_3_MAX_WIDTH]: {
-        marginInline: `${spacings.DOUBLE}rem`,
-      },
-    },
-    [mq.GROUP_4_MIN_WIDTH]: {
-      marginInline: 0,
-    },
-  });
-
 export default {
+  commonMarginSpacing: ({ mq, spacings }: Theme) =>
+    css({
+      marginInline: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_3_MAX_WIDTH]: {
+          marginInline: `${spacings.DOUBLE}rem`,
+        },
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInline: 0,
+      },
+    }),
   pageWrapper: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.GREY_2,
