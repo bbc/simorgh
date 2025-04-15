@@ -7,7 +7,7 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 
 > ### Components in this folder:
 >
-> - FlexWrapper
+> - ButtonLikeWrapper
 > - Text
 > - Chevron
 
@@ -17,28 +17,30 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 
 ## Props
 
-| Name               | type                           | Description                                                                                                                    |
-| ------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| to?                | string                         | The url for the Call to Action Link                                                                                            |
-| children?          | node                           | The content included between the opening and closing tags of the Call to Action Link                                           |
-| alignWithMargin?   | boolean                        | Applies display styling to align link with text. (Left margin for LTR, right margin for RTL). Component is centered by default |
-| className?         | string                         | Permits `css` prop to be applied                                                                                               |
-| htmlAttributes?    | string                         | Permits custom html attributes to be applied. E.g. `data-ignore-lite` for .lite                                                |
-| eventTrackingData? | shape({componentName: string}) | Tracking data needed for ati to track view and click of the Call to Action Link                                                |
-| download?          | boolean                        | Permits download                                                                                                               |
+| Name               | type                           | Description                                                                                                                                                                                                                                                                  |
+| ------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| url                | string                         | The url for the Call to Action Link                                                                                                                                                                                                                                          |
+| children?          | node                           | The content included between the opening and closing tags of the Call to Action Link                                                                                                                                                                                         |
+| alignWithMargin?   | boolean                        | Applies display styling to align link with text. (Left margin for LTR, right margin for RTL). Component is centered by default                                                                                                                                               |
+| className?         | string                         | Permits `css` prop to be applied                                                                                                                                                                                                                                             |
+| htmlAttributes?    | string                         | Permits custom html attributes to be applied. E.g. `data-ignore-lite` for .lite                                                                                                                                                                                              |
+| eventTrackingData? | shape({componentName: string}) | Tracking data needed for ati to track view and click of the Call to Action Link                                                                                                                                                                                              |
+| download?          | boolean                        | Permits download                                                                                                                                                                                                                                                             |
+| fontVariant?       | string                         | Used to render the correct `font-family`, `font-style` and `font-weight`. Possible values are `sansRegular`, `sansRegularItalic`, `sansBold`, `sansBoldItalic`, `sansLight`, `serifRegular`, `serifMedium`, `serifMediumItalic`, `serifBold`, `serifLight`.                  |
+| size?              | string                         | The [BBC GEL size](https://www.bbc.co.uk/gel/features/typography#type-sizes). Possible values are `atlas`, `elephant`, `imperial`, `royal`, `foolscap`, `canon`, `trafalgar`, `paragon`, `doublePica`, `greatPrimer`, `bodyCopy`, `pica`, `longPrimer`, `brevier`, `minion`. |
 
 ## Example ltr/rtl
 
 ### Call to Action Link with Flex Wrapper, Text and Chevron
 
 ```javascript
-<CallToActionLink to="https://www.bbc.com/ws/languages">
-  <CallToActionLink.FlexWrapper>
+<CallToActionLink url="https://www.bbc.com/ws/languages">
+  <CallToActionLink.ButtonLikeWrapper>
     <CallToActionLink.Text>
       I am a link
       <CallToActionLink.Chevron />
     </CallToActionLink.Text>
-  </CallToActionLink.FlexWrapper>
+  </CallToActionLink.ButtonLikeWrapper>
 </CallToActionLink>
 ```
 
@@ -47,7 +49,7 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 The Chevron can be inside or outside of the Text component.
 
 ```javascript
-<CallToActionLink to="https://www.bbc.com/ws/languages">
+<CallToActionLink url="https://www.bbc.com/ws/languages">
   <CallToActionLink.Text>I am a link</CallToActionLink.Text>
   <CallToActionLink.Chevron />
 </CallToActionLink>
@@ -56,7 +58,12 @@ The Chevron can be inside or outside of the Text component.
 ### Call to Action Link with Text
 
 ```javascript
-<CallToActionLink to="https://www.bbc.com/ws/languages">
+<CallToActionLink
+  url="https://www.bbc.com/ws/languages"
+  alignWithMargin
+  size="brevier"
+  fontVariant="sansRegular"
+>
   <CallToActionLink.Text>I am a link</CallToActionLink.Text>
 </CallToActionLink>
 ```
@@ -71,17 +78,17 @@ The css prop can be used to apply further styles, such as spacing and colours. T
 
 ```javascript
 <CallToActionLink
-  to={link}
+  url={link}
   className="focusIndicatorInvert"
   eventTrackingData={eventTrackingData}
   css={styles.callToActionLink}
 >
-  <CallToActionLink.FlexWrapper>
+  <CallToActionLink.ButtonLikeWrapper>
     <CallToActionLink.Text>
       {linkText}
       <CallToActionLink.Chevron />
     </CallToActionLink.Text>
-  </CallToActionLink.FlexWrapper>
+  </CallToActionLink.ButtonLikeWrapper>
 </CallToActionLink>
 ```
 
