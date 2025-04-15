@@ -183,7 +183,7 @@ const ConsentBanner = ({
     externalLinkText,
   );
 
-  const viewRef = useViewTracker(getEventTrackingData(provider));
+  const viewTracker = useViewTracker(getEventTrackingData(provider));
 
   return (
     <div
@@ -193,7 +193,7 @@ const ConsentBanner = ({
         consentBannerCss.parent,
         isLive && consentBannerCss.tranparentBorder,
       ]}
-      ref={viewRef}
+      {...viewTracker}
     >
       <Text
         as="strong"

@@ -20,7 +20,7 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
   const { recommendations, mostRead, script, service, dir } =
     useContext(ServiceContext);
 
-  const viewEventTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const {
     palette: { GREY_2 },
@@ -87,11 +87,7 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
         {isSinglePromo ? (
           <RecommendationsItem recommendation={data?.[0]} />
         ) : (
-          <ul
-            css={styles.recommendationsList}
-            role="list"
-            ref={viewEventTracker}
-          >
+          <ul css={styles.recommendationsList} role="list" {...viewTracker}>
             {data?.map(recommendation => (
               <li key={recommendation.id} role="listitem">
                 <RecommendationsItem recommendation={recommendation} />

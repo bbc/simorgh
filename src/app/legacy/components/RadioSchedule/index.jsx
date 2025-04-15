@@ -71,7 +71,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
     componentName: 'radio-schedule',
   };
 
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   return (
     <StyledGrid
@@ -79,7 +79,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
       dir={dir}
       {...schedulesGridProps}
       role="list"
-      ref={viewRef}
+      {...viewTracker}
     >
       {schedule.map(({ id, ...program }) => (
         <StyledFlexGrid
