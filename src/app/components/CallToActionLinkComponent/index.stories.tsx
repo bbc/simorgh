@@ -15,16 +15,6 @@ export const ExampleWithChevronAlignedWithText = () => {
   );
 };
 
-export const ExampleWithChevronAlignedWithTextchevInside = () => {
-  return (
-    <CallToActionLink url="https://www.bbc.com/ws/languages" alignWithMargin>
-      <CallToActionLink.Text>
-        Hello <CallToActionLink.Chevron />
-      </CallToActionLink.Text>
-    </CallToActionLink>
-  );
-};
-
 export const ExampleWithoutChevronAlignedWithText = () => {
   return (
     <CallToActionLink url="https://www.bbc.com/ws/languages" alignWithMargin>
