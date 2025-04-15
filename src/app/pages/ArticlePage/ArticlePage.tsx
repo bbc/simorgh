@@ -40,6 +40,7 @@ import {
 } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
+
 import ScrollablePromo from '#components/ScrollablePromo';
 import { Services } from '#app/models/types/global';
 import Recommendations from '#app/components/Recommendations';
@@ -69,7 +70,7 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
-import getVideoOrientation from '../utils/getVideoOrientation';
+import isPortraitVideo from '../utils/isPortraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -130,12 +131,12 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 const getVideoComponent =
   (translations: Translations) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    const showPortraitTitle = getVideoOrientation(blocks) === 'Portrait';
+
     const title = translations.media.watchMoments || 'Watch Moments';
 
     return (
       <>
-        {showPortraitTitle && (
+        {isPortraitVideo(blocks) && (
           <strong css={styles.portraitVideoTitle}>{title}</strong>
         )}
         <MediaLoader blocks={blocks as MediaBlock[]} />
