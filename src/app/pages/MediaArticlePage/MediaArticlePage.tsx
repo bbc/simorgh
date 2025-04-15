@@ -78,7 +78,7 @@ const getAudioVideoComponent =
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
           isCpsMap && styles.cafMediaPlayer,
-          isPortraitVideo && styles.mapPortraitVideoPlayer,
+          isPortraitVideo && styles.portraitVideoPlayer,
         ]}
       >
         <MediaLoader blocks={blocks as MediaBlock[]} className={className} />

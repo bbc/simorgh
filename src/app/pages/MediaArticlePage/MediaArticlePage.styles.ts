@@ -51,7 +51,7 @@ export default {
         padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
-  mapPortraitVideoPlayer: ({ mq, spacings }: Theme) =>
+  portraitVideoPlayer: ({ mq, spacings }: Theme) =>
     css({
       paddingTop: 0,
       paddingBottom: `${spacings.TRIPLE}rem`,
