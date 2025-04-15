@@ -1,7 +1,6 @@
 export default () => {
   window.processClientDeviceAndSendLite = atiURL => {
     // TODO: Temp - used for testing
-    // eslint-disable-next-line no-alert
     alert(`✅ processClientDeviceAndSendLite: ${atiURL}`);
 
     if (atiURL) {

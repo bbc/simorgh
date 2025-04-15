@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, { ReactElement, PropsWithChildren } from 'react';
 import { BaseRendererProps } from './types';
-import LiteTrackingTemplate from './LiteTrackingTemplate';
+import ComponentTrackingTemplate from './ComponentTrackingTemplate';
 
 interface Props extends BaseRendererProps {
   bodyContent: ReactElement;
@@ -25,7 +25,7 @@ export default function LitePageRenderer({
         {helmetLinkTags}
         {helmetScriptTags}
         <style dangerouslySetInnerHTML={{ __html: styles }} />
-        <LiteTrackingTemplate />
+        <ComponentTrackingTemplate />
       </head>
       <body>{bodyContent}</body>
     </html>
