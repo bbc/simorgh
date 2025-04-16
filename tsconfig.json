@@ -43,7 +43,6 @@
   },
   "include": [
     "src/**/*",
-    ".storybook/**/*",
   ],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
 }

@@ -22,7 +22,12 @@ module.exports = {
     },
     requireConfigFile: false,
   },
-  ignorePatterns: ['**/tz/**', 'index.stories.jsx', 'index.amp.stories.jsx'],
+  ignorePatterns: [
+    '**/tz/**',
+    'index.stories.jsx',
+    'index.amp.stories.jsx',
+    '.storybook/**/*',
+  ],
   plugins: [
     'prettier',
     'json',
@@ -66,11 +71,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'off',
       {
-        devDependencies: [
-          '/.storybook/**',
-          '**/stories.jsx',
-          '/src/testHelpers/**',
-        ],
+        devDependencies: ['**/stories.jsx', '/src/testHelpers/**'],
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
