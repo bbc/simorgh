@@ -7,6 +7,27 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import { BylineLinkedData, LinkedDataProps } from './types';
 
+type OrgAuthor = {
+  noBylinesPolicy?: string | null | undefined;
+  '@type': string;
+  name: string;
+  logo: {
+    '@type': string;
+    width: number;
+    height: number;
+    url: string;
+  };
+};
+
+type AuthorStructure = {
+  image?: string | undefined;
+  sameAs?: (string | undefined)[] | undefined;
+  '@type': string;
+  name: string | undefined;
+};
+
+type Author = AuthorStructure | AuthorStructure[];
+
 const LinkedData = ({
   showAuthor = false,
   type,
@@ -148,8 +169,8 @@ const LinkedData = ({
     },
     ...(isTrustProjectParticipant && { noBylinesPolicy }),
   };
-  
-  let author = orgAuthor;
+
+  let author: OrgAuthor | Author = orgAuthor;
   if (hasByline && bylineAuthors) {
     author = bylineAuthors.length === 1 ? bylineAuthors?.[0] : bylineAuthors;
   }

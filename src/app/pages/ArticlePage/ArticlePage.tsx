@@ -233,7 +233,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImage = promoImageRawBlock?.model?.locator;
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
-  const authors = bylineLinkedData?.map(({ authorName }) => authorName).join(', ');
+  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
   return (
     <div css={styles.pageWrapper}>
@@ -241,7 +241,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
-        {...(hasByline && { authors })}
+        authors={authors}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
