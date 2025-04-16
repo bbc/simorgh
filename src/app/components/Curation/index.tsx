@@ -6,6 +6,7 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
@@ -54,6 +55,7 @@ export default ({
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
   embed,
+  isHomePage = false,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -148,9 +150,15 @@ export default ({
       if (summaries.length > 0) {
         return curationLength > 1 && (title || isFirstCuration) ? (
           <section aria-labelledby={id} role="region">
-            <Subheading id={id} link={link}>
-              {curationSubheading}
-            </Subheading>
+            {isFirstCuration && isHomePage ? (
+              <VisuallyHiddenText id={id} as="h2">
+                {curationSubheading}
+              </VisuallyHiddenText>
+            ) : (
+              <Subheading id={id} link={link}>
+                {curationSubheading}
+              </Subheading>
+            )}
             <GridComponent
               summaries={summaries}
               headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3

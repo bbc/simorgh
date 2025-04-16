@@ -121,6 +121,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                         nthCurationByStyleAndProminence
                       }
                       embed={embed}
+                      isHomePage
                     />
 
                     {index === indexOfFirstNonBanner && <MPU />}
