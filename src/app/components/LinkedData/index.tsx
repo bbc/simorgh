@@ -148,10 +148,11 @@ const LinkedData = ({
     },
     ...(isTrustProjectParticipant && { noBylinesPolicy }),
   };
-  let author;
+  
+  let author = orgAuthor;
   if (hasByline && bylineAuthors) {
     author = bylineAuthors.length === 1 ? bylineAuthors?.[0] : bylineAuthors;
-  } else author = orgAuthor;
+  }
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
