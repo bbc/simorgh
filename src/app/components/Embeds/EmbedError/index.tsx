@@ -19,7 +19,7 @@ const EmbedError = ({ message, link }: Props) => {
         {message}
       </Text>
       <div css={styles.errorLinkWrapper}>
-        {link && link.text && link.href && (
+        {link?.text && link.href && (
           <InlineLink to={link.href} text={link.text} css={styles.inlineLink} />
         )}
       </div>
