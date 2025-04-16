@@ -41,6 +41,9 @@
       "react": ["./node_modules/@types/react"]
     }
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    ".storybook/**/*",
+  ],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
 }
