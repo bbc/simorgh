@@ -31,6 +31,7 @@ module.exports = {
     'cypress',
     'import',
     'no-only-tests',
+    'simorgh-eslint-rules',
   ],
   rules: {
     'react/prop-types': 'off',
@@ -76,6 +77,7 @@ module.exports = {
     'import/extensions': [1, { json: 'ignorePackages' }],
     'jsx-a11y/no-redundant-roles': 'off',
     'no-only-tests/no-only-tests': 'error',
+    'simorgh-eslint-rules/detect-to-string-on-function': 'error',
   },
   settings: {
     'import/resolver': {

@@ -8154,6 +8154,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-simorgh-eslint-rules@file:eslint/custom-rules::locator=simorgh%40workspace%3A.":
+  version: 1.0.0
+  resolution: "eslint-plugin-simorgh-eslint-rules@file:eslint/custom-rules#eslint/custom-rules::hash=a4b158&locator=simorgh%40workspace%3A."
+  checksum: 10/e79cba983e2e3e513c227e4756f01c30fb5f3fede371b911686c8633a7d13e9387ab682bc62388c25c34e1410dcce4ce6522c1a6fb900a032866ca1bdf58a1a8
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:5.1.1, eslint-scope@npm:^5.1.1":
   version: 5.1.1
   resolution: "eslint-scope@npm:5.1.1"
@@ -14730,6 +14737,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.2.5"
     eslint-plugin-react: "npm:7.37.4"
     eslint-plugin-react-hooks: "npm:5.2.0"
+    eslint-plugin-simorgh-eslint-rules: "file:eslint/custom-rules"
     express: "npm:4.21.2"
     express-static-gzip: "npm:2.2.0"
     glob: "npm:11.0.1"
