@@ -1,47 +1,49 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useContext, useEffect, useState, useRef } from 'react';
-import prop from 'ramda/src/prop';
 
 import { RequestContext } from '#app/contexts/RequestContext';
+import {
+  LITE_ATI_VIEW_TRACKING,
+  VIEW_EVENT,
+} from '#app/lib/analyticsUtils/analytics.const';
+import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
-import { EventTrackingContext } from '../../contexts/EventTrackingContext';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { useConstructLiteSiteATIEventTrackUrl } from '../useClickTrackerHandler';
 
-const VIEW_EVENT = 'view';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
-export const LITE_ATI_VIEW_TRACKING = 'data-lite-ati-view-tracking';
 
-/**
- *
- * @returns {Ref<HTMLElement> | undefined}
- */
-const useViewTracker = (props = {}) => {
-  const componentName = props?.componentName;
-  const format = props?.format;
-  const advertiserID = props?.advertiserID;
-  const url = props?.url;
-  const optimizely = props?.optimizely;
-  const optimizelyMetricNameOverride = props?.optimizelyMetricNameOverride;
-  const detailedPlacement = props?.detailedPlacement;
-
-  const observer = useRef();
-  const timer = useRef(null);
-  const [isInView, setIsInView] = useState();
-  const [eventSent, setEventSent] = useState(false);
-  const { trackingIsEnabled } = useTrackingToggle(componentName);
-  const eventTrackingContext = useContext(EventTrackingContext);
-
+const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const {
+    componentName,
+    format,
+    advertiserID,
+    url,
     pageIdentifier,
     platform,
     producerId,
     producerName,
     statsDestination,
-  } = eventTrackingContext;
-  const campaignID = props?.campaignID || eventTrackingContext?.campaignID;
+    campaignID,
+    detailedPlacement,
+    optimizely,
+    optimizelyMetricNameOverride,
+  } = extractATITrackingProps({
+    eventTrackingData,
+    eventType: VIEW_EVENT,
+  });
+
+  const observer = useRef(null);
+  const timer = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  const [eventSent, setEventSent] = useState(false);
+  const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const { service, useReverb } = useContext(ServiceContext);
 
@@ -50,20 +52,26 @@ const useViewTracker = (props = {}) => {
       // Polyfill IntersectionObserver, e.g. for IE11
       await import('intersection-observer');
     }
-    const callback = changes => {
-      const someElementsAreInView = changes.some(prop('isIntersecting'));
+
+    const callback = (elements: IntersectionObserverEntry[]) => {
+      const someElementsAreInView = elements.some(
+        element => element.isIntersecting,
+      );
 
       setIsInView(someElementsAreInView);
     };
+
     const options = {
       threshold: [MIN_VIEWED_PERCENT],
     };
 
+    // @ts-expect-error current element won't be null
     observer.current = new IntersectionObserver(callback, options);
   };
 
   useEffect(() => {
     if (isInView && !timer.current) {
+      // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
         const hasRequiredProps = [
           campaignID,
@@ -95,7 +103,7 @@ const useViewTracker = (props = {}) => {
               optimizelyMetricNameOverride
                 ? `${optimizelyMetricNameOverride}_views`
                 : 'component_views',
-              optimizely.user.id,
+              optimizely.user.id as string,
               overrideAttributes,
             );
           }
@@ -124,17 +132,19 @@ const useViewTracker = (props = {}) => {
               }),
           });
           setEventSent(true);
-          observer.current.disconnect();
+          (observer.current as unknown as IntersectionObserver)?.disconnect();
           observer.current = null;
           timer.current = null;
         }
       }, VIEWED_DURATION_MS);
     } else {
+      // @ts-expect-error current timer will not be null
       clearTimeout(timer.current);
       timer.current = null;
     }
 
     return () => {
+      // @ts-expect-error current timer will not be null
       clearTimeout(timer.current);
     };
   }, [
@@ -158,7 +168,7 @@ const useViewTracker = (props = {}) => {
     useReverb,
   ]);
 
-  return async element => {
+  return async (element: HTMLElement) => {
     if (!element || !trackingIsEnabled || eventSent) {
       return;
     }
@@ -166,18 +176,21 @@ const useViewTracker = (props = {}) => {
       await initObserver();
     }
 
-    observer.current.observe(element);
+    (observer.current as unknown as IntersectionObserver)?.observe(element);
   };
 };
 
-export const useLiteViewTracker = (props = {}) => {
+export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
-  const liteHandler = useConstructLiteSiteATIEventTrackUrl({
-    props,
+  const viewTracker = getComponentViewTracker(eventTrackingData);
+  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+    eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
-  return isLite ? { [LITE_ATI_VIEW_TRACKING]: liteHandler } : null;
+  return isLite
+    ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
+    : {
+        ref: viewTracker,
+      };
 };
-
-export default useViewTracker;
