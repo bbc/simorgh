@@ -171,7 +171,8 @@ const LinkedData = ({
   };
 
   let author: OrgAuthor | Author = orgAuthor;
-  if (hasByline && bylineAuthors) {
+
+  if (hasByline && bylineAuthors && bylineAuthors.length > 0) {
     author = bylineAuthors.length === 1 ? bylineAuthors?.[0] : bylineAuthors;
   }
   const linkedData = {
