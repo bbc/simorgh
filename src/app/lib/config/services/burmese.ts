@@ -307,7 +307,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'နောက်ဆုံးရ',
     },
     mostRead: {
-      header: 'အဖတ်အများဆုံး',
+      header: 'အဖတ်များနေသော သတင်းဆောင်းပါးများ',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -318,7 +318,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ကြာမြင့်ချိန် %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'အဖတ်အများဆုံး',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

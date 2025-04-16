@@ -9,9 +9,6 @@ exports[`Toggles Config when application environment is live should contain corr
   "chartbeatAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": {
-    "enabled": false,
-  },
   "enableFetchingToggles": {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
@@ -20,6 +17,9 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": false,
   },
   "include": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {
@@ -61,9 +61,6 @@ exports[`Toggles Config when application environment is local should contain cor
   "comscoreAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": {
-    "enabled": true,
-  },
   "electionBanner": {
     "enabled": true,
   },
@@ -81,6 +78,9 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
   },
   "liveRadioSchedule": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {
@@ -119,9 +119,6 @@ exports[`Toggles Config when application environment is test should contain corr
   "chartbeatAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": {
-    "enabled": true,
-  },
   "enableFetchingToggles": {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
@@ -130,6 +127,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
   },
   "include": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {

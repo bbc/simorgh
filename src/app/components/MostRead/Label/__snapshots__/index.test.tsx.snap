@@ -141,7 +141,7 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
             dir="rtl"
             id="Most-Read"
           >
-            پربیننده‌ترین‌ها
+            مطالب پرخواننده
           </span>
         </span>
       </span>

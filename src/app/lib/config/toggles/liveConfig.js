@@ -6,9 +6,6 @@ export default {
   chartbeatAnalytics: {
     enabled: true,
   },
-  cpsRecommendations: {
-    enabled: false,
-  },
   enableFetchingToggles: {
     enabled: true,
     value:
@@ -18,6 +15,9 @@ export default {
     enabled: false,
   },
   include: {
+    enabled: true,
+  },
+  midArticleOnwardJourney: {
     enabled: true,
   },
   mostRead: {

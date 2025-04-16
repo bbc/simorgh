@@ -9,8 +9,6 @@ export interface Translations {
   ads: {
     advertisementLabel: string;
   };
-  recommendationTitle?: string;
-  splitRecommendationTitle?: string;
   seeAll?: string;
   home: string;
   currentPage: string;

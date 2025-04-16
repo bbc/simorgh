@@ -16,7 +16,7 @@ export default () => {
       event.stopPropagation();
       event.preventDefault();
 
-      const atiURL = targetElement.getAttribute('data-lite-ati-tracking');
+      const atiURL = targetElement.getAttribute('data-lite-ati-click');
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 

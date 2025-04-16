@@ -210,7 +210,7 @@ const Promo = () => {
 
   return (
     <ResponsivePodcastPromoWrapper
-      ref={viewTrackerRef}
+      {...viewTrackerRef}
       dir={dir}
       data-e2e="podcast-promo"
     >
