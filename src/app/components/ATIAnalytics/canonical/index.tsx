@@ -31,7 +31,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
 };
 
 const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconOperaMiniScript(atiPageViewUrlString);
+  const script = `(${sendBeaconOperaMiniScript.toString()})("${atiPageViewUrlString}")`;
 
   return (
     <Helmet>
