@@ -465,8 +465,11 @@ const liteTestSuites = canonicalTestSuites
   .map(testSuite => {
     const excludedLiteTests = [
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
+      assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
       assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
       assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
     ];
