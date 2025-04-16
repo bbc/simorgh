@@ -41,8 +41,6 @@
       "react": ["./node_modules/@types/react"]
     }
   },
-  "include": [
-    "src/**/*",
-  ],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
 }
