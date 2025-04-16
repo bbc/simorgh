@@ -4,23 +4,22 @@ import clickTracking from '.';
 const createAnchor = ({
   href = '/gahuza',
   isLite = true,
+  atiUrl = 'https://logws1363.ati-host.net/?',
 }: {
   href?: string;
   isLite?: boolean;
+  atiUrl?: string;
 } = {}) => {
   const anchorElement = document.createElement('a');
   anchorElement.href = href;
   if (isLite) {
-    anchorElement.setAttribute(
-      LITE_ATI_CLICK_TRACKING,
-      'https://logws1363.ati-host.net/?',
-    );
+    anchorElement.setAttribute(LITE_ATI_CLICK_TRACKING, atiUrl);
   }
+  document.body.appendChild(anchorElement);
   return anchorElement;
 };
 
 const dispatchClick = (targetElement: HTMLElement) => {
-  document.body.appendChild(targetElement);
   const event = new MouseEvent('click', {
     view: window,
     bubbles: true,
@@ -77,5 +76,19 @@ describe('Click tracking script', () => {
     expect(
       window.processClientDeviceAndSendStaticBeacon as jest.Mock,
     ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
+  });
+
+  it('Should NOT call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
+    const anchorElement = createAnchor({
+      atiUrl: 'https://logws1363.ati-host.net/?uniqueLink=1',
+    });
+
+    dispatchClick(anchorElement);
+    dispatchClick(anchorElement);
+    dispatchClick(anchorElement);
+
+    expect(
+      window.processClientDeviceAndSendStaticBeacon as jest.Mock,
+    ).toHaveBeenCalledTimes(1);
   });
 });

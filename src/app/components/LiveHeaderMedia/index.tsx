@@ -47,7 +47,9 @@ const LiveHeaderMedia = ({
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'live-header-media',
   };
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
   const viewTracker = useViewTracker(eventTrackingData);
 
   let warningLevel = WARNING_LEVELS.NO_WARNING;
@@ -108,7 +110,7 @@ const LiveHeaderMedia = ({
   };
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    clickTrackerHandler(e);
+    if (clickTrackerHandler) clickTrackerHandler(e);
     clickToggleMedia();
   };
 

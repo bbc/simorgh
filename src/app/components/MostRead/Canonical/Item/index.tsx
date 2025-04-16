@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
-import { useATIClickTrackerHandler } from '#hooks/useClickTrackerHandler';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import {
   mostReadListGridProps,
@@ -47,17 +47,14 @@ export const MostReadLink = ({
   eventTrackingData,
   isAmp = false,
 }: PropsWithChildren<MostReadLinkProps>) => {
-  const atiClickTrackerHandler = useATIClickTrackerHandler(
-    eventTrackingData,
-    isAmp,
-  );
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData, isAmp);
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}
-        {...atiClickTrackerHandler}
+        {...clickTrackerHandler}
       >
         {title}
       </a>

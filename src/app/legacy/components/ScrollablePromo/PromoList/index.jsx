@@ -83,7 +83,7 @@ const PromoList = ({
   blocks,
   experimentVariant,
   viewTracker,
-  onClick,
+  clickTracker,
   a11yAttributes,
 }) => {
   const { dir } = useContext(ServiceContext);
@@ -115,7 +115,7 @@ const PromoList = ({
             <Promo
               block={block}
               experimentVariant={experimentVariant}
-              onClick={onClick}
+              clickTracker={clickTracker}
             />
           </List>
         );

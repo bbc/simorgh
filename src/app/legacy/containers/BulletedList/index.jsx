@@ -14,7 +14,7 @@ const StyledGridItemMedium = styled(GridItemMedium)`
 `;
 
 const withClickHandler = (Component, clickHandler) => props => (
-  <Component {...props} onClick={clickHandler} />
+  <Component {...props} {...clickHandler} />
 );
 
 const BulletedListContainer = ({

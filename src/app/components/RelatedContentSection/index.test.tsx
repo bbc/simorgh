@@ -140,23 +140,17 @@ describe('Event Tracking', () => {
 
     const [
       [blockLevelTrackingItem1],
-      [linkLevelTrackingItem1],
 
       [blockLevelTrackingItem2],
-      [linkLevelTrackingItem2],
 
       [blockLevelTrackingItem3],
-      [linkLevelTrackingItem3],
     ] = clickTrackerSpy.mock.calls;
 
     expect(blockLevelTrackingItem1).toEqual(expected);
-    expect(linkLevelTrackingItem1).toEqual({});
 
     expect(blockLevelTrackingItem2).toEqual(expected);
-    expect(linkLevelTrackingItem2).toEqual({});
 
     expect(blockLevelTrackingItem3).toEqual(expected);
-    expect(linkLevelTrackingItem3).toEqual({});
   });
 
   it('should implement 1 BLOCK level view tracker', () => {
