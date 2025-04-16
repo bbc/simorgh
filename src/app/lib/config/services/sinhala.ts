@@ -264,16 +264,20 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
-      header: 'වැඩිපුරම කියැවූ',
+      header: 'ජනප්‍රිය ලිපි',
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
     },
+    recommendations: {
+      header: 'වැඩිපුරම කියැවූ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
+    },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

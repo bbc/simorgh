@@ -55,7 +55,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: '광고',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
@@ -265,7 +264,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: '최신 뉴스',
     },
     mostRead: {
-      header: 'TOP 뉴스',
+      header: '많이 본 뉴스',
       lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
@@ -276,7 +275,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '방송 길이 %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'TOP 뉴스',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
