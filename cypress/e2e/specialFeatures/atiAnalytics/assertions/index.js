@@ -105,7 +105,7 @@ export const assertPageView = ({
 
 const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
   new RegExp(
-    `PUB-\\[?${contentType}.*?\\]?-\\[?${component}.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?${pageIdentifier}\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?`,
+    `PUB-\\[${contentType}(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[${pageIdentifier}\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
     'g',
   );
 
