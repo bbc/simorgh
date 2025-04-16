@@ -102,10 +102,7 @@ const getMpuComponent =
 
 const getWsojComponent = (
   props: ComponentToRenderProps & { data: Recommendation[] },
-) => {
-  const { data } = props;
-  return <Recommendations data={data} />;
-};
+) => <Recommendations data={props.data} />;
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
