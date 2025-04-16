@@ -8156,8 +8156,8 @@ __metadata:
 
 "eslint-plugin-simorgh-eslint-rules@file:eslint/custom-rules::locator=simorgh%40workspace%3A.":
   version: 1.0.0
-  resolution: "eslint-plugin-simorgh-eslint-rules@file:eslint/custom-rules#eslint/custom-rules::hash=a4b158&locator=simorgh%40workspace%3A."
-  checksum: 10/e79cba983e2e3e513c227e4756f01c30fb5f3fede371b911686c8633a7d13e9387ab682bc62388c25c34e1410dcce4ce6522c1a6fb900a032866ca1bdf58a1a8
+  resolution: "eslint-plugin-simorgh-eslint-rules@file:eslint/custom-rules#eslint/custom-rules::hash=44d7a3&locator=simorgh%40workspace%3A."
+  checksum: 10/8bbaef0bb8665b15bc97b4e616164aea9834acc15a67fdd9a2269800c44d79bc9aab7d749ab293481bcf578cf7596fee0b628f9e55124dab25e823d1aeb5ccbb
   languageName: node
   linkType: hard
 
