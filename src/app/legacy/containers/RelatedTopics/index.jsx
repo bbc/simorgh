@@ -46,7 +46,8 @@ const RelatedTopics = ({
   const topicsPath = pathOr('topics', ['topicsPath'], translations);
 
   const getTopicPageUrl = id => {
-    const hostname = `https://www.bbc${service === 'news' ? '.co.uk' : '.com'}`;
+    const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
+    const hostname = `https://www.bbc${isPublicService.includes(service) ? '.co.uk' : '.com'}`;
 
     return variant
       ? `${hostname}/${service}/${variant}/${topicsPath}/${id}`
