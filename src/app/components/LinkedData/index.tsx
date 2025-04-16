@@ -131,10 +131,7 @@ const LinkedData = ({
       ...(authorImage && { image: authorImage }),
     };
   };
-  let bylineAuthors;
-  if (bylineLinkedData) {
-    bylineAuthors = bylineLinkedData?.map(data => getAuthorTagging(data));
-  }
+  const bylineAuthors = bylineLinkedData?.map(data => getAuthorTagging(data));
 
   const locationCreated = {
     '@place': places.length === 1 ? places[0] : places,
