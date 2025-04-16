@@ -50,7 +50,7 @@ describe('sendBeaconOperaMiniScript', () => {
     });
 
     it('should send beacon with XHR', () => {
-      eval(sendBeaconOperaMiniScript('https://ati-host.example.com'));
+      sendBeaconOperaMiniScript('https://ati-host.example.com');
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
         'GET',
@@ -62,7 +62,7 @@ describe('sendBeaconOperaMiniScript', () => {
     it('should send beacon including the referrer with XHR', () => {
       documentReferrerSpy.mockReturnValue('https://client.referrer.com');
 
-      eval(sendBeaconOperaMiniScript('https://ati-host.example.com'));
+      sendBeaconOperaMiniScript('https://ati-host.example.com');
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
         'GET',
@@ -79,19 +79,16 @@ describe('sendBeaconOperaMiniScript', () => {
 
       windowSpy.mockImplementation(() => check);
 
-      const multipleCalls =
-        sendBeaconOperaMiniScript('https://ati-host.example.com') +
-        sendBeaconOperaMiniScript('https://ati-host.example.com') +
-        sendBeaconOperaMiniScript('https://ati-host.example.com');
-
-      eval(multipleCalls);
+      sendBeaconOperaMiniScript('https://ati-host.example.com');
+      sendBeaconOperaMiniScript('https://ati-host.example.com');
+      sendBeaconOperaMiniScript('https://ati-host.example.com');
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledTimes(1);
     });
   });
 
   it('should not send beacon with XHR, when browser is not Opera Mini', () => {
-    eval(sendBeaconOperaMiniScript('https://ati-host.example.com'));
+    sendBeaconOperaMiniScript('https://ati-host.example.com');
 
     expect(XMLHttpRequestMock.open).not.toHaveBeenCalled();
   });
