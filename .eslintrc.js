@@ -90,6 +90,9 @@ module.exports = {
     {
       files: ['**/*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: true,
+      },
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'react/jsx-filename-extension': [
@@ -109,6 +112,7 @@ module.exports = {
             caughtErrorsIgnorePattern: '^_',
           },
         ],
+        '@typescript-eslint/prefer-optional-chain': ['error'],
         'react/require-default-props': 'off',
         'react/no-unused-prop-types': 'off',
       },
