@@ -233,7 +233,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImage = promoImageRawBlock?.model?.locator;
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
-  const authors = bylineLinkedData?.map(data => data?.authorName).join(', ');
+  const authors = bylineLinkedData?.map(({ authorName }) => authorName).join(', ');
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
