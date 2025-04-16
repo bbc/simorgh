@@ -19,7 +19,7 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
-  clickTrackerHandler,
+  clickTracker,
   viewTracker,
   isLite,
 ) =>
@@ -38,7 +38,7 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        {...clickTrackerHandler}
+        clickTracker={clickTracker}
         viewTracker={viewTracker}
       >
         {title}
