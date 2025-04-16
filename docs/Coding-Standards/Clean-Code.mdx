@@ -347,3 +347,6 @@ const Promo = ({ block }) => {
 ...
 }
 ```
+
+### Caveats
+As we target legacy browsers as part of our transpilation bundling, usages of optional chaining will be polyfilled, which means bundle sizes will increase the more we use optional chaining throughout our codebase.
