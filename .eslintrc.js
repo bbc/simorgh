@@ -22,7 +22,12 @@ module.exports = {
     },
     requireConfigFile: false,
   },
-  ignorePatterns: ['**/tz/**', 'index.stories.jsx', 'index.amp.stories.jsx'],
+  ignorePatterns: [
+    '**/tz/**',
+    'index.stories.jsx',
+    'index.amp.stories.jsx',
+    '.storybook/**/*',
+  ],
   plugins: [
     'prettier',
     'json',
@@ -67,16 +72,13 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'off',
       {
-        devDependencies: [
-          '/.storybook/**',
-          '**/stories.jsx',
-          '/src/testHelpers/**',
-        ],
+        devDependencies: ['**/stories.jsx', '/src/testHelpers/**'],
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
     'jsx-a11y/no-redundant-roles': 'off',
     'no-only-tests/no-only-tests': 'error',
+    'no-unsafe-optional-chaining': 'error',
     'simorgh-eslint-rules/detect-to-string-on-function': 'error',
   },
   settings: {
@@ -91,6 +93,9 @@ module.exports = {
     {
       files: ['**/*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: true,
+      },
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'react/jsx-filename-extension': [
@@ -110,6 +115,7 @@ module.exports = {
             caughtErrorsIgnorePattern: '^_',
           },
         ],
+        '@typescript-eslint/prefer-optional-chain': ['error'],
         'react/require-default-props': 'off',
         'react/no-unused-prop-types': 'off',
       },
