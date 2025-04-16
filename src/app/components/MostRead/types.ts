@@ -32,6 +32,7 @@ export interface MostReadLinkProps {
   eventTrackingData?: {
     componentName: string;
   };
+  isAmp?: boolean;
 }
 
 type ArticleSource = 'cps' | 'optimo';

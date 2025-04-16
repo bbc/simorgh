@@ -266,7 +266,6 @@ exports[`AmpMostRead should render as expected 1`] = `
             >
               <a
                 class="emotion-7"
-                data-lite-ati-click="undefineds=598285&r=0x0x24x24&re=1024x768&hl=18x2x18&lng=en-US&atc=PUB-[]-[]-[]-[]-[]-[]-[]-[]&type=AT"
                 href="{{href}}"
               >
                 {{title}}

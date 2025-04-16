@@ -99,6 +99,7 @@ export const getItemWrapperArray = ({
           service={service}
           title={item.title}
           size={size}
+          isAmp={isAmp}
         >
           {item.timestamp}
         </MostReadLink>

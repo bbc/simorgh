@@ -15,6 +15,7 @@ jest.mock('#lib/analyticsUtils', () => {
   return {
     ...jest.requireActual('#lib/analyticsUtils'),
     getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
   };
 });
 

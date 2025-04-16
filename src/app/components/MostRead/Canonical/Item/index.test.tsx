@@ -3,6 +3,14 @@ import { render } from '../../../react-testing-library-with-providers';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
 
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
+});
+
 describe('MostReadLink', () => {
   const pidginItem = getItem({ service: 'pidgin', withTimestamp: true });
   const persianItem = getItem({ service: 'persian' });

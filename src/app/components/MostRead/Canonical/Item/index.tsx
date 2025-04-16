@@ -45,8 +45,12 @@ export const MostReadLink = ({
   children,
   size,
   eventTrackingData,
+  isAmp = false,
 }: PropsWithChildren<MostReadLinkProps>) => {
-  const atiClickTrackerHandler = useATIClickTrackerHandler(eventTrackingData);
+  const atiClickTrackerHandler = useATIClickTrackerHandler(
+    eventTrackingData,
+    isAmp,
+  );
 
   return (
     <div css={getItemCss({ dir, size })} dir={dir}>
