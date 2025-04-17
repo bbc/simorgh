@@ -9,10 +9,28 @@ const styles = {
       padding: `${theme.spacings.DOUBLE}rem ${theme.spacings.TRIPLE}rem`,
     }),
 
-  heading: (_theme: Theme) =>
+  heading: css({
+    marginBottom: '1rem',
+  }),
+
+  ctaLink: (_theme: Theme) =>
     css({
-      marginBottom: '1rem',
+      display: 'inline-flex',
+      alignItems: 'center',
+      textDecoration: 'none',
+      fontWeight: 700,
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
     }),
+
+  chevron: css({
+    marginInlineStart: '0.5rem',
+    width: '1rem',
+    height: '1rem',
+    verticalAlign: 'middle',
+    fill: 'currentcolor',
+  }),
 
   scrollWrapper: (theme: Theme) =>
     css({
@@ -28,34 +46,32 @@ const styles = {
       scrollbarWidth: 'none',
     }),
 
-  promoItem: (_theme: Theme) =>
-    css({
-      scrollSnapAlign: 'start',
-      flex: `0 0 ${ITEM_WIDTH_REM}rem`,
-      display: 'flex',
-      flexDirection: 'column',
-    }),
+  promoItem: css({
+    scrollSnapAlign: 'start',
+    flex: `0 0 ${ITEM_WIDTH_REM}rem`,
+    display: 'flex',
+    flexDirection: 'column',
+    textDecoration: 'none',
+  }),
 
-  image: (_theme: Theme) =>
-    css({
-      width: '100%',
-      height: 'auto',
-      objectFit: 'cover',
-      borderRadius: '0.25rem',
-      marginBottom: '0.5rem',
-    }),
+  image: css({
+    width: '100%',
+    height: 'auto',
+    objectFit: 'cover',
+    borderRadius: '0.25rem',
+    marginBottom: '0.5rem',
+  }),
 
-  headline: (_theme: Theme) =>
-    css({
-      margin: 0,
-    }),
+  promoHeading: css({
+    margin: 0,
+  }),
 
-  link: (theme: Theme) =>
+  promoLink: (theme: Theme) =>
     css({
       color: theme.palette.SHADOW,
       textDecoration: 'none',
-      fontWeight: 'bold',
-      '&:hover': {
+      fontWeight: 700,
+      '&:hover, &:focus': {
         textDecoration: 'underline',
       },
     }),

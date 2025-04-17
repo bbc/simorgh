@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import Heading from '../Heading';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import CallToActionLink from '../CallToActionLink';
+import { RightChevron } from '../icons';
 
 interface PortraitVideoItem {
   id: string;
@@ -14,11 +16,13 @@ interface PortraitVideoItem {
 
 interface PortraitVideoCarouselProps {
   title: string;
+  titleUrl?: string;
   items: PortraitVideoItem[];
 }
 
 const PortraitVideoCarousel = ({
   title,
+  titleUrl,
   items,
 }: PortraitVideoCarouselProps) => {
   const theme = useTheme();
@@ -31,9 +35,23 @@ const PortraitVideoCarousel = ({
       data-testid="portrait-video-carousel"
       css={styles.section(theme)}
     >
-      <Heading level={2} size="doublePica" css={styles.heading(theme)}>
-        {title}
-      </Heading>
+      {titleUrl ? (
+        <CallToActionLink
+          href={titleUrl}
+          css={styles.ctaLink(theme)}
+          className="focusIndicatorInvert"
+        >
+          <Heading level={2} size="doublePica" css={styles.heading}>
+            {title}
+          </Heading>
+          <RightChevron css={styles.chevron} />
+        </CallToActionLink>
+      ) : (
+        <Heading level={2} size="doublePica" css={styles.heading}>
+          {title}
+        </Heading>
+      )}
+
       <div dir={dir} css={styles.scrollWrapper(theme)}>
         {items.map(item => {
           const image = item.images?.[0]?.url;
@@ -42,21 +60,12 @@ const PortraitVideoCarousel = ({
           const href = item.link?.path || '#';
 
           return (
-            <div
-              key={item.id}
-              css={styles.promoItem(theme)}
-              className="portrait-video-promo"
-            >
+            <div key={item.id} css={styles.promoItem}>
               {image && (
-                <img
-                  src={image}
-                  alt={alt}
-                  css={styles.image(theme)}
-                  loading="lazy"
-                />
+                <img src={image} alt={alt} css={styles.image} loading="lazy" />
               )}
-              <Heading level={3} size="longPrimer" css={styles.headline(theme)}>
-                <a href={href} css={styles.link(theme)}>
+              <Heading level={3} size="longPrimer" css={styles.promoHeading}>
+                <a href={href} css={styles.promoLink(theme)}>
                   {headline}
                 </a>
               </Heading>
