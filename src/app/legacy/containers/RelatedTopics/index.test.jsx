@@ -121,7 +121,7 @@ describe('Related Topics', () => {
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
-        `https://www.bbc.com/uzbek/cyr/topics/${topic.topicId}`,
+        `https://www.bbc.com/uzbek/topics/${topic.topicId}/cyr`,
       );
     });
 

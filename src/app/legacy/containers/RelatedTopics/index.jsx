@@ -50,7 +50,7 @@ const RelatedTopics = ({
     const hostname = `https://www.bbc.${isPublicService.includes(service) ? 'co.uk' : 'com'}`;
 
     return variant
-      ? `${hostname}/${service}/${variant}/${topicsPath}/${id}`
+      ? `${hostname}/${service}/${topicsPath}/${id}/${variant}`
       : `${hostname}/${service}/${topicsPath}/${id}`;
   };
 
