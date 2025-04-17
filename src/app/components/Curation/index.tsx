@@ -16,6 +16,7 @@ import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
+import PortraitVideoCarousel from '../PortraitVideoCarousel';
 import styles from './index.styles';
 
 const {
@@ -27,6 +28,7 @@ const {
   RADIO_SCHEDULE,
   EMBED,
   BILLBOARD,
+  PORTRAIT_VIDEO_CAROUSEL,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -55,6 +57,7 @@ export default ({
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
   embed,
+  portraitVideo,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -143,6 +146,13 @@ export default ({
       );
     case EMBED:
       return embed ? <Embed oembed={embed} /> : null;
+    case PORTRAIT_VIDEO_CAROUSEL:
+      if (portraitVideo?.items?.length) {
+        return (
+          <PortraitVideoCarousel title={title} items={portraitVideo.items} />
+        );
+      }
+      return null;
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

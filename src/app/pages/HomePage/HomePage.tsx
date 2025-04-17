@@ -92,6 +92,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   mostRead,
                   radioSchedule,
                   embed,
+                  portraitVideo,
                 },
                 index,
               ) => {
@@ -121,6 +122,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                         nthCurationByStyleAndProminence
                       }
                       embed={embed}
+                      portraitVideo={portraitVideo}
                     />
 
                     {index === indexOfFirstNonBanner && <MPU />}
