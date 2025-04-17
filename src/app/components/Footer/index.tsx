@@ -11,7 +11,7 @@ import styles from './index.styles';
 const openPrivacyManagerModal = (e: MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault();
   // @ts-expect-error dotcom is required for ads
-  if (window.dotcom && window.dotcom.openPrivacyManagerModal) {
+  if (window.dotcom?.openPrivacyManagerModal) {
     // @ts-expect-error dotcom is required for ads
     window.dotcom.openPrivacyManagerModal();
   }
