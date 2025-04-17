@@ -62,7 +62,7 @@ export const interceptATIAnalyticsBeacons = () => {
   // Component Views
   Object.values(COMPONENTS).forEach(component => {
     const viewClickEventRegex = new RegExp(
-      `PUB-\\[?.*?\\]?-\\[?${component}.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?`,
+      `PUB-\\[(.*?)\\]-\\[${component}(.*)?\\]-\\[(.*?)\\]-\\[(.*?)\\]-\\[(.*?)\\]-\\[(.*?)\\]-\\[(.*?)\\]-\\[(.*?)\\]`,
       'g',
     );
 
