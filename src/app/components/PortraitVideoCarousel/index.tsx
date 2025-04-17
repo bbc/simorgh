@@ -2,7 +2,6 @@
 import { jsx, useTheme } from '@emotion/react';
 import { useContext } from 'react';
 import Heading from '../Heading';
-import Paragraph from '../Paragraph';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
@@ -43,9 +42,8 @@ const PortraitVideoCarousel = ({
           const href = item.link?.path || '#';
 
           return (
-            <a
+            <div
               key={item.id}
-              href={href}
               css={styles.promoItem(theme)}
               className="portrait-video-promo"
             >
@@ -57,10 +55,12 @@ const PortraitVideoCarousel = ({
                   loading="lazy"
                 />
               )}
-              <Paragraph size="longPrimer" css={styles.headline(theme)}>
-                {headline}
-              </Paragraph>
-            </a>
+              <Heading level={3} size="longPrimer" css={styles.headline(theme)}>
+                <a href={href} css={styles.link(theme)}>
+                  {headline}
+                </a>
+              </Heading>
+            </div>
           );
         })}
       </div>

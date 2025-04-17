@@ -3,7 +3,6 @@ import { css, Theme } from '@emotion/react';
 const ITEM_WIDTH_REM = 10;
 const ITEM_GAP_REM = 1;
 
-// placeholder styling for the timebeing just to get us going
 const styles = {
   section: (theme: Theme) =>
     css({
@@ -21,7 +20,7 @@ const styles = {
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
       gap: `${ITEM_GAP_REM}rem`,
-      paddingBottom: theme.spacings.FULL + 'rem',
+      paddingBottom: `${theme.spacings.FULL}rem`,
       WebkitOverflowScrolling: 'touch',
       '&::-webkit-scrollbar': {
         display: 'none',
@@ -33,7 +32,6 @@ const styles = {
     css({
       scrollSnapAlign: 'start',
       flex: `0 0 ${ITEM_WIDTH_REM}rem`,
-      textDecoration: 'none',
       display: 'flex',
       flexDirection: 'column',
     }),
@@ -47,12 +45,19 @@ const styles = {
       marginBottom: '0.5rem',
     }),
 
-  headline: (theme: Theme) =>
+  headline: (_theme: Theme) =>
     css({
-      fontFamily: theme.fontVariants?.sansRegular?.fontFamily || 'sans-serif',
-      fontSize: '0.875rem',
+      margin: 0,
+    }),
+
+  link: (theme: Theme) =>
+    css({
       color: theme.palette.SHADOW,
-      lineHeight: 1.4,
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
     }),
 };
 
