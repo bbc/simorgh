@@ -276,14 +276,10 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         referenceNumber: 'İstinad nömrəniz',
-        retentionPeriodDays:
-          `Bizə göndərdiyiniz məlumatları {{days}} günədək saxlayacağıq. Ondan istifadə etmədiyimiz halda bizə göndərdiyiniz bu və digər məlumatları siləcəyik.`,
-        privacyInfoHtml:
-          `Sizin məlumatlarınızı qoruyuruq – ətraflı {{privacyInfoLink}} oxuyun.`,
-        emailToHtml:
-          `Fikrinizi dəyişsəniz və ya məlumatlarınızdan istifadə etməyimizi istəmirsinizsə, {{emailLink}} emailinə yazın. İstinad nömrənizi də qeyd edin.`,
-        removalGuidelineText:
-          `Lakin proqramlarımız və ya saytımız üçün məlumat göndərmisinizsə və biz ondan istifadə etmişiksə, onu silmək mümkün olmayacaq.`,
+        retentionPeriodDays: `Bizə göndərdiyiniz məlumatları {{days}} günədək saxlayacağıq. Ondan istifadə etmədiyimiz halda bizə göndərdiyiniz bu və digər məlumatları siləcəyik.`,
+        privacyInfoHtml: `Sizin məlumatlarınızı qoruyuruq – ətraflı {{privacyInfoLink}} oxuyun.`,
+        emailToHtml: `Fikrinizi dəyişsəniz və ya məlumatlarınızdan istifadə etməyimizi istəmirsinizsə, {{emailLink}} emailinə yazın. İstinad nömrənizi də qeyd edin.`,
+        removalGuidelineText: `Lakin proqramlarımız və ya saytımız üçün məlumat göndərmisinizsə və biz ondan istifadə etmişiksə, onu silmək mümkün olmayacaq.`,
 
         // Form Screen
         dataPolicyHeading: 'Bizim informasiya siyasə timiz',
