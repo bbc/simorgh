@@ -295,7 +295,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             className={isPortraitVideo ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={orientation === 'portrait' && styles.captionPortrait}
+            css={isPortraitVideo && styles.captionPortrait}
           />
         )}
       </figure>
