@@ -9,27 +9,15 @@ const styles = {
       padding: `${theme.spacings.DOUBLE}rem ${theme.spacings.TRIPLE}rem`,
     }),
 
-  heading: css({
-    marginBottom: '1rem',
-  }),
-
-  ctaLink: (_theme: Theme) =>
+  heading: (_theme: Theme) =>
     css({
-      display: 'inline-flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      fontWeight: 700,
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-      },
+      marginBottom: '1rem',
     }),
 
-  chevron: css({
-    marginInlineStart: '0.5rem',
-    width: '1rem',
-    height: '1rem',
-    verticalAlign: 'middle',
-    fill: 'currentcolor',
+  navWrapper: css({
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
   }),
 
   scrollWrapper: (theme: Theme) =>
@@ -38,42 +26,56 @@ const styles = {
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
       gap: `${ITEM_GAP_REM}rem`,
-      paddingBottom: `${theme.spacings.FULL}rem`,
+      paddingBottom: theme.spacings.FULL + 'rem',
+      scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
       '&::-webkit-scrollbar': {
         display: 'none',
       },
       scrollbarWidth: 'none',
+      flex: 1,
     }),
 
-  promoItem: css({
-    scrollSnapAlign: 'start',
-    flex: `0 0 ${ITEM_WIDTH_REM}rem`,
-    display: 'flex',
-    flexDirection: 'column',
-    textDecoration: 'none',
-  }),
+  promoItem: (_theme: Theme) =>
+    css({
+      scrollSnapAlign: 'start',
+      flex: `0 0 ${ITEM_WIDTH_REM}rem`,
+      textDecoration: 'none',
+      display: 'flex',
+      flexDirection: 'column',
+    }),
 
-  image: css({
-    width: '100%',
-    height: 'auto',
-    objectFit: 'cover',
-    borderRadius: '0.25rem',
-    marginBottom: '0.5rem',
-  }),
+  image: (_theme: Theme) =>
+    css({
+      width: '100%',
+      height: 'auto',
+      objectFit: 'cover',
+      borderRadius: '0.25rem',
+      marginBottom: '0.5rem',
+    }),
 
-  promoHeading: css({
-    margin: 0,
-  }),
+  promoHeading: (_theme: Theme) =>
+    css({
+      margin: 0,
+    }),
 
   promoLink: (theme: Theme) =>
     css({
+      fontSize: '0.875rem',
       color: theme.palette.SHADOW,
       textDecoration: 'none',
-      fontWeight: 700,
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
+    }),
+
+  navButton: (_theme: Theme) =>
+    css({
+      background: 'none',
+      border: 'none',
+      padding: '0.5rem',
+      cursor: 'pointer',
+      zIndex: 1,
     }),
 };
 

@@ -149,11 +149,7 @@ export default ({
     case PORTRAIT_VIDEO_CAROUSEL:
       if (portraitVideo?.items?.length) {
         return (
-          <PortraitVideoCarousel
-            title={title}
-            items={portraitVideo.items}
-            titleUrl="/portuguese"
-          />
+          <PortraitVideoCarousel title={title} items={portraitVideo.items} />
         );
       }
       return null;
