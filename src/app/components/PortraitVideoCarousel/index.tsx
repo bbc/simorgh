@@ -16,7 +16,6 @@ interface PortraitVideoItem {
 interface PortraitVideoCarouselProps {
   title: string;
   items: PortraitVideoItem[];
-  titleUrl?: string;
 }
 
 const PortraitVideoCarousel = ({
@@ -60,16 +59,8 @@ const PortraitVideoCarousel = ({
       <Heading level={2} size="doublePica" css={styles.heading(theme)}>
         {title}
       </Heading>
-      <div css={styles.navWrapper}>
-        {canScrollLeft && (
-          <button
-            aria-label="Scroll left"
-            onClick={() => scroll('left')}
-            css={styles.navButton(theme)}
-          >
-            <LeftChevron />
-          </button>
-        )}
+
+      <div css={styles.scrollContainer}>
         <div
           dir={dir}
           ref={scrollRef}
@@ -83,38 +74,43 @@ const PortraitVideoCarousel = ({
             const href = item.link?.path || '#';
 
             return (
-              <a
-                key={item.id}
-                href={href}
-                css={styles.promoItem(theme)}
-                className="portrait-video-promo"
-              >
+              <a key={item.id} href={href} css={styles.promoItem(theme)}>
                 {image && (
                   <img
                     src={image}
                     alt={alt}
-                    css={styles.image(theme)}
+                    css={styles.image}
                     loading="lazy"
                   />
                 )}
-                <Heading level={3} size="longPrimer" css={styles.promoHeading}>
-                  <a href={href} css={styles.promoLink(theme)}>
-                    {headline}
-                  </a>
+                <Heading
+                  level={3}
+                  size="longPrimer"
+                  css={styles.promoHeading(theme)}
+                >
+                  {headline}
                 </Heading>
               </a>
             );
           })}
         </div>
-        {canScrollRight && (
+
+        <div css={styles.buttonGroup}>
+          <button
+            aria-label="Scroll left"
+            onClick={() => scroll('left')}
+            css={styles.navButton}
+          >
+            <LeftChevron />
+          </button>
           <button
             aria-label="Scroll right"
             onClick={() => scroll('right')}
-            css={styles.navButton(theme)}
+            css={styles.navButton}
           >
             <RightChevron />
           </button>
-        )}
+        </div>
       </div>
     </section>
   );

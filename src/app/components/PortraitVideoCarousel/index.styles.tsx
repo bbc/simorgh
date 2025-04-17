@@ -14,7 +14,7 @@ const styles = {
       marginBottom: '1rem',
     }),
 
-  navWrapper: css({
+  scrollContainer: css({
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -45,38 +45,47 @@ const styles = {
       flexDirection: 'column',
     }),
 
-  image: (_theme: Theme) =>
-    css({
-      width: '100%',
-      height: 'auto',
-      objectFit: 'cover',
-      borderRadius: '0.25rem',
-      marginBottom: '0.5rem',
-    }),
+  image: css({
+    width: '100%',
+    height: 'auto',
+    objectFit: 'cover',
+    borderRadius: '0.25rem',
+    marginBottom: '0.5rem',
+  }),
 
-  promoHeading: (_theme: Theme) =>
+  promoHeading: (theme: Theme) =>
     css({
-      margin: 0,
-    }),
-
-  promoLink: (theme: Theme) =>
-    css({
+      fontFamily: theme.fontVariants?.sansBold?.fontFamily,
       fontSize: '0.875rem',
       color: theme.palette.SHADOW,
-      textDecoration: 'none',
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
+      textDecoration: 'underline',
+      '&:hover': {
+        textDecoration: 'none',
       },
     }),
 
-  navButton: (_theme: Theme) =>
-    css({
-      background: 'none',
-      border: 'none',
-      padding: '0.5rem',
-      cursor: 'pointer',
-      zIndex: 1,
-    }),
+  buttonGroup: css({
+    position: 'absolute',
+    top: '50%',
+    right: 0,
+    transform: 'translateY(-50%)',
+    display: 'flex',
+    flexDirection: 'row',
+    zIndex: 2,
+    gap: '0.25rem',
+  }),
+
+  navButton: css({
+    backgroundColor: '#E0E0E0',
+    color: '#000',
+    border: 'none',
+    width: '2rem',
+    height: '2rem',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+  }),
 };
 
 export default styles;
