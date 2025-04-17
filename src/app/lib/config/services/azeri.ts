@@ -291,7 +291,7 @@ export const service: DefaultServiceConfig = {
         // Success Screen
         successHeading: 'Mesaj göndərildi!',
         successDescription: 'Əlaqə saxladığınız üçün təşəkkür edirik.',
-        privacyPolicyLinkHref: 'https://www.bbc.com/privacy/',
+        privacyPolicyLinkHref: 'https://www.bbc.com/usingthebbc/privacy',
         privacyPolicyLinkText: 'Məxfilik siyasətimizi',
       },
     },
