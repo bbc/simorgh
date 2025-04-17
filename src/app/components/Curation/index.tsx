@@ -148,27 +148,36 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        return curationLength > 1 && (title || isFirstCuration) ? (
+        return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
-            {isFirstCuration && isHomePage ? (
+            {isFirstCuration && !title && (
+              // Case: Multiple curations, home or topic, first curation has no title
               <VisuallyHiddenText id={id} as="h2">
                 {curationSubheading}
               </VisuallyHiddenText>
-            ) : (
+            )}
+            {isFirstCuration && title && !isHomePage && (
+              // Case: Multiple curations, first curation has a title and is on a topic page
               <Subheading id={id} link={link}>
                 {curationSubheading}
               </Subheading>
             )}
+            {isFirstCuration && title && isHomePage && (
+              // Case: Multiple curations, first curation has a title and is on the home page
+              <VisuallyHiddenText id={id} as="h2">
+                {curationSubheading}
+              </VisuallyHiddenText>
+            )}
             <GridComponent
               summaries={summaries}
-              headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
+              headingLevel={3}
               isFirstCuration={isFirstCuration}
             />
           </section>
         ) : (
           <GridComponent
             summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2
+            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
             isFirstCuration={isFirstCuration}
           />
         );
