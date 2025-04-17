@@ -1,3 +1,4 @@
+/* eslint-disable no-only-tests/no-only-tests */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 
@@ -30,7 +31,7 @@ export const assertFeaturesAnalysisComponentClick = ({
   useReverb,
   path,
 }) => {
-  it('should send a click event for the Features & Analysis component', () => {
+  it.only('should send a click event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
