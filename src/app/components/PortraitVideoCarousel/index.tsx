@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { useContext, useRef, useState, useEffect } from 'react';
+import { useContext, useRef } from 'react';
 import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
@@ -25,21 +25,8 @@ const PortraitVideoCarousel = ({
   const theme = useTheme();
   const { dir } = useContext(ServiceContext);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const scrollByAmount = 160;
-
-  const updateScrollButtons = () => {
-    const node = scrollRef.current;
-    if (!node) return;
-    setCanScrollLeft(node.scrollLeft > 0);
-    setCanScrollRight(node.scrollLeft + node.clientWidth < node.scrollWidth);
-  };
-
-  useEffect(() => {
-    updateScrollButtons();
-  }, [items]);
 
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollRef.current) return;
@@ -61,12 +48,7 @@ const PortraitVideoCarousel = ({
       </Heading>
 
       <div css={styles.scrollContainer}>
-        <div
-          dir={dir}
-          ref={scrollRef}
-          css={styles.scrollWrapper(theme)}
-          onScroll={updateScrollButtons}
-        >
+        <div dir={dir} ref={scrollRef} css={styles.scrollWrapper(theme)}>
           {items.map(item => {
             const image = item.images?.[0]?.url;
             const alt = item.images?.[0]?.altText || '';
