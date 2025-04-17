@@ -87,6 +87,7 @@ export const interceptATIAnalyticsBeacons = () => {
         },
       },
       request => {
+        cy.log('Intercepted ATI request CLICK:', request);
         request.reply({ statusCode: 200 });
       },
     ).as(`${component}-ati-click`);
