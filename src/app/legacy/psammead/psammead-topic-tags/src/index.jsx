@@ -60,11 +60,13 @@ const SingleTopicTagItem = styled.div`
   }
 `;
 
-export const TopicTag = forwardRef(({ name, link, ...handlers }, ref) => (
-  <a href={link} ref={ref} {...handlers}>
-    {name}
-  </a>
-));
+export const TopicTag = forwardRef(
+  ({ name, link, ...staticComponentTrackers }, ref) => (
+    <a href={link} ref={ref} {...staticComponentTrackers}>
+      {name}
+    </a>
+  ),
+);
 
 export const TopicTags = ({
   children = [],
