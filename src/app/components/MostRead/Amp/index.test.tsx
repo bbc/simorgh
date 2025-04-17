@@ -19,7 +19,6 @@ const MostReadAmpWithContext = ({ service }: MostReadAmpWithContextProps) => (
 
 const fetchMock = fetch as FetchMock;
 
-// TODO - review why data-ati-* attribute is added to AmpMostRead?
 describe('AmpMostRead', () => {
   afterEach(() => {
     fetchMock.resetMocks();
