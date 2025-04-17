@@ -26,7 +26,7 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
     palette: { GREY_2 },
   } = useTheme();
 
-  const { enabled } = useToggle('mostRead');
+  const { enabled } = useToggle('midArticleOnwardJourney');
 
   const { hasMostRead } = mostRead || {};
 
