@@ -234,7 +234,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
         class="emotion-15 emotion-16"
       >
         <a
-          href="/mundo/topics/123"
+          href="https://www.bbc.com/mundo/topics/123"
         >
           topic
         </a>
@@ -480,7 +480,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         class="emotion-15 emotion-16"
       >
         <a
-          href="/mundo/topics/1"
+          href="https://www.bbc.com/mundo/topics/1"
         >
           topic1
         </a>
@@ -489,7 +489,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         class="emotion-15 emotion-16"
       >
         <a
-          href="/mundo/topics/2"
+          href="https://www.bbc.com/mundo/topics/2"
         >
           topic2
         </a>
@@ -498,7 +498,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         class="emotion-15 emotion-16"
       >
         <a
-          href="/mundo/topics/3"
+          href="https://www.bbc.com/mundo/topics/3"
         >
           topic3
         </a>

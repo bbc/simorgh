@@ -95,7 +95,7 @@ describe('Related Topics', () => {
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
-        `/pidgin/topics/${topic.topicId}`,
+        `https://www.bbc.com/pidgin/topics/${topic.topicId}`,
       );
     });
 
@@ -108,7 +108,7 @@ describe('Related Topics', () => {
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
-        `/cymrufyw/pynciau/${topic.topicId}`,
+        `https://www.bbc.co.uk/cymrufyw/pynciau/${topic.topicId}`,
       );
     });
 
@@ -121,7 +121,7 @@ describe('Related Topics', () => {
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
-        `/uzbek/cyr/topics/${topic.topicId}`,
+        `https://www.bbc.com/uzbek/topics/${topic.topicId}/cyr`,
       );
     });
 
