@@ -263,7 +263,7 @@ describe('Curation', () => {
       expect(document.querySelectorAll('h3').length).toBe(8);
     });
 
-    it('should have h2 summary titles when page has one curation - somple curation', () => {
+    it('should have h2 summary titles when page has one curation - simple curation', () => {
       const { summaries } = fixture.data.curations[0];
 
       render(
@@ -294,8 +294,8 @@ describe('Curation', () => {
       expect(document.querySelectorAll('h2').length).toBe(12);
       expect(document.querySelectorAll('h3').length).toBe(0);
     });
-
-    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - simple curation', () => {
+    // new tests
+    it('should have visually hidden title text as h2 if it is the first curation of multiple on a HOME page and has a title - simple curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -306,13 +306,16 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
+          isHomePage
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
       expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
+      const subheading = document.querySelector('h2.Subheading');
+      expect(subheading).not.toBeInTheDocument(); // no subheading for first curation on a home page
     });
 
-    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - hierarchial curation', () => {
+    it('should have visually hidden title text as h2 if it is the first curation of multiple on a HOME page and has a title - hierarchial curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -323,10 +326,177 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
+          isHomePage
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
       expect(document.querySelectorAll('h3').length).toBe(8); // the visible h3 promos
+      const subheading = document.querySelector('h2.Subheading');
+      expect(subheading).not.toBeInTheDocument(); // no subheading for first curation on a home page
+    });
+    it('should have a subheading as h2 if it is the first curation of multiple on a TOPIC page and has a title - simple curation', () => {
+      const { summaries, title } = mundoFixture.data.curations[0];
+      render(
+        <Curation
+          title={title}
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          isHomePage={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(1); // the subheading h2
+      const subheading = document.querySelector('h2');
+      expect(subheading).toBeInTheDocument();
+      // Check that the <h2> does NOT have a classname containing 'visuallyHiddenText'
+      const classList = Array.from(subheading?.classList || []);
+      const hasVisuallyHiddenClass = classList.some(className =>
+        className.includes('visuallyHiddenText'),
+      );
+      expect(hasVisuallyHiddenClass).toBe(false); // Ensure it's not visually hidden
+      expect(subheading?.textContent).toBe(title);
+    });
+
+    it('should have a subheading as h2 if it is the first curation of multiple on a TOPIC page and has a title - hierarchical curation', () => {
+      const { summaries, title } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title={title}
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          isHomePage={false}
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(1); // the subheading h2
+      const subheading = document.querySelector('h2');
+      expect(subheading).toBeInTheDocument();
+      // Check that the <h2> does NOT have a classname containing 'visuallyHiddenText'
+      const classList = Array.from(subheading?.classList || []);
+      const hasVisuallyHiddenClass = classList.some(className =>
+        className.includes('visuallyHiddenText'),
+      );
+      expect(hasVisuallyHiddenClass).toBe(false); // Ensure it's not visually hidden
+      expect(subheading?.textContent).toBe(title);
+    });
+
+    it('should have a visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - simple curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          isHomePage={false}
+        />,
+      );
+
+      // Ensure there is exactly one <h2> element
+      expect(document.querySelectorAll('h2').length).toBe(1);
+
+      // Select the <h2> element
+      const subheading = document.querySelector('h2');
+
+      // Ensure the <h2> is in the document
+      expect(subheading).toBeInTheDocument();
+
+      // Check that the <h2> has a classname containing 'visuallyHiddenText'
+      const classList = Array.from(subheading?.classList || []);
+      const hasVisuallyHiddenClass = classList.some(className =>
+        className.includes('visuallyHiddenText'),
+      );
+      expect(hasVisuallyHiddenClass).toBe(true); // Ensure it's visually hidden
+
+      // Do we want the vissually hidden title to be an empty string h2 when there is no curation title in the data for the first curation?
+      // need a test asset for this
+      expect(subheading?.textContent).toBe('');
+    });
+
+    it('should have a visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - hierarchical curation', () => {
+      const { summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          visualProminence={HIGH}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          isHomePage={false}
+        />,
+      );
+
+      // Ensure there is exactly one <h2> element
+      expect(document.querySelectorAll('h2').length).toBe(1);
+
+      // Select the <h2> element
+      const subheading = document.querySelector('h2');
+
+      // Ensure the <h2> is in the document
+      expect(subheading).toBeInTheDocument();
+
+      // Check that the <h2> has a classname containing 'visuallyHiddenText'
+      const classList = Array.from(subheading?.classList || []);
+      const hasVisuallyHiddenClass = classList.some(className =>
+        className.includes('visuallyHiddenText'),
+      );
+      expect(hasVisuallyHiddenClass).toBe(true); // Ensure it's visually hidden
+
+      // Do we want the visually hidden title to be an empty string h2 when there is no curation title in the data for the first curation?
+      // need a test asset for this
+      expect(subheading?.textContent).toBe('');
+    });
+
+    it('should not have a subheading or visually hidden text as h2 if it is a topic page with only one curation', () => {
+      const { summaries, title } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title={title}
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={1} // Only one curation
+          isHomePage={false} // Topic page
+        />,
+      );
+
+      expect(document.querySelectorAll('h2').length).toBe(summaries.length);
+      const firstHeading = document.querySelector('h2');
+      expect(firstHeading).toBeInTheDocument();
+      expect(firstHeading?.textContent).not.toBe(title);
+    });
+
+    it('should render the curation title as a link if the title has a link in the data on a topic page', () => {
+      const { title, link, summaries } = mundoFixture.data.curations[0];
+
+      render(
+        <Curation
+          title={title}
+          link={link}
+          visualProminence={NORMAL}
+          visualStyle={NONE}
+          position={0}
+          summaries={summaries}
+          curationLength={6}
+          isHomePage={false}
+        />,
+      );
+
+      const titleLink = document.querySelector(`a[href="${link}"]`);
+      expect(titleLink).toBeInTheDocument();
+      expect(titleLink?.textContent).toBe(title);
     });
   });
 });
