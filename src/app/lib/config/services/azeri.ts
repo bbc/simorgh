@@ -267,13 +267,36 @@ export const service: DefaultServiceConfig = {
         optional: 'vacib deyil',
 
         // File upload
+        fileUploadLiveRegionText: `Göndərdikləriniz bunlardır: `,
+        fileUploadListHeading: `Göndərdikləriniz bunlardır:`,
         fileUploadButton: 'Faylı seçin',
 
         // Submit button
         submitButton: 'Göndərin',
 
+        // Messaging
+        referenceNumber: 'İstinad nömrəniz',
+        retentionPeriodDays:
+          `Bizə göndərdiyiniz məlumatları {{days}} günədək saxlayacağıq. Ondan istifadə etmədiyimiz halda bizə göndərdiyiniz bu və digər məlumatları siləcəyik.`,
+        privacyInfoHtml:
+          `Sizin məlumatlarınızı qoruyuruq – ətraflı {{privacyInfoLink}} oxuyun.`,
+        emailToHtml:
+          `Fikrinizi dəyişsəniz və ya məlumatlarınızdan istifadə etməyimizi istəmirsinizsə, {{emailLink}} emailinə yazın. İstinad nömrənizi də qeyd edin.`,
+        removalGuidelineText:
+          `Lakin proqramlarımız və ya saytımız üçün məlumat göndərmisinizsə və biz ondan istifadə etmişiksə, onu silmək mümkün olmayacaq.`,
+
         // Form Screen
         dataPolicyHeading: 'Bizim informasiya siyasə timiz',
+
+        // Uploading Screen
+        uploadingHeading: 'Yüklənir',
+        uploadingDescription: 'Zəhmət olmasa, yüklənmə bitənədək gözləyin.',
+
+        // Success Screen
+        successHeading: 'Mesaj göndərildi!',
+        successDescription: 'Əlaqə saxladığınız üçün təşəkkür edirik.',
+        privacyPolicyLinkHref: 'https://www.bbc.com/privacy/',
+        privacyPolicyLinkText: 'Məxfilik siyasətimizi',
       },
     },
     mostRead: {
