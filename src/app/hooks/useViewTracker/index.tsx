@@ -5,7 +5,7 @@ import { useContext, useEffect, useState, useRef } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import {
-  LITE_ATI_VIEW_TRACKING,
+  STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
@@ -189,7 +189,7 @@ export default (eventTrackingData?: EventTrackingData): any => {
   });
 
   return isLite
-    ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
+    ? { [STATIC_ATI_VIEW_TRACKING]: liteATIUrl }
     : {
         ref: viewTracker,
       };

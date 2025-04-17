@@ -40,7 +40,7 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   );
 };
 
-const addLiteScript = (atiPageViewUrlString: string) => {
+const addStaticBeaconScript = (atiPageViewUrlString: string) => {
   const script = sendStaticBeacon(atiPageViewUrlString);
 
   return (
@@ -70,7 +70,7 @@ const CanonicalATIAnalytics = ({
   return (
     <>
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
-      {addLiteScript(atiPageViewUrlString)}
+      {addStaticBeaconScript(atiPageViewUrlString)}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );

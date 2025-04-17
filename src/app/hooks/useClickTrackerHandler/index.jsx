@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
-  LITE_ATI_CLICK_TRACKING,
+  STATIC_ATI_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
@@ -140,13 +140,13 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
 export default (eventTrackingData = {}, isAmp = false) => {
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+  const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,
   });
 
   return {
     onClick: clickTracker,
-    ...(isAmp ? {} : { [LITE_ATI_CLICK_TRACKING]: liteATIUrl }),
+    ...(isAmp ? {} : { [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl }),
   };
 };

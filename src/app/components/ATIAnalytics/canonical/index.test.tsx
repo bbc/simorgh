@@ -32,21 +32,19 @@ describe('Canonical ATI Analytics', () => {
     expect(mockSendBeacon).toHaveBeenCalledWith(expectedUrl, reverbConfig);
   });
 
-  it('should render lite Helmet script when isLite is true', () => {
+  it('should render sendStaticBeacon Helmet script for canonical', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     const expectedUrl = `${atiBaseUrl}${mockPageviewParams}`;
 
     act(() => {
-      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />, {
-        isLite: true,
-      });
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
     });
 
     const helmet = Helmet.peek();
 
-    expect(helmet.scriptTags).toHaveLength(1);
-    expect(helmet.scriptTags[0].innerHTML).toEqual(`
+    expect(helmet.scriptTags).toHaveLength(2);
+    expect(helmet.scriptTags[1].innerHTML).toEqual(`
     function sendStaticBeacon (atiPageViewUrlString) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", atiPageViewUrlString, true);

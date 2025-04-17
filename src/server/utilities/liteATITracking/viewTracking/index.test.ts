@@ -1,4 +1,4 @@
-import { LITE_ATI_VIEW_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_ATI_VIEW_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import viewTracker from '.';
 
 jest.useFakeTimers();
@@ -12,22 +12,22 @@ describe('View tracking script', () => {
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
-  it('LITE_ATI_VIEW_TRACKING tracking variable is correct', () => {
+  it('STATIC_ATI_VIEW_TRACKING tracking variable is correct', () => {
     const viewTrackerString = viewTracker.toString();
 
-    const pattern = /LITE_ATI_VIEW_TRACKING = '([^']+)'/;
+    const pattern = /STATIC_ATI_VIEW_TRACKING = '([^']+)'/;
 
     const matches = viewTrackerString.match(pattern) || [];
     const [, liteAtiViewTracking] = matches;
 
-    // LITE_ATI_VIEW_TRACKING in ./index.ts must match the value of LITE_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
-    expect(liteAtiViewTracking).toBe(LITE_ATI_VIEW_TRACKING);
+    // STATIC_ATI_VIEW_TRACKING in ./index.ts must match the value of STATIC_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
+    expect(liteAtiViewTracking).toBe(STATIC_ATI_VIEW_TRACKING);
   });
 
   it('Calls processClientDeviceAndSendStaticBeacon() when the IntersectionObserver marks it as intersecting.', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
-      LITE_ATI_VIEW_TRACKING,
+      STATIC_ATI_VIEW_TRACKING,
       'https://logws1363.ati-host.net/?',
     );
     const mockElement = { isIntersecting: true, target: anchorElement };
@@ -48,7 +48,7 @@ describe('View tracking script', () => {
   it('should not call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
-      LITE_ATI_VIEW_TRACKING,
+      STATIC_ATI_VIEW_TRACKING,
       'https://logws1363.ati-host.net/?',
     );
     const mockElement = { isIntersecting: true, target: anchorElement };
