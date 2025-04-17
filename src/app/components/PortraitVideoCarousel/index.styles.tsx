@@ -9,16 +9,17 @@ const styles = {
       padding: `${theme.spacings.DOUBLE}rem ${theme.spacings.TRIPLE}rem`,
     }),
 
-  heading: (_theme: Theme) =>
+  heading: (theme: Theme) =>
     css({
       marginBottom: '1rem',
     }),
 
-  scrollContainer: css({
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-  }),
+  scrollContainer: (theme: Theme) =>
+    css({
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+    }),
 
   scrollWrapper: (theme: Theme) =>
     css({
@@ -36,7 +37,7 @@ const styles = {
       flex: 1,
     }),
 
-  promoItem: (_theme: Theme) =>
+  promoItem: (theme: Theme) =>
     css({
       scrollSnapAlign: 'start',
       flex: `0 0 ${ITEM_WIDTH_REM}rem`,
@@ -45,47 +46,50 @@ const styles = {
       flexDirection: 'column',
     }),
 
-  image: css({
-    width: '100%',
-    height: 'auto',
-    objectFit: 'cover',
-    borderRadius: '0.25rem',
-    marginBottom: '0.5rem',
-  }),
+  image: (theme: Theme) =>
+    css({
+      width: '100%',
+      height: 'auto',
+      objectFit: 'cover',
+      borderRadius: '0.25rem',
+      marginBottom: '0.5rem',
+    }),
 
   promoHeading: (theme: Theme) =>
     css({
       fontFamily: theme.fontVariants?.sansBold?.fontFamily,
       fontSize: '0.875rem',
       color: theme.palette.SHADOW,
-      textDecoration: 'underline',
+      textDecoration: 'none',
       '&:hover': {
-        textDecoration: 'none',
+        textDecoration: 'underline',
       },
     }),
 
-  buttonGroup: css({
-    position: 'absolute',
-    top: '50%',
-    right: 0,
-    transform: 'translateY(-50%)',
-    display: 'flex',
-    flexDirection: 'row',
-    zIndex: 2,
-    gap: '0.25rem',
-  }),
+  buttonGroup: (theme: Theme) =>
+    css({
+      position: 'absolute',
+      top: '50%',
+      right: 0,
+      transform: 'translateY(-50%)',
+      display: 'flex',
+      flexDirection: 'row',
+      zIndex: 2,
+      gap: '0.25rem',
+    }),
 
-  navButton: css({
-    backgroundColor: '#E0E0E0',
-    color: '#000',
-    border: 'none',
-    width: '2rem',
-    height: '2rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-  }),
+  navButton: (theme: Theme) =>
+    css({
+      backgroundColor: '#E0E0E0',
+      color: '#000',
+      border: 'none',
+      width: '2rem',
+      height: '2rem',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      cursor: 'pointer',
+    }),
 };
 
 export default styles;
