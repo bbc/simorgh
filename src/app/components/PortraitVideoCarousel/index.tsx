@@ -26,6 +26,7 @@ const PortraitVideoCarousel = ({
   const { dir } = useContext(ServiceContext);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // fixed amount for one promo
   const scrollByAmount = 160;
 
   const scroll = (direction: 'left' | 'right') => {
