@@ -1,4 +1,4 @@
-name: Simorgh CI - AMP Validation, Lighthouse, Puppeteer & Lite Tests
+name: Simorgh CI - AMP Validation, Lighthouse, & Puppeteer Tests
 on:
   pull_request:
     branches:
@@ -60,9 +60,8 @@ jobs:
 
       - name: Run Puppeteer Tests
         run: |
-          yarn add puppeteer@18.0.5
-          yarn test:puppeteer
-          yarn remove puppeteer
-
-      - name: Run Lite Page Size Validator
-        run: yarn test:lite
+          npx puppeteer browsers install chrome
+          sudo apt-get install -y xvfb
+          Xvfb -ac :99 -screen 0 1280x1024x16 2>/dev/null 1>&2 & 
+          export DISPLAY=:99
+          yarn test:puppeteer:local

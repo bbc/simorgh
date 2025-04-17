@@ -58,24 +58,6 @@ describe('constructDataFilePath', () => {
     });
   });
 
-  describe('Recommendations', () => {
-    it('should construct correct data file path', () => {
-      expect(
-        constructDataFilePath({ pageType: 'recommendations', service: 'igbo' }),
-      ).toEqual(`${DATA_PATH}/data/igbo/recommendations/index.json`);
-    });
-
-    it('should construct correct data file path with variant', () => {
-      expect(
-        constructDataFilePath({
-          pageType: 'recommendations',
-          service: 'ukchina',
-          variant: '/simp',
-        }),
-      ).toEqual(`${DATA_PATH}/data/ukchina/recommendations/simp.json`);
-    });
-  });
-
   describe('CPS Assets', () => {
     it('should construct correct data file path', () => {
       expect(

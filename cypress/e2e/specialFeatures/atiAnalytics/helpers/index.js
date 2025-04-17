@@ -3,16 +3,7 @@ import envs from '../../../../support/config/envs';
 export const getATIParamsFromURL = atiAnalyticsURL => {
   const url = new URL(atiAnalyticsURL);
 
-  const objectFromEntries = Object.fromEntries(new URLSearchParams(url.search));
-  console.log(
-    'objectFromEntries p value in getATIParamsFromURL',
-    objectFromEntries.p,
-  );
-  cy.log(
-    'objectFromEntries p value in getATIParamsFromURL',
-    objectFromEntries.p,
-  );
-  return objectFromEntries;
+  return Object.fromEntries(new URLSearchParams(url.search));
 };
 
 export const ATI_PAGE_VIEW = 'ati-page-view';
@@ -34,29 +25,35 @@ const CANONICAL_LITE_CTA = 'canonical-lite-cta';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
-const RECOMMENDATIONS = 'wsoj';
+const RECOMMENDATIONS = 'midarticle-mostread';
 const SCROLLABLE_PROMO = 'edoj';
 const BILLBOARD = 'billboard';
+const SOCIAL_EMBED = 'social-consent-banner';
+const LIVE_MEDIA = 'live-header-media';
+const SHARE = 'asset:';
 
 export const COMPONENTS = {
-  SCROLLABLE_NAVIGATION,
+  BILLBOARD,
+  CANONICAL_LITE_CTA,
   DROPDOWN_NAVIGATION,
-  TOP_STORIES,
   FEATURES,
-  MOST_READ,
-  RADIO_SCHEDULE,
+  LATEST_MEDIA,
+  LITE_SITE_CTA,
+  LIVE_MEDIA,
   MESSAGE_BANNER,
+  MOST_READ,
+  PODCAST_LINKS,
+  PODCAST_PROMO,
+  RADIO_SCHEDULE,
+  RECENT_AUDIO_EPISODES,
+  RECOMMENDATIONS,
   RELATED_CONTENT,
   RELATED_TOPICS,
-  PODCAST_PROMO,
-  LITE_SITE_CTA,
-  CANONICAL_LITE_CTA,
-  RECENT_AUDIO_EPISODES,
-  PODCAST_LINKS,
-  LATEST_MEDIA,
-  RECOMMENDATIONS,
+  SCROLLABLE_NAVIGATION,
   SCROLLABLE_PROMO,
-  BILLBOARD,
+  SHARE,
+  SOCIAL_EMBED,
+  TOP_STORIES,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
@@ -120,4 +117,21 @@ export const interceptATIAnalyticsBeacons = () => {
       request.reply({ statusCode: 200 });
     },
   ).as(`${ATI_PAGE_VIEW_REVERB}`);
+};
+
+export const getPathWithSuffix = ({ path, suffix = '' }) => {
+  const { pathname, search } = new URL(`https://www.bbc.com${path}`);
+
+  return `${pathname}${suffix}${search}`;
+};
+
+export const runIfToggleEnabled = ({ service, toggleName, testContext }) => {
+  cy.getToggles(service);
+
+  cy.fixture(`toggles/${service}.json`).then(toggles => {
+    const { enabled } = toggles[toggleName];
+    if (!enabled) {
+      testContext.skip();
+    }
+  });
 };

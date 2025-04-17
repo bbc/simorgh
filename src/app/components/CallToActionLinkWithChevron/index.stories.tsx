@@ -3,6 +3,7 @@ import React, { PropsWithChildren } from 'react';
 import { SerializedStyles } from '@emotion/react';
 import CallToActionLinkWithChevron from '.';
 import { CallToActionLinkProps } from '../CallToActionLink/types';
+import metadata from './metadata.json';
 
 const Component = ({
   href,
@@ -18,6 +19,10 @@ const Component = ({
 export default {
   title: 'Components/Call To Action Link With Chevron',
   Component,
+  parameters: {
+    chromatic: { disable: false },
+    metadata,
+  },
 };
 
 export const Example = () => {

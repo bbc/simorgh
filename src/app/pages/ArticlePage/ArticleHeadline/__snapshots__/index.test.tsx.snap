@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleHeadline - Lite Site CTA After hydration snapshot 1`] = `
+.emotion-0 {
+  height: 2.75rem;
+  margin-bottom: 1.25rem;
+  display: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.emotion-2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  color: #141414;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0 0.75rem;
+  display: inline-block;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    -webkit-margin-start: 1rem;
+    margin-inline-start: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+  }
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  vertical-align: middle;
+  color: inherit;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: inherit;
+  border-bottom: 0.0625rem solid #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+a:visited .emotion-5 {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+a:focus .emotion-5,
+a:hover .emotion-5 {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
+.emotion-6 {
+  color: #141414;
+  fill: currentColor;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+a:visited .emotion-6 {
+  color: #6E6E73;
+}
+
+a:focus .emotion-6,
+a:hover .emotion-6 {
+  color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
+
+  a:visited .emotion-6 {
+    fill: visitedText;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-e2e="to-lite-site-loading"
+  />
+  <div
+    class="emotion-1"
+    data-e2e="to-lite-site"
+  >
+    <a
+      class="emotion-2"
+      href="/news/articles/c0g992jmmkko.lite"
+    >
+      <div
+        class="emotion-3"
+      >
+        <span
+          class="emotion-4"
+        >
+          <span
+            class="emotion-5"
+          >
+            Inyandiko gusa
+          </span>
+          <svg
+            aria-hidden="true"
+            class="emotion-6"
+            focusable="false"
+            height="12"
+            viewBox="0 0 32 32"
+            width="12"
+          >
+            <path
+              d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+            />
+          </svg>
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ArticleHeadline - Lite Site CTA Before hydration snapshot 1`] = `
+.emotion-0 {
+  height: 2.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 1.25rem;
+  display: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-1 {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.emotion-2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  color: #141414;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0 0.75rem;
+  display: inline-block;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    -webkit-margin-start: 1rem;
+    margin-inline-start: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+  }
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  vertical-align: middle;
+  color: inherit;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: inherit;
+  border-bottom: 0.0625rem solid #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+a:visited .emotion-5 {
+  color: #6E6E73;
+  border-bottom: 0.0625rem solid #6E6E73;
+}
+
+a:focus .emotion-5,
+a:hover .emotion-5 {
+  border-bottom: 0.125rem solid #B80000;
+  color: #B80000;
+}
+
+.emotion-6 {
+  color: #141414;
+  fill: currentColor;
+  -webkit-margin-start: 0.5rem;
+  margin-inline-start: 0.5rem;
+  vertical-align: middle;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+a:visited .emotion-6 {
+  color: #6E6E73;
+}
+
+a:focus .emotion-6,
+a:hover .emotion-6 {
+  color: #B80000;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-6 {
+    fill: linkText;
+  }
+
+  a:visited .emotion-6 {
+    fill: visitedText;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-e2e="to-lite-site-loading"
+  />
+  <div
+    class="emotion-1"
+    data-e2e="to-lite-site"
+  >
+    <a
+      class="emotion-2"
+      href="/news/articles/c0g992jmmkko.lite"
+    >
+      <div
+        class="emotion-3"
+      >
+        <span
+          class="emotion-4"
+        >
+          <span
+            class="emotion-5"
+          >
+            Inyandiko gusa
+          </span>
+          <svg
+            aria-hidden="true"
+            class="emotion-6"
+            focusable="false"
+            height="12"
+            viewBox="0 0 32 32"
+            width="12"
+          >
+            <path
+              d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+            />
+          </svg>
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+`;

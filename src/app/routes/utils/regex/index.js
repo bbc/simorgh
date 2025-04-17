@@ -1,8 +1,6 @@
 import services from '../../../lib/config/services/loadableConfig';
 import {
   getArticleRegex,
-  getArticleSwRegex,
-  getArticleManifestRegex,
   getHomePageRegex,
   getSwRegex,
   getManifestRegex,
@@ -18,7 +16,6 @@ import {
   getMostReadPageRegex,
   getMostReadDataRegex,
   getSecondaryColumnDataRegex,
-  getRecommendationsDataRegex,
   getAfricaEyeTVPageRegex,
 } from './utils';
 
@@ -26,9 +23,6 @@ const allServices = Object.keys(services);
 
 export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
-
-export const articleSwPath = getArticleSwRegex(allServices);
-export const articleManifestPath = getArticleManifestRegex(allServices);
 
 export const homePageSwPath = getSwRegex(allServices);
 export const homePageManifestPath = getManifestRegex(allServices);
@@ -66,9 +60,6 @@ export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
 
 export const secondaryColumnDataRegexPath =
   getSecondaryColumnDataRegex(allServices);
-
-export const recommendationsDataRegex =
-  getRecommendationsDataRegex(allServices);
 
 export const africaEyeTVPagePath = getAfricaEyeTVPageRegex();
 export const africaEyeTVDataPath = `${africaEyeTVPagePath}.json`;

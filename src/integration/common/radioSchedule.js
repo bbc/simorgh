@@ -1,21 +1,36 @@
-const servicesWithRadioSchedule = ['indonesia'];
-const servicesWithoutRadioSchedule = ['gahuza'];
+import fetchToggles from '../utils/fetchToggles';
 
-export default ({ isAmp = false } = {}) => {
+const isRadioScheduleToggleEnabled = async ({ service, pageType }) => {
+  const pageTypeToggleMapping = {
+    'Live Radio': 'liveRadioSchedule',
+    'On Demand Audio Page': 'onDemandRadioSchedule',
+  };
+  const radioScheduleToggleName = pageTypeToggleMapping[pageType];
+
+  const toggles = await fetchToggles(service);
+
+  const { enabled: hasRadioSchedule } = toggles[radioScheduleToggleName] || {};
+
+  return hasRadioSchedule;
+};
+
+export default pageType => {
   describe('Radio Schedule', () => {
-    const scheduleWrapperEl = document.querySelector(
-      '[data-e2e="radio-schedule"]',
-    );
+    it('should be in the document if toggle enabled, otherwise should not be in the document', async () => {
+      const scheduleWrapperEl = document.querySelector(
+        '[data-e2e="radio-schedule"]',
+      );
 
-    if (!isAmp && servicesWithRadioSchedule.includes(service)) {
-      it('should be in the document', () => {
+      const hasRadioSchedule = await isRadioScheduleToggleEnabled({
+        service,
+        pageType,
+      });
+
+      if (hasRadioSchedule) {
         expect(scheduleWrapperEl).toBeInTheDocument();
-      });
-    }
-    if (isAmp || servicesWithoutRadioSchedule.includes(service)) {
-      it('should not be in the document', () => {
+      } else {
         expect(scheduleWrapperEl).not.toBeInTheDocument();
-      });
-    }
+      }
+    });
   });
 };

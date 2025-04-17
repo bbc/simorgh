@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 25,
+    "month": "March",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Text-CTA-below-H1-Canonical-to-Lite-Site-Screen-reader-UX--Cigs~xHuJIk9T0EHXAvQFVTRAg-AS8KipN7GULpxJldPQCoF?noDesktopRedirect=1",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/vYAVN9JXUKmuDc71BSdw7?noDesktopRedirect=1",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Canonical-to-Lite-Site-CTA--CiyQ0JQgBqyy~VQKnriUNwkeAg-61ABYtPk5Vozk84r8ou82",
+      "label": "Accessibility Swarm"
+    }
+  }
+}

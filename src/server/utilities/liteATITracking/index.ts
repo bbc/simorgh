@@ -57,11 +57,12 @@ export default () => {
         r: screenResolutionColourDepth,
         re: browserViewportResolution,
         hl: timestamp,
-        ...(navigator.language && { lng: navigator.language }),
         app_type: 'lite',
-        ...(user.val && { idclient: user.val }),
-        ...(document.referrer && { ref: document.referrer }),
       };
+
+      if (navigator.language) params.lng = navigator.language;
+      if (user.val) params.idclient = user.val;
+      if (document.referrer) params.ref = document.referrer;
 
       const paramValues = Object.keys(params)
         .map(key => `${key}=${params[key]}`)

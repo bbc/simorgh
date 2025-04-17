@@ -35,6 +35,24 @@ export default defineConfig({
         logPrinterOptions,
       );
 
+      on('task', {
+        log(message) {
+          // eslint-disable-next-line no-console
+          console.log(message);
+          return null;
+        },
+        table(message) {
+          // eslint-disable-next-line no-console
+          console.table(message);
+          return null;
+        },
+        error(message) {
+          // eslint-disable-next-line no-console
+          console.error(message);
+          return null;
+        },
+      });
+
       return config;
     },
     env: {

@@ -14,6 +14,7 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 import isCypress from './isCypress';
 
 const isInCypress = isCypress();
+const TIMEOUT_INTERVAL = 5000;
 
 if (isLive() || isInCypress) {
   setLogger(null);
@@ -57,7 +58,7 @@ const withOptimizelyProvider = Component => {
       <OptimizelyProvider
         optimizely={optimizely}
         isServerSide
-        timeout={1000}
+        timeout={TIMEOUT_INTERVAL}
         user={{
           id: getUserId(),
           attributes: {

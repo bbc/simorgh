@@ -142,7 +142,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
     <Wrapper
       role="complementary"
       aria-labelledby="third-party-links"
-      ref={viewTrackerRef}
+      {...viewTrackerRef}
       data-e2e="podcast-links"
     >
       <ThirdPartyLinksTitle

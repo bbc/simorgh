@@ -266,7 +266,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
     mostRead: {
-      header: 'धेरै पढिएको',
+      header: 'धेरै रुचाइएको',
       lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
       numberOfItems: 5,
       hasMostRead: true,
@@ -277,7 +277,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'अवधि %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'धेरै पढिएको',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

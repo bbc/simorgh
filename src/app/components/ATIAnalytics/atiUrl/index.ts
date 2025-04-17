@@ -218,14 +218,14 @@ export const buildATIPageTrackPath = ({
       ? [
           {
             key: 'mv_test',
-            description: 'Top Bar OJs experiment',
-            value: 'Top Bar OJs experiment',
+            description: 'Lite Site Promotion experiment',
+            value: 'Lite_Site_Promotion_experiment',
             wrap: false,
             disableEncoding: true,
           },
           {
             key: 'mv_creation',
-            description: 'Top Bar OJs variant',
+            description: 'Lite Site Promotion variant',
             value: `${experimentVariant}`,
             wrap: false,
             disableEncoding: true,

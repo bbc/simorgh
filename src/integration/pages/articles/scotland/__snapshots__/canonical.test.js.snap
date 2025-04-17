@@ -123,6 +123,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="Map of France showing Paris and Cognac"
   class="bbc-139onq"
   height="351"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg.webp 624w"

@@ -354,7 +354,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Wanda aka fi karantawa',
+      header: 'Labaran da suka fi shahara',
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -366,7 +366,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Tsawon lokaci %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Wanda aka fi karantawa',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

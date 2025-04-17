@@ -1,49 +1,19 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
-import { buildATIEventTrackUrl } from '#app/components/ATIAnalytics/atiUrl';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
+import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import {
+  CLICK_EVENT,
+  LITE_ATI_CLICK_TRACKING,
+} from '#app/lib/analyticsUtils/analytics.const';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const CLICK_EVENT = 'click';
-export const LITE_ATI_TRACKING = 'data-lite-ati-tracking';
-
-const extractTrackingProps = (props = {}, eventType = null) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const eventTrackingContext = useContext(EventTrackingContext);
-
-  const { componentName, url, advertiserID, format, detailedPlacement } = props;
-  const {
-    pageIdentifier,
-    platform,
-    producerId,
-    statsDestination,
-    producerName,
-  } = eventTrackingContext;
-
-  const campaignID = props?.campaignID || eventTrackingContext?.campaignID;
-
-  return {
-    pageIdentifier,
-    producerId,
-    platform,
-    statsDestination,
-    componentName,
-    campaignID,
-    format,
-    type: eventType,
-    advertiserID,
-    url,
-    detailedPlacement,
-    producerName,
-  };
-};
-
-const useClickTrackerHandler = (props = {}) => {
+const useClickTrackerHandler = (eventTrackingData = {}) => {
   const {
     pageIdentifier,
     producerId,
@@ -56,11 +26,10 @@ const useClickTrackerHandler = (props = {}) => {
     url,
     detailedPlacement,
     producerName,
-  } = extractTrackingProps(props);
-
-  const preventNavigation = props?.preventNavigation;
-  const optimizely = props?.optimizely;
-  const optimizelyMetricNameOverride = props?.optimizelyMetricNameOverride;
+    preventNavigation,
+    optimizely,
+    optimizelyMetricNameOverride,
+  } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -168,25 +137,17 @@ const useClickTrackerHandler = (props = {}) => {
   );
 };
 
-export const useConstructLiteSiteATIEventTrackUrl = ({
-  props = {},
-  eventType = null,
-}) => {
-  const atiTrackingParams = extractTrackingProps(props, eventType);
-  return buildATIEventTrackUrl(atiTrackingParams);
-};
-
-export const useATIClickTrackerHandler = (props = {}) => {
+export const useATIClickTrackerHandler = (eventTrackingData = {}) => {
   const { isLite } = useContext(RequestContext);
-  const clickTrackerHandler = useClickTrackerHandler(props);
-  const liteHandler = useConstructLiteSiteATIEventTrackUrl({
-    props,
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
+  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+    eventTrackingData,
     eventType: CLICK_EVENT,
   });
 
   return isLite
-    ? { [LITE_ATI_TRACKING]: liteHandler }
-    : { onClick: clickTrackerHandler };
+    ? { [LITE_ATI_CLICK_TRACKING]: liteATIUrl }
+    : { onClick: clickTracker };
 };
 
 export default useClickTrackerHandler;
