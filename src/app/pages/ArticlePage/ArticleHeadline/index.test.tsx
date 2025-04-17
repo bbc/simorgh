@@ -8,6 +8,14 @@ import ArticleHeadline from '.';
 
 jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
 
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
+});
+
 const headlineBlock = {
   id: 'c7298038',
   type: 'text',

@@ -148,6 +148,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         <a
           aria-labelledby="externalLinkId-Apple"
           class="emotion-8 emotion-9"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-podcast]-[third-party]-[]-[]-[]-[]-[]-[]&type=AT"
           dir="ltr"
           href="https://bbc.com"
         >
@@ -175,6 +176,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         <a
           aria-labelledby="externalLinkId-Spotify"
           class="emotion-8 emotion-9"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-podcast]-[third-party]-[]-[]-[]-[]-[]-[]&type=AT"
           dir="ltr"
           href="https://bbc.com"
         >
@@ -202,6 +204,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         <a
           aria-labelledby="externalLinkId-RSS"
           class="emotion-8 emotion-9"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-podcast]-[third-party]-[]-[]-[]-[]-[]-[]&type=AT"
           dir="ltr"
           href="https://bbc.com"
         >
@@ -229,6 +232,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         <a
           aria-labelledby="externalLinkId-Загрузить-эпизод"
           class="emotion-8 emotion-9"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-podcast]-[third-party]-[]-[]-[]-[]-[]-[]&type=AT"
           dir="ltr"
           href="https://bbc.com"
         >

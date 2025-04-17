@@ -1972,6 +1972,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
                 <a
                   aria-labelledby="scheduleItem-p0jwq89q"
                   class="focusIndicatorDisplayBlock emotion-110 emotion-111"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-live]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/gahuza/bbc_gahuza_radio/liveradio"
                 >
                   <span
@@ -2133,6 +2134,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
                 <a
                   aria-labelledby="scheduleItem-p0jwk04v"
                   class="focusIndicatorDisplayBlock emotion-110 emotion-111"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/gahuza/bbc_gahuza_radio/w17300mbzfv5q13"
                 >
                   <span
@@ -2263,6 +2265,7 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
                 <a
                   aria-labelledby="scheduleItem-p0jwk03y"
                   class="focusIndicatorDisplayBlock emotion-110 emotion-111"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/gahuza/bbc_gahuza_radio/w172zyj3mr6kz9l"
                 >
                   <span
@@ -4288,6 +4291,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                 <a
                   aria-labelledby="scheduleItem-p0k15my7"
                   class="focusIndicatorDisplayBlock emotion-112 emotion-113"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/korean/bbc_korean_radio/w3ct792c"
                 >
                   <span
@@ -4418,6 +4422,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                 <a
                   aria-labelledby="scheduleItem-p0k0x2lh"
                   class="focusIndicatorDisplayBlock emotion-112 emotion-113"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/korean/bbc_korean_radio/w3ct7917"
                 >
                   <span
@@ -4548,6 +4553,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                 <a
                   aria-labelledby="scheduleItem-p0k0p4zx"
                   class="focusIndicatorDisplayBlock emotion-112 emotion-113"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/korean/bbc_korean_radio/w3ct78yz"
                 >
                   <span
@@ -6575,6 +6581,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
                 <a
                   aria-labelledby="scheduleItem-p0jy9tkq"
                   class="focusIndicatorDisplayBlock emotion-112 emotion-113"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/swahili/bbc_swahili_radio/w172zyg20xqr6gq"
                 >
                   <span
@@ -6705,6 +6712,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
                 <a
                   aria-labelledby="scheduleItem-p0jy88rx"
                   class="focusIndicatorDisplayBlock emotion-112 emotion-113"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/swahili/bbc_swahili_radio/w172zyg20xqr2ql"
                 >
                   <span
@@ -6835,6 +6843,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
                 <a
                   aria-labelledby="scheduleItem-p0jy5gfm"
                   class="focusIndicatorDisplayBlock emotion-112 emotion-113"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/swahili/bbc_swahili_radio/w172zyggr911bvr"
                 >
                   <span

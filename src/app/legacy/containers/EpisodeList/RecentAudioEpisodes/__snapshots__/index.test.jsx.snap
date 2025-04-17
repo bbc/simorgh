@@ -404,6 +404,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           <a
             aria-labelledby="episodeLinkIndex-0"
             class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-radio]-[episodes-audio]-[]-[]-[]-[]-[]-[]&type=AT"
             href="/indonesia/bbc_indonesian_radio/w172xnm8j4tz686"
           >
             <div
@@ -525,6 +526,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           <a
             aria-labelledby="episodeLinkIndex-1"
             class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-radio]-[episodes-audio]-[]-[]-[]-[]-[]-[]&type=AT"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2"
           >
             <div
@@ -636,6 +638,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           <a
             aria-labelledby="episodeLinkIndex-2"
             class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-radio]-[episodes-audio]-[]-[]-[]-[]-[]-[]&type=AT"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y"
           >
             <div
@@ -747,6 +750,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           <a
             aria-labelledby="episodeLinkIndex-3"
             class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[player-episode-radio]-[episodes-audio]-[]-[]-[]-[]-[]-[]&type=AT"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s"
           >
             <div

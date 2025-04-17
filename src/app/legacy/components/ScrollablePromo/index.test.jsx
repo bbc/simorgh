@@ -14,6 +14,14 @@ import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
 import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
+});
+
 describe('ScrollablePromo', () => {
   describe('Mid Page ScrollablePromo', () => {
     it('should return null if no data is passed', () => {

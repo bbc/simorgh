@@ -37,11 +37,17 @@ const Page = ({ pageData, service, lang }: Props) => (
   </BrowserRouter>
 );
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
-
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
+});
+
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
 });
 
 describe('Radio Page Main', () => {

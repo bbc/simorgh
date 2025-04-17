@@ -44,14 +44,6 @@ const MostReadPageWithContext = () => (
 );
 
 describe('Most Read Page Main', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
-  });
-
-  afterEach(() => {
-    delete process.env.SIMORGH_ATI_BASE_URL;
-  });
-
   it('should match snapshot for most read page', () => {
     const { container } = render(<MostReadPageWithContext service="pidgin" />, {
       service: 'pidgin',

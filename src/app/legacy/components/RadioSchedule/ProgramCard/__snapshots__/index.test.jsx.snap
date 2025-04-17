@@ -273,6 +273,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
         <a
           aria-labelledby="scheduleItem-1"
           class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-live]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
@@ -885,6 +886,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
         <a
           aria-labelledby="scheduleItem-1"
           class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
@@ -1183,6 +1185,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
         <a
           aria-labelledby="scheduleItem-1"
           class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/arabic/articles/c1er5mjnznzo"
         >
           <span
@@ -1504,6 +1507,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
         <a
           aria-labelledby="scheduleItem-1"
           class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-live]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span

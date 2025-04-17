@@ -602,6 +602,7 @@ exports[`Inline Should render correctly 1`] = `
             <strong>
               <a
                 class="emotion-21 emotion-22"
+                data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[promo-podcast]-[]-[]-[]-[]-[]-[]&type=AT"
                 href="https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G"
               >
                 <span
@@ -1040,6 +1041,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
           >
             <a
               class="emotion-20 emotion-21"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[promo-podcast]-[]-[]-[]-[]-[]-[]&type=AT"
               href="https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G"
             >
               <span

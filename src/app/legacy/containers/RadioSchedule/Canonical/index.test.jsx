@@ -10,6 +10,14 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RadioSchedule from '.';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
+});
+
 const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
   <RequestContextProvider
     isAmp={false}

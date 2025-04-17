@@ -807,6 +807,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             <a
               aria-labelledby="scheduleItem-p0"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-live]-[]-[]-[]-[]-[]-[]&type=AT"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
@@ -968,6 +969,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             <a
               aria-labelledby="scheduleItem-p1"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
@@ -1098,6 +1100,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             <a
               aria-labelledby="scheduleItem-p2"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
@@ -2112,6 +2115,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             <a
               aria-labelledby="scheduleItem-p0"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-live]-[]-[]-[]-[]-[]-[]&type=AT"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
@@ -2273,6 +2277,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             <a
               aria-labelledby="scheduleItem-p1"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
@@ -2403,6 +2408,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             <a
               aria-labelledby="scheduleItem-p2"
               class="focusIndicatorDisplayBlock emotion-24 emotion-25"
+              data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span

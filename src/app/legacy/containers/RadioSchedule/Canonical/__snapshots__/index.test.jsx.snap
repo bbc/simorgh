@@ -1107,6 +1107,7 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
                 <a
                   aria-labelledby="scheduleItem-p086pjpz"
                   class="focusIndicatorDisplayBlock emotion-77 emotion-78"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
@@ -1237,6 +1238,7 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
                 <a
                   aria-labelledby="scheduleItem-p086pjpx"
                   class="focusIndicatorDisplayBlock emotion-77 emotion-78"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
@@ -1367,6 +1369,7 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
                 <a
                   aria-labelledby="scheduleItem-p086pjpp"
                   class="focusIndicatorDisplayBlock emotion-77 emotion-78"
+                  data-lite-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[radio-schedule-onDemand]-[]-[]-[]-[]-[]-[]&type=AT"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span

@@ -68,3 +68,4 @@ process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
   '../server/assets/fixture.json',
 );
 process.env.SIMORGH_OPTIMIZELY_SDK_KEY = 'LptPKDnHyAFu9V12s5xCz';
+process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';

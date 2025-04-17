@@ -9,6 +9,14 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
+jest.mock('#lib/analyticsUtils', () => {
+  return {
+    ...jest.requireActual('#lib/analyticsUtils'),
+    getAtUserId: jest.fn(),
+    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
+  };
+});
+
 beforeEach(() => {
   jest.resetModules();
 });
