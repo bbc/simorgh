@@ -37,6 +37,8 @@ export const assertFeaturesAnalysisComponentClick = ({
 
     cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
 
+    cy.log('CHECK', cy.get('[data-testid="features"]'));
+
     // Click on first item
     cy.get('[data-testid="features"]').find('a').first().click({ force: true });
 
