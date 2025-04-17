@@ -73,22 +73,10 @@ const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
     isClick,
   } = eventDetails;
 
-  // const actionName = isLive ? componentName : '';
-  // const actionAdditionalLabels = isLive
-  //   ? { container, attribute, placement, source, result }
-  //   : { item, group, event };
-
-  // const actionName = componentName;
-  // const actionAdditionalLabels = {
-  //   container,
-  //   attribute,
-  //   placement,
-  //   source,
-  //   result,
-  // };
-
-  const actionName = '';
-  const actionAdditionalLabels =  { item, group, event };
+  const actionName = isLive() ? componentName : '';
+  const actionAdditionalLabels = isLive()
+    ? { container, attribute, placement, source, result }
+    : { item, group, event };
 
   return reverbInstance.userActionEvent(
     eventPublisher,
