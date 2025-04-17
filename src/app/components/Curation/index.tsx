@@ -67,6 +67,16 @@ export default ({
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
+  console.log(
+    'isHomePage',
+    isHomePage,
+    'isFirstCuration',
+    isFirstCuration,
+    'curationSubheading',
+    curationSubheading,
+    'curationLength',
+    curationLength,
+  );
   const id =
     `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
 
@@ -167,6 +177,12 @@ export default ({
               <VisuallyHiddenText id={id} as="h2">
                 {curationSubheading}
               </VisuallyHiddenText>
+            )}
+            {!isFirstCuration && (
+              // Case: Not the first curation, always show the subheading
+              <Subheading id={id} link={link}>
+                {curationSubheading}
+              </Subheading>
             )}
             <GridComponent
               summaries={summaries}
