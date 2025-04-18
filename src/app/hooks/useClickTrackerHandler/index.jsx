@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
-import { useContext, useCallback, useState } from 'react';
+import { useContext, useCallback, useState, useEffect } from 'react';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
   STATIC_ATI_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
@@ -138,15 +139,27 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   );
 };
 
-export default (eventTrackingData = {}, isAmp = false) => {
+export default (eventTrackingData = {}) => {
+  const { isAmp } = useContext(RequestContext);
+  const [isStatic, setIsStatic] = useState(true);
   const clickTracker = useClickTrackerHandler(eventTrackingData);
   const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,
+    isStatic,
   });
 
+  useEffect(() => {
+    setIsStatic(false);
+  }, []);
+
+  const enableStaticTracking = isStatic && !isAmp;
+
   return {
-    onClick: clickTracker,
-    ...(isAmp ? {} : { [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl }),
+    ...(enableStaticTracking && {
+      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+    }),
+
+    ...(!isStatic && { onClick: clickTracker }),
   };
 };

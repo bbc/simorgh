@@ -41,14 +41,6 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-jest.mock('#lib/analyticsUtils', () => {
-  return {
-    ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
-    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
-  };
-});
-
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', () => {
     const { container } = render(

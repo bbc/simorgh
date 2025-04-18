@@ -234,7 +234,6 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
         class="emotion-15 emotion-16"
       >
         <a
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[topics]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/mundo/topics/123"
         >
           topic
@@ -481,7 +480,6 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         class="emotion-15 emotion-16"
       >
         <a
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[topics]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/mundo/topics/1"
         >
           topic1
@@ -491,7 +489,6 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         class="emotion-15 emotion-16"
       >
         <a
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[topics]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/mundo/topics/2"
         >
           topic2
@@ -501,7 +498,6 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         class="emotion-15 emotion-16"
       >
         <a
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[topics]-[]-[]-[]-[]-[]-[]&type=AT"
           href="/mundo/topics/3"
         >
           topic3

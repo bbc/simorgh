@@ -60,7 +60,7 @@ export default () => {
         r: screenResolutionColourDepth,
         re: browserViewportResolution,
         hl: timestamp,
-        // TODO: Should we assign canonical here?
+        // TODO: TODO - check for app_type here
         app_type: 'lite',
       };
 

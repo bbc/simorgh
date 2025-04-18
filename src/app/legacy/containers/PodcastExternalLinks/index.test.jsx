@@ -7,14 +7,6 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
-jest.mock('#lib/analyticsUtils', () => {
-  return {
-    ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
-    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
-  };
-});
-
 const Component = ({ links, service = 'russian', variant = null }) => (
   <ToggleContextProvider
     toggles={{

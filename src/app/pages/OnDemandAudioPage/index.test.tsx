@@ -70,14 +70,6 @@ const renderPage = async ({
   return result;
 };
 
-jest.mock('#lib/analyticsUtils', () => {
-  return {
-    ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
-    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
-  };
-});
-
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;

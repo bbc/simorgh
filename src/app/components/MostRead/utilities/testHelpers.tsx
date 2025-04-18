@@ -67,7 +67,6 @@ interface GetItemWrapperArrayProps extends MostReadBaseProps {
   listIndex?: number;
   service: Services;
   size: Size;
-  isAmp?: boolean;
 }
 
 export const getItemWrapperArray = ({
@@ -77,7 +76,6 @@ export const getItemWrapperArray = ({
   withTimestamp = false,
   columnLayout = 'multiColumn',
   size,
-  isAmp = false,
 }: GetItemWrapperArrayProps) => {
   const itemWrapperArray = [];
   const item = getItem({ service, withTimestamp });
@@ -91,7 +89,6 @@ export const getItemWrapperArray = ({
           dir={dir}
           columnLayout={columnLayout}
           size={size}
-          isAmp={isAmp}
         />
         <MostReadLink
           dir={dir}
@@ -99,7 +96,6 @@ export const getItemWrapperArray = ({
           service={service}
           title={item.title}
           size={size}
-          isAmp={isAmp}
         >
           {item.timestamp}
         </MostReadLink>

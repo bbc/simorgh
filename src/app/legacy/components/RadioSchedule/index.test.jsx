@@ -5,14 +5,6 @@ import { renderRadioSchedule } from './testHelpers/helper';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
-jest.mock('#lib/analyticsUtils', () => {
-  return {
-    ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
-    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
-  };
-});
-
 describe('RadioSchedule', () => {
   it('should render ltr radio schedules correctly', () => {
     const { container } = render(renderRadioSchedule({}));

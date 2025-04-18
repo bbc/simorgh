@@ -17,7 +17,7 @@ const trackingScripts = ({
       // TODO - temp comment 
       const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
       // alert(alertMessage);
-      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', ${trackOnlyStaticCanonical}, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      // console.log('liteTrackingScripts: trackOnlyStaticCanonical:', ${trackOnlyStaticCanonical}, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
       
       
       if (!isComponentTrackingEnabled) {

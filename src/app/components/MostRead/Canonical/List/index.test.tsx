@@ -4,14 +4,6 @@ import { render } from '../../../react-testing-library-with-providers';
 import MostReadList from '.';
 import { getItemWrapperArray } from '../../utilities/testHelpers';
 
-jest.mock('#lib/analyticsUtils', () => {
-  return {
-    ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
-    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
-  };
-});
-
 describe('MostReadList', () => {
   it('should render with ltr news items with correct dir', () => {
     const { container } = render(

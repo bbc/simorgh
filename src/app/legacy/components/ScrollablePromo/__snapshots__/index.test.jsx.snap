@@ -324,7 +324,6 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
         >
           <a
             class="emotion-10 emotion-11"
-            data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[edojnull]-[]-[CHD=edoj]-[]-[]-[]-[]&type=AT"
             href="https://www.bbc.co.uk/pidgin"
           >
             Show headline
@@ -340,7 +339,6 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
         >
           <a
             class="emotion-10 emotion-11"
-            data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[edojnull]-[]-[CHD=edoj]-[]-[]-[]-[]&type=AT"
             href="https://www.bbc.com/mundo"
           >
             Link with Headline
@@ -356,7 +354,6 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
         >
           <a
             class="emotion-10 emotion-11"
-            data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[edojnull]-[]-[CHD=edoj]-[]-[]-[]-[]&type=AT"
             href="https://www.bbc.com/brasil"
           >
             Brasil homepage
@@ -589,7 +586,6 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
       >
         <a
           class="emotion-6 emotion-7"
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[edojnull]-[]-[CHD=edoj]-[]-[]-[]-[]&type=AT"
           href="https://www.bbc.com/pidgin"
         >
           Single link
@@ -872,7 +868,6 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
       >
         <a
           class="emotion-8 emotion-9"
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[edojnull]-[]-[CHD=edoj]-[]-[]-[]-[]&type=AT"
           href="https://www.bbc.com/pidgin"
         >
           Single link
@@ -1104,7 +1099,6 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match snapshot when 
       >
         <a
           class="emotion-6 emotion-7"
-          data-static-ati-click="https://logws1363.ati-host.net?s=598285&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[edojnull]-[]-[CHD=edoj]-[]-[]-[]-[]&type=AT"
           href="https://www.bbc.com/pidgin"
         >
           Single link

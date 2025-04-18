@@ -143,7 +143,7 @@ exports[`Document Component should render APP version correctly 1`] = `
       // TODO - temp comment 
       const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
       // alert(alertMessage);
-      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', true, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      // console.log('liteTrackingScripts: trackOnlyStaticCanonical:', true, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
       
       
       if (!isComponentTrackingEnabled) {
@@ -250,7 +250,7 @@ exports[`Document Component should render LITE version correctly 1`] = `
       // TODO - temp comment 
       const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
       // alert(alertMessage);
-      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', false, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      // console.log('liteTrackingScripts: trackOnlyStaticCanonical:', false, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
       
       
       if (!isComponentTrackingEnabled) {
@@ -352,7 +352,7 @@ exports[`Document Component should render correctly 1`] = `
       // TODO - temp comment 
       const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
       // alert(alertMessage);
-      console.log('liteTrackingScripts: trackOnlyStaticCanonical:', true, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
+      // console.log('liteTrackingScripts: trackOnlyStaticCanonical:', true, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
       
       
       if (!isComponentTrackingEnabled) {
