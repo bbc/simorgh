@@ -103,7 +103,6 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
               title="{{title}}"
               href="{{href}}"
               size={size}
-              isAmp
             />
           </MostReadItemWrapper>
         </template>

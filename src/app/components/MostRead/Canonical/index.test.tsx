@@ -167,10 +167,7 @@ describe('MostRead Canonical', () => {
         />,
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(
-        blockLevelEventTrackingData,
-        false,
-      );
+      expect(clickTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
     });
   });
 });

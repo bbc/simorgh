@@ -487,8 +487,6 @@ describe('Routes', () => {
         service: 'persian',
       });
 
-      console.log('all good? 123');
-
       const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
         'پهپادی که برایتان قهوه می‌آورد';
 
