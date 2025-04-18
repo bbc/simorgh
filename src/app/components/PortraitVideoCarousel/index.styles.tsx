@@ -4,9 +4,9 @@ const ITEM_WIDTH_REM = 10;
 const ITEM_GAP_REM = 1;
 
 const styles = {
-  section: (theme: Theme) =>
+  section: (_theme: Theme) =>
     css({
-      padding: `${theme.spacings.DOUBLE}rem ${theme.spacings.TRIPLE}rem`,
+      width: '100%',
     }),
 
   heading: (theme: Theme) =>
