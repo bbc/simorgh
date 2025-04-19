@@ -235,6 +235,60 @@ describe('useClickTrackerHandler', () => {
       jest.restoreAllMocks();
     });
 
+    it('should send tracking request with the URL of the next page on click of a link', async () => {
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const TestLink = () => {
+        const handleClick = useClickTrackerHandler(defaultProps);
+
+        return (
+          <div>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a
+              href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+              onClick={handleClick}
+            >
+              Link
+            </a>
+          </div>
+        );
+      };
+
+      const { getByText } = render(<TestLink hookProps={defaultProps} />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      const [[viewEventUrl]] = global.fetch.mock.calls;
+
+      expect(urlToObject(viewEventUrl)).toEqual({
+        origin: 'https://logws1363.ati-host.net',
+        pathname: '/',
+        searchParams: {
+          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/pidgin/articles/c93gd1yxng1o]',
+          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+          lng: 'en-US',
+          p: 'news::pidgin.news.story.51745682.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598343',
+          s2: '70',
+          type: 'AT',
+        },
+      });
+
+      jest.restoreAllMocks();
+    });
+
     it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
       const parentHookProps = {
         componentName: 'header',
