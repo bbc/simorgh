@@ -512,9 +512,9 @@ export const buildReverbPageSectionEventModel = ({
         eventName: type === 'view' ? 'sectionView' : 'sectionClick',
         eventPublisher: 'viewability',
         item: {
-          attribution: advertiserID,
+          ...(advertiserID && { attribution: advertiserID }),
           name: componentName,
-          link: url,
+          ...(url && { link: url }),
         },
         group: {
           name: campaignID,

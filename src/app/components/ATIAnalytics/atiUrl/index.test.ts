@@ -485,6 +485,37 @@ describe('Reverb', () => {
           isClick: true,
         });
       });
+
+      it('should omit the attribution and link attributes from the event details configuration', () => {
+        const inputWithAdvertiserIDAndUrlMissing = {
+          pageIdentifier: 'mundo.page',
+          producerName: 'MUNDO',
+          statsDestination: 'statsDestination',
+          componentName: 'top-stories',
+          campaignID: '1234',
+          format: 'format',
+          type: 'view',
+        };
+
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel(inputWithAdvertiserIDAndUrlMissing);
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'viewability',
+          item: {
+            name: 'top-stories',
+          },
+          group: {
+            name: '1234',
+          },
+          event: {
+            category: 'viewability',
+            action: 'view',
+          },
+          isClick: false,
+        });
+      });
     });
 
     describe('LIVE - Click-Per-View (CPV) Model', () => {
