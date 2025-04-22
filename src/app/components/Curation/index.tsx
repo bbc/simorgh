@@ -67,7 +67,6 @@ export default ({
 
   const isFirstCuration = position === 0;
   const curationSubheading = title || topStoriesTitle;
-
   const id =
     `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
 
@@ -151,29 +150,16 @@ export default ({
       if (summaries.length > 0) {
         return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
-            {(() => {
-              if (!curationSubheading) return null;
-
-              switch (true) {
-                case isFirstCuration && !title: // Case: Multiple curations, home or topic, first curation has no title
-                case isFirstCuration && title && isHomePage: // Case: Multiple curations, first curation has a title and is on the home page
-                  return (
-                    <VisuallyHiddenText id={id} as="h2">
-                      {curationSubheading}
-                    </VisuallyHiddenText>
-                  );
-
-                case isFirstCuration && title && !isHomePage: // Case: Multiple curations, first curation has a title and is on a topic page
-                case !isFirstCuration: // Case: Not the first curation, always show the subheading
-                  return (
-                    <Subheading id={id} link={link}>
-                      {curationSubheading}
-                    </Subheading>
-                  );
-                default:
-                  return null;
-              }
-            })()}
+            {curationSubheading &&
+              (isFirstCuration && isHomePage ? (
+                <VisuallyHiddenText id={id} as="h2">
+                  {curationSubheading}
+                </VisuallyHiddenText>
+              ) : (
+                <Subheading id={id} link={link}>
+                  {curationSubheading}
+                </Subheading>
+              ))}
             <GridComponent
               summaries={summaries}
               headingLevel={3}

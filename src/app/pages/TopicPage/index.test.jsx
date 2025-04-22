@@ -20,7 +20,6 @@ import {
   amharicOnlyTitle,
   amharicSingleItemNoCurationTitle,
   pidginSingleCurationEmptyStringSubheading,
-  mundoMultipleCurationsFirstCurationNoTitle,
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
@@ -138,22 +137,6 @@ describe('Topic Page', () => {
       className.includes('visuallyHiddenText'),
     );
     expect(isVisuallyHidden).toBe(false); // Ensure it's not visually hidden
-  });
-
-  it('should render the first curation subheading as h2 when curation title exists', () => {
-    const { container } = render(
-      <TopicPage pageData={mundoMultipleCurationsFirstCurationNoTitle} />,
-      getOptionParams({ service: 'mundo', lang: 'es' }),
-    );
-    const firstH2 = container.querySelector('h2');
-    expect(firstH2).toBeInTheDocument();
-    expect(firstH2.textContent).toBe('Principales noticias');
-
-    const classList = Array.from(firstH2.classList || []);
-    const isVisuallyHidden = classList.some(className =>
-      className.includes('visuallyHiddenText'),
-    );
-    expect(isVisuallyHidden).toBe(true);
   });
 
   it('should render promo headings as h3 when curation subheading exists', () => {
