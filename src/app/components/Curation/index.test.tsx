@@ -296,7 +296,7 @@ describe('Curation', () => {
       expect(document.querySelectorAll('h3').length).toBe(0);
     });
 
-    it('should have visually hidden title text as h2 if it is the first curation of multiple on a HOME page and has a title - simple curation', () => {
+    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - simple curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -316,7 +316,7 @@ describe('Curation', () => {
       expect(subheading).not.toBeInTheDocument(); // no subheading for first curation on a home page
     });
 
-    it('should have visually hidden title text as h2 if it is the first curation of multiple on a HOME page and has a title - hierarchial curation', () => {
+    it('should have visually hidden title text as h2 if it is the first curation of multiple and has a title - hierarchial curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -335,7 +335,7 @@ describe('Curation', () => {
       const subheading = document.querySelector('h2.Subheading');
       expect(subheading).not.toBeInTheDocument(); // no subheading for first curation on a home page
     });
-    it('should have a subheading as h2 if it is the first curation of multiple on a TOPIC page and has a title - simple curation', () => {
+    it('should have a subheading as h2 if it is the first curation of multiple and has a title - simple curation', () => {
       const { summaries, title } = mundoFixture.data.curations[0];
       render(
         <Curation
@@ -361,7 +361,7 @@ describe('Curation', () => {
       expect(subheading?.textContent).toBe(title);
     });
 
-    it('should have a subheading as h2 if it is the first curation of multiple on a TOPIC page and has a title - hierarchical curation', () => {
+    it('should have a subheading as h2 if it is the first curation of multiple and has a title - hierarchical curation', () => {
       const { summaries, title } = mundoFixture.data.curations[0];
 
       render(
@@ -388,7 +388,7 @@ describe('Curation', () => {
       expect(subheading?.textContent).toBe(title);
     });
 
-    it('should not render visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - simple curation', () => {
+    it('should not render visually hidden title as h2 if it is the first curation of multiple and does not have a title - simple curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -409,7 +409,7 @@ describe('Curation', () => {
       expect(subheading).not.toBeInTheDocument();
     });
 
-    it('should not render visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - hierarchical curation', () => {
+    it('should not render visually hidden title as h2 if it is the first curation of multiple and does not have a title - hierarchical curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
