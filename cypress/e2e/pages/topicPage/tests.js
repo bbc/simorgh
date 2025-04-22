@@ -2,7 +2,7 @@ import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import serviceConfigs from '../../../../src/server/utilities/serviceConfigs';
 
-export default ({ service, pageType, variant, currentPath }) => {
+export default ({ service, pageType, variant = 'default', path }) => {
   let topicId;
   let topicTitle;
   let firstItemHeadline;
@@ -10,10 +10,10 @@ export default ({ service, pageType, variant, currentPath }) => {
   let numberOfItems;
   let messageBanner;
   const otherVariant = serviceConfigs[service][variant]?.scriptLink?.variant;
-
+  
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
-      topicId = Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
+      topicId = path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
       // Gets the topic page data for all the tests
       cy.getPageDataFromWindow().then(({ pageData }) => {
@@ -33,7 +33,7 @@ export default ({ service, pageType, variant, currentPath }) => {
       beforeEach(() => {
         // make sure we always start from the path being tested to make the tests deterministic and not reliant on order
         // as otherwise some tests can change the path and affect subsequent tests (i.e. when you change page script)
-        cy.visit(currentPath);
+        cy.visit(path);
       });
       it('should render a H1, which contains/displays topic title', () => {
         cy.get('h1').should('contain', topicTitle);
