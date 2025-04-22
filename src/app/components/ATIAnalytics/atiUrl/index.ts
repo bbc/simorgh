@@ -335,7 +335,6 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
       disableEncoding: true,
     },
-    // TODO - rethink
     ...(isStatic
       ? []
       : [

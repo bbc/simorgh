@@ -1,5 +1,4 @@
 import React from 'react';
-
 import processClientDeviceAndSendStaticBeacon from '#src/server/utilities/liteATITracking';
 import clickTracking from '#src/server/utilities/liteATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -13,12 +12,6 @@ const trackingScripts = ({
     window.addEventListener('load', function () {
       const isOperaMini = ${isOperaProxy.toString()}();
       const isComponentTrackingEnabled = ${trackOnlyStaticCanonical} ? isOperaMini : true;
-
-      // TODO - temp comment 
-      const alertMessage = ['trackingScripts', 'isOperaMini', isOperaMini, 'isComponentTrackingEnabled', isComponentTrackingEnabled].join(': ')
-      // alert(alertMessage);
-      // console.log('liteTrackingScripts: trackOnlyStaticCanonical:', ${trackOnlyStaticCanonical}, 'isOpera:', isOperaMini, "isComponentTrackingEnabled:", isComponentTrackingEnabled);
-      
       
       if (!isComponentTrackingEnabled) {
         return;
@@ -31,7 +24,6 @@ const trackingScripts = ({
       }
 
       (${clickTracking.toString()})();
-
     });
   `;
 };
