@@ -38,7 +38,8 @@ const ShareButton = ({
 }) => {
   const viewTracker = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
   const {
     translations: {
       liveExperiencePage: { shareButtonText = 'Share' },
@@ -46,7 +47,7 @@ const ShareButton = ({
   } = useContext(ServiceContext);
 
   const handleShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    clickTrackerHandler(event);
+    if (clickTrackerHandler) clickTrackerHandler(event);
     try {
       const currentUrlNoHash = new URL(window.location.href.split('#')[0]);
 

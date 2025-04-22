@@ -119,7 +119,7 @@ StyledCurrentLink.defaultProps = {
 export const DropdownLi = ({
   children,
   script,
-  clickTrackerHandler = null,
+  clickTracker = null,
   currentPageText = null,
   active = false,
   service,
@@ -138,7 +138,7 @@ export const DropdownLi = ({
         service={service}
         href={url}
         aria-labelledby={ariaId}
-        onClick={clickTrackerHandler}
+        {...clickTracker}
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652

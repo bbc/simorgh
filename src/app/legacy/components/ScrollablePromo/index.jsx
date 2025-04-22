@@ -166,7 +166,7 @@ const ScrollablePromo = ({
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
@@ -225,7 +225,7 @@ const ScrollablePromo = ({
             blocks={blocks}
             experimentVariant={experimentVariant}
             viewTracker={viewTracker}
-            onClick={handleClickTracking}
+            clickTracker={clickTracker}
             a11yAttributes={a11yAttributes}
           />
         </GridItemMediumNoMargin>
@@ -246,13 +246,13 @@ const ScrollablePromo = ({
       )}
       {isSingleItem ? (
         <PromoWrapper dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
           viewTracker={viewTracker}
-          onClick={handleClickTracking}
+          clickTracker={clickTracker}
         />
       )}
     </GridItemMediumNoMargin>
