@@ -3,8 +3,8 @@ import appConfig from '../../../src/server/utilities/serviceConfigs';
 import serviceHasPageType from '../../support/helpers/serviceHasPageType';
 import ampOnlyServices from '../../support/helpers/ampOnlyServices';
 import envConfig from '../../support/config/envs';
-import getPaths from '../../support/helpers/getPaths';
 import { getTopicPagePath } from '../pages/topicPage/helpers';
+import { topicPagesForService } from '../pages/topicPage/index.cy';
 
 describe('Application', () => {
   Object.keys(config)
@@ -33,15 +33,15 @@ describe('Application', () => {
 
         it(`should awaken fresh data for pages for later tests`, () => {
           // Add more here if you want to awaken fresh data for other page types
-          if (serviceHasPageType(service, 'topicPage')) {
-            const paths = getPaths(service, 'topicPage');
-            paths.forEach(currentPath => {
-              const topicPagePath = getTopicPagePath(currentPath);
-              const fullPath = `${envConfig.baseUrl}${topicPagePath}`;
-              cy.log(fullPath);
-              cy.visit(fullPath, { retryOnStatusCodeFailure: true });
-            });
-          }
+          const topicPages = topicPagesForService(service);
+
+          topicPages.forEach(page => {
+            const currentPath = page.path;
+            const topicPagePath = getTopicPagePath(currentPath);
+            const fullPath = `${envConfig.baseUrl}${topicPagePath}`;
+            cy.log(fullPath);
+            cy.visit(fullPath, { retryOnStatusCodeFailure: true });
+          });
         });
       }
     });

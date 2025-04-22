@@ -51,6 +51,13 @@ const topicPagesToTest = [
   },
 ];
 
+// ToDo(discuss): I put this helper here - but it seems to me that both the helper and the array of pages should be in helper.js
+// but keeping it like this for consistency
+export const topicPagesForService = service =>
+  topicPagesToTest.filter(
+    topicPage =>
+      topicPage.service === service && topicPage.pageType === TOPIC_PAGE,
+  );
 // ToDo: clarify if we need to check which ones should run on SMOKE=True
 // why only Ukrainian is SMOKE=FALSE currently?
 const testSuites =

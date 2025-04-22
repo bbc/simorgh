@@ -10,7 +10,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
   let numberOfItems;
   let messageBanner;
   const otherVariant = serviceConfigs[service][variant]?.scriptLink?.variant;
-  
+
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
       topicId = path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
