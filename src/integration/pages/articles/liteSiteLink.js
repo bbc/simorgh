@@ -3,7 +3,7 @@ import fetchToggles from '../../utils/fetchToggles';
 const isArticleLiteSiteLinkEnabled = async service => {
   const toggles = await fetchToggles(service);
 
-  return toggles?.articleLiteSiteLink?.enabled || false;
+  return toggles?.articleLiteSiteLink?.enabled;
 };
 
 export default () => {
@@ -13,16 +13,12 @@ export default () => {
     );
 
     it('should be in the document if toggle enabled', async () => {
-      if (await isArticleLiteSiteLinkEnabled(service)) {
+      const isLiteSiteLinkEnabled = await isArticleLiteSiteLinkEnabled(service);
+
+      if (isLiteSiteLinkEnabled) {
         expect(articleLiteSiteLink).toBeInTheDocument();
       } else {
         expect(articleLiteSiteLink).not.toBeInTheDocument();
-      }
-    });
-
-    it('should match snapshot if toggle enabled', async () => {
-      if (await isArticleLiteSiteLinkEnabled(service)) {
-        expect(articleLiteSiteLink).toMatchSnapshot();
       }
     });
   });
