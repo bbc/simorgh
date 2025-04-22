@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+src / app / models / types / translations.ts; /* eslint-disable camelcase */
 export interface Translations {
   pagination?: {
     page?: string;
@@ -24,7 +24,6 @@ export interface Translations {
     informationPageLink: string;
     dataSaving: string;
     articleDataSavingLinkText: string;
-    experiment?: Record<string, string>;
   };
   mediaAssetPage: {
     mediaPlayer: string;

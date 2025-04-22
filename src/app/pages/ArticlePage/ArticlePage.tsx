@@ -1,9 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
+import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -16,6 +19,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,
@@ -131,6 +135,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  const experimentVariant = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
+  const isInExperiment = experimentVariant && experimentVariant !== 'off';
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -175,6 +184,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isInExperiment && { experimentVariant }),
   };
 
   const componentsToRender = {
@@ -313,6 +323,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           mobileDivider={showTopics}
           sendOptimizelyEvents={false}
         />
+      )}
+      {isInExperiment && (
+        <>
+          <OptimizelyArticleCompleteTracking />
+          <OptimizelyPageViewTracking />
+        </>
       )}
     </div>
   );

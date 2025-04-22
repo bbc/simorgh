@@ -165,15 +165,13 @@ describe('Article Page', () => {
       shouldBeDisplayed: false,
     },
   ])('$testScenario', ({ isLite, toggleEnabled, shouldBeDisplayed }) => {
-    useDecisionSpy.mockReturnValueOnce('off' as unknown as true);
-
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite,
       toggles: { liteSiteCTA: { enabled: toggleEnabled } },
     });
 
-    const liteCTA = screen.queryByRole('link', { name: /Nyandiko gusa/i });
+    const liteCTA = screen.queryByRole('link', { name: /Inyandiko gusa/ });
 
     if (shouldBeDisplayed) {
       expect(liteCTA).toBeInTheDocument();
@@ -185,7 +183,6 @@ describe('Article Page', () => {
   it('should apply click and view tracking data on lite site cta link', () => {
     const eventTrackingData = {
       componentName: 'canonical-lite-cta',
-      optimizely: null,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
