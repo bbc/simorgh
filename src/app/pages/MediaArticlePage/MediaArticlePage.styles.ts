@@ -63,9 +63,15 @@ export default {
         marginInline: `${spacings.DOUBLE}rem`,
         maxWidth: `${pixelsToRem(325)}rem`,
       },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        [mq.GROUP_3_MAX_WIDTH]: {
+          paddingTop: `${spacings.DOUBLE}rem`,
+          marginInline: `${spacings.DOUBLE}rem`,
+        },
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingTop: `${spacings.TRIPLE}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
       },
       '.portrait-media-loader': {
         maxWidth: '100%',
