@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState, useEffect } from 'react';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructStaticATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
   STATIC_ATI_CLICK_TRACKING,

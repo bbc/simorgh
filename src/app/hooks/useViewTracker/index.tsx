@@ -8,7 +8,7 @@ import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
@@ -183,7 +183,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
   const viewTracker = getComponentViewTracker(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+  const liteATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });

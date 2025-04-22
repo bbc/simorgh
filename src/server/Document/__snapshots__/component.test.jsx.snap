@@ -144,17 +144,17 @@ exports[`Document Component should render APP version correctly 1`] = `
         return;
       }
 
-      (function liteATIClickTracking() {
+      (function staticATIClickTracking() {
     return 'Tracking script placeholder';
   })();
 
       if (false) {
-        (function liteATIClickTracking() {
+        (function staticATIClickTracking() {
     return 'View script placeholder';
   })();
       }
 
-      (function liteATIClickTracking() {
+      (function staticATIClickTracking() {
     return 'Click script placeholder';
   })();
     });
@@ -244,17 +244,17 @@ exports[`Document Component should render LITE version correctly 1`] = `
         return;
       }
 
-      (function liteATIClickTracking() {
+      (function staticATIClickTracking() {
     return 'Tracking script placeholder';
   })();
 
       if (true) {
-        (function liteATIClickTracking() {
+        (function staticATIClickTracking() {
     return 'View script placeholder';
   })();
       }
 
-      (function liteATIClickTracking() {
+      (function staticATIClickTracking() {
     return 'Click script placeholder';
   })();
     });
@@ -339,17 +339,17 @@ exports[`Document Component should render correctly 1`] = `
         return;
       }
 
-      (function liteATIClickTracking() {
+      (function staticATIClickTracking() {
     return 'Tracking script placeholder';
   })();
 
       if (false) {
-        (function liteATIClickTracking() {
+        (function staticATIClickTracking() {
     return 'View script placeholder';
   })();
       }
 
-      (function liteATIClickTracking() {
+      (function staticATIClickTracking() {
     return 'Click script placeholder';
   })();
     });

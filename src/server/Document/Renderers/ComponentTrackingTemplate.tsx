@@ -1,8 +1,8 @@
 import React from 'react';
-import processClientDeviceAndSendStaticBeacon from '#src/server/utilities/liteATITracking';
-import clickTracking from '#src/server/utilities/liteATITracking/clickTracking';
+import processClientDeviceAndSendStaticBeacon from '#src/server/utilities/staticATITracking';
+import clickTracking from '#src/server/utilities/staticATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import viewTracking from '#src/server/utilities/liteATITracking/viewTracking';
+import viewTracking from '#src/server/utilities/staticATITracking/viewTracking';
 
 const trackingScripts = ({
   trackOnlyStaticCanonical = false,
