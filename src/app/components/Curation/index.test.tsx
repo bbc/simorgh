@@ -211,6 +211,7 @@ describe('Curation', () => {
           // @ts-expect-error summary will not be undefined
           summaries={[summary]}
           curationLength={2}
+          title={summary?.title}
         />,
       );
 
@@ -294,7 +295,7 @@ describe('Curation', () => {
       expect(document.querySelectorAll('h2').length).toBe(12);
       expect(document.querySelectorAll('h3').length).toBe(0);
     });
-    // new tests
+
     it('should have visually hidden title text as h2 if it is the first curation of multiple on a HOME page and has a title - simple curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
@@ -387,7 +388,7 @@ describe('Curation', () => {
       expect(subheading?.textContent).toBe(title);
     });
 
-    it('should have a visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - simple curation', () => {
+    it('should not render visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - simple curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -401,28 +402,14 @@ describe('Curation', () => {
         />,
       );
 
-      // Ensure there is exactly one <h2> element
-      expect(document.querySelectorAll('h2').length).toBe(1);
+      expect(document.querySelectorAll('h2').length).toBe(0);
 
-      // Select the <h2> element
       const subheading = document.querySelector('h2');
 
-      // Ensure the <h2> is in the document
-      expect(subheading).toBeInTheDocument();
-
-      // Check that the <h2> has a classname containing 'visuallyHiddenText'
-      const classList = Array.from(subheading?.classList || []);
-      const hasVisuallyHiddenClass = classList.some(className =>
-        className.includes('visuallyHiddenText'),
-      );
-      expect(hasVisuallyHiddenClass).toBe(true); // Ensure it's visually hidden
-
-      // Do we want the vissually hidden title to be an empty string h2 when there is no curation title in the data for the first curation?
-      // need a test asset for this
-      expect(subheading?.textContent).toBe('');
+      expect(subheading).not.toBeInTheDocument();
     });
 
-    it('should have a visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - hierarchical curation', () => {
+    it('should not render visually hidden title as h2 if it is the first curation of multiple on a TOPIC page and does not have a title - hierarchical curation', () => {
       const { summaries } = mundoFixture.data.curations[0];
 
       render(
@@ -436,25 +423,11 @@ describe('Curation', () => {
         />,
       );
 
-      // Ensure there is exactly one <h2> element
-      expect(document.querySelectorAll('h2').length).toBe(1);
+      expect(document.querySelectorAll('h2').length).toBe(0);
 
-      // Select the <h2> element
       const subheading = document.querySelector('h2');
 
-      // Ensure the <h2> is in the document
-      expect(subheading).toBeInTheDocument();
-
-      // Check that the <h2> has a classname containing 'visuallyHiddenText'
-      const classList = Array.from(subheading?.classList || []);
-      const hasVisuallyHiddenClass = classList.some(className =>
-        className.includes('visuallyHiddenText'),
-      );
-      expect(hasVisuallyHiddenClass).toBe(true); // Ensure it's visually hidden
-
-      // Do we want the visually hidden title to be an empty string h2 when there is no curation title in the data for the first curation?
-      // need a test asset for this
-      expect(subheading?.textContent).toBe('');
+      expect(subheading).not.toBeInTheDocument();
     });
 
     it('should not have a subheading or visually hidden text as h2 if it is a topic page with only one curation', () => {

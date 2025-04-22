@@ -156,17 +156,21 @@ export default ({
                 case isFirstCuration && !title: // Case: Multiple curations, home or topic, first curation has no title
                 case isFirstCuration && title && isHomePage: // Case: Multiple curations, first curation has a title and is on the home page
                   return (
-                    <VisuallyHiddenText id={id} as="h2">
-                      {curationSubheading}
-                    </VisuallyHiddenText>
+                    curationSubheading && (
+                      <VisuallyHiddenText id={id} as="h2">
+                        {curationSubheading}
+                      </VisuallyHiddenText>
+                    )
                   );
 
                 case isFirstCuration && title && !isHomePage: // Case: Multiple curations, first curation has a title and is on a topic page
                 case !isFirstCuration: // Case: Not the first curation, always show the subheading
                   return (
-                    <Subheading id={id} link={link}>
-                      {curationSubheading}
-                    </Subheading>
+                    curationSubheading && (
+                      <Subheading id={id} link={link}>
+                        {curationSubheading}
+                      </Subheading>
+                    )
                   );
                 default:
                   return null;
