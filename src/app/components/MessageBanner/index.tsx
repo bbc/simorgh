@@ -28,9 +28,7 @@ const MessageBanner = ({
 }: MessageBannerProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
 
-  const { dir } = useContext(ServiceContext);
   const { mq } = useTheme();
-  const isRtl = dir === 'rtl';
 
   const IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH = styles.IMAGE_WIDTH * 2;
   const IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH =
@@ -60,19 +58,19 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-            <CallToActionLink
-              url={link}
-              className="focusIndicatorInvert"
-              eventTrackingData={eventTrackingData}
-              css={styles.callToActionLink}
-            >
-              <CallToActionLink.ButtonLikeWrapper>
-                <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-                  {linkText}
-                  <CallToActionLink.Chevron />
-                </CallToActionLink.Text>
-              </CallToActionLink.ButtonLikeWrapper>
-            </CallToActionLink>
+          <CallToActionLink
+            url={link}
+            className="focusIndicatorInvert"
+            eventTrackingData={eventTrackingData}
+            css={styles.callToActionLink}
+          >
+            <CallToActionLink.ButtonLikeWrapper>
+              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+                {linkText}
+                <CallToActionLink.Chevron />
+              </CallToActionLink.Text>
+            </CallToActionLink.ButtonLikeWrapper>
+          </CallToActionLink>
           {image && (
             <div css={styles.image}>
               <Image
