@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import {
@@ -168,16 +168,16 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     useReverb,
   ]);
 
-  return async (element: HTMLElement) => {
-    if (!element || !trackingIsEnabled || eventSent) {
-      return;
-    }
-    if (!observer.current) {
-      await initObserver();
-    }
+  const viewTracker = useCallback(
+    async (element: HTMLElement) => {
+      if (!element || !trackingIsEnabled || eventSent) return;
+      if (!observer.current) await initObserver();
+      (observer.current as unknown as IntersectionObserver)?.observe(element);
+    },
+    [trackingIsEnabled, eventSent],
+  );
 
-    (observer.current as unknown as IntersectionObserver)?.observe(element);
-  };
+  return viewTracker;
 };
 
 export default (eventTrackingData?: EventTrackingData): any => {

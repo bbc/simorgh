@@ -177,7 +177,10 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should not send a tracking request if the toggle is disabled', async () => {
-      trackingToggleSpy.mockImplementationOnce(() => false);
+      trackingToggleSpy
+        .mockImplementationOnce(() => false)
+        .mockImplementationOnce(() => false);
+
       const {
         metadata: { atiAnalytics },
       } = pidginData;
@@ -616,6 +619,7 @@ describe('useClickTrackerHandler', () => {
               campaignID: 'custom-campaign',
             },
             eventType: 'click',
+            isStatic: true,
           }),
         {
           wrapper,

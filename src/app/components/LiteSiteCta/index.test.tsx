@@ -3,6 +3,11 @@ import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.con
 import { render } from '../react-testing-library-with-providers';
 import LiteSiteCta from '.';
 
+jest.mock('#app/hooks/useStaticRenderDetection', () => ({
+  __esModule: true,
+  default: () => true,
+}));
+
 describe('LiteSiteCTA', () => {
   it('Should have a hidden strong element with lite site identifier.', () => {
     const { container } = render(<LiteSiteCta />);
