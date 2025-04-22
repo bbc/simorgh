@@ -108,6 +108,11 @@ describe('processClientDeviceAndSendStaticBeacon script', () => {
     Object.defineProperty(document, 'referrer', {
       value: 'https://www.bbc.com',
     });
+    Object.defineProperty(window, 'location', {
+      writable: true,
+      value: { pathname: 'gahuza/popular/read.lite' },
+    });
+
     window.screen = {
       width: 100,
       height: 400,

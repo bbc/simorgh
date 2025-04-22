@@ -1,8 +1,5 @@
 export default () => {
   window.processClientDeviceAndSendStaticBeacon = atiURL => {
-    // TODO: Temp - used for testing
-    // alert(`✅ processClientDeviceAndSendStaticBeacon: ${atiURL}`);
-
     if (atiURL) {
       const {
         screen: { width, height, colorDepth, pixelDepth },
@@ -55,13 +52,13 @@ export default () => {
       ].join('x');
 
       const timestamp = [hours, mins, secs].join('x');
+      const isLiteSite = window.location.pathname?.includes('.lite');
 
       const params: Record<string, string> = {
         r: screenResolutionColourDepth,
         re: browserViewportResolution,
         hl: timestamp,
-        // TODO: TODO - check for app_type here
-        app_type: 'lite',
+        app_type: isLiteSite ? 'lite' : 'responsive',
       };
 
       if (navigator.language) params.lng = navigator.language;
