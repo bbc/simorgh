@@ -20,7 +20,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
   const eventTrackingData = { componentName: 'canonical-lite-cta', optimizely };
-  const { enabled: showCTA } = useToggle('liteSiteCTA');
+  const { enabled: showCTA } = useToggle('articleToLiteSiteLink');
   const viewTracker = useViewTracker(eventTrackingData);
   const titleVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
 
