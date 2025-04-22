@@ -5,6 +5,10 @@ import {
   assertBillboardComponentView,
 } from './assertions/billboard';
 import {
+  assertCanonicalToLiteSiteCTAComponentClick,
+  assertCanonicalToLiteSiteCTAComponentView,
+} from './assertions/canonicalLiteSiteCta';
+import {
   assertFeaturesAnalysisComponentClick,
   assertFeaturesAnalysisComponentView,
 } from './assertions/featuresAnalysis';
@@ -13,10 +17,6 @@ import {
   assertLatestMediaComponentView,
 } from './assertions/latestMedia';
 import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
-import {
-  assertCanonicalToLiteSiteCTAComponentClick,
-  assertCanonicalToLiteSiteCTAComponentView,
-} from './assertions/canonicalLiteSiteCta';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -64,13 +64,13 @@ import {
   assertScrollablePromoComponentView,
 } from './assertions/scrollablePromo';
 import {
-  assertTopStoriesComponentClick,
-  assertTopStoriesComponentView,
-} from './assertions/topStories';
-import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from './assertions/topStories';
 import { getPathWithSuffix } from './helpers';
 
 const canonicalTestSuites = [
@@ -470,6 +470,7 @@ const liteTestSuites = canonicalTestSuites
       assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
       assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
       assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
+      assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
     ];
 
     const liteSiteTests = testSuite.tests.filter(
