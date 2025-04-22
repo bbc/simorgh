@@ -125,14 +125,14 @@ export const DropdownLi = ({
   service,
   url,
   dir = 'ltr',
-  viewRef = null,
+  viewTracker = null,
 }) => {
   const ariaId = `dropdownNavigation-${children
     .replace(/\s+/g, '-')
     .toLowerCase()}`;
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    <StyledDropdownLi role="listitem" ref={viewRef}>
+    <StyledDropdownLi role="listitem" {...viewTracker}>
       <StyledDropdownLink
         script={script}
         service={service}

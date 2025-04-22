@@ -95,9 +95,7 @@ const MetadataContainer = ({
     '/sport/rugby-league/articles',
   ];
 
-  const isUKLink = pathsForUkLink.some(
-    path => pathname && pathname.startsWith(path),
-  );
+  const isUKLink = pathsForUkLink.some(path => pathname?.startsWith(path));
 
   const showAlternateUKAmp = !isUKLink && isAmp;
 
@@ -216,8 +214,8 @@ const MetadataContainer = ({
           content={`https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${pathname}`}
         />
       )}
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
+      {Boolean(aboutTags?.length) && renderTags(aboutTags)}
+      {Boolean(mentionsTags?.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link

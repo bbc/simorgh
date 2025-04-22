@@ -121,6 +121,7 @@ export interface ATIEventTrackingProps {
   useReverb?: boolean;
   experimentVariant?: string;
   ampExperimentName?: string;
+  preventNavigation?: string;
 }
 
 export interface ATIPageTrackingProps {

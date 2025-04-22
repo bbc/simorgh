@@ -17,6 +17,9 @@ export default {
   include: {
     enabled: true,
   },
+  midArticleOnwardJourney: {
+    enabled: true,
+  },
   mostRead: {
     enabled: true,
   },
