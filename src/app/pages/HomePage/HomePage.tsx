@@ -121,7 +121,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                         nthCurationByStyleAndProminence
                       }
                       embed={embed}
-                      isHomePage
+                      renderVisuallyHiddenH2Title={position === 0}
                     />
 
                     {index === indexOfFirstNonBanner && <MPU />}

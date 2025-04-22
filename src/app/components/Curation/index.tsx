@@ -55,7 +55,7 @@ export default ({
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
   embed,
-  isHomePage = false,
+  renderVisuallyHiddenH2Title = false,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -66,6 +66,7 @@ export default ({
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
+
   const curationSubheading = title || topStoriesTitle;
   const id =
     `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
@@ -151,7 +152,7 @@ export default ({
         return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
             {curationSubheading &&
-              (isFirstCuration && isHomePage ? (
+              (renderVisuallyHiddenH2Title ? (
                 <VisuallyHiddenText id={id} as="h2">
                   {curationSubheading}
                 </VisuallyHiddenText>

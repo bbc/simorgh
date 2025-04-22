@@ -307,7 +307,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage
+          renderVisuallyHiddenH2Title
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
@@ -327,7 +327,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage
+          renderVisuallyHiddenH2Title
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
@@ -345,7 +345,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage={false}
+          renderVisuallyHiddenH2Title={false}
         />,
       );
 
@@ -372,7 +372,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage={false}
+          renderVisuallyHiddenH2Title={false}
         />,
       );
 
@@ -398,7 +398,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage={false}
+          renderVisuallyHiddenH2Title={false}
         />,
       );
 
@@ -419,7 +419,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage={false}
+          renderVisuallyHiddenH2Title={false}
         />,
       );
 
@@ -441,7 +441,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={1} // Only one curation
-          isHomePage={false} // Topic page
+          renderVisuallyHiddenH2Title={false}
         />,
       );
 
@@ -463,7 +463,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          isHomePage={false}
+          renderVisuallyHiddenH2Title={false}
         />,
       );
 
