@@ -8,14 +8,14 @@ This component derives `size` and `fontVariant` values from the Context Provider
 
 ## Props
 
-| Name                         | type    | Description                                                                           |
-| ---------------------------- | ------- | ------------------------------------------------------------------------------------- |
-| as?                          | string  | The HTML element to render the text in e.g. `h1`, `span`, `p`. The default is `span`. |
-| children?                    | node    | The content included between the opening and closing tags of the Call to Action Text  |
-| className?                   | string  | Permits `css` prop to be applied                                                      |
-| shouldUnderlineOnHoverFocus? | boolean | Applies underline styling for interaction states instead of a thicker bottom border.  |
+| Name                         | Type    | Required | Description                                                                           |
+| ---------------------------- | ------- | -------- | ------------------------------------------------------------------------------------- |
+| as?                          | string  | No       | The HTML element to render the text in e.g. `h1`, `span`, `p`. The default is `span`. |
+| children?                    | node    | No       | The content included between the opening and closing tags of the Call to Action Text  |
+| className?                   | string  | No       | Permits `css` prop to be applied                                                      |
+| shouldUnderlineOnHoverFocus? | boolean | No       | Applies underline styling for interaction states instead of a thicker bottom border.  |
 
-## Example ltr/rtl
+## Examples
 
 ### Text
 
@@ -59,6 +59,8 @@ For example:
   </CallToActionLink.FlexWrapper>
 </CallToActionLink>
 ```
+
+In `index.styles.ts`:
 
 ```javascript
   callToActionLink: ({ mq, palette }: Theme) =>
