@@ -14,9 +14,9 @@ import {
 } from './assertions/latestMedia';
 import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
 import {
-  assertCanonicalToLiteSiteCTAComponentClick,
-  assertCanonicalToLiteSiteCTAComponentView,
-} from './assertions/canonicalLiteSiteCta';
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from './assertions/articleLiteSiteLink';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -120,6 +120,8 @@ const canonicalTestSuites = [
     useReverb: true,
     tests: [
       assertPageView,
+      assertArticleLiteSiteLinkComponentView,
+      assertArticleLiteSiteLinkComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
@@ -132,8 +134,6 @@ const canonicalTestSuites = [
       assertRelatedContentComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
-      assertCanonicalToLiteSiteCTAComponentView,
-      assertCanonicalToLiteSiteCTAComponentClick,
     ],
   },
   {
@@ -454,7 +454,13 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     useReverb: false,
     applicationType: 'amp',
-    tests: [assertPageView],
+    tests: [
+      assertPageView,
+      testSuite.contentType === 'article' && [
+        assertArticleLiteSiteLinkComponentView,
+        assertArticleLiteSiteLinkComponentClick,
+      ],
+    ],
   };
 });
 
@@ -467,8 +473,8 @@ const liteTestSuites = canonicalTestSuites
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
-      assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
-      assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
+      assertArticleLiteSiteLinkComponentView, // Article Lite Site Link only displayed on canonical pages
+      assertArticleLiteSiteLinkComponentClick, // Article Lite Site Link only displayed on canonical pages
     ];
 
     const liteSiteTests = testSuite.tests.filter(

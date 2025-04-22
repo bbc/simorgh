@@ -184,7 +184,7 @@ describe('Article Page', () => {
 
   it('should apply click and view tracking data on lite site cta link', () => {
     const eventTrackingData = {
-      componentName: 'canonical-lite-cta',
+      componentName: 'article-lite-site-link',
       optimizely: null,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');

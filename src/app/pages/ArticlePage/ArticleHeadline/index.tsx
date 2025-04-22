@@ -19,8 +19,13 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
-  const eventTrackingData = { componentName: 'canonical-lite-cta', optimizely };
-  const { enabled: showCTA } = useToggle('articleToLiteSiteLink');
+  const eventTrackingData = {
+    componentName: 'article-lite-site-link',
+    optimizely,
+  };
+  const { enabled: articleToLiteSiteLinkEnabled } = useToggle(
+    'articleToLiteSiteLink',
+  );
   const viewTracker = useViewTracker(eventTrackingData);
   const titleVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
 
@@ -35,18 +40,19 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       articleDataSavingLinkText;
   }
 
-  const showLiteCTAOnCanonical: boolean = !isLite && showCTA;
+  const showArticleLiteSiteLink: boolean =
+    !isLite && articleToLiteSiteLinkEnabled;
 
   return (
     <>
       <Headings
         className="article-heading"
         {...props}
-        {...(showLiteCTAOnCanonical && {
+        {...(showArticleLiteSiteLink && {
           css: styles.headlineStylesOverride,
         })}
       />
-      {showLiteCTAOnCanonical && (
+      {showArticleLiteSiteLink && (
         <>
           <div
             css={[
@@ -54,7 +60,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
               styles.liteCTAContainer,
               titleVariation && styles.displayNone,
             ]}
-            data-e2e="to-lite-site-loading"
+            data-e2e="article-lite-site-link-loading"
           />
           <div
             css={[
@@ -62,7 +68,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
               !titleVariation && styles.displayNone,
             ]}
             {...viewTracker}
-            data-e2e="to-lite-site"
+            data-e2e="article-lite-site-link"
           >
             <CallToActionLinkWithChevron
               eventTrackingData={eventTrackingData}

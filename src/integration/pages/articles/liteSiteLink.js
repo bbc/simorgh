@@ -1,6 +1,8 @@
 export default () => {
-  describe('canonical Lite Site CTA', () => {
-    const liteSiteCTA = document.querySelector("[data-e2e='to-lite-site']");
+  describe('Article Lite Site Link', () => {
+    const liteSiteCTA = document.querySelector(
+      "[data-e2e='article-lite-site-link']",
+    );
     it('should be in the document', () => {
       expect(liteSiteCTA).toBeInTheDocument();
     });

@@ -426,7 +426,7 @@ exports[`Canonical Articles Timestamp should match text and date 1`] = `
 exports[`Canonical Articles canonical Lite Site CTA should match snapshot 1`] = `
 <div
   class="bbc-oa1h7m"
-  data-e2e="to-lite-site"
+  data-e2e="article-lite-site-link"
 >
   <a
     class="bbc-ellgq8"

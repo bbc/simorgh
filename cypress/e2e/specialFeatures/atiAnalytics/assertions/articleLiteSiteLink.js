@@ -1,21 +1,21 @@
 import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 
-const { CANONICAL_LITE_CTA } = COMPONENTS;
+const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 
-const runUnlessCanonicalToLiteSiteCTAExperimentRunning = service => {
+const runUnlessArticleLiteSiteLinkExperimentRunning = service => {
   let run = it;
   let skipReason = '';
 
   if (service === 'gahuza') {
-    skipReason = ` - skipped because Canonical to Lite Site CTA experiment running on ${service}`;
+    skipReason = ` - skipped because Article Lite Site Link experiment running on ${service}`;
     run = it.skip;
   }
 
   return { run, skipReason };
 };
 
-export const assertCanonicalToLiteSiteCTAComponentView = ({
+export const assertArticleLiteSiteLinkComponentView = ({
   pageIdentifier,
   contentType,
   useReverb,
@@ -23,18 +23,20 @@ export const assertCanonicalToLiteSiteCTAComponentView = ({
   service,
 }) => {
   const { run, skipReason } =
-    runUnlessCanonicalToLiteSiteCTAExperimentRunning(service);
+    runUnlessArticleLiteSiteLinkExperimentRunning(service);
 
   run(
-    `should send a view event for the Canonical to Lite Site CTA component ${skipReason}`,
+    `should send a view event for the Article Lite Site Link component ${skipReason}`,
     () => {
       interceptATIAnalyticsBeacons();
       cy.visit(path);
 
-      cy.get('[data-e2e="to-lite-site"]').scrollIntoView({ duration: 1000 });
+      cy.get('[data-e2e="article-lite-site-link"]').scrollIntoView({
+        duration: 1000,
+      });
 
       assertATIComponentViewEvent({
-        component: CANONICAL_LITE_CTA,
+        component: ARTICLE_LITE_SITE_LINK,
         pageIdentifier,
         contentType,
         useReverb,
@@ -43,7 +45,7 @@ export const assertCanonicalToLiteSiteCTAComponentView = ({
   );
 };
 
-export const assertCanonicalToLiteSiteCTAComponentClick = ({
+export const assertArticleLiteSiteLinkComponentClick = ({
   pageIdentifier,
   contentType,
   useReverb,
@@ -51,23 +53,23 @@ export const assertCanonicalToLiteSiteCTAComponentClick = ({
   service,
 }) => {
   const { run, skipReason } =
-    runUnlessCanonicalToLiteSiteCTAExperimentRunning(service);
+    runUnlessArticleLiteSiteLinkExperimentRunning(service);
 
   run(
-    `should send a click event for the Canonical to Lite Site CTA component ${skipReason}`,
+    `should send a click event for the Article Lite Site Link component ${skipReason}`,
     () => {
       interceptATIAnalyticsBeacons();
       cy.visit(path);
 
-      cy.get('[data-e2e="to-lite-site"]').scrollIntoView({
+      cy.get('[data-e2e="article-lite-site-link"]').scrollIntoView({
         duration: 1000,
       });
 
       // Click on first item
-      cy.get('[data-e2e="to-lite-site"]').find('a').first().click();
+      cy.get('[data-e2e="article-lite-site-link"]').find('a').first().click();
 
       assertATIComponentClickEvent({
-        component: CANONICAL_LITE_CTA,
+        component: ARTICLE_LITE_SITE_LINK,
         pageIdentifier,
         contentType,
         useReverb,
