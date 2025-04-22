@@ -97,7 +97,7 @@ const PodcastExternalLink = ({ linkUrl, children, aria }) => {
       service={service}
       script={script}
       dir={dir}
-      onClick={clickTrackerRef}
+      {...clickTrackerRef}
       {...aria}
     >
       {children}
