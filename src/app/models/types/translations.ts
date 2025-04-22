@@ -1,4 +1,4 @@
-src / app / models / types / translations.ts; /* eslint-disable camelcase */
+/* eslint-disable camelcase */
 export interface Translations {
   pagination?: {
     page?: string;
