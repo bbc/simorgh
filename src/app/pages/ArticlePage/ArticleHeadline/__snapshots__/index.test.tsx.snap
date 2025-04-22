@@ -309,7 +309,7 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
@@ -323,33 +323,33 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
   margin-inline-start: 0.5rem;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-5:hover,
+.emotion-5:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:focus,
-.emotion-6:hover {
+.emotion-5:focus,
+.emotion-5:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 @media (min-width: 25rem) {
-  .emotion-6 {
+  .emotion-5 {
     -webkit-margin-start: 1rem;
     margin-inline-start: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-6 {
+  .emotion-5 {
     -webkit-margin-start: 0;
     margin-inline-start: 0;
   }
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -363,7 +363,7 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -375,20 +375,20 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -402,31 +402,31 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-a:visited .emotion-9 {
+a:visited .emotion-8 {
   color: #6E6E73;
   border-bottom: 0.0625rem solid #6E6E73;
 }
 
-a:focus .emotion-9,
-a:hover .emotion-9 {
+a:focus .emotion-8,
+a:hover .emotion-8 {
   border-bottom: 0.125rem solid #B80000;
   color: #B80000;
 }
 
-.emotion-10 {
+.emotion-9 {
   color: #141414;
   fill: currentColor;
   -webkit-margin-start: 0.5rem;
@@ -436,21 +436,21 @@ a:hover .emotion-9 {
   height: 0.875rem;
 }
 
-a:visited .emotion-10 {
+a:visited .emotion-9 {
   color: #6E6E73;
 }
 
-a:focus .emotion-10,
-a:hover .emotion-10 {
+a:focus .emotion-9,
+a:hover .emotion-9 {
   color: #B80000;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-10 {
+  .emotion-9 {
     fill: linkText;
   }
 
-  a:visited .emotion-10 {
+  a:visited .emotion-9 {
     fill: visitedText;
   }
 }
@@ -470,30 +470,26 @@ a:hover .emotion-10 {
   </div>
   <div
     class="emotion-4"
-    data-e2e="to-lite-site-loading"
-  />
-  <div
-    class="emotion-4"
     data-e2e="to-lite-site"
   >
     <a
-      class="emotion-6"
+      class="emotion-5"
       href="/news/articles/c0g992jmmkko.lite"
     >
       <div
-        class="emotion-7"
+        class="emotion-6"
       >
         <span
-          class="emotion-8"
+          class="emotion-7"
         >
           <span
-            class="emotion-9"
+            class="emotion-8"
           >
             Inyandiko gusa
           </span>
           <svg
             aria-hidden="true"
-            class="emotion-10"
+            class="emotion-9"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"

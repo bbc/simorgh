@@ -33,22 +33,19 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
         })}
       />
       {showLiteCTAOnCanonical && (
-        <>
-          <div css={styles.liteCTAContainer} data-e2e="to-lite-site-loading" />
-          <div
-            css={styles.liteCTAContainer}
-            {...viewTracker}
-            data-e2e="to-lite-site"
+        <div
+          css={styles.liteCTAContainer}
+          {...viewTracker}
+          data-e2e="to-lite-site"
+        >
+          <CallToActionLinkWithChevron
+            eventTrackingData={eventTrackingData}
+            href={`${pathname}.lite`}
+            css={styles.liteCTA}
           >
-            <CallToActionLinkWithChevron
-              eventTrackingData={eventTrackingData}
-              href={`${pathname}.lite`}
-              css={styles.liteCTA}
-            >
-              {articleDataSavingLinkText}
-            </CallToActionLinkWithChevron>
-          </div>
-        </>
+            {articleDataSavingLinkText}
+          </CallToActionLinkWithChevron>
+        </div>
       )}
     </>
   );
