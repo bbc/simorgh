@@ -1,8 +1,9 @@
 import { createContext } from 'react';
+import { GelFontSize, FontVariant } from '../../models/types/theming';
 
 interface ContextProps {
-  size?: string;
-  fontVariant?: string;
+  size?: GelFontSize;
+  fontVariant?: FontVariant;
 }
 
 const CallToActionLinkContext = createContext({} as ContextProps);

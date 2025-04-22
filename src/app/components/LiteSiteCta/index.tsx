@@ -43,7 +43,7 @@ const LiteSiteCta = () => {
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
             url={canonicalLink}
-            {...{ 'data-ignore-lite': true }}
+            data-ignore-lite
             {...atiClickTrackerHandler}
             css={styles.topLinkSpacing}
             alignWithMargin
