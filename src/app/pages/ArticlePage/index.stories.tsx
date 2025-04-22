@@ -63,7 +63,7 @@ type Props = {
   service?: Services;
   podcastEnabled?: boolean;
   electionBanner?: boolean;
-  articleToLiteSiteLinkEnabled?: boolean;
+  articleLiteSiteLinkEnabled?: boolean;
 };
 
 const ComponentWithContext = ({
@@ -71,7 +71,7 @@ const ComponentWithContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
-  articleToLiteSiteLinkEnabled = false,
+  articleLiteSiteLinkEnabled = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -81,7 +81,7 @@ const ComponentWithContext = ({
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
-        articleToLiteSiteLink: { enabled: articleToLiteSiteLinkEnabled },
+        articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -115,7 +115,7 @@ const ComponentWithServiceContext = ({
   service = 'news',
   podcastEnabled = false,
   electionBanner = false,
-  articleToLiteSiteLinkEnabled = false,
+  articleLiteSiteLinkEnabled = false,
 }: Props) => {
   const memoisedServiceContext = useMemo(
     () => ({ ...serviceContextMock, service }),
@@ -130,8 +130,8 @@ const ComponentWithServiceContext = ({
         frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
-        articleToLiteSiteLink: {
-          enabled: articleToLiteSiteLinkEnabled,
+        articleLiteSiteLink: {
+          enabled: articleLiteSiteLinkEnabled,
         },
       }}
     >
@@ -245,7 +245,7 @@ export const ArticlePageWithLiteSiteCTA = {
     <ComponentWithContext
       data={articleData}
       service={service}
-      articleToLiteSiteLinkEnabled
+      articleLiteSiteLinkEnabled
     />
   ),
   parameters: {
@@ -258,7 +258,7 @@ export const TestArticlePageWithLiteSiteCTA = {
     <ComponentWithContext
       data={articleDataGahuza}
       service="gahuza"
-      articleToLiteSiteLinkEnabled
+      articleLiteSiteLinkEnabled
     />
   ),
   tags: ['!dev'],
@@ -269,7 +269,7 @@ export const TestArticlePageWithLiteSiteCTARightToLeft = {
     <ComponentWithContext
       data={articleDataArabic}
       service="arabic"
-      articleToLiteSiteLinkEnabled
+      articleLiteSiteLinkEnabled
     />
   ),
   tags: ['!dev'],

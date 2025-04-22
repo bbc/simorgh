@@ -77,7 +77,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
         ({ container } = await act(() => {
           return render(<ArticleHeadline {...headlineBlock} />, {
             service: 'gahuza',
-            toggles: { articleToLiteSiteLink: { enabled: true } },
+            toggles: { articleLiteSiteLink: { enabled: true } },
           });
         }));
       });
@@ -99,7 +99,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
       ({ container } = await act(() => {
         return render(<ArticleHeadline {...headlineBlock} />, {
           service: 'gahuza',
-          toggles: { articleToLiteSiteLink: { enabled: true } },
+          toggles: { articleLiteSiteLink: { enabled: true } },
         });
       }));
     });
@@ -116,7 +116,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
       ({ container } = await act(() => {
         return render(<ArticleHeadline {...headlineBlock} />, {
           service: 'gahuza',
-          toggles: { articleToLiteSiteLink: { enabled: true } },
+          toggles: { articleLiteSiteLink: { enabled: true } },
         });
       }));
     });
