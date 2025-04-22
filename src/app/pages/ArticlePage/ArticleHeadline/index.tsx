@@ -57,14 +57,14 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
           <div
             css={[
               styles.loadingContainer,
-              styles.liteCTAContainer,
+              styles.liteSiteLinkContainer,
               titleVariation && styles.displayNone,
             ]}
             data-e2e="article-lite-site-link-loading"
           />
           <div
             css={[
-              styles.liteCTAContainer,
+              styles.liteSiteLinkContainer,
               !titleVariation && styles.displayNone,
             ]}
             {...viewTracker}
@@ -73,7 +73,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
             <CallToActionLinkWithChevron
               eventTrackingData={eventTrackingData}
               href={`${pathname}.lite`}
-              css={styles.liteCTA}
+              css={styles.liteSiteLink}
             >
               {articleDataSavingLinkText}
             </CallToActionLinkWithChevron>
