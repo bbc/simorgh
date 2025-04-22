@@ -8,7 +8,7 @@ import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    liteSiteLink();
+    liteSiteLink(service);
     runCanonicalTests(service);
   });
 });

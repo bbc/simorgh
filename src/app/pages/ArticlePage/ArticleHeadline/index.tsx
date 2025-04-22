@@ -23,8 +23,8 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
     componentName: 'article-lite-site-link',
     optimizely,
   };
-  const { enabled: articleToLiteSiteLinkEnabled } = useToggle(
-    'articleToLiteSiteLink',
+  const { enabled: articleLiteSiteLinkEnabled } = useToggle(
+    'articleLiteSiteLink',
   );
   const viewTracker = useViewTracker(eventTrackingData);
   const titleVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
@@ -41,7 +41,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   }
 
   const showArticleLiteSiteLink: boolean =
-    !isLite && articleToLiteSiteLinkEnabled;
+    !isLite && articleLiteSiteLinkEnabled;
 
   return (
     <>
