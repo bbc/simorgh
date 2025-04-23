@@ -310,29 +310,38 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
 }
 
 .emotion-5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
   color: #141414;
-  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0 0.75rem;
   display: inline-block;
+  padding: 0.8125rem 0 0.8125rem;
   -webkit-margin-start: 0.5rem;
   margin-inline-start: 0.5rem;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.emotion-5:visited {
+  color: #6E6E73;
 }
 
 .emotion-5:focus,
 .emotion-5:hover {
+  color: #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-5 {
+    fill: linkText;
+  }
+
+  .emotion-5:visited {
+    fill: visitedText;
+  }
+
+  .emotion-5:active {
+    fill: activeText;
+  }
 }
 
 @media (min-width: 25rem) {
@@ -350,45 +359,6 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-7 {
-  color: #141414;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  vertical-align: middle;
-  color: inherit;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-7 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-8 {
   color: #141414;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -397,62 +367,40 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
   font-weight: 700;
   color: inherit;
   border-bottom: 0.0625rem solid #141414;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-a:visited .emotion-8 {
+a:visited .emotion-6 {
   color: #6E6E73;
   border-bottom: 0.0625rem solid #6E6E73;
 }
 
-a:focus .emotion-8,
-a:hover .emotion-8 {
-  border-bottom: 0.125rem solid #B80000;
+a:focus .emotion-6,
+a:hover .emotion-6 {
   color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
 }
 
-.emotion-9 {
-  color: #141414;
-  fill: currentColor;
+.emotion-7 {
   -webkit-margin-start: 0.5rem;
   margin-inline-start: 0.5rem;
-  vertical-align: middle;
   width: 0.875rem;
   height: 0.875rem;
-}
-
-a:visited .emotion-9 {
-  color: #6E6E73;
-}
-
-a:focus .emotion-9,
-a:hover .emotion-9 {
-  color: #B80000;
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-9 {
-    fill: linkText;
-  }
-
-  a:visited .emotion-9 {
-    fill: visitedText;
-  }
+  vertical-align: middle;
+  fill: currentColor;
 }
 
 <div>
@@ -476,31 +424,23 @@ a:hover .emotion-9 {
       class="emotion-5"
       href="/news/articles/c0g992jmmkko.lite"
     >
-      <div
+      <span
         class="emotion-6"
       >
-        <span
-          class="emotion-7"
-        >
-          <span
-            class="emotion-8"
-          >
-            Inyandiko gusa
-          </span>
-          <svg
-            aria-hidden="true"
-            class="emotion-9"
-            focusable="false"
-            height="12"
-            viewBox="0 0 32 32"
-            width="12"
-          >
-            <path
-              d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
-            />
-          </svg>
-        </span>
-      </div>
+        Inyandiko gusa
+      </span>
+      <svg
+        aria-hidden="true"
+        class="emotion-7"
+        focusable="false"
+        height="12"
+        viewBox="0 0 32 32"
+        width="12"
+      >
+        <path
+          d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+        />
+      </svg>
     </a>
   </div>
 </div>
