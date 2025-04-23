@@ -9,7 +9,7 @@ export default {
         marginBottom: `${pixelsToRem(28)}rem`,
       },
     }),
-  liteCTA: ({ spacings, mq }: Theme) =>
+  canonicalToLiteSiteCTA: ({ spacings, mq }: Theme) =>
     css({
       padding: `${pixelsToRem(13)}rem 0 ${pixelsToRem(13)}rem`,
       marginInlineStart: `${spacings.FULL}rem`,
