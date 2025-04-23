@@ -41,19 +41,19 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
 };
 
 const addStaticBeaconScript = () => {
+  const script = addStaticBeacon();
   return (
     <Helmet>
-      <script type="text/javascript">{addStaticBeacon()}</script>
+      <script type="text/javascript">{script}</script>
     </Helmet>
   );
 };
 
 const sendStaticBeaconScript = (atiPageViewUrlString: string) => {
+  const script = sendStaticBeacon(atiPageViewUrlString);
   return (
     <Helmet>
-      <script type="text/javascript">
-        {sendStaticBeacon(atiPageViewUrlString)}
-      </script>
+      <script type="text/javascript">{script}</script>
     </Helmet>
   );
 };
