@@ -137,7 +137,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   );
 };
 
-export const useATIClickTrackerHandler = (eventTrackingData = {}) => {
+export default (eventTrackingData = {}) => {
   const { isLite } = useContext(RequestContext);
   const clickTracker = useClickTrackerHandler(eventTrackingData);
   const liteATIUrl = constructLiteSiteATIEventTrackUrl({
@@ -149,5 +149,3 @@ export const useATIClickTrackerHandler = (eventTrackingData = {}) => {
     ? { [LITE_ATI_CLICK_TRACKING]: liteATIUrl }
     : { onClick: clickTracker };
 };
-
-export default useClickTrackerHandler;

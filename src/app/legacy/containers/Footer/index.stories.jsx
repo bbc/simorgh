@@ -1,17 +1,11 @@
 import React from 'react';
 import Footer from '.';
-import { StoryArgs, StoryProps } from '../../../models/types/storybook';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import metadata from './metadata.json';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ThemeProvider from '../../../components/ThemeProvider';
 
-interface Props extends StoryProps {
-  isAmp?: boolean;
-  withAds?: boolean;
-}
-
-const Component = ({ service, isAmp = false, withAds = false }: Props) => (
+const Component = ({ service, isAmp = false, withAds = false }) => (
   <RequestContextProvider
     isAmp={isAmp}
     isApp={false}
@@ -46,23 +40,23 @@ export default {
   },
 };
 
-export const Example = (_: StoryArgs, { service, variant }) => (
+export const Example = (_, { service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-export const ExampleAMP = (_: StoryArgs, { service, variant }) => (
+export const ExampleAMP = (_, { service, variant }) => (
   <Component service={service} variant={variant} isAmp />
 );
 
-export const WithAdsEnabled = (_: StoryArgs, { service, variant }) => (
+export const WithAdsEnabled = (_, { service, variant }) => (
   <Component service={service} variant={variant} withAds />
 );
 
 export const HindiCollectiveNewsroomPublication = (
-  _: StoryArgs,
+  _,
   { variant },
 ) => <Component service="hindi" variant={variant} />;
 
-export const SportWithoutTrustProjectLink = (_: StoryArgs, { variant }) => (
+export const SportWithoutTrustProjectLink = (_, { variant }) => (
   <Component service="sport" variant={variant} />
 );
