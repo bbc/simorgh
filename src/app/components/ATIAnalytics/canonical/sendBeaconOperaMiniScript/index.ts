@@ -7,10 +7,7 @@ const sendBeaconOperaMiniScript = (atiPageViewUrlString: string) => `
       var atiPageViewUrl = "${atiPageViewUrlString}";
       atiPageViewUrl += document.referrer ? "&ref=" + document.referrer : '';
 
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", atiPageViewUrl, true);
-      xhr.withCredentials = true;
-      xhr.send();
+      window.sendStaticBeacon && window.sendStaticBeacon(atiPageViewUrl)
     }
 `;
 

@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
-import sendStaticBeacon from './sendStaticBeacon';
+import { addStaticBeacon, sendStaticBeacon } from './staticBeacon';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -40,12 +40,20 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   );
 };
 
-const addStaticBeaconScript = (atiPageViewUrlString: string) => {
-  const script = sendStaticBeacon(atiPageViewUrlString);
-
+const addStaticBeaconScript = () => {
   return (
     <Helmet>
-      <script type="text/javascript">{script}</script>
+      <script type="text/javascript">{addStaticBeacon()}</script>
+    </Helmet>
+  );
+};
+
+const sendStaticBeaconScript = (atiPageViewUrlString: string) => {
+  return (
+    <Helmet>
+      <script type="text/javascript">
+        {sendStaticBeacon(atiPageViewUrlString)}
+      </script>
     </Helmet>
   );
 };
@@ -69,8 +77,9 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
+      {addStaticBeaconScript()}
+      {isLite && sendStaticBeaconScript(atiPageViewUrlString)}
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
-      {addStaticBeaconScript(atiPageViewUrlString)}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );
