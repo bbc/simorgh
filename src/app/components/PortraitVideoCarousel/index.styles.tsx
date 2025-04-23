@@ -4,17 +4,17 @@ const ITEM_WIDTH_REM = 10;
 const ITEM_GAP_REM = 1;
 
 const styles = {
-  section: (_theme: Theme) =>
+  section: () =>
     css({
       width: '100%',
     }),
 
-  heading: (theme: Theme) =>
+  heading: () =>
     css({
       marginBottom: '1rem',
     }),
 
-  scrollContainer: (theme: Theme) =>
+  scrollContainer: () =>
     css({
       position: 'relative',
       display: 'flex',
@@ -27,7 +27,7 @@ const styles = {
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
       gap: `${ITEM_GAP_REM}rem`,
-      paddingBottom: theme.spacings.FULL + 'rem',
+      paddingBottom: `${theme.spacings.FULL}rem`,
       scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
       '&::-webkit-scrollbar': {
@@ -37,7 +37,7 @@ const styles = {
       flex: 1,
     }),
 
-  promoItem: (theme: Theme) =>
+  promoItem: () =>
     css({
       scrollSnapAlign: 'start',
       flex: `0 0 ${ITEM_WIDTH_REM}rem`,
@@ -46,13 +46,14 @@ const styles = {
       flexDirection: 'column',
     }),
 
-  image: (theme: Theme) =>
+  image: () =>
     css({
       width: '100%',
       height: 'auto',
       objectFit: 'cover',
       borderRadius: '0.25rem',
       marginBottom: '0.5rem',
+      aspectRatio: '9/16',
     }),
 
   promoHeading: (theme: Theme) =>
@@ -66,7 +67,7 @@ const styles = {
       },
     }),
 
-  buttonGroup: (theme: Theme) =>
+  buttonGroup: () =>
     css({
       position: 'absolute',
       top: '50%',
@@ -78,7 +79,7 @@ const styles = {
       gap: '0.25rem',
     }),
 
-  navButton: (theme: Theme) =>
+  navButton: () =>
     css({
       backgroundColor: '#E0E0E0',
       color: '#000',

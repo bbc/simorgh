@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import { jsx } from '@emotion/react';
 import { useContext, useRef } from 'react';
 import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
@@ -22,7 +22,6 @@ const PortraitVideoCarousel = ({
   title,
   items,
 }: PortraitVideoCarouselProps) => {
-  const theme = useTheme();
   const { dir } = useContext(ServiceContext);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -42,14 +41,14 @@ const PortraitVideoCarousel = ({
       aria-label={title}
       role="region"
       data-testid="portrait-video-carousel"
-      css={styles.section(theme)}
+      css={styles.section}
     >
-      <Heading level={2} size="doublePica" css={styles.heading(theme)}>
+      <Heading level={2} size="doublePica" css={styles.heading}>
         {title}
       </Heading>
 
       <div css={styles.scrollContainer}>
-        <div dir={dir} ref={scrollRef} css={styles.scrollWrapper(theme)}>
+        <div dir={dir} ref={scrollRef} css={styles.scrollWrapper}>
           {items.map(item => {
             const image = item.images?.[0]?.url;
             const alt = item.images?.[0]?.altText || '';
@@ -57,7 +56,7 @@ const PortraitVideoCarousel = ({
             const href = item.link?.path || '#';
 
             return (
-              <a key={item.id} href={href} css={styles.promoItem(theme)}>
+              <a key={item.id} href={href} css={styles.promoItem}>
                 {image && (
                   <img
                     src={image}
@@ -66,11 +65,7 @@ const PortraitVideoCarousel = ({
                     loading="lazy"
                   />
                 )}
-                <Heading
-                  level={3}
-                  size="longPrimer"
-                  css={styles.promoHeading(theme)}
-                >
+                <Heading level={3} size="longPrimer" css={styles.promoHeading}>
                   {headline}
                 </Heading>
               </a>
@@ -80,6 +75,7 @@ const PortraitVideoCarousel = ({
 
         <div css={styles.buttonGroup}>
           <button
+            type="button"
             aria-label="Scroll left"
             onClick={() => scroll('left')}
             css={styles.navButton}
@@ -87,6 +83,7 @@ const PortraitVideoCarousel = ({
             <LeftChevron />
           </button>
           <button
+            type="button"
             aria-label="Scroll right"
             onClick={() => scroll('right')}
             css={styles.navButton}
