@@ -240,7 +240,7 @@ export const ArticlePageWithElectionBanner = {
   },
 };
 
-export const ArticlePageWithLiteSiteCTA = {
+export const ArticlePageWithLiteSiteLink = {
   render: (_: StoryArgs, { service }: StoryProps) => (
     <ComponentWithContext
       data={articleData}
@@ -253,7 +253,7 @@ export const ArticlePageWithLiteSiteCTA = {
   },
 };
 
-export const TestArticlePageWithLiteSiteCTA = {
+export const TestArticlePageWithLiteSiteLink = {
   render: () => (
     <ComponentWithContext
       data={articleDataGahuza}
@@ -264,7 +264,7 @@ export const TestArticlePageWithLiteSiteCTA = {
   tags: ['!dev'],
 };
 
-export const TestArticlePageWithLiteSiteCTARightToLeft = {
+export const TestArticlePageWithLiteSiteLinkRTL = {
   render: () => (
     <ComponentWithContext
       data={articleDataArabic}
