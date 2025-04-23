@@ -40,7 +40,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
         <div
           css={styles.liteSiteLinkContainer}
           {...viewTracker}
-          data-e2e="to-lite-site"
+          data-e2e="article-lite-site-link"
         >
           <CallToActionLink
             url={`${pathname}.lite`}
