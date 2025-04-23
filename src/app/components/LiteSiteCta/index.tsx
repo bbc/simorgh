@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { useATIClickTrackerHandler } from '#app/hooks/useClickTrackerHandler';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -22,7 +22,7 @@ const LiteSiteCta = () => {
     dataSaving,
   } = liteSite;
   const id = 'LiteSiteCta';
-  const atiClickTrackerHandler = useATIClickTrackerHandler({
+  const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'lite-site-cta',
   });
 
@@ -44,7 +44,7 @@ const LiteSiteCta = () => {
           <CallToActionLink
             url={canonicalLink}
             data-ignore-lite
-            {...atiClickTrackerHandler}
+            {...clickTrackerHandler}
             css={styles.topLinkSpacing}
             alignWithMargin
             size="brevier"

@@ -1,5 +1,5 @@
-import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 
 const { CANONICAL_LITE_CTA } = COMPONENTS;
 
