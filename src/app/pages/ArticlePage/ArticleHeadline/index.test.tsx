@@ -46,7 +46,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
   it('with toggle enabled', async () => {
     const { container } = render(<ArticleHeadline {...headlineBlock} />, {
       service: 'gahuza',
-      toggles: { liteSiteCTA: { enabled: true } },
+      toggles: { articleLiteSiteLink: { enabled: true } },
     });
 
     expect(container).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
   it('with toggle disabled', async () => {
     const { container } = render(<ArticleHeadline {...headlineBlock} />, {
       service: 'gahuza',
-      toggles: { liteSiteCTA: { enabled: false } },
+      toggles: { articleLiteSiteLink: { enabled: false } },
     });
 
     expect(container).toMatchSnapshot();

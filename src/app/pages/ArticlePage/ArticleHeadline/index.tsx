@@ -14,34 +14,38 @@ import styles from './index.styles';
 const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
-  const eventTrackingData = { componentName: 'canonical-lite-cta' };
-  const { enabled: showCTA } = useToggle('liteSiteCTA');
+  const eventTrackingData = {
+    componentName: 'article-lite-site-link',
+  };
+  const { enabled: articleLiteSiteLinkEnabled } = useToggle(
+    'articleLiteSiteLink',
+  );
   const viewTracker = useViewTracker(eventTrackingData);
 
   const articleDataSavingLinkText =
     translations?.liteSite?.articleDataSavingLinkText ?? 'Data saving version';
 
-  const showLiteCTAOnCanonical: boolean = !isLite && showCTA;
+  const showArticleLiteSiteLink = !isLite && articleLiteSiteLinkEnabled;
 
   return (
     <>
       <Headings
         className="article-heading"
         {...props}
-        {...(showLiteCTAOnCanonical && {
-          css: styles.reducePaddingForCTA,
+        {...(showArticleLiteSiteLink && {
+          css: styles.reducePadding,
         })}
       />
-      {showLiteCTAOnCanonical && (
+      {showArticleLiteSiteLink && (
         <div
-          css={styles.liteCTAContainer}
+          css={styles.liteSiteLinkContainer}
           {...viewTracker}
           data-e2e="to-lite-site"
         >
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            css={styles.canonicalToLiteSiteCTA}
+            css={styles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >

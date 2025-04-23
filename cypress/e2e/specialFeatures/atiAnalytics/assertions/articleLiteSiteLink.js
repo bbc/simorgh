@@ -1,7 +1,7 @@
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 
-const { CANONICAL_LITE_CTA } = COMPONENTS;
+const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 
 export const assertCanonicalToLiteSiteCTAComponentView = ({
   pageIdentifier,
@@ -9,14 +9,14 @@ export const assertCanonicalToLiteSiteCTAComponentView = ({
   useReverb,
   path,
 }) => {
-  it('should send a view event for the Canonical to Lite Site CTA component', () => {
+  it('should send a view event for the Article Lite Site Link component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
     cy.get('[data-e2e="to-lite-site"]').scrollIntoView({ duration: 1000 });
 
     assertATIComponentViewEvent({
-      component: CANONICAL_LITE_CTA,
+      component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
       contentType,
       useReverb,
@@ -24,25 +24,25 @@ export const assertCanonicalToLiteSiteCTAComponentView = ({
   });
 };
 
-export const assertCanonicalToLiteSiteCTAComponentClick = ({
+export const assertArticleLiteSiteLinkComponentClick = ({
   pageIdentifier,
   contentType,
   useReverb,
   path,
 }) => {
-  it('should send a click event for the Canonical to Lite Site CTA component', () => {
+  it('should send a click event for the Article Lite Site Link component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="to-lite-site"]').scrollIntoView({
+    cy.get('[data-e2e="article-lite-site-link"]').scrollIntoView({
       duration: 1000,
     });
 
     // Click on first item
-    cy.get('[data-e2e="to-lite-site"]').find('a').first().click();
+    cy.get('[data-e2e="article-lite-site-link"]').find('a').first().click();
 
     assertATIComponentClickEvent({
-      component: CANONICAL_LITE_CTA,
+      component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
       contentType,
       useReverb,
