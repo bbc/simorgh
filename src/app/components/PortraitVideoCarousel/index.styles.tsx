@@ -79,10 +79,9 @@ const styles = {
       gap: '0.25rem',
     }),
 
-  navButton: () =>
+  navButton: ({palette}: Theme) =>
     css({
-      backgroundColor: '#E0E0E0',
-      color: '#000',
+      backgroundColor: palette.BLACK,
       border: 'none',
       width: '2rem',
       height: '2rem',
@@ -90,6 +89,9 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
+      '& svg path': {
+        fill: palette.GREY_2,
+    },
     }),
 };
 
