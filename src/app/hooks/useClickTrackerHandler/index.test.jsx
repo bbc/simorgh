@@ -255,7 +255,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const TestLink = () => {
-        const handleClick = useClickTrackerHandler(defaultProps);
+        const { onClick: handleClick } = useClickTrackerHandler(defaultProps);
 
         return (
           <div>
@@ -270,7 +270,7 @@ describe('useClickTrackerHandler', () => {
         );
       };
 
-      const { getByText } = render(<TestLink hookProps={defaultProps} />, {
+      const { getByText } = render(<TestLink />, {
         atiData: atiAnalytics,
         pageData: pidginData,
         pageType: STORY_PAGE,
@@ -595,7 +595,7 @@ describe('useClickTrackerHandler', () => {
         } = pidginData;
 
         const TestLink = () => {
-          const handleClick = useClickTrackerHandler(defaultProps);
+          const { onClick: handleClick } = useClickTrackerHandler(defaultProps);
 
           return (
             <div>
