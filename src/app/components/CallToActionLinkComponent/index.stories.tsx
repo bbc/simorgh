@@ -18,7 +18,7 @@ export const WithChevronInsideText = () => {
   );
 };
 
-export const WithChevronOutsideTextAndUnderline = () => {
+export const WithChevronOutsideTextAndUnderlineOnHover = () => {
   return (
     <div>
       <CallToActionLink url="https://www.bbc.com/ws/languages">
@@ -38,15 +38,16 @@ export const WithoutChevron = () => {
   );
 };
 
-export const WithButtonLikeWrapperAndChevronOutsideTextAndUnderline = () => {
-  return (
-    <CallToActionLink url="https://www.bbc.com/ws/languages" size="brevier">
-      <CallToActionLink.ButtonLikeWrapper>
-        <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-          Call to Action Link
-        </CallToActionLink.Text>
-        <CallToActionLink.Chevron />
-      </CallToActionLink.ButtonLikeWrapper>
-    </CallToActionLink>
-  );
-};
+export const WithButtonLikeWrapperAndChevronOutsideTextAndUnderlineOnHover =
+  () => {
+    return (
+      <CallToActionLink url="https://www.bbc.com/ws/languages" size="brevier">
+        <CallToActionLink.ButtonLikeWrapper>
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            Call to Action Link
+          </CallToActionLink.Text>
+          <CallToActionLink.Chevron />
+        </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink>
+    );
+  };
