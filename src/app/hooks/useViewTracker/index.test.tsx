@@ -119,6 +119,18 @@ const defaultToggles = {
   },
 };
 
+const reverbMock = {
+  isReady: jest.fn(),
+  initialise: jest.fn(() => Promise.resolve()),
+  viewEvent: jest.fn(),
+  userActionEvent: jest.fn(() => 'userActionEvent'),
+};
+
+// eslint-disable-next-line no-underscore-dangle
+window.__reverb = {
+  __reverbLoadedPromise: Promise.resolve(reverbMock),
+};
+
 const wrapper = ({
   atiData,
   children,
@@ -687,6 +699,51 @@ describe('useViewTracker', () => {
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
       expect(options).toEqual({ threshold: [0.5] });
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+    });
+
+    describe('View tracking - Reverb', () => {
+      beforeEach(() => {
+        jest.replaceProperty(
+          serviceContextModule,
+          'ServiceContext',
+          // @ts-expect-error override service context for tests
+          createContext({
+            atiAnalyticsProducerId: '70',
+            atiAnalyticsProducerName: 'PIDGIN',
+            service: 'pidgin',
+            useReverb: true,
+          }),
+        );
+      });
+
+      it('should trigger a beacon for a view event', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+          .calls;
+
+        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+        expect(options).toEqual({ threshold: [0.5] });
+        expect(reverbMock.userActionEvent).toHaveBeenCalled();
+      });
     });
   });
 
