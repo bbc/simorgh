@@ -12,6 +12,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
+import isLive from '../../lib/utilities/isLive';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
@@ -71,6 +72,11 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
 
+jest.mock('../../lib/utilities/isLive', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 const {
   metadata: { atiAnalytics },
 } = fixtureData;
@@ -123,7 +129,7 @@ const reverbMock = {
   isReady: jest.fn(),
   initialise: jest.fn(() => Promise.resolve()),
   viewEvent: jest.fn(),
-  userActionEvent: jest.fn(() => 'userActionEvent'),
+  userActionEvent: jest.fn(),
 };
 
 // eslint-disable-next-line no-underscore-dangle
@@ -716,33 +722,102 @@ describe('useViewTracker', () => {
         );
       });
 
-      it('should trigger a beacon for a view event', async () => {
-        const { result } = renderHook(() => useViewTracker(trackingData), {
-          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+      describe('LOCAL, TEST and PREVIEW - Viewability Model', () => {
+        beforeEach(() => {
+          (isLive as jest.Mock).mockImplementation(() => false);
         });
-        const element = document.createElement('div');
 
-        await result.current.ref(element);
-
-        const observerInstance = getObserverInstance(element);
-
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
+        it('should trigger a beacon for a view event', async () => {
+          const { result } = renderHook(() => useViewTracker(trackingData), {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
           });
+          const element = document.createElement('div');
+
+          await result.current.ref(element);
+
+          const observerInstance = getObserverInstance(element);
+
+          act(() => {
+            triggerIntersection({
+              changes: [{ isIntersecting: true }],
+              observer: observerInstance,
+            });
+          });
+
+          await act(() => {
+            jest.advanceTimersByTime(1100);
+          });
+
+          const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+            .calls;
+
+          expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+          expect(options).toEqual({ threshold: [0.5] });
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              event: { action: 'view', category: 'viewability' },
+              group: { name: 'article-sty' },
+              item: {
+                link: 'http://www.bbc.com/pidgin/tori-51745682',
+                name: 'most-read',
+              },
+            },
+            undefined,
+            undefined,
+            false,
+          );
+        });
+      });
+
+      describe('LIVE - Click-Per-View (CPV) Model', () => {
+        beforeEach(() => {
+          (isLive as jest.Mock).mockImplementation(() => true);
         });
 
-        act(() => {
-          jest.advanceTimersByTime(1100);
+        it('should trigger a beacon for a view event', async () => {
+          const { result } = renderHook(() => useViewTracker(trackingData), {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          });
+          const element = document.createElement('div');
+
+          await result.current.ref(element);
+
+          const observerInstance = getObserverInstance(element);
+
+          act(() => {
+            triggerIntersection({
+              changes: [{ isIntersecting: true }],
+              observer: observerInstance,
+            });
+          });
+
+          await act(() => {
+            jest.advanceTimersByTime(1100);
+          });
+
+          const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+            .calls;
+
+          expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+          expect(options).toEqual({ threshold: [0.5] });
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'impression',
+            'most-read',
+            {
+              container: 'article-sty',
+              attribute: 'most-read',
+              placement: 'news::pidgin.news.story.51745682.page',
+              result: 'http://www.bbc.com/pidgin/tori-51745682',
+            },
+            undefined,
+            undefined,
+            false,
+          );
         });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [0.5] });
-        expect(reverbMock.userActionEvent).toHaveBeenCalled();
       });
     });
   });

@@ -504,8 +504,8 @@ export const buildReverbPageSectionEventModel = ({
         attribute: componentName,
         metadata: format,
         placement: pageIdentifier,
-        source: advertiserID,
-        result: url,
+        ...(advertiserID && { source: advertiserID }),
+        ...(url && { result: url }),
         isClick: type === 'click',
       }
     : {

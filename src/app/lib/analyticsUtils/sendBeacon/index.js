@@ -78,13 +78,6 @@ const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
     ? { container, attribute, placement, source, result }
     : { item, group, event };
 
-  // console.log('###################');
-  // console.log('I GET HERE');
-  // console.log(actionName);
-  // console.log(actionAdditionalLabels);
-  // console.log(reverbInstance.userActionEvent());
-  // console.log('###################');
-
   return reverbInstance.userActionEvent(
     eventPublisher,
     actionName,
