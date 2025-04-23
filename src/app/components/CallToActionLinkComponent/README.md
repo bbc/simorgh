@@ -9,10 +9,6 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 > - Text
 > - Chevron
 
-> ### Components outside this folder:
->
-> - Text
-
 ## Props
 
 | Name              | Type                           | Required | Description                                                                                                                                                                                                                             |
@@ -37,6 +33,15 @@ The Chevron can be inside or outside of the Text component.
 <CallToActionLink url="https://www.bbc.com/ws/languages">
   <CallToActionLink.Text>I am a link</CallToActionLink.Text>
   <CallToActionLink.Chevron />
+</CallToActionLink>
+```
+
+```javascript
+<CallToActionLink url="https://www.bbc.com/ws/languages">
+  <CallToActionLink.Text>
+    I am a link
+    <CallToActionLink.Chevron />
+  </CallToActionLink.Text>
 </CallToActionLink>
 ```
 
