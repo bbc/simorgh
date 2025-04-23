@@ -468,8 +468,8 @@ const liteTestSuites = canonicalTestSuites
       assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
       assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
-      assertArticleLiteSiteLinkComponentView, // Article Lite Site Link only displayed on canonical pages
-      assertArticleLiteSiteLinkComponentClick, // Article Lite Site Link only displayed on canonical pages
+      assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
+      assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
       assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
     ];
 
