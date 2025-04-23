@@ -2,7 +2,7 @@
 
 import { PropsWithChildren, useContext } from 'react';
 import { jsx } from '@emotion/react';
-import TEXT from '#app/components/Text';
+import Text from '#app/components/Text';
 import CallToActionLinkContext from '../CallToActionLinkContext';
 import styles from './index.styles';
 
@@ -12,7 +12,7 @@ type TextProps = {
   shouldUnderlineOnHoverFocus?: boolean;
 };
 
-const Text = ({
+export default ({
   as,
   children,
   className,
@@ -20,10 +20,10 @@ const Text = ({
 }: PropsWithChildren<TextProps>) => {
   const { fontVariant, size } = useContext(CallToActionLinkContext);
   return (
-    <TEXT
+    <Text
       as={as}
-      size={size || 'pica'}
-      fontVariant={fontVariant || 'sansBold'}
+      size={size}
+      fontVariant={fontVariant}
       css={[
         styles.text,
         shouldUnderlineOnHoverFocus
@@ -33,8 +33,6 @@ const Text = ({
       className={className}
     >
       {children}
-    </TEXT>
+    </Text>
   );
 };
-
-export default Text;

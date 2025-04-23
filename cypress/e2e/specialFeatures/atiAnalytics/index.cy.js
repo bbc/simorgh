@@ -5,6 +5,10 @@ import {
   assertBillboardComponentView,
 } from './assertions/billboard';
 import {
+  assertCanonicalToLiteSiteCTAComponentClick,
+  assertCanonicalToLiteSiteCTAComponentView,
+} from './assertions/canonicalLiteSiteCta';
+import {
   assertFeaturesAnalysisComponentClick,
   assertFeaturesAnalysisComponentView,
 } from './assertions/featuresAnalysis';
@@ -64,13 +68,13 @@ import {
   assertScrollablePromoComponentView,
 } from './assertions/scrollablePromo';
 import {
-  assertTopStoriesComponentClick,
-  assertTopStoriesComponentView,
-} from './assertions/topStories';
-import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from './assertions/topStories';
 import { getPathWithSuffix } from './helpers';
 
 const canonicalTestSuites = [
@@ -219,7 +223,6 @@ const canonicalTestSuites = [
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
       assertRecommendationsComponentView,
       assertRecommendationsComponentClick,
       assertPodcastPromoComponentView,
@@ -325,7 +328,6 @@ const canonicalTestSuites = [
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
       assertSocialEmbedComponentView,
       assertSocialEmbedComponentClick,
       assertRelatedTopicsComponentView,
@@ -471,18 +473,17 @@ const liteTestSuites = canonicalTestSuites
   .map(testSuite => {
     const excludedLiteTests = [
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
       assertArticleLiteSiteLinkComponentView, // Article Lite Site Link only displayed on canonical pages
       assertArticleLiteSiteLinkComponentClick, // Article Lite Site Link only displayed on canonical pages
+      assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
     ];
 
     const liteSiteTests = testSuite.tests.filter(
-      test =>
-        test.name !== assertMostReadComponentClick.name &&
-        // Exclude component click tests, as component click support is not supported on all components yet
-        !test.name.toLowerCase().includes('click') &&
-        !excludedLiteTests.includes(test),
+      test => !excludedLiteTests.includes(test),
     );
 
     // All lite enabled pages should have the LiteSiteCTA component

@@ -49,7 +49,7 @@ export default ({
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
-              <a href={link} css={styles.link} onClick={clickTrackerHandler}>
+              <a href={link} css={styles.link} {...clickTrackerHandler}>
                 {showLiveLabel ? (
                   <div data-testid="billboard-live-label">
                     <LivePulse

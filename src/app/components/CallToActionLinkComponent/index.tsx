@@ -27,8 +27,8 @@ const CallToActionLink = ({
   alignWithMargin,
   download = false,
   className,
-  fontVariant,
-  size,
+  fontVariant = 'sansBold',
+  size = 'pica',
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -46,7 +46,7 @@ const CallToActionLink = ({
   return (
     <a
       href={url}
-      onClick={clickTrackerHandler}
+      {...(eventTrackingData && clickTrackerHandler)}
       className={className}
       download={download}
       {...htmlAttributes}
