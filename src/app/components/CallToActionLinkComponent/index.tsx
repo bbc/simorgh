@@ -46,7 +46,7 @@ const CallToActionLink = ({
   return (
     <a
       href={url}
-      {...clickTrackerHandler}
+      {...(eventTrackingData && clickTrackerHandler)}
       className={className}
       download={download}
       {...htmlAttributes}
