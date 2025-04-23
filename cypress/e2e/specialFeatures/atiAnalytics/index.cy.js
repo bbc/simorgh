@@ -5,10 +5,6 @@ import {
   assertBillboardComponentView,
 } from './assertions/billboard';
 import {
-  assertCanonicalToLiteSiteCTAComponentClick,
-  assertCanonicalToLiteSiteCTAComponentView,
-} from './assertions/canonicalLiteSiteCta';
-import {
   assertFeaturesAnalysisComponentClick,
   assertFeaturesAnalysisComponentView,
 } from './assertions/featuresAnalysis';
