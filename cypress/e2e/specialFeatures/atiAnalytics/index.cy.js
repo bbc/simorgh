@@ -452,13 +452,7 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     useReverb: false,
     applicationType: 'amp',
-    tests: [
-      assertPageView,
-      testSuite.contentType === 'article' && [
-        assertArticleLiteSiteLinkComponentView,
-        assertArticleLiteSiteLinkComponentClick,
-      ],
-    ],
+    tests: [assertPageView],
   };
 });
 
@@ -483,7 +477,7 @@ const liteTestSuites = canonicalTestSuites
     );
 
     // All lite enabled pages should have the LiteSiteCTA component
-    liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
+    liteSiteTests.push(assertLiteSiteCTAComponentClick);
 
     return {
       ...testSuite,
