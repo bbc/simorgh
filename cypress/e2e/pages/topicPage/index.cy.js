@@ -46,14 +46,6 @@ const testSuites = [
   },
 ];
 
-// ToDo: remove once we decide whether we want to keep the Application tests or not
-// eslint-disable-next-line import/prefer-default-export
-export const topicPagesForService = service =>
-  testSuites.filter(
-    topicPage =>
-      topicPage.service === service && topicPage.pageType === TOPIC_PAGE,
-  );
-
 runTestsForPage({
   pageType: TOPIC_PAGE,
   testSuites,

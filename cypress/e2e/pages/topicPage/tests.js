@@ -162,9 +162,8 @@ export default ({ service, pageType, variant = 'default', path }) => {
             const expectedStatus = isErrorPage ? 404 : 200;
             // const failOnStatusCode = !isErrorPage;
             cy.url().then(url => {
-              const path = url;
               cy.testResponseCodeAndType({
-                path,
+                path: url,
                 responseCode: expectedStatus,
                 type: expectedContentType,
               });
