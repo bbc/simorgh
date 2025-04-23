@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
-const ITEM_WIDTH_REM = 10;
-const ITEM_GAP_REM = 1;
+export const PROMO_ITEM_WIDTH = 160; // fixed width for one promo item
 
 const styles = {
   section: () =>
@@ -21,13 +21,13 @@ const styles = {
       alignItems: 'center',
     }),
 
-  scrollWrapper: (theme: Theme) =>
+  scrollWrapper: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
-      gap: `${ITEM_GAP_REM}rem`,
-      paddingBottom: `${theme.spacings.FULL}rem`,
+      gap: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.FULL}rem`,
       scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
       '&::-webkit-scrollbar': {
@@ -40,7 +40,7 @@ const styles = {
   promoItem: () =>
     css({
       scrollSnapAlign: 'start',
-      flex: `0 0 ${ITEM_WIDTH_REM}rem`,
+      flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
       textDecoration: 'none',
       display: 'flex',
       flexDirection: 'column',
@@ -56,11 +56,11 @@ const styles = {
       aspectRatio: '9/16',
     }),
 
-  promoHeading: (theme: Theme) =>
+  promoHeading: ({ fontVariants, palette }: Theme) =>
     css({
-      fontFamily: theme.fontVariants?.sansBold?.fontFamily,
+      fontFamily: fontVariants?.sansBold?.fontFamily,
       fontSize: '0.875rem',
-      color: theme.palette.SHADOW,
+      color: palette.SHADOW,
       textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',

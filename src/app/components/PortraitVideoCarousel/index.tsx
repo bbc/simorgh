@@ -3,7 +3,7 @@ import { jsx } from '@emotion/react';
 import { useContext, useRef } from 'react';
 import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
-import styles from './index.styles';
+import styles, { PROMO_ITEM_WIDTH } from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface PortraitVideoItem {
@@ -25,13 +25,10 @@ const PortraitVideoCarousel = ({
   const { dir } = useContext(ServiceContext);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // fixed amount for one promo
-  const scrollByAmount = 160;
-
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollRef.current) return;
     scrollRef.current.scrollBy({
-      left: direction === 'left' ? -scrollByAmount : scrollByAmount,
+      left: direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH,
       behavior: 'smooth',
     });
   };
