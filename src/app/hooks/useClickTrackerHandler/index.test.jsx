@@ -610,7 +610,7 @@ describe('useClickTrackerHandler', () => {
           );
         };
 
-        const { getByText } = render(<TestLink hookProps={defaultProps} />, {
+        const { getByText } = render(<TestLink />, {
           atiData: atiAnalytics,
           pageData: pidginData,
           pageType: STORY_PAGE,
