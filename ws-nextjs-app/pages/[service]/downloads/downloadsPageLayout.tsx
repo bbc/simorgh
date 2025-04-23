@@ -6,7 +6,7 @@ import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Metadata from '#app/components/Metadata';
-import CallToActionLink from '#app/components/CallToActionLinkComponent';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import styles from './styles';

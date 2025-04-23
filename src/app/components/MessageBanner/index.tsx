@@ -6,7 +6,7 @@ import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
-import CallToActionLink from '../CallToActionLinkComponent';
+import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {
   heading: string;
