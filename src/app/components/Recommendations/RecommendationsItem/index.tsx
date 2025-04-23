@@ -19,7 +19,7 @@ const RecommendationsItem = ({
 }) => {
   const { isLite } = useContext(RequestContext);
 
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   if (!recommendation) return null;
 
@@ -34,7 +34,7 @@ const RecommendationsItem = ({
       )}
       <div css={styles.textWrapper}>
         <div css={styles.headline}>
-          <a css={styles.link} href={href} onClick={handleClickTracking}>
+          <a css={styles.link} href={href} {...clickTrackerHandler}>
             {title}
           </a>
         </div>

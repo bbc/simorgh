@@ -1,4 +1,6 @@
 export default () => {
+  const clickTrackingFiredUrls: string[] = [];
+
   document.addEventListener('click', (event: MouseEvent) => {
     let targetElement;
     const clickedElement = event.target as HTMLElement;
@@ -16,11 +18,15 @@ export default () => {
       event.stopPropagation();
       event.preventDefault();
 
-      const atiURL = targetElement.getAttribute('data-lite-ati-tracking');
+      const atiURL = targetElement.getAttribute('data-lite-ati-click');
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
-      window.processClientDeviceAndSendLite(atiURL as string);
+      if (atiURL && !clickTrackingFiredUrls.includes(atiURL)) {
+        window.processClientDeviceAndSendLite(atiURL as string);
+        clickTrackingFiredUrls.push(atiURL);
+      }
+
       window.location.assign(nextPageUrl);
     }
   });

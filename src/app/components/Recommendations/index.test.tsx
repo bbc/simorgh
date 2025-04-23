@@ -7,7 +7,10 @@ describe('Recommendations', () => {
   it('should render a single recommendation', () => {
     const { getByText } = render(
       <Recommendations data={recommendationsFixtures} />,
-      { service: 'pidgin', toggles: { mostRead: { enabled: true } } },
+      {
+        service: 'pidgin',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
     );
     const title = getByText(recommendationsFixtures[0].title);
     expect(title).toBeInTheDocument();
@@ -16,7 +19,10 @@ describe('Recommendations', () => {
   it('should render multiple recommendations', () => {
     const { getByText } = render(
       <Recommendations data={recommendationsFixtures} />,
-      { service: 'pidgin', toggles: { mostRead: { enabled: true } } },
+      {
+        service: 'pidgin',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
     );
 
     const listEl = document.querySelector('ul');
@@ -31,7 +37,7 @@ describe('Recommendations', () => {
   it('should not render recommendations when toggle is disabled', () => {
     render(<Recommendations data={recommendationsFixtures} />, {
       service: 'pidgin',
-      toggles: { mostRead: { enabled: false } },
+      toggles: { midArticleOnwardJourney: { enabled: false } },
     });
 
     const listEl = document.querySelector('ul');
