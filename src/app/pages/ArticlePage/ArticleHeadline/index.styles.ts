@@ -13,9 +13,9 @@ export default {
     css({
       height: `${pixelsToRem(44)}rem`,
     }),
-  liteCTA: ({ spacings, mq }: Theme) =>
+  canonicalToLiteSiteCTA: ({ spacings, mq }: Theme) =>
     css({
-      display: 'inline-block',
+      padding: `${pixelsToRem(13)}rem 0 ${pixelsToRem(13)}rem`,
       marginInlineStart: `${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
@@ -25,7 +25,7 @@ export default {
         marginInlineStart: 0,
       },
     }),
-  headlineStylesOverride: ({ spacings, mq }: Theme) =>
+  reducePaddingForCTA: ({ spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.HALF}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {

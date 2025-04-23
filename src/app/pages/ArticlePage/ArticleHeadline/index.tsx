@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
-import CallToActionLinkWithChevron from '#app/components/CallToActionLinkWithChevron';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
@@ -43,7 +43,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
         className="article-heading"
         {...props}
         {...(showLiteCTAOnCanonical && {
-          css: styles.headlineStylesOverride,
+          css: styles.reducePaddingForCTA,
         })}
       />
       {showLiteCTAOnCanonical && (
@@ -64,13 +64,18 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
             {...viewTracker}
             data-e2e="to-lite-site"
           >
-            <CallToActionLinkWithChevron
+            <CallToActionLink
+              url={`${pathname}.lite`}
               eventTrackingData={eventTrackingData}
-              href={`${pathname}.lite`}
-              css={styles.liteCTA}
+              css={styles.canonicalToLiteSiteCTA}
+              alignWithMargin
+              size="brevier"
             >
-              {articleDataSavingLinkText}
-            </CallToActionLinkWithChevron>
+              <CallToActionLink.Text>
+                {articleDataSavingLinkText}
+              </CallToActionLink.Text>
+              <CallToActionLink.Chevron />
+            </CallToActionLink>
             <OptimizelyPageViewTracking />
           </div>
         </>
