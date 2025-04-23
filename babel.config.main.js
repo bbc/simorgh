@@ -1,4 +1,5 @@
 const plugins = [
+  'babel-plugin-react-compiler',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',

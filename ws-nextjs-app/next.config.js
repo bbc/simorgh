@@ -35,6 +35,7 @@ module.exports = {
   generateEtags: false,
   experimental: {
     externalDir: true,
+    reactCompiler: true,
   },
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),

@@ -60,6 +60,7 @@ module.exports = {
       },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
+    'react-hooks/react-compiler': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'import/no-import-module-exports': [
