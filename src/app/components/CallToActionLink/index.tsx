@@ -20,7 +20,7 @@ const CallToActionLink = ({
       href={href}
       className={className}
       css={styles.linkBackground}
-      onClick={clickTrackerHandler}
+      {...clickTrackerHandler}
       download={download}
     >
       <div css={styles.linkTextWrapper}>

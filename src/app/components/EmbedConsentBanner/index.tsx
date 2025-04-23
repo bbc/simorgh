@@ -59,7 +59,7 @@ const EmbedConsentBannerCanonical = ({
 }: PropsWithChildren<ConsentBannerProps>) => {
   const [consented, setConsented] = useState(false);
 
-  const handleClickTracking = useClickTrackerHandler(
+  const { onClick: handleClickTracking } = useClickTrackerHandler(
     getEventTrackingData(provider),
   );
 
@@ -75,7 +75,7 @@ const EmbedConsentBannerCanonical = ({
       clickHandler={{
         onClick: e => {
           setConsented(true);
-          handleClickTracking(e);
+          if (handleClickTracking) handleClickTracking(e);
         },
       }}
     />
