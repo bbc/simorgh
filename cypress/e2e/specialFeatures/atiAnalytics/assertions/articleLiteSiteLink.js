@@ -3,7 +3,7 @@ import { COMPONENTS, interceptATIAnalyticsBeacons } from '../helpers';
 
 const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 
-export const assertCanonicalToLiteSiteCTAComponentView = ({
+export const assertArticleLiteSiteLinkComponentView = ({
   pageIdentifier,
   contentType,
   useReverb,
