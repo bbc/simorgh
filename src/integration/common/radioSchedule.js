@@ -1,17 +1,13 @@
-import fetchToggles from '../utils/fetchToggles';
+import isToggleEnabled from '../utils/isToggleEnabled';
 
 const isRadioScheduleToggleEnabled = async ({ service, pageType }) => {
   const pageTypeToggleMapping = {
     'Live Radio': 'liveRadioSchedule',
     'On Demand Audio Page': 'onDemandRadioSchedule',
   };
-  const radioScheduleToggleName = pageTypeToggleMapping[pageType];
+  const toggleName = pageTypeToggleMapping[pageType];
 
-  const toggles = await fetchToggles(service);
-
-  const { enabled: hasRadioSchedule } = toggles[radioScheduleToggleName] || {};
-
-  return hasRadioSchedule;
+  return isToggleEnabled({ service, toggleName });
 };
 
 export default pageType => {
