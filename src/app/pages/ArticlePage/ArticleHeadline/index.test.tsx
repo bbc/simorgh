@@ -47,10 +47,19 @@ describe('ArticleHeadline - Lite Site CTA', () => {
     const toggles = { articleLiteSiteLink: { enabled: true } };
 
     it('should be displayed on canonical', async () => {
-      const { container } = render(<ArticleHeadline {...headlineBlock} />, {
-        service: 'gahuza',
-        toggles: { articleLiteSiteLink: { enabled: true } },
+      const { container, queryByRole } = render(
+        <ArticleHeadline {...headlineBlock} />,
+        {
+          service: 'gahuza',
+          toggles: { articleLiteSiteLink: { enabled: true } },
+        },
+      );
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
       });
+
+      expect(liteSiteLink).toBeInTheDocument();
 
       expect(container).toMatchSnapshot();
     });
