@@ -9,7 +9,7 @@ import {
   TOPIC_PAGE,
   ERROR_PAGE,
 } from '#app/routes/utils/pageTypes';
-import LiteSiteCta from '#app/components/LiteSiteSummary';
+import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -103,7 +103,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       )}
-      {isLite && <LiteSiteCta />}
+      {isLite && <LiteSiteSummary />}
       <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
     </header>
   );
