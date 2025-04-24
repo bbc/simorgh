@@ -1,3 +1,4 @@
+/* istanbul ignore next */
 export default () => {
   const clickTrackingFiredUrls: string[] = [];
   const STATIC_ATI_CLICK_TRACKING = 'data-static-ati-click';
