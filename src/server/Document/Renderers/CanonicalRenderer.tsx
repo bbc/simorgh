@@ -55,7 +55,7 @@ export default function CanonicalRenderer({
         />
         <ComponentTracking
           trackComponentViews={false}
-          enableStaticClickTrackingOnOperaMini
+          enableStaticClickTrackingOnOperaMiniOnly
         />
       </head>
       <body>

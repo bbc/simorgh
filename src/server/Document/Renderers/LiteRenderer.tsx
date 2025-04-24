@@ -26,7 +26,7 @@ export default function LitePageRenderer({
         {helmetScriptTags}
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <ComponentTracking
-          enableStaticClickTrackingOnOperaMini={false}
+          enableStaticClickTrackingOnOperaMiniOnly={false}
           trackComponentViews
         />
       </head>

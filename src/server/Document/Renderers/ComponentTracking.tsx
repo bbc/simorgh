@@ -4,18 +4,20 @@ import clickTracking from '#src/server/utilities/staticATITracking/clickTracking
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import viewTracking from '#src/server/utilities/staticATITracking/viewTracking';
 
-const trackingScripts = ({
-  enableStaticClickTrackingOnOperaMini,
-  trackComponentViews,
-}: {
-  enableStaticClickTrackingOnOperaMini: boolean;
+type Props = {
+  enableStaticClickTrackingOnOperaMiniOnly: boolean;
   trackComponentViews: boolean;
-}) => {
+};
+
+const trackingScripts = ({
+  enableStaticClickTrackingOnOperaMiniOnly,
+  trackComponentViews,
+}: Props) => {
   return `
     window.addEventListener('load', function () {
       let isComponentTrackingEnabled = true;
 
-      if (${enableStaticClickTrackingOnOperaMini}) {
+      if (${enableStaticClickTrackingOnOperaMiniOnly}) {
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
       }      
 
@@ -32,13 +34,16 @@ const trackingScripts = ({
   `;
 };
 
-type Props = {
-  enableStaticClickTrackingOnOperaMini: boolean;
-  trackComponentViews: boolean;
-};
-
+/**
+ * Component for injecting component tracking scripts into the page.
+ *
+ * @param {Object} props - Props for the component.
+ * @param {boolean} props.enableStaticClickTrackingOnOperaMiniOnly - Enables static click tracking only on Opera Mini browsers.
+ *   If true, tracking will only occur on Opera Mini; otherwise, it will occur on all browsers.
+ * @param {boolean} props.trackComponentViews - Enables tracking of component views.
+ */
 const ComponentTracking = ({
-  enableStaticClickTrackingOnOperaMini,
+  enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
 }: Props) => {
   return (
@@ -46,7 +51,7 @@ const ComponentTracking = ({
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: `${trackingScripts({
-          enableStaticClickTrackingOnOperaMini,
+          enableStaticClickTrackingOnOperaMiniOnly,
           trackComponentViews,
         })}`,
       }}

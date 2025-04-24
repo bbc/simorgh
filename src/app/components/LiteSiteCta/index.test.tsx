@@ -5,7 +5,7 @@ import LiteSiteCta from '.';
 
 jest.mock('#app/hooks/useHydrationDetection', () => ({
   __esModule: true,
-  default: () => true,
+  default: () => false,
 }));
 
 describe('LiteSiteCTA', () => {

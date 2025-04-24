@@ -135,28 +135,29 @@ exports[`Document Component should render APP version correctly 1`] = `
     <script>
       
     window.addEventListener('load', function () {
-      const isOperaMini = function isOperaProxy() {
+      let isComponentTrackingEnabled = true;
+
+      if (true) {
+        isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
-      const isComponentTrackingEnabled = true ? isOperaMini : true;
-      
-      if (!isComponentTrackingEnabled) {
-        return;
-      }
+      }      
 
-      (function staticATIClickTracking() {
+      if (isComponentTrackingEnabled) {
+        (function staticATIClickTracking() {
     return 'Tracking script placeholder';
   })();
 
-      if (false) {
-        (function staticATIClickTracking() {
+        if (false) {
+          (function staticATIClickTracking() {
     return 'View script placeholder';
   })();
-      }
+        }
 
-      (function staticATIClickTracking() {
+        (function staticATIClickTracking() {
     return 'Click script placeholder';
   })();
+      }
     });
   
     </script>
@@ -235,28 +236,29 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <script>
       
     window.addEventListener('load', function () {
-      const isOperaMini = function isOperaProxy() {
+      let isComponentTrackingEnabled = true;
+
+      if (false) {
+        isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
-      const isComponentTrackingEnabled = false ? isOperaMini : true;
-      
-      if (!isComponentTrackingEnabled) {
-        return;
-      }
+      }      
 
-      (function staticATIClickTracking() {
+      if (isComponentTrackingEnabled) {
+        (function staticATIClickTracking() {
     return 'Tracking script placeholder';
   })();
 
-      if (true) {
-        (function staticATIClickTracking() {
+        if (true) {
+          (function staticATIClickTracking() {
     return 'View script placeholder';
   })();
-      }
+        }
 
-      (function staticATIClickTracking() {
+        (function staticATIClickTracking() {
     return 'Click script placeholder';
   })();
+      }
     });
   
     </script>
@@ -330,28 +332,29 @@ exports[`Document Component should render correctly 1`] = `
     <script>
       
     window.addEventListener('load', function () {
-      const isOperaMini = function isOperaProxy() {
+      let isComponentTrackingEnabled = true;
+
+      if (true) {
+        isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
-      const isComponentTrackingEnabled = true ? isOperaMini : true;
-      
-      if (!isComponentTrackingEnabled) {
-        return;
-      }
+      }      
 
-      (function staticATIClickTracking() {
+      if (isComponentTrackingEnabled) {
+        (function staticATIClickTracking() {
     return 'Tracking script placeholder';
   })();
 
-      if (false) {
-        (function staticATIClickTracking() {
+        if (false) {
+          (function staticATIClickTracking() {
     return 'View script placeholder';
   })();
-      }
+        }
 
-      (function staticATIClickTracking() {
+        (function staticATIClickTracking() {
     return 'Click script placeholder';
   })();
+      }
     });
   
     </script>

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
  * Initially assumes the component is not hydrated (server-side render), and then updates to indicate hydration (client-side render).
  * @returns {boolean} True if the component is hydrated (client-side), false otherwise (server-side).
  */
-export const useHydrationDetection = () => {
+export const useHydrationDetection = (): boolean => {
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
