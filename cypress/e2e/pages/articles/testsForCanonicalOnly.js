@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
@@ -7,6 +6,8 @@ import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
+
+const litePromotedServices = ['burmese', 'gahuza'];
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType, variant = 'default' }) =>
@@ -73,7 +74,7 @@ export default ({ service, pageType, variant = 'default' }) =>
       });
     }
 
-    if (liteEnabledServices.includes(service)) {
+    if (litePromotedServices.includes(service)) {
       it('should have a lite site link', () => {
         cy.get('[data-e2e="article-lite-site-link"]').within(() => {
           cy.get('a')
