@@ -6,6 +6,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import constructATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
 import {
   AllTheProviders,
   render,
@@ -16,9 +17,7 @@ import {
 import * as serviceContextModule from '../../contexts/ServiceContext';
 
 import pidginData from './fixtureData/tori-51745682.json';
-import useClickTrackerHandler, {
-  useConstructLiteSiteATIEventTrackUrl,
-} from '.';
+import useClickTrackerHandler from '.';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
@@ -65,7 +64,7 @@ const TestComponent = ({ hookProps }) => {
   const handleClick = useClickTrackerHandler(hookProps);
 
   return (
-    <div data-testid="test-component" onClick={handleClick}>
+    <div data-testid="test-component" {...handleClick}>
       <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
     </div>
@@ -77,7 +76,7 @@ const TestComponentSingleLink = ({ hookProps }) => {
 
   return (
     <div data-testid="test-component">
-      <a href="https://bbc.com/pidgin" onClick={handleClick}>
+      <a href="https://bbc.com/pidgin" {...handleClick}>
         Link
       </a>
     </div>
@@ -124,7 +123,9 @@ describe('useClickTrackerHandler', () => {
         },
       );
 
-      expect(result.current).toBeInstanceOf(Function);
+      const { onClick } = result.current;
+
+      expect(onClick).toBeInstanceOf(Function);
     });
 
     it('should send a single tracking request on click', async () => {
@@ -249,7 +250,7 @@ describe('useClickTrackerHandler', () => {
         const handleClick = useClickTrackerHandler(parentHookProps);
 
         return (
-          <div onClick={handleClick}>
+          <div {...handleClick}>
             <TestComponent hookProps={defaultProps} />
           </div>
         );
@@ -436,7 +437,7 @@ describe('useClickTrackerHandler', () => {
         'myEvent_clicks',
         mockUserId,
         {
-          'clicked_canonical-lite-cta': true,
+          'clicked_article-lite-site-link': true,
           foo: 'bar',
         },
       );
@@ -604,26 +605,26 @@ describe('useClickTrackerHandler', () => {
       expect(global.fetch).not.toHaveBeenCalled();
     });
   });
-});
 
-describe('Lite Site - Click tracking', () => {
-  it('Returns a valid ati tracking url given the input props', () => {
-    const { result } = renderHook(
-      () =>
-        useConstructLiteSiteATIEventTrackUrl({
-          props: {
-            ...defaultProps,
-            campaignID: 'custom-campaign',
-          },
-          eventType: 'click',
-        }),
-      {
-        wrapper,
-      },
-    );
+  describe('Lite Site - Click tracking', () => {
+    it('Returns a valid ati tracking url given the input props', () => {
+      const { result } = renderHook(
+        () =>
+          constructATIUrl({
+            eventTrackingData: {
+              ...defaultProps,
+              campaignID: 'custom-campaign',
+            },
+            eventType: 'click',
+          }),
+        {
+          wrapper,
+        },
+      );
 
-    expect(result.current).toContain(
-      'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
-    );
+      expect(result.current).toContain(
+        'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
+      );
+    });
   });
 });

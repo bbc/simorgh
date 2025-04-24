@@ -31,15 +31,16 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import CpsRecommendations from '#containers/CpsRecommendations';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
-  Recommendation,
 } from '#app/models/types/optimo';
+import { Recommendation } from '#app/models/types/onwardJourney';
+
 import ScrollablePromo from '#components/ScrollablePromo';
+import Recommendations from '#app/components/Recommendations';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -99,11 +100,9 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent =
-  (recommendationsData: Recommendation[]) =>
-  (props: ComponentToRenderProps) => (
-    <CpsRecommendations {...props} items={recommendationsData} />
-  );
+const getWsojComponent = (
+  props: ComponentToRenderProps & { data: Recommendation[] },
+) => <Recommendations data={props.data} />;
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -166,8 +165,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
-  const recommendationsData = pageData?.recommendations ?? [];
-
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isSTY = pageData?.metadata?.type === STORY_PAGE;
   const isCPS = isPGL || isSTY;
@@ -203,7 +200,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent(recommendationsData),
+    wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
   };

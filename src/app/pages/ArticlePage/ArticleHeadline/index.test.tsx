@@ -77,13 +77,13 @@ describe('ArticleHeadline - Lite Site CTA', () => {
         ({ container } = await act(() => {
           return render(<ArticleHeadline {...headlineBlock} />, {
             service: 'gahuza',
-            toggles: { liteSiteCTA: { enabled: true } },
+            toggles: { articleLiteSiteLink: { enabled: true } },
           });
         }));
       });
 
       const titleSpan = (container as unknown as HTMLElement).querySelector(
-        'div[data-e2e="to-lite-site"] div span span',
+        'div[data-e2e="article-lite-site-link"] span',
       );
 
       expect(titleSpan?.innerHTML).toBe(expected);
@@ -99,7 +99,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
       ({ container } = await act(() => {
         return render(<ArticleHeadline {...headlineBlock} />, {
           service: 'gahuza',
-          toggles: { liteSiteCTA: { enabled: true } },
+          toggles: { articleLiteSiteLink: { enabled: true } },
         });
       }));
     });
@@ -116,7 +116,7 @@ describe('ArticleHeadline - Lite Site CTA', () => {
       ({ container } = await act(() => {
         return render(<ArticleHeadline {...headlineBlock} />, {
           service: 'gahuza',
-          toggles: { liteSiteCTA: { enabled: true } },
+          toggles: { articleLiteSiteLink: { enabled: true } },
         });
       }));
     });

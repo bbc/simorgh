@@ -145,7 +145,7 @@ const ScheduleItemHeader = ({
       as={linkComponent}
       {...linkProps}
       className="focusIndicatorDisplayBlock"
-      onClick={clickTrackerHandler}
+      {...clickTrackerHandler}
     >
       {content}
     </StyledLink>

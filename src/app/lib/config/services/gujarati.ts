@@ -271,7 +271,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'લેટેસ્ટ',
     },
     mostRead: {
-      header: 'સૌથી વધારે વંચાયેલા સમાચાર',
+      header: 'સૌથી વધુ વંચાયેલી સ્ટોરીઝ',
       lastUpdated: 'લાસ્ટ અપડેટ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -280,7 +280,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'સૌથી વધારે વંચાયેલા સમાચાર',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

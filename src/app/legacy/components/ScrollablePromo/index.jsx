@@ -164,8 +164,8 @@ const ScrollablePromo = ({
     ...(optimizely && experimentVariant && { optimizely }),
   };
 
-  const viewRef = useViewTracker(eventTrackingData);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
@@ -223,9 +223,9 @@ const ScrollablePromo = ({
           <PromoList
             blocks={blocks}
             experimentVariant={experimentVariant}
-            viewTracker={viewRef}
-            onClick={handleClickTracking}
-            {...a11yAttributes}
+            viewTracker={viewTracker}
+            clickTracker={clickTracker}
+            a11yAttributes={a11yAttributes}
           />
         </GridItemMediumNoMargin>
       </ScrollablePromoContainer>
@@ -244,14 +244,14 @@ const ScrollablePromo = ({
         </LabelComponent>
       )}
       {isSingleItem ? (
-        <PromoWrapper dir={dir} ref={viewRef}>
-          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
+        <PromoWrapper dir={dir} {...viewTracker}>
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          viewTracker={viewRef}
-          onClick={handleClickTracking}
+          viewTracker={viewTracker}
+          clickTracker={clickTracker}
         />
       )}
     </GridItemMediumNoMargin>

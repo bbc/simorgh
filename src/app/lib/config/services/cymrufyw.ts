@@ -315,16 +315,13 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Mwyaf poblogaidd',
+      header: 'Popular Reads',
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

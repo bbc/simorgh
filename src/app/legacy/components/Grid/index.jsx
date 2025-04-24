@@ -20,7 +20,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 const Grid = React.forwardRef((props, ref) => {
   const { dir } = use(ServiceContext);
 
-  return <GRID dir={dir} {...props} ref={ref} />;
+  return <GRID dir={dir} {...props} {...ref} />;
 });
 
 const fourOfSixColumnsMaxWidthGroup4 = `30rem`;

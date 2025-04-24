@@ -3,11 +3,9 @@ export default {
   ads: {
     enabled: false,
   },
+  articleLiteSiteLink: { enabled: true },
   chartbeatAnalytics: {
     enabled: true,
-  },
-  cpsRecommendations: {
-    enabled: false,
   },
   enableFetchingToggles: {
     enabled: true,
@@ -18,6 +16,9 @@ export default {
     enabled: false,
   },
   include: {
+    enabled: true,
+  },
+  midArticleOnwardJourney: {
     enabled: true,
   },
   mostRead: {

@@ -210,7 +210,7 @@ const Promo = () => {
 
   return (
     <ResponsivePodcastPromoWrapper
-      ref={viewTrackerRef}
+      {...viewTrackerRef}
       dir={dir}
       data-e2e="podcast-promo"
     >
@@ -251,7 +251,7 @@ const Promo = () => {
               <strong>
                 <StyledCardLink
                   href={url}
-                  onClick={clickTrackerRef}
+                  {...clickTrackerRef}
                   script={script}
                   service={service}
                 >

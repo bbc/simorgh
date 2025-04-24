@@ -121,7 +121,7 @@ const RecentAudioEpisodes = ({
           <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
               href={getUrl(episode.id)}
-              onClick={clickTrackerHandler}
+              {...clickTrackerHandler}
               index={index}
             >
               {/* these must be concatenated for screen reader UX */}
