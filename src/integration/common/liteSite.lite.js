@@ -1,6 +1,8 @@
 export default () => {
   describe('Lite Site Cta', () => {
-    const liteSiteCta = document.querySelector("section[data-e2e='lite-cta']");
+    const liteSiteCta = document.querySelector(
+      "section[data-e2e='lite-summary']",
+    );
 
     it('should be in the document', () => {
       expect(liteSiteCta).toBeInTheDocument();

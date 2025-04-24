@@ -15,7 +15,7 @@ import { IconSizes, MetadataProps, Tag } from './types';
 import {
   defaultTranslations,
   liteEnabledServices,
-} from '../LiteSiteCta/liteSiteConfig';
+} from '../LiteSiteSummary/liteSiteConfig';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';

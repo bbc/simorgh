@@ -10,7 +10,7 @@ import styles from './index.styles';
 import { defaultTranslations } from './liteSiteConfig';
 import CallToActionLink from '../CallToActionLink';
 
-const LiteSiteCta = () => {
+const LiteSiteSummary = () => {
   const { translations } = useContext(ServiceContext);
   const { canonicalLink } = useContext(RequestContext);
   const { liteSite = defaultTranslations } = translations;
@@ -21,15 +21,15 @@ const LiteSiteCta = () => {
     informationPageLink,
     dataSaving,
   } = liteSite;
-  const id = 'LiteSiteCta';
+  const id = 'LiteSiteSummary';
   const clickTrackerHandler = useClickTrackerHandler({
-    componentName: 'lite-site-cta',
+    componentName: 'lite-site-summarry',
   });
 
   return (
     <section
       role="region"
-      data-e2e="lite-cta"
+      data-e2e="lite-summary"
       aria-labelledby={id}
       css={styles.outerContainer}
     >
@@ -69,4 +69,4 @@ const LiteSiteCta = () => {
   );
 };
 
-export default LiteSiteCta;
+export default LiteSiteSummary;

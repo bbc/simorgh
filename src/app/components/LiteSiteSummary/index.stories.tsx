@@ -1,12 +1,12 @@
 import React from 'react';
-import LiteSiteCTA from '.';
+import LiteSiteSummary from '.';
 import metadata from './metadata.json';
 import readme from './README.md';
 
-export const Component = () => <LiteSiteCTA />;
+export const Component = () => <LiteSiteSummary />;
 
 export default {
-  title: 'Components/LiteSiteCTA',
+  title: 'Components/LiteSiteSummary',
   Component,
   parameters: {
     metadata,
