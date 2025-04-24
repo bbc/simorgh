@@ -94,8 +94,6 @@ const styles = {
       },
     }),
 
-  // test for Ped
-
   disabledButton: () =>
     css({
       opacity: 0.2,
