@@ -70,8 +70,8 @@ const styles = {
   buttonGroup: () =>
     css({
       position: 'absolute',
-      top: '50%',
-      right: 0,
+      top: '35%',
+      right: '1%',
       transform: 'translateY(-50%)',
       display: 'flex',
       flexDirection: 'row',
