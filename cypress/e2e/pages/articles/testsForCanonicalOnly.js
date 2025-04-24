@@ -6,7 +6,7 @@ import {
   getBlockData,
   getBlockByType,
   getVideoEmbedUrl,
-  litePromotedServices,
+  isLitePromotedService,
 } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -77,7 +77,7 @@ export default ({ service, pageType, variant = 'default' }) =>
       });
     }
 
-    if (litePromotedServices.includes(service)) {
+    if (isLitePromotedService(service)) {
       it('should have a lite site link', () => {
         cy.get('[data-e2e="article-lite-site-link"]').within(() => {
           cy.get('a')

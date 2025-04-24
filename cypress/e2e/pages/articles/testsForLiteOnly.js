@@ -1,4 +1,4 @@
-import { litePromotedServices } from './helpers';
+import { isLitePromotedService } from './helpers';
 
 export default ({ service, pageType }) => {
   describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {
@@ -14,7 +14,7 @@ export default ({ service, pageType }) => {
         });
         cy.go('back');
       });
-      if (litePromotedServices.includes(service)) {
+      if (isLitePromotedService(service)) {
         it('Clicking the link to the Information page should navigate to lite site', () => {
           cy.get('[data-e2e="information-page"]').within(() => {
             cy.get('a')

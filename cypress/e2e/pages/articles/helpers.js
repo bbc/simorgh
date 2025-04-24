@@ -1,4 +1,5 @@
 import envConfig from '../../../support/config/envs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 export const getBlockByType = (blocks, blockType) => {
   let blockData;
@@ -51,4 +52,5 @@ export const getVideoEmbedUrl = (body, language, isAmp = false) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const litePromotedServices = ['burmese', 'gahuza'];
+export const isLitePromotedService = service =>
+  appConfig[service].default.translations?.liteSite?.informationPageLink;

@@ -21,7 +21,7 @@ export interface Translations {
     onboardingMessage: string;
     toMainSite: string;
     informationPage: string;
-    informationPageLink: string;
+    informationPageLink?: string;
     dataSaving: string;
     articleDataSavingLinkText: string;
   };
