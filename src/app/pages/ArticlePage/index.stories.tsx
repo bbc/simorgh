@@ -80,7 +80,6 @@ const ComponentWithContext = ({
       toggles={{
         eventTracking: { enabled: true },
         mostRead: { enabled: true },
-        frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
@@ -129,7 +128,6 @@ const ComponentWithServiceContext = ({
       toggles={{
         eventTracking: { enabled: true },
         mostRead: { enabled: true },
-        frostedPromo: { enabled: true, value: 1 },
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: {

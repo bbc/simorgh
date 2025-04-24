@@ -42,7 +42,6 @@ const ComponentWithContext = ({
     <ToggleContextProvider
       toggles={{
         eventTracking: { enabled: true },
-        frostedPromo: { enabled: true, value: 1 },
       }}
     >
       <ServiceContextProvider service={service}>
