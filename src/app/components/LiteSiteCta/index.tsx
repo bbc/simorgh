@@ -8,7 +8,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import styles from './index.styles';
 import { defaultTranslations } from './liteSiteConfig';
-import CallToActionLink from '../CallToActionLinkComponent';
+import CallToActionLink from '../CallToActionLink';
 
 const LiteSiteCta = () => {
   const { translations } = useContext(ServiceContext);

@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
-import CallToActionLink from '#app/components/CallToActionLinkComponent';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';

@@ -2,7 +2,7 @@
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { jsx } from '@emotion/react';
-import CallToActionLink from '#app/components/CallToActionLinkComponent';
+import CallToActionLink from '#app/components/CallToActionLink';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
 import styles from './index.styles';
