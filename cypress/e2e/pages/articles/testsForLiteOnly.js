@@ -1,3 +1,5 @@
+import { litePromotedServices } from './helpers';
+
 export default ({ service, pageType }) => {
   describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {
     describe('CTA: Lite', () => {
@@ -12,19 +14,20 @@ export default ({ service, pageType }) => {
         });
         cy.go('back');
       });
-
-      it('Clicking the link to the Information page should navigate to lite site', () => {
-        cy.get('[data-e2e="information-page"]').within(() => {
-          cy.get('a')
-            .should('have.attr', 'href')
-            .then($href => {
-              cy.get('a').click();
-              cy.url().should('eq', $href);
-            })
-            .and('contain', '.lite');
+      if (litePromotedServices.includes(service)) {
+        it('Clicking the link to the Information page should navigate to lite site', () => {
+          cy.get('[data-e2e="information-page"]').within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .then($href => {
+                cy.get('a').click();
+                cy.url().should('eq', $href);
+              })
+              .and('contain', '.lite');
+          });
+          cy.go('back');
         });
-        cy.go('back');
-      });
+      }
     });
   });
 };

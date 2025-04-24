@@ -50,3 +50,5 @@ export const getVideoEmbedUrl = (body, language, isAmp = false) => {
 
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
+
+export const litePromotedServices = ['burmese', 'gahuza'];
