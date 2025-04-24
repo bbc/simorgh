@@ -9,10 +9,6 @@ export default {
         marginBottom: `${pixelsToRem(28)}rem`,
       },
     }),
-  loadingContainer: () =>
-    css({
-      height: `${pixelsToRem(44)}rem`,
-    }),
   liteSiteLink: ({ spacings, mq }: Theme) =>
     css({
       padding: `${pixelsToRem(13)}rem 0 ${pixelsToRem(13)}rem`,
@@ -31,9 +27,5 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         paddingBottom: `${pixelsToRem(12)}rem`,
       },
-    }),
-  displayNone: () =>
-    css({
-      display: 'none',
     }),
 };

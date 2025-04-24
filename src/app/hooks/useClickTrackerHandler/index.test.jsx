@@ -437,7 +437,7 @@ describe('useClickTrackerHandler', () => {
         'myEvent_clicks',
         mockUserId,
         {
-          'clicked_article-lite-site-link': true,
+          clicked_wsoj: true,
           foo: 'bar',
         },
       );
