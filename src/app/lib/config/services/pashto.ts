@@ -278,7 +278,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ځانګړي مطالب',
     },
     mostRead: {
-      header: 'ډېر لوستل شوي',
+      header: 'تر ټولو ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
       hasMostRead: true,
@@ -291,7 +291,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% موده',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ډېر لوستل شوي',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

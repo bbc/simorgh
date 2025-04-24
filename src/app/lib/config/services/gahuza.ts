@@ -305,7 +305,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Ibiheruka',
     },
     mostRead: {
-      header: 'Ibisomwa cane',
+      header: 'Izisomwa na benshi',
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -316,7 +316,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Umwanya bimara %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ibisomwa cane',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

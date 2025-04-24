@@ -3,6 +3,7 @@ export default {
   ads: {
     enabled: false,
   },
+  articleLiteSiteLink: { enabled: true },
   electionBanner: {
     enabled: true,
   },
@@ -10,9 +11,6 @@ export default {
     enabled: true,
   },
   comscoreAnalytics: {
-    enabled: true,
-  },
-  cpsRecommendations: {
     enabled: true,
   },
   enableFetchingToggles: {
@@ -24,6 +22,9 @@ export default {
     enabled: true,
   },
   include: {
+    enabled: true,
+  },
+  midArticleOnwardJourney: {
     enabled: true,
   },
   mostRead: {

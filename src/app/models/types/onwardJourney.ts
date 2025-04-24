@@ -1,50 +1,16 @@
-import { OptimoBlock } from './optimo';
-
-export type OptimoRecommendation = {
-  headlines: {
-    seoHeadline?: string;
-    promoHeadline: {
-      blocks: OptimoBlock[];
-    };
+export type Recommendation = {
+  id: string;
+  title: string;
+  image: {
+    width: number;
+    height: number;
+    altText: string;
+    copyrightHolder: string;
+    originCode: string;
+    locator: string;
   };
-  locators: {
-    optimoUrn: string;
-    canonicalUrl: string;
-  };
-  summary: {
-    blocks: OptimoBlock[];
-  };
-  images: {
-    defaultPromoImage: {
-      blocks: OptimoBlock[];
-    };
-  };
-  timestamp: number;
-  suitableForSyndication?: boolean;
-  language?: string;
-  passport?: object;
-  id?: string;
-  type?: string;
+  href: string;
 };
-
-export type CpsRecommendation = {
-  headlines: {
-    shortHeadline?: string;
-    headline: string;
-  };
-  locators: {
-    assetUri: string;
-    cpsUrn?: string;
-  };
-  summary: string;
-  timestamp: number;
-  indexImage: IndexImage;
-  cpsType?: string;
-  id?: string;
-  type?: string;
-};
-
-export type Recommendation = OptimoRecommendation | CpsRecommendation;
 
 export type TopStoriesOnwardJourney = {
   headlines: Headlines;
