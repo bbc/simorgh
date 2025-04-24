@@ -120,11 +120,11 @@ a:hover .emotion-3 {
 <div>
   <div
     class="emotion-0"
-    data-e2e="to-lite-site-loading"
+    data-e2e="article-lite-site-link-loading"
   />
   <div
     class="emotion-1"
-    data-e2e="to-lite-site"
+    data-e2e="article-lite-site-link"
   >
     <a
       class="emotion-2"
@@ -272,11 +272,11 @@ a:hover .emotion-3 {
 <div>
   <div
     class="emotion-0"
-    data-e2e="to-lite-site-loading"
+    data-e2e="article-lite-site-link-loading"
   />
   <div
     class="emotion-1"
-    data-e2e="to-lite-site"
+    data-e2e="article-lite-site-link"
   >
     <a
       class="emotion-2"

@@ -19,8 +19,13 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
-  const eventTrackingData = { componentName: 'canonical-lite-cta', optimizely };
-  const { enabled: showCTA } = useToggle('liteSiteCTA');
+  const eventTrackingData = {
+    componentName: 'article-lite-site-link',
+    optimizely,
+  };
+  const { enabled: articleLiteSiteLinkEnabled } = useToggle(
+    'articleLiteSiteLink',
+  );
   const viewTracker = useViewTracker(eventTrackingData);
   const titleVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
 
@@ -35,39 +40,40 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       articleDataSavingLinkText;
   }
 
-  const showLiteCTAOnCanonical: boolean = !isLite && showCTA;
+  const showArticleLiteSiteLink: boolean =
+    !isLite && articleLiteSiteLinkEnabled;
 
   return (
     <>
       <Headings
         className="article-heading"
         {...props}
-        {...(showLiteCTAOnCanonical && {
-          css: styles.reducePaddingForCTA,
+        {...(showArticleLiteSiteLink && {
+          css: styles.reducePadding,
         })}
       />
-      {showLiteCTAOnCanonical && (
+      {showArticleLiteSiteLink && (
         <>
           <div
             css={[
               styles.loadingContainer,
-              styles.liteCTAContainer,
+              styles.liteSiteLinkContainer,
               titleVariation && styles.displayNone,
             ]}
-            data-e2e="to-lite-site-loading"
+            data-e2e="article-lite-site-link-loading"
           />
           <div
             css={[
-              styles.liteCTAContainer,
+              styles.liteSiteLinkContainer,
               !titleVariation && styles.displayNone,
             ]}
             {...viewTracker}
-            data-e2e="to-lite-site"
+            data-e2e="article-lite-site-link"
           >
             <CallToActionLink
               url={`${pathname}.lite`}
               eventTrackingData={eventTrackingData}
-              css={styles.canonicalToLiteSiteCTA}
+              css={styles.liteSiteLink}
               alignWithMargin
               size="brevier"
             >
