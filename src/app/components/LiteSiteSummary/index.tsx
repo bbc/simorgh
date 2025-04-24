@@ -23,7 +23,7 @@ const LiteSiteSummary = () => {
   } = liteSite;
   const id = 'LiteSiteSummary';
   const clickTrackerHandler = useClickTrackerHandler({
-    componentName: 'lite-site-summarry',
+    componentName: 'lite-site-summrry',
   });
 
   return (
