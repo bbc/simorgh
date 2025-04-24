@@ -57,6 +57,7 @@ export default ({ service, pageType, variant = 'default' }) => {
             cy.request({
               url: href,
               failOnStatusCode: false,
+              retryOnStatusCodeFailure: true,
             }).then(resp => {
               expect(resp.status).to.not.equal(404);
             });
