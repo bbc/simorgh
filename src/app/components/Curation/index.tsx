@@ -55,6 +55,7 @@ export default ({
   radioSchedule,
   nthCurationByStyleAndProminence = 1,
   embed,
+  renderVisuallyHiddenH2Title = false,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -65,6 +66,7 @@ export default ({
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
+
   const curationSubheading = title || topStoriesTitle;
   const id =
     `${visualProminence}-${visualStyle}-${nthCurationByStyleAndProminence}`.toLowerCase();
@@ -147,27 +149,28 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        return curationLength > 1 && (title || isFirstCuration) ? (
+        return curationLength > 1 ? (
           <section aria-labelledby={id} role="region">
-            {isFirstCuration ? (
-              <VisuallyHiddenText id={id} as="h2">
-                {curationSubheading}
-              </VisuallyHiddenText>
-            ) : (
-              <Subheading id={id} link={link}>
-                {curationSubheading}
-              </Subheading>
-            )}
+            {curationSubheading &&
+              (renderVisuallyHiddenH2Title ? (
+                <VisuallyHiddenText id={id} as="h2">
+                  {curationSubheading}
+                </VisuallyHiddenText>
+              ) : (
+                <Subheading id={id} link={link}>
+                  {curationSubheading}
+                </Subheading>
+              ))}
             <GridComponent
               summaries={summaries}
-              headingLevel={3} // if there are multiple curations, each curation's heading will be h2 and the promos within will be h3
+              headingLevel={3}
               isFirstCuration={isFirstCuration}
             />
           </section>
         ) : (
           <GridComponent
             summaries={summaries}
-            headingLevel={2} // if there is only one curation, all promos should be h2
+            headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
             isFirstCuration={isFirstCuration}
           />
         );

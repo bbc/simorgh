@@ -231,6 +231,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
+  const isPortraitVideo = orientation === 'portrait';
 
   const {
     placeholderSrc,
@@ -241,8 +242,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
 
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
-  const showPortraitTitle = orientation === 'portrait' && !embedded;
-
   return (
     <>
       {
@@ -251,11 +250,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
-      {showPortraitTitle && (
-        <strong css={styles.titlePortrait}>
-          {translations.media.watchMoments || 'Watch Moments'}
-        </strong>
-      )}
       <figure
         data-e2e="media-loader__container"
         className={className}
@@ -298,9 +292,10 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         )}
         {captionBlock && (
           <Caption
+            className={isPortraitVideo ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={orientation === 'portrait' && styles.captionPortrait}
+            css={isPortraitVideo && styles.captionPortrait}
           />
         )}
       </figure>

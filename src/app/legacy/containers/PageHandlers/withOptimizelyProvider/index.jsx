@@ -14,7 +14,7 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 import isCypress from './isCypress';
 
 const isInCypress = isCypress();
-const TIMEOUT_INTERVAL = 5000;
+const TIMEOUT_INTERVAL = 1000;
 
 if (isLive() || isInCypress) {
   setLogger(null);
