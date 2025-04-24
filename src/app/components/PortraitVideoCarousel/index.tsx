@@ -33,12 +33,12 @@ const PortraitVideoCarousel = ({
 
     setCanScrollLeft(scrollLeft > 0);
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
-   
   };
 
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollRef.current) return;
-    const scrollAmount = direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
+    const scrollAmount =
+      direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
     scrollRef.current.scrollBy({
       left: scrollAmount,
       behavior: 'smooth',
@@ -50,16 +50,16 @@ const PortraitVideoCarousel = ({
   useEffect(() => {
     const scrollElement = scrollRef.current;
     if (scrollElement) {
-      scrollElement.addEventListener('scroll', checkScrollButtons)
+      scrollElement.addEventListener('scroll', checkScrollButtons);
     }
 
     checkScrollButtons();
 
     return () => {
       if (scrollElement) {
-        scrollElement.removeEventListener('scroll', checkScrollButtons)
+        scrollElement.removeEventListener('scroll', checkScrollButtons);
       }
-    }
+    };
   }, [items]);
 
   return (
