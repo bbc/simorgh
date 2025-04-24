@@ -6,7 +6,7 @@ import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
-import ComponentTrackingTemplate from './ComponentTrackingTemplate';
+import ComponentTracking from './ComponentTracking';
 
 interface Props extends BaseRendererProps {
   data: Record<string, unknown>;
@@ -53,9 +53,9 @@ export default function CanonicalRenderer({
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
         />
-        <ComponentTrackingTemplate
+        <ComponentTracking
           trackComponentViews={false}
-          trackOnlyStaticCanonical
+          enableStaticClickTrackingOnOperaMini
         />
       </head>
       <body>

@@ -7,7 +7,7 @@ import {
   STATIC_ATI_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useStaticRenderDetection from '#app/hooks/useStaticRenderDetection';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
@@ -140,22 +140,22 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
 export default (eventTrackingData = {}) => {
   const { isAmp } = useContext(RequestContext);
-  const isStatic = useStaticRenderDetection();
+  const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(eventTrackingData);
   const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,
-    isStatic,
+    isStatic: !isHydrated,
   });
 
-  const enableStaticTracking = isStatic && !isAmp;
+  const enableStaticTracking = !isHydrated && !isAmp;
 
   return {
     ...(enableStaticTracking && {
       [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
     }),
 
-    ...(!isStatic && { onClick: clickTracker }),
+    ...(isHydrated && { onClick: clickTracker }),
   };
 };

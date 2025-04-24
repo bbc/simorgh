@@ -1,5 +1,5 @@
 /* eslint-disable no-eval */
-import { sendStaticBeacon, addStaticBeacon } from '.';
+import { sendStaticBeacon, addSendStaticBeaconToWindow } from '.';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
 
@@ -12,7 +12,7 @@ describe('staticBeacon', () => {
 
   beforeEach(() => {
     XMLHttpRequestSpy = jest.spyOn(window, 'XMLHttpRequest');
-    eval(addStaticBeacon());
+    eval(addSendStaticBeaconToWindow());
   });
 
   afterEach(() => {

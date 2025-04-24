@@ -5,7 +5,7 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { addStaticBeacon } from '#app/components/ATIAnalytics/canonical/staticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/components/ATIAnalytics/canonical/staticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
@@ -43,7 +43,9 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
 
     expect(helmet.scriptTags).toHaveLength(2);
-    expect(helmet.scriptTags[0].innerHTML).toEqual(addStaticBeacon());
+    expect(helmet.scriptTags[0].innerHTML).toEqual(
+      addSendStaticBeaconToWindow(),
+    );
   });
 
   it('should not send beacon when browser is Opera Mini', () => {

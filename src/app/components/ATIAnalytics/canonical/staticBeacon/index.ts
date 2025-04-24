@@ -1,4 +1,4 @@
-export const addStaticBeacon = () => `
+export const addSendStaticBeaconToWindow = () => `
     function sendStaticBeacon (atiUrlString) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", atiUrlString, true);

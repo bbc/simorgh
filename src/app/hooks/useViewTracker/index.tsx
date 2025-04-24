@@ -183,13 +183,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
   const viewTracker = getComponentViewTracker(eventTrackingData);
-  const liteATIUrl = constructStaticATIUrl({
+  const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
   return isLite
-    ? { [STATIC_ATI_VIEW_TRACKING]: liteATIUrl }
+    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
     : {
         ref: viewTracker,
       };
