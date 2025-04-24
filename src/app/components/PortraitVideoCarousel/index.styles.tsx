@@ -93,6 +93,11 @@ const styles = {
         fill: palette.GREY_2,
     },
     }),
+
+    disabledButton: () =>
+      css({
+        opacity: 0.2,
+      })
 };
 
 export default styles;
