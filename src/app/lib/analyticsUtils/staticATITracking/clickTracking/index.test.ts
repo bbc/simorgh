@@ -56,7 +56,7 @@ describe('Click tracking script', () => {
     });
   });
 
-  it('STATIC_ATI_CLICK_TRACKING tracking variable is correct', () => {
+  it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
     const clickTrackerString = clickTracking.toString();
 
     const pattern = /STATIC_ATI_CLICK_TRACKING = '([^']+)'/;
