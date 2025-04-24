@@ -5,7 +5,7 @@ import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
-import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
+import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
@@ -30,8 +30,8 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
   );
 };
 
-const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconOperaMiniScript(atiPageViewUrlString);
+const addSendPageViewBeaconOperaMiniScript = (atiPageViewUrlString: string) => {
+  const script = sendPageViewBeaconOperaMini(atiPageViewUrlString);
 
   return (
     <Helmet>
@@ -40,7 +40,7 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   );
 };
 
-const addStaticBeaconScript = () => {
+const addSendStaticBeaconToWindowScript = () => {
   const script = addSendStaticBeaconToWindow();
   return (
     <Helmet>
@@ -49,7 +49,7 @@ const addStaticBeaconScript = () => {
   );
 };
 
-const sendStaticBeaconScript = (atiPageViewUrlString: string) => {
+const addSendStaticBeaconScript = (atiPageViewUrlString: string) => {
   const script = sendStaticBeacon(atiPageViewUrlString);
   return (
     <Helmet>
@@ -77,9 +77,9 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addStaticBeaconScript()}
-      {isLite && sendStaticBeaconScript(atiPageViewUrlString)}
-      {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
+      {addSendStaticBeaconToWindowScript()}
+      {isLite && addSendStaticBeaconScript(atiPageViewUrlString)}
+      {!isLite && addSendPageViewBeaconOperaMiniScript(atiPageViewUrlString)}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );
