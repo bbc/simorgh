@@ -13,7 +13,9 @@ export const assertArticleLiteSiteLinkComponentView = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="to-lite-site"]').scrollIntoView({ duration: 1000 });
+    cy.get('[data-e2e="article-lite-site-link"]').scrollIntoView({
+      duration: 1000,
+    });
 
     assertATIComponentViewEvent({
       component: ARTICLE_LITE_SITE_LINK,
