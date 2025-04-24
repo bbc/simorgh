@@ -23,7 +23,7 @@ const LiteSiteSummary = () => {
   } = liteSite;
   const id = 'LiteSiteSummary';
   const clickTrackerHandler = useClickTrackerHandler({
-    componentName: 'lite-site-summrry',
+    componentName: 'lite-site-summary',
   });
 
   return (
@@ -53,17 +53,19 @@ const LiteSiteSummary = () => {
             <CallToActionLink.Chevron />
           </CallToActionLink>
         </Paragraph>
-        <Paragraph data-e2e="information-page">
-          <CallToActionLink
-            url={informationPageLink}
-            css={styles.bottomLinkSpacing}
-            alignWithMargin
-            size="brevier"
-            fontVariant="sansRegular"
-          >
-            <CallToActionLink.Text>{informationPage}</CallToActionLink.Text>
-          </CallToActionLink>
-        </Paragraph>
+        {informationPageLink && (
+          <Paragraph data-e2e="information-page">
+            <CallToActionLink
+              url={informationPageLink}
+              css={styles.bottomLinkSpacing}
+              alignWithMargin
+              size="brevier"
+              fontVariant="sansRegular"
+            >
+              <CallToActionLink.Text>{informationPage}</CallToActionLink.Text>
+            </CallToActionLink>
+          </Paragraph>
+        )}
       </div>
     </section>
   );
