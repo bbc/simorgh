@@ -11,6 +11,8 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataPidginWithPV,
+  articleDataPortugueseWithPV,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -906,5 +908,25 @@ describe('Article Page', () => {
         undefined,
       );
     });
+  });
+
+  describe('when rendering an article page with a portrait video', () => {
+    it.each`
+      pageData                       | service         | expected
+      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
+      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
+    `(
+      `should render the $expected title with the MediaLoader component`,
+      ({ pageData, service, expected }) => {
+        render(
+          <Context service={service}>
+            <ArticlePage pageData={pageData} />
+          </Context>,
+        );
+
+        const title = screen.queryByRole('strong');
+        expect(title?.textContent).toEqual(expected);
+      },
+    );
   });
 });
