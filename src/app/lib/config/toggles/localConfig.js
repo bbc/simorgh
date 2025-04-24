@@ -3,6 +3,7 @@ export default {
   ads: {
     enabled: false,
   },
+  articleLiteSiteLink: { enabled: true },
   electionBanner: {
     enabled: true,
   },
