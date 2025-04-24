@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
-  liteCTAContainer: ({ mq }: Theme) =>
+  liteSiteLinkContainer: ({ mq }: Theme) =>
     css({
       marginBottom: `${pixelsToRem(20)}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
@@ -13,7 +13,7 @@ export default {
     css({
       height: `${pixelsToRem(44)}rem`,
     }),
-  canonicalToLiteSiteCTA: ({ spacings, mq }: Theme) =>
+  liteSiteLink: ({ spacings, mq }: Theme) =>
     css({
       padding: `${pixelsToRem(13)}rem 0 ${pixelsToRem(13)}rem`,
       marginInlineStart: `${spacings.FULL}rem`,
@@ -25,7 +25,7 @@ export default {
         marginInlineStart: 0,
       },
     }),
-  reducePaddingForCTA: ({ spacings, mq }: Theme) =>
+  reducePadding: ({ spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.HALF}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
