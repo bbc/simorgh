@@ -1,6 +1,6 @@
 import constructTogglesEndpoint from '#app/contexts/ToggleContext/utils/constructTogglesEndpoint';
 
-export default async service => {
+export default async ({ service, toggleName }) => {
   const togglesUrl = constructTogglesEndpoint(service);
 
   const response = await fetch(togglesUrl, {
@@ -9,5 +9,7 @@ export default async service => {
 
   const { toggles } = await response.json();
 
-  return toggles;
+  const { enabled } = (toggles && toggles[toggleName]) || { enabled: false };
+
+  return enabled;
 };
