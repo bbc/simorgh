@@ -1,0 +1,1306 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Soviet+Union~Literature~Brazil~Russia~Culture~Vladimir+Putin",
+          "contentId": "urn:bbc:optimo:asset:cp319w676r0o",
+          "contentType": "article-sfv",
+          "language": "pt-br",
+          "ldpThingIds": "004e54fe-005e-4f9a-9c5d-cff7de91d93a~0ddb2a64-18b7-4e25-9844-9f467489a53f~15f1bcf6-b6ab-48e8-b708-efed41e43d31~39267b85-1784-4f4b-80ed-f8cb4a35f337~6a73afa3-ea6b-45c1-80bb-49060b99f864~7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+          "ldpThingLabels": "Soviet+Union~Literature~Brazil~Russia~Culture~Vladimir+Putin",
+          "nationsProducer": null,
+          "pageIdentifier": "portuguese.articles.cp319w676r0o.page",
+          "pageTitle": "Jorge Amado: a fascinação de Vladimir Putin com livro 'Capitães da Areia'",
+          "timePublished": "2025-03-31T19:28:57.143Z",
+          "timeUpdated": "2025-04-01T12:39:00.343Z"
+        },
+        "id": "urn:bbc:ares::article:cp319w676r0o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cp319w676r0o",
+          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cp319w676r0o"
+        },
+        "type": "article",
+        "createdBy": "Brasil",
+        "language": "pt-br",
+        "firstPublished": 1743449337143,
+        "lastPublished": 1743511140343,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Soviet+Union~Literature~Brazil~Russia~Culture~Vladimir+Putin",
+          "page": "portuguese.articles.cp319w676r0o.page",
+          "irisKeyword": null,
+          "audience_motivation": "Help me learn",
+          "ldp_ids": "004e54fe-005e-4f9a-9c5d-cff7de91d93a~0ddb2a64-18b7-4e25-9844-9f467489a53f~15f1bcf6-b6ab-48e8-b708-efed41e43d31~39267b85-1784-4f4b-80ed-f8cb4a35f337~6a73afa3-ea6b-45c1-80bb-49060b99f864~7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+          "contentId": "urn:bbc:optimo:asset:cp319w676r0o",
+          "producer": "Brasil"
+        },
+        "passport": {
+          "language": "pt-br",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/004e54fe-005e-4f9a-9c5d-cff7de91d93a#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2025-03-31T19:28:57.143Z"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2025-03-31T19:28:57.143Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/004e54fe-005e-4f9a-9c5d-cff7de91d93a#id",
+                "thingLabel": "União Soviética",
+                "thingUri": "http://www.bbc.co.uk/things/004e54fe-005e-4f9a-9c5d-cff7de91d93a#id",
+                "thingId": "004e54fe-005e-4f9a-9c5d-cff7de91d93a",
+                "thingType": [
+                  "tagging:AmbiguousTerm",
+                  "core:Thing",
+                  "core:Organisation",
+                  "tagging:TagConcept",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Soviet_Union",
+                  "http://www.wikidata.org/entity/Q15180"
+                ],
+                "thingEnglishLabel": "Soviet Union",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+                "thingLabel": "Literatura",
+                "thingUri": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+                "thingId": "0ddb2a64-18b7-4e25-9844-9f467489a53f",
+                "thingType": [
+                  "tagging:TagConcept",
+                  "core:Thing",
+                  "core:Theme"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q8242",
+                  "http://dbpedia.org/resource/Literature"
+                ],
+                "thingEnglishLabel": "Literature",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                "thingLabel": "Brasil",
+                "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+                "thingType": [
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/3469034/",
+                  "http://www.wikidata.org/entity/Q155"
+                ],
+                "thingEnglishLabel": "Brazil",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                "thingLabel": "Rússia",
+                "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                "thingType": [
+                  "core:Thing",
+                  "core:Place",
+                  "tagging:TagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/2017370/",
+                  "http://www.wikidata.org/entity/Q159"
+                ],
+                "thingEnglishLabel": "Russia",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "thingLabel": "Cultura",
+                "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                "thingType": [
+                  "tagging:TagConcept",
+                  "core:Theme",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q11042",
+                  "http://dbpedia.org/resource/Culture"
+                ],
+                "thingEnglishLabel": "Culture",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                "thingLabel": "Vladimir Putin",
+                "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+                "thingType": [
+                  "core:Person",
+                  "tagging:Agent",
+                  "tagging:TagConcept",
+                  "core:Thing",
+                  "tagging:AmbiguousTerm"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Vladimir_Putin",
+                  "http://www.wikidata.org/entity/Q7747",
+                  "http://www.imdb.com/name/nm1269884/",
+                  "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_"
+                ],
+                "thingEnglishLabel": "Vladimir Putin",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "União Soviética",
+              "thingUri": "http://www.bbc.co.uk/things/004e54fe-005e-4f9a-9c5d-cff7de91d93a#id",
+              "thingId": "004e54fe-005e-4f9a-9c5d-cff7de91d93a",
+              "thingType": [
+                "tagging:AmbiguousTerm",
+                "core:Thing",
+                "core:Organisation",
+                "tagging:TagConcept",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Soviet_Union",
+                "http://www.wikidata.org/entity/Q15180"
+              ],
+              "topicName": "União Soviética",
+              "topicId": "c12v7298wvzt",
+              "curationList": [
+                {
+                  "curationId": "3ca19585-c44b-489e-b4a6-6c2555d28d09",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Soviet Union",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Soviet Union"
+            },
+            {
+              "thingLabel": "Literatura",
+              "thingUri": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+              "thingId": "0ddb2a64-18b7-4e25-9844-9f467489a53f",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Thing",
+                "core:Theme"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q8242",
+                "http://dbpedia.org/resource/Literature"
+              ],
+              "topicName": "Literatura",
+              "topicId": "c1gdqgk3rggt",
+              "curationList": [
+                {
+                  "curationId": "2ba17406-11f6-43c0-9797-f89dba109e04",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Literature",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Literature"
+            },
+            {
+              "thingLabel": "Brasil",
+              "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+              "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Place",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/3469034/",
+                "http://www.wikidata.org/entity/Q155"
+              ],
+              "topicName": "Brasil",
+              "topicId": "cz74k717pw5t",
+              "curationList": [
+                {
+                  "curationId": "bcf15bdb-b59d-4726-ba50-9eba0a3e90f2",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Brazil",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Brazil"
+            },
+            {
+              "thingLabel": "Rússia",
+              "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+              "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+              "thingType": [
+                "core:Thing",
+                "core:Place",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/2017370/",
+                "http://www.wikidata.org/entity/Q159"
+              ],
+              "topicName": "Rússia",
+              "topicId": "c1gdqg5dr8nt",
+              "curationList": [
+                {
+                  "curationId": "79237523-d34e-40af-92f5-7890fe82a883",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Russia",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Russia"
+            },
+            {
+              "thingLabel": "Cultura",
+              "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+              "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Theme",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q11042",
+                "http://dbpedia.org/resource/Culture"
+              ],
+              "topicName": "Cultura",
+              "topicId": "ckdxnd620g8t",
+              "curationList": [
+                {
+                  "curationId": "e8020d97-3d33-48d7-86bc-1efae7ea5f74",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Culture",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Culture"
+            },
+            {
+              "thingLabel": "Vladimir Putin",
+              "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+              "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+              "thingType": [
+                "core:Person",
+                "tagging:Agent",
+                "tagging:TagConcept",
+                "core:Thing",
+                "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Vladimir_Putin",
+                "http://www.wikidata.org/entity/Q7747",
+                "http://www.imdb.com/name/nm1269884/",
+                "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_"
+              ],
+              "topicName": "Vladimir Putin",
+              "topicId": "c8y94y37ry2t",
+              "curationList": [
+                {
+                  "curationId": "05b98bc3-5fd0-4e4e-a885-6d4a95b35663",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Vladimir Putin",
+              "thingLabelLanguage": "pt-br",
+              "thingPreferredLabel": "Vladimir Putin"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "União Soviética",
+            "topicId": "c12v7298wvzt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/004e54fe-005e-4f9a-9c5d-cff7de91d93a#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "3ca19585-c44b-489e-b4a6-6c2555d28d09",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "core:Organisation",
+              "tagging:TagConcept",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/c12v7298wvzt"
+          },
+          {
+            "topicName": "Rússia",
+            "topicId": "c1gdqg5dr8nt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "79237523-d34e-40af-92f5-7890fe82a883",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "core:Place",
+              "tagging:TagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/c1gdqg5dr8nt"
+          },
+          {
+            "topicName": "Literatura",
+            "topicId": "c1gdqgk3rggt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "2ba17406-11f6-43c0-9797-f89dba109e04",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/c1gdqgk3rggt"
+          },
+          {
+            "topicName": "Vladimir Putin",
+            "topicId": "c8y94y37ry2t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "05b98bc3-5fd0-4e4e-a885-6d4a95b35663",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Person",
+              "tagging:Agent",
+              "tagging:TagConcept",
+              "core:Thing",
+              "tagging:AmbiguousTerm"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/c8y94y37ry2t"
+          },
+          {
+            "topicName": "Cultura",
+            "topicId": "ckdxnd620g8t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "e8020d97-3d33-48d7-86bc-1efae7ea5f74",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Theme"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/ckdxnd620g8t"
+          },
+          {
+            "topicName": "Brasil",
+            "topicId": "cz74k717pw5t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "bcf15bdb-b59d-4726-ba50-9eba0a3e90f2",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+            "topicUrl": "/portuguese/topics/cz74k717pw5t"
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 1,
+          "wordCount": 186
+        },
+        "isTransliterated": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "804a811a",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4cc967e9",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3cfa6f45",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                            "blocks": [
+                              {
+                                "id": "ec8950a7",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "06dc4c2c",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0l0t9vq",
+                "blocks": [
+                  {
+                    "id": "79f94cf0",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "ecdac13e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "699bf829",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                                  "blocks": [
+                                    {
+                                      "id": "997e603b",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "636e5cbd",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "74efcde7",
+                          "blockId": "urn:bbc:ares::clip:p0l0t9vq",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0l0t9vq",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                            "synopses": {
+                              "short": "A adaptação da história baiana às telonas fez russos se aproximarem do Brasil",
+                              "long": "Os livros de Jorge Amado abriram um \"novo mundo\" para os leitores soviéticos, por abordar a preocupação social e política - retratando a dura vida em Salvador e a exploração e a injustiça social nas plantações de cacau.\n\nMas uma obscura adaptação de Capitães da Areia ao cinema se encarregou de sedimentar de vez o encanto da Bahia no imaginário de muitos soviéticos.\n\nO filme americano The Sandpit Generals (nome que traduzido ao pé da letra seria 'Generais do Areal'), dirigido por Hal Bartlett e finalizado em 1971, levou, pela primeira vez à URSS, imagem, movimento, cores e som a história do autor baiano.\n\nHá estimativas de que esse filme, um fracasso nos EUA e proibido no Brasil pelo regime militar, foi assistido por cerca de 43 milhões de pessoas na União Soviética.\n\nO filme deixou marcas profundas, principalmente entre os jovens russos da época, incluindo Vladimir Putin, atual líder russo.\n\nNeste vídeo, a repórter Camilla Veras Mota explica melhor essa história.",
+                              "medium": "A adaptação da história baiana às telonas fez russos se aproximarem do Brasil"
+                            },
+                            "imageUrl": null,
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0l0t9vx",
+                                "types": [
+                                  "Portrait"
+                                ],
+                                "duration": 144,
+                                "durationISO8601": "PT2M24S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1743103215000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": [
+                                "default"
+                              ]
+                            },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "7f17a534",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2fa93a5d",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": null,
+                                  "originCode": "mpv"
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "f411fb17",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ee1f624a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c93242d3",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                            "blocks": [
+                              {
+                                "id": "1afa0ed7",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "9d9754e9",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1743449337143,
+                "lastPublished": 1743511140343
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "63e21ab4",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "7ad3bf97",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Os livros de Jorge Amado abriram um \"novo mundo\" para os leitores soviéticos, por abordar a preocupação social e política - retratando a dura vida em Salvador e a exploração e a injustiça social nas plantações de cacau.",
+                      "blocks": [
+                        {
+                          "id": "f51638d2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Os livros de Jorge Amado abriram um \"novo mundo\" para os leitores soviéticos, por abordar a preocupação social e política - retratando a dura vida em Salvador e a exploração e a injustiça social nas plantações de cacau.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "ba3f5379",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Mas uma obscura adaptação de Capitães da Areia ao cinema se encarregou de sedimentar de vez o encanto da Bahia no imaginário de muitos soviéticos.",
+                      "blocks": [
+                        {
+                          "id": "ee46bdd3",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Mas uma obscura adaptação de Capitães da Areia ao cinema se encarregou de sedimentar de vez o encanto da Bahia no imaginário de muitos soviéticos.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "918fc851",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "O filme americano The Sandpit Generals (nome que traduzido ao pé da letra seria 'Generais do Areal'), dirigido por Hal Bartlett e finalizado em 1971, levou, pela primeira vez à URSS, imagem, movimento, cores e som a história do autor baiano.",
+                      "blocks": [
+                        {
+                          "id": "5bbc0d2d",
+                          "type": "fragment",
+                          "model": {
+                            "text": "O filme americano The Sandpit Generals (nome que traduzido ao pé da letra seria 'Generais do Areal'), dirigido por Hal Bartlett e finalizado em 1971, levou, pela primeira vez à URSS, imagem, movimento, cores e som a história do autor baiano.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "4950bb16",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Há estimativas de que esse filme, um fracasso nos EUA e proibido no Brasil pelo regime militar, foi assistido por cerca de 43 milhões de pessoas na União Soviética.",
+                      "blocks": [
+                        {
+                          "id": "57ea7b3e",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Há estimativas de que esse filme, um fracasso nos EUA e proibido no Brasil pelo regime militar, foi assistido por cerca de 43 milhões de pessoas na União Soviética.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      4
+                    ]
+                  },
+                  {
+                    "id": "6cfb5961",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "O filme deixou marcas profundas, principalmente entre os jovens russos da época, incluindo Vladimir Putin, atual líder russo.",
+                      "blocks": [
+                        {
+                          "id": "2f25b2f5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "O filme deixou marcas profundas, principalmente entre os jovens russos da época, incluindo Vladimir Putin, atual líder russo.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            5,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      5
+                    ]
+                  },
+                  {
+                    "id": "2d707929",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Neste vídeo, a repórter Camilla Veras Mota explica melhor essa história.",
+                      "blocks": [
+                        {
+                          "id": "b0f30799",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Neste vídeo, a repórter Camilla Veras Mota explica melhor essa história.",
+                            "attributes": []
+                          },
+                          "position": [
+                            5,
+                            6,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      6
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Jorge Amado: a fascinação de Vladimir Putin com livro 'Capitães da Areia'",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "0ce0/live/34c76060-0e66-11f0-b234-07dc7691c360.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Reprodução",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Uma obscura adaptação de Capitães da Areia ao cinema se encarregou de sedimentar de vez o encanto da Bahia no imaginário de muitos soviéticos",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Uma obscura adaptação de Capitães da Areia ao cinema se encarregou de sedimentar de vez o encanto da Bahia no imaginário de muitos soviéticos",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Brasil",
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0l0t9vq",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0l0t9vq",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0l0t9vq",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "A fascinação de Putin com livro 'Capitães da Areia', de Jorge Amado",
+                            "synopses": {
+                              "short": "A adaptação da história baiana às telonas fez russos se aproximarem do Brasil",
+                              "long": "Os livros de Jorge Amado abriram um \"novo mundo\" para os leitores soviéticos, por abordar a preocupação social e política - retratando a dura vida em Salvador e a exploração e a injustiça social nas plantações de cacau.\n\nMas uma obscura adaptação de Capitães da Areia ao cinema se encarregou de sedimentar de vez o encanto da Bahia no imaginário de muitos soviéticos.\n\nO filme americano The Sandpit Generals (nome que traduzido ao pé da letra seria 'Generais do Areal'), dirigido por Hal Bartlett e finalizado em 1971, levou, pela primeira vez à URSS, imagem, movimento, cores e som a história do autor baiano.\n\nHá estimativas de que esse filme, um fracasso nos EUA e proibido no Brasil pelo regime militar, foi assistido por cerca de 43 milhões de pessoas na União Soviética.\n\nO filme deixou marcas profundas, principalmente entre os jovens russos da época, incluindo Vladimir Putin, atual líder russo.\n\nNeste vídeo, a repórter Camilla Veras Mota explica melhor essa história.",
+                              "medium": "A adaptação da história baiana às telonas fez russos se aproximarem do Brasil"
+                            },
+                            "imageUrl": null,
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0l0t9vx",
+                                "types": [
+                                  "Portrait"
+                                ],
+                                "duration": 144,
+                                "durationISO8601": "PT2M24S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1743103215000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": [
+                                "default"
+                              ]
+                            },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": null,
+                                  "originCode": "mpv"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT13M55S",
+          "isLive": false,
+          "title": "Rota da Seda: o papel estratégico da Ásia Central, disputada por China e Rússia",
+          "firstPublished": "2025-04-08T20:45:04.304Z",
+          "lastPublished": "2025-04-08T20:45:04.304Z",
+          "link": "https://www.bbc.com/portuguese/articles/c078z3l35mxo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e33d/live/1d0f9b40-14ba-11f0-b1b3-7358f8d35a35.jpg.webp",
+          "imageAlt": "Video",
+          "id": "c078z3l35mxo"
+        },
+        {
+          "type": "video",
+          "duration": "PT5M53S",
+          "isLive": false,
+          "title": "O 'plantador de árvores' que criou floresta no meio do entulho em São Paulo",
+          "firstPublished": "2025-04-07T18:02:43.847Z",
+          "lastPublished": "2025-04-07T18:02:43.847Z",
+          "link": "https://www.bbc.com/portuguese/articles/c24q11e9m9qo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bbe4/live/5f077d50-13da-11f0-ba12-8d27eb561761.jpg.webp",
+          "description": "Em meio ao concreto da Zona Leste de São Paulo, um morador fez surgir uma floresta em uma área onde havia apenas entulho e lixo, no que acabou se tornando o maior parte linear da cidade: o Parque Tiquatira",
+          "imageAlt": "Hélio",
+          "id": "c24q11e9m9qo"
+        },
+        {
+          "type": "video",
+          "duration": "PT17M33S",
+          "isLive": false,
+          "title": "Como as grandes guerras começam - e será que corremos risco em 2025?",
+          "firstPublished": "2025-04-04T08:14:22.132Z",
+          "lastPublished": "2025-04-04T08:14:22.132Z",
+          "link": "https://www.bbc.com/portuguese/articles/cy8q9qn63vdo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c8e1/live/10e76a00-112c-11f0-ac9f-c37d6fd89579.jpg.webp",
+          "description": "Neste vídeo, a repórter Julia Braun conversa com historiadores para mostrar os elementos-chave por trás da Primeira e da Segunda Guerras Mundiais. ",
+          "imageAlt": "Repórter em primeiro plano, com imagem de soldados ao fundo",
+          "id": "cy8q9qn63vdo"
+        },
+        {
+          "type": "video",
+          "duration": "PT10M23S",
+          "isLive": false,
+          "title": "Como Japão foi de país do futuro para preso ao passado",
+          "firstPublished": "2025-04-02T22:27:49.292Z",
+          "lastPublished": "2025-04-02T22:27:49.292Z",
+          "link": "https://www.bbc.com/portuguese/articles/cvgp4npnekeo",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a7f9/live/9fa75f00-1011-11f0-b234-07dc7691c360.jpg.webp",
+          "description": "Japão tem a fama de ter sido o berço de várias inovações tecnológicas.",
+          "imageAlt": "Vídeo",
+          "id": "cvgp4npnekeo"
+        }
+      ]
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

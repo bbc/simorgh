@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -15,6 +15,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import {
@@ -37,6 +38,7 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
@@ -66,6 +68,7 @@ import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
+import isPortraitVideo from '../utils/isPortraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -115,6 +118,22 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
   <ArticleHeadline {...props} />
 );
 
+const getVideoComponent =
+  (translations: Translations) => (props: ComponentToRenderProps) => {
+    const { blocks } = props;
+
+    const title = translations.media.watchMoments || 'Watch Moments';
+
+    return (
+      <>
+        {isPortraitVideo(blocks) && (
+          <strong css={styles.portraitVideoTitle}>{title}</strong>
+        )}
+        <MediaLoader blocks={blocks as MediaBlock[]} />
+      </>
+    );
+  };
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp } = useContext(RequestContext);
 
@@ -123,6 +142,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
+    translations,
   } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -182,7 +202,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
-    video: MediaLoader,
+    video: getVideoComponent(translations),
     text,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
