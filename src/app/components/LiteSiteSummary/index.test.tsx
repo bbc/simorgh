@@ -19,14 +19,14 @@ describe('LiteSiteSummary', () => {
     expect(ctaText?.innerHTML).toBe('Take me to the main website');
     expect(ctaLink).toBeTruthy();
   });
-  it('Should have a CTA link for more information.', () => {
-    const { container } = render(<LiteSiteSummary />);
+  it('Should have a CTA link for more information with a service that has a translation.', () => {
+    const { container } = render(<LiteSiteSummary />, { service: 'gahuza' });
     const [, ctaText] = container.querySelectorAll('a span');
     const [ctaLink] = container.querySelectorAll(
       'a[href="https://www.test.bbc.com/news/articles/c0g992jmmkko"]',
     );
     expect(ctaText?.innerHTML).toBe(
-      'Find out more about this data-saving version',
+      'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
     );
     expect(ctaLink).toBeTruthy();
   });
@@ -39,5 +39,27 @@ describe('LiteSiteSummary', () => {
     const atiUrl = ctaLink.getAttribute(LITE_ATI_CLICK_TRACKING);
 
     expect(atiUrl).toContain('lite-site-summary');
+  });
+
+  it('Should render the information page link if informationPageLink exists with a service that has a translation.', () => {
+    const { container } = render(<LiteSiteSummary />, {
+      service: 'gahuza',
+    });
+
+    const informationPageParagraph = container.querySelector(
+      '[data-e2e="information-page"]',
+    );
+
+    expect(informationPageParagraph).toBeVisible();
+  });
+
+  it('Should not render the information page link if informationPageLink does not exist.', () => {
+    const { container } = render(<LiteSiteSummary />);
+
+    const informationPageParagraph = container.querySelector(
+      '[data-e2e="information-page"]',
+    );
+
+    expect(informationPageParagraph).toBeNull();
   });
 });
