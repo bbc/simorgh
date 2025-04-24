@@ -48,7 +48,7 @@ describe('useToggle custom hook', () => {
     expect(result.current).toEqual({ enabled: false });
   });
 
-  it('should return enabled null if a toggle does not exist', async () => {
+  it('should return enabled false if a toggle does not exist', async () => {
     const mockToggles = {
       testToggle: {
         enabled: false,
@@ -65,6 +65,6 @@ describe('useToggle custom hook', () => {
       result = renderHook(() => useToggle('notAToggle'), { wrapper }).result;
     });
 
-    expect(result.current).toEqual({ enabled: null });
+    expect(result.current).toEqual({ enabled: false });
   });
 });

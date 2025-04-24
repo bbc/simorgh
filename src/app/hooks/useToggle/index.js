@@ -3,14 +3,14 @@ import { ToggleContext } from '#contexts/ToggleContext';
 
 const useToggle = toggleName => {
   const featureToggle = useContext(ToggleContext).toggleState[toggleName];
-  const { enabled = null, value } = featureToggle || {};
+  const { enabled = false, value } = featureToggle || {};
 
   if (featureToggle) {
     return {
       ...{ enabled, value },
     };
   }
-  return { enabled: null }; // if toggle does not exist then return { enabled: null }
+  return { enabled: false }; // if toggle does not exist then return { enabled: false }
 };
 
 export default useToggle;
