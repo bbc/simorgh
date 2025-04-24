@@ -1,8 +1,8 @@
 import React from 'react';
-import processClientDeviceAndSendStaticBeacon from '#src/server/utilities/staticATITracking';
-import clickTracking from '#src/server/utilities/staticATITracking/clickTracking';
+import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking';
+import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import viewTracking from '#src/server/utilities/staticATITracking/viewTracking';
+import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
 
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;
