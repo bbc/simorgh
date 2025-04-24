@@ -79,7 +79,7 @@ const styles = {
       gap: '0.25rem',
     }),
 
-  navButton: ({palette}: Theme) =>
+  navButton: ({ palette }: Theme) =>
     css({
       backgroundColor: palette.BLACK,
       border: 'none',
@@ -91,13 +91,13 @@ const styles = {
       cursor: 'pointer',
       '& svg path': {
         fill: palette.GREY_2,
-    },
+      },
     }),
 
-    disabledButton: () =>
-      css({
-        opacity: 0.2,
-      })
+  disabledButton: () =>
+    css({
+      opacity: 0.2,
+    }),
 };
 
 export default styles;
