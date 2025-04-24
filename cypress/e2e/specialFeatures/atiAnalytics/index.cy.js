@@ -14,9 +14,9 @@ import {
 } from './assertions/latestMedia';
 import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
 import {
-  assertCanonicalToLiteSiteCTAComponentClick,
-  assertCanonicalToLiteSiteCTAComponentView,
-} from './assertions/canonicalLiteSiteCta';
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from './assertions/articleLiteSiteLink';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -64,13 +64,13 @@ import {
   assertScrollablePromoComponentView,
 } from './assertions/scrollablePromo';
 import {
-  assertTopStoriesComponentClick,
-  assertTopStoriesComponentView,
-} from './assertions/topStories';
-import {
   assertSocialEmbedComponentClick,
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from './assertions/topStories';
 import { getPathWithSuffix } from './helpers';
 
 const canonicalTestSuites = [
@@ -120,6 +120,8 @@ const canonicalTestSuites = [
     useReverb: true,
     tests: [
       assertPageView,
+      assertArticleLiteSiteLinkComponentView,
+      assertArticleLiteSiteLinkComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
@@ -132,8 +134,6 @@ const canonicalTestSuites = [
       assertRelatedContentComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
-      assertCanonicalToLiteSiteCTAComponentView,
-      assertCanonicalToLiteSiteCTAComponentClick,
     ],
   },
   {
@@ -219,7 +219,6 @@ const canonicalTestSuites = [
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
       assertRecommendationsComponentView,
       assertRecommendationsComponentClick,
       assertPodcastPromoComponentView,
@@ -325,7 +324,6 @@ const canonicalTestSuites = [
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
-      assertFeaturesAnalysisComponentClick,
       assertSocialEmbedComponentView,
       assertSocialEmbedComponentClick,
       assertRelatedTopicsComponentView,
@@ -465,22 +463,22 @@ const liteTestSuites = canonicalTestSuites
   .map(testSuite => {
     const excludedLiteTests = [
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
       assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+      assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
-      assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
-      assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
+      assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
+      assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
+      assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
+      assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
     ];
 
     const liteSiteTests = testSuite.tests.filter(
-      test =>
-        test.name !== assertMostReadComponentClick.name &&
-        // Exclude component click tests, as component click support is not supported on all components yet
-        !test.name.toLowerCase().includes('click') &&
-        !excludedLiteTests.includes(test),
+      test => !excludedLiteTests.includes(test),
     );
 
     // All lite enabled pages should have the LiteSiteCTA component
-    liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
+    liteSiteTests.push(assertLiteSiteCTAComponentClick);
 
     return {
       ...testSuite,
