@@ -1,4 +1,4 @@
-import defaultToggles from '#lib/config/toggles';
+import localToggles from '#lib/config/toggles';
 import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
 import nodeLogger from '#lib/logger.node';
 import {
@@ -10,6 +10,7 @@ import {
 } from '#lib/logger.const';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import { getEnvConfig } from '../getEnvConfig';
+import isLocal from '../isLocal';
 
 const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
@@ -36,11 +37,12 @@ const logResponseTime = async (url, origin, service, timeout) => {
 };
 
 const getToggles = async (service, cache) => {
-  const environment = getEnvConfig().SIMORGH_APP_ENV || 'local';
   const timeout =
     parseInt(getEnvConfig().SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
-  const localToggles = defaultToggles[environment];
-  if (!localToggles.enableFetchingToggles.enabled) {
+
+  console.log({ localToggles });
+
+  if (!localToggles?.enableFetchingToggles?.enabled) {
     return localToggles;
   }
 
@@ -58,7 +60,7 @@ const getToggles = async (service, cache) => {
 
   if (cachedResponse) {
     return {
-      ...localToggles,
+      ...(isLocal() && { localToggles }),
       ...cachedResponse,
     };
   }
@@ -81,7 +83,7 @@ const getToggles = async (service, cache) => {
       cache.set(url, toggles);
     }
     return {
-      ...localToggles,
+      ...(isLocal() && { localToggles }),
       ...toggles,
     };
   } catch (error) {
