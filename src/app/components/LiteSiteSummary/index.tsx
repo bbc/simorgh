@@ -7,7 +7,7 @@ import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import styles from './index.styles';
-import { defaultTranslations } from './liteSiteConfig';
+import defaultTranslations from './liteSiteTranslations';
 import CallToActionLink from '../CallToActionLink';
 
 const LiteSiteSummary = () => {
