@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
@@ -24,14 +24,43 @@ const PortraitVideoCarousel = ({
 }: PortraitVideoCarouselProps) => {
   const { dir } = useContext(ServiceContext);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const checkScrollButtons = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+   
+  };
 
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollRef.current) return;
+    const scrollAmount = direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
     scrollRef.current.scrollBy({
-      left: direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH,
+      left: scrollAmount,
       behavior: 'smooth',
     });
+
+    setTimeout(checkScrollButtons, 100);
   };
+
+  useEffect(() => {
+    const scrollElement = scrollRef.current;
+    if (scrollElement) {
+      scrollElement.addEventListener('scroll', checkScrollButtons)
+    }
+
+    checkScrollButtons();
+
+    return () => {
+      if (scrollElement) {
+        scrollElement.removeEventListener('scroll', checkScrollButtons)
+      }
+    }
+  }, [items]);
 
   return (
     <section
@@ -75,7 +104,7 @@ const PortraitVideoCarousel = ({
             type="button"
             aria-label="Scroll left"
             onClick={() => scroll('left')}
-            css={styles.navButton}
+            css={[styles.navButton, !canScrollLeft && styles.disabledButton]}
           >
             <LeftChevron />
           </button>
@@ -83,7 +112,7 @@ const PortraitVideoCarousel = ({
             type="button"
             aria-label="Scroll right"
             onClick={() => scroll('right')}
-            css={styles.navButton}
+            css={[styles.navButton, !canScrollRight && styles.disabledButton]}
           >
             <RightChevron />
           </button>
