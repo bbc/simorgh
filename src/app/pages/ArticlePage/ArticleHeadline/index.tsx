@@ -12,7 +12,7 @@ import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
-  const { pathname, isLite } = useContext(RequestContext);
+  const { pathname, isLite, isAmp, isApp } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const eventTrackingData = {
     componentName: 'article-lite-site-link',
@@ -25,7 +25,9 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   const articleDataSavingLinkText =
     translations?.liteSite?.articleDataSavingLinkText ?? 'Data saving version';
 
-  const showArticleLiteSiteLink = !isLite && articleLiteSiteLinkEnabled;
+  const isCanonical = !(isLite || isAmp || isApp);
+
+  const showArticleLiteSiteLink = isCanonical && articleLiteSiteLinkEnabled;
 
   return (
     <>

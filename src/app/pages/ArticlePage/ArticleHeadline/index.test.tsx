@@ -43,21 +43,111 @@ describe('ArticleHeadline - Lite Site CTA', () => {
     jest.clearAllMocks();
   });
 
-  it('with toggle enabled', async () => {
-    const { container } = render(<ArticleHeadline {...headlineBlock} />, {
-      service: 'gahuza',
-      toggles: { articleLiteSiteLink: { enabled: true } },
+  describe('with toggle enabled', () => {
+    const toggles = { articleLiteSiteLink: { enabled: true } };
+
+    it('should be displayed on canonical', async () => {
+      const { container } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        toggles: { articleLiteSiteLink: { enabled: true } },
+      });
+
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
+    it('should not be displayed on AMP', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isAmp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .app', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isApp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .lite', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isLite: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
   });
 
-  it('with toggle disabled', async () => {
-    const { container } = render(<ArticleHeadline {...headlineBlock} />, {
-      service: 'gahuza',
-      toggles: { articleLiteSiteLink: { enabled: false } },
+  describe('with toggle disabled', () => {
+    const toggles = { articleLiteSiteLink: { enabled: false } };
+
+    it('should not be displayed on canonical', async () => {
+      const { container } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        toggles,
+      });
+
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
+    it('should not be displayed on AMP', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isAmp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', { name: /Inyandiko gusa/ });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .app', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isApp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .lite', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isLite: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
   });
 });

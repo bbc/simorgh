@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleHeadline - Lite Site CTA with toggle disabled 1`] = `
+exports[`ArticleHeadline - Lite Site CTA with toggle disabled should not be displayed on canonical 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;
@@ -154,7 +154,7 @@ exports[`ArticleHeadline - Lite Site CTA with toggle disabled 1`] = `
 </div>
 `;
 
-exports[`ArticleHeadline - Lite Site CTA with toggle enabled 1`] = `
+exports[`ArticleHeadline - Lite Site CTA with toggle enabled should be displayed on canonical 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;
