@@ -6,7 +6,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import constructATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
+import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
   AllTheProviders,
   render,
