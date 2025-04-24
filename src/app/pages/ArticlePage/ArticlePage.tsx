@@ -42,9 +42,7 @@ import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
-import { Services } from '#app/models/types/global';
 import Recommendations from '#app/components/Recommendations';
-import SERVICES_WITH_NEW_RECOMMENDATIONS from '#app/components/Recommendations/config';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -105,17 +103,9 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent =
-  (service: Services) =>
-  (props: ComponentToRenderProps & { data: Recommendation[] }) => {
-    // TODO: Remove this when the new recommendations are rolled out to all services
-    if (SERVICES_WITH_NEW_RECOMMENDATIONS.includes(service)) {
-      const { data } = props;
-      return <Recommendations data={data} />;
-    }
-
-    return null;
-  };
+const getWsojComponent = (
+  props: ComponentToRenderProps & { data: Recommendation[] },
+) => <Recommendations data={props.data} />;
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -148,7 +138,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp } = useContext(RequestContext);
 
   const {
-    service,
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
@@ -231,7 +220,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent(service),
+    wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
   };

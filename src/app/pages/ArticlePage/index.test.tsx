@@ -147,21 +147,21 @@ describe('Article Page', () => {
   it.each([
     {
       testScenario:
-        'should show the CTA on non Lite Site pages, when the toggle is enabled',
+        'should show the lite site link on non Lite pages, when the toggle is enabled',
       isLite: false,
       toggleEnabled: true,
       shouldBeDisplayed: true,
     },
     {
       testScenario:
-        'should not show the CTA on non Lite Site pages, when the toggle is false',
+        'should not show the lite site link on non Lite pages, when the toggle is false',
       isLite: false,
       toggleEnabled: false,
       shouldBeDisplayed: false,
     },
     {
       testScenario:
-        'should not show the CTA on Lite Site pages, regardless of the toggle',
+        'should not show the lite site link on Lite pages, regardless of the toggle',
       isLite: true,
       toggleEnabled: true,
       shouldBeDisplayed: false,
@@ -172,7 +172,7 @@ describe('Article Page', () => {
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite,
-      toggles: { liteSiteCTA: { enabled: toggleEnabled } },
+      toggles: { articleLiteSiteLink: { enabled: toggleEnabled } },
     });
 
     const liteCTA = screen.queryByRole('link', { name: /Nyandiko gusa/i });
@@ -184,9 +184,9 @@ describe('Article Page', () => {
     }
   });
 
-  it('should apply click and view tracking data on lite site cta link', () => {
+  it('should apply click and view tracking data on lite site link', () => {
     const eventTrackingData = {
-      componentName: 'canonical-lite-cta',
+      componentName: 'article-lite-site-link',
       optimizely: null,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
@@ -195,7 +195,7 @@ describe('Article Page', () => {
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite: false,
-      toggles: { liteSiteCTA: { enabled: true } },
+      toggles: { articleLiteSiteLink: { enabled: true } },
     });
 
     expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);

@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
-import CallToActionLinkWithChevron from '#app/components/CallToActionLinkWithChevron';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
@@ -19,8 +19,13 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
-  const eventTrackingData = { componentName: 'canonical-lite-cta', optimizely };
-  const { enabled: showCTA } = useToggle('liteSiteCTA');
+  const eventTrackingData = {
+    componentName: 'article-lite-site-link',
+    optimizely,
+  };
+  const { enabled: articleLiteSiteLinkEnabled } = useToggle(
+    'articleLiteSiteLink',
+  );
   const viewTracker = useViewTracker(eventTrackingData);
   const titleVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
 
@@ -35,42 +40,48 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       articleDataSavingLinkText;
   }
 
-  const showLiteCTAOnCanonical: boolean = !isLite && showCTA;
+  const showArticleLiteSiteLink: boolean =
+    !isLite && articleLiteSiteLinkEnabled;
 
   return (
     <>
       <Headings
         className="article-heading"
         {...props}
-        {...(showLiteCTAOnCanonical && {
-          css: styles.headlineStylesOverride,
+        {...(showArticleLiteSiteLink && {
+          css: styles.reducePadding,
         })}
       />
-      {showLiteCTAOnCanonical && (
+      {showArticleLiteSiteLink && (
         <>
           <div
             css={[
               styles.loadingContainer,
-              styles.liteCTAContainer,
+              styles.liteSiteLinkContainer,
               titleVariation && styles.displayNone,
             ]}
-            data-e2e="to-lite-site-loading"
+            data-e2e="article-lite-site-link-loading"
           />
           <div
             css={[
-              styles.liteCTAContainer,
+              styles.liteSiteLinkContainer,
               !titleVariation && styles.displayNone,
             ]}
             {...viewTracker}
-            data-e2e="to-lite-site"
+            data-e2e="article-lite-site-link"
           >
-            <CallToActionLinkWithChevron
+            <CallToActionLink
+              url={`${pathname}.lite`}
               eventTrackingData={eventTrackingData}
-              href={`${pathname}.lite`}
-              css={styles.liteCTA}
+              css={styles.liteSiteLink}
+              alignWithMargin
+              size="brevier"
             >
-              {articleDataSavingLinkText}
-            </CallToActionLinkWithChevron>
+              <CallToActionLink.Text>
+                {articleDataSavingLinkText}
+              </CallToActionLink.Text>
+              <CallToActionLink.Chevron />
+            </CallToActionLink>
             <OptimizelyPageViewTracking />
           </div>
         </>
