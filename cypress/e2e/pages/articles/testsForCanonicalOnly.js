@@ -74,7 +74,7 @@ export default ({ service, pageType, variant = 'default' }) =>
     }
 
     if (liteEnabledServices.includes(service)) {
-      it.skip('should have a lite site link', () => {
+      it('should have a lite site link', () => {
         cy.get('[data-e2e="article-lite-site-link"]').within(() => {
           cy.get('a')
             .should('have.attr', 'href')

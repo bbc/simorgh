@@ -11,6 +11,8 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataPidginWithPV,
+  articleDataPortugueseWithPV,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -30,7 +32,6 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import * as useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   render,
   screen,
@@ -57,8 +58,6 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
-
-const useDecisionSpy = jest.spyOn(useOptimizelyVariation, 'default');
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -165,15 +164,13 @@ describe('Article Page', () => {
       shouldBeDisplayed: false,
     },
   ])('$testScenario', ({ isLite, toggleEnabled, shouldBeDisplayed }) => {
-    useDecisionSpy.mockReturnValueOnce('off' as unknown as true);
-
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite,
       toggles: { articleLiteSiteLink: { enabled: toggleEnabled } },
     });
 
-    const liteCTA = screen.queryByRole('link', { name: /Nyandiko gusa/i });
+    const liteCTA = screen.queryByRole('link', { name: /Inyandiko gusa/ });
 
     if (shouldBeDisplayed) {
       expect(liteCTA).toBeInTheDocument();
@@ -185,7 +182,6 @@ describe('Article Page', () => {
   it('should apply click and view tracking data on lite site link', () => {
     const eventTrackingData = {
       componentName: 'article-lite-site-link',
-      optimizely: null,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
@@ -912,5 +908,25 @@ describe('Article Page', () => {
         undefined,
       );
     });
+  });
+
+  describe('when rendering an article page with a portrait video', () => {
+    it.each`
+      pageData                       | service         | expected
+      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
+      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
+    `(
+      `should render the $expected title with the MediaLoader component`,
+      ({ pageData, service, expected }) => {
+        render(
+          <Context service={service}>
+            <ArticlePage pageData={pageData} />
+          </Context>,
+        );
+
+        const title = screen.queryByRole('strong');
+        expect(title?.textContent).toEqual(expected);
+      },
+    );
   });
 });
