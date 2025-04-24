@@ -1,6 +1,6 @@
 import { isLitePromotedService } from './helpers';
 
-export default ({ service, pageType }) => {
+export default ({ service, pageType, variant }) => {
   describe(`Running testsForLiteOnly for ${service} ${pageType}`, () => {
     describe('CTA: Lite', () => {
       it('Clicking the link to the main site should navigate to canonical site', () => {
@@ -14,7 +14,7 @@ export default ({ service, pageType }) => {
         });
         cy.go('back');
       });
-      if (isLitePromotedService(service)) {
+      if (isLitePromotedService({ service, variant })) {
         it('Clicking the link to the Information page should navigate to lite site', () => {
           cy.get('[data-e2e="information-page"]').within(() => {
             cy.get('a')

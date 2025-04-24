@@ -77,7 +77,7 @@ export default ({ service, pageType, variant = 'default' }) =>
       });
     }
 
-    if (isLitePromotedService(service)) {
+    if (isLitePromotedService({ service, variant })) {
       it('should have a lite site link', () => {
         cy.get('[data-e2e="article-lite-site-link"]').within(() => {
           cy.get('a')
