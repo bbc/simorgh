@@ -91,9 +91,15 @@ const PortraitVideoCarousel = ({
                     loading="lazy"
                   />
                 )}
-                <Heading level={3} size="longPrimer" css={styles.promoHeading}>
-                  {headline}
-                </Heading>
+                <div css={styles.gradientOverlay}>
+                  <Heading
+                    level={3}
+                    size="longPrimer"
+                    css={styles.promoHeading}
+                  >
+                    {headline}
+                  </Heading>
+                </div>
               </a>
             );
           })}
