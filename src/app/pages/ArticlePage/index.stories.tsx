@@ -241,6 +241,8 @@ export const ArticlePageWithTranscriptStage3 = () => (
   <ComponentWithServiceContext
     data={articleDataWithTranscript}
     service="news"
+  />
+);
 
 export const ArticlePageWithPortraitVideo = () => (
   <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />

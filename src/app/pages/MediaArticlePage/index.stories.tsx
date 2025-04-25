@@ -108,14 +108,14 @@ export const MediaArticlePageWithLiveTv = (
 );
 
 export const MediaArticlePageWithTranscript = (
-          _: StoryArgs,
+  _: StoryArgs,
   { isLite }: StoryProps,
 ) => (
   <ComponentWithContext
     data={articleDataWithTranscript}
     service="hausa"
-            isLite={isLite}
-          />
+    isLite={isLite}
+  />
 );
 
 export const MediaArticlePageWithPortraitVideo = (
