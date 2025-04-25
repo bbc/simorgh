@@ -6,7 +6,10 @@ import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
-import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
+import {
+  addSendStaticBeaconToWindow,
+  sendStaticBeacon as sendPageViewBeaconLite,
+} from './staticBeacon';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -58,7 +61,7 @@ const CanonicalATIAnalytics = ({
   return (
     <>
       {addInlineScript(addSendStaticBeaconToWindow())}
-      {isLite && addInlineScript(sendStaticBeacon(atiPageViewUrlString))}
+      {isLite && addInlineScript(sendPageViewBeaconLite(atiPageViewUrlString))}
       {!isLite &&
         addInlineScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
