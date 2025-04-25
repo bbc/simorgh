@@ -1,4 +1,4 @@
-export const portraitVideoFixture = {
+const portraitVideoFixture = {
   title: 'Portrait Video Carousel',
   items: [
     {
@@ -155,3 +155,5 @@ export const portraitVideoFixture = {
     },
   ],
 };
+
+export default portraitVideoFixture;
