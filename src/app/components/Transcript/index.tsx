@@ -16,13 +16,10 @@ const DEAFULT_TRANSLATIONS = {
     ' This transcript has been reviewed by a journalist, it was generated with AI (artificial intelligence).',
 };
 
-// TO DO - move this to BFF
-const removeHoursMilliseconds = (timestamp: string) => timestamp.slice(3, -4);
-
 const TranscriptListItem = ({ id, start, content }: TranscriptItem) => (
   <li key={id} css={styles.listItem}>
     <Text role="text" css={styles.transcriptText} size="bodyCopy">
-      <TranscriptTimestamp timestamp={removeHoursMilliseconds(start)} />
+      <TranscriptTimestamp timestamp={start} />
       <VisuallyHiddenText> </VisuallyHiddenText>
       <span css={styles.itemText}>{content}</span>
     </Text>
