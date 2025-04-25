@@ -269,11 +269,7 @@ export const ArticlePageWithLiteSiteLink = {
 
 export const ArticlePageWithEasyReadCta = {
   render: (_: StoryArgs, { service }: StoryProps) => (
-    <ComponentWithContext
-      data={articleDataWithEasyRead}
-      service={service}
-      articleLiteSiteLinkEnabled
-    />
+    <ComponentWithContext data={articleDataWithEasyRead} service={service} />
   ),
   parameters: {
     chromatic: { disableSnapshot: true },
