@@ -65,7 +65,7 @@ type Props = {
 };
 
 const EasyReadCTA = ({ easyReadAssetId, originalAssetId }: Props) => {
-  const viewRef = useViewTracker(eventTrackingData);
+ const viewTracker = useViewTracker(eventTrackingData);
   const { pathname } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
@@ -96,7 +96,7 @@ const EasyReadCTA = ({ easyReadAssetId, originalAssetId }: Props) => {
         role="region"
         data-e2e="easy-read-cta"
         aria-labelledby={id}
-        ref={viewRef}
+        {...viewTracker}
       >
         <FormatIcon css={styles.icon} />
         <Text as="strong" id={id} hidden>
