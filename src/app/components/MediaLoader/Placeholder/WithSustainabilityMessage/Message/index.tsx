@@ -18,12 +18,12 @@ type Props = {
 const Message = ({ title = '' }: Props) => {
   const {
     translations: {
-      media: { signPost, loadVideo },
+      media: { sustainabilitySignpost, loadVideo },
     },
   } = useContext(ServiceContext);
   const idRef = useId();
 
-  const message = signPost ?? DEFAULT_MESSAGE;
+  const message = sustainabilitySignpost ?? DEFAULT_MESSAGE;
   const buttonLabel = loadVideo ?? DEFAULT_LOAD_TITLE;
 
   return (
