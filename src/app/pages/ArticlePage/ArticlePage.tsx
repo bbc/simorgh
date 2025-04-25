@@ -178,7 +178,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
-  let blocks = pageData?.content?.model?.blocks ?? [];
+  const blocks = pageData?.content?.model?.blocks ?? [];
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
