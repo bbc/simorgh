@@ -1,7 +1,7 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
-export const PROMO_ITEM_WIDTH = 160; // fixed width for one promo item
+export const PROMO_ITEM_WIDTH = 180; // fixed width for one promo item
 
 const styles = {
   section: () =>
