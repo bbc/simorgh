@@ -8,4 +8,4 @@
  */
 
 export const MIN_SIZE = 763 - 5;
-export const MAX_SIZE = 1227 + 5;
+export const MAX_SIZE = 1231 + 5;
