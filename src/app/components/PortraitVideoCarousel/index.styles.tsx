@@ -42,8 +42,8 @@ const styles = {
       scrollSnapAlign: 'start',
       flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
       textDecoration: 'none',
-      display: 'flex',
-      flexDirection: 'column',
+      display: 'block',
+      position: 'relative',
     }),
 
   image: () =>
@@ -52,15 +52,21 @@ const styles = {
       height: 'auto',
       objectFit: 'cover',
       borderRadius: '0.25rem',
-      marginBottom: '0.5rem',
       aspectRatio: '9/16',
+      display: 'block',
     }),
 
   promoHeading: ({ fontVariants, palette }: Theme) =>
     css({
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      padding: '0.5rem',
+      background: 'linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0))',
+      color: palette.WHITE,
       fontFamily: fontVariants?.sansBold?.fontFamily,
       fontSize: '0.875rem',
-      color: palette.SHADOW,
       textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',
