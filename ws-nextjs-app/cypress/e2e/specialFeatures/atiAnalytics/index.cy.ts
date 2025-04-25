@@ -26,10 +26,10 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin/live/c7p765ynk9qt',
+    path: '/mundo/live/c7dkx155e626t',
     runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+    service: 'mundo',
+    pageIdentifier: 'live_coverage.c7dkx155e626t.page',
     applicationType: 'responsive',
     contentType: 'live-coverage',
     componentTrackingContentType: LIVE_PAGE,
@@ -43,9 +43,13 @@ const canonicalTestSuites = [
 ];
 
 const liteTestSuites = canonicalTestSuites.map(testSuite => {
-  const isBurmese = testSuite.service === 'burmese';
-  const liteSiteTests = [assertPageView, ...(isBurmese ? [assertLiteSiteCTAComponentClick] : [])];
+  const liteSiteTests = testSuite.tests.filter(
+    test =>
+      // Exclude component click tests, as component click support is not supported on all components yet
+      !test.name.toLowerCase().includes('click'),
+  );
 
+  liteSiteTests.push(assertLiteSiteCTAComponentClick);
 
   return {
     ...testSuite,

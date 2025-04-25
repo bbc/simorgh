@@ -65,4 +65,5 @@ export interface Curation extends BaseCuration {
   topStoriesTitle?: string;
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
+  renderVisuallyHiddenH2Title?: boolean;
 }

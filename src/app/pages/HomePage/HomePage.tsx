@@ -114,13 +114,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       topStoriesTitle={topStoriesTitle}
                       position={position}
                       link={link}
-                      curationLength={curations && curations.length}
+                      curationLength={curations?.length}
                       mostRead={mostRead}
                       radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
                       embed={embed}
+                      renderVisuallyHiddenH2Title={position === 0}
                     />
 
                     {index === indexOfFirstNonBanner && <MPU />}
