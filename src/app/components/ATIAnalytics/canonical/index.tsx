@@ -30,18 +30,10 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
   );
 };
 
-const addInlineScript = ({
-  script,
-  params = '',
-}: {
-  script: (args: string) => string;
-  params?: string;
-}) => {
-  const inlineScript = script(params);
-
+const addInlineScript = (script: string) => {
   return (
     <Helmet>
-      <script type="text/javascript">{inlineScript}</script>
+      <script type="text/javascript">{script}</script>
     </Helmet>
   );
 };
@@ -65,19 +57,10 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addInlineScript({
-        script: addSendStaticBeaconToWindow,
-      })}
-      {isLite &&
-        addInlineScript({
-          script: sendStaticBeacon,
-          params: atiPageViewUrlString,
-        })}
+      {addInlineScript(addSendStaticBeaconToWindow())}
+      {isLite && addInlineScript(sendStaticBeacon(atiPageViewUrlString))}
       {!isLite &&
-        addInlineScript({
-          script: sendPageViewBeaconOperaMini,
-          params: atiPageViewUrlString,
-        })}
+        addInlineScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );
