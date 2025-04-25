@@ -142,7 +142,6 @@ const getVideoComponent =
   };
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const { translations } = useContext(ServiceContext);
   const { isApp } = useContext(RequestContext);
 
   const {
@@ -250,7 +249,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent(recommendationsData),
     easyReadMeta: EasyReadCTA,
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
