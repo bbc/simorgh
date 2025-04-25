@@ -130,8 +130,8 @@ exports[`Message should render a 'Help reduce your power consumption' message 1`
   }
 }
 
-.placeholder:hover .emotion-6,
-.placeholder:focus .emotion-6 {
+.mediaLoaderPlaceholder:hover .emotion-6,
+.mediaLoaderPlaceholder:focus .emotion-6 {
   border-bottom: 0.125rem solid #FFFFFF;
 }
 

@@ -762,7 +762,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
           data-e2e="media-loader__container"
         >
           <div
-            class="placeholder emotion-8"
+            class="mediaLoaderPlaceholder emotion-8"
             data-e2e="media-loader__placeholder"
           >
             <div

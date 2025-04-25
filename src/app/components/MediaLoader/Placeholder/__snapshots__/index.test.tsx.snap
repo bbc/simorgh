@@ -253,7 +253,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 
 <div>
   <div
-    class="placeholder emotion-0"
+    class="mediaLoaderPlaceholder emotion-0"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -603,7 +603,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 
 <div>
   <div
-    class="placeholder emotion-0"
+    class="mediaLoaderPlaceholder emotion-0"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -917,7 +917,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 
 <div>
   <div
-    class="placeholder emotion-0"
+    class="mediaLoaderPlaceholder emotion-0"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -1234,7 +1234,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 
 <div>
   <div
-    class="placeholder emotion-0"
+    class="mediaLoaderPlaceholder emotion-0"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -1535,7 +1535,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 
 <div>
   <div
-    class="placeholder emotion-0"
+    class="mediaLoaderPlaceholder emotion-0"
     data-e2e="media-loader__placeholder"
   >
     <div
@@ -1871,7 +1871,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 
 <div>
   <div
-    class="placeholder emotion-0"
+    class="mediaLoaderPlaceholder emotion-0"
     data-e2e="media-loader__placeholder"
   >
     <div
