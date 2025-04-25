@@ -7,7 +7,6 @@ import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
 import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
-
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
