@@ -41,7 +41,6 @@ import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
   EasyReadMetaBlock,
-  OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
   Recommendation,
@@ -126,9 +125,7 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { translations } = useContext(ServiceContext);
-  const { isApp, pageType, service } = useContext(RequestContext);
-
-        
+  const { isApp } = useContext(RequestContext);
 
   const {
     articleAuthor,
@@ -173,15 +170,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   // SHOULD MOVE TO REQUEST CONTEXT
   let targetBlock = null;
   let removeIndex = null;
-  const easyMetaBlock = blocks.find(block => block.type === 'easyReadMeta');
+  const easyReadBlocks = blocks.find(block => block.type === 'easyRead');
 
-  const isEasyPage = !(easyMetaBlock as EasyReadMetaBlock)?.model
-    .easyReadAssetId;
+  const isEasyPage = !easyReadBlocks;
 
-  if (isEasyPage && easyMetaBlock) {
-    targetBlock = easyMetaBlock;
+  if (isEasyPage) {
+    const easyMetaBlock = blocks.find(block => block.type === 'easyReadMeta');
+    targetBlock = easyMetaBlock as EasyReadMetaBlock;
     removeIndex = blocks.findIndex(block => block.type === 'easyReadMeta');
-    // INSERT AFTER HEADING
     blocks.splice(removeIndex, 1);
     blocks.splice(1, 0, targetBlock);
   }
