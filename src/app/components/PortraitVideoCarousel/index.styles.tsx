@@ -83,6 +83,19 @@ const styles = {
       },
     }),
 
+  // Adjust fade on carousel to suit UX designs at diff breakpoints
+  promoFadeOverlayRight: () =>
+    css({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      width: `${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+      height: '100%',
+      backgroundColor: 'rgba(255, 255, 255, 0.6)',
+      zIndex: 1,
+      pointerEvents: 'none',
+    }),
+
   buttonGroup: () =>
     css({
       position: 'absolute',

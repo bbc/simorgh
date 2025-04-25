@@ -104,7 +104,7 @@ const PortraitVideoCarousel = ({
             );
           })}
         </div>
-
+        <div css={styles.promoFadeOverlayRight} />
         <div css={styles.buttonGroup}>
           <button
             type="button"
