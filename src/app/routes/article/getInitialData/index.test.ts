@@ -1,5 +1,4 @@
 import { Agent } from 'undici';
-import * as getOnwardsPageData from '#app/routes/article/utils/getOnwardsData';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import pidginArticleWithLatestMedia from '#data/pidgin/articles/cw0x29n2pvqo.json';
@@ -122,36 +121,6 @@ describe('Articles - BFF Fetching', () => {
         'ctx-service-env': 'live',
       },
       pageType: ARTICLE_PAGE,
-    });
-  });
-
-  it('should request WSOJ data.', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-
-    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    const getOnwardsPageDataSpy = jest.spyOn(getOnwardsPageData, 'default');
-
-    fetchDataSpy.mockReturnValueOnce(
-      Promise.resolve({
-        status: 200,
-        json: bffArticleJson,
-      }),
-    );
-
-    await getInitialData({
-      path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
-      service: 'kyrgyz',
-      pageType: ARTICLE_PAGE,
-      getAgent: mockGetAgent,
-    });
-
-    expect(getOnwardsPageDataSpy).toBeCalledWith({
-      pathname: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
-      service: 'kyrgyz',
-      isAdvertising: true,
-      isArticleSfv: true,
-      agent,
-      variant: undefined,
     });
   });
 

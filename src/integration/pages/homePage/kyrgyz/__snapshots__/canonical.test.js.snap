@@ -778,6 +778,7 @@ exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
   class="bbc-139onq"
+  loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp"
   srcset="https://ichef.test.bbci.co.uk/ace/ws/184/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp 184w, 

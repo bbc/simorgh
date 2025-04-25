@@ -73,7 +73,7 @@ export const assertPageView = ({
 }) => {
   it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, application type = ${applicationType} and content type = ${contentType}`, () => {
     interceptATIAnalyticsBeacons();
-    cy.visit(path);
+    cy.visit(path, { retryOnStatusCodeFailure: true });
 
     const atiPageViewAlias = useReverb ? ATI_PAGE_VIEW_REVERB : ATI_PAGE_VIEW;
 
@@ -105,7 +105,7 @@ export const assertPageView = ({
 
 const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
   new RegExp(
-    `PUB-\\[?${contentType}.*?\\]?-\\[?${component}.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?${pageIdentifier}\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?`,
+    `PUB-\\[${contentType}(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[${pageIdentifier}\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
     'g',
   );
 

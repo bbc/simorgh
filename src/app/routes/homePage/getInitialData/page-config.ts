@@ -113,6 +113,10 @@ export const HOME_PAGE_CONFIG: {
     test: 'c93v2kkz841t',
     live: 'ck3yk9nz25qt',
   },
+  polska: {
+    test: 'cpqr492886k4t',
+    live: '',
+  },
   portuguese: {
     test: 'c7pe2jj9l7mt',
     live: 'c0rp0kp57p1t',

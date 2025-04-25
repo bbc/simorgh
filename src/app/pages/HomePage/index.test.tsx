@@ -102,6 +102,23 @@ describe('Home Page', () => {
     expect(langSpan?.textContent).toEqual('BBC News');
   });
 
+  it('should have a visually hidden h2 title for the first curation on the home page that matches the curationTitle', () => {
+    const { curations } = afriqueHomePageData;
+    const firstCurationTitle = curations[0]?.title;
+
+    const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
+      service: 'afrique',
+    });
+
+    // Select the visually hidden h2 element by matching a class containing 'visuallyHiddenText'
+    const visuallyHiddenH2 = container.querySelector(
+      'h2[class*="visuallyHiddenText"]',
+    );
+
+    expect(visuallyHiddenH2).toBeInTheDocument();
+    expect(visuallyHiddenH2?.textContent).toBe(firstCurationTitle);
+  });
+
   it('should have a metadata title', () => {
     // @ts-expect-error suppress pageData prop type conflicts due to missing imageAlt on selected historical test data for curations
     render(<HomePage pageData={homePageData} />, {
@@ -217,7 +234,7 @@ describe('Home Page', () => {
         const src = image.getAttribute('src') || '';
 
         if (index === 0 || nonLazyLoadImages.includes(src)) {
-          expect(image.getAttribute('loading')).toBeNull();
+          expect(image.getAttribute('loading')).toBe('eager');
         } else {
           expect(image.getAttribute('loading')).toBe('lazy');
         }

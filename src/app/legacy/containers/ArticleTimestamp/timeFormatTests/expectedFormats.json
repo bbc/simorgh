@@ -259,6 +259,16 @@
       "exact date and time with timezone": "12 July 2019, 13:55 WAT"
     }
   },
+  "polska": {
+    "default": {
+      "one minute ago": "minutę temu",
+      "five minutes ago": "5 minut temu",
+      "one hour ago": "godzinę temu",
+      "five hours ago": "5 godzin temu",
+      "exact date": "10 października 2018",
+      "exact date and time with timezone": "12 lipca 2019, 13:55 BST"
+    }
+  },
   "portuguese": {
     "default": {
       "one minute ago": "Há 1 minuto",

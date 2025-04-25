@@ -12,6 +12,8 @@ Object.keys(config)
     const { variant, name: service } = config[serviceId];
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
+      const isLite = currentPath.includes('.lite');
+
       describe(`${pageType} - ${currentPath}`, () => {
         beforeEach(() => {
           Cypress.env('currentPath', currentPath);
@@ -24,6 +26,7 @@ Object.keys(config)
           service,
           pageType,
           variant,
+          isLite,
         });
       });
     });

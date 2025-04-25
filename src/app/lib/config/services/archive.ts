@@ -37,7 +37,6 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: null,
     isTrustProjectParticipant: false,
     script: latin,
-    swPath: '/articles/sw.js',
     homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: true,
@@ -206,16 +205,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       hasMostRead: false,
       numberOfItems: 10,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

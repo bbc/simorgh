@@ -1,0 +1,46 @@
+{
+  "data": {
+    "title": "polska strona tematyczna",
+    "description": "polish topic page",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Polski artykuł testowy",
+            "firstPublished": "2025-03-26T10:40:12.938Z",
+            "lastPublished": "2025-03-26T10:40:12.938Z",
+            "link": "https://www.bbc.comundefined/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg.webp",
+            "imageAlt": "Rzeszow",
+            "id": "c639526lxlro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:optimo:asset:c639526lxlro",
+        "curationType": "optimo",
+        "position": 0,
+        "visualProminence": "NORMAL",
+        "intent": "overview"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "metadata": {
+      "analytics": {
+        "name": "topics.polska-strona-tematyczna.page",
+        "producer": "BBC"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cpqr492886k4t",
+        "contentType": "index-category",
+        "pageIdentifier": "polska.topics.cpqr492886k4t.page",
+        "pageTitle": "polska strona tematyczna"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

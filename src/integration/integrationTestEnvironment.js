@@ -48,6 +48,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         service: { value: this.service },
         window: { value: dom.window },
         document: { value: dom.window.document },
+        fetch: { value: fetch },
       });
     } catch (e) {
       console.error(e);

@@ -216,7 +216,8 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 <img
   alt="الرياضه"
   class="bbc-139onq"
-  loading="lazy"
+  fetchpriority="high"
+  loading="eager"
   src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
   style="aspect-ratio:16 / 9"
 />

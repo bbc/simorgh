@@ -6,44 +6,50 @@ import {
   videoPlaceholderImageUrl,
 } from '../../../support/helpers/onDemandRadioTv';
 
-export default ({ service, pageType, variant }) => {
-  describe(`Tests for ${service} ${pageType}`, () => {
-    describe(
-      'Video Player',
-      {
-        retries: 3,
-      },
-      () => {
-        it('should render a valid media player', () => {
-          cy.getPageDataFromWindow().then(({ pageData }) => {
-            if (!getEpisodeAvailability(pageData)) {
-              return cy.log(
-                `Episode is not available: ${Cypress.env('currentPath')}`,
-              );
-            }
+export default ({ service, pageType, variant, isLite }) => {
+  describe(`Tests for ${service} ${pageType}${isLite ? ' - isLite' : ''}`, () => {
+    if (!isLite) {
+      describe(
+        'Video Player',
+        {
+          retries: 3,
+        },
+        () => {
+          it('should render a valid media player', () => {
+            cy.getPageDataFromWindow().then(({ pageData }) => {
+              if (!getEpisodeAvailability(pageData)) {
+                return cy.log(
+                  `Episode is not available: ${Cypress.env('currentPath')}`,
+                );
+              }
 
-            cy.get('[data-e2e="media-loader__container"]').should('be.visible');
-            cy.get('[data-e2e="media-loader__placeholder"]').within(() => {
-              cy.get('div img')
-                .should('be.visible')
-                .should('have.attr', 'src')
-                .should('not.be.empty')
-                .and('equal', videoPlaceholderImageUrl(pageData));
+              cy.get('[data-e2e="media-loader__container"]').should(
+                'be.visible',
+              );
+              cy.get('[data-e2e="media-loader__placeholder"]').within(() => {
+                cy.get('div img')
+                  .should('be.visible')
+                  .should('have.attr', 'src')
+                  .should('not.be.empty')
+
+                  .and('equal', videoPlaceholderImageUrl(pageData));
+              });
             });
           });
-        });
-      },
-      describe('Chartbeat', () => {
-        if (envConfig.chartbeatEnabled) {
-          it('should have a script with src value set to chartbeat source', () => {
-            cy.hasScriptWithChartbeatSrc();
-          });
-          it('should have chartbeat config set to window object', () => {
-            cy.hasGlobalChartbeatConfig();
-          });
-        }
-      }),
-    );
+        },
+
+        describe('Chartbeat', () => {
+          if (envConfig.chartbeatEnabled) {
+            it('should have a script with src value set to chartbeat source', () => {
+              cy.hasScriptWithChartbeatSrc();
+            });
+            it('should have chartbeat config set to window object', () => {
+              cy.hasGlobalChartbeatConfig();
+            });
+          }
+        }),
+      );
+    }
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
         cy.getToggles(service);
