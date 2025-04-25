@@ -41,7 +41,7 @@ const CtaLink = ({ href, text, className, selected = false }: CtaLinkProps) => {
       href={href}
       className={className}
       css={styles.linkContainer}
-      onClick={clickTrackerHandler}
+      {...clickTrackerHandler}
       {...(selected && { 'aria-current': 'page' })}
     >
       <span css={styles.linkTextContainer}>
