@@ -25,7 +25,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     send: jest.fn(),
   };
 
-  const addStaticBeaconFn = eval(addSendStaticBeaconToWindow());
+  const sendStaticBeacon = eval(addSendStaticBeaconToWindow());
 
   beforeEach(() => {
     windowSpy = jest.spyOn(window, 'window', 'get');
@@ -48,7 +48,7 @@ describe('sendPageViewBeaconOperaMini', () => {
         () =>
           ({
             operamini: new OperaMiniMock(),
-            sendStaticBeacon: addStaticBeaconFn,
+            sendStaticBeacon,
           }) as WindowOperaMini,
       );
     });
@@ -79,7 +79,7 @@ describe('sendPageViewBeaconOperaMini', () => {
       const check = {
         hasOperaMiniScriptRan: false,
         operamini: new OperaMiniMock(),
-        sendStaticBeacon: addStaticBeaconFn,
+        sendStaticBeacon,
       } as WindowOperaMini;
 
       windowSpy.mockImplementation(() => check);
