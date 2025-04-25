@@ -41,6 +41,12 @@ export type OptimoAltTextBlock = {
   };
 };
 
+export type EasyBlockModel = {
+  hasBeenReviewed: boolean;
+  suitableForAbridgement: boolean;
+  blocks: OptimoBlock[];
+};
+
 export type EasyReadMetaBlock = {
   type: 'easyReadMeta';
   model: {

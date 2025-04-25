@@ -40,6 +40,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
+  EasyBlockModel,
   EasyReadMetaBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
@@ -178,7 +179,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
-  const blocks = pageData?.content?.model?.blocks ?? [];
+  let blocks = pageData?.content?.model?.blocks ?? [];
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
@@ -188,15 +189,32 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   // SHOULD MOVE TO REQUEST CONTEXT
   let targetBlock = null;
   let removeIndex = null;
+  let easyMetaBlock;
   const easyReadBlocks = blocks.find(block => block.type === 'easyRead');
 
-  const isEasyPage = !easyReadBlocks;
+  if (easyReadBlocks) {
+    const easyBlocks = (easyReadBlocks.model as EasyBlockModel).blocks;
+    easyMetaBlock = easyBlocks.find(block => block.type === 'easyReadMeta');
+  } else {
+    easyMetaBlock = blocks.find(block => block.type === 'easyReadMeta');
+  }
 
-  if (isEasyPage) {
-    const easyMetaBlock = blocks.find(block => block.type === 'easyReadMeta');
+  const isEasyPage =
+    !easyReadBlocks &&
+    (easyMetaBlock as EasyReadMetaBlock)?.model?.easyReadAssetId ===
+      undefined &&
+    (easyMetaBlock as EasyReadMetaBlock)?.model?.originalAssetId;
+
+  if (isEasyPage || easyReadBlocks) {
     targetBlock = easyMetaBlock as EasyReadMetaBlock;
-    removeIndex = blocks.findIndex(block => block.type === 'easyReadMeta');
-    blocks.splice(removeIndex, 1);
+    if (isEasyPage) {
+      removeIndex = blocks.findIndex(block => block.type === 'easyReadMeta');
+      blocks.splice(removeIndex, 1);
+    }
+    else{
+      removeIndex = blocks.findIndex(block => block.type === 'easyRead');
+      blocks.splice(removeIndex, 1);
+    }
     blocks.splice(1, 0, targetBlock);
   }
 
