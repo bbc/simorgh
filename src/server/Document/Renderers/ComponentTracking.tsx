@@ -37,10 +37,9 @@ const trackingScripts = ({
 /**
  * Component for injecting component tracking scripts into the page.
  *
- * @param {Object} props - Props for the component.
- * @param {boolean} props.enableStaticClickTrackingOnOperaMiniOnly - Enables static click tracking only on Opera Mini browsers.
+ * @param {boolean} enableStaticClickTrackingOnOperaMiniOnly - Enables static click tracking only on Opera Mini browsers.
  *   If true, tracking will only occur on Opera Mini; otherwise, it will occur on all browsers.
- * @param {boolean} props.trackComponentViews - Enables tracking of component views.
+ * @param {boolean} trackComponentViews - Enables tracking of component views.
  */
 const ComponentTracking = ({
   enableStaticClickTrackingOnOperaMiniOnly,
