@@ -1,34 +1,36 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { RequestContext } from '#contexts/RequestContext';
-import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useDeterminePlaceholderMode, {
+  Mode,
+} from '#app/hooks/useDeterminePlaceholderMode';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
+import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
+import { PageTypes } from '#app/models/types/global';
 import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { RequestContext } from '#contexts/RequestContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { PageTypes } from '#app/models/types/global';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import useTranscriptStage, { Stages } from '#app/hooks/useTranscriptStage';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
-import Caption from '../Caption';
+import { jsx } from '@emotion/react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import nodeLogger from '../../lib/logger.node';
-import buildConfig from './utils/buildSettings';
-import Placeholder from './Placeholder';
-import getProducerFromServiceName from './utils/getProducerFromServiceName';
-import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
-import Metadata from './Metadata';
-import AmpMediaLoader from './Amp';
-import getTranscriptBlock from './utils/getTranscriptBlock';
+import Caption from '../Caption';
 import Transcript from '../Transcript';
+import AmpMediaLoader from './Amp';
+import styles from './index.styles';
+import Metadata from './Metadata';
+import Placeholder from './Placeholder';
+import { BumpType, MediaBlock, PlayerConfig } from './types';
+import buildConfig from './utils/buildSettings';
+import getCaptionBlock from './utils/getCaptionBlock';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
+import getTranscriptBlock from './utils/getTranscriptBlock';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -178,7 +180,7 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
-  forceStage?: Stages;
+  forcePlaceholderMode?: Mode;
   uniqueId?: string;
 };
 
@@ -187,7 +189,7 @@ const MediaLoader = ({
   className,
   embedded,
   uniqueId,
-  forceStage,
+  forcePlaceholderMode,
 }: Props) => {
   const transcriptBlock = getTranscriptBlock(blocks);
   const hasTranscript = !!transcriptBlock;
@@ -195,9 +197,9 @@ const MediaLoader = ({
   const { lang, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
-  const stage = useTranscriptStage(hasTranscript);
+  const determinedPlaceholderMode = useDeterminePlaceholderMode(hasTranscript);
 
-  const experimentStage = forceStage ?? stage;
+  const placeholderMode = forcePlaceholderMode ?? determinedPlaceholderMode;
 
   const {
     id,
@@ -308,7 +310,7 @@ const MediaLoader = ({
                 noJsMessage={translatedNoJSMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
-                experimentStage={experimentStage}
+                placeholderMode={placeholderMode}
               />
             ) : (
               <MediaContainer

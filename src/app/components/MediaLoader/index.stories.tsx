@@ -1,7 +1,7 @@
-import React from 'react';
-import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { Stages } from '#app/hooks/useTranscriptStage';
+import { Mode } from '#app/hooks/useDeterminePlaceholderMode';
+import { PageTypes, Services } from '#app/models/types/global';
+import React from 'react';
 import MediaLoaderComponent from '.';
 import {
   aresMediaBlocks,
@@ -9,17 +9,17 @@ import {
   clipMediaBlocks,
   legacyMediaBlock,
 } from './fixture';
-import { MediaBlock } from './types';
 import readme from './README.md';
+import { MediaBlock } from './types';
 
 type Props = {
   pageType: PageTypes;
   service: Services;
   blocks: MediaBlock[];
-  experimentStage?: Stages;
+  placeholderMode?: Mode;
 };
 
-const Component = ({ service, pageType, blocks, experimentStage }: Props) => (
+const Component = ({ service, pageType, blocks, placeholderMode }: Props) => (
   <RequestContextProvider
     id="testID"
     isAmp={false}
@@ -28,7 +28,10 @@ const Component = ({ service, pageType, blocks, experimentStage }: Props) => (
     pathname=""
     service={service}
   >
-    <MediaLoaderComponent blocks={blocks} forceStage={experimentStage} />
+    <MediaLoaderComponent
+      blocks={blocks}
+      forcePlaceholderMode={placeholderMode}
+    />
   </RequestContextProvider>
 );
 
@@ -36,8 +39,8 @@ export default {
   title: 'Components/MediaLoader',
   Component,
   argTypes: {
-    experimentStage: {
-      options: [Stages.STAGE_2, Stages.STAGE_3],
+    placeholderMode: {
+      options: [Mode.SHOW_SUSTAINABILITY_MSG, Mode.DEFAULT],
       control: { type: 'radio' },
     },
   },
@@ -46,12 +49,12 @@ export default {
   },
 };
 
-export const MediaLoaderWithTranscript = ({ experimentStage }: Props) => (
+export const MediaLoaderWithTranscript = ({ placeholderMode }: Props) => (
   <Component
     service="pidgin"
     pageType="article"
     blocks={aresMediaBlocks as MediaBlock[]}
-    experimentStage={experimentStage}
+    placeholderMode={placeholderMode}
   />
 );
 

@@ -5,13 +5,13 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 // Disabled due to bug in ts lint
 // eslint-disable-next-line no-shadow
-export enum Stages {
-  STAGE_1 = `No js stage`,
-  STAGE_2 = `Qualifies for transcript`,
-  STAGE_3 = `Does not qualify for transcript`,
+export enum Mode {
+  NO_JS = `No js mode`,
+  SHOW_SUSTAINABILITY_MSG = `Has sustainability message`,
+  DEFAULT = `Default - has no sustainability message`,
 }
 
-type ExperimentCriteria = Partial<{
+type Criteria = Partial<{
   service: Services;
   isOperaMini: boolean;
   dataSaver: boolean;
@@ -27,29 +27,29 @@ export type Navigator = {
 
 const LOW_POWER_THRESHOLD = 0.2;
 
-const determineStage = ({
+const determineMode = ({
   service,
   isOperaMini,
   dataSaver,
   lowPower,
   noJs,
   hasTranscript,
-}: ExperimentCriteria) => {
+}: Criteria) => {
   if (noJs) {
-    return Stages.STAGE_1;
+    return Mode.NO_JS;
   }
 
   if (
     (service === 'mundo' || dataSaver || isOperaMini || lowPower) &&
     hasTranscript
   ) {
-    return Stages.STAGE_2;
+    return Mode.SHOW_SUSTAINABILITY_MSG;
   }
 
-  return Stages.STAGE_3;
+  return Mode.DEFAULT;
 };
 
-const useTranscriptStage = (hasTranscript: boolean) => {
+const useDeterminePlaceholderMode = (hasTranscript: boolean) => {
   const [lowPower, setLowPower] = useState(false);
   const [dataSaver, setSaveDataMode] = useState(false);
   const [noJs, setNoJs] = useState(true);
@@ -72,7 +72,7 @@ const useTranscriptStage = (hasTranscript: boolean) => {
     setNoJs(false);
   }, []);
 
-  const stage = determineStage({
+  const stage = determineMode({
     isOperaMini,
     service,
     dataSaver,
@@ -84,4 +84,4 @@ const useTranscriptStage = (hasTranscript: boolean) => {
   return stage;
 };
 
-export default useTranscriptStage;
+export default useDeterminePlaceholderMode;

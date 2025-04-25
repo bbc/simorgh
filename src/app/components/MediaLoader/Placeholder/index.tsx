@@ -1,14 +1,15 @@
+/* eslint-disable prettier/prettier */
 /** @jsx jsx */
+import { Mode } from '#app/hooks/useDeterminePlaceholderMode';
 import { jsx } from '@emotion/react';
-import { Stages } from '#app/hooks/useTranscriptStage';
-import SustainabilityMessage from './WithSustainabilityMessage/Message';
-import SustainabilityMessageNoJs from './WithSustainabilityMessage/MessageNoJs';
 import Image from '../../Image';
+import { MediaInfo } from '../types';
+import Guidance from './Guidance';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
-import Guidance from './Guidance';
-import { MediaInfo } from '../types';
 import WithSustainabilityMessageMediaIndicator from './WithSustainabilityMessage/MediaIndicator';
+import SustainabilityMessage from './WithSustainabilityMessage/Message';
+import SustainabilityMessageNoJs from './WithSustainabilityMessage/MessageNoJs';
 
 interface Props {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -16,7 +17,7 @@ interface Props {
   srcSet?: string;
   mediaInfo?: MediaInfo;
   noJsMessage?: string;
-  experimentStage?: Stages;
+  placeholderMode?: Mode;
 }
 
 const MediaPlayerPlaceholder = ({
@@ -25,7 +26,7 @@ const MediaPlayerPlaceholder = ({
   srcSet,
   mediaInfo,
   noJsMessage = '',
-  experimentStage = Stages.STAGE_3,
+  placeholderMode = Mode.DEFAULT,
 }: Props) => {
   const {
     title,
@@ -40,7 +41,7 @@ const MediaPlayerPlaceholder = ({
     <PlayButton
       css={styles.playButton}
       // eslint-disable-next-line @typescript-eslint/no-empty-function
-      onClick={() => {}}
+      onClick={() => { }}
       title={title}
       datetime={datetime}
       duration={duration}
@@ -70,8 +71,6 @@ const MediaPlayerPlaceholder = ({
     />
   );
 
-  const withSustainabilityMessage = <SustainabilityMessage title={title} />;
-
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
@@ -80,11 +79,11 @@ const MediaPlayerPlaceholder = ({
       data-e2e="media-loader__placeholder"
       className="placeholder"
     >
-      {experimentStage === Stages.STAGE_3 ? guideComponent : null}
-      {experimentStage === Stages.STAGE_2
+      {placeholderMode === Mode.DEFAULT ? guideComponent : null}
+      {placeholderMode === Mode.SHOW_SUSTAINABILITY_MSG
         ? playButtonWithSustainabilityMessage
         : playButton}
-      {experimentStage === Stages.STAGE_2 ? withSustainabilityMessage : null}
+      {placeholderMode === Mode.SHOW_SUSTAINABILITY_MSG ? <SustainabilityMessage title={title} /> : null}
       <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
       <Image alt="" src={src} srcSet={srcSet} />
     </div>

@@ -1,10 +1,10 @@
-import React from 'react';
 import {
-  render,
   fireEvent,
   getByText,
+  render,
 } from '#app/components/react-testing-library-with-providers';
-import { Stages } from '#app/hooks/useTranscriptStage';
+import { Mode } from '#app/hooks/useDeterminePlaceholderMode';
+import React from 'react';
 import Placeholder from '.';
 
 describe('Media Player: Placeholder', () => {
@@ -26,7 +26,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -40,7 +40,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.' }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -58,7 +58,7 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -72,7 +72,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ type: 'audio', title: 'Dog barks at cat.' }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -86,7 +86,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -107,7 +107,7 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -126,7 +126,7 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        experimentStage={Stages.STAGE_3}
+        placeholderMode={Mode.DEFAULT}
       />,
       { service: 'news' },
     );
