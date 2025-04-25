@@ -37,16 +37,6 @@ const styles = {
       flex: 1,
     }),
 
-  image: () =>
-    css({
-      width: '100%',
-      height: 'auto',
-      objectFit: 'cover',
-      borderRadius: '0.25rem',
-      aspectRatio: '9/16',
-      display: 'block',
-    }),
-
   promoItem: () =>
     css({
       scrollSnapAlign: 'start',
@@ -56,6 +46,16 @@ const styles = {
       position: 'relative',
       borderRadius: '0.25rem',
       overflow: 'hidden',
+    }),
+
+  image: () =>
+    css({
+      width: '100%',
+      height: 'auto',
+      objectFit: 'cover',
+      borderRadius: '0.25rem',
+      aspectRatio: '9/16',
+      display: 'block',
     }),
 
   gradientOverlay: () =>
@@ -105,14 +105,13 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
+      '&:disabled': {
+        opacity: 0.2,
+        cursor: 'not-allowed',
+      },
       '& svg path': {
         fill: palette.GREY_2,
       },
-    }),
-
-  disabledButton: () =>
-    css({
-      opacity: 0.2,
     }),
 };
 

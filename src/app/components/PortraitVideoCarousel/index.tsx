@@ -110,7 +110,8 @@ const PortraitVideoCarousel = ({
             type="button"
             aria-label="Scroll left"
             onClick={() => scroll('left')}
-            css={[styles.navButton, !canScrollLeft && styles.disabledButton]}
+            disabled={!canScrollLeft}
+            css={styles.navButton}
           >
             <LeftChevron />
           </button>
@@ -118,7 +119,8 @@ const PortraitVideoCarousel = ({
             type="button"
             aria-label="Scroll right"
             onClick={() => scroll('right')}
-            css={[styles.navButton, !canScrollRight && styles.disabledButton]}
+            disabled={!canScrollRight}
+            css={styles.navButton}
           >
             <RightChevron />
           </button>
