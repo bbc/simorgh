@@ -59,7 +59,7 @@ const styles = {
   underline: ({ palette }: Theme) =>
     css({
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
-      '.placeholder:hover &, .placeholder:focus &': {
+      '.mediaLoaderPlaceholder:hover &, .mediaLoaderPlaceholder:focus &': {
         borderBottom: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
       },
     }),

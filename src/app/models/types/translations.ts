@@ -120,7 +120,7 @@ export interface Translations {
     };
   };
   media: {
-    signPost?: string;
+    sustainabilitySignpost?: string;
     loadVideo?: string;
     noJs?: string;
     contentExpired?: string;

@@ -1,31 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useMemo } from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
 import {
   ServiceContext,
   ServiceContextProvider,
 } from '#app/contexts/ServiceContext';
-import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/news/articles/c0g992jmmkko.json';
-import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
-import articleDataGahuza from '#data/gahuza/articles/c5y51yxeg53o.json';
-import articleDataArabic from '#data/arabic/articles/cn0m90verwvo.json';
-import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
-import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
-import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
-import articleDataWithTranscript from '#data/mundo/articles/cle16n19nd9o.json';
-import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
-import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
-import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
-import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.json';
+import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
+import articleDataArabic from '#data/arabic/articles/cn0m90verwvo.json';
+import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
+import articleDataGahuza from '#data/gahuza/articles/c5y51yxeg53o.json';
+import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
+import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
+import articleDataWithTranscript from '#data/mundo/articles/cle16n19nd9o.json';
+import articleData from '#data/news/articles/c0g992jmmkko.json';
+import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
+import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
+import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.json';
+import React, { useMemo } from 'react';
 import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
@@ -230,14 +230,14 @@ export const ArticlePageWithPodcastNews = () => (
   />
 );
 
-export const ArticlePageWithTranscriptStage2 = () => (
+export const ArticlePageWithTranscriptSustainabilityMessagePlaceholder = () => (
   <ComponentWithServiceContext
     data={articleDataWithTranscript}
     service="mundo"
   />
 );
 
-export const ArticlePageWithTranscriptStage3 = () => (
+export const ArticlePageWithTranscriptDefaultPlaceholder = () => (
   <ComponentWithServiceContext
     data={articleDataWithTranscript}
     service="news"

@@ -77,7 +77,7 @@ const MediaPlayerPlaceholder = ({
       onClick={onClick}
       css={styles.placeholder}
       data-e2e="media-loader__placeholder"
-      className="placeholder"
+      className="mediaLoaderPlaceholder"
     >
       {placeholderMode === Mode.DEFAULT ? guideComponent : null}
       {placeholderMode === Mode.SHOW_SUSTAINABILITY_MSG

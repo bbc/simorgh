@@ -8,11 +8,11 @@ import useDeterminePlaceholderMode, { Mode } from '.';
 
 const ServiceContextWrapper =
   (service: Services) =>
-    ({ children }: PropsWithChildren) => (
-      <ServiceContextProvider service={service}>
-        {children}
-      </ServiceContextProvider>
-    );
+  ({ children }: PropsWithChildren) => (
+    <ServiceContextProvider service={service}>
+      {children}
+    </ServiceContextProvider>
+  );
 
 describe('useDeterminePlaceholder', () => {
   it.each([
