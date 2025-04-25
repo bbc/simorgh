@@ -35,7 +35,7 @@ const determineMode = ({
   noJs,
   hasTranscript,
 }: Criteria) => {
-  if (noJs) {
+  if (noJs && hasTranscript) {
     return Mode.NO_JS;
   }
 
