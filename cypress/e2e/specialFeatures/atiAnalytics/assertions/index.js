@@ -50,6 +50,17 @@ const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
   }
 };
 
+const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
+  expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('events'); // event details
+  expect(params).to.have.property('context');
+
+  const eventContext = JSON.parse(params.context);
+
+  expect(eventContext[0].data.page).to.have.property('$');
+  expect(eventContext[0].data.site).to.have.property('level2_id');
+};
+
 const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('atc'); // click event
@@ -109,7 +120,13 @@ const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
     'g',
   );
 
-export const assertATIComponentViewEvent = ({
+const getViewabilityViewEventDetailsRegex = ({ contentType, component }) =>
+  new RegExp(
+    `\\[\\{"name":"viewability\\.view","data":\\{"group":\\{"name":"${contentType}(.*)?"\\},"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+    'g',
+  );
+
+const assertCPVModelViewEvent = ({
   component,
   pageIdentifier,
   contentType,
@@ -136,6 +153,51 @@ export const assertATIComponentViewEvent = ({
         'params.ati (publisher impression)',
       );
     });
+
+const assertViewabilityModelViewEvent = ({
+  component,
+  pageIdentifier,
+  contentType,
+  useReverb,
+}) =>
+  cy
+    .wait(`@${component}-ati-view-viewability`)
+    .its('request.url')
+    .then(url => {
+      const params = getATIParamsFromURL(url);
+
+      assertReverbViewabilityComponentEventParamsExist({
+        params,
+        useReverb,
+      });
+
+      expect(params.events).to.match(
+        getViewabilityViewEventDetailsRegex({
+          contentType,
+          component,
+        }),
+        'params.events (publisher impression)',
+      );
+    });
+
+export const assertATIComponentViewEvent = ({
+  component,
+  pageIdentifier,
+  contentType,
+  useReverb,
+}) =>
+  Cypress.env('APP_ENV') === 'live'
+    ? assertCPVModelViewEvent({
+        component,
+        pageIdentifier,
+        contentType,
+        useReverb,
+      })
+    : assertViewabilityModelViewEvent({
+        component,
+        contentType,
+        useReverb,
+      });
 
 export const assertATIComponentClickEvent = ({
   component,
