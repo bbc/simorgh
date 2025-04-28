@@ -9,6 +9,7 @@ import {
   getEventInfo,
   getScreenInfo,
 } from '..';
+import { VIEW_EVENT } from '../analytics.const';
 import { ComponentTrackingProps } from '../types';
 
 export default ({
@@ -33,7 +34,7 @@ export default ({
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
   const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
-  const eventPublisher = type === 'view' ? 'ati' : 'atc';
+  const eventPublisher = type === VIEW_EVENT ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {
       key: 's',
