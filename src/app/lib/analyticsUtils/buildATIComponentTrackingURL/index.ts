@@ -35,7 +35,7 @@ export default ({
   const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
   const eventPublisher = type === VIEW_EVENT ? 'ati' : 'atc';
-  const eventTrackingBeaconValues = [
+  const componentTrackingBeaconValues = [
     {
       key: 's',
       description: 'destination',
@@ -155,6 +155,6 @@ export default ({
   ];
 
   return `${getEnvConfig().SIMORGH_ATI_BASE_URL}${getAtiUrl(
-    eventTrackingBeaconValues,
+    componentTrackingBeaconValues,
   )}&type=AT`;
 };
