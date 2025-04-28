@@ -70,7 +70,7 @@ const PortraitVideoCarousel = ({
     >
       <h2 css={styles.heading}>{title}</h2>
 
-      <div dir={dir} css={styles.scrollContainer}>
+      <div css={styles.scrollContainer}>
         <div ref={scrollRef} css={styles.scrollWrapper}>
           {items.map(item => {
             const image = item.images?.[0]?.url;
