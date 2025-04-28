@@ -4,13 +4,13 @@ import { assertATIComponentClickEvent } from '.';
 const { LITE_SITE_SUMMARY } = COMPONENTS;
 
 // eslint-disable-next-line import/prefer-default-export
-export const assertLiteSiteCTAComponentClick = ({
+export const assertLiteSiteSummaryComponentToMainSiteClick = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
   path,
 }) => {
-  it(`should send a click event for the Lite Site CTA component`, () => {
+  it(`should send a click event for the Lite Site Summary component to main site link`, () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
