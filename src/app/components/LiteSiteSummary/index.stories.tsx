@@ -6,7 +6,7 @@ import readme from './README.md';
 export const Component = () => <LiteSiteSummary />;
 
 export default {
-  title: 'Components/LiteSiteSummary',
+  title: 'Components/Lite Site Summary',
   Component,
   parameters: {
     metadata,
