@@ -100,6 +100,7 @@ const PortraitVideoCarousel = ({
               </a>
             );
           })}
+          <div css={[styles.promoItem, styles.endBlankItem]} />
         </div>
         <div css={styles.buttonGroupOverlay}>
           <div css={styles.buttonGroup}>

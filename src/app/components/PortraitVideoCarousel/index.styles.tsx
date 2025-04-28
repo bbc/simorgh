@@ -47,6 +47,15 @@ const styles = {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
       },
     }),
+  endBlankItem: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'block',
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH / 1.5)}rem`,
+      },
+    }),
 
   image: () =>
     css({
@@ -98,7 +107,7 @@ const styles = {
         insetInlineEnd: 0,
         width: '7rem',
         height: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        backgroundColor: 'rgba(253, 253, 253, 0.6)',
         zIndex: 1,
       },
     }),
