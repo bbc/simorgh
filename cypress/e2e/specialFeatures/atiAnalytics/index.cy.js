@@ -453,7 +453,7 @@ const canonicalTestSuites = [
     tests: [
       assertPageView,
       assertRecentAudioEpisodesComponentView,
-      // assertRecentAudioEpisodesComponentClick,
+      assertRecentAudioEpisodesComponentClick,
       // assertRadioScheduleComponentView,
       // assertRadioScheduleComponentClick,
     ],
