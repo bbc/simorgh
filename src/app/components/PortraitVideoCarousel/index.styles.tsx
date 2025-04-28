@@ -32,6 +32,7 @@ const styles = {
       },
       scrollbarWidth: 'none',
       flex: 1,
+      padding: `${spacings.FULL}rem 0`,
     }),
 
   promoItem: ({ mq }: Theme) =>
