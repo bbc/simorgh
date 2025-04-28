@@ -66,7 +66,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -254,7 +253,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -418,7 +416,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -585,23 +582,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/arabic/topics/cwr9j7nv58nt'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic/topics/cwr9j7nv58nt'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/arabic/topics/cwr9j7nv58nt'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -727,7 +707,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -891,7 +870,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1092,7 +1070,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1221,7 +1198,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
@@ -1317,7 +1293,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1475,7 +1450,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1671,7 +1645,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1869,7 +1842,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1995,7 +1967,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2164,7 +2135,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2290,7 +2260,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2449,7 +2418,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2637,23 +2605,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2825,7 +2776,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2946,7 +2896,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3090,7 +3039,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -3189,7 +3137,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3315,7 +3262,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
@@ -3373,7 +3319,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
@@ -3511,7 +3456,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3750,7 +3694,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3909,23 +3852,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin/topics/c95y35941vrt'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/pidgin/topics/cqywjyzk2vyt'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/pidgin/topics/c95y35941vrt'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4067,7 +3993,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4192,7 +4117,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4338,7 +4262,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4461,7 +4384,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -4513,7 +4435,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4631,23 +4552,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/topics/c1gd303q6y6t/lat'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/serbian/topics/c1gd303q6y6t/lat'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/serbian/topics/c1gd303q6y6t/lat'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4766,7 +4670,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4927,7 +4830,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
           live: {
@@ -5066,7 +4968,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
@@ -5202,7 +5103,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5395,7 +5295,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5550,7 +5449,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5671,7 +5569,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5847,7 +5744,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5968,7 +5864,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6094,7 +5989,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6220,7 +6114,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6329,20 +6222,6 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
-            enabled: true,
-          },
-          test: {
-            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
-            enabled: true,
-          },
-          local: { paths: [], enabled: false },
-        },
-        smoke: false,
-      },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -6424,7 +6303,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6620,7 +6498,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6813,7 +6690,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6927,23 +6803,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/topics/c8y949r98pgt/cyr'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/topics/c8y949r98pgt/cyr'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/topics/c8y949r98pgt/cyr'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -6964,23 +6823,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/topics/c8y949r98pgt/lat'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/topics/c8y949r98pgt/lat'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/topics/c8y949r98pgt/lat'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -7017,7 +6859,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7143,7 +6984,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7293,7 +7133,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7448,7 +7287,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {

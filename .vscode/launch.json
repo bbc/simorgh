@@ -17,6 +17,12 @@
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*",
       ]
-    }
+    },
+    {
+      "name": "Debug Next.js: server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "cd ws-nextjs-app && nvm use && yarn dev"
+    },
   ]
 }
