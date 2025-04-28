@@ -45,7 +45,11 @@ const LiteSiteSummary = () => {
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}
-            css={styles.topLinkSpacing}
+            css={
+              informationPageLink
+                ? styles.topLinkSpacing
+                : styles.singleLinkSpacing
+            }
             alignWithMargin
             size="brevier"
           >
