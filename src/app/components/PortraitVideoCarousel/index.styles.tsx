@@ -89,7 +89,7 @@ const styles = {
       position: 'absolute',
       top: 0,
       right: 0,
-      width: `${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+      width: `${pixelsToRem(PROMO_ITEM_WIDTH / 2)}rem`,
       height: '100%',
       backgroundColor: 'rgba(255, 255, 255, 0.6)',
       zIndex: 1,
