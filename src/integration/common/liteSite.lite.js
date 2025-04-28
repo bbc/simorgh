@@ -1,6 +1,6 @@
 export default () => {
   describe('Lite Site Cta', () => {
-    const liteSiteCta = document.querySelector(
+    const liteSiteSummary = document.querySelector(
       "section[data-e2e='lite-summary']",
     );
 
