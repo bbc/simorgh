@@ -1,6 +1,6 @@
-# ATI Analytics
+# Page View & Component Tracking
 
-This directory contains code for logging events to ATI (Piano) Analytics.
+This directory contains code for logging page view and component tracking events to ATI (Piano) Analytics.
 
 ## Logging Click Events
 
