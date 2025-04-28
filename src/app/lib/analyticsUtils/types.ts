@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ATIComponentTrackingProps } from '#app/components/PageViewTracking/types';
+import { ComponentTrackingProps } from '#app/components/PageViewTracking/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import {
   CLICK_EVENT,
@@ -9,8 +9,7 @@ import {
 
 export type ATIEventType = typeof VIEW_EVENT | typeof CLICK_EVENT;
 
-export type EventTrackingData = EventTrackingMetadata &
-  ATIComponentTrackingProps;
+export type EventTrackingData = EventTrackingMetadata & ComponentTrackingProps;
 
 export type EventTrackingProps = {
   eventTrackingData?: EventTrackingData;

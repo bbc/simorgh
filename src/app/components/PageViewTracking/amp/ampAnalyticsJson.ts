@@ -2,12 +2,12 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable prefer-template */
 
-import { PageViewTrackingProps } from '../types';
+import { PageViewTrackingParams } from '../types';
 
 const ampAnalyticsJson = ({
   baseUrl,
-  pageviewParams,
-}: PageViewTrackingProps) => ({
+  pageViewParams,
+}: PageViewTrackingParams) => ({
   transport: {
     beacon: false,
     xhrpost: false,
@@ -15,7 +15,7 @@ const ampAnalyticsJson = ({
   },
   requests: {
     base: baseUrl,
-    pageview: '${base}' + pageviewParams,
+    pageview: '${base}' + pageViewParams,
   },
   triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });

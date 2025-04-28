@@ -4,7 +4,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import { PageViewTrackingProps } from '../types';
+import { PageViewTrackingParams } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 import {
   addSendStaticBeaconToWindow,
@@ -41,11 +41,11 @@ const addInlineScript = (script: string) => {
   );
 };
 
-export default ({ pageviewParams, reverbParams }: PageViewTrackingProps) => {
+export default ({ pageViewParams, reverbParams }: PageViewTrackingParams) => {
   const { isLite } = useContext(RequestContext);
 
   const atiPageViewUrlString =
-    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
+    getEnvConfig().SIMORGH_ATI_BASE_URL + pageViewParams;
 
   const [reverbBeaconConfig] = useState(reverbParams);
 

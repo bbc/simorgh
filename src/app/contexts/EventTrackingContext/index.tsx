@@ -32,7 +32,7 @@ import { buildATIEventTrackingParams } from '../../components/PageViewTracking/p
 import { ServiceContext } from '../ServiceContext';
 import {
   ATIData,
-  ATIComponentTrackingProps,
+  ComponentTrackingProps,
 } from '../../components/PageViewTracking/types';
 
 type EventTrackingContextProps =
@@ -111,7 +111,7 @@ export const EventTrackingContextProvider = ({
           requestContext,
           serviceContext,
           atiData,
-        }) as ATIComponentTrackingProps;
+        }) as ComponentTrackingProps;
 
       return {
         campaignID,

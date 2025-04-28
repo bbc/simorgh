@@ -13,7 +13,7 @@ describe('Amp ATI Analytics', () => {
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
     const { container } = render(
-      <AmpPageViewTracking pageviewParams="key1=value1&key2=value2" />,
+      <AmpPageViewTracking pageViewParams="key1=value1&key2=value2" />,
     );
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);

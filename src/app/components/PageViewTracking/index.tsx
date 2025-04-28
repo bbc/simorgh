@@ -31,10 +31,10 @@ export default ({ atiData = {} }: ATIProps) => {
   }
 
   return isAmp ? (
-    <AmpPageViewTracking pageviewParams={pageViewParams} />
+    <AmpPageViewTracking pageViewParams={pageViewParams} />
   ) : (
     <CanonicalPageViewTracking
-      pageviewParams={pageViewParams}
+      pageViewParams={pageViewParams}
       reverbParams={reverbParams}
     />
   );

@@ -5,7 +5,7 @@ describe('AMP ATI Analytics', () => {
     expect(
       ampAnalyticsJson({
         baseUrl: 'https://exampleBaseAtiUrl.com?',
-        pageviewParams: 'param1=value1&param2=value2',
+        pageViewParams: 'param1=value1&param2=value2',
       }),
     ).toEqual({
       transport: {

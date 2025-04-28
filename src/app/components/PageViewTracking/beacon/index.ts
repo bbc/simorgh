@@ -3,7 +3,7 @@ import {
   buildATIEventTrackUrl,
   buildReverbPageSectionEventModel,
 } from '../atiUrl';
-import { ATIComponentTrackingProps } from '../types';
+import { ComponentTrackingProps } from '../types';
 
 export const sendEventBeacon = async ({
   campaignID,
@@ -21,7 +21,7 @@ export const sendEventBeacon = async ({
   detailedPlacement,
   experimentVariant,
   useReverb,
-}: ATIComponentTrackingProps) => {
+}: ComponentTrackingProps) => {
   const atiClickTrackingUrl = buildATIEventTrackUrl({
     campaignID,
     componentName,

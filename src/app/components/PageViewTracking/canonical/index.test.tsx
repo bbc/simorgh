@@ -26,7 +26,7 @@ describe('Canonical ATI Analytics', () => {
     const reverbConfig = undefined;
 
     act(() => {
-      render(<CanonicalPageViewTracking pageviewParams={mockPageviewParams} />);
+      render(<CanonicalPageViewTracking pageViewParams={mockPageviewParams} />);
     });
 
     expect(mockSendBeacon).toHaveBeenCalledTimes(1);
@@ -37,7 +37,7 @@ describe('Canonical ATI Analytics', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     act(() => {
-      render(<CanonicalPageViewTracking pageviewParams={mockPageviewParams} />);
+      render(<CanonicalPageViewTracking pageViewParams={mockPageviewParams} />);
     });
 
     const helmet = Helmet.peek();
@@ -52,7 +52,7 @@ describe('Canonical ATI Analytics', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => true);
 
     act(() => {
-      render(<CanonicalPageViewTracking pageviewParams={mockPageviewParams} />);
+      render(<CanonicalPageViewTracking pageViewParams={mockPageviewParams} />);
     });
 
     expect(mockSendBeacon).not.toHaveBeenCalled();
@@ -60,7 +60,7 @@ describe('Canonical ATI Analytics', () => {
 
   it('should render a noscript image for non-JS users', () => {
     const { container } = render(
-      <CanonicalPageViewTracking pageviewParams={mockPageviewParams} />,
+      <CanonicalPageViewTracking pageViewParams={mockPageviewParams} />,
     );
     expect(container.querySelector('noscript')).toBeInTheDocument();
   });

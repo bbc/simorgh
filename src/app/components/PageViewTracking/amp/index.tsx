@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
-import { PageViewTrackingProps, AMPAnalyticsData } from '../types';
+import { PageViewTrackingParams, AMPAnalyticsData } from '../types';
 
 const JsonInlinedScript = (data: AMPAnalyticsData) => (
   <script
@@ -12,13 +12,13 @@ const JsonInlinedScript = (data: AMPAnalyticsData) => (
   />
 );
 
-export default ({ pageviewParams }: PageViewTrackingProps) => {
+export default ({ pageViewParams }: PageViewTrackingParams) => {
   return (
     <amp-analytics>
       {JsonInlinedScript(
         getAmpAnalyticsJson({
           baseUrl: getEnvConfig().SIMORGH_ATI_BASE_URL,
-          pageviewParams,
+          pageViewParams,
         }),
       )}
     </amp-analytics>
