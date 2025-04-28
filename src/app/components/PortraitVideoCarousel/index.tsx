@@ -101,26 +101,27 @@ const PortraitVideoCarousel = ({
             );
           })}
         </div>
-        <div css={styles.promoFadeOverlay} />
-        <div css={styles.buttonGroup}>
-          <button
-            type="button"
-            aria-label="Scroll left"
-            onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
-            disabled={!canScrollLeft}
-            css={styles.navButton}
-          >
-            <LeftChevron />
-          </button>
-          <button
-            type="button"
-            aria-label="Scroll right"
-            onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
-            disabled={!canScrollRight}
-            css={styles.navButton}
-          >
-            <RightChevron />
-          </button>
+        <div css={styles.buttonGroupOverlay}>
+          <div css={styles.buttonGroup}>
+            <button
+              type="button"
+              aria-label="Scroll left"
+              onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
+              disabled={!canScrollLeft}
+              css={styles.navButton}
+            >
+              <LeftChevron />
+            </button>
+            <button
+              type="button"
+              aria-label="Scroll right"
+              onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
+              disabled={!canScrollRight}
+              css={styles.navButton}
+            >
+              <RightChevron />
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 export const PROMO_ITEM_WIDTH = 180; // fixed width for one promo item
 
@@ -82,36 +83,41 @@ const styles = {
     }),
 
   // Adjust fade on carousel to suit UX designs at diff breakpoints
-  promoFadeOverlay: ({ mq }: Theme) =>
+  buttonGroupOverlay: ({ mq }: Theme) =>
     css({
       display: 'none',
-      position: 'absolute',
-      top: 0,
-      insetInlineEnd: 0,
-      width: '7rem',
-      height: '100%',
-      backgroundColor: 'rgba(255, 255, 255, 0.6)',
-      zIndex: 1,
-      pointerEvents: 'none',
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        display: 'none',
+      },
 
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
+        position: 'absolute',
+        top: 0,
+        insetInlineEnd: 0,
+        width: '7rem',
+        height: '100%',
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        zIndex: 1,
       },
     }),
 
   buttonGroup: ({ mq }: Theme) =>
     css({
       display: 'none',
-      position: 'absolute',
-      top: '50%',
-      insetInlineEnd: '1%',
-      transform: 'translateY(-50%)',
-      flexDirection: 'row',
-      zIndex: 2,
-      gap: '0.25rem',
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        display: 'none',
+      },
 
       [mq.GROUP_3_MIN_WIDTH]: {
+        width: '100%',
         display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '0.25rem',
       },
     }),
 
