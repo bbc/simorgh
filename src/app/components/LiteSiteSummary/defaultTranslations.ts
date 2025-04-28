@@ -1,4 +1,4 @@
-export default {
+const defaultTranslations: {
   onboardingMessage: string;
   toMainSite: string;
   informationPage: string;

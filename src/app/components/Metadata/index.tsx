@@ -12,7 +12,7 @@ import {
   renderAppleItunesApp,
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
-import defaultTranslations from '../LiteSiteSummary/liteSiteTranslations';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
