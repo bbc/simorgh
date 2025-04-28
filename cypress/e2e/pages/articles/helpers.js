@@ -53,5 +53,6 @@ export const getVideoEmbedUrl = (body, language, isAmp = false) => {
 };
 
 export const isLitePromotedService = ({ service, variant = 'default' }) => {
-  return appConfig[service][variant].translations?.liteSite?.informationPageLink;
+  return appConfig[service][variant].translations?.liteSite
+    ?.informationPageLink;
 };
