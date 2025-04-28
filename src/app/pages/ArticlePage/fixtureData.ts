@@ -20,7 +20,7 @@ const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   ];
 };
 
-const blocksWithHeadlineTexAndByline = (blockValues: (object | string)[]) => {
+const blocksWithHeadlineTextAndByline = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, twitterHandle] = blockValues;
 
   return [
@@ -739,7 +739,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   'Article summary in Pidgin',
   emptyThings,
   undefined,
-  blocksWithHeadlineTexAndByline,
+  blocksWithHeadlineTextAndByline,
 ) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
@@ -794,6 +794,156 @@ export const articleStyDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'STY',
+) as unknown as Article;
+
+export const articleDataPidginWithPV = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  [
+    'Article Headline in Pidgin',
+    'A paragraph in Pidgin.',
+    {
+      id: '9eea8935',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p0l0sm0w',
+        blocks: [
+          {
+            id: '326c14fc',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: 'b6ceabfb',
+                  blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p0l0sm0w',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'A trágica história da dupla que unia mágica e tigres em Las Vegas',
+                    synopses: {
+                      short: 'some synopsis',
+                      long: 'some synopsis',
+                      medium: 'some synopsis',
+                    },
+                    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p0l0sm10',
+                        types: ['Portrait'],
+                        duration: 88,
+                        durationISO8601: 'PT1M28S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743098855000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: ['default'],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  true,
+) as unknown as Article;
+
+export const articleDataPortugueseWithPV = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Portuguese',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  [
+    'Article Headline in Portuguese',
+    'A paragraph in Portuguese.',
+    {
+      id: '9eea8935',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p0l0sm0w',
+        blocks: [
+          {
+            id: '326c14fc',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: 'b6ceabfb',
+                  blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p0l0sm0w',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'A trágica história da dupla que unia mágica e tigres em Las Vegas',
+                    synopses: {
+                      short: 'some synopsis',
+                      long: 'some synopsis',
+                      medium: 'some synopsis',
+                    },
+                    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p0l0sm10',
+                        types: ['Portrait'],
+                        duration: 88,
+                        durationISO8601: 'PT1M28S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743098855000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: ['default'],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+  'Article Headline for SEO in Portuguese',
+  'Article Headline for Promo in Portuguese',
+  'Article summary in Portuguese',
+  emptyThings,
+  true,
 ) as unknown as Article;
 
 export const bylineWithNoAuthor = [

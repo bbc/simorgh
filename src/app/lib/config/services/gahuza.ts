@@ -83,17 +83,6 @@ export const service: DefaultServiceConfig = {
         informationPageLink: 'https://www.bbc.com/gahuza/articles/cn7y7pvem0vo',
         dataSaving: 'Ahagusaba uburyo (ama mega) buke',
         articleDataSavingLinkText: 'Inyandiko gusa',
-        experiment: {
-          control_text_only: 'Inyandiko gusa',
-          variation_a_explore_data_friendly_version:
-            'Koresha uburyo butwara amahera make',
-          variation_b_data_saving_version: 'Uburyo buziganya amahera',
-          variation_c_read_data_saving_version:
-            'Soma mu buryo buziganya amahera',
-          variation_d_lite_site: 'Site yoroheje',
-          variation_e_2g_optimised_version: '2G Ukoresheje uburyo busanzwe',
-          variation_f_low_data_version: 'Uburyo butwara amahera make',
-        },
       },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',

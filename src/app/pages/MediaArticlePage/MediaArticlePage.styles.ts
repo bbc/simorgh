@@ -51,6 +51,52 @@ export default {
         padding: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
     }),
+  portraitVideoPlayer: ({ mq, spacings }: Theme) =>
+    css({
+      paddingTop: 0,
+      paddingBottom: `${spacings.TRIPLE}rem`,
+      maxWidth: '100%',
+      marginInline: 0,
+      margin: 0,
+      [mq.GROUP_3_ONLY]: {
+        paddingTop: `${spacings.DOUBLE}rem`,
+        marginInline: `${spacings.DOUBLE}rem`,
+        maxWidth: `${pixelsToRem(325)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        [mq.GROUP_3_MAX_WIDTH]: {
+          paddingTop: `${spacings.DOUBLE}rem`,
+          marginInline: `${spacings.DOUBLE}rem`,
+        },
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingTop: `${spacings.TRIPLE}rem`,
+      },
+      '.portrait-media-loader': {
+        maxWidth: '100%',
+        marginInline: 0,
+        margin: 0,
+        [mq.GROUP_3_ONLY]: {
+          maxWidth: `${pixelsToRem(325)}rem`,
+        },
+        [mq.GROUP_4_ONLY]: {
+          maxWidth: `${pixelsToRem(315)}rem`,
+        },
+        [mq.GROUP_5_MIN_WIDTH]: {
+          maxWidth: `${pixelsToRem(397)}rem`,
+        },
+      },
+      '.portrait-caption': {
+        marginInline: `${spacings.FULL}rem`,
+        [mq.GROUP_2_MIN_WIDTH]: {
+          marginInline: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_3_MIN_WIDTH]: {
+          marginInline: 0,
+        },
+      },
+    }),
   mostReadSection: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_1_MAX_WIDTH]: {

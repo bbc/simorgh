@@ -21,7 +21,7 @@ const RELATED_CONTENT = 'related-content';
 const RELATED_TOPICS = 'topics';
 const PODCAST_PROMO = 'promo-podcast';
 const LITE_SITE_CTA = 'lite-site-cta';
-const CANONICAL_LITE_CTA = 'canonical-lite-cta';
+const ARTICLE_LITE_SITE_LINK = 'article-lite-site-link';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
@@ -33,8 +33,8 @@ const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
 
 export const COMPONENTS = {
+  ARTICLE_LITE_SITE_LINK,
   BILLBOARD,
-  CANONICAL_LITE_CTA,
   DROPDOWN_NAVIGATION,
   FEATURES,
   LATEST_MEDIA,
@@ -62,7 +62,7 @@ export const interceptATIAnalyticsBeacons = () => {
   // Component Views
   Object.values(COMPONENTS).forEach(component => {
     const viewClickEventRegex = new RegExp(
-      `PUB-\\[?.*?\\]?-\\[?${component}.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?`,
+      `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
       'g',
     );
 
