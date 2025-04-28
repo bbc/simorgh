@@ -196,7 +196,7 @@
     "babel-loader": "10.0.0",
     "babel-plugin-dynamic-import-node": "2.3.3",
     "chalk": "5.4.1",
-    "chromatic": "11.28.0",
+    "chromatic": "11.28.2",
     "cli-table": "0.3.11",
     "colors": "^1.4.0",
     "compression-webpack-plugin": "11.1.0",
