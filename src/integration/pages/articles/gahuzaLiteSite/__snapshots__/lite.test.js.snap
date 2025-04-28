@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Lite Site Articles Lite Site Cta should match snapshot 1`] = `
+exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
 <section
   aria-labelledby="LiteSiteSummary"
   class="bbc-1x0h7k"

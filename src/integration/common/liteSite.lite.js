@@ -5,11 +5,11 @@ export default () => {
     );
 
     it('should be in the document', () => {
-      expect(liteSiteCta).toBeInTheDocument();
+      expect(liteSiteSummary).toBeInTheDocument();
     });
 
     it('should match snapshot', () => {
-      expect(liteSiteCta).toMatchSnapshot();
+      expect(liteSiteSummary).toMatchSnapshot();
     });
   });
 };
