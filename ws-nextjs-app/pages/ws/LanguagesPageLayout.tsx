@@ -1,6 +1,6 @@
 import React from 'react';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-import ATIAnalytics from '#app/components/ATIAnalytics';
+import PageViewTracking from '#app/components/PageViewTracking';
 import MetadataContainer from '#app/components/Metadata';
 import Head from 'next/head';
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
@@ -44,7 +44,7 @@ const atiAnalytics = {
 export default function LanguagesPageLayout() {
   return (
     <>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <PageViewTracking atiData={atiAnalytics} />
       <ChartbeatAnalytics title={pageTitle} />
       <MetadataContainer
         title={pageTitle}

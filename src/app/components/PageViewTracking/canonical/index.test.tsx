@@ -5,9 +5,9 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { addSendStaticBeaconToWindow } from '#app/components/ATIAnalytics/canonical/staticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/components/PageViewTracking/canonical/staticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
-import CanonicalATIAnalytics from '.';
+import CanonicalPageViewTracking from '.';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -26,7 +26,7 @@ describe('Canonical ATI Analytics', () => {
     const reverbConfig = undefined;
 
     act(() => {
-      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+      render(<CanonicalPageViewTracking pageviewParams={mockPageviewParams} />);
     });
 
     expect(mockSendBeacon).toHaveBeenCalledTimes(1);
@@ -37,7 +37,7 @@ describe('Canonical ATI Analytics', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     act(() => {
-      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+      render(<CanonicalPageViewTracking pageviewParams={mockPageviewParams} />);
     });
 
     const helmet = Helmet.peek();
@@ -52,7 +52,7 @@ describe('Canonical ATI Analytics', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => true);
 
     act(() => {
-      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+      render(<CanonicalPageViewTracking pageviewParams={mockPageviewParams} />);
     });
 
     expect(mockSendBeacon).not.toHaveBeenCalled();
@@ -60,7 +60,7 @@ describe('Canonical ATI Analytics', () => {
 
   it('should render a noscript image for non-JS users', () => {
     const { container } = render(
-      <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
+      <CanonicalPageViewTracking pageviewParams={mockPageviewParams} />,
     );
     expect(container.querySelector('noscript')).toBeInTheDocument();
   });

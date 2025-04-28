@@ -6,7 +6,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import MediaLoader from '#app/components/MediaLoader';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -28,7 +28,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
   const hasRadioScheduleData = Boolean(radioScheduleData);
   return (
     <>
-      <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
+      <PageViewTracking atiData={pageData?.metadata.atiAnalytics} />
       <ChartbeatAnalytics
         mediaPageType="Radio"
         title={name}

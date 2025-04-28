@@ -1,4 +1,4 @@
-import { buildATIEventTrackUrl } from '#app/components/ATIAnalytics/atiUrl';
+import { buildATIEventTrackUrl } from '#app/components/PageViewTracking/atiUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 

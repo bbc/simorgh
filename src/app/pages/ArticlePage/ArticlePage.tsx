@@ -53,7 +53,7 @@ import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
 import EmbedHtml from '../../components/Embeds/EmbedHtml';
 import MostRead from '../../components/MostRead';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import Byline from '../../components/Byline';
@@ -263,7 +263,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <PageViewTracking atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}

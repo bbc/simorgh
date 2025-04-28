@@ -1,6 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import { ATIData } from '#app/components/PageViewTracking/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
 import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';

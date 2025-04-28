@@ -10,7 +10,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import { ATIData } from '#app/components/PageViewTracking/types';
 import { Toggles } from '#app/models/types/global';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import useViewTracker from '.';

@@ -96,7 +96,7 @@ describe('sendBeacon', () => {
       },
     };
 
-    // Simulates reverbBeaconConfig set to null in ATIAnalytics and sendEventBeacon
+    // Simulates reverbBeaconConfig set to null in PageViewTracking and sendEventBeacon
     // in the event useReverb resolves to 'false'
     const reverbConfigWhenReverbIsDisabled = null;
 

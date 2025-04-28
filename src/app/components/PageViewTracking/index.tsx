@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import CanonicalATIAnalytics from './canonical';
-import AmpATIAnalytics from './amp';
+import CanonicalPageViewTracking from './canonical';
+import AmpPageViewTracking from './amp';
 import { ATIProps } from './types';
 import { buildATIUrl, buildReverbParams } from './params';
 
-const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
+export default ({ atiData = {} }: ATIProps) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { isAmp } = requestContext;
   const { useReverb } = serviceContext;
 
-  const urlPageViewParams = buildATIUrl({
+  const pageViewParams = buildATIUrl({
     requestContext,
     serviceContext,
     atiData,
@@ -26,18 +26,16 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
       })
     : null;
 
-  if (!urlPageViewParams) {
+  if (!pageViewParams) {
     return null;
   }
 
   return isAmp ? (
-    <AmpATIAnalytics pageviewParams={urlPageViewParams} />
+    <AmpPageViewTracking pageviewParams={pageViewParams} />
   ) : (
-    <CanonicalATIAnalytics
-      pageviewParams={urlPageViewParams}
+    <CanonicalPageViewTracking
+      pageviewParams={pageViewParams}
       reverbParams={reverbParams}
     />
   );
 };
-
-export default ATIAnalytics;

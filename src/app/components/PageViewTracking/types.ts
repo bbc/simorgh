@@ -98,13 +98,13 @@ export interface ReverbDetailsProviders {
   atiData: ATIData;
 }
 
-export interface ATIAnalyticsProps {
+export interface PageViewTrackingProps {
   baseUrl?: string;
   pageviewParams: string;
   reverbParams?: object | null;
 }
 
-export interface ATIEventTrackingProps {
+export interface ATIComponentTrackingProps {
   campaignID?: string;
   componentName?: string;
   format?: string;

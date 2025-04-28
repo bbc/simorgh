@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
-import ATIAnalytics from '#app/components/ATIAnalytics';
+import PageViewTracking from '#app/components/PageViewTracking';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
@@ -33,7 +33,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
   const pageTitle = pageData?.metadata?.pageTitle || '';
   return (
     <>
-      <ATIAnalytics atiData={atiData} />
+      <PageViewTracking atiData={atiData} />
       <ChartbeatAnalytics title={pageTitle} />
       <Metadata
         title={title}

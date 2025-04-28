@@ -3,13 +3,13 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import {
   Curation,
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
+import { ATIData } from '../../components/PageViewTracking/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
@@ -70,7 +70,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
       />
       <Ad slotType="leaderboard" />
       <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
+        <PageViewTracking atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">

@@ -1,4 +1,4 @@
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import { ATIData } from '#app/components/PageViewTracking/types';
 import { ChartbeatProps } from '#app/components/ChartbeatAnalytics/types';
 import { LiveRadioBlock } from '#app/models/types/media';
 

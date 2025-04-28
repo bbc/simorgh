@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
 import styles from './index.styles';
@@ -50,7 +50,7 @@ const TopicPage = ({ pageData }) => {
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>
-          <ATIAnalytics atiData={atiAnalytics} />
+          <PageViewTracking atiData={atiAnalytics} />
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={activePage >= 2 ? pageTitle : title}

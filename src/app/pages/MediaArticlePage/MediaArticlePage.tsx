@@ -35,7 +35,7 @@ import text from '../../legacy/containers/Text';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import Blocks from '../../legacy/containers/Blocks';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
@@ -240,7 +240,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <PageViewTracking atiData={atiData} />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}
         title={headline}

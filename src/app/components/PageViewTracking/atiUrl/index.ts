@@ -18,7 +18,7 @@ import {
   getATIMarketingString,
   getRSSMarketingString,
 } from '../../../lib/analyticsUtils';
-import { ATIEventTrackingProps, ATIPageTrackingProps } from '../types';
+import { ATIComponentTrackingProps, ATIPageTrackingProps } from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -291,7 +291,7 @@ export const buildATIEventTrackUrl = ({
   experimentVariant,
   ampExperimentName,
   isStatic = false,
-}: ATIEventTrackingProps & {
+}: ATIComponentTrackingProps & {
   isStatic?: boolean;
 }) => {
   // on AMP, variable substitutions are used in the value and they cannot be
@@ -500,7 +500,7 @@ export const buildReverbPageSectionEventModel = ({
   type,
   advertiserID,
   url,
-}: ATIEventTrackingProps) => {
+}: ATIComponentTrackingProps) => {
   const eventDetails = {
     eventName: type === 'view' ? 'sectionView' : 'sectionClick',
     eventPublisher: type === 'click' ? 'click' : 'impression',

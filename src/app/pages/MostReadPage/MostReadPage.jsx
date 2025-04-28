@@ -16,7 +16,7 @@ import Grid, { GelPageGrid } from '#components/Grid';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
 import MostRead from '../../components/MostRead/Canonical';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -92,7 +92,7 @@ const MostReadPage = ({ pageData }) => {
 
   return (
     <>
-      <ATIAnalytics atiData={atiData} />
+      <PageViewTracking atiData={atiData} />
       <ChartbeatAnalytics title={header} />
       <ComscoreAnalytics />
       <MetadataContainer

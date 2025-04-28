@@ -1,4 +1,4 @@
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import { ATIData } from '#app/components/PageViewTracking/types';
 import { Tag } from '#app/components/Metadata/types';
 import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';

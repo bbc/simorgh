@@ -5,8 +5,8 @@ import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-import ATIAnalytics from '#app/components/ATIAnalytics';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import PageViewTracking from '#app/components/PageViewTracking';
+import { ATIData } from '#app/components/PageViewTracking/types';
 import { RequestContext } from '#app/contexts/RequestContext';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
@@ -117,7 +117,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
 
   return (
     <>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <PageViewTracking atiData={atiAnalytics} />
       <ChartbeatAnalytics title={pageTitle} />
       <MetadataContainer
         title={pageTitle}

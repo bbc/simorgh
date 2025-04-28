@@ -28,12 +28,12 @@ import {
   AUDIO_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
-import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
+import { buildATIEventTrackingParams } from '../../components/PageViewTracking/params';
 import { ServiceContext } from '../ServiceContext';
 import {
   ATIData,
-  ATIEventTrackingProps,
-} from '../../components/ATIAnalytics/types';
+  ATIComponentTrackingProps,
+} from '../../components/PageViewTracking/types';
 
 type EventTrackingContextProps =
   | {
@@ -111,7 +111,7 @@ export const EventTrackingContextProvider = ({
           requestContext,
           serviceContext,
           atiData,
-        }) as ATIEventTrackingProps;
+        }) as ATIComponentTrackingProps;
 
       return {
         campaignID,

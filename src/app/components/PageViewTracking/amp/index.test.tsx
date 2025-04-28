@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
-import AmpATIAnalytics from '.';
+import AmpPageViewTracking from '.';
 
 describe('Amp ATI Analytics', () => {
   const atiBaseUrl = 'https://foobar.com?';
@@ -13,7 +13,7 @@ describe('Amp ATI Analytics', () => {
     process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
     const { container } = render(
-      <AmpATIAnalytics pageviewParams="key1=value1&key2=value2" />,
+      <AmpPageViewTracking pageviewParams="key1=value1&key2=value2" />,
     );
 
     expect(container.querySelectorAll('amp-analytics').length).toEqual(1);

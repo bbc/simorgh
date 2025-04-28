@@ -18,9 +18,9 @@ import {
   EpisodeAvailability,
   OnDemandAudioBlock,
 } from '#app/models/types/media';
-import { ATIData } from '#app/components/ATIAnalytics/types';
+import { ATIData } from '#app/components/PageViewTracking/types';
 import styles from './index.styles';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
 import LinkedData from '../../components/LinkedData';
@@ -140,7 +140,7 @@ const OnDemandAudioPage = ({
 
   return (
     <>
-      <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
+      <PageViewTracking atiData={pageData?.metadata.atiAnalytics} />
       <ChartbeatAnalytics
         mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
         title={headline}

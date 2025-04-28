@@ -4,7 +4,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import { ATIAnalyticsProps } from '../types';
+import { PageViewTrackingProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 import {
   addSendStaticBeaconToWindow,
@@ -41,10 +41,7 @@ const addInlineScript = (script: string) => {
   );
 };
 
-const CanonicalATIAnalytics = ({
-  pageviewParams,
-  reverbParams,
-}: ATIAnalyticsProps) => {
+export default ({ pageviewParams, reverbParams }: PageViewTrackingProps) => {
   const { isLite } = useContext(RequestContext);
 
   const atiPageViewUrlString =
@@ -68,5 +65,3 @@ const CanonicalATIAnalytics = ({
     </>
   );
 };
-
-export default CanonicalATIAnalytics;

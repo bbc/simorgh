@@ -41,7 +41,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import PageViewTracking from '../../components/PageViewTracking';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -49,7 +49,7 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
-jest.mock('../../components/ATIAnalytics');
+jest.mock('../../components/PageViewTracking');
 
 jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
 jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
@@ -131,13 +131,13 @@ beforeEach(() => {
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
 
-  (ATIAnalytics as jest.Mock).mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
+  (PageViewTracking as jest.Mock).mockImplementation(
+    jest.requireActual('../../components/PageViewTracking').default,
   );
 });
 
 afterAll(() => {
-  (ATIAnalytics as jest.Mock).mockReset();
+  (PageViewTracking as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
@@ -838,7 +838,7 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
+      (PageViewTracking as jest.Mock).mockImplementation(() => <div />);
 
       render(
         <Context service="pidgin">
@@ -846,7 +846,7 @@ describe('Article Page', () => {
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(PageViewTracking).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -882,7 +882,7 @@ describe('Article Page', () => {
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
+      (PageViewTracking as jest.Mock).mockImplementation(() => <div />);
 
       render(
         <Context service="pidgin">
@@ -890,7 +890,7 @@ describe('Article Page', () => {
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(PageViewTracking).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,

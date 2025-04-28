@@ -10,7 +10,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
-import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
+import { sendEventBeacon } from '../../components/PageViewTracking/beacon';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 

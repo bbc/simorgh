@@ -8,7 +8,7 @@ import { UserContextProvider } from '../contexts/UserContext';
 import { EventTrackingContextProvider } from '../contexts/EventTrackingContext';
 import ThemeProvider from './ThemeProvider';
 import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
-import { ATIData } from './ATIAnalytics/types';
+import { ATIData } from './PageViewTracking/types';
 
 jest.mock('./ThemeProvider');
 

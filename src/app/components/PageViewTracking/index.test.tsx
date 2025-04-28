@@ -22,7 +22,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import ATIAnalytics from '.';
+import PageViewTracking from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
@@ -48,7 +48,7 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('pageType article', () => {
-    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+    it('should call CanonicalPageViewTracking when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -57,7 +57,7 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
+      render(<PageViewTracking atiData={atiAnalytics} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: false,
@@ -97,7 +97,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should call AmpATIAnalytics when platform is Amp', () => {
+    it('should call AmpPageViewTracking when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -107,7 +107,7 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
+      render(<PageViewTracking atiData={atiAnalytics} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: true,
@@ -150,7 +150,7 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('pageType media article', () => {
-    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+    it('should call CanonicalPageViewTracking when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -168,7 +168,9 @@ describe('ATI Analytics Container', () => {
       };
 
       render(
-        <ATIAnalytics atiData={mediaArticleDataNews.metadata.atiAnalytics} />,
+        <PageViewTracking
+          atiData={mediaArticleDataNews.metadata.atiAnalytics}
+        />,
         {
           ...defaultRenderProps,
           isAmp: false,
@@ -209,7 +211,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should call AmpATIAnalytics when platform is Amp', () => {
+    it('should call AmpPageViewTracking when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -228,7 +230,9 @@ describe('ATI Analytics Container', () => {
       };
 
       render(
-        <ATIAnalytics atiData={mediaArticleDataNews.metadata.atiAnalytics} />,
+        <PageViewTracking
+          atiData={mediaArticleDataNews.metadata.atiAnalytics}
+        />,
         {
           ...defaultRenderProps,
           isAmp: true,
@@ -272,7 +276,7 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('pageType=MAP', () => {
-    it('should call AmpATIAnalytics when platform is amp', () => {
+    it('should call AmpPageViewTracking when platform is amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -287,7 +291,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Pidgin`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: true,
@@ -329,7 +333,7 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('pageType=PGL', () => {
-    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+    it('should call CanonicalPageViewTracking when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -343,7 +347,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Azərbaycanca`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: false,
@@ -382,7 +386,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should call AmpATIAnalytics when platform is Amp', () => {
+    it('should call AmpPageViewTracking when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
@@ -397,7 +401,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Azərbaycanca`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: true,
@@ -440,7 +444,7 @@ describe('ATI Analytics Container', () => {
   });
 
   describe('pageType=STY', () => {
-    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+    it('should call CanonicalPageViewTracking when platform is canonical', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       canonical.default = mockCanonical;
@@ -454,7 +458,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: false,
@@ -494,7 +498,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should call AmpATIAnalytics when platform is Amp', () => {
+    it('should call AmpPageViewTracking when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
@@ -508,7 +512,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: true,
@@ -550,7 +554,7 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should call AmpATIAnalytics when platform is Amp and pageType is CSP', () => {
+    it('should call AmpPageViewTracking when platform is Amp and pageType is CSP', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
       amp.default = mockAmp;
@@ -565,7 +569,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: true,
@@ -621,7 +625,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData,
         isAmp: false,
@@ -675,7 +679,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData,
         isAmp: true,
@@ -731,7 +735,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData,
         isAmp: false,
@@ -785,7 +789,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Україна`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData,
         isAmp: true,
@@ -851,7 +855,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData,
         isAmp: false,
@@ -908,7 +912,7 @@ describe('ATI Analytics Container', () => {
         pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
       };
 
-      render(<ATIAnalytics atiData={atiData} />, {
+      render(<PageViewTracking atiData={atiData} />, {
         ...defaultRenderProps,
         atiData,
         isAmp: false,
@@ -972,7 +976,7 @@ describe('ATI Analytics Container', () => {
 
       render(
         <ServiceContext.Provider value={serviceContextProps}>
-          <ATIAnalytics atiData={atiAnalytics} />
+          <PageViewTracking atiData={atiAnalytics} />
         </ServiceContext.Provider>,
         {
           ...defaultRenderProps,
@@ -1023,7 +1027,7 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      render(<ATIAnalytics atiData={atiAnalytics} />, {
+      render(<PageViewTracking atiData={atiAnalytics} />, {
         ...defaultRenderProps,
         atiData: atiAnalytics,
         isAmp: false,
