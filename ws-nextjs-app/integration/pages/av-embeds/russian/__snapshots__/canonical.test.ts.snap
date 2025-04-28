@@ -4,7 +4,7 @@ exports[`Canonical Av-embeds Media Loader a11y assistive technology can read the
 
 exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 <div
-  class="placeholder css-1r8vrs6"
+  class="mediaLoaderPlaceholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
   <button
@@ -72,7 +72,7 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 <div
-  class="placeholder css-1r8vrs6"
+  class="mediaLoaderPlaceholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
   <button
@@ -144,7 +144,7 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
   data-e2e="media-loader__container"
 >
   <div
-    class="placeholder css-1r8vrs6"
+    class="mediaLoaderPlaceholder css-1r8vrs6"
     data-e2e="media-loader__placeholder"
   >
     <button
