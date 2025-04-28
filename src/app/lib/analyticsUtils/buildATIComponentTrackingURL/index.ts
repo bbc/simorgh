@@ -1,4 +1,3 @@
-import { ComponentTrackingProps } from '#app/components/PageViewTracking/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   getAtiUrl,
@@ -10,6 +9,7 @@ import {
   getEventInfo,
   getScreenInfo,
 } from '..';
+import { ComponentTrackingProps } from '../types';
 
 export default ({
   pageIdentifier,

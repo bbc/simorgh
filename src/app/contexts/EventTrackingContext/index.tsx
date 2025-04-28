@@ -5,6 +5,7 @@ import React, {
   useMemo,
 } from 'react';
 
+import { ComponentTrackingProps } from '#app/lib/analyticsUtils/types';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -30,10 +31,7 @@ import {
 import { PageTypes, Platforms } from '../../models/types/global';
 import { getATIParams } from '../../components/PageViewTracking/params';
 import { ServiceContext } from '../ServiceContext';
-import {
-  ATIData,
-  ComponentTrackingProps,
-} from '../../components/PageViewTracking/types';
+import { ATIData } from '../../components/PageViewTracking/types';
 
 type EventTrackingContextProps =
   | {

@@ -1,3 +1,4 @@
+import { buildReverbComponentTrackingModel } from '#app/components/PageViewTracking/params';
 import buildATIComponentTrackingURL from '#app/lib/analyticsUtils/buildATIComponentTrackingURL';
 import sendBeacon from '../sendBeacon';
 import { ComponentTrackingProps } from '../types';

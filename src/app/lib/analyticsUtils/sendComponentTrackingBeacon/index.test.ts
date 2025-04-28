@@ -1,6 +1,6 @@
 import * as sendBeacon from '../sendBeacon';
 import * as analyticsUtils from '..';
-import { sendEventBeacon } from '.';
+import sendComponentTrackingBeacon from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 
@@ -35,7 +35,7 @@ describe('beacon', () => {
 
   describe('event', () => {
     it('should call sendBeacon exactly once', () => {
-      sendEventBeacon({
+      sendComponentTrackingBeacon({
         type: 'click',
         service: 'news',
         componentName: 'component',
@@ -63,7 +63,7 @@ describe('beacon', () => {
 
     describe('Reverb', () => {
       it('should call reverb userActionEvent exactly once for a view event', async () => {
-        await sendEventBeacon({
+        await sendComponentTrackingBeacon({
           type: 'view',
           service: 'news',
           pageIdentifier: 'pageIdentifier',
@@ -98,7 +98,7 @@ describe('beacon', () => {
       });
 
       it('should call reverb click event exactly once for a click event', async () => {
-        await sendEventBeacon({
+        await sendComponentTrackingBeacon({
           type: 'click',
           service: 'news',
           pageIdentifier: 'pageIdentifier',
@@ -133,7 +133,7 @@ describe('beacon', () => {
       });
 
       it('should resolve reverbParams to null when Reverb is disabled for a service', () => {
-        sendEventBeacon({
+        sendComponentTrackingBeacon({
           type: 'click',
           service: 'news',
           componentName: 'component',
