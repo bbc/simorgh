@@ -73,8 +73,8 @@ const PortraitVideoCarousel = ({
         {title}
       </Heading>
 
-      <div css={styles.scrollContainer}>
-        <div dir={dir} ref={scrollRef} css={styles.scrollWrapper}>
+      <div dir={dir} css={styles.scrollContainer}>
+        <div ref={scrollRef} css={styles.scrollWrapper}>
           {items.map(item => {
             const image = item.images?.[0]?.url;
             const alt = item.images?.[0]?.altText || '';
@@ -104,12 +104,12 @@ const PortraitVideoCarousel = ({
             );
           })}
         </div>
-        <div css={styles.promoFadeOverlayRight} />
+        <div css={styles.promoFadeOverlay} />
         <div css={styles.buttonGroup}>
           <button
             type="button"
             aria-label="Scroll left"
-            onClick={() => scroll('left')}
+            onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
             disabled={!canScrollLeft}
             css={styles.navButton}
           >
@@ -118,7 +118,7 @@ const PortraitVideoCarousel = ({
           <button
             type="button"
             aria-label="Scroll right"
-            onClick={() => scroll('right')}
+            onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
             disabled={!canScrollRight}
             css={styles.navButton}
           >
