@@ -11,10 +11,13 @@ import sendBeaconLite from './sendBeaconLite';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const trackingPixelUrl = (ATIAnalyticsPropsExport: object) =>
-  reverbUrlHelper.getTrackingPixelSrc(ATIAnalyticsPropsExport);
+const trackingPixelUrl = (
+  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
+) => reverbUrlHelper.getTrackingPixelSrc(reverbParams);
 
-const renderNoScriptTrackingPixel = (ATIAnalyticsPropsExport: object) => {
+const renderNoScriptTrackingPixel = (
+  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
+) => {
   return (
     <noscript>
       <img
@@ -25,7 +28,7 @@ const renderNoScriptTrackingPixel = (ATIAnalyticsPropsExport: object) => {
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={trackingPixelUrl(ATIAnalyticsPropsExport)}
+        src={trackingPixelUrl(reverbParams)}
       />
     </noscript>
   );
@@ -72,7 +75,7 @@ const CanonicalATIAnalytics = ({
     <>
       {isLite && addLiteScript(atiPageViewUrlString)}
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
-      {renderNoScriptTrackingPixel(ATIAnalyticsPropsExport)}
+      {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );
 };
