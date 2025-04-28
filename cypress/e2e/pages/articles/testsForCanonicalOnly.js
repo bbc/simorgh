@@ -74,18 +74,16 @@ export default ({ service, pageType, variant = 'default' }) =>
     }
 
     if (liteEnabledServices.includes(service)) {
-      describe('Canonical Lite Site CTA', () => {
-        it.skip('should have a lite site CTA', () => {
-          cy.get('[data-e2e="to-lite-site"]').within(() => {
-            cy.get('a')
-              .should('have.attr', 'href')
-              .then($href => {
-                cy.get('a').click();
-                cy.url().should('contain', $href).should('contain', '.lite');
-              });
-          });
-          cy.go('back');
+      it('should have a lite site link', () => {
+        cy.get('[data-e2e="article-lite-site-link"]').within(() => {
+          cy.get('a')
+            .should('have.attr', 'href')
+            .then($href => {
+              cy.get('a').click();
+              cy.url().should('contain', $href).should('contain', '.lite');
+            });
         });
+        cy.go('back');
       });
     }
 

@@ -39,7 +39,7 @@
     "@next/swc-win32-arm64-msvc": "15.2.4",
     "@next/swc-win32-x64-msvc": "15.2.4",
     "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.2.0",
+    "@testing-library/react": "16.3.0",
     "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "14.3.0",
     "cypress-axe": "^1.6.0",

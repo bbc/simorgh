@@ -5,10 +5,6 @@ import {
   assertBillboardComponentView,
 } from './assertions/billboard';
 import {
-  assertCanonicalToLiteSiteCTAComponentClick,
-  assertCanonicalToLiteSiteCTAComponentView,
-} from './assertions/canonicalLiteSiteCta';
-import {
   assertFeaturesAnalysisComponentClick,
   assertFeaturesAnalysisComponentView,
 } from './assertions/featuresAnalysis';
@@ -17,6 +13,10 @@ import {
   assertLatestMediaComponentView,
 } from './assertions/latestMedia';
 import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
+import {
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from './assertions/articleLiteSiteLink';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -120,6 +120,8 @@ const canonicalTestSuites = [
     useReverb: true,
     tests: [
       assertPageView,
+      assertArticleLiteSiteLinkComponentView,
+      assertArticleLiteSiteLinkComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
       assertFeaturesAnalysisComponentView,
@@ -132,8 +134,6 @@ const canonicalTestSuites = [
       assertRelatedContentComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
-      assertCanonicalToLiteSiteCTAComponentView,
-      assertCanonicalToLiteSiteCTAComponentClick,
     ],
   },
   {
@@ -468,8 +468,8 @@ const liteTestSuites = canonicalTestSuites
       assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
       assertSocialEmbedComponentView, // Social embeds removed from lite article pages
       assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
-      assertCanonicalToLiteSiteCTAComponentView, // Canonical to Lite Site CTA only displayed on canonical pages
-      assertCanonicalToLiteSiteCTAComponentClick, // Canonical to Lite Site CTA only displayed on canonical pages
+      assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
+      assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
       assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
     ];
 
@@ -478,7 +478,7 @@ const liteTestSuites = canonicalTestSuites
     );
 
     // All lite enabled pages should have the LiteSiteCTA component
-    liteSiteTests.push(...[assertLiteSiteCTAComponentClick]);
+    liteSiteTests.push(assertLiteSiteCTAComponentClick);
 
     return {
       ...testSuite,
