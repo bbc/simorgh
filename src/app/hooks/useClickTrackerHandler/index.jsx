@@ -8,9 +8,9 @@ import {
 } from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import sendComponentTrackingBeacon from '#app/lib/analyticsUtils/sendComponentTrackingBeacon';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
-import { sendEventBeacon } from '../../components/PageViewTracking/beacon';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
@@ -84,7 +84,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
             optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
 
           try {
-            await sendEventBeacon({
+            await sendComponentTrackingBeacon({
               type: CLICK_EVENT,
               campaignID,
               componentName,

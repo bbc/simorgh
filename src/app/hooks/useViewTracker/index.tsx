@@ -11,7 +11,7 @@ import {
 import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { sendEventBeacon } from '../../components/PageViewTracking/beacon';
+import sendComponentTrackingBeacon from '#app/lib/analyticsUtils/sendComponentTrackingBeacon';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -111,7 +111,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           const optimizelyVariation =
             optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
 
-          sendEventBeacon({
+          sendComponentTrackingBeacon({
             campaignID,
             componentName,
             format,
