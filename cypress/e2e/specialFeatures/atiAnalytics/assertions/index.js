@@ -165,6 +165,7 @@ const assertViewabilityModelViewEvent = ({
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
+      const eventContext = JSON.parse(params.context);
 
       assertReverbViewabilityComponentEventParamsExist({
         params,
@@ -178,6 +179,8 @@ const assertViewabilityModelViewEvent = ({
         }),
         'params.events (publisher impression)',
       );
+
+      expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
     });
 
 export const assertATIComponentViewEvent = ({
@@ -195,6 +198,7 @@ export const assertATIComponentViewEvent = ({
       })
     : assertViewabilityModelViewEvent({
         component,
+        pageIdentifier,
         contentType,
         useReverb,
       });
