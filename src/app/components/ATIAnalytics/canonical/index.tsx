@@ -3,13 +3,12 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
+import sendPageViewBeaconLite, {
+  addSendStaticBeaconToWindow,
+} from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
-import {
-  addSendStaticBeaconToWindow,
-  sendStaticBeacon as sendPageViewBeaconLite,
-} from './staticBeacon';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')

@@ -7,6 +7,6 @@ export const addSendStaticBeaconToWindow = () => `
     }
 `;
 
-export const sendStaticBeacon = (atiUrlString: string) => `
+export default (atiUrlString: string) => `
     window.sendStaticBeacon("${atiUrlString}")
 `;
