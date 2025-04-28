@@ -9,6 +9,10 @@ type Props = {
   trackComponentViews: boolean;
 };
 
+const addInlineScript = (script: Function) => {
+  return <script type="text/javascript">{script.toString()}</script>;
+};
+
 const trackingScripts = ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
@@ -22,8 +26,6 @@ const trackingScripts = ({
       }      
 
       if (isComponentTrackingEnabled) {
-        (${processClientDeviceAndSendStaticBeacon.toString()})();
-
         if (${trackComponentViews}) {
           (${viewTracking.toString()})();
         }
@@ -46,15 +48,18 @@ const ComponentTracking = ({
   trackComponentViews,
 }: Props) => {
   return (
-    <script
-      // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{
-        __html: `${trackingScripts({
-          enableStaticClickTrackingOnOperaMiniOnly,
-          trackComponentViews,
-        })}`,
-      }}
-    />
+    <>
+      {addInlineScript(processClientDeviceAndSendStaticBeacon)}
+      <script
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `${trackingScripts({
+            enableStaticClickTrackingOnOperaMiniOnly,
+            trackComponentViews,
+          })}`,
+        }}
+      />
+    </>
   );
 };
 
