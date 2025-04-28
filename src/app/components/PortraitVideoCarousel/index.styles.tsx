@@ -4,14 +4,11 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 export const PROMO_ITEM_WIDTH = 180; // fixed width for one promo item
 
 const styles = {
-  section: () =>
+  heading: ({ fontSizes, fontVariants, palette }: Theme) =>
     css({
-      width: '100%',
-    }),
-
-  heading: () =>
-    css({
-      marginBottom: '1rem',
+      ...fontVariants.sansBold,
+      ...fontSizes.doublePica,
+      color: palette.GREY_10,
     }),
 
   scrollContainer: () =>
@@ -27,7 +24,6 @@ const styles = {
       overflowX: 'auto',
       scrollSnapType: 'x mandatory',
       gap: `${spacings.DOUBLE}rem`,
-      paddingBottom: `${spacings.FULL}rem`,
       scrollBehavior: 'smooth',
       WebkitOverflowScrolling: 'touch',
       '&::-webkit-scrollbar': {
@@ -37,15 +33,18 @@ const styles = {
       flex: 1,
     }),
 
-  promoItem: () =>
+  promoItem: ({ mq }: Theme) =>
     css({
       scrollSnapAlign: 'start',
-      flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+      flex: '0 0 35%',
       textDecoration: 'none',
       display: 'block',
       position: 'relative',
-      borderRadius: '0.25rem',
       overflow: 'hidden',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+      },
     }),
 
   image: () =>
@@ -53,7 +52,6 @@ const styles = {
       width: '100%',
       height: 'auto',
       objectFit: 'cover',
-      borderRadius: '0.25rem',
       aspectRatio: '9/16',
       display: 'block',
     }),
@@ -84,36 +82,45 @@ const styles = {
     }),
 
   // Adjust fade on carousel to suit UX designs at diff breakpoints
-  promoFadeOverlay: () =>
+  promoFadeOverlay: ({ mq }: Theme) =>
     css({
+      display: 'none',
       position: 'absolute',
       top: 0,
       insetInlineEnd: 0,
-      width: `${pixelsToRem(PROMO_ITEM_WIDTH / 2)}rem`,
+      width: '7rem',
       height: '100%',
       backgroundColor: 'rgba(255, 255, 255, 0.6)',
       zIndex: 1,
       pointerEvents: 'none',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'flex',
+      },
     }),
 
-  buttonGroup: () =>
+  buttonGroup: ({ mq }: Theme) =>
     css({
+      display: 'none',
       position: 'absolute',
       top: '50%',
       insetInlineEnd: '1%',
       transform: 'translateY(-50%)',
-      display: 'flex',
       flexDirection: 'row',
       zIndex: 2,
       gap: '0.25rem',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'flex',
+      },
     }),
 
-  navButton: ({ palette }: Theme) =>
+  navButton: ({ palette, spacings }: Theme) =>
     css({
       backgroundColor: palette.BLACK,
       border: 'none',
-      width: '2rem',
-      height: '2rem',
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -122,7 +129,9 @@ const styles = {
         opacity: 0.2,
         cursor: 'not-allowed',
       },
-      '& svg path': {
+      '& svg': {
+        width: `${spacings.DOUBLE}rem`,
+        height: `${spacings.DOUBLE}rem`,
         fill: palette.GREY_2,
       },
     }),

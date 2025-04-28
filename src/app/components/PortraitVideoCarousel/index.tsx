@@ -67,11 +67,8 @@ const PortraitVideoCarousel = ({
       aria-label={title}
       role="region"
       data-testid="portrait-video-carousel"
-      css={styles.section}
     >
-      <Heading level={2} size="doublePica" css={styles.heading}>
-        {title}
-      </Heading>
+      <h2 css={styles.heading}>{title}</h2>
 
       <div dir={dir} css={styles.scrollContainer}>
         <div ref={scrollRef} css={styles.scrollWrapper}>
