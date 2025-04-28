@@ -28,7 +28,7 @@ import {
   AUDIO_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes, Platforms } from '../../models/types/global';
-import { buildATIEventTrackingParams } from '../../components/PageViewTracking/params';
+import { getATIParams } from '../../components/PageViewTracking/params';
 import { ServiceContext } from '../ServiceContext';
 import {
   ATIData,
@@ -106,12 +106,11 @@ export const EventTrackingContextProvider = ({
     if (eventTrackingIsEnabled && atiData) {
       const campaignID = getCampaignID(pageType as CampaignPageTypes);
 
-      const { pageIdentifier, platform, statsDestination } =
-        buildATIEventTrackingParams({
-          requestContext,
-          serviceContext,
-          atiData,
-        }) as ComponentTrackingProps;
+      const { pageIdentifier, platform, statsDestination } = getATIParams({
+        requestContext,
+        serviceContext,
+        atiData,
+      }) as ComponentTrackingProps;
 
       return {
         campaignID,

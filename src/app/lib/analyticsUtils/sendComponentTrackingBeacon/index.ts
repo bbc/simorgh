@@ -1,11 +1,8 @@
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import {
-  buildATIEventTrackUrl,
-  buildReverbPageSectionEventModel,
-} from '../atiUrl';
+import buildATIComponentTrackingURL from '#app/lib/analyticsUtils/buildATIComponentTrackingURL';
+import sendBeacon from '../sendBeacon';
 import { ComponentTrackingProps } from '../types';
 
-export const sendEventBeacon = async ({
+export default async ({
   campaignID,
   componentName,
   format,
@@ -22,7 +19,7 @@ export const sendEventBeacon = async ({
   experimentVariant,
   useReverb,
 }: ComponentTrackingProps) => {
-  const atiClickTrackingUrl = buildATIEventTrackUrl({
+  const atiComponentTrackingUrl = buildATIComponentTrackingURL({
     campaignID,
     componentName,
     format,
@@ -39,7 +36,7 @@ export const sendEventBeacon = async ({
   });
 
   const reverbParams = useReverb
-    ? buildReverbPageSectionEventModel({
+    ? buildReverbComponentTrackingModel({
         pageIdentifier,
         producerName,
         statsDestination,
@@ -52,7 +49,5 @@ export const sendEventBeacon = async ({
       })
     : null;
 
-  await sendBeacon(atiClickTrackingUrl, reverbParams);
+  await sendBeacon(atiComponentTrackingUrl, reverbParams);
 };
-
-export default sendEventBeacon;

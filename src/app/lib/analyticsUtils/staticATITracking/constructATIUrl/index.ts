@@ -1,6 +1,6 @@
-import { buildATIEventTrackUrl } from '#app/components/PageViewTracking/atiUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
+import buildATIComponentTrackingURL from '#app/lib/analyticsUtils/buildATIComponentTrackingURL';
 
 export default ({
   eventTrackingData,
@@ -13,5 +13,5 @@ export default ({
     eventTrackingData,
     eventType,
   });
-  return buildATIEventTrackUrl({ ...atiTrackingParams, isStatic });
+  return buildATIComponentTrackingURL({ ...atiTrackingParams, isStatic });
 };

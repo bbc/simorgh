@@ -4,7 +4,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import CanonicalPageViewTracking from './canonical';
 import AmpPageViewTracking from './amp';
 import { ATIProps } from './types';
-import { buildATIUrl, buildReverbParams } from './params';
+import { getATIPageViewParams, getReverbParams } from './params';
 
 export default ({ atiData = {} }: ATIProps) => {
   const requestContext = useContext(RequestContext);
@@ -12,14 +12,14 @@ export default ({ atiData = {} }: ATIProps) => {
   const { isAmp } = requestContext;
   const { useReverb } = serviceContext;
 
-  const pageViewParams = buildATIUrl({
+  const pageViewParams = getATIPageViewParams({
     requestContext,
     serviceContext,
     atiData,
   }) as string;
 
   const reverbParams = useReverb
-    ? buildReverbParams({
+    ? getReverbParams({
         requestContext,
         serviceContext,
         atiData,

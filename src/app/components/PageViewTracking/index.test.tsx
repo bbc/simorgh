@@ -42,7 +42,7 @@ const defaultRenderProps = {
   pathname: '/pathname',
 };
 
-describe('ATI Analytics Container', () => {
+describe('Page View Tracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -67,10 +67,10 @@ describe('ATI Analytics Container', () => {
         isUK: true,
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -116,10 +116,10 @@ describe('ATI Analytics Container', () => {
         service: 'news',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -181,10 +181,10 @@ describe('ATI Analytics Container', () => {
         },
       );
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -242,10 +242,10 @@ describe('ATI Analytics Container', () => {
         },
       );
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -300,10 +300,10 @@ describe('ATI Analytics Container', () => {
         service: 'pidgin',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -356,10 +356,10 @@ describe('ATI Analytics Container', () => {
         service: 'azeri',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -410,10 +410,10 @@ describe('ATI Analytics Container', () => {
         service: 'azeri',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -467,10 +467,10 @@ describe('ATI Analytics Container', () => {
         service: 'mundo',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -521,10 +521,10 @@ describe('ATI Analytics Container', () => {
         service: 'mundo',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -578,10 +578,10 @@ describe('ATI Analytics Container', () => {
         service: 'mundo',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -634,10 +634,10 @@ describe('ATI Analytics Container', () => {
         service: 'ukrainian',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -688,10 +688,10 @@ describe('ATI Analytics Container', () => {
         service: 'ukrainian',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -744,10 +744,10 @@ describe('ATI Analytics Container', () => {
         service: 'ukrainian',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -798,10 +798,10 @@ describe('ATI Analytics Container', () => {
         service: 'ukrainian',
       });
 
-      const { pageviewParams } = mockAmp.mock.calls[0][0];
+      const { pageViewParams } = mockAmp.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -864,10 +864,10 @@ describe('ATI Analytics Container', () => {
         service: 'mundo',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({
@@ -921,10 +921,10 @@ describe('ATI Analytics Container', () => {
         service: 'mundo',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { pageViewParams } = mockCanonical.mock.calls[0][0];
 
       const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
+        new URLSearchParams(pageViewParams),
       );
 
       expect(parsedATIParams).toEqual({

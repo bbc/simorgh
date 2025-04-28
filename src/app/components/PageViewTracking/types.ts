@@ -1,4 +1,4 @@
-import { PageTypes, Platforms, Services } from '../../models/types/global';
+import { PageTypes, Platforms } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
 
@@ -102,26 +102,6 @@ export interface PageViewTrackingParams {
   baseUrl?: string;
   pageViewParams: string;
   reverbParams?: object | null;
-}
-
-export interface ComponentTrackingProps {
-  campaignID?: string;
-  componentName?: string;
-  format?: string;
-  pageIdentifier?: string;
-  platform?: Platforms;
-  producerId?: string;
-  producerName?: string;
-  service?: Services;
-  statsDestination?: string;
-  type?: string;
-  advertiserID?: string;
-  url?: string;
-  detailedPlacement?: string;
-  useReverb?: boolean;
-  experimentVariant?: string;
-  ampExperimentName?: string;
-  preventNavigation?: string;
 }
 
 export interface PageTrackingProps {
