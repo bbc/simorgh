@@ -53,8 +53,10 @@ describe('LiteSiteSummary', () => {
     expect(informationPageParagraph).toBeVisible();
   });
 
-  it('Should not render the information page link if informationPageLink does not exist.', () => {
-    const { container } = render(<LiteSiteSummary />);
+  it('Should not render the information page link if informationPageLink does not exist for service.', () => {
+    const { container } = render(<LiteSiteSummary />, {
+      service: 'news',
+    });
 
     const informationPageParagraph = container.querySelector(
       '[data-e2e="information-page"]',
