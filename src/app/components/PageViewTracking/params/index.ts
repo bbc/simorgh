@@ -17,7 +17,6 @@ import {
   onOnionTld,
   sanitise,
 } from '#app/lib/analyticsUtils';
-import { ComponentTrackingProps } from '#app/lib/analyticsUtils/types';
 import {
   ATIConfigurationDetailsProviders,
   PageTrackingProps,
