@@ -477,7 +477,7 @@ const liteTestSuites = canonicalTestSuites
       test => !excludedLiteTests.includes(test),
     );
 
-    // All lite enabled pages should have the LiteSiteCTA component
+    // All lite enabled pages should have the Lite Site Summary component
     liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
     return {
