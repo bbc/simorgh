@@ -5,6 +5,9 @@ import {
   interceptATIAnalyticsBeacons,
 } from '../helpers';
 
+const usesReverbViewabilityModel = ({ useReverb, appEnv }) =>
+  useReverb && appEnv !== 'live';
+
 const assertATIPageViewEventParamsExist = ({
   params,
   contentType,
@@ -135,56 +138,47 @@ const assertCPVModelViewEvent = ({
   pageIdentifier,
   contentType,
   useReverb,
-}) =>
-  cy
-    .wait(`@${component}-ati-view`)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
+  params,
+}) => {
+  assertATIComponentViewEventParamsExist({ params, useReverb });
 
-      assertATIComponentViewEventParamsExist({ params, useReverb });
+  if (!useReverb) {
+    expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
+  }
 
-      if (!useReverb) {
-        expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-      }
-
-      expect(params.ati).to.match(
-        getViewClickDetailsRegex({
-          contentType,
-          component,
-          pageIdentifier,
-        }),
-        'params.ati (publisher impression)',
-      );
-    });
+  expect(params.ati).to.match(
+    getViewClickDetailsRegex({
+      contentType,
+      component,
+      pageIdentifier,
+    }),
+    'params.ati (publisher impression)',
+  );
+};
 
 const assertViewabilityModelViewEvent = ({
   component,
   pageIdentifier,
   contentType,
-}) =>
-  cy
-    .wait(`@${component}-ati-view-viewability`)
-    .its('request.url')
-    .then(url => {
-      const params = getATIParamsFromURL(url);
-      const eventContext = JSON.parse(params.context);
+  params,
+}) => {
+  const eventContext = JSON.parse(params.context);
 
-      assertReverbViewabilityComponentEventParamsExist({
-        params,
-      });
+  assertReverbViewabilityComponentEventParamsExist({
+    params,
+  });
 
-      expect(params.events).to.match(
-        getViewabilityEventDetailsRegex({
-          contentType,
-          component,
-          actionType: 'view',
-        }),
-        'params.events (publisher impression)',
-      );
+  expect(params.events).to.match(
+    getViewabilityEventDetailsRegex({
+      contentType,
+      component,
+      actionType: 'view',
+    }),
+    'params.events (publisher impression)',
+  );
 
-      expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
-    });
+  expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+};
 
 const assertCPVModelClickEvent = ({
   component,
@@ -261,19 +255,38 @@ export const assertATIComponentViewEvent = ({
   pageIdentifier,
   contentType,
   useReverb,
-}) =>
-  Cypress.env('APP_ENV') === 'live'
-    ? assertCPVModelViewEvent({
-        component,
-        pageIdentifier,
-        contentType,
-        useReverb,
-      })
-    : assertViewabilityModelViewEvent({
-        component,
-        pageIdentifier,
-        contentType,
-      });
+}) => {
+  const useViewabilty = usesReverbViewabilityModel({
+    useReverb,
+    appEnv: Cypress.env('APP_ENV'),
+  });
+  const requestAlias = useViewabilty
+    ? `@${component}-ati-view-viewability`
+    : `@${component}-ati-view`;
+
+  cy.wait(requestAlias)
+    .its('request.url')
+    .then(url => {
+      const params = getATIParamsFromURL(url);
+
+      if (useViewabilty) {
+        assertViewabilityModelViewEvent({
+          component,
+          pageIdentifier,
+          contentType,
+          params,
+        });
+      } else {
+        assertCPVModelViewEvent({
+          component,
+          pageIdentifier,
+          contentType,
+          useReverb,
+          params,
+        });
+      }
+    });
+};
 
 export const assertATIComponentClickEvent = ({
   component,
