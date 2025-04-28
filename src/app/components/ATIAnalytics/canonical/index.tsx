@@ -3,17 +3,18 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 import sendBeaconLite from './sendBeaconLite';
 
-const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
-  atiPageViewUrl.includes('x8=[simorgh]')
-    ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
-    : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
+type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
+const trackingPixelUrl = (ATIAnalyticsPropsExport: object) =>
+  reverbUrlHelper.getTrackingPixelSrc(ATIAnalyticsPropsExport);
+
+const renderNoScriptTrackingPixel = (ATIAnalyticsPropsExport: object) => {
   return (
     <noscript>
       <img
@@ -24,7 +25,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoJsATIPageViewUrl(atiPageViewUrl)}
+        src={trackingPixelUrl(ATIAnalyticsPropsExport)}
       />
     </noscript>
   );
@@ -71,7 +72,7 @@ const CanonicalATIAnalytics = ({
     <>
       {isLite && addLiteScript(atiPageViewUrlString)}
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
-      {renderNoScriptTrackingPixel(atiPageViewUrl)}
+      {renderNoScriptTrackingPixel(ATIAnalyticsPropsExport)}
     </>
   );
 };
