@@ -4,7 +4,7 @@ export const addSendStaticBeaconToWindow = () => `
         xhr.open("GET", atiUrlString, true);
         xhr.withCredentials = true;
         xhr.send();
-    }
+    };
 `;
 
 export default (atiUrlString: string) => `
