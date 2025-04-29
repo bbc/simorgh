@@ -8,20 +8,22 @@ import DocumentComponent from './component';
 
 Helmet.canUseDOM = false;
 
-jest.mock('#app/lib/analyticsUtils/staticATITracking', () =>
-  function staticATIClickTracking() {
-    return 'Tracking script placeholder';
-  }.toString(),
+jest.mock(
+  '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon',
+  () =>
+    function processClientDeviceAndSendStaticBeacon() {
+      return 'Process client device and send beacon placeholder';
+    }.toString(),
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/clickTracking', () =>
-  function staticATIClickTracking() {
+  function clickTracking() {
     return 'Click script placeholder';
   }.toString(),
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/viewTracking', () =>
-  function staticATIClickTracking() {
+  function viewTracking() {
     return 'View script placeholder';
   }.toString(),
 );

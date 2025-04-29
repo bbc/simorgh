@@ -132,6 +132,13 @@ exports[`Document Component should render APP version correctly 1`] = `
     <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
     </script>
+    <script
+      type="text/javascript"
+    >
+      function processClientDeviceAndSendStaticBeacon() {
+    return 'Process client device and send beacon placeholder';
+  }
+    </script>
     <script>
       
     window.addEventListener('load', function () {
@@ -144,17 +151,13 @@ exports[`Document Component should render APP version correctly 1`] = `
       }      
 
       if (isComponentTrackingEnabled) {
-        (function staticATIClickTracking() {
-    return 'Tracking script placeholder';
-  })();
-
         if (false) {
-          (function staticATIClickTracking() {
+          (function viewTracking() {
     return 'View script placeholder';
   })();
         }
 
-        (function staticATIClickTracking() {
+        (function clickTracking() {
     return 'Click script placeholder';
   })();
       }
@@ -233,6 +236,13 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <style>
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
+    <script
+      type="text/javascript"
+    >
+      function processClientDeviceAndSendStaticBeacon() {
+    return 'Process client device and send beacon placeholder';
+  }
+    </script>
     <script>
       
     window.addEventListener('load', function () {
@@ -245,17 +255,13 @@ exports[`Document Component should render LITE version correctly 1`] = `
       }      
 
       if (isComponentTrackingEnabled) {
-        (function staticATIClickTracking() {
-    return 'Tracking script placeholder';
-  })();
-
         if (true) {
-          (function staticATIClickTracking() {
+          (function viewTracking() {
     return 'View script placeholder';
   })();
         }
 
-        (function staticATIClickTracking() {
+        (function clickTracking() {
     return 'Click script placeholder';
   })();
       }
@@ -329,6 +335,13 @@ exports[`Document Component should render correctly 1`] = `
     <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
     </script>
+    <script
+      type="text/javascript"
+    >
+      function processClientDeviceAndSendStaticBeacon() {
+    return 'Process client device and send beacon placeholder';
+  }
+    </script>
     <script>
       
     window.addEventListener('load', function () {
@@ -341,17 +354,13 @@ exports[`Document Component should render correctly 1`] = `
       }      
 
       if (isComponentTrackingEnabled) {
-        (function staticATIClickTracking() {
-    return 'Tracking script placeholder';
-  })();
-
         if (false) {
-          (function staticATIClickTracking() {
+          (function viewTracking() {
     return 'View script placeholder';
   })();
         }
 
-        (function staticATIClickTracking() {
+        (function clickTracking() {
     return 'Click script placeholder';
   })();
       }
