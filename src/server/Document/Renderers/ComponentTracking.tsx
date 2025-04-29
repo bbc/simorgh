@@ -1,5 +1,5 @@
 import React from 'react';
-import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking';
+import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
