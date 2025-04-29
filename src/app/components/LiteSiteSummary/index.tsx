@@ -7,10 +7,10 @@ import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import styles from './index.styles';
-import { defaultTranslations } from './liteSiteConfig';
+import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
 
-const LiteSiteCta = () => {
+const LiteSiteSummary = () => {
   const { translations } = useContext(ServiceContext);
   const { canonicalLink } = useContext(RequestContext);
   const { liteSite = defaultTranslations } = translations;
@@ -21,15 +21,15 @@ const LiteSiteCta = () => {
     informationPageLink,
     dataSaving,
   } = liteSite;
-  const id = 'LiteSiteCta';
+  const id = 'LiteSiteSummary';
   const clickTrackerHandler = useClickTrackerHandler({
-    componentName: 'lite-site-cta',
+    componentName: 'lite-site-summary',
   });
 
   return (
     <section
       role="region"
-      data-e2e="lite-cta"
+      data-e2e="lite-summary"
       aria-labelledby={id}
       css={styles.outerContainer}
     >
@@ -45,7 +45,11 @@ const LiteSiteCta = () => {
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}
-            css={styles.topLinkSpacing}
+            css={
+              informationPageLink
+                ? styles.topLinkSpacing
+                : styles.singleLinkSpacing
+            }
             alignWithMargin
             size="brevier"
           >
@@ -53,20 +57,22 @@ const LiteSiteCta = () => {
             <CallToActionLink.Chevron />
           </CallToActionLink>
         </Paragraph>
-        <Paragraph data-e2e="information-page">
-          <CallToActionLink
-            url={informationPageLink}
-            css={styles.bottomLinkSpacing}
-            alignWithMargin
-            size="brevier"
-            fontVariant="sansRegular"
-          >
-            <CallToActionLink.Text>{informationPage}</CallToActionLink.Text>
-          </CallToActionLink>
-        </Paragraph>
+        {informationPageLink && (
+          <Paragraph data-e2e="information-page">
+            <CallToActionLink
+              url={informationPageLink}
+              css={styles.bottomLinkSpacing}
+              alignWithMargin
+              size="brevier"
+              fontVariant="sansRegular"
+            >
+              <CallToActionLink.Text>{informationPage}</CallToActionLink.Text>
+            </CallToActionLink>
+          </Paragraph>
+        )}
       </div>
     </section>
   );
 };
 
-export default LiteSiteCta;
+export default LiteSiteSummary;

@@ -20,7 +20,7 @@ const MESSAGE_BANNER = 'message-banner';
 const RELATED_CONTENT = 'related-content';
 const RELATED_TOPICS = 'topics';
 const PODCAST_PROMO = 'promo-podcast';
-const LITE_SITE_CTA = 'lite-site-cta';
+const LITE_SITE_SUMMARY = 'lite-site-summary';
 const ARTICLE_LITE_SITE_LINK = 'article-lite-site-link';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
@@ -38,7 +38,7 @@ export const COMPONENTS = {
   DROPDOWN_NAVIGATION,
   FEATURES,
   LATEST_MEDIA,
-  LITE_SITE_CTA,
+  LITE_SITE_SUMMARY,
   LIVE_MEDIA,
   MESSAGE_BANNER,
   MOST_READ,
@@ -123,15 +123,4 @@ export const getPathWithSuffix = ({ path, suffix = '' }) => {
   const { pathname, search } = new URL(`https://www.bbc.com${path}`);
 
   return `${pathname}${suffix}${search}`;
-};
-
-export const runIfToggleEnabled = ({ service, toggleName, testContext }) => {
-  cy.getToggles(service);
-
-  cy.fixture(`toggles/${service}.json`).then(toggles => {
-    const { enabled } = toggles[toggleName];
-    if (!enabled) {
-      testContext.skip();
-    }
-  });
 };
