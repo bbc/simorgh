@@ -20,8 +20,6 @@ const trackingScripts = ({
       if (${enableStaticClickTrackingOnOperaMiniOnly}) {
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
       }      
-
-      console.log({isComponentTrackingEnabled});
       
       if (isComponentTrackingEnabled) {
         (${processClientDeviceAndSendStaticBeacon.toString()})();
