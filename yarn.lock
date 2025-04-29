@@ -2857,47 +2857,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/swc-darwin-arm64@npm:15.2.4"
-  checksum: 10/eb47e3e97475e75259c767d90b848581f8bc763cb50c35815ac92858235fc7125632fc5a71d49b468dbe99b9d7220f124b8fcc6526470ec199f006a780005b90
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@next/swc-darwin-arm64@npm:15.3.1":
   version: 15.3.1
   resolution: "@next/swc-darwin-arm64@npm:15.3.1"
+  checksum: 10/a6161d9107c7fb52dd61bfe968c4a71ac9dea8dc4bad7c6f14e8ae95a3717cba7b8a9d69680b42170f18142a7afb8197a82c580a0485e09f57ad01b421dc1920
   conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@next/swc-darwin-x64@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/swc-darwin-x64@npm:15.2.4"
-  checksum: 10/ce8d3828897dee13cc1e8dc88d2144ddd0a1868c0bf94579b3fd002e79dde57e9bcef85f5a5b9c6202c7eb7062875e28e579288ab881f3818f71d07672816278
-  conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
 "@next/swc-darwin-x64@npm:15.3.1":
   version: 15.3.1
   resolution: "@next/swc-darwin-x64@npm:15.3.1"
+  checksum: 10/139a508a0c0e7e521a1726809b14db7a96f859b0c6737deee7f2bc860cbdb17d242a40050490a5e94ef35280d2c66e5a69dd2bf2170580b814a7bc310786fb2d
   conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@next/swc-linux-arm64-gnu@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/swc-linux-arm64-gnu@npm:15.2.4"
-  checksum: 10/41c0b0e39e97616ab3778ac2c0f318eb113ccc5f10fdaae2196d02ce3e033edef9ec9a2023e78f2bf6babe7de08d9003df0058b7538d97b5ce7f44e9edebc213
-  conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
 "@next/swc-linux-arm64-gnu@npm:15.3.1":
   version: 15.3.1
   resolution: "@next/swc-linux-arm64-gnu@npm:15.3.1"
+  checksum: 10/3402f81a59041c7ae07226a3b68c9d6c8399fbe835aa43141619dfb4e30543d743c05e066844c5dd9697cfdc5ef32325719b62925a696a2cbeddcdc42308121a
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -2909,17 +2888,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/swc-linux-x64-gnu@npm:15.2.4"
-  checksum: 10/4ab531a01fe4b58611181b733f5de15aff4902fdc7de64181ff7e271ddd5ebea1de9d3fb0de75eeaf35d7ae226ad93c52c608f45584b38951cd0097721e646ff
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
 "@next/swc-linux-x64-gnu@npm:15.3.1":
   version: 15.3.1
   resolution: "@next/swc-linux-x64-gnu@npm:15.3.1"
+  checksum: 10/4833193cf3d50b34171152804110b93ffb797947f0e4cde5b88c9b2a40e2fbe9d20313eadbe29f1499b77e549689c61b0f7859e5ada89642757a479daea5f0a7
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -2931,32 +2903,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/swc-win32-arm64-msvc@npm:15.2.4"
-  checksum: 10/9d72e486a774fda49078d524b9ac4e37a3664083b801a532bce345af7a683185864b8ca63a0fa78a67ff8205b6df255239941a02d8da55d4608bc189dbbecdc8
-  conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@next/swc-win32-arm64-msvc@npm:15.3.1":
   version: 15.3.1
   resolution: "@next/swc-win32-arm64-msvc@npm:15.3.1"
+  checksum: 10/bf923d71a53d098ee996f95de67e9e365ad4e62874acf9abbdfcc594ccfc656b5ffe04f4422623c804aac980d9c4f0c9d920fb5693a415c5095ba5a5525f2b56
   conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@next/swc-win32-x64-msvc@npm:15.2.4":
-  version: 15.2.4
-  resolution: "@next/swc-win32-x64-msvc@npm:15.2.4"
-  checksum: 10/ddabf4d61127e343ea5f385afedfe5fac84ea8af0cc93d9bf75f723e4de051c4bddf70bd82c492bf789c4979bee84ad0409205ff6391ba7ae5f84ac769817d22
-  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
 "@next/swc-win32-x64-msvc@npm:15.3.1":
   version: 15.3.1
   resolution: "@next/swc-win32-x64-msvc@npm:15.3.1"
+  checksum: 10/964b431c9e4c1fcb9cf865949b37a85f4ca2378afbb94d37950f6b22936e589cc9ca389882cc1a52f55eeb377932060c1e9b66373b0a9c757d6ce71d29b5a727
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -14778,12 +14736,12 @@ __metadata:
     "@emotion/jest": "npm:^11.11.0"
     "@jest/environment": "npm:^29.7.0"
     "@jest/types": "npm:^29.6.3"
-    "@next/swc-darwin-arm64": "npm:15.2.4"
-    "@next/swc-darwin-x64": "npm:15.2.4"
-    "@next/swc-linux-arm64-gnu": "npm:15.2.4"
-    "@next/swc-linux-x64-gnu": "npm:15.2.4"
-    "@next/swc-win32-arm64-msvc": "npm:15.2.4"
-    "@next/swc-win32-x64-msvc": "npm:15.2.4"
+    "@next/swc-darwin-arm64": "npm:15.3.1"
+    "@next/swc-darwin-x64": "npm:15.3.1"
+    "@next/swc-linux-arm64-gnu": "npm:15.3.1"
+    "@next/swc-linux-x64-gnu": "npm:15.3.1"
+    "@next/swc-win32-arm64-msvc": "npm:15.3.1"
+    "@next/swc-win32-x64-msvc": "npm:15.3.1"
     "@testing-library/jest-dom": "npm:6.6.3"
     "@testing-library/react": "npm:16.3.0"
     babel-plugin-transform-rename-import: "npm:2.3.0"
