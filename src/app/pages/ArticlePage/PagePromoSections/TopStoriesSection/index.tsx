@@ -68,7 +68,7 @@ const TopStoriesSection = ({
       componentName: 'top-stories',
       ...(sendOptimizelyEvents && {
         optimizely,
-        optimizelyMetricNameOverride: 'top_stories',
+        componentName: 'top-stories',
       }),
     },
   };
