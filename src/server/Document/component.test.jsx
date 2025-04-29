@@ -18,13 +18,13 @@ jest.mock(
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/clickTracking', () =>
   function clickTracking() {
-    return 'Click script placeholder';
+    return 'Click tracking placeholder';
   }.toString(),
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/viewTracking', () =>
   function viewTracking() {
-    return 'View script placeholder';
+    return 'View tracking placeholder';
   }.toString(),
 );
 

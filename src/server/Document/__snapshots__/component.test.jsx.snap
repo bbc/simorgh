@@ -135,9 +135,9 @@ exports[`Document Component should render APP version correctly 1`] = `
     <script
       type="text/javascript"
     >
-      function processClientDeviceAndSendStaticBeacon() {
+      (function processClientDeviceAndSendStaticBeacon() {
     return 'Process client device and send beacon placeholder';
-  }
+  })()
     </script>
     <script>
       
@@ -153,12 +153,12 @@ exports[`Document Component should render APP version correctly 1`] = `
       if (isComponentTrackingEnabled) {
         if (false) {
           (function viewTracking() {
-    return 'View script placeholder';
+    return 'View tracking placeholder';
   })();
         }
 
         (function clickTracking() {
-    return 'Click script placeholder';
+    return 'Click tracking placeholder';
   })();
       }
     });
@@ -239,9 +239,9 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <script
       type="text/javascript"
     >
-      function processClientDeviceAndSendStaticBeacon() {
+      (function processClientDeviceAndSendStaticBeacon() {
     return 'Process client device and send beacon placeholder';
-  }
+  })()
     </script>
     <script>
       
@@ -257,12 +257,12 @@ exports[`Document Component should render LITE version correctly 1`] = `
       if (isComponentTrackingEnabled) {
         if (true) {
           (function viewTracking() {
-    return 'View script placeholder';
+    return 'View tracking placeholder';
   })();
         }
 
         (function clickTracking() {
-    return 'Click script placeholder';
+    return 'Click tracking placeholder';
   })();
       }
     });
@@ -338,9 +338,9 @@ exports[`Document Component should render correctly 1`] = `
     <script
       type="text/javascript"
     >
-      function processClientDeviceAndSendStaticBeacon() {
+      (function processClientDeviceAndSendStaticBeacon() {
     return 'Process client device and send beacon placeholder';
-  }
+  })()
     </script>
     <script>
       
@@ -356,12 +356,12 @@ exports[`Document Component should render correctly 1`] = `
       if (isComponentTrackingEnabled) {
         if (false) {
           (function viewTracking() {
-    return 'View script placeholder';
+    return 'View tracking placeholder';
   })();
         }
 
         (function clickTracking() {
-    return 'Click script placeholder';
+    return 'Click tracking placeholder';
   })();
       }
     });
