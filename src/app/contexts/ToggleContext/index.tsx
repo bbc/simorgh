@@ -6,11 +6,8 @@ import React, {
   useMemo,
 } from 'react';
 import defaultToggles from '#lib/config/toggles';
-import { Environments, Toggles } from '#app/models/types/global';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Toggles } from '#app/models/types/global';
 import toggleReducer from './reducer';
-
-const environment = (getEnvConfig().SIMORGH_APP_ENV || 'local') as Environments;
 
 type ToggleContextProps = {
   toggleState: Toggles;
@@ -27,7 +24,7 @@ type ToggleContextProviderProps = {
 
 const ToggleContextProvider = ({
   children,
-  toggles = defaultToggles[environment],
+  toggles = defaultToggles,
 }: PropsWithChildren<ToggleContextProviderProps>) => {
   const [toggleState, toggleDispatch] = useReducer(toggleReducer, toggles);
 
