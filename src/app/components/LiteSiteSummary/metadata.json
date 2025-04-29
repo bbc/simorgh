@@ -1,0 +1,28 @@
+{
+  "lastUpdated": {
+    "day": 30,
+    "month": "October",
+    "year": 2024
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/WS-litecanonical-site-CTA-component-Screenreader-UX--CZmjhKa9j7EO3OuW2MDiev66Ag-iUblmHKieJBH6YMemel3M",
+      "label": "Documented screen reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Lite-site-Accessibility-acceptance-criteria--CYt13VQbmyR63Z5ZHFt6uQXBAg-xyTULgByamiYbQSOrzd9h",
+      "label": "Accessibility acceptance criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://docs.google.com/spreadsheets/d/1Czod6SFI4utFaSoG5twfaiLkLgieMSTD8ohvJafQe1k/edit?usp=sharing",
+      "label": "Accessibility swarm results"
+    }
+  }
+}
