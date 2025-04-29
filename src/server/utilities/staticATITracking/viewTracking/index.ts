@@ -1,5 +1,7 @@
 /* istanbul ignore next */
 export default () => {
+  console.log(`staticATITracking - viewTracking called`);
+
   const MIN_VIEWED_PERCENT = 0.5;
   const VIEWED_DURATION_MS = 1000;
   const options = { threshold: MIN_VIEWED_PERCENT };

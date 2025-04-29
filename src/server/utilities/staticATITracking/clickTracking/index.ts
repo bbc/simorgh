@@ -1,4 +1,6 @@
 export default () => {
+  console.log(`clickTracking - add script`);
+
   const clickTrackingFiredUrls: string[] = [];
 
   document.addEventListener('click', (event: MouseEvent) => {
@@ -22,7 +24,11 @@ export default () => {
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
+      console.log(`clickTracking - onClick`);
+
       if (atiURL && !clickTrackingFiredUrls.includes(atiURL)) {
+        console.log(atiURL);
+
         window.processClientDeviceAndSendStaticBeacon(atiURL as string);
         clickTrackingFiredUrls.push(atiURL);
       }

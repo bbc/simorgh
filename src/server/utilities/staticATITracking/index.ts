@@ -1,5 +1,6 @@
 export default () => {
   window.processClientDeviceAndSendStaticBeacon = atiURL => {
+    console.log(`processClientDeviceAndSendStaticBeacon called`);
     if (atiURL) {
       const {
         screen: { width, height, colorDepth, pixelDepth },

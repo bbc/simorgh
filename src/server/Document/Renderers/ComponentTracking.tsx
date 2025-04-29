@@ -21,6 +21,8 @@ const trackingScripts = ({
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
       }      
 
+      console.log({isComponentTrackingEnabled});
+      
       if (isComponentTrackingEnabled) {
         (${processClientDeviceAndSendStaticBeacon.toString()})();
 
@@ -47,6 +49,7 @@ const ComponentTracking = ({
 }: Props) => {
   return (
     <script
+      type="text/javascript"
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: `${trackingScripts({
