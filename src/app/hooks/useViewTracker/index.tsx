@@ -101,7 +101,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
             optimizely.track(
               optimizelyMetricNameOverride
-                ? `${componentName}_views`
+                ? `${componentName}-views`
                 : 'component_views',
               optimizely.user.id as string,
               overrideAttributes,
