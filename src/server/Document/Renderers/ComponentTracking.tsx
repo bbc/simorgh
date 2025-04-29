@@ -15,7 +15,7 @@ const trackingScripts = ({
 }: Props) => {
   return `
     window.addEventListener('load', function () {
-      let isComponentTrackingEnabled = true;
+      var isComponentTrackingEnabled = true;
 
       if (${enableStaticClickTrackingOnOperaMiniOnly}) {
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
