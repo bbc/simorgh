@@ -52,7 +52,7 @@ export const service: DefaultServiceConfig = {
       title: 'पॉडकास्ट',
       brandTitle: 'कहानी ज़िंदगी की',
       brandDescription:
-        'ना सिर्फ़ दुनिया बल्कि भारत की अलग- अलग भाषाओं की प्रसिद्ध कहानियां.',
+        'मशहूर हस्तियों की कहानी पूरी तसल्ली और इत्मीनान से इरफ़ान के साथ.',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l1f646.jpg',
         alt: 'पॉडकास्ट: कहानी ज़िंदगी की',
