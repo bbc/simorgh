@@ -1,6 +1,9 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-export const hasInformationPageLink = ({ service, variant = 'default' }) => {
+export const hasInformationPageLinkTranslation = ({
+  service,
+  variant = 'default',
+}) => {
   return appConfig[service][variant].translations?.liteSite
     ?.informationPageLink;
 };
@@ -19,7 +22,7 @@ export default ({ service, pageType, variant }) => {
         });
         cy.go('back');
       });
-      if (hasInformationPageLink({ service, variant })) {
+      if (hasInformationPageLinkTranslation({ service, variant })) {
         it('Clicking the link to the Information page should navigate to lite site', () => {
           cy.get('[data-e2e="information-page"]').within(() => {
             cy.get('a')
