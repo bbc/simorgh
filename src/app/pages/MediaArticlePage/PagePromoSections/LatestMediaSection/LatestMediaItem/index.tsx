@@ -8,7 +8,7 @@ import LatestMediaIndicator from '../LatestMediaIndicator';
 import styles from './index.styles';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewRef) => {
+  ({ item, ariaLabelledBy, eventTrackingData }, viewTracker) => {
     if (!item || Object.keys(item).length === 0) return null;
 
     const timestamp = item.firstPublished;
@@ -16,7 +16,7 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
     const src = item.imageUrl.replace('{width}', '240');
 
     return (
-      <div ref={viewRef} css={styles.promoWrapper}>
+      <div {...viewTracker} css={styles.promoWrapper}>
         <Promo
           to={item.link}
           ariaLabelledBy={ariaLabelledBy}

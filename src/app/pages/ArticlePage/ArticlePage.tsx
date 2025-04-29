@@ -4,6 +4,9 @@ import { useContext, useState } from 'react';
 import { jsx, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
+import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -15,7 +18,9 @@ import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
 
 import {
   getArticleId,
@@ -37,12 +42,11 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
-import { Services } from '#app/models/types/global';
 import Recommendations from '#app/components/Recommendations';
-import SERVICES_WITH_NEW_RECOMMENDATIONS from '#app/components/Recommendations/config';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -69,6 +73,7 @@ import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ContinueReadingButton from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
+import isPortraitVideo from '../utils/isPortraitVideo';
 
 const serviceMapping: Record<string, 'A' | 'B'> = {
   pidgin: 'A',
@@ -110,17 +115,9 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent =
-  (service: Services) =>
-  (props: ComponentToRenderProps & { data: Recommendation[] }) => {
-    // TODO: Remove this when the new recommendations are rolled out to all services
-    if (SERVICES_WITH_NEW_RECOMMENDATIONS.includes(service)) {
-      const { data } = props;
-      return <Recommendations data={data} />;
-    }
-
-    return null;
-  };
+const getWsojComponent = (
+  props: ComponentToRenderProps & { data: Recommendation[] },
+) => <Recommendations data={props.data} />;
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -133,15 +130,31 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
   <ArticleHeadline {...props} />
 );
 
+const getVideoComponent =
+  (translations: Translations) => (props: ComponentToRenderProps) => {
+    const { blocks } = props;
+
+    const title = translations.media.watchMoments || 'Watch Moments';
+
+    return (
+      <>
+        {isPortraitVideo(blocks) && (
+          <strong css={styles.portraitVideoTitle}>{title}</strong>
+        )}
+        <MediaLoader blocks={blocks as MediaBlock[]} />
+      </>
+    );
+  };
+
 const ArticlePage = ({
   pageData,
-  continueReadingEnabled = true, // change to true when developing to see on the page (comment can be removed when the experiment is ready to run)
+  continueReadingEnabled = false,
 }: {
   pageData: Article;
   continueReadingEnabled?: boolean;
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isLite, isAmp, isApp } = useContext(RequestContext);
+  const { isApp, isAmp, isLite } = useContext(RequestContext);
 
   const {
     service,
@@ -149,6 +162,7 @@ const ArticlePage = ({
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
+    translations,
   } = useContext(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -156,6 +170,11 @@ const ArticlePage = ({
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
+
+  const experimentVariant = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
+  const isInExperiment = experimentVariant && experimentVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -203,6 +222,7 @@ const ArticlePage = ({
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(isInExperiment && { experimentVariant }),
   };
 
   const componentsToRender = {
@@ -210,7 +230,7 @@ const ArticlePage = ({
     headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
-    video: MediaLoader,
+    video: getVideoComponent(translations),
     text,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
@@ -228,7 +248,7 @@ const ArticlePage = ({
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent(service),
+    wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
   };
@@ -372,6 +392,12 @@ const ArticlePage = ({
           mobileDivider={showTopics}
           sendOptimizelyEvents={false}
         />
+      )}
+      {isInExperiment && (
+        <>
+          <OptimizelyArticleCompleteTracking />
+          <OptimizelyPageViewTracking />
+        </>
       )}
     </div>
   );

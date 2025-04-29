@@ -42,6 +42,7 @@ type EventTrackingContextProps =
       platform: Platforms;
       producerId: string;
       statsDestination: string;
+      producerName: string;
     }
   | Record<string, never>;
 

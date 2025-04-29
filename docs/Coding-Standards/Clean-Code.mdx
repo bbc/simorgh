@@ -315,3 +315,38 @@ The scout rule is “Always leave the campground cleaner than you found it”. T
 
 * [X-TEAM: A Few Principles of Clean Code](https://x-team.com/blog/principles-clean-code/)
 * [The Art of Readable Code: Simple and Practical Techniques for Writing Better Code](https://www.goodreads.com/book/show/8677004-the-art-of-readable-code)
+
+## Objects
+
+### Use optional chaining and/or nullish coalescing when accessing heavily nested data formats
+
+#### Why?
+
+Within the application, we have to access and sometimes manipulate heavily nested data that uses a block model format, you can see examples of this within our [data folder](https://github.com/bbc/simorgh/tree/latest/data). Because of the heavily nested nature of the data, it's quite difficult to construct types within TypeScript to help prevent object accessing errors.
+
+To help mitigate these errors we should have a rule in place to use [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) in all instances of accessing any form of the block model data structure, in combination with the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing), to help prevent runtime issues in the application.
+
+#### How?
+
+❌
+
+```jsx
+const Promo = ({ block }) => {
+	const headlineBlockText = block.headlines.promoHeadline.blocks[0].model.blocks[0].model.text;
+
+...
+}
+```
+
+✅
+
+```jsx
+const Promo = ({ block }) => {
+	const headlineBlockText = block?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model?.text ?? '';
+
+...
+}
+```
+
+#### Caveats
+As we target legacy browsers as part of our transpilation bundling, usages of optional chaining will be polyfilled, which means bundle sizes will increase the more we use optional chaining throughout our codebase.
