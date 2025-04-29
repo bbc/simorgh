@@ -9,7 +9,7 @@ type Props = {
   trackComponentViews: boolean;
 };
 
-const addInlineScript = (script: Function) => {
+const addInlineScript = (script: { toString: () => string }) => {
   return <script type="text/javascript">{script.toString()}</script>;
 };
 
