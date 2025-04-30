@@ -191,7 +191,7 @@ export const assertATIComponentViewEvent = ({
     appEnv: Cypress.env('APP_ENV'),
   });
   const requestAlias = useViewabilty
-    ? `@${component}-ati-view-viewability`
+    ? `@${component}-viewability-view`
     : `@${component}-ati-view`;
 
   cy.wait(requestAlias)
@@ -291,7 +291,7 @@ export const assertATIComponentClickEvent = ({
     appEnv: Cypress.env('APP_ENV'),
   });
   const requestAlias = useViewabilty
-    ? `@${component}-ati-click-viewability`
+    ? `@${component}-viewability-click`
     : `@${component}-ati-click`;
 
   cy.wait(requestAlias)
