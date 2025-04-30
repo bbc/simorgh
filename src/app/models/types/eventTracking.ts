@@ -1,5 +1,3 @@
-import { ReactSDKClient } from '@optimizely/react-sdk';
-
 export type ReverbClient = {
   isReady: () => boolean;
   initialise: () => Promise<void>;
@@ -12,8 +10,8 @@ export type EventTrackingMetadata = {
   detailedPlacement?: string;
   campaignID?: string;
   advertiserID?: string;
-  optimizely?: ReactSDKClient | null;
   optimizelyMetricNameOverride?: string;
+  sendOptimizelyEvents?: boolean;
 };
 
 export type EventTrackingBlock = {
