@@ -142,6 +142,7 @@ describe('ContinueReadingButton', () => {
         jest.clearAllMocks(); // Clear any previous mocks
         clickTrackerSpy = jest
           .spyOn(clickTracking, 'default')
+          // @ts-expect-error - Mocking the implementation of useClickTrackerHandler
           .mockImplementation(() => jest.fn());
       });
 
