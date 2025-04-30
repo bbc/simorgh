@@ -116,7 +116,7 @@ export const interceptATIAnalyticsBeacons = () => {
       request => {
         request.reply({ statusCode: 200 });
       },
-    ).as(`${component}-ati-view-viewability`);
+    ).as(`${component}-viewability-view`);
 
     // Component Clicks
     cy.intercept(
@@ -129,7 +129,7 @@ export const interceptATIAnalyticsBeacons = () => {
       request => {
         request.reply({ statusCode: 200 });
       },
-    ).as(`${component}-ati-click-viewability`);
+    ).as(`${component}-viewability-click`);
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
