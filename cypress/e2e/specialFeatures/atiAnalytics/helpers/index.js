@@ -59,7 +59,7 @@ export const COMPONENTS = {
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views & Clicks - CPV Model
+  // Component Views & Clicks - Click Per View Model
   Object.values(COMPONENTS).forEach(component => {
     const viewClickEventRegex = new RegExp(
       `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
