@@ -7,6 +7,7 @@ import {
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
+import * as renderNoScriptTrackingPixelModule from './index'
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -118,4 +119,16 @@ describe('Canonical ATI Analytics', () => {
     expect(container.querySelector('noscript')).toBeInTheDocument();
     expect(image?.getAttribute('src')).toEqual('');
   });
+
+  it('should invoke renderNoScriptTrackingPixel with the correct values', () => {
+    const spy = jest.spyOn(renderNoScriptTrackingPixelModule, 'default')
+
+  render(
+    <CanonicalATIAnalytics
+      reverbParams={mockReverbParams}
+      pageviewParams={mockPageviewParams}
+    />,
+  );
+ expect(spy).toHaveBeenCalledWith(mockReverbParams)
+});
 });
