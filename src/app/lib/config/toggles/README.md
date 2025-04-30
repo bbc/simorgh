@@ -43,7 +43,6 @@ Feature toggles can be found in [src/app/lib/config/toggles](./index.js)
 | recentAudioEpisodes     | Display recent episodes on On Demand Audio Pages                                    | Number of episodes to display                      | 4        |
 | recentPodcastEpisodes   | Display recent episodes on Podcast Pages                                            | Number of episodes to display                      | 8        |
 | recentVideoEpisodes     | Display recent episodes on On Demand TV Pages                                       | Number of episodes to display                      | 4        |
-| variantCookie           | Set variant cookie for services with variants                                       |                                                    |          |
 | webVitalsMonitoring     | Capture web vitals                                                                  |                                                    |          |
 
 ## Default (Fallback) Toggle Values

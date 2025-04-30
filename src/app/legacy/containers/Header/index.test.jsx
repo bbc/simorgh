@@ -25,9 +25,6 @@ const defaultToggleState = {
   scriptLink: {
     enabled: true,
   },
-  variantCookie: {
-    enabled: true,
-  },
 };
 
 jest.mock('react-router-dom', () => ({

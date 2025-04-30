@@ -6,9 +6,6 @@ const enabledToggleState = {
   scriptLink: {
     enabled: true,
   },
-  variantCookie: {
-    enabled: true,
-  },
 };
 
 describe(`Script Link`, () => {
@@ -72,9 +69,6 @@ describe(`Script Link`, () => {
   it('should not render when scriptLink toggle is off', () => {
     const disabledToggleState = {
       scriptLink: {
-        enabled: false,
-      },
-      variantCookie: {
         enabled: false,
       },
     };

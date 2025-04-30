@@ -65,9 +65,6 @@ export default {
   socialEmbed: {
     enabled: true,
   },
-  variantCookie: {
-    enabled: true,
-  },
   webVitalsMonitoring: {
     enabled: true,
   },
