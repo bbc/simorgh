@@ -9,7 +9,7 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '../../../../../src/app/lib/analyticsUtils/analytics.const';
 
-const usesReverbViewabilityModel = ({ useReverb }) =>
+const usesReverbViewabilityModel = useReverb =>
   useReverb && Cypress.env('APP_ENV') !== 'live';
 
 const assertATIPageViewEventParamsExist = ({
@@ -137,7 +137,7 @@ export const assertPageView = ({
   });
 };
 
-const assertCPVModelViewEvent = ({
+const assertClickPerViewModelViewEvent = ({
   component,
   pageIdentifier,
   contentType,
@@ -190,9 +190,7 @@ export const assertATIComponentViewEvent = ({
   contentType,
   useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel({
-    useReverb,
-  });
+  const useViewabilty = usesReverbViewabilityModel(useReverb);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-view`
     : `@${component}-ati-view`;
@@ -210,7 +208,7 @@ export const assertATIComponentViewEvent = ({
           params,
         });
       } else {
-        assertCPVModelViewEvent({
+        assertClickPerViewModelViewEvent({
           component,
           pageIdentifier,
           contentType,
@@ -221,7 +219,7 @@ export const assertATIComponentViewEvent = ({
     });
 };
 
-const assertCPVModelClickEvent = ({
+const assertClickPerViewModelClickEvent = ({
   component,
   contentType,
   pageIdentifier,
@@ -289,9 +287,7 @@ export const assertATIComponentClickEvent = ({
   applicationType,
   useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel({
-    useReverb,
-  });
+  const useViewabilty = usesReverbViewabilityModel(useReverb);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-click`
     : `@${component}-ati-click`;
@@ -309,7 +305,7 @@ export const assertATIComponentClickEvent = ({
           params,
         });
       } else {
-        assertCPVModelClickEvent({
+        assertClickPerViewModelClickEvent({
           component,
           contentType,
           pageIdentifier,
