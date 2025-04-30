@@ -417,6 +417,10 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
+        title: 'EE.UU.',
+        url: '/mundo/topics/cdr5613yzwqt',
+      },
+      {
         title: 'Hay Festival',
         url: '/mundo/topics/cr50y7p7qyqt',
       },
