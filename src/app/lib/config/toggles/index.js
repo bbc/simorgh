@@ -32,9 +32,6 @@ export default {
   liveRadioSchedule: {
     enabled: true,
   },
-  mediaPlayer: {
-    enabled: true,
-  },
   midArticleOnwardJourney: {
     enabled: true,
   },

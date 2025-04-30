@@ -29,7 +29,6 @@ Feature toggles can be found in [src/app/lib/config/toggles](./index.js)
 | homePageRadioSchedule   | Display Radio Schedule on Home Pages                                                |                                                    |          |
 | include                 | Display Includes on Story (STY) Pages                                               |                                                    |          |
 | liveRadioSchedule       | Display Radio Schedule on Live Radio Pages                                          |                                                    |          |
-| mediaPlayer             | Display the media player                                                            |                                                    |          |
 | midArticleOnwardJourney | Display the mid article onward journeys on Article Pages                            |                                                    |          |
 | mostRead                | Display Most Read                                                                   |                                                    |          |
 | nielsenAnalytics        | Capture Nielsen Analytics in Australia on AMP pages                                 |                                                    |          |
