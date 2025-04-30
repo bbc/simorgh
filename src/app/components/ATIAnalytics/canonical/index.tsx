@@ -7,6 +7,7 @@ import sendPageViewBeaconLite, {
   addSendStaticBeaconToWindow,
 } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
+import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
@@ -32,12 +33,8 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
   );
 };
 
-const addInlineScript = (script: string) => {
-  return (
-    <Helmet>
-      <script type="text/javascript">{script}</script>
-    </Helmet>
-  );
+const addScript = (script: string) => {
+  return <Helmet>{addInlineScript({ script })}</Helmet>;
 };
 
 const CanonicalATIAnalytics = ({
@@ -59,10 +56,9 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addInlineScript(addSendStaticBeaconToWindow())}
-      {isLite && addInlineScript(sendPageViewBeaconLite(atiPageViewUrlString))}
-      {!isLite &&
-        addInlineScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
+      {addScript(addSendStaticBeaconToWindow())}
+      {isLite && addScript(sendPageViewBeaconLite(atiPageViewUrlString))}
+      {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );
