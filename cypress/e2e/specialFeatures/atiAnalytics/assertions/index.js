@@ -1,13 +1,13 @@
 import {
+  VIEW_EVENT,
+  VIEWABILITY_CLICK_EVENT,
+} from '#app/lib/analyticsUtils/analytics.const';
+import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
 } from '../helpers';
-import {
-  VIEW_EVENT,
-  VIEWABILITY_CLICK_EVENT,
-} from '#app/lib/analyticsUtils/analytics.const';
 
 const usesReverbViewabilityModel = useReverb =>
   useReverb && Cypress.env('APP_ENV') !== 'live';
