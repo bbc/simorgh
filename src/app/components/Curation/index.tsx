@@ -18,6 +18,7 @@ import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
+import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 
 const {
@@ -30,6 +31,7 @@ const {
   EMBED,
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
+  SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -45,6 +47,7 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
+// Note: Curation - container component rendering components based on the VS-VP
 export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -61,12 +64,15 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
 }: Curation) => {
+  // Note: Links does not have a component name yet
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
   });
+
+  // Note: Rendered as Default if the component VS-VP is not defined;
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
@@ -160,6 +166,10 @@ export default ({
         );
       }
       return null;
+    case SOCIAL_LINKS:
+      return (
+        <SocialLinks summaries={summaries} position={position} title={title} />
+      );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:

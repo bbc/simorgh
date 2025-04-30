@@ -15,6 +15,7 @@ import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 
+// NOTE: Topic names contain curation list;
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName } = useContext(ServiceContext);
   const {
@@ -26,6 +27,9 @@ const TopicPage = ({ pageData }) => {
     activePage,
     metadata: { atiAnalytics } = {},
   } = pageData;
+
+  console.log({ pageData });
+  console.log({ curations });
 
   const topStoriesTitle = path(['topStoriesTitle'], translations);
 
