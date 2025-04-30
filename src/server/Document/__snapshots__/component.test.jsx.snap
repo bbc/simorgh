@@ -145,15 +145,17 @@ exports[`Document Component should render APP version correctly 1`] = `
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = true;
+      var isComponentViewTrackingEnabled = false;
 
-      if (true) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
       }      
 
       if (isComponentTrackingEnabled) {
-        if (false) {
+        if (isComponentViewTrackingEnabled) {
           (function viewTracking() {
     return 'View tracking placeholder';
   })();
@@ -251,15 +253,17 @@ exports[`Document Component should render LITE version correctly 1`] = `
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = false;
+      var isComponentViewTrackingEnabled = true;
 
-      if (false) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
       }      
 
       if (isComponentTrackingEnabled) {
-        if (true) {
+        if (isComponentViewTrackingEnabled) {
           (function viewTracking() {
     return 'View tracking placeholder';
   })();
@@ -352,15 +356,17 @@ exports[`Document Component should render correctly 1`] = `
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = true;
+      var isComponentViewTrackingEnabled = false;
 
-      if (true) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
       }      
 
       if (isComponentTrackingEnabled) {
-        if (false) {
+        if (isComponentViewTrackingEnabled) {
           (function viewTracking() {
     return 'View tracking placeholder';
   })();

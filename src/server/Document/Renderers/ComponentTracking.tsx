@@ -22,13 +22,15 @@ const trackingScripts = ({
   return `
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = ${enableStaticClickTrackingOnOperaMiniOnly};
+      var isComponentViewTrackingEnabled = ${trackComponentViews};
 
-      if (${enableStaticClickTrackingOnOperaMiniOnly}) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
       }      
 
       if (isComponentTrackingEnabled) {
-        if (${trackComponentViews}) {
+        if (isComponentViewTrackingEnabled) {
           (${viewTracking.toString()})();
         }
 
