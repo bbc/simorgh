@@ -9,12 +9,6 @@ type Props = {
   trackComponentViews: boolean;
 };
 
-const addInlineScript = (inlineScript: { toString: () => string }) => {
-  return (
-    <script type="text/javascript">{`(${inlineScript.toString()})()`}</script>
-  );
-};
-
 const trackingScripts = ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
