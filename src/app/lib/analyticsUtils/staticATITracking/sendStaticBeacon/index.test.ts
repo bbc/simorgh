@@ -3,7 +3,7 @@ import sendStaticBeacon, { addSendStaticBeaconToWindow } from '.';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
 
-describe('staticBeacon', () => {
+describe('sendStaticBeacon', () => {
   const XMLHttpRequestMock: Partial<XMLHttpRequest> = {
     open: jest.fn(),
     withCredentials: false,
