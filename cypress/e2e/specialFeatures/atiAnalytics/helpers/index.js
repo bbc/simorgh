@@ -110,7 +110,7 @@ export const interceptATIAnalyticsBeacons = () => {
       {
         url: `${atiUrl}/*`,
         query: {
-          events: viewEventRegex,
+          events: viewabilityViewRegex,
         },
       },
       request => {
@@ -123,7 +123,7 @@ export const interceptATIAnalyticsBeacons = () => {
       {
         url: `${atiUrl}/*`,
         query: {
-          events: clickEventRegex,
+          events: viewabilityClickRegex,
         },
       },
       request => {
