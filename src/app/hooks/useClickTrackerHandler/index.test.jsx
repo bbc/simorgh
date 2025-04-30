@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { createContext } from 'react';
+import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -53,10 +54,18 @@ const reverbMock = {
   userActionEvent: jest.fn(),
 };
 
+const defaultOptimizely = {
+  track: jest.fn(),
+  user: { attributes: { foo: 'bar' }, id: 'test' },
+  getVariation: jest.fn(() => 'off'),
+};
+
 // eslint-disable-next-line no-underscore-dangle
 window.__reverb = {
   __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
+
+jest.mock('#app/hooks/useOptimizelyMvtVariation', () => jest.fn());
 
 const wrapper = ({ children }) => (
   <AllTheProviders
@@ -68,7 +77,9 @@ const wrapper = ({ children }) => (
     pathname="/pidgin/tori-51745682"
     toggles={defaultToggles}
   >
-    {children}
+    <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+      {children}
+    </OptimizelyProvider>
   </AllTheProviders>
 );
 

@@ -99,9 +99,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
         if (shouldSendEvent) {
           if (sendOptimizelyEvents && optimizelyVariation) {
-            const overrideAttributes = {
-              ...optimizely?.user.attributes,
-            };
+            const overrideAttributes = optimizely?.user.attributes;
 
             optimizely?.track(
               optimizelyMetricNameOverride
