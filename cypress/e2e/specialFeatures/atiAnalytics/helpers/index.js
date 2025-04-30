@@ -100,7 +100,7 @@ export const interceptATIAnalyticsBeacons = () => {
       'g',
     );
 
-    const clickEventRegex = new RegExp(
+    const viewabilityClickRegex = new RegExp(
       `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
       'g',
     );
