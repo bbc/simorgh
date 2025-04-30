@@ -6,7 +6,7 @@ import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import constructATIUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
 import {
   AllTheProviders,
   render,
@@ -189,7 +189,10 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should not send a tracking request if the toggle is disabled', async () => {
-      trackingToggleSpy.mockImplementationOnce(() => false);
+      trackingToggleSpy
+        .mockImplementationOnce(() => false)
+        .mockImplementationOnce(() => false);
+
       const {
         metadata: { atiAnalytics },
       } = pidginData;
@@ -749,6 +752,7 @@ describe('useClickTrackerHandler', () => {
               campaignID: 'custom-campaign',
             },
             eventType: 'click',
+            isStatic: true,
           }),
         {
           wrapper,

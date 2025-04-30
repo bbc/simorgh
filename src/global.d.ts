@@ -19,8 +19,8 @@ declare global {
       bootstrap: () => void;
       cmd: { push: () => void };
     };
-    sendBeaconLite: (url: string, data?: BodyInit | null) => boolean;
-    processClientDeviceAndSendLite: (url: string) => void;
+    sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
+    processClientDeviceAndSendStaticBeacon: (url: string) => void;
   }
 }
 
