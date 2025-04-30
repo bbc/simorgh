@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import sendPageViewBeaconLite, {
   addSendStaticBeaconToWindow,
 } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
