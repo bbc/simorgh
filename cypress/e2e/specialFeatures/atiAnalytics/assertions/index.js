@@ -4,6 +4,10 @@ import {
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
 } from '../helpers';
+import {
+  VIEW_EVENT,
+  VIEWABILITY_CLICK_EVENT,
+} from '../../../../../src/app/lib/analyticsUtils/analytics.const';
 
 const usesReverbViewabilityModel = ({ useReverb }) =>
   useReverb && Cypress.env('APP_ENV') !== 'live';
@@ -172,7 +176,7 @@ const assertViewabilityModelViewEvent = ({
     getViewabilityEventDetailsRegex({
       contentType,
       component,
-      actionType: 'view',
+      actionType: VIEW_EVENT,
     }),
     'params.events (publisher impression)',
   );
@@ -270,7 +274,7 @@ const assertViewabilityModelClickEvent = ({
     getViewabilityEventDetailsRegex({
       contentType,
       component,
-      actionType: 'select',
+      actionType: VIEWABILITY_CLICK_EVENT,
     }),
     'params.events (publisher click)',
   );
