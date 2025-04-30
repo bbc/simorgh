@@ -12,7 +12,7 @@ import {
   assertLatestMediaComponentClick,
   assertLatestMediaComponentView,
 } from './assertions/latestMedia';
-import { assertLiteSiteCTAComponentClick } from './assertions/liteSiteCta';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from './assertions/liteSiteSummary';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
@@ -477,8 +477,8 @@ const liteTestSuites = canonicalTestSuites
       test => !excludedLiteTests.includes(test),
     );
 
-    // All lite enabled pages should have the LiteSiteCTA component
-    liteSiteTests.push(assertLiteSiteCTAComponentClick);
+    // All lite enabled pages should have the Lite Site Summary component
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
     return {
       ...testSuite,

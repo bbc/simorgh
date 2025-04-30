@@ -139,10 +139,12 @@ exports[`Document Component should render APP version correctly 1`] = `
     return 'Process client device and send beacon placeholder';
   })()
     </script>
-    <script>
+    <script
+      type="text/javascript"
+    >
       
     window.addEventListener('load', function () {
-      let isComponentTrackingEnabled = true;
+      var isComponentTrackingEnabled = true;
 
       if (true) {
         isComponentTrackingEnabled = function isOperaProxy() {
@@ -243,10 +245,12 @@ exports[`Document Component should render LITE version correctly 1`] = `
     return 'Process client device and send beacon placeholder';
   })()
     </script>
-    <script>
+    <script
+      type="text/javascript"
+    >
       
     window.addEventListener('load', function () {
-      let isComponentTrackingEnabled = true;
+      var isComponentTrackingEnabled = true;
 
       if (false) {
         isComponentTrackingEnabled = function isOperaProxy() {
@@ -342,10 +346,12 @@ exports[`Document Component should render correctly 1`] = `
     return 'Process client device and send beacon placeholder';
   })()
     </script>
-    <script>
+    <script
+      type="text/javascript"
+    >
       
     window.addEventListener('load', function () {
-      let isComponentTrackingEnabled = true;
+      var isComponentTrackingEnabled = true;
 
       if (true) {
         isComponentTrackingEnabled = function isOperaProxy() {

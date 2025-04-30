@@ -21,7 +21,7 @@ const trackingScripts = ({
 }: Props) => {
   return `
     window.addEventListener('load', function () {
-      let isComponentTrackingEnabled = true;
+      var isComponentTrackingEnabled = true;
 
       if (${enableStaticClickTrackingOnOperaMiniOnly}) {
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
@@ -53,6 +53,7 @@ const ComponentTracking = ({
     <>
       {addInlineScript(processClientDeviceAndSendStaticBeacon)}
       <script
+        type="text/javascript"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: `${trackingScripts({
