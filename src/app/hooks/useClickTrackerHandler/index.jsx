@@ -95,7 +95,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               service,
               advertiserID,
               statsDestination,
-              url,
+              url: url || nextPageUrl,
               detailedPlacement,
               useReverb,
               ...(optimizelyVariation &&
