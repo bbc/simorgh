@@ -1,5 +1,5 @@
 import React from 'react';
-import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import addProcessClientDeviceAndSendStaticBeaconToWindow from '#app/lib/analyticsUtils/staticATITracking/addProcessClientDeviceAndSendStaticBeaconToWindow';
 import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
@@ -30,6 +30,8 @@ const trackingScripts = ({
       }      
 
       if (isComponentTrackingEnabled) {
+        (${addProcessClientDeviceAndSendStaticBeaconToWindow.toString()})();
+
         if (isComponentViewTrackingEnabled) {
           (${viewTracking.toString()})();
         }
@@ -52,19 +54,16 @@ const ComponentTracking = ({
   trackComponentViews,
 }: Props) => {
   return (
-    <>
-      {addInlineScript(processClientDeviceAndSendStaticBeacon)}
-      <script
-        type="text/javascript"
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{
-          __html: `${trackingScripts({
-            enableStaticClickTrackingOnOperaMiniOnly,
-            trackComponentViews,
-          })}`,
-        }}
-      />
-    </>
+    <script
+      type="text/javascript"
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{
+        __html: `${trackingScripts({
+          enableStaticClickTrackingOnOperaMiniOnly,
+          trackComponentViews,
+        })}`,
+      }}
+    />
   );
 };
 

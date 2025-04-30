@@ -135,13 +135,6 @@ exports[`Document Component should render APP version correctly 1`] = `
     <script
       type="text/javascript"
     >
-      (function processClientDeviceAndSendStaticBeacon() {
-    return 'Process client device and send beacon placeholder';
-  })()
-    </script>
-    <script
-      type="text/javascript"
-    >
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
@@ -155,6 +148,10 @@ exports[`Document Component should render APP version correctly 1`] = `
       }      
 
       if (isComponentTrackingEnabled) {
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
+  })();
+
         if (isComponentViewTrackingEnabled) {
           (function viewTracking() {
     return 'View tracking placeholder';
@@ -243,13 +240,6 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <script
       type="text/javascript"
     >
-      (function processClientDeviceAndSendStaticBeacon() {
-    return 'Process client device and send beacon placeholder';
-  })()
-    </script>
-    <script
-      type="text/javascript"
-    >
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
@@ -263,6 +253,10 @@ exports[`Document Component should render LITE version correctly 1`] = `
       }      
 
       if (isComponentTrackingEnabled) {
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
+  })();
+
         if (isComponentViewTrackingEnabled) {
           (function viewTracking() {
     return 'View tracking placeholder';
@@ -346,13 +340,6 @@ exports[`Document Component should render correctly 1`] = `
     <script
       type="text/javascript"
     >
-      (function processClientDeviceAndSendStaticBeacon() {
-    return 'Process client device and send beacon placeholder';
-  })()
-    </script>
-    <script
-      type="text/javascript"
-    >
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
@@ -366,6 +353,10 @@ exports[`Document Component should render correctly 1`] = `
       }      
 
       if (isComponentTrackingEnabled) {
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
+  })();
+
         if (isComponentViewTrackingEnabled) {
           (function viewTracking() {
     return 'View tracking placeholder';
