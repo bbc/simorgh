@@ -34,8 +34,8 @@ Feature toggles can be found in [src/app/lib/config/toggles](./index.js)
 | nielsenAnalytics        | Capture Nielsen Analytics in Australia on AMP pages                                 |                                                    |          |
 | onDemandRadioSchedule   | Display Radio Schedule on On Demand Audio / Podcast Pages                           |                                                    |          |
 | podcastPromo            | Display the podcast promo on Article Pages                                          |                                                    |          |
-| preloadLeadImage        | Display preload image tag on Story (STY) Pages                                      |                                                    |          |
-| preroll                 | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                    |          |
+| preloadLeadImage        | Display preload image tag on AMP Article Pages                                      |                                                    |          |
+| preroll                 | Display Preroll Advertisements on Media Article Pages                               |                                                    |          |
 | privacyPolicy           | Display the privacy policy link on the consent banner                               | Month and year the privacy policy was last updated | july2019 |
 | scriptLink              | Display Script Switching link for services with variants                            |                                                    |          |
 | socialEmbed             | Display social embeds on Article and Live Pages                                     |                                                    |          |
