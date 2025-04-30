@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
@@ -9,7 +9,7 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
 
   const {
     onClick: handleBlockLevelClick,
-    [LITE_ATI_CLICK_TRACKING]: staticTrackingInfo,
+    [STATIC_ATI_CLICK_TRACKING]: staticTrackingInfo,
   } = useClickTrackerHandler({
     ...(blockData && {
       ...blockData,
@@ -32,7 +32,7 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
 
   return {
     onClick: combinedClickTacker,
-    [LITE_ATI_CLICK_TRACKING]: staticTrackingInfo,
+    [STATIC_ATI_CLICK_TRACKING]: staticTrackingInfo,
   };
 };
 

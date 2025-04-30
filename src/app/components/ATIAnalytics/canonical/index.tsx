@@ -7,7 +7,7 @@ import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
-import sendBeaconLite from './sendBeaconLite';
+import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
@@ -44,9 +44,17 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   );
 };
 
-const addLiteScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconLite(atiPageViewUrlString);
+const addStaticBeaconScript = () => {
+  const script = addSendStaticBeaconToWindow();
+  return (
+    <Helmet>
+      <script type="text/javascript">{script}</script>
+    </Helmet>
+  );
+};
 
+const sendStaticBeaconScript = (atiPageViewUrlString: string) => {
+  const script = sendStaticBeacon(atiPageViewUrlString);
   return (
     <Helmet>
       <script type="text/javascript">{script}</script>
@@ -73,7 +81,8 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {isLite && addLiteScript(atiPageViewUrlString)}
+      {addStaticBeaconScript()}
+      {isLite && sendStaticBeaconScript(atiPageViewUrlString)}
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>

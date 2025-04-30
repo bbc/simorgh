@@ -1,4 +1,5 @@
 /* eslint-disable no-eval */
+import { addSendStaticBeaconToWindow } from '#app/components/ATIAnalytics/canonical/staticBeacon';
 import sendBeaconOperaMiniScript from '.';
 
 interface WindowOperaMini extends Window {
@@ -24,6 +25,8 @@ describe('sendBeaconOperaMiniScript', () => {
     send: jest.fn(),
   };
 
+  const sendStaticBeacon = eval(addSendStaticBeaconToWindow());
+
   beforeEach(() => {
     windowSpy = jest.spyOn(window, 'window', 'get');
     documentReferrerSpy = jest.spyOn(document, 'referrer', 'get');
@@ -45,6 +48,7 @@ describe('sendBeaconOperaMiniScript', () => {
         () =>
           ({
             operamini: new OperaMiniMock(),
+            sendStaticBeacon,
           }) as WindowOperaMini,
       );
     });
@@ -75,6 +79,7 @@ describe('sendBeaconOperaMiniScript', () => {
       const check = {
         hasOperaMiniScriptRan: false,
         operamini: new OperaMiniMock(),
+        sendStaticBeacon,
       } as WindowOperaMini;
 
       windowSpy.mockImplementation(() => check);

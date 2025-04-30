@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
-import { liteEnabledServices } from '#app/components/LiteSiteCta/liteSiteConfig';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
+import runIfToggleEnabled from '../../../support/helpers/runIfToggleEnabled';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
@@ -73,21 +73,22 @@ export default ({ service, pageType, variant = 'default' }) =>
       });
     }
 
-    if (liteEnabledServices.includes(service)) {
-      describe('Canonical Lite Site CTA', () => {
-        it.skip('should have a lite site CTA', () => {
-          cy.get('[data-e2e="to-lite-site"]').within(() => {
-            cy.get('a')
-              .should('have.attr', 'href')
-              .then($href => {
-                cy.get('a').click();
-                cy.url().should('contain', $href).should('contain', '.lite');
-              });
-          });
-          cy.go('back');
-        });
+    it('should have a lite site link', function test() {
+      runIfToggleEnabled({
+        service,
+        toggleName: 'articleLiteSiteLink',
+        testContext: this,
       });
-    }
+      cy.get('[data-e2e="article-lite-site-link"]').within(() => {
+        cy.get('a')
+          .should('have.attr', 'href')
+          .then($href => {
+            cy.get('a').click();
+            cy.url().should('contain', $href).should('contain', '.lite');
+          });
+      });
+      cy.go('back');
+    });
 
     describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {

@@ -6,6 +6,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "ads": {
     "enabled": false,
   },
+  "articleLiteSiteLink": {
+    "enabled": true,
+  },
   "chartbeatAnalytics": {
     "enabled": true,
   },
@@ -54,6 +57,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "_environment": "local",
   "ads": {
     "enabled": false,
+  },
+  "articleLiteSiteLink": {
+    "enabled": true,
   },
   "chartbeatAnalytics": {
     "enabled": true,
@@ -115,6 +121,9 @@ exports[`Toggles Config when application environment is test should contain corr
   "_environment": "test",
   "ads": {
     "enabled": false,
+  },
+  "articleLiteSiteLink": {
+    "enabled": true,
   },
   "chartbeatAnalytics": {
     "enabled": true,
