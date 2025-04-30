@@ -95,7 +95,7 @@ export const interceptATIAnalyticsBeacons = () => {
 
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
-    const viewEventRegex = new RegExp(
+    const viewabilityViewRegex = new RegExp(
       `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
       'g',
     );
