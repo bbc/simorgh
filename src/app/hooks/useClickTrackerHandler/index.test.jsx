@@ -46,6 +46,18 @@ const defaultToggles = {
   },
 };
 
+const reverbMock = {
+  isReady: jest.fn(),
+  initialise: jest.fn(() => Promise.resolve()),
+  viewEvent: jest.fn(),
+  userActionEvent: jest.fn(),
+};
+
+// eslint-disable-next-line no-underscore-dangle
+window.__reverb = {
+  __reverbLoadedPromise: Promise.resolve(reverbMock),
+};
+
 const wrapper = ({ children }) => (
   <AllTheProviders
     bbcOrigin="https://www.test.bbc.com"
@@ -225,6 +237,60 @@ describe('useClickTrackerHandler', () => {
         pathname: '/',
         searchParams: {
           atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+          lng: 'en-US',
+          p: 'news::pidgin.news.story.51745682.page',
+          r: '0x0x24x24',
+          re: '1024x768',
+          s: '598343',
+          s2: '70',
+          type: 'AT',
+        },
+      });
+
+      jest.restoreAllMocks();
+    });
+
+    it('should send tracking request with the URL of the next page on click of a link', async () => {
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const TestLink = () => {
+        const { onClick: handleClick } = useClickTrackerHandler(defaultProps);
+
+        return (
+          <div>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a
+              href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+              onClick={handleClick}
+            >
+              Link
+            </a>
+          </div>
+        );
+      };
+
+      const { getByText } = render(<TestLink />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      const [[viewEventUrl]] = global.fetch.mock.calls;
+
+      expect(urlToObject(viewEventUrl)).toEqual({
+        origin: 'https://logws1363.ati-host.net',
+        pathname: '/',
+        searchParams: {
+          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/pidgin/articles/c93gd1yxng1o]',
           hl: expect.stringMatching(/^.+?x.+?x.+?$/),
           idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
           lng: 'en-US',
@@ -510,6 +576,73 @@ describe('useClickTrackerHandler', () => {
       fireEvent.click(getByTestId('test-component'));
 
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+    });
+
+    describe('Click tracking - Reverb', () => {
+      beforeEach(() => {
+        jest.replaceProperty(
+          serviceContextModule,
+          'ServiceContext',
+          createContext({
+            atiAnalyticsProducerId: '70',
+            atiAnalyticsProducerName: 'PIDGIN',
+            service: 'pidgin',
+            useReverb: true,
+          }),
+        );
+      });
+
+      it('should trigger a beacon for a click event', async () => {
+        const {
+          metadata: { atiAnalytics },
+        } = pidginData;
+
+        const TestLink = () => {
+          const { onClick: handleClick } = useClickTrackerHandler(defaultProps);
+
+          return (
+            <div>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a
+                href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+                onClick={handleClick}
+              >
+                Link
+              </a>
+            </div>
+          );
+        };
+
+        const { getByText } = render(<TestLink />, {
+          atiData: atiAnalytics,
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        });
+
+        await act(() => userEvent.click(getByText('Link')));
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'viewability',
+          '',
+          {
+            event: { action: 'select', category: 'viewability' },
+            group: { name: 'article-sty' },
+            item: {
+              link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+              name: 'brand',
+            },
+          },
+          undefined,
+          undefined,
+          true,
+        );
+
+        jest.restoreAllMocks();
+      });
     });
   });
 

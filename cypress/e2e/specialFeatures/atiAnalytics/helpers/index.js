@@ -59,13 +59,14 @@ export const COMPONENTS = {
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views
+  // Component Views & Clicks - Click Per View Model
   Object.values(COMPONENTS).forEach(component => {
     const viewClickEventRegex = new RegExp(
       `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
       'g',
     );
 
+    // Component Views
     cy.intercept(
       {
         url: `${atiUrl}/*`,
@@ -90,6 +91,45 @@ export const interceptATIAnalyticsBeacons = () => {
         request.reply({ statusCode: 200 });
       },
     ).as(`${component}-ati-click`);
+  });
+
+  // Component Views & Clicks - Viewability Model
+  Object.values(COMPONENTS).forEach(component => {
+    const viewabilityViewRegex = new RegExp(
+      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      'g',
+    );
+
+    const viewabilityClickRegex = new RegExp(
+      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      'g',
+    );
+
+    // Component Views
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityViewRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-view`);
+
+    // Component Clicks
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityClickRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-click`);
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
