@@ -45,4 +45,9 @@ export default {
   },
 };
 
+export const WithMedia = {
+  render: () => <Component promoCount={12} promosToRender="withMedia" />,
+  tags: ['!dev'],
+};
+
 export const Example = Component;
