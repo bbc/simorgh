@@ -3,17 +3,14 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
+import trackingPixelUrl from './getPixelUrl';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const trackingPixelUrl = (
-  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
-) => reverbUrlHelper.getTrackingPixelSrc(reverbParams);
 
 const renderNoScriptTrackingPixel = (
   reverbParams: ATIAnalyticsPropsExport['reverbParams'],
