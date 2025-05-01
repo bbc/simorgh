@@ -646,7 +646,7 @@ describe('useViewTracker', () => {
       expect(options).toEqual({ threshold: [0.5] });
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
       expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'myEvent-views',
+        'component-views',
         mockUserId,
         mockOverrideAttributes,
       );
