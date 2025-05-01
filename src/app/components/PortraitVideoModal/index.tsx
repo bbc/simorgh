@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
-import { ClipMediaBlock } from '#app/components/MediaLoader/types';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import styles from './index.styles';
 
 type PortraitVideoModalProps = {
@@ -17,8 +17,8 @@ type PortraitVideoModalProps = {
 };
 
 const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
-  const clipBlock: ClipMediaBlock = {
-    type: 'clipMedia',
+  const block: PortraitClipMediaBlock = {
+    type: 'portraitClipMedia',
     model: {
       type: 'video',
       images: [],
@@ -46,7 +46,7 @@ const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
         >
           ×
         </button>
-        <MediaLoader blocks={[clipBlock]} />
+        <MediaLoader blocks={[block]} />
       </div>
     </div>
   );
