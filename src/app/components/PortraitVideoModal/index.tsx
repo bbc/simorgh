@@ -10,8 +10,14 @@ type PortraitVideoModalProps = {
     title: string;
     versionId: string;
     duration: string;
+    kind: string;
     guidance: string | null;
+    territories: string[];
     isEmbeddingAllowed: boolean;
+    images: {
+      url: string;
+      urlTemplate: string;
+    }[];
   };
   onClose: () => void;
 };
@@ -21,15 +27,19 @@ const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
     type: 'portraitClipMedia',
     model: {
       type: 'video',
-      images: [],
+      images: video.images.map(img => ({
+        source: img.url,
+        urlTemplate: img.urlTemplate,
+      })),
       video: {
         id: video.id,
         title: video.title,
         version: {
           id: video.versionId,
           duration: video.duration,
-          kind: 'programme',
+          kind: video.kind,
           guidance: video.guidance,
+          territories: video.territories,
         },
         isEmbeddingAllowed: video.isEmbeddingAllowed,
       },

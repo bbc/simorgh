@@ -234,6 +234,7 @@ export type PortraitClipMediaBlock = {
         duration: string;
         kind: string;
         guidance: string | null;
+        territories: string[];
       };
       isEmbeddingAllowed: boolean;
     };

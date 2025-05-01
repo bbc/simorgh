@@ -7,18 +7,32 @@ import styles, { PROMO_ITEM_WIDTH } from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PortraitVideoModal from '../PortraitVideoModal';
 
-interface PortraitVideoItem {
+export interface PortraitVideoItem {
   id: string;
-  images?: { url: string; altText?: string }[];
-  headlines?: { promoHeadline?: string };
-  link?: { path: string };
-  video?: {
+  headlines: {
+    promoHeadline: string;
+  };
+  link: {
+    path: string;
+  };
+  images: {
+    url: string;
+    urlTemplate: string;
+    altText: string;
+  }[];
+  video: {
     id: string;
-    title?: string;
     isEmbeddingAllowed?: boolean;
-    version?: {
-      id: string;
-      duration?: string;
+    version: {
+      id?: string;
+      duration: string;
+      kind: string;
+      territories: string[];
+    };
+  };
+  analytics?: {
+    page?: {
+      contentId?: string;
     };
   };
 }
@@ -44,7 +58,6 @@ const PortraitVideoCarousel = ({
   const checkScrollButtons = () => {
     if (!scrollRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-
     setCanScrollLeft(scrollLeft > 0);
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
   };
@@ -57,7 +70,6 @@ const PortraitVideoCarousel = ({
       left: scrollAmount,
       behavior: 'smooth',
     });
-
     setTimeout(checkScrollButtons, 100);
   };
 
@@ -78,9 +90,7 @@ const PortraitVideoCarousel = ({
     if (scrollElement) {
       scrollElement.addEventListener('scroll', checkScrollButtons);
     }
-
     checkScrollButtons();
-
     return () => {
       if (scrollElement) {
         scrollElement.removeEventListener('scroll', checkScrollButtons);
@@ -95,7 +105,6 @@ const PortraitVideoCarousel = ({
       data-testid="portrait-video-carousel"
     >
       <h2 css={styles.heading}>{title}</h2>
-
       <div css={styles.scrollContainer}>
         <div ref={scrollRef} css={styles.scrollWrapper}>
           {items.map(item => {
@@ -163,8 +172,11 @@ const PortraitVideoCarousel = ({
             title: selectedItem.headlines?.promoHeadline || '',
             versionId: selectedItem.video?.version?.id || '',
             duration: selectedItem.video?.version?.duration || 'PT0M0S',
+            kind: selectedItem.video?.version?.kind || 'programme',
+            territories: selectedItem.video?.version?.territories || [],
             guidance: null,
-            isEmbeddingAllowed: true,
+            isEmbeddingAllowed: selectedItem.video?.isEmbeddingAllowed ?? true,
+            images: selectedItem.images || [],
           }}
           onClose={handleCloseModal}
         />
