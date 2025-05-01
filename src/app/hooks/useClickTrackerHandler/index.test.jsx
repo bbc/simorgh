@@ -457,6 +457,7 @@ describe('useClickTrackerHandler', () => {
           user: { attributes: mockAttributes, id: mockUserId },
           getVariation: jest.fn(() => 'off'),
         },
+        componentName: 'component',
       };
       const {
         metadata: { atiAnalytics },
