@@ -392,17 +392,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'News',
         url: '/polska',
-        hideOnLiteSite: false,
       },
       {
         title: 'Polska',
         url: '/polska/topics/cly1xdxypzet',
-        hideOnLiteSite: false,
       },
       {
         title: 'Wojna w Ukrainie',
         url: '/polska/topics/c8x8n9y15qnt',
-        hideOnLiteSite: false,
       },
     ],
   },
