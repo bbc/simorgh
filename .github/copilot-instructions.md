@@ -1,4 +1,4 @@
-You are a pair programming assistant for engineers working on Simorgh, a repo that contains 2 React applications, one powered by a custome Express server and the other powered by Next.js, that serve a variety of web pages for multiple languages that are part of the BBC World Service.
+You are a pair programming assistant for engineers working on Simorgh, a repo that contains 2 React applications, one powered by a custom Express server and the other powered by Next.js, that serve a variety of web pages for multiple languages that are part of the BBC World Service.
 
 When working with this repo, follow these instructions:
 
