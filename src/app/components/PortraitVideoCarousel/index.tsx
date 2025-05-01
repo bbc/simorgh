@@ -5,12 +5,17 @@ import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import PortraitVideoModal from '../PortraitVideoModal';
 
 interface PortraitVideoItem {
   id: string;
   images?: { url: string; altText?: string }[];
   headlines?: { promoHeadline?: string };
   link?: { path: string };
+  video?: {
+    id: string;
+    version?: { id: string };
+  };
 }
 
 interface PortraitVideoCarouselProps {
@@ -26,6 +31,10 @@ const PortraitVideoCarousel = ({
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<PortraitVideoItem | null>(
+    null,
+  );
 
   const checkScrollButtons = () => {
     if (!scrollRef.current) return;
@@ -45,6 +54,18 @@ const PortraitVideoCarousel = ({
     });
 
     setTimeout(checkScrollButtons, 100);
+  };
+
+  const handlePromoClick = (item: PortraitVideoItem) => {
+    if (item.video) {
+      setSelectedItem(item);
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
   };
 
   useEffect(() => {
@@ -76,10 +97,14 @@ const PortraitVideoCarousel = ({
             const image = item.images?.[0]?.url;
             const alt = item.images?.[0]?.altText || '';
             const headline = item.headlines?.promoHeadline || '';
-            const href = item.link?.path || '#';
 
             return (
-              <a key={item.id} href={href} css={styles.promoItem}>
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handlePromoClick(item)}
+                css={styles.promoItemButton}
+              >
                 {image && (
                   <img
                     src={image}
@@ -97,7 +122,7 @@ const PortraitVideoCarousel = ({
                     {headline}
                   </Heading>
                 </div>
-              </a>
+              </button>
             );
           })}
           <div css={[styles.promoItem, styles.endBlankItem]} />
@@ -125,6 +150,20 @@ const PortraitVideoCarousel = ({
           </div>
         </div>
       </div>
+
+      {isModalOpen && selectedItem && (
+        <PortraitVideoModal
+          video={{
+            id: selectedItem.video?.id || '',
+            title: selectedItem.headlines?.promoHeadline || '',
+            versionId: selectedItem.video?.version?.id || '',
+            duration: 'PT0M0S', // Replace with actual duration if needed
+            guidance: null,
+            isEmbeddingAllowed: true,
+          }}
+          onClose={handleCloseModal}
+        />
+      )}
     </section>
   );
 };
