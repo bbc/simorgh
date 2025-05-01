@@ -1,126 +1,162 @@
 import React from 'react';
-import {
-  act,
-  render,
-} from '#app/components/react-testing-library-with-providers';
-import * as useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import { render } from '#app/components/react-testing-library-with-providers';
 import ArticleHeadline from '.';
 
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
-
 const headlineBlock = {
-  id: 'c7298038',
-  type: 'text',
+  id: '7aa081eb',
+  type: 'headline',
   blocks: [
     {
-      id: 'eed627ab',
-      type: 'paragraph',
+      id: '7cf597a1',
+      type: 'text',
       model: {
-        text: '‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny',
         blocks: [
           {
-            id: 'af816737',
-            type: 'fragment',
+            id: '4c00bb79',
+            type: 'paragraph',
             model: {
-              text: '‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny',
-              attributes: [],
+              text: "'Urukundo rukomeye n'impuhwe ni byo byamurangaga' – Antoine Karidinali Kambanda yibuka Papa",
+              blocks: [
+                {
+                  id: '83e4e7f5',
+                  type: 'fragment',
+                  model: {
+                    text: "'Urukundo rukomeye n'impuhwe ni byo byamurangaga' – Antoine Karidinali Kambanda yibuka Papa",
+                    attributes: [],
+                  },
+                  position: [1, 1, 1, 1],
+                },
+              ],
             },
+            position: [1, 1, 1],
           },
         ],
       },
+      position: [1, 1],
     },
   ],
+  position: [1],
 };
 
 describe('ArticleHeadline - Lite Site CTA', () => {
-  const useDecisionSpy = jest.spyOn(useOptimizelyVariation, 'default');
-
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it.each([
-    { variation: 'control_text_only', expected: 'Nyandiko gusa' },
-    {
-      variation: 'variation_a_explore_data_friendly_version',
-      expected: 'Koresha uburyo butwara amahera make',
-    },
-    {
-      variation: 'variation_b_data_saving_version',
-      expected: 'Uburyo buziganya amahera',
-    },
-    {
-      variation: 'variation_c_read_data_saving_version',
-      expected: 'Soma mu buryo biziganya amahera',
-    },
-    { variation: 'variation_d_lite_site', expected: 'Site yoroheje' },
-    {
-      variation: 'variation_e_2g_optimised_version',
-      expected: '2G Ukoresheje uburyo busanzwe',
-    },
-    {
-      variation: 'variation_f_low_data_version',
-      expected: 'Uburyo butwara amahera make',
-    },
-    {
-      variation: 'off',
-      expected: 'Nyandiko gusa',
-    },
-  ])(
-    'Should display $expected when the variation is $variation',
-    async ({ variation, expected }) => {
-      useDecisionSpy.mockReturnValueOnce(variation as unknown as true);
+  describe('with toggle enabled', () => {
+    const toggles = { articleLiteSiteLink: { enabled: true } };
 
-      let container;
-
-      await act(async () => {
-        ({ container } = await act(() => {
-          return render(<ArticleHeadline {...headlineBlock} />, {
-            service: 'gahuza',
-            toggles: { liteSiteCTA: { enabled: true } },
-          });
-        }));
-      });
-
-      const titleSpan = (container as unknown as HTMLElement).querySelector(
-        'div[data-e2e="to-lite-site"] div span span',
+    it('should be displayed on canonical', async () => {
+      const { container, queryByRole } = render(
+        <ArticleHeadline {...headlineBlock} />,
+        {
+          service: 'gahuza',
+          toggles: { articleLiteSiteLink: { enabled: true } },
+        },
       );
 
-      expect(titleSpan?.innerHTML).toBe(expected);
-    },
-  );
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
 
-  it('Before hydration snapshot', async () => {
-    useDecisionSpy.mockReturnValueOnce(null as unknown as true);
+      expect(liteSiteLink).toBeInTheDocument();
 
-    let container;
-
-    await act(async () => {
-      ({ container } = await act(() => {
-        return render(<ArticleHeadline {...headlineBlock} />, {
-          service: 'gahuza',
-          toggles: { liteSiteCTA: { enabled: true } },
-        });
-      }));
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
+    it('should not be displayed on AMP', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isAmp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .app', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isApp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .lite', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isLite: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
   });
 
-  it('After hydration snapshot', async () => {
-    useDecisionSpy.mockReturnValueOnce('off' as unknown as true);
+  describe('with toggle disabled', () => {
+    const toggles = { articleLiteSiteLink: { enabled: false } };
 
-    let container;
+    it('should not be displayed on canonical', async () => {
+      const { container } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        toggles,
+      });
 
-    await act(async () => {
-      ({ container } = await act(() => {
-        return render(<ArticleHeadline {...headlineBlock} />, {
-          service: 'gahuza',
-          toggles: { liteSiteCTA: { enabled: true } },
-        });
-      }));
+      expect(container).toMatchSnapshot();
     });
 
-    expect(container).toMatchSnapshot();
+    it('should not be displayed on AMP', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isAmp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', { name: /Inyandiko gusa/ });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .app', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isApp: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
+
+    it('should not be displayed on .lite', async () => {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        isLite: true,
+        toggles,
+      });
+
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
+    });
   });
 });

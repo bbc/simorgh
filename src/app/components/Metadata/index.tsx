@@ -12,10 +12,7 @@ import {
   renderAppleItunesApp,
 } from './utils';
 import { IconSizes, MetadataProps, Tag } from './types';
-import {
-  defaultTranslations,
-  liteEnabledServices,
-} from '../LiteSiteCta/liteSiteConfig';
+import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
@@ -95,9 +92,7 @@ const MetadataContainer = ({
     '/sport/rugby-league/articles',
   ];
 
-  const isUKLink = pathsForUkLink.some(
-    path => pathname && pathname.startsWith(path),
-  );
+  const isUKLink = pathsForUkLink.some(path => pathname?.startsWith(path));
 
   const showAlternateUKAmp = !isUKLink && isAmp;
 
@@ -134,7 +129,6 @@ const MetadataContainer = ({
   const { liteSite = defaultTranslations } = translations;
   const { dataSaving } = liteSite;
 
-  const showLiteTitle = isLite && liteEnabledServices.includes(service);
   const litePageTitle = `${title} - ${dataSaving}: ${brandName}`;
   const pageTitle = `${title} - ${brandName}`;
   const socialTitle = `${socialHeadline || title} - ${brandName}`;
@@ -161,7 +155,7 @@ const MetadataContainer = ({
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
       />
-      <title>{showLiteTitle ? litePageTitle : pageTitle}</title>
+      <title>{isLite ? litePageTitle : pageTitle}</title>
       <link rel="canonical" href={canonicalToUse} />
       {isEnglishService && alternateLinksEnglishSites.map(renderAlternateLinks)}
       {isoLang &&
@@ -216,8 +210,8 @@ const MetadataContainer = ({
           content={`https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${pathname}`}
         />
       )}
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
+      {Boolean(aboutTags?.length) && renderTags(aboutTags)}
+      {Boolean(mentionsTags?.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link

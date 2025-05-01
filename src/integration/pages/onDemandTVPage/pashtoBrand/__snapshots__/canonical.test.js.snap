@@ -266,6 +266,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
       style="aspect-ratio:auto"
@@ -340,6 +341,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
       style="aspect-ratio:auto"
@@ -418,6 +420,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       <img
         alt=""
         class="bbc-ipdj63"
+        loading="eager"
         src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
         srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
         style="aspect-ratio:auto"

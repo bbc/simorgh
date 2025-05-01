@@ -115,8 +115,6 @@ export const mainTranslations = {
   ads: {
     advertisementLabel: 'Реклама',
   },
-  recommendationTitle: 'По теме',
-  splitRecommendationTitle: 'Другие статьи',
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
@@ -356,10 +354,17 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     mostRead: {
-      header: 'Самое популярное',
+      header: 'Популярное',
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Самое популярное',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     podcastPromo: {
       title: 'WhatsApp',
@@ -389,9 +394,6 @@ export const service: DefaultServiceConfig = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

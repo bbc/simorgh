@@ -66,7 +66,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -229,27 +228,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.lite', // Brand
               '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv', // Episode
+              '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.lite', // Brand
               '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv', // Episode
+              '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -413,7 +416,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -580,23 +582,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/arabic/topics/cwr9j7nv58nt'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic/topics/cwr9j7nv58nt'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/arabic/topics/cwr9j7nv58nt'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -722,7 +707,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -886,7 +870,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1062,27 +1045,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
+              '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3.lite', // Brand
               '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw', // Episode
+              '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
+              '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3.lite', // Brand
               '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw', // Episode
+              '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/burmese/bbc_burmese_tv/tv/w172xbmg65lczy0', // Episode
+              '/burmese/bbc_burmese_tv/tv/w172xbmg65lczy0.lite', // Episode
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1211,7 +1198,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
@@ -1307,7 +1293,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1440,27 +1425,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr.lite', // Brand
               '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj', // Episode
+              '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr.lite', // Brand
               '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj', // Episode
+              '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1631,27 +1620,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+              '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0.lite', // Brand
               '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
+              '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+              '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0.lite', // Brand
               '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
+              '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p', // Episode
+              '/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p.lite', // Episode
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1824,27 +1817,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.lite', // Brand
               '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp', // Episode
+              '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.lite', // Brand
               '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp', // Episode
+              '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: true,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1970,7 +1967,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2139,7 +2135,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2265,7 +2260,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2424,7 +2418,6 @@ module.exports = () => ({
         smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2587,39 +2580,27 @@ module.exports = () => ({
           live: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+              '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx.lite', // Brand
               '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562', // Episode
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+              '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx.lite', // Brand
               '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562', // Episode
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgmgcj9864', // Episode
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgmgcj9864.lite', // Episode
             ],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      topicPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -2777,12 +2758,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2', // Brand
+              '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2.lite', // Brand
             ],
             enabled: false, // Marathi TV currently not broadcasting - do not enable
           },
           test: {
             paths: [
               '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2', // Brand
+              '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2.lite', // Brand
             ],
             enabled: false, // Marathi TV currently not broadcasting - do not enable
           },
@@ -2793,7 +2776,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2914,7 +2896,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3058,7 +3039,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -3157,7 +3137,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3283,7 +3262,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
@@ -3341,7 +3319,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
@@ -3452,28 +3429,33 @@ module.exports = () => ({
           live: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.lite', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1', // Episode
+              '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.lite', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1', // Episode
+              '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.lite', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
+              '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.lite', // Episode
             ],
             enabled: true,
           },
         },
         smoke: true,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3687,27 +3669,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr.lite', // Brand
               '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx', // Episode
+              '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr.lite', // Brand
               '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx', // Episode
+              '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3866,23 +3852,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin/topics/c95y35941vrt'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/pidgin/topics/cqywjyzk2vyt'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/pidgin/topics/c95y35941vrt'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4024,7 +3993,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4149,7 +4117,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4295,7 +4262,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4418,7 +4384,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -4470,7 +4435,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4588,23 +4552,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/topics/c1gd303q6y6t/lat'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/serbian/topics/c1gd303q6y6t/lat'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/serbian/topics/c1gd303q6y6t/lat'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4723,7 +4670,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4884,26 +4830,30 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
           live: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv_programmes/w13xttqt.lite', // Brand
               '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
+              '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z.lite', // Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv_programmes/w13xttqt.lite', // Brand
               '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
+              '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z.lite', // Episode
             ],
             enabled: false,
           },
           local: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv_programmes/w13xttqt.lite', // Brand
             ],
             enabled: false,
           },
@@ -5018,7 +4968,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: {
@@ -5129,27 +5078,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
+              '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3.lite', // Brand
               '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n', // Episode
+              '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
+              '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3.lite', // Brand
               '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n', // Episode
+              '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
+              '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk.lite', // Episode
             ],
             enabled: false,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5317,27 +5270,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy.lite', // Brand
               '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv', // Episode
+              '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy.lite', // Brand
               '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv', // Episode
+              '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5467,27 +5424,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // On Demand Brand
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld.lite', // On Demand Brand
               '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p', // On Demand Episode
+              '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p.lite', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // On Demand Brand
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld.lite', // On Demand Brand
               '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p', // On Demand Episode
+              '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p.lite', // On Demand Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5608,7 +5569,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5784,7 +5744,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5905,7 +5864,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6031,7 +5989,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6157,7 +6114,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6266,20 +6222,6 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
-            enabled: true,
-          },
-          test: {
-            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
-            enabled: true,
-          },
-          local: { paths: [], enabled: false },
-        },
-        smoke: false,
-      },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -6336,27 +6278,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+              '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9.lite', // Brand
               '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m', // Episode
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+              '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9.lite', // Brand
               '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m', // Episode
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv/w172xct4hclz27g', // Episode
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xct4hclz27g.lite', // Episode
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6527,27 +6473,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
+              '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1.lite', // Brand
               '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
+              '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1.lite', // Brand
               '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t.lite', // Episode
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6715,27 +6665,31 @@ module.exports = () => ({
           live: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv.lite', // Brand
               '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz', // Episode
+              '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz.lite', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv.lite', // Brand
               '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz', // Episode
+              '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz.lite', // Episode
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv.lite', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6849,23 +6803,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/topics/c8y949r98pgt/cyr'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/topics/c8y949r98pgt/cyr'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/topics/c8y949r98pgt/cyr'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -6886,23 +6823,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/topics/c8y949r98pgt/lat'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/topics/c8y949r98pgt/lat'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/topics/c8y949r98pgt/lat'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
@@ -6939,7 +6859,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7065,7 +6984,6 @@ module.exports = () => ({
       liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7215,7 +7133,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -7370,7 +7287,6 @@ module.exports = () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {

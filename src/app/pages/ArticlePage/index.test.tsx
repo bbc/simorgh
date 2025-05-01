@@ -11,8 +11,9 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataPidginWithPV,
+  articleDataPortugueseWithPV,
   promoSample,
-  sampleRecommendations,
   articlePglDataPidgin,
   articleStyDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
@@ -31,7 +32,6 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import * as useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   render,
   screen,
@@ -58,8 +58,6 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
-
-const useDecisionSpy = jest.spyOn(useOptimizelyVariation, 'default');
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -112,9 +110,6 @@ const Context = ({
             ads: {
               enabled: adsToggledOn,
             },
-            cpsRecommendations: {
-              enabled: true,
-            },
             podcastPromo: { enabled: promo != null },
           }}
         >
@@ -149,35 +144,33 @@ describe('Article Page', () => {
   it.each([
     {
       testScenario:
-        'should show the CTA on non Lite Site pages, when the toggle is enabled',
+        'should show the lite site link on non Lite pages, when the toggle is enabled',
       isLite: false,
       toggleEnabled: true,
       shouldBeDisplayed: true,
     },
     {
       testScenario:
-        'should not show the CTA on non Lite Site pages, when the toggle is false',
+        'should not show the lite site link on non Lite pages, when the toggle is false',
       isLite: false,
       toggleEnabled: false,
       shouldBeDisplayed: false,
     },
     {
       testScenario:
-        'should not show the CTA on Lite Site pages, regardless of the toggle',
+        'should not show the lite site link on Lite pages, regardless of the toggle',
       isLite: true,
       toggleEnabled: true,
       shouldBeDisplayed: false,
     },
   ])('$testScenario', ({ isLite, toggleEnabled, shouldBeDisplayed }) => {
-    useDecisionSpy.mockReturnValueOnce('off' as unknown as true);
-
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite,
-      toggles: { liteSiteCTA: { enabled: toggleEnabled } },
+      toggles: { articleLiteSiteLink: { enabled: toggleEnabled } },
     });
 
-    const liteCTA = screen.queryByRole('link', { name: /Nyandiko gusa/i });
+    const liteCTA = screen.queryByRole('link', { name: /Inyandiko gusa/ });
 
     if (shouldBeDisplayed) {
       expect(liteCTA).toBeInTheDocument();
@@ -186,10 +179,9 @@ describe('Article Page', () => {
     }
   });
 
-  it('should apply click and view tracking data on lite site cta link', () => {
+  it('should apply click and view tracking data on lite site link', () => {
     const eventTrackingData = {
-      componentName: 'canonical-lite-cta',
-      optimizely: null,
+      componentName: 'article-lite-site-link',
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
@@ -197,7 +189,7 @@ describe('Article Page', () => {
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite: false,
-      toggles: { liteSiteCTA: { enabled: true } },
+      toggles: { articleLiteSiteLink: { enabled: true } },
     });
 
     expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
@@ -700,22 +692,6 @@ describe('Article Page', () => {
     });
   });
 
-  it('should render WSOJ recommendations when passed', async () => {
-    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-    const pageDataWithSecondaryColumn = {
-      ...articleDataNews,
-      recommendations: sampleRecommendations,
-    };
-    const { getByText } = render(
-      <Context service="turkce">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
-      </Context>,
-      { service: 'turkce' },
-    );
-
-    expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
-  });
-
   it('should render PodcastPromos when passed', async () => {
     suppressPropWarnings(['pageData.promo.id', 'ArticlePage', 'undefined']);
     suppressPropWarnings(['pageData.promo.id', 'SecondaryColumn', 'undefined']);
@@ -897,7 +873,7 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
+      const schemaType = JSON.parse(helmetContent.scriptTags[2].innerHTML)[
         '@graph'
       ][0]['@type'];
 
@@ -932,5 +908,25 @@ describe('Article Page', () => {
         undefined,
       );
     });
+  });
+
+  describe('when rendering an article page with a portrait video', () => {
+    it.each`
+      pageData                       | service         | expected
+      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
+      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
+    `(
+      `should render the $expected title with the MediaLoader component`,
+      ({ pageData, service, expected }) => {
+        render(
+          <Context service={service}>
+            <ArticlePage pageData={pageData} />
+          </Context>,
+        );
+
+        const title = screen.queryByRole('strong');
+        expect(title?.textContent).toEqual(expected);
+      },
+    );
   });
 });

@@ -46,7 +46,7 @@ const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 interface GetIdProps {
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   env: Environments;
 }
 
@@ -140,7 +140,7 @@ export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   page?: string;
   isAmp?: boolean;
   disableRadioSchedule?: boolean;
@@ -232,12 +232,13 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_PAGE: {
+        const [liveID] = pathname.split('.');
         const variantPath = variant ? `/${variant}` : '';
         const host = `http://${process.env.HOSTNAME || 'localhost'}`;
         const port = process.env.PORT ? `:${process.env.PORT}` : '';
         // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${pathname}${variantPath}`,
+          `${host}${port}/api/local/${service}/live/${liveID}${variantPath}`,
         );
         break;
       }

@@ -56,7 +56,8 @@ const PostHeaderBanner = ({
 }) => {
   const {
     timezone,
-    locale,
+    datetimeLocale,
+    serviceDatetimeLocale,
     altCalendar,
     service,
     script,
@@ -68,6 +69,7 @@ const PostHeaderBanner = ({
       },
     },
   } = useContext(ServiceContext);
+  const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
     <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>

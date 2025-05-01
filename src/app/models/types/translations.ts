@@ -9,8 +9,6 @@ export interface Translations {
   ads: {
     advertisementLabel: string;
   };
-  recommendationTitle?: string;
-  splitRecommendationTitle?: string;
   seeAll?: string;
   home: string;
   currentPage: string;
@@ -19,15 +17,7 @@ export interface Translations {
   topicsPath?: string;
   relatedTopics?: string;
   navMenuText: string;
-  liteSite?: {
-    onboardingMessage: string;
-    toMainSite: string;
-    informationPage: string;
-    informationPageLink: string;
-    dataSaving: string;
-    articleDataSavingLinkText: string;
-    experiment?: Record<string, string>;
-  };
+  liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
@@ -288,3 +278,12 @@ export type UgcTranslations = {
   closedHeading: string;
   closedDescription: string;
 };
+
+export interface LiteSiteTranslations {
+  onboardingMessage: string;
+  toMainSite: string;
+  informationPage: string;
+  informationPageLink?: string;
+  dataSaving: string;
+  articleDataSavingLinkText?: string;
+}

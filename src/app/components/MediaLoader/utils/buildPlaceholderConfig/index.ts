@@ -39,7 +39,6 @@ export default ({
   const placeholderSrcset = getPlaceholderSrcSet({
     originCode: placeholderImageOriginCode,
     locator: placeholderImageLocator,
-    isWebP: true,
   });
 
   return {
