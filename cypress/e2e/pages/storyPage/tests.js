@@ -153,12 +153,9 @@ export const testsThatFollowSmokeTestConfig = ({
         if (runRecommendationTests) {
           cy.getToggles(service);
           cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const recommendationsEnabled = path(
-              ['cpsRecommendations', 'enabled'],
-              toggles,
-            );
-            cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
-            if (recommendationsEnabled) {
+            const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
+
+            if (mostReadEnabled) {
               cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
               cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
                 (item, index) => {
@@ -167,12 +164,13 @@ export const testsThatFollowSmokeTestConfig = ({
                     cy.log(`isAmp= ${isAmp}`);
                     if (isAmp) {
                       cy.get(
-                        `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > amp-img`,
-                      ).should('have.attr', 'width');
+                        `[data-e2e=recommendations-wrapper] amp-img`,
+                      ).should('have.attr', 'src');
                     } else {
-                      cy.get(
-                        `[data-e2e=story-promo-wrapper] > div > [data-e2e=image-placeholder] > div > img`,
-                      ).should('have.attr', 'width');
+                      cy.get(`[data-e2e=recommendations-wrapper] img`).should(
+                        'have.attr',
+                        'src',
+                      );
                     }
                   });
                 },
@@ -192,18 +190,15 @@ export const testsThatFollowSmokeTestConfig = ({
         if (runRecommendationTests) {
           cy.getToggles(service);
           cy.fixture(`toggles/${service}.json`).then(toggles => {
-            const recommendationsEnabled = path(
-              ['cpsRecommendations', 'enabled'],
-              toggles,
-            );
-            cy.log(`Recommendations enabled? ${recommendationsEnabled}`);
-            if (recommendationsEnabled) {
+            const mostReadEnabled = path(['mostRead', 'enabled'], toggles);
+
+            if (mostReadEnabled) {
               cy.get(`[data-e2e=recommendations-heading]`).scrollIntoView();
               cy.get('[data-e2e=recommendations-heading] > div > ul > li').each(
                 (item, index) => {
                   cy.wrap(item).within(() => {
                     cy.log(`List item number: ${index + 1}`);
-                    cy.get(`[data-e2e=story-promo-wrapper] > div > div > a`)
+                    cy.get(`[data-e2e=recommendations-wrapper] > div > div > a`)
                       .invoke('text')
                       .then(text => {
                         expect(text.length).to.be.at.least(1);

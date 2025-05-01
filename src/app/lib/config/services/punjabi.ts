@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
+    atiAnalyticsProducerName: 'PUNJABI',
+    useReverb: true,
     chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/punjabi/institutional-49282853',
     isTrustProjectParticipant: true,
     script: gurmukhi,
-    manifestPath: '/manifest.json',
+    manifestPath: '/punjabi/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ਨਿਊਜ਼',
+    homePageTitle: 'ਨਿਊਜ਼',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -219,6 +221,7 @@ export const service: DefaultServiceConfig = {
         video: 'ਵੀਡੀਓ',
         listen: 'ਸੁਣੋ',
         watch: 'ਦੇਖੋ',
+        watchMoments: 'ਸ਼ਾਰਟ ਵੀਡੀਓ ਦੇਖੋ',
         listenLive: 'live ਸੁਣੋ',
         liveLabel: 'LIVE',
         nextLabel: 'NEXT',
@@ -226,6 +229,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'ਤਾਜ਼ਾ ਐਪੀਸੋਡ',
+        closeVideo: 'ਬਾਹਰ ਜਾਓ',
       },
       socialEmbed: {
         caption: {
@@ -262,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
     },
     mostRead: {
-      header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
+      header: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -271,7 +275,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {

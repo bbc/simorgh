@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
+    atiAnalyticsProducerName: 'SWAHILI',
+    useReverb: true,
     chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/manifest.json',
+    manifestPath: '/swahili/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Swahili',
+    homePageTitle: 'Swahili',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -230,6 +232,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'Sikiliza',
         watch: 'Tazama',
+        watchMoments: 'Tazama hapa',
         liveLabel: 'Moja kwa moja',
         nextLabel: 'MBELE',
         previousRadioShow: 'Kipindi kilichopita cha redio',
@@ -269,9 +272,9 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
     mostRead: {
-      header: 'Iliyosomwa zaidi',
+      header: 'Zinazovuma zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -280,7 +283,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muda %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Iliyosomwa zaidi',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -12,27 +12,27 @@ import {
 import { Translations } from './translations';
 
 export type DefaultServiceConfig = {
-  [key in ServicesWithNoVariants['variant']]: ServiceConfig;
+  [_key in ServicesWithNoVariants['variant']]: ServiceConfig;
 };
 
 export type SerbianConfig = {
-  [key in SerbianService['variant']]: ServiceConfig;
+  [_key in SerbianService['variant']]: ServiceConfig;
 };
 
 export type ChineseConfig = {
-  [key in ChineseService['variant']]: ServiceConfig;
+  [_key in ChineseService['variant']]: ServiceConfig;
 };
 
 export type ZhongwenConfig = {
-  [key in ZhongwenService['variant']]: ServiceConfig;
+  [_key in ZhongwenService['variant']]: ServiceConfig;
 };
 
 export type UkrainianConfig = {
-  [key in UkrainianService['variant']]: ServiceConfig;
+  [_key in UkrainianService['variant']]: ServiceConfig;
 };
 
 export type UzbekConfig = {
-  [key in UzbekService['variant']]: ServiceConfig;
+  [_key in UzbekService['variant']]: ServiceConfig;
 };
 
 export type ServiceConfig = {
@@ -42,6 +42,8 @@ export type ServiceConfig = {
   articleTimestampSuffix?: string;
   atiAnalyticsAppName: string;
   atiAnalyticsProducerId: string;
+  atiAnalyticsProducerName?: string;
+  useReverb?: boolean;
   chartbeatDomain: string;
   brandName: string;
   product: string;
@@ -72,9 +74,9 @@ export type ServiceConfig = {
   publishingPrinciples?: string | null;
   isTrustProjectParticipant: boolean;
   script: object;
-  manifestPath: string;
+  manifestPath?: string;
   swPath?: string;
-  frontPageTitle: string;
+  homePageTitle: string;
   passportHomes?: string[];
   iTunesAppId?: number;
   showAdPlaceholder: boolean;
@@ -146,7 +148,7 @@ export interface RadioSchedule {
 }
 
 export interface Recommendations {
-  hasStoryRecommendations: boolean;
+  header?: string;
   skipLink?: {
     text: string;
     endTextVisuallyHidden: string;

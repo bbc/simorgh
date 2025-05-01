@@ -1,34 +1,41 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
-
-import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
+import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
+import {
+  CLICK_EVENT,
+  STATIC_ATI_CLICK_TRACKING,
+} from '#app/lib/analyticsUtils/analytics.const';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const EVENT_TYPE = 'click';
-
-const useClickTrackerHandler = (props = {}) => {
-  const preventNavigation = props?.preventNavigation;
-  const componentName = props?.componentName;
-  const url = props?.url;
-  const advertiserID = props?.advertiserID;
-  const format = props?.format;
-  const optimizely = props?.optimizely;
-  const optimizelyMetricNameOverride = props?.optimizelyMetricNameOverride;
-  const detailedPlacement = props?.detailedPlacement;
+const useClickTrackerHandler = (eventTrackingData = {}) => {
+  const {
+    pageIdentifier,
+    producerId,
+    platform,
+    statsDestination,
+    componentName,
+    campaignID,
+    format,
+    advertiserID,
+    url,
+    detailedPlacement,
+    producerName,
+    preventNavigation,
+    optimizely,
+    optimizelyMetricNameOverride,
+  } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
-  const eventTrackingContext = useContext(EventTrackingContext);
 
-  const { pageIdentifier, platform, producerId, statsDestination } =
-    eventTrackingContext;
-  const campaignID = props?.campaignID || eventTrackingContext?.campaignID;
-
-  const { service } = useContext(ServiceContext);
+  const { service, useReverb } = useContext(ServiceContext);
 
   return useCallback(
     async event => {
@@ -46,6 +53,7 @@ const useClickTrackerHandler = (props = {}) => {
           pageIdentifier,
           platform,
           producerId,
+          producerName,
           service,
           statsDestination,
         ].every(Boolean);
@@ -77,18 +85,20 @@ const useClickTrackerHandler = (props = {}) => {
 
           try {
             await sendEventBeacon({
-              type: EVENT_TYPE,
+              type: CLICK_EVENT,
               campaignID,
               componentName,
               format,
               pageIdentifier,
               platform,
               producerId,
+              producerName,
               service,
               advertiserID,
               statsDestination,
-              url,
+              url: url || nextPageUrl,
               detailedPlacement,
+              useReverb,
               ...(optimizelyVariation &&
                 optimizelyVariation !== 'off' && {
                   experimentVariant: optimizelyVariation,
@@ -114,6 +124,7 @@ const useClickTrackerHandler = (props = {}) => {
       platform,
       preventNavigation,
       producerId,
+      producerName,
       service,
       statsDestination,
       url,
@@ -122,8 +133,29 @@ const useClickTrackerHandler = (props = {}) => {
       optimizely,
       optimizelyMetricNameOverride,
       detailedPlacement,
+      useReverb,
     ],
   );
 };
 
-export default useClickTrackerHandler;
+export default (eventTrackingData = {}) => {
+  const { isAmp } = useContext(RequestContext);
+  const isHydrated = useHydrationDetection();
+
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
+  const staticAtiUrl = constructStaticATIUrl({
+    eventTrackingData,
+    eventType: CLICK_EVENT,
+    isStatic: !isHydrated,
+  });
+
+  const enableStaticTracking = !isHydrated && !isAmp;
+
+  return {
+    ...(enableStaticTracking && {
+      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+    }),
+
+    ...(isHydrated && { onClick: clickTracker }),
+  };
+};

@@ -20,6 +20,7 @@ export type PlayerConfig = {
   insideIframe?: boolean;
   embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
+  superResponsive?: boolean;
   statsObject: {
     clipPID?: string | null;
     episodePID?: string | null;

@@ -129,7 +129,7 @@ exports[`Canonical Articles Header Navigation link should match text and url 3`]
 exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
-  "url": "/hausa/52140979",
+  "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
@@ -143,7 +143,7 @@ exports[`Canonical Articles Header Navigation link should match text and url 5`]
 exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+  "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
@@ -161,6 +161,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
   class="bbc-139onq"
   height="351"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 624w"

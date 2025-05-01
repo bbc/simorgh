@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Feature Idx Page Assertions should render flattened sections 1`] = `"اہم خبریں"`;
-
-exports[`Feature Idx Page Assertions should render flattened sections 2`] = `"ملٹی میڈیاسب دیکھیں"`;
-
-exports[`Feature Idx Page Assertions should render flattened sections 3`] = `"فیچر اور تجزیے"`;
-
-exports[`Feature Idx Page Assertions should render flattened sections 4`] = `"وائرس کی تاریخ"`;

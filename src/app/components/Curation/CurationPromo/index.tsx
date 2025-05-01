@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import { useContext } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import formatDuration from '#app/lib/utilities/formatDuration';
@@ -9,6 +11,7 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+import styles from './index.styles';
 
 const CurationPromo = ({
   id,
@@ -23,7 +26,7 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
 }: Summary) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, isLite } = useContext(RequestContext);
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
@@ -45,21 +48,25 @@ const CurationPromo = ({
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
   return (
-    <Promo>
-      <Promo.Image src={imageUrl} alt={imageAlt} lazyLoad={lazy} isAmp={isAmp}>
-        {isMedia && (
-          <Promo.MediaIcon type={type}>
-            {showDuration ? mediaDuration : ''}
-          </Promo.MediaIcon>
-        )}
-      </Promo.Image>
+    <Promo css={styles.promo} className="">
+      {imageUrl && (
+        <Promo.Image
+          src={imageUrl}
+          alt={imageAlt}
+          lazyLoad={lazy}
+          isAmp={isAmp}
+          {...(isLite && { css: styles.image })}
+        >
+          {isMedia && (
+            <Promo.MediaIcon css={styles.icon} type={type}>
+              {showDuration ? mediaDuration : ''}
+            </Promo.MediaIcon>
+          )}
+        </Promo.Image>
+      )}
       <Promo.Heading as={`h${headingLevel}`}>
         {isMedia ? (
-          <Promo.A
-            href={link}
-            aria-labelledby={id}
-            className="focusIndicatorDisplayBlock"
-          >
+          <Promo.A href={link} aria-labelledby={id}>
             <span id={id} role="text">
               <VisuallyHiddenText data-testid="visually-hidden-text">
                 {typeTranslated}
@@ -71,7 +78,7 @@ const CurationPromo = ({
             </span>
           </Promo.A>
         ) : (
-          <Promo.A href={link} className="focusIndicatorDisplayBlock">
+          <Promo.A href={link}>
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}

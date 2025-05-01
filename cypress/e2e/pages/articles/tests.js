@@ -13,26 +13,18 @@ const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 const serviceHasInlineLink = service =>
   service === 'news' || service === 'afaanoromoo';
 
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
-};
-
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({
-  service,
-  pageType,
-  variant,
-}) => {
+export default ({ service, pageType, variant = 'default' }) => {
   describe(`Running tests for ${service} ${pageType}`, () => {
     describe(`Metadata`, () => {
+      const serviceID = config[service]?.name || service;
+
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[config[service].name][variant].articleAuthor,
+          appConfig[serviceID][variant].articleAuthor,
         );
       });
 

@@ -5,11 +5,11 @@ import React, {
   useContext,
   useState,
 } from 'react';
-import { v4 as uuid } from 'uuid';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import getUUID from '#app/lib/utilities/getUUID';
 import {
   Field,
   FieldData,
@@ -179,7 +179,7 @@ export const FormContextProvider = ({
     try {
       const environment = getEnvironment(asPath);
       const domain = `https://www.${environment === 'test' ? 'test.' : ''}bbc.com`;
-      const url = `${domain}/ugc/send/${id}?said=${uuid()}`;
+      const url = `${domain}/ugc/send/${id}?said=${getUUID()}`;
 
       const req = new XMLHttpRequest();
       req.responseType = 'json';

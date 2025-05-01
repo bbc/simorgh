@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
   BRAND_LOGO: string;
@@ -95,7 +97,7 @@ interface MediaQueries {
   GROUP_4_MIN_WIDTH: string;
   /** between 1008px and 1279px  */
   GROUP_4_ONLY: string;
-  /** 1280px and abovex  */
+  /** 1280px and above  */
   GROUP_5_MIN_WIDTH: string;
   /** @media screen and (forced-colors: active) */
   FORCED_COLOURS: string;

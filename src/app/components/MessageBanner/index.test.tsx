@@ -104,7 +104,7 @@ describe('MessageBanner', () => {
       );
       const image = screen.getByAltText('');
       expect(image.getAttribute('src')).toEqual(
-        'https://ichef.test.bbci.co.uk/ace/ws/240/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
+        'https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
       );
     });
 

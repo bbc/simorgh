@@ -148,35 +148,33 @@ const StyledBrand = ({
   serviceLocalisedName = null,
   svg,
   isLongBrand,
-}) => (
-  <>
-    {svg && (
-      <>
-        <BrandSvg
-          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-          viewBox={[
-            svg.viewbox.minX || 0,
-            svg.viewbox.minY || 0,
-            svg.viewbox.width,
-            svg.viewbox.height,
-          ].join(' ')}
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          aria-hidden="true"
-          height="32"
-          isLongBrand={isLongBrand}
-        >
-          {svg.group}
-        </BrandSvg>
-        <LocalisedBrandName
-          linkId={linkId}
-          product={product}
-          serviceLocalisedName={serviceLocalisedName}
-        />
-      </>
-    )}
-  </>
-);
+}) => {
+  return svg ? (
+    <>
+      <BrandSvg
+        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+        viewBox={[
+          svg.viewbox.minX || 0,
+          svg.viewbox.minY || 0,
+          svg.viewbox.width,
+          svg.viewbox.height,
+        ].join(' ')}
+        xmlns="http://www.w3.org/2000/svg"
+        focusable="false"
+        aria-hidden="true"
+        height="32"
+        isLongBrand={isLongBrand}
+      >
+        {svg.group}
+      </BrandSvg>
+      <LocalisedBrandName
+        linkId={linkId}
+        product={product}
+        serviceLocalisedName={serviceLocalisedName}
+      />
+    </>
+  ) : null;
+};
 
 const Brand = forwardRef((props, ref) => {
   const {

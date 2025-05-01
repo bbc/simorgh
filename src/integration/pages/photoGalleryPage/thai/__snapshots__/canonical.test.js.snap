@@ -185,6 +185,7 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
   alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
   class="bbc-139onq"
   height="549"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/17431/production/_109118259_01.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17431/production/_109118259_01.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/17431/production/_109118259_01.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/17431/production/_109118259_01.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsprodpb/17431/production/_109118259_01.jpg.webp 624w, https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/17431/production/_109118259_01.jpg.webp 800w"

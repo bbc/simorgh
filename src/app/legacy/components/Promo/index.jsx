@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Promo = ({ children }) => {
+const Promo = ({ children, className }) => {
   const { script, service } = useContext(ServiceContext);
 
   // Image components are moved to a left column on mobile
@@ -39,7 +39,7 @@ const Promo = ({ children }) => {
     [script, service],
   );
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <PromoContext.Provider value={promoValue}>
         {leftChildren && <div className="promo-image">{leftChildren}</div>}
         {rightChildren && <div className="promo-text">{rightChildren}</div>}

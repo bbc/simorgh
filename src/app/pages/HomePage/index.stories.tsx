@@ -37,7 +37,7 @@ const overrideRadioSchedule = (
   }
 };
 
-const Component = ({ service, variant }: StoryProps) => {
+const Component = ({ service, variant, isLite }: StoryProps) => {
   const [pageData, setPageData] = useState({});
 
   useEffect(() => {
@@ -69,6 +69,7 @@ const Component = ({ service, variant }: StoryProps) => {
         pageType={HOME_PAGE}
         status={200}
         isAmp={false}
+        isLite={isLite}
         pathname={`/${service}`}
         pageData={pageData}
       />
@@ -82,8 +83,8 @@ export default {
 };
 
 export const Example = {
-  render: (_: StoryArgs, { service, variant }: StoryProps) => (
-    <Component service={service} variant={variant} />
+  render: (_: StoryArgs, { service, variant, isLite }: StoryProps) => (
+    <Component service={service} variant={variant} isLite={isLite} />
   ),
   parameters: { chromatic: { disableSnapshot: true } },
 };
@@ -94,4 +95,19 @@ export const Test = {
     <Component service="kyrgyz" variant={variant} />
   ),
   tags: ['!dev'],
+};
+
+export const TestLite = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="gahuza" variant={variant} isLite />
+  ),
+  tags: ['!dev'],
+  parameters: {
+    chromatic: {
+      viewports: [
+        399, // Group 1
+        899, // Group 3
+      ],
+    },
+  },
 };

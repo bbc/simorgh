@@ -28,6 +28,7 @@ const loadableConfig = {
   pashto: loadable(() => import('./pashto')),
   persian: loadable(() => import('./persian')),
   pidgin: loadable(() => import('./pidgin')),
+  polska: loadable(() => import('./polska')),
   portuguese: loadable(() => import('./portuguese')),
   punjabi: loadable(() => import('./punjabi')),
   russian: loadable(() => import('./russian')),

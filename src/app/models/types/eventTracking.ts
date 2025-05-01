@@ -1,10 +1,17 @@
 import { ReactSDKClient } from '@optimizely/react-sdk';
 
+export type ReverbClient = {
+  isReady: () => boolean;
+  initialise: () => Promise<void>;
+  viewEvent: () => void;
+  userActionEvent: (...args: unknown[]) => void;
+};
+
 export type EventTrackingMetadata = {
   componentName: string;
   detailedPlacement?: string;
   campaignID?: string;
-  advertiserID?: number | string;
+  advertiserID?: string;
   optimizely?: ReactSDKClient | null;
   optimizelyMetricNameOverride?: string;
 };

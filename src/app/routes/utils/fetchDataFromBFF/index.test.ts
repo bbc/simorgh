@@ -196,7 +196,6 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                     | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/tipohome'}                                                    | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=c93v2kkz841t&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=ck3yk9nz25qt&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=c93v2kkz841t&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}

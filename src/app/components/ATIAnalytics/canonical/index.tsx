@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
-import sendBeaconLite from './sendBeaconLite';
+import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -40,9 +40,8 @@ const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
   );
 };
 
-const addLiteScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconLite(atiPageViewUrlString);
-
+const addStaticBeaconScript = () => {
+  const script = addSendStaticBeaconToWindow();
   return (
     <Helmet>
       <script type="text/javascript">{script}</script>
@@ -50,21 +49,36 @@ const addLiteScript = (atiPageViewUrlString: string) => {
   );
 };
 
-const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
+const sendStaticBeaconScript = (atiPageViewUrlString: string) => {
+  const script = sendStaticBeacon(atiPageViewUrlString);
+  return (
+    <Helmet>
+      <script type="text/javascript">{script}</script>
+    </Helmet>
+  );
+};
+
+const CanonicalATIAnalytics = ({
+  pageviewParams,
+  reverbParams,
+}: ATIAnalyticsProps) => {
   const { isLite } = useContext(RequestContext);
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
 
+  const [reverbBeaconConfig] = useState(reverbParams);
+
   const [atiPageViewUrl] = useState(atiPageViewUrlString);
 
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl);
-  }, [atiPageViewUrl]);
+    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
+  }, [atiPageViewUrl, reverbBeaconConfig]);
 
   return (
     <>
-      {isLite && addLiteScript(atiPageViewUrlString)}
+      {addStaticBeaconScript()}
+      {isLite && sendStaticBeaconScript(atiPageViewUrlString)}
       {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>

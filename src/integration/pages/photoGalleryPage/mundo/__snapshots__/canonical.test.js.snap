@@ -146,40 +146,47 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 {
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
+{
   "text": "Hay Festival",
   "url": "/mundo/topics/cr50y7p7qyqt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
 {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
@@ -193,6 +200,7 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
   alt="Tenista de 1904"
   class="bbc-139onq"
   height="549"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 549w"

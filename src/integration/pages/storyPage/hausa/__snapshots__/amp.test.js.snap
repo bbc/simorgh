@@ -117,6 +117,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
 exports[`AMP Story Page Analytics chartbeat 1`] = `
 {
   "vars": {
+    "authors": "Kalkidan Yibeltal",
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
     "sections": "Hausa, Hausa - STY",
@@ -203,7 +204,7 @@ exports[`AMP Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Story Page Footer Cookie Settings Button should match text and on handler 1`] = `
 {
-  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
 `;
@@ -238,7 +239,7 @@ exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
-  "url": "/hausa/52140979",
+  "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
@@ -252,7 +253,7 @@ exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
 exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+  "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 

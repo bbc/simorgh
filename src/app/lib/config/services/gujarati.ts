@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
+    atiAnalyticsProducerName: 'GUJARATI',
+    useReverb: true,
     chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/gujarati/institutional-50409883',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/gujarati/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'સમાચાર',
+    homePageTitle: 'સમાચાર',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -226,12 +228,14 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'સાંભળો',
         watch: 'જુઓ',
+        watchMoments: 'વીડિયો જુઓ',
         liveLabel: 'LIVE',
         nextLabel: 'NEXT',
         previousRadioShow: 'આ પહેલાંનો રેડિયો શો',
         nextRadioShow: 'આગામી રેડિયો શો',
         duration: 'અવધિ',
         recentEpisodes: 'તાજેતરનાં એપિસોડ્સ',
+        closeVideo: 'બહાર નીકળો',
       },
       socialEmbed: {
         caption: {
@@ -267,7 +271,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'લેટેસ્ટ',
     },
     mostRead: {
-      header: 'સૌથી વધારે વંચાયેલા સમાચાર',
+      header: 'સૌથી વધુ વંચાયેલી સ્ટોરીઝ',
       lastUpdated: 'લાસ્ટ અપડેટ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -276,7 +280,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'સૌથી વધારે વંચાયેલા સમાચાર',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -24,8 +24,8 @@ describe('Home Page - BFF Fetching', () => {
 
   it('should request local fixture data when the app env is "local"', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
-
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+
     fetchDataSpy.mockImplementation(() =>
       Promise.resolve({
         status: 200,
@@ -34,14 +34,14 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/tipohome',
+      path: '/kyrgyz',
       service: 'kyrgyz',
       pageType: 'home',
       getAgent: mockGetAgent,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'http://localhost/kyrgyz/tipohome',
+      path: 'http://localhost/kyrgyz',
       pageType: HOME_PAGE,
       timeout: 60000,
     });
@@ -59,7 +59,7 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/tipohome',
+      path: '/kyrgyz',
       service: 'kyrgyz',
       pageType: 'home',
       getAgent: mockGetAgent,
@@ -87,7 +87,7 @@ describe('Home Page - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/tipohome',
+      path: '/kyrgyz',
       service: 'kyrgyz',
       pageType: 'home',
       getAgent: mockGetAgent,

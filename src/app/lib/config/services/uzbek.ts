@@ -11,6 +11,8 @@ const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcnews`,
   atiAnalyticsAppName: 'news-uzbek',
   atiAnalyticsProducerId: '96',
+  atiAnalyticsProducerName: 'UZBEK',
+  useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
@@ -20,13 +22,10 @@ const baseServiceConfig = {
   twitterCreator: '@bbcuzbek',
   twitterSite: '@bbcuzbek',
   isTrustProjectParticipant: true,
-  manifestPath: '/manifest.json',
+  manifestPath: '/uzbek/manifest.json',
   swPath: '/sw.js',
   radioSchedule: {
     hasRadioSchedule: false,
-  },
-  recommendations: {
-    hasStoryRecommendations: false,
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
@@ -42,9 +41,9 @@ const defaultCyrillicConfig = {
   brandName: "BBC News O'zbek",
   datetimeLocale: `uz`,
   externalLinkText: ', ташқи',
-  frontPageTitle: 'Бош саҳифа',
-  lang: `uz-Cyrl`,
-  locale: `uz-UZ`,
+  homePageTitle: 'Бош саҳифа',
+  lang: 'uz-cyrl',
+  locale: 'uz-UZ',
   // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
   isoLang: 'uz',
   noBylinesPolicy:
@@ -244,6 +243,7 @@ const defaultCyrillicConfig = {
       nextRadioShow: 'Кейинги радио дастур',
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
+      closeVideo: 'Чиқиш',
     },
     socialEmbed: {
       caption: {
@@ -280,10 +280,17 @@ const defaultCyrillicConfig = {
     latestMediaTitle: 'Сўнгги',
   },
   mostRead: {
-    header: 'Энг кўп ўқилган',
+    header: 'Оммабоп мақолалар',
     lastUpdated: 'Сўнгги янгиланиш:',
     numberOfItems: 5,
     hasMostRead: true,
+  },
+  recommendations: {
+    header: 'Энг кўп ўқилган',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -331,27 +338,27 @@ const defaultCyrillicConfig = {
     },
     {
       title: 'Ўзбекистон',
-      url: '/uzbek/topics/c8y949r98pgt',
+      url: '/uzbek/topics/c8y949r98pgt/cyr',
     },
     {
       title: 'Минтақа',
-      url: '/uzbek/topics/cwr9j9dz4gpt',
+      url: '/uzbek/topics/cwr9j9dz4gpt/cyr',
     },
     {
       title: 'Дунё',
-      url: '/uzbek/topics/cl8l9mved19t',
+      url: '/uzbek/topics/cl8l9mved19t/cyr',
     },
     {
       title: 'Спорт',
-      url: '/uzbek/topics/cxnykykk1zkt',
+      url: '/uzbek/topics/cxnykykk1zkt/cyr',
     },
     {
       title: 'Илм-Фан',
-      url: '/uzbek/topics/cg7262681krt',
+      url: '/uzbek/topics/cg7262681krt/cyr',
     },
     {
       title: 'Технология',
-      url: '/uzbek/topics/cjgn7n7v3yjt',
+      url: '/uzbek/topics/cjgn7n7v3yjt/cyr',
     },
     {
       title: 'BBC News O‘zbek TV dasturi',
@@ -377,9 +384,9 @@ export const service: UzbekConfig = {
     brandName: "BBC News O'zbek",
     datetimeLocale: `uz-latn`,
     externalLinkText: ', tashqi',
-    frontPageTitle: 'Bosh sahifa',
-    lang: `uz-Cyrl`,
-    locale: `uz-UZ`,
+    homePageTitle: 'Bosh sahifa',
+    lang: 'uz-latn',
+    locale: 'uz-UZ',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'uz',
     noBylinesPolicy:
@@ -615,10 +622,17 @@ export const service: UzbekConfig = {
       latestMediaTitle: 'So‘nggi',
     },
     mostRead: {
-      header: 'Eng ko‘p o‘qilgan',
+      header: 'Ommabop maqolalar',
       lastUpdated: 'So‘nggi yangilanish:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Eng ko‘p o‘qilgan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -666,27 +680,27 @@ export const service: UzbekConfig = {
       },
       {
         title: 'O‘zbekiston',
-        url: '/uzbek/topics/c8y949r98pgt',
+        url: '/uzbek/topics/c8y949r98pgt/lat',
       },
       {
         title: 'Mintaqa',
-        url: '/uzbek/topics/cwr9j9dz4gpt',
+        url: '/uzbek/topics/cwr9j9dz4gpt/lat',
       },
       {
         title: 'Dunyo',
-        url: '/uzbek/topics/cl8l9mved19t',
+        url: '/uzbek/topics/cl8l9mved19t/lat',
       },
       {
         title: 'Sport',
-        url: '/uzbek/topics/cxnykykk1zkt',
+        url: '/uzbek/topics/cxnykykk1zkt/lat',
       },
       {
         title: 'Ilm-Fan',
-        url: '/uzbek/topics/cg7262681krt',
+        url: '/uzbek/topics/cg7262681krt/lat',
       },
       {
         title: 'Texnologiya',
-        url: '/uzbek/topics/cjgn7n7v3yjt',
+        url: '/uzbek/topics/cjgn7n7v3yjt/lat',
       },
       {
         title: 'BBC News O‘zbek TV dasturi',

@@ -71,6 +71,15 @@ describe('Handle AV Route', () => {
     });
   });
 
+  it('should set the x-robots-tag header to noindex', async () => {
+    await handleAvRoute(mockGetServerSidePropsContext);
+
+    expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
+      'x-robots-tag',
+      'noindex',
+    );
+  });
+
   it('should remove the x-frame-options header', async () => {
     await handleAvRoute(mockGetServerSidePropsContext);
 

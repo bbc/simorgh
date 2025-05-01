@@ -12,6 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news',
     atiAnalyticsProducerId: '64',
+    atiAnalyticsProducerName: 'NEWS',
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC News',
     product: 'BBC News',
@@ -36,8 +37,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latin,
-    manifestPath: '/articles/manifest.json',
-    frontPageTitle: 'Home',
+    manifestPath:
+      'https://static.files.bbci.co.uk/core/manifest.1ccdbcfd4cc3bf889128a50903c2b22c81758637.json',
+    homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -210,16 +212,13 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'More to explore',
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

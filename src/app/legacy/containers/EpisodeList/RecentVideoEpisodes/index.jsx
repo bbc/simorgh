@@ -32,9 +32,22 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
+
 const InlineDiv = styled.div`
   display: inline;
 `;
+
+const getAmpImageComponent =
+  ({ image, altText }) =>
+  () => (
+    <amp-img
+      layout="responsive"
+      width="16"
+      height="9"
+      src={image}
+      alt={altText}
+    />
+  );
 
 const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const { script, service, dir, timezone, datetimeLocale, translations } =
@@ -101,15 +114,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                 locale: datetimeLocale,
               })}
               {...(isAmp && {
-                as: () => (
-                  <amp-img
-                    layout="responsive"
-                    width="16"
-                    height="9"
-                    src={episode.image}
-                    alt={episode.altText}
-                  />
-                ),
+                as: getAmpImageComponent(episode),
               })}
             />
             {/* these must be concatenated for screen reader UX */}

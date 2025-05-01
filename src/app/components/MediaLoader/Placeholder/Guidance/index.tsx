@@ -20,7 +20,7 @@ const Guidance = ({
       guidanceMessage && styles.guidanceWrapperWithMessage,
     ]}
     data-e2e="media-player__guidance"
-    {...(className && { className })}
+    {...(className ? { className } : undefined)}
   >
     {guidanceMessage && (
       <strong

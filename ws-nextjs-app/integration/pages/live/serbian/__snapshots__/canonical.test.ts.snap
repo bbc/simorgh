@@ -80,33 +80,40 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 
 exports[`Canonical Live Header Navigation link should match text and url 2`] = `
 {
-  "text": "Srbija",
-  "url": "/serbian/lat/topics/cr50vdy9q6wt",
+  "text": "Studentske blokade",
+  "url": "/serbian/topics/cly9dd4w09wt/lat",
 }
 `;
 
 exports[`Canonical Live Header Navigation link should match text and url 3`] = `
 {
-  "text": "Balkan",
-  "url": "/serbian/lat/topics/c06g87137jgt",
+  "text": "Srbija",
+  "url": "/serbian/topics/cr50vdy9q6wt/lat",
 }
 `;
 
 exports[`Canonical Live Header Navigation link should match text and url 4`] = `
 {
-  "text": "Svet",
-  "url": "/serbian/lat/topics/c2lej05e1eqt",
+  "text": "Balkan",
+  "url": "/serbian/topics/c06g87137jgt/lat",
 }
 `;
 
 exports[`Canonical Live Header Navigation link should match text and url 5`] = `
 {
-  "text": "Video",
-  "url": "/serbian/lat/topics/c44vyp5g049t",
+  "text": "Svet",
+  "url": "/serbian/topics/c2lej05e1eqt/lat",
 }
 `;
 
 exports[`Canonical Live Header Navigation link should match text and url 6`] = `
+{
+  "text": "Video",
+  "url": "/serbian/topics/c44vyp5g049t/lat",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 7`] = `
 {
   "text": "Najpopularnije",
   "url": "/serbian/lat/popular/read",
@@ -185,7 +192,7 @@ exports[`Canonical Live SEO Apple Touch Icon should match attributes 10`] = `
 }
 `;
 
-exports[`Canonical Live SEO Canonical link 1`] = `"http://localhost:7080/serbian/live/media-23179005/lat"`;
+exports[`Canonical Live SEO Canonical link 1`] = `"http://localhost:7081/serbian/live/media-23179005/lat"`;
 
 exports[`Canonical Live SEO Dir attribute 1`] = `"ltr"`;
 
@@ -227,7 +234,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "name": "Serbian",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/serbian/live/media-23179005/lat",
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
         "@type": "WebPage",
         "name": "Live test page",
       },
@@ -243,7 +250,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
-      "url": "http://localhost:7080/serbian/live/media-23179005/lat",
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
     {
       "@type": "LiveBlogPosting",
@@ -269,7 +276,7 @@ exports[`Canonical Live SEO OG title 1`] = `"Live test page - BBC News na srpsko
 
 exports[`Canonical Live SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Live SEO OG url 1`] = `"http://localhost:7080/serbian/live/media-23179005/lat"`;
+exports[`Canonical Live SEO OG url 1`] = `"http://localhost:7081/serbian/live/media-23179005/lat"`;
 
 exports[`Canonical Live SEO Page title 1`] = `"Live test page - BBC News na srpskom"`;
 

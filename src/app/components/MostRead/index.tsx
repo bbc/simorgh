@@ -3,7 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { OptimizelyContext } from '@optimizely/react-sdk';
+import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -39,6 +39,72 @@ interface MostReadProps {
   sendOptimizelyEvents?: boolean;
 }
 
+// We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
+const AmpMostRead = ({
+  pageType,
+  className,
+  mobileDivider,
+  headingBackgroundColour,
+  endpoint,
+  size,
+}: {
+  pageType: PageTypes;
+  className: string;
+  mobileDivider: boolean;
+  headingBackgroundColour: string;
+  endpoint: string;
+  size: Size;
+}) =>
+  mostReadAmpPageTypes.includes(pageType) ? (
+    <MostReadSection {...(className ? { className } : undefined)}>
+      <MostReadSectionLabel
+        mobileDivider={mobileDivider}
+        backgroundColor={headingBackgroundColour}
+      />
+      <Amp
+        endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
+        size={size}
+      />
+    </MostReadSection>
+  ) : null;
+
+// Do not render on Canonical if data is not provided
+const CanonicalMostRead = ({
+  data,
+  className,
+  mobileDivider,
+  headingBackgroundColour,
+  columnLayout,
+  size,
+  eventTrackingData,
+}: {
+  data: MostReadData | undefined;
+  className: string;
+  mobileDivider: boolean;
+  headingBackgroundColour: string;
+  columnLayout?: ColumnLayout;
+  size: Size;
+  eventTrackingData: {
+    optimizely?: ReactSDKClient | null | undefined;
+    optimizelyMetricNameOverride?: string | undefined;
+    componentName: string;
+  };
+}) =>
+  data ? (
+    <MostReadSection className={className}>
+      <MostReadSectionLabel
+        mobileDivider={mobileDivider}
+        backgroundColor={headingBackgroundColour}
+      />
+      <Canonical
+        data={data}
+        columnLayout={columnLayout}
+        size={size}
+        eventTrackingData={eventTrackingData}
+      />
+    </MostReadSection>
+  ) : null;
+
 const MostRead = ({
   data,
   columnLayout = 'multiColumn',
@@ -73,21 +139,6 @@ const MostRead = ({
     isBff,
   });
 
-  // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
-  const AmpMostRead = () =>
-    mostReadAmpPageTypes.includes(pageType) ? (
-      <MostReadSection {...(className && { className })}>
-        <MostReadSectionLabel
-          mobileDivider={mobileDivider}
-          backgroundColor={headingBackgroundColour}
-        />
-        <Amp
-          endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
-          size={size}
-        />
-      </MostReadSection>
-    ) : null;
-
   const eventTrackingData = {
     ...blockLevelEventTrackingData,
     ...(sendOptimizelyEvents && {
@@ -96,24 +147,26 @@ const MostRead = ({
     }),
   };
 
-  // Do not render on Canonical if data is not provided
-  const CanonicalMostRead = () =>
-    data ? (
-      <MostReadSection className={className}>
-        <MostReadSectionLabel
-          mobileDivider={mobileDivider}
-          backgroundColor={headingBackgroundColour}
-        />
-        <Canonical
-          data={data}
-          columnLayout={columnLayout}
-          size={size}
-          eventTrackingData={eventTrackingData}
-        />
-      </MostReadSection>
-    ) : null;
-
-  return isAmp ? <AmpMostRead /> : <CanonicalMostRead />;
+  return isAmp ? (
+    <AmpMostRead
+      pageType={pageType}
+      className={className}
+      mobileDivider={mobileDivider}
+      headingBackgroundColour={headingBackgroundColour}
+      endpoint={endpoint}
+      size={size}
+    />
+  ) : (
+    <CanonicalMostRead
+      data={data}
+      className={className}
+      mobileDivider={mobileDivider}
+      headingBackgroundColour={headingBackgroundColour}
+      columnLayout={columnLayout}
+      size={size}
+      eventTrackingData={eventTrackingData}
+    />
+  );
 };
 
 export default MostRead;

@@ -139,82 +139,75 @@ exports[`Canonical Media Asset Page Header Navigation link should match text and
 
 exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "انتخابات آمریکا",
-  "url": "/persian/topics/cj1gj22k6z6t",
-}
-`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
-{
   "text": "پخش زنده",
   "url": "/persian/media-49522521",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
 {
   "text": "ویدیو",
   "url": "/persian/topics/c6z7mnr559gt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
 {
   "text": "تلویزیون",
-  "url": "/persian/tv-and-radio-37434377",
+  "url": "/persian/topics/cw9qgeqd1zqt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
 {
   "text": "ايران",
   "url": "/persian/topics/ckdxnwvwwjnt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
 {
   "text": "افغانستان",
   "url": "/persian/afghanistan",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
 {
   "text": "جهان",
   "url": "/persian/topics/c1d8ye58xl8t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
 {
   "text": "هنر",
   "url": "/persian/topics/c9wpm0epm45t",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
 {
   "text": "ورزش",
   "url": "/persian/topics/cnq6879k7yjt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 11`] = `
 {
   "text": "اقتصاد",
   "url": "/persian/topics/cl8l9mvlllqt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 12`] = `
 {
   "text": "دانش",
   "url": "/persian/topics/ckdxnwr4r1yt",
 }
 `;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 13`] = `
 {
   "text": "فراتر از خبر",
   "url": "/persian/topics/cxr3ex12k6et",

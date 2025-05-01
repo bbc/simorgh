@@ -203,7 +203,7 @@ exports[`AMP Media Asset Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Media Asset Page Footer Cookie Settings Button should match text and on handler 1`] = `
 {
-  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
 `;

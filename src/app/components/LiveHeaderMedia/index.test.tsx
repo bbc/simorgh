@@ -7,10 +7,16 @@ import {
   render,
   fireEvent,
 } from '../react-testing-library-with-providers';
+import * as viewTracking from '../../hooks/useViewTracker';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 const fixtureData = mundoLiveFixture.data.mediaCollections;
 
 describe('liveMediaStream', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Displays all components on intial render.', () => {
     const { container } = render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
@@ -225,5 +231,36 @@ describe('liveMediaStream', () => {
     fireEvent.click(playCloseButton);
 
     expect(window.mediaPlayers.p0gh4n67.play).toHaveBeenCalledTimes(playCalls);
+  });
+
+  describe('Event Tracking', () => {
+    const eventTrackingData = { componentName: 'live-header-media' };
+
+    describe('Click tracking', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+      it('should register click tracker', () => {
+        render(
+          <LiveHeaderMedia
+            mediaCollection={fixtureData as MediaCollection[]}
+          />,
+        );
+        expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      });
+    });
+
+    describe('View tracking', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      it('should register view tracker', () => {
+        render(
+          <LiveHeaderMedia
+            mediaCollection={fixtureData as MediaCollection[]}
+          />,
+        );
+
+        expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+      });
+    });
   });
 });

@@ -12,6 +12,7 @@ import { service as hausaServiceConfig } from '#app/lib/config/services/hausa';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import { service as afriqueServiceConfig } from '#app/lib/config/services/afrique';
 import { service as mundoServiceConfig } from '#app/lib/config/services/mundo';
+import { service as arabicServiceConfig } from '#app/lib/config/services/arabic';
 import isLive from '#app/lib/utilities/isLive';
 import buildSettings from './buildSettings';
 import {
@@ -73,6 +74,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
+          superResponsive: true,
           playlistObject: {
             title:
               "BBC launch trailer for We Know Our Place women's sport campaign",
@@ -157,6 +159,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
+          superResponsive: true,
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -223,6 +226,7 @@ describe('buildSettings', () => {
           appName: 'news-serbian',
           appType: 'responsive',
           counterName: 'live_coverage.testID.page',
+          superResponsive: true,
           playlistObject: {
             title: 'Five things ants can teach us about management',
             summary: 'This is a caption!',
@@ -291,6 +295,7 @@ describe('buildSettings', () => {
         appName: 'news-serbian',
         appType: 'responsive',
         counterName: 'live_coverage.testID.page',
+        superResponsive: true,
         externalEmbedUrl:
           'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/bbc_arabic_tv',
         playlistObject: {
@@ -348,6 +353,7 @@ describe('buildSettings', () => {
           appName: 'news-arabic',
           appType: 'responsive',
           counterName: 'arabic.multimedia.2013.12.131208_iraq_blast_.page',
+          superResponsive: true,
           playlistObject: {
             title: 'Legacy Media Page Title',
             holdingImageURL:
@@ -480,6 +486,54 @@ describe('buildSettings', () => {
       });
 
       expect(result?.orientation).toEqual('portrait');
+    });
+
+    it('Should process an AresMedia block with portrait video as the orientation when type is editorial and portrait', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Editorial', 'Portrait'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('portrait');
+    });
+
+    it('Should process an AresMedia block with landscape video as the orientation when type is editorial', () => {
+      const myFixture = [
+        {
+          ...aresMediaBlock,
+          model: {
+            blocks: [
+              {
+                ...buildAresMediaPlayerBlock({
+                  types: ['Editorial'],
+                }),
+              },
+            ],
+          },
+        },
+      ] as unknown as MediaBlock[];
+
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: myFixture,
+      });
+
+      expect(result?.orientation).toEqual('landscape');
     });
 
     it('Should process an AresMedia block with landscape video as the orientation if nothing exists in types', () => {
@@ -699,6 +753,7 @@ describe('buildSettings', () => {
           autoplay: false,
           appName: 'news-hindi',
           counterName: 'hindi.bbc_hindi_tv.tv.w172zm8920nck2z.page',
+          superResponsive: true,
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'HINDI',
@@ -910,6 +965,7 @@ describe('buildSettings', () => {
               enabled: true,
             },
           },
+          superResponsive: false,
         },
         mediaType: 'liveRadio',
         showAds: false,
@@ -955,6 +1011,7 @@ describe('buildSettings', () => {
           autoplay: false,
           appName: 'news-afrique',
           counterName: 'afrique.bbc_afrique_radio.w172zn0kxd65h3g.page',
+          superResponsive: false,
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
             producer: 'AFRIQUE',
@@ -1008,6 +1065,15 @@ describe('buildSettings', () => {
       statsDestination: 'WS_NEWS_LANGUAGES',
       producer: 'MUNDO',
       translations: mundoServiceConfig.default.translations,
+    } as BuildConfigProps;
+
+    const arabicMediaBaseSettings = {
+      counterName: 'live_coverage.cvp5r6m6mgpt.page',
+      lang: 'ar',
+      service: 'arabic' as Services,
+      statsDestination: 'WS_NEWS_LANGUAGES',
+      producer: 'ARABIC',
+      translations: arabicServiceConfig.default.translations,
     } as BuildConfigProps;
 
     it('Should process a live media block into a valid playlist item.', () => {
@@ -1071,6 +1137,7 @@ describe('buildSettings', () => {
           autoplay: false,
           counterName: 'live_coverage.c7dkx155e626t.page',
           enableToucan: true,
+          superResponsive: true,
           playlistObject: {
             holdingImageURL:
               'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
@@ -1100,6 +1167,106 @@ describe('buildSettings', () => {
             },
             locale: {
               lang: 'es',
+            },
+            skin: 'classic',
+            subtitles: {
+              defaultOn: true,
+              enabled: true,
+            },
+          },
+        },
+        showAds: false,
+      });
+    });
+
+    it('Should process a live media block with service ID into a valid playlist item', () => {
+      const mediaBlock = {
+        type: 'liveMedia',
+        model: {
+          urn: 'urn:bbc:pips:sid:bbc_arabic_tv',
+          title: 'BBC Arabic TV',
+          type: 'episode',
+          synopses: {
+            short:
+              'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+            medium:
+              'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+            long: 'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+          },
+          mediaType: 'audio_video',
+          imageUrlTemplate:
+            'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+          masterbrand: {
+            id: 'bbc_arabic_tv',
+            name: 'تلفزيون بي بي سي عربي',
+            networkName: 'تلفزيون بي بي سي عربي',
+            type: 'tv',
+            imageUrlTemplate: 'ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+          },
+          version: {
+            vpid: 'n4pdm3cdh4',
+            duration: 'PT1H',
+            availabilityType: 'simulcast',
+            versionTypes: [
+              {
+                type: 'Original',
+                name: 'Original version',
+              },
+            ],
+            schedule: null,
+            serviceId: 'bbc_arabic_tv',
+            authToken: null,
+            status: 'LIVE',
+            warnings: null,
+          },
+          leadMedia: true,
+        },
+      };
+
+      const result = buildSettings({
+        ...arabicMediaBaseSettings,
+        blocks: [mediaBlock] as MediaBlock[],
+        pageType: LIVE_PAGE,
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          appName: 'news-arabic',
+          appType: 'responsive',
+          autoplay: false,
+          counterName: 'live_coverage.cvp5r6m6mgpt.page',
+          enableToucan: true,
+          superResponsive: true,
+          playlistObject: {
+            holdingImageURL:
+              'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+            items: [
+              {
+                kind: 'programme',
+                live: true,
+                serviceID: 'bbc_arabic_tv',
+              },
+            ],
+            summary:
+              'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
+            title: 'BBC Arabic TV',
+          },
+          product: 'news',
+          statsObject: {
+            destination: 'WS_NEWS_LANGUAGES',
+            episodePID: undefined,
+            producer: 'ARABIC',
+          },
+          ui: {
+            controls: {
+              enabled: true,
+            },
+            fullscreen: {
+              enabled: true,
+            },
+            locale: {
+              lang: 'ar',
             },
             skin: 'classic',
             subtitles: {

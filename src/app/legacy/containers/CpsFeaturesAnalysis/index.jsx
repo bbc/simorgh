@@ -79,7 +79,7 @@ const PromoListComponent = ({
     },
   };
 
-  const viewRef = useViewTracker(eventTrackingDataWithOptimizely.block);
+  const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
     <StoryPromoUlFeatures>
@@ -87,7 +87,7 @@ const PromoListComponent = ({
         return (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
-            ref={viewRef}
+            {...viewTracker}
             border={false}
           >
             <FrostedGlassPromo
@@ -121,10 +121,10 @@ const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
     },
   };
 
-  const viewRef = useViewTracker(eventTrackingDataWithOptimizely);
+  const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <div ref={viewRef}>
+    <div {...viewTracker}>
       <FrostedGlassPromo
         item={promo}
         dir={dir}
@@ -138,7 +138,7 @@ const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
 };
 
 const FeaturesAnalysis = ({
-  content = [],
+  content,
   parentColumns,
   sectionLabelBackground,
   sendOptimizelyEvents,

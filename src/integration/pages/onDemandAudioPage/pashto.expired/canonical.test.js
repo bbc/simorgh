@@ -20,6 +20,6 @@ describe('Canonical', () => {
     runRecentEpisodesTests();
     runCoreCanonicalTests();
     runCanonicalAnalyticsTests();
-    runRadioScheduleTests({ isAmp: false });
+    runRadioScheduleTests(pageType);
   });
 });

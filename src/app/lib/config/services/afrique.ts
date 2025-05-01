@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    atiAnalyticsProducerName: 'AFRIQUE',
+    useReverb: true,
     chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
@@ -40,9 +42,9 @@ export const service: DefaultServiceConfig = {
       'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/afrique/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Accueil',
+    homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -55,7 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
       currentPage: 'Page en cours',
@@ -235,6 +236,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Emission de radio suivante',
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
+        closeVideo: 'Sortir',
       },
       socialEmbed: {
         caption: {
@@ -270,7 +272,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Le choix de la rédaction',
     },
     mostRead: {
-      header: 'Les plus lus',
+      header: 'Les plus populaires',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -281,7 +283,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Les plus lus',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -336,6 +338,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Accueil',
         url: '/afrique',
+      },
+      {
+        title: 'Conflit en RDC',
+        url: '/afrique/topics/cge72ry253jt',
       },
       {
         title: 'Ecoutez en direct',

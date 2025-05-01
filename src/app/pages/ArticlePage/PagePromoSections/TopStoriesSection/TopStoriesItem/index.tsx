@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx } from '@emotion/react';
-import { forwardRef } from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 import { getIsLive } from '#lib/utilities/getStoryPromoInfo';
 import Promo from '#components/OptimoPromos';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
@@ -24,7 +24,7 @@ const getArticleTopStoryItem = (item: TopStoryItem) => {
 
   const mediaType = item?.media?.format ?? '';
   const mediaDuration = item?.media?.duration ?? '';
-  const isPhotoGallery = item?.cpsType === 'PGL' ?? null;
+  const isPhotoGallery = item?.cpsType === 'PGL';
   const timestamp = item?.timestamp ?? null;
 
   const assetUri = item?.locators?.assetUri ?? '';
@@ -73,7 +73,7 @@ type TopStoriesItemProps = {
 const TopStoriesItem = forwardRef(
   (
     { item, ariaLabelledBy, eventTrackingData = null }: TopStoriesItemProps,
-    viewRef,
+    viewTracker: ForwardedRef<HTMLDivElement>,
   ) => {
     if (!item || Object.keys(item).length === 0) return null;
 
@@ -102,7 +102,7 @@ const TopStoriesItem = forwardRef(
     const titleHasContent = titleTag === 'h3';
 
     return (
-      <div css={styles.topStoriesWrapper} ref={viewRef}>
+      <div css={styles.topStoriesWrapper} {...viewTracker}>
         <Promo
           to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}

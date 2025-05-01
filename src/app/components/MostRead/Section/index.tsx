@@ -13,7 +13,7 @@ const MostReadSection = ({
     aria-labelledby="Most-Read"
     data-e2e="most-read"
     data-testid="most-read"
-    {...(className && { className })}
+    {...(className ? { className } : undefined)}
   >
     {children}
   </section>

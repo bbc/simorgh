@@ -57,7 +57,7 @@ const MaskedImage = ({
         sizes="(min-width: 1008px) 660px, 100vw"
         width={800}
         height={533}
-        fetchpriority="high"
+        fetchPriority="high"
         preload
         placeholder={showPlaceholder}
       />

@@ -1,300 +1,299 @@
 {
-    "data": {
-        "title": "América Latina",
-        "description": "",
-        "imageData": null,
-        "curations": [
-            {
-                "summaries": [
-                    {
-                        "type": "article",
-                        "title": "Las intrigantes caras talladas en rocas que quedaron expuestas por la grave sequía en el Amazonas",
-                        "firstPublished": "2023-10-24T18:04:38.999Z",
-                        "lastPublished": "2023-10-24T18:04:38.999Z",
-                        "link": "https://www.bbc.com/mundo/articles/c88e2j4y2qpo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9e8b/live/01532810-7293-11ee-bf76-55d3810c1824.jpg",
-                        "description": "La caída en el nivel del río, que descendió por debajo de los 13 metros, dejó al descubierto los enigmáticos grabados rupestres de rostros humanos.",
-                        "imageAlt": "Rostros tallados en rocas",
-                        "id": "c88e2j4y2qpo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Dónde reside la extraordinaria capacidad de supervivencia del peronismo en Argentina",
-                        "firstPublished": "2023-10-23T19:05:13.917Z",
-                        "lastPublished": "2023-10-23T19:05:13.917Z",
-                        "link": "https://www.bbc.com/mundo/articles/cjj8p1z936do",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/06c0/live/9aae7000-71d5-11ee-a387-671baf956d33.jpg",
-                        "description": "Tras el inesperado primer lugar del ministro de Economía Sergio Massa en las elecciones presidenciales te contamos cómo el peronismo siempre ha resurgido después de las peores catástrofes económicas de Argentina.",
-                        "imageAlt": "Sergio Massa",
-                        "id": "cjj8p1z936do"
-                    },
-                    {
-                        "type": "article",
-                        "title": "3 claves que explican el triunfo del centrista Sergio Massa frente a su rival libertario Javier Milei en Argentina",
-                        "firstPublished": "2023-10-23T17:02:05.465Z",
-                        "lastPublished": "2023-10-23T17:33:43.737Z",
-                        "link": "https://www.bbc.com/mundo/articles/cyd121pd8q7o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5403/live/cc3e1420-71af-11ee-9d67-33d6dd26a73e.jpg",
-                        "description": "Desafiando la mayoría de las encuestas, Sergio Massa obtuvo el 36,6% de los votos, más que cualquier otro candidato en las elecciones presidenciales en Argentina. En esta nota analizamos las razones detrás de este triunfo. ",
-                        "imageAlt": "Sergio Massa, candidato de Unión Por La Patria y actual Ministro de Economía de Argentina. ",
-                        "id": "cyd121pd8q7o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "María Corina Machado, la elegida de la oposición de Venezuela para desafiar a Maduro (y cómo le puede afectar su inhabilitación)",
-                        "firstPublished": "2023-10-23T09:17:53.552Z",
-                        "lastPublished": "2023-10-23T09:17:53.552Z",
-                        "link": "https://www.bbc.com/mundo/articles/cp64p2lpg7yo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da5e/live/de4a8530-7142-11ee-ae48-293583c32fa4.jpg",
-                        "description": "Machado ganó unas primarias de la oposición por un amplio margen y, por primera vez, se convirtió en la líder del movimiento que se opone al chavismo.",
-                        "imageAlt": "Maria Corina Machado",
-                        "id": "cp64p2lpg7yo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Massa vs. Milei: 3 factores que definirán cuál de los dos será el próximo presidente de Argentina",
-                        "firstPublished": "2023-10-23T06:54:08.384Z",
-                        "lastPublished": "2023-10-23T06:54:08.384Z",
-                        "link": "https://www.bbc.com/mundo/articles/cg3epzv7pz9o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cecc/live/97946820-71bc-11ee-a44e-71f38a720542.jpg",
-                        "description": "Argentina se encamina hacia un balotaje de resultado incierto entre un candidato oficialista y otro libertario. Analizamos qué podría inclinar la balanza hacia uno de ellos.",
-                        "imageAlt": "Milei y Massa durante un debate de campaña.",
-                        "id": "cg3epzv7pz9o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Los hitos en la vida y la carrera de Javier Milei, el \"rara avis\" que promete dinamitar el sistema y un cambio radical para Argentina",
-                        "firstPublished": "2023-10-23T03:58:50.739Z",
-                        "lastPublished": "2023-10-23T03:58:50.739Z",
-                        "link": "https://www.bbc.com/mundo/articles/cpe87jl17yjo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/68ff/live/13a97110-712e-11ee-9456-d511b84977e4.jpg",
-                        "description": "Javier Milei, el segundo candidato más votado este domingo, peleará el 19 de noviembre contra Sergio Massa por la presidencia de Argentina. Su intensa vida explica su fenómeno político. ",
-                        "imageAlt": "Javier Milei, del partido La Libertad Avanza, en un acto de campaña.",
-                        "id": "cpe87jl17yjo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Elecciones en Argentina: el \"superministro\" centrista Sergio Massa y el libertario Javier Milei se disputarán la presidencia en segunda vuelta",
-                        "firstPublished": "2023-10-23T00:23:26.334Z",
-                        "lastPublished": "2023-10-23T00:23:26.334Z",
-                        "link": "https://www.bbc.com/mundo/articles/cy912v1kjn5o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c34c/live/6d575dd0-713d-11ee-a503-4588075e3427.jpg",
-                        "description": "El actual ministro de Economía, Sergio Massa, y el economista libertario Javier  Milei se disputarían la presidencia el 19 de noviembre.",
-                        "imageAlt": "Sergio Massa y Javier Milei.",
-                        "id": "cy912v1kjn5o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Por qué las elecciones de este domingo en Argentina desafían la lógica política de ese país",
-                        "firstPublished": "2023-10-20T11:50:38.284Z",
-                        "lastPublished": "2023-10-22T08:44:13.738Z",
-                        "link": "https://www.bbc.com/mundo/articles/crg1eyzj0eeo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f69a/live/9c7e8910-70f9-11ee-b28c-3bb76357dce9.jpg",
-                        "description": "Con tres candidatos que podrían alcanzar la presidencia según las encuestas y un descalabro económico de fondo, los argentinos van a las urnas en unos comicios que podrían marcar cambios sustanciales en la historia reciente argentina.",
-                        "imageAlt": "Sergio Massa, Patricia Bullrich y Javier Milei",
-                        "id": "crg1eyzj0eeo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "La alianza con la que México y la Gran Colombia buscaron defenderse del imperialismo europeo y expulsar a España del Caribe hace 200 años",
-                        "firstPublished": "2023-10-21T15:45:07.644Z",
-                        "lastPublished": "2023-10-21T15:45:07.644Z",
-                        "link": "https://www.bbc.com/mundo/articles/cldx79wq4v5o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b7b5/live/d0a5e0a0-6823-11ee-bae1-0f3ee25a3569.jpg",
-                        "description": "Con el Tratado de Amistad, Liga y Confederación los nacientes estados se comprometieron a ayudarse mutuamente a asegurar su independencia frente a cualquier enemigo.",
-                        "imageAlt": "Pintura de un asalto al puerto de La Habana en el siglo XVIII",
-                        "id": "cldx79wq4v5o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Manzanas del Cuidado: el pionero plan de Bogotá para atender a mujeres que cuidan de otros (y que varias ciudades latinoamericanas quieren replicar)",
-                        "firstPublished": "2023-10-20T11:29:29.037Z",
-                        "lastPublished": "2023-10-20T11:29:29.037Z",
-                        "link": "https://www.bbc.com/mundo/articles/cqeq38je3qro",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0aa9/live/cce9caa0-566a-11ee-943d-91ce654583c0.jpg",
-                        "description": "En Bogotá, un tercio de las mujeres se dedican de manera exclusiva al cuidado doméstico no remunerado. Por eso la alcaldía de la capital colombiana creó unos centros de ayuda para ellas.",
-                        "imageAlt": "Natalia Moreno",
-                        "id": "cqeq38je3qro"
-                    },
-                    {
-                        "type": "article",
-                        "title": "\"Argenchina\": ¿por qué Argentina superó a Brasil y se convirtió en el \"favorito\" de China en América Latina?",
-                        "firstPublished": "2023-10-18T11:04:07.702Z",
-                        "lastPublished": "2023-10-18T11:04:07.702Z",
-                        "link": "https://www.bbc.com/mundo/articles/cxe3kl5z1y7o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2a2c/live/c35e7b80-6cdf-11ee-a93c-cdee1fd6cb4f.jpg",
-                        "description": "Argentina superó a Brasil como el principal socio comercial de China en América Latina en 2022. Expertos consideran que la relación continuará sin importar el resultado de las próximas elecciones presidenciales en Argentina.",
-                        "imageAlt": "Banderas china y argentina",
-                        "id": "cxe3kl5z1y7o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "3 claves para entender la crisis de violencia en Ecuador y las propuestas para combatirla de Daniel Noboa, el nuevo presidente electo",
-                        "firstPublished": "2023-10-16T13:11:20.367Z",
-                        "lastPublished": "2023-10-16T13:11:20.367Z",
-                        "link": "https://www.bbc.com/mundo/articles/cnd89g0zxleo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0eb5/live/ab9db0b0-6c17-11ee-a6b3-61dda6c6fec7.jpg",
-                        "description": "Daniel Noboa tendrá hasta mayo de 2025 para enfrentar el gran desafío de combatir la grave violencia que sacude a Ecuador. ",
-                        "imageAlt": "Daniel Noboa durante la campaña electoral. ",
-                        "id": "cnd89g0zxleo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Daniel Noboa, la meteórica carrera política del joven empresario que triunfó en lo que su padre fracasó 5 veces y será presidente de Ecuador",
-                        "firstPublished": "2023-10-16T01:35:27.040Z",
-                        "lastPublished": "2023-10-16T01:35:27.040Z",
-                        "link": "https://www.bbc.com/mundo/articles/c3g34ny7wn5o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e9e0/live/eef2da90-6bc0-11ee-b092-a3cef6940fcc.jpg",
-                        "description": "Daniel Noboa dio la sorpresa en la primera vuelta y ahora la consolidó al confirmarse como presidente tras una corta carrera política que comenzó en 2021. Te contamos quién es.",
-                        "imageAlt": "Daniel Noboa",
-                        "id": "c3g34ny7wn5o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "El empresario Daniel Noboa da un giro a la política de Ecuador: será el presidente más joven del país tras derrotar a la abogada correísta Luisa González",
-                        "firstPublished": "2023-10-15T23:24:55.415Z",
-                        "lastPublished": "2023-10-16T01:03:33.895Z",
-                        "link": "https://www.bbc.com/mundo/articles/cv20j810w93o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17f0/live/1d292870-6bc5-11ee-b46b-573a36e0a10c.jpg",
-                        "description": "Ecuador eligió al joven empresario Daniel Noboa como presidente hasta mayo de 2025 al imponerse en las elecciones anticipadas a la abogada correísta Luisa González.",
-                        "imageAlt": "Daniel Noboa",
-                        "id": "cv20j810w93o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Las espectaculares imágenes del eclipse solar \"anillo de fuego\" que pudo verse en América Latina",
-                        "firstPublished": "2023-10-14T18:30:07.292Z",
-                        "lastPublished": "2023-10-14T18:30:07.292Z",
-                        "link": "https://www.bbc.com/mundo/articles/c6p599l418jo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4fef/live/26f28080-6ad1-11ee-8073-5b93bd1aa7db.jpg",
-                        "description": "El fenómeno pudo verse en Estados Unidos y varios países de la región. ",
-                        "imageAlt": "El \"anillo de fuego\" desde Panamá",
-                        "id": "c6p599l418jo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Desde antiguas guerras hasta Cristóbal Colón: cómo los eclipses han cambiado el rumbo de la historia",
-                        "firstPublished": "2023-10-13T18:44:13.458Z",
-                        "lastPublished": "2023-10-13T18:44:13.458Z",
-                        "link": "https://www.bbc.com/mundo/articles/cn0q54zeje4o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1e20/live/52a5cfe0-69cb-11ee-a013-7d20b5f37524.jpg",
-                        "description": "Algunas guerras antiguas y hasta la Teoría de la Relatividad de Einstein tienen alguna relación con los eclipses. La astronomía ha amparado a muchos para tomar decisiones que pudieron haber cambiado la historia.",
-                        "imageAlt": "Cristóbal Colón",
-                        "id": "cn0q54zeje4o"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Cuán ordenadas deja realmente las cuentas el presidente Guillermo Lasso en Ecuador (y cuál ha sido el costo social de su política económica)",
-                        "firstPublished": "2023-08-17T12:30:34.829Z",
-                        "lastPublished": "2023-10-13T13:23:34.825Z",
-                        "link": "https://www.bbc.com/mundo/articles/cv25gq93pvro",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6fd8/live/4489c580-3c1a-11ee-8d1a-e90bdc09a724.jpg",
-                        "description": "El gobierno de Guillermo Lasso consiguió reducir la deuda pública, pero a cambio tuvo que recortar en inversión social. Ahora deja la presidencia antes del final de su mandato. ",
-                        "imageAlt": "Guillermo Lasso",
-                        "id": "cv25gq93pvro"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Muere Luis Alfredo Garavito: los crímenes contra casi 200 niños del mayor asesino en serie de la historia de Colombia",
-                        "firstPublished": "2023-10-13T01:44:41.867Z",
-                        "lastPublished": "2023-10-13T01:44:41.867Z",
-                        "link": "https://www.bbc.com/mundo/articles/cw0k974k4xko",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4fda/live/e065b060-6968-11ee-999a-17d3ba52098c.jpg",
-                        "description": "Pese a que sus condenas sumaban 1.853 años, ciertas disposiciones de la ley hacían posible que recuperara su libertad en dos meses. Con su muerte se cierra esa posibilidad, así como uno de los capítulos más traumáticos de la vida colombiana.",
-                        "imageAlt": "Retrato Luis Alfredo Garavito",
-                        "id": "cw0k974k4xko"
-                    },
-                    {
-                        "type": "article",
-                        "title": "\"Hasta para pedir un préstamo en el banco\": la alucinante cantidad de cosas para las que necesitan el certificado de votación los ecuatorianos",
-                        "firstPublished": "2023-10-12T13:48:18.602Z",
-                        "lastPublished": "2023-10-12T13:48:18.602Z",
-                        "link": "https://www.bbc.com/mundo/articles/cn48rj2486jo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d589/live/2a578a20-6934-11ee-a305-894244efd71e.png",
-                        "description": "En Ecuador el voto es obligatorio y el certificado de votación es casi tan importante como la cédula de identidad. ",
-                        "imageAlt": "Cédula",
-                        "id": "cn48rj2486jo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Qué es un eclipse \"anillo de fuego\" y dónde se verá en América Latina este  14 de octubre ",
-                        "firstPublished": "2023-10-12T11:57:06.188Z",
-                        "lastPublished": "2023-10-12T11:57:06.188Z",
-                        "link": "https://www.bbc.com/mundo/articles/cw0k12lkwjjo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da61/live/fda5dbd0-69b0-11ee-97a6-f13289207f54.png",
-                        "description": "Desde México, Centroamérica y partes de Sudamérica, el eclipse anular del 14 de octubre podrá ser visto de manera total o parcial.",
-                        "imageAlt": "Eclipse anular",
-                        "id": "cw0k12lkwjjo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "\"Mi hija me llamó y me dijo: ‘Papi, estamos en guerra’. Fue la última vez que hablé con ella\": la desesperación de los familiares de latinoamericanos desaparecidos en Israel",
-                        "firstPublished": "2023-10-09T23:53:57.595Z",
-                        "lastPublished": "2023-10-09T23:53:57.595Z",
-                        "link": "https://www.bbc.com/mundo/articles/ce9d7d67lgqo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/57fe/live/b624cda0-67b9-11ee-a097-ff42e411b681.jpg",
-                        "description": "Decenas de latinoamericanos han muerto o desaparecido durante el ataque de Hamás a Israel. Una pareja colombiana estaba en la fiesta electrónica donde fueron encontrados 260 cadáveres. Familiares que buscan a sus seres queridos temen que sean rehenes.",
-                        "imageAlt": "Ivonne Rubio y Antonio Macías, pareja de colombianos desaparecidos en Israel.",
-                        "id": "ce9d7d67lgqo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "El faro sin luz que honra a Cristóbal Colón y las maldiciones atribuidas a sus restos en República Dominicana",
-                        "firstPublished": "2023-10-08T13:31:05.909Z",
-                        "lastPublished": "2023-10-08T13:31:05.909Z",
-                        "link": "https://www.bbc.com/mundo/articles/czv945d0xgjo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/672a/live/23508740-6452-11ee-a0c8-ab8a89e71afa.jpg",
-                        "description": "En Santo Domingo se inauguró en los 90 un faro para honrar a Cristóbal Colón. El autor de esta crónica, que lo conoció de niño, regresa y comparte su curiosa historia. ",
-                        "imageAlt": "Vista aérea del Faro a Colón",
-                        "id": "czv945d0xgjo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "Por qué los migrantes venezolanos se volvieron un asunto clave para el presidente Biden",
-                        "firstPublished": "2023-10-06T23:34:50.416Z",
-                        "lastPublished": "2023-10-06T23:34:50.416Z",
-                        "link": "https://www.bbc.com/mundo/articles/c6p4zp4re6lo",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7020/live/82863a00-649a-11ee-999b-452f629fee80.jpg",
-                        "description": "La llegada masiva de migrantes venezolanos ha llevado a la Casa Blanca a reenfocar su política migratoria, en medio de fuertes presiones de republicanos y demócratas.",
-                        "imageAlt": "Un grupo de migrantes en la frontera con TExas",
-                        "id": "c6p4zp4re6lo"
-                    },
-                    {
-                        "type": "article",
-                        "title": "\"Aquí los que deberían estar pidiendo perdón por el asesinato de mi hijo son Álvaro Uribe y Juan Manuel Santos\": Rubiela Giraldo, madre de una de las víctimas de los falsos positivos en Colombia",
-                        "firstPublished": "2023-10-06T11:01:56.599Z",
-                        "lastPublished": "2023-10-06T11:01:56.599Z",
-                        "link": "https://www.bbc.com/mundo/articles/c4nd2jde111o",
-                        "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dab7/live/2cbb2b70-6388-11ee-8c6f-1d8308af9ab5.jpg",
-                        "description": "Esta semana el gobierno colombiano realizó un acto de petición de perdón público por la muerte de miles de jóvenes que fueron ejecutados extrajudicialmente por el ejército.",
-                        "imageAlt": "Rubiela Giraldo.",
-                        "id": "c4nd2jde111o"
-                    }
-                ],
-                "activePage": 1,
-                "pageCount": 40,
-                "curationId": "urn:bbc:vivo:curation:3dbcb38a-f8c3-4661-a7fe-146105a493f9",
-                "curationType": "vivo-stream",
-                "position": 0,
-                "visualProminence": "NORMAL",
-                "visualStyle": "FEED"
-            }
+  "data": {
+    "title": "América Latina",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "Las intrigantes caras talladas en rocas que quedaron expuestas por la grave sequía en el Amazonas",
+            "firstPublished": "2023-10-24T18:04:38.999Z",
+            "lastPublished": "2023-10-24T18:04:38.999Z",
+            "link": "https://www.bbc.com/mundo/articles/c88e2j4y2qpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/9e8b/live/01532810-7293-11ee-bf76-55d3810c1824.jpg",
+            "description": "La caída en el nivel del río, que descendió por debajo de los 13 metros, dejó al descubierto los enigmáticos grabados rupestres de rostros humanos.",
+            "imageAlt": "Rostros tallados en rocas",
+            "id": "c88e2j4y2qpo"
+          },
+          {
+            "type": "article",
+            "title": "Dónde reside la extraordinaria capacidad de supervivencia del peronismo en Argentina",
+            "firstPublished": "2023-10-23T19:05:13.917Z",
+            "lastPublished": "2023-10-23T19:05:13.917Z",
+            "link": "https://www.bbc.com/mundo/articles/cjj8p1z936do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/06c0/live/9aae7000-71d5-11ee-a387-671baf956d33.jpg",
+            "description": "Tras el inesperado primer lugar del ministro de Economía Sergio Massa en las elecciones presidenciales te contamos cómo el peronismo siempre ha resurgido después de las peores catástrofes económicas de Argentina.",
+            "imageAlt": "Sergio Massa",
+            "id": "cjj8p1z936do"
+          },
+          {
+            "type": "article",
+            "title": "3 claves que explican el triunfo del centrista Sergio Massa frente a su rival libertario Javier Milei en Argentina",
+            "firstPublished": "2023-10-23T17:02:05.465Z",
+            "lastPublished": "2023-10-23T17:33:43.737Z",
+            "link": "https://www.bbc.com/mundo/articles/cyd121pd8q7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/5403/live/cc3e1420-71af-11ee-9d67-33d6dd26a73e.jpg",
+            "description": "Desafiando la mayoría de las encuestas, Sergio Massa obtuvo el 36,6% de los votos, más que cualquier otro candidato en las elecciones presidenciales en Argentina. En esta nota analizamos las razones detrás de este triunfo. ",
+            "imageAlt": "Sergio Massa, candidato de Unión Por La Patria y actual Ministro de Economía de Argentina. ",
+            "id": "cyd121pd8q7o"
+          },
+          {
+            "type": "article",
+            "title": "María Corina Machado, la elegida de la oposición de Venezuela para desafiar a Maduro (y cómo le puede afectar su inhabilitación)",
+            "firstPublished": "2023-10-23T09:17:53.552Z",
+            "lastPublished": "2023-10-23T09:17:53.552Z",
+            "link": "https://www.bbc.com/mundo/articles/cp64p2lpg7yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da5e/live/de4a8530-7142-11ee-ae48-293583c32fa4.jpg",
+            "description": "Machado ganó unas primarias de la oposición por un amplio margen y, por primera vez, se convirtió en la líder del movimiento que se opone al chavismo.",
+            "imageAlt": "Maria Corina Machado",
+            "id": "cp64p2lpg7yo"
+          },
+          {
+            "type": "article",
+            "title": "Massa vs. Milei: 3 factores que definirán cuál de los dos será el próximo presidente de Argentina",
+            "firstPublished": "2023-10-23T06:54:08.384Z",
+            "lastPublished": "2023-10-23T06:54:08.384Z",
+            "link": "https://www.bbc.com/mundo/articles/cg3epzv7pz9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/cecc/live/97946820-71bc-11ee-a44e-71f38a720542.jpg",
+            "description": "Argentina se encamina hacia un balotaje de resultado incierto entre un candidato oficialista y otro libertario. Analizamos qué podría inclinar la balanza hacia uno de ellos.",
+            "imageAlt": "Milei y Massa durante un debate de campaña.",
+            "id": "cg3epzv7pz9o"
+          },
+          {
+            "type": "article",
+            "title": "Los hitos en la vida y la carrera de Javier Milei, el \"rara avis\" que promete dinamitar el sistema y un cambio radical para Argentina",
+            "firstPublished": "2023-10-23T03:58:50.739Z",
+            "lastPublished": "2023-10-23T03:58:50.739Z",
+            "link": "https://www.bbc.com/mundo/articles/cpe87jl17yjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/68ff/live/13a97110-712e-11ee-9456-d511b84977e4.jpg",
+            "description": "Javier Milei, el segundo candidato más votado este domingo, peleará el 19 de noviembre contra Sergio Massa por la presidencia de Argentina. Su intensa vida explica su fenómeno político. ",
+            "imageAlt": "Javier Milei, del partido La Libertad Avanza, en un acto de campaña.",
+            "id": "cpe87jl17yjo"
+          },
+          {
+            "type": "article",
+            "title": "Elecciones en Argentina: el \"superministro\" centrista Sergio Massa y el libertario Javier Milei se disputarán la presidencia en segunda vuelta",
+            "firstPublished": "2023-10-23T00:23:26.334Z",
+            "lastPublished": "2023-10-23T00:23:26.334Z",
+            "link": "https://www.bbc.com/mundo/articles/cy912v1kjn5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c34c/live/6d575dd0-713d-11ee-a503-4588075e3427.jpg",
+            "description": "El actual ministro de Economía, Sergio Massa, y el economista libertario Javier  Milei se disputarían la presidencia el 19 de noviembre.",
+            "imageAlt": "Sergio Massa y Javier Milei.",
+            "id": "cy912v1kjn5o"
+          },
+          {
+            "type": "article",
+            "title": "Por qué las elecciones de este domingo en Argentina desafían la lógica política de ese país",
+            "firstPublished": "2023-10-20T11:50:38.284Z",
+            "lastPublished": "2023-10-22T08:44:13.738Z",
+            "link": "https://www.bbc.com/mundo/articles/crg1eyzj0eeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/f69a/live/9c7e8910-70f9-11ee-b28c-3bb76357dce9.jpg",
+            "description": "Con tres candidatos que podrían alcanzar la presidencia según las encuestas y un descalabro económico de fondo, los argentinos van a las urnas en unos comicios que podrían marcar cambios sustanciales en la historia reciente argentina.",
+            "imageAlt": "Sergio Massa, Patricia Bullrich y Javier Milei",
+            "id": "crg1eyzj0eeo"
+          },
+          {
+            "type": "article",
+            "title": "La alianza con la que México y la Gran Colombia buscaron defenderse del imperialismo europeo y expulsar a España del Caribe hace 200 años",
+            "firstPublished": "2023-10-21T15:45:07.644Z",
+            "lastPublished": "2023-10-21T15:45:07.644Z",
+            "link": "https://www.bbc.com/mundo/articles/cldx79wq4v5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/b7b5/live/d0a5e0a0-6823-11ee-bae1-0f3ee25a3569.jpg",
+            "description": "Con el Tratado de Amistad, Liga y Confederación los nacientes estados se comprometieron a ayudarse mutuamente a asegurar su independencia frente a cualquier enemigo.",
+            "imageAlt": "Pintura de un asalto al puerto de La Habana en el siglo XVIII",
+            "id": "cldx79wq4v5o"
+          },
+          {
+            "type": "article",
+            "title": "Manzanas del Cuidado: el pionero plan de Bogotá para atender a mujeres que cuidan de otros (y que varias ciudades latinoamericanas quieren replicar)",
+            "firstPublished": "2023-10-20T11:29:29.037Z",
+            "lastPublished": "2023-10-20T11:29:29.037Z",
+            "link": "https://www.bbc.com/mundo/articles/cqeq38je3qro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0aa9/live/cce9caa0-566a-11ee-943d-91ce654583c0.jpg",
+            "description": "En Bogotá, un tercio de las mujeres se dedican de manera exclusiva al cuidado doméstico no remunerado. Por eso la alcaldía de la capital colombiana creó unos centros de ayuda para ellas.",
+            "imageAlt": "Natalia Moreno",
+            "id": "cqeq38je3qro"
+          },
+          {
+            "type": "article",
+            "title": "\"Argenchina\": ¿por qué Argentina superó a Brasil y se convirtió en el \"favorito\" de China en América Latina?",
+            "firstPublished": "2023-10-18T11:04:07.702Z",
+            "lastPublished": "2023-10-18T11:04:07.702Z",
+            "link": "https://www.bbc.com/mundo/articles/cxe3kl5z1y7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/2a2c/live/c35e7b80-6cdf-11ee-a93c-cdee1fd6cb4f.jpg",
+            "description": "Argentina superó a Brasil como el principal socio comercial de China en América Latina en 2022. Expertos consideran que la relación continuará sin importar el resultado de las próximas elecciones presidenciales en Argentina.",
+            "imageAlt": "Banderas china y argentina",
+            "id": "cxe3kl5z1y7o"
+          },
+          {
+            "type": "article",
+            "title": "3 claves para entender la crisis de violencia en Ecuador y las propuestas para combatirla de Daniel Noboa, el nuevo presidente electo",
+            "firstPublished": "2023-10-16T13:11:20.367Z",
+            "lastPublished": "2023-10-16T13:11:20.367Z",
+            "link": "https://www.bbc.com/mundo/articles/cnd89g0zxleo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/0eb5/live/ab9db0b0-6c17-11ee-a6b3-61dda6c6fec7.jpg",
+            "description": "Daniel Noboa tendrá hasta mayo de 2025 para enfrentar el gran desafío de combatir la grave violencia que sacude a Ecuador. ",
+            "imageAlt": "Daniel Noboa durante la campaña electoral. ",
+            "id": "cnd89g0zxleo"
+          },
+          {
+            "type": "article",
+            "title": "Daniel Noboa, la meteórica carrera política del joven empresario que triunfó en lo que su padre fracasó 5 veces y será presidente de Ecuador",
+            "firstPublished": "2023-10-16T01:35:27.040Z",
+            "lastPublished": "2023-10-16T01:35:27.040Z",
+            "link": "https://www.bbc.com/mundo/articles/c3g34ny7wn5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/e9e0/live/eef2da90-6bc0-11ee-b092-a3cef6940fcc.jpg",
+            "description": "Daniel Noboa dio la sorpresa en la primera vuelta y ahora la consolidó al confirmarse como presidente tras una corta carrera política que comenzó en 2021. Te contamos quién es.",
+            "imageAlt": "Daniel Noboa",
+            "id": "c3g34ny7wn5o"
+          },
+          {
+            "type": "article",
+            "title": "El empresario Daniel Noboa da un giro a la política de Ecuador: será el presidente más joven del país tras derrotar a la abogada correísta Luisa González",
+            "firstPublished": "2023-10-15T23:24:55.415Z",
+            "lastPublished": "2023-10-16T01:03:33.895Z",
+            "link": "https://www.bbc.com/mundo/articles/cv20j810w93o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/17f0/live/1d292870-6bc5-11ee-b46b-573a36e0a10c.jpg",
+            "description": "Ecuador eligió al joven empresario Daniel Noboa como presidente hasta mayo de 2025 al imponerse en las elecciones anticipadas a la abogada correísta Luisa González.",
+            "imageAlt": "Daniel Noboa",
+            "id": "cv20j810w93o"
+          },
+          {
+            "type": "article",
+            "title": "Las espectaculares imágenes del eclipse solar \"anillo de fuego\" que pudo verse en América Latina",
+            "firstPublished": "2023-10-14T18:30:07.292Z",
+            "lastPublished": "2023-10-14T18:30:07.292Z",
+            "link": "https://www.bbc.com/mundo/articles/c6p599l418jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4fef/live/26f28080-6ad1-11ee-8073-5b93bd1aa7db.jpg",
+            "description": "El fenómeno pudo verse en Estados Unidos y varios países de la región. ",
+            "imageAlt": "El \"anillo de fuego\" desde Panamá",
+            "id": "c6p599l418jo"
+          },
+          {
+            "type": "article",
+            "title": "Desde antiguas guerras hasta Cristóbal Colón: cómo los eclipses han cambiado el rumbo de la historia",
+            "firstPublished": "2023-10-13T18:44:13.458Z",
+            "lastPublished": "2023-10-13T18:44:13.458Z",
+            "link": "https://www.bbc.com/mundo/articles/cn0q54zeje4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/1e20/live/52a5cfe0-69cb-11ee-a013-7d20b5f37524.jpg",
+            "description": "Algunas guerras antiguas y hasta la Teoría de la Relatividad de Einstein tienen alguna relación con los eclipses. La astronomía ha amparado a muchos para tomar decisiones que pudieron haber cambiado la historia.",
+            "imageAlt": "Cristóbal Colón",
+            "id": "cn0q54zeje4o"
+          },
+          {
+            "type": "article",
+            "title": "Cuán ordenadas deja realmente las cuentas el presidente Guillermo Lasso en Ecuador (y cuál ha sido el costo social de su política económica)",
+            "firstPublished": "2023-08-17T12:30:34.829Z",
+            "lastPublished": "2023-10-13T13:23:34.825Z",
+            "link": "https://www.bbc.com/mundo/articles/cv25gq93pvro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/6fd8/live/4489c580-3c1a-11ee-8d1a-e90bdc09a724.jpg",
+            "description": "El gobierno de Guillermo Lasso consiguió reducir la deuda pública, pero a cambio tuvo que recortar en inversión social. Ahora deja la presidencia antes del final de su mandato. ",
+            "imageAlt": "Guillermo Lasso",
+            "id": "cv25gq93pvro"
+          },
+          {
+            "type": "article",
+            "title": "Muere Luis Alfredo Garavito: los crímenes contra casi 200 niños del mayor asesino en serie de la historia de Colombia",
+            "firstPublished": "2023-10-13T01:44:41.867Z",
+            "lastPublished": "2023-10-13T01:44:41.867Z",
+            "link": "https://www.bbc.com/mundo/articles/cw0k974k4xko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/4fda/live/e065b060-6968-11ee-999a-17d3ba52098c.jpg",
+            "description": "Pese a que sus condenas sumaban 1.853 años, ciertas disposiciones de la ley hacían posible que recuperara su libertad en dos meses. Con su muerte se cierra esa posibilidad, así como uno de los capítulos más traumáticos de la vida colombiana.",
+            "imageAlt": "Retrato Luis Alfredo Garavito",
+            "id": "cw0k974k4xko"
+          },
+          {
+            "type": "article",
+            "title": "\"Hasta para pedir un préstamo en el banco\": la alucinante cantidad de cosas para las que necesitan el certificado de votación los ecuatorianos",
+            "firstPublished": "2023-10-12T13:48:18.602Z",
+            "lastPublished": "2023-10-12T13:48:18.602Z",
+            "link": "https://www.bbc.com/mundo/articles/cn48rj2486jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/d589/live/2a578a20-6934-11ee-a305-894244efd71e.png",
+            "description": "En Ecuador el voto es obligatorio y el certificado de votación es casi tan importante como la cédula de identidad. ",
+            "imageAlt": "Cédula",
+            "id": "cn48rj2486jo"
+          },
+          {
+            "type": "article",
+            "title": "Qué es un eclipse \"anillo de fuego\" y dónde se verá en América Latina este  14 de octubre ",
+            "firstPublished": "2023-10-12T11:57:06.188Z",
+            "lastPublished": "2023-10-12T11:57:06.188Z",
+            "link": "https://www.bbc.com/mundo/articles/cw0k12lkwjjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/da61/live/fda5dbd0-69b0-11ee-97a6-f13289207f54.png",
+            "description": "Desde México, Centroamérica y partes de Sudamérica, el eclipse anular del 14 de octubre podrá ser visto de manera total o parcial.",
+            "imageAlt": "Eclipse anular",
+            "id": "cw0k12lkwjjo"
+          },
+          {
+            "type": "article",
+            "title": "\"Mi hija me llamó y me dijo: ‘Papi, estamos en guerra’. Fue la última vez que hablé con ella\": la desesperación de los familiares de latinoamericanos desaparecidos en Israel",
+            "firstPublished": "2023-10-09T23:53:57.595Z",
+            "lastPublished": "2023-10-09T23:53:57.595Z",
+            "link": "https://www.bbc.com/mundo/articles/ce9d7d67lgqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/57fe/live/b624cda0-67b9-11ee-a097-ff42e411b681.jpg",
+            "description": "Decenas de latinoamericanos han muerto o desaparecido durante el ataque de Hamás a Israel. Una pareja colombiana estaba en la fiesta electrónica donde fueron encontrados 260 cadáveres. Familiares que buscan a sus seres queridos temen que sean rehenes.",
+            "imageAlt": "Ivonne Rubio y Antonio Macías, pareja de colombianos desaparecidos en Israel.",
+            "id": "ce9d7d67lgqo"
+          },
+          {
+            "type": "article",
+            "title": "El faro sin luz que honra a Cristóbal Colón y las maldiciones atribuidas a sus restos en República Dominicana",
+            "firstPublished": "2023-10-08T13:31:05.909Z",
+            "lastPublished": "2023-10-08T13:31:05.909Z",
+            "link": "https://www.bbc.com/mundo/articles/czv945d0xgjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/672a/live/23508740-6452-11ee-a0c8-ab8a89e71afa.jpg",
+            "description": "En Santo Domingo se inauguró en los 90 un faro para honrar a Cristóbal Colón. El autor de esta crónica, que lo conoció de niño, regresa y comparte su curiosa historia. ",
+            "imageAlt": "Vista aérea del Faro a Colón",
+            "id": "czv945d0xgjo"
+          },
+          {
+            "type": "article",
+            "title": "Por qué los migrantes venezolanos se volvieron un asunto clave para el presidente Biden",
+            "firstPublished": "2023-10-06T23:34:50.416Z",
+            "lastPublished": "2023-10-06T23:34:50.416Z",
+            "link": "https://www.bbc.com/mundo/articles/c6p4zp4re6lo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/7020/live/82863a00-649a-11ee-999b-452f629fee80.jpg",
+            "description": "La llegada masiva de migrantes venezolanos ha llevado a la Casa Blanca a reenfocar su política migratoria, en medio de fuertes presiones de republicanos y demócratas.",
+            "imageAlt": "Un grupo de migrantes en la frontera con TExas",
+            "id": "c6p4zp4re6lo"
+          },
+          {
+            "type": "article",
+            "title": "\"Aquí los que deberían estar pidiendo perdón por el asesinato de mi hijo son Álvaro Uribe y Juan Manuel Santos\": Rubiela Giraldo, madre de una de las víctimas de los falsos positivos en Colombia",
+            "firstPublished": "2023-10-06T11:01:56.599Z",
+            "lastPublished": "2023-10-06T11:01:56.599Z",
+            "link": "https://www.bbc.com/mundo/articles/c4nd2jde111o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/dab7/live/2cbb2b70-6388-11ee-8c6f-1d8308af9ab5.jpg",
+            "description": "Esta semana el gobierno colombiano realizó un acto de petición de perdón público por la muerte de miles de jóvenes que fueron ejecutados extrajudicialmente por el ejército.",
+            "imageAlt": "Rubiela Giraldo.",
+            "id": "c4nd2jde111o"
+          }
         ],
         "activePage": 1,
         "pageCount": 40,
-        "variantTopicId": null,
-        "metadata": {
-            "analytics": {
-                "name": "mundo.topics.c7zp57yyz25t.page",
-                "producer": "MUNDO"
-            },
-            "atiAnalytics": {
-                "contentId": "urn:bbc:tipo:topic:c7zp57yyz25t",
-                "contentType": "index-category",
-                "pageIdentifier": "mundo.topics.c7zp57yyz25t.page",
-                "pageTitle": "América Latina"
-            }
-        }
-    },
-    "contentType": "application/json; charset=utf-8"
+        "curationId": "urn:bbc:vivo:curation:3dbcb38a-f8c3-4661-a7fe-146105a493f9",
+        "curationType": "vivo-stream",
+        "position": 0,
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 40,
+    "metadata": {
+      "analytics": {
+        "name": "mundo.topics.c7zp57yyz25t.page",
+        "producer": "MUNDO"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7zp57yyz25t",
+        "contentType": "index-category",
+        "pageIdentifier": "mundo.topics.c7zp57yyz25t.page",
+        "pageTitle": "América Latina"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

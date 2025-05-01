@@ -867,6 +867,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                   <img
                     alt=""
                     class="emotion-17"
+                    loading="eager"
                     src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp"
                     srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w"
                   />

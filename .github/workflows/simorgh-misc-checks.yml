@@ -3,6 +3,9 @@ on:
   pull_request:
     branches:
       - '**'
+  push:
+    branches:
+      - 'latest'
 
 permissions:
   statuses: write
@@ -12,23 +15,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [22.x]
     env:
       CI: true
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: '0'
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache Node Modules
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -61,7 +64,8 @@ jobs:
           autoAcceptChanges: true # Auto accept changes to accept a new baseline when merging to latest
 
       - name: Get Storybook Branch Permalink
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
         id: get-storybook-permalink
         with:
           script: |
@@ -70,7 +74,7 @@ jobs:
             core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
 
       - name: Publish Storybook Branch Permalink
-        if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
         run: |
           curl \
           -X POST \
@@ -87,10 +91,13 @@ jobs:
           --fail
 
       - name: Duplicate Dependency Checker
+        if: github.ref != 'refs/heads/latest'
         run: yarn test:dependencies
 
       - name: Linting
+        if: github.ref != 'refs/heads/latest'
         run: yarn build && yarn test:lint
 
       - name: NPM Audit
+        if: github.ref != 'refs/heads/latest'
         run: yarn npm audit --all --severity low --no-deprecations

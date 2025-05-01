@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import {
   ARTICLE_PAGE,
-  FRONT_PAGE,
+  HOME_PAGE,
   STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -16,9 +16,7 @@ import {
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { data as serbianFrontPageData } from '#data/serbian/frontpage/lat.json';
 import { data as gahuzaAudioPage } from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-import { data as urduFrontPageData } from '#data/urdu/frontpage/index.json';
 import { data as liveRadioPageData } from '#data/korean/bbc_korean_radio/liveradio.json';
 import { data as hindiTVBrand } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
@@ -701,18 +699,18 @@ describe('Metadata', () => {
     });
   });
 
-  it('should render the default service twitter handle for a Front Page asset', async () => {
+  it('should render the default service twitter handle for a Home Page asset', async () => {
     render(
       <MetadataWithContext
         service="serbian"
         bbcOrigin={dotComOrigin}
         platform="canonical"
         id={null}
-        pageType={FRONT_PAGE}
+        pageType={HOME_PAGE}
         pathname="/serbian"
         title="Serbian"
-        lang={serbianFrontPageData.article.metadata.language}
-        description={serbianFrontPageData.article.metadata.summary}
+        lang="sr-Latn"
+        description="BBC na srpskom nudi ekskluzivan sadržaj - analitičko, istraživačko i nepristrasno izveštavanje u tekstovima i video prilozima prilagođenim i društvenim mrežama."
         openGraphType="website"
       />,
     );
@@ -997,18 +995,18 @@ describe('Metadata', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match for WS Frontpages', () => {
+    it('should match for WS Homepages', () => {
       render(
         <MetadataWithContext
           service="urdu"
           bbcOrigin={dotComOrigin}
           platform="canonical"
           id={null}
-          pageType={FRONT_PAGE}
+          pageType={HOME_PAGE}
           pathname="/urdu"
           title="خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news"
-          lang={urduFrontPageData.article.metadata.language}
-          description={urduFrontPageData.article.metadata.summary}
+          lang="ur"
+          description="تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"
           openGraphType="website"
         />,
       );

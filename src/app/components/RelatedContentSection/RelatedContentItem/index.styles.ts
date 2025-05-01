@@ -5,6 +5,7 @@ export default {
     css({
       border: '0.1875rem solid transparent',
       height: '100%',
+      width: '100%',
     }),
   promoFullWidth: () =>
     css({

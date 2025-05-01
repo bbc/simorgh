@@ -115,8 +115,6 @@ export const mainTranslations = {
   ads: {
     advertisementLabel: 'Реклама',
   },
-  recommendationTitle: 'По теме',
-  splitRecommendationTitle: 'Другие статьи',
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
@@ -208,6 +206,7 @@ export const mainTranslations = {
     episodes: 'передачи',
     podcastExternalLinks: 'Этот подкаст доступен на',
     download: 'Загрузить эпизод',
+    closeVideo: 'Выйти',
   },
   socialEmbed: {
     caption: {
@@ -318,6 +317,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
+    atiAnalyticsProducerName: 'RUSSIAN',
+    useReverb: true,
     chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
@@ -345,18 +346,25 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
     isTrustProjectParticipant: true,
     script: cyrillic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/russian/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Главная',
+    homePageTitle: 'Главная',
     iTunesAppId: 504278066,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     mostRead: {
-      header: 'Самое популярное',
+      header: 'Популярное',
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Самое популярное',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     podcastPromo: {
       title: 'WhatsApp',
@@ -386,9 +394,6 @@ export const service: DefaultServiceConfig = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -443,6 +448,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Война в Украине',
         url: '/russian/topics/cez0n29ggrdt',
+      },
+      {
+        title: 'Сводка потерь',
+        url: '/russian/topics/cqx9qqylwvgt',
       },
       {
         title: 'Истории',
