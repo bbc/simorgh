@@ -18,12 +18,12 @@ export default () => {
       event.stopPropagation();
       event.preventDefault();
 
-      const atiURL = targetElement.getAttribute('data-lite-ati-click');
+      const atiURL = targetElement.getAttribute('data-static-ati-click');
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
       if (atiURL && !clickTrackingFiredUrls.includes(atiURL)) {
-        window.processClientDeviceAndSendLite(atiURL as string);
+        window.processClientDeviceAndSendStaticBeacon(atiURL as string);
         clickTrackingFiredUrls.push(atiURL);
       }
 
