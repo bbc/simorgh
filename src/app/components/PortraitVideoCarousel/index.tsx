@@ -157,7 +157,7 @@ const PortraitVideoCarousel = ({
             id: selectedItem.video?.id || '',
             title: selectedItem.headlines?.promoHeadline || '',
             versionId: selectedItem.video?.version?.id || '',
-            duration: 'PT0M0S', // Replace with actual duration if needed
+            duration: 'PT0M0S', // hardcoded for now
             guidance: null,
             isEmbeddingAllowed: true,
           }}
