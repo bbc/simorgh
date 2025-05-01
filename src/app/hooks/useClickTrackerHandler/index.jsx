@@ -127,7 +127,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       advertiserID,
       format,
       optimizely,
-      optimizelyMetricNameOverride,
       detailedPlacement,
       useReverb,
     ],

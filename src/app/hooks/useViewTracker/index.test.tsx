@@ -612,7 +612,7 @@ describe('useViewTracker', () => {
           user: { attributes: mockAttributes, id: mockUserId },
           getVariation: jest.fn(() => 'off'),
         },
-        componentName: 'myEvent',
+        componentName: 'component',
       };
 
       const { result } = renderHook(
