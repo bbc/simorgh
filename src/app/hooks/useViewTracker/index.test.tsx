@@ -233,7 +233,7 @@ describe('useViewTracker', () => {
       expect(global.fetch).not.toHaveBeenCalled();
     });
 
-    it('should use "optimizelyMetricNameOverride" property if provided in eventTrackingData object', async () => {
+    it('should use componentName property if provided in eventTrackingData object', async () => {
       const mockOptimizelyTrack = jest.fn();
       const mockUserId = 'test';
       const mockAttributes = { foo: 'bar' };
@@ -244,7 +244,6 @@ describe('useViewTracker', () => {
           user: { attributes: mockAttributes, id: mockUserId },
           getVariation: jest.fn(() => 'off'),
         },
-        optimizelyMetricNameOverride: 'myEvent',
       };
 
       const { result } = renderHook(

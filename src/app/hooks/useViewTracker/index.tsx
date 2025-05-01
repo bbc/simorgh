@@ -33,7 +33,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     detailedPlacement,
     optimizely,
-    optimizelyMetricNameOverride,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -100,9 +99,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             };
 
             optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${componentName}-views`
-                : 'component_views',
+              `${componentName}-views`,
               optimizely.user.id as string,
               overrideAttributes,
             );
@@ -163,7 +160,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     advertiserID,
     url,
     optimizely,
-    optimizelyMetricNameOverride,
     detailedPlacement,
     useReverb,
   ]);

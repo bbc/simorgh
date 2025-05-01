@@ -111,7 +111,6 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
       componentName: 'related-content',
       ...(sendOptimizelyEvents && {
         optimizely,
-        componentName: 'related-content',
       }),
     },
   };

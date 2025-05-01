@@ -401,7 +401,7 @@ describe('useClickTrackerHandler', () => {
       );
     });
 
-    it('should use "optimizelyMetricNameOverride" property if provided in eventTrackingData object', async () => {
+    it('should use componentName property if provided in eventTrackingData object', async () => {
       const mockOptimizelyTrack = jest.fn();
       const mockUserId = 'test';
       const mockAttributes = { foo: 'bar' };
@@ -412,7 +412,7 @@ describe('useClickTrackerHandler', () => {
           user: { attributes: mockAttributes, id: mockUserId },
           getVariation: jest.fn(() => 'off'),
         },
-        optimizelyMetricNameOverride: 'myEvent',
+        componentName: 'myEvent',
       };
       const {
         metadata: { atiAnalytics },
