@@ -143,7 +143,6 @@ const MostRead = ({
     ...blockLevelEventTrackingData,
     ...(sendOptimizelyEvents && {
       optimizely,
-      optimizelyMetricNameOverride: 'most_read',
     }),
   };
 
