@@ -9,7 +9,7 @@ When working with this repo, follow these instructions:
 * Always use const where possible.
 * Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
 * Don't use any external dependencies that you don't need.
-* Try to limit the amount of parameters in functions, if you can't, use a one object argument with object destructuring syntax instead.
+* Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
 * React tests should use the @testing-library/react framework. We have enhanced this library slightly in this file src/app/components/react-testing-library-with-providers.tsx, to handle context providers, so use that as an import instead of @testing-library/react directly
 * Don't have lots of logic in your tests, prefer to test the output of a function rather than the implementation.
 * Follow the KISS principle (Keep it Simple Stupid).
