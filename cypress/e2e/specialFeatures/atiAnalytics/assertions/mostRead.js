@@ -1,9 +1,6 @@
-import {
-  interceptATIAnalyticsBeacons,
-  COMPONENTS,
-  runIfToggleEnabled,
-} from '../helpers';
+import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import runIfToggleEnabled from '../../../../support/helpers/runIfToggleEnabled';
 
 const { MOST_READ } = COMPONENTS;
 

@@ -8,20 +8,20 @@ import DocumentComponent from './component';
 
 Helmet.canUseDOM = false;
 
-jest.mock('#src/server/utilities/liteATITracking', () =>
-  function liteATIClickTracking() {
+jest.mock('#src/server/utilities/staticATITracking', () =>
+  function staticATIClickTracking() {
     return 'Tracking script placeholder';
   }.toString(),
 );
 
-jest.mock('#src/server/utilities/liteATITracking/clickTracking', () =>
-  function liteATIClickTracking() {
+jest.mock('#src/server/utilities/staticATITracking/clickTracking', () =>
+  function staticATIClickTracking() {
     return 'Click script placeholder';
   }.toString(),
 );
 
-jest.mock('#src/server/utilities/liteATITracking/viewTracking', () =>
-  function liteATIClickTracking() {
+jest.mock('#src/server/utilities/staticATITracking/viewTracking', () =>
+  function staticATIClickTracking() {
     return 'View script placeholder';
   }.toString(),
 );
