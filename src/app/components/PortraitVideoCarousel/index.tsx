@@ -14,7 +14,12 @@ interface PortraitVideoItem {
   link?: { path: string };
   video?: {
     id: string;
-    version?: { id: string };
+    title?: string;
+    isEmbeddingAllowed?: boolean;
+    version?: {
+      id: string;
+      duration?: string;
+    };
   };
 }
 
@@ -157,7 +162,7 @@ const PortraitVideoCarousel = ({
             id: selectedItem.video?.id || '',
             title: selectedItem.headlines?.promoHeadline || '',
             versionId: selectedItem.video?.version?.id || '',
-            duration: 'PT0M0S', // hardcoded for now
+            duration: selectedItem.video?.version?.duration || 'PT0M0S',
             guidance: null,
             isEmbeddingAllowed: true,
           }}
