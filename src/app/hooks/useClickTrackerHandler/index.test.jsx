@@ -434,7 +434,7 @@ describe('useClickTrackerHandler', () => {
 
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
       expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'myEvent_clicks',
+        'myEvent-clicks',
         mockUserId,
         {
           clicked_wsoj: true,
@@ -478,7 +478,7 @@ describe('useClickTrackerHandler', () => {
 
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
       expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'component_clicks',
+        'component-clicks',
         mockUserId,
         mockOverrideAttributes,
       );
