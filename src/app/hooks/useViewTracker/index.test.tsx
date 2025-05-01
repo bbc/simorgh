@@ -612,6 +612,7 @@ describe('useViewTracker', () => {
           user: { attributes: mockAttributes, id: mockUserId },
           getVariation: jest.fn(() => 'off'),
         },
+        componentName: 'myEvent',
       };
 
       const { result } = renderHook(
@@ -645,7 +646,7 @@ describe('useViewTracker', () => {
       expect(options).toEqual({ threshold: [0.5] });
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
       expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'component_views',
+        'myEvent-views',
         mockUserId,
         mockOverrideAttributes,
       );
