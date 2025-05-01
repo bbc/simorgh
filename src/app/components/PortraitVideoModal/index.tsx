@@ -4,7 +4,7 @@ import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import styles from './index.styles';
 
-type PortraitVideoModalProps = {
+export interface PortraitVideoModalProps {
   video: {
     id: string;
     title: string;
@@ -20,7 +20,7 @@ type PortraitVideoModalProps = {
     }[];
   };
   onClose: () => void;
-};
+}
 
 const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
   const block: PortraitClipMediaBlock = {
