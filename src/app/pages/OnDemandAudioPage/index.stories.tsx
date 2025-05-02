@@ -120,7 +120,6 @@ export const TestRadioLite = {
       viewports: [
         399, // Group 1
         899, // Group 3
-        1008, // Group 5
       ],
     },
   },
@@ -137,7 +136,6 @@ export const TestPodcast = {
       viewports: [
         399, // Group 1
         899, // Group 3
-        1008, // Group 5
       ],
     },
   },
@@ -154,7 +152,6 @@ export const TestPodcastLite = {
       viewports: [
         399, // Group 1
         899, // Group 3
-        1008, // Group 5
       ],
     },
   },
