@@ -1,5 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
+import { Helmet } from 'react-helmet';
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
@@ -55,6 +56,21 @@ const HomePage = ({ pageData }: HomePageProps) => {
   return (
     <>
       <ChartbeatAnalytics title={title} />
+      <Helmet>
+        <script
+          src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+          type="text/javascript"
+        />
+        <script type="text/javascript">
+          {`
+      bbcRequireMap = {
+        "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4"
+      };
+      require({ paths: bbcRequireMap, waitSeconds: 30 });
+    `}
+        </script>
+      </Helmet>
+
       <MetadataContainer
         title={homePageTitle}
         lang={lang}
