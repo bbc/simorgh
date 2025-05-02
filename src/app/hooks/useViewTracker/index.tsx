@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
 import {
-  LITE_ATI_VIEW_TRACKING,
+  STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
@@ -168,28 +168,28 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     useReverb,
   ]);
 
-  return async (element: HTMLElement) => {
-    if (!element || !trackingIsEnabled || eventSent) {
-      return;
-    }
-    if (!observer.current) {
-      await initObserver();
-    }
+  const viewTracker = useCallback(
+    async (element: HTMLElement) => {
+      if (!element || !trackingIsEnabled || eventSent) return;
+      if (!observer.current) await initObserver();
+      (observer.current as unknown as IntersectionObserver)?.observe(element);
+    },
+    [trackingIsEnabled, eventSent],
+  );
 
-    (observer.current as unknown as IntersectionObserver)?.observe(element);
-  };
+  return viewTracker;
 };
 
 export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
   const viewTracker = getComponentViewTracker(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+  const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
   return isLite
-    ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
+    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
     : {
         ref: viewTracker,
       };
