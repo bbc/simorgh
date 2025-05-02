@@ -456,6 +456,7 @@ export const buildReverbAnalyticsModel = ({
 
   const reverbVariables = {
     params: {
+      env: getEnvConfig().SIMORGH_APP_ENV,
       page: {
         contentId,
         contentType,

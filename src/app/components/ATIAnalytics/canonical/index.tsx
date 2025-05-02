@@ -7,7 +7,7 @@ import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
-import trackingPixelUrl from './getPixelUrl';
+import trackingPixelUrl from './getNoScriptTrackingPixelUrl';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
@@ -64,6 +64,8 @@ const CanonicalATIAnalytics = ({
   reverbParams,
 }: ATIAnalyticsProps) => {
   const { isLite } = useContext(RequestContext);
+  console.log(JSON.stringify(reverbParams));
+  
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
