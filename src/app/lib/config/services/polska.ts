@@ -390,9 +390,16 @@ export const service: DefaultServiceConfig = {
     timezone: 'Europe/London',
     navigation: [
       {
-        url: 'https://www.bbc.com/polska',
         title: 'News',
-        hideOnLiteSite: false,
+        url: '/polska',
+      },
+      {
+        title: 'Polska',
+        url: '/polska/topics/cly1xdxypzet',
+      },
+      {
+        title: 'Wojna w Ukrainie',
+        url: '/polska/topics/c8x8n9y15qnt',
       },
     ],
   },
