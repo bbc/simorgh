@@ -147,14 +147,14 @@ const wrapper = ({
 
 describe('useViewTracker', () => {
   describe('Expected use', () => {
-    const eventTrackingData = {
+    const trackingData = {
       componentName: 'most-read',
       format: 'CHD=promo::2',
       url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
 
     it('should return a function that can be assigned to an element to observe for intersections', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
       });
       const element = document.createElement('div');
@@ -167,7 +167,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI when element is not in view', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
       });
       const element = document.createElement('div');
@@ -191,7 +191,7 @@ describe('useViewTracker', () => {
     });
 
     it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props =>
           wrapper({
             ...props,
@@ -218,7 +218,7 @@ describe('useViewTracker', () => {
     });
 
     it('should skip initialising IntersectionObserver when ref is not assigned to element', async () => {
-      renderHook(() => useViewTracker(eventTrackingData), {
+      renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {
           toggles: {
@@ -248,7 +248,7 @@ describe('useViewTracker', () => {
 
       const { result } = renderHook(
         // @ts-expect-error partial data required for tests
-        () => useViewTracker({ ...eventTrackingData, ...mockOptimizely }),
+        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -287,7 +287,7 @@ describe('useViewTracker', () => {
     });
 
     it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
@@ -333,7 +333,7 @@ describe('useViewTracker', () => {
     });
 
     it('should only send one view event when mutiple elements are viewed', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const elementA = document.createElement('div');
@@ -364,7 +364,7 @@ describe('useViewTracker', () => {
     });
 
     it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
@@ -389,13 +389,13 @@ describe('useViewTracker', () => {
 
     it('should send multiple view events for multiple hook instances', async () => {
       const { result: resultA } = renderHook(
-        () => useViewTracker(eventTrackingData),
+        () => useViewTracker(trackingData),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const { result: resultB } = renderHook(
-        () => useViewTracker(eventTrackingData),
+        () => useViewTracker(trackingData),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -428,7 +428,7 @@ describe('useViewTracker', () => {
     });
 
     it('should disconnect IntersectionObserver after event is sent', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
 
@@ -454,7 +454,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not disconnect IntersectionObserver before event is sent', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
@@ -480,7 +480,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI when element is in view for less than 1 second', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
@@ -519,7 +519,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
@@ -570,7 +570,7 @@ describe('useViewTracker', () => {
       const { result } = renderHook(
         () =>
           useViewTracker({
-            ...eventTrackingData,
+            ...trackingData,
             campaignID: 'custom-campaign',
           }),
         {
@@ -620,7 +620,7 @@ describe('useViewTracker', () => {
 
         const { result } = renderHook(
           // @ts-expect-error partial data for tests
-          () => useViewTracker({ ...eventTrackingData, ...mockOptimizely }),
+          () => useViewTracker({ ...trackingData, ...mockOptimizely }),
           {
             wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
           },
@@ -661,7 +661,7 @@ describe('useViewTracker', () => {
 
         const { result } = renderHook(
           // @ts-expect-error partial data for tests
-          () => useViewTracker({ ...eventTrackingData, ...mockOptimizely }),
+          () => useViewTracker({ ...trackingData, ...mockOptimizely }),
           {
             wrapper,
             initialProps: {},
@@ -699,12 +699,12 @@ describe('useViewTracker', () => {
       // @ts-expect-error required for testing purposes
       delete global.IntersectionObserver;
 
-      const eventTrackingData = {
+      const trackingData = {
         componentName: 'most-read',
         format: 'CHD=promo::2',
         url: 'http://www.bbc.com/pidgin/tori-51745682',
       };
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
@@ -717,9 +717,9 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
-      const eventTrackingData = undefined;
+      const trackingData = undefined;
 
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
@@ -733,12 +733,12 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when no tracking data from the event context provider is passed into hook', async () => {
-      const eventTrackingData = {
+      const trackingData = {
         componentName: 'most-read',
         format: 'CHD=promo::2',
         url: 'http://www.bbc.com/pidgin/tori-51745682',
       };
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {
           pageData: undefined,
@@ -753,12 +753,12 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
-      const eventTrackingData = {
+      const trackingData = {
         foo: 'bar',
       };
 
       // @ts-expect-error partial data for tests
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
@@ -771,10 +771,10 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
-      const eventTrackingData = ['unexpected data type'];
+      const trackingData = ['unexpected data type'];
 
       // @ts-expect-error partial data for tests
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
@@ -788,13 +788,13 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when no element is passed into hook ref callback function', async () => {
-      const eventTrackingData = {
+      const trackingData = {
         componentName: 'most-read',
         format: 'CHD=promo::2',
         url: 'http://www.bbc.com/pidgin/tori-51745682',
       };
 
-      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper,
         initialProps: {},
       });
