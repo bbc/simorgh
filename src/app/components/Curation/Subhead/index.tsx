@@ -1,12 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { Fragment, PropsWithChildren, useContext } from 'react';
+import { Fragment, PropsWithChildren } from 'react';
+import CallToActionLink from '#app/components/CallToActionLink';
 
 import styles from './index.styles';
-
-import { LeftChevron, RightChevron } from '../../icons';
-
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 interface Props {
   link?: string;
@@ -14,14 +11,19 @@ interface Props {
 }
 
 const Subhead = ({ children, link, id }: PropsWithChildren<Props>) => {
-  const { dir } = useContext(ServiceContext);
-
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
-        <a href={link} className="focusIndicatorDisplayBlock">
-          <span>{innerChildren}</span>
-          {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
-        </a>
+        <CallToActionLink
+          url={link}
+          size="doublePica"
+          className="focusIndicatorDisplayBlock"
+          alignWithMargin
+        >
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            {innerChildren}
+          </CallToActionLink.Text>
+          <CallToActionLink.Chevron css={styles.chevronStyles} />
+        </CallToActionLink>
       )
     : Fragment;
   return (
