@@ -147,14 +147,14 @@ const wrapper = ({
 
 describe('useViewTracker', () => {
   describe('Expected use', () => {
-    const trackingData = {
+    const eventTrackingData = {
       componentName: 'most-read',
       format: 'CHD=promo::2',
       url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
 
     it('should return a function that can be assigned to an element to observe for intersections', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
       });
       const element = document.createElement('div');
@@ -167,7 +167,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI when element is not in view', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
       });
       const element = document.createElement('div');
@@ -191,7 +191,7 @@ describe('useViewTracker', () => {
     });
 
     it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper: props =>
           wrapper({
             ...props,
@@ -218,7 +218,7 @@ describe('useViewTracker', () => {
     });
 
     it('should skip initialising IntersectionObserver when ref is not assigned to element', async () => {
-      renderHook(() => useViewTracker(trackingData), {
+      renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {
           toggles: {
@@ -248,7 +248,7 @@ describe('useViewTracker', () => {
 
       const { result } = renderHook(
         // @ts-expect-error partial data required for tests
-        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+        () => useViewTracker({ ...eventTrackingData, ...mockOptimizely }),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -287,7 +287,7 @@ describe('useViewTracker', () => {
     });
 
     it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
@@ -333,7 +333,7 @@ describe('useViewTracker', () => {
     });
 
     it('should only send one view event when mutiple elements are viewed', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const elementA = document.createElement('div');
@@ -364,7 +364,7 @@ describe('useViewTracker', () => {
     });
 
     it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
@@ -389,13 +389,13 @@ describe('useViewTracker', () => {
 
     it('should send multiple view events for multiple hook instances', async () => {
       const { result: resultA } = renderHook(
-        () => useViewTracker(trackingData),
+        () => useViewTracker(eventTrackingData),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
       );
       const { result: resultB } = renderHook(
-        () => useViewTracker(trackingData),
+        () => useViewTracker(eventTrackingData),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -428,7 +428,7 @@ describe('useViewTracker', () => {
     });
 
     it('should disconnect IntersectionObserver after event is sent', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
 
@@ -454,7 +454,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not disconnect IntersectionObserver before event is sent', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
@@ -480,7 +480,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI when element is in view for less than 1 second', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
@@ -519,7 +519,7 @@ describe('useViewTracker', () => {
     });
 
     it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
@@ -569,7 +569,10 @@ describe('useViewTracker', () => {
     it('should be able to override the campaignID that is sent to ATI', async () => {
       const { result } = renderHook(
         () =>
-          useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
+          useViewTracker({
+            ...eventTrackingData,
+            campaignID: 'custom-campaign',
+          }),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -598,95 +601,96 @@ describe('useViewTracker', () => {
       );
     });
 
-    it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockUserId = 'test';
-      const mockAttributes = { foo: 'bar' };
-      const mockOverrideAttributes = {
-        ...mockAttributes,
-        [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
-      };
-      const mockOptimizely = {
-        optimizely: {
-          track: mockOptimizelyTrack,
-          user: { attributes: mockAttributes, id: mockUserId },
-          getVariation: jest.fn(() => 'off'),
-        },
-        componentName: 'component',
-      };
+    describe('Optimizely', () => {
+      it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
+        const mockOptimizelyTrack = jest.fn();
+        const mockUserId = 'test';
+        const mockAttributes = { foo: 'bar' };
+        const mockOverrideAttributes = {
+          ...mockAttributes,
+          [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+        };
+        const mockOptimizely = {
+          optimizely: {
+            track: mockOptimizelyTrack,
+            user: { attributes: mockAttributes, id: mockUserId },
+            getVariation: jest.fn(() => 'off'),
+          },
+        };
 
-      const { result } = renderHook(
-        // @ts-expect-error partial data for tests
-        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
-        {
-          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-        },
-      );
-      const element = document.createElement('div');
+        const { result } = renderHook(
+          // @ts-expect-error partial data for tests
+          () => useViewTracker({ ...eventTrackingData, ...mockOptimizely }),
+          {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          },
+        );
+        const element = document.createElement('div');
 
-      await result.current.ref(element);
+        await result.current.ref(element);
 
-      const observerInstance = getObserverInstance(element);
+        const observerInstance = getObserverInstance(element);
 
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
         });
-      });
 
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-        .calls;
-
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-      expect(options).toEqual({ threshold: [0.5] });
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-      expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'component-views',
-        mockUserId,
-        mockOverrideAttributes,
-      );
-    });
-
-    it('should not send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object is undefined', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockOptimizely = undefined;
-
-      const { result } = renderHook(
-        // @ts-expect-error partial data for tests
-        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
-        {
-          wrapper,
-          initialProps: {},
-        },
-      );
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
+        act(() => {
+          jest.advanceTimersByTime(1100);
         });
+
+        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+          .calls;
+
+        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+        expect(options).toEqual({ threshold: [0.5] });
+        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+        expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+          'most-read-views',
+          mockUserId,
+          mockOverrideAttributes,
+        );
       });
 
-      act(() => {
-        jest.advanceTimersByTime(1100);
+      it('should not send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object is undefined', async () => {
+        const mockOptimizelyTrack = jest.fn();
+        const mockOptimizely = undefined;
+
+        const { result } = renderHook(
+          // @ts-expect-error partial data for tests
+          () => useViewTracker({ ...eventTrackingData, ...mockOptimizely }),
+          {
+            wrapper,
+            initialProps: {},
+          },
+        );
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+          .calls;
+
+        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+        expect(options).toEqual({ threshold: [0.5] });
+        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
       });
-
-      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-        .calls;
-
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-      expect(options).toEqual({ threshold: [0.5] });
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
     });
   });
 
