@@ -67,3 +67,20 @@ export const Test = {
   ),
   tags: ['!dev'],
 };
+
+// This story is for chromatic testing purposes only
+export const TestLite = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="gahuza" variant={variant} isLite />
+  ),
+  tags: ['!dev'],
+  parameters: {
+    chromatic: {
+      viewports: [
+        399, // Group 1
+        899, // Group 3
+        1008, // Group 5
+      ],
+    },
+  },
+};
