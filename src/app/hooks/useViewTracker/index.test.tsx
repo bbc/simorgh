@@ -699,12 +699,12 @@ describe('useViewTracker', () => {
       // @ts-expect-error required for testing purposes
       delete global.IntersectionObserver;
 
-      const trackingData = {
+      const eventTrackingData = {
         componentName: 'most-read',
         format: 'CHD=promo::2',
         url: 'http://www.bbc.com/pidgin/tori-51745682',
       };
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
@@ -717,9 +717,9 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
-      const trackingData = undefined;
+      const eventTrackingData = undefined;
 
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
@@ -733,12 +733,12 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when no tracking data from the event context provider is passed into hook', async () => {
-      const trackingData = {
+      const eventTrackingData = {
         componentName: 'most-read',
         format: 'CHD=promo::2',
         url: 'http://www.bbc.com/pidgin/tori-51745682',
       };
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {
           pageData: undefined,
@@ -753,12 +753,12 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
-      const trackingData = {
+      const eventTrackingData = {
         foo: 'bar',
       };
 
       // @ts-expect-error partial data for tests
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
@@ -771,10 +771,10 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
-      const trackingData = ['unexpected data type'];
+      const eventTrackingData = ['unexpected data type'];
 
       // @ts-expect-error partial data for tests
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
@@ -788,13 +788,13 @@ describe('useViewTracker', () => {
     });
 
     it('should not throw error and not send event to ATI when no element is passed into hook ref callback function', async () => {
-      const trackingData = {
+      const eventTrackingData = {
         componentName: 'most-read',
         format: 'CHD=promo::2',
         url: 'http://www.bbc.com/pidgin/tori-51745682',
       };
 
-      const { result } = renderHook(() => useViewTracker(trackingData), {
+      const { result } = renderHook(() => useViewTracker(eventTrackingData), {
         wrapper,
         initialProps: {},
       });
