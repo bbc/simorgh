@@ -167,17 +167,18 @@ const PortraitVideoCarousel = ({
 
       {isModalOpen && selectedItem && (
         <PortraitVideoModal
-          video={{
-            id: selectedItem.video?.id || '',
-            title: selectedItem.headlines?.promoHeadline || '',
-            versionId: selectedItem.video?.version?.id || '',
-            duration: selectedItem.video?.version?.duration || 'PT0M0S',
-            kind: selectedItem.video?.version?.kind || 'programme',
-            territories: selectedItem.video?.version?.territories || [],
+          items={items.map(item => ({
+            id: item.video?.id || '',
+            title: item.headlines?.promoHeadline || '',
+            versionId: item.video?.version?.id || '',
+            duration: item.video?.version?.duration || 'PT0M0S',
+            kind: item.video?.version?.kind || 'programme',
+            territories: item.video?.version?.territories || [],
             guidance: null,
-            isEmbeddingAllowed: selectedItem.video?.isEmbeddingAllowed ?? true,
-            images: selectedItem.images || [],
-          }}
+            isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
+            images: item.images || [],
+          }))}
+          initialVideoIndex={items.findIndex(i => i.id === selectedItem?.id)}
           onClose={handleCloseModal}
         />
       )}

@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
+import { useState } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 
 export interface PortraitVideoModalProps {
-  video: {
+  items: {
     id: string;
     title: string;
     versionId: string;
@@ -18,11 +20,19 @@ export interface PortraitVideoModalProps {
       url: string;
       urlTemplate: string;
     }[];
-  };
+  }[];
+  initialVideoIndex: number;
   onClose: () => void;
 }
 
-const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
+const PortraitVideoModal = ({
+  items,
+  initialVideoIndex,
+  onClose,
+}: PortraitVideoModalProps) => {
+  const [currentVideoIndex, setCurrentIndex] = useState(initialVideoIndex);
+  const video = items[currentVideoIndex];
+
   const block: PortraitClipMediaBlock = {
     type: 'portraitClipMedia',
     model: {
@@ -46,6 +56,18 @@ const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
     },
   };
 
+  const handlePrev = () => {
+    if (currentVideoIndex > 0) {
+      setCurrentIndex(i => i - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentVideoIndex < items.length - 1) {
+      setCurrentIndex(i => i + 1);
+    }
+  };
+
   return (
     <div css={styles.modalWrapper}>
       <div css={styles.modalInner}>
@@ -56,7 +78,28 @@ const PortraitVideoModal = ({ video, onClose }: PortraitVideoModalProps) => {
         >
           ×
         </button>
-        <MediaLoader blocks={[block]} />
+
+        <div css={styles.navWrapper}>
+          <button
+            onClick={handlePrev}
+            disabled={currentVideoIndex === 0}
+            aria-label="Previous video"
+            css={styles.navButton}
+          >
+            <LeftChevron />
+          </button>
+
+          <MediaLoader blocks={[block]} />
+
+          <button
+            onClick={handleNext}
+            disabled={currentVideoIndex === items.length - 1}
+            aria-label="Next video"
+            css={styles.navButton}
+          >
+            <RightChevron />
+          </button>
+        </div>
       </div>
     </div>
   );
