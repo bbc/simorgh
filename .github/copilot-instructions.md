@@ -13,5 +13,4 @@ When working with this repo, follow these instructions:
 * React tests should use the @testing-library/react framework. We have enhanced this library slightly in this file src/app/components/react-testing-library-with-providers.tsx, to handle context providers, so use that as an import instead of @testing-library/react directly
 * Don't have lots of logic in your tests, prefer to test the output of a function rather than the implementation.
 * Follow the KISS principle (Keep it Simple Stupid).
-* We have a docs folder of mdx and md files for our coding standards, feel free to use that for context when generating code, the folder is located here docs/Coding-Standards/*
 * Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.
