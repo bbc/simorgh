@@ -15,7 +15,6 @@ const CurationGrid = ({
   if (summaries.length === 0) {
     return null;
   }
-
   return (
     <div data-testid="curation-grid-normal">
       {hasMultiplePromos ? (

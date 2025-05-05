@@ -70,7 +70,6 @@ export default ({
     radioSchedule,
     embed,
   });
-
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
