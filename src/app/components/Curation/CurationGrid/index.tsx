@@ -4,7 +4,6 @@ import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
 import { CurationGridProps } from '../types';
 
-// Default component
 const CurationGrid = ({
   summaries,
   isFirstCuration,
@@ -16,10 +15,6 @@ const CurationGrid = ({
   if (summaries.length === 0) {
     return null;
   }
-
-  console.group('📦 CurationGrid ');
-  console.log(summaries);
-  console.groupEnd();
 
   return (
     <div data-testid="curation-grid-normal">

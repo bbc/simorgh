@@ -7,11 +7,24 @@ import socialLinksFixture from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { Curation, Summary } from '#app/models/types/curationData';
 import SocialLinks from '.';
 
-const socialLinksData = socialLinksFixture.data.curations.find(curation => {
-  return (
-    curation.visualStyle === 'LINKS' && curation.visualProminence === 'NORMAL'
-  );
-});
+const getSocialLinksData = (numberOfItems?: number): Curation => {
+  const socialLinksCuration = socialLinksFixture.data.curations.find(
+    curation => {
+      return (
+        curation.visualStyle === 'LINKS' &&
+        curation.visualProminence === 'NORMAL'
+      );
+    },
+  ) as Curation;
+
+  if (!socialLinksCuration.summaries || !numberOfItems)
+    return socialLinksCuration;
+
+  return {
+    ...socialLinksCuration,
+    summaries: socialLinksCuration.summaries.slice(0, numberOfItems),
+  };
+};
 
 const Component = ({
   curations,
@@ -40,6 +53,14 @@ export default {
   title: 'Components/SocialLinks',
 };
 
-export const MultipleItems = () => (
-  <Component curations={socialLinksData as Curation} service="kyrgyz" />
+export const MultipleLinks = () => (
+  <Component curations={getSocialLinksData()} service="kyrgyz" />
+);
+
+export const SingleLink = () => (
+  <Component curations={getSocialLinksData(1)} service="kyrgyz" />
+);
+
+export const OddNumberOfLinks = () => (
+  <Component curations={getSocialLinksData(5)} service="kyrgyz" />
 );

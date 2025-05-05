@@ -32,7 +32,6 @@ const createSrcSet = (imageUrl, isProgrammeImage, suffix = '') => {
     .join(', ');
 };
 
-// TODO
 const createSizes = (useLargeImages, isProgrammeImage) => {
   // 4 columns of fixed width
   const DESKTOP_SIZE = useLargeImages

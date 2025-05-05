@@ -47,7 +47,7 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-// Note: Curation - container component rendering components based on the VS-VP
+// TEMP: Note: Curation - container component rendering components based on the VS-VP
 export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -64,7 +64,6 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
 }: Curation) => {
-  // Note: Links does not have a component name yet
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -72,7 +71,6 @@ export default ({
     embed,
   });
 
-  // Note: Rendered as Default if the component VS-VP is not defined;
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;

@@ -8,12 +8,8 @@ const IMAGE_SIZE_GROUP_4 = 67;
 
 const styles = {
   IMAGE_SIZE_GROUP_1,
-  IMAGE_SIZE_GROUP_2,
-  IMAGE_SIZE_GROUP_3,
-  IMAGE_SIZE_GROUP_4,
   container: () =>
     css({
-      // TODO: Double check re. section padding; Should it be controlled on the items instead?
       paddingTop: `${pixelsToRem(32)}rem`,
       paddingBottom: `${pixelsToRem(32)}rem`,
     }),
@@ -28,7 +24,6 @@ const styles = {
     css({
       padding: 0,
       margin: 0,
-      // TODO: Double check re. grid.
       display: 'grid',
       listStyleType: 'none',
       gridGap: `${spacings.DOUBLE}rem`,
@@ -52,6 +47,7 @@ const styles = {
     css({
       width: `${pixelsToRem(IMAGE_SIZE_GROUP_1)}rem`,
       height: `${pixelsToRem(IMAGE_SIZE_GROUP_1)}rem`,
+      flexShrink: 0,
 
       [mq.GROUP_2_MIN_WIDTH]: {
         width: `${pixelsToRem(IMAGE_SIZE_GROUP_2)}rem`,
@@ -68,9 +64,19 @@ const styles = {
         height: `${pixelsToRem(IMAGE_SIZE_GROUP_4)}rem`,
       },
     }),
-  link: () =>
+  link: ({ palette, fontVariants }: Theme) =>
     css({
-      // Temp: Note: the approach to make the "image" clickable without wrapping it by <a/>
+      color: palette.GREY_10,
+      textDecoration: 'none',
+      ...fontVariants.sansBold,
+
+      '&:hover, &:focus, &:visited': {
+        color: palette.GREY_6,
+      },
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
+      },
       '::before': {
         position: 'absolute',
         top: 0,

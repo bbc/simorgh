@@ -24,7 +24,6 @@ export const getMimeType = srcset => {
   }
 };
 
-// TOOD
 export const createSrcsets = ({
   originCode,
   locator,
@@ -38,9 +37,6 @@ export const createSrcsets = ({
   const requiredResolutions = imageResolutions.filter(
     resolution => resolution <= originalImageWidth,
   );
-
-  console.log('createSrcsets');
-  console.log({ requiredResolutions });
 
   if (
     originalImageWidth < imageResolutions[imageResolutions.length - 1] &&
