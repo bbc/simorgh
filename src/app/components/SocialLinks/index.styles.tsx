@@ -1,7 +1,16 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
+const IMAGE_SIZE_GROUP_1 = 80;
+const IMAGE_SIZE_GROUP_2 = 55;
+const IMAGE_SIZE_GROUP_3 = 80;
+const IMAGE_SIZE_GROUP_4 = 67;
+
 const styles = {
+  IMAGE_SIZE_GROUP_1,
+  IMAGE_SIZE_GROUP_2,
+  IMAGE_SIZE_GROUP_3,
+  IMAGE_SIZE_GROUP_4,
   container: () =>
     css({
       // TODO: Double check re. section padding; Should it be controlled on the items instead?
@@ -41,23 +50,22 @@ const styles = {
     }),
   image: ({ mq }: Theme) =>
     css({
-      // TODO - Review img src too;
-      width: `${pixelsToRem(80)}rem`,
-      height: `${pixelsToRem(80)}rem`,
+      width: `${pixelsToRem(IMAGE_SIZE_GROUP_1)}rem`,
+      height: `${pixelsToRem(IMAGE_SIZE_GROUP_1)}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        width: `${pixelsToRem(55)}rem`,
-        height: `${pixelsToRem(55)}rem`,
+        width: `${pixelsToRem(IMAGE_SIZE_GROUP_2)}rem`,
+        height: `${pixelsToRem(IMAGE_SIZE_GROUP_2)}rem`,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
-        width: `${pixelsToRem(80)}rem`,
-        height: `${pixelsToRem(80)}rem`,
+        width: `${pixelsToRem(IMAGE_SIZE_GROUP_3)}rem`,
+        height: `${pixelsToRem(IMAGE_SIZE_GROUP_3)}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        width: `${pixelsToRem(67)}rem`,
-        height: `${pixelsToRem(67)}rem`,
+        width: `${pixelsToRem(IMAGE_SIZE_GROUP_4)}rem`,
+        height: `${pixelsToRem(IMAGE_SIZE_GROUP_4)}rem`,
       },
     }),
   link: () =>

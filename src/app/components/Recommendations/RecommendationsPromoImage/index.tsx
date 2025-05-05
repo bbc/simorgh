@@ -19,6 +19,8 @@ const RecommendationsImage = ({
   const { height, width, altText, copyrightHolder, originCode, locator } =
     image;
 
+  console.log({ image });
+
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const { primarySrcset, fallbackSrcset } = createSrcsets({
     originCode,
