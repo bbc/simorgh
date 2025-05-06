@@ -443,71 +443,73 @@ describe('useClickTrackerHandler', () => {
       );
     });
 
-    it('should fire event to Optimizely if optimizely object exists', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockUserId = 'test';
-      const mockAttributes = { foo: 'bar' };
-      const mockOverrideAttributes = {
-        ...mockAttributes,
-        [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
-      };
-      const mockOptimizely = {
-        optimizely: {
-          track: mockOptimizelyTrack,
-          user: { attributes: mockAttributes, id: mockUserId },
-          getVariation: jest.fn(() => 'off'),
-        },
-        componentName: 'component',
-      };
-      const {
-        metadata: { atiAnalytics },
-      } = pidginData;
+    describe('Optimizely', () => {
+      it('should fire event to Optimizely if optimizely object exists', async () => {
+        const mockOptimizelyTrack = jest.fn();
+        const mockUserId = 'test';
+        const mockAttributes = { foo: 'bar' };
+        const mockOverrideAttributes = {
+          ...mockAttributes,
+          [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+        };
+        const mockOptimizely = {
+          optimizely: {
+            track: mockOptimizelyTrack,
+            user: { attributes: mockAttributes, id: mockUserId },
+            getVariation: jest.fn(() => 'off'),
+          },
+          componentName: 'component',
+        };
+        const {
+          metadata: { atiAnalytics },
+        } = pidginData;
 
-      const { getByTestId } = render(
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
+        const { getByTestId } = render(
+          <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+          {
+            atiData: atiAnalytics,
+            pageData: pidginData,
+            pageType: STORY_PAGE,
+            pathname: '/pidgin',
+            service: 'pidgin',
+            toggles: defaultToggles,
+          },
+        );
 
-      fireEvent.click(getByTestId('test-component'));
+        fireEvent.click(getByTestId('test-component'));
 
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-      expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-        'component-clicks',
-        mockUserId,
-        mockOverrideAttributes,
-      );
-    });
+        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+        expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+          'component-clicks',
+          mockUserId,
+          mockOverrideAttributes,
+        );
+      });
 
-    it('should not fire event to Optimizely if optimizely object is undefined', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockOptimizely = undefined;
+      it('should not fire event to Optimizely if optimizely object is undefined', async () => {
+        const mockOptimizelyTrack = jest.fn();
+        const mockOptimizely = undefined;
 
-      const {
-        metadata: { atiAnalytics },
-      } = pidginData;
+        const {
+          metadata: { atiAnalytics },
+        } = pidginData;
 
-      const { getByTestId } = render(
-        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
+        const { getByTestId } = render(
+          <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
+          {
+            atiData: atiAnalytics,
+            pageData: pidginData,
+            pageType: STORY_PAGE,
+            pathname: '/pidgin',
+            service: 'pidgin',
+            toggles: defaultToggles,
+          },
+        );
 
-      fireEvent.click(getByTestId('test-component'));
+        fireEvent.click(getByTestId('test-component'));
 
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+      });
     });
   });
 
