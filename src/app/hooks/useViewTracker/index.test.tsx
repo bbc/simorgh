@@ -133,7 +133,6 @@ const defaultToggles = {
 const defaultOptimizely = {
   track: jest.fn(),
   user: { attributes: { foo: 'bar' }, id: 'test' },
-  getVariation: jest.fn(() => 'off'),
 } as unknown as ReactSDKClient;
 
 const reverbMock = {

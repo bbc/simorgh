@@ -76,7 +76,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
             optimizely?.track(
               optimizelyMetricNameOverride
                 ? `${optimizelyMetricNameOverride}_clicks`
-                : 'component_clicks',
+                : 'component-clicks',
               optimizely?.user.id,
               overrideAttributes,
             );
