@@ -46,7 +46,7 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'телеграмі',
+    title: 'телеграм',
     brandTitle: 'Як дізнатися головне про Україну та світ?',
     brandDescription: 'Стежте за BBC News Україна в телеграмі.',
     image: {
