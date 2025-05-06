@@ -458,7 +458,6 @@ describe('useClickTrackerHandler', () => {
             user: { attributes: mockAttributes, id: mockUserId },
             getVariation: jest.fn(() => 'off'),
           },
-          componentName: 'component',
         };
         const {
           metadata: { atiAnalytics },
@@ -480,7 +479,7 @@ describe('useClickTrackerHandler', () => {
 
         expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
         expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-          'component-clicks',
+          'brand-clicks',
           mockUserId,
           mockOverrideAttributes,
         );
