@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useState } from 'react';
+import { useState, useLayoutEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { LeftChevron, RightChevron } from '../icons';
@@ -30,6 +30,7 @@ const PortraitVideoModal = ({
   initialVideoIndex,
   onClose,
 }: PortraitVideoModalProps) => {
+  const modalRef = useRef<HTMLDialogElement>(null);
   const [currentVideoIndex, setCurrentIndex] = useState(initialVideoIndex);
   const video = items[currentVideoIndex];
 
@@ -68,40 +69,52 @@ const PortraitVideoModal = ({
     }
   };
 
+  useLayoutEffect(() => {
+    if (modalRef.current) {
+      modalRef.current.showModal();
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.removeAttribute('style');
+    };
+  }, []);
+
   return (
-    <div css={styles.modalWrapper}>
-      <div css={styles.modalInner}>
+    <dialog ref={modalRef} css={styles.dialog}>
+      <button
+        type="button"
+        css={styles.closeButton}
+        onClick={onClose}
+        aria-label="Close modal"
+      >
+        ×
+      </button>
+
+      <div css={styles.navWrapper}>
         <button
-          css={styles.closeButton}
-          onClick={onClose}
-          aria-label="Close modal"
+          type="button"
+          onClick={handlePrev}
+          disabled={currentVideoIndex === 0}
+          aria-label="Previous video"
+          css={styles.navButton}
         >
-          ×
+          <LeftChevron />
         </button>
 
-        <div css={styles.navWrapper}>
-          <button
-            onClick={handlePrev}
-            disabled={currentVideoIndex === 0}
-            aria-label="Previous video"
-            css={styles.navButton}
-          >
-            <LeftChevron />
-          </button>
+        <MediaLoader blocks={[block]} />
 
-          <MediaLoader blocks={[block]} />
-
-          <button
-            onClick={handleNext}
-            disabled={currentVideoIndex === items.length - 1}
-            aria-label="Next video"
-            css={styles.navButton}
-          >
-            <RightChevron />
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={handleNext}
+          disabled={currentVideoIndex === items.length - 1}
+          aria-label="Next video"
+          css={styles.navButton}
+        >
+          <RightChevron />
+        </button>
       </div>
-    </div>
+    </dialog>
   );
 };
 

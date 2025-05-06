@@ -1,25 +1,21 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  modalWrapper: (theme: Theme) =>
-    css({
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      zIndex: 9999,
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: 'rgba(0, 0, 0, 0.9)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '1rem',
-    }),
-
-  modalInner: css({
+  dialog: css({
     width: '100%',
-    maxWidth: '480px',
+    maxWidth: '100%',
+    height: '100%',
+    maxHeight: '100%',
     position: 'relative', // anchor the nav buttons
+    backgroundColor: 'transparent',
+    border: 'none',
+    margin: 0,
+    padding: 0,
+
+    // Dialog backdrop styles
+    '&::backdrop': {
+      backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    },
   }),
 
   closeButton: css({
@@ -53,6 +49,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     gap: '0.5rem', // spacing between buttons and video
+    width: '100%',
+    height: '100%',
   }),
 
   navButton: ({ palette, spacings }: Theme) =>
