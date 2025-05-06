@@ -186,7 +186,7 @@ type Props = {
 };
 
 const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -194,7 +194,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
