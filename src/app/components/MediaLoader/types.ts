@@ -224,7 +224,7 @@ export type PortraitClipMediaBlock = {
     type: MediaType;
     images: {
       source: string;
-      urlTemplate: string;
+      urlTemplate?: string;
     }[];
     video: {
       id: string;

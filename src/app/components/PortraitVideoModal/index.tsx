@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useState, useLayoutEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { LeftChevron, RightChevron } from '../icons';
@@ -18,7 +18,7 @@ export interface PortraitVideoModalProps {
     isEmbeddingAllowed: boolean;
     images: {
       url: string;
-      urlTemplate: string;
+      urlTemplate?: string;
     }[];
   }[];
   initialVideoIndex: number;
@@ -69,7 +69,7 @@ const PortraitVideoModal = ({
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (modalRef.current) {
       modalRef.current.showModal();
       document.body.style.overflow = 'hidden';

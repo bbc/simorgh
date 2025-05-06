@@ -9,7 +9,6 @@ import {
   PlaylistItem,
 } from '../types';
 import getCaptionBlock from '../utils/getCaptionBlock';
-import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
 import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
@@ -21,7 +20,6 @@ export default ({
   lang,
   blocks,
   basePlayerConfig,
-  translations,
   adsEnabled = false,
   showAdsBasedOnLocation = false,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
@@ -69,18 +67,6 @@ export default ({
     resolution: DEFAULT_WIDTH,
   });
 
-  const placeholderConfig = buildPlaceholderConfig({
-    title,
-    duration: rawDuration,
-    durationISO8601: clipISO8601Duration,
-    type: type || 'video',
-    holdingImageURL,
-    placeholderImageLocator: locator,
-    placeholderImageOriginCode: originCode,
-    translations,
-    guidanceMessage,
-  });
-
   const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
 
   if (showAds) items.unshift({ kind: 'advert' });
@@ -92,6 +78,7 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       ...(externalEmbedUrl && { externalEmbedUrl }),
+      autoplay: true,
       playlistObject: {
         title,
         summary: caption || '',
@@ -109,7 +96,6 @@ export default ({
         ...(videoId && { clipPID: videoId }),
       },
     },
-    placeholderConfig,
     showAds,
     orientation: 'portrait',
   };

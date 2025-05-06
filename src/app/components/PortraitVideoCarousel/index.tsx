@@ -18,10 +18,10 @@ export interface PortraitVideoItem {
   };
   images: {
     url: string;
-    urlTemplate: string;
+    urlTemplate?: string;
     altText: string;
   }[];
-  video: {
+  video?: {
     id: string;
     isEmbeddingAllowed?: boolean;
     version: {
