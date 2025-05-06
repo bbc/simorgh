@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
-import { RequestContext } from '#app/contexts/RequestContext';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
-  LITE_ATI_CLICK_TRACKING,
+  STATIC_ATI_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useTrackingToggle from '../useTrackingToggle';
 import OPTIMIZELY_CONFIG from '../../lib/config/optimizely';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
@@ -95,7 +96,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               service,
               advertiserID,
               statsDestination,
-              url,
+              url: url || nextPageUrl,
               detailedPlacement,
               useReverb,
               ...(optimizelyVariation &&
@@ -137,17 +138,24 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   );
 };
 
-export const useATIClickTrackerHandler = (eventTrackingData = {}) => {
-  const { isLite } = useContext(RequestContext);
+export default (eventTrackingData = {}) => {
+  const { isAmp } = useContext(RequestContext);
+  const isHydrated = useHydrationDetection();
+
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+  const staticAtiUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: CLICK_EVENT,
+    isStatic: !isHydrated,
   });
 
-  return isLite
-    ? { [LITE_ATI_CLICK_TRACKING]: liteATIUrl }
-    : { onClick: clickTracker };
-};
+  const enableStaticTracking = !isHydrated && !isAmp;
 
-export default useClickTrackerHandler;
+  return {
+    ...(enableStaticTracking && {
+      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+    }),
+
+    ...(isHydrated && { onClick: clickTracker }),
+  };
+};

@@ -40,13 +40,9 @@ const styles = {
         color: palette.WHITE,
       },
     }),
-  chevron: ({ spacings }: Theme) =>
+  chevronSpacing: () =>
     css({
       marginInlineStart: `${pixelsToRem(12)}rem`,
-      width: `${spacings.DOUBLE}rem`,
-      height: `${spacings.DOUBLE}rem`,
-      fill: 'currentcolor',
-      verticalAlign: 'middle',
     }),
 };
 export default styles;
