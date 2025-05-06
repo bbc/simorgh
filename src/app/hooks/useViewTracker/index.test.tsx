@@ -569,10 +569,7 @@ describe('useViewTracker', () => {
     it('should be able to override the campaignID that is sent to ATI', async () => {
       const { result } = renderHook(
         () =>
-          useViewTracker({
-            ...trackingData,
-            campaignID: 'custom-campaign',
-          }),
+          useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -601,96 +598,95 @@ describe('useViewTracker', () => {
       );
     });
 
-    describe('Optimizely', () => {
-      it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
-        const mockOptimizelyTrack = jest.fn();
-        const mockUserId = 'test';
-        const mockAttributes = { foo: 'bar' };
-        const mockOverrideAttributes = {
-          ...mockAttributes,
-          [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
-        };
-        const mockOptimizely = {
-          optimizely: {
-            track: mockOptimizelyTrack,
-            user: { attributes: mockAttributes, id: mockUserId },
-            getVariation: jest.fn(() => 'off'),
-          },
-        };
+    it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
+      const mockOptimizelyTrack = jest.fn();
+      const mockUserId = 'test';
+      const mockAttributes = { foo: 'bar' };
+      const mockOverrideAttributes = {
+        ...mockAttributes,
+        [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
+      };
+      const mockOptimizely = {
+        optimizely: {
+          track: mockOptimizelyTrack,
+          user: { attributes: mockAttributes, id: mockUserId },
+          getVariation: jest.fn(() => 'off'),
+        },
+        componentName: 'component',
+      };
 
-        const { result } = renderHook(
-          // @ts-expect-error partial data for tests
-          () => useViewTracker({ ...trackingData, ...mockOptimizely }),
-          {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-          },
-        );
-        const element = document.createElement('div');
+      const { result } = renderHook(
+        // @ts-expect-error partial data for tests
+        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+        {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+        },
+      );
+      const element = document.createElement('div');
 
-        await result.current.ref(element);
+      await result.current.ref(element);
 
-        const observerInstance = getObserverInstance(element);
+      const observerInstance = getObserverInstance(element);
 
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
-          });
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: observerInstance,
         });
-
-        act(() => {
-          jest.advanceTimersByTime(1100);
-        });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [0.5] });
-        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-        expect(mockOptimizelyTrack).toHaveBeenCalledWith(
-          'most-read-views',
-          mockUserId,
-          mockOverrideAttributes,
-        );
       });
 
-      it('should not send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object is undefined', async () => {
-        const mockOptimizelyTrack = jest.fn();
-        const mockOptimizely = undefined;
-
-        const { result } = renderHook(
-          // @ts-expect-error partial data for tests
-          () => useViewTracker({ ...trackingData, ...mockOptimizely }),
-          {
-            wrapper,
-            initialProps: {},
-          },
-        );
-        const element = document.createElement('div');
-
-        await result.current.ref(element);
-
-        const observerInstance = getObserverInstance(element);
-
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
-          });
-        });
-
-        act(() => {
-          jest.advanceTimersByTime(1100);
-        });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [0.5] });
-        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+      act(() => {
+        jest.advanceTimersByTime(1100);
       });
+
+      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+        .calls;
+
+      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+      expect(options).toEqual({ threshold: [0.5] });
+      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+      expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+        'component-views',
+        mockUserId,
+        mockOverrideAttributes,
+      );
+    });
+
+    it('should not send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object is undefined', async () => {
+      const mockOptimizelyTrack = jest.fn();
+      const mockOptimizely = undefined;
+
+      const { result } = renderHook(
+        // @ts-expect-error partial data for tests
+        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+        {
+          wrapper,
+          initialProps: {},
+        },
+      );
+      const element = document.createElement('div');
+
+      await result.current.ref(element);
+
+      const observerInstance = getObserverInstance(element);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: observerInstance,
+        });
+      });
+
+      act(() => {
+        jest.advanceTimersByTime(1100);
+      });
+
+      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+        .calls;
+
+      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+      expect(options).toEqual({ threshold: [0.5] });
+      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
     });
   });
 

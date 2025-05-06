@@ -86,6 +86,7 @@ const CanonicalMostRead = ({
   size: Size;
   eventTrackingData: {
     optimizely?: ReactSDKClient | null | undefined;
+    optimizelyMetricNameOverride?: string | undefined;
     componentName: string;
   };
 }) =>
