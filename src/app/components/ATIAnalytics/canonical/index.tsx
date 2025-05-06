@@ -11,7 +11,6 @@ import trackingPixelUrl from './getNoScriptTrackingPixelUrl';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-
 const renderNoScriptTrackingPixel = (
   reverbParams: ATIAnalyticsPropsExport['reverbParams'],
 ) => {
@@ -65,7 +64,6 @@ const CanonicalATIAnalytics = ({
 }: ATIAnalyticsProps) => {
   const { isLite } = useContext(RequestContext);
   console.log(JSON.stringify(reverbParams));
-  
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;

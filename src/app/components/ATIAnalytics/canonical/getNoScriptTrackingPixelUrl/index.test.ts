@@ -1,4 +1,5 @@
 import trackingPixelUrl from '.';
+
 const mockReverbParams = {
   params: {
     env: 'live',
