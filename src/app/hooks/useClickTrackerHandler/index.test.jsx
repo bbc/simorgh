@@ -486,7 +486,7 @@ describe('useClickTrackerHandler', () => {
       );
     });
 
-    it.skip('should use "optimizelyMetricNameOverride" property if provided in eventTrackingData object', async () => {
+    it('should use "optimizelyMetricNameOverride" property if provided in eventTrackingData object', async () => {
       useOptimizelyMvtVariation.mockReturnValue('variation_a');
 
       const {
