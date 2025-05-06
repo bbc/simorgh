@@ -70,7 +70,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (sendOptimizelyEvents && optimizelyVariation) {
+          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
             const overrideAttributes = optimizely?.user.attributes;
 
             optimizely?.track(
