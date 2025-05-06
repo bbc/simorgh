@@ -261,7 +261,8 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const TestLink = () => {
-        const { onClick: handleClick } = useClickTrackerHandler(defaultProps);
+        const { onClick: handleClick } =
+          useClickTrackerHandler(eventTrackingData);
 
         return (
           <div>
@@ -618,7 +619,8 @@ describe('useClickTrackerHandler', () => {
         } = pidginData;
 
         const TestLink = () => {
-          const { onClick: handleClick } = useClickTrackerHandler(defaultProps);
+          const { onClick: handleClick } =
+            useClickTrackerHandler(eventTrackingData);
 
           return (
             <div>
