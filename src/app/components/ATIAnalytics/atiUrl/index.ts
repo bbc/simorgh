@@ -1,4 +1,5 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import isLive from '../../../lib/utilities/isLive';
 import {
   getDestination,
   getAppType,
@@ -290,19 +291,16 @@ export const buildATIEventTrackUrl = ({
   detailedPlacement,
   experimentVariant,
   ampExperimentName,
-}: ATIEventTrackingProps) => {
+  isStatic = false,
+}: ATIEventTrackingProps & {
+  isStatic?: boolean;
+}) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
   const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
-    {
-      key: 'idclient',
-      description: 'at user id',
-      value: getAtUserId(),
-      wrap: false,
-    },
     {
       key: 's',
       description: 'destination',
@@ -323,34 +321,6 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
     },
     {
-      key: 'r',
-      description: 'screen resolution & colour depth',
-      value: getScreenInfo(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 're',
-      description: 'browser/viewport resolution',
-      value: getBrowserViewPort(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 'hl',
-      description: 'time',
-      value: getCurrentTime(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
-      key: 'lng',
-      description: 'device language',
-      value: getDeviceLanguage(platform),
-      wrap: false,
-      disableEncoding: disableEncodingDueToAmpSubstitution,
-    },
-    {
       key: eventPublisher,
       description: 'event publisher',
       value: getEventInfo({
@@ -366,6 +336,44 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
       disableEncoding: true,
     },
+    ...(isStatic
+      ? []
+      : [
+          {
+            key: 'idclient',
+            description: 'at user id',
+            value: getAtUserId(),
+            wrap: false,
+          },
+          {
+            key: 'hl',
+            description: 'time',
+            value: getCurrentTime(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+          {
+            key: 're',
+            description: 'browser/viewport resolution',
+            value: getBrowserViewPort(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+          {
+            key: 'r',
+            description: 'screen resolution & colour depth',
+            value: getScreenInfo(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+          {
+            key: 'lng',
+            description: 'device language',
+            value: getDeviceLanguage(platform),
+            wrap: false,
+            disableEncoding: disableEncodingDueToAmpSubstitution,
+          },
+        ]),
     ...(experimentVariant
       ? [
           {
@@ -494,18 +502,36 @@ export const buildReverbPageSectionEventModel = ({
   advertiserID,
   url,
 }: ATIEventTrackingProps) => {
-  const eventDetails = {
-    eventName: type === 'view' ? 'sectionView' : 'sectionClick',
-    eventPublisher: type === 'click' ? 'click' : 'impression',
-    componentName,
-    container: campaignID,
-    attribute: componentName,
-    metadata: format,
-    placement: pageIdentifier,
-    source: advertiserID,
-    result: url,
-    isClick: type === 'click',
-  };
+  const eventDetails = isLive()
+    ? {
+        eventName: type === 'view' ? 'sectionView' : 'sectionClick',
+        eventPublisher: type === 'click' ? 'click' : 'impression',
+        componentName,
+        container: campaignID,
+        attribute: componentName,
+        metadata: format,
+        placement: pageIdentifier,
+        ...(advertiserID && { source: advertiserID }),
+        ...(url && { result: url }),
+        isClick: type === 'click',
+      }
+    : {
+        eventName: type === 'view' ? 'sectionView' : 'sectionClick',
+        eventPublisher: 'viewability',
+        item: {
+          ...(advertiserID && { attribution: advertiserID }),
+          name: componentName,
+          ...(url && { link: url }),
+        },
+        group: {
+          name: campaignID,
+        },
+        event: {
+          category: 'viewability',
+          action: type === 'click' ? 'select' : 'view',
+        },
+        isClick: type === 'click',
+      };
 
   return {
     params: {
