@@ -35,7 +35,7 @@ const urlToObject = url => {
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
-const eventTrackingData = {
+const defaultProps = {
   componentName: 'brand',
   format: 'CHD=promo::2',
 };
@@ -117,7 +117,7 @@ describe('useClickTrackerHandler', () => {
   describe('Click tracking', () => {
     it('should return a function', () => {
       const { result } = renderHook(
-        () => useClickTrackerHandler(eventTrackingData),
+        () => useClickTrackerHandler(defaultProps),
         {
           wrapper,
         },
@@ -135,7 +135,7 @@ describe('useClickTrackerHandler', () => {
 
       const spyFetch = jest.spyOn(global, 'fetch');
       const { getByTestId } = render(
-        <TestComponent hookProps={eventTrackingData} />,
+        <TestComponent hookProps={defaultProps} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -183,7 +183,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={eventTrackingData} />,
+        <TestComponent hookProps={defaultProps} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -204,17 +204,14 @@ describe('useClickTrackerHandler', () => {
         metadata: { atiAnalytics },
       } = pidginData;
 
-      const { getByText } = render(
-        <TestComponent hookProps={eventTrackingData} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
+      const { getByText } = render(<TestComponent hookProps={defaultProps} />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
 
       await act(() => userEvent.click(getByText('Button')));
 
@@ -254,7 +251,7 @@ describe('useClickTrackerHandler', () => {
 
         return (
           <div {...handleClick}>
-            <TestComponent hookProps={eventTrackingData} />
+            <TestComponent hookProps={defaultProps} />
           </div>
         );
       };
@@ -306,9 +303,7 @@ describe('useClickTrackerHandler', () => {
       });
 
       const { getByText } = render(
-        <TestComponentSingleLink
-          hookProps={{ ...eventTrackingData, href: url }}
-        />,
+        <TestComponentSingleLink hookProps={{ ...defaultProps, href: url }} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -335,17 +330,14 @@ describe('useClickTrackerHandler', () => {
         metadata: { atiAnalytics },
       } = pidginData;
 
-      const { getByText } = render(
-        <TestComponent hookProps={eventTrackingData} />,
-        {
-          atiData: atiAnalytics,
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
+      const { getByText } = render(<TestComponent hookProps={defaultProps} />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
 
       act(() => {
         fireEvent.contextMenu(getByText('Button'));
@@ -362,11 +354,7 @@ describe('useClickTrackerHandler', () => {
 
       const { getByText } = render(
         <TestComponent
-          hookProps={{
-            ...eventTrackingData,
-            href: url,
-            preventNavigation: true,
-          }}
+          hookProps={{ ...defaultProps, href: url, preventNavigation: true }}
         />,
         {
           atiData: atiAnalytics,
@@ -393,7 +381,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent hookProps={{ ...eventTrackingData, campaignID }} />,
+        <TestComponent hookProps={{ ...defaultProps, campaignID }} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -431,9 +419,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent
-          hookProps={{ ...eventTrackingData, ...mockOptimizely }}
-        />,
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -478,9 +464,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent
-          hookProps={{ ...eventTrackingData, ...mockOptimizely }}
-        />,
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -510,9 +494,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <TestComponent
-          hookProps={{ ...eventTrackingData, ...mockOptimizely }}
-        />,
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />,
         {
           atiData: atiAnalytics,
           pageData: pidginData,
@@ -555,7 +537,7 @@ describe('useClickTrackerHandler', () => {
 
     it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
       const { container, getByText } = render(
-        <TestComponent hookProps={eventTrackingData} />,
+        <TestComponent hookProps={defaultProps} />,
         {
           atiData: undefined,
           pageData: undefined,
@@ -631,7 +613,7 @@ describe('useClickTrackerHandler', () => {
         () =>
           constructATIUrl({
             eventTrackingData: {
-              ...eventTrackingData,
+              ...defaultProps,
               campaignID: 'custom-campaign',
             },
             eventType: 'click',
