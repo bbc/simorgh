@@ -13,7 +13,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
           cy.get('amp-iframe').then($ampIframe => {
             cy.testResponseCodeAndTypeRetry({
-              path: $ampIframe.prop('src'),
+              path: $ampIframe.attr('src'),
               responseCode: 200,
               type: 'text/html',
               allowFallback: true,
