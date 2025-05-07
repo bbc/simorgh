@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
@@ -17,10 +18,10 @@ export interface PortraitVideoItem {
   };
   images: {
     url: string;
-    urlTemplate: string;
+    urlTemplate?: string;
     altText: string;
   }[];
-  video: {
+  video?: {
     id: string;
     isEmbeddingAllowed?: boolean;
     version: {
@@ -165,23 +166,26 @@ const PortraitVideoCarousel = ({
         </div>
       </div>
 
-      {isModalOpen && selectedItem && (
-        <PortraitVideoModal
-          items={items.map(item => ({
-            id: item.video?.id || '',
-            title: item.headlines?.promoHeadline || '',
-            versionId: item.video?.version?.id || '',
-            duration: item.video?.version?.duration || 'PT0M0S',
-            kind: item.video?.version?.kind || 'programme',
-            territories: item.video?.version?.territories || [],
-            guidance: null,
-            isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
-            images: item.images || [],
-          }))}
-          initialVideoIndex={items.findIndex(i => i.id === selectedItem?.id)}
-          onClose={handleCloseModal}
-        />
-      )}
+      {isModalOpen &&
+        selectedItem &&
+        createPortal(
+          <PortraitVideoModal
+            items={items.map(item => ({
+              id: item.video?.id || '',
+              title: item.headlines?.promoHeadline || '',
+              versionId: item.video?.version?.id || '',
+              duration: item.video?.version?.duration || 'PT0M0S',
+              kind: item.video?.version?.kind || 'programme',
+              territories: item.video?.version?.territories || [],
+              guidance: null,
+              isEmbeddingAllowed: item.video?.isEmbeddingAllowed ?? true,
+              images: item.images || [],
+            }))}
+            initialVideoIndex={items.findIndex(i => i.id === selectedItem?.id)}
+            onClose={handleCloseModal}
+          />,
+          document.body,
+        )}
     </section>
   );
 };
