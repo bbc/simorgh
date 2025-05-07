@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
-import constructATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
+import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import useOptimizelyMvtVariation from '../useOptimizelyMvtVariation';
 import {
   AllTheProviders,
