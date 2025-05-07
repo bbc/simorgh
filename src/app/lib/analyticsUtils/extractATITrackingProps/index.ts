@@ -15,7 +15,6 @@ export default ({
     format,
     detailedPlacement,
     optimizely,
-    optimizelyMetricNameOverride,
     preventNavigation,
   } = eventTrackingData || {};
 
@@ -45,6 +44,5 @@ export default ({
     producerName,
     preventNavigation,
     optimizely,
-    optimizelyMetricNameOverride,
   };
 };
