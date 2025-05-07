@@ -545,7 +545,7 @@ export const buildReverbPageSectionEventModel = ({
         isClick: type === 'click',
         ...(experimentVariant && {
           experience: {
-            EXP: `${OPTIMIZELY_CONFIG.flagKey}::${experimentVariant}`,
+            engine_id: `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
           },
         }),
       };

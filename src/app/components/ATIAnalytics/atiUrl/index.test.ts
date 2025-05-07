@@ -14,6 +14,8 @@ jest.mock('../../../lib/utilities/isLive', () => ({
   default: jest.fn(),
 }));
 
+jest.mock('#app/lib/config/optimizely', () => ({ flagKey: 'mockFlagKey' }));
+
 // @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -370,6 +372,43 @@ describe('Reverb', () => {
         eventName: 'pageView',
       });
     });
+
+    it('should add experiment fields if experimentVariant is present', () => {
+      const reverbAnalyticsModel = buildReverbAnalyticsModel({
+        ...input,
+        experimentVariant: 'variant_1',
+      });
+
+      const pageParams = {
+        contentId: 'contentId',
+        contentType: 'contentType',
+        destination: 'statsDestination',
+        name: 'pageIdentifier',
+        producer: 'producerName',
+        additionalProperties: {
+          app_name: 'news',
+          app_type: 'getAppType',
+          content_language: 'language',
+          product_platform: null,
+          referrer_url: 'getReferrer',
+          x5: 'getHref',
+          x8: 'libraryVersion',
+          x9: 'sanitise',
+          x10: '',
+          x11: 'timePublished',
+          x12: 'timeUpdated',
+          x13: 'ldpThingLabels',
+          x14: 'ldpThingIds',
+          x16: 'campaign1~campaign2',
+          x17: 'categoryName',
+          x18: 'isLocServeCookieSet',
+          mv_creation: 'variant_1',
+          mv_test: 'mockFlagKey',
+        },
+      };
+
+      expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
+    });
   });
 
   describe('buildReverbPageSectionEventModel', () => {
@@ -514,6 +553,35 @@ describe('Reverb', () => {
             action: 'view',
           },
           isClick: false,
+        });
+      });
+
+      it('should add experiment fields if experimentVariant is present', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel({
+            ...input,
+            experimentVariant: 'variant_1',
+          });
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'viewability',
+          item: {
+            attribution: 'advertiserID',
+            name: 'top-stories',
+            link: 'http://localhost',
+          },
+          group: {
+            name: '1234',
+          },
+          event: {
+            category: 'viewability',
+            action: 'view',
+          },
+          isClick: false,
+          experience: {
+            engine_id: 'optimizely.mockFlagKey.variant_1',
+          },
         });
       });
     });
