@@ -541,11 +541,6 @@ export const buildReverbPageSectionEventModel = ({
         event: {
           category: 'viewability',
           action: type === 'click' ? 'select' : 'view',
-          ...(experimentVariant && {
-            personalisation: {
-              EXP: `${OPTIMIZELY_CONFIG.flagKey}::${experimentVariant}`,
-            },
-          }),
         },
         isClick: type === 'click',
       };
