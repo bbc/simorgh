@@ -27,7 +27,6 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GREY_2 } from '#app/components/ThemeProvider/palette';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -155,14 +154,11 @@ const ScrollablePromo = ({
 }) => {
   const { script, service, dir, translations, mostRead } =
     useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
-    // We want to check for experimentVariant here as ScrollablePromo is used in within the Article body as well.
-    // We only want to track Optimizely events for the Top Bar use case.
-    ...(optimizely && experimentVariant && { optimizely }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
   };
 
   const viewTracker = useViewTracker(eventTrackingData);

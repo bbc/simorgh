@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
 import {
@@ -28,13 +30,18 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     detailedPlacement,
     producerName,
     preventNavigation,
-    optimizely,
+    sendOptimizelyEvents,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
 
   const { service, useReverb } = useContext(ServiceContext);
+
+  const { optimizely } = useContext(OptimizelyContext);
+  const optimizelyVariation = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
 
   return useCallback(
     async event => {
@@ -62,13 +69,8 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely) {
-            const eventName = OPTIMIZELY_CONFIG.viewClickAttributeId;
-
-            const overrideAttributes = {
-              ...optimizely.user.attributes,
-              [`clicked_${eventName}`]: true,
-            };
+          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+            const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
               `${componentName}-clicks`,
@@ -76,9 +78,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               overrideAttributes,
             );
           }
-
-          const optimizelyVariation =
-            optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
 
           try {
             await sendEventBeacon({
@@ -127,7 +126,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       url,
       advertiserID,
       format,
+      sendOptimizelyEvents,
       optimizely,
+      optimizelyVariation,
       detailedPlacement,
       useReverb,
     ],
