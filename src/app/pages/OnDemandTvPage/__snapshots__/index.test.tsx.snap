@@ -1112,8 +1112,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
+  color: #F6F6F6;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1139,7 +1139,7 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
 .emotion-10 {
   display: block;
   font-weight: normal;
-  bottom: 0;
+  bottom: auto;
   position: absolute;
   padding: 0.5rem;
 }
@@ -1736,8 +1736,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
+  color: #F6F6F6;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1763,7 +1763,7 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
 .emotion-10 {
   display: block;
   font-weight: normal;
-  bottom: 0;
+  bottom: auto;
   position: absolute;
   padding: 0.5rem;
 }
