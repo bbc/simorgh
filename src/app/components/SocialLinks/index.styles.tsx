@@ -8,17 +8,16 @@ const IMAGE_SIZE_GROUP_4 = 67;
 
 const styles = {
   IMAGE_SIZE_GROUP_1,
-  container: () =>
+  container: ({ spacings }: Theme) =>
     css({
-      paddingTop: `${pixelsToRem(32)}rem`,
-      paddingBottom: `${pixelsToRem(32)}rem`,
+      marginTop: `${spacings.QUADRUPLE}rem`,
+      marginBottom: `${spacings.TRIPLE}rem`,
     }),
-  heading: ({ fontSizes, fontVariants }: Theme) =>
+  heading: ({ fontSizes, fontVariants, spacings }: Theme) =>
     css({
-      paddingTop: `${pixelsToRem(24)}rem`,
-      paddingBottom: `${pixelsToRem(32)}rem`,
       ...fontSizes.doublePica,
       ...fontVariants.sansBold,
+      marginBottom: `${spacings.TRIPLE}rem`,
     }),
   unorderedList: ({ spacings, mq }: Theme) =>
     css({
@@ -34,14 +33,20 @@ const styles = {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(4, 1fr)',
+        gap: `${spacings.DOUBLE}rem`,
       },
     }),
-  item: () =>
+  item: ({ spacings, mq }: Theme) =>
     css({
       position: 'relative',
       display: 'flex',
-      gap: '1rem',
+      minWidth: '0',
       alignItems: 'center',
+      gap: `${spacings.FULL}rem`,
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        gap: `${spacings.DOUBLE}rem`,
+      },
     }),
   image: ({ mq }: Theme) =>
     css({
@@ -64,11 +69,15 @@ const styles = {
         height: `${pixelsToRem(IMAGE_SIZE_GROUP_4)}rem`,
       },
     }),
-  link: ({ palette, fontVariants }: Theme) =>
+  link: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.GREY_10,
       textDecoration: 'none',
+      ...fontSizes.pica,
       ...fontVariants.sansBold,
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'collapse',
 
       '&:hover, &:focus, &:visited': {
         color: palette.GREY_6,

@@ -17,12 +17,6 @@ interface SocialLinksProps {
   summaries: Summary[];
 }
 
-/**
- * TODO:
- * 2. Section padding
- * 3. RTL feature
- */
-
 const SocialLink = ({ summary }: { summary: Summary }) => {
   const DEFAULT_IMAGE_SIZE = styles.IMAGE_SIZE_GROUP_1;
   const DEFAULT_IMAGE_SIZE_2X = DEFAULT_IMAGE_SIZE * 2;
@@ -57,14 +51,12 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
   );
 };
 
-const SocialLinks = ({ summaries, position, title }: SocialLinksProps) => {
+const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
   const hasMultipleItems = summaries.length > 1;
 
   const { dir } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
 
   console.group('📦 SocialLinks ');
-  console.log({ isRtl });
   console.log({ summaries });
   console.groupEnd();
 
@@ -78,17 +70,17 @@ const SocialLinks = ({ summaries, position, title }: SocialLinksProps) => {
         {title}
       </Heading>
       {hasMultipleItems ? (
-        <ul css={styles.unorderedList}>
+        <ul css={styles.unorderedList} dir={dir} role="list">
           {summaries.map(summary => {
             return (
-              <li css={styles.item}>
+              <li css={styles.item} role="listitem" key={summary.title}>
                 <SocialLink summary={summary} />
               </li>
             );
           })}
         </ul>
       ) : (
-        <div css={styles.item}>
+        <div css={styles.item} dir={dir}>
           <SocialLink summary={summaries[0]} />
         </div>
       )}

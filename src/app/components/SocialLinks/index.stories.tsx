@@ -64,3 +64,7 @@ export const SingleLink = () => (
 export const OddNumberOfLinks = () => (
   <Component curations={getSocialLinksData(5)} service="kyrgyz" />
 );
+
+export const RTLMultipleLinks = () => (
+  <Component curations={getSocialLinksData(5)} service="arabic" />
+);
