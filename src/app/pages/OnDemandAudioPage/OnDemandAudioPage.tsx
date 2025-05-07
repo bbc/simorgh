@@ -180,8 +180,7 @@ const OnDemandAudioPage = ({
           </main>
 
           {isPodcast && (
-            // remove div?
-            <div css={styles.externalLinks}>
+            <div css={styles.aside}>
               <PodcastExternalLinks
                 links={externalLinks}
                 brandTitle={brandTitle}
@@ -189,13 +188,14 @@ const OnDemandAudioPage = ({
             </div>
           )}
           {hasRecentEpisodes && (
-            // remove div?
-            <RecentAudioEpisodes
-              masterBrand={masterBrand}
-              episodes={recentEpisodes}
-              brandId={brandId}
-              pageType={pageType}
-            />
+            <div css={styles.aside}>
+              <RecentAudioEpisodes
+                masterBrand={masterBrand}
+                episodes={recentEpisodes}
+                brandId={brandId}
+                pageType={pageType}
+              />
+            </div>
           )}
           {radioScheduleData && (
             <RadioScheduleContainer

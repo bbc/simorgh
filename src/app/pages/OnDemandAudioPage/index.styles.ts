@@ -69,7 +69,7 @@ export default {
         gridColumn: '5 / span 12',
       },
     }),
-  externalLinks: () =>
+  aside: () =>
     css({
       display: 'inline-block',
       width: '100%',
