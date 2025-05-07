@@ -1,5 +1,11 @@
 import React from 'react';
 
+const sanitizeScript = (input: string) => {
+  const div = document.createElement('div');
+  div.appendChild(document.createTextNode(input));
+  return div.innerHTML;
+};
+
 export default ({
   script,
 }: {
@@ -11,5 +17,9 @@ export default ({
     inlineScript = `(${script.toString()})()`;
   }
 
-  return <script type="text/javascript">{inlineScript as string}</script>;
+  return (
+    <script type="text/javascript">
+      {sanitizeScript(inlineScript.toString())}
+    </script>
+  );
 };
