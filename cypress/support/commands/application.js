@@ -95,47 +95,6 @@ export const testResponseCodeAndTypeRetry = ({
   );
 };
 
-export const getPageData = ({ service, pageType, variant = 'default', id }) => {
-  // eslint-disable-next-line no-param-reassign
-  service = config[service]?.name || service;
-
-  const env = Cypress.env('APP_ENV');
-  const isNextJs = Cypress.env('isNextJs');
-  if (isNextJs) {
-    const bffUrl = `${process.env.BFF_PATH}?pageType=${pageType}&id=${id}&service=${service}${
-      variant !== 'default' ? `&variant=${variant}` : ''
-    }`;
-    return cy.request({
-      url: bffUrl,
-      headers: { 'ctx-service-env': 'test' },
-    });
-  }
-
-  if (env !== 'local') {
-    let ctxEnv = null;
-    if (pageType === 'topic') {
-      ctxEnv = Cypress.env('currentPath').includes('?renderer_env=test')
-        ? 'test'
-        : 'live';
-    }
-    const ctxServEnv = ctxEnv || env;
-
-    const assetId =
-      id || // passed in as an argument
-      getOptimoOrTipoId(Cypress.env('currentPath')) || // Extract Optimo or Tipo ID from the current path
-      `${Cypress.env('currentPath')}`; // Extract the current path as the asset ID (typically CPS pages)
-
-    const bffUrl = `${process.env.BFF_PATH}?pageType=${pageType}&id=${assetId}&service=${service}${
-      variant !== 'default' ? `&variant=${variant}` : ''
-    }`;
-    return cy.request({
-      url: bffUrl,
-      headers: { 'ctx-service-env': ctxServEnv },
-    });
-  }
-  return cy.request(`${Cypress.env('currentPath')}.json`);
-};
-
 export const getPageDataFromWindow = () => {
   cy.window().then(win => {
     const pageData = win.SIMORGH_DATA;
@@ -145,5 +104,4 @@ export const getPageDataFromWindow = () => {
 
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 Cypress.Commands.add('testResponseCodeAndTypeRetry', testResponseCodeAndType);
-Cypress.Commands.add('getPageData', getPageData);
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
