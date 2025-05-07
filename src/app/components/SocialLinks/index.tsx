@@ -63,10 +63,10 @@ const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
   return (
     <section
       role="region"
-      aria-labelledby={`useful-links-${position}`}
+      aria-labelledby={`social-links-${position}`}
       css={styles.container}
     >
-      <Heading level={2} id={`useful-links-${position}`} css={styles.heading}>
+      <Heading level={2} id={`social-links-${position}`} css={styles.heading}>
         {title}
       </Heading>
       {hasMultipleItems ? (
