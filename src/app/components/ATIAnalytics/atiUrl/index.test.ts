@@ -629,6 +629,30 @@ describe('Reverb', () => {
           isClick: true,
         });
       });
+
+      it('should add experiment fields if experimentVariant is present', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel({
+            ...input,
+            experimentVariant: 'variant_1',
+          });
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'impression',
+          componentName: 'top-stories',
+          container: '1234',
+          attribute: 'top-stories',
+          metadata: 'format',
+          placement: 'mundo.page',
+          source: 'advertiserID',
+          result: 'http://localhost',
+          isClick: false,
+          personalisation: {
+            EXP: 'mockFlagKey::variant_1',
+          },
+        });
+      });
     });
   });
 });
