@@ -12,7 +12,7 @@ describe('View tracking script', () => {
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
-  it('STATIC_ATI_VIEW_TRACKING tracking variable is correct', () => {
+  it('STATIC_ATI_VIEW_TRACKING variable is correct', () => {
     const viewTrackerString = viewTracker.toString();
 
     const pattern = /STATIC_ATI_VIEW_TRACKING = '([^']+)'/;
