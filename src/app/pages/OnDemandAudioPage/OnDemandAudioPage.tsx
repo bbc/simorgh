@@ -132,7 +132,6 @@ const OnDemandAudioPage = ({
             <div css={styles.flexWrapper}>
               <div css={styles.text}>
                 <StyledRadioHeadingContainer
-                  // @ts-expect-error idAttr is a string
                   idAttr={idAttr}
                   brandTitle={brandTitle}
                   episodeTitle={episodeTitle}
@@ -196,14 +195,14 @@ const OnDemandAudioPage = ({
               />
             </div>
           )}
-          {radioScheduleData && (
-            <RadioScheduleContainer
-              initialData={radioScheduleData}
-              toggleName="onDemandRadioSchedule"
-            />
-          )}
         </div>
       </div>
+      {radioScheduleData && (
+        <RadioScheduleContainer
+          initialData={radioScheduleData}
+          toggleName="onDemandRadioSchedule"
+        />
+      )}
     </>
   );
 };

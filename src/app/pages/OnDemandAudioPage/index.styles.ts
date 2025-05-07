@@ -4,16 +4,16 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 const showOnDemandImage = '22.4375rem';
 
 export default {
-  grid: ({ mq, gridWidths }: Theme) =>
+  grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(6, 1fr)',
-      columnGap: '0.5rem',
+      columnGap: `${spacings.FULL}rem`,
 
       [mq.GROUP_3_MIN_WIDTH]: {
-        columnGap: '1rem',
+        columnGap: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {

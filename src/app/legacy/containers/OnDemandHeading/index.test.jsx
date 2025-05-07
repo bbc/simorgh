@@ -73,6 +73,12 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     expect(container.querySelector('[tabIndex]')).toBeNull();
   });
 
+  it('should not have an empty id value when id is not provided', () => {
+    const { container } = render(<Component />);
+
+    expect(container.querySelector('[id]')).toBeNull();
+  });
+
   it('should have visually hidden comma so screenreaders pause when reading', () => {
     render(<Component />);
 
