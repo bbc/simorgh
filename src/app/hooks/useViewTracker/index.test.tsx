@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 import React, { createContext, ReactNode } from 'react';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   renderHook,
   act,
@@ -9,9 +10,9 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
+import useOptimizelyMvtVariation from '../useOptimizelyMvtVariation';
 import isLive from '../../lib/utilities/isLive';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import useViewTracker from '.';
@@ -77,6 +78,8 @@ jest.mock('../../lib/utilities/isLive', () => ({
   default: jest.fn(),
 }));
 
+jest.mock('#app/hooks/useOptimizelyMvtVariation', () => jest.fn());
+
 const {
   metadata: { atiAnalytics },
 } = fixtureData;
@@ -85,6 +88,8 @@ beforeEach(() => {
   jest.clearAllMocks();
   jest.useFakeTimers();
   console.error = jest.fn();
+
+  (useOptimizelyMvtVariation as jest.Mock).mockReturnValue(null);
 
   // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
@@ -125,6 +130,11 @@ const defaultToggles = {
   },
 };
 
+const defaultOptimizely = {
+  track: jest.fn(),
+  user: { attributes: { foo: 'bar' }, id: 'test' },
+} as unknown as ReactSDKClient;
+
 const reverbMock = {
   isReady: jest.fn(),
   initialise: jest.fn(() => Promise.resolve()),
@@ -141,26 +151,30 @@ const wrapper = ({
   atiData,
   children,
   toggles = defaultToggles,
+  mockOptimizely = defaultOptimizely,
 }: {
   atiData?: ATIData;
   children?: ReactNode | null;
   toggles?: Toggles;
+  mockOptimizely?: ReactSDKClient;
 }) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    pageType={STORY_PAGE}
-    isAmp={false}
-    service="pidgin"
-    pathname="/pidgin/tori-51745682"
-  >
-    <serviceContextModule.ServiceContextProvider service="pidgin">
-      <ToggleContextProvider toggles={toggles}>
-        <EventTrackingContextProvider atiData={atiData}>
-          {children}
-        </EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </serviceContextModule.ServiceContextProvider>
-  </RequestContextProvider>
+  <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.com"
+      pageType={STORY_PAGE}
+      isAmp={false}
+      service="pidgin"
+      pathname="/pidgin/tori-51745682"
+    >
+      <serviceContextModule.ServiceContextProvider service="pidgin">
+        <ToggleContextProvider toggles={toggles}>
+          <EventTrackingContextProvider atiData={atiData}>
+            {children}
+          </EventTrackingContextProvider>
+        </ToggleContextProvider>
+      </serviceContextModule.ServiceContextProvider>
+    </RequestContextProvider>
+  </OptimizelyProvider>
 );
 
 describe('useViewTracker', () => {
@@ -252,21 +266,14 @@ describe('useViewTracker', () => {
     });
 
     it('should use componentName property if provided in eventTrackingData object', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockUserId = 'test';
-      const mockAttributes = { foo: 'bar' };
-
-      const mockOptimizely = {
-        optimizely: {
-          track: mockOptimizelyTrack,
-          user: { attributes: mockAttributes, id: mockUserId },
-          getVariation: jest.fn(() => 'off'),
-        },
-      };
+      (useOptimizelyMvtVariation as jest.Mock).mockReturnValue('variation_a');
 
       const { result } = renderHook(
-        // @ts-expect-error partial data required for tests
-        () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+        () =>
+          useViewTracker({
+            ...trackingData,
+            sendOptimizelyEvents: true,
+          }),
         {
           wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
         },
@@ -293,14 +300,11 @@ describe('useViewTracker', () => {
 
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
       expect(options).toEqual({ threshold: [0.5] });
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-      expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
+      expect(defaultOptimizely.track).toHaveBeenCalledWith(
         'most-read-views',
-        mockUserId,
-        {
-          foo: 'bar',
-          viewed_wsoj: true,
-        },
+        defaultOptimizely.user.id,
+        { foo: 'bar' },
       );
     });
 
@@ -618,24 +622,10 @@ describe('useViewTracker', () => {
 
     describe('Optimizely', () => {
       it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
-        const mockOptimizelyTrack = jest.fn();
-        const mockUserId = 'test';
-        const mockAttributes = { foo: 'bar' };
-        const mockOverrideAttributes = {
-          ...mockAttributes,
-          [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
-        };
-        const mockOptimizely = {
-          optimizely: {
-            track: mockOptimizelyTrack,
-            user: { attributes: mockAttributes, id: mockUserId },
-            getVariation: jest.fn(() => 'off'),
-          },
-        };
+        (useOptimizelyMvtVariation as jest.Mock).mockReturnValue('variation_a');
 
         const { result } = renderHook(
-          // @ts-expect-error partial data for tests
-          () => useViewTracker({ ...trackingData, ...mockOptimizely }),
+          () => useViewTracker({ ...trackingData, sendOptimizelyEvents: true }),
           {
             wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
           },
@@ -662,11 +652,11 @@ describe('useViewTracker', () => {
 
         expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
         expect(options).toEqual({ threshold: [0.5] });
-        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
-        expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+        expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
+        expect(defaultOptimizely.track).toHaveBeenCalledWith(
           'most-read-views',
-          mockUserId,
-          mockOverrideAttributes,
+          defaultOptimizely.user.id,
+          defaultOptimizely.user.attributes,
         );
       });
 
