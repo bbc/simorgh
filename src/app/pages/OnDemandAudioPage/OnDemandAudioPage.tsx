@@ -129,9 +129,8 @@ const OnDemandAudioPage = ({
       <div css={styles.grid}>
         <div css={styles.contentWrapper}>
           <main role="main">
-            {/* flex opp direction */}
             <div css={styles.flexWrapper}>
-              <div css={styles.paragraph}>
+              <div css={styles.text}>
                 <StyledRadioHeadingContainer
                   // @ts-expect-error idAttr is a string
                   idAttr={idAttr}
