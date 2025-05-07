@@ -11,7 +11,7 @@ exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel excluding
 />
 `;
 
-exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/"`;
+exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
 
 exports[`Canonical Korean Live Radio Page Analytics ATI tracking pixel search params 1`] = `
 [
