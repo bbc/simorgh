@@ -5,7 +5,6 @@ import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-// import Grid, { GelPageGrid } from '#components/Grid';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import EpisodeImage from '#containers/OnDemandImage';
@@ -30,22 +29,6 @@ import LinkedData from '../../components/LinkedData';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
-
-const getGroups = (
-  zero: number | boolean,
-  one: number | boolean,
-  two: number | boolean,
-  three: number | boolean,
-  four: number | boolean,
-  five: number | boolean,
-) => ({
-  group0: zero,
-  group1: one,
-  group2: two,
-  group3: three,
-  group4: four,
-  group5: five,
-});
 
 export interface OnDemandAudioProps {
   pageData: {
@@ -109,8 +92,7 @@ const OnDemandAudioPage = ({
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const { dir, serviceName } = useContext(ServiceContext);
-  const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
+  const { serviceName } = useContext(ServiceContext);
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle

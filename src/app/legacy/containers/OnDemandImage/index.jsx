@@ -32,8 +32,8 @@ const smallImageSize = 128;
 const mediumImageSize = 256;
 const largeImageSize = 480;
 
-const OnDemandImage = ({ imageUrl, alt: altFromProps, dir = 'ltr' }) => {
-  const { defaultImageAltText } = useContext(ServiceContext);
+const OnDemandImage = ({ imageUrl, alt: altFromProps }) => {
+  const { defaultImageAltText, dir } = useContext(ServiceContext);
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
 
