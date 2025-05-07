@@ -114,8 +114,8 @@ export const HOME_PAGE_CONFIG: {
     live: 'ck3yk9nz25qt',
   },
   polska: {
-    test: 'cpqr492886k4t',
-    live: '',
+    test: 'cyk5qnl3jd3xt',
+    live: 'c7vn395n0q9t',
   },
   portuguese: {
     test: 'c7pe2jj9l7mt',
