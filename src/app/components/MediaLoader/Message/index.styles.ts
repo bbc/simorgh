@@ -20,11 +20,11 @@ export default {
         backgroundColor: 'transparent',
       },
     }),
-  message: ({ spacings, mq, isDarkUi }: Theme) =>
+  message: ({ spacings, mq }: Theme) =>
     css({
       display: 'block',
       fontWeight: 'normal',
-      bottom: isDarkUi ? 'auto' : 0,
+      bottom: 0,
       position: 'absolute',
       padding: `${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
