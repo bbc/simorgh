@@ -127,17 +127,12 @@ export const youtubeBlockEmbed = {
           oembed: {
             title:
               'Rick Astley - Never Gonna Give You Up (Official Music Video)',
-            author_name: 'Rick Astley',
-            author_url: 'https://www.youtube.com/user/BBCMundo',
             type: 'video',
             height: 113,
             width: 200,
             version: '1.0',
             provider_name: 'YouTube',
             provider_url: 'https://www.youtube.com/',
-            thumbnail_height: 360,
-            thumbnail_width: 480,
-            thumbnail_url: 'https://i.ytimg.com/vi/chiWVxreqhU/hqdefault.jpg',
             html: '<iframe width="200" height="113" src="https://www.youtube.com/embed/1e05_rwHvOM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
           },
         },

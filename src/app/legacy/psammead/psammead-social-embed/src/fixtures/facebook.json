@@ -4,8 +4,6 @@
   "embed": {
     "oembed": {
       "version": "1.0",
-      "author_name": "BBC News Marathi",
-      "author_url": "https://www.facebook.com/BBCnewsMarathi/",
       "provider_name": "Facebook",
       "provider_url": "https://www.facebook.com",
       "url": "https://www.facebook.com/BBCnewsMarathi/videos/568952960644257",
