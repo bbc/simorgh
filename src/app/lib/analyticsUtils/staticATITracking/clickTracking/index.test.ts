@@ -56,6 +56,18 @@ describe('Click tracking script', () => {
     });
   });
 
+  it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
+    const clickTrackerString = clickTracking.toString();
+
+    const pattern = /STATIC_ATI_CLICK_TRACKING = '([^']+)'/;
+
+    const matches = clickTrackerString.match(pattern) || [];
+    const [, staticAtiClickTracking] = matches;
+
+    // STATIC_ATI_CLICK_TRACKING in ./index.ts must match the value of STATIC_ATI_CLICK_TRACKING in #app/lib/analyticsUtils/analytics.const
+    expect(staticAtiClickTracking).toBe(STATIC_ATI_CLICK_TRACKING);
+  });
+
   it('Redirects all clicks', () => {
     const anchorElement = createAnchor({
       href: '/gahuza',
