@@ -1,6 +1,6 @@
-import processClientDeviceAndSendStaticBeacon from '.';
+import addProcessClientDeviceAndSendStaticBeaconToWindow from '.';
 
-describe('processClientDeviceAndSendStaticBeacon script', () => {
+describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   const originalWindowLocation = window.location;
   const testSystemTime = new Date('2024-11-13T16:30:02.000Z');
   const testHour = testSystemTime.getHours();
@@ -18,7 +18,7 @@ describe('processClientDeviceAndSendStaticBeacon script', () => {
         mockCookie = cookieValue;
       },
     });
-    processClientDeviceAndSendStaticBeacon();
+    addProcessClientDeviceAndSendStaticBeaconToWindow();
   });
 
   beforeEach(() => {
