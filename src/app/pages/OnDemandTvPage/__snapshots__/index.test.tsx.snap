@@ -1139,7 +1139,7 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
 .emotion-10 {
   display: block;
   font-weight: normal;
-  bottom: auto;
+  bottom: 0;
   position: absolute;
   padding: 0.5rem;
 }
@@ -1763,7 +1763,7 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
 .emotion-10 {
   display: block;
   font-weight: normal;
-  bottom: auto;
+  bottom: 0;
   position: absolute;
   padding: 0.5rem;
 }
