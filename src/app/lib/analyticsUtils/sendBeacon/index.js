@@ -68,6 +68,7 @@ const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
     item,
     group,
     event,
+    personalisation,
     anchorElement,
     originalEvent,
     isClick,
@@ -75,8 +76,8 @@ const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
 
   const actionName = isLive() ? componentName : '';
   const actionAdditionalLabels = isLive()
-    ? { container, attribute, placement, source, result }
-    : { item, group, event };
+    ? { attribute, container, personalisation, placement, result, source }
+    : { event, group, item };
 
   return reverbInstance.userActionEvent(
     eventPublisher,
