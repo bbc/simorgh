@@ -392,6 +392,7 @@ export const pashto = reithQalamStyles;
 export const persian = reithQalamStyles;
 export const pidgin = helmetFontStyles;
 export const portuguese = latinReithFontStyles;
+export const polska = latinReithFontStyles;
 export const punjabi = punjabiStyles;
 export const russian = latinReithFontStyles;
 export const scotland = latinReithFontStyles;
