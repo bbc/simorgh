@@ -4,10 +4,6 @@
 // NB:
 // - Default timeout for cy.request is 50s
 // - Certain types of network error are retried automatically (retryOnNetworkFailure)
-import config from '../config/services';
-
-const getOptimoOrTipoId = path => path.match(/(c[a-zA-Z0-9]{10}(o|t))/)?.[1];
-
 export const testResponseCodeAndType = ({
   path,
   responseCode,

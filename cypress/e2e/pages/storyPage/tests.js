@@ -1,8 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import paths from 'ramda/src/paths';
-import getDataUrl from '../../../support/helpers/getDataUrl';
 import { crossPlatform as mostReadAssertions } from '../mostReadPage/mostReadAssertions';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 
@@ -16,16 +13,6 @@ const isArticleLessThanTwoYearsOld = () => {
       const isNewArticle = Number(fullDate.split('-')[0]) > Number(twoYearsAgo);
       return isNewArticle && getAppEnv() === 'live';
     });
-};
-
-const getContentBlocks = body => {
-  const contentBlock = body.data.article.content;
-
-  const [cpsAssetBlocks, cafBlocks] = paths(
-    [['blocks'], ['model', 'blocks']],
-    contentBlock,
-  );
-  return cpsAssetBlocks || cafBlocks;
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
