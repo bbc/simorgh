@@ -102,7 +102,7 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
   const env = Cypress.env('APP_ENV');
   const isNextJs = Cypress.env('isNextJs');
   if (isNextJs) {
-    const bffUrl = `https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${id}&service=${service}${
+    const bffUrl = `${process.env.BFF_PATH}?pageType=${pageType}&id=${id}&service=${service}${
       variant !== 'default' ? `&variant=${variant}` : ''
     }`;
     return cy.request({
@@ -125,9 +125,7 @@ export const getPageData = ({ service, pageType, variant = 'default', id }) => {
       getOptimoOrTipoId(Cypress.env('currentPath')) || // Extract Optimo or Tipo ID from the current path
       `${Cypress.env('currentPath')}`; // Extract the current path as the asset ID (typically CPS pages)
 
-    const bffUrl = `https://web-cdn.${
-      env === 'live' ? '' : `${env}.`
-    }api.bbci.co.uk/fd/simorgh-bff?pageType=${pageType}&id=${assetId}&service=${service}${
+    const bffUrl = `${process.env.BFF_PATH}?pageType=${pageType}&id=${assetId}&service=${service}${
       variant !== 'default' ? `&variant=${variant}` : ''
     }`;
     return cy.request({
