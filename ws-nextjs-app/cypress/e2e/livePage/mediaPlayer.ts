@@ -12,12 +12,7 @@ export default () => {
     });
 
     it('should render a visible guidance message', () => {
-      cy.get('[data-e2e="media-loader__container"]')
-        .first()
-        .within(() => {
-          // Check for video with guidance message
-          cy.get('[data-e2e="media-loader__guidance"]').should('exist');
-        });
+      cy.get('[data-e2e="media-player__guidance"]').should('exist');
     });
 
     it('should have a visible play button and valid duration', () => {
