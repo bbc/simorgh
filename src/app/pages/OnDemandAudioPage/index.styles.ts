@@ -1,28 +1,33 @@
 import { css, Theme } from '@emotion/react';
-import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
-export const GROUP_1_FROM_360PX_AND_GROUP_2 = `@media (min-width: 22.5rem) and (max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
+const showOnDemandImage = '22.4375rem';
 
 export default {
-  wrapper: ({ mq, spacings }: Theme) =>
+  flexWrapper: ({ mq, spacings }: Theme) =>
     css({
+      display: 'flex',
+      flexDirection: 'row-reverse',
       [mq.GROUP_4_MIN_WIDTH]: {
         paddingTop: `${spacings.TRIPLE}rem`,
       },
     }),
-  paragraph: () =>
+  paragraph: ({ mq }: Theme) =>
     css({
-      [GROUP_1_FROM_360PX_AND_GROUP_2]: {
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gridColumnEnd: 'span 4',
+      flex: '4 1 0',
+      [`@media (min-width: ${showOnDemandImage})`]: {
+        paddingInlineStart: '0.5rem',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        paddingInlineStart: '1rem',
       },
     }),
   image: () =>
     css({
-      [GROUP_1_FROM_360PX_AND_GROUP_2]: {
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gridColumnEnd: 'span 2',
+      display: 'none',
+      [`@media (min-width: ${showOnDemandImage})`]: {
+        display: 'unset',
+        flex: '2 1 0',
       },
     }),
   grid: ({ mq, gridWidths }: Theme) =>
@@ -63,5 +68,10 @@ export default {
       [mq.GROUP_5_MIN_WIDTH]: {
         gridColumn: '5 / span 12',
       },
+    }),
+  externalLinks: () =>
+    css({
+      display: 'inline-block',
+      width: '100%',
     }),
 };

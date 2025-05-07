@@ -148,7 +148,7 @@ const OnDemandAudioPage = ({
         <div css={styles.contentWrapper}>
           <main role="main">
             {/* flex opp direction */}
-            <div css={styles.wrapper}>
+            <div css={styles.flexWrapper}>
               <div css={styles.paragraph}>
                 <StyledRadioHeadingContainer
                   // @ts-expect-error idAttr is a string
@@ -199,7 +199,7 @@ const OnDemandAudioPage = ({
 
           {isPodcast && (
             // remove div?
-            <div>
+            <div css={styles.externalLinks}>
               <PodcastExternalLinks
                 links={externalLinks}
                 brandTitle={brandTitle}
@@ -208,14 +208,12 @@ const OnDemandAudioPage = ({
           )}
           {hasRecentEpisodes && (
             // remove div?
-            <div>
-              <RecentAudioEpisodes
-                masterBrand={masterBrand}
-                episodes={recentEpisodes}
-                brandId={brandId}
-                pageType={pageType}
-              />
-            </div>
+            <RecentAudioEpisodes
+              masterBrand={masterBrand}
+              episodes={recentEpisodes}
+              brandId={brandId}
+              pageType={pageType}
+            />
           )}
           {radioScheduleData && (
             <RadioScheduleContainer
