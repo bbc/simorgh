@@ -30,7 +30,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     detailedPlacement,
     producerName,
     preventNavigation,
-    optimizelyMetricNameOverride,
     sendOptimizelyEvents,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
@@ -73,11 +72,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
             const overrideAttributes = optimizely?.user.attributes;
 
-            optimizely?.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_clicks`
-                : 'component-clicks',
-              optimizely?.user.id,
+            optimizely.track(
+              `${componentName}-clicks`,
+              optimizely.user.id,
               overrideAttributes,
             );
           }
@@ -129,10 +126,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       url,
       advertiserID,
       format,
-      optimizely,
-      optimizelyMetricNameOverride,
-      optimizelyVariation,
       sendOptimizelyEvents,
+      optimizely,
+      optimizelyVariation,
       detailedPlacement,
       useReverb,
     ],

@@ -10,7 +10,6 @@ export type EventTrackingMetadata = {
   detailedPlacement?: string;
   campaignID?: string;
   advertiserID?: string;
-  optimizelyMetricNameOverride?: string;
   sendOptimizelyEvents?: boolean;
 };
 
