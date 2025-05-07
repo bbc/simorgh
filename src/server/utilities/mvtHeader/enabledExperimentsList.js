@@ -9,16 +9,8 @@ Add enabled experiments objects inside this array in this format:
 */
 const enabledExperimentList = [
   {
-    name: 'newswb_ws_topbarojs',
-    services: [
-      'gujarati',
-      'hindi',
-      'marathi',
-      'punjabi',
-      'tamil',
-      'telugu',
-      'urdu',
-    ],
+    name: 'header_a_a_test',
+    services: ['hindi', 'urdu'],
     pageTypes: ['article'],
   },
 ];
