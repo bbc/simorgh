@@ -29,7 +29,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     producerName,
     preventNavigation,
     optimizely,
-    optimizelyMetricNameOverride,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -72,9 +71,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
             };
 
             optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_clicks`
-                : 'component_clicks',
+              `${componentName}-clicks`,
               optimizely.user.id,
               overrideAttributes,
             );
@@ -131,7 +128,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       advertiserID,
       format,
       optimizely,
-      optimizelyMetricNameOverride,
       detailedPlacement,
       useReverb,
     ],
