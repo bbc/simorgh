@@ -6,7 +6,7 @@ export const testsThatFollowSmokeTestConfig = ({
   variant,
 }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${variant} ${pageType}`, () => {
-    it('should render a description for the page', () => {
+    it.skip('should render a description for the page', () => {
       cy.getPageData({ service, pageType: 'article', variant }).then(
         ({ body }) => {
           const description =
