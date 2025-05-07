@@ -10,16 +10,16 @@ import PortraitVideoModal from '../PortraitVideoModal';
 
 export interface PortraitVideoItem {
   id: string;
-  headlines: {
-    promoHeadline: string;
+  headlines?: {
+    promoHeadline?: string;
   };
-  link: {
+  link?: {
     path: string;
   };
-  images: {
+  images?: {
     url: string;
     urlTemplate?: string;
-    altText: string;
+    altText?: string;
   }[];
   video?: {
     id: string;
