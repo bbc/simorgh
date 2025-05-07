@@ -48,7 +48,15 @@ const ampTestSuites = testSuites.map(testSuite => {
   };
 });
 
+const liteTestSuites = testSuites.map(testSuite => {
+  return {
+    ...testSuite,
+    path: `${testSuite.path}.lite`,
+    tests: [crossPlatformTests],
+  };
+});
+
 runTestsForPage({
   pageType,
-  testSuites: [...testSuites, ...ampTestSuites],
+  testSuites: [...testSuites, ...ampTestSuites, ...liteTestSuites],
 });
