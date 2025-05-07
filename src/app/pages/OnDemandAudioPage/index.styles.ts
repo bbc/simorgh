@@ -25,13 +25,13 @@ export default {
         gridTemplateColumns: 'repeat(20, 1fr)',
       },
     }),
-  contentWrapper: ({ mq }: Theme) =>
+  contentWrapper: ({ mq, spacings }: Theme) =>
     css({
       gridColumn: '1 / span 6',
-      padding: '0 0.5rem',
+      padding: `0 ${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: '0 1rem',
+        padding: `0 ${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -51,14 +51,14 @@ export default {
         paddingTop: `${spacings.TRIPLE}rem`,
       },
     }),
-  text: ({ mq }: Theme) =>
+  text: ({ mq, spacings }: Theme) =>
     css({
       flex: '4 1 0',
       [`@media (min-width: ${showOnDemandImage})`]: {
-        paddingInlineStart: '0.5rem',
+        paddingInlineStart: `${spacings.FULL}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        paddingInlineStart: '1rem',
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
       },
     }),
   image: () =>
