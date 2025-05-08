@@ -44,7 +44,6 @@ describe('LiteButton', () => {
     expect(helmet.scriptTags).toHaveLength(1);
 
     const script = helmet.scriptTags[0].innerHTML;
-
     expect(script).toMatchSnapshot();
   });
 });

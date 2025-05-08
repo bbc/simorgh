@@ -3,12 +3,23 @@ import { Helmet } from 'react-helmet';
 
 type Script = string | (() => void);
 
-const generateScript = (script: Script, elementId: string) => `
+const generateScript = (script: Script, elementId: string) => {
+  if (typeof script === 'string') {
+    return `
+      window.addEventListener("load", function(event) {
+        var button = document.getElementById('${elementId}');
+        button.addEventListener('click', function() {${script}});
+      });
+    `;
+  }
+
+  return `
     window.addEventListener("load", function(event) {
       var button = document.getElementById('${elementId}');
       button.addEventListener('click', ${script});
     });
   `;
+};
 
 export const LiteButton = ({
   children,
