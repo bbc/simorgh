@@ -9,9 +9,8 @@ import sendPageViewBeaconLite, {
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
-import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
-import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
 import trackingPixelUrl from './getNoScriptTrackingPixelUrl';
+import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
