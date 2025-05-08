@@ -17,14 +17,6 @@ export interface Translations {
   topicsPath?: string;
   relatedTopics?: string;
   navMenuText: string;
-  liteSite?: {
-    onboardingMessage: string;
-    toMainSite: string;
-    informationPage: string;
-    informationPageLink: string;
-    dataSaving: string;
-    articleDataSavingLinkText: string;
-  };
   easyReadSite?: {
     toStandardSite: string;
     toEasySite: string;
@@ -35,6 +27,7 @@ export interface Translations {
     learnMore: string;
     learnMoreLink: string;
   };
+  liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
@@ -295,3 +288,12 @@ export type UgcTranslations = {
   closedHeading: string;
   closedDescription: string;
 };
+
+export interface LiteSiteTranslations {
+  onboardingMessage: string;
+  toMainSite: string;
+  informationPage: string;
+  informationPageLink?: string;
+  dataSaving: string;
+  articleDataSavingLinkText?: string;
+}

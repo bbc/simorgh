@@ -5,7 +5,7 @@ import {
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
 } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/navigation';
-import { assertLiteSiteCTAComponentClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteCta';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
@@ -49,7 +49,7 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
       !test.name.toLowerCase().includes('click'),
   );
 
-  liteSiteTests.push(assertLiteSiteCTAComponentClick);
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
   return {
     ...testSuite,

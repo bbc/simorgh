@@ -1,7 +1,7 @@
 import React from 'react';
 import { suppressPropWarnings } from '../../../legacy/psammead/psammead-test-helpers/src';
 import { render } from '../../react-testing-library-with-providers';
-import fixture from './fixtures';
+import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';

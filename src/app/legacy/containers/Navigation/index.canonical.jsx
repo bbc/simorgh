@@ -18,17 +18,16 @@ const ScrollableWrapper = styled.div`
 const Divider = styled.div`
   position: absolute;
   width: calc(100vw - 0.8rem);
-  left: 0;
+  inset-inline-start: 0;
   @media (min-width: 1041px) {
     width: calc(100vw + 0.8rem);
-    left: calc(-1 * (100vw - 1014px) / 2);
+    inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
-    left: -0.8rem;
+    inset-block-end: 0;
+    inset-inline: -0.8rem 0;
     width: calc(100% + 0.8rem);
     border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
   }
