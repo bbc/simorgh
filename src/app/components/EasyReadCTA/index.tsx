@@ -15,8 +15,6 @@ import { FormatIcon } from '../icons';
 type CtaLinkProps = {
   href: string;
   text: string;
-  ignoreLiteExtension?: boolean;
-  className?: string;
   selected?: boolean;
 };
 
@@ -33,13 +31,12 @@ const eventTrackingData = {
   componentName: 'easyReadCta',
 };
 
-const CtaLink = ({ href, text, className, selected = false }: CtaLinkProps) => {
+const CtaLink = ({ href, text, selected = false }: CtaLinkProps) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
     <a
       href={href}
-      className={className}
       css={styles.linkContainer}
       {...clickTrackerHandler}
       {...(selected && { 'aria-current': 'page' })}

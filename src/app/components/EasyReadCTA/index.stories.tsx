@@ -1,8 +1,9 @@
 import React from 'react';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import EasyReadCTA from '.';
+import readme from './README.md';
 
-export const Component = () => (
+export const Standard = () => (
   <RequestContextProvider
     pathname="/mundo/afrique/cdwrpl7qwqqo"
     pageType="article"
@@ -15,7 +16,7 @@ export const Component = () => (
   </RequestContextProvider>
 );
 
-export const EasyComponent = () => (
+export const Easy = () => (
   <RequestContextProvider
     pathname="/mundo/afrique/cdwrpl7qwqqo"
     pageType="article"
@@ -27,5 +28,8 @@ export const EasyComponent = () => (
 
 export default {
   title: 'Components/EasyReadCTA',
-  Component,
+  Standard,
+  parameters: {
+    docs: { readme },
+  },
 };
