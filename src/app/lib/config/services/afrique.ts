@@ -70,7 +70,7 @@ export const service: DefaultServiceConfig = {
         easySite: 'Facile à lire',
         standardSite: 'Standard',
         format: 'Version',
-        aIDisclaimer: `Ce facile à lire a été vérifié par un journaliste. Il a été créé avec l'IA (intelligence artificielle) à partir de la version standard. En savoir plus sur la version facile à lire.`,
+        aIDisclaimer: `Ce facile à lire a été vérifié par un journaliste. Il a été créé avec l'IA (intelligence artificielle) à partir de la version standard.`,
         learnMore: 'En savoir plus sur la version facile à lire',
         learnMoreLink: 'https://www.bbc.co.uk/',
       },
