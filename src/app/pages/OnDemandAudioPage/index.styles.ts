@@ -51,23 +51,20 @@ export default {
         paddingTop: `${spacings.TRIPLE}rem`,
       },
     }),
-  text: ({ mq, spacings }: Theme) =>
+  text: () =>
     css({
       flex: '7 1 0',
-
-      [`@media (min-width: ${showOnDemandImage})`]: {
-        paddingInlineStart: `${spacings.FULL}rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        paddingInlineStart: `${spacings.DOUBLE}rem`,
-      },
     }),
-  image: () =>
+  image: ({ mq, spacings }: Theme) =>
     css({
       display: 'none',
       [`@media (min-width: ${showOnDemandImage})`]: {
         display: 'unset',
         flex: '3 1 0',
+        marginInlineEnd: `${spacings.FULL}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginInlineEnd: `${spacings.DOUBLE}rem`,
       },
     }),
   aside: () =>
