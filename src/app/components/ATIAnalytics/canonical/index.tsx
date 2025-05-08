@@ -3,7 +3,11 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import sendPageViewBeaconLite, {
+  addSendStaticBeaconToWindow,
+} from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
+import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
 import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
 import { addSendStaticBeaconToWindow, sendStaticBeacon } from './staticBeacon';
@@ -30,32 +34,8 @@ const renderNoScriptTrackingPixel = (
   );
 };
 
-const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconOperaMiniScript(atiPageViewUrlString);
-
-  return (
-    <Helmet>
-      <script type="text/javascript">{script}</script>
-    </Helmet>
-  );
-};
-
-const addStaticBeaconScript = () => {
-  const script = addSendStaticBeaconToWindow();
-  return (
-    <Helmet>
-      <script type="text/javascript">{script}</script>
-    </Helmet>
-  );
-};
-
-const sendStaticBeaconScript = (atiPageViewUrlString: string) => {
-  const script = sendStaticBeacon(atiPageViewUrlString);
-  return (
-    <Helmet>
-      <script type="text/javascript">{script}</script>
-    </Helmet>
-  );
+const addScript = (script: string) => {
+  return <Helmet>{addInlineScript({ script })}</Helmet>;
 };
 
 const CanonicalATIAnalytics = ({
@@ -78,9 +58,9 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addStaticBeaconScript()}
-      {isLite && sendStaticBeaconScript(atiPageViewUrlString)}
-      {!isLite && addOperaMiniExtremeScript(atiPageViewUrlString)}
+      {addScript(addSendStaticBeaconToWindow())}
+      {isLite && addScript(sendPageViewBeaconLite(atiPageViewUrlString))}
+      {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );

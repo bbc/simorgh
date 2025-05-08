@@ -1,4 +1,5 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import isLive from '../../../lib/utilities/isLive';
 import {
   getDestination,
@@ -442,6 +443,7 @@ export const buildReverbAnalyticsModel = ({
   statsDestination,
   timePublished,
   timeUpdated,
+  experimentVariant,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -480,6 +482,10 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
+          ...(experimentVariant && {
+            mv_test: OPTIMIZELY_CONFIG.flagKey,
+            mv_creation: `${experimentVariant}`,
+          }),
         },
       },
       user: {
@@ -502,6 +508,7 @@ export const buildReverbPageSectionEventModel = ({
   type,
   advertiserID,
   url,
+  experimentVariant,
 }: ATIEventTrackingProps) => {
   const eventDetails = isLive()
     ? {
@@ -512,9 +519,14 @@ export const buildReverbPageSectionEventModel = ({
         attribute: componentName,
         metadata: format,
         placement: pageIdentifier,
+        isClick: type === 'click',
         ...(advertiserID && { source: advertiserID }),
         ...(url && { result: url }),
-        isClick: type === 'click',
+        ...(experimentVariant && {
+          personalisation: {
+            EXP: `${OPTIMIZELY_CONFIG.flagKey}::${experimentVariant}`,
+          },
+        }),
       }
     : {
         eventName: type === 'view' ? 'sectionView' : 'sectionClick',
@@ -532,6 +544,11 @@ export const buildReverbPageSectionEventModel = ({
           action: type === 'click' ? 'select' : 'view',
         },
         isClick: type === 'click',
+        ...(experimentVariant && {
+          experience: {
+            engine_id: `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
+          },
+        }),
       };
 
   return {
