@@ -43,7 +43,6 @@ const ContinueReadingButton = ({
     }
 
     event.preventDefault();
-    clickTrackerHandler(event as React.MouseEvent<HTMLButtonElement>);
     setShowAllContent();
   };
 
@@ -102,6 +101,7 @@ const ContinueReadingButton = ({
       onTouchStart={handleEvent}
       data-testid="read-more-button"
       ref={viewRef}
+      {...clickTrackerHandler}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>
       {variation === 'B' && <TriangleDown />}
