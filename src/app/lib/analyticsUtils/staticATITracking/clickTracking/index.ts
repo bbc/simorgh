@@ -1,5 +1,7 @@
+/* istanbul ignore next */
 export default () => {
   const clickTrackingFiredUrls: string[] = [];
+  const STATIC_ATI_CLICK_TRACKING = 'data-static-ati-click';
 
   document.addEventListener('click', (event: MouseEvent) => {
     let targetElement;
@@ -18,7 +20,7 @@ export default () => {
       event.stopPropagation();
       event.preventDefault();
 
-      const atiURL = targetElement.getAttribute('data-static-ati-click');
+      const atiURL = targetElement.getAttribute(STATIC_ATI_CLICK_TRACKING);
       const anchorElement = targetElement as HTMLAnchorElement;
       const nextPageUrl = anchorElement?.href;
 
