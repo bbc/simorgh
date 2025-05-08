@@ -72,7 +72,7 @@ const liteTestSuites = [
     tests,
   },
   {
-    path: '/afaanoromoo/oduu-41217768.lite',
+    path: '/arabic/art-and-culture-38260491.lite',
     runforEnv: 'local',
     pageType: 'CPS Photo Gallery (PGL)',
     tests,
@@ -96,7 +96,7 @@ const liteTestSuites = [
     tests,
   },
   {
-    path: '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv.lite',
+    path: '/urdu/bbc_urdu_tv/tv/w172xtwkxr1xtlz.lite',
     runforEnv: 'local',
     pageType: 'On Demand TV - Episode',
     tests,

@@ -3,10 +3,11 @@
     "metadata": {
       "type": "On Demand TV",
       "atiAnalytics": {
-        "pageIdentifier": "urdu.bbc_urdu_tv.tv.w172xctrrk6t25t.page",
+        "pageIdentifier": "urdu.bbc_urdu_tv.tv.w172xtwkxr1xtlz.page",
         "contentType": "player-episode",
         "pageTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ - BBC News اردو",
-        "contentId": "urn:bbc:pips:w172xctrrk6t25t"
+        "language": "ur",
+        "contentId": "urn:bbc:pips:w172xtwkxr1xtlz"
       }
     },
     "language": "ur",
@@ -15,32 +16,23 @@
     "headline": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
     "shortSynopsis": "سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر۔",
     "mediumSynopsis": "سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر۔",
-    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_tv/w172xctrrk6t25t",
+    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_tv/w172xtwkxr1xtlz",
     "brandId": "w13xttn1",
-    "episodeId": "w172xctrrk6t25t",
+    "episodeId": "w172xtwkxr1xtlz",
     "masterBrand": "bbc_urdu_tv",
-    "releaseDateTimeStamp": "2020-12-21T00:00:00.000Z",
+    "releaseDateTimeStamp": "2021-08-26T00:00:00.000Z",
     "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
     "imageAltText": null,
     "promoBrandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-    "durationISO8601": null,
+    "durationISO8601": "PT10M5S",
     "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23yf.png",
-    "episodeAvailability": "expired",
+    "episodeAvailability": "available",
     "recentEpisodes": [
       {
         "id": "w172xtwkxr20qj2",
         "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
         "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
         "timestamp": "2021-08-27T00:00:00.000Z",
-        "duration": "PT10M5S",
-        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
-        "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
-      },
-      {
-        "id": "w172xtwkxr1xtlz",
-        "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-        "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-        "timestamp": "2021-08-26T00:00:00.000Z",
         "duration": "PT10M5S",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
         "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
@@ -190,19 +182,28 @@
         "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
       },
       {
-        "id": "w172xtwjty3dkz8",
+        "id": "w172xtwjgnsx42q",
         "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
         "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-        "timestamp": "2021-08-03T00:00:00.000Z",
+        "timestamp": "2021-07-30T00:00:00.000Z",
         "duration": "PT10M5S",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
         "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
       },
       {
-        "id": "w172xtwjty39p25",
+        "id": "w172xtwjgnst75m",
         "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
         "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
-        "timestamp": "2021-08-02T00:00:00.000Z",
+        "timestamp": "2021-07-29T00:00:00.000Z",
+        "duration": "PT10M5S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
+        "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
+      },
+      {
+        "id": "w172xtwjgnsqb8j",
+        "brandTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
+        "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
+        "timestamp": "2021-07-28T00:00:00.000Z",
         "duration": "PT10M5S",
         "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b23yf.png",
         "altText": "سیربین ٹی وی پروگرام آن ڈیمانڈ"
@@ -212,7 +213,7 @@
       {
         "type": "tv",
         "model": {
-          "id": "w172xctrrk6t25t",
+          "id": "w172xtwkxr1xtlz",
           "subType": "episode",
           "format": "Video",
           "title": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
@@ -224,8 +225,24 @@
           "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
           "embedding": false,
           "advertising": false,
-          "versions": [],
-          "availability": "notAvailable",
+          "versions": [
+            {
+              "versionId": "w1msj186ylmhn8v",
+              "types": ["Original"],
+              "duration": 605,
+              "durationISO8601": "PT10M5S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": false,
+                "nonUk": false,
+                "world": true
+              },
+              "availableFrom": "2021-08-26T14:10:05.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
           "smpKind": "programme",
           "episodeTitle": "سیربین ٹی وی پروگرام آن ڈیمانڈ",
           "type": "media"
@@ -235,7 +252,7 @@
         "type": "mediaOverrides",
         "model": {
           "language": "ur",
-          "pageIdentifierOverride": "urdu.bbc_urdu_tv.tv.w172xctrrk6t25t.page"
+          "pageIdentifierOverride": "urdu.bbc_urdu_tv.tv.w172xtwkxr1xtlz.page"
         }
       }
     ]
