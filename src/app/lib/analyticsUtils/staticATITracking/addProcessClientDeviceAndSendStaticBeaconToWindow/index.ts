@@ -15,18 +15,19 @@ export default () => {
       // COOKIE SETTINGS
       const cookieName = 'atuserid';
       const expires = 397; // expires in 13 months
-      const cookiesForPage = `; ${document.cookie}`;
-      const atUserIdCookie = cookiesForPage.split(`; ${cookieName}=`);
-      let user: { val: null | string } = { val: null };
 
-      if (atUserIdCookie.length === 2) {
-        const cookieInfo = atUserIdCookie.pop()?.split(';').shift();
-
-        if (cookieInfo) {
-          const decodedCookie = decodeURIComponent(cookieInfo);
-          user = JSON.parse(decodedCookie);
+      const getAtUserIdFromCookie = () => {
+        try {
+          const match = document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/);
+          return match
+            ? JSON.parse(decodeURIComponent(match[1]))
+            : { val: null };
+        } catch {
+          return { val: null };
         }
-      }
+      };
+
+      const user = getAtUserIdFromCookie();
 
       if (!user.val && window.crypto && crypto.randomUUID) {
         user.val = crypto.randomUUID();
