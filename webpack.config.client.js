@@ -199,6 +199,12 @@ module.exports = ({
         emitError: true,
         // Display full duplicates information? (Default: `false`)
         verbose: true,
+        exclude({ name, path }) {
+          return (
+            name === '@babel/runtime' &&
+            path === './~/@emotion/react/~/@babel/runtime'
+          );
+        },
       }),
       /*
        * webpack 5 does no longer includes a polyfill for the Node.js process variable in
