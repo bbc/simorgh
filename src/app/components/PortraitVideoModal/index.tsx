@@ -3,6 +3,7 @@ import { jsx } from '@emotion/react';
 import { useState, useEffect, useRef } from 'react';
 import MediaLoader from '#app/components/MediaLoader';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 
@@ -88,7 +89,7 @@ const PortraitVideoModal = ({
         onClick={onClose}
         aria-label="Close modal"
       >
-        ×
+        {navigationIcons.cross}
       </button>
 
       <div css={styles.navWrapper}>

@@ -18,17 +18,23 @@ const styles = {
     },
   }),
 
-  closeButton: css({
-    position: 'absolute',
-    top: '1rem',
-    right: '1rem',
-    fontSize: '1.5rem',
-    color: 'white',
-    background: 'transparent',
-    border: 'none',
-    cursor: 'pointer',
-    zIndex: 2,
-  }),
+  closeButton: ({ palette }: Theme) =>
+    css({
+      display: 'flex',
+      position: 'absolute',
+      top: '1rem',
+      right: '1rem',
+      fontSize: '1.5rem',
+      background: 'transparent',
+      border: 'none',
+      cursor: 'pointer',
+      zIndex: 2,
+
+      svg: {
+        fill: 'currentcolor',
+        color: palette.WHITE,
+      },
+    }),
 
   // tightly wraps nav buttons to edge of video
   navButtonWrapper: css({
