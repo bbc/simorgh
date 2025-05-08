@@ -20,6 +20,7 @@ import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataWithEasyRead from '#data/afrique/articles/c161g3y596go.json';
+import standardArticleDataWithEasyRead from '#data/afrique/articles/c023vz8qn6ro.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
@@ -267,9 +268,21 @@ export const ArticlePageWithLiteSiteLink = {
   },
 };
 
-export const ArticlePageWithEasyReadCta = {
+export const EasyArticlePageWithEasyReadCta = {
   render: (_: StoryArgs, { service }: StoryProps) => (
     <ComponentWithContext data={articleDataWithEasyRead} service={service} />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
+
+export const StandardArticlePageWithEasyReadCta = {
+  render: (_: StoryArgs, { service }: StoryProps) => (
+    <ComponentWithContext
+      data={standardArticleDataWithEasyRead}
+      service={service}
+    />
   ),
   parameters: {
     chromatic: { disableSnapshot: true },
