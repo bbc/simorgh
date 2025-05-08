@@ -77,7 +77,7 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     expect(result).toBeFalsy();
   });
 
-  it('should return null when the experiment variation is false', () => {
+  it('should return null when the experiment variation is string "false"', () => {
     const mockMvtExperiments = [
       {
         experimentName: 'foo',
@@ -87,7 +87,20 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     ];
 
     const result = renderUseOptimizelyMvtVariation(mockMvtExperiments, 'foo');
-    expect(result).toBeFalsy();
+    expect(result).toBeNull();
+  });
+
+  it('should return null when the experiment variation is boolean "false"', () => {
+    const mockMvtExperiments = [
+      {
+        experimentName: 'foo',
+        variation: false,
+        enabled: true,
+      },
+    ];
+
+    const result = renderUseOptimizelyMvtVariation(mockMvtExperiments, 'foo');
+    expect(result).toBeNull();
   });
 
   it('should call activate experiment if experiment is enabled', () => {
