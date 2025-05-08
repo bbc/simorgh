@@ -159,8 +159,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     OPTIMIZELY_CONFIG.ruleKey,
   );
 
-  console.log({ experimentVariant });
-
   const isInExperiment = experimentVariant && experimentVariant !== 'off';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
