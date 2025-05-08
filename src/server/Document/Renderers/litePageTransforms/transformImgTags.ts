@@ -32,7 +32,7 @@ export default (html: string) => {
     imgTags.forEach(tag => {
       const src = tag?.match(/src="([^"]*)"/)?.[1] || '';
 
-      if (!src || !src.includes('bbci.co.uk')) return;
+      if (!src?.includes('bbci.co.uk')) return;
 
       const modifiedSrc = setImgSize(src);
 
