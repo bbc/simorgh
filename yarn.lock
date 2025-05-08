@@ -7146,7 +7146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^2.4.2":
+"chalk@npm:^2.3.0, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -8638,6 +8638,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"duplicate-package-checker-webpack-plugin@npm:3.0.0":
+  version: 3.0.0
+  resolution: "duplicate-package-checker-webpack-plugin@npm:3.0.0"
+  dependencies:
+    chalk: "npm:^2.3.0"
+    find-root: "npm:^1.0.0"
+    lodash: "npm:^4.17.4"
+    semver: "npm:^5.4.1"
+  checksum: 10/fdfdb0e19b5dea8c9462ac5ec8cc8166fec4ff54523be0f66c32e66bcf84697f901ddafed96a8fd2d9ed11b58c5eb0c90f1059956649bb8f7fa6dbd3e4af8eca
+  languageName: node
+  linkType: hard
+
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
@@ -9944,7 +9956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-root@npm:^1.1.0":
+"find-root@npm:^1.0.0, find-root@npm:^1.1.0":
   version: 1.1.0
   resolution: "find-root@npm:1.1.0"
   checksum: 10/caa799c976a14925ba7f31ca1a226fe73d3aa270f4f1b623fcfeb1c6e263111db4beb807d8acd31bd4d48d44c343b93688a9288dfbccca27463c36a0301b0bb9
@@ -10118,13 +10130,6 @@ __metadata:
   version: 0.2.0
   resolution: "forwarded@npm:0.2.0"
   checksum: 10/29ba9fd347117144e97cbb8852baae5e8b2acb7d1b591ef85695ed96f5b933b1804a7fac4a15dd09ca7ac7d0cdc104410e8102aae2dd3faa570a797ba07adb81
-  languageName: node
-  linkType: hard
-
-"fp-ts@npm:^2.6.1":
-  version: 2.16.5
-  resolution: "fp-ts@npm:2.16.5"
-  checksum: 10/2274ae9f65597321f308ea0b11637c4d8aa21f14f16981da8bf3187aaed88b9ab9fd5df2f40976809b3b504b845cf60c1601919364937d9b0d65044e0f076b81
   languageName: node
   linkType: hard
 
@@ -11125,23 +11130,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inspectpack@npm:4.7.1":
-  version: 4.7.1
-  resolution: "inspectpack@npm:4.7.1"
-  dependencies:
-    chalk: "npm:^4.1.0"
-    fp-ts: "npm:^2.6.1"
-    io-ts: "npm:^2.2.13"
-    io-ts-reporters: "npm:^1.2.2"
-    pify: "npm:^5.0.0"
-    semver-compare: "npm:^1.0.0"
-    yargs: "npm:^16.2.0"
-  bin:
-    inspectpack: bin/inspectpack.js
-  checksum: 10/71cf9461da45d50bea26b4004bc9757ff91ab6bc0ed2df342e79a9e7887b549085d2e56be6d74b783d5c128d8dcdafa2f54058ea9cd43ee31862d2de2e4002b0
-  languageName: node
-  linkType: hard
-
 "internal-slot@npm:^1.1.0":
   version: 1.1.0
   resolution: "internal-slot@npm:1.1.0"
@@ -11164,25 +11152,6 @@ __metadata:
   version: 0.12.2
   resolution: "intersection-observer@npm:0.12.2"
   checksum: 10/cb1a6369bd1636b3f227d7cb7fec22f5a35b9d8ba9e26303b405d50c54c3ef02c5a547107b1d951e7eb421e192a564222faf4660a21fad69c34dcb9f926c159c
-  languageName: node
-  linkType: hard
-
-"io-ts-reporters@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "io-ts-reporters@npm:1.2.2"
-  peerDependencies:
-    fp-ts: ^2.0.2
-    io-ts: ^2.0.0
-  checksum: 10/438b6a5895a8c56b7b3fb5fd5a1d51dd2dc99942c6b7cda155a45a5d04aaf0458a20e007ae26378cd852e8aea7eb12c75995de848ed6171095f73d69c379e453
-  languageName: node
-  linkType: hard
-
-"io-ts@npm:^2.2.13":
-  version: 2.2.21
-  resolution: "io-ts@npm:2.2.21"
-  peerDependencies:
-    fp-ts: ^2.5.0
-  checksum: 10/b917d1ca82e6cde0a7decc7cd08f0fcccf2bb7e1d326c12a7372cadc86e6bf409989a3b85be855f98edcadb6ddf97a0e8d9837812988cffdb5f90cfe9eb1f862
   languageName: node
   linkType: hard
 
@@ -12815,7 +12784,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10/c08619c038846ea6ac754abd6dd29d2568aa705feb69339e836dfa8d8b09abbb2f859371e86863eda41848221f9af43714491467b5b0299122431e202bb0c532
@@ -14347,13 +14316,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pify@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "pify@npm:5.0.0"
-  checksum: 10/443e3e198ad6bfa8c0c533764cf75c9d5bc976387a163792fb553ffe6ce923887cf14eebf5aea9b7caa8eab930da8c33612990ae85bd8c2bc18bedb9eae94ecb
-  languageName: node
-  linkType: hard
-
 "pirates@npm:^4.0.4, pirates@npm:^4.0.6":
   version: 4.0.6
   resolution: "pirates@npm:4.0.6"
@@ -15559,7 +15521,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^5.6.0":
+"semver@npm:^5.4.1, semver@npm:^5.6.0":
   version: 5.7.2
   resolution: "semver@npm:5.7.2"
   bin:
@@ -15980,6 +15942,7 @@ __metadata:
     cypress-terminal-report: "npm:7.1.0"
     depcheck: "npm:1.4.7"
     dotenv: "npm:16.5.0"
+    duplicate-package-checker-webpack-plugin: "npm:3.0.0"
     eslint: "npm:7.32.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-prettier: "npm:10.1.2"
@@ -15998,7 +15961,6 @@ __metadata:
     helmet: "npm:8.1.0"
     helmet-csp: "npm:4.0.0"
     husky: "npm:9.1.7"
-    inspectpack: "npm:4.7.1"
     intersection-observer: "npm:0.12.2"
     jalaali-js: "npm:1.2.8"
     jest: "npm:29.7.0"
