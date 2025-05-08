@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import BASE64_PLACEHOLDER_IMAGE from '#app/components/Image/base64Placeholder';
 
 const IMAGE_SIZE_GROUP_1 = 80;
 const IMAGE_SIZE_GROUP_2 = 55;
@@ -69,6 +70,15 @@ const styles = {
         height: `${pixelsToRem(IMAGE_SIZE_GROUP_4)}rem`,
       },
     }),
+  placeholder: ({ palette }: Theme) =>
+    css({
+      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '75%',
+      backgroundColor: palette.LUNAR,
+      border: `${pixelsToRem(1)}rem ${palette.STONE} solid`,
+    }),
   link: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.GREY_10,
@@ -76,10 +86,8 @@ const styles = {
       ...fontSizes.pica,
       ...fontVariants.sansBold,
       overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'collapse',
 
-      '&:hover, &:focus, &:visited': {
+      '&:visited': {
         color: palette.GREY_6,
       },
       '&:hover, &:focus': {

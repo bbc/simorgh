@@ -34,15 +34,24 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
 
   return (
     <>
-      <Image
-        css={styles.image}
-        src={imageTemplateUrl.replace('{width}', String(DEFAULT_IMAGE_SIZE))}
-        srcSet={primarySrcset}
-        mediaType={primaryMimeType || undefined}
-        fallbackSrcSet={fallbackSrcset || undefined}
-        fallbackMediaType={fallbackMimeType || undefined}
-        alt=""
-      />
+      {imagePath ? (
+        <Image
+          css={styles.image}
+          src={imageTemplateUrl.replace('{width}', String(DEFAULT_IMAGE_SIZE))}
+          srcSet={imagePath ? primarySrcset : undefined}
+          mediaType={primaryMimeType || undefined}
+          fallbackSrcSet={imagePath ? fallbackSrcset : undefined}
+          fallbackMediaType={fallbackMimeType || undefined}
+          lazyLoad
+          alt=""
+        />
+      ) : (
+        <div
+          css={[styles.image, styles.placeholder]}
+          aria-hidden="true"
+          data-testid="social-link-image-placeholder"
+        />
+      )}
 
       <a href={summary.link} css={styles.link}>
         {summary.title}
@@ -52,13 +61,13 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
 };
 
 const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
-  const hasMultipleItems = summaries.length > 1;
-
   const { dir } = useContext(ServiceContext);
 
-  console.group('📦 SocialLinks ');
-  console.log({ summaries });
-  console.groupEnd();
+  if (!summaries.length) {
+    return null;
+  }
+
+  const hasMultipleItems = summaries.length > 1;
 
   return (
     <section
@@ -73,7 +82,7 @@ const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
         <ul css={styles.unorderedList} dir={dir} role="list">
           {summaries.map(summary => {
             return (
-              <li css={styles.item} role="listitem" key={summary.title}>
+              <li css={styles.item} key={summary.title}>
                 <SocialLink summary={summary} />
               </li>
             );
