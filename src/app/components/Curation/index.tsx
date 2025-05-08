@@ -47,7 +47,6 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-// TEMP: Note: Curation - container component rendering components based on the VS-VP
 export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,

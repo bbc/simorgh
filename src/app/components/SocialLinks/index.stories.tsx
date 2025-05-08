@@ -6,6 +6,8 @@ import { Services } from '#app/models/types/global';
 import socialLinksFixture from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { Curation, Summary } from '#app/models/types/curationData';
 import SocialLinks from '.';
+import metadata from './metadata.json';
+import readme from './README.md';
 
 const getSocialLinksData = (numberOfItems?: number): Curation => {
   const socialLinksCuration = socialLinksFixture.data.curations.find(
@@ -51,18 +53,22 @@ const Component = ({
 export default {
   Component,
   title: 'Components/SocialLinks',
+  parameters: {
+    metadata,
+    docs: { readme },
+  },
 };
 
 export const MultipleLinks = () => (
-  <Component curations={getSocialLinksData()} service="kyrgyz" />
+  <Component curations={getSocialLinksData()} service="mundo" />
 );
 
 export const SingleLink = () => (
-  <Component curations={getSocialLinksData(1)} service="kyrgyz" />
+  <Component curations={getSocialLinksData(1)} service="mundo" />
 );
 
 export const OddNumberOfLinks = () => (
-  <Component curations={getSocialLinksData(5)} service="kyrgyz" />
+  <Component curations={getSocialLinksData(5)} service="mundo" />
 );
 
 export const RTLMultipleLinks = () => (

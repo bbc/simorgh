@@ -150,7 +150,6 @@ describe('SocialLinks', () => {
     expect(imgPlaceholder).toBeInTheDocument();
     expect(imgPlaceholder).toHaveAttribute('aria-hidden', 'true');
 
-    // There shouldn't be any img tag on the screen
     const images = document.querySelectorAll('img');
     expect(images.length).toBe(0);
     expect(container).toMatchSnapshot();

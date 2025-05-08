@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import Heading from '../Heading';
@@ -17,12 +18,26 @@ interface SocialLinksProps {
   summaries: Summary[];
 }
 
-const SocialLink = ({ summary }: { summary: Summary }) => {
+const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
+  const { isLite } = useContext(RequestContext);
   const DEFAULT_IMAGE_SIZE = styles.IMAGE_SIZE_GROUP_1;
   const DEFAULT_IMAGE_SIZE_2X = DEFAULT_IMAGE_SIZE * 2;
 
-  const imageTemplateUrl = summary.imageUrl;
-  const imagePath = imageTemplateUrl.split('{width}')[1];
+  const imagePath = imageUrl?.split('{width}')[1];
+
+  if (isLite) {
+    return null;
+  }
+
+  if (!imagePath) {
+    return (
+      <div
+        css={[styles.image, styles.placeholder]}
+        aria-hidden="true"
+        data-testid="social-link-image-placeholder"
+      />
+    );
+  }
 
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
     createSrcsets({
@@ -33,26 +48,24 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
     });
 
   return (
-    <>
-      {imagePath ? (
-        <Image
-          css={styles.image}
-          src={imageTemplateUrl.replace('{width}', String(DEFAULT_IMAGE_SIZE))}
-          srcSet={imagePath ? primarySrcset : undefined}
-          mediaType={primaryMimeType || undefined}
-          fallbackSrcSet={imagePath ? fallbackSrcset : undefined}
-          fallbackMediaType={fallbackMimeType || undefined}
-          lazyLoad
-          alt=""
-        />
-      ) : (
-        <div
-          css={[styles.image, styles.placeholder]}
-          aria-hidden="true"
-          data-testid="social-link-image-placeholder"
-        />
-      )}
+    <Image
+      css={[styles.image]}
+      width={DEFAULT_IMAGE_SIZE}
+      src={imageUrl.replace('{width}', String(DEFAULT_IMAGE_SIZE))}
+      srcSet={primarySrcset}
+      mediaType={primaryMimeType || undefined}
+      fallbackSrcSet={fallbackSrcset || undefined}
+      fallbackMediaType={fallbackMimeType || undefined}
+      lazyLoad
+      alt=""
+    />
+  );
+};
 
+const SocialLink = ({ summary }: { summary: Summary }) => {
+  return (
+    <>
+      <SocialLinkImage imageUrl={summary.imageUrl} />
       <a href={summary.link} css={styles.link}>
         {summary.title}
       </a>
@@ -96,4 +109,5 @@ const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
     </section>
   );
 };
+
 export default SocialLinks;
