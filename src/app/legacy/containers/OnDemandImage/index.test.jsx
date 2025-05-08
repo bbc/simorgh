@@ -5,7 +5,7 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandImage from '.';
 
-const component = ({ url, isAmp, service, alt, isLite }) => (
+const component = ({ url, isAmp, service, alt, isLite = false }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       isAmp={isAmp}
