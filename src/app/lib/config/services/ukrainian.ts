@@ -46,16 +46,16 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'WhatsApp',
-    brandTitle: 'BBC Україна тепер у WhatsApp',
-    brandDescription: 'Головне про Україну та світ - у нашому WhatsApp-каналі',
+    title: 'телеграм',
+    brandTitle: 'Як дізнатися головне про Україну та світ?',
+    brandDescription: 'Стежте за BBC News Україна в телеграмі.',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kv11pb.png',
-      alt: 'BBC News Україна підписуйтеся на наш WhatsApp',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hlvk.png',
+      alt: 'Чнтайте наш телеграм',
     },
     linkLabel: {
-      text: 'Клікніть тут, щоб підписатися',
-      href: 'https://www.whatsapp.com/channel/0029Vau5deM0QeaqQRTPVs2e',
+      text: 'Підпишіться на наш канал тут!',
+      href: 'https://t.me/bbcukrainian',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -282,7 +282,7 @@ const baseServiceConfig = {
     ...secondaryColumnTranslations,
   },
   mostRead: {
-    header: 'Найпопулярніше',
+    header: 'Найбільше читають',
     lastUpdated: 'Останнє оновлення:',
     numberOfItems: 10,
     hasMostRead: true,
@@ -291,7 +291,11 @@ const baseServiceConfig = {
     hasRadioSchedule: false,
   },
   recommendations: {
-    hasStoryRecommendations: false,
+    header: 'Найпопулярніше',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {

@@ -3,16 +3,7 @@ import envs from '../../../../support/config/envs';
 export const getATIParamsFromURL = atiAnalyticsURL => {
   const url = new URL(atiAnalyticsURL);
 
-  const objectFromEntries = Object.fromEntries(new URLSearchParams(url.search));
-  console.log(
-    'objectFromEntries p value in getATIParamsFromURL',
-    objectFromEntries.p,
-  );
-  cy.log(
-    'objectFromEntries p value in getATIParamsFromURL',
-    objectFromEntries.p,
-  );
-  return objectFromEntries;
+  return Object.fromEntries(new URLSearchParams(url.search));
 };
 
 export const ATI_PAGE_VIEW = 'ati-page-view';
@@ -29,46 +20,53 @@ const MESSAGE_BANNER = 'message-banner';
 const RELATED_CONTENT = 'related-content';
 const RELATED_TOPICS = 'topics';
 const PODCAST_PROMO = 'promo-podcast';
-const LITE_SITE_CTA = 'lite-site-cta';
-const CANONICAL_LITE_CTA = 'canonical-lite-cta';
+const LITE_SITE_SUMMARY = 'lite-site-summary';
+const ARTICLE_LITE_SITE_LINK = 'article-lite-site-link';
 const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
-const RECOMMENDATIONS = 'wsoj';
+const RECOMMENDATIONS = 'midarticle-mostread';
 const SCROLLABLE_PROMO = 'edoj';
 const BILLBOARD = 'billboard';
+const SOCIAL_EMBED = 'social-consent-banner';
+const LIVE_MEDIA = 'live-header-media';
+const SHARE = 'asset:';
 
 export const COMPONENTS = {
-  SCROLLABLE_NAVIGATION,
+  ARTICLE_LITE_SITE_LINK,
+  BILLBOARD,
   DROPDOWN_NAVIGATION,
-  TOP_STORIES,
   FEATURES,
-  MOST_READ,
-  RADIO_SCHEDULE,
+  LATEST_MEDIA,
+  LITE_SITE_SUMMARY,
+  LIVE_MEDIA,
   MESSAGE_BANNER,
+  MOST_READ,
+  PODCAST_LINKS,
+  PODCAST_PROMO,
+  RADIO_SCHEDULE,
+  RECENT_AUDIO_EPISODES,
+  RECOMMENDATIONS,
   RELATED_CONTENT,
   RELATED_TOPICS,
-  PODCAST_PROMO,
-  LITE_SITE_CTA,
-  CANONICAL_LITE_CTA,
-  RECENT_AUDIO_EPISODES,
-  PODCAST_LINKS,
-  LATEST_MEDIA,
-  RECOMMENDATIONS,
+  SCROLLABLE_NAVIGATION,
   SCROLLABLE_PROMO,
-  BILLBOARD,
+  SHARE,
+  SOCIAL_EMBED,
+  TOP_STORIES,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views
+  // Component Views & Clicks - Click Per View Model
   Object.values(COMPONENTS).forEach(component => {
     const viewClickEventRegex = new RegExp(
-      `PUB-\\[?.*?\\]?-\\[?${component}.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?`,
+      `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
       'g',
     );
 
+    // Component Views
     cy.intercept(
       {
         url: `${atiUrl}/*`,
@@ -93,6 +91,45 @@ export const interceptATIAnalyticsBeacons = () => {
         request.reply({ statusCode: 200 });
       },
     ).as(`${component}-ati-click`);
+  });
+
+  // Component Views & Clicks - Viewability Model
+  Object.values(COMPONENTS).forEach(component => {
+    const viewabilityViewRegex = new RegExp(
+      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      'g',
+    );
+
+    const viewabilityClickRegex = new RegExp(
+      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
+      'g',
+    );
+
+    // Component Views
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityViewRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-view`);
+
+    // Component Clicks
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          events: viewabilityClickRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-viewability-click`);
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
@@ -120,4 +157,10 @@ export const interceptATIAnalyticsBeacons = () => {
       request.reply({ statusCode: 200 });
     },
   ).as(`${ATI_PAGE_VIEW_REVERB}`);
+};
+
+export const getPathWithSuffix = ({ path, suffix = '' }) => {
+  const { pathname, search } = new URL(`https://www.bbc.com${path}`);
+
+  return `${pathname}${suffix}${search}`;
 };

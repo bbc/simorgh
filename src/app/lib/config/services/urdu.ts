@@ -353,7 +353,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'سب سے زیادہ پڑھی جانے والی',
+      header: 'مقبول خبریں',
       lastUpdated: 'آخری اپ ڈیٹ',
       numberOfItems: 10,
       hasMostRead: true,
@@ -364,7 +364,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% دورانیہ',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'سب سے زیادہ پڑھی جانے والی',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

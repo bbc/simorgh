@@ -12,7 +12,7 @@ describe('MostReadSectionLabel assertion', () => {
     );
     const label = container.getElementsByTagName('span')[2];
     expect(label).toHaveAttribute('id', 'Most-Read');
-    expect(label.textContent).toEqual('پربیننده‌ترین‌ها');
+    expect(label.textContent).toEqual('مطالب پرخواننده');
     expect(container).toMatchSnapshot();
   });
 });

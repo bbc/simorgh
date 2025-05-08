@@ -5,13 +5,14 @@ import {
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
 } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/navigation';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
 import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
 const canonicalTestSuites = [
   {
     path: '/burmese/live/ckg19998pldt',
-    runforEnv: ['live'],
+    runforEnv: ['local', 'live'],
     service: 'burmese',
     pageIdentifier: 'live_coverage.ckg19998pldt.page',
     applicationType: 'responsive',
@@ -25,10 +26,10 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin/live/c7p765ynk9qt',
+    path: '/mundo/live/c7dkx155e626t',
     runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+    service: 'mundo',
+    pageIdentifier: 'live_coverage.c7dkx155e626t.page',
     applicationType: 'responsive',
     contentType: 'live-coverage',
     componentTrackingContentType: LIVE_PAGE,
@@ -42,7 +43,13 @@ const canonicalTestSuites = [
 ];
 
 const liteTestSuites = canonicalTestSuites.map(testSuite => {
-  const liteSiteTests = [assertPageView];
+  const liteSiteTests = testSuite.tests.filter(
+    test =>
+      // Exclude component click tests, as component click support is not supported on all components yet
+      !test.name.toLowerCase().includes('click'),
+  );
+
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
 
   return {
     ...testSuite,

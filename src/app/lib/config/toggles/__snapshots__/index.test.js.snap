@@ -6,11 +6,11 @@ exports[`Toggles Config when application environment is live should contain corr
   "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": {
+  "articleLiteSiteLink": {
     "enabled": true,
   },
-  "cpsRecommendations": {
-    "enabled": false,
+  "chartbeatAnalytics": {
+    "enabled": true,
   },
   "enableFetchingToggles": {
     "enabled": true,
@@ -20,6 +20,9 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": false,
   },
   "include": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {
@@ -55,13 +58,13 @@ exports[`Toggles Config when application environment is local should contain cor
   "ads": {
     "enabled": false,
   },
+  "articleLiteSiteLink": {
+    "enabled": true,
+  },
   "chartbeatAnalytics": {
     "enabled": true,
   },
   "comscoreAnalytics": {
-    "enabled": true,
-  },
-  "cpsRecommendations": {
     "enabled": true,
   },
   "electionBanner": {
@@ -81,6 +84,9 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
   },
   "liveRadioSchedule": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {
@@ -116,10 +122,10 @@ exports[`Toggles Config when application environment is test should contain corr
   "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": {
+  "articleLiteSiteLink": {
     "enabled": true,
   },
-  "cpsRecommendations": {
+  "chartbeatAnalytics": {
     "enabled": true,
   },
   "enableFetchingToggles": {
@@ -130,6 +136,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
   },
   "include": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {

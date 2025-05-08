@@ -56,7 +56,13 @@ export const serviceWorkerCaching = () => {
       });
     });
 
-    const cacheableItems = ['cwr.js', 'woff2', 'moment-lib', 'frosted_promo'];
+    const cacheableItems = [
+      'woff2',
+      'moment-lib',
+      'frosted_promo',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+    ];
 
     it(`simorgh cache contains cached responses for cacheable items - ${JSON.stringify(cacheableItems)}`, () => {
       cy.window().then(win => {

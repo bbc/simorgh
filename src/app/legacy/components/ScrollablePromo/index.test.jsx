@@ -93,7 +93,7 @@ describe('ScrollablePromo', () => {
           <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
         );
 
-        expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
+        expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
         expect(viewTrackerSpy).toHaveBeenCalledWith({
           componentName: 'edoj1',
           format: 'CHD=edoj',
@@ -125,7 +125,7 @@ describe('ScrollablePromo', () => {
           <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
         );
 
-        expect(clickTrackerSpy).toHaveBeenCalledTimes(2);
+        expect(clickTrackerSpy).toHaveBeenCalledTimes(4);
         expect(clickTrackerSpy).toHaveBeenCalledWith({
           componentName: 'edoj1',
           format: 'CHD=edoj',
@@ -174,7 +174,7 @@ describe('ScrollablePromo', () => {
         />,
       );
       expect(getByText('Top Stories')).toBeVisible();
-      expect(queryByText('Most read')).toBeNull();
+      expect(queryByText('Popular Reads')).toBeNull();
     });
 
     it('it should display Most Read label when experimentVariant is top_bar_most_read', () => {
@@ -184,7 +184,7 @@ describe('ScrollablePromo', () => {
           experimentVariant="top_bar_most_read"
         />,
       );
-      expect(getByText('Most read')).toBeVisible();
+      expect(getByText('Popular Reads')).toBeVisible();
       expect(queryByText('Top Stories')).toBeNull();
     });
 

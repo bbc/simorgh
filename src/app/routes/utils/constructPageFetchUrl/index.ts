@@ -46,7 +46,7 @@ const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 interface GetIdProps {
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   env: Environments;
 }
 
@@ -140,7 +140,7 @@ export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   page?: string;
   isAmp?: boolean;
   disableRadioSchedule?: boolean;

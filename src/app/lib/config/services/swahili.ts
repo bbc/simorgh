@@ -272,7 +272,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
     mostRead: {
-      header: 'Iliyosomwa zaidi',
+      header: 'Zinazovuma zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -283,7 +283,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Muda %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Iliyosomwa zaidi',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
