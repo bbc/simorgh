@@ -3941,6 +3941,67 @@ module.exports = () => ({
       },
     },
   },
+  polska: {
+    name: 'polska',
+    font: 'Reith',
+    isWorldService: true,
+    variant: 'default',
+    pageTypes: {
+      errorPage404: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/polska/articles/c639526lxlr1'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/polska/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/polska/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
+  },
   portuguese: {
     name: 'portuguese',
     font: 'Reith',
