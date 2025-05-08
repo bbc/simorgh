@@ -1,8 +1,8 @@
 import React from 'react';
-import processClientDeviceAndSendStaticBeacon from '#src/server/utilities/staticATITracking';
-import clickTracking from '#src/server/utilities/staticATITracking/clickTracking';
+import addProcessClientDeviceAndSendStaticBeaconToWindow from '#app/lib/analyticsUtils/staticATITracking/addProcessClientDeviceAndSendStaticBeaconToWindow';
+import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import viewTracking from '#src/server/utilities/staticATITracking/viewTracking';
+import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
 
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;
@@ -16,15 +16,17 @@ const trackingScripts = ({
   return `
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = ${enableStaticClickTrackingOnOperaMiniOnly};
+      var isComponentViewTrackingEnabled = ${trackComponentViews};
 
-      if (${enableStaticClickTrackingOnOperaMiniOnly}) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = ${isOperaProxy.toString()}();
       }      
 
       if (isComponentTrackingEnabled) {
-        (${processClientDeviceAndSendStaticBeacon.toString()})();
+        (${addProcessClientDeviceAndSendStaticBeaconToWindow.toString()})();
 
-        if (${trackComponentViews}) {
+        if (isComponentViewTrackingEnabled) {
           (${viewTracking.toString()})();
         }
 
