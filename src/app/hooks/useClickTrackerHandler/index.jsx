@@ -3,7 +3,7 @@ import { useContext, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
+import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
   STATIC_ATI_CLICK_TRACKING,
