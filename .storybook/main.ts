@@ -21,10 +21,8 @@ const storybookConfig: StorybookConfig = {
     './StorybookComponents/**/*.stories.@(t|j)sx',
     './SidebarLabel/**/*.stories.@(t|j)sx',
     '../ws-nextjs-app/**/*.stories.tsx',
-
     '../docs/**/*.mdx',
     '../src/**/*.mdx',
-    '../3rdPartyCypress/**/*.mdx',
   ],
   addons: [
     '@storybook/addon-backgrounds',
