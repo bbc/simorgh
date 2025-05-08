@@ -3,42 +3,13 @@
 import { jsx } from '@emotion/react';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { PortraitVideoItem } from '#app/models/types/portraitVideoCarousel';
 import Heading from '../Heading';
 import { LeftChevron, RightChevron } from '../icons';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
-
-export interface PortraitVideoItem {
-  id: string;
-  headlines?: {
-    promoHeadline?: string;
-  };
-  link?: {
-    path: string;
-  };
-  images?: {
-    url: string;
-    urlTemplate?: string;
-    altText?: string;
-  }[];
-  video?: {
-    id: string;
-    isEmbeddingAllowed?: boolean;
-    version: {
-      id?: string;
-      duration: string;
-      kind: string;
-      territories: string[];
-    };
-  };
-  analytics?: {
-    page?: {
-      contentId?: string;
-    };
-  };
-}
 
 interface PortraitVideoCarouselProps {
   title: string;

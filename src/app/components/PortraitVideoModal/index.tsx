@@ -6,7 +6,7 @@ import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 
-export interface PortraitVideoModalProps {
+interface PortraitVideoModalProps {
   items: {
     id: string;
     title: string;
