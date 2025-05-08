@@ -53,7 +53,8 @@ export default {
     }),
   text: ({ mq, spacings }: Theme) =>
     css({
-      flex: '4 1 0',
+      flex: '7 1 0',
+
       [`@media (min-width: ${showOnDemandImage})`]: {
         paddingInlineStart: `${spacings.FULL}rem`,
       },
@@ -66,7 +67,7 @@ export default {
       display: 'none',
       [`@media (min-width: ${showOnDemandImage})`]: {
         display: 'unset',
-        flex: '2 1 0',
+        flex: '3 1 0',
       },
     }),
   aside: () =>

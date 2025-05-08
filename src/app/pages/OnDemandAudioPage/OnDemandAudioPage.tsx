@@ -144,9 +144,12 @@ const OnDemandAudioPage = ({
                   />
                 )}
               </div>
-              <div css={styles.image}>
-                <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
-              </div>
+              <EpisodeImage
+                imageUrl={imageUrl}
+                alt={imageAltText}
+                css={styles.image}
+                className="imageStyles"
+              />
             </div>
             {mediaIsAvailable ? (
               <MediaLoader blocks={pageData?.mediaBlocks} />

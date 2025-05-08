@@ -32,7 +32,7 @@ const smallImageSize = 128;
 const mediumImageSize = 256;
 const largeImageSize = 480;
 
-const OnDemandImage = ({ imageUrl, alt: altFromProps }) => {
+const OnDemandImage = ({ imageUrl, alt: altFromProps, className = '' }) => {
   const { defaultImageAltText, dir } = useContext(ServiceContext);
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
@@ -45,7 +45,7 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps }) => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ImageContainer data-e2e="on-demand-image" dir={dir}>
+    <ImageContainer data-e2e="on-demand-image" dir={dir} className={className}>
       <ImageWithPlaceholder
         src={src}
         alt={alt}
