@@ -96,6 +96,54 @@ describe('sendBeacon', () => {
       },
     };
 
+    const reverbViewabilityConfigComponentView = {
+      params: {
+        page: 'page',
+        user: '1234-5678',
+      },
+      eventDetails: {
+        eventName: 'sectionView',
+        eventPublisher: 'viewability',
+        item: {
+          attribution: 'advertiserID',
+          name: 'scrollable-navigation',
+          link: 'http://localhost',
+        },
+        group: {
+          name: '1234',
+        },
+        event: {
+          category: 'viewability',
+          action: 'view',
+        },
+        isClick: false,
+      },
+    };
+
+    const reverbViewabilityConfigComponentClick = {
+      params: {
+        page: 'page',
+        user: '1234-5678',
+      },
+      eventDetails: {
+        eventName: 'sectionClick',
+        eventPublisher: 'viewability',
+        item: {
+          attribution: 'advertiserID',
+          name: 'scrollable-navigation',
+          link: 'http://localhost',
+        },
+        group: {
+          name: '1234',
+        },
+        event: {
+          category: 'viewability',
+          action: 'select',
+        },
+        isClick: true,
+      },
+    };
+
     // Simulates reverbBeaconConfig set to null in ATIAnalytics and sendEventBeacon
     // in the event useReverb resolves to 'false'
     const reverbConfigWhenReverbIsDisabled = null;
@@ -118,18 +166,28 @@ describe('sendBeacon', () => {
       });
 
       it('should call Reverb userActionEvent if Reverb config is passed for a component view event', async () => {
-        await sendBeacon('https://foobar.com', reverbConfigComponentView);
+        await sendBeacon(
+          'https://foobar.com',
+          reverbViewabilityConfigComponentView,
+        );
 
         expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'impression',
-          'scrollable-navigation',
+          'viewability',
+          '',
           {
-            container: '1234',
-            attribute: 'scrollable-navigation',
-            placement: 'pageIdentifier',
-            source: 'advertiserID',
-            result: 'http://localhost',
+            item: {
+              attribution: 'advertiserID',
+              name: 'scrollable-navigation',
+              link: 'http://localhost',
+            },
+            group: {
+              name: '1234',
+            },
+            event: {
+              category: 'viewability',
+              action: 'view',
+            },
           },
           undefined,
           undefined,
@@ -138,18 +196,28 @@ describe('sendBeacon', () => {
       });
 
       it('should call Reverb userActionEvent if Reverb config is passed for a component click event', async () => {
-        await sendBeacon('https://foobar.com', reverbConfigComponentClick);
+        await sendBeacon(
+          'https://foobar.com',
+          reverbViewabilityConfigComponentClick,
+        );
 
         expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'click',
-          'scrollable-navigation',
+          'viewability',
+          '',
           {
-            container: '1234',
-            attribute: 'scrollable-navigation',
-            placement: 'pageIdentifier',
-            source: 'advertiserID',
-            result: 'http://localhost',
+            item: {
+              attribution: 'advertiserID',
+              name: 'scrollable-navigation',
+              link: 'http://localhost',
+            },
+            group: {
+              name: '1234',
+            },
+            event: {
+              category: 'viewability',
+              action: 'select',
+            },
           },
           undefined,
           undefined,
@@ -185,18 +253,28 @@ describe('sendBeacon', () => {
       });
 
       it('should call Reverb userActionEvent if Reverb config is passed for a component view event', async () => {
-        await sendBeacon('https://foobar.com', reverbConfigComponentView);
+        await sendBeacon(
+          'https://foobar.com',
+          reverbViewabilityConfigComponentView,
+        );
 
         expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'impression',
-          'scrollable-navigation',
+          'viewability',
+          '',
           {
-            container: '1234',
-            attribute: 'scrollable-navigation',
-            placement: 'pageIdentifier',
-            source: 'advertiserID',
-            result: 'http://localhost',
+            item: {
+              attribution: 'advertiserID',
+              name: 'scrollable-navigation',
+              link: 'http://localhost',
+            },
+            group: {
+              name: '1234',
+            },
+            event: {
+              category: 'viewability',
+              action: 'view',
+            },
           },
           undefined,
           undefined,
@@ -205,18 +283,28 @@ describe('sendBeacon', () => {
       });
 
       it('should call Reverb userActionEvent if Reverb config is passed for a component click event', async () => {
-        await sendBeacon('https://foobar.com', reverbConfigComponentClick);
+        await sendBeacon(
+          'https://foobar.com',
+          reverbViewabilityConfigComponentClick,
+        );
 
         expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
         expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-          'click',
-          'scrollable-navigation',
+          'viewability',
+          '',
           {
-            container: '1234',
-            attribute: 'scrollable-navigation',
-            placement: 'pageIdentifier',
-            source: 'advertiserID',
-            result: 'http://localhost',
+            item: {
+              attribution: 'advertiserID',
+              name: 'scrollable-navigation',
+              link: 'http://localhost',
+            },
+            group: {
+              name: '1234',
+            },
+            event: {
+              category: 'viewability',
+              action: 'select',
+            },
           },
           undefined,
           undefined,

@@ -360,6 +360,14 @@ describe('buildSettings', () => {
               'http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/08/131208135805_iraq_blast_640x360_bbc_nocredit.jpg',
             items: [
               {
+                href: 'https://wsodprogrf.akamaized.net/arabic/3gp/2013/12/iraqblast_16x9_lo.3gp',
+                kind: 'programme',
+              },
+              {
+                href: 'https://wsodprogrf.akamaized.net/zhongwen/simp/3gp/2013/12/iraqblast_16x9_hi.3gp',
+                kind: 'programme',
+              },
+              {
                 href: 'https://wsodprogrf.akamaized.net/arabic/dps/2013/12/iraqblast_16x9_lo.mp4',
                 kind: 'programme',
               },

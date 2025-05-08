@@ -1,12 +1,20 @@
 import { resetWindowValue } from '#psammead/psammead-test-helpers/src';
 import { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
+import isLive from '../../../lib/utilities/isLive';
 import {
   buildATIPageTrackPath,
   buildATIEventTrackUrl,
   buildReverbAnalyticsModel,
   buildReverbPageSectionEventModel,
 } from '.';
+
+jest.mock('../../../lib/utilities/isLive', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+jest.mock('#app/lib/config/optimizely', () => ({ flagKey: 'mockFlagKey' }));
 
 // @ts-expect-error required for testing purposes
 const mockAndSet = ({ name, source }, response) => {
@@ -271,14 +279,14 @@ describe('buildATIEventTrackUrl', () => {
 
     expect(splitUrl(atiEventTrackUrl)).toEqual([
       'http://foobar.com',
-      'idclient=getAtUserId',
       's=getDestination',
       'p=pageIdentifier',
-      'r=getScreenInfo',
-      're=getBrowserViewPort',
-      'hl=getCurrentTime',
-      'lng=getDeviceLanguage',
       'atc=PUB-[campaignID]-[component]-[variant_1]-[format]-[pageIdentifier]-[detailedPlacement]-[]-[url]',
+      'idclient=getAtUserId',
+      'hl=getCurrentTime',
+      're=getBrowserViewPort',
+      'r=getScreenInfo',
+      'lng=getDeviceLanguage',
       'mv_test=Top Bar OJs experiment',
       'mv_creation=variant_1',
       'type=AT',
@@ -364,6 +372,43 @@ describe('Reverb', () => {
         eventName: 'pageView',
       });
     });
+
+    it('should add experiment fields if experimentVariant is present', () => {
+      const reverbAnalyticsModel = buildReverbAnalyticsModel({
+        ...input,
+        experimentVariant: 'variant_1',
+      });
+
+      const pageParams = {
+        contentId: 'contentId',
+        contentType: 'contentType',
+        destination: 'statsDestination',
+        name: 'pageIdentifier',
+        producer: 'producerName',
+        additionalProperties: {
+          app_name: 'news',
+          app_type: 'getAppType',
+          content_language: 'language',
+          product_platform: null,
+          referrer_url: 'getReferrer',
+          x5: 'getHref',
+          x8: 'libraryVersion',
+          x9: 'sanitise',
+          x10: '',
+          x11: 'timePublished',
+          x12: 'timeUpdated',
+          x13: 'ldpThingLabels',
+          x14: 'ldpThingIds',
+          x16: 'campaign1~campaign2',
+          x17: 'categoryName',
+          x18: 'isLocServeCookieSet',
+          mv_creation: 'variant_1',
+          mv_test: 'mockFlagKey',
+        },
+      };
+
+      expect(reverbAnalyticsModel.params.page).toEqual(pageParams);
+    });
   });
 
   describe('buildReverbPageSectionEventModel', () => {
@@ -397,24 +442,6 @@ describe('Reverb', () => {
       );
     });
 
-    it('should return the correct event details for the Reverb page section view event model', () => {
-      const reverbPageSectionViewEventModel =
-        buildReverbPageSectionEventModel(input);
-
-      expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
-        eventName: 'sectionView',
-        eventPublisher: 'impression',
-        componentName: 'top-stories',
-        container: '1234',
-        attribute: 'top-stories',
-        metadata: 'format',
-        placement: 'mundo.page',
-        source: 'advertiserID',
-        result: 'http://localhost',
-        isClick: false,
-      });
-    });
-
     it('should return the correct Reverb page section click event model', () => {
       const reverbPageSectionViewEventModel = buildReverbPageSectionEventModel({
         ...input,
@@ -435,32 +462,196 @@ describe('Reverb', () => {
       );
     });
 
-    it('should return the correct event details for the Reverb page section click event model', () => {
-      const reverbPageSectionViewEventModel = buildReverbPageSectionEventModel({
-        ...input,
-        type: 'click',
-      });
-
-      expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
-        eventName: 'sectionClick',
-        eventPublisher: 'click',
-        componentName: 'top-stories',
-        container: '1234',
-        attribute: 'top-stories',
-        metadata: 'format',
-        placement: 'mundo.page',
-        source: 'advertiserID',
-        result: 'http://localhost',
-        isClick: true,
-      });
-    });
-
     it('should return the correct Reverb user object configuration', () => {
       const reverbPageSectionViewEventModel =
         buildReverbPageSectionEventModel(input);
 
       expect(reverbPageSectionViewEventModel.params.user).toEqual({
         isSignedIn: false,
+      });
+    });
+
+    describe('LOCAL, TEST and PREVIEW - Viewability Model', () => {
+      beforeEach(() => {
+        (isLive as jest.Mock).mockImplementationOnce(() => false);
+      });
+
+      it('should return the correct event details for the Reverb page section view event model', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel(input);
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'viewability',
+          item: {
+            attribution: 'advertiserID',
+            name: 'top-stories',
+            link: 'http://localhost',
+          },
+          group: {
+            name: '1234',
+          },
+          event: {
+            category: 'viewability',
+            action: 'view',
+          },
+          isClick: false,
+        });
+      });
+
+      it('should return the correct event details for the Reverb page section click event model', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel({
+            ...input,
+            type: 'click',
+          });
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionClick',
+          eventPublisher: 'viewability',
+          item: {
+            attribution: 'advertiserID',
+            name: 'top-stories',
+            link: 'http://localhost',
+          },
+          group: {
+            name: '1234',
+          },
+          event: {
+            category: 'viewability',
+            action: 'select',
+          },
+          isClick: true,
+        });
+      });
+
+      it('should omit the attribution and link attributes from the event details configuration', () => {
+        const inputWithAdvertiserIDAndUrlMissing = {
+          pageIdentifier: 'mundo.page',
+          producerName: 'MUNDO',
+          statsDestination: 'statsDestination',
+          componentName: 'top-stories',
+          campaignID: '1234',
+          format: 'format',
+          type: 'view',
+        };
+
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel(inputWithAdvertiserIDAndUrlMissing);
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'viewability',
+          item: {
+            name: 'top-stories',
+          },
+          group: {
+            name: '1234',
+          },
+          event: {
+            category: 'viewability',
+            action: 'view',
+          },
+          isClick: false,
+        });
+      });
+
+      it('should add experiment fields if experimentVariant is present', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel({
+            ...input,
+            experimentVariant: 'variant_1',
+          });
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'viewability',
+          item: {
+            attribution: 'advertiserID',
+            name: 'top-stories',
+            link: 'http://localhost',
+          },
+          group: {
+            name: '1234',
+          },
+          event: {
+            category: 'viewability',
+            action: 'view',
+          },
+          isClick: false,
+          experience: {
+            engine_id: 'optimizely.mockFlagKey.variant_1',
+          },
+        });
+      });
+    });
+
+    describe('LIVE - Click-Per-View (CPV) Model', () => {
+      beforeEach(() => {
+        (isLive as jest.Mock).mockImplementationOnce(() => true);
+      });
+
+      it('should return the correct event details for the Reverb page section view event model', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel(input);
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'impression',
+          componentName: 'top-stories',
+          container: '1234',
+          attribute: 'top-stories',
+          metadata: 'format',
+          placement: 'mundo.page',
+          source: 'advertiserID',
+          result: 'http://localhost',
+          isClick: false,
+        });
+      });
+
+      it('should return the correct event details for the Reverb page section click event model', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel({
+            ...input,
+            type: 'click',
+          });
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionClick',
+          eventPublisher: 'click',
+          componentName: 'top-stories',
+          container: '1234',
+          attribute: 'top-stories',
+          metadata: 'format',
+          placement: 'mundo.page',
+          source: 'advertiserID',
+          result: 'http://localhost',
+          isClick: true,
+        });
+      });
+
+      it('should add experiment fields if experimentVariant is present', () => {
+        const reverbPageSectionViewEventModel =
+          buildReverbPageSectionEventModel({
+            ...input,
+            experimentVariant: 'variant_1',
+          });
+
+        expect(reverbPageSectionViewEventModel.eventDetails).toEqual({
+          eventName: 'sectionView',
+          eventPublisher: 'impression',
+          componentName: 'top-stories',
+          container: '1234',
+          attribute: 'top-stories',
+          metadata: 'format',
+          placement: 'mundo.page',
+          source: 'advertiserID',
+          result: 'http://localhost',
+          isClick: false,
+          personalisation: {
+            EXP: 'mockFlagKey::variant_1',
+          },
+        });
       });
     });
   });

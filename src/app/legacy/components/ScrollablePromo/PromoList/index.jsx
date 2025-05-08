@@ -83,8 +83,8 @@ const PromoList = ({
   blocks,
   experimentVariant,
   viewTracker,
-  onClick,
-  ...a11yAttributes
+  clickTracker,
+  a11yAttributes,
 }) => {
   const { dir } = useContext(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
@@ -95,12 +95,13 @@ const PromoList = ({
 
   const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
+
   return (
     <ScrollPromo
       dir={dir}
       role="list"
       isOperaMini={isOperaMini}
-      ref={viewTracker}
+      {...viewTracker}
       {...a11yAttributes}
     >
       {listBlocks.map((block, index) => {
@@ -114,7 +115,7 @@ const PromoList = ({
             <Promo
               block={block}
               experimentVariant={experimentVariant}
-              onClick={onClick}
+              clickTracker={clickTracker}
             />
           </List>
         );

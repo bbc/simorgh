@@ -26,6 +26,11 @@ interface Props extends PromoProps {
   variant?: Variants;
 }
 
+jest.mock('#app/hooks/useHydrationDetection', () => ({
+  __esModule: true,
+  default: () => true,
+}));
+
 const Component = ({
   service = 'mundo',
   variant,
