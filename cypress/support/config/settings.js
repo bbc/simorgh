@@ -121,23 +121,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/afaanoromoo/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/afaanoromoo/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/afaanoromoo/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -313,23 +296,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/afrique/popular/read'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/afrique/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/afrique/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -466,23 +432,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/amharic/news-53260525'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/amharic/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/amharic/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/amharic/popular/read'],
             enabled: false,
           },
         },
@@ -642,23 +591,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/arabic/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/arabic/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -762,23 +694,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/azeri/international-53242449'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/azeri/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/azeri/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/azeri/popular/read'],
             enabled: false,
           },
         },
@@ -925,23 +840,6 @@ module.exports = () => ({
           },
           local: {
             paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/bengali/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/bengali/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/bengali/popular/read'],
             enabled: false,
           },
         },
@@ -1130,23 +1028,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/burmese/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/burmese/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/burmese/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1198,7 +1079,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1353,23 +1233,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/gahuza/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gahuza/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gahuza/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1500,23 +1363,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/gujarati/international-53214116'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/gujarati/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gujarati/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gujarati/popular/read'],
             enabled: false,
           },
         },
@@ -1704,23 +1550,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/hausa/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hausa/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hausa/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -1902,23 +1731,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/hindi/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/hindi/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hindi/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2018,23 +1830,6 @@ module.exports = () => ({
           local: {
             paths: ['/igbo/afirika-23252735'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/igbo/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/igbo/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/igbo/popular/read'],
-            enabled: false,
           },
         },
         smoke: false,
@@ -2195,23 +1990,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/indonesia/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/indonesia/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/indonesia/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2310,23 +2088,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/japanese/world-23252833'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/japanese/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/japanese/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/japanese/popular/read'],
             enabled: false,
           },
         },
@@ -2468,23 +2229,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/korean/features-53146758'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/korean/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/korean/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/korean/popular/read'],
             enabled: false,
           },
         },
@@ -2665,23 +2409,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/kyrgyz/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2831,23 +2558,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/marathi/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/marathi/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/marathi/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -2959,23 +2669,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/mundo/popular/read'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/mundo/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/mundo/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3042,7 +2735,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3197,23 +2889,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/nepali/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/nepali/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/nepali/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3281,7 +2956,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3338,7 +3012,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3511,23 +3184,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pashto/23289748'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/pashto/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pashto/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pashto/popular/read'],
             enabled: false,
           },
         },
@@ -3755,23 +3411,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/persian/popular/read'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/persian/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/persian/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -3898,23 +3537,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/tori-51745682'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/pidgin/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/pidgin/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/pidgin/popular/read'],
             enabled: false,
           },
         },
@@ -4053,23 +3675,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/portuguese/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/portuguese/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/portuguese/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4167,23 +3772,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/punjabi/international-53251686'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/punjabi/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/punjabi/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/punjabi/popular/read'],
             enabled: false,
           },
         },
@@ -4319,23 +3907,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/russian/popular/read'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/russian/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/russian/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4387,7 +3958,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4488,23 +4058,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/cyr/popular/read'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/serbian/cyr/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/serbian/cyr/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4601,23 +4154,6 @@ module.exports = () => ({
           local: {
             paths: [],
             enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/serbian/lat/popular/read'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/serbian/lat/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/serbian/lat/popular/read'],
-            enabled: true,
           },
         },
         smoke: false,
@@ -4724,23 +4260,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/sinhala/23225618'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/sinhala/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala/popular/read'],
             enabled: false,
           },
         },
@@ -4920,23 +4439,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/somali/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/somali/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/somali/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -4987,7 +4489,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5158,23 +4659,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/swahili/habari-53264596'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/swahili/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/swahili/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/swahili/popular/read'],
             enabled: false,
           },
         },
@@ -5355,23 +4839,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/tamil/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tamil/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tamil/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5504,23 +4971,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/telugu/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/telugu/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/telugu/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5623,23 +5073,6 @@ module.exports = () => ({
           },
         },
         smoke: true,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/thai/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/thai/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/thai/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
       },
     },
     specialFeatures: {
@@ -5799,23 +5232,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/tigrinya/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tigrinya/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tigrinya/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -5919,23 +5335,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/turkce/haberler-dunya-53818547'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/turkce/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/turkce/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/turkce/popular/read'],
             enabled: false,
           },
         },
@@ -6049,23 +5448,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/simp/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/simp/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/simp/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6174,23 +5556,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/ukchina/trad/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukchina/trad/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukchina/trad/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6225,7 +5590,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6361,23 +5725,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukrainian/23340963'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/ukrainian/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/ukrainian/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/ukrainian/popular/read'],
             enabled: false,
           },
         },
@@ -6553,23 +5900,6 @@ module.exports = () => ({
           },
           local: {
             paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/urdu/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/urdu/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/urdu/popular/read'],
             enabled: false,
           },
         },
@@ -6754,23 +6084,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/uzbek/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -6806,7 +6119,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
       specialFeatures: {
         cookieBanner: { environments: undefined, smoke: false },
       },
@@ -6826,7 +6138,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
       specialFeatures: {
         cookieBanner: { environments: undefined, smoke: false },
       },
@@ -6914,23 +6225,6 @@ module.exports = () => ({
           },
           local: {
             paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/vietnamese/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/vietnamese/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/vietnamese/popular/read'],
             enabled: false,
           },
         },
@@ -7034,23 +6328,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/yoruba/afrika-23252769'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/yoruba/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/yoruba/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/yoruba/popular/read'],
             enabled: false,
           },
         },
@@ -7193,23 +6470,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/zhongwen/simp/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/zhongwen/simp/popular/read'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/zhongwen/simp/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
     },
     specialFeatures: {
       cookieBanner: {
@@ -7342,23 +6602,6 @@ module.exports = () => ({
           },
           local: {
             paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/zhongwen/trad/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/zhongwen/trad/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/zhongwen/trad/popular/read'],
             enabled: false,
           },
         },

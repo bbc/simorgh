@@ -2006,10 +2006,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-arm64@npm:0.25.3":
-  version: 0.25.3
-  resolution: "@esbuild/darwin-arm64@npm:0.25.3"
-  checksum: 10/b4dbc55815b785ed167495b592cea6038a467352ae1254f863731ecac2e18a6a587471a45c054305a10afe35b7c225f5a95241b2b1ee52b6f505bef16556857e
+"@esbuild/darwin-arm64@npm:0.25.4":
+  version: 0.25.4
+  resolution: "@esbuild/darwin-arm64@npm:0.25.4"
+  checksum: 10/81b4d0482813ccff8c783035317d78220a4ec3eee3798e50b804a781a071f5790c7903c2f9216a25f5c167becd4c3d78fcf0a13e454b3973eb7d82b7ce1d4688
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -2021,10 +2021,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-x64@npm:0.25.3":
-  version: 0.25.3
-  resolution: "@esbuild/darwin-x64@npm:0.25.3"
-  checksum: 10/89e1bada7cd7ba03f5029893fb193efb002fab2180e2a083e116337f72076c992233e9b27aed8259c618b4bf74cd4a55c68afb0c0d0a8983effa0a0f396d894f
+"@esbuild/darwin-x64@npm:0.25.4":
+  version: 0.25.4
+  resolution: "@esbuild/darwin-x64@npm:0.25.4"
+  checksum: 10/633d97f18c299c8da3730ae04831895779b5f1271020cc924e06c6a5f0c5aac9f0653d60cca7d6ac23926797368301cd6ce2059b25f432aa2f1f378fcb34530d
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -2050,10 +2050,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-arm64@npm:0.25.3":
-  version: 0.25.3
-  resolution: "@esbuild/linux-arm64@npm:0.25.3"
-  checksum: 10/7cdcb7f2637853efef29393586850020a25dd94ab23aaef36f7ec63b7af7106afd21663aee92898abc13d3c6bcc10706a396a172e25ef6ed37cd428870cbc56a
+"@esbuild/linux-arm64@npm:0.25.4":
+  version: 0.25.4
+  resolution: "@esbuild/linux-arm64@npm:0.25.4"
+  checksum: 10/72b7e3b8fe3bd27206577f8eceea1e0c289dc01fa2f5b03fe22f4ea27931ca664a9b93b35f9ae424e78552caec76330383fe7dc5afeeaffa0e00645ec143a49b
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -2114,10 +2114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-x64@npm:0.25.3":
-  version: 0.25.3
-  resolution: "@esbuild/linux-x64@npm:0.25.3"
-  checksum: 10/2857d527fc9809834bce7984a86e5c51f68f44a397e2a0c33564d223ac1a75862b6a57f82681e6fa17a080ef93f7e12cb441c694743a95bb77def0633f7ef067
+"@esbuild/linux-x64@npm:0.25.4":
+  version: 0.25.4
+  resolution: "@esbuild/linux-x64@npm:0.25.4"
+  checksum: 10/1ba32d40895c826e6990157a141e23d68fdf00b46d60ef3572a89781f177df75e023d38b130087b167a6e38410c3af0a6bec7b2d3b1af2a37a21c1ed70dcba45
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -2164,10 +2164,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-arm64@npm:0.25.3":
-  version: 0.25.3
-  resolution: "@esbuild/win32-arm64@npm:0.25.3"
-  checksum: 10/270ac886e18ed1fd3ac0ff7c988026e175b6f615202c681e63567d6e1d251f47986b2cfa2b4586f4b0d44ac25195b6371f005c941f46f040462235d192e157c0
+"@esbuild/win32-arm64@npm:0.25.4":
+  version: 0.25.4
+  resolution: "@esbuild/win32-arm64@npm:0.25.4"
+  checksum: 10/0422de25c136f407bc223e1a9a65a6f528e64201a1b06b7ddcf3190045914c6d68f550a8190d18e58c4e22231acc4c7982d45bd5ceab6a739e2c539d135376fe
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -2186,10 +2186,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-x64@npm:0.25.3":
-  version: 0.25.3
-  resolution: "@esbuild/win32-x64@npm:0.25.3"
-  checksum: 10/0787faaedaee18a3d44f0601360d2be034b3afcd730b28e681f98024078f321f91ade7c2d6eab3ba51eb84a49ee1f798cdf2a42994a8077ead343e4ab3a907aa
+"@esbuild/win32-x64@npm:0.25.4":
+  version: 0.25.4
+  resolution: "@esbuild/win32-x64@npm:0.25.4"
+  checksum: 10/0bc72a7dc50b20d2cb7cd38a0d85ab3ff0c6467ba7d817a74da8c671703f97c7c7f7a7375d0069c3f0a76571dc04a1072852e711131cf4d1a62a70e7a38449db
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -3055,9 +3055,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@puppeteer/browsers@npm:2.10.3":
-  version: 2.10.3
-  resolution: "@puppeteer/browsers@npm:2.10.3"
+"@puppeteer/browsers@npm:2.10.4":
+  version: 2.10.4
+  resolution: "@puppeteer/browsers@npm:2.10.4"
   dependencies:
     debug: "npm:^4.4.0"
     extract-zip: "npm:^2.0.1"
@@ -3068,7 +3068,7 @@ __metadata:
     yargs: "npm:^17.7.2"
   bin:
     browsers: lib/cjs/main-cli.js
-  checksum: 10/bb41382723b3774f6b605fc7a4c205194fc32f8874ac994192ebc1c03d9315bdc5f3d08ca0c144f487e2378b38b077863fa4cb8ecc56825ecf2b29eb174d437d
+  checksum: 10/7ccae2c9bbab5d1f69e29e454e9744a873a5a791012799faea36a71b9908dfe67c61f7a64a1b9839ac79b1f9a5677f540197e0bbfe58e9d62b7ccb300f8002b3
   languageName: node
   linkType: hard
 
@@ -13596,33 +13596,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:24.8.1":
-  version: 24.8.1
-  resolution: "puppeteer-core@npm:24.8.1"
+"puppeteer-core@npm:24.8.2":
+  version: 24.8.2
+  resolution: "puppeteer-core@npm:24.8.2"
   dependencies:
-    "@puppeteer/browsers": "npm:2.10.3"
+    "@puppeteer/browsers": "npm:2.10.4"
     chromium-bidi: "npm:5.1.0"
     debug: "npm:^4.4.0"
     devtools-protocol: "npm:0.0.1439962"
     typed-query-selector: "npm:^2.12.0"
     ws: "npm:^8.18.2"
-  checksum: 10/e44401f3ddf422f60caecab59c02fb2469f8697b43e5c16b31481c722f118b823ccbf2d915d6872cbbfbc2109c2d1a8cfd01c9c12c2bb4ab63bddd55988995f0
+  checksum: 10/38ca26d83a15876a2207415bd4ceb889267c1264d7678d5b61b2d8aefe7cfc1e0d7f949e260acb3265b0cbbc0b85de5f080129cfb242fb04415f701a1b9efe78
   languageName: node
   linkType: hard
 
-"puppeteer@npm:24.8.1":
-  version: 24.8.1
-  resolution: "puppeteer@npm:24.8.1"
+"puppeteer@npm:24.8.2":
+  version: 24.8.2
+  resolution: "puppeteer@npm:24.8.2"
   dependencies:
-    "@puppeteer/browsers": "npm:2.10.3"
+    "@puppeteer/browsers": "npm:2.10.4"
     chromium-bidi: "npm:5.1.0"
     cosmiconfig: "npm:^9.0.0"
     devtools-protocol: "npm:0.0.1439962"
-    puppeteer-core: "npm:24.8.1"
+    puppeteer-core: "npm:24.8.2"
     typed-query-selector: "npm:^2.12.0"
   bin:
     puppeteer: lib/cjs/puppeteer/node/cli.js
-  checksum: 10/6bdf84bb61f14573ac70a6858514e2ef861afc3026aba9d4822f1a7d0dadb1d3a1fdfa6d0d22fe2964e799985caefc98d5cbed1aefc7c63cc0b400b44a3db4a4
+  checksum: 10/541470f3d2902bca0f95838e8f383be4251f69e0d31a7ee65b5dd6adbe0855e03e174ce59632fcf627494b3d67920c3fc531ee014007cfb61bc1322cccc995f5
   languageName: node
   linkType: hard
 
@@ -14791,12 +14791,12 @@ __metadata:
     "@emotion/react": "npm:11.14.0"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.14.0"
-    "@esbuild/darwin-arm64": "npm:0.25.3"
-    "@esbuild/darwin-x64": "npm:0.25.3"
-    "@esbuild/linux-arm64": "npm:0.25.3"
-    "@esbuild/linux-x64": "npm:0.25.3"
-    "@esbuild/win32-arm64": "npm:0.25.3"
-    "@esbuild/win32-x64": "npm:0.25.3"
+    "@esbuild/darwin-arm64": "npm:0.25.4"
+    "@esbuild/darwin-x64": "npm:0.25.4"
+    "@esbuild/linux-arm64": "npm:0.25.4"
+    "@esbuild/linux-x64": "npm:0.25.4"
+    "@esbuild/win32-arm64": "npm:0.25.4"
+    "@esbuild/win32-x64": "npm:0.25.4"
     "@loadable/babel-plugin": "npm:5.16.1"
     "@loadable/component": "npm:5.16.4"
     "@loadable/server": "npm:5.16.5"
@@ -14893,7 +14893,7 @@ __metadata:
     npm-run-all2: "npm:8.0.1"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.5.3"
-    puppeteer: "npm:24.8.1"
+    puppeteer: "npm:24.8.2"
     ramda: "npm:0.30.1"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
