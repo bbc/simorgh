@@ -4,7 +4,7 @@ import runTestsForPage from '../../../support/helpers/runTestsForPage';
 
 const testSuites = [
   {
-    path: '/urdu/live/c04z6x46l0vt.lite?renderer_env=live',
+    path: '/urdu/live/c04z6x46l0vt',
     runforEnv: ['local'],
     pageType: 'Live',
     tests: [assertPageWeight],
