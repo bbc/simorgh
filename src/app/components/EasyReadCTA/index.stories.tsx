@@ -26,6 +26,6 @@ export const EasyComponent = () => (
 );
 
 export default {
-  title: 'Components/EasyReadCTAVersion2',
+  title: 'Components/EasyReadCTA',
   Component,
 };
