@@ -24,7 +24,6 @@ const storybookConfig: StorybookConfig = {
 
     '../docs/**/*.mdx',
     '../src/**/*.mdx',
-    '../AdHocCypress/**/*.mdx',
     '../3rdPartyCypress/**/*.mdx',
   ],
   addons: [
