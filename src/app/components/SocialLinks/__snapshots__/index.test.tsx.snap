@@ -117,8 +117,6 @@ exports[`SocialLinks renders a placeholder if image is not provided 1`] = `
   font-style: normal;
   font-weight: 700;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: collapse;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -135,8 +133,6 @@ exports[`SocialLinks renders a placeholder if image is not provided 1`] = `
   }
 }
 
-.emotion-4:hover,
-.emotion-4:focus,
 .emotion-4:visited {
   color: #545658;
 }
@@ -348,8 +344,6 @@ exports[`SocialLinks should correctly render social links 1`] = `
   font-style: normal;
   font-weight: 700;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: collapse;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -366,8 +360,6 @@ exports[`SocialLinks should correctly render social links 1`] = `
   }
 }
 
-.emotion-6:hover,
-.emotion-6:focus,
 .emotion-6:visited {
   color: #545658;
 }
@@ -418,6 +410,7 @@ exports[`SocialLinks should correctly render social links 1`] = `
             loading="lazy"
             src="https://example.com//80/instagram.png"
             srcset="https://ichef.bbci.co.uk/ace/ws/80/instagram.png.webp 80w, https://ichef.bbci.co.uk/ace/ws/160/instagram.png.webp 160w"
+            width="80"
           />
         </div>
         <a
@@ -440,6 +433,7 @@ exports[`SocialLinks should correctly render social links 1`] = `
             loading="lazy"
             src="https://example.com//80/facebook.png"
             srcset="https://ichef.bbci.co.uk/ace/ws/80/facebook.png.webp 80w, https://ichef.bbci.co.uk/ace/ws/160/facebook.png.webp 160w"
+            width="80"
           />
         </div>
         <a

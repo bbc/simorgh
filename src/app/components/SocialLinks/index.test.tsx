@@ -125,10 +125,8 @@ describe('SocialLinks', () => {
     expect(images.length).toBe(mockSummaries.length);
 
     mockSummaries.forEach((summary, index) => {
-      expect(images[index]).toHaveAttribute(
-        'src',
-        expect.stringContaining(summary.imageUrl.replace('{width}', '80')),
-      );
+      const expectedSrc = summary.imageUrl.replace('{width}', '80');
+      expect(images[index]).toHaveAttribute('src', expectedSrc);
     });
   });
 
