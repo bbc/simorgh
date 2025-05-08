@@ -25,9 +25,9 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.26.10",
-    "@babel/plugin-proposal-export-default-from": "7.25.9",
-    "@babel/preset-react": "7.26.3",
+    "@babel/core": "7.27.1",
+    "@babel/plugin-proposal-export-default-from": "7.27.1",
+    "@babel/preset-react": "7.27.1",
     "@emotion/babel-plugin": "11.13.5",
     "@emotion/jest": "^11.11.0",
     "@jest/environment": "^29.7.0",
