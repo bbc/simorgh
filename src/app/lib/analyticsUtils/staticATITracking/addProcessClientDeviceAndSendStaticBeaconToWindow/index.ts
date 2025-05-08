@@ -1,5 +1,5 @@
 export default () => {
-  window.processClientDeviceAndSendLite = atiURL => {
+  window.processClientDeviceAndSendStaticBeacon = atiURL => {
     if (atiURL) {
       const {
         screen: { width, height, colorDepth, pixelDepth },
@@ -52,12 +52,13 @@ export default () => {
       ].join('x');
 
       const timestamp = [hours, mins, secs].join('x');
+      const isLiteSite = window.location.pathname?.includes('.lite');
 
       const params: Record<string, string> = {
         r: screenResolutionColourDepth,
         re: browserViewportResolution,
         hl: timestamp,
-        app_type: 'lite',
+        app_type: isLiteSite ? 'lite' : 'responsive',
       };
 
       if (navigator.language) params.lng = navigator.language;
@@ -68,7 +69,7 @@ export default () => {
         .map(key => `${key}=${params[key]}`)
         .join('&');
 
-      window.sendBeaconLite(`${atiURL}&${paramValues}`);
+      window.sendStaticBeacon(`${atiURL}&${paramValues}`);
     }
   };
 };

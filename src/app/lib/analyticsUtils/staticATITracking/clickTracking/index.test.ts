@@ -1,4 +1,4 @@
-import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import clickTracking from '.';
 
 const createAnchor = ({
@@ -13,7 +13,7 @@ const createAnchor = ({
   const anchorElement = document.createElement('a');
   anchorElement.href = href;
   if (isLite) {
-    anchorElement.setAttribute(LITE_ATI_CLICK_TRACKING, atiUrl);
+    anchorElement.setAttribute(STATIC_ATI_CLICK_TRACKING, atiUrl);
   }
   document.body.appendChild(anchorElement);
   return anchorElement;
@@ -45,7 +45,7 @@ describe('Click tracking script', () => {
     while (document.body.firstChild) {
       document.body.removeChild(document.body.firstChild);
     }
-    window.processClientDeviceAndSendLite = jest.fn();
+    window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
   afterAll(() => {
@@ -54,6 +54,18 @@ describe('Click tracking script', () => {
         ...originalWindowLocation,
       },
     });
+  });
+
+  it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
+    const clickTrackerString = clickTracking.toString();
+
+    const pattern = /STATIC_ATI_CLICK_TRACKING = '([^']+)'/;
+
+    const matches = clickTrackerString.match(pattern) || [];
+    const [, staticAtiClickTracking] = matches;
+
+    // STATIC_ATI_CLICK_TRACKING in ./index.ts must match the value of STATIC_ATI_CLICK_TRACKING in #app/lib/analyticsUtils/analytics.const
+    expect(staticAtiClickTracking).toBe(STATIC_ATI_CLICK_TRACKING);
   });
 
   it('Redirects all clicks', () => {
@@ -68,17 +80,17 @@ describe('Click tracking script', () => {
     expect(nextPageUrl).toContain('/gahuza');
   });
 
-  it('Calls processClientDeviceAndSendLite() with the right parameters', () => {
+  it('Calls processClientDeviceAndSendStaticBeacon() with the right parameters', () => {
     const anchorElement = createAnchor();
 
     dispatchClick(anchorElement);
 
     expect(
-      window.processClientDeviceAndSendLite as jest.Mock,
+      window.processClientDeviceAndSendStaticBeacon as jest.Mock,
     ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
   });
 
-  it('Should NOT call processClientDeviceAndSendLite() more than once for the same url', () => {
+  it('Should NOT call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
     const anchorElement = createAnchor({
       atiUrl: 'https://logws1363.ati-host.net/?uniqueLink=1',
     });
@@ -88,7 +100,7 @@ describe('Click tracking script', () => {
     dispatchClick(anchorElement);
 
     expect(
-      window.processClientDeviceAndSendLite as jest.Mock,
+      window.processClientDeviceAndSendStaticBeacon as jest.Mock,
     ).toHaveBeenCalledTimes(1);
   });
 });

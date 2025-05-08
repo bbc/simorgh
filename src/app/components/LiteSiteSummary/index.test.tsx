@@ -1,7 +1,12 @@
 import React from 'react';
-import { LITE_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { render } from '../react-testing-library-with-providers';
 import LiteSiteSummary from '.';
+
+jest.mock('#app/hooks/useHydrationDetection', () => ({
+  __esModule: true,
+  default: () => false,
+}));
 
 describe('LiteSiteSummary', () => {
   it('Should have a hidden strong element with lite site identifier.', () => {
@@ -32,11 +37,10 @@ describe('LiteSiteSummary', () => {
   });
 
   it(`Should have click tracking on the 'Back to canonical' link.`, () => {
-    process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
     const { container } = render(<LiteSiteSummary />, { isLite: true });
 
     const [ctaLink] = container.querySelectorAll('a');
-    const atiUrl = ctaLink.getAttribute(LITE_ATI_CLICK_TRACKING);
+    const atiUrl = ctaLink.getAttribute(STATIC_ATI_CLICK_TRACKING);
 
     expect(atiUrl).toContain('lite-site-summary');
   });

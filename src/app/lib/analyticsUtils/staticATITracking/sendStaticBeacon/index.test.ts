@@ -1,9 +1,9 @@
 /* eslint-disable no-eval */
-import sendBeaconLite from './sendBeaconLite';
+import sendStaticBeacon, { addSendStaticBeaconToWindow } from '.';
 
 let XMLHttpRequestSpy: jest.SpyInstance<XMLHttpRequest | undefined, []>;
 
-describe('sendBeaconLite', () => {
+describe('sendStaticBeacon', () => {
   const XMLHttpRequestMock: Partial<XMLHttpRequest> = {
     open: jest.fn(),
     withCredentials: false,
@@ -12,11 +12,18 @@ describe('sendBeaconLite', () => {
 
   beforeEach(() => {
     XMLHttpRequestSpy = jest.spyOn(window, 'XMLHttpRequest');
+    eval(addSendStaticBeaconToWindow());
   });
 
   afterEach(() => {
     XMLHttpRequestSpy.mockRestore();
     jest.clearAllMocks();
+    // @ts-expect-error cleanup
+    delete window.sendStaticBeacon;
+  });
+
+  it('should load the sendStaticBeacon script onto window', () => {
+    expect(typeof window.sendStaticBeacon).toBe('function');
   });
 
   it('should send beacon with XHR', () => {
@@ -24,7 +31,7 @@ describe('sendBeaconLite', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
-    eval(sendBeaconLite('https://foobar.com'));
+    eval(sendStaticBeacon('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
       'GET',

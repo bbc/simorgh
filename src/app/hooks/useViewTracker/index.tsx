@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import {
-  LITE_ATI_VIEW_TRACKING,
+  STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructLiteSiteATIEventTrackUrl from '#src/server/utilities/liteATITracking/constructATIUrl';
+import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
@@ -32,12 +34,16 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     statsDestination,
     campaignID,
     detailedPlacement,
-    optimizely,
-    optimizelyMetricNameOverride,
+    sendOptimizelyEvents,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
+
+  const { optimizely } = useContext(OptimizelyContext);
+  const optimizelyVariation = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -91,25 +97,15 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          if (optimizely) {
-            const eventName = OPTIMIZELY_CONFIG.viewClickAttributeId;
-
-            const overrideAttributes = {
-              ...optimizely.user.attributes,
-              [`viewed_${eventName}`]: true,
-            };
+          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+            const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_views`
-                : 'component_views',
+              `${componentName}-views`,
               optimizely.user.id as string,
               overrideAttributes,
             );
           }
-
-          const optimizelyVariation =
-            optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
 
           sendEventBeacon({
             campaignID,
@@ -162,34 +158,37 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventSent,
     advertiserID,
     url,
+    sendOptimizelyEvents,
     optimizely,
-    optimizelyMetricNameOverride,
+    optimizelyVariation,
     detailedPlacement,
     useReverb,
   ]);
 
-  return async (element: HTMLElement) => {
-    if (!element || !trackingIsEnabled || eventSent) {
-      return;
-    }
-    if (!observer.current) {
-      await initObserver();
-    }
+  const viewTracker = useCallback(
+    async (element: HTMLElement) => {
+      if (!element || !trackingIsEnabled || eventSent) return;
+      if (!observer.current) await initObserver();
+      (observer.current as unknown as IntersectionObserver)?.observe(element);
+    },
+    [trackingIsEnabled, eventSent],
+  );
 
-    (observer.current as unknown as IntersectionObserver)?.observe(element);
-  };
+  return viewTracker;
 };
 
 export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
+
   const viewTracker = getComponentViewTracker(eventTrackingData);
-  const liteATIUrl = constructLiteSiteATIEventTrackUrl({
+
+  const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
   return isLite
-    ? { [LITE_ATI_VIEW_TRACKING]: liteATIUrl }
+    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
     : {
         ref: viewTracker,
       };
