@@ -34,7 +34,7 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-const BumpLoader = () => (
+export const BumpLoader = () => (
   <Helmet>
     <script
       type="text/javascript"

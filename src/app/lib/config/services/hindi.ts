@@ -54,7 +54,7 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'मशहूर हस्तियों की कहानी पूरी तसल्ली और इत्मीनान से इरफ़ान के साथ.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l1f646.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hm5m.jpg',
         alt: 'पॉडकास्ट: कहानी ज़िंदगी की',
       },
       linkLabel: {
