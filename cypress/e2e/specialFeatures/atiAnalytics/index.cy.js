@@ -298,8 +298,8 @@ const canonicalTestSuites = [
   {
     path: '/gahuza',
     runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.page',
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.page',
     applicationType: 'responsive',
     contentType: 'index-home',
     useReverb: true,
