@@ -2,8 +2,9 @@
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
+import Text from '#app/components/Text';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { use } from 'react';
+import React, { use, useState } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './index.styles';
 
@@ -30,33 +31,54 @@ const Dislike = () => (
 );
 
 const Feedback = () => {
+  const [formOpen, setFormOpen] = useState(false);
   const { id } = use(RequestContext);
 
   return (
     <section css={styles.feedbackWrapper}>
-      <div>
-        <Heading level={2} size="pica">
-          Tell us what you think
-        </Heading>
-      </div>
-      <div css={styles.feedbackButtons}>
-        <a
-          title="Like"
-          css={styles.feedbackButton}
-          href={`http://localhost:7081/mundo/send/u50853489?reaction=like&assetId=${id}`}
-        >
-          <Like />
-          <VisuallyHiddenText>Like</VisuallyHiddenText>
-        </a>
-        <a
-          title="Dislike"
-          css={styles.feedbackButton}
-          href={`http://localhost:7081/mundo/send/u50853489?reaction=dislike&assetId=${id}`}
-        >
-          <Dislike />
-          <VisuallyHiddenText>Dislike</VisuallyHiddenText>
-        </a>
-      </div>
+      {!formOpen && (
+        <>
+          <div>
+            <Heading level={2} size="pica">
+              Tell us what you think
+            </Heading>
+          </div>
+          <div css={styles.feedbackButtons}>
+            <a
+              title="Like"
+              css={styles.feedbackButton}
+              href={`http://localhost:7081/mundo/send/u50853489?reaction=like&assetId=${id}`}
+            >
+              <Like />
+              <VisuallyHiddenText>Like</VisuallyHiddenText>
+            </a>
+            <button
+              title="Dislike"
+              onClick={() => setFormOpen(!formOpen)}
+              css={styles.feedbackButton}
+              type="button"
+            >
+              <Dislike />
+              <VisuallyHiddenText>Dislike</VisuallyHiddenText>
+            </button>
+          </div>
+        </>
+      )}
+      {formOpen && (
+        <div css={{ display: 'flex', flexDirection: 'column' }}>
+          <Text as="p" fontVariant="sansBold" css={{ display: 'block' }}>
+            Please tell us what we can do better.
+          </Text>
+          <div>
+            <form css={{ display: 'block', flexDirection: 'column' }}>
+              <textarea css={{ display: 'block', width: '100%' }} />
+              <button type="submit" css={{ margin: '12px 0' }}>
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
