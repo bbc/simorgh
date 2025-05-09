@@ -33,7 +33,6 @@ import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getTranscriptBlock from './utils/getTranscriptBlock';
 import Message from './Message';
 
-
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,

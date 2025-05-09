@@ -65,6 +65,22 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
   class="mediaLoaderPlaceholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
+  <div
+    class="css-czokpf"
+    data-e2e="media-player__guidance"
+  >
+    <strong
+      aria-hidden="true"
+      class="guidance-message css-e3010g"
+    >
+      Contains strong language and some upsetting scenes.
+    </strong>
+    <noscript
+      class="css-lllaou"
+    >
+      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+    </noscript>
+  </div>
   <button
     class="focusIndicatorRemove css-4vlf9b"
     type="button"
@@ -133,6 +149,22 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
   class="mediaLoaderPlaceholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
+  <div
+    class="css-czokpf"
+    data-e2e="media-player__guidance"
+  >
+    <strong
+      aria-hidden="true"
+      class="guidance-message css-e3010g"
+    >
+      Contains strong language and some upsetting scenes.
+    </strong>
+    <noscript
+      class="css-lllaou"
+    >
+      &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+    </noscript>
+  </div>
   <button
     class="focusIndicatorRemove css-4vlf9b"
     type="button"
@@ -205,6 +237,22 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     class="mediaLoaderPlaceholder css-1r8vrs6"
     data-e2e="media-loader__placeholder"
   >
+    <div
+      class="css-czokpf"
+      data-e2e="media-player__guidance"
+    >
+      <strong
+        aria-hidden="true"
+        class="guidance-message css-e3010g"
+      >
+        Contains strong language and some upsetting scenes.
+      </strong>
+      <noscript
+        class="css-lllaou"
+      >
+        &lt;strong&gt;Dem no support media player for your device&lt;/strong&gt;
+      </noscript>
+    </div>
     <button
       class="focusIndicatorRemove css-4vlf9b"
       type="button"

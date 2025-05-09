@@ -7,6 +7,16 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
   class="mediaLoaderPlaceholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
+  <div
+    class="css-6bu8o5"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="css-lllaou"
+    >
+      &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
+    </noscript>
+  </div>
   <button
     class="focusIndicatorRemove css-c2c21w"
     type="button"
@@ -75,6 +85,16 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
   class="mediaLoaderPlaceholder css-1r8vrs6"
   data-e2e="media-loader__placeholder"
 >
+  <div
+    class="css-6bu8o5"
+    data-e2e="media-player__guidance"
+  >
+    <noscript
+      class="css-lllaou"
+    >
+      &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
+    </noscript>
+  </div>
   <button
     class="focusIndicatorRemove css-c2c21w"
     type="button"
@@ -147,6 +167,16 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
     class="mediaLoaderPlaceholder css-1r8vrs6"
     data-e2e="media-loader__placeholder"
   >
+    <div
+      class="css-6bu8o5"
+      data-e2e="media-player__guidance"
+    >
+      <noscript
+        class="css-lllaou"
+      >
+        &lt;strong&gt;Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер&lt;/strong&gt;
+      </noscript>
+    </div>
     <button
       class="focusIndicatorRemove css-c2c21w"
       type="button"
