@@ -1351,9 +1351,9 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
           <div
             class="emotion-24"
             data-e2e="media-player"
-        >
-          <noscript />
-        </div>
+          >
+            <noscript />
+          </div>
         </figure>
       </main>
     </div>
