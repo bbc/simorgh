@@ -10,6 +10,6 @@
 const MIN = 960;
 const MAX = 1234;
 
-const DELTA = 5;
-export const MIN_SIZE = MIN - DELTA;
-export const MAX_SIZE = MAX + DELTA;
+const VARIANCE = 5;
+export const MIN_SIZE = MIN - VARIANCE;
+export const MAX_SIZE = MAX + VARIANCE;
