@@ -20,15 +20,11 @@ export default {
         margin: `${spacings.DOUBLE}rem 0`,
       },
     }),
-  feedbackHeading: ({ spacings }: Theme) =>
-    css({
-      // marginBottom: `${spacings.FULL}rem`,
-    }),
-  feedbackParagraph: ({ spacings }: Theme) =>
+  feedbackParagraph: () =>
     css({
       margin: 0,
     }),
-  feedbackButtons: ({ spacings }: Theme) =>
+  feedbackButtons: () =>
     css({
       display: 'flex',
     }),
