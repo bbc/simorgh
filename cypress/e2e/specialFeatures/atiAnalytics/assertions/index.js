@@ -18,7 +18,6 @@ const assertATIPageViewEventParamsExist = ({
   applicationType,
 }) => {
   expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('idclient');
   expect(params).to.have.property('p'); // page identifier
   expect(params).to.have.property('x2'); // application type
   expect(params).to.have.property('x3'); // application name
@@ -33,6 +32,10 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('hl'); // timestamp
     expect(params).to.have.property('lng'); // device language
     expect(params).to.have.property('x5'); // url
+  }
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
   }
 
   if (contentType !== 'list-datadriven') {
@@ -236,9 +239,7 @@ const assertClickPerViewModelClickEvent = ({
     applicationType,
   });
 
-  if (applicationType === 'lite') {
-    expect(params.app_type).to.equal(applicationType, 'params.app_type');
-  }
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   if (useReverb) {
     expect(params.patc).to.equal(
