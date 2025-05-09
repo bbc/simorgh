@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /** @jsx jsx */
 import { PlaceholderMode } from '#app/hooks/useDeterminePlaceholderMode';
 import { jsx } from '@emotion/react';
@@ -41,6 +40,8 @@ const MediaPlayerPlaceholder = ({
     <PlayButton
       css={styles.playButton}
       title={title}
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      onClick={() => {}}
       datetime={datetime}
       duration={duration}
       durationSpoken={durationSpoken}
@@ -81,7 +82,9 @@ const MediaPlayerPlaceholder = ({
       {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG
         ? playButtonWithSustainabilityMessage
         : playButton}
-      {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG ? <SustainabilityMessage title={title} /> : null}
+      {placeholderMode === PlaceholderMode.SHOW_SUSTAINABILITY_MSG ? (
+        <SustainabilityMessage title={title} />
+      ) : null}
       <SustainabilityMessageNoJs noJsMessage={noJsMessage} />
       <Image alt="" src={src} srcSet={srcSet} />
     </div>
