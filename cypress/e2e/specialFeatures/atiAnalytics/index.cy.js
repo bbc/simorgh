@@ -75,6 +75,20 @@ import { getPathWithSuffix } from './helpers';
 
 const canonicalTestSuites = [
   {
+    path: '/afrique',
+    runforEnv: ['local', 'test'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertBillboardComponentView,
+      assertBillboardComponentClick,
+    ],
+  },
+  {
     path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
     runforEnv: ['local', 'test', 'live'],
     service: 'afrique',
@@ -293,20 +307,6 @@ const canonicalTestSuites = [
       assertDropdownNavigationComponentClick,
       assertMessageBannerComponentView,
       assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/gahuza',
-    runforEnv: ['local', 'test'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.page',
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertBillboardComponentView,
-      assertBillboardComponentClick,
     ],
   },
   {
