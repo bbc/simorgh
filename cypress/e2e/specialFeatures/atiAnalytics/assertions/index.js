@@ -18,6 +18,7 @@ const assertATIPageViewEventParamsExist = ({
   applicationType,
 }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('p'); // page identifier
   expect(params).to.have.property('x2'); // application type
   expect(params).to.have.property('x3'); // application name
@@ -48,6 +49,7 @@ const assertATIPageViewEventParamsExist = ({
 
 const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('ati'); // view event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -59,6 +61,7 @@ const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
 
 const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('atc'); // click event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
