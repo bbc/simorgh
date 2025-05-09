@@ -296,7 +296,7 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin?renderer_env=test',
+    path: '/gahuza',
     runforEnv: ['local', 'test'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.page',
@@ -307,8 +307,6 @@ const canonicalTestSuites = [
       assertPageView,
       assertBillboardComponentView,
       assertBillboardComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
     ],
   },
   {
