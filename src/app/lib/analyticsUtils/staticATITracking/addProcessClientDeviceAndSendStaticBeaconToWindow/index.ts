@@ -20,7 +20,10 @@ export default () => {
         try {
           const [, atUserIdCookie] =
             document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/) || [];
-          return { val: JSON.parse(decodeURIComponent(atUserIdCookie))?.val };
+
+          const { val } = JSON.parse(decodeURIComponent(atUserIdCookie));
+
+          return { val };
         } catch {
           return { val: null };
         }
