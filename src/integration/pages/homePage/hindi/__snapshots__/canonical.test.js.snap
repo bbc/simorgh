@@ -835,7 +835,7 @@ exports[`Canonical Home Page SEO Twitter title 1`] = `"ब्रेकिंग 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
   "date": "2025-05-08",
-  "text": "3 घंटे पहले",
+  "text": "8 मई 2025",
 }
 `;
 
