@@ -219,6 +219,29 @@ export type ClipMediaBlock = {
   };
 };
 
+export type PortraitClipMediaBlock = {
+  type: 'portraitClipMedia';
+  model: {
+    type: MediaType;
+    images: {
+      source: string;
+      urlTemplate?: string;
+    }[];
+    video: {
+      id: string;
+      title: string;
+      version: {
+        id: string;
+        duration: string;
+        kind: string;
+        guidance: string | null;
+        territories: string[];
+      };
+      isEmbeddingAllowed: boolean;
+    };
+  };
+};
+
 export type LegacyMediaBlock = {
   type: 'legacyMedia';
   content: {
@@ -268,6 +291,7 @@ export type MediaCollection = {
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
+  | PortraitClipMediaBlock
   | LegacyMediaBlock
   | LiveRadioBlock
   | OnDemandTVBlock

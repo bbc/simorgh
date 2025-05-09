@@ -177,7 +177,11 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-1mgo2mg"&gt;&lt;strong class="bbc-pow7hy"&gt;Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 

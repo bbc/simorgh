@@ -31,6 +31,8 @@ import buildConfig from './utils/buildSettings';
 import getCaptionBlock from './utils/getCaptionBlock';
 import getProducerFromServiceName from './utils/getProducerFromServiceName';
 import getTranscriptBlock from './utils/getTranscriptBlock';
+import Message from './Message';
+
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -39,7 +41,7 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-const BumpLoader = () => (
+export const BumpLoader = () => (
   <Helmet>
     <script
       type="text/javascript"
@@ -101,12 +103,14 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   uniqueId?: string;
+  noJsMessage?: string;
 };
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   uniqueId,
+  noJsMessage,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
@@ -172,7 +176,11 @@ const MediaContainer = ({
           ? styles.audioMediaContainer
           : styles.standardMediaContainer
       }
-    />
+    >
+      <noscript>
+        <Message message={noJsMessage} />
+      </noscript>
+    </div>
   );
 };
 
@@ -193,8 +201,7 @@ const MediaLoader = ({
 }: Props) => {
   const transcriptBlock = getTranscriptBlock(blocks);
   const hasTranscript = !!transcriptBlock;
-
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
   const determinedPlaceholderMode = useDeterminePlaceholderMode(hasTranscript);
@@ -205,7 +212,6 @@ const MediaLoader = ({
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
@@ -258,6 +264,8 @@ const MediaLoader = ({
     mediaInfo,
   } = placeholderConfig ?? {};
 
+  const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
+
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
   return isLite && hasTranscript ? (
@@ -291,7 +299,7 @@ const MediaLoader = ({
             title={mediaInfo?.title}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
+            noJsMessage={noJsMessage}
           />
         ) : (
           <>
@@ -301,7 +309,7 @@ const MediaLoader = ({
               <Placeholder
                 src={placeholderSrc}
                 srcSet={placeholderSrcset}
-                noJsMessage={translatedNoJSMessage}
+                noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
                 placeholderMode={finalPlaceholderMode}
@@ -311,6 +319,7 @@ const MediaLoader = ({
                 playerConfig={playerConfig}
                 showAds={showAds}
                 uniqueId={uniqueId}
+                noJsMessage={noJsMessage}
               />
             )}
           </>

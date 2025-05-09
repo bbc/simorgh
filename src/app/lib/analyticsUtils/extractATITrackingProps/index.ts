@@ -14,9 +14,8 @@ export default ({
     advertiserID,
     format,
     detailedPlacement,
-    optimizely,
-    optimizelyMetricNameOverride,
     preventNavigation,
+    sendOptimizelyEvents,
   } = eventTrackingData || {};
 
   const {
@@ -44,7 +43,6 @@ export default ({
     detailedPlacement,
     producerName,
     preventNavigation,
-    optimizely,
-    optimizelyMetricNameOverride,
+    sendOptimizelyEvents,
   };
 };
