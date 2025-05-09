@@ -164,7 +164,11 @@ export default ({
       return null;
     case SOCIAL_LINKS:
       return (
-        <SocialLinks summaries={summaries} position={position} title={title} />
+        <SocialLinks
+          summaries={summaries}
+          title={title}
+          id={`social-links-${nthCurationByStyleAndProminence}`}
+        />
       );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:

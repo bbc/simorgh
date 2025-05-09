@@ -4,7 +4,12 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { Services } from '#app/models/types/global';
 import socialLinksFixture from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
-import { Curation, Summary } from '#app/models/types/curationData';
+import {
+  Curation,
+  Summary,
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '#app/models/types/curationData';
 import SocialLinks from '.';
 import metadata from './metadata.json';
 import readme from './README.md';
@@ -13,8 +18,8 @@ const getSocialLinksData = (numberOfItems?: number): Curation => {
   const socialLinksCuration = socialLinksFixture.data.curations.find(
     curation => {
       return (
-        curation.visualStyle === 'LINKS' &&
-        curation.visualProminence === 'NORMAL'
+        curation.visualStyle === VISUAL_STYLE.LINKS &&
+        curation.visualProminence === VISUAL_PROMINENCE.NORMAL
       );
     },
   ) as Curation;
@@ -41,7 +46,7 @@ const Component = ({
         <ServiceContextProvider service={service}>
           <SocialLinks
             summaries={curations.summaries as Summary[]}
-            position={curations.position}
+            id="social-links-1"
             title={curations.title || 'Social links demo'}
           />
         </ServiceContextProvider>

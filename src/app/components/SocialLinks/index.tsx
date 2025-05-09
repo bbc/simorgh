@@ -13,7 +13,7 @@ import Image from '../Image';
 import styles from './index.styles';
 
 interface SocialLinksProps {
-  position: number;
+  id: string;
   title: string;
   summaries: Summary[];
 }
@@ -23,7 +23,7 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
   const DEFAULT_IMAGE_SIZE = styles.IMAGE_SIZE_GROUP_1;
   const DEFAULT_IMAGE_SIZE_2X = DEFAULT_IMAGE_SIZE * 2;
 
-  const imagePath = imageUrl?.split('{width}')[1];
+  const [, imagePath] = imageUrl?.split('{width}') || [];
 
   if (isLite) {
     return null;
@@ -53,9 +53,9 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
       width={DEFAULT_IMAGE_SIZE}
       src={imageUrl.replace('{width}', String(DEFAULT_IMAGE_SIZE))}
       srcSet={primarySrcset}
-      mediaType={primaryMimeType || undefined}
-      fallbackSrcSet={fallbackSrcset || undefined}
-      fallbackMediaType={fallbackMimeType || undefined}
+      mediaType={primaryMimeType || ''}
+      fallbackSrcSet={fallbackSrcset || ''}
+      fallbackMediaType={fallbackMimeType || ''}
       lazyLoad
       alt=""
     />
@@ -73,7 +73,7 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
   );
 };
 
-const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
+const SocialLinks = ({ summaries = [], id, title }: SocialLinksProps) => {
   const { dir } = useContext(ServiceContext);
 
   if (!summaries.length) {
@@ -83,12 +83,8 @@ const SocialLinks = ({ summaries = [], position, title }: SocialLinksProps) => {
   const hasMultipleItems = summaries.length > 1;
 
   return (
-    <section
-      role="region"
-      aria-labelledby={`social-links-${position}`}
-      css={styles.container}
-    >
-      <Heading level={2} id={`social-links-${position}`} css={styles.heading}>
+    <section role="region" aria-labelledby={id} css={styles.container}>
+      <Heading level={2} id={id} css={styles.heading}>
         {title}
       </Heading>
       {hasMultipleItems ? (

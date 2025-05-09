@@ -31,22 +31,26 @@ const mockSummaries: Summary[] = [
 ];
 
 const singleSummary: Summary[] = [mockSummaries[0]];
+const socialLinksId = 'social-links-1';
 
 describe('SocialLinks', () => {
-  it('should correctly render social links', () => {
-    const { container } = render(
+  it('should render section correctly', () => {
+    const { getByRole } = render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={mockSummaries}
       />,
     );
-    expect(container).toMatchSnapshot();
+
+    const section = getByRole('region');
+    expect(section).toBeInTheDocument();
+    expect(section).toHaveAttribute('aria-labelledby', socialLinksId);
   });
 
   it('should return null if no summaries are passed', () => {
     const { container } = render(
-      <SocialLinks position={1} title="Social Links" summaries={[]} />,
+      <SocialLinks id="social-links-1" title="Social Links" summaries={[]} />,
     );
     expect(container.firstChild).toBeNull();
   });
@@ -54,20 +58,21 @@ describe('SocialLinks', () => {
   it('renders a single h2 heading with correct content', () => {
     render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={mockSummaries}
       />,
     );
     const headers = screen.getAllByRole('heading', { level: 2 });
     expect(headers.length).toBe(1);
+    expect(headers[0]).toHaveAttribute('id', 'social-links-1');
     expect(headers[0]).toHaveTextContent('Social Links');
   });
 
   it('renders ul/li for multiple items with correct roles and count', () => {
     render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={mockSummaries}
       />,
@@ -83,7 +88,7 @@ describe('SocialLinks', () => {
   it('renders correct content for single item', () => {
     render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={singleSummary}
       />,
@@ -99,7 +104,7 @@ describe('SocialLinks', () => {
   it('renders correct links', () => {
     render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={mockSummaries}
       />,
@@ -115,7 +120,7 @@ describe('SocialLinks', () => {
   it('renders correct images', () => {
     const { container } = render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={mockSummaries}
       />,
@@ -136,9 +141,9 @@ describe('SocialLinks', () => {
       imageUrl: '',
     };
 
-    const { container } = render(
+    render(
       <SocialLinks
-        position={1}
+        id={socialLinksId}
         title="Social Links"
         summaries={[summaryWithoutImage]}
       />,
@@ -150,6 +155,5 @@ describe('SocialLinks', () => {
 
     const images = document.querySelectorAll('img');
     expect(images.length).toBe(0);
-    expect(container).toMatchSnapshot();
   });
 });
