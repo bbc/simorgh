@@ -13,7 +13,7 @@ import Image from '../Image';
 import styles from './index.styles';
 
 interface SocialLinksProps {
-  id: string;
+  id?: string;
   title: string;
   summaries: Summary[];
 }
@@ -73,7 +73,11 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
   );
 };
 
-const SocialLinks = ({ summaries = [], id, title }: SocialLinksProps) => {
+const SocialLinks = ({
+  title,
+  summaries = [],
+  id = 'social-links-1',
+}: SocialLinksProps) => {
   const { dir } = useContext(ServiceContext);
 
   if (!summaries.length) {

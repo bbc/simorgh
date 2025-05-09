@@ -13,7 +13,7 @@ const mockSummaries: Summary[] = [
     title: 'Instagram',
     firstPublished: '',
     link: 'https://www.instagram.com/',
-    imageUrl: 'https://example.com//{width}/instagram.png',
+    imageUrl: 'https://example.com/{width}/instagram.png',
     description: '',
     imageAlt: 'Instagram',
     id: 'mock-instagram-id',
@@ -23,7 +23,7 @@ const mockSummaries: Summary[] = [
     title: 'Facebook',
     firstPublished: '',
     link: 'https://www.facebook.com/',
-    imageUrl: 'https://example.com//{width}/facebook.png',
+    imageUrl: 'https://example.com/{width}/facebook.png',
     description: '',
     imageAlt: 'Facebook',
     id: 'mock-facebook-id',
@@ -36,11 +36,7 @@ const socialLinksId = 'social-links-1';
 describe('SocialLinks', () => {
   it('should render section correctly', () => {
     const { getByRole } = render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={mockSummaries}
-      />,
+      <SocialLinks title="Social Links" summaries={mockSummaries} />,
     );
 
     const section = getByRole('region');
@@ -50,19 +46,13 @@ describe('SocialLinks', () => {
 
   it('should return null if no summaries are passed', () => {
     const { container } = render(
-      <SocialLinks id={socialLinksId} title="Social Links" summaries={[]} />,
+      <SocialLinks title="Social Links" summaries={[]} />,
     );
     expect(container.firstChild).toBeNull();
   });
 
   it('renders a single h2 heading with correct content', () => {
-    render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={mockSummaries}
-      />,
-    );
+    render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
     const headers = screen.getAllByRole('heading', { level: 2 });
     expect(headers.length).toBe(1);
     expect(headers[0]).toHaveAttribute('id', socialLinksId);
@@ -70,13 +60,7 @@ describe('SocialLinks', () => {
   });
 
   it('renders ul/li for multiple items with correct roles and count', () => {
-    render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={mockSummaries}
-      />,
-    );
+    render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
     const list = screen.getByRole('list');
     expect(list).toBeInTheDocument();
     expect(list.getAttribute('role')).toBe('list');
@@ -86,13 +70,7 @@ describe('SocialLinks', () => {
   });
 
   it('renders correct content for single item', () => {
-    render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={singleSummary}
-      />,
-    );
+    render(<SocialLinks title="Social Links" summaries={singleSummary} />);
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
     expect(screen.queryByRole('listitem')).not.toBeInTheDocument();
 
@@ -102,13 +80,7 @@ describe('SocialLinks', () => {
   });
 
   it('renders correct links', () => {
-    render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={mockSummaries}
-      />,
-    );
+    render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
 
     mockSummaries.forEach(summary => {
       const link = screen.getByRole('link', { name: summary.title });
@@ -119,11 +91,7 @@ describe('SocialLinks', () => {
 
   it('renders correct images', () => {
     const { container } = render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={mockSummaries}
-      />,
+      <SocialLinks title="Social Links" summaries={mockSummaries} />,
     );
 
     const images = container.querySelectorAll('img');
@@ -142,11 +110,7 @@ describe('SocialLinks', () => {
     };
 
     render(
-      <SocialLinks
-        id={socialLinksId}
-        title="Social Links"
-        summaries={[summaryWithoutImage]}
-      />,
+      <SocialLinks title="Social Links" summaries={[summaryWithoutImage]} />,
     );
 
     const imgPlaceholder = screen.getByTestId('social-link-image-placeholder');
