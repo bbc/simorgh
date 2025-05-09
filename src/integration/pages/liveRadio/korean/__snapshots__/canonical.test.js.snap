@@ -162,7 +162,11 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-i4t8f7"&gt;&lt;strong class="bbc-pow7hy"&gt;사용 기기에서 미디어 재생이 지원되지 않습니다&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 

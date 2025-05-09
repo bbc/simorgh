@@ -169,7 +169,11 @@ exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-1mgo2mg"&gt;&lt;strong class="bbc-pow7hy"&gt;Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 

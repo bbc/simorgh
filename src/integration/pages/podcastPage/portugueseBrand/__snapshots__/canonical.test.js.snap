@@ -198,7 +198,11 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-1ezssgh"&gt;&lt;strong class="bbc-pow7hy"&gt;A reprodução deste formato de vídeo não é compatível com seu dispositivo&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 
