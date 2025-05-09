@@ -1,6 +1,6 @@
 import envConfig from '../../../support/config/envs';
 
-export default ({ service, pageType, variant }) => {
+export default ({ service, pageType, variant = 'default' }) => {
   describe(`testsForCanonicalOnly for ${service} ${pageType} ${variant}`, () => {
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
