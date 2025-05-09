@@ -3,7 +3,7 @@ import { css, Theme } from '@emotion/react';
 const NOJS_BACKGROUND_COLOUR = 'rgba(34, 34, 34, 0.75)';
 
 export default {
-  messageWrapper: ({ fontVariants, fontSizes, palette, mq }: Theme) =>
+  messageWrapper: ({ fontVariants, fontSizes, palette, mq, isDarkUi }: Theme) =>
     css({
       ...fontVariants.sansRegular,
       ...fontSizes.longPrimer,
@@ -13,8 +13,8 @@ export default {
       top: 0,
       left: 0,
       border: `0.0625rem solid transparent`,
-      color: palette.WHITE,
-      backgroundColor: NOJS_BACKGROUND_COLOUR,
+      color: isDarkUi ? palette.GREY_2 : palette.WHITE,
+      backgroundColor: isDarkUi ? palette.GREY_7 : NOJS_BACKGROUND_COLOUR,
 
       [mq.FORCED_COLOURS]: {
         backgroundColor: 'transparent',

@@ -26,6 +26,7 @@ import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
+import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -96,12 +97,14 @@ type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
   uniqueId?: string;
+  noJsMessage?: string;
 };
 
 const MediaContainer = ({
   playerConfig,
   showAds,
   uniqueId,
+  noJsMessage,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
@@ -167,7 +170,11 @@ const MediaContainer = ({
           ? styles.audioMediaContainer
           : styles.standardMediaContainer
       }
-    />
+    >
+      <noscript>
+        <Message message={noJsMessage} />
+      </noscript>
+    </div>
   );
 };
 
@@ -179,7 +186,7 @@ type Props = {
 };
 
 const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
+  const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -187,7 +194,6 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
@@ -240,6 +246,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     mediaInfo,
   } = placeholderConfig ?? {};
 
+  const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
+
   const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
   return (
@@ -267,7 +275,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             title={mediaInfo?.title}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
+            noJsMessage={noJsMessage}
           />
         ) : (
           <>
@@ -277,7 +285,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
               <Placeholder
                 src={placeholderSrc}
                 srcSet={placeholderSrcset}
-                noJsMessage={translatedNoJSMessage}
+                noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
               />
@@ -286,6 +294,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                 playerConfig={playerConfig}
                 showAds={showAds}
                 uniqueId={uniqueId}
+                noJsMessage={noJsMessage}
               />
             )}
           </>
