@@ -1,6 +1,15 @@
 export interface PortraitVideoItem {
   id: string;
-  images?: Array<{
+  headlines?: {
+    primaryHeadline?: string;
+    seoHeadline?: string;
+    promoHeadline?: string;
+    socialHeadline?: string;
+  };
+  link?: {
+    path: string;
+  };
+  images?: {
     url: string;
     urlTemplate?: string;
     altText?: string;
@@ -9,15 +18,20 @@ export interface PortraitVideoItem {
     height?: number;
     width?: number;
     orientation?: 'portrait' | 'landscape';
-  }>;
-  headlines?: {
-    primaryHeadline?: string;
-    seoHeadline?: string;
-    promoHeadline?: string;
-    socialHeadline?: string;
+  }[];
+  video?: {
+    id: string;
+    isEmbeddingAllowed?: boolean;
+    version: {
+      id?: string;
+      duration: string;
+      kind: string;
+      territories: string[];
+    };
   };
-  description?: string;
-  link?: {
-    path: string;
+  analytics?: {
+    page?: {
+      contentId?: string;
+    };
   };
 }
