@@ -47,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
+import Feedback from './Feedback';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -98,9 +99,13 @@ const getTimestampComponent =
           lastPublished={new Date(lastPublished).getTime()}
           popOut={false}
         />
+        <Feedback />
       </Byline>
     ) : (
-      <Timestamp {...props} popOut={false} />
+      <>
+        <Timestamp {...props} popOut={false} />
+        <Feedback />
+      </>
     );
 
 const getMpuComponent =

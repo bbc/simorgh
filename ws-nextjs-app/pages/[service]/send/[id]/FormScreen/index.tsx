@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React, { useEffect, useRef, useContext } from 'react';
+import { useRouter } from 'next/router';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
@@ -28,6 +29,10 @@ export default function FormScreen({
   fields,
   privacyNotice,
 }: Props) {
+  const {
+    query: { reaction, assetId },
+  } = useRouter();
+  console.log({ reaction, assetId });
   const { handleSubmit, submitted, validationErrors, attemptedSubmitCount } =
     useFormContext();
 
@@ -72,6 +77,8 @@ export default function FormScreen({
 
   return (
     <>
+      {reaction && <div>Reaction: {reaction}</div>}
+      {assetId && <div>AssetID: {assetId}</div>}
       <Heading
         level={1}
         id="content"
