@@ -50,7 +50,7 @@ describe('SocialLinks', () => {
 
   it('should return null if no summaries are passed', () => {
     const { container } = render(
-      <SocialLinks id="social-links-1" title="Social Links" summaries={[]} />,
+      <SocialLinks id={socialLinksId} title="Social Links" summaries={[]} />,
     );
     expect(container.firstChild).toBeNull();
   });
@@ -65,7 +65,7 @@ describe('SocialLinks', () => {
     );
     const headers = screen.getAllByRole('heading', { level: 2 });
     expect(headers.length).toBe(1);
-    expect(headers[0]).toHaveAttribute('id', 'social-links-1');
+    expect(headers[0]).toHaveAttribute('id', socialLinksId);
     expect(headers[0]).toHaveTextContent('Social Links');
   });
 
