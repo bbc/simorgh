@@ -48,6 +48,23 @@ const styles = {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
       },
     }),
+
+  promoItemButton: ({ mq }: Theme) =>
+    css({
+      all: 'unset',
+      scrollSnapAlign: 'start',
+      flex: '0 0 35%',
+      textDecoration: 'none',
+      display: 'block',
+      position: 'relative',
+      overflow: 'hidden',
+      cursor: 'pointer',
+
+      [mq.GROUP_3_MIN_WIDTH]: {
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+      },
+    }),
+
   endBlankItem: ({ mq }: Theme) =>
     css({
       display: 'none',
@@ -92,7 +109,6 @@ const styles = {
       },
     }),
 
-  // Adjust fade on carousel to suit UX designs at diff breakpoints
   buttonGroupOverlay: ({ mq }: Theme) =>
     css({
       display: 'none',
