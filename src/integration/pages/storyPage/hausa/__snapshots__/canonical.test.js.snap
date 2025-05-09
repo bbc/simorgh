@@ -182,8 +182,10 @@ exports[`Canonical Story Page Header Navigation link should match text and url 7
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Bayanan sautiमुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
-<noscript>
-  &lt;div class="bbc-kvi82l"&gt;&lt;p class="bbc-8ugaiq"&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/p&gt;&lt;/div&gt;
+<noscript
+  class="bbc-n2zqlz"
+>
+  &lt;strong&gt;Na&#x27;urarku na da matsalar sauraren sauti&lt;/strong&gt;
 </noscript>
 `;
 
