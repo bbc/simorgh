@@ -26,7 +26,7 @@ const styles = {
       margin: 0,
       display: 'grid',
       listStyleType: 'none',
-      gridGap: `${spacings.DOUBLE}rem`,
+      gap: `${spacings.DOUBLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(2, 1fr)',
@@ -34,7 +34,7 @@ const styles = {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: `${spacings.DOUBLE}rem`,
+        gap: `${spacings.TRIPLE}rem`,
       },
     }),
   item: ({ spacings, mq }: Theme) =>
