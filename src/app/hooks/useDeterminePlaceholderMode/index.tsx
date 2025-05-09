@@ -3,9 +3,7 @@ import { Services } from '#app/models/types/global';
 import { useContext, useEffect, useState } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-// Disabled due to bug in ts lint
-// eslint-disable-next-line no-shadow
-export enum Mode {
+export enum PlaceholderMode {
   NO_JS = `No js mode`,
   SHOW_SUSTAINABILITY_MSG = `Has sustainability message`,
   DEFAULT = `Default - has no sustainability message`,
@@ -36,17 +34,17 @@ const determineMode = ({
   hasTranscript,
 }: Criteria) => {
   if (noJs) {
-    return Mode.NO_JS;
+    return PlaceholderMode.NO_JS;
   }
 
   if (
     (service === 'mundo' || dataSaver || isOperaMini || lowPower) &&
     hasTranscript
   ) {
-    return Mode.SHOW_SUSTAINABILITY_MSG;
+    return PlaceholderMode.SHOW_SUSTAINABILITY_MSG;
   }
 
-  return Mode.DEFAULT;
+  return PlaceholderMode.DEFAULT;
 };
 
 const useDeterminePlaceholderMode = (hasTranscript: boolean) => {

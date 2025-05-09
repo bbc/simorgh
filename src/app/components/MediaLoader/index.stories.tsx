@@ -1,5 +1,5 @@
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { Mode } from '#app/hooks/useDeterminePlaceholderMode';
+import { PlaceholderMode } from '#app/hooks/useDeterminePlaceholderMode';
 import { PageTypes, Services } from '#app/models/types/global';
 import React from 'react';
 import MediaLoaderComponent from '.';
@@ -16,7 +16,7 @@ type Props = {
   pageType: PageTypes;
   service: Services;
   blocks: MediaBlock[];
-  placeholderMode?: Mode;
+  placeholderMode?: PlaceholderMode;
 };
 
 const Component = ({ service, pageType, blocks, placeholderMode }: Props) => (
@@ -28,10 +28,7 @@ const Component = ({ service, pageType, blocks, placeholderMode }: Props) => (
     pathname=""
     service={service}
   >
-    <MediaLoaderComponent
-      blocks={blocks}
-      forcePlaceholderMode={placeholderMode}
-    />
+    <MediaLoaderComponent blocks={blocks} placeholderMode={placeholderMode} />
   </RequestContextProvider>
 );
 
@@ -40,7 +37,11 @@ export default {
   Component,
   argTypes: {
     placeholderMode: {
-      options: [Mode.SHOW_SUSTAINABILITY_MSG, Mode.DEFAULT],
+      options: [
+        PlaceholderMode.SHOW_SUSTAINABILITY_MSG,
+        PlaceholderMode.DEFAULT,
+        PlaceholderMode.NO_JS,
+      ],
       control: { type: 'radio' },
     },
   },

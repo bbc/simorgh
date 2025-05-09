@@ -3,7 +3,7 @@ import {
   getByText,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import { Mode } from '#app/hooks/useDeterminePlaceholderMode';
+import { PlaceholderMode } from '#app/hooks/useDeterminePlaceholderMode';
 import React from 'react';
 import Placeholder from '.';
 
@@ -26,7 +26,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -40,7 +40,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.' }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -58,7 +58,7 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -72,7 +72,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ type: 'audio', title: 'Dog barks at cat.' }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -86,7 +86,7 @@ describe('Media Player: Placeholder', () => {
         src="http://foo.bar/placeholder.png"
         mediaInfo={{ title: 'Dog chases cat.', ...withDuration }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -107,7 +107,7 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );
@@ -126,7 +126,7 @@ describe('Media Player: Placeholder', () => {
           ...withDuration,
         }}
         noJsMessage="no js"
-        placeholderMode={Mode.DEFAULT}
+        placeholderMode={PlaceholderMode.DEFAULT}
       />,
       { service: 'news' },
     );

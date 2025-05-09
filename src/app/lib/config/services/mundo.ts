@@ -57,7 +57,7 @@ export const service: DefaultServiceConfig = {
       transcript: {
         readTranscript: 'Read transcript',
         disclaimer:
-          ' This transcript has been reviewed by a journalist, it was generated with AI (artificial intelligence).',
+          ' This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
       },
       ads: {
         advertisementLabel: 'Publicidad',

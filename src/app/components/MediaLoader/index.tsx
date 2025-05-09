@@ -3,7 +3,7 @@
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useDeterminePlaceholderMode, {
-  Mode,
+  PlaceholderMode,
 } from '#app/hooks/useDeterminePlaceholderMode';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
@@ -180,7 +180,7 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
-  forcePlaceholderMode?: Mode;
+  placeholderMode?: PlaceholderMode;
   uniqueId?: string;
 };
 
@@ -189,7 +189,7 @@ const MediaLoader = ({
   className,
   embedded,
   uniqueId,
-  forcePlaceholderMode,
+  placeholderMode,
 }: Props) => {
   const transcriptBlock = getTranscriptBlock(blocks);
   const hasTranscript = !!transcriptBlock;
@@ -199,7 +199,7 @@ const MediaLoader = ({
   const { enabled: adsEnabled } = useToggle('ads');
   const determinedPlaceholderMode = useDeterminePlaceholderMode(hasTranscript);
 
-  const placeholderMode = forcePlaceholderMode ?? determinedPlaceholderMode;
+  const finalPlaceholderMode = placeholderMode ?? determinedPlaceholderMode;
 
   const {
     id,
@@ -304,7 +304,7 @@ const MediaLoader = ({
                 noJsMessage={translatedNoJSMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
-                placeholderMode={placeholderMode}
+                placeholderMode={finalPlaceholderMode}
               />
             ) : (
               <MediaContainer

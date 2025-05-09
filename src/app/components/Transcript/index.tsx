@@ -10,10 +10,10 @@ import TranscriptTimestamp from './TranscriptTimestamp';
 import styles from './index.styles';
 import { TranscriptBlock, TranscriptItem } from './types';
 
-const DEAFULT_TRANSLATIONS = {
+const DEFAULT_TRANSLATIONS = {
   readTranscript: 'Read transcript',
   disclaimer:
-    ' This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
+    'This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
 };
 
 const TranscriptListItem = ({ id, start, content }: TranscriptItem) => (
@@ -39,7 +39,7 @@ const Transcript = ({
     return null;
   }
 
-  const { transcript: transcriptTranslations = DEAFULT_TRANSLATIONS } =
+  const { transcript: transcriptTranslations = DEFAULT_TRANSLATIONS } =
     translations;
   const { readTranscript, disclaimer } = transcriptTranslations;
 

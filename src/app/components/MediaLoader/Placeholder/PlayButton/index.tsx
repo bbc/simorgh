@@ -12,7 +12,7 @@ type Props = {
   durationSpoken?: string;
   type?: string;
   title?: string;
-  onClick: () => void;
+  onClick?: () => void;
   guidanceMessage?: string | null;
 };
 

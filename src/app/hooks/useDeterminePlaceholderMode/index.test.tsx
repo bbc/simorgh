@@ -4,7 +4,7 @@ import { renderHook } from '#app/components/react-testing-library-with-providers
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
 import React, { PropsWithChildren, act } from 'react';
-import useDeterminePlaceholderMode, { Mode } from '.';
+import useDeterminePlaceholderMode, { PlaceholderMode } from '.';
 
 const ServiceContextWrapper =
   (service: Services) =>
@@ -24,7 +24,7 @@ describe('useDeterminePlaceholder', () => {
       dataSaver: false,
       batteryLevel: '1',
       hasTranscript: true,
-      expected: Mode.DEFAULT,
+      expected: PlaceholderMode.DEFAULT,
     },
     {
       title:
@@ -34,7 +34,7 @@ describe('useDeterminePlaceholder', () => {
       dataSaver: false,
       batteryLevel: '1',
       hasTranscript: true,
-      expected: Mode.SHOW_SUSTAINABILITY_MSG,
+      expected: PlaceholderMode.SHOW_SUSTAINABILITY_MSG,
     },
     {
       title:
@@ -44,7 +44,7 @@ describe('useDeterminePlaceholder', () => {
       dataSaver: true,
       batteryLevel: '1',
       hasTranscript: true,
-      expected: Mode.SHOW_SUSTAINABILITY_MSG,
+      expected: PlaceholderMode.SHOW_SUSTAINABILITY_MSG,
     },
     {
       title:
@@ -54,7 +54,7 @@ describe('useDeterminePlaceholder', () => {
       dataSaver: false,
       batteryLevel: '0.2',
       hasTranscript: true,
-      expected: Mode.SHOW_SUSTAINABILITY_MSG,
+      expected: PlaceholderMode.SHOW_SUSTAINABILITY_MSG,
     },
 
     {
@@ -65,7 +65,7 @@ describe('useDeterminePlaceholder', () => {
       dataSaver: false,
       batteryLevel: '1',
       hasTranscript: true,
-      expected: Mode.SHOW_SUSTAINABILITY_MSG,
+      expected: PlaceholderMode.SHOW_SUSTAINABILITY_MSG,
     },
     {
       title: 'Returns default for Mundo services with no transcript',
@@ -74,7 +74,7 @@ describe('useDeterminePlaceholder', () => {
       dataSaver: false,
       batteryLevel: '1',
       hasTranscript: false,
-      expected: Mode.DEFAULT,
+      expected: PlaceholderMode.DEFAULT,
     },
   ])(
     '$title',
