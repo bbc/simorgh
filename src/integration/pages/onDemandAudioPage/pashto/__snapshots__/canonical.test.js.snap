@@ -205,7 +205,11 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
   <div
     class="bbc-1eq7znh"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-q0ilh"&gt;&lt;strong class="bbc-pow7hy"&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 
