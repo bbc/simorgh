@@ -78,9 +78,9 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-jest.mock('../../components/ATIAnalytics', () => {
-  return () => <div>ATI Analytics</div>;
-});
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 const { env } = process;
 
