@@ -6,12 +6,20 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
-import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import * as processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as onClient from '#app/lib/utilities/onClient';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
+const { addProcessClientDeviceAndSendStaticBeaconToWindow } =
+  processClientDeviceAndSendStaticBeacon;
+
 jest.spyOn(onClient, 'default').mockImplementation(() => false);
+
+const processClientDeviceAndSendStaticBeaconSpy = jest.spyOn(
+  processClientDeviceAndSendStaticBeacon,
+  'default',
+);
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -78,6 +86,20 @@ describe('Canonical ATI Analytics', () => {
       expect.stringContaining(
         addProcessClientDeviceAndSendStaticBeaconToWindow.toString(),
       ),
+    );
+  });
+
+  it('should send a beacon via processClientDeviceAndSendStaticBeacon on lite', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />, {
+        isLite: true,
+      });
+    });
+
+    expect(processClientDeviceAndSendStaticBeaconSpy).toHaveBeenCalledWith(
+      `${atiBaseUrl}${mockPageviewParams}`,
     );
   });
 
