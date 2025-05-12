@@ -1,5 +1,5 @@
 /* eslint-disable no-eval */
-import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/addSendStaticBeaconToWindow';
 import sendPageViewBeaconOperaMini from '.';
 
 interface WindowOperaMini extends Window {

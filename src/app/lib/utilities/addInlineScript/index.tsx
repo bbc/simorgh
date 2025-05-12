@@ -11,5 +11,7 @@ export default ({
     inlineScript = `(${script.toString()})()`;
   }
 
+  console.log({ inlineScript });
+
   return <script type="text/javascript">{inlineScript as string}</script>;
 };

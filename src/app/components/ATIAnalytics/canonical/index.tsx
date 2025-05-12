@@ -3,13 +3,15 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite, {
-  addSendStaticBeaconToWindow,
-} from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+  addProcessClientDeviceAndSendStaticBeaconToWindow,
+} from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
+import onClient from '#app/lib/utilities/onClient';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -33,7 +35,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
   );
 };
 
-const addScript = (script: string) => {
+const addScript = (script: string | { toString: () => string }) => {
   return <Helmet>{addInlineScript({ script })}</Helmet>;
 };
 
@@ -55,9 +57,11 @@ const CanonicalATIAnalytics = ({
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
   return (
+    // @ts-expect-error allow stringified scripts to be added to the window
     <>
       {addScript(addSendStaticBeaconToWindow())}
-      {isLite && addScript(sendPageViewBeaconLite(atiPageViewUrlString))}
+      {addScript(addProcessClientDeviceAndSendStaticBeaconToWindow)}
+      {isLite && onClient() && sendPageViewBeaconLite(atiPageViewUrlString)}
       {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
