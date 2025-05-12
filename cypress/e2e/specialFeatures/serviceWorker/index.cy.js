@@ -4,6 +4,7 @@ import {
   serviceWorkerIsRegistered,
   serviceWorkerCaching,
 } from './assertions';
+import { getPathWithSuffix } from '../atiAnalytics/helpers';
 
 const tests = [
   serviceWorkerIsAvailable,
@@ -32,6 +33,12 @@ const testSuites = [
   },
 ];
 
+const ampTestSuites = testSuites.map(testSuite => ({
+  ...testSuite,
+  path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+  applicationType: 'amp',
+}));
+
 runTestsForPage({
-  testSuites,
+  testSuites: [...testSuites, ...ampTestSuites],
 });
