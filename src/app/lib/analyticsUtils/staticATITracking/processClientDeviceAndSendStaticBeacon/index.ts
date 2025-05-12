@@ -1,3 +1,5 @@
+import onClient from '#app/lib/utilities/onClient';
+
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   window.processClientDeviceAndSendStaticBeacon = atiURL => {
     if (atiURL) {
@@ -75,5 +77,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 };
 
 export default (atiURL: string) => {
-  window.processClientDeviceAndSendStaticBeacon(atiURL);
+  if (onClient()) {
+    window.processClientDeviceAndSendStaticBeacon(atiURL);
+  }
 };

@@ -11,7 +11,6 @@ import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
-import onClient from '#app/lib/utilities/onClient';
 
 const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
   atiPageViewUrl.includes('x8=[simorgh]')
@@ -61,7 +60,7 @@ const CanonicalATIAnalytics = ({
     <>
       {addScript(addSendStaticBeaconToWindow())}
       {addScript(addProcessClientDeviceAndSendStaticBeaconToWindow)}
-      {isLite && onClient() && sendPageViewBeaconLite(atiPageViewUrlString)}
+      {isLite && sendPageViewBeaconLite(atiPageViewUrlString)}
       {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
