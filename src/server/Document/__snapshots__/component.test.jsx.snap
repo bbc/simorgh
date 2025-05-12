@@ -138,26 +138,28 @@ exports[`Document Component should render APP version correctly 1`] = `
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = true;
+      var isComponentViewTrackingEnabled = false;
 
-      if (true) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
       }      
 
       if (isComponentTrackingEnabled) {
-        (function staticATIClickTracking() {
-    return 'Tracking script placeholder';
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
   })();
 
-        if (false) {
-          (function staticATIClickTracking() {
-    return 'View script placeholder';
+        if (isComponentViewTrackingEnabled) {
+          (function viewTracking() {
+    return 'View tracking placeholder';
   })();
         }
 
-        (function staticATIClickTracking() {
-    return 'Click script placeholder';
+        (function clickTracking() {
+    return 'Click tracking placeholder';
   })();
       }
     });
@@ -241,26 +243,28 @@ exports[`Document Component should render LITE version correctly 1`] = `
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = false;
+      var isComponentViewTrackingEnabled = true;
 
-      if (false) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
       }      
 
       if (isComponentTrackingEnabled) {
-        (function staticATIClickTracking() {
-    return 'Tracking script placeholder';
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
   })();
 
-        if (true) {
-          (function staticATIClickTracking() {
-    return 'View script placeholder';
+        if (isComponentViewTrackingEnabled) {
+          (function viewTracking() {
+    return 'View tracking placeholder';
   })();
         }
 
-        (function staticATIClickTracking() {
-    return 'Click script placeholder';
+        (function clickTracking() {
+    return 'Click tracking placeholder';
   })();
       }
     });
@@ -339,26 +343,28 @@ exports[`Document Component should render correctly 1`] = `
       
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = true;
+      var isComponentViewTrackingEnabled = false;
 
-      if (true) {
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
         isComponentTrackingEnabled = function isOperaProxy() {
   return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
 }();
       }      
 
       if (isComponentTrackingEnabled) {
-        (function staticATIClickTracking() {
-    return 'Tracking script placeholder';
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
   })();
 
-        if (false) {
-          (function staticATIClickTracking() {
-    return 'View script placeholder';
+        if (isComponentViewTrackingEnabled) {
+          (function viewTracking() {
+    return 'View tracking placeholder';
   })();
         }
 
-        (function staticATIClickTracking() {
-    return 'Click script placeholder';
+        (function clickTracking() {
+    return 'Click tracking placeholder';
   })();
       }
     });

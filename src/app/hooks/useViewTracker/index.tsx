@@ -4,11 +4,13 @@
 import { useContext, useEffect, useState, useRef, useCallback } from 'react';
 
 import { RequestContext } from '#app/contexts/RequestContext';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
 import {
   STATIC_ATI_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructStaticATIUrl from '#src/server/utilities/staticATITracking/constructATIUrl';
+import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
@@ -32,12 +34,16 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     statsDestination,
     campaignID,
     detailedPlacement,
-    optimizely,
-    optimizelyMetricNameOverride,
+    sendOptimizelyEvents,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
+
+  const { optimizely } = useContext(OptimizelyContext);
+  const optimizelyVariation = useOptimizelyMvtVariation(
+    OPTIMIZELY_CONFIG.ruleKey,
+  );
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -91,25 +97,15 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          if (optimizely) {
-            const eventName = OPTIMIZELY_CONFIG.viewClickAttributeId;
-
-            const overrideAttributes = {
-              ...optimizely.user.attributes,
-              [`viewed_${eventName}`]: true,
-            };
+          if (optimizely && sendOptimizelyEvents && optimizelyVariation) {
+            const overrideAttributes = optimizely?.user.attributes;
 
             optimizely.track(
-              optimizelyMetricNameOverride
-                ? `${optimizelyMetricNameOverride}_views`
-                : 'component_views',
+              `${componentName}-views`,
               optimizely.user.id as string,
               overrideAttributes,
             );
           }
-
-          const optimizelyVariation =
-            optimizely?.getVariation(OPTIMIZELY_CONFIG.ruleKey) || null;
 
           sendEventBeacon({
             campaignID,
@@ -162,8 +158,9 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     eventSent,
     advertiserID,
     url,
+    sendOptimizelyEvents,
     optimizely,
-    optimizelyMetricNameOverride,
+    optimizelyVariation,
     detailedPlacement,
     useReverb,
   ]);
@@ -182,7 +179,9 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
 
 export default (eventTrackingData?: EventTrackingData): any => {
   const { isLite } = useContext(RequestContext);
+
   const viewTracker = getComponentViewTracker(eventTrackingData);
+
   const staticATIUrl = constructStaticATIUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
