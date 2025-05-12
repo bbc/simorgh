@@ -3,8 +3,8 @@ import { ATIAnalyticsProps } from '../../types';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const trackingPixelUrl = (
+const getNoScriptTrackingPixelUrl = (
   reverbParams: ATIAnalyticsPropsExport['reverbParams'],
 ) => reverbUrlHelper.getTrackingPixelSrc(reverbParams);
 
-export default trackingPixelUrl;
+export default getNoScriptTrackingPixelUrl;

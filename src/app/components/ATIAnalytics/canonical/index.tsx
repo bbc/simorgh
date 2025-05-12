@@ -9,7 +9,7 @@ import sendPageViewBeaconLite, {
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
-import trackingPixelUrl from './getNoScriptTrackingPixelUrl';
+import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
@@ -27,7 +27,7 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={trackingPixelUrl(reverbParams)}
+        src={getNoScriptTrackingPixelUrl(reverbParams)}
       />
     </noscript>
   );

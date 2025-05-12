@@ -1,4 +1,4 @@
-import trackingPixelUrl from '.';
+import getNoScriptTrackingPixelUrl from '.';
 
 const mockReverbParams = {
   params: {
@@ -36,6 +36,6 @@ describe('trackingPixelUrl', () => {
   it('should return the correct tracking pixel URL', () => {
     const expectedUrl =
       'https://a1.api.bbc.co.uk/hit.xiti?s=598342&s2=40&p=gahuza.articles.cj9ed704jjeo.page&x1=[urn%3Abbc%3Aoptimo%3Aasset%3Acj9ed704jjeo]&x2=[responsive]&x3=[news-gahuza]&x4=[rw]&x7=[article]&x8=[simorgh-nojs]&x9=[Imbonezamirire%3A%2520Ibiryo%2520bitunganyije%2520cyane%2520bishobora%2520kuba%2520bifitanye%2520isano%2520no%2520gupfa%2520hakiri%2520kare]&x11=[2025-05-01T07%3A52%3A32.280Z]&x12=[2025-05-01T07%3A52%3A32.280Z]&x13=[Life~Food~Food%2Bsafety~Diet%2B%26%2Bnutrition]&x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~99fb9bbd-9150-4e13-a3ac-3fa0610683f8~a9a254fe-0059-441c-9d75-fab5997d371e~b5a68823-bb0c-4229-b142-d6d5e09e113f]&x17=[Life~Food~Food%2Bsafety~Diet%2B%26%2Bnutrition]';
-    expect(trackingPixelUrl(mockReverbParams)).toEqual(expectedUrl);
+    expect(getNoScriptTrackingPixelUrl(mockReverbParams)).toEqual(expectedUrl);
   });
 });
