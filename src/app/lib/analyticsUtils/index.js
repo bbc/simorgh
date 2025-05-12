@@ -165,7 +165,7 @@ export const getDeviceLanguage = platform => {
 
 export const getHref = platform => {
   if (platform === 'amp') {
-    return `\${sourceUrl}`;
+    return null;
   }
 
   if (onClient() && window.location.href) {
@@ -182,7 +182,7 @@ export const getReferrer = platform => {
        to a `document.referrer` equivalent as the window document is undefined on amp pages.
        https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#document-referrer
     */
-    return `\${documentReferrer}`;
+    return null;
   }
 
   if (onClient() && document.referrer) {
