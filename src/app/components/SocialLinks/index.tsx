@@ -8,6 +8,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
@@ -68,6 +69,10 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
       <SocialLinkImage imageUrl={summary.imageUrl} />
       <a href={summary.link} css={styles.link}>
         {summary.title}
+
+        {summary.description ? (
+          <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
+        ) : null}
       </a>
     </>
   );
