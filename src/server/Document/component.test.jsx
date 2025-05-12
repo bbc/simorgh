@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server.node';
 import { Helmet } from 'react-helmet';
 import { JSDOM } from 'jsdom';
 import dotenv from 'dotenv';
@@ -45,6 +45,8 @@ describe('Document Component', () => {
   afterEach(() => {
     process.env = originalProcessEnv;
   });
+
+  afterAll(() => {});
 
   const data = { test: 'data' };
   const legacyScripts = (

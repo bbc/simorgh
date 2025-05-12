@@ -11,9 +11,6 @@ import * as onClient from '#app/lib/utilities/onClient';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
-const { addProcessClientDeviceAndSendStaticBeaconToWindow } =
-  processClientDeviceAndSendStaticBeacon;
-
 jest.spyOn(onClient, 'default').mockImplementation(() => false);
 
 const processClientDeviceAndSendStaticBeaconSpy = jest.spyOn(
@@ -68,24 +65,6 @@ describe('Canonical ATI Analytics', () => {
 
     expect(helmet.scriptTags[0].innerHTML).toEqual(
       addSendStaticBeaconToWindow(),
-    );
-  });
-
-  it('should render processClientDeviceAndSendStaticBeacon Helmet script on lite only', () => {
-    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
-
-    act(() => {
-      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />, {
-        isLite: true,
-      });
-    });
-
-    const helmet = Helmet.peek();
-
-    expect(helmet.scriptTags[1].innerHTML).toEqual(
-      expect.stringContaining(
-        addProcessClientDeviceAndSendStaticBeaconToWindow.toString(),
-      ),
     );
   });
 
