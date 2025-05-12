@@ -10,10 +10,13 @@ Helmet.canUseDOM = false;
 
 jest.mock(
   '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon',
-  () =>
-    function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+  () => {
+    const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       return 'Add process client device and send static beacon to window placeholder';
-    }.toString(),
+    };
+
+    return { addProcessClientDeviceAndSendStaticBeaconToWindow };
+  },
 );
 
 jest.mock('#app/lib/analyticsUtils/staticATITracking/clickTracking', () =>
