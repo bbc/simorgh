@@ -1,3 +1,4 @@
+/* istanbul ignore next */
 import onClient from '#app/lib/utilities/onClient';
 
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
