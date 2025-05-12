@@ -68,7 +68,7 @@ describe('Canonical ATI Analytics', () => {
     );
   });
 
-  it('should send a beacon via processClientDeviceAndSendStaticBeacon on lite', () => {
+  it('should contain a beacon onLoad script via processClientDeviceAndSendStaticBeacon on lite', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     act(() => {
@@ -77,7 +77,10 @@ describe('Canonical ATI Analytics', () => {
       });
     });
 
-    expect(processClientDeviceAndSendStaticBeaconSpy).toHaveBeenCalledWith(
+    const helmet = Helmet.peek();
+    const sendPageViewBeaconLite = helmet.scriptTags[1].innerHTML;
+
+    expect(sendPageViewBeaconLite).toContain(
       `${atiBaseUrl}${mockPageviewParams}`,
     );
   });
