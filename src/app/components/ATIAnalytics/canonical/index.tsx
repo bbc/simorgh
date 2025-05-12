@@ -56,7 +56,8 @@ const CanonicalATIAnalytics = ({
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
   return (
-    // @ts-expect-error allow stringified scripts to be added to the window
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore allow stringified scripts to be added to the window
     <>
       {addScript(addSendStaticBeaconToWindow())}
       {addScript(addProcessClientDeviceAndSendStaticBeaconToWindow)}
