@@ -5,7 +5,8 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/addSendStaticBeaconToWindow';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
@@ -33,7 +34,7 @@ describe('Canonical ATI Analytics', () => {
     expect(mockSendBeacon).toHaveBeenCalledWith(expectedUrl, reverbConfig);
   });
 
-  it('should render sendStaticBeacon Helmet script for canonical', () => {
+  it('should add scripts to helmet', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
     act(() => {
@@ -42,9 +43,36 @@ describe('Canonical ATI Analytics', () => {
 
     const helmet = Helmet.peek();
 
-    expect(helmet.scriptTags).toHaveLength(2);
+    expect(helmet.scriptTags).toHaveLength(3);
+  });
+
+  it('should render sendStaticBeacon Helmet script', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+    });
+
+    const helmet = Helmet.peek();
+
     expect(helmet.scriptTags[0].innerHTML).toEqual(
       addSendStaticBeaconToWindow(),
+    );
+  });
+
+  it('should render processClientDeviceAndSendStaticBeacon Helmet script', () => {
+    jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
+
+    act(() => {
+      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />);
+    });
+
+    const helmet = Helmet.peek();
+
+    expect(helmet.scriptTags[1].innerHTML).toEqual(
+      expect.stringContaining(
+        addProcessClientDeviceAndSendStaticBeaconToWindow.toString(),
+      ),
     );
   });
 
