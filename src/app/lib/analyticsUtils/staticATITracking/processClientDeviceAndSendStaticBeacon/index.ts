@@ -75,6 +75,4 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   };
 };
 
-export default (atiURL: string) => `
-    window.processClientDeviceAndSendStaticBeacon("${atiURL}");
-`;
+export default (atiURL: string) => () => window.processClientDeviceAndSendStaticBeacon(atiURL);
