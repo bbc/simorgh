@@ -9,7 +9,7 @@ import DocumentComponent from './component';
 Helmet.canUseDOM = false;
 
 jest.mock(
-  '#app/lib/analyticsUtils/staticATITracking/addProcessClientDeviceAndSendStaticBeaconToWindow',
+  '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon',
   () =>
     function addProcessClientDeviceAndSendStaticBeaconToWindow() {
       return 'Add process client device and send static beacon to window placeholder';
