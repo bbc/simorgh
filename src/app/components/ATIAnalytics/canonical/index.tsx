@@ -60,7 +60,7 @@ const CanonicalATIAnalytics = ({
     // @ts-ignore allow stringified scripts to be added to the window
     <>
       {addScript(addSendStaticBeaconToWindow())}
-      {addScript(addProcessClientDeviceAndSendStaticBeaconToWindow)}
+      {isLite && addScript(addProcessClientDeviceAndSendStaticBeaconToWindow)}
       {isLite && sendPageViewBeaconLite(atiPageViewUrlString)}
       {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
