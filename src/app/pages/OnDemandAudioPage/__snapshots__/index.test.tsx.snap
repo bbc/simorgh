@@ -1645,7 +1645,9 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 <div>
-  <noscript />
+  <div>
+    ATI Analytics
+  </div>
   <div>
     chartbeat
   </div>
@@ -3957,7 +3959,9 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 <div>
-  <noscript />
+  <div>
+    ATI Analytics
+  </div>
   <div>
     chartbeat
   </div>
@@ -6242,7 +6246,9 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 <div>
-  <noscript />
+  <div>
+    ATI Analytics
+  </div>
   <div>
     chartbeat
   </div>
