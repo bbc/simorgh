@@ -149,12 +149,15 @@ const assertClickPerViewModelViewEvent = ({
   contentType,
   useReverb,
   params,
+  applicationType,
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
+
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   expect(params.ati).to.match(
     getViewClickDetailsRegex({
@@ -195,6 +198,7 @@ export const assertATIComponentViewEvent = ({
   pageIdentifier,
   contentType,
   useReverb,
+  applicationType,
 }) => {
   const useViewabilty = usesReverbViewabilityModel(useReverb);
   const requestAlias = useViewabilty
@@ -220,6 +224,7 @@ export const assertATIComponentViewEvent = ({
           contentType,
           useReverb,
           params,
+          applicationType,
         });
       }
     });
