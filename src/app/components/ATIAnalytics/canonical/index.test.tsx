@@ -6,17 +6,11 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
-import * as processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as onClient from '#app/lib/utilities/onClient';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 
 jest.spyOn(onClient, 'default').mockImplementation(() => false);
-
-const processClientDeviceAndSendStaticBeaconSpy = jest.spyOn(
-  processClientDeviceAndSendStaticBeacon,
-  'default',
-);
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
