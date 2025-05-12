@@ -6,7 +6,6 @@ import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import isLocal from '#app/lib/utilities/isLocal';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface AmpServiceWorkerProps {
@@ -32,7 +31,6 @@ const AmpServiceWorker = ({
     src={swSrc}
     data-iframe-src={canonicalLink}
     layout="nodisplay"
-    data-ampdevmode={isLocal() ? 'true' : false}
   />
 );
 
