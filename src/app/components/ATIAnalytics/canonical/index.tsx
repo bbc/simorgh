@@ -61,7 +61,7 @@ const CanonicalATIAnalytics = ({
     <>
       {addScript(addSendStaticBeaconToWindow())}
       {isLite && addScript(addProcessClientDeviceAndSendStaticBeaconToWindow)}
-      {isLite && sendPageViewBeaconLite(atiPageViewUrlString)}
+      {isLite && addScript(sendPageViewBeaconLite(atiPageViewUrlString))}
       {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
