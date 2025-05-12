@@ -13,6 +13,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -40,7 +41,7 @@ const LitePlayWrapper = withEpisodeContext(styled.div`
     padding: ${GEL_SPACING};
   }
   svg {
-    margin: 0 0 1px 0;
+    margin: 0 0 ${pixelsToRem(1)}px 0;
     height: 0.6rem;
     width: 0.7rem;
     color: ${props => props.theme.palette.WHITE};
