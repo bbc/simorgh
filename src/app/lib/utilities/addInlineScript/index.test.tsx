@@ -30,6 +30,18 @@ describe('addInlineScript', () => {
   it.each([
     {
       title:
+        'should render the script as expected when script is a function with empty string',
+      params: '',
+      expectedParamOutput: ``,
+    },
+    {
+      title:
+        'should render the script as expected when script is a function with a single string',
+      params: 'helloWorld',
+      expectedParamOutput: `'helloWorld'`,
+    },
+    {
+      title:
         'should render the script as expected when script is a function with empty parameters',
       params: [],
       expectedParamOutput: ``,

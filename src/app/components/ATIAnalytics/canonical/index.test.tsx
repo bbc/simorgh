@@ -6,11 +6,9 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
-import * as onClient from '#app/lib/utilities/onClient';
+import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
-
-jest.spyOn(onClient, 'default').mockImplementation(() => false);
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -74,6 +72,9 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
     const sendPageViewBeaconLite = helmet.scriptTags[1].innerHTML;
 
+    expect(sendPageViewBeaconLite).toContain(
+      processClientDeviceAndSendStaticBeacon.toString(),
+    );
     expect(sendPageViewBeaconLite).toContain(
       `${atiBaseUrl}${mockPageviewParams}`,
     );

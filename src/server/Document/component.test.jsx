@@ -46,8 +46,6 @@ describe('Document Component', () => {
     process.env = originalProcessEnv;
   });
 
-  afterAll(() => {});
-
   const data = { test: 'data' };
   const legacyScripts = (
     <>
