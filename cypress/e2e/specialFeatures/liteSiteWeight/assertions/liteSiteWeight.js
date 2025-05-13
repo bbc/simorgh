@@ -63,8 +63,11 @@ export default ({ path, pageType }) => {
                 {
                   URL: `${Cypress.config().baseUrl}${path}`,
                   'Page Type': pageType,
-                  'Local Page Weight (KB)': localPageWeight,
-                  'Live Page Weight (KB)': livePageWeight,
+                  'Local (KB)': localPageWeight,
+                  'Live (KB)': livePageWeight,
+                  'Delta (KB)': roundTo2Decimals(
+                    livePageWeight - localPageWeight,
+                  ),
                   'Delta (%) ': delta,
                 },
               ]);
