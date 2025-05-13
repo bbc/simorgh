@@ -494,5 +494,4 @@ Cypress.Cookies.debug(true);
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   beforeAll: [setUserIDCookie],
-  testIsolation: true,
 });
