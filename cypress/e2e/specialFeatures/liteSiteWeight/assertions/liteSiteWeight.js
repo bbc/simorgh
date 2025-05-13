@@ -2,7 +2,15 @@ import interceptGetRequests from '../helpers/interceptGetRequests';
 import getTotalPageSize from '../helpers/getTotalPageSize';
 import roundTo2Decimals from '../helpers/roundTo2Decimals';
 
-const MAX_PAGE_WEIGHT_KB = 75;
+const LOWER_MAX_PAGE_WEIGHT_KB = 50;
+const UPPER_MAX_PAGE_WEIGHT_KB = 75;
+
+const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
+  'Live Page': UPPER_MAX_PAGE_WEIGHT_KB,
+};
+
+const getPageWeightLimit = pageType =>
+  PAGE_TYPE_PAGE_WEIGHT_MAPPING[pageType] || LOWER_MAX_PAGE_WEIGHT_KB;
 
 const formatTableData = sizes => {
   return sizes.map(({ url, size }) => ({
@@ -31,7 +39,9 @@ export default ({ path, pageType }) => {
       liveRequests = [];
     });
 
-    it(`Page weight for ${pageType} page should be less than ${MAX_PAGE_WEIGHT_KB}Kb`, () => {
+    const pageWeightLimit = getPageWeightLimit(pageType);
+
+    it(`Page weight for ${pageType} page should be less than ${pageWeightLimit}Kb`, () => {
       getTotalPageSize(allRequests).then(
         ({ totalSize: localPageWeight, requestSizes: localRequestSizes }) => {
           interceptGetRequests(liveRequests);
@@ -44,7 +54,7 @@ export default ({ path, pageType }) => {
                 ((localPageWeight + livePageWeight) / 2);
 
               const delta = roundTo2Decimals(percentageDifference);
-              expect(localPageWeight).to.be.lessThan(MAX_PAGE_WEIGHT_KB);
+              expect(localPageWeight).to.be.lessThan(pageWeightLimit);
               const localRequestSizesData = formatTableData(localRequestSizes);
               const liveRequestSizesData = formatTableData(liveRequestSizes);
               cy.task('table', localRequestSizesData);
