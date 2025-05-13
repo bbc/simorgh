@@ -5,11 +5,7 @@ import roundTo2Decimals from '../helpers/roundTo2Decimals';
 const MAX_PAGE_WEIGHT_KB = 50;
 
 const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
-  Home: 55,
   Live: 75,
-  'On Demand TV - Episode': 55,
-  'Podcast - Brand': 55,
-  'Podcast - Episode': 55,
 };
 
 const getMaxPageWeight = pageType =>
@@ -73,7 +69,7 @@ export default ({ path, pageType }) => {
                   'Delta (KB)': roundTo2Decimals(
                     localPageWeight - livePageWeight,
                   ),
-                  'Delta (%) ': delta,
+                  'Delta (%)': delta,
                 },
               ]);
             },
