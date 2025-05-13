@@ -12,7 +12,7 @@ exports[`withContexts HOC should return all context providers 1`] = `
     {"toggleState":{"testToggle":{"enabled":false}},"toggleDispatch":"*function - bound dispatchReducerAction*"}
   </span>
   <span>
-    {"cookiePolicy":"000","sendCanonicalChartbeatBeacon":"*function - bound dispatchSetState*","updateCookiePolicy":"*function - updateCookiePolicy*","personalisationEnabled":false}
+    {"cookiePolicy":"000","updateCookiePolicy":"*function - updateCookiePolicy*","personalisationEnabled":false}
   </span>
   <span>
     {}

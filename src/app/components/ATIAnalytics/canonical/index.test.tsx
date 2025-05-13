@@ -16,6 +16,7 @@ describe('Canonical ATI Analytics', () => {
 
   const atiBaseUrl = 'https://foobar.com?';
   const mockPageviewParams = 'key=value&key2=value2&x8=[simorgh]';
+
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
   process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
   // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
