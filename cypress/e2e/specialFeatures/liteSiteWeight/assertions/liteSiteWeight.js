@@ -60,16 +60,10 @@ export default ({ path, pageType }) => {
               expect(localPageWeight).to.be.lessThan(maxPageWeight);
               const localRequestSizesData = formatTableData(localRequestSizes);
               const liveRequestSizesData = formatTableData(liveRequestSizes);
-              cy.task(
-                'log',
-                localRequestSizesData,
-                JSON.stringify(localRequestSizesData, null, 2),
-              );
-              cy.task(
-                'log',
-                liveRequestSizesData,
-                JSON.stringify(liveRequestSizesData, null, 2),
-              );
+              cy.task('log', 'localRequestSizesData:');
+              cy.task('log', localRequestSizesData);
+              cy.task('log', 'liveRequestSizesData:');
+              cy.task('log', liveRequestSizesData);
               cy.task('table', [
                 {
                   URL: `${Cypress.config().baseUrl}${path}`,
