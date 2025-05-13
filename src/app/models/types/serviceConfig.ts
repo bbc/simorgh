@@ -35,6 +35,12 @@ export type UzbekConfig = {
   [_key in UzbekService['variant']]: ServiceConfig;
 };
 
+type DisclaimerParagraph = {
+  text: string;
+  url: string;
+  isExternal: boolean;
+};
+
 export type ServiceConfig = {
   lang: string;
   articleAuthor: string;
@@ -83,12 +89,8 @@ export type ServiceConfig = {
   showRelatedTopics: boolean;
   podcastPromo?: PodcastPromo;
   disclaimer?: {
-    para1: {
-      text: string;
-      url: string;
-      isExternal: boolean;
-    };
-    para2: string;
+    para1: DisclaimerParagraph | string;
+    para2?: DisclaimerParagraph | string;
   };
   translations: Translations;
   mostRead: MostRead;

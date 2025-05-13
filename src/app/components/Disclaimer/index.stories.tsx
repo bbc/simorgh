@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { StoryProps } from '../../models/types/storybook';
+import { StoryArgs, StoryProps } from '../../models/types/storybook';
 
 import metadata from './metadata.json';
 import DisclaimerComponent from '.';
@@ -35,4 +35,8 @@ export default {
 
 export const Disclaimer = ({ variant }: StoryProps) => (
   <Component service="russian" variant={variant} />
+);
+
+export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
+  <Component service={service} variant={variant} />
 );

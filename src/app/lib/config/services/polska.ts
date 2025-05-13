@@ -322,6 +322,15 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Zamknięto dnia {{date}}.',
       },
     },
+    disclaimer: {
+      para1:
+        'Niniejszy artykuł został napisany i sprawdzony przez naszych dziennikarzy, którzy skorzystali ze wsparcia sztucznej inteligencji w tłumaczeniu, w ',
+      para2: {
+        text: 'ramach pilotażu.',
+        url: 'https://www.bbc.com/mediacentre/articles/2024/update-generative-ai-and-ai-tools-bbc',
+        isExternal: true,
+      },
+    },
     mostRead: {
       header: 'Najczęściej czytane',
       lastUpdated: 'Ostatnio zaktualizowane:',
