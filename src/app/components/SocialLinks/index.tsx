@@ -92,7 +92,12 @@ const SocialLinks = ({
   const hasMultipleItems = summaries.length > 1;
 
   return (
-    <section role="region" aria-labelledby={id} css={styles.container}>
+    <section
+      role="region"
+      aria-labelledby={id}
+      data-testid={id}
+      css={styles.container}
+    >
       <Heading level={2} id={id} css={styles.heading}>
         {title}
       </Heading>
