@@ -2641,6 +2641,8 @@ __metadata:
   version: 1.0.0
   resolution: "@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.0.tgz"
   checksum: 10/445bd2af59abf6dfc2e8d07f4aafa4707c1a80a7a6eba79dfd6f5d6c281f877fb2dc31b26b6d3249a08ebbf014e91192df5fec483ad5da904fc5b2a1f5b9f512
+  languageName: node
+  linkType: hard
 
 "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize":
   version: 0.0.0-use.local
