@@ -99,6 +99,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
+    "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.0.tgz",
     "@bbc/web-vitals": "2.5.3",
     "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
@@ -130,7 +131,7 @@
     "react-lazyload": "3.2.1",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.3.4",
-    "undici": "7.8.0",
+    "undici": "7.9.0",
     "url-parse": "1.5.10",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
