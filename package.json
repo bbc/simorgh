@@ -206,7 +206,7 @@
     "cypress": "14.3.3",
     "cypress-axe": "1.6.0",
     "cypress-multi-reporters": "2.0.5",
-    "cypress-terminal-report": "7.1.0",
+    "cypress-terminal-report": "7.2.0",
     "depcheck": "1.4.7",
     "duplicate-package-checker-webpack-plugin": "3.0.0",
     "eslint": "7.32.0",
