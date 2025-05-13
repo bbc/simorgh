@@ -6,7 +6,9 @@ import { Helmet } from 'react-helmet';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
-import addInlineScript from '#app/lib/utilities/addInlineScript';
+import addInlineScript, {
+  InlineScriptProps,
+} from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
@@ -32,10 +34,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
   );
 };
 
-const addScript = (
-  script: string | { toString: () => string },
-  parameters?: string,
-) => {
+const addScript = ({ script, parameters }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters })}</Helmet>;
 };
 
@@ -58,9 +57,16 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addScript(addSendStaticBeaconToWindow())}
-      {isLite && addScript(sendPageViewBeaconLite, atiPageViewUrlString)}
-      {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
+      {addScript({ script: addSendStaticBeaconToWindow() })}
+      {isLite &&
+        addScript({
+          script: sendPageViewBeaconLite,
+          parameters: atiPageViewUrlString,
+        })}
+      {!isLite &&
+        addScript({
+          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+        })}
       {renderNoScriptTrackingPixel(atiPageViewUrl)}
     </>
   );

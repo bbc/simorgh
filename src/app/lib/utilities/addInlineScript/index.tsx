@@ -1,12 +1,11 @@
 import React from 'react';
 
-export default ({
-  script,
-  parameters = '',
-}: {
+export type InlineScriptProps = {
   script: string | { toString: () => string };
   parameters?: string;
-}) => {
+};
+
+export default ({ script, parameters = '' }: InlineScriptProps) => {
   let inlineScript = script;
 
   if (typeof script === 'function') {
