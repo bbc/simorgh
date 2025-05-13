@@ -46,7 +46,6 @@ const Component = ({
         <ServiceContextProvider service={service}>
           <SocialLinks
             summaries={curation.summaries as Summary[]}
-            id="social-links-1"
             title={curation.title || 'Social Links'}
           />
         </ServiceContextProvider>
@@ -64,7 +63,7 @@ export default {
   },
 };
 
-export const MultipleLinks = () => (
+export const Example = () => (
   <Component curation={getSocialLinksData()} service="mundo" />
 );
 
@@ -76,6 +75,6 @@ export const OddNumberOfLinks = () => (
   <Component curation={getSocialLinksData(5)} service="mundo" />
 );
 
-export const RTLMultipleLinks = () => (
+export const RTL = () => (
   <Component curation={getSocialLinksData(5)} service="arabic" />
 );
