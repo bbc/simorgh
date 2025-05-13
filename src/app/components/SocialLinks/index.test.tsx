@@ -14,7 +14,7 @@ const mockSummaries: Summary[] = [
     firstPublished: '',
     link: 'https://www.instagram.com/',
     imageUrl: 'https://example.com/{width}/instagram.png',
-    description: '',
+    description: 'BBC News',
     imageAlt: 'Instagram',
     id: 'mock-instagram-id',
   },
@@ -24,7 +24,7 @@ const mockSummaries: Summary[] = [
     firstPublished: '',
     link: 'https://www.facebook.com/',
     imageUrl: 'https://example.com/{width}/facebook.png',
-    description: '',
+    description: 'BBC News',
     imageAlt: 'Facebook',
     id: 'mock-facebook-id',
   },
@@ -83,9 +83,16 @@ describe('SocialLinks', () => {
     render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
 
     mockSummaries.forEach(summary => {
-      const link = screen.getByRole('link', { name: summary.title });
+      const link = screen.getByText(summary.title).closest('a');
       expect(link).toHaveAttribute('href', summary.link);
       expect(link).toHaveTextContent(summary.title);
+
+      if (link && summary.description) {
+        const visuallyHiddenText = link.querySelector(
+          '[class*="visuallyHiddenText"]',
+        );
+        expect(visuallyHiddenText).toHaveTextContent(summary.description);
+      }
     });
   });
 

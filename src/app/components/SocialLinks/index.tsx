@@ -8,6 +8,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
@@ -67,7 +68,13 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
     <>
       <SocialLinkImage imageUrl={summary.imageUrl} />
       <a href={summary.link} css={styles.link}>
-        {summary.title}
+        {/* eslint-disable-next-line jsx-a11y/aria-role */}
+        <span role="text">
+          {summary.title}
+          {summary.description ? (
+            <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
+          ) : null}
+        </span>
       </a>
     </>
   );
@@ -87,7 +94,12 @@ const SocialLinks = ({
   const hasMultipleItems = summaries.length > 1;
 
   return (
-    <section role="region" aria-labelledby={id} css={styles.container}>
+    <section
+      role="region"
+      aria-labelledby={id}
+      data-testid={id}
+      css={styles.container}
+    >
       <Heading level={2} id={id} css={styles.heading}>
         {title}
       </Heading>
