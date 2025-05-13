@@ -19,10 +19,12 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
       const getAtUserIdFromCookie = () => {
         try {
-          const match = document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/);
-          return match
-            ? JSON.parse(decodeURIComponent(match[1]))
-            : { val: null };
+          const [, atUserIdCookie] =
+            document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/) || [];
+
+          const { val } = JSON.parse(decodeURIComponent(atUserIdCookie));
+
+          return { val };
         } catch {
           return { val: null };
         }
@@ -32,12 +34,10 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
       if (!user.val && window.crypto && crypto.randomUUID) {
         user.val = crypto.randomUUID();
-      }
 
-      const stringifiedCookieValue = JSON.stringify(user);
-      const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
+        const stringifiedCookieValue = JSON.stringify(user);
+        const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
 
-      if (user.val) {
         document.cookie = `${cookieName}=${encodedCookieValue}; path=/; max-age=${expires}; Secure;`;
       }
 
