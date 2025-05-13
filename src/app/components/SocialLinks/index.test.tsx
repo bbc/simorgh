@@ -83,11 +83,11 @@ describe('SocialLinks', () => {
     render(<SocialLinks title="Social Links" summaries={mockSummaries} />);
 
     mockSummaries.forEach(summary => {
-      const link = screen.getByText(summary.title);
+      const link = screen.getByText(summary.title).closest('a');
       expect(link).toHaveAttribute('href', summary.link);
       expect(link).toHaveTextContent(summary.title);
 
-      if (summary.description) {
+      if (link && summary.description) {
         const visuallyHiddenText = link.querySelector(
           '[class*="visuallyHiddenText"]',
         );
