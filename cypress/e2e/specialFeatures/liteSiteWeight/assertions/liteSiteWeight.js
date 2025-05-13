@@ -2,15 +2,18 @@ import interceptGetRequests from '../helpers/interceptGetRequests';
 import getTotalPageSize from '../helpers/getTotalPageSize';
 import roundTo2Decimals from '../helpers/roundTo2Decimals';
 
-const LOWER_MAX_PAGE_WEIGHT_KB = 50;
-const UPPER_MAX_PAGE_WEIGHT_KB = 75;
+const MAX_PAGE_WEIGHT_KB = 50;
 
 const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
-  'Live Page': UPPER_MAX_PAGE_WEIGHT_KB,
+  Home: 55,
+  Live: 75,
+  'On Demand TV - Episode': 55,
+  'Podcast - Brand': 55,
+  'Podcast - Episode': 55,
 };
 
-const getPageWeightLimit = pageType =>
-  PAGE_TYPE_PAGE_WEIGHT_MAPPING[pageType] || LOWER_MAX_PAGE_WEIGHT_KB;
+const getMaxPageWeight = pageType =>
+  PAGE_TYPE_PAGE_WEIGHT_MAPPING[pageType] || MAX_PAGE_WEIGHT_KB;
 
 const formatTableData = sizes => {
   return sizes.map(({ url, size }) => ({
@@ -39,9 +42,9 @@ export default ({ path, pageType }) => {
       liveRequests = [];
     });
 
-    const pageWeightLimit = getPageWeightLimit(pageType);
+    const maxPageWeight = getMaxPageWeight(pageType);
 
-    it(`Page weight for ${pageType} page should be less than ${pageWeightLimit}Kb`, () => {
+    it(`${pageType} page weight should be less than ${maxPageWeight}Kb`, () => {
       getTotalPageSize(allRequests).then(
         ({ totalSize: localPageWeight, requestSizes: localRequestSizes }) => {
           interceptGetRequests(liveRequests);
@@ -54,11 +57,19 @@ export default ({ path, pageType }) => {
                 ((localPageWeight + livePageWeight) / 2);
 
               const delta = roundTo2Decimals(percentageDifference);
-              expect(localPageWeight).to.be.lessThan(pageWeightLimit);
+              expect(localPageWeight).to.be.lessThan(maxPageWeight);
               const localRequestSizesData = formatTableData(localRequestSizes);
               const liveRequestSizesData = formatTableData(liveRequestSizes);
-              cy.task('table', localRequestSizesData);
-              cy.task('table', liveRequestSizesData);
+              cy.task(
+                'log',
+                localRequestSizesData,
+                JSON.stringify(localRequestSizesData, null, 2),
+              );
+              cy.task(
+                'log',
+                liveRequestSizesData,
+                JSON.stringify(liveRequestSizesData, null, 2),
+              );
               cy.task('table', [
                 {
                   URL: `${Cypress.config().baseUrl}${path}`,
@@ -66,7 +77,7 @@ export default ({ path, pageType }) => {
                   'Local (KB)': localPageWeight,
                   'Live (KB)': livePageWeight,
                   'Delta (KB)': roundTo2Decimals(
-                    livePageWeight - localPageWeight,
+                    localPageWeight - livePageWeight,
                   ),
                   'Delta (%) ': delta,
                 },
