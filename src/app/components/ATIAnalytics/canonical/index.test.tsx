@@ -9,6 +9,7 @@ import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITr
 import * as onClient from '#app/lib/utilities/onClient';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
+import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 
 jest.spyOn(onClient, 'default').mockImplementation(() => false);
 
@@ -74,6 +75,9 @@ describe('Canonical ATI Analytics', () => {
     const helmet = Helmet.peek();
     const sendPageViewBeaconLite = helmet.scriptTags[1].innerHTML;
 
+    expect(sendPageViewBeaconLite).toContain(
+      processClientDeviceAndSendStaticBeacon.toString(),
+    );
     expect(sendPageViewBeaconLite).toContain(
       `${atiBaseUrl}${mockPageviewParams}`,
     );
