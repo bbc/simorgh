@@ -71,7 +71,7 @@ import {
   assertTopStoriesComponentClick,
   assertTopStoriesComponentView,
 } from './assertions/topStories';
-import { getPathWithSuffix } from './helpers';
+import { getPathWithSuffix, setUserIDCookie } from './helpers';
 
 const canonicalTestSuites = [
   {
@@ -489,7 +489,10 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
+Cypress.Cookies.debug(true);
+
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
