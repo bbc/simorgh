@@ -86,7 +86,6 @@ const styles = {
       ...fontSizes.pica,
       ...fontVariants.sansBold,
       overflow: 'hidden',
-      overflowWrap: 'break-word',
 
       '&:visited': {
         color: palette.GREY_6,
