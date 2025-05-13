@@ -2,6 +2,58 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip to content"`;
 
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598274",
+  },
+  {
+    "s2": "79",
+  },
+  {
+    "p": "scotland.articles.czwj5l0n210o.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:czwj5l0n210o]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[scotland]",
+  },
+  {
+    "x4": "[en-gb]",
+  },
+  {
+    "x7": "[article]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[This%20is%20the%20SEO%20headline%20of%20this%20test%20article]",
+  },
+  {
+    "x11": "[2019-09-13T12:36:29.124Z]",
+  },
+  {
+    "x12": "[2019-09-13T12:36:29.124Z]",
+  },
+]
+`;
+
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
   "text": "BBC Scotland",
