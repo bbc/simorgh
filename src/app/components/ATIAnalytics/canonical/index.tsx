@@ -42,7 +42,6 @@ const CanonicalATIAnalytics = ({
   reverbParams,
 }: ATIAnalyticsProps) => {
   const { isLite } = useContext(RequestContext);
-  console.log(JSON.stringify(reverbParams));
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
