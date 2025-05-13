@@ -396,6 +396,14 @@ describe('analyticsUtils', () => {
     it('should replace all spaces with a + character', () => {
       expect(sanitise('hi hello there')).toEqual('hi%20hello%20there');
     });
+
+    it('should replace all apostrophes with the ASCII equivalent character', () => {
+      expect(
+        sanitise(`...Daga Bakin Mai Ita tare da Sa'a ta fim din Labarina`),
+      ).toEqual(
+        '...Daga%20Bakin%20Mai%20Ita%20tare%20da%20Sa%27a%20ta%20fim%20din%20Labarina',
+      );
+    });
   });
 
   describe('getPublishedDatetime', () => {

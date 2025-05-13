@@ -225,7 +225,9 @@ export const getAtUserId = () => {
 };
 
 export const sanitise = initialString =>
-  initialString ? initialString.trim().replace(/\s/g, '%20') : null;
+  initialString
+    ? initialString.trim().replace(/\s/g, '%20').replace(/'/g, '%27')
+    : null;
 
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
