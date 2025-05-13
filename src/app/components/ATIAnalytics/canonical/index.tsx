@@ -34,7 +34,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
 
 const addScript = (
   script: string | { toString: () => string },
-  parameters?: string,
+  ...parameters: string[]
 ) => {
   return <Helmet>{addInlineScript({ script, parameters })}</Helmet>;
 };

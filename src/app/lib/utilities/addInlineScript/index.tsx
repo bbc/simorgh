@@ -2,15 +2,21 @@ import React from 'react';
 
 export default ({
   script,
-  parameters = '',
+  parameters,
 }: {
   script: string | { toString: () => string };
-  parameters?: string;
+  parameters?: string[];
 }) => {
   let inlineScript = script;
+  const stringifiedParams = parameters?.map(param => `'${param}'`).join(', ');
+
+  let paramLiteral = '';
+  if (parameters && parameters.length > 0 && stringifiedParams) {
+    paramLiteral = stringifiedParams;
+  }
 
   if (typeof script === 'function') {
-    inlineScript = `(${script.toString()})(${parameters && `'${parameters}'`})`;
+    inlineScript = `(${script.toString()})(${paramLiteral})`;
   }
 
   return <script type="text/javascript">{inlineScript as string}</script>;
