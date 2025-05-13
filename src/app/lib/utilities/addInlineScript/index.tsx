@@ -9,7 +9,7 @@ export default ({ script, parameters }: InlineScriptProps) => {
   let inlineScript = script;
   const stringifiedParams = [parameters]
     .flat()
-    .map(param => `'${param}'`)
+    .map(param => `"${param}"`)
     .join(', ');
 
   let paramLiteral = '';

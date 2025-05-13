@@ -38,7 +38,7 @@ describe('addInlineScript', () => {
       title:
         'should render the script as expected when script is a function with a single string',
       params: 'helloWorld',
-      expectedParamOutput: `'helloWorld'`,
+      expectedParamOutput: `"helloWorld"`,
     },
     {
       title:
@@ -50,13 +50,13 @@ describe('addInlineScript', () => {
       title:
         'should render the script as expected when script is a function with a single parameter',
       params: ['HelloWorld'],
-      expectedParamOutput: `'HelloWorld'`,
+      expectedParamOutput: `"HelloWorld"`,
     },
     {
       title:
         'should render the script as expected when script is a function with multiple parameter',
       params: ['Hello', 'There', 'World'],
-      expectedParamOutput: `'Hello', 'There', 'World'`,
+      expectedParamOutput: `"Hello", "There", "World"`,
     },
   ])('$title', ({ params, expectedParamOutput }) => {
     const script = (printString: string) => console.log(printString);
