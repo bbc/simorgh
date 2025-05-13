@@ -68,11 +68,13 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
     <>
       <SocialLinkImage imageUrl={summary.imageUrl} />
       <a href={summary.link} css={styles.link}>
-        {summary.title}
+        <span role="link">
+          {summary.title}
 
-        {summary.description ? (
-          <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
-        ) : null}
+          {summary.description ? (
+            <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
+          ) : null}
+        </span>
       </a>
     </>
   );
