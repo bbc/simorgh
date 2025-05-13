@@ -37,6 +37,9 @@ export const Disclaimer = ({ variant }: StoryProps) => (
   <Component service="russian" variant={variant} />
 );
 
-export const Example = (_: StoryArgs, { service, variant }: StoryProps) => (
-  <Component service={service} variant={variant} />
-);
+export const Example = {
+  render: (_: StoryArgs, { service, variant }: StoryProps) => (
+    <Component service={service} variant={variant} />
+  ),
+  parameters: { chromatic: { disableSnapshot: true } },
+};
