@@ -89,9 +89,21 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
     expect(callParam).toContain('idclient=oldCookieId');
   });
 
-  it('Reuses the atuserid cookie if there is a atuserid cookie on the user browser', () => {
+  it('Reuses the atuserid cookie if there is 1 atuserid cookie on the user browser', () => {
     document.cookie =
       'atuserid={"val":"oldCookieId"}; path=/; max-age=397; Secure;';
+    (crypto.randomUUID as jest.Mock).mockReturnValueOnce('newCookieId');
+    window.processClientDeviceAndSendStaticBeacon(
+      'https://logws1363.ati-host.net/?',
+    );
+
+    const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
+    expect(callParam).toContain('idclient=oldCookieId');
+  });
+
+  it('Reuses the atuserid cookie if there are already multiple atuserid cookies on the user browser', () => {
+    document.cookie =
+      'random-cookie=blah; atuserid={"name":"atuserid", "val":"oldCookieId"}; atuserid={"val":"oldCookieId"}; path=/; max-age=397; Secure;';
     (crypto.randomUUID as jest.Mock).mockReturnValueOnce('newCookieId');
     window.processClientDeviceAndSendStaticBeacon(
       'https://logws1363.ati-host.net/?',
