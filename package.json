@@ -210,7 +210,7 @@
     "duplicate-package-checker-webpack-plugin": "3.0.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "10.1.2",
+    "eslint-config-prettier": "10.1.5",
     "eslint-import-resolver-alias": "1.1.2",
     "eslint-plugin-cypress": "4.3.0",
     "eslint-plugin-import": "2.31.0",
