@@ -2637,6 +2637,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.0.tgz":
+  version: 1.0.0
+  resolution: "@bbc/reverb-url-helper@https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.0.tgz"
+  checksum: 10/445bd2af59abf6dfc2e8d07f4aafa4707c1a80a7a6eba79dfd6f5d6c281f877fb2dc31b26b6d3249a08ebbf014e91192df5fec483ad5da904fc5b2a1f5b9f512
+  languageName: node
+  linkType: hard
+
 "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize":
   version: 0.0.0-use.local
   resolution: "@bbc/simorgh-bundleSize@workspace:scripts/bundleSize"
@@ -15930,6 +15937,7 @@ __metadata:
     "@babel/preset-react": "npm:7.27.1"
     "@babel/preset-typescript": "npm:7.27.1"
     "@babel/runtime": "npm:7.27.1"
+    "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.0.tgz"
     "@bbc/web-vitals": "npm:2.5.3"
     "@cypress/webpack-preprocessor": "npm:6.0.4"
     "@emotion/babel-plugin": "npm:11.13.5"
@@ -16060,7 +16068,7 @@ __metadata:
     ts-jest: "npm:29.3.2"
     ts-loader: "npm:9.5.2"
     typescript: "npm:5.8.3"
-    undici: "npm:7.8.0"
+    undici: "npm:7.9.0"
     url-parse: "npm:1.5.10"
     wait-on: "npm:8.0.3"
     webpack: "npm:5.99.8"
@@ -17438,10 +17446,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:7.8.0":
-  version: 7.8.0
-  resolution: "undici@npm:7.8.0"
-  checksum: 10/bbd1fd9e63f0842196fc0210ffb36c29eed2841f1499e149718b96e52e195afe3ccaaa2da76aae4253cd5cc58a26b20836f7a98db11f335b594009603cc72eec
+"undici@npm:7.9.0":
+  version: 7.9.0
+  resolution: "undici@npm:7.9.0"
+  checksum: 10/fa92d3d9106612be566e79942174e00426c2e1f9a688fb86c8d1809c84a032c02fc57bd601d2051a45d94bbd312c50221644b58c8186c4f0d64f8ecc7f18b806
   languageName: node
   linkType: hard
 
