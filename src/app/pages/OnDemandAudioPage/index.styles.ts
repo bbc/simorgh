@@ -51,9 +51,12 @@ export default {
         paddingTop: `${spacings.TRIPLE}rem`,
       },
     }),
-  text: () =>
+  text: ({ spacings, isLite }: Theme) =>
     css({
       flex: '7 1 0',
+      ...(isLite && {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      }),
     }),
   image: ({ mq, spacings }: Theme) =>
     css({
