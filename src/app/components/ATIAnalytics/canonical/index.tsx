@@ -9,14 +9,14 @@ import sendPageViewBeaconLite, {
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
+import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
-  atiPageViewUrl.includes('x8=[simorgh]')
-    ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
-    : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
+type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
+const renderNoScriptTrackingPixel = (
+  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
+) => {
   return (
     <noscript>
       <img
@@ -27,7 +27,7 @@ const renderNoScriptTrackingPixel = (atiPageViewUrl: string) => {
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoJsATIPageViewUrl(atiPageViewUrl)}
+        src={getNoScriptTrackingPixelUrl(reverbParams)}
       />
     </noscript>
   );
@@ -59,7 +59,7 @@ const CanonicalATIAnalytics = ({
       {addScript(addSendStaticBeaconToWindow())}
       {isLite && addScript(sendPageViewBeaconLite(atiPageViewUrlString))}
       {!isLite && addScript(sendPageViewBeaconOperaMini(atiPageViewUrlString))}
-      {renderNoScriptTrackingPixel(atiPageViewUrl)}
+      {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );
 };
