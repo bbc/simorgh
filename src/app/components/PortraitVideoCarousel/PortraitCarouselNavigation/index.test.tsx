@@ -1,10 +1,11 @@
-import React, { act, RefObject } from 'react';
+import React, { RefObject } from 'react';
 import {
+  act,
   screen,
   render,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
-import NavigationButtons from '.';
+import PortraitCarouselNavigation from '.';
 import { PROMO_ITEM_WIDTH } from '../index.styles';
 
 jest.useFakeTimers();
@@ -47,10 +48,10 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     await act(async () => {
-      render(<NavigationButtons scrollPaneRef={mockRef} />);
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
     });
 
-    const rightButton = screen.getByTestId('pv-right-nav-button');
+    const rightButton = screen.getByTestId('pv-scroll-right');
 
     await act(async () => {
       fireEvent.click(rightButton);
@@ -69,10 +70,10 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     await act(async () => {
-      render(<NavigationButtons scrollPaneRef={mockRef} />);
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
     });
 
-    const leftButton = screen.getByTestId('pv-left-nav-button');
+    const leftButton = screen.getByTestId('pv-scroll-left');
 
     await act(async () => {
       fireEvent.click(leftButton);
@@ -91,10 +92,10 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     await act(async () => {
-      render(<NavigationButtons scrollPaneRef={mockRef} />);
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
     });
 
-    const leftButton = screen.getByTestId('pv-left-nav-button');
+    const leftButton = screen.getByTestId('pv-scroll-left');
 
     fireEvent.click(leftButton);
     jest.runAllTimers();
@@ -116,10 +117,10 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     await act(async () => {
-      render(<NavigationButtons scrollPaneRef={mockRef} />);
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
     });
 
-    const rightButton = screen.getByTestId('pv-right-nav-button');
+    const rightButton = screen.getByTestId('pv-scroll-right');
 
     await act(async () => {
       fireEvent.click(rightButton);

@@ -51,7 +51,7 @@ export default ({ scrollPaneRef }: NavigationButtonsProp) => {
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
-          data-testid="pv-left-nav-button"
+          data-testid="pv-scroll-left"
         >
           <LeftChevron />
         </button>
@@ -61,7 +61,7 @@ export default ({ scrollPaneRef }: NavigationButtonsProp) => {
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}
-          data-testid="pv-right-nav-button"
+          data-testid="pv-scroll-right"
         >
           <RightChevron />
         </button>
