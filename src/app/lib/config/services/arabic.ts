@@ -283,6 +283,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
+      latestMediaTitle: 'أحدث الموضوعات',
       ugc: {
         // No JavaScript
         noJsHeading: undefined,
