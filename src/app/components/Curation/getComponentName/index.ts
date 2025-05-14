@@ -14,9 +14,10 @@ export const COMPONENT_NAMES = {
   EMBED: 'embed',
   BILLBOARD: 'billboard',
   PORTRAIT_VIDEO_CAROUSEL: 'portrait-video-carousel',
+  USEFUL_LINKS: 'useful-links',
 } as const;
 
-const { NONE, BANNER, COLLECTION, RANKED, INSITU } = VISUAL_STYLE;
+const { NONE, BANNER, COLLECTION, RANKED, INSITU, LINKS } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const {
   MESSAGE_BANNER,
@@ -28,6 +29,7 @@ const {
   EMBED,
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
+  USEFUL_LINKS,
 } = COMPONENT_NAMES;
 
 export default ({
@@ -54,6 +56,7 @@ export default ({
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${RANKED}_${NORMAL}`]: MOST_READ,
     [`${INSITU}_${NORMAL}`]: PORTRAIT_VIDEO_CAROUSEL,
+    [`${LINKS}_${LOW}`]: USEFUL_LINKS,
   };
 
   const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;

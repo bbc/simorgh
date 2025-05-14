@@ -41,7 +41,6 @@ const styles = {
       textDecoration: 'none',
       ...fontSizes.pica,
       ...fontVariants.sansBold,
-      overflow: 'hidden',
       '&:visited': {
         color: palette.GREY_6,
       },

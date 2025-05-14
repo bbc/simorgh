@@ -18,6 +18,7 @@ import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
+import UsefulLinks from '../UsefulLinks';
 import styles from './index.styles';
 
 const {
@@ -30,6 +31,7 @@ const {
   EMBED,
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
+  USEFUL_LINKS,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -160,6 +162,14 @@ export default ({
         );
       }
       return null;
+    case USEFUL_LINKS:
+      return (
+        <UsefulLinks
+          summaries={summaries}
+          title={title}
+          id={`useful-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
     case SIMPLE_CURATION_GRID:
     case HIERARCHICAL_CURATION_GRID:
     default:
