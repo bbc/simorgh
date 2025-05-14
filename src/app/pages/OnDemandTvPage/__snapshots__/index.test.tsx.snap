@@ -5,6 +5,30 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   background-color: #141414;
 }
 
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
+}
+
 .emotion-2 {
   width: 100%;
   padding-bottom: 2rem;
@@ -207,25 +231,19 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-7 {
-    margin: 2.5rem 0px 0px;
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-7 {
-    margin-top: 1rem;
+    margin: 0px 0px 0px;
   }
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-7 {
-    margin: 1rem -1rem 0px;
+    margin: 0px -1rem 0px;
   }
 }
 
 @media (max-width: 24.9375rem) {
   .emotion-7 {
-    margin: 0.5rem -0.5rem 0px;
+    margin: 0px -0.5rem 0px;
   }
 }
 
@@ -882,6 +900,30 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   background-color: #141414;
 }
 
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
+}
+
 .emotion-2 {
   width: 100%;
   padding-bottom: 2rem;
@@ -1504,6 +1546,30 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
 exports[`OnDemand TV Page  should show the future content message if episode is not yet available 1`] = `
 .emotion-0 {
   background-color: #141414;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
 }
 
 .emotion-2 {
