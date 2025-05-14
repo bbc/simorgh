@@ -386,7 +386,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Warsaw',
     navigation: [
       {
         title: 'News',
