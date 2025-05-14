@@ -8,6 +8,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { getMimeType } from '#lib/utilities/srcSet';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { RequestContext } from '../../../contexts/RequestContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
@@ -34,6 +35,9 @@ const largeImageSize = 480;
 
 const OnDemandImage = ({ imageUrl, alt: altFromProps, className = '' }) => {
   const { defaultImageAltText, dir } = useContext(ServiceContext);
+
+  const { isLite } = useContext(RequestContext);
+  if (isLite) return null;
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
 
