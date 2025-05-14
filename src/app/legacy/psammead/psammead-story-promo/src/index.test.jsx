@@ -26,7 +26,7 @@ const Info = ({
     >
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel ariaHidden offScreenText="Live">
+          <LiveLabel ariaHidden={true} offScreenText="Live">
             The live promo headline
           </LiveLabel>
         ) : (

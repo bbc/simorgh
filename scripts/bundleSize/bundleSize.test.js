@@ -102,7 +102,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         didThrow = true;
       }
       expect(didThrow).toBe(false);
@@ -112,7 +112,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         // silence error
       }
 
@@ -217,7 +217,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         didThrow = true;
       }
       expect(didThrow).toBe(true);
@@ -227,7 +227,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         // silence error
       }
       expect(global.console.error).toHaveBeenCalledWith(
@@ -244,7 +244,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         didThrow = true;
       }
       expect(didThrow).toBe(true);
@@ -254,7 +254,7 @@ describe('bundleSize', () => {
       try {
         const { default: bundleSize } = await import('./index.js');
         bundleSize();
-      } catch (e) {
+      } catch (_e) {
         // silence error
       }
       expect(global.console.error).toHaveBeenCalledWith(

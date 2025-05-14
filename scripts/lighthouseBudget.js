@@ -40,32 +40,25 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
     logArray.push(passLog);
     if (!isPassing) result = false;
   });
-
-  console.table(logArray);
   return result;
 };
 
 const readReport = path => {
-  console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
   const result = JSON.parse(rawdata);
 
   if (result) {
-    console.log(result.finalUrl);
   }
 
   return result;
 };
 
 const exitResult = isPassing => {
-  process.on('exit', code => console.log(`Exiting with code ${code}`));
+  process.on('exit', _code => );
 
   if (!isPassing) {
-    console.log('Lighthouse tests failed. See log table for details');
     process.exit(1);
   }
-
-  console.log('All tests passed!');
   process.exit(0);
 };
 

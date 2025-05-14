@@ -39,7 +39,7 @@ const Timestamp = ({
     script={script}
     padding={padding}
     service={service}
-    suppressHydrationWarning
+    suppressHydrationWarning={true}
     {...(className ? { className } : undefined)}
   >
     {children}

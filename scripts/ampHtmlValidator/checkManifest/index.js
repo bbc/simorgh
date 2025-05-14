@@ -45,15 +45,10 @@ export default async () => {
     }),
   );
 
-  console.table(testResults);
-
   const failures = testResults.filter(({ result }) => result === '❌');
 
   if (failures.length > 0) {
     failures.forEach(({ service }) => {
-      console.error(
-        `⚠️ The live manifest file for ${service} AMP articles does not match the local manifest file. Please update the manifestPath in src/app/lib/config/services/${service}.ts`,
-      );
     });
     process.exitCode = 1;
   }

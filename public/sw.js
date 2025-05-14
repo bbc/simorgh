@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.2.5';
+const _version = 'v0.2.5';
 const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
@@ -81,7 +81,7 @@ const fetchEventHandler = async event => {
         }
         const networkResponse = await fetch(event.request);
         return networkResponse;
-      } catch (error) {
+      } catch (_error) {
         const cache = await caches.open(cacheName);
         const cachedResponse = await cache.match(OFFLINE_PAGE);
         return cachedResponse;

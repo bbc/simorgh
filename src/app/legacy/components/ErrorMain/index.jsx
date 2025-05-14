@@ -58,10 +58,10 @@ const ErrorMain = ({
       group4: 8,
       group5: 20,
     }}
-    enableGelGutters
+    enableGelGutters={true}
   >
     <Grid
-      item
+      item={true}
       startOffset={{
         group0: 1,
         group1: 1,

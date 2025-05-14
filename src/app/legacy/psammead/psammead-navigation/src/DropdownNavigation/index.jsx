@@ -233,7 +233,7 @@ export const CanonicalMenuButton = ({
 const AmpHead = () => (
   <Helmet>
     <script
-      async
+      async={true}
       custom-element="amp-bind"
       src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
     />
@@ -256,7 +256,7 @@ export const AmpMenuButton = ({
     <amp-state id="menuState">
       <script
         type="application/json"
-        /* eslint-disable-next-line react/no-danger */
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
         dangerouslySetInnerHTML={{ __html: JSON.stringify(initialState) }}
       />
     </amp-state>

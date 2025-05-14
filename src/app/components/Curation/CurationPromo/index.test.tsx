@@ -66,7 +66,7 @@ describe('Curation Promo', () => {
     });
 
     it('should lazy load when lazy is truthy', () => {
-      render(<Fixture lazy />);
+      render(<Fixture lazy={true} />);
 
       const loadingAttribute = screen
         .getByAltText('Campesino indígena peruano.')
@@ -101,7 +101,7 @@ describe('Curation Promo', () => {
       const container = render(
         <Fixture
           link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
-          isLive
+          isLive={true}
         />,
         { service: 'mundo' },
       );
@@ -122,7 +122,7 @@ describe('Curation Promo', () => {
       const container = render(
         <Fixture
           link="https://www.bbc.com/mundo/live/noticias-america-latina-60742314"
-          isLive
+          isLive={true}
         />,
         { service: 'mundo' },
       );

@@ -507,7 +507,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide={true}>
           <TestComponent
             hookProps={{ ...eventTrackingData, sendOptimizelyEvents: true }}
           />
@@ -540,7 +540,7 @@ describe('useClickTrackerHandler', () => {
       } = pidginData;
 
       const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide={true}>
           <TestComponent
             hookProps={{ ...eventTrackingData, sendOptimizelyEvents: true }}
           />

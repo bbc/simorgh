@@ -30,7 +30,7 @@ describe('RadioScheduleData', () => {
       <RadioSchedulesWithContext
         service="gahuza"
         initialData={radioScheduleData}
-        radioScheduleToggle
+        radioScheduleToggle={true}
         toggleName="onDemandRadioSchedule"
       />,
     );
@@ -46,8 +46,8 @@ describe('RadioScheduleData', () => {
       <RadioSchedulesWithContext
         service="gahuza"
         initialData={radioScheduleData}
-        radioScheduleToggle
-        isAmp
+        radioScheduleToggle={true}
+        isAmp={true}
       />,
     );
     await waitFor(() => {

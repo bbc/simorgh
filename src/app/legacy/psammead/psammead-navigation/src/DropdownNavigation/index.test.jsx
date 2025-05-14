@@ -45,7 +45,7 @@ describe('Canonical', () => {
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={mockOnClick}
-          isOpen
+          isOpen={true}
           script={latin}
         />,
       );
@@ -60,7 +60,7 @@ describe('Canonical', () => {
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
-          isOpen
+          isOpen={true}
           script={latin}
         />,
       );
@@ -73,7 +73,7 @@ describe('Canonical', () => {
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
-          isOpen
+          isOpen={true}
           script={latin}
           dir="ltr"
         />,
@@ -86,7 +86,7 @@ describe('Canonical', () => {
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
-          isOpen
+          isOpen={true}
           script={arabic}
           dir="rtl"
         />,
@@ -163,7 +163,7 @@ describe('Dropdown navigation', () => {
 
   it('should render correctly when open', () => {
     const { container } = render(
-      <CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>,
+      <CanonicalDropdown isOpen={true}>{dropdownList}</CanonicalDropdown>,
     );
     expect(container).toMatchSnapshot();
   });

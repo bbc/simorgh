@@ -54,6 +54,7 @@ const AdvertTagLoader = () => {
   const location = useLocation();
   const queryString = location ? location.search : '';
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     // Set window.dotcom to disabled if it doesn't load in 2 seconds.
     const timeoutID = setTimeout(() => {
@@ -87,8 +88,12 @@ const AdvertTagLoader = () => {
 
   return (
     <Helmet>
-      <script type="module" src={getBootstrapSrc(queryString)} async />
-      <script noModule src={getBootstrapSrc(queryString, true)} async />
+      <script type="module" src={getBootstrapSrc(queryString)} async={true} />
+      <script
+        noModule={true}
+        src={getBootstrapSrc(queryString, true)}
+        async={true}
+      />
     </Helmet>
   );
 };

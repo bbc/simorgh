@@ -46,7 +46,7 @@ const getObserverInstance = element => {
     );
 
     return instance;
-  } catch (e) {
+  } catch (_e) {
     throw new Error('Failed to find IntersectionObserver for element.');
   }
 };
@@ -64,7 +64,7 @@ const ContextWrap = ({ pageType, isAmp, children, service }) => (
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={optimizely} isServerSide>
+    <OptimizelyProvider optimizely={optimizely} isServerSide={true}>
       {children}
     </OptimizelyProvider>
   </RequestContextProvider>
@@ -156,7 +156,7 @@ describe('Optimizely Page Complete tracking', () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={true}>
         <OptimizelyArticleCompleteTracking />
       </ContextWrap>,
     );

@@ -17,7 +17,7 @@ interface AmpServiceWorkerProps {
 const AmpHead = () => (
   <Helmet>
     <script
-      async
+      async={true}
       custom-element="amp-install-serviceworker"
       src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
     />

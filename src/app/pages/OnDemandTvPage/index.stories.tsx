@@ -76,7 +76,7 @@ export const Test = {
 // This story is for chromatic testing purposes only
 export const TestLite = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="pashto" variant={variant} isLite />
+    <Component service="pashto" variant={variant} isLite={true} />
   ),
   tags: ['!dev'],
 };

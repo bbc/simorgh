@@ -66,7 +66,7 @@ const ErrorSummaryBox = forwardRef(
         hasArrowStyle={false}
         messageCode={InvalidMessageCodes.ErrorSummary}
         ref={ref}
-        isErrorSummary
+        isErrorSummary={true}
       >
         {isSingleError ? (
           <Text css={styles.singleItem}>{errorListItems}</Text>

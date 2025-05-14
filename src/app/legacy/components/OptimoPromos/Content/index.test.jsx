@@ -74,7 +74,7 @@ describe('Promo Content', () => {
       <ContentFixture
         headline={headlineDefault}
         ariaLabelledBy={ariaLabelledByDefault}
-        isPhotoGallery
+        isPhotoGallery={true}
       />,
     );
 

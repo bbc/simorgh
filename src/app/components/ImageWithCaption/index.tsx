@@ -104,8 +104,8 @@ const ImageWithCaption = ({
         fallbackMediaType={fallbackMimeType || undefined}
         sizes={!isAmp ? sizes : undefined}
         isAmp={isAmp}
-        placeholder
-        hasCaption
+        placeholder={true}
+        hasCaption={true}
       >
         {renderCopyright(copyright || '')}
       </Image>

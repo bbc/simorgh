@@ -16,6 +16,7 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
+// biome-ignore lint/style/noRestrictedGlobals: <explanation>
 Object.defineProperty(self, 'location', {
   writable: true,
   value: { assign: jest.fn() },

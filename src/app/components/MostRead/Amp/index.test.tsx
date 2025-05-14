@@ -42,7 +42,7 @@ describe('AmpMostRead', () => {
   });
 
   it('should render fallback when fetch fails to load', async () => {
-    fetchMock.mockReject(Error('failed fetch'));
+    fetchMock.mockReject(new Error('failed fetch'));
 
     const { container, getByText } = render(
       <MostReadAmpWithContext service="mundo" />,

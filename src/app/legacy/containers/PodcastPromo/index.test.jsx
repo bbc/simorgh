@@ -39,12 +39,12 @@ const {
 
 describe('Inline', () => {
   it('Should render correctly', () => {
-    const { container } = render(<PromoWithContext inline />);
+    const { container } = render(<PromoWithContext inline={true} />);
     expect(container).toMatchSnapshot();
   });
 
   it('should show when all props are available', () => {
-    const { getByText, getByRole } = render(<PromoWithContext inline />);
+    const { getByText, getByRole } = render(<PromoWithContext inline={true} />);
     const section = getByRole('region');
     const element = getByText(brandTitle);
 
@@ -56,7 +56,7 @@ describe('Inline', () => {
     const { container } = render(
       <PromoWithContext
         serviceConfigTransformer={dissocPath(['podcastPromo'])}
-        inline
+        inline={true}
       />,
     );
     const sections = container.getElementsByTagName('section');
@@ -64,19 +64,19 @@ describe('Inline', () => {
   });
 
   it('should render the wrapping section element with role=region attribute', () => {
-    const { getByRole } = render(<PromoWithContext inline />);
+    const { getByRole } = render(<PromoWithContext inline={true} />);
 
     expect(getByRole('region')).toBeInTheDocument();
   });
 
   it('should render podcast in a strong element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline={true} />);
 
     expect(getByText(brandTitle).closest('strong')).toBeInTheDocument();
   });
 
   it('should contain a link to skip to end of podcast component', () => {
-    const { container } = render(<PromoWithContext inline />);
+    const { container } = render(<PromoWithContext inline={true} />);
 
     const links = container.querySelectorAll('a');
     const skipLink = links[0];
@@ -90,7 +90,7 @@ describe('Inline', () => {
   it('should fall back to english when the skipLink object is missing from the service config', () => {
     const { getByText } = render(
       <PromoWithContext
-        inline
+        inline={true}
         serviceConfigTransformer={dissocPath(['podcastPromo', 'skipLink'])}
       />,
     );
@@ -101,25 +101,25 @@ describe('Inline', () => {
   });
 
   it('should render the title text in a <a> element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline={true} />);
 
     expect(getByText(brandTitle).closest('a')).toBeInTheDocument();
   });
 
   it('should render the description in a paragraph element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline={true} />);
 
     expect(getByText(brandDescription).closest('p')).toBeInTheDocument();
   });
 
   it('should render the "Episodes" call to action in a paragraph element', () => {
-    const { getByText } = render(<PromoWithContext inline />);
+    const { getByText } = render(<PromoWithContext inline={true} />);
 
     expect(getByText('Подписывайтесь').closest('p')).toBeInTheDocument();
   });
 
   it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
-    const { container } = render(<PromoWithContext inline />);
+    const { container } = render(<PromoWithContext inline={true} />);
     const svgEls = Array.from(container.querySelectorAll('svg'));
     const focusableAttrs = svgEls.map(svgEl => svgEl.getAttribute('focusable'));
     const ariaHiddenAttrs = svgEls.map(svgEl =>

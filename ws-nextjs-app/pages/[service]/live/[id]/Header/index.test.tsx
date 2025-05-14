@@ -15,7 +15,7 @@ describe('Live Page Header', () => {
           <Header
             title="I am a title"
             description="I am a description"
-            showLiveLabel
+            showLiveLabel={true}
           />,
         );
       });
@@ -26,7 +26,7 @@ describe('Live Page Header', () => {
 
     it('should render a title if only a title is provided', async () => {
       await act(async () => {
-        render(<Header title="I am a title" showLiveLabel />);
+        render(<Header title="I am a title" showLiveLabel={true} />);
       });
 
       expect(screen.getByText('I am a title')).toBeInTheDocument();
@@ -35,7 +35,7 @@ describe('Live Page Header', () => {
   describe('live label', () => {
     it('should render if the liveLabel flag is true', async () => {
       await act(async () => {
-        render(<Header title="I am a title" showLiveLabel />);
+        render(<Header title="I am a title" showLiveLabel={true} />);
       });
 
       expect(screen.getByTestId('live-label')).toBeInTheDocument();
@@ -55,7 +55,7 @@ describe('Live Page Header', () => {
         render(
           <Header
             title="I am a title"
-            showLiveLabel
+            showLiveLabel={true}
             imageUrl="https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
             imageUrlTemplate="https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg"
             imageWidth={660}
@@ -76,7 +76,7 @@ describe('Live Page Header', () => {
         render(
           <Header
             title="I am a title"
-            showLiveLabel
+            showLiveLabel={true}
             imageUrl={undefined}
             imageUrlTemplate={undefined}
             imageWidth={undefined}
@@ -93,7 +93,7 @@ describe('Live Page Header', () => {
   describe('a11y', () => {
     it('should have id of content', async () => {
       await act(async () => {
-        render(<Header title="I am a title" showLiveLabel />);
+        render(<Header title="I am a title" showLiveLabel={true} />);
       });
 
       const header = document.getElementById('content');
@@ -102,7 +102,7 @@ describe('Live Page Header', () => {
 
     it('should have tab index of -1', async () => {
       await act(async () => {
-        render(<Header title="I am a title" showLiveLabel />);
+        render(<Header title="I am a title" showLiveLabel={true} />);
       });
 
       const header = document.getElementById('content');

@@ -6,7 +6,7 @@ import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
  */
 export const getProviderName = provider => {
   if (typeof provider !== 'string')
-    throw Error("Expected 'provider' to be a string.");
+    throw new Error("Expected 'provider' to be a string.");
   return {
     instagram: 'Instagram',
     twitter: 'X',
@@ -22,7 +22,7 @@ export const getProviderName = provider => {
  * @param {Object} dictionary An object which maps keys as tokens to values.
  */
 export const detokenise = (text, dictionary) => {
-  if (typeof text !== 'string' || dictionary !== Object(dictionary))
+  if (typeof text !== 'string' || dictionary !== new Object(dictionary))
     return null;
   return text.replace(/%\w+%/g, match => dictionary[match] || match);
 };

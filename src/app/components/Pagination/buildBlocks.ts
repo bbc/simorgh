@@ -155,7 +155,7 @@ const addKeys = (state: StateType) => ({
 export default (activePage: number, pageCount: number) => {
   if (pageCount <= 1) return null;
   const initialState: StateType = {
-    result: Array(pageCount)
+    result: new Array(pageCount)
       .fill(undefined)
       .map((_, i) => ({
         type: 'NUMBER',

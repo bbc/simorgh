@@ -57,11 +57,11 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
           group4: 8,
           group5: 20,
         }}
-        enableGelGutters
+        enableGelGutters={true}
       >
         {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
-          item
+          item={true}
           startOffset={{
             group0: 1,
             group1: 1,

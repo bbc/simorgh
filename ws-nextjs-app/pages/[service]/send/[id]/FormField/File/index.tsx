@@ -152,7 +152,7 @@ export default ({
         type="file"
         onChange={event => event.target.files && handleFileChange(event)}
         ref={inputRef}
-        multiple
+        multiple={true}
         {...(hasAttemptedSubmit && {
           ...(wasInvalid && { 'aria-invalid': !isValid }),
           ...(required && { 'aria-required': required }),

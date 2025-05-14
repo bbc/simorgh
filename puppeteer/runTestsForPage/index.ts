@@ -8,12 +8,7 @@ const BASE_URL = {
   live: 'https://www.bbc.com',
 };
 
-const onFailedRequest = request => {
-  console.log('Request failed:', {
-    url: request.url(),
-    test: expect.getState().currentTestName,
-    errorText: request.failure().errorText,
-  });
+const onFailedRequest = _request => {
 };
 
 const noOp = () => {

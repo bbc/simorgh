@@ -45,7 +45,7 @@ const EmbedConsentBannerAmp = ({
         }}
         id={id}
       />
-      <div id={`embed${id ? `-${id}` : ''}`} hidden>
+      <div id={`embed${id ? `-${id}` : ''}`} hidden={true}>
         {children}
       </div>
     </>

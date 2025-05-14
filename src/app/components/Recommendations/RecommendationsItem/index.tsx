@@ -29,7 +29,7 @@ const RecommendationsItem = ({
     <div css={styles.promoWrapper} data-e2e="recommendations-wrapper">
       {!isLite && (
         <div css={styles.imageWrapper}>
-          <RecommendationsImage image={image} lazyLoad />
+          <RecommendationsImage image={image} lazyLoad={true} />
         </div>
       )}
       <div css={styles.textWrapper}>

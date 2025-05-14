@@ -10,6 +10,7 @@ declare global {
       bumpVersion: string[],
       callback: (Bump: BumpType) => void,
     ) => void;
+    // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
     mediaPlayers: Record<string, Player>;
     dotcom: {
       ads: {

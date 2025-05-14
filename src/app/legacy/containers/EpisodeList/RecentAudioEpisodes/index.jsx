@@ -156,7 +156,7 @@ const RecentAudioEpisodes = ({
               {episode.episodeTitle && (
                 <InlineDiv>
                   <EpisodeList.DateTimeDuration
-                    hasBorder
+                    hasBorder={true}
                     dir={dir}
                     as={StyledTimestamp}
                     timestamp={episode.timestamp}

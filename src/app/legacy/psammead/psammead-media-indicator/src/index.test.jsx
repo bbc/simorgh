@@ -22,7 +22,7 @@ describe('MediaIndicator', () => {
 
   it('should render video indicator correctly when inline', () => {
     const { container } = render(
-      <MediaIndicator type="video" script={latin} service="news" isInline />,
+      <MediaIndicator type="video" script={latin} service="news" isInline={true} />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -34,7 +34,7 @@ describe('MediaIndicator', () => {
         script={arabic}
         service="persian"
         dir="rtl"
-        isInline
+        isInline={true}
       />,
     );
     expect(container).toMatchSnapshot();

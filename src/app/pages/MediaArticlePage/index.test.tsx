@@ -57,7 +57,7 @@ const Context = ({
           service={service}
           statusCode={200}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
-          isUK
+          isUK={true}
         >
           <ServiceContextProvider service={service}>
             {children}
@@ -140,7 +140,7 @@ describe('MediaArticlePage', () => {
     fetchMock.mockResponse(JSON.stringify(newsMostReadData));
 
     const { container } = render(
-      <Context service="news" adsToggledOn showAdsBasedOnLocation>
+      <Context service="news" adsToggledOn={true} showAdsBasedOnLocation={true}>
         <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );
@@ -169,7 +169,7 @@ describe('MediaArticlePage', () => {
     ].join(', ');
 
     render(
-      <Context service="news" adsToggledOn showAdsBasedOnLocation>
+      <Context service="news" adsToggledOn={true} showAdsBasedOnLocation={true}>
         <MediaArticlePage pageData={pidginPageData as unknown as Article} />
       </Context>,
     );

@@ -118,7 +118,7 @@ const ProgramCard = ({ program, id, ...props }) => {
         <IconWrapper {...programStateConfig[state]}>
           {mediaIcons.audio}
         </IconWrapper>
-        <DurationWrapper dir={dir} dateTime={duration} suppressHydrationWarning>
+        <DurationWrapper dir={dir} dateTime={duration} suppressHydrationWarning={true}>
           <span aria-hidden="true">{formatDuration({ duration, locale })}</span>
         </DurationWrapper>
       </ButtonWrapper>

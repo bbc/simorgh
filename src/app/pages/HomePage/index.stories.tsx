@@ -99,7 +99,7 @@ export const Test = {
 
 export const TestLite = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="gahuza" variant={variant} isLite />
+    <Component service="gahuza" variant={variant} isLite={true} />
   ),
   tags: ['!dev'],
   parameters: {

@@ -23,7 +23,7 @@ const ContextWrap = ({ pageType, isAmp, children, service }) => (
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={optimizely} isServerSide>
+    <OptimizelyProvider optimizely={optimizely} isServerSide={true}>
       {children}
     </OptimizelyProvider>
   </RequestContextProvider>
@@ -52,7 +52,7 @@ describe('Optimizely Page View tracking', () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={true}>
         <OptimizelyPageViewTracking />
       </ContextWrap>,
     );

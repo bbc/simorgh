@@ -13,6 +13,7 @@ const useOptimizelyVariation = (
   useClientSide = isClientSide,
 ) => {
   if (useClientSide) {
+    // biome-ignore lint/correctness/useHookAtTopLevel: <explanation>
     const [decision, isClientReady, didTimeout] = useDecision(
       flagKey,
       {
@@ -21,8 +22,10 @@ const useOptimizelyVariation = (
       { overrideAttributes },
     );
 
+    // biome-ignore lint/correctness/useHookAtTopLevel: <explanation>
     const [variation, setVariation] = useState(null);
 
+    // biome-ignore lint/correctness/useHookAtTopLevel: <explanation>
     useEffect(() => {
       if (isClientReady && !didTimeout) {
         setVariation(decision.variationKey);

@@ -53,7 +53,7 @@ const ComponentWithContext = ({
           pageType={pageType}
           service={service}
           pathname="/news/articles/c000000000o"
-          isUK
+          isUK={true}
           id="c000000000o"
         >
           <UserContextProvider>

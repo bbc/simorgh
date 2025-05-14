@@ -141,12 +141,12 @@ const OnDemandTvPage = ({
         as="main"
         role="main"
         columns={getGroups(6, 6, 6, 6, 8, 20)}
-        enableGelGutters
+        enableGelGutters={true}
         css={styles.pageGrid}
       >
         {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
-          item
+          item={true}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
@@ -169,14 +169,14 @@ const OnDemandTvPage = ({
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
             episodeTitle={episodeTitle}
-            ariaHidden
+            ariaHidden={true}
             //  @ts-expect-error: pass prop to StyledTvHeadingContainer, but the styled component does not accept it
             isLite={isLite}
           />
         </Grid>
         {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
         <Grid
-          item
+          item={true}
           columns={getGroups(6, 6, 6, 6, 5, 10)}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
@@ -194,12 +194,12 @@ const OnDemandTvPage = ({
         // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
         <GelPageGrid
           columns={getGroups(6, 6, 6, 6, 8, 20)}
-          enableGelGutters
+          enableGelGutters={true}
           css={styles.pageGrid}
         >
           {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}
           <Grid
-            item
+            item={true}
             startOffset={getGroups(1, 1, 1, 1, 2, 5)}
             columns={getGroups(6, 6, 6, 6, 6, 12)}
             margins={getGroups(true, true, true, true, false, false)}

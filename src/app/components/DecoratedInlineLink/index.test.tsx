@@ -32,7 +32,7 @@ describe('InlineLink', () => {
         <InlineLink
           locator="https://www.example.com/"
           blocks={[fragmentBlock('This is a link')]}
-          isExternal
+          isExternal={true}
         />,
         { service: 'news' },
       );
@@ -44,7 +44,7 @@ describe('InlineLink', () => {
         <InlineLink
           locator="https://www.example.com/"
           blocks={[fragmentBlock('این لینک هست')]}
-          isExternal
+          isExternal={true}
         />,
         { service: 'persian' },
       );

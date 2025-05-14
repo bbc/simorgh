@@ -112,7 +112,7 @@ export const TestRadio = {
 // This story is for chromatic testing purposes only
 export const TestRadioLite = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="gahuza" variant={variant} isLite />
+    <Component service="gahuza" variant={variant} isLite={true} />
   ),
   tags: ['!dev'],
   parameters: {
@@ -144,7 +144,7 @@ export const TestPodcast = {
 // This story is for chromatic testing purposes only
 export const TestPodcastLite = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="portuguese" variant={variant} isLite />
+    <Component service="portuguese" variant={variant} isLite={true} />
   ),
   tags: ['!dev'],
   parameters: {

@@ -13,7 +13,7 @@ const AvEmbedsPageLayout = ({ pageData }: AvEmbedsPageProps) => (
       <MediaLoader
         blocks={pageData?.mediaBlock}
         css={styles.mediaPlayer}
-        embedded
+        embedded={true}
       />
     </div>
   </>

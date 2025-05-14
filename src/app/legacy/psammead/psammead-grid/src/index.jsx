@@ -196,8 +196,8 @@ const outerGridFallback = (
   columnsGroup,
   marginsGroup,
   marginSize,
-  enableGelGutters,
-  gutterSize,
+  _enableGelGutters,
+  _gutterSize,
   gridStartOffset,
   gridStartOffsetGroup,
 ) => `

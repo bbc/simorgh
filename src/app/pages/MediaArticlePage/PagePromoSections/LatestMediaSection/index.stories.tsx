@@ -34,7 +34,7 @@ const Component = ({
     pageType={MEDIA_ARTICLE_PAGE}
     service={service}
     pathname=""
-    isUK
+    isUK={true}
   >
     <ToggleContextProvider>
       <ThemeProvider service={service}>

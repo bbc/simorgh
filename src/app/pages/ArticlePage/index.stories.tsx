@@ -95,7 +95,7 @@ const ComponentWithContext = ({
           service={service}
           pathname="/news/articles/c000000000o"
           id="c000000000o"
-          isUK
+          isUK={true}
         >
           <ThemeProvider service={service}>
             <Page
@@ -193,7 +193,7 @@ export const ArticlePageWithPodcastPromo = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
     service="russian"
-    podcastEnabled
+    podcastEnabled={true}
   />
 );
 
@@ -201,7 +201,7 @@ export const ArticlePageWithTopStoriesPidgin = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
     service="pidgin"
-    podcastEnabled
+    podcastEnabled={true}
   />
 );
 
@@ -209,7 +209,7 @@ export const ArticlePageWithMostReadMundo = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
     service="mundo"
-    podcastEnabled
+    podcastEnabled={true}
   />
 );
 
@@ -217,7 +217,7 @@ export const ArticlePageWithPodcastPromoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
     service="arabic"
-    podcastEnabled
+    podcastEnabled={true}
   />
 );
 
@@ -225,7 +225,7 @@ export const ArticlePageWithPodcastNews = () => (
   <ComponentWithServiceContext
     data={articleNewsWithPodcastPromo}
     service="news"
-    podcastEnabled
+    podcastEnabled={true}
   />
 );
 
@@ -245,7 +245,7 @@ export const ArticlePageWithElectionBanner = {
     <ComponentWithServiceContext
       data={articleDataWithElectionTag}
       service="mundo"
-      electionBanner
+      electionBanner={true}
     />
   ),
   parameters: {
@@ -258,7 +258,7 @@ export const ArticlePageWithLiteSiteLink = {
     <ComponentWithContext
       data={articleData}
       service={service}
-      articleLiteSiteLinkEnabled
+      articleLiteSiteLinkEnabled={true}
     />
   ),
   parameters: {
@@ -271,7 +271,7 @@ export const TestArticlePageWithLiteSiteLink = {
     <ComponentWithContext
       data={articleDataGahuza}
       service="gahuza"
-      articleLiteSiteLinkEnabled
+      articleLiteSiteLinkEnabled={true}
     />
   ),
   tags: ['!dev'],
@@ -282,7 +282,7 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
     <ComponentWithContext
       data={articleDataArabic}
       service="arabic"
-      articleLiteSiteLinkEnabled
+      articleLiteSiteLinkEnabled={true}
     />
   ),
   tags: ['!dev'],

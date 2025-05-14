@@ -33,7 +33,7 @@ const LiteSiteSummary = () => {
       aria-labelledby={id}
       css={styles.outerContainer}
     >
-      <Text as="strong" id={id} hidden>
+      <Text as="strong" id={id} hidden={true}>
         {dataSaving}
       </Text>
       <div css={styles.container}>
@@ -43,14 +43,14 @@ const LiteSiteSummary = () => {
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
             url={canonicalLink}
-            data-ignore-lite
+            data-ignore-lite={true}
             {...clickTrackerHandler}
             css={
               informationPageLink
                 ? styles.topLinkSpacing
                 : styles.singleLinkSpacing
             }
-            alignWithMargin
+            alignWithMargin={true}
             size="brevier"
           >
             <CallToActionLink.Text>{toMainSite}</CallToActionLink.Text>
@@ -62,7 +62,7 @@ const LiteSiteSummary = () => {
             <CallToActionLink
               url={informationPageLink}
               css={styles.bottomLinkSpacing}
-              alignWithMargin
+              alignWithMargin={true}
               size="brevier"
               fontVariant="sansRegular"
             >

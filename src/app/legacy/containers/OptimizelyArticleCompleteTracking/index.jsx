@@ -29,6 +29,7 @@ const OptimizelyArticleCompleteTracking = () => {
     observer.current.observe(ref.current);
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     initObserver();
     return () => {

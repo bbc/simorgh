@@ -23,7 +23,7 @@ const Image = ({
       aspectRatio={ASPECT_RATIO}
       width={width}
       height={height}
-      lazyLoad
+      lazyLoad={true}
     />
   );
 };

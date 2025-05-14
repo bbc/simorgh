@@ -38,7 +38,7 @@ const buildIndexAlsosMediaIndicator = ({
       script={script}
       service={service}
       dir={dir}
-      isInline
+      isInline={true}
     />
   ) : null;
 };

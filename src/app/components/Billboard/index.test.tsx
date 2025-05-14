@@ -211,7 +211,7 @@ describe('Billboard', () => {
           link={link}
           image={imageUrl}
           altText={imageAlt}
-          showLiveLabel
+          showLiveLabel={true}
         />,
       );
 
@@ -230,7 +230,7 @@ describe('Billboard', () => {
           link={link}
           image={imageUrl}
           altText={imageAlt}
-          showLiveLabel
+          showLiveLabel={true}
         />,
         {
           service: 'kyrgyz',

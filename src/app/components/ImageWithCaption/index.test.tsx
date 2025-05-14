@@ -100,7 +100,7 @@ describe('Image', () => {
     });
     it('should preload an image if the image is before the 5th block', async () => {
       render(
-        <ImageContainer sizes="100vw" position={[4]} {...data} shouldPreload />,
+        <ImageContainer sizes="100vw" position={[4]} {...data} shouldPreload={true} />,
       );
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');

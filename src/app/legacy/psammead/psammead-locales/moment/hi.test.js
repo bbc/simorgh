@@ -10,16 +10,16 @@ moment.locale('hi');
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 test('parse', () => {
-  var tests =
+  const tests =
       'जनवरी जन._फ़रवरी फ़र._मार्च मार्च_अप्रैल अप्रै._मई मई_जून जून_जुलाई जुल._अगस्त अग._सितंबर सित._अक्टूबर अक्टू._नवंबर नव._दिसंबर दिस.'.split(
         '_'
-      ),
-    i;
+      );
+  let i;
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      input + ' should be month ' + (i + 1)
+      `${input} should be month ${i + 1}`
     );
   }
   for (i = 0; i < 12; i += 1) {
@@ -36,7 +36,7 @@ test('parse', () => {
 });
 
 test('format', () => {
-  var a = [
+  const a = [
       [
         'dddd, Do MMMM YYYY, a h:mm:ss बजे',
         'रविवार, 14 फ़रवरी 2010, दोपहर 3:25:50 बजे',
@@ -62,11 +62,11 @@ test('format', () => {
       ['ll', '14 फ़र. 2010'],
       ['lll', '14 फ़र. 2010, दोपहर 3:25 बजे'],
       ['llll', 'रवि, 14 फ़र. 2010, दोपहर 3:25 बजे'],
-    ],
-    b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
-    i;
+    ];
+  const b = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  let i;
   for (i = 0; i < a.length; i += 1) {
-    assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+    assert.equal(b.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
 });
 
@@ -108,11 +108,11 @@ test('format ordinal', () => {
 });
 
 test('format month', () => {
-  var expected =
+  const expected =
       'जनवरी जन._फ़रवरी फ़र._मार्च मार्च_अप्रैल अप्रै._मई मई_जून जून_जुलाई जुल._अगस्त अग._सितंबर सित._अक्टूबर अक्टू._नवंबर नव._दिसंबर दिस.'.split(
         '_'
-      ),
-    i;
+      );
+  let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
@@ -123,11 +123,11 @@ test('format month', () => {
 });
 
 test('format week', () => {
-  var expected =
+  const expected =
       'रविवार रवि र_सोमवार सोम सो_मंगलवार मंगल मं_बुधवार बुध बु_गुरूवार गुरू गु_शुक्रवार शुक्र शु_शनिवार शनि श'.split(
         '_'
-      ),
-    i;
+      );
+  let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
@@ -138,7 +138,7 @@ test('format week', () => {
 });
 
 test('from', () => {
-  var start = moment([2007, 1, 28]);
+  const start = moment([2007, 1, 28]);
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'कुछ ही क्षण',
@@ -304,7 +304,7 @@ test('fromNow', () => {
 });
 
 test('calendar day', () => {
-  var a = moment().hours(12).minutes(0).seconds(0);
+  const a = moment().hours(12).minutes(0).seconds(0);
 
   assert.equal(
     moment(a).calendar(),
@@ -339,57 +339,59 @@ test('calendar day', () => {
 });
 
 test('calendar next week', () => {
-  var i, m;
+  let i;
+  let m;
   for (i = 2; i < 7; i += 1) {
     m = moment().add({ d: i });
     assert.equal(
       m.calendar(),
       m.format('dddd[,] LT'),
-      'Today + ' + i + ' days current time'
+      `Today + ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd[,] LT'),
-      'Today + ' + i + ' days beginning of day'
+      `Today + ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd[,] LT'),
-      'Today + ' + i + ' days end of day'
+      `Today + ${i} days end of day`
     );
   }
 });
 
 test('calendar last week', () => {
-  var i, m;
+  let i;
+  let m;
 
   for (i = 2; i < 7; i += 1) {
     m = moment().subtract({ d: i });
     assert.equal(
       m.calendar(),
       m.format('[पिछले] dddd[,] LT'),
-      'Today - ' + i + ' days current time'
+      `Today - ${i} days current time`
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('[पिछले] dddd[,] LT'),
-      'Today - ' + i + ' days beginning of day'
+      `Today - ${i} days beginning of day`
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('[पिछले] dddd[,] LT'),
-      'Today - ' + i + ' days end of day'
+      `Today - ${i} days end of day`
     );
   }
 });
 
 test('calendar all else', () => {
-  var weeksAgo = moment().subtract({ w: 1 }),
-    weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = moment().subtract({ w: 1 });
+  let weeksFromNow = moment().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');

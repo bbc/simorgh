@@ -74,7 +74,7 @@ describe('Comscore Analytics Container', () => {
           platform="amp"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          comscoreAnalyticsToggle
+          comscoreAnalyticsToggle={true}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
@@ -92,7 +92,7 @@ describe('Comscore Analytics Container', () => {
         platform="amp"
         pageType={ARTICLE_PAGE}
         origin="bbc.com"
-        comscoreAnalyticsToggle
+        comscoreAnalyticsToggle={true}
       >
         <ComscoreAnalytics />
       </ContextWrap>,

@@ -8,7 +8,7 @@ const MediaIndicator = ({ className = '' }) => {
   if (!mediaType) return null;
   return (
     <MediaIndicatorWrapper
-      aria-hidden
+      aria-hidden={true}
       {...(className ? { className } : undefined)}
     >
       <MediaIndicatorAlignment>{mediaIcons[mediaType]}</MediaIndicatorAlignment>

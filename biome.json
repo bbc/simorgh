@@ -1,0 +1,141 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "files": { "ignoreUnknown": false, "ignore": ["cypress"] },
+  "formatter": { "enabled": true, "indentStyle": "tab" },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "a11y": {
+        "useKeyWithClickEvents": "error"
+      },
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn",
+        "noDangerouslySetInnerHtmlWithChildren": "error",
+        "noGlobalEval": "error"
+      },
+      "style": {
+        "noRestrictedGlobals": {
+          "level": "error",
+          "options": {
+            "deniedGlobals": [
+              "isFinite",
+              "isNaN",
+              "addEventListener",
+              "blur",
+              "close",
+              "closed",
+              "confirm",
+              "defaultStatus",
+              "defaultstatus",
+              "event",
+              "external",
+              "find",
+              "focus",
+              "frameElement",
+              "frames",
+              "history",
+              "innerHeight",
+              "innerWidth",
+              "length",
+              "location",
+              "locationbar",
+              "menubar",
+              "moveBy",
+              "moveTo",
+              "name",
+              "onblur",
+              "onerror",
+              "onfocus",
+              "onload",
+              "onresize",
+              "onunload",
+              "open",
+              "opener",
+              "opera",
+              "outerHeight",
+              "outerWidth",
+              "pageXOffset",
+              "pageYOffset",
+              "parent",
+              "print",
+              "removeEventListener",
+              "resizeBy",
+              "resizeTo",
+              "screen",
+              "screenLeft",
+              "screenTop",
+              "screenX",
+              "screenY",
+              "scroll",
+              "scrollbars",
+              "scrollBy",
+              "scrollTo",
+              "scrollX",
+              "scrollY",
+              "self",
+              "status",
+              "statusbar",
+              "stop",
+              "toolbar",
+              "top"
+            ]
+          }
+        },
+        "useImportType": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "error",
+        "noAssignInExpressions": "error",
+        "noConsole": "warn",
+        "noGlobalAssign": "error",
+        "useValidTypeof": "error"
+      }
+    },
+    "ignore": [
+      "**/tz/**",
+      "**/index.stories.jsx",
+      "**/index.amp.stories.jsx",
+      ".storybook/**/*",
+      "src/integration/**/*",
+      "src/app/hooks/useImageColour/colorthief.js"
+    ]
+  },
+  "javascript": {
+    "formatter": { "quoteStyle": "double" },
+    "globals": [
+      "React",
+      "BufferEncoding",
+      "jest",
+      "expect",
+      "describe",
+      "it",
+      "beforeEach",
+      "afterEach",
+      "beforeAll",
+      "afterAll",
+      "test"
+    ]
+  },
+  "overrides": [
+    {
+      "include": ["**/*.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "complexity": { "useOptionalChain": "error" },
+          "correctness": {
+            "noInvalidUseBeforeDeclaration": "error",
+            "noUnusedVariables": "warn"
+          }
+        }
+      }
+    }
+  ]
+}

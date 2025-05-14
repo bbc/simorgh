@@ -8,32 +8,32 @@ moment.updateLocale('sw', {
     ),
   relativeTime: {
     past: '%s',
-    s(number, withoutSuffix, key, isFuture) {
+    s(_number, withoutSuffix, _key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'sekunde chache zilizopita'
         : 'hivi punde';
     },
-    ss(number, withoutSuffix, key, isFuture) {
+    ss(_number, withoutSuffix, _key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'sekunde chache zilizopita'
         : 'hivi punde';
     },
-    m(number, withoutSuffix, key, isFuture) {
+    m(_number, withoutSuffix, _key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'Dakika 1 iliyopita'
         : 'Dakika 1';
     },
-    mm(number, withoutSuffix, key, isFuture) {
+    mm(number, withoutSuffix, _key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? `Dakika ${number} zilizopita`
         : `Dakika ${number}`;
     },
-    h(number, withoutSuffix, key, isFuture) {
+    h(_number, withoutSuffix, _key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? 'Saa 1 iliyopita'
         : 'Saa 1';
     },
-    hh(number, withoutSuffix, key, isFuture) {
+    hh(number, withoutSuffix, _key, isFuture) {
       return withoutSuffix === false && isFuture === false
         ? `Saa ${number} zilizopita`
         : `Saa ${number}`;

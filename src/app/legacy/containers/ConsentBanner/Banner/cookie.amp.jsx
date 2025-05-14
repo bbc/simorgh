@@ -265,7 +265,7 @@ const AmpCookieBanner = ({
     <div id={id} hidden={hidden}>
       <Helmet>
         <script
-          async
+          async={true}
           custom-element="amp-bind"
           src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
         />
@@ -308,7 +308,7 @@ const AmpCookieBanner = ({
           </ContentWrapper>
         </BannerPage>
         <BannerPage
-          hidden
+          hidden={true}
           data-amp-bind-hidden="!isManagingSettings"
           data-testid="amp-cookie-banner-manage-settings"
         >

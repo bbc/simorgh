@@ -19,7 +19,7 @@ const OEmbed = styled.div`
   ${({ isLive }) => (isLive ? 'flex-wrap: wrap;' : '')}
 `;
 
-const getOnRenderError = providerName =>
+const _getOnRenderError = providerName =>
   `onRender callback function not implemented for ${providerName}`;
 
 /**
@@ -42,7 +42,7 @@ export const providers = (provider, isLive) =>
           window.instgrm.Embeds.process();
         }
       },
-      onLibraryLoad: () => console.error(getOnRenderError('Instagram')),
+      onLibraryLoad: () => null,
     },
     twitter: {
       script: 'https://platform.twitter.com/widgets.js',
@@ -114,7 +114,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('YouTube')),
+      onLibraryLoad: () => null,
     },
     tiktok: {
       script: `https://www.tiktok.com/embed.js?t=${Date.now()}`,
@@ -125,7 +125,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('TikTok')),
+      onLibraryLoad: () => null,
     },
     facebook: {
       script: 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0',
@@ -151,7 +151,7 @@ export const providers = (provider, isLive) =>
       }
     `,
       enrich: () => {},
-      onLibraryLoad: () => console.error(getOnRenderError('Facebook')),
+      onLibraryLoad: () => null,
     },
   })[provider];
 
@@ -162,17 +162,18 @@ const CanonicalEmbed = ({ provider, oEmbed, onRender = null }) => {
   const hasLoadedLibrary = useScript(script);
   useEffect(enrich);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (onRender && hasLoadedLibrary && onLibraryLoad) {
       onLibraryLoad(onRender);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasLoadedLibrary]);
 
   return (
     <OEmbed
       styles={styles}
       isLive={isLive}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{ __html: oEmbed.html }}
     />
   );

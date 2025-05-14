@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import React, { ReactElement, PropsWithChildren } from 'react';
 import { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
@@ -24,10 +23,13 @@ export default function LitePageRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         {helmetScriptTags}
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          dangerouslySetInnerHTML={{ __html: styles }}
+        />
         <ComponentTracking
           enableStaticClickTrackingOnOperaMiniOnly={false}
-          trackComponentViews
+          trackComponentViews={true}
         />
       </head>
       <body>{bodyContent}</body>

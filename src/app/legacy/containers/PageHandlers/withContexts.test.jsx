@@ -60,7 +60,7 @@ describe('withContexts HOC', () => {
     let container;
 
     await act(
-      // eslint-disable-next-line no-return-assign
+      // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
       async () => ({ container } = render(<ContextsHOC {...props} />)),
     );
 

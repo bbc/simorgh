@@ -165,6 +165,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     useReverb,
   ]);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const viewTracker = useCallback(
     async (element: HTMLElement) => {
       if (!element || !trackingIsEnabled || eventSent) return;

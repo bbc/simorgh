@@ -7,7 +7,7 @@ describe('Grid component', () => {
   it('should render Grid with Grid items', () => {
     const { container } = render(
       <Grid
-        enableGelGutters
+        enableGelGutters={true}
         columns={{
           group0: 6,
           group1: 6,
@@ -32,7 +32,7 @@ describe('Grid component', () => {
         }}
       >
         <Grid
-          item
+          item={true}
           columns={{
             group0: 6,
             group1: 6,
@@ -55,7 +55,7 @@ describe('Grid component', () => {
           }}
         >
           <Grid
-            item
+            item={true}
             columns={{
               group0: 6,
               group1: 6,
@@ -68,7 +68,7 @@ describe('Grid component', () => {
             <ExampleParagraph identifier="Landscape image " />
           </Grid>
           <Grid
-            item
+            item={true}
             columns={{
               group0: 6,
               group1: 6,
@@ -82,7 +82,7 @@ describe('Grid component', () => {
           </Grid>
         </Grid>
         <Grid
-          item
+          item={true}
           columns={{
             group0: 6,
             group1: 6,
@@ -96,7 +96,7 @@ describe('Grid component', () => {
         </Grid>
         {['2', '3', '4', '5', '6', '7', '8', '9', '10'].map(num => (
           <Grid
-            item
+            item={true}
             columns={{
               group0: 6,
               group1: 6,
@@ -126,10 +126,10 @@ describe('Grid component', () => {
           group4: 8,
           group5: 20,
         }}
-        enableGelMargins
+        enableGelMargins={true}
       >
         <Grid
-          item
+          item={true}
           columns={{
             group0: 6,
             group1: 6,
@@ -169,7 +169,7 @@ describe('Grid component', () => {
             }}
           >
             <Grid
-              item
+              item={true}
               columns={{
                 group0: 6,
                 group1: 6,
@@ -190,7 +190,7 @@ describe('Grid component', () => {
               <ExampleParagraph identifier="Landscape image " />
             </Grid>
             <Grid
-              item
+              item={true}
               columns={{
                 group0: 6,
                 group1: 6,
@@ -213,7 +213,7 @@ describe('Grid component', () => {
           </Grid>
         </ExampleFigure>
         <Grid
-          item
+          item={true}
           columns={{
             group0: 6,
             group1: 6,
@@ -235,7 +235,7 @@ describe('Grid component', () => {
         </Grid>
         {['2', '3', '4', '5', '6', '7', '8', '9', '10'].map(num => (
           <Grid
-            item
+            item={true}
             columns={{
               group0: 6,
               group1: 6,
@@ -275,7 +275,7 @@ describe('Grid component', () => {
         }}
       >
         <Grid
-          item
+          item={true}
           columns={{
             group0: 6,
             group1: 6,
@@ -288,7 +288,7 @@ describe('Grid component', () => {
           <ExampleImage />
         </Grid>
         <Grid
-          item
+          item={true}
           columns={{
             group0: 6,
             group1: 6,

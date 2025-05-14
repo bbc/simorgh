@@ -16,7 +16,7 @@ const StyledImage = styled(Image)`
 const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (
     <>
-      <LazyLoad offset={LAZYLOAD_OFFSET} once>
+      <LazyLoad offset={LAZYLOAD_OFFSET} once={true}>
         {imageToRender}
       </LazyLoad>
       {fallback && <noscript>{imageToRender}</noscript>}

@@ -12,7 +12,7 @@ const ampAnalyticsJson = ({ baseUrl, pageviewParams }: ATIAnalyticsProps) => ({
   },
   requests: {
     base: baseUrl,
-    pageview: '${base}' + pageviewParams,
+    pageview: `\${base}${pageviewParams}`,
   },
   triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });

@@ -32,8 +32,8 @@ const EmbedHtml = ({ embeddableContent }: PropsWithChildren<Props>) => {
         styles.embedDiv,
         isUSElectionBanner && styles.electionBannerOverrides,
       ]}
-      suppressHydrationWarning
-      // eslint-disable-next-line react/no-danger
+      suppressHydrationWarning={true}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{ __html: embeddableContent }}
       data-testid="embed"
     />

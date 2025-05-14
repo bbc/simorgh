@@ -8,7 +8,7 @@ import styles from './index.styles';
 const AmpHead = () => (
   <Helmet>
     <script
-      async
+      async={true}
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
     />

@@ -31,6 +31,7 @@ const ToggleContextProvider = ({
 }: PropsWithChildren<ToggleContextProviderProps>) => {
   const [toggleState, toggleDispatch] = useReducer(toggleReducer, toggles);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const toggleContextValue = useMemo(
     () => ({
       toggleState,

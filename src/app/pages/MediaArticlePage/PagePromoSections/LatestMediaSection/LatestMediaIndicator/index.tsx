@@ -18,8 +18,8 @@ const LatestMediaIndicator = ({ duration }: LatestMediaIndicatorProp) => {
       {duration ? (
         <time
           dateTime={isoDuration}
-          suppressHydrationWarning
-          aria-hidden
+          suppressHydrationWarning={true}
+          aria-hidden={true}
           css={styles.time}
         >
           {durationString}

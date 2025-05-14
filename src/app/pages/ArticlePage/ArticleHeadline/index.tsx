@@ -48,7 +48,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
             css={styles.liteSiteLink}
-            alignWithMargin
+            alignWithMargin={true}
             size="brevier"
           >
             <CallToActionLink.Text>

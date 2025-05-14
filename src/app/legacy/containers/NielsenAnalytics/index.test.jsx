@@ -77,7 +77,7 @@ describe('Nielsen Analytics Container', () => {
           platform="canonical"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          nielsenAnalyticsToggle
+          nielsenAnalyticsToggle={true}
           service="news"
           pathname="somepath"
         >
@@ -94,7 +94,7 @@ describe('Nielsen Analytics Container', () => {
           platform="amp"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          nielsenAnalyticsToggle
+          nielsenAnalyticsToggle={true}
           service="news"
           pathname="somepath"
         >
@@ -112,7 +112,7 @@ describe('Nielsen Analytics Container', () => {
           platform="amp"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          nielsenAnalyticsToggle
+          nielsenAnalyticsToggle={true}
           service="news"
           pathname="somepath"
         >
@@ -130,7 +130,7 @@ describe('Nielsen Analytics Container', () => {
           platform="amp"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          nielsenAnalyticsToggle
+          nielsenAnalyticsToggle={true}
           service="sport"
           pathname="somepath"
         >
@@ -148,7 +148,7 @@ describe('Nielsen Analytics Container', () => {
           platform="amp"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          nielsenAnalyticsToggle
+          nielsenAnalyticsToggle={true}
           service="sport"
           pathname="/news/business-58007120.amp"
         >
@@ -166,7 +166,7 @@ describe('Nielsen Analytics Container', () => {
           platform="amp"
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
-          nielsenAnalyticsToggle
+          nielsenAnalyticsToggle={true}
           service="news"
           pathname="/sport/articles/c6v11qzyv8po.amp"
         >

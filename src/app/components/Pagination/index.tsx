@@ -140,7 +140,6 @@ const renderBlock = ({
   return (
     <li
       css={() => [styles.elipsisBlock, visibilityToMediaQuery(visibility)]}
-      role="separator"
       data-testid="topic-pagination-ellipsis"
       key={key}
     >

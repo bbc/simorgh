@@ -145,7 +145,7 @@ describe('Story Promo Media Indicator', () => {
         item={videoItem}
         script={latin}
         service="news"
-        isInline
+        isInline={true}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -158,7 +158,7 @@ describe('Story Promo Media Indicator', () => {
         item={videoItem}
         script={arabic}
         service="persian"
-        isInline
+        isInline={true}
       />,
     );
     expect(container).toMatchSnapshot();

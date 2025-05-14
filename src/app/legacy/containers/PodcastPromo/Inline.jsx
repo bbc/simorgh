@@ -227,7 +227,7 @@ const Promo = () => {
           endTextVisuallyHidden={endTextVisuallyHidden}
           service={service}
         >
-          <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
+          <PromoComponent.Card inlinePromo={true} isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
               <ImageWithPlaceholder
                 src={imgSrc}
@@ -238,7 +238,7 @@ const Promo = () => {
                 height={100}
                 width={100}
                 ratio={100}
-                lazyLoad
+                lazyLoad={true}
               />
             </StyledImageWrapper>
             <StyledPodcastIconWrapper

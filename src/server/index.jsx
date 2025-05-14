@@ -82,7 +82,7 @@ server
   .disable('x-powered-by')
   .use(
     morgan('tiny', {
-      skip: (req, res) => res.statusCode === 200,
+      skip: (_, res) => res.statusCode === 200,
       stream: new LoggerStream(),
     }),
   )
@@ -99,7 +99,7 @@ server
     }),
   )
   .use(logResponseTime)
-  .get('/status', (req, res) => {
+  .get('/status', (_, res) => {
     try {
       res.status(200).send('Ok');
     } catch (error) {
@@ -112,11 +112,11 @@ server
  * Application env routes
  */
 server
-  .get(homePageSwPath, (req, res) => {
+  .get(homePageSwPath, (_, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.set(
-      `Cache-Control`,
-      `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
+      'Cache-Control',
+      'public, stale-if-error=6000, stale-while-revalidate=600, max-age=300',
     );
     res.sendFile(swPath, {}, error => {
       if (error) {
@@ -188,7 +188,7 @@ const injectResourceHintsHeader = (req, res, next) => {
   next();
 };
 // Set Referrer-Policy
-const injectReferrerPolicyHeader = (req, res, next) => {
+const injectReferrerPolicyHeader = (_, res, next) => {
   res.set('Referrer-Policy', 'no-referrer-when-downgrade');
   next();
 };
@@ -297,6 +297,7 @@ server.get(
         });
 
         if (isLocal()) {
+          // biome-ignore lint/suspicious/noConsole: <explanation>
           console.error(error);
         }
 

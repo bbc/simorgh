@@ -137,7 +137,7 @@ describe('RequestContext', () => {
   describe('platform', () => {
     it('should be "amp" when isAmp is true', () => {
       render(
-        <RequestContextProvider {...input} isAmp>
+        <RequestContextProvider {...input} isAmp={true}>
           <Component />
         </RequestContextProvider>,
       );
@@ -165,7 +165,7 @@ describe('RequestContext', () => {
 
     it('should be "app" when isAmp is false and isApp is true', () => {
       render(
-        <RequestContextProvider {...input} isAmp={false} isApp>
+        <RequestContextProvider {...input} isAmp={false} isApp={true}>
           <Component />
         </RequestContextProvider>,
       );
@@ -180,7 +180,7 @@ describe('RequestContext', () => {
 
     it('should be "lite" when isAmp is false and isApp is false and isLite is true', () => {
       render(
-        <RequestContextProvider {...input} isAmp={false} isApp={false} isLite>
+        <RequestContextProvider {...input} isAmp={false} isApp={false} isLite={true}>
           <Component />
         </RequestContextProvider>,
       );

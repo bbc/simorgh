@@ -20,6 +20,7 @@ export const LiveRegionContextProvider = ({ children }: PropsWithChildren) => {
     setLiveRegionItem(item);
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const memoisedLiveRegion = useMemo(
     () => ({
       liveRegionItem,

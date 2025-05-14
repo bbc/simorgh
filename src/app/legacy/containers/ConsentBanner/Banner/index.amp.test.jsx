@@ -11,7 +11,7 @@ describe('Amp Consent Banner Container', () => {
         rejectAction="tap:cookieId.show, privacyId.hide"
         hideAction="tap:brandLink.focus, privacy.hide"
         promptId="promptId"
-        hidden
+        hidden={true}
       />,
       { service: 'news' },
     );
@@ -26,7 +26,7 @@ describe('Amp Consent Banner Container', () => {
         rejectAction="tap:cookieId.show, privacyId.hide"
         hideAction="tap:brandLink.focus, cookie.hide"
         promptId="promptId"
-        hidden
+        hidden={true}
       />,
       { service: 'arabic' },
     );
@@ -39,7 +39,7 @@ describe('Amp Consent Banner Container', () => {
         acceptAction="tap:parentId.accept"
         rejectAction="tap:parentId.reject"
         promptId="promptId"
-        hidden
+        hidden={true}
       />,
       { service: 'news' },
     );
@@ -53,7 +53,7 @@ describe('Amp Consent Banner Container', () => {
         acceptAction="tap:parentId.accept"
         rejectAction="tap:parentId.reject"
         promptId="promptId"
-        hidden
+        hidden={true}
       />,
       { service: 'arabic' },
     );

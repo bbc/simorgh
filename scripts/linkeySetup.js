@@ -25,7 +25,7 @@ fs.readdir(dir, (err, files) => {
     const importConfig = `import { service } from './${serviceName}';\n`;
     const testTemplate = fs.readFileSync(
       'scripts/linkeyTest.js',
-      (error, data) => {
+      (_error, data) => {
         return data;
       },
     );

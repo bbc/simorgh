@@ -94,7 +94,7 @@ const PromoListComponent = ({
               item={item}
               index={promoIndex}
               dir={dir}
-              displayImage
+              displayImage={true}
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
               eventTrackingData={eventTrackingDataWithOptimizely}
@@ -128,7 +128,7 @@ const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
       <FrostedGlassPromo
         item={promo}
         dir={dir}
-        displayImage
+        displayImage={true}
         serviceDatetimeLocale={serviceDatetimeLocale}
         eventTrackingData={eventTrackingDataWithOptimizely}
         sectionType="features-and-analysis"

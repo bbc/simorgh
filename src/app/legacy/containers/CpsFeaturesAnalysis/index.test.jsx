@@ -31,7 +31,7 @@ const renderFeaturesAnalysis = ({
         statusCode={200}
       >
         <ToggleContextProvider>
-          <FeaturesAnalysis content={content} enableGridWrapper />
+          <FeaturesAnalysis content={content} enableGridWrapper={true} />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
@@ -52,7 +52,7 @@ const renderFeaturesAnalysisNull = ({
         statusCode={200}
       >
         <ToggleContextProvider>
-          <FeaturesAnalysis content={[]} enableGridWrapper />
+          <FeaturesAnalysis content={[]} enableGridWrapper={true} />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
@@ -74,7 +74,7 @@ const renderFeaturesAnalysisNoTitle = ({
         statusCode={200}
       >
         <ToggleContextProvider>
-          <FeaturesAnalysis content={content} enableGridWrapper />
+          <FeaturesAnalysis content={content} enableGridWrapper={true} />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,

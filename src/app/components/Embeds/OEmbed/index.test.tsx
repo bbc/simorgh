@@ -108,7 +108,7 @@ describe('OEmbed', () => {
   describe('AMP', () => {
     it('Riddle Embed - Should show a translated error message with a link to the canonical page', () => {
       const { container, getByText } = render(
-        <Component props={sampleRiddleProps} service="afrique" isAmp />,
+        <Component props={sampleRiddleProps} service="afrique" isAmp={true} />,
       );
       const iFrameElement = container.querySelector(
         'iframe[src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"]',
@@ -128,7 +128,7 @@ describe('OEmbed', () => {
         <Component
           props={sampleFlourishVisualisationProps}
           service="afrique"
-          isAmp
+          isAmp={true}
         />,
       );
       const iFrameElement = container.querySelector(
@@ -148,7 +148,7 @@ describe('OEmbed', () => {
 
     it('Flourish Story Embed - Should show a translated error message with a link to the canonical page', () => {
       const { container, getByText } = render(
-        <Component props={sampleFlourishStoryProps} service="afrique" isAmp />,
+        <Component props={sampleFlourishStoryProps} service="afrique" isAmp={true} />,
       );
       const iFrameElement = container.querySelector(
         'iframe[src="https://flo.uri.sh/story/2070814/embed?auto=1"]',
@@ -167,7 +167,7 @@ describe('OEmbed', () => {
 
     it('VJ Embed - Should show an amp iframe with the appropriate link', () => {
       const { container } = render(
-        <Component props={sampleVJAmpProps} isAmp />,
+        <Component props={sampleVJAmpProps} isAmp={true} />,
       );
       const actual = container.querySelector(
         'amp-iframe[src="https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0"]',
@@ -177,7 +177,7 @@ describe('OEmbed', () => {
 
     it('VJ Embed - Should show an error message if parameters are missing', () => {
       const { container, getByText } = render(
-        <Component props={sampleVJAmpPropsWithoutParams} isAmp />,
+        <Component props={sampleVJAmpPropsWithoutParams} isAmp={true} />,
       );
       const iFrameElement = container.querySelector(
         'amp-iframe[src="https://news.test.files.bbci.co.uk/include/newsspec/36430-optimo-deployments/develop/pidgin/app/amp?version=1.0.0"]',
@@ -194,7 +194,7 @@ describe('OEmbed', () => {
   describe('Lite', () => {
     it('Should return null if isLite is true', () => {
       const { container } = render(
-        <Component props={sampleRiddleProps} isAmp={false} isLite />,
+        <Component props={sampleRiddleProps} isAmp={false} isLite={true} />,
       );
       expect(container).toBeEmptyDOMElement();
     });

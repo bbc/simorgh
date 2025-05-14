@@ -93,7 +93,7 @@ export default function FormScreen({
           {sectionTitle}
         </Heading>
       )}
-      <form onSubmit={handleSubmit} noValidate>
+      <form onSubmit={handleSubmit} noValidate={true}>
         <LiveRegionContextProvider>
           {hasAttemptedSubmit && hasValidationErrors && (
             <ErrorSummaryBox ref={ref} labelMap={labelMap} />

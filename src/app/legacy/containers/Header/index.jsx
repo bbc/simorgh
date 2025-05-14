@@ -95,7 +95,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
   if (isApp) return null;
 
   return (
-    <header role="banner" lang={serviceLang} {...viewTracker}>
+    <header lang={serviceLang} {...viewTracker}>
       {isAmp ? (
         <Header
           linkId="brandLink"

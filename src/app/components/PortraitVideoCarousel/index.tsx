@@ -59,6 +59,7 @@ const PortraitVideoCarousel = ({
     setSelectedItem(null);
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     const scrollElement = scrollRef.current;
     if (scrollElement) {

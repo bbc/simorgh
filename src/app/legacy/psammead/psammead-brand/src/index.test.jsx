@@ -77,8 +77,8 @@ describe('Brand', () => {
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
-        borderTop
-        borderBottom
+        borderTop={true}
+        borderBottom={true}
         backgroundColour={POSTBOX}
         logoColour={WHITE}
       />,
@@ -184,8 +184,8 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          borderTop
-          borderBottom
+          borderTop={true}
+          borderBottom={true}
           backgroundColour={POSTBOX}
           logoColour={WHITE}
           linkId="brandLink"

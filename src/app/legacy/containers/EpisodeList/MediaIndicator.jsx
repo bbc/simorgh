@@ -11,6 +11,7 @@ const MediaIndicator = ({ size }) => (
   <Wrapper
     aria-hidden="true"
     size={size}
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
     dangerouslySetInnerHTML={{
       __html: `
       <svg class="rounded-play-button" focusable="false" width=${size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">

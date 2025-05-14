@@ -6,10 +6,10 @@ import React from 'react';
 
 const IfAboveIE9 = ({ children }) => (
   <>
-    {/* eslint-disable-next-line react/no-danger */}
+    {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
     <div dangerouslySetInnerHTML={{ __html: '<!--[if !IE]><!-->' }} />
     {children}
-    {/* eslint-disable-next-line react/no-danger */}
+    {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
     <div dangerouslySetInnerHTML={{ __html: '<!--<![endif]-->' }} />
   </>
 );

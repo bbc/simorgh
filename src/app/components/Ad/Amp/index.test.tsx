@@ -24,7 +24,7 @@ const adTranslations = {
 const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
-    isAmp
+    isAmp={true}
     isApp={false}
     pageType={HOME_PAGE}
     service="afrique"

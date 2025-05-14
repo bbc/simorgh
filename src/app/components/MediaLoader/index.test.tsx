@@ -205,7 +205,7 @@ describe('MediaLoader', () => {
     it('should not render metadata tags when media player is embedded', async () => {
       await act(async () => {
         render(
-          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded />,
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} embedded={true} />,
           {
             id: 'cn8jgj8rjppo',
           },
@@ -225,7 +225,7 @@ describe('MediaLoader', () => {
         render(
           <MediaPlayer
             blocks={onDemandTvBlocksWithOverrides as MediaBlock[]}
-            embedded
+            embedded={true}
           />,
           { service: 'hindi' },
         );
@@ -255,7 +255,7 @@ describe('MediaLoader', () => {
       const buildConfigSpy = jest.spyOn(buildConfig, 'default');
       await act(async () => {
         render(
-          <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded />,
+          <MediaPlayer blocks={onDemandTvBlocks as MediaBlock[]} embedded={true} />,
           {
             service: 'hindi',
             atiData: {

@@ -30,6 +30,7 @@ export default function AmpRenderer({
         <style
           amp-custom=""
           data-emotion-css={ids?.join(' ')}
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
           dangerouslySetInnerHTML={{ __html: styles }}
         />
         <style amp-boilerplate="">{AMP_SCRIPT}</style>
@@ -42,6 +43,7 @@ export default function AmpRenderer({
         {AMP_ANALYTICS_JS}
       </head>
       <body className="amp-geo-pending">
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
         <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
       </body>
     </html>

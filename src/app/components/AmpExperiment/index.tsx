@@ -46,7 +46,7 @@ type AmpScriptProps = AmpExperimentConfig | AmpAnalyticsConfig;
 const AmpHead = () => (
   <Helmet>
     <script
-      async
+      async={true}
       custom-element="amp-experiment"
       src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"
     />
@@ -57,7 +57,7 @@ const AmpScript = ({ config }: { config: AmpScriptProps }) => {
   return (
     <script
       type="application/json"
-      /* eslint-disable-next-line react/no-danger */
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{ __html: JSON.stringify(config) }}
     />
   );

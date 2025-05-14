@@ -37,6 +37,6 @@ export default {
 
 export const CanonicalYoutube = () => <Component provider="youtube" />;
 
-export const AmpYoutube = () => <Component isAmp provider="youtube" />;
+export const AmpYoutube = () => <Component isAmp={true} provider="youtube" />;
 export const CanonicalTikTok = () => <Component provider="tiktok" />;
-export const AmpTikTok = () => <Component isAmp provider="tiktok" />;
+export const AmpTikTok = () => <Component isAmp={true} provider="tiktok" />;

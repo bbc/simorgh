@@ -95,7 +95,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
               dir={direction}
               columnLayout="oneColumn"
               size={size}
-              isAmp
+              isAmp={true}
             />
             <MostReadLink
               dir={direction}

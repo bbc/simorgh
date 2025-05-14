@@ -190,7 +190,7 @@ describe('Charbeats Analytics Container', () => {
     testUtils.getConfig = mockGetConfig;
     render(
       <ContextWrap
-        isLite
+        isLite={true}
         platform="canonical"
         pageType={ARTICLE_PAGE}
         origin="test.bbc.com"

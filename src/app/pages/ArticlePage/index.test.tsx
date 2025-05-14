@@ -638,7 +638,7 @@ describe('Article Page', () => {
       };
 
       const { container } = render(
-        <Context service="news" isApp>
+        <Context service="news" isApp={true}>
           <ArticlePage pageData={pageDataWithSecondaryColumn} />
         </Context>,
       );
@@ -651,7 +651,7 @@ describe('Article Page', () => {
 
     it('should remove the most read section', async () => {
       const { container } = render(
-        <Context service="pidgin" isApp>
+        <Context service="pidgin" isApp={true}>
           <ArticlePage pageData={articleDataPidgin} />
         </Context>,
         { service: 'pidgin' },
@@ -700,7 +700,7 @@ describe('Article Page', () => {
       promo: promoSample,
     };
     const { getByText } = render(
-      <Context service="russian" promo>
+      <Context service="russian" promo={true}>
         <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
       { service: 'russian' },

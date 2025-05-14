@@ -50,7 +50,7 @@ const getObserverInstance = (element: HTMLElement) => {
     );
 
     return instance;
-  } catch (e) {
+  } catch (_e) {
     throw new Error('Failed to find IntersectionObserver for element.');
   }
 };
@@ -158,7 +158,7 @@ const wrapper = ({
   toggles?: Toggles;
   mockOptimizely?: ReactSDKClient;
 }) => (
-  <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
+  <OptimizelyProvider optimizely={mockOptimizely} isServerSide={true}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
       pageType={STORY_PAGE}

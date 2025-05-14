@@ -66,13 +66,13 @@ describe('Ad Container', () => {
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
-              isAmp
+              isAmp={true}
               isApp={false}
               pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
-              showAdsBasedOnLocation
+              showAdsBasedOnLocation={true}
             >
               <ToggleContext.Provider value={toggleContextMock}>
                 <AdContainer slotType="leaderboard" />
@@ -92,13 +92,13 @@ describe('Ad Container', () => {
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
-              isAmp
+              isAmp={true}
               isApp={false}
               pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
-              showAdsBasedOnLocation
+              showAdsBasedOnLocation={true}
             >
               <ToggleContext.Provider value={toggleContextMock}>
                 <AdContainer slotType="mpu" />
@@ -118,13 +118,13 @@ describe('Ad Container', () => {
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
-              isAmp
+              isAmp={true}
               isApp={false}
               pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
-              showAdsBasedOnLocation
+              showAdsBasedOnLocation={true}
             >
               <ToggleContext.Provider value={toggleContextMock}>
                 <AdContainer slotType="leaderboard" />
@@ -144,13 +144,13 @@ describe('Ad Container', () => {
             <RequestContextProvider
               bbcOrigin="https://www.test.bbc.co.uk"
               id="c0000000000o"
-              isAmp
+              isAmp={true}
               isApp={false}
               pageType={HOME_PAGE}
               service="mundo"
               statusCode={200}
               pathname="/mundo"
-              showAdsBasedOnLocation
+              showAdsBasedOnLocation={true}
             >
               <ToggleContext.Provider value={toggleContextMock}>
                 <AdContainer slotType="leaderboard" />
@@ -175,7 +175,7 @@ describe('Ad Container', () => {
               service="mundo"
               statusCode={200}
               pathname="/mundo"
-              showAdsBasedOnLocation
+              showAdsBasedOnLocation={true}
             >
               <ToggleContext.Provider value={toggleContextMock}>
                 <BrowserRouter>
@@ -200,7 +200,7 @@ describe('Ad Container', () => {
               service="mundo"
               statusCode={200}
               pathname="/mundo"
-              showAdsBasedOnLocation
+              showAdsBasedOnLocation={true}
             >
               <ToggleContext.Provider value={toggleContextMock}>
                 <BrowserRouter>
@@ -237,13 +237,13 @@ describe('Ad Container', () => {
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
-            isAmp
+            isAmp={true}
             isApp={false}
             pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
-            showAdsBasedOnLocation
+            showAdsBasedOnLocation={true}
           >
             <ToggleContext.Provider value={toggleContextMock}>
               <AdContainer slotType="leaderboard" />
@@ -267,7 +267,7 @@ describe('Ad Container', () => {
             service="mundo"
             statusCode={200}
             pathname="/mundo"
-            showAdsBasedOnLocation
+            showAdsBasedOnLocation={true}
           >
             <ToggleContext.Provider value={toggleContextMock}>
               <AdContainer slotType="leaderboard" />
@@ -301,7 +301,7 @@ describe('Ad Container', () => {
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
-            isAmp
+            isAmp={true}
             isApp={false}
             pageType={HOME_PAGE}
             service="mundo"
@@ -370,13 +370,13 @@ describe('Ad Container', () => {
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
-            isAmp
+            isAmp={true}
             isApp={false}
             pageType={HOME_PAGE}
             service="mundo"
             statusCode={200}
             pathname="/mundo"
-            showAdsBasedOnLocation
+            showAdsBasedOnLocation={true}
           >
             <ToggleContext.Provider value={toggleContextMock}>
               <AdContainer slotType="leaderboard" />
@@ -401,7 +401,7 @@ describe('Ad Container', () => {
             service="mundo"
             statusCode={200}
             pathname="/mundo"
-            showAdsBasedOnLocation
+            showAdsBasedOnLocation={true}
           >
             <ToggleContext.Provider value={toggleContextMock}>
               <BrowserRouter>

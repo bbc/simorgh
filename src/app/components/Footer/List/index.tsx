@@ -35,7 +35,7 @@ export default ({
         </li>
       )}
       {elements.map((elem, index) => (
-        // eslint-disable-next-line react/no-array-index-key
+        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
         <li key={index}>{elem}</li>
       ))}
     </ul>

@@ -18,8 +18,6 @@ depcheck(
   path.resolve(__dirname, '..'),
   options,
   ({ dependencies, missing }) => {
-    console.log(`${dependencies.length} unused dependencies.`);
-    console.log(dependencies.join('\n'));
 
     // Filter out dependencies prefixed with "#".
     const missingFiltered = Object.keys(missing).reduce((obj, key) => {
@@ -32,12 +30,7 @@ depcheck(
         [key]: missing[key],
       };
     }, {});
-
-    console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
-    Object.keys(missingFiltered).forEach(key => {
-      console.log(key);
-      console.log(`\t${missingFiltered[key].join('\n\t')}`);
-      console.log('\n');
+    Object.keys(missingFiltered).forEach(_key => {
     });
 
     if (dependencies.length > 0 || Object.keys(missingFiltered).length > 0) {

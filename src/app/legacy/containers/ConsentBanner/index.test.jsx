@@ -14,7 +14,7 @@ describe('Consent Banner Container', () => {
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      isAmp
+      isAmp={true}
       pageType={ARTICLE_PAGE}
       service="news"
       statusCode={200}

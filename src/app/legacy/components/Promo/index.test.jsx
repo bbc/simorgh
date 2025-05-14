@@ -78,7 +78,7 @@ describe('Promo component - Image', () => {
     );
   });
   it('should use large image resolution and width when large image is true on desktop', () => {
-    render(<Fixture useLargeImages />);
+    render(<Fixture useLargeImages={true} />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl).toHaveAttribute(
       'sizes',

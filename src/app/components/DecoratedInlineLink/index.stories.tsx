@@ -34,7 +34,7 @@ export const NormalInlineLink = () => (
       },
     ]}
     locator="google.com"
-    isExternal
+    isExternal={true}
   />
 );
 
@@ -51,7 +51,7 @@ export const BoldInlineLink = () => (
       },
     ]}
     locator="google.com"
-    isExternal
+    isExternal={true}
   />
 );
 
@@ -68,7 +68,7 @@ export const BoldItalicInlineLink = () => (
       },
     ]}
     locator="google.com"
-    isExternal
+    isExternal={true}
   />
 );
 
@@ -85,7 +85,7 @@ export const InlineLinkWithOnClick = () => (
       },
     ]}
     locator=""
-    isExternal
+    isExternal={true}
     // eslint-disable-next-line no-alert
     onClick={() => alert('HELLO WORLD!')}
   />

@@ -45,9 +45,11 @@ export default function CanonicalRenderer({
         {helmetScriptTags}
         <style
           data-emotion-css={ids?.join(' ')}
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
           dangerouslySetInnerHTML={{ __html: styles }}
         />
         <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
           dangerouslySetInnerHTML={{
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
@@ -55,13 +57,18 @@ export default function CanonicalRenderer({
         />
         <ComponentTracking
           trackComponentViews={false}
-          enableStaticClickTrackingOnOperaMiniOnly
+          enableStaticClickTrackingOnOperaMiniOnly={true}
         />
       </head>
       <body>
-        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+        <div
+          id="root"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          dangerouslySetInnerHTML={{ __html: html || '' }}
+        />
         <script
           // This script should be the first script tag in the body, otherwise Opera Mini has trouble parsing the `window.SIMORGH_DATA` object
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
           dangerouslySetInnerHTML={{
             __html: `window.SIMORGH_DATA=${serialisedData}`,
           }}
@@ -73,6 +80,7 @@ export default function CanonicalRenderer({
         </IfAboveIE9>
         <script
           type="text/javascript"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.classList.remove("no-js");`,
           }}

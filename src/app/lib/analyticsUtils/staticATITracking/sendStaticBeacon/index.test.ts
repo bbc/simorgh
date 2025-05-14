@@ -12,6 +12,7 @@ describe('sendStaticBeacon', () => {
 
   beforeEach(() => {
     XMLHttpRequestSpy = jest.spyOn(window, 'XMLHttpRequest');
+    // biome-ignore lint/security/noGlobalEval: <explanation>
     eval(addSendStaticBeaconToWindow());
   });
 
@@ -31,6 +32,7 @@ describe('sendStaticBeacon', () => {
       () => XMLHttpRequestMock as XMLHttpRequest,
     );
 
+    // biome-ignore lint/security/noGlobalEval: <explanation>
     eval(sendStaticBeacon('https://foobar.com'));
 
     expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(

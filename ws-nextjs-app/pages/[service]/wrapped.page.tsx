@@ -104,6 +104,7 @@ const pageLayout = () => {
   const { datetimeLocale, locale } = useContext(ServiceContext);
   const isLocalhost = isLocal();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     let wsWrapped;
     const MINUTES_IN_HOURS = 60;
@@ -151,7 +152,7 @@ const pageLayout = () => {
       }, 0);
     const article = document.getElementById('article');
     article.innerText = new Intl.NumberFormat(locale).format(pageTypeCounts);
-    const average = document.getElementById('average');
+
     /// average.innerText = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(totalWords / pageTypeCounts);
     const topics = Object.keys(wsWrapped[thisYear].topicCounts)
       .sort((a, b) => {
@@ -172,7 +173,6 @@ const pageLayout = () => {
     const monthValues = [];
     const graphMonths = wsWrapped[thisYear].byMonth;
     const tempMonths = [];
-    const blah = new Intl.DateTimeFormat();
     for (let i = 0; i <= 11; i++) {
       const date = new Date(`2024-${String(i + 1).padStart(2, '0')}-01`);
       tempMonths.push(

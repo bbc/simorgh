@@ -209,7 +209,7 @@ const Bulletin = ({
             {isLive ? (
               <LiveLabel
                 liveText={liveText}
-                ariaHidden
+                ariaHidden={true}
                 offScreenText={offScreenText}
                 id={`bulletin-${sanitisedAriaId}`}
               >

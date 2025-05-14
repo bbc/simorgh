@@ -46,5 +46,5 @@ export const Example = (_: StoryArgs, globalArgs: Props) => {
 export const WithLiveLabel = (_: StoryArgs, globalArgs: Props) => {
   const { text, longText } = globalArgs;
 
-  return <Component text={text} longText={longText} showLiveLabel />;
+  return <Component text={text} longText={longText} showLiveLabel={true} />;
 };

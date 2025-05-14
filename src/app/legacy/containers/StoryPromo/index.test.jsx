@@ -117,7 +117,7 @@ describe('StoryPromo Container', () => {
       platform="canonical"
       item={completeItem}
       promoType="top"
-      isSingleColumnLayout
+      isSingleColumnLayout={true}
     />,
   );
 
@@ -127,7 +127,7 @@ describe('StoryPromo Container', () => {
       platform="amp"
       item={completeItem}
       promoType="top"
-      isSingleColumnLayout
+      isSingleColumnLayout={true}
     />,
   );
 

@@ -1,4 +1,5 @@
 /* eslint-disable no-eval */
+
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconOperaMini from '.';
 
@@ -25,6 +26,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     send: jest.fn(),
   };
 
+  // biome-ignore lint/security/noGlobalEval: <explanation>
   const sendStaticBeacon = eval(addSendStaticBeaconToWindow());
 
   beforeEach(() => {
@@ -54,6 +56,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     });
 
     it('should send beacon with XHR', () => {
+      // biome-ignore lint/security/noGlobalEval: <explanation>
       eval(sendPageViewBeaconOperaMini('https://ati-host.example.com'));
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
@@ -66,6 +69,7 @@ describe('sendPageViewBeaconOperaMini', () => {
     it('should send beacon including the referrer with XHR', () => {
       documentReferrerSpy.mockReturnValue('https://client.referrer.com');
 
+      // biome-ignore lint/security/noGlobalEval: <explanation>
       eval(sendPageViewBeaconOperaMini('https://ati-host.example.com'));
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledWith(
@@ -89,6 +93,7 @@ describe('sendPageViewBeaconOperaMini', () => {
         sendPageViewBeaconOperaMini('https://ati-host.example.com') +
         sendPageViewBeaconOperaMini('https://ati-host.example.com');
 
+      // biome-ignore lint/security/noGlobalEval: <explanation>
       eval(multipleCalls);
 
       expect(XMLHttpRequestMock.open).toHaveBeenCalledTimes(1);
@@ -96,6 +101,7 @@ describe('sendPageViewBeaconOperaMini', () => {
   });
 
   it('should not send beacon with XHR, when browser is not Opera Mini', () => {
+    // biome-ignore lint/security/noGlobalEval: <explanation>
     eval(sendPageViewBeaconOperaMini('https://ati-host.example.com'));
 
     expect(XMLHttpRequestMock.open).not.toHaveBeenCalled();

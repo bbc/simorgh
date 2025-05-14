@@ -9,6 +9,7 @@ describe('getRemoteDataScript', () => {
 
     const translations = WesternArabic;
 
+    // biome-ignore lint/security/noGlobalEval: <explanation>
     eval(transformData());
 
     data.items.forEach((item: object, index: number) => {
@@ -25,6 +26,7 @@ describe('getRemoteDataScript', () => {
     const translations = WesternArabic;
     expect(translations).toBeDefined();
 
+    // biome-ignore lint/security/noGlobalEval: <explanation>
     expect(() => eval(transformData())).toThrowError(
       'Empty records from mostread endpoint',
     );

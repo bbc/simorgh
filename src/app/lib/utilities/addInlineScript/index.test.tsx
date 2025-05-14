@@ -14,7 +14,7 @@ describe('addInlineScript', () => {
   });
 
   it('should render the script as expected when script is a function', () => {
-    const script = () => console.log('hello world');
+    const script = () => null;
 
     const inlineScript = addInlineScript({ script });
 

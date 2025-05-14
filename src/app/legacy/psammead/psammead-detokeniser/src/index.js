@@ -4,7 +4,7 @@
  * @param {Object} dictionary An object which maps keys as tokens to values.
  */
 const detokenise = (text, dictionary) => {
-  if (typeof text !== 'string' || dictionary !== Object(dictionary))
+  if (typeof text !== 'string' || dictionary !== new Object(dictionary))
     return null;
   return text.replace(/%\w+%/g, match => dictionary[match] || match);
 };

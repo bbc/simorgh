@@ -253,8 +253,8 @@ describe('MostRead', () => {
           render(
             <MostReadWithContext
               service={service}
-              mostReadToggle
-              isAmp
+              mostReadToggle={true}
+              isAmp={true}
               variant={variant}
               pageType={STORY_PAGE}
               data={pidginMostReadData}

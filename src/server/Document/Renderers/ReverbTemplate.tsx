@@ -5,7 +5,7 @@ const ReverbTemplate = () => {
   return (
     <>
       <script
-        // eslint-disable-next-line react/no-danger
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
         dangerouslySetInnerHTML={{
           __html: `
             window.__reverb = {};
@@ -18,7 +18,7 @@ const ReverbTemplate = () => {
             }, 5000);`,
         }}
       />
-      <script async src={`${getEnvConfig().SIMORGH_REVERB_SOURCE}`} />
+      <script async={true} src={`${getEnvConfig().SIMORGH_REVERB_SOURCE}`} />
     </>
   );
 };

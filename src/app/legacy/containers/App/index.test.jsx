@@ -42,7 +42,7 @@ describe('ClientApp', () => {
   it('should catch exceptions', () => {
     jest.mock('./App', () =>
       jest.fn(() => {
-        throw Error('Error!');
+        throw new Error('Error!');
       }),
     );
     expect(renderClientApp).not.toThrow();

@@ -50,9 +50,7 @@ const dealWithCaretsAndTildes = (versionString, timeJson) => {
 };
 
 const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
-  console.log(`Checking ${dep} for download count`);
   await fetchResponse(downloadsBaseUrl + dep).then(response => {
-    console.log(`Received download count data for ${dep}`);
     response.json().then(json => {
       dependencyTable.push({
         name: dep,
@@ -86,10 +84,8 @@ const collectResults = async ({ dep, modifiedDate, ourFreshness }) => {
 };
 
 Object.keys(allDependencies).forEach((dep, index) => {
-  console.log(`Checking ${dep} for last modified date`);
   exec(`npm view ${dep} time --json`, (err, stdout) => {
     if (err) {
-      console.error(err);
     }
     const stdoutJson = JSON.parse(stdout);
     const modifiedDate = new Date(stdoutJson.modified);
@@ -99,7 +95,7 @@ Object.keys(allDependencies).forEach((dep, index) => {
     );
     const dateOfOurVersion = new Date(stdoutJson[ourVersion]);
     const ourFreshness = datediff(dateOfOurVersion.getTime(), dateNow);
-    const mything = +setTimeout(() => {
+    const _mything = +setTimeout(() => {
         collectResults({
           dep,
           modifiedDate,

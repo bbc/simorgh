@@ -112,7 +112,7 @@ describe('Bulletin', () => {
         mediaType="audio"
         ctaText="Listen"
         ariaId="https://bbc.co.uk"
-        isLive
+        isLive={true}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -126,7 +126,7 @@ describe('Bulletin', () => {
         mediaType="video"
         ctaText="Watch"
         ariaId="https://bbc.co.uk"
-        isLive
+        isLive={true}
       />,
     );
     expect(container).toMatchSnapshot();

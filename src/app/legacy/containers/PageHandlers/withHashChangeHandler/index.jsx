@@ -12,6 +12,7 @@ const useHashChangeHandler = hash => {
       element?.scrollIntoView();
       element?.focus();
     }
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   }, [hash]);
 };
 

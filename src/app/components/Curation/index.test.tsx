@@ -307,7 +307,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          renderVisuallyHiddenH2Title
+          renderVisuallyHiddenH2Title={true}
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading
@@ -327,7 +327,7 @@ describe('Curation', () => {
           position={0}
           summaries={summaries}
           curationLength={6}
-          renderVisuallyHiddenH2Title
+          renderVisuallyHiddenH2Title={true}
         />,
       );
       expect(document.querySelectorAll('h2').length).toBe(1); // the visually hidden h2 heading

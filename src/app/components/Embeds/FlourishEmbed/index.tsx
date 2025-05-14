@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import React from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
@@ -14,7 +15,7 @@ const FlourishEmbed = (props: OEmbedData) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <script>{sizeAdjustScript}</script>
       </Helmet>
@@ -28,7 +29,7 @@ const FlourishEmbed = (props: OEmbedData) => {
         width={width}
         title={iFrameTitle}
       />
-    </React.Fragment>
+    </>
   );
 };
 

@@ -24,6 +24,7 @@ const useScript = src => {
         document.head.removeChild(script);
       };
     }
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   }, [src]);
 
   return isLoaded;

@@ -20,6 +20,7 @@ declare namespace React.JSX {
     type: string;
   }
   interface IntrinsicElements {
+    // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
     'amp-script': React.PropsWithChildren<ScriptHTMLAttributesHTMLScriptElement>;
     'amp-list': React.PropsWithChildren<AmpListProps>;
     template: TemplateProps;

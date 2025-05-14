@@ -6,7 +6,7 @@ export const hexToRgb = hex => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   const fullLengthHex = hex.replace(
     shorthandRegex,
-    (m, r, g, b) => r + r + g + g + b + b,
+    (_m, r, g, b) => r + r + g + g + b + b,
   );
 
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
@@ -106,7 +106,7 @@ export const selectColour = ({
     return getMostVibrantColour(
       palette.filter(color => hasSufficientContrast(color)),
     );
-  } catch (e) {
+  } catch (_e) {
     return {
       isFallback: true,
       hex: fallbackColour,

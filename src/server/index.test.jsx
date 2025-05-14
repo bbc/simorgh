@@ -263,7 +263,7 @@ const testHomePages = ({ platform, service, variant, queryString = '' }) => {
           service,
           isAmp,
           isApp,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           variant,
           pageType,
@@ -375,7 +375,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           service,
           isAmp,
           isApp,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           variant,
           pageType,
@@ -469,7 +469,7 @@ const testTopics = ({ service, variant, queryString = '' }) => {
         mockRouteProps({
           id,
           service,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           variant,
           pageType,
@@ -587,7 +587,7 @@ const testAssetPages = ({
           service,
           isAmp,
           isApp,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           variant,
           pageType,
@@ -689,7 +689,7 @@ const testMediaPages = ({
         mockRouteProps({
           service,
           isAmp,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           pageType,
         });
@@ -801,7 +801,7 @@ const testTvPages = ({
           service,
           isAmp,
           isApp,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           pageType,
         });
@@ -913,7 +913,7 @@ const testOnDemandTvEpisodePages = ({
           service,
           isAmp,
           isApp,
-          dataResponse: Error('Error!'),
+          dataResponse: new Error('Error!'),
           responseType: 'reject',
           pageType,
         });
@@ -1780,7 +1780,7 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
 
   it(`when simorgh fails due to a getInitialData error`, async () => {
     mockRouteProps({
-      dataResponse: Error('Oh no'),
+      dataResponse: new Error('Oh no'),
     });
 
     await act();
@@ -1808,7 +1808,7 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
   });
 
   it(`when simorgh fails due to a renderDocument error`, async () => {
-    renderDocument.default.mockImplementation(() => Error('Oh no'));
+    renderDocument.default.mockImplementation(() => new Error('Oh no'));
 
     await act();
 

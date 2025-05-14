@@ -1,8 +1,6 @@
-/* eslint-disable no-console */
-
-const { exec, spawn } = require('child_process');
+const { exec, spawn } = require('node:child_process');
 const argv = require('minimist')(process.argv.slice(2));
-const path = require('path');
+const path = require('node:path');
 
 const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);
@@ -21,7 +19,7 @@ const getFilesToTest = pageTypes => {
     const pageTypesRegexp = pageTypes.replace(/,/g, '|');
     return `./src/integration/pages/(${pageTypesRegexp})/.+?`;
   }
-  return `./src/integration/pages/.+?`;
+  return './src/integration/pages/.+?';
 };
 
 const filesToTest = getFilesToTest(argv.pageTypes);

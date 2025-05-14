@@ -18,7 +18,7 @@ const Component = ({
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.co.uk"
     id="c0000000000o"
-    isAmp
+    isAmp={true}
     isApp={false}
     pageType={ARTICLE_PAGE}
     pathname="/pathname"

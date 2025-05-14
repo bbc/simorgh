@@ -65,7 +65,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                   <CallToActionLink
                     css={styles.cta}
                     url={item.files[0].fileLink}
-                    download
+                    download={true}
                     eventTrackingData={{
                       componentName: 'koreanDownloads',
                       campaignID: 'korean_downloads',
@@ -81,7 +81,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     >
                       <path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2" />
                     </svg>
-                    <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+                    <CallToActionLink.Text shouldUnderlineOnHoverFocus={true}>
                       {item.files[0].fileName}
                       <span>
                         {' '}

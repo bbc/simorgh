@@ -28,7 +28,7 @@ describe('ImagePlaceholder', () => {
 
   it('should render dark mode version correctly', () => {
     const { container } = render(
-      <ImagePlaceholder ratio={landscapeImageRatio} darkPlaceholder />,
+      <ImagePlaceholder ratio={landscapeImageRatio} darkPlaceholder={true} />,
     );
     expect(container).toMatchSnapshot();
   });

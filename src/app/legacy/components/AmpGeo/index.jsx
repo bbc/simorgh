@@ -11,7 +11,7 @@ const configuration = {
 
 export const AMP_GEO_SCRIPT = (
   <script
-    async
+    async={true}
     custom-element="amp-geo"
     src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
   />
@@ -21,7 +21,7 @@ const AmpGeo = () => (
   <amp-geo layout="nodisplay">
     <script
       type="application/json"
-      // eslint-disable-next-line react/no-danger
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{ __html: JSON.stringify(configuration) }}
     />
   </amp-geo>

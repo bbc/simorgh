@@ -22,7 +22,7 @@ describe('ImageWithPlaceholder', () => {
 
   it('should lazyload component when lazyLoad prop is set to true', async () => {
     const { container, queryByAltText } = render(
-      <LazyLoadImageWithPlaceholder lazyLoad />,
+      <LazyLoadImageWithPlaceholder lazyLoad={true} />,
     );
 
     expect(queryByAltText('Pauline Clayton')).not.toBeInTheDocument();
@@ -30,7 +30,7 @@ describe('ImageWithPlaceholder', () => {
   });
 
   it('should add a link tag to the head of the document when preload is set to true', async () => {
-    render(<ImageWithPlaceholder preload />);
+    render(<ImageWithPlaceholder preload={true} />);
 
     await waitFor(() => {
       const preloadLink = document.querySelector('head link');

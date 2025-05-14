@@ -47,9 +47,8 @@ const getRemoteGitFile = async (gitDepUrl, args) => {
       }
       return { type: 'error', ...args };
     })
-    .catch(e => {
+    .catch(_e => {
       countedRepos += 1;
-      console.error(e);
       return { type: 'error', ...args };
     });
 };
@@ -147,16 +146,13 @@ const writeCsvFile = data => {
   fs.writeFileSync('./esmDependencyTable.csv', csvContents);
 };
 
-const repoLength = Object.keys(allDependencies).length;
+const _repoLength = Object.keys(allDependencies).length;
 
 if (gitHubToken) {
-  console.log('Please wait. Gathering npm data...');
   Object.keys(allDependencies).forEach((dep, i) => {
     let gitRepo;
-    console.log(`checking npm details for ${dep}`);
     exec(`npm view ${dep} --json`, (err, stdout) => {
       if (err) {
-        console.error(err);
       }
       if (stdout) {
         const depRepository = JSON.parse(stdout);
@@ -208,26 +204,17 @@ if (gitHubToken) {
                     ourVersionDate: simplifiedDateOfOurVersion,
                     ourFreshnessInDays: data.ourFreshnessInDays,
                   });
-                  console.log(
-                    `checking repo ${countedRepos} out of ${repoLength}: ${gitRepo}`,
-                  );
                   if (countedRepos >= Object.keys(allDependencies).length) {
-                    console.log('FINISHED');
                     writeCsvFile(dependencyTable);
                   }
                 })
-                .catch(e => {
-                  console.error(e);
+                .catch(_e => {
                   countedRepos += 1;
                 });
-            } catch (e) {
-              console.error(e);
+            } catch (_e) {
             }
           } else {
             countedRepos += 1;
-            console.error(
-              `dep ${dep} has no public repo so we're reading from local`,
-            );
             const repository = JSON.parse(
               fs.readFileSync(`./node_modules/${dep}/package.json`),
             );
@@ -245,12 +232,8 @@ if (gitHubToken) {
         }, i * 50);
       } else {
         countedRepos += 1;
-        console.log('no stdout', dep, stdout);
       }
     });
   });
 } else {
-  console.error(
-    'No github token supplied. Please see ./scripts/README.md for details',
-  );
 }

@@ -27,5 +27,5 @@ export const extractBundlesForPageType = pageComponent => {
       .filter(({ name }) => name.endsWith('.js'))
       .map(({ name }) => name.replace(/static\/js\//, ''));
   }
-  throw Error(`page type '${pageComponent}' not found`);
+  throw new Error(`page type '${pageComponent}' not found`);
 };

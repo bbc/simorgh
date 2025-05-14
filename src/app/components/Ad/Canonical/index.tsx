@@ -75,8 +75,8 @@ const CanonicalAd = ({ slotType, className }: AdProps) => {
     <>
       <Helmet>
         {/* Add Ad scripts to document head */}
-        <script type="module" src={getBootstrapSrc(queryString)} async />
-        <script noModule src={getBootstrapSrc(queryString, true)} async />
+        <script type="module" src={getBootstrapSrc(queryString)} async={true} />
+        <script noModule={true} src={getBootstrapSrc(queryString, true)} async={true} />
       </Helmet>
 
       <section

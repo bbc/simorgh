@@ -65,7 +65,7 @@ const MessageBanner = ({
             css={styles.callToActionLink}
           >
             <CallToActionLink.ButtonLikeWrapper>
-              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+              <CallToActionLink.Text shouldUnderlineOnHoverFocus={true}>
                 {linkText}
                 <CallToActionLink.Chevron />
               </CallToActionLink.Text>

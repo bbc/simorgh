@@ -21,6 +21,7 @@ const useImageColour = (
     setIsLoading(false);
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     try {
       setIsLoading(true);
@@ -36,7 +37,7 @@ const useImageColour = (
       img.addEventListener('error', setErrorState);
       img.crossOrigin = 'Anonymous';
       img.src = url;
-    } catch (err) {
+    } catch (_err) {
       setErrorState();
     }
   }, [url, paletteSize]);

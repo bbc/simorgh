@@ -85,7 +85,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
         <StyledFlexGrid
           dir={dir}
           parentColumns={schedulesGridProps.columns}
-          parentEnableGelGutters
+          parentEnableGelGutters={true}
           {...programGridProps}
           key={id}
           as="li"

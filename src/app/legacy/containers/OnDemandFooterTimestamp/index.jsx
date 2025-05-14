@@ -46,7 +46,7 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
       script={script}
       service={service}
       dateTime={dateTime}
-      suppressHydrationWarning
+      suppressHydrationWarning={true}
     >
       {formattedTimestamp}
     </Wrapper>

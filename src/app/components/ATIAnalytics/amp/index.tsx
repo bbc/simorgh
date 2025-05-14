@@ -7,7 +7,7 @@ import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 const JsonInlinedScript = (data: AMPAnalyticsData) => (
   <script
     type="application/json"
-    /* eslint-disable-next-line react/no-danger */
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
     dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
   />
 );

@@ -107,7 +107,7 @@ const PromoList = ({
       {listBlocks.map((block, index) => {
         return (
           <List
-            // eslint-disable-next-line react/no-array-index-key
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             dir={dir}
             experimentVariant={experimentVariant}

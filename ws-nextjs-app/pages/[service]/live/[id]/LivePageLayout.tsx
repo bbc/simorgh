@@ -134,7 +134,7 @@ const LivePage = ({ pageData }: ComponentProps) => {
         type="NewsArticle"
         seoTitle={pageTitle}
         headline={pageTitle}
-        showAuthor
+        showAuthor={true}
         promoImage={promoImage?.url}
         {...(datePublished && {
           datePublished,

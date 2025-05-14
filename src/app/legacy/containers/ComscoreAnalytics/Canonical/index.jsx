@@ -22,7 +22,7 @@ const CanonicalComscoreAnalytics = () => {
   return (
     <Helmet>
       <script
-        async
+        async={true}
         type="text/javascript"
         src={`${staticAssetsPath}${comscoreScript}`}
       />

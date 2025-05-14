@@ -289,7 +289,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         hasAmpPage={!isTC2Asset}
       />
       <LinkedData
-        showAuthor
+        showAuthor={true}
         bylineLinkedData={bylineLinkedData}
         type={
           !isPGL

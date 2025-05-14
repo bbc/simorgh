@@ -63,7 +63,7 @@ const ShareButton = ({
         title: headline,
       });
     } catch (error) {
-      // eslint-disable-next-line no-console
+      // biome-ignore lint/suspicious/noConsole: <explanation>
       console.log('Error sharing', error);
     }
 

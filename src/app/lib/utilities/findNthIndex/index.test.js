@@ -2,7 +2,7 @@
 import findNthIndex from '.';
 
 const buildArray = length =>
-  Array(length)
+  new Array(length)
     .fill()
     .map(() => true);
 

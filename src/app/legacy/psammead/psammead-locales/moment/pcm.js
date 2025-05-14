@@ -49,8 +49,8 @@ moment.defineLocale('pcm', {
   /* eslint-disable */
   // Copied exactly from https://github.com/moment/moment/blob/develop/locale/en-gb.js#L50-L57
   ordinal: function (number) {
-    var b = number % 10,
-      output =
+    const b = number % 10;
+    const output =
         ~~((number % 100) / 10) === 1
           ? 'th'
           : b === 1

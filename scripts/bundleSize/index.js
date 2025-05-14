@@ -175,51 +175,7 @@ export default () => {
     },
   );
 
-  const styledBundleTypeTitle = chalk.green(bundleType.toUpperCase());
-  console.log(chalk.magenta('Analysing bundles...'));
-  console.log(chalk.bold('\n\nResults'));
-
-  console.log(
-    chalk.bold(`\n${styledBundleTypeTitle} service config bundle sizes\n`),
-  );
-  console.log(serviceConfigBundlesTable.toString());
-  console.log(
-    chalk.bold(
-      `\n\n${styledBundleTypeTitle} service config bundle sizes summary\n`,
-    ),
-  );
-  console.log(serviceSummaryTable.toString());
-
-  console.log(
-    chalk.bold(`\n${styledBundleTypeTitle} service theme bundle sizes\n`),
-  );
-  console.log(serviceThemeBundlesTable.toString());
-  console.log(
-    chalk.bold(
-      `\n\n${styledBundleTypeTitle} service theme bundle sizes summary\n`,
-    ),
-  );
-  console.log(serviceThemeSummaryTable.toString());
-
-  console.log(
-    chalk.bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`),
-  );
-  console.log(pageBundlesTable.toString());
-
-  console.log(
-    [
-      chalk.bold(`\n\n${styledBundleTypeTitle} page bundle sizes summary`),
-      chalk.cyan.bold('(excludes service bundle)\n'),
-    ].join(' '),
-  );
-  console.log(pageSummaryTable.toString());
-
-  console.log(
-    chalk.bold(
-      `\n\n${styledBundleTypeTitle} service config & theme + page bundle sizes summary\n`,
-    ),
-  );
-  console.log(servicePageSummaryTable.toString());
+  const _styledBundleTypeTitle = chalk.green(bundleType.toUpperCase());
 
   const errors = [];
 
@@ -251,10 +207,7 @@ export default () => {
   }
 
   if (errors.length) {
-    console.error('Issues with service bundles: ');
-    errors.forEach(err => console.error(err));
+    errors.forEach(_err => null);
     throw new Error();
-  } else {
-    console.log('All bundle sizes are good!');
   }
 };

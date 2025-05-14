@@ -179,7 +179,7 @@ describe('Metadata', () => {
   });
 
   it('should render the lite page title', async () => {
-    render(<CanonicalNewsInternationalOrigin service="gahuza" isLite />);
+    render(<CanonicalNewsInternationalOrigin service="gahuza" isLite={true} />);
 
     await waitFor(() => {
       const actual = document.querySelector('head > title')?.innerHTML;
@@ -241,7 +241,7 @@ describe('Metadata', () => {
         id="c0000000001o"
         pageType={ARTICLE_PAGE}
         pathname="/sport/cricket/articles/c0000000001o"
-        isUK
+        isUK={true}
         {...newsArticleMetadataProps}
       />,
     );
@@ -266,7 +266,7 @@ describe('Metadata', () => {
         id="c0000000001o"
         pageType={ARTICLE_PAGE}
         pathname="/sport/cricket/articles/c0000000001o"
-        isUK
+        isUK={true}
         {...newsArticleMetadataProps}
       />,
     );
@@ -1193,7 +1193,7 @@ describe('Metadata', () => {
           <CanonicalCPSAssetInternationalOrigin
             service={service}
             platform="canonical"
-            hasAppleItunesAppBanner
+            hasAppleItunesAppBanner={true}
           />,
         );
 

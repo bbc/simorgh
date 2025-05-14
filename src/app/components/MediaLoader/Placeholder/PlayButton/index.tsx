@@ -56,7 +56,7 @@ const PlayButton = ({
           css={styles.timeDuration}
           dateTime={datetime}
           aria-hidden="true"
-          suppressHydrationWarning
+          suppressHydrationWarning={true}
         >
           {duration}
         </time>

@@ -49,7 +49,7 @@ export const getPodcastExternalLinks = async (
     const links = pathOr([], ['default', variant, brandPid], linkData);
 
     return [...links, getRssLink(brandPid), getDownloadLink(versionId)];
-  } catch (err) {
+  } catch (_err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,
       brandPid,

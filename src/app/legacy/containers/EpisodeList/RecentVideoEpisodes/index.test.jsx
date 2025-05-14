@@ -130,7 +130,7 @@ describe('Recent Video Episodes', () => {
 
   it('should not render images on Lite', () => {
     const { container, getByText } = render(
-      <RecentVideoEpisodesWithContext episodes={afrique} isLite />,
+      <RecentVideoEpisodesWithContext episodes={afrique} isLite={true} />,
     );
 
     expect(getByText('Oui, je suis le chef')).toBeInTheDocument();
@@ -170,7 +170,7 @@ describe('Recent Video Episodes', () => {
   describe('on amp', () => {
     it('should use amp-img rather than img', () => {
       const { container } = render(
-        <RecentVideoEpisodesWithContext episodes={afrique} isAmp />,
+        <RecentVideoEpisodesWithContext episodes={afrique} isAmp={true} />,
       );
 
       expect(container.querySelector('amp-img')).toBeDefined();

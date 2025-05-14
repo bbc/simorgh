@@ -33,7 +33,7 @@ const formatChildren = children => {
   const durationString = formatDuration({ duration });
   const isoDuration = duration.toISOString();
   return (
-    <StyledTime dateTime={isoDuration} suppressHydrationWarning>
+    <StyledTime dateTime={isoDuration} suppressHydrationWarning={true}>
       {durationString}
     </StyledTime>
   );

@@ -50,13 +50,13 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   });
 
   it('should not emit an h1 when ariaHidden is true', () => {
-    render(<Component ariaHidden />);
+    render(<Component ariaHidden={true} />);
 
     expect(document.querySelector('h1')).toBeNull();
   });
 
   it('should be aria-hidden when ariaHidden is true', () => {
-    const { container } = render(<Component ariaHidden />);
+    const { container } = render(<Component ariaHidden={true} />);
 
     expect(container.querySelector('strong[aria-hidden=true]')).toBeDefined();
   });

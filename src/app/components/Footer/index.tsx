@@ -51,7 +51,7 @@ export default () => {
               href={href}
               lang={lang}
               onClick={openPrivacyManagerModal}
-              onlyShowIfJSenabled
+              onlyShowIfJSenabled={true}
             />
           );
         }
@@ -79,7 +79,7 @@ export default () => {
           <span lang="en-GB">{`\u00A9`} </span>
           {`${new Date().getFullYear()} ${copyrightText}`}{' '}
           {externalLink && (
-            <Link text={externalLink?.text} href={externalLink?.href} inline />
+            <Link text={externalLink?.text} href={externalLink?.href} inline={true} />
           )}
         </p>
       </div>

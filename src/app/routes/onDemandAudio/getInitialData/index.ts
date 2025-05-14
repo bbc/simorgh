@@ -74,11 +74,7 @@ export default async ({
           : { recentEpisodes: null }),
       },
     };
-  } catch ({
-    message,
-    status = getErrorStatusCode(),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  }: any | { message: string; status: number }) {
+  } catch ({ message, status = getErrorStatusCode() }: any) {
     logger.error(BFF_FETCH_ERROR, {
       service,
       status,

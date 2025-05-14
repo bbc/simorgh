@@ -42,7 +42,7 @@ describe('Navigation', () => {
 
   it('should render correctly when isOpen is true', () => {
     const { container } = render(
-      <Navigation script={latin} service="news" isOpen>
+      <Navigation script={latin} service="news" isOpen={true}>
         {navigationUlComponent}
       </Navigation>,
     );
@@ -82,7 +82,7 @@ describe('Assertions', () => {
         script={latin}
         currentPageText="Current page"
         service="news"
-        active
+        active={true}
         data-navigation="test_navigation"
       >
         Testing exta props

@@ -33,7 +33,7 @@ const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
   );
   return (
     <RequestContextProvider
-      isAmp
+      isAmp={true}
       pageType={HOME_PAGE}
       pathname="/"
       service={service}

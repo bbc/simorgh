@@ -31,7 +31,7 @@ const wrapper = ({
     service={service}
     pathname="/pathname"
   >
-    <OptimizelyProvider optimizely={optimizelyMock} isServerSide>
+    <OptimizelyProvider optimizely={optimizelyMock} isServerSide={true}>
       {children}
     </OptimizelyProvider>
   </RequestContextProvider>

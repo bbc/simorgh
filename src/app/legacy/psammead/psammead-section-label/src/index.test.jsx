@@ -27,7 +27,7 @@ describe('SectionLabel', () => {
           <SectionLabel
             script={latin}
             labelId="test-section-label"
-            bar
+            bar={true}
             service="news"
           >
             This is text in a SectionLabel, and there is a bar over to the right
@@ -101,7 +101,7 @@ describe('SectionLabel', () => {
           <SectionLabel
             script={latin}
             labelId="test-section-label"
-            bar
+            bar={true}
             service="news"
             href="/igbo/other-index"
             linkText="See All"
@@ -254,7 +254,7 @@ describe('SectionLabel', () => {
           <SectionLabel
             script={latin}
             bar={false}
-            visuallyHidden
+            visuallyHidden={true}
             labelId="test-section-label"
             service="news"
           >
@@ -271,7 +271,7 @@ describe('SectionLabel', () => {
           <SectionLabel
             script={latin}
             bar={false}
-            visuallyHidden
+            visuallyHidden={true}
             labelId="test-section-label"
             service="news"
             data-section-divider="section_name"

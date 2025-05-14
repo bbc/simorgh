@@ -13,6 +13,7 @@ const useLocation = () => {
     setLocation(window.location);
   }, []);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     window.addEventListener('popstate', listener);
     return () => {

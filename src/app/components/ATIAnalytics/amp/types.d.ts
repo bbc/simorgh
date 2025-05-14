@@ -6,6 +6,7 @@ declare namespace React.JSX {
 
   interface IntrinsicElements {
     'amp-analytics': React.PropsWithChildren<
+      // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
       ScriptHTMLAttributes<HTMLScriptElement>
     >;
   }

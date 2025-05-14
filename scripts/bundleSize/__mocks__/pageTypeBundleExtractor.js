@@ -72,6 +72,6 @@ export default {
       ];
     }
 
-    throw Error(`page type ${pageType} not mocked`);
+    throw new Error(`page type ${pageType} not mocked`);
   },
 };

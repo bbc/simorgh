@@ -4,6 +4,7 @@ declare module 'intersection-observer';
 
 declare namespace React.JSX {
   interface DivProps extends React.HTMLAttributes<HTMLDivElement> {
+    // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
     ref?: Ref<HTMLDivElement> | null;
     placeholder?: string;
     'amp-access'?: string;

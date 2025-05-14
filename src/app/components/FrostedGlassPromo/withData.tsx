@@ -164,7 +164,7 @@ const normalise = (props: PromoProps): FormattedPromo => {
 const validate = (props: FormattedPromo) => {
   try {
     return [props.children, props.image, props.url].every(Boolean);
-  } catch (e) {
+  } catch (_) {
     return false;
   }
 };

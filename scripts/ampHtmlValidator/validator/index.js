@@ -29,19 +29,15 @@ const printResult = result => {
   consoleMethod(result.status);
 
   result.errors.forEach(error => {
-    let msg = `line ${error.line}, col ${error.col}: ${error.message}`;
+    let _msg = `line ${error.line}, col ${error.col}: ${error.message}`;
     if (error.specUrl !== null) {
-      msg += ` (see ${error.specUrl})`;
+      _msg += ` (see ${error.specUrl})`;
     }
-    console.error(msg);
   });
-  console.log('\n');
 };
 
 const printSummary = results => {
-  const passed = results.filter(result => result.status === 'PASS').length;
-  console.log(`Passed: ${passed}`);
-  console.log(`Failed: ${results.length - passed}`);
+  const _passed = results.filter(result => result.status === 'PASS').length;
 };
 
 const validate = async ({ validator, url }) => {

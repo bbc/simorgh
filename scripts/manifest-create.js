@@ -73,7 +73,7 @@ services.forEach(service => {
   if (COPY_IMAGES_ACROSS) {
     const iconsPathStem = `../public/${service}/images/icons/`;
     const newIconsPathStem = `${NEW_IMAGES_FOLDER_LOCATION}/${service}/`;
-    currentManifest.icons.forEach((icon, i) => {
+    currentManifest.icons.forEach((icon, _i) => {
       const imagename = icon.src.split('/').at(-1).split('?')[0];
       fs.renameSync(newIconsPathStem + imagename, iconsPathStem + imagename);
     });

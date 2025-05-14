@@ -71,7 +71,7 @@ const Promo = () => {
               height={1}
               width={1}
               ratio={100}
-              lazyLoad
+              lazyLoad={true}
             />
           </PromoComponent.Card.ImageWrapper>
           <PromoComponent.Card.Content>

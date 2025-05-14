@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
@@ -52,7 +53,7 @@ const Byline = ({
       role="region"
       aria-labelledby="article-byline"
     >
-      <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
+      <VisuallyHiddenText as="strong" id="article-byline" aria-hidden={true}>
         {articleInformationTranslated}
       </VisuallyHiddenText>
       <ul css={BylineCss.bylineList} role="list">
@@ -74,7 +75,7 @@ const Byline = ({
         )}
         <li>
           {authorTopicUrl ? (
-            <React.Fragment>
+            <>
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>
               <a
                 css={[BylineCss.link, BylineCss.authorLink]}
@@ -95,7 +96,7 @@ const Byline = ({
                   <RightChevron css={BylineCss.authorChevron} />
                 )}
               </a>
-            </React.Fragment>
+            </>
           ) : (
             <span role="text">
               <VisuallyHiddenText>{`${authorTranslated}, `}</VisuallyHiddenText>

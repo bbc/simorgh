@@ -14,7 +14,7 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
     <ServiceContext.Provider value={serviceContextStubNews}>
       <RequestContextProvider
         isAmp={isAmp}
-        isUK
+        isUK={true}
         origin="https://www.bbc.co.uk"
         id="c0000000000o"
         service="news"

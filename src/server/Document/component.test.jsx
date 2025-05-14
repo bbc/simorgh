@@ -112,14 +112,14 @@ describe('Document Component', () => {
 
   it('should render AMP version correctly', () => {
     const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" isAmp />),
+      renderToString(<TestDocumentComponent service="news" isAmp={true} />),
     );
     expect(dom.window.document.documentElement).toMatchSnapshot();
   });
 
   it('should not render preload links on amp', () => {
     const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" isAmp />),
+      renderToString(<TestDocumentComponent service="news" isAmp={true} />),
     );
 
     const head = dom.window.document.querySelector('head');
@@ -130,21 +130,21 @@ describe('Document Component', () => {
 
   it('should render APP version correctly', () => {
     const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" isApp />),
+      renderToString(<TestDocumentComponent service="news" isApp={true} />),
     );
     expect(dom.window.document.documentElement).toMatchSnapshot();
   });
 
   it('should render LITE version correctly', () => {
     const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" isLite />),
+      renderToString(<TestDocumentComponent service="news" isLite={true} />),
     );
     expect(dom.window.document.documentElement).toMatchSnapshot();
   });
 
   it('should render "noindex" meta tag on APP version', () => {
     const dom = new JSDOM(
-      renderToString(<TestDocumentComponent service="news" isApp />),
+      renderToString(<TestDocumentComponent service="news" isApp={true} />),
     );
 
     const head = dom.window.document.querySelector('head');

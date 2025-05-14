@@ -5,7 +5,7 @@ const Instagram = ({ id }) => (
   <>
     <Helmet>
       <script
-        async
+        async={true}
         custom-element="amp-instagram"
         src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"
       />
@@ -24,7 +24,7 @@ const Twitter = ({ id }) => (
   <>
     <Helmet>
       <script
-        async
+        async={true}
         custom-element="amp-twitter"
         src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"
       />
@@ -37,7 +37,7 @@ const YouTube = ({ id }) => (
   <>
     <Helmet>
       <script
-        async
+        async={true}
         custom-element="amp-youtube"
         src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"
       />
@@ -50,7 +50,7 @@ const TikTok = ({ id }) => (
   <>
     <Helmet>
       <script
-        async
+        async={true}
         custom-element="amp-tiktok"
         src="https://cdn.ampproject.org/v0/amp-tiktok-0.1.js"
       />
@@ -75,7 +75,7 @@ const Facebook = ({ source }) => {
     <>
       <Helmet>
         <script
-          async
+          async={true}
           custom-element="amp-facebook"
           src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"
         />

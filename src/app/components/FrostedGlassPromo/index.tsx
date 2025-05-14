@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /** @jsx jsx */
+/* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
 import React, { PropsWithChildren, useContext } from 'react';
 import pick from 'ramda/src/pick';
@@ -60,7 +61,7 @@ const FrostedGlassPromo = ({
   });
 
   const promoText = (
-    <React.Fragment>
+    <>
       <h3 css={styles.header}>
         <a
           css={theme => [
@@ -80,7 +81,7 @@ const FrostedGlassPromo = ({
         </a>
       </h3>
       {footer}
-    </React.Fragment>
+    </>
   );
 
   // The ClickableArea component is an anchor ("a") element
@@ -92,12 +93,11 @@ const FrostedGlassPromo = ({
         css={styles.clickableArea}
         href={relativeUrl}
         {...(eventTrackingData && clickTracker)}
-        aria-hidden="true"
         tabIndex={-1}
       />
       <IMAGE
         darkPlaceholder={isCanonical}
-        lazyLoad
+        lazyLoad={true}
         {...pick(
           [
             'src',
@@ -117,7 +117,7 @@ const FrostedGlassPromo = ({
       <Lazyload
         css={{ height: '100%' }}
         offset={PANEL_OFFSET}
-        once
+        once={true}
         placeholder={
           // Placeholder always gets rendered on AMP
           <div

@@ -109,7 +109,7 @@ describe('Timestamp', () => {
             timestamp={elevenMonthsFromNow}
             dateTimeFormat="YYYY-MM-DD"
             format="D MMMM YYYY"
-            isRelative
+            isRelative={true}
             script={latin}
             locale="fa"
             service="persian"
@@ -162,7 +162,7 @@ describe('Timestamp', () => {
           timestamp={elevenMonthsFromNow}
           dateTimeFormat="YYYY-MM-DD"
           format="D MMMM YYYY"
-          isRelative
+          isRelative={true}
           script={latin}
           locale="ha"
           service="hausa"
