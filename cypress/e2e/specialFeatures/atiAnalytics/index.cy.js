@@ -377,6 +377,18 @@ const canonicalTestSuites = [
     ],
   },
   {
+    path: '/polska',
+    runforEnv: ['test'],
+    service: 'polska',
+    tests: [assertPageView],
+  },
+  {
+    path: '/polska/articles/c639526lxlro',
+    runforEnv: ['test'],
+    service: 'polska',
+    tests: [assertPageView],
+  },
+  {
     path: '/portuguese/podcasts/p07r3r3t',
     runforEnv: ['local', 'test', 'live'],
     service: 'portuguese',

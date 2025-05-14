@@ -101,6 +101,20 @@ const liteTestSuites = [
     pageType: 'On Demand TV - Episode',
     tests,
   },
+  {
+    path: '/polska/articles/c639526lxlro?renderer_env=test',
+    service: 'polska',
+    runforEnv: 'local',
+    pageType: 'Optimo Article',
+    tests,
+  },
+  {
+    path: '/polska?renderer_env=test',
+    service: 'polska',
+    runforEnv: 'local',
+    pageType: 'Home',
+    tests,
+  },
 ];
 
 runTestsForPage({
