@@ -1,4 +1,4 @@
-export interface PortraitVideoItem {
+export interface PortraitVideoItemProps {
   id: string;
   headlines?: {
     primaryHeadline?: string;
@@ -34,4 +34,11 @@ export interface PortraitVideoItem {
       contentId?: string;
     };
   };
+  onClick?: () => void;
+}
+
+export interface NavigationButtonsProp {
+  scroll: (direction: 'left' | 'right') => void;
+  canScrollLeft: boolean;
+  canScrollRight: boolean;
 }

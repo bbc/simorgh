@@ -1,33 +1,30 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { PortraitVideoItem } from '#app/models/types/portraitVideoCarousel';
-import Heading from '../Heading';
-import { LeftChevron, RightChevron } from '../icons';
+import { PortraitVideoItemProps as PortraitVideoItemProp } from '#app/models/types/portraitVideoCarousel';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
+import PortraitVideoItem from './PortraitVideoItem';
+import PortraitCarouselNavigation from './PortraitCarouselNavigation';
 
 interface PortraitVideoCarouselProps {
   title: string;
-  items: PortraitVideoItem[];
+  items: PortraitVideoItemProp[];
 }
 
 const PortraitVideoCarousel = ({
   title,
   items,
 }: PortraitVideoCarouselProps) => {
-  const { dir } = useContext(ServiceContext);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<PortraitVideoItem | null>(
-    null,
-  );
+  const [selectedItem, setSelectedItem] =
+    useState<PortraitVideoItemProp | null>(null);
 
   const checkScrollButtons = () => {
     if (!scrollRef.current) return;
@@ -47,7 +44,7 @@ const PortraitVideoCarousel = ({
     setTimeout(checkScrollButtons, 100);
   };
 
-  const handlePromoClick = (item: PortraitVideoItem) => {
+  const handlePromoClick = (item: PortraitVideoItemProp) => {
     if (item.video) {
       setSelectedItem(item);
       setIsModalOpen(true);
@@ -83,64 +80,20 @@ const PortraitVideoCarousel = ({
         <h2 css={styles.heading}>{title}</h2>
         <div css={styles.scrollContainer}>
           <div ref={scrollRef} css={styles.scrollWrapper}>
-            {items.map(item => {
-              const image = item.images?.[0]?.url;
-              const alt = item.images?.[0]?.altText || '';
-              const headline = item.headlines?.promoHeadline || '';
-
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => handlePromoClick(item)}
-                  css={styles.promoItemButton}
-                >
-                  {image && (
-                    <img
-                      src={image}
-                      alt={alt}
-                      css={styles.image}
-                      loading="lazy"
-                    />
-                  )}
-                  <div css={styles.gradientOverlay}>
-                    <Heading
-                      level={3}
-                      size="longPrimer"
-                      css={styles.promoHeading}
-                    >
-                      {headline}
-                    </Heading>
-                  </div>
-                </button>
-              );
-            })}
+            {items.map(item => (
+              <PortraitVideoItem
+                {...item}
+                onClick={() => handlePromoClick(item)}
+              />
+            ))}
             <div css={[styles.promoItem, styles.endBlankItem]} />
           </div>
-          <div css={styles.buttonGroupOverlay}>
-            <div css={styles.buttonGroup}>
-              <button
-                type="button"
-                aria-label="Scroll left"
-                onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
-                disabled={!canScrollLeft}
-                css={styles.navButton}
-              >
-                <LeftChevron />
-              </button>
-              <button
-                type="button"
-                aria-label="Scroll right"
-                onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
-                disabled={!canScrollRight}
-                css={styles.navButton}
-              >
-                <RightChevron />
-              </button>
-            </div>
-          </div>
+          <PortraitCarouselNavigation
+            canScrollLeft={canScrollLeft}
+            canScrollRight={canScrollRight}
+            scroll={scroll}
+          />
         </div>
-
         {isModalOpen &&
           selectedItem &&
           createPortal(
