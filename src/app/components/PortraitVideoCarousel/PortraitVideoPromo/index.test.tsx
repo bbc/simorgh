@@ -33,6 +33,6 @@ describe('PortraitVideoItem', () => {
     const heading = container.querySelector(
       'img[src="https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg"]',
     );
-    expect(heading).not.toBeUndefined();
+    expect(heading).toBeInTheDocument();
   });
 });

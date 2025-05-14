@@ -1,7 +1,7 @@
 import { OEmbedData } from '#app/components/Embeds/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
-import { PortraitVideoItemProps } from './portraitVideoCarousel';
+import { PortraitVideoItemProps } from './portraitVideo';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {

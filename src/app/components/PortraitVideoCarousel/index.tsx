@@ -3,16 +3,16 @@
 import { jsx } from '@emotion/react';
 import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { PortraitVideoItemProps as PortraitVideoItemProp } from '#app/models/types/portraitVideoCarousel';
+import { PortraitVideoItemProps } from '#app/models/types/portraitVideo';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
-import PortraitVideoItem from './PortraitVideoItem';
+import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitCarouselNavigation';
 
 interface PortraitVideoCarouselProps {
   title: string;
-  items: PortraitVideoItemProp[];
+  items: PortraitVideoItemProps[];
 }
 
 const PortraitVideoCarousel = ({
@@ -23,9 +23,9 @@ const PortraitVideoCarousel = ({
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] =
-    useState<PortraitVideoItemProp | null>(null);
+    useState<PortraitVideoItemProps | null>(null);
 
-  const handlePromoClick = (item: PortraitVideoItemProp) => {
+  const handlePromoClick = (item: PortraitVideoItemProps) => {
     if (item.video) {
       setSelectedItem(item);
       setIsModalOpen(true);
@@ -53,7 +53,7 @@ const PortraitVideoCarousel = ({
             data-testid="pv-scroll-panel"
           >
             {items.map(item => (
-              <PortraitVideoItem
+              <PortraitVideoPromo
                 {...item}
                 key={item.id}
                 onClick={() => handlePromoClick(item)}

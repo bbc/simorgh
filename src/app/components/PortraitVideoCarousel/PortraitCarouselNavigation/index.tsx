@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useCallback, useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
-import { NavigationButtonsProp } from '#app/models/types/portraitVideoCarousel';
+import { NavigationButtonsProp } from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
@@ -18,10 +18,10 @@ export default ({ scrollPaneRef }: NavigationButtonsProp) => {
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
   }, [scrollPaneRef]);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (buttonTriggered: 'left' | 'right') => {
     if (!scrollPaneRef.current) return;
     const scrollAmount =
-      direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
+      buttonTriggered === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
     scrollPaneRef.current.scrollBy({
       left: scrollAmount,
       behavior: 'smooth',
