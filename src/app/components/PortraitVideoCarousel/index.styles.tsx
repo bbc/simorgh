@@ -53,8 +53,6 @@ const styles = {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH / 1.5)}rem`,
       },
     }),
-
-
 };
 
 export default styles;
