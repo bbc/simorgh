@@ -70,7 +70,6 @@ const LiveHeaderMedia = ({
 
   const {
     model: {
-      masterbrand: { networkName },
       synopses: { short },
       version: { vpid, warnings },
     },
@@ -129,10 +128,6 @@ const LiveHeaderMedia = ({
       <Text size="pica" fontVariant="sansBold" as="span">
         {short}
         {!titleHasPunctuation && ','}
-      </Text>
-      <Text size="pica" fontVariant="sansRegular" as="span">
-        {' '}
-        {networkName}
       </Text>
     </Text>
   );
