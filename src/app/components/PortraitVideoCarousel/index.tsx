@@ -1,10 +1,10 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { PortraitVideoItemProps as PortraitVideoItemProp } from '#app/models/types/portraitVideoCarousel';
-import styles, { PROMO_ITEM_WIDTH } from './index.styles';
+import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoItem from './PortraitVideoItem';
@@ -20,29 +20,10 @@ const PortraitVideoCarousel = ({
   items,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] =
     useState<PortraitVideoItemProp | null>(null);
-
-  const checkScrollButtons = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
-  };
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const scrollAmount =
-      direction === 'left' ? -PROMO_ITEM_WIDTH : PROMO_ITEM_WIDTH;
-    scrollRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-    setTimeout(checkScrollButtons, 100);
-  };
 
   const handlePromoClick = (item: PortraitVideoItemProp) => {
     if (item.video) {
@@ -56,19 +37,6 @@ const PortraitVideoCarousel = ({
     setSelectedItem(null);
   };
 
-  useEffect(() => {
-    const scrollElement = scrollRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener('scroll', checkScrollButtons);
-    }
-    checkScrollButtons();
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener('scroll', checkScrollButtons);
-      }
-    };
-  }, [items]);
-
   return (
     <>
       <BumpLoader />
@@ -79,20 +47,21 @@ const PortraitVideoCarousel = ({
       >
         <h2 css={styles.heading}>{title}</h2>
         <div css={styles.scrollContainer}>
-          <div ref={scrollRef} css={styles.scrollWrapper}>
+          <div
+            ref={scrollRef}
+            css={styles.scrollWrapper}
+            data-testid="pv-scroll-panel"
+          >
             {items.map(item => (
               <PortraitVideoItem
                 {...item}
+                key={item.id}
                 onClick={() => handlePromoClick(item)}
               />
             ))}
             <div css={[styles.promoItem, styles.endBlankItem]} />
           </div>
-          <PortraitCarouselNavigation
-            canScrollLeft={canScrollLeft}
-            canScrollRight={canScrollRight}
-            scroll={scroll}
-          />
+          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
         </div>
         {isModalOpen &&
           selectedItem &&

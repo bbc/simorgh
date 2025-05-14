@@ -108,7 +108,7 @@ const portraitVideoFixture = {
       },
     },
     {
-      id: 'urn:bbc:pips:pid:p01wjx7v',
+      id: 'urn:bbc:pips:pid:p01wjx7v-copy',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg',
@@ -124,7 +124,7 @@ const portraitVideoFixture = {
       },
     },
     {
-      id: 'urn:bbc:optimo:asset:cgp62emnrk5o',
+      id: 'urn:bbc:optimo:asset:cgp62emnrk5o-copy',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg',
@@ -139,7 +139,7 @@ const portraitVideoFixture = {
       },
     },
     {
-      id: 'urn:bbc:pips:pid:p01wjx5y',
+      id: 'urn:bbc:pips:pid:p01wjx5y-copy',
       images: [
         {
           url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg',

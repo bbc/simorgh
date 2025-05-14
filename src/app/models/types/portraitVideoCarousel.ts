@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 export interface PortraitVideoItemProps {
   id: string;
   headlines?: {
@@ -35,10 +37,9 @@ export interface PortraitVideoItemProps {
     };
   };
   onClick?: () => void;
+  key?: string;
 }
 
 export interface NavigationButtonsProp {
-  scroll: (direction: 'left' | 'right') => void;
-  canScrollLeft: boolean;
-  canScrollRight: boolean;
+  scrollPaneRef: RefObject<HTMLDivElement | null>;
 }
