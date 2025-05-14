@@ -22,7 +22,7 @@ const NOTO_SERIF_BENGALI_FONTS_DIR =
   'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/';
 
 const REITH_QALAM_FONTS_DIR =
-  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/';
+  'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.310/';
 
 const REITH_SERIF_LIGHT = {
   name: 'BBCReithSerif_WNumbers_Lt',
@@ -194,7 +194,7 @@ const REITH_QALAM_REGULAR = {
   name: 'qalamNormal',
   fontFamily: 'BBC Reith Qalam',
   fontWeight: 400,
-  varsion: 'v1.210',
+  version: 'v1.310',
   fontStyle: 'normal',
   src: `${REITH_QALAM_FONTS_DIR}normal.woff2`,
   fontDisplay: 'optional',
@@ -204,7 +204,7 @@ const REITH_QALAM_BOLD = {
   name: 'qalamBold',
   fontFamily: 'BBC Reith Qalam',
   fontWeight: 700,
-  varsion: 'v1.210',
+  version: 'v1.310',
   fontStyle: 'normal',
   src: `${REITH_QALAM_FONTS_DIR}bold.woff2`,
   fontDisplay: 'optional',
