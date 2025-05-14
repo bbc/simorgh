@@ -100,7 +100,7 @@ const SocialLinks = ({
       data-testid={id}
       css={styles.container}
     >
-      <Heading level={2} id={id} css={styles.heading}>
+      <Heading level={2} id={id} css={styles.heading} dir={dir}>
         {title}
       </Heading>
       {hasMultipleItems ? (
