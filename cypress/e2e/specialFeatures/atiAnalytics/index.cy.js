@@ -75,6 +75,20 @@ import { getPathWithSuffix, setUserIDCookie } from './helpers';
 
 const canonicalTestSuites = [
   {
+    path: '/afrique',
+    runforEnv: ['local', 'test'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertBillboardComponentView,
+      assertBillboardComponentClick,
+    ],
+  },
+  {
     path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
     runforEnv: ['local', 'test', 'live'],
     service: 'afrique',
@@ -207,7 +221,7 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/hindi/articles/c9w59wnx27ro?renderer_env=live',
+    path: '/hindi/articles/c9w59wnx27ro',
     runforEnv: ['local', 'live'],
     service: 'hindi',
     pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
@@ -252,7 +266,7 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/marathi/topics/c1wmk63rjkvt?renderer_env=live',
+    path: '/marathi/topics/c1wmk63rjkvt',
     runforEnv: ['local', 'live'],
     service: 'marathi',
     pageIdentifier: 'marathi.topics.c1wmk63rjkvt.page',
@@ -296,23 +310,7 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/pidgin?renderer_env=test',
-    runforEnv: ['local', 'test'],
-    service: 'pidgin',
-    pageIdentifier: 'pidgin.page',
-    applicationType: 'responsive',
-    contentType: 'index-home',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertBillboardComponentView,
-      assertBillboardComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
-  {
-    path: '/pidgin/articles/ce9wk6glg4lo?renderer_env=live',
+    path: '/pidgin/articles/ce9wk6glg4lo',
     runforEnv: ['local', 'test'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
@@ -375,6 +373,22 @@ const canonicalTestSuites = [
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
     ],
+  },
+  {
+    path: '/polska',
+    runforEnv: ['test'],
+    service: 'polska',
+    tests: [
+      assertPageView,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+    ],
+  },
+  {
+    path: '/polska/articles/c639526lxlro',
+    runforEnv: ['test'],
+    service: 'polska',
+    tests: [assertPageView],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',
