@@ -225,7 +225,6 @@ export const getAtUserId = () => {
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '%20') : null;
 
-// biome-ignore lint/style/noRestrictedGlobals: <explanation>
 const isValidDateTime = dateTime => !isNaN(dateTime);
 
 const getISODate = unixTimestamp => {

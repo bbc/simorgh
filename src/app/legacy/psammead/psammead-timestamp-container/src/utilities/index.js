@@ -30,11 +30,9 @@ export const formatDuration = ({ duration, format, locale = 'en-gb' }) => {
 
 // if the date is invalid return false - https://stackoverflow.com/questions/1353684/detecting-an-invalid-date-date-instance-in-javascript#answer-1353711
 export const isValidDateTime = dateTime => {
-  // biome-ignore lint/style/noRestrictedGlobals: <explanation>
   if (isNaN(dateTime) || dateTime === null) {
     return false;
   }
-  // biome-ignore lint/style/noRestrictedGlobals: <explanation>
   return !isNaN(new Date(dateTime));
 };
 

@@ -33,10 +33,8 @@ export const formatType = ({
 };
 
 export const isValidDateTime = dateTime => {
-  // biome-ignore lint/style/noRestrictedGlobals: <explanation>
   if (isNaN(dateTime) || dateTime === null) {
     return false;
   }
-  // biome-ignore lint/style/noRestrictedGlobals: <explanation>
   return !isNaN(new Date(dateTime));
 };
