@@ -8,7 +8,7 @@
  */
 
 const MIN = 954;
-const MAX = 1239;
+const MAX = 1246;
 
 const VARIANCE = 5;
 export const MIN_SIZE = MIN - VARIANCE;
