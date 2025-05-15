@@ -23,12 +23,13 @@ export default function LitePageRenderer({
         {title}
         {helmetMetaTags}
         {helmetLinkTags}
-        {helmetScriptTags}
         <style dangerouslySetInnerHTML={{ __html: styles }} />
+        {/* IMPORTANT: ComponentTracking MUST come before helmetScriptTags due to synchronous calls from helmetScriptTags to functions within ComponentTracking */}
         <ComponentTracking
           enableStaticClickTrackingOnOperaMiniOnly={false}
           trackComponentViews
         />
+        {helmetScriptTags}
       </head>
       <body>{bodyContent}</body>
     </html>
