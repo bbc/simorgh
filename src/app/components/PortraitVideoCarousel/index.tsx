@@ -11,7 +11,7 @@ import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
-import PortraitCarouselNavigation from './PortraitVideoCarouselNavigationfor';
+import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 
 export const PROMO_ITEM_WIDTH = 180;
 
