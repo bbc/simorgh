@@ -1,188 +1,1784 @@
 {
-    "data": {
-        "title": "BBC News हिंदी",
-        "description": "हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories.",
-        "pageType": "home",
-        "curations": [
-            {
-                "curationId": "urn:bbc:tipo:list:b9b4842d-b1a7-4ada-a14d-52b76c43862f",
-                "curationType": "tipo-curation",
-                "position": 0,
-                "title": "VJ",
-                "visualProminence": "NORMAL",
-                "visualStyle": "BANNER",
-                "link": "https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed",
-                "embed": {
-                    "html": "<script>\n    window.vjConfigObject = window.vjConfigObject || {};\n    window.vjConfigObject['vjsthasia-2308-india-elections-2024-results-page-election-banner'] = {\"js\":true,\"output\":{\"wrapper\":\"embed\"},\"name\":\"vjsthasia-2308-india-elections-2024-results-page\",\"version\":\"1.0.0\",\"urlToOutputDir\":\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop\",\"assetsPath\":\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/assets/election-banner-project-assets\",\"includeName\":\"election-banner\",\"language\":\"english\",\"languageCode\":\"en\",\"brandingVersion\":\"3.1\",\"brandingExtension\":\"svg\",\"loremText\":[\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a purus eu nisl porta aliquam. Morbi pharetra aliquet dolor a cursus. In auctor dolor a felis feugiat ultrices. Phasellus sagittis aliquet mattis. Etiam turpis neque, auctor a pulvinar a, vestibulum consequat ante. Morbi ut dui eget sapien vulputate viverra. Curabitur luctus malesuada nunc.\",\"Nullam gravida erat ut porttitor sollicitudin. Aliquam feugiat odio rutrum arcu tincidunt vehicula. Donec nec dolor rhoncus, consectetur metus eget, consectetur enim. Duis euismod, arcu non efficitur porta, nibh eros viverra risus, ac gravida lorem ex in dui. Morbi pulvinar varius erat, quis facilisis ligula mollis vel. Nulla efficitur augue quam, ac aliquet mi ornare vitae. In ornare nisl eget tortor aliquam consectetur id nec lorem. Pellentesque massa dolor, placerat ac risus a, aliquam rhoncus nulla.\",\"Ut et suscipit enim. Nam aliquam porttitor sapien elementum mollis. In quis turpis ante. Morbi et ex aliquam, ornare neque sit amet, porttitor est. Quisque eleifend consequat turpis. Curabitur ultrices luctus quam, et dapibus quam bibendum non. Praesent facilisis augue magna, eu volutpat nibh gravida et. Cras pulvinar, ligula vel consectetur molestie, lorem eros euismod arcu, sed condimentum leo metus efficitur ante. Duis eu diam semper, hendrerit est porta, tincidunt odio. Maecenas sagittis justo lacus, ac varius est dictum sit amet. Nam vitae turpis dignissim, tincidunt felis sit amet, dignissim sapien. Integer et iaculis ex. Sed rhoncus elit vitae massa facilisis venenatis.\",\"Curabitur lorem ligula, aliquet id lorem ut, molestie consequat sem. Donec sit amet lacus sagittis, gravida nunc a, volutpat elit. Nullam elementum, leo sed gravida euismod, enim leo venenatis dolor, eget consequat nisi nisl vel tortor. Ut hendrerit non justo nec porttitor. Aenean et dolor laoreet augue vulputate commodo ac ut turpis. Morbi luctus lacinia felis at pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam tristique faucibus mauris, sed volutpat ante consequat nec. Proin fermentum vehicula tortor, sed bibendum lectus volutpat ac. Cras dignissim elit id aliquam consectetur.\"],\"metaCSP\":\"default-src 'none';script-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' 'report-sample' 'unsafe-inline' assets.wearehearken.eu cdn.syndication.twimg.com connect.facebook.net c.files.bbci.co.uk emp.bbci.co.uk ems.wearehearken.eu modules.wearehearken.eu mybbc-analytics.files.bbci.co.uk nav.files.bbci.co.uk news.files.bbci.co.uk platform.twitter.com public.flourish.studio static.bbc.co.uk static.bbci.co.uk static.chartbeat.com static2.chartbeat.com www.bbc.co.uk www.instagram.com www.ons.gov.uk gn-web-assets.api.bbc.com www.google-analytics.com bitesize.files.bbci.co.uk www.tiktok.com lf16-tiktok-web.ttwstatic.com static.files.bbci.co.uk;img-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' https: data:;font-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost c.files.bbci.co.uk gel.files.bbci.co.uk static.files.bbci.co.uk static.bbci.co.uk news.files.bbci.co.uk ws-downloads.files.bbci.co.uk bitesize.files.bbci.co.uk;style-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost cdn.riddle.com flo.uri.sh news.files.bbci.co.uk platform.twitter.com static.bbc.co.uk static.bbci.co.uk static.files.bbci.co.uk ton.twimg.com www.riddle.com 'unsafe-inline' lf16-tiktok-web.ttwstatic.com;frame-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' bbc001.carto.com bbc003.carto.com bbc-maps.carto.com cdn.riddle.com chartbeat.com emp.bbc.co.uk emp.bbc.com flo.uri.sh graphics.reuters.com www.reuters.com m.facebook.com news.files.bbci.co.uk personaltaxcalculator2.deloittecloud.co.uk platform.twitter.com public.flourish.studio static2.chartbeat.com syndication.twitter.com web.facebook.com www.bbc.co.uk www.facebook.com www.instagram.com www.tiktok.com www.ons.gov.uk www.riddle.com www.youtube.com www.youtube-nocookie.com toybox.tools.bbc.co.uk uk-script.dotmetrics.net ssp-app-uk.votenow.tv ssp-app-uktest.votenow.tv;object-src 'none';manifest-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost static.files.bbci.co.uk bitesize.files.bbci.co.uk;media-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost 'self' blob: https:;connect-src *.files.bbci.co.uk *.local.bbc.co.uk:* ws://localhost:* localhost 'self' https:;child-src *.files.bbci.co.uk *.local.bbc.co.uk:* localhost blob:;\",\"textDirection\":\"ltr\",\"serviceName\":\"news\",\"serviceNameNative\":\"News\",\"AtiSiteIdTest\":598286,\"AtiSiteIdLive\":598285,\"AtiSiteStringTest\":\"news_ps_test\",\"AtiSiteStringLive\":\"news_ps\",\"AtiSiteStringExtraUkTest\":\"gnl_news_test\",\"AtiSiteStringExtraUkLive\":\"gnl_news\",\"AtiProducerString\":\"news\",\"AtiProducerId\":64,\"AllowsAtiDeviceTracking\":true,\"vocab\":{\"news_vj_search_lookup_button_label\":\"Submit search\",\"news_vj_search_lookup_min_chars\":\"Type in {{num}} or more characters for results.\",\"news_vj_search_lookup_no_results\":\"No search results.\",\"news_vj_search_lookup_one_result_available\":\"1 result is available: {{suggestion}}.\",\"news_vj_search_lookup_multiple_results_available\":\"{{numberOfResults}} results are available.\",\"news_vj_search_lookup_selected_result\":\"{{suggestion}} is selected.\",\"show_pre_results\":\"FALSE\",\"show_current_results\":\"FALSE\",\"show_final_results\":\"TRUE\",\"title\":\"Lok Sabha: India general election results 2024\",\"meta-description\":\"Counting of results begin at 8:00 local time (2:30 GMT) on Tuesday 4th June.\",\"keywords\":\"Lok Sabha: India general election results 2024\",\"twitter-image\":\"\",\"facebook-image\":\"\",\"headline\":\"Lok Sabha: India general election results 2024\",\"hero_img_url\":\"Lok Sabha: India general election results 2024\",\"hero_img_alt\":\"Lok Sabha: India general election results 2024\",\"election-banner-alt\":\"India Election 2024\",\"byline_author\":\"By BBC Visual and Data Journalism Team\",\"byline_date\":\"4 June 2024\",\"byline_category\":\"India\",\"byline_category_url\":\"https://www.bbc.com/news/world/asia/india\",\"intro_cta\":\"Click/tap on the map to see results in detail\",\"intro_text_1\":\"Between 19 April and 1 June, hundreds of millions of Indians voted for 543 members of the Lok Sabha, the lower house of parliament. Counting of results begins at 08:00 local time (02:30 GMT) on Tuesday 4 June.\",\"intro_text_2\":\"The Bharatiya Janata Party (BJP), heading the National Democratic Alliance (NDA), face off against the Indian National Congress-led Indian National Developmental Inclusive Alliance (INDIA) to form the government in the center.\",\"animation_toggle_enabled\":\"Animations on\",\"animation_toggle_disabled\":\"Animations off\",\"party-nda\":\"NDA\",\"party-india\":\"INDIA\",\"party-others\":\"Others\",\"nda-alliance-name\":\"BJP alliance\",\"india-alliance-name\":\"Opposition alliance\",\"no_js_message\":\"A modern browser with JavaScript and a stable internet connection are required to view this interactive.\",\"live_label\":\"Live\",\"refresh_cta\":\"Refresh the page to update\",\"leaderboard_pre-results\":\"Results awaiting\",\"leaderboard_last-updated\":\"Last updated: {{last-updated}}\",\"leaderboard_majority-seats\":\"272 seats to win\",\"seats-to-go-text\":\"{{number}} seats to go\",\"leaderboard_source\":\"Source: Datanet India\",\"change_from_2019\":\"Change since 2019\",\"full_results\":\"See the full results\",\"pre-results-title\":\"Awaiting Results\",\"ongoing-results-title\":\"Partial and declared results\",\"post-results-title\":\"Final results\",\"map_title\":\"Partial and declared results\",\"map_filter-2024\":\"2024\",\"map_filter-2019\":\"2019\",\"map_source-2024\":\"Source: Datanet India\",\"map_source-2019\":\"Source: Election Commission of India\",\"map_para_1\":\"Disclaimer: This is an electoral map which is not to scale geographically\",\"battleground_title\":\"Battleground states\",\"battleground-uttarpradesh\":\"Uttar Pradesh\",\"battleground-maharashtra\":\"Maharashtra\",\"battleground-westbengal\":\"West Bengal\",\"battleground-bihar\":\"Bihar\",\"battleground-tamilnadu\":\"Tamil Nadu\",\"back-to-main\":\"Back to main\",\"previous-results_title\":\"Previous Results\",\"lookup_title\":\"All constituencies results - A to Z\",\"search_cta\":\"Search constituency below\",\"search_placeholder\":\"Enter a constituency name\",\"search_error\":\"Please enter a valid constituency name\",\"results_clear-offscreen\":\"Clear search\",\"candidate-details_no-results\":\"Results awaiting\",\"election-adjourned\":\"Election adjourned\",\"total-seats\":\"{{seats}} Seats\",\"results_constituency-title\":\"Constituency 001P\",\"results_subheading-1\":\"Candidate\",\"results_subheading-2\":\"Votes\",\"results_subheading-3\":\"Party\",\"results_subheading-4\":\"Status\",\"results_col-1\":\"{{candidate-name}}\",\"results_col-2\":\"{{votes}}\",\"results_leading\":\"Leading\",\"results_won\":\"Won\",\"show-more\":\"Show more constituencies\",\"show-less\":\"Show less constituencies\",\"back-to-top\":\"Back to top\",\"error_message\":\"Data is no longer updated. Please wait for some time or come back later\",\"handle_error\":\"FALSE\",\"methodology_title\":\"Methodology\",\"methodology_subtitle\":\"The source of this election page results is C-Voter.\",\"methodology_para_1\":\"The page will show results as C-Voter shares constituency party and candidate's status during the counting of the votes. The same will be updated as and when there is a change made by C-Voter. The ultimate tally of votes by party will be updated upon the Election Commission of India (ECI) declaring the final results.\",\"methodology_para_2\":\"\",\"credits_title\":\"Credits\",\"credits_para\":\"Words and production by a great editorial person design and illustrations by a brilliant designer development by an exceptional group of developers.\",\"onward_journeys_title\":\"More on this story\",\"onward_journey_1_summary\":\"Vidhan Sabha: Chhatisgarh assembly election results 2023\",\"onward_journey_1_link\":\"https://www.bbc.co.uk/news/resources/idt-f678540c-cb25-4dcd-8cab-8de65ce9474f\",\"onward_journey_1_img_url\":\"https://ichef.bbci.co.uk/news/800/cpsprodpb/F3F5/production/_131835426_chhattisgarh_thumbnail_976x549.jpg\",\"onward_journey_1_img_alt\":\"Vidhan Sabha: Chhatisgarh assembly election results 2023\",\"onward_journey_2_summary\":\"Live: Madhya Pradesh assembly election results 2023\",\"onward_journey_2_link\":\"https://www.bbc.co.uk/news/resources/idt-ce9e6ff7-d0d2-4eab-95ec-0b33afdd79a8\",\"onward_journey_2_img_url\":\"https://ichef.bbci.co.uk/news/800/cpsprodpb/11B05/production/_131835427_madhya_pradesh_thumbnail_976x549.jpg\",\"onward_journey_2_img_alt\":\"Live: Madhya Pradesh assembly election results 2023\",\"onward_journey_3_summary\":\"Live: Rajasthan assembly election results 2023\",\"onward_journey_3_link\":\"https://www.bbc.co.uk/news/resources/idt-d31ed54e-a9bf-4e43-8b79-15cf3cbcc7cc\",\"onward_journey_3_img_url\":\"https://ichef.bbci.co.uk/news/800/cpsprodpb/16925/production/_131835429_rajasthan_thumbnail_976x549.jpg\",\"onward_journey_3_img_alt\":\"Live: Rajasthan assembly election results 2023\",\"candidate_1_bihar\":\"Bihar Canidate 1\",\"candidate_2_bihar\":\"Bihar Canidate 2\",\"candidate_1_maharashtra\":\"Maharashtra Canidate 1\",\"candidate_1_tamilnadu\":\"Tamil Nadu Canidate 1\",\"candidate_1_westbengal\":\"West Bengal Canidate 2\"},\"parties\":[\"nda\",\"india\",\"others\"],\"constituencyIDs\":{},\"states\":[],\"outputs\":[{\"wrapper\":\"full-width\"},{\"wrapper\":\"embed\"},{\"wrapper\":\"core\"},{\"wrapper\":\"envelope\"},{\"wrapper\":\"news-app\"},{\"wrapper\":\"amp\"},{\"wrapper\":\"syndication\",\"photoCaption\":\"\",\"photoURL\":\"\",\"hyperlinkCallToAction\":\"Click here to see the BBC interactive\"},{\"wrapper\":\"applenews\",\"photoCaption\":\"\",\"photoURL\":\"\",\"hyperlinkCallToAction\":\"Click or tap here to see interactive content\"}],\"usesAppJs\":true,\"autoFixLintingErrors\":false,\"polyfill\":false,\"dynamicImports\":true,\"dynamicPolyfills\":[\"core-js/modules/es.promise\",\"core-js/modules/es.array.iterator\",\"core-js/modules/es.array.filter\",\"core-js/modules/es.array.from\",\"core-js/modules/es.array.map\",\"core-js/modules/es.array.reduce\",\"core-js/modules/es.object.assign\",\"core-js/modules/es.object.entries\",\"core-js/modules/es.object.from-entries\",\"core-js/modules/es.object.keys\",\"core-js/modules/es.object.values\"],\"reactProject\":false,\"preactProject\":false,\"failFast\":false,\"includePath\":{\"responsive\":true,\"newsapps\":true,\"app-image\":\"https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png\",\"app-clickable\":true,\"amp-clickable\":true,\"amp-image-height\":360,\"amp-image-width\":640,\"amp-image\":\"https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png\",\"app-image-alt-text\":\"Click or tap here to see interactive content\"},\"languages\":[\"english\"],\"destinationSection\":{\"english\":\"uk\"},\"uncompressedAppBudget\":\"(1024 * 1000) * 0.5\",\"meta\":{\"title\":{\"english\":\"\"},\"images\":[{\"thumbnail\":\"\"}],\"hasBeenDeployed\":false,\"publication_date\":null,\"publication_date_iso\":null,\"last_modified\":null,\"last_modified_iso\":null,\"data_last_modified\":null,\"data_last_modified_iso\":null,\"keywords\":[\"vj\",\"visual-journalism\",\"visualjournalism\",\"visual journalism\"],\"locations\":{\"regions\":[]}},\"handlebarsPartials\":[\"picture\"],\"defaultPort\":1031,\"usedPort\":1031,\"generateForMozart\":true,\"hasGithubRepo\":true,\"bespokeOrbitCacheTTL\":false,\"shouldAllowDeviceTracking\":true,\"optimizely\":false,\"shadowDom\":true,\"generator\":\"standalone\",\"projectNamespace\":\"vjsthasia-2308-india-elections-2024-results-page\",\"generatorVersion\":\"11.0.2\",\"projectName\":\"vjsthasia-2308-india-elections-2024-results-page\",\"outputDir\":\"include/vjsthasia/2308-india-elections-2024-results-page\",\"includes\":{\"app\":{\"uuid\":\"0385e7a0-3feb-4ab7-ab78-d80ad189e347\"},\"election-banner\":{\"uuid\":\"873f8308-56c5-4278-ba0b-32a91668d0aa\"}},\"pathToWrapperAssets\":\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/assets/embed\",\"pathToInclude\":\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed\",\"pathToWrapperAssetsToInclude\":\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/english/election-banner/embed\"};\n</script>\n<link rel=\"stylesheet\" href=\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/assets/embed/css/inline.css??v=1.0.0.202405200747\">\n<div id=\"responsive-embed-vjsthasia-2308-india-elections-2024-results-page-election-banner\" class=\"bbc-news-vj-wrapper--embed bbc-news-vj-direction--ltr bbc-news-vj-language--english\">\n    <div id=\"responsive-embed-vjsthasia-2308-india-elections-2024-results-page-election-banner-core-content\">\n        <section aria-labelledby=\"election-results\" role=\"region\">\n            <div class=\"election-visual-identity enhanced\" aria-hidden=\"true\" focusable=\"false\">\n                <div class=\"election-visual-identity__logo\">\n                    <img src=\"https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/assets/election-banner-project-assets/img/india_election_logo.svg\" width=\"256\" height=\"40\" alt=\"India Election 2024\" aria-hidden=\"true\">\n                </div>\n            </div>\n            <div class=\"gel-wrap\">\n                <div class=\"gel-layout__item gel-1/1\">\n                        <h2 id=\"election-results\" class=\"leaderboard__headline\">\n                            <span aria-hidden=\"true\">Partial and declared results</span>\n                            <span class=\"off-screen\"></span>\n                        </h2>\n                        <div class=\"core-content\">\n                            <p>A modern browser with JavaScript and a stable internet connection are required to view this interactive.</p>\n                        </div>\n                        <div class=\"enhanced\">\n                            <div class=\"results-awaiting-cta\">Results awaiting</div>\n                            <div class=\"seats-counter-container\">\n                                <svg class=\"seats-counter-container__timer\" viewBox=\"0 0 32 32\" fill=\"currentColor\" focusable=\"false\" aria-hidden=\"true\" width=\"16\" height=\"16\">\n                                    <path d=\"m20.1 22.8.8-1.2-3.8-3-.5-6.1h-1.7l-.5 7.4 5.7 2.9zm-4-18.4h2.6v2.4h-2.6c-5.9 0-10.8 4.7-10.8 10.9 0 6.1 4.5 10.6 10.8 10.6 6.1 0 10.6-4.5 10.6-10.6h2.7c0 7.6-5.7 13.3-13.3 13.3-7.7 0-13.5-5.7-13.5-13.3C2.6 10 8.5 4.4 16.1 4.4zM14.7 1h2.5l3.6 4.6-3.6 4.6h-2.5l3.2-4.6L14.7 1z\"></path>\n                                </svg>\n                                <span role=\"text\">\n                                    <span class=\"seats-counter-container__text\"></span>\n                                </span>\n                            </div>                    <div class=\"leaderboard-container leaderboard-main\">\n                                <div class=\"leaderboard-main--seats-container\">\n                                    <div class=\"leaderboard-main--seats-counter\">\n                                        <span>272 seats to win</span>\n                                    </div>\n                                    <div class=\"leaderboard-main--seats-allocation\" aria-hidden=\"true\" focusable=\"false\">\n                                        <div class=\"leaderboard__seats-percentage nda\">\n                                            <div class=\"leaderboard__bar-container nda\">\n                                                <div class=\"leaderboard__bar--nda\"></div>\n                                            </div>\n                                        </div>\n                                        <div class=\"leaderboard__seats-percentage india\">\n                                            <div class=\"leaderboard__bar-container india\">\n                                                <div class=\"leaderboard__bar--india\"></div>\n                                            </div>\n                                        </div>\n                                        <div class=\"leaderboard__seats-percentage others\">\n                                            <div class=\"leaderboard__bar-container others\">\n                                                <div class=\"leaderboard__bar--others\"></div>\n                                            </div>\n                                        </div>\n                                    </div>\n                                    <div class=\"leaderboard__results-bar\">\n                                        <ul class=\"leaderboard__party-details nda\">\n                                            <li class=\"leaderboard__party-name nda\"><span aria-hidden=\"true\"></span></li>\n                                            <li class=\"leaderboard__party-seats nda\"><span aria-hidden=\"true\"></span></li>\n                                            <li class=\"leaderboard__seats-change nda\">\n                                                <svg class=\"leaderboard__arrow-down nda\"\n                                                    viewBox=\"0 0 32 32\"\n                                                    fill=\"currentColor\"\n                                                    focusable=\"false\"\n                                                    aria-hidden=\"true\"\n                                                    width=\"16\"\n                                                    height=\"16\"\n                                                    style=\"display: none;\">\n                                                    <path d=\"M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4v3.8z\"></path>\n                                                </svg>\n                                                <svg class=\"leaderboard__arrow-up nda\"\n                                                    viewBox=\"0 0 32 32\"\n                                                    fill=\"currentColor\"\n                                                    focusable=\"false\"\n                                                    aria-hidden=\"true\"\n                                                    width=\"16\"\n                                                    height=\"16\"\n                                                    style=\"display: none;\">\n                                                    <path d=\"M26.7 19.4 16 8.8 5.3 19.4v3.7h21.4v-3.7z\"></path>\n                                                </svg>\n                                                <span class=\"leaderboard__seats-change-number nda\" aria-hidden=\"true\"></span>\n                                            </li>\n                                            <li class=\"off-screen\"></li>\n                                        </ul>\n                                        <ul class=\"leaderboard__party-details india\">\n                                            <li class=\"leaderboard__party-name india\"><span aria-hidden=\"true\"></span></li>\n                                            <li class=\"leaderboard__party-seats india\"><span aria-hidden=\"true\"></span></li>\n                                            <li class=\"leaderboard__seats-change india\">\n                                                <svg class=\"leaderboard__arrow-down india\"\n                                                    viewBox=\"0 0 32 32\"\n                                                    fill=\"currentColor\"\n                                                    focusable=\"false\"\n                                                    aria-hidden=\"true\"\n                                                    width=\"16\"\n                                                    height=\"16\"\n                                                    style=\"display: none;\">\n                                                    <path d=\"M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4v3.8z\"></path>\n                                                </svg>\n                                                <svg class=\"leaderboard__arrow-up india\"\n                                                    viewBox=\"0 0 32 32\"\n                                                    fill=\"currentColor\"\n                                                    focusable=\"false\"\n                                                    aria-hidden=\"true\"\n                                                    width=\"16\"\n                                                    height=\"16\"\n                                                    style=\"display: none;\">\n                                                    <path d=\"M26.7 19.4 16 8.8 5.3 19.4v3.7h21.4v-3.7z\"></path>\n                                                </svg>\n                                                <span class=\"leaderboard__seats-change-number india\" aria-hidden=\"true\"></span>\n                                            </li>\n                                            <li class=\"off-screen\"></li>\n                                        </ul>\n                                        <ul class=\"leaderboard__party-details others\">\n                                            <li class=\"leaderboard__party-name others\"><span aria-hidden=\"true\"></span></li>\n                                            <li class=\"leaderboard__party-seats others\"><span aria-hidden=\"true\"></span></li>\n                                            <li class=\"leaderboard__seats-change others\">\n                                                <svg class=\"leaderboard__arrow-down others\"\n                                                    viewBox=\"0 0 32 32\"\n                                                    fill=\"currentColor\"\n                                                    focusable=\"false\"\n                                                    aria-hidden=\"true\"\n                                                    width=\"16\"\n                                                    height=\"16\"\n                                                    style=\"display: none;\">\n                                                    <path d=\"M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4v3.8z\"></path>\n                                                </svg>\n                                                <svg class=\"leaderboard__arrow-up others\"\n                                                    viewBox=\"0 0 32 32\"\n                                                    fill=\"currentColor\"\n                                                    focusable=\"false\"\n                                                    aria-hidden=\"true\"\n                                                    width=\"16\"\n                                                    height=\"16\"\n                                                    style=\"display: none;\">\n                                                    <path d=\"M26.7 19.4 16 8.8 5.3 19.4v3.7h21.4v-3.7z\"></path>\n                                                </svg>\n                                                <span class=\"leaderboard__seats-change-number others\" aria-hidden=\"true\"></span>\n                                            </li>\n                                            <li class=\"off-screen\"></li>\n                                        </ul>\n                                    </div>\n                                    <div class=\"leaderboard-main--seats-change-title\" aria-hidden=\"true\" focusable=\"false\">Change since 2019</div>\n                                    <div class=\"leaderboard__party-alliance\" aria-hidden=\"true\" focusable=\"false\">\n                                        <span>*BJP alliance</span>\n                                        <span>**Opposition alliance</span>\n                                    </div>\n                                </div>\n                            </div>                    <div class=\"cta-timer-container\">\n                                <span class=\"last-updated\">Results awaiting</span>\n                                <div class=\"refresh-cta-text\">Refresh the page to update</div>\n                            </div>\n                            <div class=\"live-results-button\">\n                                <div>\n                                    <a class=\"live-results-button__link\" href=''>\n                                        <span class=\"text\">See the full results</span>\n                                        <span class=\"arrow\">\n                                            <svg id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                                                viewBox=\"0 0 32 32\" width=\"1em\" height=\"1em\" xml:space=\"preserve\" aria-hidden=\"true\" focusable=\"false\">\n                                                <style type=\"text/css\">\n                                                    .st0{fill:#222222;}\n                                                </style>\n                                                <path class=\"st0\" d=\"M16.1,13.3L0,30h6.4L21,15L6.4,0H0l16.1,16.7C16.1,16.7,16.1,13.3,16.1,13.3z\"/>\n                                            </svg>\n                                        </span>\n                                    </a>\n                                </div>\n                            </div>                </div>\n                </div>\n            </div>\n        </section>\n    </div>\n</div>\n<style id=\"responsive-embed-vjsthasia-2308-india-elections-2024-results-page-election-banner-inline-css\">\n    .bbc-news-vj-wrapper img.lazy{opacity:0;height:1px}@-moz-keyframes gel-spin{0%{-moz-transform:rotate(0deg)}100%{-moz-transform:rotate(360deg)}}@-webkit-keyframes gel-spin{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}@-ms-keyframes gel-spin{0%{-ms-transform:rotate(0deg)}100%{-ms-transform:rotate(360deg)}}@keyframes gel-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.bbc-news-visual-journalism-loading-spinner{display:block;margin:8px auto;width:32px;height:32px;max-width:32px;fill:#323232;-webkit-animation-name:gel-spin;-webkit-animation-duration:1s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:gel-spin;-moz-animation-duration:1s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear;animation-name:gel-spin;animation-duration:1s;animation-iteration-count:infinite;animation-timing-function:linear}\n@font-face{font-display:swap;font-family:\"ReithSans\";src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Rg.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_It.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_It.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Bd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_BdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_BdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Lt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Lt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_LtIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_LtIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Md.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_Md.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_MdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_MdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSans\";font-style:italic;font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSans_W_ExBdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Rg.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Rg.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_It.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_It.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Bd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Bd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:bold;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_BdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_BdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Lt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Lt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:300;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_LtIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_LtIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_Md.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:500;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_MdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_MdIt.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBd.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBd.woff\") format(\"woff\")}@font-face{font-display:swap;font-family:\"ReithSerif\";font-style:italic;font-weight:800;src:url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBdIt.woff2\") format(\"woff2\"),url(\"https://gel.files.bbci.co.uk/r2.512/BBCReithSerif_W_ExBdIt.woff\") format(\"woff\")}\n\n</style>\n\n<script>\n    (function(){\n\nfunction cutsTheMustard() {\n    return (\n        document.implementation.hasFeature(\n            'http://www.w3.org/TR/SVG11/feature#BasicStructure',\n            '1.1',\n        )\n        && 'querySelector' in document\n        && 'localStorage' in window\n        && 'addEventListener' in window\n        && 'MutationObserver' in window // not supported in IE9 & IE10\n        && !document.documentMode // undefined in all browsers except IE\n    );\n}\n\n                    if (cutsTheMustard()) {\n                                    function initEmbed() {\n                require(['https://news.test.files.bbci.co.uk/include/vjsthasia/2308-india-elections-2024-results-page/develop/assets/embed/js/embed-init.js??v=1.0.0.202405200747'], function (initFullFatApplication) {\n                    initFullFatApplication(vjConfigObject['vjsthasia-2308-india-elections-2024-results-page-election-banner']);\n                });\n            }\n\n            if (typeof require === 'undefined') {\n                var headTag = document.getElementsByTagName('head')[0],\n                    requireTag = document.createElement('script');\n                requireTag.type = 'text/javascript';\n                requireTag.src = 'https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js';\n                requireTag.onload = initEmbed;\n                headTag.appendChild(requireTag);\n            } else {\n                initEmbed();\n            }\n\n                    }\n                    else if (window.require) {\n                        require(['istats-1'], function (istats) {\n                            istats.log('browser does not cut the mustard', 'newsspec-nonuser');\n                        });\n                    }    })();\n</script>\n"
-                }
-            },
-            {
-                "summaries": [
-                    {
-                        "type": "article",
-                        "isLive": false,
-                        "title": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23",
-                        "firstPublished": "2016-08-22T15:24:30.000Z",
-                        "lastPublished": "2016-08-22T15:24:30.000Z",
-                        "link": "https://www.bbc.com/hindi/23068682",
-                        "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/15392/test/_63503968_160822002233_rio_olympic_closing_624x351_afp.jpg",
-                        "description": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा!",
-                        "imageAlt": "पढ़ें",
-                        "id": "8b4a9029-86d0-3d4d-b6a4-57e97a0d668b"
-                    },
-                    {
-                        "type": "article",
-                        "isLive": false,
-                        "title": "बिजनौर में तीन हत्याओं के बाद तनाव",
-                        "firstPublished": "2016-09-16T11:15:13.000Z",
-                        "lastPublished": "2017-06-21T14:00:53.000Z",
-                        "link": "https://www.bbc.com/hindi/india-23075154",
-                        "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/98B2/test/_63509093_mediaitem63509092.jpg",
-                        "description": "उत्तर प्रदेश के बिजनौर में तीन मुसलमान युवकों की हत्या के बाद सांप्रदायिक तनाव पैदा हो गया है.",
-                        "imageAlt": "ोतू ूोु",
-                        "id": "f49be585-3a3e-e54e-8436-462da1b08fb0"
-                    },
-                    {
-                        "type": "article",
-                        "isLive": false,
-                        "title": "क्या आपको भी समुद्र में उबकाई आती है? 2",
-                        "firstPublished": "2016-08-26T05:25:19.000Z",
-                        "lastPublished": "2016-08-26T05:25:19.000Z",
-                        "link": "https://www.bbc.com/hindi/international-23069805",
-                        "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/9BA0/test/_63504893_e080a03d-64fc-4e41-9d4c-ba01ba3018ab.jpg",
-                        "description": "समंदर की लहरों को देखना, उस पर तैरना किसे अच्छा नहीं लगता. बहुत से लोग नाव लेकर निकल जाते हैं, इन लहरों पर जीत हासिल करने के लिए. बहुत से लोग क्रूज़ शिप पर सवार होकर लंबी छुट्टियां बिताने निकल जाते हैं.",
-                        "imageAlt": "Ship",
-                        "id": "a01e0390-9100-2f4a-990e-9451713127de"
-                    }
-                ],
-                "activePage": 1,
-                "pageCount": 1,
-                "curationId": "urn:bbc:tipo:list:8cdd7b84-9433-4d21-8e3d-bbbbed90b2c4",
-                "curationType": "tipo-curation",
-                "position": 1,
-                "title": "ज़रूर पढ़ें",
-                "visualProminence": "HIGH",
-                "visualStyle": "COLLECTION"
-            },
-            {
-                "summaries": [
-                    {
-                        "type": "article",
-                        "isLive": false,
-                        "title": "Hindi Headline हिंदी शीर्षक",
-                        "firstPublished": "2023-08-17T08:05:07.972Z",
-                        "lastPublished": "2023-08-17T08:05:07.972Z",
-                        "link": "https://www.bbc.com/hindi/articles/c558wpnqq4qo",
-                        "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/69dc/test/01e08570-07f8-11ef-a801-47fbecfec49f.png",
-                        "description": "पाकिस्तान में चुनाव के क़रीब 11 दिन बाद भी यह साफ़ नहीं हो पाया कि सरकार कौन सा दल या गठबंधन बना रहा है.",
-                        "imageAlt": "India economy",
-                        "id": "c558wpnqq4qo"
-                    }
-                ],
-                "activePage": 1,
-                "pageCount": 1,
-                "curationId": "urn:bbc:tipo:list:b4616a2a-1c7f-428e-b1d5-72dd35226051",
-                "curationType": "tipo-curation",
-                "position": 2,
-                "title": "पाकिस्तान: बिलावल का समर्थन मिला फिर भी नवाज़ शरीफ़ क्यों नहीं बना पा रहे हैं सरकार",
-                "visualProminence": "MAXIMUM",
-                "visualStyle": "BANNER"
-            },
-            {
-                "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
-                "curationType": "most-popular",
-                "position": 3,
-                "title": "Most Read",
-                "visualProminence": "NORMAL",
-                "visualStyle": "RANKED",
-                "link": "https://www.bbc.com/hindi/popular/read",
-                "mostRead": {
-                    "generated": "2024-05-20T13:10:01.891Z",
-                    "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
-                    "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
-                    "items": [
-                        {
-                            "id": "c728846d-0159-4b49-a90b-b1b6273bd9e9",
-                            "rank": 1,
-                            "title": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 13",
-                            "href": "/hindi/23068672",
-                            "timestamp": "2016-08-22T15:10:16.000Z"
-                        },
-                        {
-                            "id": "38577c7e-0021-bd4b-a8b5-c3b8e8b2ef19",
-                            "rank": 2,
-                            "title": "grdfjfzxczn",
-                            "href": "/hindi/india-23185273",
-                            "timestamp": "2018-02-02T06:59:11.000Z"
-                        },
-                        {
-                            "id": "9c9bf253-bc9a-2948-8608-738ad7159792",
-                            "rank": 3,
-                            "title": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 30",
-                            "href": "/hindi/23068699",
-                            "timestamp": "2016-08-22T15:28:48.000Z"
-                        },
-                        {
-                            "id": "12b3ab8e-3dcb-6042-968c-6235170d00ae",
-                            "rank": 4,
-                            "title": "Brexit bill passed in parliament সা্ব",
-                            "href": "/news/uk-politics-23164548",
-                            "timestamp": "2017-11-14T10:51:07.000Z"
-                        },
-                        {
-                            "id": "5d5150f4-17e0-bc4c-aaba-55b25008c62d",
-                            "rank": 5,
-                            "title": "Flights axed as Monarch ceases trading",
-                            "href": "/gujarati/india-23155321",
-                            "timestamp": "2017-10-02T07:16:16.000Z"
-                        },
-                        {
-                            "id": "a01e0390-9100-2f4a-990e-9451713127de",
-                            "rank": 6,
-                            "title": "क्या आपको भी समुद्र में उबकाई आती है? 2",
-                            "href": "/hindi/international-23069805",
-                            "timestamp": "2016-08-26T05:25:19.000Z"
-                        },
-                        {
-                            "id": "989b725a-43aa-1649-b0c9-d5bf5ed176a6",
-                            "rank": 7,
-                            "title": "फ़्लोरिडा शहर में खेले गए पहले टी-20 मैच",
-                            "href": "/hindi/live/sport-23070449",
-                            "timestamp": "2016-08-30T10:24:38.000Z"
-                        },
-                        {
-                            "id": "65f4e3bb-bd66-b348-b29f-24a0abbaf194",
-                            "rank": 8,
-                            "title": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 10",
-                            "href": "/hindi/23068669",
-                            "timestamp": "2016-08-22T15:03:03.000Z"
-                        },
-                        {
-                            "id": "f49be585-3a3e-e54e-8436-462da1b08fb0",
-                            "rank": 9,
-                            "title": "बिजनौर में तीन हत्याओं के बाद तनाव",
-                            "href": "/hindi/india-23075154",
-                            "timestamp": "2017-06-21T14:00:53.000Z"
-                        },
-                        {
-                            "id": "8b4a9029-86d0-3d4d-b6a4-57e97a0d668b",
-                            "rank": 10,
-                            "title": "पाक: मोदी की 'तारीफ़' पर गद्दारी का मुकदमा! 23",
-                            "href": "/hindi/23068682",
-                            "timestamp": "2016-08-22T15:24:30.000Z"
-                        }
-                    ]
-                }
-            }
+  "data": {
+    "title": "BBC News हिंदी",
+    "description": "हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories.",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "लाहौर का एयर डिफ़ेंस सिस्टम तबाह करने का भारत का दावा, पाकिस्तान ने 25 भारतीय ड्रोन गिराने का दावा किया",
+            "firstPublished": "2025-05-08T11:57:44.286Z",
+            "lastPublished": "2025-05-08T11:57:44.286Z",
+            "link": "https://www.bbc.com/hindi/articles/c365nejek65o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/93f7/live/3790be20-2bf5-11f0-b1de-7559cc68415f.jpg.webp",
+            "description": "भारतीय रक्षा मंत्रालय ने कहा है कि पाकिस्तान ने ड्रोन और मिसाइलों का उपयोग कर भारत के कई सैन्य ठिकानों को निशाना बनाने की कोशिश की.",
+            "imageAlt": "भारत-पाकिस्तान तनाव",
+            "id": "c365nejek65o"
+          }
         ],
-        "metadata": {
-            "atiAnalytics": {
-                "contentId": "urn:bbc:tipo:topic:cg8nwjjm7vet",
-                "contentType": "index-home",
-                "pageIdentifier": "hindi.page",
-                "pageTitle": "BBC News हिंदी"
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:ca62f3b9-3b32-4651-b811-23febac54e95",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "भारत ने पाकिस्तान और पाकिस्तान प्रशासित कश्मीर पर किया मिसाइल हमला",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "कौन है द रेज़िस्टेंस फ़्रंट ग्रुप जिसका नाम पहलगाम हमले में आ रहा है?",
+            "firstPublished": "2025-05-08T14:02:11.051Z",
+            "lastPublished": "2025-05-08T14:02:11.051Z",
+            "link": "https://www.bbc.com/hindi/articles/c5yq871757po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8b52/live/6c11f130-2c01-11f0-8da1-ad2bbee6cda5.jpg.webp",
+            "description": "भारत के विदेश मंत्रालय ने पहलगाम में हुए हमले के पीछे द रेज़िस्टेंस फ़्रंट को ज़िम्मेदार ठहराया है. इस ग्रुप के बारे में अब तक क्या जानकारी सामने आई है?",
+            "imageAlt": "पहलगाम",
+            "id": "c5yq871757po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "पाकिस्तान भारत के मिसाइल हमलों को क्यों नहीं रोक पाया?",
+            "firstPublished": "2025-05-08T11:18:26.112Z",
+            "lastPublished": "2025-05-08T11:18:26.112Z",
+            "link": "https://www.bbc.com/hindi/articles/cx2jgwp0je1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/028f/live/70a48160-2bf0-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "भारतीय सेना की ओर से चलाए गए ऑपरेशन सिंदूर के तहत सात मई को पाकिस्तान में कई जगहों पर हवाई हमले किए गए. क्या कहते हैं पाकिस्तान के विशेषज्ञ.",
+            "imageAlt": "पाकिस्तानी एयर डिफ़ेंस सिस्टम",
+            "id": "cx2jgwp0je1o"
+          },
+          {
+            "type": "commentary",
+            "isLive": true,
+            "title": "मिसरी ने तस्वीर दिखाकर पूछा- 'आतंकियों के जनाजे में पाकिस्तानी फौज क्या कर रही थी?'",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/live/c1memd40vk5t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c60a/live/c15cdfb0-2c15-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "पाकिस्तान के विदेश मंत्री इसहाक़ डार ने रॉयटर्स से बातचीत में यह दावा किया है कि पाकिस्तान और भारत के राष्ट्रीय सुरक्षा सलाहकारों के कार्यालयों के बीच संपर्क हुआ है.",
+            "imageAlt": "Pakistan",
+            "id": "c1memd40vk5t"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत ने बहावलपुर को निशाना क्यों बनाया?",
+            "firstPublished": "2025-05-08T06:43:20.448Z",
+            "lastPublished": "2025-05-08T06:43:20.448Z",
+            "link": "https://www.bbc.com/hindi/articles/cgjljw6xq4jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4d7d/live/0b542c20-2beb-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "भारत ने अपने हमले में पाकिस्तान के पंजाब प्रांत में स्थित बहावलपुर को भी निशाना बनाया है. बहावलपुर अंतरराष्ट्रीय सीमा से 100 किलोमीटर दूर है. ",
+            "imageAlt": "भारत का 'ऑपरेशन सिंदूर'",
+            "id": "cgjljw6xq4jo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत-पाकिस्तान के बीच बढ़े तनाव की दुनिया भर में चर्चा, क्या कह रहा है अंतरराष्ट्रीय मीडिया?",
+            "firstPublished": "2025-05-08T07:54:09.400Z",
+            "lastPublished": "2025-05-08T07:54:09.400Z",
+            "link": "https://www.bbc.com/hindi/articles/cz703jn7y2wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/70f4/live/d0375e00-2be5-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "कई अंतरराष्ट्रीय मीडिया संस्थानों ने आशंका जताई है कि भारत और पाकिस्तान के बीच तनाव और बढ़ सकता है. हालांकि, कुछ संस्थानों ने शांति के लिए मध्यस्थता पर भी ज़ोर दिया है.",
+            "imageAlt": "तबाह हुई अब्बास मस्जिद",
+            "id": "cz703jn7y2wo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "चीन क्यों नहीं चाहेगा कि भारत और पाकिस्तान के बीच युद्ध हो?",
+            "firstPublished": "2025-05-08T04:55:18.359Z",
+            "lastPublished": "2025-05-08T04:59:40.545Z",
+            "link": "https://www.bbc.com/hindi/articles/cddedl5vdq4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cf43/live/4a426e10-2bc3-11f0-8f57-b7237f6a66e6.jpg.webp",
+            "description": "चीन ने भारत के हवाई हमलों को अफ़सोसजनक बताते हुए चिंता ज़ाहिर की लेकिन दोनों देशों से 'शांत रहने और संयम बरतने' की अपील की.",
+            "imageAlt": "नरेंद्र मोदी, शी जिनपिंग और शहबाज़ शरीफ़",
+            "id": "cddedl5vdq4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "पाकिस्तान क्या भारतीय हवाई हमले का जवाब देगा? चार बड़े सवाल",
+            "firstPublished": "2025-05-08T02:01:30.773Z",
+            "lastPublished": "2025-05-08T02:01:30.773Z",
+            "link": "https://www.bbc.com/hindi/articles/cly2ypjrkp2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/22b4/live/e77fb840-2b5f-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "इस वक़्त सबसे बड़ा सवाल यही है कि क्या पाकिस्तान जवाबी कार्रवाई करेगा? अगर ऐसा हुआ तो क्या ये संघर्ष और व्यापक हो जाएगा?",
+            "imageAlt": "मंगलवार को श्रीनगर में सड़क पर पहरा देते भारतीय अर्धसैनिक बल के जवान",
+            "id": "cly2ypjrkp2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत ने कहा 'हमने केवल उन्हीं को मारा, जिन्होंने हमारे मासूमों को मारा', पाकिस्तान ने मानी भारी नुक़सान की बात",
+            "firstPublished": "2025-05-06T21:27:04.073Z",
+            "lastPublished": "2025-05-07T11:53:06.565Z",
+            "link": "https://www.bbc.com/hindi/articles/c5ygyg8j794o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4f25/live/5bb6d9b0-2baa-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "भारत ने अपने इस हमले को 'ऑपरेशन सिंदूर' का नाम दिया है.  पाकिस्तान ने भारत के हमले में बड़े नुक़सान की बात मानी है. ",
+            "imageAlt": "श्रीनगर में एक भारतीय सैनिक",
+            "id": "c5ygyg8j794o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "मसूद अज़हर के 10 रिश्तेदार एयर स्ट्राइक में मारे गए, क्या है भारत के 'मोस्ट वॉन्टेड' की पूरी कहानी",
+            "firstPublished": "2025-05-07T15:32:53.353Z",
+            "lastPublished": "2025-05-07T15:32:53.353Z",
+            "link": "https://www.bbc.com/hindi/articles/cj6860krekgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/73f4/live/c6bc3f60-2b4c-11f0-8f8e-479aa3cc788f.jpg.webp",
+            "description": "चरमपंथी संगठन जैश-ए-मोहम्मद के मुखिया मसूद अज़हर पर पुलवामा हमले की साज़िश रचने के आरोप हैं. अज़हर को भारत में गिरफ़्तार किया गया था और बाद में कंधार विमान हाईजैक के दौरान छोड़ा गया था.",
+            "imageAlt": "मसूद अज़हर",
+            "id": "cj6860krekgo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c5c30d41-8bb5-4681-8cd3-0d9231d9034a",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "प्रमुख समाचार",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत का हवाई हमला: अमेरिका, इसराइल,  चीन, रूस और तुर्की  क्या बोले?",
+            "firstPublished": "2025-05-07T13:28:32.557Z",
+            "lastPublished": "2025-05-07T13:28:32.557Z",
+            "link": "https://www.bbc.com/hindi/articles/c3r8rzpz881o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/de40/live/2e3d6e70-2b3e-11f0-b26b-ab62c890638b.png.webp",
+            "description": "इसराइल ने भारत के 'आत्मरक्षा के अधिकार' का समर्थन किया है. लेकिन अमेरिका समेत कई देशों ने हालात पर चिंता जताई है. ",
+            "imageAlt": "शहबाज़ शरीफ़ और नरेंद्र मोदी",
+            "id": "c3r8rzpz881o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत के 'ऑपरेशन सिंदूर' पर मीडिया को जानकारी देने वाली दो महिला अधिकारी कौन हैं?",
+            "firstPublished": "2025-05-07T09:06:53.373Z",
+            "lastPublished": "2025-05-07T09:06:53.373Z",
+            "link": "https://www.bbc.com/hindi/articles/c77n7zz1zg2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/074b/live/63f5e6d0-2b3b-11f0-bb67-13fec63813db.jpg.webp",
+            "description": "बुधवार को भारतीय विदेश मंत्रालय और सेना की तरफ से भारत के 'ऑपरेशन सिंदूर' की जानकारी दी गई है. इसमें सेना की तरफ से दो महिला अधिकारी शामिल हुईं, जो सुर्खियों में हैं",
+            "imageAlt": "भारत का 'ऑपरेशन सिंदूर'",
+            "id": "c77n7zz1zg2o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "मॉक ड्रिलः क्या है सिविल डिफ़ेंस और आपात स्थिति में क्यों है ये ज़रूरी",
+            "firstPublished": "2025-05-07T14:47:26.158Z",
+            "lastPublished": "2025-05-07T14:47:26.158Z",
+            "link": "https://www.bbc.com/hindi/articles/c0l0lk2r0r4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7579/live/c9082e00-2b06-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "गृह मंत्रालय के आदेश के मुताबिक़ पूरे देश में बुधवार को मॉक ड्रिल की गई. सिविल डिफ़ेंस यानी नागरिक सुरक्षा एक ऐसी व्यवस्था है जो युद्ध, प्राकृतिक आपदाओं, या अन्य आपातकालीन स्थितियों में नागरिकों की सुरक्षा के लिए काम करती है. ",
+            "imageAlt": "मॉक ड्रिल",
+            "id": "c0l0lk2r0r4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत ने पाकिस्तान और पाकिस्तान प्रशासित कश्मीर में किन-किन जगहों को निशाना बनाया?",
+            "firstPublished": "2025-05-07T07:52:43.749Z",
+            "lastPublished": "2025-05-07T07:52:43.749Z",
+            "link": "https://www.bbc.com/hindi/articles/creqevwwrqeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6789/live/2d77b470-2af1-11f0-8f57-b7237f6a66e6.jpg.webp",
+            "description": "भारतीय सेना ने मंगलवार और बुधवार की दरमियानी रात को पाकिस्तान और पाकिस्तान प्रशासित कश्मीर में कई जगहों को निशाना बनाकर हमले किए हैं.",
+            "imageAlt": "बिलाल मस्जिद",
+            "id": "creqevwwrqeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत का मिसाइल और एयर डिफ़ेंस सिस्टम पाकिस्तान की तुलना में कैसा है?",
+            "firstPublished": "2025-05-07T04:52:04.328Z",
+            "lastPublished": "2025-05-07T04:52:04.328Z",
+            "link": "https://www.bbc.com/hindi/articles/c9343dq12z4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/57b0/live/6e4d8b30-2b02-11f0-b266-09b83b28415a.jpg.webp",
+            "description": "भारत और पाकिस्तान के बीच छिड़े ताज़ा तनाव के बाद दोनों देशों की सैन्य क्षमता पर बात शुरू हो गई है.",
+            "imageAlt": "पाकिस्तान",
+            "id": "c9343dq12z4o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारतीय सेना के 'ऑपरेशन सिंदूर' पर बीजेपी और विपक्ष के राजनेता क्या कह रहे हैं?",
+            "firstPublished": "2025-05-07T02:33:08.110Z",
+            "lastPublished": "2025-05-07T02:33:08.110Z",
+            "link": "https://www.bbc.com/hindi/articles/cx2y278l8v0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7e99/live/e53cb440-2aea-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "पहलगाम हमले के बाद भारत ने बताया है कि सेना ने 'ऑपरेशन सिंदूर' किया है, जिस पर सियासी गलियारों से प्रतिक्रियाएं आ रही हैं.",
+            "imageAlt": "योगी और ओवैसी",
+            "id": "cx2y278l8v0o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत के हमले पर पाकिस्तान के नेताओं की ओर से क्या कहा जा रहा है?",
+            "firstPublished": "2025-05-07T00:48:09.183Z",
+            "lastPublished": "2025-05-07T00:48:09.183Z",
+            "link": "https://www.bbc.com/hindi/articles/cx2v2v8mldeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/16d4/live/e27908c0-2adc-11f0-b91d-8f7d0544a3b9.jpg.webp",
+            "description": "भारत सरकार ने बयान जारी करके कहा है कि सेना ने 'ऑपरेशन सिंदूर' शुरू किया है. इस ऑपरेशन को लेकर पाकिस्तान के प्रधानमंत्री, रक्षा मंत्री और सूचना मंत्री ने प्रतिक्रिया दी है.",
+            "imageAlt": "पाकिस्तान के प्रधानमंत्री शहबाज़ शरीफ़",
+            "id": "cx2v2v8mldeo"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M22S",
+            "isLive": false,
+            "title": "पाकिस्तान और पाकिस्तान प्रशासित कश्मीर पर भारत का हमला, पाकिस्तान ये बोला",
+            "firstPublished": "2025-05-07T01:20:27.417Z",
+            "lastPublished": "2025-05-07T01:20:27.417Z",
+            "link": "https://www.bbc.com/hindi/articles/cy5r5wn2n7wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9e89/live/3b4940b0-2ae1-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "भारत सरकार ने बयान जारी करके कहा है कि सेना ने \"ऑपरेशन सिंदूर\" शुरू किया है.",
+            "imageAlt": "सुरक्षाबल",
+            "id": "cy5r5wn2n7wo"
+          },
+          {
+            "type": "video",
+            "duration": "PT51M22S",
+            "isLive": false,
+            "title": "पंकज कपूर: मुसद्दीलाल से मक़बूल एक्टर बनने तक-कहानी ज़िंदगी की",
+            "firstPublished": "2025-05-02T04:29:46.616Z",
+            "lastPublished": "2025-05-02T04:29:46.616Z",
+            "link": "https://www.bbc.com/hindi/articles/cy9vzq3pg0no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/df62/live/db190fc0-2713-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "लुधियाना में पैदा हुए पंकज कपूर ने अपने करियर में अभिनय, लेखन और निर्देशन के क्षेत्र में अनूठी छाप छोड़ी है. ",
+            "imageAlt": "पंकज कपूर",
+            "id": "cy9vzq3pg0no"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:907e1c33-e9dc-4b9f-b6f2-6615e886bf74",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "बीबीसी विशेष",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "व्हाट्सऐप चैनल से जुड़ें",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://whatsapp.com/channel/0029Vaf8zY1ElagsEvZ4Gp1I",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp",
+            "imageAlt": "व्हाट्सऐप चैनल से जुड़ें\n",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029Vaf8zY1ElagsEvZ4Gp1I"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://whatsapp.com/channel/0029Vaf8zY1ElagsEvZ4Gp1I",
+        "curationId": "urn:bbc:tipo:list:d160b864-7600-48fc-9793-58d11df10018",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "बीबीसी हिंदी अब व्हाट्सऐप चैनल पर",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "भारत और पाकिस्तान: किसकी सेना, कितनी मज़बूत",
+            "firstPublished": "2025-04-30T08:09:02.173Z",
+            "lastPublished": "2025-05-07T01:44:19.856Z",
+            "link": "https://www.bbc.com/hindi/articles/cm2xp04glj3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/810b/live/86491cf0-25a7-11f0-8c66-ebf25fc2cfef.jpg.webp",
+            "description": "बीते कुछ सालों में पाकिस्तान ने अपने परमाणु हथियारों के ज़ख़ीरे में बढ़ोतरी की है. लेकिन बाक़ी हथियारों के मामले में कौन किस पर भारी है?",
+            "imageAlt": "भारत और पाकिस्तान",
+            "id": "cm2xp04glj3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "पहलगाम हमले के बाद भारत और पाकिस्तान के बीच बढ़े तनाव से ईरान क्यों है बेचैन?",
+            "firstPublished": "2025-05-06T01:21:47.572Z",
+            "lastPublished": "2025-05-06T05:51:01.692Z",
+            "link": "https://www.bbc.com/hindi/articles/ce8g5z7x85yo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d3d7/live/df6efd50-2a3d-11f0-b26b-ab62c890638b.png.webp",
+            "description": "जम्मू-कश्मीर के पहलगाम में हुए हमले के बाद भारत और पाकिस्तान के बीच तनाव बढ़ गया है. इस बीच ईरान के विदेश मंत्री पाकिस्तान पहुँचे हैं. इसके बाद वो ईरान जाएंगे और फिर लौटकर भारत की यात्रा पर आएंगे.",
+            "imageAlt": "जयशंकर",
+            "id": "ce8g5z7x85yo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "पहलगाम हमला: शांति की अपील करने वाली हिमांशी को ट्रोल्स ने निशाना क्यों बनाया?",
+            "firstPublished": "2025-05-05T16:02:04.691Z",
+            "lastPublished": "2025-05-05T16:02:04.691Z",
+            "link": "https://www.bbc.com/hindi/articles/cedyq5y6zg3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7e2c/live/f3ea5710-29c6-11f0-bc22-75868d6442e8.jpg.webp",
+            "description": "पहलगाम हमले में मारे गए विनय नरवाल की पत्नी हिमांशी ने एक बयान दिया है, जिसके बाद वे सोशल मीडिया पर ट्रोल्स के निशाने पर आ गई हैं. ",
+            "imageAlt": "हिमांशी नरवाल",
+            "id": "cedyq5y6zg3o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "आईपीएलः सीएसके में उर्विल की धमाकेदार एंट्री, 2026 में खेलने पर क्या बोले धोनी?",
+            "firstPublished": "2025-05-08T02:56:49.020Z",
+            "lastPublished": "2025-05-08T02:56:49.020Z",
+            "link": "https://www.bbc.com/hindi/articles/cze1ee3w4xeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6181/live/0b9ba4f0-2bb5-11f0-b9f3-5967e5834e8d.jpg.webp",
+            "description": "इस सीज़न सीएसके की तरफ़ से डेब्यू करने वाले कई युवाओं ने अपनी धमाकेदार एंट्री से सबका ध्यान आकर्षित किया है. केकेआर के ख़िलाफ़ डेब्यू करने वाले उर्विल पटेल उनमें से एक हैं. ",
+            "imageAlt": "उर्विल पटेल",
+            "id": "cze1ee3w4xeo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "बगलिहार डैम: भारत के इस बांध से क्यों है पाकिस्तान को डर",
+            "firstPublished": "2025-05-05T07:23:35.715Z",
+            "lastPublished": "2025-05-05T07:23:35.715Z",
+            "link": "https://www.bbc.com/hindi/articles/cgjl384z5z5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dd97/live/73a66800-2985-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "बगलिहार एक हाइड्रो इलेक्ट्रिक पावर प्रोजेक्ट है जिसका निर्माण साल 1999 में शुरू हुआ था और कई चरणों के बाद इसका काम साल 2008 में पूरा हुआ था.",
+            "imageAlt": "बगलियार बांध की सांकेतिक तस्वीर",
+            "id": "cgjl384z5z5o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "वो दासी जिसकी ऑटोमन साम्राज्य के सुल्तान से हुई शादी, आज भी पहचान को लेकर रहस्य बरक़रार",
+            "firstPublished": "2025-05-06T06:26:14.698Z",
+            "lastPublished": "2025-05-06T06:26:14.698Z",
+            "link": "https://www.bbc.com/hindi/articles/ce8gkn4dkg6o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f676/live/8a2dbd40-25bf-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "हुर्रेम सुल्तान ऑटोमन साम्राज्य की सबसे प्रभावशाली महिलाओं में से एक हैं. वो ऑटोमन साम्राज्य के सबसे ताक़तवर सुल्तान 'सुलेमान द मैग्निफ़िसेंट' की पत्नी थीं.",
+            "imageAlt": "रॉक्सेलाना की तस्वीर",
+            "id": "ce8gkn4dkg6o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "टेनिस चैंपियंस तैयार करने के लिए भारत को चीन और यूरोप से क्या सबक लेने चाहिए",
+            "firstPublished": "2025-05-05T14:03:23.856Z",
+            "lastPublished": "2025-05-05T14:03:23.856Z",
+            "link": "https://www.bbc.com/hindi/articles/c209rrnl5rqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b5fa/live/ff59cac0-28e2-11f0-9f2f-f347b04268f5.jpg.webp",
+            "description": "महेश भूपति का मानना है कि चैंपियंस तैयार करने के लिए एक सिस्टम की ज़रूरत होती है, इस पर कोई समझौता नहीं किया जा सकता है.",
+            "imageAlt": "ऑस्ट्रेलिया ओपन ",
+            "id": "c209rrnl5rqo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "कैलाश मानसरोवर यात्रा: कैसे करें आवेदन, कितना होगा ख़र्च और कौन जा सकता है? ",
+            "firstPublished": "2025-05-05T05:15:51.012Z",
+            "lastPublished": "2025-05-05T06:10:18.842Z",
+            "link": "https://www.bbc.com/hindi/articles/c8dgzvd2rvgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ccfe/live/a1645530-2913-11f0-bb12-8947dfb8b9d8.jpg.webp",
+            "description": "कैलाश पर्वत और मानसरोवर झील की यात्रा के लिए आवेदन फिर से शुरू हो गया है. इसके लिए बड़ी संख्या में हिंदू आवेदन करते हैं. इनमें से कुछ ही श्रद्धालुओं को जाने का मौका मिलता है. ",
+            "imageAlt": "कैलाश मानसरोवर यात्रा",
+            "id": "c8dgzvd2rvgo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "पहलगाम में मारे गए नेपाल के सुदीप के परिवार ने बताया- उस दिन क्या हुआ था",
+            "firstPublished": "2025-05-05T03:28:35.288Z",
+            "lastPublished": "2025-05-05T03:28:35.288Z",
+            "link": "https://www.bbc.com/hindi/articles/cx20vvrkprzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c55f/live/52b6db40-2960-11f0-ac83-3d7f3b5a2ff5.jpg.webp",
+            "description": "22 अप्रैल को जम्मू-कश्मीर के पहलगाम में सुदीप अपनी माँ, बहन और जीजा के साथ थे. परिवार वालों ने बताया कि उस दिन क्या हुआ था? ",
+            "imageAlt": "पहलगाम हमला",
+            "id": "cx20vvrkprzo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c1b1cdc9-651a-4fc6-84c3-606c4a9568de",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "चर्चित रिपोर्टें",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M17S",
+            "isLive": false,
+            "title": "पाकिस्तान की तरफ़ से गोलाबारी के बीच भारत के सीमावर्ती गांव का क्या हाल?",
+            "firstPublished": "2025-05-08T12:31:23.211Z",
+            "lastPublished": "2025-05-08T12:31:23.211Z",
+            "link": "https://www.bbc.com/hindi/articles/c628392j6zeo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/76e6/live/5af85090-2bea-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "जम्मू-कश्मीर में पाकिस्तान की सीमा से लगे भारत के इस गांव में लोग अपना घर छोड़कर जा रहे हैं.",
+            "imageAlt": "सीमावर्ती गांवों में तनाव का असर",
+            "id": "c628392j6zeo"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M8S",
+            "isLive": false,
+            "title": "भारत और ब्रिटेन में फ़्री ट्रेड अग्रीमेंट पर बनी बात",
+            "firstPublished": "2025-05-07T08:07:10.534Z",
+            "lastPublished": "2025-05-07T08:07:10.534Z",
+            "link": "https://www.bbc.com/hindi/articles/c2kvkx0y0d9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/75b2/live/c6883620-2a93-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "भारत और ब्रिटेन के बीच उस कारोबारी समझौते पर बात बन गई, जिस पर बीते तीन साल से चर्चा चल रही थी.",
+            "imageAlt": "बीबीसी दुनिया",
+            "id": "c2kvkx0y0d9o"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M11S",
+            "isLive": false,
+            "title": "भारत ने मुज़फ़्फ़राबाद में जिस जगह हमला किया, वहां क्या हाल है?",
+            "firstPublished": "2025-05-07T08:05:22.706Z",
+            "lastPublished": "2025-05-07T08:05:22.706Z",
+            "link": "https://www.bbc.com/hindi/articles/c9djd6d2e79o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1f57/live/dab156b0-2b18-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "भारत की तरफ से हुए हवाई हमलों में मुज़फ़्फ़राबाद के इलाकों को भी निशाना बनाया गया.",
+            "imageAlt": "फ़रहत जावेद",
+            "id": "c9djd6d2e79o"
+          },
+          {
+            "type": "video",
+            "duration": "PT2M1S",
+            "isLive": false,
+            "title": "पाकिस्तान की वो जगह जहां भारत ने हवाई हमला किया",
+            "firstPublished": "2025-05-07T06:48:56.205Z",
+            "lastPublished": "2025-05-07T06:48:56.205Z",
+            "link": "https://www.bbc.com/hindi/articles/c0jzjqx8w3jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b325/live/c8794990-2b08-11f0-8f57-b7237f6a66e6.png.webp",
+            "description": "बीबीसी उर्दू संवाददाता उमर दराज नांगियाना ने मुरीदके से यह रिपोर्ट भेजी है, जहां ऐसा ही एक हमला हुआ है.",
+            "imageAlt": "मुरीदके शहर ",
+            "id": "c0jzjqx8w3jo"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M17S",
+            "isLive": false,
+            "title": "भारत के हमले के बाद पाकिस्तान से रिपोर्ट",
+            "firstPublished": "2025-05-07T06:06:53.529Z",
+            "lastPublished": "2025-05-07T06:06:53.529Z",
+            "link": "https://www.bbc.com/hindi/articles/c8x8xrkx9x1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c206/live/099a8660-2b08-11f0-b26b-ab62c890638b.png.webp",
+            "description": "बीबीसी उर्दू संवाददाता फ़रहत जावेद ने इस्लामाबाद से मुज़फ़्फ़राबाद के रास्ते से यह रिपोर्ट भेजी है.",
+            "imageAlt": "फ़रहत जावेद",
+            "id": "c8x8xrkx9x1o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M40S",
+            "isLive": false,
+            "title": "शेयर बाज़ार या सोना किसमें पैसा लगाना है फ़ायदेमंद- पैसा वसूल",
+            "firstPublished": "2025-05-06T14:01:03.845Z",
+            "lastPublished": "2025-05-06T14:01:03.845Z",
+            "link": "https://www.bbc.com/hindi/articles/c2dedprnw75o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ff8c/live/586e6820-2a7b-11f0-8f57-b7237f6a66e6.jpg.webp",
+            "description": "क्या सोना हमेशा ही बढ़िया रिटर्न देता है या शेयर बाज़ार उसे पछाड़ देता है, पैसा वसूल में इसी पर बात.",
+            "imageAlt": "सोना ",
+            "id": "c2dedprnw75o"
+          },
+          {
+            "type": "video",
+            "duration": "PT3M42S",
+            "isLive": false,
+            "title": "अंडरवाटर नेवल माइन क्या होती है?",
+            "firstPublished": "2025-05-06T14:00:12.382Z",
+            "lastPublished": "2025-05-06T14:00:12.382Z",
+            "link": "https://www.bbc.com/hindi/articles/c89g9l0157wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/769c/live/2b8ddee0-2a7a-11f0-8ff1-59f5dcf8e9f5.png.webp",
+            "description": "डीआरडीओ और भारतीय नौसेना ने स्वदेशी रूप से डिजाइन और विकसित बहुउद्देश्यीय ग्राउंड माइन का सफलतापूर्वक परीक्षण किया है.",
+            "imageAlt": "अंडरवाटर नेवल माइन",
+            "id": "c89g9l0157wo"
+          },
+          {
+            "type": "video",
+            "duration": "PT1M51S",
+            "isLive": false,
+            "title": "डोनाल्ड ट्रंप अब फ़िल्मों पर टैरिफ़ लगाने की तैयारी में, बताई ये वजह",
+            "firstPublished": "2025-05-06T00:45:55.839Z",
+            "lastPublished": "2025-05-06T00:45:55.839Z",
+            "link": "https://www.bbc.com/hindi/articles/cpdzw61lpxjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5b1f/live/9f7fe2e0-29c5-11f0-8c66-ebf25fc2cfef.png.webp",
+            "description": "डोनाल्ड ट्रंप अब उन फ़िल्मों पर 100 फ़ीसदी टैरिफ़ लगाने की तैयारी में हैं जो अमेरिका में नहीं बनीं.",
+            "imageAlt": "डोनाल्ड ट्रंप",
+            "id": "cpdzw61lpxjo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/hindi/topics/cw9kv0kpxydt",
+        "curationId": "urn:bbc:vivo:curation:23b426a2-6119-4c26-9c6b-b19d468186fd",
+        "curationType": "vivo-stream",
+        "position": 5,
+        "title": "मल्टीमीडिया",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c5f6/live/11c27630-24a7-11ef-a13a-0b8c563da930.png.webp",
+            "description": "देखिए सोमवार से शुक्रवार हर रात 10 बजे से BBC News Hindi  के होम पेज पर.",
+            "imageAlt": "बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fkyrgyz%2Fbbc_kyrgyz_tv%2Ftv_programmes%2Fw13xttqx%3Flimit%3D4"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:2323cbdf-5d76-425c-94e0-fe743831ce17",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "बीबीसी दुनिया",
+        "visualProminence": "MAXIMUM",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "brand",
+            "isLive": false,
+            "title": "पंकज कपूर:  ‘गांधी’ की आवाज़ बने ‘मुसद्दीलाल’ की कहानी",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/programmes/p08s9wv2",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c79f/live/b8140a50-270b-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "रंगमंच की बारीकियां सीख किरदारों में डूब जाने की कला और जुनून पंकज कपूर की पहचान है",
+            "imageAlt": "पंकज कपूर",
+            "id": "p08s9wv2"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "अमेरिकी राष्ट्रपति ट्रंप टैरिफ़ प्लान से क्या हासिल करने वाले हैं? - दुनिया जहान",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/podcasts/p05525mc",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9a87/live/f4bade60-2982-11f0-8c66-ebf25fc2cfef.jpg.webp",
+            "description": "ट्रंप ने आर्थिक जगत में हलचल मचा दी लेकिन क्या ये अमेरिका की नई शुरुआत है?",
+            "imageAlt": "Trump",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fhindi%2Fpodcasts%2Fp05525mc"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "जब अमेरिका ने वियतनाम के सामने घुटने टेके - विवेचना",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/podcasts/p0552909",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fd7b/live/6b6c0cc0-28aa-11f0-8f57-b7237f6a66e6.jpg.webp",
+            "description": "वियतनाम की पूरी लड़ाई के दौरान अमेरिकी हेलिकॉप्टरों ने करीब 3 करोड़ 60 लाख उड़ानें भरीं.",
+            "imageAlt": "हेलीकॉप्टर",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fhindi%2Fpodcasts%2Fp0552909"
+          },
+          {
+            "type": "brand",
+            "isLive": false,
+            "title": "जातिगत जनगणना से राजनीतिक दलों को हासिल क्या होगा?",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/podcasts/p0kjf03y",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0kjf0bz.jpg.webp",
+            "description": "1931 के बाद भारत में जातिगत जनगणना नहीं हुई. लेकिन कई दल लंबे समय से इसकी मांग कर रहे थे.",
+            "imageAlt": "",
+            "id": "p0kjf03y"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "दिनभर: पूरा दिन,पूरी ख़बर",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/hindi/podcasts/p09ds7zx",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5de4/live/90f049a0-8488-11ef-822c-a50726bfda2e.jpg.webp",
+            "description": "देश दुनिया की बड़ी ख़बरें",
+            "imageAlt": "दिनभर",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fhindi%2Fpodcasts%2Fp09ds7zx"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.bbc.com/hindi/topics/ckdxnkz7607t",
+        "curationId": "urn:bbc:tipo:list:32bf524e-877f-4480-a5da-8636fec4758d",
+        "curationType": "tipo-curation",
+        "position": 7,
+        "title": "पॉडकास्ट",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "यूट्यूब चैनल से जुड़ें",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/playlist?list=PLYxuvEJLss6A0bxcJJ5wKJASYN_veB0Wp",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8dd9/live/1412e260-79b8-11ef-b282-4535eb84fe4b.png.webp",
+            "description": "सोमवार से शुक्रवार शाम 7.30 बजे बीबीसी हिंदी के YouTube चैनल पर",
+            "imageAlt": "दिनभर: पूरा दिन, पूरी ख़बर सुनने के लिए यहाँ क्लिक करें",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLYxuvEJLss6A0bxcJJ5wKJASYN_veB0Wp"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:aefcd0ed-eedf-4454-b7ec-ee04fe6f2f79",
+        "curationType": "tipo-curation",
+        "position": 8,
+        "title": "दिनभर: पूरा दिन, पूरी ख़बर सुनने के लिए यहाँ क्लिक करें",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "रोहित शर्मा: 275 रुपये स्कूल फ़ीस माफ़ होने से वर्ल्ड कप चैंपियन तक",
+            "firstPublished": "2023-11-18T07:34:23.063Z",
+            "lastPublished": "2025-05-07T16:17:43.568Z",
+            "link": "https://www.bbc.com/hindi/articles/ce9p7dy1qd1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0431/live/d83e42f0-2b5c-11f0-8686-fb39aea3a90c.jpg.webp",
+            "description": "रोहित शर्मा ने टेस्ट क्रिकेट से संन्यास लेने का एलान कर दिया है. उनके करियर के शुरुआती दिनों में एक वक़्त ऐसा भी था जब आर्थिक तंगी की वजह से उनके क्रिकेट खेलने पर ही सवाल खड़ा हो गया था?",
+            "imageAlt": "रोहित शर्मा",
+            "id": "ce9p7dy1qd1o"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "उरी और पुलवामा हमले के बाद भारत-पाकिस्तान ने कैसे कम किया था तनाव? ",
+            "firstPublished": "2025-05-04T09:44:41.757Z",
+            "lastPublished": "2025-05-07T03:16:19.348Z",
+            "link": "https://www.bbc.com/hindi/articles/c9djz01093po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f540/live/722663c0-283d-11f0-b5a0-212f3662e1cf.jpg.webp",
+            "description": "भारत पर पहले भी चरमपंथी हमले हुए हैं और उस दौरान उसने सैन्य और कूटनीतिक दोनों मोर्चों से जवाब दिए हैं. देखना ये है कि इस बार तनाव कैसे कम होता है.",
+            "imageAlt": "पहलगाम हमला ",
+            "id": "c9djz01093po"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ब्रिटेन के साथ व्यापार समझौता, भारत के लिए कितना फ़ायदे का सौदा",
+            "firstPublished": "2025-05-06T16:37:39.040Z",
+            "lastPublished": "2025-05-06T16:37:39.040Z",
+            "link": "https://www.bbc.com/hindi/articles/c93g38p51pzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8081/live/423e7370-2a98-11f0-a09e-c5bdc3540c45.jpg.webp",
+            "description": "भारत और ब्रिटेन के बीच बीते तीन साल से रुक-रुक कर चल रहे एफ़टीए यानी मुक्त व्यापार समझौते पर सहमति बन गई है.",
+            "imageAlt": "निर्मला सीतारमण",
+            "id": "c93g38p51pzo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "देशभर में मॉक ड्रिल कराने के पीछे मोदी सरकार की रणनीति क्या है?",
+            "firstPublished": "2025-05-06T14:23:22.146Z",
+            "lastPublished": "2025-05-06T14:23:22.146Z",
+            "link": "https://www.bbc.com/hindi/articles/cevdvjkl2jro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8a48/live/875e64e0-2a86-11f0-b7de-9bad89ac4cd7.jpg.webp",
+            "description": "भारत के गृह मंत्रालय ने सभी राज्यों और केंद्र शासित प्रदेशों को निर्देश जारी कर सात मई को मॉक ड्रिल करने को कहा है. ",
+            "imageAlt": "नरेंद्र मोदी ",
+            "id": "cevdvjkl2jro"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 40,
+        "link": "https://www.bbc.com/hindi/topics/c9wpm0en87xt",
+        "curationId": "urn:bbc:vivo:curation:b52869c2-ba72-460c-81f8-83d48c534f39",
+        "curationType": "vivo-stream",
+        "position": 9,
+        "title": "विदेश",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "कमिंस की क़हर बरपाती गेंदबाज़ी पर फिरा पानी, हैदराबाद की आईपीएल ट्रॉफ़ी की उम्मीद टूटी",
+            "firstPublished": "2025-05-06T02:17:08.583Z",
+            "lastPublished": "2025-05-06T02:17:08.583Z",
+            "link": "https://www.bbc.com/hindi/articles/cgkgl6k4pxzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4339/live/ab1bebb0-2a1c-11f0-8506-9123fea60c8a.jpg.webp",
+            "description": "पैट कमिंस की गेंदबाज़ी के क़हर पर बारिश ने पानी फेर दिया. बारिश की वजह से मैच पूरा नहीं होने से दोनों टीमों में एक-एक अंक बंट गया.",
+            "imageAlt": "पैट कमिंस",
+            "id": "cgkgl6k4pxzo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "आईपीएलः केकेआर मैच जीता, पर 6 गेंदों पर दनदनाते 6 छक्के जमाकर इतिहास रच गए रियान",
+            "firstPublished": "2025-05-05T01:28:45.530Z",
+            "lastPublished": "2025-05-05T01:28:45.530Z",
+            "link": "https://www.bbc.com/hindi/articles/c4grnx2kwrpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bcfe/live/f1e95990-295b-11f0-8f57-b7237f6a66e6.jpg.webp",
+            "description": "रियान पराग की धुआंधार सेंचुरी के बावजूद अंतिम ओवर में कैसे चूक गई राजस्थान रॉयल्स की टीम.",
+            "imageAlt": "रियान पराग",
+            "id": "c4grnx2kwrpo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "इस मैच में 14 गेंद पर फ़िफ़्टी और हैरतअंगेज़ प्रदर्शनों की जगह अंपायर चर्चा में क्यों?",
+            "firstPublished": "2025-05-04T02:36:19.594Z",
+            "lastPublished": "2025-05-04T02:36:19.594Z",
+            "link": "https://www.bbc.com/hindi/articles/cgqvwgvenxno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cf67/live/9c1f6100-288c-11f0-82c6-79afee6247a2.jpg.webp",
+            "description": "बीती रात बेंगलुरु और चेन्नई के बीच एक ऐसा मुक़ाबला खेला गया, जहां न केवल इसे देखने वालों की, बल्कि मैदान पर मौजूद बेंगलुरु के कप्तान की धड़कनें भी बेकाबू हो गईं.",
+            "imageAlt": "आईपीएल",
+            "id": "cgqvwgvenxno"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "गुजरात टाइटंस की जीत हुई ज़रूर लेकिन चर्चा शुभमन गिल के आउट होने की क्यों हो रही है?",
+            "firstPublished": "2025-05-03T02:48:57.440Z",
+            "lastPublished": "2025-05-03T02:48:57.440Z",
+            "link": "https://www.bbc.com/hindi/articles/cedy31d9192o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6b39/live/9188dd90-27c2-11f0-83af-8701ab8d32c0.jpg.webp",
+            "description": "गुजरात टाइटंस ने प्लेऑफ़ में स्थान बनाने की तरफ़ एक कदम और बढ़ा लिया है. वह सनराइज़र्स हैदराबाद को 38 रन से हराकर अंकतालिका में दूसरे स्थान पर पहुंच गई है.",
+            "imageAlt": "शुभमन गिल ",
+            "id": "cedy31d9192o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 37,
+        "link": "https://www.bbc.com/hindi/topics/cwr9j8g1kj9t",
+        "curationId": "urn:bbc:vivo:curation:082ded67-cb5f-4606-8769-5b1cf48e44a1",
+        "curationType": "vivo-stream",
+        "position": 10,
+        "title": "खेल",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "बाबिल: इरफ़ान ख़ान के बेटे का वायरल वीडियो और उसे लेकर उठते सवाल",
+            "firstPublished": "2025-05-06T07:39:07.344Z",
+            "lastPublished": "2025-05-06T07:39:07.344Z",
+            "link": "https://www.bbc.com/hindi/articles/c33zg0lk31xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b32e/live/2565d7b0-2a35-11f0-8ca8-2f44cccb0f35.jpg.webp",
+            "description": "बाबिल की तारीफ़ करते हुए फ़िल्म निर्देशक कहते हैं कि वो अपने पिता इरफ़ान की ही तरह, बेहद गहरे और प्रतिभाशाली हैं. लेकिन उनके एक वायरल वीडियो की वजह से अब कई सवाल खड़े हो रहे हैं.",
+            "imageAlt": "बाबिल",
+            "id": "c33zg0lk31xo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "फ़िल्म अभिनेता एजाज़ ख़ान के शो 'हाउस अरेस्ट' पर क्यों मचा है हंगामा?",
+            "firstPublished": "2025-05-03T09:39:43.723Z",
+            "lastPublished": "2025-05-03T09:39:43.723Z",
+            "link": "https://www.bbc.com/hindi/articles/c62xy96wy0eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d681/live/5a673210-27e2-11f0-9f2e-a3a783ccb5a1.jpg.webp",
+            "description": "एजाज़ ख़ान पहले भी कई बार विवादों में रहे हैं. इस बार उनपर 'अश्लील कंटेंट' को लेकर आरोप लगा है.",
+            "imageAlt": "एजाज़ ख़ान",
+            "id": "c62xy96wy0eo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "'गांधी' फ़िल्म के कारण जब गई पंकज कपूर की नौकरी",
+            "firstPublished": "2025-05-02T08:01:47.725Z",
+            "lastPublished": "2025-05-02T08:01:47.725Z",
+            "link": "https://www.bbc.com/hindi/articles/c9qwrjp8zpgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/48da/live/81b524b0-274e-11f0-8f57-b7237f6a66e6.jpg.webp",
+            "description": "गांधी फ़िल्म में काम करने का पंकज कपूर का सफ़र आसान नहीं था. इस फ़िल्म में काम करने की वजह से उन्हें अपनी नौकरी तक गंवानी पड़ी. आइए मिलते हैं पंकज कपूर से और जानते हैं उनकी ज़िंदगी के अहम पहलुओं के बारे में.\n",
+            "imageAlt": "पंकज कपूर",
+            "id": "c9qwrjp8zpgo"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "परेश रावल का दावा- पेशाब पीने से हुए थे ठीक, क्या मूत्र पीने से बीमारी या चोट ठीक हो सकती है?",
+            "firstPublished": "2025-04-29T12:11:56.983Z",
+            "lastPublished": "2025-04-29T12:11:56.983Z",
+            "link": "https://www.bbc.com/hindi/articles/cpq73gnr8r1o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5f73/live/a6df1c10-24dc-11f0-b9f4-a31b3d6bba36.jpg.webp",
+            "description": "फ़िल्म अभिनेता और बीजेपी नेता परेश रावल का वो बयान सोशल मीडिया पर वायरल हो रहा है, जिसमें उन्होंने कहा था कि उन्हें अपना पेशाब पीने से  घुटने की चोट से उबरने में मदद मिली.",
+            "imageAlt": "परेश रावल ",
+            "id": "cpq73gnr8r1o"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 9,
+        "link": "https://www.bbc.com/hindi/topics/c06gq3n0pp7t",
+        "curationId": "urn:bbc:vivo:curation:081e2e1c-8bb7-4de5-a640-4333aa19a009",
+        "curationType": "vivo-stream",
+        "position": 11,
+        "title": "मनोरंजन",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "टैरिफ़ वॉर के बीच क्या एप्पल के इस क़दम से भारत को होगा फ़ायदा?",
+            "firstPublished": "2025-05-02T16:02:36.195Z",
+            "lastPublished": "2025-05-02T16:02:36.195Z",
+            "link": "https://www.bbc.com/hindi/articles/czrvz25yx4ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4932/live/cdc9b6c0-276e-11f0-8c66-ebf25fc2cfef.jpg.webp",
+            "description": "टैरिफ वॉर की वजह से एप्पल ऐसा कौन सा क़दम उठाने जा रही है जिससे माना जा रहा है कि भारत को बड़ा फ़ायदा पहुंच सकता है. ",
+            "imageAlt": "टैरिफ़ वॉर",
+            "id": "czrvz25yx4ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "पृथ्वी के केंद्र में कितना लोहा है? धरती के बारे में 10 दिलचस्प बातें",
+            "firstPublished": "2025-04-22T04:39:34.778Z",
+            "lastPublished": "2025-04-22T04:39:34.778Z",
+            "link": "https://www.bbc.com/hindi/articles/ce8grxyd18ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a34a/live/c2f529a0-1f35-11f0-80b3-83959215671c.jpg.webp",
+            "description": "पृथ्वी दिवस कब और क्यों मनाया जाता है, अपनी धरती के बारे में क्या ये 10 बातें जानते हैं आप? ",
+            "imageAlt": "आँखों की पुतली में पृथ्वी का ग्राफ़िक्स",
+            "id": "ce8grxyd18ro"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "आइंस्टाइन जिन तीन चीज़ों पर ग़लत साबित हुए",
+            "firstPublished": "2025-04-21T14:38:55.342Z",
+            "lastPublished": "2025-04-21T14:38:55.342Z",
+            "link": "https://www.bbc.com/hindi/articles/ckgevrd222ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/246f/live/efb54240-13b4-11f0-92ad-eb42d450dc76.jpg.webp",
+            "description": "आइंस्टाइन को दुनिया का सबसे महान वैज्ञानिक माना जाता है, लेकिन आइंस्टाइन की 70वीं पुण्यतिथि हम तीन ऐसे उदाहरण दे रहे हैं, जहाँ उन्होंने ख़ुद के ग़लत होने को स्वीकार किया था. ",
+            "imageAlt": "अल्बर्ट आइंस्टाइन ",
+            "id": "ckgevrd222ko"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "वैज्ञानिकों को मिले पृथ्वी से दूर इस ग्रह पर जीवन के संकेत, कब तक मिलेंगे पुख़्ता सुबूत?",
+            "firstPublished": "2025-04-17T07:45:02.738Z",
+            "lastPublished": "2025-04-17T07:45:02.738Z",
+            "link": "https://www.bbc.com/hindi/articles/cy5r0dg461zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2164/live/28f6cba0-1b58-11f0-b1b3-7358f8d35a35.jpg.webp",
+            "description": "कैंब्रिज के वैज्ञानिकों को पृथ्वी से दूर एक ऐसे ग्रह होने के संकेत मिले हैं, जहां जीवन संभव है. ",
+            "imageAlt": "नए ग्रह का एक काल्पनिक चित्र ",
+            "id": "cy5r0dg461zo"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 11,
+        "link": "https://www.bbc.com/hindi/topics/c2lej0594knt",
+        "curationId": "urn:bbc:vivo:curation:4a940cc1-6bbe-443f-8bb4-efd2302588d5",
+        "curationType": "vivo-stream",
+        "position": 12,
+        "title": "विज्ञान-टेक्नॉलॉजी",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "WhatsApp",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://bit.ly/4gA4bwJ",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7a76/live/81f7b470-eac7-11ee-9410-0f893255c2a0.png.webp",
+            "imageAlt": "WhatsApp",
+            "id": "https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VaUm1Ss3WHTbgIXrjw3D"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Facebook",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/bbchindi",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c624/live/0631c950-5ee2-11ee-954a-413268577267.png.webp",
+            "imageAlt": "Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2Fbbcnewsbrasil%2F"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "X",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://x.com/BBCHindi",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ea9e/live/bb332d90-5ee1-11ee-954a-413268577267.png.webp",
+            "imageAlt": "X logo",
+            "id": "https%3A%2F%2Ftwitter.com%2Fbbcbrasil%3Flang%3Den"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "YouTube",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/user/bbchindi",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/048e/live/ef849480-5ee1-11ee-8feb-1f7179b2c49b.png.webp",
+            "imageAlt": "YouTube logo",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fuser%2FBBCBrasil"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Instagram",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbchindi/",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/df6c/live/d34c7580-5ee1-11ee-954a-413268577267.png.webp",
+            "imageAlt": "Instagram logo",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcbrasil%2F%3Fhl%3Den"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:fb0b42ad-56c3-4482-b0fc-0d03fd43c963",
+        "curationType": "tipo-curation",
+        "position": 13,
+        "title": "सोशल मीडिया पर फ़ॉलो करें",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 14,
+        "title": "सबसे अधिक पढ़ी गईं",
+        "visualProminence": "NORMAL",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/hindi/popular/read",
+        "mostRead": {
+          "generated": "2025-05-08T14:10:17.401Z",
+          "lastRecordTimeStamp": "2025-05-08T14:08:00Z",
+          "firstRecordTimeStamp": "2025-05-08T13:53:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:cx2jgwp0je1o",
+              "rank": 1,
+              "title": "पाकिस्तान भारत के मिसाइल हमलों को क्यों नहीं रोक पाया?",
+              "href": "https://www.bbc.com/hindi/articles/cx2jgwp0je1o",
+              "timestamp": "2025-05-08T11:18:26.112Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "मिसाइल रोधी रक्षा प्रणाली में रडार और अन्य उपकरण होते हैं जो हमलावर विमानों का पता लगाते हैं ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "मिसाइल रोधी रक्षा प्रणाली में रडार और अन्य उपकरण होते हैं जो हमलावर विमानों का पता लगाते हैं ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "पाकिस्तानी एयर डिफ़ेंस सिस्टम",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "पाकिस्तानी एयर डिफ़ेंस सिस्टम",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 537,
+                        "locator": "028f/live/70a48160-2bf0-11f0-b26b-ab62c890638b.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c365nejek65o",
+              "rank": 2,
+              "title": "लाहौर का एयर डिफ़ेंस सिस्टम तबाह करने का भारत का दावा, पाकिस्तान ने 25 भारतीय ड्रोन गिराने का दावा किया",
+              "href": "https://www.bbc.com/hindi/articles/c365nejek65o",
+              "timestamp": "2025-05-08T11:57:44.286Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "भारत के हवाई हमलों के बाद पाकिस्तान में कई जगहों पर सुरक्षाकर्मियों का तलाशी अभियान",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "भारत के हवाई हमलों के बाद पाकिस्तान में कई जगहों पर सुरक्षाकर्मियों का तलाशी अभियान",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "भारत-पाकिस्तान तनाव",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "भारत-पाकिस्तान तनाव",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 877,
+                        "height": 493,
+                        "locator": "93f7/live/3790be20-2bf5-11f0-b1de-7559cc68415f.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cz703jn7y2wo",
+              "rank": 3,
+              "title": "भारत-पाकिस्तान के बीच बढ़े तनाव की दुनिया भर में चर्चा, क्या कह रहा है अंतरराष्ट्रीय मीडिया?",
+              "href": "https://www.bbc.com/hindi/articles/cz703jn7y2wo",
+              "timestamp": "2025-05-08T07:54:09.400Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "तबाह हुई अब्बास मस्जिद",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "तबाह हुई अब्बास मस्जिद",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 683,
+                        "locator": "70f4/live/d0375e00-2be5-11f0-b26b-ab62c890638b.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cddedl5vdq4o",
+              "rank": 4,
+              "title": "चीन क्यों नहीं चाहेगा कि भारत और पाकिस्तान के बीच युद्ध हो?",
+              "href": "https://www.bbc.com/hindi/articles/cddedl5vdq4o",
+              "timestamp": "2025-05-08T04:59:40.545Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "पाकिस्तान के ख़िलाफ़ भारत की कार्रवाई पर चीन ने प्रतिक्रिया दी है. (फ़ाइल फ़ोटो)",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "पाकिस्तान के ख़िलाफ़ भारत की कार्रवाई पर चीन ने प्रतिक्रिया दी है. (फ़ाइल फ़ोटो)",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "नरेंद्र मोदी, शी जिनपिंग और शहबाज़ शरीफ़",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "नरेंद्र मोदी, शी जिनपिंग और शहबाज़ शरीफ़",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 800,
+                        "height": 449,
+                        "locator": "cf43/live/4a426e10-2bc3-11f0-8f57-b7237f6a66e6.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c3r8rzpz881o",
+              "rank": 5,
+              "title": "भारत का हवाई हमला: अमेरिका, इसराइल,  चीन, रूस और तुर्की  क्या बोले?",
+              "href": "https://www.bbc.com/hindi/articles/c3r8rzpz881o",
+              "timestamp": "2025-05-07T13:28:32.557Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "शहबाज़ शरीफ़ और नरेंद्र मोदी",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "शहबाज़ शरीफ़ और नरेंद्र मोदी",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1265,
+                        "height": 730,
+                        "locator": "de40/live/2e3d6e70-2b3e-11f0-b26b-ab62c890638b.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cgjljw6xq4jo",
+              "rank": 6,
+              "title": "भारत ने बहावलपुर को निशाना क्यों बनाया?",
+              "href": "https://www.bbc.com/hindi/articles/cgjljw6xq4jo",
+              "timestamp": "2025-05-08T06:43:20.448Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "भारत का 'ऑपरेशन सिंदूर'",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "भारत का 'ऑपरेशन सिंदूर'",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 647,
+                        "height": 364,
+                        "locator": "4d7d/live/0b542c20-2beb-11f0-b26b-ab62c890638b.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c5yq871757po",
+              "rank": 7,
+              "title": "कौन है द रेज़िस्टेंस फ़्रंट ग्रुप जिसका नाम पहलगाम हमले में आ रहा है?",
+              "href": "https://www.bbc.com/hindi/articles/c5yq871757po",
+              "timestamp": "2025-05-08T14:02:11.051Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "22 अप्रैल को पहलगाम में पर्यटकों पर हमला हुआ था जिसमें 26 लोग मारे गए थे. ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "22 अप्रैल को पहलगाम में पर्यटकों पर हमला हुआ था जिसमें 26 लोग मारे गए थे. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "पहलगाम",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "पहलगाम",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "8b52/live/6c11f130-2c01-11f0-8da1-ad2bbee6cda5.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cly2ypjrkp2o",
+              "rank": 8,
+              "title": "पाकिस्तान क्या भारतीय हवाई हमले का जवाब देगा? चार बड़े सवाल",
+              "href": "https://www.bbc.com/hindi/articles/cly2ypjrkp2o",
+              "timestamp": "2025-05-08T02:01:30.773Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "मंगलवार को श्रीनगर में सड़क पर पहरा देते भारतीय अर्धसैनिक बल के जवान",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "मंगलवार को श्रीनगर में सड़क पर पहरा देते भारतीय अर्धसैनिक बल के जवान",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "मंगलवार को श्रीनगर में सड़क पर पहरा देते भारतीय अर्धसैनिक बल के जवान",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "मंगलवार को श्रीनगर में सड़क पर पहरा देते भारतीय अर्धसैनिक बल के जवान",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 576,
+                        "locator": "22b4/live/e77fb840-2b5f-11f0-8ff1-59f5dcf8e9f5.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "AFP via Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c9343dq12z4o",
+              "rank": 9,
+              "title": "भारत का मिसाइल और एयर डिफ़ेंस सिस्टम पाकिस्तान की तुलना में कैसा है?",
+              "href": "https://www.bbc.com/hindi/articles/c9343dq12z4o",
+              "timestamp": "2025-05-07T04:52:04.328Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "भारत की अग्नि मिसाइल की क्षमता पाकिस्तान की शाहीन सिरीज़ से अधिक है",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "भारत की अग्नि मिसाइल की क्षमता पाकिस्तान की शाहीन सिरीज़ से अधिक है",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "पाकिस्तान",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "पाकिस्तान",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 915,
+                        "height": 515,
+                        "locator": "57b0/live/6e4d8b30-2b02-11f0-b266-09b83b28415a.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c77n7zz1zg2o",
+              "rank": 10,
+              "title": "भारत के 'ऑपरेशन सिंदूर' पर मीडिया को जानकारी देने वाली दो महिला अधिकारी कौन हैं?",
+              "href": "https://www.bbc.com/hindi/articles/c77n7zz1zg2o",
+              "timestamp": "2025-05-07T09:06:53.373Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "विंग कमांडर व्योमिका सिंह और कर्नल सोफ़िया क़ुरैशी चर्चा में हैं",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "विंग कमांडर व्योमिका सिंह और कर्नल सोफ़िया क़ुरैशी चर्चा में हैं",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "भारत का 'ऑपरेशन सिंदूर'",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "भारत का 'ऑपरेशन सिंदूर'",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1148,
+                        "height": 646,
+                        "locator": "074b/live/63f5e6d0-2b3b-11f0-bb67-13fec63813db.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
             }
+          ]
         }
-    },
-    "contentType": "application/json; charset=utf-8"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c6z8lgd39q7t",
+        "contentType": "index-home",
+        "pageIdentifier": "hindi.page",
+        "pageTitle": "BBC News हिंदी"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

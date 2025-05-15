@@ -5439,8 +5439,8 @@ module.exports = () => ({
           },
           local: {
             paths: [
-              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t', // Episode
-              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t.lite', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xtwkxr1xtlz', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xtwkxr1xtlz.lite', // Episode
             ],
             enabled: true,
           },
