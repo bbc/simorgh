@@ -1,17 +1,18 @@
 /** @jsx jsx */
 import { useCallback, useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
-import { NavigationButtonsProp } from '#app/models/types/portraitVideo';
+import { PortraitVideoCarouselNavigation } from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles, { PROMO_ITEM_WIDTH } from './index.styles';
+import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
+import { PROMO_ITEM_WIDTH } from '..';
 
 const defaultTranslations = {
-  scrollLeftAria: 'Scroll left',
-  scrollRightAria: 'Scroll right',
+  scrollLeft: 'Scroll left',
+  scrollRight: 'Scroll right',
 };
 
-export default ({ scrollPaneRef }: NavigationButtonsProp) => {
+export default ({ scrollPaneRef }: PortraitVideoCarouselNavigation) => {
   const { dir } = useContext(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -19,7 +20,7 @@ export default ({ scrollPaneRef }: NavigationButtonsProp) => {
     translations: { carousel = defaultTranslations },
   } = useContext(ServiceContext);
 
-  const { scrollLeftAria, scrollRightAria } = carousel;
+  const { scrollLeft: scrollLeftAria, scrollRight: scrollRightAria } = carousel;
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;

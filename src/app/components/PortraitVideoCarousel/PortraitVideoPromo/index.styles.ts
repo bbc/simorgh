@@ -1,10 +1,9 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-
-export const PROMO_ITEM_WIDTH = 180; // fixed width for one promo item
+import { PROMO_ITEM_WIDTH } from '..';
 
 const styles = {
-  promoItemButton: ({ mq }: Theme) =>
+  button: ({ mq }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -39,7 +38,7 @@ const styles = {
       zIndex: 1,
     }),
 
-  promoHeading: ({ fontVariants, palette }: Theme) =>
+  heading: ({ fontVariants, palette }: Theme) =>
     css({
       position: 'relative',
       color: palette.WHITE,

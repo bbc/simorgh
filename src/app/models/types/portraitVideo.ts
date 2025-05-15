@@ -1,6 +1,6 @@
 import { RefObject } from 'react';
 
-export interface PortraitVideoItemProps {
+export interface PortraitVideoPromoProps {
   id: string;
   headlines?: {
     primaryHeadline?: string;
@@ -19,7 +19,7 @@ export interface PortraitVideoItemProps {
     source?: string;
     height?: number;
     width?: number;
-    orientation?: 'portrait' | 'landscape';
+    orientation?: ScreenOrientation;
   }[];
   video?: {
     id: string;
@@ -40,6 +40,11 @@ export interface PortraitVideoItemProps {
   key?: string;
 }
 
-export interface NavigationButtonsProp {
+export interface PortraitVideoCarouselNavigation {
   scrollPaneRef: RefObject<HTMLDivElement | null>;
+}
+
+export interface PortraitVideoCarouselProps {
+  title: string;
+  items: PortraitVideoPromoProps[];
 }

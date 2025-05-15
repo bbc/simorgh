@@ -3,17 +3,17 @@
 import { jsx } from '@emotion/react';
 import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { PortraitVideoItemProps } from '#app/models/types/portraitVideo';
+import {
+  PortraitVideoCarouselProps,
+  PortraitVideoPromoProps,
+} from '#app/models/types/portraitVideo';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
-import PortraitCarouselNavigation from './PortraitCarouselNavigation';
+import PortraitCarouselNavigation from './PortraitVideoCarouselNavigationfor';
 
-interface PortraitVideoCarouselProps {
-  title: string;
-  items: PortraitVideoItemProps[];
-}
+export const PROMO_ITEM_WIDTH = 180;
 
 const PortraitVideoCarousel = ({
   title,
@@ -23,9 +23,9 @@ const PortraitVideoCarousel = ({
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] =
-    useState<PortraitVideoItemProps | null>(null);
+    useState<PortraitVideoPromoProps | null>(null);
 
-  const handlePromoClick = (item: PortraitVideoItemProps) => {
+  const handlePromoClick = (item: PortraitVideoPromoProps) => {
     if (item.video) {
       setSelectedItem(item);
       setIsModalOpen(true);
@@ -59,7 +59,7 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(item)}
               />
             ))}
-            <div css={[styles.promoItem, styles.endBlankItem]} />
+            <div css={[styles.promo, styles.endBlankItem]} />
           </div>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
         </div>

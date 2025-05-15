@@ -2,8 +2,6 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
-export const PROMO_ITEM_WIDTH = 180; // fixed width for one promo item
-
 const styles = {
   buttonGroupOverlay: ({ mq }: Theme) =>
     css({

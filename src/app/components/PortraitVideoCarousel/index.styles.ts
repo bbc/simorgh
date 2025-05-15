@@ -1,7 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-
-export const PROMO_ITEM_WIDTH = 180; // fixed width for one promo item
+import { PROMO_ITEM_WIDTH } from '.';
 
 const styles = {
   heading: ({ fontSizes, fontVariants, palette }: Theme) =>
@@ -31,7 +30,7 @@ const styles = {
       flex: 1,
       padding: `${spacings.FULL}rem 0`,
     }),
-  promoItem: ({ mq }: Theme) =>
+  promo: ({ mq }: Theme) =>
     css({
       scrollSnapAlign: 'start',
       flex: '0 0 35%',

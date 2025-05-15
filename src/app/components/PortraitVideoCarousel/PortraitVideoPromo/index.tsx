@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { PortraitVideoItemProps } from '#app/models/types/portraitVideo';
+import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
 import Image from '#app/components/Image';
 import Heading from '../../Heading';
 import styles from './index.styles';
 
-export default (item: PortraitVideoItemProps) => {
+export default (item: PortraitVideoPromoProps) => {
   const { images, headlines, onClick } = item;
 
   const imageUrl = images?.[0]?.url;
@@ -13,12 +13,12 @@ export default (item: PortraitVideoItemProps) => {
   const headline = headlines?.promoHeadline || '';
 
   return (
-    <button type="button" onClick={onClick} css={styles.promoItemButton}>
+    <button type="button" onClick={onClick} css={styles.button}>
       {imageUrl && (
         <Image alt={alt} src={imageUrl} css={styles.image} lazyLoad />
       )}
       <div css={styles.gradientOverlay}>
-        <Heading level={3} size="longPrimer" css={styles.promoHeading}>
+        <Heading level={3} size="longPrimer" css={styles.heading}>
           {headline}
         </Heading>
       </div>
