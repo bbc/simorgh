@@ -3,6 +3,7 @@ export default {
   ads: {
     enabled: false,
   },
+  articleLiteSiteLink: { enabled: true },
   chartbeatAnalytics: {
     enabled: true,
   },
@@ -15,6 +16,9 @@ export default {
     enabled: true,
   },
   include: {
+    enabled: true,
+  },
+  midArticleOnwardJourney: {
     enabled: true,
   },
   mostRead: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server.node';
 import { Helmet } from 'react-helmet';
 import { JSDOM } from 'jsdom';
 import dotenv from 'dotenv';
@@ -8,21 +8,26 @@ import DocumentComponent from './component';
 
 Helmet.canUseDOM = false;
 
-jest.mock('#src/server/utilities/liteATITracking', () =>
-  function liteATIClickTracking() {
-    return 'Tracking script placeholder';
+jest.mock(
+  '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon',
+  () => {
+    const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
+      return 'Add process client device and send static beacon to window placeholder';
+    };
+
+    return { addProcessClientDeviceAndSendStaticBeaconToWindow };
+  },
+);
+
+jest.mock('#app/lib/analyticsUtils/staticATITracking/clickTracking', () =>
+  function clickTracking() {
+    return 'Click tracking placeholder';
   }.toString(),
 );
 
-jest.mock('#src/server/utilities/liteATITracking/clickTracking', () =>
-  function liteATIClickTracking() {
-    return 'Click script placeholder';
-  }.toString(),
-);
-
-jest.mock('#src/server/utilities/liteATITracking/viewTracking', () =>
-  function liteATIClickTracking() {
-    return 'View script placeholder';
+jest.mock('#app/lib/analyticsUtils/staticATITracking/viewTracking', () =>
+  function viewTracking() {
+    return 'View tracking placeholder';
   }.toString(),
 );
 

@@ -20,6 +20,8 @@ const useOptimizelyMvtVariation = id => {
   const isEnabled = experiment.enabled;
   const variation = isEnabled && experiment.variation;
 
+  if (!variation || variation === 'false') return null;
+
   if (variation) activateExperiment(optimizely, id, variation);
 
   return variation;
