@@ -17,7 +17,6 @@ jobs:
       LOG_LEVEL: 'error'
       CYPRESS_SKIP_EU: true
       CYPRESS_SMOKE: true
-      BFF_PATH: 'https://web-cdn.test.api.bbci.co.uk/fd/simorgh-bff'
       CYPRESS_APP_ENV: 'local'
 
     steps:
