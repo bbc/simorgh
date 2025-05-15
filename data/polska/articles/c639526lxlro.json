@@ -16,17 +16,13 @@
           "timeUpdated": "2025-03-26T10:40:12.938Z"
         },
         "id": "urn:bbc:ares::article:c639526lxlro",
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c639526lxlro"
-        },
+        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c639526lxlro" },
         "type": "article",
         "createdBy": "Polska",
         "language": "pl",
         "firstPublished": 1742985612938,
         "lastPublished": 1742985612938,
-        "options": {
-          "includeComments": false
-        },
+        "options": { "includeComments": false },
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c639526lxlro",
           "producer": "BBC",
@@ -64,37 +60,32 @@
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false,
-        "breakingNews": {
-          "isBreaking": false
-        },
+        "breakingNews": { "isBreaking": false },
         "useSensitiveOnwardJourneys": false,
-        "stats": {
-          "readTime": 1,
-          "wordCount": 117
-        },
+        "stats": { "readTime": 1, "wordCount": 117 },
         "isTransliterated": false
       },
       "content": {
         "model": {
           "blocks": [
             {
-              "id": "4407707e",
+              "id": "3d9f5223",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "525cb69e",
+                    "id": "86610ea0",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2ef3ebf4",
+                          "id": "43cf1494",
                           "type": "paragraph",
                           "model": {
                             "text": "Polski artykuł testowy",
                             "blocks": [
                               {
-                                "id": "7d676541",
+                                "id": "0b437b02",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Polski artykuł testowy",
@@ -115,7 +106,7 @@
               "position": [1]
             },
             {
-              "id": "bdcb89be",
+              "id": "4a0693aa",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1742985612938,
@@ -124,19 +115,19 @@
               "position": [2]
             },
             {
-              "id": "ba046fd0",
+              "id": "36fb6a5c",
               "type": "text",
               "model": {
                 "suitableForAbridgement": false,
                 "blocks": [
                   {
-                    "id": "1446bf67",
+                    "id": "52a99d89",
                     "type": "paragraph",
                     "model": {
                       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue dwa piwa proszę non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
                       "blocks": [
                         {
-                          "id": "fd46fcad",
+                          "id": "ca90e878",
                           "type": "fragment",
                           "model": {
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue dwa piwa proszę non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
@@ -153,28 +144,28 @@
               "position": [3]
             },
             {
-              "id": "1ceb0a57",
+              "id": "69c45360",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "22ea8eff",
+                    "id": "9823bd3c",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "19ffa725",
+                          "id": "f9d5ef7c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d7210570",
+                                "id": "a5b4858c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Rzeszow",
                                   "blocks": [
                                     {
-                                      "id": "8a23b6d8",
+                                      "id": "a6f1e006",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Rzeszow",
@@ -195,7 +186,7 @@
                     "position": [4, 1]
                   },
                   {
-                    "id": "23213682",
+                    "id": "08c182b8",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -212,19 +203,19 @@
               "position": [4]
             },
             {
-              "id": "1a72dd06",
+              "id": "71bb829c",
               "type": "text",
               "model": {
                 "suitableForAbridgement": false,
                 "blocks": [
                   {
-                    "id": "b456cd2f",
+                    "id": "582af062",
                     "type": "paragraph",
                     "model": {
                       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
                       "blocks": [
                         {
-                          "id": "454756dd",
+                          "id": "4a24228b",
                           "type": "fragment",
                           "model": {
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
@@ -240,20 +231,7 @@
               },
               "position": [5]
             },
-            {
-              "id": "86b617e8",
-              "type": "mpu",
-              "model": {},
-              "position": [6]
-            },
-            {
-              "id": "488352fe",
-              "type": "wsoj",
-              "model": {
-                "type": "recommendations"
-              },
-              "position": [7]
-            }
+            { "id": "2f28545e", "type": "mpu", "model": {}, "position": [6] }
           ]
         }
       },
@@ -346,10 +324,7 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": {
-                            "text": "",
-                            "attributes": []
-                          }
+                          "model": { "text": "", "attributes": [] }
                         }
                       ]
                     }
@@ -360,9 +335,7 @@
           ]
         },
         "serviceIdentifier": "Polska",
-        "breakingNews": {
-          "isBreaking": false
-        },
+        "breakingNews": { "isBreaking": false },
         "consumableAsSFV": false
       }
     },
