@@ -59,6 +59,40 @@ export const COMPONENTS = {
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
+  // Component Views & Clicks - Click Per View Model
+  Object.values(COMPONENTS).forEach(component => {
+    const viewClickEventRegex = new RegExp(
+      `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
+      'g',
+    );
+
+    // Component Views
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          ati: viewClickEventRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-ati-view`);
+
+    // Component Clicks
+    cy.intercept(
+      {
+        url: `${atiUrl}/*`,
+        query: {
+          atc: viewClickEventRegex,
+        },
+      },
+      request => {
+        request.reply({ statusCode: 200 });
+      },
+    ).as(`${component}-ati-click`);
+  });
+
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
     const viewabilityViewRegex = new RegExp(

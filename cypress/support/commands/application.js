@@ -145,7 +145,23 @@ export const getPageDataFromWindow = () => {
   });
 };
 
+export const getApplicationType = () => {
+  cy.url().then(url => {
+    switch (url) {
+      case url.includes('.lite'):
+        return 'lite';
+      case url.includes('.amp'):
+        return 'amp';
+      case url.includes('.app'):
+        return 'app';
+      default:
+        return 'responsive'; // 'responsive' is considered 'canonical' in this context
+    }
+  });
+};
+
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 Cypress.Commands.add('testResponseCodeAndTypeRetry', testResponseCodeAndType);
 Cypress.Commands.add('getPageData', getPageData);
 Cypress.Commands.add('getPageDataFromWindow', getPageDataFromWindow);
+Cypress.Commands.add('getApplicationType', getApplicationType);
