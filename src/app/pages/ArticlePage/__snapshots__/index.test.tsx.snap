@@ -826,7 +826,9 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -2219,7 +2221,9 @@ exports[`Article Page should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -3074,7 +3078,9 @@ exports[`Article Page should render a news article with headline in the middle c
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -3315,7 +3321,9 @@ exports[`Article Page should render a news article without headline correctly 1`
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -4400,7 +4408,9 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
