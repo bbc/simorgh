@@ -1,6 +1,7 @@
 import {
   CLICK_EVENT,
   VIEW_EVENT,
+  VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
@@ -543,7 +544,7 @@ export const buildReverbPageSectionEventModel = ({
       },
       event: {
         category: 'viewability',
-        action: type === CLICK_EVENT ? 'select' : 'view',
+        action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
       },
       isClick: type === 'click',
       ...(experimentVariant && {
