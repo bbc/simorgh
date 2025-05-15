@@ -380,7 +380,11 @@ const canonicalTestSuites = [
     path: '/polska',
     runforEnv: ['test'],
     service: 'polska',
-    tests: [assertPageView],
+    tests: [
+      assertPageView,
+      assertMessageBannerComponentView,
+      assertMessageBannerComponentClick,
+    ],
   },
   {
     path: '/polska/articles/c639526lxlro',
