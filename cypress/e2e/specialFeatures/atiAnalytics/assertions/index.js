@@ -33,6 +33,10 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x5'); // url
   }
 
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
+
   if (contentType !== 'list-datadriven') {
     expect(params).to.have.property('x1'); // content ID
   }
@@ -47,6 +51,7 @@ const assertATIPageViewEventParamsExist = ({
 
 const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('ati'); // view event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -58,6 +63,7 @@ const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
 
 const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('atc'); // click event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -142,12 +148,15 @@ const assertClickPerViewModelViewEvent = ({
   contentType,
   useReverb,
   params,
+  applicationType,
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
+
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   expect(params.ati).to.match(
     getViewClickDetailsRegex({
@@ -188,6 +197,7 @@ export const assertATIComponentViewEvent = ({
   pageIdentifier,
   contentType,
   useReverb,
+  applicationType,
 }) => {
   const useViewabilty = usesReverbViewabilityModel();
   const requestAlias = useViewabilty
@@ -213,6 +223,7 @@ export const assertATIComponentViewEvent = ({
           contentType,
           useReverb,
           params,
+          applicationType,
         });
       }
     });
@@ -232,9 +243,7 @@ const assertClickPerViewModelClickEvent = ({
     applicationType,
   });
 
-  if (applicationType === 'lite') {
-    expect(params.app_type).to.equal(applicationType, 'params.app_type');
-  }
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   if (useReverb) {
     expect(params.patc).to.equal(

@@ -5,7 +5,7 @@ import roundTo2Decimals from '../helpers/roundTo2Decimals';
 const MAX_PAGE_WEIGHT_KB = 50;
 
 const PAGE_TYPE_PAGE_WEIGHT_MAPPING = {
-  Live: 70,
+  live: 70,
 };
 
 const getMaxPageWeight = pageType =>
