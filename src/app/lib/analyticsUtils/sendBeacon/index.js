@@ -1,5 +1,4 @@
 import onClient from '../../utilities/onClient';
-import isLive from '../../utilities/isLive';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
 
@@ -75,10 +74,8 @@ const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
     experience,
   } = eventDetails;
 
-  const actionName = isLive() ? componentName : '';
-  const actionAdditionalLabels = isLive()
-    ? { attribute, container, personalisation, placement, result, source }
-    : { event, group, item, experience };
+  const actionName = '';
+  const actionAdditionalLabels = { event, group, item, experience };
 
   return reverbInstance.userActionEvent(
     eventPublisher,

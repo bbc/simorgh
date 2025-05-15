@@ -9,9 +9,6 @@ import {
   interceptATIAnalyticsBeacons,
 } from '../helpers';
 
-const usesReverbViewabilityModel = useReverb =>
-  useReverb && Cypress.env('APP_ENV') !== 'live';
-
 const assertATIPageViewEventParamsExist = ({
   params,
   contentType,
@@ -188,34 +185,18 @@ export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
   contentType,
-  useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
-  const requestAlias = useViewabilty
-    ? `@${component}-viewability-view`
-    : `@${component}-ati-view`;
-
-  cy.wait(requestAlias)
+  cy.wait(`@${component}-viewability-view`)
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
 
-      if (useViewabilty) {
-        assertViewabilityModelViewEvent({
-          component,
-          pageIdentifier,
-          contentType,
-          params,
-        });
-      } else {
-        assertClickPerViewModelViewEvent({
-          component,
-          pageIdentifier,
-          contentType,
-          useReverb,
-          params,
-        });
-      }
+      assertViewabilityModelViewEvent({
+        component,
+        pageIdentifier,
+        contentType,
+        params,
+      });
     });
 };
 
@@ -284,35 +265,17 @@ export const assertATIComponentClickEvent = ({
   component,
   contentType,
   pageIdentifier,
-  applicationType,
-  useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
-  const requestAlias = useViewabilty
-    ? `@${component}-viewability-click`
-    : `@${component}-ati-click`;
-
-  cy.wait(requestAlias)
+  cy.wait(`@${component}-viewability-click`)
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
 
-      if (useViewabilty) {
-        assertViewabilityModelClickEvent({
-          component,
-          contentType,
-          pageIdentifier,
-          params,
-        });
-      } else {
-        assertClickPerViewModelClickEvent({
-          component,
-          contentType,
-          pageIdentifier,
-          applicationType,
-          useReverb,
-          params,
-        });
-      }
+      assertViewabilityModelClickEvent({
+        component,
+        contentType,
+        pageIdentifier,
+        params,
+      });
     });
 };

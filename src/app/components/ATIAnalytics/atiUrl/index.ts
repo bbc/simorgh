@@ -1,6 +1,5 @@
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import isLive from '../../../lib/utilities/isLive';
 import {
   getDestination,
   getAppType,
@@ -510,47 +509,6 @@ export const buildReverbPageSectionEventModel = ({
   url,
   experimentVariant,
 }: ATIEventTrackingProps) => {
-  const eventDetails = isLive()
-    ? {
-        eventName: type === 'view' ? 'sectionView' : 'sectionClick',
-        eventPublisher: type === 'click' ? 'click' : 'impression',
-        componentName,
-        container: campaignID,
-        attribute: componentName,
-        metadata: format,
-        placement: pageIdentifier,
-        isClick: type === 'click',
-        ...(advertiserID && { source: advertiserID }),
-        ...(url && { result: url }),
-        ...(experimentVariant && {
-          personalisation: {
-            EXP: `${OPTIMIZELY_CONFIG.flagKey}::${experimentVariant}`,
-          },
-        }),
-      }
-    : {
-        eventName: type === 'view' ? 'sectionView' : 'sectionClick',
-        eventPublisher: 'viewability',
-        item: {
-          ...(advertiserID && { attribution: advertiserID }),
-          name: componentName,
-          ...(url && { link: url }),
-        },
-        group: {
-          name: campaignID,
-        },
-        event: {
-          category: 'viewability',
-          action: type === 'click' ? 'select' : 'view',
-        },
-        isClick: type === 'click',
-        ...(experimentVariant && {
-          experience: {
-            engine_id: `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
-          },
-        }),
-      };
-
   return {
     params: {
       page: {
@@ -565,6 +523,27 @@ export const buildReverbPageSectionEventModel = ({
         isSignedIn: false,
       },
     },
-    eventDetails,
+    eventDetails: {
+      eventName: type === 'view' ? 'sectionView' : 'sectionClick',
+      eventPublisher: 'viewability',
+      item: {
+        ...(advertiserID && { attribution: advertiserID }),
+        name: componentName,
+        ...(url && { link: url }),
+      },
+      group: {
+        name: campaignID,
+      },
+      event: {
+        category: 'viewability',
+        action: type === 'click' ? 'select' : 'view',
+      },
+      isClick: type === 'click',
+      ...(experimentVariant && {
+        experience: {
+          engine_id: `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
+        },
+      }),
+    },
   };
 };
