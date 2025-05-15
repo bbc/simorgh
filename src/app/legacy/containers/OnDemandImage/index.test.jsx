@@ -5,13 +5,14 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import OnDemandImage from '.';
 
-const component = ({ url, isAmp, service, alt }) => (
+const component = ({ url, isAmp, service, alt, isLite = false }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       isAmp={isAmp}
       service={service}
       pageType={AUDIO_PAGE}
       pathname="/path"
+      isLite={isLite}
     >
       <OnDemandImage imageUrl={url} alt={alt} />
     </RequestContextProvider>
@@ -67,5 +68,17 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     );
     expect(img.getAttribute('alt')).toEqual('BBC News Afaan Oromoo');
     expect(img.getAttribute('layout')).toEqual('responsive');
+  });
+
+  it('should not render an image on lite', () => {
+    const { container } = render(
+      component({
+        url: 'mock-url',
+        isAmp: false,
+        service: 'news',
+        isLite: true,
+      }),
+    );
+    expect(container).toBeEmptyDOMElement();
   });
 });

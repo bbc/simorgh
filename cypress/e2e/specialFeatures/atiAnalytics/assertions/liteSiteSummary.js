@@ -9,6 +9,7 @@ export const assertLiteSiteSummaryComponentToMainSiteClick = ({
   contentType,
   componentTrackingContentType,
   path,
+  applicationType,
 }) => {
   it(`should send a click event for the Lite Site Summary component to main site link`, () => {
     interceptATIAnalyticsBeacons();
@@ -25,6 +26,7 @@ export const assertLiteSiteSummaryComponentToMainSiteClick = ({
       component: LITE_SITE_SUMMARY,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
+      applicationType,
     });
   });
 };
