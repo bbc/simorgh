@@ -503,7 +503,6 @@ export const buildReverbPageSectionEventModel = ({
   statsDestination,
   componentName,
   campaignID,
-  format,
   type,
   advertiserID,
   url,
