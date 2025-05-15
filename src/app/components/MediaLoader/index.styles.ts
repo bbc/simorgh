@@ -61,16 +61,16 @@ export default {
       height: '130px',
       margin: `0 0 ${spacings.FULL}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        padding: '0 0.5rem',
+        padding: `0 ${spacings.FULL}rem`,
       },
       [`@media (min-width: 548px)`]: {
         padding: '0 0',
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        marginInlineEnd: '1rem',
+        marginInlineEnd: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginInlineStart: '-1rem',
+        marginInlineStart: `-${spacings.DOUBLE}rem`,
       },
     }),
 
@@ -121,10 +121,10 @@ export default {
       margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 1rem 0`,
+        margin: `${spacings.DOUBLE}rem ${spacings.DOUBLE}rem 0`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 1rem 0`,
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `${spacings.TRIPLE}rem 0 0`,
