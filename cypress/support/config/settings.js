@@ -22,26 +22,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: [
-              '/afaanoromoo/bbc_afaanoromoo_radio/liveradio?renderer_env=live',
-            ],
-            enabled: true,
-          },
-          local: {
-            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandAudio: {
         environments: {
           live: {
@@ -160,24 +140,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/afrique/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/afrique/bbc_afrique_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/afrique/bbc_afrique_radio/liveradio'],
             enabled: true,
           },
         },
@@ -340,24 +302,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/amharic/bbc_amharic_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/amharic/bbc_amharic_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/amharic/bbc_amharic_radio/liveradio'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       onDemandAudio: {
         environments: {
           live: {
@@ -476,24 +420,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/arabic/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/arabic/bbc_arabic_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/arabic/bbc_arabic_radio/liveradio'],
             enabled: true,
           },
         },
@@ -636,7 +562,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -738,24 +663,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/bengali/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/bengali/bbc_bangla_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/bengali/bbc_bangla_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/bengali/bbc_bangla_radio/liveradio'],
             enabled: true,
           },
         },
@@ -884,24 +791,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/burmese/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/burmese/bbc_burmese_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/burmese/bbc_burmese_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/burmese/bbc_burmese_radio/liveradio'],
             enabled: true,
           },
         },
@@ -1073,7 +962,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -1118,24 +1006,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/gahuza/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/gahuza/bbc_gahuza_radio/liveradio?renderer_env=live'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
             enabled: true,
           },
         },
@@ -1277,8 +1147,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: undefined,
         smoke: false,
@@ -1407,24 +1275,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/hausa/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/hausa/bbc_hausa_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/hausa/bbc_hausa_radio/liveradio'],
             enabled: true,
           },
         },
@@ -1594,27 +1444,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: [],
-            // route deprecated - hindi/bbc_hindi_radio/* will 404
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            // route deprecated - hindi/bbc_hindi_radio/* will 404
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            // route deprecated - hindi/bbc_hindi_radio/* will 404
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandAudio: {
         environments: {
           live: {
@@ -1775,8 +1604,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -1873,26 +1700,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/indonesia/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: [
-              '/indonesia/bbc_indonesian_radio/liveradio?renderer_env=live',
-            ],
-            enabled: true,
-          },
-          local: {
-            paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
             enabled: true,
           },
         },
@@ -2034,8 +1841,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -2132,24 +1937,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/korean/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/korean/bbc_korean_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/korean/bbc_korean_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/korean/bbc_korean_radio/liveradio'],
             enabled: true,
           },
         },
@@ -2273,24 +2060,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/kyrgyz/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
             enabled: true,
           },
         },
@@ -2454,7 +2223,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
           live: {
@@ -2603,7 +2371,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -2729,7 +2496,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -2774,24 +2540,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/nepali/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/nepali/bbc_nepali_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/nepali/bbc_nepali_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/nepali/bbc_nepali_radio/liveradio'],
             enabled: true,
           },
         },
@@ -2933,8 +2681,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -2989,8 +2735,6 @@ module.exports = () => ({
     variant: 'default',
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
-
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -3051,24 +2795,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pashto/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/pashto/bbc_pashto_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/pashto/bbc_pashto_radio/liveradio'],
             enabled: true,
           },
         },
@@ -3271,24 +2997,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/persian/bbc_dari_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/persian/bbc_dari_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/persian/bbc_dari_radio/liveradio'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
       onDemandAudio: {
         environments: {
           live: {
@@ -3488,7 +3196,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -3587,7 +3294,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
           live: {
@@ -3719,7 +3425,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -3822,7 +3527,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
           live: {
@@ -3952,7 +3656,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -4002,7 +3705,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -4102,7 +3804,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -4203,7 +3904,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -4303,24 +4003,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/somali/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/somali/bbc_somali_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/somali/bbc_somali_radio/liveradio'],
             enabled: true,
           },
         },
@@ -4467,7 +4149,6 @@ module.exports = () => ({
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -4528,24 +4209,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/swahili/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/swahili/bbc_swahili_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/swahili/bbc_swahili_radio/liveradio'],
             enabled: true,
           },
         },
@@ -4703,24 +4366,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/tamil/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/tamil/bbc_tamil_radio/liveradio'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/tamil/bbc_tamil_radio/liveradio?renderer_env=live'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/tamil/bbc_tamil_radio/liveradio'],
             enabled: true,
           },
         },
@@ -4884,7 +4529,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
@@ -5016,7 +4660,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -5130,24 +4773,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/tigrinya/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
             enabled: true,
           },
         },
@@ -5277,7 +4902,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -5385,7 +5009,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -5493,7 +5116,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -5583,7 +5205,6 @@ module.exports = () => ({
     isWorldService: true,
     variant: 'default',
     pageTypes: {
-      liveRadio: { environments: undefined, smoke: false },
       errorPage404: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
@@ -5635,7 +5256,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
@@ -5769,24 +5389,6 @@ module.exports = () => ({
           },
           local: {
             paths: ['/urdu/articles/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: true,
-          },
-          test: {
-            paths: ['/urdu/bbc_urdu_radio/liveradio?renderer_env=live'],
-            enabled: true,
-          },
-          local: {
-            paths: ['/urdu/bbc_urdu_radio/liveradio'],
             enabled: true,
           },
         },
@@ -5949,24 +5551,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/uzbek/bbc_uzbek_radio/liveradio?renderer_env=live'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
       onDemandAudio: {
         environments: {
           live: {
@@ -6113,7 +5697,6 @@ module.exports = () => ({
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -6132,7 +5715,6 @@ module.exports = () => ({
     pageTypes: {
       errorPage404: { environments: undefined, smoke: false },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -6167,7 +5749,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -6275,7 +5856,6 @@ module.exports = () => ({
         smoke: false,
       },
 
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -6377,7 +5957,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
           live: {
@@ -6514,7 +6093,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      liveRadio: { environments: undefined, smoke: false },
       onDemandAudio: {
         environments: {
           live: {
