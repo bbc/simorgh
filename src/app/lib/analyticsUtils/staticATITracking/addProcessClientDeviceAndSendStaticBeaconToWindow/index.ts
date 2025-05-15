@@ -15,27 +15,28 @@ export default () => {
       // COOKIE SETTINGS
       const cookieName = 'atuserid';
       const expires = 397; // expires in 13 months
-      const cookiesForPage = `; ${document.cookie}`;
-      const atUserIdCookie = cookiesForPage.split(`; ${cookieName}=`);
-      let user: { val: null | string } = { val: null };
 
-      if (atUserIdCookie.length === 2) {
-        const cookieInfo = atUserIdCookie.pop()?.split(';').shift();
+      const getAtUserIdFromCookie = () => {
+        try {
+          const [, atUserIdCookie] =
+            document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/) || [];
 
-        if (cookieInfo) {
-          const decodedCookie = decodeURIComponent(cookieInfo);
-          user = JSON.parse(decodedCookie);
+          const { val } = JSON.parse(decodeURIComponent(atUserIdCookie));
+
+          return { val };
+        } catch {
+          return { val: null };
         }
-      }
+      };
+
+      const user = getAtUserIdFromCookie();
 
       if (!user.val && window.crypto && crypto.randomUUID) {
         user.val = crypto.randomUUID();
-      }
 
-      const stringifiedCookieValue = JSON.stringify(user);
-      const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
+        const stringifiedCookieValue = JSON.stringify(user);
+        const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
 
-      if (user.val) {
         document.cookie = `${cookieName}=${encodedCookieValue}; path=/; max-age=${expires}; Secure;`;
       }
 
