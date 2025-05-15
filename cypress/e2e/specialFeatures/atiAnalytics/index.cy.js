@@ -378,6 +378,10 @@ const canonicalTestSuites = [
     path: '/polska',
     runforEnv: ['local', 'test'],
     service: 'polska',
+    pageIdentifier: 'polska.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
     tests: [
       assertPageView,
       assertMessageBannerComponentView,
@@ -388,6 +392,10 @@ const canonicalTestSuites = [
     path: '/polska/articles/c639526lxlro',
     runforEnv: ['local', 'test'],
     service: 'polska',
+    pageIdentifier: 'polska.articles.c639526lxlro.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
     tests: [assertPageView],
   },
   {
