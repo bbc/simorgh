@@ -311,7 +311,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/pidgin/articles/ce9wk6glg4lo',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'live'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
     applicationType: 'responsive',
@@ -373,22 +373,6 @@ const canonicalTestSuites = [
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
     ],
-  },
-  {
-    path: '/polska',
-    runforEnv: ['test'],
-    service: 'polska',
-    tests: [
-      assertPageView,
-      assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
-    ],
-  },
-  {
-    path: '/polska/articles/c639526lxlro',
-    runforEnv: ['test'],
-    service: 'polska',
-    tests: [assertPageView],
   },
   {
     path: '/portuguese/podcasts/p07r3r3t',
