@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext, useId } from 'react';
+import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
@@ -8,7 +8,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Heading from '../Heading';
 import Image from '../Image';
 import styles from './index.styles';
@@ -64,26 +63,15 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 };
 
 const SocialLink = ({ summary }: { summary: Summary }) => {
-  const linkLabelId = useId();
-  const hasDescription = Boolean(summary.description);
-
   return (
     <>
       <SocialLinkImage imageUrl={summary.imageUrl} />
       <a
         href={summary.link}
         css={styles.link}
-        {...(hasDescription && { 'aria-labelledby': linkLabelId })}
+        aria-label={`${summary.title}, ${summary.description}`}
       >
-        {hasDescription ? (
-          // eslint-disable-next-line jsx-a11y/aria-role
-          <span id={linkLabelId} role="text">
-            {summary.title}
-            <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
-          </span>
-        ) : (
-          summary.title
-        )}
+        {summary.title}
       </a>
     </>
   );
