@@ -49,4 +49,4 @@ export interface PortraitVideoCarouselProps {
   items: PortraitVideoPromoProps[];
 }
 
-export type CarouselButtonType = 'left' | 'right';
+export type ScrollDirection = 'left' | 'right';
