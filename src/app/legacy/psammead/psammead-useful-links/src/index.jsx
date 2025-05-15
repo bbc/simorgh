@@ -30,6 +30,7 @@ export const UsefulLink = styled.a`
   }
 `;
 
+// TODO: Follow up on the existing component - should this be removed?
 export const UsefulLinksUl = styled.ul`
   padding: 0;
   margin: 0;

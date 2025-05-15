@@ -11,7 +11,6 @@ const config = {
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
     togglesUrl: 'https://config.api.bbci.co.uk/',
-    bffUrl: 'https://web-cdn.api.bbci.co.uk/fd/simorgh-bff',
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -25,7 +24,6 @@ const config = {
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
     togglesUrl: 'https://config.test.api.bbci.co.uk/',
-    bffUrl: 'https://web-cdn.api.bbci.co.uk/fd/simorgh-bff',
   },
   local: {
     baseUrl: 'http://localhost.bbc.com:7080',
