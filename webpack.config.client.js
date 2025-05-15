@@ -4,8 +4,8 @@
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
-const fs = require('fs');
-const crypto = require('crypto');
+const fs = require('node:fs');
+const crypto = require('node:crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
@@ -119,7 +119,7 @@ module.exports = ({
             // This regex ignores nested copies of framework libraries so they're bundled with their issuer.
             test: new RegExp(
               `(?<!node_modules.*)[\\\\/]node_modules[\\\\/](${FRAMEWORK_BUNDLES.join(
-                `|`,
+                '|',
               )})[\\\\/]`,
             ),
             priority: 40,
@@ -141,18 +141,20 @@ module.exports = ({
               );
             },
             name(module) {
-              const rawRequest =
-                module.rawRequest &&
-                module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
+              const rawRequest = module.rawRequest?.replace(
+                /^@(\w+)[/\\]/,
+                '$1-',
+              );
               if (rawRequest) return `${rawRequest}-lib`;
 
               const identifier = module.identifier();
               const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
                 identifier,
               );
-              const processedIdentifier =
-                trimmedIdentifier &&
-                trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
+              const processedIdentifier = trimmedIdentifier?.[1].replace(
+                /^@(\w+)[/\\]/,
+                '$1-',
+              );
 
               return `${processedIdentifier || identifier}-lib`;
             },
@@ -227,10 +229,9 @@ module.exports = ({
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
-          // eslint-disable-next-line no-param-reassign
           resource.request = resource.request.replace(
             /logger.node/,
-            `logger.web`,
+            'logger.web',
           );
         },
       ),

@@ -22,11 +22,13 @@
         "noGlobalEval": "error"
       },
       "style": {
+        "noParameterAssign": "error",
         "useImportType": "off"
       },
       "suspicious": {
         "noArrayIndexKey": "error",
         "noAssignInExpressions": "error",
+        "noExplicitAny": "warn",
         "noConsole": "warn",
         "noGlobalAssign": "error",
         "useValidTypeof": "error"
