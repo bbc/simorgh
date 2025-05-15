@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -101,7 +102,6 @@ export interface ReverbDetailsProviders {
 export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
-    // eslint-disable-next-line camelcase
     content_language?: string | null;
     type?: string | null;
   };
@@ -118,7 +118,6 @@ export type ReverbUserVars = {
 export type ReverbEventDetails = {
   anchorElement?: HTMLElement;
   experience?: {
-    // eslint-disable-next-line camelcase
     engine_id: string;
   };
   event?: {

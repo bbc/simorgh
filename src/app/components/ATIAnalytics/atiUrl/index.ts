@@ -1,3 +1,7 @@
+import {
+  CLICK_EVENT,
+  VIEW_EVENT,
+} from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import {
@@ -527,7 +531,7 @@ export const buildReverbPageSectionEventModel = ({
       },
     },
     eventDetails: {
-      eventName: type === 'view' ? 'sectionView' : 'sectionClick',
+      eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
       eventPublisher: 'viewability',
       item: {
         ...(advertiserID && { attribution: advertiserID }),
@@ -539,7 +543,7 @@ export const buildReverbPageSectionEventModel = ({
       },
       event: {
         category: 'viewability',
-        action: type === 'click' ? 'select' : 'view',
+        action: type === CLICK_EVENT ? 'select' : 'view',
       },
       isClick: type === 'click',
       ...(experimentVariant && {
