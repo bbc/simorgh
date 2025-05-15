@@ -166,7 +166,6 @@ exports[`AMP Media Article Page Analytics ATI 1`] = `
         "ref": "\${documentReferrer}",
       },
     ],
->>>>>>> latest
   },
   "transport": {
     "beacon": false,
