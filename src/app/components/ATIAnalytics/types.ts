@@ -98,10 +98,48 @@ export interface ReverbDetailsProviders {
   atiData: ATIData;
 }
 
+export type ReverbPageVars = {
+  name?: string | null;
+  additionalProperties?: {
+    content_language?: string | null;
+    type?: string | null;
+  };
+  destination?: string | null;
+  producer?: string | null;
+  contentId?: string | null;
+  contentType?: string | null;
+};
+
+export type ReverbUserVars = {
+  isSignedIn: boolean;
+};
+
+export type ReverbEventDetails = {
+  anchorElement?: HTMLElement;
+  experience?: {
+    engine_id: string;
+  };
+  event?: {
+    category: string;
+    action: 'select' | 'view';
+  };
+  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventPublisher?: string;
+  group?: string | object;
+  isClick?: boolean;
+  item?: string | object;
+  originalEvent?: Event;
+};
+
+export type ReverbBeaconConfig = {
+  params: { page: ReverbPageVars; user: ReverbUserVars };
+  eventDetails: ReverbEventDetails;
+};
+
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;
-  reverbParams?: object | null;
+  reverbParams?: ReverbBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {

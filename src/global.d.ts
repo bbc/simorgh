@@ -3,6 +3,8 @@ import { BumpType } from '#app/components/MediaLoader/types';
 
 declare global {
   interface Window {
+    bbcpage: {};
+    bbcuser: {};
     __reverb: {
       __reverbLoadedPromise: Promise<ReverbClient>;
     };

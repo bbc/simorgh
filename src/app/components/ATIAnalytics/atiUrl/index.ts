@@ -19,7 +19,11 @@ import {
   getATIMarketingString,
   getRSSMarketingString,
 } from '../../../lib/analyticsUtils';
-import { ATIEventTrackingProps, ATIPageTrackingProps } from '../types';
+import {
+  ATIEventTrackingProps,
+  ATIPageTrackingProps,
+  ReverbBeaconConfig,
+} from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -443,7 +447,7 @@ export const buildReverbAnalyticsModel = ({
   timePublished,
   timeUpdated,
   experimentVariant,
-}: ATIPageTrackingProps) => {
+}: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
 
@@ -452,7 +456,7 @@ export const buildReverbAnalyticsModel = ({
     .join('~');
 
   const eventDetails = {
-    eventName: 'pageView',
+    eventName: 'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
   };
 
   const reverbVariables = {
@@ -507,7 +511,7 @@ export const buildReverbPageSectionEventModel = ({
   advertiserID,
   url,
   experimentVariant,
-}: ATIEventTrackingProps) => {
+}: ATIEventTrackingProps): ReverbBeaconConfig => {
   return {
     params: {
       page: {
