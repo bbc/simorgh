@@ -164,6 +164,7 @@ export interface Translations {
     download?: string;
     closeVideo?: string;
   };
+
   socialEmbed: {
     caption?: {
       textPrefixVisuallyHidden: string;
@@ -196,6 +197,10 @@ export interface Translations {
   latestMediaTitle?: string;
   infoBannerLabel?: string;
   ugc?: Partial<UgcTranslations>;
+  carousel?: {
+    scrollLeftAria?: string;
+    scrollRightAria?: string;
+  };
 }
 
 export interface TranslationsError {

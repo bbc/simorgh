@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
-import PortraitVideoIPromo from '.';
+import PortraitVideoPromo from '.';
 
-describe('PortraitVideoIPromo', () => {
+describe('PortraitVideoPromo', () => {
   it('Should contain a h3 level title', () => {
     const sampleHeadlines = { promoHeadline: 'Sample Heading' };
 
     const { container } = render(
-      <PortraitVideoIPromo id="testId" headlines={sampleHeadlines} />,
+      <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
     );
 
     const heading = container.querySelector('h3');
@@ -23,7 +23,7 @@ describe('PortraitVideoIPromo', () => {
     ];
 
     const { container } = render(
-      <PortraitVideoIPromo id="testId" images={sampleImages} />,
+      <PortraitVideoPromo id="testId" images={sampleImages} />,
     );
 
     const heading = container.querySelector(

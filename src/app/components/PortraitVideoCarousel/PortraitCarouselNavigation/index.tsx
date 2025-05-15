@@ -6,10 +6,20 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles, { PROMO_ITEM_WIDTH } from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
 
+const defaultTranslations = {
+  scrollLeftAria: 'Scroll left',
+  scrollRightAria: 'Scroll right',
+};
+
 export default ({ scrollPaneRef }: NavigationButtonsProp) => {
   const { dir } = useContext(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const {
+    translations: { carousel = defaultTranslations },
+  } = useContext(ServiceContext);
+
+  const { scrollLeftAria, scrollRightAria } = carousel;
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
@@ -47,7 +57,7 @@ export default ({ scrollPaneRef }: NavigationButtonsProp) => {
       <div css={styles.buttonGroup}>
         <button
           type="button"
-          aria-label="Scroll left"
+          aria-label={scrollLeftAria}
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
@@ -57,7 +67,7 @@ export default ({ scrollPaneRef }: NavigationButtonsProp) => {
         </button>
         <button
           type="button"
-          aria-label="Scroll right"
+          aria-label={scrollRightAria}
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}

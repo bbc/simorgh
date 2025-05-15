@@ -251,6 +251,10 @@ export const service: DefaultServiceConfig = {
         download: 'Baixar episódio',
         closeVideo: 'Sair',
       },
+      carousel: {
+        scrollLeftAria: 'Scroll left',
+        scrollRightAria: 'Scroll right',
+      },
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'Legenda do vídeo, ',
