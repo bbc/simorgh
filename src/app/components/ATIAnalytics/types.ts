@@ -101,6 +101,7 @@ export interface ReverbDetailsProviders {
 export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
+    // eslint-disable-next-line camelcase
     content_language?: string | null;
     type?: string | null;
   };
@@ -117,6 +118,7 @@ export type ReverbUserVars = {
 export type ReverbEventDetails = {
   anchorElement?: HTMLElement;
   experience?: {
+    // eslint-disable-next-line camelcase
     engine_id: string;
   };
   event?: {

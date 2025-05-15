@@ -1,6 +1,3 @@
-import onClient from '../../utilities/onClient';
-import nodeLogger from '../../logger.node';
-import { ATI_LOGGING_ERROR } from '../../logger.const';
 import { ReverbClient } from '#app/models/types/eventTracking';
 import {
   ReverbBeaconConfig,
@@ -8,6 +5,9 @@ import {
   ReverbPageVars,
   ReverbUserVars,
 } from '#app/components/ATIAnalytics/types';
+import onClient from '../../utilities/onClient';
+import nodeLogger from '../../logger.node';
+import { ATI_LOGGING_ERROR } from '../../logger.const';
 
 const logger = nodeLogger(__filename);
 

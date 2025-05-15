@@ -1,11 +1,12 @@
 /* eslint-disable global-require */
 import loggerMock from '#testHelpers/loggerMock';
 import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
+import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
-import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
 
-let fetchResponse: any;
+let fetchResponse: Promise<Response>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let isOnClient: any;
 
 const reverbMock = {
