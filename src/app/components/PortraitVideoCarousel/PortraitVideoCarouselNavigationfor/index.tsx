@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useCallback, useContext, useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
-import { PortraitVideoCarouselNavigation } from '#app/models/types/portraitVideo';
+import { PortraitVideoCarouselNavigationProps } from '#app/models/types/portraitVideo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import { LeftChevron, RightChevron } from '../../icons';
@@ -12,7 +12,7 @@ const defaultTranslations = {
   scrollRight: 'Scroll right',
 };
 
-export default ({ scrollPaneRef }: PortraitVideoCarouselNavigation) => {
+export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   const { dir } = useContext(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);

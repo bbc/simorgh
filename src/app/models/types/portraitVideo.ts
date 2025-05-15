@@ -40,7 +40,7 @@ export interface PortraitVideoPromoProps {
   key?: string;
 }
 
-export interface PortraitVideoCarouselNavigation {
+export interface PortraitVideoCarouselNavigationProps {
   scrollPaneRef: RefObject<HTMLDivElement | null>;
 }
 
@@ -48,3 +48,5 @@ export interface PortraitVideoCarouselProps {
   title: string;
   items: PortraitVideoPromoProps[];
 }
+
+export type CarouselButtonType = 'left' | 'right';
