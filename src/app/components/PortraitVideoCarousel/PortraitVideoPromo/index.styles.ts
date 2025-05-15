@@ -40,9 +40,9 @@ const styles = {
 
   heading: ({ fontVariants, palette }: Theme) =>
     css({
+      ...fontVariants.sansBold,
       position: 'relative',
       color: palette.WHITE,
-      fontFamily: fontVariants?.sansBold?.fontFamily,
       fontSize: '0.875rem',
       zIndex: 2,
       textDecoration: 'none',
