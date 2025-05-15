@@ -134,29 +134,6 @@ export const assertPageView = ({
   });
 };
 
-const assertClickPerViewModelViewEvent = ({
-  component,
-  pageIdentifier,
-  contentType,
-  useReverb,
-  params,
-}) => {
-  assertATIComponentViewEventParamsExist({ params, useReverb });
-
-  if (!useReverb) {
-    expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-  }
-
-  expect(params.ati).to.match(
-    getViewClickDetailsRegex({
-      contentType,
-      component,
-      pageIdentifier,
-    }),
-    'params.ati (publisher impression)',
-  );
-};
-
 const assertViewabilityModelViewEvent = ({
   component,
   pageIdentifier,
@@ -198,43 +175,6 @@ export const assertATIComponentViewEvent = ({
         params,
       });
     });
-};
-
-const assertClickPerViewModelClickEvent = ({
-  component,
-  contentType,
-  pageIdentifier,
-  applicationType,
-  useReverb,
-  params,
-}) => {
-  assertATIComponentClickEventParamsExist({
-    params,
-    useReverb,
-    applicationType,
-  });
-
-  if (applicationType === 'lite') {
-    expect(params.app_type).to.equal(applicationType, 'params.app_type');
-  }
-
-  if (useReverb) {
-    expect(params.patc).to.equal(
-      pageIdentifier,
-      'params.patc (page identifier)',
-    );
-  } else {
-    expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-  }
-
-  expect(params.atc).to.match(
-    getViewClickDetailsRegex({
-      contentType,
-      pageIdentifier,
-      component,
-    }),
-    'params.atc (publisher click)',
-  );
 };
 
 const assertViewabilityModelClickEvent = ({
