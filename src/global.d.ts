@@ -3,8 +3,29 @@ import { BumpType } from '#app/components/MediaLoader/types';
 
 declare global {
   interface Window {
-    bbcpage: {};
-    bbcuser: {};
+    bbcpage:
+      | {
+          getName: () => Promise<string>;
+          getLanguage: () => Promise<string>;
+          getDestination: () => Promise<string>;
+          getProducer: () => Promise<string>;
+          getSection: () => Promise<string>;
+          getContentId: () => Promise<string>;
+          getContentType: () => Promise<string>;
+          getEdition: () => Promise<string>;
+          getReferrer: () => Promise<string>;
+          getAdditionalProperties: () => Promise<Record<string, string>>;
+          additionalProperties: {
+            testDomain: string;
+            trace: string;
+            customVars: string;
+          };
+        }
+      | object;
+    bbcuser: {
+      getHashedId: () => null;
+      isSignedIn: () => Promise<boolean>;
+    };
     __reverb: {
       __reverbLoadedPromise: Promise<ReverbClient>;
     };
