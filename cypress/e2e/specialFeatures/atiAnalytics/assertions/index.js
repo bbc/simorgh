@@ -43,30 +43,6 @@ const assertATIPageViewEventParamsExist = ({
   }
 };
 
-const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
-  expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('ati'); // view event
-  expect(params).to.have.property('type');
-  expect(params.type).to.equal('AT', 'params.type');
-
-  if (!useReverb) {
-    expect(params).to.have.property('p'); // page identifier
-  }
-};
-
-const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
-  expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('atc'); // click event
-  expect(params).to.have.property('type');
-  expect(params.type).to.equal('AT', 'params.type');
-
-  if (useReverb) {
-    expect(params).to.have.property('patc'); // page identifier
-  } else {
-    expect(params).to.have.property('p'); // page identifier
-  }
-};
-
 const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
@@ -77,12 +53,6 @@ const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
   expect(eventContext[0].data.page).to.have.property('$');
   expect(eventContext[0].data.site).to.have.property('level2_id');
 };
-
-const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
-  new RegExp(
-    `PUB-\\[${contentType}(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[${pageIdentifier}\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
-    'g',
-  );
 
 const getViewabilityEventDetailsRegex = ({
   contentType,
