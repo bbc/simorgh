@@ -51,11 +51,27 @@ export default {
       }),
       !isEmbedded && commonMarginSpacing,
     ],
-
-  audioMediaContainer: ({ palette }: Theme) =>
+  audioFigure: ({ spacings }: Theme) =>
     css({
-      backgroundColor: palette.WHITE,
-      height: '165px',
+      margin: `0 0 ${spacings.FULL}rem 0`,
+    }),
+
+  audioMediaContainer: ({ mq, spacings }: Theme) =>
+    css({
+      height: '130px',
+      margin: `0 0 ${spacings.FULL}rem 0`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${spacings.FULL}rem`,
+      },
+      [`@media (min-width: 548px)`]: {
+        padding: '0 0',
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginInlineEnd: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInlineStart: `-${spacings.DOUBLE}rem`,
+      },
     }),
 
   standardMediaContainer: ({ palette }: Theme) =>
@@ -97,6 +113,21 @@ export default {
       marginInline: '0',
       [mq.GROUP_2_ONLY]: {
         marginInline: '0',
+      },
+    }),
+
+  captionAudio: ({ mq, spacings }: Theme) =>
+    css({
+      margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        margin: `${spacings.DOUBLE}rem ${spacings.DOUBLE}rem 0`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem 0`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        margin: `${spacings.TRIPLE}rem 0 0`,
       },
     }),
 };

@@ -264,9 +264,10 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         css={[
           styles.figure(embedded),
           playerConfig?.ui?.skin === 'classic' && [
-            orientation === 'portrait' && styles.portraitFigure(embedded),
+            isPortraitVideo && styles.portraitFigure(embedded),
             orientation === 'landscape' && styles.landscapeFigure,
           ],
+          playerConfig?.ui?.skin === 'audio' && styles.audioFigure,
         ]}
       >
         {isAmp ? (
@@ -304,7 +305,13 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
             className={isPortraitVideo ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={isPortraitVideo && styles.captionPortrait}
+            css={[
+              styles.figure(embedded),
+              playerConfig?.ui?.skin === 'classic' && [
+                isPortraitVideo && styles.captionPortrait,
+              ],
+              playerConfig?.ui?.skin === 'audio' && styles.captionAudio,
+            ]}
           />
         )}
       </figure>
