@@ -159,14 +159,14 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
 {
-  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
   "text": "Do not share or sell my info",
 }
 `;
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News"`;
 

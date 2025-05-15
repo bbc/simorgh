@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
-import { v4 as uuid } from 'uuid';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import ParagraphContainer from '.';
+import getUUID from '../../../lib/utilities/getUUID';
 
 const fragmentBlock = (text, attributes = []) => ({
   type: 'fragment',
-  id: uuid(),
+  id: `${getUUID()}${text}`,
   model: {
     text,
     attributes,
@@ -16,7 +16,7 @@ const fragmentBlock = (text, attributes = []) => ({
 
 const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
   type: 'urlLink',
-  id: uuid(),
+  id: `${getUUID()}${text}`,
   model: {
     text,
     locator,
@@ -27,7 +27,7 @@ const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
 
 const inlineSpanBlock = (blocks, language, text) => ({
   type: 'inline',
-  id: uuid,
+  id: `${getUUID()}${text}`,
   model: {
     blocks,
     language,
@@ -76,7 +76,15 @@ const ParagraphContainerWithContext = ({ blocks }) => {
   );
 };
 
+jest.mock('#app/lib/utilities/getUUID', () =>
+  jest.fn().mockImplementation(() => 'mockId'),
+);
+
 describe('ParagraphContainer', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should render correctly', () => {
     const { container } = render(
       <ParagraphContainerWithContext blocks={blocksMock} />,

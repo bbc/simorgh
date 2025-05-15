@@ -1,0 +1,293 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "korean.bbc_korean_radio.w3ct1vk5.page",
+        "contentType": "player-episode",
+        "pageTitle": "English Learning with BBC - BBC News 코리아",
+        "contentId": "urn:bbc:pips:w3ct1vk5"
+      }
+    },
+    "language": "ko",
+    "brandTitle": "English Learning with BBC",
+    "episodeTitle": "English Learning with BBC",
+    "headline": "English Learning with BBC",
+    "shortSynopsis": "BBC와 함께하는 영어학습 코너입니다",
+    "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct1vk5",
+    "brandId": "w13xttlm",
+    "summary": "BBC와 함께하는 영어학습 코너입니다",
+    "contentType": "player-episode",
+    "episodeId": "w3ct1vk5",
+    "masterBrand": "bbc_korean_radio",
+    "releaseDateTimeStamp": 1623110400000,
+    "pageTitle": "English Learning with BBC - BBC News 코리아",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+    "imageAltText": null,
+    "promoBrandTitle": "English Learning with BBC",
+    "durationISO8601": "PT10M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b8lzc.png",
+    "episodeAvailability": "available",
+    "radioScheduleData": [
+      {
+        "id": "p0k1fy8s",
+        "state": "next",
+        "startTime": "2024-11-21T12:29:30.000Z",
+        "link": "/korean/bbc_korean_radio/w3ct7903",
+        "brandTitle": "BBC 코리아 라디오",
+        "summary": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0k15my7",
+        "state": "onDemand",
+        "startTime": "2024-11-20T12:29:30.000Z",
+        "link": "/korean/bbc_korean_radio/w3ct792c",
+        "brandTitle": "BBC 코리아 라디오",
+        "summary": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0k0x2lh",
+        "state": "onDemand",
+        "startTime": "2024-11-19T12:29:30.000Z",
+        "link": "/korean/bbc_korean_radio/w3ct7917",
+        "brandTitle": "BBC 코리아 라디오",
+        "summary": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0k0p4zx",
+        "state": "onDemand",
+        "startTime": "2024-11-18T12:29:30.000Z",
+        "link": "/korean/bbc_korean_radio/w3ct78yz",
+        "brandTitle": "BBC 코리아 라디오",
+        "summary": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+        "duration": "PT15M"
+      }
+    ],
+    "recentEpisodes": [
+      {
+        "id": "w3ct5dvn",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-05-03T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dtj",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-05-02T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dr8",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-05-01T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dq3",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-04-28T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dth",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-04-25T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dr7",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-04-24T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dtd",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-04-04T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dr4",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-04-03T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dpz",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-31T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5ds7",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-30T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dvh",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-29T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dtc",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-28T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct5dr3",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-27T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4ysr",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-24T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4yw0",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-23T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4yy8",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-22T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4yx4",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-21T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4ytw",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-20T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4ysq",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-17T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      },
+      {
+        "id": "w3ct4yvz",
+        "brandTitle": "English Learning with BBC",
+        "episodeTitle": "English Learning with BBC",
+        "timestamp": "2023-03-16T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b8lzc.png",
+        "altText": "English Learning with BBC"
+      }
+    ],
+    "externalLinkVersionId": "w4hqxkvd",
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w3ct1vk5",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "08/06/2021 GMT",
+          "synopses": {
+            "short": "BBC와 함께하는 영어학습 코너입니다",
+            "medium": "BBC와 함께하는 영어학습 코너입니다"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8lzc.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w4hqxkvd",
+              "types": ["Original"],
+              "duration": 600,
+              "durationISO8601": "PT10M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": false,
+                "nonUk": false,
+                "world": true
+              },
+              "availableFrom": "2021-06-08T16:00:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "English Learning with BBC",
+          "type": "media"
+        }
+      }
+    ]
+  }
+}

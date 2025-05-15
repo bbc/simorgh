@@ -37,7 +37,7 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
   const authorName = pathOrZeroIndexModelBlocks(2, 'text', authorBlock);
   const jobRole = pathOrZeroIndexModelBlocks(2, 'text', jobRoleBlock);
 
-  if (!authorName || !jobRole) {
+  if (!authorName) {
     return null;
   }
 

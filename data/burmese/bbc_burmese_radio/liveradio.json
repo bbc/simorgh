@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_burmese_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_burmese_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "burmese",
+  "data": {
+    "heading": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
+    "bodySummary": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
     "language": "my",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို - BBC News မြန်မာ",
-      "pageIdentifier": "burmese.bbc_burmese_radio.liveradio.page",
-      "producerId": "35",
-      "contentType": "player-live",
-      "producer": "BURMESE"
+    "id": "urn:bbc:ares:ws_media:live:bbc_burmese_radio",
+    "name": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
+    "summary": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
+    "masterBrand": "bbc_burmese_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k0crj5",
+        "state": "next",
+        "startTime": "2024-11-30T13:29:30.000Z",
+        "link": "/burmese/bbc_burmese_radio/w3ct7620",
+        "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0k01c52",
+        "state": "onDemand",
+        "startTime": "2024-11-29T13:29:30.000Z",
+        "link": "/burmese/bbc_burmese_radio/w3ct75zr",
+        "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0jzxtnc",
+        "state": "onDemand",
+        "startTime": "2024-11-28T13:29:30.000Z",
+        "link": "/burmese/bbc_burmese_radio/w3ct7648",
+        "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0jznlhr",
+        "state": "onDemand",
+        "startTime": "2024-11-27T13:29:30.000Z",
+        "link": "/burmese/bbc_burmese_radio/w3ct768s",
+        "brandTitle": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "summary": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+        "duration": "PT15M"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_burmese_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "burmese.bbc_burmese_radio.liveradio.page",
+        "pageTitle": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို - BBC News မြန်မာ"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_burmese_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_burmese_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "ဘီဘီစီ မြန်မာပိုင်း ရေဒီယို",
-    "summary": "နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ",
-    "uri": "/burmese/bbc_burmese_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_burmese_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "burmese",
-      "uri": "/burmese",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

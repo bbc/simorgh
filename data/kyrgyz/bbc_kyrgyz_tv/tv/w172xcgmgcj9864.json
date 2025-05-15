@@ -1,547 +1,243 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgmgcj9864",
-    "locators": { "pid": "w172xcgmgcj9864", "brandPid": "w13xttqx" },
-    "type": "WSTV",
-    "createdBy": "bbc_kyrgyz_tv",
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "kyrgyz.bbc_kyrgyz_tv.tv.w172xcgmgcj9864.page",
+        "contentType": "player-episode",
+        "pageTitle": "Би-Би-Си ТВ жаңылыктары - BBC News Кыргыз КызMATы",
+        "contentId": "urn:bbc:pips:w172xcgmgcj9864"
+      }
+    },
     "language": "ky",
-    "lastUpdated": 1608629268284,
-    "firstPublished": 1603736508000,
-    "lastPublished": 1603736508000,
-    "timestamp": 1603736508000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Би-Би-Си ТВ жаңылыктары - BBC News Кыргыз КызMATы",
-      "pageIdentifier": "kyrgyz.bbc_kyrgyz_tv.tv.w172xcgmgcj9864.page",
-      "producerId": "58",
-      "contentType": "player-episode",
-      "producer": "KYRGYZ"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "Би-Би-Си ТВ жаңылыктары",
-    "releaseDateTimeStamp": 1606089600000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "w172xcgmgcj9864",
-        "subType": "episode",
-        "format": "Video",
-        "title": "23/11/2020 GMT",
-        "synopses": {
-          "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-          "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-        "embedding": false,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshjbspmcxs8n",
-            "types": ["Original"],
-            "duration": 900,
-            "durationISO8601": "PT15M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1618185600000,
-            "availableFrom": 1606148100000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "programme",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-    "locators": { "pid": "w172xcgmgcj9864", "brandPid": "w13xttqx" },
-    "media": {
-      "id": "w172xcgmgcj9864",
-      "subType": "episode",
-      "format": "Video",
-      "title": "23/11/2020 GMT",
-      "synopses": {
-        "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-        "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-      "embedding": false,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshjbspmcxs8n",
-          "types": ["Original"],
-          "duration": 900,
-          "durationISO8601": "PT15M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1618185600000,
-          "availableFrom": 1606148100000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "programme",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1606089600000,
-    "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
+    "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+    "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+    "headline": "Би-Би-Си ТВ жаңылыктары",
+    "shortSynopsis": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
+    "mediumSynopsis": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
     "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgmgcj9864",
-    "type": "ws_tv"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Kyrgyz",
-      "uri": "/kyrgyz",
-      "type": "simple"
-    },
-    "groups": [
+    "brandId": "w13xttqx",
+    "episodeId": "w172xcgmgcj9864",
+    "masterBrand": "bbc_kyrgyz_tv",
+    "releaseDateTimeStamp": "2020-11-23T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
+    "imageAltText": null,
+    "promoBrandTitle": "Би-Би-Си ТВ жаңылыктары",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b24cn.png",
+    "episodeAvailability": "expired",
+    "recentEpisodes": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgnxfsdvmh", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgnxfsdvmh",
-              "subType": "episode",
-              "format": "Video",
-              "title": "21/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbv4pn1cq0",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608567300000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608508800000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgnxfsdvmh",
-            "type": "ws_tv"
+        "id": "w172zm921pcfxpt",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-19T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm921pcc0sq",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-18T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91pf1ygt8",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-15T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91pf1vkx5",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-14T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91pf1rp02",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-13T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91pf1ns2z",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-12T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91pf1kw5w",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-11T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91b4r5b6f",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-08T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91b4r2f9b",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-07T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91b4qzjd7",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-06T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91b4qwmh4",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-05T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm91b4qsql1",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-04T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90ywfd5ll",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-11-01T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90ywf98ph",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-31T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90ywf6csd",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-30T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90ywf3gw9",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-29T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90ywf0kz6",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-28T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90lm3m0zr",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-25T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90lm3j42n",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-24T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      },
+      {
+        "id": "w172zm90lm3f75k",
+        "brandTitle": "Би-Би-Си ТВ жаңылыктары",
+        "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+        "timestamp": "2024-10-23T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b24cn.png",
+        "altText": "Би-Би-Си ТВ жаңылыктары"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "w172xcgmgcj9864",
+          "subType": "episode",
+          "format": "Video",
+          "title": "Би-Би-Си ТВ жаңылыктары",
+          "synopses": {
+            "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
+            "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
           },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgnk5h09n1", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgnk5h09n1",
-              "subType": "episode",
-              "format": "Video",
-              "title": "18/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtsfbmtqk",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608308100000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608249600000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgnk5h09n1",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgnk5gxdqy", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgnk5gxdqy",
-              "subType": "episode",
-              "format": "Video",
-              "title": "17/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtsfbjxtg",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608221700000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608163200000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgnk5gxdqy",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgnk5gthtv", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgnk5gthtv",
-              "subType": "episode",
-              "format": "Video",
-              "title": "16/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtsfbg0xc",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608135300000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608076800000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgnk5gthtv",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgnk5gqlxr", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgnk5gqlxr",
-              "subType": "episode",
-              "format": "Video",
-              "title": "15/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtsfbc408",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608048900000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgnk5gqlxr",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgnk5gmq0n", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgnk5gmq0n",
-              "subType": "episode",
-              "format": "Video",
-              "title": "14/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtsfb8735",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607962500000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgnk5gmq0n",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgn5x57516", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgn5x57516",
-              "subType": "episode",
-              "format": "Video",
-              "title": "11/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtf50vp3q",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607703300000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607644800000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgn5x57516",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "Би-Би-Си ТВ жаңылыктары" },
-            "locators": { "pid": "w172xcgn5x54843", "brandPid": "w13xttqx" },
-            "media": {
-              "id": "w172xcgn5x54843",
-              "subType": "episode",
-              "format": "Video",
-              "title": "10/12/2020 GMT",
-              "synopses": {
-                "short": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.",
-                "medium": "Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshjbtf50rs6m",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607616900000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607558400000,
-            "brand": { "pid": "w13xttqx", "title": "Би-Би-Си ТВ жаңылыктары" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_tv/w172xcgn5x54843",
-            "type": "ws_tv"
-          }
-        ]
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b24cn.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "programme",
+          "episodeTitle": "Би-Би-Си ТВ жаңылыктары",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "ky",
+          "pageIdentifierOverride": "kyrgyz.bbc_kyrgyz_tv.tv.w172xcgmgcj9864.page"
+        }
       }
     ]
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

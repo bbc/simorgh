@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
+    atiAnalyticsProducerName: 'SINHALA',
+    useReverb: true,
     chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/sinhala/institutional-50288553',
     isTrustProjectParticipant: true,
     script: sinhalese,
-    manifestPath: '/manifest.json',
+    manifestPath: '/sinhala/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'මුල් පිටුව',
+    homePageTitle: 'ප්‍රධාන පුවත්',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -55,7 +57,7 @@ export const service: DefaultServiceConfig = {
         advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
       },
       seeAll: 'සියල්ල දැකගන්න',
-      home: 'මුල් පිටුව',
+      home: 'ප්‍රධාන පුවත්',
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
@@ -132,7 +134,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'හරි',
           reject: 'වෙනස් කර ඇත්තේ මොනවාදැයි දැනගන්න',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -226,6 +228,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'ධාවන කාලය',
         recentEpisodes: 'පෙර වැඩසටහන්',
+        closeVideo: 'ඉවත්වෙන්න',
       },
       socialEmbed: {
         caption: {
@@ -261,16 +264,20 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'අලුත්ම',
     },
     mostRead: {
-      header: 'වැඩිපුරම කියැවූ',
+      header: 'ජනප්‍රිය ලිපි',
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
     },
+    recommendations: {
+      header: 'වැඩිපුරම කියැවූ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
+    },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -299,6 +306,10 @@ export const service: DefaultServiceConfig = {
           text: 'බීබීසී ය අමතන්න',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'බීබීසී පුවත් වෙනත් භාෂාවලින්',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -310,12 +321,8 @@ export const service: DefaultServiceConfig = {
     timezone: 'GMT',
     navigation: [
       {
-        title: 'මුල් පිටුව',
+        title: 'ප්‍රධාන පුවත්',
         url: '/sinhala',
-      },
-      {
-        title: 'මහ මැතිවරණය 2024',
-        url: '/sinhala/topics/c5y3ve4z2lkt',
       },
       {
         title: 'ශ්‍රී ලංකා',
@@ -330,8 +337,12 @@ export const service: DefaultServiceConfig = {
         url: '/sinhala/topics/crldzm9n2lnt',
       },
       {
-        title: 'කලා',
-        url: '/sinhala/topics/c7zp5zxk8jxt',
+        title: 'ක්‍රීඩා',
+        url: '/sinhala/topics/cvjp2jy9g2qt',
+      },
+      {
+        title: 'සෞඛ්‍ය',
+        url: '/sinhala/topics/cz74k723j57t',
       },
     ],
   },

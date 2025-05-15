@@ -1,31 +1,183 @@
 import { Meta } from '@storybook/blocks';
+import { Link } from 'react-router-dom';
 
-<Meta title="docs/Test-Strategy-Info" />
+<Meta title="docs/WS-Automation-strategy" />
 
-# Test Strategy for adding integration/cypress tests
+# World Service - Test Automation strategy
 
-This document gives a brief overview on what basis integration and e2e tests are added.
 
-![TestingPyramid](https://user-images.githubusercontent.com/9802855/83626408-42541580-a58d-11ea-9891-30dcd2e5b936.png)
+## Table of Contents
+- [Background](#background)
+- [Why should we automate?](#why-should-we-automate)
+- [Where should we automate?](#where-should-we-automate)
+- [What levels to prioritise?](#what-levels-to-prioritise)
+- [What should we automate?](#what-should-we-automate)
+- [When should we automate?](#when-should-we-automate)
+- [How should we automate?](#how-should-we-automate)
+- [Who should automate?](#who-should-automate)
 
-## Factors to be considered before deciding on integration or cypress tests
 
-* Test runtime
-* How flaky the test would be (how often the test will fail due to external conditions such as timing out)
-* Realistic environment (does it mock the browser behaviour)
-* Client/Server side rendered (as with JSDom in integration testing, it doesn’t entirely emulate a web browser so client side rendered components have to be tested using cypress)
+## Background 
 
-## Integration tests:
+This document aims to provide high-level guidance on approaching test automation for World Service teams. It specifically seeks to answer the following questions:
 
-* Integration tests should cover all the test scenarios (happy and unhappy scenarios) at the component level (but in our case its more likely to be page types).
-* Evaluate whether cases can be covered by integration tests before considering adding cypress tests due to the the time taken by cypress.
-* Mock endpoints if it’s a third party component. Ideally, we should try not to mock our own components.
 
-## E2E Tests:
+- Why should we automate? (Why we write tests)
+- Where should we automate? (What levels)
+- What should we automate? 
+- When should we automate?
+- How should we automate? (Patterns, Anti-Patterns and Practices)
+- Who should automate? (Responsibilities)
 
-* Cypress tests to be used for simulating real user journeys.
-* Cypress tests to be used for actions that change the state of the page (e.g script switching, clicking play on media, changing viewport)
-* Most of our current cypress test have been replaced by integration tests which saves time in CI, however integration tests are not run against real browser environments so core functionality tests for page types which affect users should remain in cypress tests.
-* It could be good to have either one or multiple user journeys that navigates through all page types (e.g front page → MAP → another MAP → front page → article etc.). This simulate a real user experience and could also serve as a sanity check as mentioned above. This is currently limited by some page types still being on PAL, but there are still some user journeys currently possible without needing to touch PAL pages. Another issue is that some page types require an override on the URL to be used in the test environment as they do not have many/any assets on test (e.g On Demand Radio brands and episodes)
-* Layout changes at different viewport to be considered adding to cypress tests.
-* Cypress tests to be run on a subset of services (services having script switcher, RTL, different layout) and not for all services.
+While this document focuses primarily on E2E test strategy, it touches on other levels of testing to give a holistic understanding and context for the decisions we make when it comes to testing. It documents some of our existing approaches, while suggesting gradual improvements for the future. It’s a living collaborative document that we should refer to and update continuously. 
+
+
+
+
+## Why should we automate?
+
+There are many reasons why we write automated tests. Some of the most common are:
+
+
+1. Verify the code is working correctly
+2. Prevent future regressions
+3. Document code behaviour
+4. Provides (code) design guidance
+5. Support refactoring
+
+[source: https://madeintandem.com/blog/five-factor-testing/]
+
+
+> 🔊 Discussion point with team:
+> - Any other reasons? 
+> - What are for you the most important reasons?
+    
+
+It is important to think about why we write tests because it influences what types of testing we should prioritise. For example, unit tests might be good for improving the system design as the units become more independent and easier to test, but having only unit tests doesn’t necessarily verify the code is working correctly (beyond the single unit) as it won’t necessarily reveal problems that occur in the integration of components. On the other hand, E2E tests can provide better verification of the software, but they’re expensive and would not necessarily improve software design, nor document the code behaviour at unit or component level.
+
+## Where should we automate?
+### Defining the test levels
+
+Broadly speaking, we follow the test pyramid. We have a large set of unit tests, a smaller subset of integration tests, and an even smaller subset of UI tests. We should continue to follow this pattern.
+
+![Image](https://blog.getmason.io/content/images/2020/11/Testing-pyramid--6--1.jpg)
+Image [Source](https://blog.getmason.io/content/images/2020/11/Testing-pyramid--6--1.jpg)
+
+To avoid confusion, we will clarify what the test levels mean in our context.
+
+### Unit tests
+We use jest to write unit tests. They normally exercise a single component (UI components, hooks, helper methods). Here is an [example unit test](https://github.com/bbc/simorgh/tree/bfbed54d2b1fe880e8f171023054c16d1c274ca2/src/app/components/Heading).
+Some patterns:
+
+- We use [data-driven tests](https://github.com/bbc/simorgh/blob/bfbed54d2b1fe880e8f171023054c16d1c274ca2/src/app/hooks/useImageColour/index.test.js#L10) to define inputs to tests
+- We use [snapshot tests](https://github.com/bbc/simorgh/blob/4f385d94bee96af48eff2eca49c24cf382a3a494/src/app/components/FrostedGlassPromo/index.test.tsx#L76) to easily test certain scenarios.
+    
+
+### Component tests
+We conduct visual regression testing using Chromatic, which alongside our unit tests, comprise our component tests layer.
+
+### Integration tests
+These test the integration between the different components to ensure a page is rendered properly. 
+They typically check that what’s rendered matches local fixture data in a flexible generic way, i.e. check that a page renders “most read” articles but not the exact items rendered, and that each topic has an image and header but not the content of either.
+Examples can be found in [src/integration](https://github.com/bbc/simorgh/tree/bfbed54d2b1fe880e8f171023054c16d1c274ca2/src/integration).
+Check [here](https://github.com/bbc/simorgh/blob/cbf7c2b3d08a33775c51eeb94de750d0993a988b/src/integration/README.mdx#integration) for more details about our integration tests.
+
+### E2E tests
+These tests run against the application and can check that everything renders correctly. For example, an integration test might check that “most read” articles are rendered with the correct HTML tags, but that does not necessarily mean they appear correctly (some CSS value might hide them). With the E2E tests, we check that everything shows as expected in the UI.
+Examples and instructions can be found in [cypress](https://github.com/bbc/simorgh/tree/latest/cypress).
+
+
+
+#### What levels to prioritise?
+
+Unit tests responsibility and scope are relatively easy to define: we already have a high level of code coverage and developers should aim to maintain that. 
+
+For integration and E2E tests, the general rule of thumb should be to only add an E2E test when an integration test is not enough to ensure coverage. Integration tests are less expensive and more stable and they should be prioritised.
+
+
+> [!NOTE]
+ Think about the maintenance cost of adding a new E2E test. Always favour an integration test if possible instead of an end to end test.
+
+For new features, we should decide as part of the planning or shaping of work/tickets whether an E2E test is necessary for the feature.
+
+### What should we automate?
+The decision to write an E2E test should be taken during planning as a team, but these are general guidelines to what should go into E2E tests
+
+#### Critical paths 
+The critical path is the set of components and workflows that is required for the application to serve its core function. For example, an article page displaying the content and title for the given service is critical in our context, but links to related topics or top stories, can be considered non-critical. These should be tested as well, but they’re better candidates for a less expensive layer of testing like integration tests.
+
+#### Smoke tests
+We should have smoke tests for validating that core functionality is not broken, for example, that the page loads, has titles and content. These should run as often as possible (on each PR), they should be quick, reliable and repeatable (not flaky).
+
+#### As little as possible
+The rule of thumb is that we should avoid writing an end to end test if there is an alternative to validating the functionality. The alternative can be a combination of layers, for example, an integration test combined with an API test (which doesn’t exist right now) can be enough to reach the same confidence as an E2E test with less cost.
+
+### PUMA approach
+Adopting the [PUMA](https://confluence.dev.bbc.co.uk/display/podtest/PUMA) approach can provide a framework to decide if a proposed test genuinely meets the definition of an E2E. According to PUMA, an E2E test should:
+
+P - Prove core functionality
+
+U - be Understood by all
+
+M - Mandatory
+
+A - Automated
+
+
+### How should we automate?
+Patterns, anti-patterns and practices for E2E tests
+
+In this section, we will document some of the patterns we use and the best practices to write better E2E tests.
+
+##### Cypress best practices
+A good place to start is the Cypress best practices page: https://docs.cypress.io/guides/references/best-practices
+
+Custom commands for common functionalities
+We have many custom commands that make common tasks easier, these are located within [cypress/e2e/commands](https://github.com/bbc/simorgh/blob/latest/cypress/support/commands/application.js). It’s good to have a look at these to have an overview of what’s possible, and consider abstracting common functionality as a [cypress command](https://docs.cypress.io/api/cypress-api/custom-commands) when it makes sense.
+
+#### Do not ignore “flaky” tests
+
+
+> There is no such thing as a flaky test.
+> 
+> Any test is designed to provide insight into the functionality of the piece of code it exercises. As a result, when the test completes it provides information about how the code performed the actions detailed in the test.
+> 
+> If the test is “green” (i.e. it confirms the actual behaviour matches the expected behaviour), then we are provided with the knowledge that at that time the system behaved as defined by the test.
+> 
+> If the test is “red” (i.e. it confirms the actual behaviour did not match expectation), then we are provided with the knowledge that at that time the system did not behave as defined by the test.
+> 
+> If a test remains permanently “red”, then we either misunderstood the purpose of the code and so need to review the expectations of the checks in the test or we have uncovered unexpected behaviour in the system under test.
+> 
+> If a test remains permanently “green”, then we confirm current behaviour continues to meet the expectations of the test.
+> 
+> However, a test that flickers between the two states indicates something is not right and should not be ignored! I believe describing these as flaky makes it easy to ignore potential problems either in the functionality of the system under test or the test itself.
+> 
+> quote from  [Simon Frampton, Principal Test Engineer, BBC](@sframpton)
+
+
+
+> 🔊 Discussion with team: 
+> - What are other good practices?
+> - Any anti-patterns?
+
+
+#### Who should automate?
+#### Responsibilities
+|             | Unit tests         | Integration        | E2E                |
+| ----------- | ------------------ | ------------------ | ------------------ |
+| Responsible | Developers         | Developers and QA (^) | QA and Developers (^) |
+| Accountable | Developers         | Developers         | QA                 |
+| Consulted (+) | Developers and QA# | Developers and QA  | Developers and QA  |
+| Informed (+) | Developers and QA# | Developers and QA  | Developers and QA  |
+
+(^) For integration tests, developers are accountable for them, but sometimes QA can be involved in their implementation. For E2E, QA are accountable for them but developers can be involved in the implementation too.
+
+(+) Consulting and informing in this context happens mainly during the sprint planning or three amigos. As a team, we can decide on whether a feature requires an integration or E2E test (or both). Consulting also includes code reviews of tests being added.
+
+> [!NOTE]
+There is no reason why QA cannot be consulted and informed about the content of unit tests. As specialists, they might consider and uncover edge cases/scenarios that do not occur to developers and can also help to review the language used to frame the tests (think about `describe` and `it` blocks) even if they are not confident writing the test code itself.
+
+
+##### References
+- [Five Factor Testing](https://madeintandem.com/blog/five-factor-testing/)
+- [Practical test pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)

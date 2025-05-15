@@ -1,7 +1,21 @@
 import React from 'react';
 import HeaderContainer from '.';
+import { ToggleContextProvider } from '../../../contexts/ToggleContext';
+import { BrowserRouter } from 'react-router-dom';
 
-const Component = () => <HeaderContainer />;
+const Component = () => (
+  <ToggleContextProvider
+    toggles={{
+      scriptLink: {
+        enabled: true,
+      },
+    }}
+  >
+    <BrowserRouter>
+      <HeaderContainer />
+    </BrowserRouter>
+  </ToggleContextProvider>
+);
 
 export default {
   title: 'Containers/Header',

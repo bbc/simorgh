@@ -15,7 +15,7 @@
     "sportDataEvent": { "id": null },
     "eavisEvent": { "id": null },
     "article": { "id": null },
-    "mediaCollections": [{ "id": null }],
+    "mediaCollections": null,
     "keyHighlight": { "id": null },
     "electionBanner": { "id": null },
     "supportingLinks": { "id": null },
@@ -207,15 +207,15 @@
                       "id": "cb0f3228",
                       "type": "video",
                       "model": {
-                        "locator": "urn:bbc:pips:pid:p01vz9cq",
+                        "locator": "urn:bbc:pips:pid:p0gh4n67",
                         "blocks": [
                           {
                             "id": "2c039c31",
                             "type": "clipMedia",
                             "model": {
-                              "id": "urn:bbc:pips:pid:p01vz9cq",
+                              "id": "urn:bbc:pips:pid:p0gh4n67",
                               "urns": {
-                                "pipsPid": "urn:bbc:pips:pid:p01vz9cq"
+                                "pipsPid": "urn:bbc:pips:pid:p0gh4n67"
                               },
                               "images": [
                                 {
@@ -233,7 +233,7 @@
                                   "source": "pipsImage"
                                 }
                               ],
-                              "assetPath": "p01vz9cq",
+                              "assetPath": "p0gh4n67",
                               "type": "video",
                               "headlines": {
                                 "primaryHeadline": "Lionel Messi Skills",
@@ -243,8 +243,8 @@
                               },
                               "analytics": {
                                 "page": {
-                                  "name": "programmes.av.p01vz9cq.page",
-                                  "contentId": "urn:bbc:pips:pid:p01vz9cq",
+                                  "name": "programmes.av.p0gh4n67.page",
+                                  "contentId": "urn:bbc:pips:pid:p0gh4n67",
                                   "producer": "PROGRAMMES"
                                 }
                               },
@@ -274,16 +274,17 @@
                               "lastPublished": "2024-02-28T10:32:08Z",
                               "firstPublished": null,
                               "video": {
-                                "id": "p01vz9cq",
+                                "id": "p0gh4n67",
                                 "title": "Lionel Messi Skills",
                                 "holdingImage": {
                                   "id": "https://ichef.test.bbci.co.uk/images/ic/$recipe/p01vzbd6.jpg",
                                   "altText": "Gary Lineker talks Messi"
                                 },
                                 "version": {
-                                  "id": "p01vz9cs",
+                                  "id": "p0gh4n67",
                                   "duration": "PT34S",
                                   "kind": "programme",
+                                  "simulcast": "true",
                                   "guidance": "Contains strong language and some upsetting scenes.",
                                   "territories": ["nonuk", "uk"]
                                 },
@@ -292,7 +293,7 @@
                                 "isUnavailable": false
                               },
                               "attributions": null,
-                              "link": { "path": "/programmes/p01vz9cq" },
+                              "link": { "path": "/programmes/p0gh4n67" },
                               "section": null,
                               "isSharingAllowed": true
                             }

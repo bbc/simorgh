@@ -471,7 +471,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -573,7 +573,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
         id="content"
         tabindex="-1"
       >
-        Di one wey oda users dey read well well
+        Di one wey dem dey read well well
       </h1>
       <div
         class="emotion-4 emotion-5"
@@ -614,7 +614,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     dir="ltr"
                   >
                     <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
+                      class="emotion-19"
                       href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
                     >
                       Teams wey qualify for Afcon 2023 and how things stand for each group
@@ -655,7 +655,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     dir="ltr"
                   >
                     <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
+                      class="emotion-19"
                       href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
                     >
                       'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
@@ -696,7 +696,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     dir="ltr"
                   >
                     <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
+                      class="emotion-19"
                       href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
                     >
                       Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
@@ -737,7 +737,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     dir="ltr"
                   >
                     <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
+                      class="emotion-19"
                       href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
                     >
                       Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
@@ -778,7 +778,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                     dir="ltr"
                   >
                     <a
-                      class="focusIndicatorDisplayTableCell emotion-19"
+                      class="emotion-19"
                       href="/pidgin/65817572"
                     >
                       Tins to sabi about 2023 Sierra Leone general election

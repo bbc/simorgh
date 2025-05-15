@@ -2,7 +2,6 @@ import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
 
@@ -41,26 +40,42 @@ const masterBrands = {
 export default {
   title: 'Containers/Episode List/Audio',
   Component,
-  decorators: [withServicesDecorator({ defaultService: 'indonesia' })],
 };
 
-export const MultipleItems = (_, { service }) => (
-  <Component
-    episodes={fixtures?.[service] ?? fixtures.indonesia}
-    pageType="Podcast"
-    masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
-    service={service}
-  />
-);
-
-export const SingleItem = (_, { service }) => {
-  const fixture = fixtures?.[service]?.[0] ?? fixtures.indonesia[0];
-  return (
+export const MultipleItems = {
+  render: (_, { service }) => (
     <Component
-      episodes={[fixture]}
+      episodes={fixtures?.[service] ?? fixtures.indonesia}
       pageType="Podcast"
       masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
       service={service}
     />
-  );
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
 };
+
+export const SingleItem = {
+  render: (_, { service }) => (
+    <Component
+      episodes={[fixtures?.[service]?.[0] ?? fixtures.indonesia[0]]}
+      pageType="Podcast"
+      masterBrand={masterBrands?.[service] ?? masterBrands.indonesia}
+      service={service}
+    />
+  ),
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+};
+
+// This story is for chromatic testing purposes only
+export const TestMultipleItems = storyArgs =>
+  MultipleItems.render(storyArgs, { service: 'indonesia' });
+TestMultipleItems.tags = ['!dev'];
+
+// This story is for chromatic testing purposes only
+export const TestSingleItem = storyArgs =>
+  SingleItem.render(storyArgs, { service: 'indonesia' });
+TestSingleItem.tags = ['!dev'];

@@ -1,6 +1,6 @@
 /**
  * @service hausa
- * @pathname /hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8
+ * @pathname /hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p
  */
 
 import runCanonicalTests from '../canonicalTests';

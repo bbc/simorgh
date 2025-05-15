@@ -20,6 +20,7 @@ export type PlayerConfig = {
   insideIframe?: boolean;
   embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
+  superResponsive?: boolean;
   statsObject: {
     clipPID?: string | null;
     episodePID?: string | null;
@@ -37,6 +38,7 @@ export type PlayerConfig = {
     embedRights?: 'allowed';
     liveRewind?: boolean;
     simulcast?: boolean;
+    warning?: string;
   };
 };
 
@@ -114,6 +116,8 @@ export type Player = {
     parameters: { updatedAdTag: string },
   ): void;
   load: () => void;
+  play: () => void;
+  pause: () => void;
   bind: (event: string, callback: () => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
@@ -125,6 +129,7 @@ export type Player = {
       };
     },
   ) => void;
+  player: { paused: () => boolean };
 };
 
 export type BumpType = {
@@ -213,6 +218,29 @@ export type ClipMediaBlock = {
   };
 };
 
+export type PortraitClipMediaBlock = {
+  type: 'portraitClipMedia';
+  model: {
+    type: MediaType;
+    images: {
+      source: string;
+      urlTemplate?: string;
+    }[];
+    video: {
+      id: string;
+      title: string;
+      version: {
+        id: string;
+        duration: string;
+        kind: string;
+        guidance: string | null;
+        territories: string[];
+      };
+      isEmbeddingAllowed: boolean;
+    };
+  };
+};
+
 export type LegacyMediaBlock = {
   type: 'legacyMedia';
   content: {
@@ -239,15 +267,37 @@ export type LegacyMediaBlock = {
   };
 };
 
+export type MediaCollection = {
+  type: 'liveMedia';
+  model: {
+    synopses: {
+      short: string;
+    };
+    masterbrand: {
+      networkName: string;
+    };
+    version: {
+      vpid?: string;
+      serviceID?: string;
+      duration: string;
+      status: string;
+    };
+    imageUrlTemplate: string;
+    title: string;
+  };
+};
+
 export type MediaBlock =
   | AresMediaBlock
   | ClipMediaBlock
+  | PortraitClipMediaBlock
   | LegacyMediaBlock
   | LiveRadioBlock
   | OnDemandTVBlock
   | OnDemandAudioBlock
   | CaptionBlock
-  | MediaOverrides;
+  | MediaOverrides
+  | MediaCollection;
 
 export type BuildConfigProps = {
   id: string;

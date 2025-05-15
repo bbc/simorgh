@@ -1,5 +1,5 @@
 {
   "browser": "client.js",
-  "main": "index.js",
+  "main": "index.ts",
   "name": "@bbc/simorgh-getInitialDataArticle"
 }

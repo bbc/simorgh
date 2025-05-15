@@ -542,6 +542,7 @@ exports[`Inline Should render correctly 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="podcast-promo"
     dir="ltr"
   >
     <section
@@ -980,6 +981,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="podcast-promo"
   >
     <section
       aria-labelledby="podcast-promo"

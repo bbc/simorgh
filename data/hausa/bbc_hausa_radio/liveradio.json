@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_hausa_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_hausa_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "hausa",
+  "data": {
+    "heading": "BBC Hausa Rediyo",
+    "bodySummary": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
     "language": "ha",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "BBC Hausa Rediyo - BBC News Hausa",
-      "pageIdentifier": "hausa.bbc_hausa_radio.liveradio.page",
-      "producerId": "51",
-      "contentType": "player-live",
-      "producer": "HAUSA"
+    "id": "urn:bbc:ares:ws_media:live:bbc_hausa_radio",
+    "name": "BBC Hausa Rediyo",
+    "summary": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+    "masterBrand": "bbc_hausa_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k01c1g",
+        "state": "next",
+        "startTime": "2024-11-29T19:29:30.000Z",
+        "link": "/hausa/bbc_hausa_radio/w3ct76x0",
+        "brandTitle": "Ra’ayi Riga",
+        "summary": "Shiri ne a duk ranar Juma'a da ke baiwa masu sauraro damar bayyana ra'ayoyinsu.",
+        "duration": "PT1H"
+      },
+      {
+        "id": "p0k01c1d",
+        "state": "onDemand",
+        "startTime": "2024-11-29T13:59:30.000Z",
+        "link": "/hausa/bbc_hausa_radio/w3ct76y4",
+        "brandTitle": "Shirin Rana",
+        "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban-daban na duniya.",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k01c1b",
+        "state": "onDemand",
+        "startTime": "2024-11-29T06:30:00.000Z",
+        "link": "/hausa/bbc_hausa_radio/w172zxmn0vnfzc3",
+        "brandTitle": "Shirin Hantsi",
+        "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0k01c18",
+        "state": "onDemand",
+        "startTime": "2024-11-29T05:29:30.000Z",
+        "link": "/hausa/bbc_hausa_radio/w3ct773s",
+        "brandTitle": "Shirin Safe",
+        "summary": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+        "duration": "PT30M"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_hausa_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "hausa.bbc_hausa_radio.liveradio.page",
+        "pageTitle": "BBC Hausa Rediyo - BBC News Hausa"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "BBC Hausa Rediyo",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_hausa_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "BBC Hausa Rediyo",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_hausa_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "BBC Hausa Rediyo",
-    "summary": "Labaran duniya da sharhi da kuma bayanai kan al'amuran yau da kullum daga sashin Hausa na BBC.",
-    "uri": "/hausa/bbc_hausa_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_hausa_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "hausa",
-      "uri": "/hausa",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -1,12 +1,21 @@
 import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import getInitialData from '.';
-import * as fetchPageData from '../../utils/fetchPageData';
 
 fetch.mockResponse(JSON.stringify(liveRadioJson));
+
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 jest.mock('../../utils/getConfig', () => jest.fn());
+
+process.env.BFF_PATH = 'https://mock-bff-path';
+
+const agent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+};
+const mockGetAgent = () => Promise.resolve(agent);
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 describe('Get initial data for live radio', () => {
   afterEach(() => {
@@ -16,13 +25,15 @@ describe('Get initial data for live radio', () => {
 
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
-      path: 'mock-live-radio-path',
+      path: '/korean/bbc_korean_radio/liveradio',
       service: 'korean',
-      pageType: MEDIA_PAGE,
+      pageType: LIVE_RADIO_PAGE,
+      getAgent: mockGetAgent,
       toggles: {
         liveRadioSchedule: { enabled: true },
       },
     });
+
     expect(pageData.name).toEqual('BBC 코리아 라디오');
     expect(pageData.language).toEqual('ko');
     expect(pageData.metadata.type).toEqual('Live Radio');
@@ -39,24 +50,26 @@ describe('Get initial data for live radio', () => {
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await getInitialData({
-      path: 'mock-live-radio-path',
-      pageType: MEDIA_PAGE,
+      path: '/korean/bbc_korean_radio/liveradio',
+      pageType: LIVE_RADIO_PAGE,
     });
     expect(spy).toHaveBeenCalledWith({
-      path: 'mock-live-radio-path?renderer_env=live',
-      pageType: MEDIA_PAGE,
+      optHeaders: { 'ctx-service-env': 'test' },
+      path: 'https://mock-bff-path/?id=bbc_korean_radio&pageType=liveRadio&disableRadioSchedule=true&serviceEnv=test',
+      pageType: LIVE_RADIO_PAGE,
     });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     await getInitialData({
-      path: 'mock-live-radio-path',
-      pageType: MEDIA_PAGE,
+      path: '/korean/bbc_korean_radio/liveradio',
+      pageType: LIVE_RADIO_PAGE,
     });
     expect(spy).toHaveBeenCalledWith({
-      path: 'mock-live-radio-path',
-      pageType: MEDIA_PAGE,
+      optHeaders: { 'ctx-service-env': 'live' },
+      path: 'https://mock-bff-path/?id=bbc_korean_radio&pageType=liveRadio&disableRadioSchedule=true&serviceEnv=live',
+      pageType: LIVE_RADIO_PAGE,
     });
   });
 });

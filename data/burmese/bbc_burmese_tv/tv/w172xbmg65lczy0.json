@@ -1,571 +1,243 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmg65lczy0",
-    "locators": { "pid": "w172xbmg65lczy0", "brandPid": "w13xttn3" },
-    "type": "WSTV",
-    "createdBy": "bbc_burmese_tv",
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "burmese.bbc_burmese_tv.tv.w172xbmg65lczy0.page",
+        "contentType": "player-episode",
+        "pageTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ် - BBC News မြန်မာ",
+        "contentId": "urn:bbc:pips:w172xbmg65lczy0"
+      }
+    },
     "language": "my",
-    "lastUpdated": 1608628763844,
-    "firstPublished": 1603733197000,
-    "lastPublished": 1603733197000,
-    "timestamp": 1603733197000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ် - BBC News မြန်မာ",
-      "pageIdentifier": "burmese.bbc_burmese_tv.tv.w172xbmg65lczy0.page",
-      "producerId": "35",
-      "contentType": "player-episode",
-      "producer": "BURMESE"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": ["media"],
-    "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
-    "releaseDateTimeStamp": 1606176000000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "w172xbmg65lczy0",
-        "subType": "episode",
-        "format": "Video",
-        "title": "24/11/2020 GMT",
-        "synopses": {
-          "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-          "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-        "embedding": false,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshhg5qj7r9mp",
-            "types": ["Original"],
-            "duration": 900,
-            "durationISO8601": "PT15M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1618185600000,
-            "availableFrom": 1606228200000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "programme",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-    "locators": { "pid": "w172xbmg65lczy0", "brandPid": "w13xttn3" },
-    "media": {
-      "id": "w172xbmg65lczy0",
-      "subType": "episode",
-      "format": "Video",
-      "title": "24/11/2020 GMT",
-      "synopses": {
-        "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-        "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-      "embedding": false,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshhg5qj7r9mp",
-          "types": ["Original"],
-          "duration": 900,
-          "durationISO8601": "PT15M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1618185600000,
-          "availableFrom": 1606228200000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "programme",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1606176000000,
-    "brand": { "pid": "w13xttn3", "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
+    "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+    "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+    "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+    "shortSynopsis": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
+    "mediumSynopsis": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
     "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmg65lczy0",
-    "type": "ws_tv"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Burmese",
-      "uri": "/burmese",
-      "type": "simple"
-    },
-    "groups": [
+    "brandId": "w13xttn3",
+    "episodeId": "w172xbmg65lczy0",
+    "masterBrand": "bbc_burmese_tv",
+    "releaseDateTimeStamp": "2020-11-24T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
+    "imageAltText": null,
+    "promoBrandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p088hgd7.png",
+    "episodeAvailability": "expired",
+    "recentEpisodes": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmhn7vdpg8", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmhn7vdpg8",
-              "subType": "episode",
-              "format": "Video",
-              "title": "21/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg75lhs04y",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608561000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608508800000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmhn7vdpg8",
-            "type": "ws_tv"
+        "id": "w172zm2xyrfjmg7",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-19T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2xyrffqk4",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-18T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2xlh415kp",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-15T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2xlh3y8nl",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-14T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2xlh3vcrh",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-13T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2xlh3rgvd",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-12T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2xlh3nky9",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-11T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2x76t80yv",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-08T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2x76t541r",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-07T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2x76t274n",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-06T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2x76szb7k",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-05T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2x76swfbg",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-04T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2wvyhgwc0",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-11-01T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2wvyhczfx",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-31T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2wvyh92jt",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-30T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2wvyh65mq",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-29T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2wvyh38qm",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-28T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2whp5pqr5",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-25T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2whp5ltv2",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-24T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      },
+      {
+        "id": "w172zm2whp5hxxz",
+        "brandTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+        "timestamp": "2024-10-23T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088hgd7.png",
+        "altText": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "w172xbmg65lczy0",
+          "subType": "episode",
+          "format": "Video",
+          "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+          "synopses": {
+            "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
+            "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
           },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmh8zk04gt", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmh8zk04gt",
-              "subType": "episode",
-              "format": "Video",
-              "title": "18/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6tb6cg5h",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608301800000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608249600000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmh8zk04gt",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmh8zjx7kq", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmh8zjx7kq",
-              "subType": "episode",
-              "format": "Video",
-              "title": "17/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6tb68k8d",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608215400000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608163200000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmh8zjx7kq",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmh8zjtbnm", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmh8zjtbnm",
-              "subType": "episode",
-              "format": "Video",
-              "title": "16/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6tb65nc9",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608129000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1608076800000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmh8zjtbnm",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmh8zjqfrj", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmh8zjqfrj",
-              "subType": "episode",
-              "format": "Video",
-              "title": "15/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6tb62rg6",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1608042600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607990400000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmh8zjqfrj",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmh8zjmjvf", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmh8zjmjvf",
-              "subType": "episode",
-              "format": "Video",
-              "title": "14/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6tb5zvk3",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607956200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607904000000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmh8zjmjvf",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmgxq76zvz", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmgxq76zvz",
-              "subType": "episode",
-              "format": "Video",
-              "title": "11/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6g1wl9kn",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607697000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607644800000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmgxq76zvz",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်" },
-            "locators": { "pid": "w172xbmgxq742yw", "brandPid": "w13xttn3" },
-            "media": {
-              "id": "w172xbmgxq742yw",
-              "subType": "episode",
-              "format": "Video",
-              "title": "10/12/2020 GMT",
-              "synopses": {
-                "short": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။",
-                "medium": "မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshhg6g1whdnk",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607610600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1607558400000,
-            "brand": {
-              "pid": "w13xttn3",
-              "title": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_burmese_tv/w172xbmgxq742yw",
-            "type": "ws_tv"
-          }
-        ]
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088hgd7.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "programme",
+          "episodeTitle": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "my",
+          "pageIdentifierOverride": "burmese.bbc_burmese_tv.tv.w172xbmg65lczy0.page"
+        }
       }
     ]
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

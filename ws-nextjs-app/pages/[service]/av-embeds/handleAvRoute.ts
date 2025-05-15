@@ -13,7 +13,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import { BFF_FETCH_ERROR, ROUTING_INFORMATION } from '#app/lib/logger.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
-import getAgent from '../../../utilities/undiciAgent';
+import getAgent from '#server/utilities/getAgent';
 
 const logger = nodeLogger(__filename);
 
@@ -26,15 +26,18 @@ export default async (context: GetServerSidePropsContext) => {
   let pageStatus;
   let pageJson;
 
-  // Remove x-frame-options header to allow embedding
-  context.res.removeHeader('x-frame-options');
-
-  const parsedRoute = parseAvRoute(resolvedUrl);
+  // Set x-robots-tag header to prevent search engine indexing
+  context.res.setHeader('x-robots-tag', 'noindex');
 
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
   );
+
+  // Remove x-frame-options header to allow embedding
+  context.res.removeHeader('x-frame-options');
+
+  const parsedRoute = parseAvRoute(resolvedUrl);
 
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,

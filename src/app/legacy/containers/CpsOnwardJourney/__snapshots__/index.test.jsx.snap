@@ -712,6 +712,13 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 .emotion-9 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-9:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-11 {
@@ -1086,6 +1093,13 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 .emotion-9 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-9:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-11 {
@@ -1188,6 +1202,8 @@ exports[`CpsOnwardJourney renders section label with with alternative background
       >
         <h2
           class="emotion-9 emotion-10"
+          id="section-label-heading-heading-label"
+          tabindex="-1"
         >
           <span
             class="emotion-11 emotion-12"
@@ -1460,6 +1476,13 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 .emotion-9 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-9:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-11 {
@@ -1562,6 +1585,8 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
       >
         <h2
           class="emotion-9 emotion-10"
+          id="section-label-heading-heading-label"
+          tabindex="-1"
         >
           <span
             class="emotion-11 emotion-12"
@@ -1881,6 +1906,13 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 .emotion-13 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-15 {
@@ -2003,6 +2035,8 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
         >
           <h2
             class="emotion-13 emotion-14"
+            id="section-label-heading-heading-label"
+            tabindex="-1"
           >
             <span
               class="emotion-15 emotion-16"
@@ -2346,6 +2380,13 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 .emotion-13 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-15 {
@@ -2468,6 +2509,8 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
         >
           <h2
             class="emotion-13 emotion-14"
+            id="section-label-heading-heading-label"
+            tabindex="-1"
           >
             <span
               class="emotion-15 emotion-16"

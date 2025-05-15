@@ -54,6 +54,7 @@ const buildSettings = ({
       subtitles: { enabled: true, defaultOn: true },
       fullscreen: { enabled: true },
     },
+    ...(!embedded && { superResponsive: true }),
     ...(counterName && { counterName }),
     ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
     statsObject: {

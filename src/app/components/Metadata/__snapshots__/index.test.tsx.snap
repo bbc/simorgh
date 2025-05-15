@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot should match for AMP News & UK origin 1`] = `
+exports[`Metadata Snapshot should match for AMP News & UK origin 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -242,7 +242,7 @@ exports[`Snapshot should match for AMP News & UK origin 1`] = `
 }
 `;
 
-exports[`Snapshot should match for Canonical News & international origin 1`] = `
+exports[`Metadata Snapshot should match for Canonical News & international origin 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -491,7 +491,7 @@ exports[`Snapshot should match for Canonical News & international origin 1`] = `
 }
 `;
 
-exports[`Snapshot should match for Persian News & UK origin 1`] = `
+exports[`Metadata Snapshot should match for Persian News & UK origin 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -723,7 +723,7 @@ exports[`Snapshot should match for Persian News & UK origin 1`] = `
 }
 `;
 
-exports[`Snapshot should match for Persian News & byline twitter handle 1`] = `
+exports[`Metadata Snapshot should match for Persian News & byline twitter handle 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -957,7 +957,7 @@ exports[`Snapshot should match for Persian News & byline twitter handle 1`] = `
 }
 `;
 
-exports[`Snapshot should match for Persian News & international origin 1`] = `
+exports[`Metadata Snapshot should match for Persian News & international origin 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -1196,7 +1196,7 @@ exports[`Snapshot should match for Persian News & international origin 1`] = `
 }
 `;
 
-exports[`Snapshot should match for Ukrainian STY with Russian lang on Amp 1`] = `
+exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on Amp 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -1416,7 +1416,7 @@ exports[`Snapshot should match for Ukrainian STY with Russian lang on Amp 1`] = 
 }
 `;
 
-exports[`Snapshot should match for Ukrainian STY with Russian lang on canonical 1`] = `
+exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on canonical 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -1643,7 +1643,7 @@ exports[`Snapshot should match for Ukrainian STY with Russian lang on canonical 
 }
 `;
 
-exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on Amp 1`] = `
+exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on Amp 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -1863,7 +1863,7 @@ exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on Amp 1`] 
 }
 `;
 
-exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on canonical 1`] = `
+exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on canonical 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -2090,7 +2090,7 @@ exports[`Snapshot should match for Ukrainian STY with Ukrainian lang on canonica
 }
 `;
 
-exports[`Snapshot should match for WS Frontpages 1`] = `
+exports[`Metadata Snapshot should match for WS Homepages 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -2317,7 +2317,7 @@ exports[`Snapshot should match for WS Frontpages 1`] = `
 }
 `;
 
-exports[`Snapshot should match for WS Media liveradio 1`] = `
+exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
 {
   "baseTag": [],
   "bodyAttributes": {},
@@ -2336,10 +2336,6 @@ exports[`Snapshot should match for WS Media liveradio 1`] = `
       "href": "https://www.bbc.com/korean/bbc_korean_radio/liveradio",
       "hrefLang": "ko",
       "rel": "alternate",
-    },
-    {
-      "href": "https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp",
-      "rel": "amphtml",
     },
     {
       "href": "http://localhost:7080/korean/images/icons/icon-192x192.png",
@@ -2540,6 +2536,456 @@ exports[`Snapshot should match for WS Media liveradio 1`] = `
   "scriptTags": [],
   "styleTags": [],
   "title": "BBC 코리아 라디오 - BBC News 코리아",
+  "titleAttributes": {},
+}
+`;
+
+exports[`Metadata Snapshot should match for WS On Demand Audio 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {
+    "dir": "ltr",
+    "lang": "rw",
+  },
+  "linkTags": [
+    {
+      "href": "https://www.bbc.com/gahuza/bbc_gahuza_radio/p02pcb5c",
+      "rel": "canonical",
+    },
+    {
+      "href": "https://www.bbc.com/gahuza/bbc_gahuza_radio/p02pcb5c",
+      "hrefLang": "rw",
+      "rel": "alternate",
+    },
+    {
+      "href": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
+      "rel": "apple-touch-icon",
+      "sizes": "72x72",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
+      "rel": "apple-touch-icon",
+      "sizes": "96x96",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-128x128.png",
+      "rel": "apple-touch-icon",
+      "sizes": "128x128",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
+      "rel": "apple-touch-icon",
+      "sizes": "144x144",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-152x152.png",
+      "rel": "apple-touch-icon",
+      "sizes": "152x152",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-180x180.png",
+      "rel": "apple-touch-icon",
+      "sizes": "180x180",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+      "sizes": "192x192",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-384x384.png",
+      "rel": "apple-touch-icon",
+      "sizes": "384x384",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-512x512.png",
+      "rel": "apple-touch-icon",
+      "sizes": "512x512",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
+      "rel": "icon",
+      "sizes": "72x72",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
+      "rel": "icon",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
+      "rel": "icon",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-512x512.png",
+      "rel": "apple-touch-startup-image",
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon",
+      "type": "image/x-icon",
+    },
+  ],
+  "metaTags": [
+    {
+      "content": "IE=edge",
+      "http-equiv": "X-UA-Compatible",
+    },
+    {
+      "charset": "utf-8",
+    },
+    {
+      "content": "noodp, noydir, max-image-preview:large",
+      "name": "robots",
+    },
+    {
+      "content": "#B80000",
+      "name": "theme-color",
+    },
+    {
+      "content": "width=device-width, initial-scale=1, minimum-scale=1",
+      "name": "viewport",
+    },
+    {
+      "content": "BBC News Gahuza",
+      "name": "apple-mobile-web-app-title",
+    },
+    {
+      "content": "BBC News Gahuza",
+      "name": "application-name",
+    },
+    {
+      "content": "Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika",
+      "name": "description",
+    },
+    {
+      "content": "1609039196070050",
+      "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
+      "content": "yes",
+      "name": "mobile-web-app-capable",
+    },
+    {
+      "content": "#B80000",
+      "name": "msapplication-TileColor",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
+      "name": "msapplication-TileImage",
+    },
+    {
+      "content": "Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika",
+      "property": "og:description",
+    },
+    {
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "property": "og:image",
+    },
+    {
+      "content": "BBC News Gahuza",
+      "property": "og:image:alt",
+    },
+    {
+      "content": "rw-RW",
+      "property": "og:locale",
+    },
+    {
+      "content": "BBC News Gahuza",
+      "property": "og:site_name",
+    },
+    {
+      "content": "Imvo  n'imvano - BBC News Gahuza",
+      "property": "og:title",
+    },
+    {
+      "content": "website",
+      "property": "og:type",
+    },
+    {
+      "content": "https://www.bbc.com/gahuza/bbc_gahuza_radio/p02pcb5c",
+      "property": "og:url",
+    },
+    {
+      "content": "summary_large_image",
+      "name": "twitter:card",
+    },
+    {
+      "content": "@bbcgahuza",
+      "name": "twitter:creator",
+    },
+    {
+      "content": "Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika",
+      "name": "twitter:description",
+    },
+    {
+      "content": "BBC News Gahuza",
+      "name": "twitter:image:alt",
+    },
+    {
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "name": "twitter:image:src",
+    },
+    {
+      "content": "@bbcgahuza",
+      "name": "twitter:site",
+    },
+    {
+      "content": "Imvo  n'imvano - BBC News Gahuza",
+      "name": "twitter:title",
+    },
+    {
+      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/gahuza/bbc_gahuza_radio/p02pcb5c",
+      "http-equiv": "onion-location",
+    },
+  ],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [],
+  "styleTags": [],
+  "title": "Imvo  n'imvano - BBC News Gahuza",
+  "titleAttributes": {},
+}
+`;
+
+exports[`Metadata Snapshot should match for WS TV 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {
+    "dir": "ltr",
+    "lang": undefined,
+  },
+  "linkTags": [
+    {
+      "href": "https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+      "rel": "canonical",
+    },
+    {
+      "href": "https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+      "hrefLang": "hi",
+      "rel": "alternate",
+    },
+    {
+      "href": "http://localhost:7080/hindi/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-72x72.png",
+      "rel": "apple-touch-icon",
+      "sizes": "72x72",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-96x96.png",
+      "rel": "apple-touch-icon",
+      "sizes": "96x96",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-128x128.png",
+      "rel": "apple-touch-icon",
+      "sizes": "128x128",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-144x144.png",
+      "rel": "apple-touch-icon",
+      "sizes": "144x144",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-152x152.png",
+      "rel": "apple-touch-icon",
+      "sizes": "152x152",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-180x180.png",
+      "rel": "apple-touch-icon",
+      "sizes": "180x180",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+      "sizes": "192x192",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-384x384.png",
+      "rel": "apple-touch-icon",
+      "sizes": "384x384",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-512x512.png",
+      "rel": "apple-touch-icon",
+      "sizes": "512x512",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-72x72.png",
+      "rel": "icon",
+      "sizes": "72x72",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-96x96.png",
+      "rel": "icon",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-192x192.png",
+      "rel": "icon",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-512x512.png",
+      "rel": "apple-touch-startup-image",
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon",
+      "type": "image/x-icon",
+    },
+  ],
+  "metaTags": [
+    {
+      "content": "IE=edge",
+      "http-equiv": "X-UA-Compatible",
+    },
+    {
+      "charset": "utf-8",
+    },
+    {
+      "content": "noodp, noydir, max-image-preview:large",
+      "name": "robots",
+    },
+    {
+      "content": "#B80000",
+      "name": "theme-color",
+    },
+    {
+      "content": "D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q",
+      "name": "google-site-verification",
+    },
+    {
+      "content": "width=device-width, initial-scale=1, minimum-scale=1",
+      "name": "viewport",
+    },
+    {
+      "content": "BBC News हिंदी",
+      "name": "apple-mobile-web-app-title",
+    },
+    {
+      "content": "BBC News हिंदी",
+      "name": "application-name",
+    },
+    {
+      "content": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+      "name": "description",
+    },
+    {
+      "content": "1609039196070050",
+      "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
+      "content": "yes",
+      "name": "mobile-web-app-capable",
+    },
+    {
+      "content": "#B80000",
+      "name": "msapplication-TileColor",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-144x144.png",
+      "name": "msapplication-TileImage",
+    },
+    {
+      "content": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+      "property": "og:description",
+    },
+    {
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "property": "og:image",
+    },
+    {
+      "content": "BBC News हिंदी",
+      "property": "og:image:alt",
+    },
+    {
+      "content": "hi-IN",
+      "property": "og:locale",
+    },
+    {
+      "content": "BBC News हिंदी",
+      "property": "og:site_name",
+    },
+    {
+      "content": "दुनिया - BBC News हिंदी - BBC News हिंदी",
+      "property": "og:title",
+    },
+    {
+      "content": "website",
+      "property": "og:type",
+    },
+    {
+      "content": "https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+      "property": "og:url",
+    },
+    {
+      "content": "summary_large_image",
+      "name": "twitter:card",
+    },
+    {
+      "content": "@bbchindi",
+      "name": "twitter:creator",
+    },
+    {
+      "content": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+      "name": "twitter:description",
+    },
+    {
+      "content": "BBC News हिंदी",
+      "name": "twitter:image:alt",
+    },
+    {
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "name": "twitter:image:src",
+    },
+    {
+      "content": "@bbchindi",
+      "name": "twitter:site",
+    },
+    {
+      "content": "दुनिया - BBC News हिंदी - BBC News हिंदी",
+      "name": "twitter:title",
+    },
+    {
+      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/hindi/bbc_hindi_tv/tv_programmes/w13xttlw",
+      "http-equiv": "onion-location",
+    },
+  ],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [],
+  "styleTags": [],
+  "title": "दुनिया - BBC News हिंदी - BBC News हिंदी",
   "titleAttributes": {},
 }
 `;

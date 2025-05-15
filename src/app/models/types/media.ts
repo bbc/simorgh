@@ -84,3 +84,5 @@ export type MediaOverrides = {
   };
   type: 'mediaOverrides';
 };
+
+export type EpisodeAvailability = 'available' | 'not-yet-available' | 'expired';

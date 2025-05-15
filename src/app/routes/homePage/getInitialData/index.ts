@@ -1,9 +1,9 @@
 import { InitialDataProps } from '#app/models/types/initialData';
-import nodeLogger from '../../../lib/logger.node';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import { FetchError } from '../../../models/types/fetch';
-import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
-import { HOME_PAGE } from '../../utils/pageTypes';
+import nodeLogger from '#app/lib/logger.node';
+import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
+import { FetchError } from '#app/models/types/fetch';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 
 const logger = nodeLogger(__filename);
 
@@ -12,6 +12,7 @@ export default async ({
   path: pathname,
   pageType,
   variant,
+  getAgent,
 }: InitialDataProps) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -19,6 +20,7 @@ export default async ({
       pageType: HOME_PAGE,
       service,
       variant,
+      getAgent,
     });
 
     const {

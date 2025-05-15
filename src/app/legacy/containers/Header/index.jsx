@@ -3,7 +3,14 @@ import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import ScriptLink from '#app/components/Header/ScriptLink';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  HOME_PAGE,
+  TOPIC_PAGE,
+  ERROR_PAGE,
+} from '#app/routes/utils/pageTypes';
+import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -41,11 +48,8 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({
-  scriptSwitchId = '',
-  renderScriptSwitch = true,
-}) => {
-  const { isAmp, isApp, pageType } = useContext(RequestContext);
+const HeaderContainer = ({ propsForOJExperiment }) => {
+  const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     useContext(ServiceContext);
   const { skipLinkText } = translations;
@@ -53,6 +57,11 @@ const HeaderContainer = ({
   const isOperaMini = useOperaMiniDetection();
 
   const brandRef = useRef(null);
+
+  const viewTracker = useViewTracker({
+    componentName: 'header',
+    sendOptimizelyEvents: true,
+  });
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
@@ -71,40 +80,37 @@ const HeaderContainer = ({
 
   let shouldRenderScriptSwitch = false;
 
-  if (scriptLink && renderScriptSwitch) {
-    if (service === 'uzbek' && pageType !== ARTICLE_PAGE) {
-      shouldRenderScriptSwitch = false;
-    } else {
-      shouldRenderScriptSwitch = true;
+  if (scriptLink) {
+    switch (true) {
+      case service === 'uzbek' &&
+        ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
+        shouldRenderScriptSwitch = false;
+        break;
+      default:
+        shouldRenderScriptSwitch = true;
+        break;
     }
   }
 
   if (isApp) return null;
 
   return (
-    <header role="banner" lang={serviceLang}>
+    <header role="banner" lang={serviceLang} {...viewTracker}>
       {isAmp ? (
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink scriptSwitchId={scriptSwitchId} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink scriptSwitchId={scriptSwitchId} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         />
       )}
-      <NavigationContainer />
+      {isLite && <LiteSiteSummary />}
+      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
     </header>
   );
 };

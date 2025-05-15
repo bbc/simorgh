@@ -95,7 +95,7 @@ exports[`LinkedData should correctly render linked data for Ondemand Radio page 
       "@type": "AudioObject",
       "description": "د بي بي سي ورلډ سروس څخه پروګرام کول",
       "duration": "PT29M30S",
-      "embedURL": "https://test.bbc.com/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live",
+      "embedURL": "https://test.bbc.com/ws/av-embeds/media/korean/externalId/id/ko",
       "name": "ماښامنۍ خپرونه",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg",
       "uploadDate": "2020-04-23T15:30:00.000Z",
@@ -319,7 +319,7 @@ exports[`LinkedData should correctly render linked data for articles with byline
 }
 `;
 
-exports[`LinkedData should correctly render linked data for front pages 1`] = `
+exports[`LinkedData should correctly render linked data for home pages 1`] = `
 {
   "@context": "http://schema.org",
   "@graph": [

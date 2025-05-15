@@ -29,6 +29,13 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
 .emotion-2 {
   margin: 0;
   padding: 0;
+  scroll-margin-top: 1rem;
+}
+
+.emotion-2:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-4 {
@@ -120,6 +127,8 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
   >
     <h2
       class="emotion-2 emotion-3"
+      id="section-label-heading-Most-Read"
+      tabindex="-1"
     >
       <span
         class="emotion-4 emotion-5"
@@ -132,7 +141,7 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
             dir="rtl"
             id="Most-Read"
           >
-            پربیننده‌ترین‌ها
+            مطالب پرخواننده
           </span>
         </span>
       </span>

@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_pashto_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_pashto_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "pashto",
+  "data": {
+    "heading": "بي بي سي افغانستان (پښتو خپرونه)",
+    "bodySummary": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
     "language": "ps",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "بي بي سي افغانستان (پښتو خپرونه) - BBC News پښتو",
-      "pageIdentifier": "pashto.bbc_pashto_radio.liveradio.page",
-      "producerId": "68",
-      "contentType": "player-live",
-      "producer": "PASHTO"
+    "id": "urn:bbc:ares:ws_media:live:bbc_pashto_radio",
+    "name": "بي بي سي افغانستان (پښتو خپرونه)",
+    "summary": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
+    "masterBrand": "bbc_pashto_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k09cr2",
+        "state": "next",
+        "startTime": "2024-11-30T02:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7c3z",
+        "brandTitle": "لومړنۍ سهارنۍ خپرونه",
+        "summary": "لومړۍ  سهارنۍ  خبري راډيويي خپرونه",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0k01c67",
+        "state": "onDemand",
+        "startTime": "2024-11-29T16:30:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w172zzjb5zrmfgn",
+        "brandTitle": "خبر او نظر",
+        "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ\n",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0k01c63",
+        "state": "onDemand",
+        "startTime": "2024-11-29T15:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7ckj",
+        "brandTitle": "ماښامنۍ خپرونه",
+        "summary": "ماښامنۍ خبري راډيويي خپرونه",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k01c61",
+        "state": "onDemand",
+        "startTime": "2024-11-29T13:30:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7h87",
+        "brandTitle": "پښتو تلویزیون",
+        "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+        "duration": "PT28M"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_pashto_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "pashto.bbc_pashto_radio.liveradio.page",
+        "pageTitle": "بي بي سي افغانستان (پښتو خپرونه) - BBC News پښتو"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "بي بي سي افغانستان (پښتو خپرونه)",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_pashto_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "بي بي سي افغانستان (پښتو خپرونه)",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_pashto_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "بي بي سي افغانستان (پښتو خپرونه)",
-    "summary": "بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي",
-    "uri": "/pashto/bbc_pashto_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_pashto_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "pashto",
-      "uri": "/pashto",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

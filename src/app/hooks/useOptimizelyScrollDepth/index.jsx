@@ -21,7 +21,7 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagId);
+  const experimentVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.flagKey);
   const hasVariationKey = experimentVariation !== null;
 
   const sendScrollEvents = hasVariationKey && !isAmp;

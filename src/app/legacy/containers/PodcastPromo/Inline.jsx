@@ -209,7 +209,11 @@ const Promo = () => {
   };
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
+    <ResponsivePodcastPromoWrapper
+      {...viewTrackerRef}
+      dir={dir}
+      data-e2e="podcast-promo"
+    >
       <StyledPromoComponent
         script={script}
         service={service}
@@ -247,7 +251,7 @@ const Promo = () => {
               <strong>
                 <StyledCardLink
                   href={url}
-                  onClick={clickTrackerRef}
+                  {...clickTrackerRef}
                   script={script}
                   service={service}
                 >

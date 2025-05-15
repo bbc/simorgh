@@ -8,26 +8,26 @@ import defaultToggles from '#lib/config/toggles';
 // components being tested
 
 // mock data
-import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
-import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
+import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
-import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
-import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import liveRadioPageJson from '#data/afrique/bbc_afrique_radio/liveradio.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
-import { ERROR_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
+// eslint-disable-next-line import/order
 import routes from '.';
 import {
   act,
   render,
   screen,
-} from '../components/react-testing-library-with-providers';
-import { suppressPropWarnings } from '../legacy/psammead/psammead-test-helpers/src';
-import * as fetchDataFromBFF from './utils/fetchDataFromBFF';
+} from '#app/components/react-testing-library-with-providers';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 
 global.performance.getEntriesByName = jest.fn(() => []);
 
@@ -61,6 +61,25 @@ const renderRouter = props =>
       },
     );
   });
+
+jest.mock('@optimizely/react-sdk', () => ({
+  ...jest.requireActual('@optimizely/react-sdk'),
+  setLogger: jest.fn(),
+  createInstance: jest.fn(),
+}));
+jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
+jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 describe('Routes', () => {
   beforeEach(() => {
@@ -99,7 +118,7 @@ describe('Routes', () => {
     });
 
     it('should route to and render live radio page', async () => {
-      const pathname = '/korean/bbc_korean_radio/liveradio';
+      const pathname = '/afrique/bbc_afrique_radio/liveradio';
       fetch.mockResponseOnce(JSON.stringify(liveRadioPageJson));
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -117,7 +136,7 @@ describe('Routes', () => {
         pageType,
         service: 'korean',
       });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Afrique Radio';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -125,8 +144,10 @@ describe('Routes', () => {
     });
 
     it('should route to and render the podcast page', async () => {
-      const pathname = '/arabic/podcasts/p02pc9qc';
-      fetch.mockResponseOnce(JSON.stringify(podcastPageJson));
+      const pathname = '/gahuza/podcasts/p07yh8hb';
+      jest
+        .spyOn(fetchDataFromBFF, 'default')
+        .mockResolvedValueOnce({ json: gahuzaPodcastPage, status: 200 });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -140,10 +161,10 @@ describe('Routes', () => {
         pathname,
         pageData,
         pageType,
-        service: 'arabic',
+        service: 'gahuza',
       });
 
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Baza Muganga';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -151,9 +172,8 @@ describe('Routes', () => {
     });
 
     it.each`
-      pathname              | description
-      ${'/kyrgyz/tipohome'} | ${'tipohome'}
-      ${'/kyrgyz'}          | ${'home'}
+      pathname     | description
+      ${'/kyrgyz'} | ${'home'}
     `(
       'should route to and render a $description page',
       async ({ pathname }) => {
@@ -193,8 +213,10 @@ describe('Routes', () => {
     );
 
     it('should route to and render the onDemand Radio page', async () => {
-      const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
-      fetch.mockResponseOnce(JSON.stringify(onDemandRadioPageJson));
+      const pathname = '/gahuza/bbc_gahuza_radio/programmes/p02pcb5c';
+      jest
+        .spyOn(fetchDataFromBFF, 'default')
+        .mockResolvedValueOnce({ json: gahuzaOnDemandAudio, status: 200 });
 
       const { getInitialData, pageType } = getMatchingRoute(pathname);
       const { pageData } = await getInitialData({
@@ -208,10 +230,11 @@ describe('Routes', () => {
         pathname,
         pageData,
         pageType,
-        service: 'indonesia',
+        service: 'gahuza',
       });
 
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
+      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+        'Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika';
 
       expect(
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
@@ -311,33 +334,6 @@ describe('Routes', () => {
       ).toBeInTheDocument();
     });
 
-    it('should route to and render a feature index page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/afrique/48465371';
-
-      fetch.mockResponse(JSON.stringify(featureIndexPageJson));
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        pageType,
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'afrique',
-      });
-
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'CAN 2019 : le Sénégal qualifié pour les huitièmes de finale';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a 500 error page', async () => {
       const pathname = '/igbo/500';
       const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -371,7 +367,7 @@ describe('Routes', () => {
       });
       await renderRouter({
         pathname,
-        pageType: FRONT_PAGE,
+        pageType: HOME_PAGE,
         service: 'afrique',
         error: {
           message: error,

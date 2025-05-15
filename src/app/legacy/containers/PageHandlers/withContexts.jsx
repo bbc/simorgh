@@ -21,7 +21,6 @@ const WithContexts = Component => {
       isLite = false,
       pageType,
       pathname,
-      previousPath = null,
       variant = null,
       timeOnServer = null,
       pageData = null,
@@ -52,7 +51,6 @@ const WithContexts = Component => {
             service={service}
             statusCode={status}
             pathname={pathname}
-            previousPath={previousPath}
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}

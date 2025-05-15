@@ -39,5 +39,5 @@ export default ({
     `${visualStyle}_${visualProminence}`,
   );
 
-  return positions?.findIndex((x: number) => x === position) + 1;
+  return positions.findIndex((x: number) => x === position) + 1;
 };

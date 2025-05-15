@@ -49,7 +49,7 @@ const Subheading = styled.span`
 `;
 
 const OnDemandHeadingContainer = ({
-  idAttr = null,
+  idAttr = '',
   brandTitle,
   releaseDateTimeStamp,
   episodeTitle = '',
@@ -73,8 +73,8 @@ const OnDemandHeadingContainer = ({
     <Headline
       script={script}
       service={service}
-      id={idAttr}
-      {...(className && { className })}
+      {...(idAttr && { id: idAttr })}
+      {...(className ? { className } : undefined)}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >

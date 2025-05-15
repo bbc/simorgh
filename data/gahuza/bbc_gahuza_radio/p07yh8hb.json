@@ -1,0 +1,165 @@
+{
+  "data": {
+    "isPodcast": true,
+    "metadata": {
+      "type": "Podcast",
+      "atiAnalytics": {
+        "pageIdentifier": "gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page",
+        "contentType": "player-episode",
+        "pageTitle": "Baza Muganga - BBC News Gahuza",
+        "contentId": "urn:bbc:pips:p0k4x0jm"
+      }
+    },
+    "language": "rw",
+    "brandTitle": "Baza Muganga",
+    "episodeTitle": "Baza Muganga 15/11/2024",
+    "headline": "Baza Muganga",
+    "shortSynopsis": "Baza Muganga 15/11/2024",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_gahuza_radio/p07yh8hb",
+    "brandId": "p07yh8hb",
+    "summary": "Baza Muganga 15/11/2024",
+    "contentType": "player-episode",
+    "episodeId": "p0k4x0jm",
+    "masterBrand": "bbc_gahuza_radio",
+    "releaseDateTimeStamp": 1731628800000,
+    "pageTitle": "Baza Muganga - BBC News Gahuza",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
+    "imageAltText": "",
+    "promoBrandTitle": "Baza Muganga",
+    "durationISO8601": "PT5M58S",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p082wk67.jpg",
+    "episodeAvailability": "available",
+    "radioScheduleData": [
+      {
+        "id": "p0jyhjd6",
+        "state": "next",
+        "startTime": "2024-11-21T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w17300mcbq54ng4",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0jy60br",
+        "state": "onDemand",
+        "startTime": "2024-11-20T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w172zyj400jjxqm",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k0z6rb",
+        "state": "onDemand",
+        "startTime": "2024-11-19T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w17300mcbq4yvmy",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT15M"
+      },
+      {
+        "id": "p0k0qvyx",
+        "state": "onDemand",
+        "startTime": "2024-11-18T16:29:30.000Z",
+        "link": "/gahuza/bbc_gahuza_radio/w172zyj400jc3xf",
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "duration": "PT30M"
+      }
+    ],
+    "recentEpisodes": [
+      {
+        "id": "p0k396c8",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Ikiganiro cyo kuwa 08/11/2024",
+        "timestamp": "2024-11-08T00:00:00.000Z",
+        "duration": "PT6M2S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0k1q6rf",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Ikiganiro cyo kuwa 01/11/2024",
+        "timestamp": "2024-11-01T00:00:00.000Z",
+        "duration": "PT5M35S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0k08d5b",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Baza Muganga 25/10/2024",
+        "timestamp": "2024-10-25T00:00:00.000Z",
+        "duration": "PT5M35S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0f0xlq5",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Bazamuganga 03/02/2023",
+        "timestamp": "2023-02-03T00:00:00.000Z",
+        "duration": "PT5M29S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p0b99rb5",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Bazamuganga 10/12/2021: Ikiganiro ku ndwara ya Otite cyangwa Umuhaha",
+        "timestamp": "2021-12-10T00:00:00.000Z",
+        "duration": "PT4M20S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      },
+      {
+        "id": "p07yh9qm",
+        "brandTitle": "Baza Muganga",
+        "episodeTitle": "Welcome to Baza Muganga",
+        "timestamp": "2019-12-20T00:00:00.000Z",
+        "duration": "PT8S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p082wk67.jpg",
+        "altText": "Baza Muganga"
+      }
+    ],
+    "externalLinkVersionId": "p0k4x06p",
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "p0k4x0jm",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": { "short": "Baza Muganga 15/11/2024" },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wk67.jpg",
+          "embedding": true,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p0k4x06p",
+              "types": ["Podcast"],
+              "duration": 358,
+              "durationISO8601": "PT5M58S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": "2024-12-15T17:09:00.000Z",
+              "availableFrom": "2024-11-15T17:09:00.000Z",
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Baza Muganga 15/11/2024",
+          "type": "media"
+        }
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}

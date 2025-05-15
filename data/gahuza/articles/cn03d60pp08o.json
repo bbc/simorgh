@@ -1,0 +1,4614 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Democratic+Republic+of+Congo~March+23+Movement~M23+offensive",
+          "contentId": "urn:bbc:optimo:asset:cn03d60pp08o",
+          "contentType": "article",
+          "language": "rw",
+          "ldpThingIds": "3548f44f-46f5-4e6e-8628-3f668f161691~b03e7bfd-9a46-4053-aeed-f9f55f5e5567~c78c7532-43b3-490d-ad5b-0fc47b906e42",
+          "ldpThingLabels": "Democratic+Republic+of+Congo~March+23+Movement~M23+offensive",
+          "nationsProducer": null,
+          "pageIdentifier": "gahuza.articles.cn03d60pp08o.page",
+          "pageTitle": "DR Congo: M23 'yafashe agace ka Kalembe - Kalonge' muri Teritwari ya Walikale",
+          "timePublished": "2024-10-21T06:52:47.979Z",
+          "timeUpdated": "2024-10-21T06:52:47.979Z"
+        },
+        "id": "urn:bbc:ares::article:cn03d60pp08o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cn03d60pp08o",
+          "canonicalUrl": "https://www.bbc.com/gahuza/articles/cn03d60pp08o"
+        },
+        "type": "article",
+        "createdBy": "Gahuza",
+        "language": "rw",
+        "firstPublished": 1729493567979,
+        "lastPublished": 1729493567979,
+        "options": {
+          "includeComments": false
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Democratic+Republic+of+Congo~March+23+Movement~M23+offensive",
+          "page": "gahuza.articles.cn03d60pp08o.page",
+          "irisKeyword": null,
+          "audience_motivation": "Update me",
+          "ldp_ids": "3548f44f-46f5-4e6e-8628-3f668f161691~b03e7bfd-9a46-4053-aeed-f9f55f5e5567~c78c7532-43b3-490d-ad5b-0fc47b906e42",
+          "contentId": "urn:bbc:optimo:asset:cn03d60pp08o",
+          "producer": "Gahuza"
+        },
+        "passport": {
+          "language": "rw",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "rw",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+                "thingSameAs": [
+                  "http://sws.geonames.org/203312/",
+                  "http://www.wikidata.org/entity/Q974"
+                ],
+                "thingEnglishLabel": "Democratic Republic of Congo",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                "thingLabel": "M23",
+                "thingUri": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                "thingId": "b03e7bfd-9a46-4053-aeed-f9f55f5e5567",
+                "thingType": [
+                  "tagging:AmbiguousTerm",
+                  "tagging:TagConcept",
+                  "core:Organisation",
+                  "core:Thing",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q63345",
+                  "http://dbpedia.org/resource/March_23_Movement"
+                ],
+                "thingEnglishLabel": "March 23 Movement",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                "thingLabel": "Ibitero bya M23 muri Congo",
+                "thingUri": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                "thingId": "c78c7532-43b3-490d-ad5b-0fc47b906e42",
+                "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+                "thingSameAs": ["http://www.wikidata.org/entity/Q112628065"],
+                "thingEnglishLabel": "M23 offensive",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+              "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+              "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+              "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+              "thingSameAs": [
+                "http://sws.geonames.org/203312/",
+                "http://www.wikidata.org/entity/Q974"
+              ],
+              "topicName": "Republika Iharanira Demokrasi ya Kongo",
+              "topicId": "c8y94y03z72t",
+              "curationList": [
+                {
+                  "curationId": "be542793-fcb5-4ea2-8600-5b7d006fd03b",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Democratic Republic of Congo",
+              "thingLabelLanguage": "rw",
+              "thingPreferredLabel": "Democratic Republic of Congo"
+            },
+            {
+              "thingLabel": "M23",
+              "thingUri": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+              "thingId": "b03e7bfd-9a46-4053-aeed-f9f55f5e5567",
+              "thingType": [
+                "tagging:AmbiguousTerm",
+                "tagging:TagConcept",
+                "core:Organisation",
+                "core:Thing",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q63345",
+                "http://dbpedia.org/resource/March_23_Movement"
+              ],
+              "topicName": "M23",
+              "topicId": "cy48jdgjkl3t",
+              "curationList": [
+                {
+                  "curationId": "4bb09ef8-009b-4ea8-8a24-812203d20ff5",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "March 23 Movement",
+              "thingLabelLanguage": "rw",
+              "thingPreferredLabel": "March 23 Movement"
+            },
+            {
+              "thingLabel": "Ibitero bya M23 muri Congo",
+              "thingUri": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+              "thingId": "c78c7532-43b3-490d-ad5b-0fc47b906e42",
+              "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+              "thingSameAs": ["http://www.wikidata.org/entity/Q112628065"],
+              "topicName": "Ibitero bya M23 muri Congo",
+              "topicId": "cx2qn9pqx4yt",
+              "curationList": [
+                {
+                  "curationId": "fb7db5ec-f372-4297-bf99-ffc26780d792",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "M23 offensive",
+              "thingLabelLanguage": "rw",
+              "thingPreferredLabel": "M23 offensive"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "links",
+          "link",
+          "urlLink",
+          "aresLink"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "Republika Iharanira Demokrasi ya Kongo",
+            "topicId": "c8y94y03z72t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "be542793-fcb5-4ea2-8600-5b7d006fd03b",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "topicUrl": "/gahuza/topics/c8y94y03z72t"
+          }
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "useSensitiveOnwardJourneys": false,
+        "stats": {
+          "readTime": 2,
+          "wordCount": 445
+        },
+        "isTransliterated": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "65651560",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "0d7c4ddf",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cf3041e6",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "M23 'yinjiye muri Teritwari ya Walikale'",
+                            "blocks": [
+                              {
+                                "id": "d64e968e",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "M23 'yinjiye muri Teritwari ya Walikale'",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "d70e85f5",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "60cbab2d",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5c3a7004",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "1dddc753",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ifoto igaragaza bamwe mu barwanyi ba M23 ",
+                                  "blocks": [
+                                    {
+                                      "id": "09de871c",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ifoto igaragaza bamwe mu barwanyi ba M23 ",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "ad69efee",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "54e2ee98",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "070f4691",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ifoto y'abarwanyi ba M23 ",
+                                  "blocks": [
+                                    {
+                                      "id": "7355fece",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ifoto y'abarwanyi ba M23 ",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "0630e884",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1074,
+                      "height": 722,
+                      "locator": "3017/live/e624ff10-8f73-11ef-8e6d-e3e64e16c628.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "M23",
+                      "suitableForSyndication": false
+                    },
+                    "position": [2, 3]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "43eba400",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1729493567979,
+                "lastPublished": 1729493567979
+              },
+              "position": [3]
+            },
+            {
+              "id": "e47160ec",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a7e2ed7e",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Nyuma y’imirwano ikomeye yabaye ku cyumweru amakuru atandukanye aremeza ko umutwe wa M23 ugenzura agace ka Kalembe - Kalonge ko muri teritwari ya Walikale  y’Intara ya Kivu ya Ruguru.",
+                      "blocks": [
+                        {
+                          "id": "17cf9822",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Nyuma y’imirwano ikomeye yabaye ku cyumweru amakuru atandukanye aremeza ko umutwe wa M23 ugenzura agace ka Kalembe - Kalonge ko muri teritwari ya Walikale  y’Intara ya Kivu ya Ruguru.",
+                            "attributes": []
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "10d6c517",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Sosiyete Sivile ya Walikale ivuga ko iyi mirwano hagati ya M23 n’abarwanyi ba Wazalendo yatangiye mu gitondo kare ku cyumweru imara amasaha arenga atanu.",
+                      "blocks": [
+                        {
+                          "id": "fa4c6000",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Sosiyete Sivile ya Walikale ivuga ko iyi mirwano hagati ya M23 n’abarwanyi ba Wazalendo yatangiye mu gitondo kare ku cyumweru imara amasaha arenga atanu.",
+                            "attributes": []
+                          },
+                          "position": [4, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 2]
+                  },
+                  {
+                    "id": "52059f54",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ibinyamakuru muri DR Congo bisubiramo Willy Mishiki, umudepite uhagarariye Walikale mu nteko ishingamategeko yo ku rwego rw'igihugu, avuga ko ifatwa rya Kalembe ari “ikintu gikomeye” kuko ari ko gace ka mbere ka Teritwari ya Walikale M23 igezemo kandi “Kalembe ni ahantu h’ingenzi, hahurira inzira zigera Lubero na Rutshuru na Tshopo”.",
+                      "blocks": [
+                        {
+                          "id": "22756fa4",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ibinyamakuru muri DR Congo bisubiramo Willy Mishiki, umudepite uhagarariye Walikale mu nteko ishingamategeko yo ku rwego rw'igihugu, avuga ko ifatwa rya Kalembe ari “ikintu gikomeye” kuko ari ko gace ka mbere ka Teritwari ya Walikale M23 igezemo kandi “Kalembe ni ahantu h’ingenzi, hahurira inzira zigera Lubero na Rutshuru na Tshopo”.",
+                            "attributes": []
+                          },
+                          "position": [4, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 3]
+                  },
+                  {
+                    "id": "4188f088",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ikinyamakuru 7sur7 kivuga ko Kalembe ari ko gace ka mbere ka Teritwari ya Walikale gafashwe na M23 kuva imirwano yayo n’uruhande rwa leta yakubura mu mpera za 2021.",
+                      "blocks": [
+                        {
+                          "id": "6ca68fec",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ikinyamakuru 7sur7 kivuga ko Kalembe ari ko gace ka mbere ka Teritwari",
+                            "attributes": []
+                          },
+                          "position": [4, 4, 1]
+                        },
+                        {
+                          "id": "77ffa56e",
+                          "type": "fragment",
+                          "model": {
+                            "text": " ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [4, 4, 2]
+                        },
+                        {
+                          "id": "50862f57",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ya Walikale gafashwe na M23 kuva imirwano yayo n’uruhande rwa leta yakubura mu mpera za 2021.",
+                            "attributes": []
+                          },
+                          "position": [4, 4, 3]
+                        }
+                      ]
+                    },
+                    "position": [4, 4]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "2f9c35c8",
+              "type": "mpu",
+              "model": {},
+              "position": [5]
+            },
+            {
+              "id": "023742b9",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "cbf728b9",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Nyuma y’inkuru zemeza ifatwa rya Kalembe-Kalonge, Juvénal Munobo wahoze ari umudepite wa Walikale yatangaje ku rubuga X ko asaba FARDC “gufatanya” na Wazalendo “kugira ngo bahabavane”. Munobo avuga ko kugera ku bukungu bw’ibirombe bw’aka gace bishobora guha imbaraga kurushaho abo bashotoranyi”.",
+                      "blocks": [
+                        {
+                          "id": "62d8ec26",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Nyuma y’inkuru zemeza ifatwa rya Kalembe-Kalonge,",
+                            "attributes": []
+                          },
+                          "position": [6, 1, 1]
+                        },
+                        {
+                          "id": "d81d5e45",
+                          "type": "fragment",
+                          "model": {
+                            "text": " ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [6, 1, 2]
+                        },
+                        {
+                          "id": "01b7014e",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Juvénal",
+                            "attributes": []
+                          },
+                          "position": [6, 1, 3]
+                        },
+                        {
+                          "id": "6f8e530a",
+                          "type": "fragment",
+                          "model": {
+                            "text": " ",
+                            "attributes": ["bold"]
+                          },
+                          "position": [6, 1, 4]
+                        },
+                        {
+                          "id": "8488c310",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Munobo wahoze ari umudepite wa Walikale yatangaje ku rubuga X ko asaba FARDC “gufatanya” na Wazalendo “kugira ngo bahabavane”. Munobo avuga ko kugera ku bukungu bw’ibirombe bw’aka gace bishobora guha imbaraga kurushaho abo bashotoranyi”.",
+                            "attributes": []
+                          },
+                          "position": [6, 1, 5]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            {
+              "id": "8537dfc3",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [7]
+            },
+            {
+              "id": "a67647c6",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "1633d42f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Fiston Misona ukuriye ‘Société civile Forces Vives de Walikale’ yabwiye BBC Gahuzamiryango ko iyo mirwano yatumye “abaturage batari bacye bahunga ngo bakize ubuzima bwabo”. ",
+                      "blocks": [
+                        {
+                          "id": "7842e2b4",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Fiston Misona ukuriye ‘Société civile Forces Vives de Walikale’ yabwiye BBC Gahuzamiryango ko iyo mirwano yatumye “abaturage batari bacye bahunga ngo bakize ubuzima bwabo”. ",
+                            "attributes": []
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  },
+                  {
+                    "id": "24e25026",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ati: “Aho inzovu zirwaniye hababara ibyatsi, abaturage barahunze bava mu byabo mu bice bya Walikale, na Masisi ahegereye Walikale, kandi nta bufasha bafite.”",
+                      "blocks": [
+                        {
+                          "id": "cdafc9af",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ati: “Aho inzovu zirwaniye hababara ibyatsi, abaturage barahunze bava mu byabo mu bice bya Walikale, na Masisi ahegereye Walikale, kandi nta bufasha bafite.”",
+                            "attributes": []
+                          },
+                          "position": [8, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 2]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "9c9b9a5e",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "d65e8e5b",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "5a54646e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4063ef78",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Kugeza mu cyumweru gishize byavugwaga ko Walikale na Beni ari zo teritwari z'Intara ya Kivu ya Ruguru M23 itarinjiramo",
+                                  "blocks": [
+                                    {
+                                      "id": "ba6dbeeb",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Kugeza mu cyumweru gishize byavugwaga ko Walikale na Beni ari zo teritwari z'Intara ya Kivu ya Ruguru M23 itarinjiramo",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 1]
+                  },
+                  {
+                    "id": "c127e0ad",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2fdefa4a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "be8f5a20",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Kugeza mu cyumweru gishize byavugwaga ko Walikale na Beni ari zo teritwari z'Intara ya Kivu ya Ruguru M23 itarinjiramo",
+                                  "blocks": [
+                                    {
+                                      "id": "0f0e901c",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Kugeza mu cyumweru gishize byavugwaga ko Walikale na Beni ari zo teritwari z'Intara ya Kivu ya Ruguru M23 itarinjiramo",
+                                        "attributes": []
+                                      },
+                                      "position": [9, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [9, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [9, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [9, 2]
+                  },
+                  {
+                    "id": "235bc4c7",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 600,
+                      "height": 755,
+                      "locator": "6c89/live/332e5460-8f73-11ef-8e6d-e3e64e16c628.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "UN-OCHA",
+                      "suitableForSyndication": false
+                    },
+                    "position": [9, 3]
+                  }
+                ]
+              },
+              "position": [9]
+            },
+            {
+              "id": "84637129",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b234f429",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Misona, uvuga ko yamagana ubushotoranyi bwa M23, yongeraho ati: “Iyi ntambara turayirambiwe, turakomeza guhamagarira leta kugira icyo ikora. Ntabwo twifuza ko abaturage bacu bakomeza kuba ibitambo.”",
+                      "blocks": [
+                        {
+                          "id": "47385440",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Misona, uvuga ko yamagana ubushotoranyi bwa M23, yongeraho ati: “Iyi ntambara turayirambiwe, turakomeza guhamagarira leta kugira icyo ikora. Ntabwo twifuza ko abaturage bacu bakomeza kuba ibitambo.”",
+                            "attributes": []
+                          },
+                          "position": [10, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 1]
+                  },
+                  {
+                    "id": "6ed0b020",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ku ifatwa rya Kalembe-Kalonge, Misona avuga ko “kugeza ubu nta gihamya ifatika yabyo”, yongeraho ko “abakorerabushake bakomeje guhangana n’abashotoranyi (M23) babazibira”.",
+                      "blocks": [
+                        {
+                          "id": "1e4b2d0f",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ku ifatwa rya Kalembe-Kalonge, Misona avuga ko “kugeza ubu nta gihamya ifatika yabyo”, yongeraho ko “abakorerabushake bakomeje guhangana n’abashotoranyi (M23) babazibira”.",
+                            "attributes": []
+                          },
+                          "position": [10, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 2]
+                  },
+                  {
+                    "id": "8df3ebb4",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "BBC yagerageje kuvugana n’uruhande rwa leta ya Kivu ya Ruguru na M23 ku mirwano yo ku cyumweru n’ifatwa ry’uduce tuvugwa ariko ntibyashoboka kugeza ubu.",
+                      "blocks": [
+                        {
+                          "id": "a72a4737",
+                          "type": "fragment",
+                          "model": {
+                            "text": "BBC yagerageje kuvugana n’uruhande rwa leta ya Kivu ya Ruguru na M23 ku mirwano yo ku cyumweru n’ifatwa ry’uduce tuvugwa ariko ntibyashoboka kugeza ubu.",
+                            "attributes": []
+                          },
+                          "position": [10, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 3]
+                  },
+                  {
+                    "id": "e251c174",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Imirwano iravugwa mu gihe hari agahenge kumvikanyweho na DR Congo n’u Rwanda – ruvuga ko rudafasha umutwe wa M23.",
+                      "blocks": [
+                        {
+                          "id": "01d712f0",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Imirwano iravugwa mu gihe hari agahenge kumvikanyweho na DR Congo n’u Rwanda – ruvuga ko rudafasha umutwe wa M23.",
+                            "attributes": []
+                          },
+                          "position": [10, 4, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 4]
+                  },
+                  {
+                    "id": "0d1f8a5f",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Hari kandi ibiganiro by’amahoro bya Luanda byongeye gusubukura mu mpera z’icyumweru cyashize bigamije gushaka amahoro arambye mu burasirazuba bwa DR Congo.",
+                      "blocks": [
+                        {
+                          "id": "7e246891",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Hari kandi ibiganiro by’amahoro bya Luanda byongeye gusubukura mu mpera z’icyumweru cyashize bigamije gushaka amahoro arambye mu burasirazuba bwa DR Congo.",
+                            "attributes": []
+                          },
+                          "position": [10, 5, 1]
+                        }
+                      ]
+                    },
+                    "position": [10, 5]
+                  }
+                ]
+              },
+              "position": [10]
+            },
+            {
+              "id": "02bf239b",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "62d5e3b0",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:optimo:asset:c4g04m8153vo",
+                      "blocks": [
+                        {
+                          "id": "8e8743f8",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ca3cdac9",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "c439a24f",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "e6b25642",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Patrick Muyaya, umvugizi wa leta ya DR Congo",
+                                              "blocks": [
+                                                {
+                                                  "id": "e9c4e670",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Patrick Muyaya, umvugizi wa leta ya DR Congo",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    11, 1, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [11, 1, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 1, 1]
+                              },
+                              {
+                                "id": "899eae61",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1235,
+                                  "height": 694,
+                                  "locator": "b101/live/cad2f650-8abd-11ef-8bf3-87a591967431.jpg",
+                                  "originCode": "cpsprodpb",
+                                  "copyrightHolder": "Patrick Muyaya/X"
+                                },
+                                "position": [11, 1, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 1]
+                        },
+                        {
+                          "id": "a256d2dc",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "6f1571d5",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "RD Congo yiteguye kurandura FDLR? Iki ni igisubizo cya Patrick Muyaya",
+                                  "blocks": [
+                                    {
+                                      "id": "cb4d82d8",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "RD Congo yiteguye kurandura FDLR? Iki ni igisubizo cya Patrick Muyaya",
+                                        "locator": "https://www.bbc.com/gahuza/articles/c4g04m8153vo",
+                                        "blocks": [
+                                          {
+                                            "id": "b5261d26",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "RD Congo yiteguye kurandura FDLR? Iki ni igisubizo cya Patrick Muyaya",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 1, 2, 1, 1, 1]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [11, 1, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 1, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 2]
+                        },
+                        {
+                          "id": "519a2d06",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0482c1d8",
+                                "type": "optimoLinkMetadata",
+                                "model": {
+                                  "timestamp": 1728975176998,
+                                  "consumableAsSFV": false
+                                },
+                                "position": [11, 1, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 1, 3]
+                        }
+                      ]
+                    },
+                    "position": [11, 1]
+                  },
+                  {
+                    "id": "aa16cad7",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:optimo:asset:crkd60yn38eo",
+                      "blocks": [
+                        {
+                          "id": "a772a2eb",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "82360f80",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "4c9472d0",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "3281a46f",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Umurwanyi ufite imbunda mu burasirazuba bwa DR Congo",
+                                              "blocks": [
+                                                {
+                                                  "id": "f139a0f8",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Umurwanyi ufite imbunda mu burasirazuba bwa DR Congo",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    11, 2, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [11, 2, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 2, 1, 1]
+                              },
+                              {
+                                "id": "67afd3df",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 800,
+                                  "height": 450,
+                                  "locator": "efe8/live/9fb87ea0-7ce8-11ef-bf4b-ef19cfbf3842.jpg",
+                                  "originCode": "cpsprodpb",
+                                  "copyrightHolder": "Getty Images"
+                                },
+                                "position": [11, 2, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [11, 2, 1]
+                        },
+                        {
+                          "id": "d90bc4a0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "5ac801cf",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "DR Congo: Ingabo za 'FARDC zirimo kugaba ibitero kuri FDLR'",
+                                  "blocks": [
+                                    {
+                                      "id": "916b0eab",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "DR Congo: Ingabo za 'FARDC zirimo kugaba ibitero kuri FDLR'",
+                                        "locator": "https://www.bbc.com/gahuza/articles/crkd60yn38eo",
+                                        "blocks": [
+                                          {
+                                            "id": "d29bea25",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "DR Congo: Ingabo za 'FARDC zirimo kugaba ibitero kuri FDLR'",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 2, 2, 1, 1, 1]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [11, 2, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 2, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 2, 2]
+                        },
+                        {
+                          "id": "36287a8a",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "cf3a776b",
+                                "type": "optimoLinkMetadata",
+                                "model": {
+                                  "timestamp": 1727455767683,
+                                  "consumableAsSFV": false
+                                },
+                                "position": [11, 2, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 2, 3]
+                        }
+                      ]
+                    },
+                    "position": [11, 2]
+                  },
+                  {
+                    "id": "e2b37e31",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:optimo:asset:cd0zexrxj9po",
+                      "blocks": [
+                        {
+                          "id": "4bb5aae9",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "9de8e43c",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "c9bbc46c",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "529e9f86",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Téte Antonio (ibumoso) ashyikiriza Perezida Tshisekedi ubutumwa bwa mugenzi we Lourenço wa Angola",
+                                              "blocks": [
+                                                {
+                                                  "id": "c06ab528",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Téte Antonio (ibumoso) ashyikiriza Perezida Tshisekedi ubutumwa bwa mugenzi we Lourenço wa Angola",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    11, 3, 1, 1, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [11, 3, 1, 1, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [11, 3, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 3, 1, 1]
+                              },
+                              {
+                                "id": "3247c825",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 669,
+                                  "height": 376,
+                                  "locator": "5359/live/4c4df9b0-7712-11ef-9dbe-b7695bd29183.jpg",
+                                  "originCode": "cpsprodpb",
+                                  "copyrightHolder": "Presidence RDC"
+                                },
+                                "position": [11, 3, 1, 2]
+                              }
+                            ]
+                          },
+                          "position": [11, 3, 1]
+                        },
+                        {
+                          "id": "6b60dd69",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "02a8e985",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "DR Congo – Rwanda: João Lourenço yoherereje ubutumwa Tshisekedi",
+                                  "blocks": [
+                                    {
+                                      "id": "19830f10",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "DR Congo – Rwanda: João Lourenço yoherereje ubutumwa Tshisekedi",
+                                        "locator": "https://www.bbc.com/gahuza/articles/cd0zexrxj9po",
+                                        "blocks": [
+                                          {
+                                            "id": "52be6edf",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "DR Congo – Rwanda: João Lourenço yoherereje ubutumwa Tshisekedi",
+                                              "attributes": []
+                                            },
+                                            "position": [11, 3, 2, 1, 1, 1]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [11, 3, 2, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [11, 3, 2, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 3, 2]
+                        },
+                        {
+                          "id": "5163997b",
+                          "type": "aresLink",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8ac68889",
+                                "type": "optimoLinkMetadata",
+                                "model": {
+                                  "timestamp": 1726812739192,
+                                  "consumableAsSFV": false
+                                },
+                                "position": [11, 3, 3, 1]
+                              }
+                            ]
+                          },
+                          "position": [11, 3, 3]
+                        }
+                      ]
+                    },
+                    "position": [11, 3]
+                  }
+                ]
+              },
+              "position": [11]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "DR Congo: M23 'yafashe agace ka Kalembe - Kalonge' muri Teritwari ya Walikale",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "M23 'yinjiye muri Teritwari ya Walikale'",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "M23 'yinjiye muri Teritwari ya Walikale'",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ifoto igaragaza bamwe mu barwanyi ba M23 ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ifoto igaragaza bamwe mu barwanyi ba M23 ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ifoto y'abarwanyi ba M23 ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ifoto y'abarwanyi ba M23 ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1074,
+                  "height": 722,
+                  "locator": "3017/live/e624ff10-8f73-11ef-8e6d-e3e64e16c628.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "M23",
+                  "suitableForSyndication": false
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Ibinyamakuru muri DR Congo biravuga ko aka ari ko gace ka mbere ka teritwari ya Walikale gafashwe na M23 kuva imirwano yayo na leta yakubura mu mpera za 2021.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Ibinyamakuru muri DR Congo biravuga ko aka ari ko gace ka mbere ka teritwari ya Walikale gafashwe na M23 kuva imirwano yayo na leta yakubura mu mpera za 2021.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Gahuza",
+        "breakingNews": {
+          "isBreaking": false
+        },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cd646gdl98eo",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/cd646gdl98eo"
+          },
+          "timestamp": 1739775388268,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "DR Congo: Reta yemeye ko Bukavu yafashwe n'inyeshamba za M23",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "RD Congo: Reta yemeye ko Bukavu yafashwe n'inyeshamba za M23",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "RD Congo: Reta yemeye ko Bukavu yafashwe n'inyeshamba za M23",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ku mugoroba wo ku wa gatanu w'indwi iheze, niho abarwanyi ba M23 baboneka hagati mu gisagara ca Bukavu ahazwi nka Place de l'Independance",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ku mugoroba wo ku wa gatanu w'indwi iheze, niho abarwanyi ba M23 baboneka hagati mu gisagara ca Bukavu ahazwi nka Place de l'Independance",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ku mugoroba wo ku wa gatanu w'indwi iheze, niho abarwanyi ba M23 baboneka hagati mu gisagara ca Bukavu ahazwi nka Place de l'Independance",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ku mugoroba wo ku wa gatanu w'indwi iheze, niho abarwanyi ba M23 baboneka hagati mu gisagara ca Bukavu ahazwi nka Place de l'Independance",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1015,
+                    "height": 605,
+                    "locator": "ede7/live/eb98a290-ecfb-11ef-bd1b-d536627785f2.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "MONUSCO",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Reta ya Congo ishimangira ko iriko irakora ibishoboka vyose kugira ngo \"isubize ibintu mu buryo, igarukane umutekano n'ubusugire bwayo\".",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Reta ya Congo ishimangira ko iriko irakora ibishoboka vyose kugira ngo \"isubize ibintu mu buryo, igarukane umutekano n'ubusugire bwayo\".",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:cd646gdl98eo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3afe74c3-7b9e-4bbc-8b77-86dc1fc38a1c#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-17T06:56:28.268Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-17T06:56:28.268Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingLabel": "Ibiyaga binini",
+                  "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q87982"],
+                  "thingEnglishLabel": "African Great Lakes",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                  "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/203312/",
+                    "http://www.wikidata.org/entity/Q974"
+                  ],
+                  "thingEnglishLabel": "Democratic Republic of Congo",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/3afe74c3-7b9e-4bbc-8b77-86dc1fc38a1c#id",
+                  "thingLabel": "Abatutsi",
+                  "thingUri": "http://www.bbc.co.uk/things/3afe74c3-7b9e-4bbc-8b77-86dc1fc38a1c#id",
+                  "thingId": "3afe74c3-7b9e-4bbc-8b77-86dc1fc38a1c",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q193092"],
+                  "thingEnglishLabel": "Tutsi",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingLabel": "Rwanda",
+                  "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/49518/",
+                    "http://www.wikidata.org/entity/Q1037"
+                  ],
+                  "thingEnglishLabel": "Rwanda",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingLabel": "M23",
+                  "thingUri": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingId": "b03e7bfd-9a46-4053-aeed-f9f55f5e5567",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept",
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q63345",
+                    "http://dbpedia.org/resource/March_23_Movement"
+                  ],
+                  "thingEnglishLabel": "March 23 Movement",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                  "thingLabel": "Ibitero bya M23 muri Congo",
+                  "thingUri": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                  "thingId": "c78c7532-43b3-490d-ad5b-0fc47b906e42",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Event",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q112628065"],
+                  "thingEnglishLabel": "M23 offensive",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cd646gdl98eo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c9qj89144y9o",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/c9qj89144y9o"
+          },
+          "timestamp": 1739696017075,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "FARDC iravuga ko zigenzura Bukavu, M23 'iraboneka muri uyu mujyi'",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Ni ibiki birimo kuba i Bukavu?",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Ni ibiki birimo kuba i Bukavu?",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ifoto y'abarwanyi ba M23 hagati mu mujyi wa Bukavu yatangajwe n'umuvugizi w'uyu mutwe Col Willy Ngoma kuri iki cyumweru",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ifoto y'abarwanyi ba M23 hagati mu mujyi wa Bukavu yatangajwe n'umuvugizi w'uyu mutwe Col Willy Ngoma kuri iki cyumweru",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ifoto y'abarwanyi ba M23 hagati mu mujyi wa Bukavu yatangajwe n'umuvugizi w'uyu mutwe Col Willy Ngoma kuri iki cyumweru",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ifoto y'abarwanyi ba M23 hagati mu mujyi wa Bukavu yatangajwe n'umuvugizi w'uyu mutwe Col Willy Ngoma kuri iki cyumweru",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1011,
+                    "height": 628,
+                    "locator": "93f6/live/bcb19b00-ec36-11ef-a319-fb4e7360c4ec.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Willy Ngoma/X",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Kuri iki cyumweru, hagati no mu nkengero za Bukavu habonetse imirongo miremire bivugwa ko ari iy’abarwanyi ba M23, mu gihe FARDC ivuga ko ari yo igenzura uyu mujyi.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Kuri iki cyumweru, hagati no mu nkengero za Bukavu habonetse imirongo miremire bivugwa ko ari iy’abarwanyi ba M23, mu gihe FARDC ivuga ko ari yo igenzura uyu mujyi.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:c9qj89144y9o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-16T06:52:57.618Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-16T06:52:57.618Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingLabel": "Ibiyaga binini",
+                  "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q87982"],
+                  "thingEnglishLabel": "African Great Lakes",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                  "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/203312/",
+                    "http://www.wikidata.org/entity/Q974"
+                  ],
+                  "thingEnglishLabel": "Democratic Republic of Congo",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingLabel": "Rwanda",
+                  "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/49518/",
+                    "http://www.wikidata.org/entity/Q1037"
+                  ],
+                  "thingEnglishLabel": "Rwanda",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingLabel": "M23",
+                  "thingUri": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingId": "b03e7bfd-9a46-4053-aeed-f9f55f5e5567",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept",
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q63345",
+                    "http://dbpedia.org/resource/March_23_Movement"
+                  ],
+                  "thingEnglishLabel": "March 23 Movement",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                  "thingLabel": "Ibitero bya M23 muri Congo",
+                  "thingUri": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                  "thingId": "c78c7532-43b3-490d-ad5b-0fc47b906e42",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Event",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q112628065"],
+                  "thingEnglishLabel": "M23 offensive",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c9qj89144y9o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cn4zkklpv2no",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/cn4zkklpv2no"
+          },
+          "timestamp": 1739708606980,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "Nyuma yo kuvanaho ibwiriza rya Biden, Trump yoherereje Israel ibisasu biremereye cyane bya MK-84",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Israel yakiriye ibisasu rutura bya MK-84 yohererejwe na Amerika",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Israel yakiriye ibisasu rutura bya MK-84 yohererejwe na Amerika",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ifoto y'indege y'igisirikare cya Amerika yarekuye ibisasu byo mu byoko bwa MK-84",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ifoto y'indege y'igisirikare cya Amerika yarekuye ibisasu byo mu byoko bwa MK-84",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ifoto y'indege y'igisirikare cya Amerika yarekuye ibisasu byo mu byoko bwa MK-84",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ifoto y'indege y'igisirikare cya Amerika yarekuye ibisasu byo mu byoko bwa MK-84",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 800,
+                    "height": 450,
+                    "locator": "9cce/live/07861ce0-ec60-11ef-91f9-bd1471acd4eb.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "MK-84 ni bombe rutura imwe iba ipima hejuru ya 900kg, ifite ubushobozi bwo gushwanyaguza 'beton' nini n'ibyuma bikomeye kandi ikangiza byinshi ku murambararo munini.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "MK-84 ni bombe rutura imwe iba ipima hejuru ya 900kg, ifite ubushobozi bwo gushwanyaguza 'beton' nini n'ibyuma bikomeye kandi ikangiza byinshi ku murambararo munini.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:cn4zkklpv2no",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-16T12:23:26.980Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-16T12:23:26.980Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingLabel": "Leta Zunze Ubumwe za Amerika",
+                  "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q30",
+                    "http://sws.geonames.org/6252001/"
+                  ],
+                  "thingEnglishLabel": "United States",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "Isiraheli",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801",
+                    "http://sws.geonames.org/294640/"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingLabel": "Isareli n'abanyapalestina",
+                  "thingUri": "http://www.bbc.co.uk/things/a2ada86c-5450-4055-ad81-ef6bc0b922cc#id",
+                  "thingId": "a2ada86c-5450-4055-ad81-ef6bc0b922cc",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Israel–Palestine_relations",
+                    "http://www.wikidata.org/entity/Q16125891"
+                  ],
+                  "thingEnglishLabel": "Israel & the Palestinians",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cn4zkklpv2no",
+          "type": "optimo"
+        }
+      ],
+      "features": [
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c8xpj9vnd5wo",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/c8xpj9vnd5wo"
+          },
+          "timestamp": 1733128459421,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "BBC Gahuza yafunguye WhatsApp channel: yijyeho ube uwa mbere ku makuru yacu",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "BBC GAHUZA WhatsApp Channel: Uko wayinjiramo ukajya ubona amakuru ako kanya",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "BBC GAHUZA WhatsApp Channel: Uko wayinjiramo ukajya ubona amakuru ako kanya",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "WhatsApp",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "WhatsApp",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1024,
+                    "height": 683,
+                    "locator": "82af/live/18dbcab0-6c47-11ef-8c32-f3c2bc7494c6.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:c8xpj9vnd5wo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "campaign": [
+                {
+                  "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                  "type": "campaign"
+                }
+              ],
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c8xpj9vnd5wo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c98yz505jy0o",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/c98yz505jy0o"
+          },
+          "timestamp": 1739429716553,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "RD Congo- Rwanda: Minisitiri Kayikwamba arabaza F1 niba u Rwanda rukwiye guhagararira Afurika",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "F1 'ikurikiranye' intambara muri DRC n'impungenge kuri Grand Prix mu Rwanda  ",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "F1 'ikurikiranye' intambara muri DRC n'impungenge kuri Grand Prix mu Rwanda  ",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": " Ibihembo bya FIA Awards byatangiwe mu Rwanda mu Ukuboza gushize",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": " Ibihembo bya FIA Awards byatangiwe mu Rwanda mu Ukuboza gushize",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1910,
+                    "height": 1219,
+                    "locator": "5b2a/live/4bc44890-e9d7-11ef-a819-277e390a7a08.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Village Urugwiro",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Formula 1 ivuga ko irimo \"gukurikiranira hafi\" intambara mu burasirazuba bwa DR Congo bigendanye no kuba u Rwanda rwarasabye kwakira Grand Prix.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Formula 1 ivuga ko irimo \"gukurikiranira hafi\" intambara mu burasirazuba bwa DR Congo bigendanye no kuba u Rwanda rwarasabye kwakira Grand Prix.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:c98yz505jy0o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-13T06:55:16.553Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-13T06:55:16.553Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                  "thingLabel": "Imikino",
+                  "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                  "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:Genre",
+                    "tagging:TagConcept",
+                    "tagging:AmbiguousTerm",
+                    "core:Theme"
+                  ],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Sport",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingLabel": "Rwanda",
+                  "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/49518/",
+                    "http://www.wikidata.org/entity/Q1037"
+                  ],
+                  "thingEnglishLabel": "Rwanda",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                  "thingLabel": "Afurika",
+                  "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                  "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Africa",
+                    "http://www.wikidata.org/entity/Q15",
+                    "http://sws.geonames.org/6255146/"
+                  ],
+                  "thingEnglishLabel": "Africa",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "thingUri": "http://www.bbc.co.uk/things/90125997-d9a5-43ae-8e40-6d0509e312af#id",
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Andrew Benson",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Andrew Benson",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "F1 Correspondent",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "F1 Correspondent",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c98yz505jy0o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cp3jgnxpxweo",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/cp3jgnxpxweo"
+          },
+          "timestamp": 1739443405125,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "Umwami wa Jordan yanse umugambi wa Trump wo kuvana  Abanyapalestina muri Gaza",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Umwami wa Yorodaniya yanse umugambi wa Trump wo kuvana  Abanyapalestina muri Gaza",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Umwami wa Yorodaniya yanse umugambi wa Trump wo kuvana  Abanyapalestina muri Gaza",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "US President Donald Trump meets with Jordan's King Abdullah at the White House in Washington. The king is smiling and you can see both the US and Jordanian flags. ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "US President Donald Trump meets with Jordan's King Abdullah at the White House in Washington. The king is smiling and you can see both the US and Jordanian flags. ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1000,
+                    "height": 563,
+                    "locator": "f018/live/861fc530-e8ad-11ef-a319-fb4e7360c4ec.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Reuters ",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Umwami  Abdullah yiyamirije umugambi w'uko abanya-Gaza bimurirwa mu bihugu bibanyi harimwo na Yorodaniya. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Umwami  Abdullah yiyamirije umugambi w'uko abanya-Gaza bimurirwa mu bihugu bibanyi harimwo na Yorodaniya. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:cp3jgnxpxweo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/bdd5a12d-7578-441c-b733-b12434a1400e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-13T10:30:06.900Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-13T10:30:06.900Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                  "thingLabel": "Donald Trump",
+                  "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                  "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "tagging:Agent",
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Person"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q22686",
+                    "http://dbpedia.org/resource/Donald_Trump"
+                  ],
+                  "thingEnglishLabel": "Donald Trump",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingLabel": "Leta Zunze Ubumwe za Amerika",
+                  "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q30",
+                    "http://sws.geonames.org/6252001/"
+                  ],
+                  "thingEnglishLabel": "United States",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingLabel": "Isiraheli",
+                  "thingUri": "http://www.bbc.co.uk/things/84b77b58-6acb-4074-8733-c237a0687641#id",
+                  "thingId": "84b77b58-6acb-4074-8733-c237a0687641",
+                  "thingType": [
+                    "core:Place",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Israel",
+                    "http://www.wikidata.org/entity/Q801",
+                    "http://sws.geonames.org/294640/"
+                  ],
+                  "thingEnglishLabel": "Israel",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/bdd5a12d-7578-441c-b733-b12434a1400e#id",
+                  "thingLabel": "Yorudani",
+                  "thingUri": "http://www.bbc.co.uk/things/bdd5a12d-7578-441c-b733-b12434a1400e#id",
+                  "thingId": "bdd5a12d-7578-441c-b733-b12434a1400e",
+                  "thingType": [
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q810",
+                    "http://sws.geonames.org/248816/"
+                  ],
+                  "thingEnglishLabel": "Jordan",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "byline": {
+            "blocks": [
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Bernd Debusmann Jr & Tom Bateman muri Maison Blanche ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Bernd Debusmann Jr & Tom Bateman muri Maison Blanche ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "BBC News",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "BBC News",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "contributor",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "name",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Rachel Hagan",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Rachel Hagan",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "role",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "location",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "London",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "London",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cp3jgnxpxweo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c627y43r615o",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/c627y43r615o"
+          },
+          "timestamp": 1739422700943,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "Sosiyete civile irasaba ko imirwano itagera Bukavu mu buseruko bwa DR Congo",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "M23 'yafashe Kalehe centre na Ihusi', FARDC iramagana guhonyora agahenge",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "M23 'yafashe Kalehe centre na Ihusi', FARDC iramagana guhonyora agahenge",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ku wa gatatu abarwanyi ba M23 babonetse ku biro bikuru bya teritwari ya Karehe ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ku wa gatatu abarwanyi ba M23 babonetse ku biro bikuru bya teritwari ya Karehe ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ku wa gatatu abarwanyi ba M23 babonetse ku biro bikuru bya teritwari ya Karehe ",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ku wa gatatu abarwanyi ba M23 babonetse ku biro bikuru bya teritwari ya Karehe ",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1016,
+                    "height": 572,
+                    "locator": "fc2d/live/28b7df30-e9c6-11ef-84bc-3b473f86444a.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "M23",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Imirwano yatumye abaturage ibihumbi bahungira mu byerekezo bitandukanye birimo ku kirwa cya Idjwi mu kiyaga cya Kivu, abandi berekeza i Bukavu.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Imirwano yatumye abaturage ibihumbi bahungira mu byerekezo bitandukanye birimo ku kirwa cya Idjwi mu kiyaga cya Kivu, abandi berekeza i Bukavu.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:c627y43r615o",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-13T04:58:20.943Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-13T04:58:20.943Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingLabel": "Ibiyaga binini",
+                  "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q87982"],
+                  "thingEnglishLabel": "African Great Lakes",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                  "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/203312/",
+                    "http://www.wikidata.org/entity/Q974"
+                  ],
+                  "thingEnglishLabel": "Democratic Republic of Congo",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingLabel": "Rwanda",
+                  "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/49518/",
+                    "http://www.wikidata.org/entity/Q1037"
+                  ],
+                  "thingEnglishLabel": "Rwanda",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingLabel": "M23",
+                  "thingUri": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingId": "b03e7bfd-9a46-4053-aeed-f9f55f5e5567",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept",
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q63345",
+                    "http://dbpedia.org/resource/March_23_Movement"
+                  ],
+                  "thingEnglishLabel": "March 23 Movement",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                  "thingLabel": "Ibitero bya M23 muri Congo",
+                  "thingUri": "http://www.bbc.co.uk/things/c78c7532-43b3-490d-ad5b-0fc47b906e42#id",
+                  "thingId": "c78c7532-43b3-490d-ad5b-0fc47b906e42",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Event",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q112628065"],
+                  "thingEnglishLabel": "M23 offensive",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c627y43r615o",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:czx8jl9418eo",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/czx8jl9418eo"
+          },
+          "timestamp": 1739426027783,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "DR Congo: Nyuma ya Tshisekedi, Abanyamadini bagiye kuganira na AFC/M23 i Goma",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Nyuma ya Tshisekedi, abakuru ba Kiliziya Gatolika n'Abaporotestanti babonanye na M23",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Nyuma ya Tshisekedi, abakuru ba Kiliziya Gatolika n'Abaporotestanti babonanye na M23",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "caption",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Corneille Nangaa (hagati) hamwe n'abakuru b'amadini baje kuganira na AFC/M23 i Goma, bayobowe na Musenyeri Donatien Nshole (iburyo)",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Corneille Nangaa (hagati) hamwe n'abakuru b'amadini baje kuganira na AFC/M23 i Goma, bayobowe na Musenyeri Donatien Nshole (iburyo)",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Corneille Nangaa (hagati) hamwe n'abakuru b'amadini baje kuganira na AFC/M23 i Goma, bayobowe na Musenyeri Donatien Nshole (iburyo)",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Corneille Nangaa (hagati) hamwe n'abakuru b'amadini baje kuganira na AFC/M23 i Goma, bayobowe na Musenyeri Donatien Nshole (iburyo)",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1675,
+                    "height": 942,
+                    "locator": "6606/live/1c470a80-e9cd-11ef-896a-8d5f88b1f1a5.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Social Media",
+                    "suitableForSyndication": false
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Mu cyumweru gishize aba banyamadini bakiriwe na Perezida Thisekedi bamuha 'umushinga wo gusohoka mu ngorane', bavuga ko yawakiriye neza. ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Mu cyumweru gishize aba banyamadini bakiriwe na Perezida Thisekedi bamuha 'umushinga wo gusohoka mu ngorane', bavuga ko yawakiriye neza. ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:czx8jl9418eo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-13T05:53:47.783Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-13T05:53:47.783Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingLabel": "Ibiyaga binini",
+                  "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q87982"],
+                  "thingEnglishLabel": "African Great Lakes",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                  "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/203312/",
+                    "http://www.wikidata.org/entity/Q974"
+                  ],
+                  "thingEnglishLabel": "Democratic Republic of Congo",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingLabel": "Rwanda",
+                  "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/49518/",
+                    "http://www.wikidata.org/entity/Q1037"
+                  ],
+                  "thingEnglishLabel": "Rwanda",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingLabel": "M23",
+                  "thingUri": "http://www.bbc.co.uk/things/b03e7bfd-9a46-4053-aeed-f9f55f5e5567#id",
+                  "thingId": "b03e7bfd-9a46-4053-aeed-f9f55f5e5567",
+                  "thingType": [
+                    "tagging:AmbiguousTerm",
+                    "tagging:TagConcept",
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:Agent"
+                  ],
+                  "thingSameAs": [
+                    "http://www.wikidata.org/entity/Q63345",
+                    "http://dbpedia.org/resource/March_23_Movement"
+                  ],
+                  "thingEnglishLabel": "March 23 Movement",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:czx8jl9418eo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:cvgly3z0dxxo",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/cvgly3z0dxxo"
+          },
+          "timestamp": 1739337956651,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "DR Congo: CODECO iragirizwa kugandagura abarenga 50 barimwo abana 18 muri Ituri",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "DR Congo: Umurwi w'abitwaje ibirwanisho wagandaguye abarenga 50 muri Ituri",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "DR Congo: Umurwi w'abitwaje ibirwanisho wagandaguye abarenga 50 muri Ituri",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Inkoho",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Inkoho",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1668,
+                    "height": 785,
+                    "locator": "d51d/live/0e8e2ab0-e8fe-11ef-a819-277e390a7a08.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "Getty Images",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Umuvugizi w'igisirikare muri iyo ntara, Jules Ngongo, avuga ko abasirikare bagerageje gutabara ariko ko bahashitse akaba kabaye, ataco bagikiza.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Umuvugizi w'igisirikare muri iyo ntara, Jules Ngongo, avuga ko abasirikare bagerageje gutabara ariko ko bahashitse akaba kabaye, ataco bagikiza.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:cvgly3z0dxxo",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-12T05:25:56.651Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-12T05:25:56.651Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "formats": [
+                {
+                  "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingLabel": "News report",
+                  "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                  "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                  "thingType": ["tagging:TagConcept", "tagging:Format"],
+                  "thingSameAs": [],
+                  "thingEnglishLabel": "Report",
+                  "thingPreferredLabel": "Report",
+                  "thingLabelLanguage": "rw",
+                  "type": "formats"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingLabel": "Ibiyaga binini",
+                  "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                  "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": ["http://www.wikidata.org/entity/Q87982"],
+                  "thingEnglishLabel": "African Great Lakes",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                  "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                  "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                  "thingType": [
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Place"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/203312/",
+                    "http://www.wikidata.org/entity/Q974"
+                  ],
+                  "thingEnglishLabel": "Democratic Republic of Congo",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                  "thingLabel": "Igisirikare",
+                  "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                  "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                  "thingType": [
+                    "core:Theme",
+                    "core:Thing",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                  "thingEnglishLabel": "Military",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:cvgly3z0dxxo",
+          "type": "optimo"
+        },
+        {
+          "locators": {
+            "optimoUrn": "urn:bbc:optimo:asset:c805nzr1m8ko",
+            "canonicalUrl": "https://www.bbc.com/gahuza/articles/c805nzr1m8ko"
+          },
+          "timestamp": 1739262289855,
+          "suitableForSyndication": true,
+          "language": "rw",
+          "headlines": {
+            "seoHeadline": "Rwanda: Imwe mu misoro isanzwe igiye kuzamurwa, haze n'umusoro mushya",
+            "promoHeadline": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Rwanda: Imisoro ku nzoga n'itabi igiye kuzamurwa na telephone zishyure umusoro wa TVA",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Rwanda: Imisoro ku nzoga n'itabi igiye kuzamurwa na telephone zishyure umusoro wa TVA",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "images": {
+            "defaultPromoImage": {
+              "blocks": [
+                {
+                  "type": "altText",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "text",
+                        "model": {
+                          "blocks": [
+                            {
+                              "type": "paragraph",
+                              "model": {
+                                "text": "Ishusho y'inzoga na telephone",
+                                "blocks": [
+                                  {
+                                    "type": "fragment",
+                                    "model": {
+                                      "text": "Ishusho y'inzoga na telephone",
+                                      "attributes": []
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "rawImage",
+                  "model": {
+                    "width": 1536,
+                    "height": 864,
+                    "locator": "7c92/live/c43b2230-e842-11ef-a819-277e390a7a08.jpg",
+                    "originCode": "cpsprodpb",
+                    "copyrightHolder": "BBC",
+                    "suitableForSyndication": true
+                  }
+                }
+              ]
+            }
+          },
+          "summary": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Izi mpinduka zisobanuye ko telephone yaguraga 100,000 Frw ishobora kuzamuka ikagera ku 118,000Frw cyangwa hejuru yayo gato.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Izi mpinduka zisobanuye ko telephone yaguraga 100,000 Frw ishobora kuzamuka ikagera ku 118,000Frw cyangwa hejuru yayo gato.",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "passport": {
+            "language": "rw",
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+            "locator": "urn:bbc:optimo:asset:c805nzr1m8ko",
+            "availability": "AVAILABLE",
+            "taggings": [
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                "value": "2025-02-11T06:42:41.641Z"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+              },
+              {
+                "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+              }
+            ],
+            "schemaVersion": "1.4.0",
+            "publishedState": "PUBLISHED",
+            "predicates": {
+              "assetType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                  "type": "assetType"
+                }
+              ],
+              "primaryMediaType": [
+                {
+                  "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                  "type": "primaryMediaType"
+                }
+              ],
+              "dateFirstReleased": [
+                {
+                  "value": "2025-02-11T06:42:41.641Z",
+                  "type": "dateFirstReleased"
+                }
+              ],
+              "motivation": [],
+              "infoClass": [
+                {
+                  "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                  "type": "infoClass"
+                }
+              ],
+              "editorialSensitivity": [
+                {
+                  "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                  "type": "editorialSensitivity"
+                }
+              ],
+              "about": [
+                {
+                  "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingLabel": "Rwanda",
+                  "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                  "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                  "thingType": [
+                    "core:Thing",
+                    "core:Place",
+                    "tagging:TagConcept"
+                  ],
+                  "thingSameAs": [
+                    "http://sws.geonames.org/49518/",
+                    "http://www.wikidata.org/entity/Q1037"
+                  ],
+                  "thingEnglishLabel": "Rwanda",
+                  "type": "about"
+                },
+                {
+                  "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                  "thingLabel": "Ubukungu",
+                  "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                  "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                  "thingType": [
+                    "core:Theme",
+                    "tagging:TagConcept",
+                    "core:Thing"
+                  ],
+                  "thingSameAs": [
+                    "http://dbpedia.org/resource/Economy",
+                    "http://www.wikidata.org/entity/Q159810"
+                  ],
+                  "thingEnglishLabel": "Economics",
+                  "type": "about"
+                }
+              ]
+            }
+          },
+          "serviceIdentifier": "Gahuza",
+          "breakingNews": {
+            "isBreaking": false
+          },
+          "consumableAsSFV": false,
+          "id": "urn:bbc:ares::article:c805nzr1m8ko",
+          "type": "optimo"
+        }
+      ],
+      "mostRead": {
+        "generated": "2025-02-17T10:15:54.08Z",
+        "lastRecordTimeStamp": "2025-02-17T10:14:00Z",
+        "firstRecordTimeStamp": "2025-02-17T08:14:00Z",
+        "items": [
+          {
+            "id": "urn:bbc:optimo:asset:cd646gdl98eo",
+            "rank": 1,
+            "title": "RD Congo: Reta yemeye ko Bukavu yafashwe n'inyeshamba za M23",
+            "href": "https://www.bbc.com/gahuza/articles/cd646gdl98eo",
+            "timestamp": "2025-02-17T06:56:28.268Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cg7zlklvevyo",
+            "rank": 2,
+            "title": "Ndayishimiye avuga ko igitero c'Urwanda ku Burundi' ari nkaho kitakibaye",
+            "href": "https://www.bbc.com/gahuza/articles/cg7zlklvevyo",
+            "timestamp": "2025-02-16T09:30:15.823Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c9qj89144y9o",
+            "rank": 3,
+            "title": "Ni ibiki birimo kuba i Bukavu?",
+            "href": "https://www.bbc.com/gahuza/articles/c9qj89144y9o",
+            "timestamp": "2025-02-16T08:53:37.075Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cn4zkklpv2no",
+            "rank": 4,
+            "title": "Israel yakiriye ibisasu rutura bya MK-84 yohererejwe na Amerika",
+            "href": "https://www.bbc.com/gahuza/articles/cn4zkklpv2no",
+            "timestamp": "2025-02-16T12:23:26.980Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c1lv0jv7mego",
+            "rank": 5,
+            "title": "AFC/M23 yasabye abatuye i Bukavu kwishyiriraho abategetsi",
+            "href": "https://www.bbc.com/gahuza/articles/c1lv0jv7mego",
+            "timestamp": "2025-02-15T12:28:37.827Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c20pvev68lqo",
+            "rank": 6,
+            "title": "Uko M23 'yafashe' umujyi wa Bukavu 'nta mirwano ikomeye' ibaye",
+            "href": "https://www.bbc.com/gahuza/articles/c20pvev68lqo",
+            "timestamp": "2025-02-15T04:48:58.361Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c3918wgeg2do",
+            "rank": 7,
+            "title": "Ingene nashize ahagaragara ikinyoma cya MI5 ku bugizi bwa nabi bw'intasi yayo",
+            "href": "https://www.bbc.com/gahuza/articles/c3918wgeg2do",
+            "timestamp": "2025-02-16T09:27:54.427Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:cdxn8k72yqjo",
+            "rank": 8,
+            "title": "'Ubuzima bwanjye ni intambara' - Sultani Makenga: Ibyo wamenya kuri uyu mukuru wa M23",
+            "href": "https://www.bbc.com/gahuza/articles/cdxn8k72yqjo",
+            "timestamp": "2025-02-10T08:18:23.779Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:c98yz505jy0o",
+            "rank": 9,
+            "title": "F1 'ikurikiranye' intambara muri DRC n'impungenge kuri Grand Prix mu Rwanda  ",
+            "href": "https://www.bbc.com/gahuza/articles/c98yz505jy0o",
+            "timestamp": "2025-02-13T06:55:16.553Z"
+          },
+          {
+            "id": "urn:bbc:optimo:asset:czx8jl9418eo",
+            "rank": 10,
+            "title": "Nyuma ya Tshisekedi, abakuru ba Kiliziya Gatolika n'Abaporotestanti babonanye na M23",
+            "href": "https://www.bbc.com/gahuza/articles/czx8jl9418eo",
+            "timestamp": "2025-02-13T05:53:47.783Z"
+          }
+        ]
+      },
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

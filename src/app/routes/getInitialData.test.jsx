@@ -3,7 +3,6 @@ import {
   TOPIC_PAGE,
   ARTICLE_PAGE,
   HOME_PAGE,
-  FRONT_PAGE,
   MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 import routes from './index';
@@ -19,7 +18,6 @@ const pageTypesToSkip = [
   TOPIC_PAGE,
   ARTICLE_PAGE,
   HOME_PAGE,
-  FRONT_PAGE,
   MOST_READ_PAGE,
 ];
 
@@ -32,11 +30,15 @@ describe('getInitialData', () => {
   routes
     .filter(route => !pageTypesToSkip.includes(route.pageType))
     .forEach(({ getInitialData, pageType }) => {
+      const path =
+        pageType === 'liveRadio'
+          ? '/korean/bbc_korean_radio/liveradio'
+          : MOCK_PATH;
       it(`${pageType} - should handle Ares 404`, async () => {
         fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
 
         const actual = await getInitialData({
-          path: MOCK_PATH,
+          path,
           pageType,
           toggles,
         });
@@ -52,7 +54,7 @@ describe('getInitialData', () => {
         fetch.mockResponseOnce(JSON.stringify({}), { status: 202 });
 
         const actual = await getInitialData({
-          path: MOCK_PATH,
+          path,
           pageType,
           toggles,
         });
@@ -67,7 +69,7 @@ describe('getInitialData', () => {
         fetch.mockResponseOnce(JSON.stringify({}), { status: 500 });
 
         const actual = await getInitialData({
-          path: MOCK_PATH,
+          path,
           pageType,
           toggles,
         });
@@ -82,14 +84,14 @@ describe('getInitialData', () => {
         fetch.mockResponseOnce('dataIsNotAsExpected');
 
         const actual = await getInitialData({
-          path: MOCK_PATH,
+          path,
           pageType,
           toggles,
         });
 
         expect(actual.status).toEqual(502);
         expect(actual.error).toEqual(
-          'invalid json response body at  reason: Unexpected token d in JSON at position 0',
+          'invalid json response body at  reason: Unexpected token \'d\', "dataIsNotAsExpected" is not valid JSON',
         );
       });
     });

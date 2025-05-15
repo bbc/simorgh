@@ -11,7 +11,9 @@ import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import { PageTypes } from '#app/models/types/global';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import MediaLoader from '#app/components/MediaLoader';
-import { OnDemandTVBlock, MediaOverrides } from '#app/models/types/media';
+import { OnDemandTVBlock } from '#app/models/types/media';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+import { RequestContext } from '#app/contexts/RequestContext';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
@@ -41,6 +43,7 @@ export interface OnDemandTVProps {
     mediaBlocks: OnDemandTVBlock[];
     metadata: {
       type: PageTypes;
+      atiAnalytics: ATIData;
     };
     language: string;
     headline: string;
@@ -74,18 +77,17 @@ const OnDemandTvPage = ({
     brandTitle,
     releaseDateTimeStamp,
     masterBrand,
-    episodeId,
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
     recentEpisodes,
     episodeTitle,
     mediumSynopsis,
-    contentType,
+    metadata: { atiAnalytics },
   } = pageData;
 
-  const { timezone, datetimeLocale, service, brandName } =
-    useContext(ServiceContext);
+  const { timezone, datetimeLocale, brandName } = useContext(ServiceContext);
+  const { isLite } = useContext(RequestContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -100,25 +102,14 @@ const OnDemandTvPage = ({
     ? `${brandTitle} - ${episodeTitle} - ${brandName}`
     : headline;
 
-  const mediaOverrides: MediaOverrides = {
-    model: {
-      language,
-      pageIdentifierOverride: `${service}.bbc_${service}_tv.tv.${episodeId}.page`,
-      pageTitleOverride: promoBrandTitle,
-    },
-    type: 'mediaOverrides',
-  };
-
-  const mediaBlocksWithOverrides = [...pageData?.mediaBlocks, mediaOverrides];
-
   return (
     <div css={styles.wrapper}>
       <ChartbeatAnalytics
         mediaPageType="TV"
         title={headline}
-        contentType={contentType}
+        contentType={atiAnalytics.contentType as ContentType}
       />
-      <ATIAnalytics data={pageData} />
+      <ATIAnalytics atiData={atiAnalytics} />
       <ComscoreAnalytics />
       <MetadataContainer
         title={metadataTitle}
@@ -166,7 +157,7 @@ const OnDemandTvPage = ({
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
             <MediaLoader
-              blocks={mediaBlocksWithOverrides}
+              blocks={pageData?.mediaBlocks}
               css={styles.mediaPlayer}
             />
           ) : (
@@ -179,6 +170,8 @@ const OnDemandTvPage = ({
             releaseDateTimeStamp={releaseDateTimeStamp}
             episodeTitle={episodeTitle}
             ariaHidden
+            //  @ts-expect-error: pass prop to StyledTvHeadingContainer, but the styled component does not accept it
+            isLite={isLite}
           />
         </Grid>
         {/* @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags */}

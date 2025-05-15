@@ -21,9 +21,9 @@ const props = {
   },
 };
 
-const TestComponent = () => {
-  const Component = () => <h1>Hola Optimizely</h1>;
+const Component = () => <h1>Hola Optimizely</h1>;
 
+const TestComponent = () => {
   const OptimizelyComponent = withOptimizelyProvider(Component);
 
   const memoizedServiceContextValue = useMemo(
@@ -38,7 +38,14 @@ const TestComponent = () => {
   );
 };
 
+jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));
+jest.mock('@optimizely/react-sdk');
+
 describe('withOptimizelyProvider HOC', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should enrich the component with the Optimizely API', () => {
     const optimizelyProviderRenderSpy = jest.spyOn(
       optimizelyReactSdk.OptimizelyProvider.prototype,

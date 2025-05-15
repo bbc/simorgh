@@ -3,24 +3,28 @@ export default {
   ads: {
     enabled: false,
   },
+  articleLiteSiteLink: { enabled: true },
+  electionBanner: {
+    enabled: true,
+  },
   chartbeatAnalytics: {
     enabled: true,
   },
   comscoreAnalytics: {
     enabled: true,
   },
-  cpsRecommendations: {
-    enabled: true,
-  },
   enableFetchingToggles: {
     enabled: true,
     value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
+      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
   },
   eventTracking: {
     enabled: true,
   },
   include: {
+    enabled: true,
+  },
+  midArticleOnwardJourney: {
     enabled: true,
   },
   mostRead: {
@@ -35,7 +39,13 @@ export default {
   prerollAds: {
     enabled: true,
   },
-  radioSchedule: {
+  homePageRadioSchedule: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
+    enabled: true,
+  },
+  onDemandRadioSchedule: {
     enabled: true,
   },
   scriptLink: {

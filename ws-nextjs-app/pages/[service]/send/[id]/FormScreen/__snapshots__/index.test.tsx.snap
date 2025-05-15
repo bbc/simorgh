@@ -214,6 +214,88 @@ exports[`Form should render and match snapshot 1`] = `
   outline-offset: 0.1875rem;
 }
 
+.emotion-8 {
+  scroll-margin-top: 2.75rem;
+  border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
+.emotion-8:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
+.emotion-14 {
+  scroll-margin-top: 2.75rem;
+  border: solid 0.0625rem #141414;
+  outline: solid 0.0625rem transparent;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-14 {
+    border-color: canvasText;
+    outline: 0;
+  }
+}
+
+.emotion-14:focus {
+  outline: 0.1875rem solid #FFFFFF;
+  box-shadow: 0 0 0 0.1875rem #000000;
+  outline-offset: 0.1875rem;
+}
+
 .emotion-17 {
   scroll-margin-top: 2.75rem;
   border: solid 0.0625rem #141414;
@@ -579,7 +661,7 @@ exports[`Form should render and match snapshot 1`] = `
       <div>
         <input
           aria-invalid="false"
-          class="emotion-5"
+          class="emotion-8"
           id="txt49018835"
           name="txt49018835"
           type="email"
@@ -621,7 +703,7 @@ exports[`Form should render and match snapshot 1`] = `
       <div>
         <input
           aria-invalid="false"
-          class="emotion-5"
+          class="emotion-14"
           id="txt49018963"
           name="txt49018963"
           type="tel"

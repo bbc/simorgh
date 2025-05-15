@@ -187,16 +187,3 @@ const Component = () => (
 
 This will ensure that the service being rendered is `mundo`, in this example. This is useful for creating stories to demonstrate layout for left-to-right and right-to-left languages.
 
-## Overriding the default service
-
-You can automatically set the `service` for a story by using the `withServicesDecorator` function. To do this, import the function and add it to the `decorators` array in the default export for the story. For example:
-
-```tsx
-import { withServicesDecorator } from '#storybook/withServicesDecorator';
-
-export default {
-  title: 'MyFirstStory',
-  component: Component,
-  decorators: [withServicesDecorator({ defaultService: 'mundo' })],
-};
-```

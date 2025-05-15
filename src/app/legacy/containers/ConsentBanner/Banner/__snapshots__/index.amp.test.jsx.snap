@@ -1469,7 +1469,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
           <span>
             <a
               data-terms-banner="reject"
-              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+              href="https://www.bbc.co.uk/usingthebbc/privacy-policy/"
               on="tap:cookieId.show, privacyId.hide"
             >
               Find out what's changed
@@ -1860,7 +1860,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
           <span>
             <a
               data-terms-banner="reject"
-              href="https://www.bbc.com/usingthebbc/your-data-matters"
+              href="https://www.bbc.com/usingthebbc/privacy-policy/"
               on="tap:cookieId.show, privacyId.hide"
             >
               إطلع على التغييرات

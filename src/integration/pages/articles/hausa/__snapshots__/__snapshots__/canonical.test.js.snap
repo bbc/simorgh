@@ -2,7 +2,39 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
 
-exports[`Canonical Articles Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=51&amp;x2=[responsive]&amp;x3=[news-hausa]&amp;x4=[ha]&amp;x8=[simorgh-nojs]"/>"`;
+exports[`Canonical Articles Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Articles Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "51",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-hausa]",
+  },
+  {
+    "x4": "[ha]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+]
+`;
 
 exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 {
@@ -55,6 +87,13 @@ exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 {
+  "text": "Labaran BBC a sauran harsuna",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
+{
   "text": "Karanta hanyoyin da muke bi dangane da adireshin waje.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -62,7 +101,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Hausa"`;
 
@@ -90,7 +129,7 @@ exports[`Canonical Articles Header Navigation link should match text and url 3`]
 exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
-  "url": "/hausa/52140979",
+  "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
@@ -104,7 +143,7 @@ exports[`Canonical Articles Header Navigation link should match text and url 5`]
 exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/shirye-shirye-na-musamman-54712348",
+  "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
@@ -122,6 +161,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
   class="bbc-139onq"
   height="351"
+  loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
   src="https://ichef.bbci.co.uk/ace/ws/640/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp"
   srcset="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 480w, https://ichef.bbci.co.uk/ace/ws/624/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg.webp 624w"

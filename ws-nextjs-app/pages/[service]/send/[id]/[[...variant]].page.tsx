@@ -1,14 +1,14 @@
 import { GetServerSideProps } from 'next';
-import nodeLogger from '#lib/logger.node';
+import dynamic from 'next/dynamic';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import isLitePath from '#app/routes/utils/isLitePath';
 import isAppPath from '#app/routes/utils/isAppPath';
-import getPageData from '../../../../utilities/pageRequests/getPageData';
-import UGCPageLayout from './UGCPageLayout';
+import deriveVariant from '#nextjs/utilities/deriveVariant';
 import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import getPageData from '../../../../utilities/pageRequests/getPageData';
 
-const logger = nodeLogger(__filename);
+const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -23,28 +23,20 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const {
     id,
     service,
-    variant,
+    variant: variantFromUrl,
     renderer_env: rendererEnv,
   } = context.query as PageDataParams;
 
-  const fetchPageDataParams = {
+  const variant = deriveVariant(variantFromUrl);
+
+  const { data, toggles } = await getPageData({
     id,
     service,
+    variant,
     rendererEnv,
     resolvedUrl: context.resolvedUrl,
-  };
-
-  const constructUrlParams = {
     pageType: UGC_PAGE,
-    service,
-    variant,
-  };
-
-  const { data, toggles } = await getPageData(
-    fetchPageDataParams,
-    constructUrlParams,
-    logger,
-  );
+  });
 
   const { pageData = null, status } = data;
 
@@ -70,7 +62,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: status ?? 500,
       toggles,
-      variant: variant?.[0] || null,
+      variant,
       timeOnServer: Date.now(), // TODO: check if needed?
       ...extractHeaders(reqHeaders),
     },

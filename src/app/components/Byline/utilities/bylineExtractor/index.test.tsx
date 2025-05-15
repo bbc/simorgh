@@ -1,8 +1,6 @@
 import bylineExtractor from '.';
 import {
-  bylineWithNoRole,
   bylineWithNoAuthor,
-  bylineWithNoAuthorAndRole,
   bylineWithLink,
   bylineWithNonPngPhoto,
   bylineWithAllData,
@@ -11,18 +9,6 @@ import {
 describe('bylineExtractor', () => {
   it('should return null when authorName is not present', () => {
     const bylineValues = bylineExtractor(bylineWithNoAuthor);
-
-    expect(bylineValues).toBeNull();
-  });
-
-  it('should return null when jobRole is not present', () => {
-    const bylineValues = bylineExtractor(bylineWithNoRole);
-
-    expect(bylineValues).toBeNull();
-  });
-
-  it('should return null when jobRole and authorName are not present', () => {
-    const bylineValues = bylineExtractor(bylineWithNoAuthorAndRole);
 
     expect(bylineValues).toBeNull();
   });

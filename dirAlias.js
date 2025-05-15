@@ -8,6 +8,8 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 module.exports = {
   webpackDirAlias: {
     '#app': resolvePath('src/app'),
+    '#src': resolvePath('src'),
+    '#nextjs': resolvePath('ws-nextjs-app/'),
     '#contexts': resolvePath('src/app/contexts'),
     '#components': resolvePath('src/app/legacy/components'),
     '#containers': resolvePath('src/app/legacy/containers'),
@@ -20,9 +22,12 @@ module.exports = {
     '#testHelpers': resolvePath('src/testHelpers/'),
     '#server': resolvePath('src/server/'),
     '#storybook': resolvePath('.storybook/'),
+    '#cypress': resolvePath('cypress/'),
   },
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',
+    '^#src(.*)$': '<rootDir>/src$1',
+    '^#nextjs(.*)$': '<rootDir>/ws-nextjs-app$1',
     '^#contexts(.*)$': '<rootDir>/src/app/contexts$1',
     '^#components(.*)$': '<rootDir>/src/app/legacy/components$1',
     '^#containers(.*)$': '<rootDir>/src/app/legacy/containers$1',
@@ -35,10 +40,13 @@ module.exports = {
     '^#testHelpers(.*)$': '<rootDir>/src/testHelpers$1',
     '^#server(.*)$': '<rootDir>/src/server$1',
     '^#storybook(.*)$': '<rootDir>/.storybook$1',
+    '^#cypress(.*)$': '<rootDir>/cypress$1',
   },
   eslintDirAlias: {
     map: [
       ['#app', './src/app'],
+      ['#src', './src'],
+      ['#nextjs', './ws-nextjs-app'],
       ['#contexts', './src/app/contexts'],
       ['#components', './src/app/legacy/components'],
       ['#containers', './src/app/legacy/containers'],
@@ -51,6 +59,7 @@ module.exports = {
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
       ['#storybook', './.storybook'],
+      ['#cypress', './cypress'],
     ],
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },

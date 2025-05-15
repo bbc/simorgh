@@ -1,16 +1,10 @@
-import pipe from 'ramda/src/pipe';
-import nodeLogger from '../../../lib/logger.node';
-import { Services, Toggles, Variants } from '../../../models/types/global';
-import getOnwardsPageData from '../utils/getOnwardsData';
-import addAnalyticsCounterName from '../utils/addAnalyticsCounterName';
-import augmentWithDisclaimer from '../utils/augmentWithDisclaimer';
-import { advertisingAllowed, isSfv } from '../utils/paramChecks';
-import { FetchError } from '../../../models/types/fetch';
-import handleError from '../../utils/handleError';
-import fetchDataFromBFF from '../../utils/fetchDataFromBFF';
-import getAgent from '../../../../server/utilities/getAgent';
-import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-import certsRequired from '../../utils/certsRequired';
+import nodeLogger from '#lib/logger.node';
+import { Services, Toggles, Variants } from '#models/types/global';
+import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
+import { FetchError, GetAgent } from '#models/types/fetch';
+import handleError from '#app/routes/utils/handleError';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -21,13 +15,11 @@ type Props = {
   variant?: Variants;
   toggles?: Toggles;
   isAmp?: boolean;
+  getAgent: GetAgent;
 };
 
 const transformPageData = (toggles?: Toggles) =>
-  pipe(
-    addAnalyticsCounterName,
-    augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 }),
-  );
+  augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
 
 export default async ({
   service,
@@ -36,6 +28,7 @@ export default async ({
   variant,
   toggles,
   isAmp,
+  getAgent,
 }: Props) => {
   try {
     const { status, json } = await fetchDataFromBFF({
@@ -44,9 +37,8 @@ export default async ({
       service,
       variant,
       isAmp,
+      getAgent,
     });
-
-    const agent = certsRequired(pathname) ? await getAgent() : null;
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
@@ -55,28 +47,6 @@ export default async ({
     const {
       data: { article, secondaryData },
     } = json;
-
-    const isAdvertising = advertisingAllowed(pageType, article);
-    const isArticleSfv = isSfv(article);
-    let wsojData = [];
-    const lastPublished = article?.metadata?.lastPublished;
-    const shouldGetOnwardsPageData = lastPublished
-      ? new Date(lastPublished).getFullYear() > new Date().getFullYear() - 2
-      : false;
-    if (shouldGetOnwardsPageData) {
-      try {
-        wsojData = await getOnwardsPageData({
-          pathname,
-          service,
-          variant,
-          isAdvertising,
-          isArticleSfv,
-          agent,
-        });
-      } catch (error) {
-        logger.error('Recommendations JSON malformed', error);
-      }
-    }
 
     const { topStories, features, latestMedia, mostRead } = secondaryData;
 
@@ -92,7 +62,6 @@ export default async ({
           latestMedia,
         },
         mostRead,
-        ...(wsojData && wsojData),
       },
     };
 

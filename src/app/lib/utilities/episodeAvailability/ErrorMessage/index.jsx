@@ -15,7 +15,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 
 import Message from '#app/components/MediaLoader/Message';
-import { EPISODE_STATUS } from '..';
+import { EPISODE_STATUS } from '../episodeStatus';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const AudioErrorWrapper = styled.div`

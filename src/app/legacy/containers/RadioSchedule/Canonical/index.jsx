@@ -1,8 +1,6 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { useTheme } from '@emotion/react';
-import 'isomorphic-fetch';
 import styled from '@emotion/styled';
-import moment from 'moment';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -19,14 +17,8 @@ import {
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import { RequestContext } from '#contexts/RequestContext';
 import RadioSchedule from '#components/RadioSchedule';
-import webLogger from '#lib/logger.web';
-import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import processRadioSchedule from '../utilities/processRadioSchedule';
-
-const logger = webLogger();
 
 const RadioScheduleSection = styled.section`
   background-color: ${props => props.theme.palette.LUNAR};
@@ -95,8 +87,7 @@ const RadioFrequencyLink = styled.a`
 `;
 
 const CanonicalRadioSchedule = ({
-  initialData,
-  endpoint,
+  radioSchedule,
   lang = null,
   className = '',
 }) => {
@@ -107,55 +98,12 @@ const CanonicalRadioSchedule = ({
     radioSchedule: radioScheduleConfig = {},
   } = useContext(ServiceContext);
 
-  const { timeOnServer } = useContext(RequestContext);
-
-  const [radioSchedule, setRadioSchedule] = useState(initialData);
-
   const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
     radioScheduleConfig;
 
   const {
     palette: { LUNAR },
   } = useTheme();
-
-  useEffect(() => {
-    if (!radioSchedule) {
-      const handleResponse = url => async response => {
-        if (!response.ok) {
-          throw Error(
-            `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
-          );
-        }
-
-        const radioScheduleData = await response.json();
-        const timeOnClient = parseInt(moment.utc().format('x'), 10);
-        const processedSchedule = processRadioSchedule(
-          radioScheduleData,
-          service,
-          timeOnServer || timeOnClient,
-        );
-        setRadioSchedule(processedSchedule);
-      };
-
-      const fetchRadioScheduleData = pathname =>
-        fetch(pathname, { mode: 'no-cors' })
-          .then(handleResponse(pathname))
-          .catch(error => {
-            logger.error(
-              JSON.stringify(
-                {
-                  event: RADIO_SCHEDULE_FETCH_ERROR,
-                  message: error.toString(),
-                },
-                null,
-                2,
-              ),
-            );
-          });
-
-      fetchRadioScheduleData(endpoint);
-    }
-  }, [endpoint, service, timeOnServer, radioSchedule]);
 
   if (!radioSchedule) {
     return null;
@@ -167,7 +115,7 @@ const CanonicalRadioSchedule = ({
       aria-labelledby="Radio-Schedule"
       data-testid="radio-schedule"
       {...(lang && { lang })}
-      {...(className && { className })}
+      {...(className ? { className } : undefined)}
     >
       <RadioScheduleSectionLabel
         script={script}

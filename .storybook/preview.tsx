@@ -422,6 +422,10 @@ const preview: Preview = {
             title: 'pidgin',
           },
           {
+            value: { service: 'polska', variant: 'default' },
+            title: 'polska',
+          },
+          {
             value: { service: 'portuguese', variant: 'default' },
             title: 'portuguese',
           },
@@ -482,6 +486,14 @@ const preview: Preview = {
             title: 'uzbek',
           },
           {
+            value: { service: 'uzbek', variant: 'cyr' },
+            title: 'uzbek-cyr',
+          },
+          {
+            value: { service: 'uzbek', variant: 'lat' },
+            title: 'uzbek-lat',
+          },
+          {
             value: { service: 'vietnamese', variant: 'default' },
             title: 'vietnamese',
           },
@@ -536,6 +548,12 @@ const preview: Preview = {
         ],
         dynamicTitle: true,
       },
+    },
+  },
+  initialGlobals: {
+    service: {
+      service: 'news',
+      variant: 'default',
     },
   },
   parameters: {

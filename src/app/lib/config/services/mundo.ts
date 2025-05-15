@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    atiAnalyticsProducerName: 'MUNDO',
+    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
     script: latinWithDiacritics,
-    manifestPath: '/manifest.json',
+    manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Noticias',
+    homePageTitle: 'Noticias',
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
@@ -55,8 +57,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Recomendamos',
-      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
@@ -142,7 +142,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'Ok',
           reject: 'Descubre lo que ha cambiado',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -234,6 +234,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        closeVideo: 'Salir',
       },
       socialEmbed: {
         caption: {
@@ -342,7 +343,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Más leídas',
+      header: 'Lecturas más populares',
       lastUpdated: 'Última actualización:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -351,7 +352,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Más leídas',
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Final de %title%',
@@ -388,6 +389,10 @@ export const service: DefaultServiceConfig = {
           text: 'Escribe a BBC Mundo',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Otros idiomas',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -412,8 +417,8 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Elecciones EE.UU. 2024',
-        url: '/mundo/topics/c1v8en6r2qgt',
+        title: 'EE.UU.',
+        url: '/mundo/topics/cdr5613yzwqt',
       },
       {
         title: 'Hay Festival',
@@ -438,10 +443,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
-      },
-      {
-        title: 'Centroamérica Cuenta',
-        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

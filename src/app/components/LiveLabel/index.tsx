@@ -4,8 +4,8 @@ import React, { PropsWithChildren } from 'react';
 import { jsx } from '@emotion/react';
 import { LiveLabelProps } from './types';
 import styles from './index.styles';
-import Text from './Text';
-import Pulse from './Pulse';
+import Text from '../LiveText';
+import Pulse from '../LivePulse';
 
 const LiveLabel = ({
   lang = 'en-GB',
@@ -28,8 +28,5 @@ const LiveLabel = ({
     </>
   );
 };
-
-LiveLabel.Text = Text;
-LiveLabel.Pulse = Pulse;
 
 export default LiveLabel;

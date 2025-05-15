@@ -1,0 +1,220 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "chinese.bbc_cantonese_radio.w172xwswq9t42v6.page",
+        "contentType": "player-episode",
+        "pageTitle": "时事一周 - BBC News 中文",
+        "contentId": "urn:bbc:pips:w172xwswq9t42v6"
+      }
+    },
+    "language": "zh",
+    "brandTitle": "时事一周",
+    "episodeTitle": "時事一周 2021年6月5日23:00 GMT",
+    "headline": "时事一周",
+    "shortSynopsis": "香港政府禁止六四集會；東京當局稱一定舉辦奧運；以色列即將變天",
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xwswq9t42v6",
+    "brandId": "p0340tsy",
+    "summary": "香港政府禁止六四集會；東京當局稱一定舉辦奧運；以色列即將變天",
+    "contentType": "player-episode",
+    "episodeId": "w172xwswq9t42v6",
+    "masterBrand": "bbc_cantonese_radio",
+    "releaseDateTimeStamp": 1622851200000,
+    "pageTitle": "时事一周 - BBC News 中文",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09kpm5x.jpg",
+    "imageAltText": null,
+    "promoBrandTitle": "时事一周",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p09kpm5x.jpg",
+    "episodeAvailability": "expired",
+    "radioScheduleData": [],
+    "recentEpisodes": [
+      {
+        "id": "w3ct2hw1",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2022年3月26日12:00 GMT",
+        "timestamp": "2022-03-26T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0bxqwq5.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xn6mbgdghjv",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2021年1月2日 23:00 GMT",
+        "timestamp": "2021-01-02T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p092y35x.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xn6lz62pby0",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2020年12月26日 23:00 GMT",
+        "timestamp": "2020-12-26T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p092jp64.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xn6llxrx6b5",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2020年12月19日 23:00 GMT",
+        "timestamp": "2020-12-19T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p09200j9.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xn6l7ng41qb",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2020年12月12日 23:00 GMT",
+        "timestamp": "2020-12-12T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0919b16.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xf3zg8l2v9m",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2020年10月24日23:00 GMT",
+        "timestamp": "2020-10-24T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0bv0kdf.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xf3s8q6v9zc",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2020年6月27日 23:00 GMT",
+        "timestamp": "2020-06-27T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08j7fwg.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xf3nn121twz",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2020年4月18日 23:00 GMT",
+        "timestamp": "2020-04-18T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p089x3jt.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xf3n8rr8p94",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2020年4月11日 23:00 GMT",
+        "timestamp": "2020-04-11T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0899z7l.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172xf3mxhfhjp9",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2020年4月4日 23:00 GMT",
+        "timestamp": "2020-04-04T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p088q02p.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172x0cpfrt6xd3",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2020年1月11日23:00 GMT",
+        "timestamp": "2020-01-11T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08053vb.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0x8m30pj7",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年10月19日 23:00 GMT",
+        "timestamp": "2019-10-19T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p07rjv4n.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0qtlcbgdn",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年7月6日 23:00 GMT",
+        "timestamp": "2019-07-06T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p07g7p12.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0p07sfqcg",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一周 2019年6月1日 23:00 GMT",
+        "timestamp": "2019-06-01T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p07bzwm3.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0m5x6jzb8",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年4月27日 23:00 GMT",
+        "timestamp": "2019-04-27T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p077p41k.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0ltmwrtqf",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年4月20日 23:00 GMT",
+        "timestamp": "2019-04-20T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0771rlj.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0lgckzp3l",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年4月13日 23:00 GMT",
+        "timestamp": "2019-04-13T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p076fssm.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wp0l3386jhr",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年4月6日 23:00 GMT",
+        "timestamp": "2019-04-06T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p075rky3.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wd9n9c8fy6v",
+        "brandTitle": "时事一周",
+        "episodeTitle": "時事一週 2019年3月30日 23:00 GMT",
+        "timestamp": "2019-03-30T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0752cth.jpg",
+        "altText": "时事一周"
+      },
+      {
+        "id": "w172wd9my2ynsm0",
+        "brandTitle": "时事一周",
+        "episodeTitle": "时事一周",
+        "timestamp": "2019-03-23T00:00:00.000Z",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0bv0kdf.jpg",
+        "altText": "时事一周"
+      }
+    ],
+    "externalLinkVersionId": null,
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w172xwswq9t42v6",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "05/06/2021 GMT",
+          "synopses": {
+            "short": "香港政府禁止六四集會；東京當局稱一定舉辦奧運；以色列即將變天",
+            "medium": "本周節目內容：香港政府禁止六四集會 | 東京當局稱一定舉辦奧運 | 以色列即將變天 | 專題：香港人高速攀上頂峰 | 專題：嚴肅的蘆筍 | 英國生活點滴：掘地打勝仗 | 記者來鴻：莫奈花園重開 | 華人談天下：澳洲警隊的正向歧視"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09kpm5x.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "時事一周 2021年6月5日23:00 GMT",
+          "type": "media"
+        }
+      }
+    ]
+  }
+}

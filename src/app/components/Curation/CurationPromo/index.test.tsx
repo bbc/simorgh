@@ -62,7 +62,7 @@ describe('Curation Promo', () => {
         .getByAltText('Campesino indígena peruano.')
         .getAttribute('loading');
 
-      expect(loadingAttribute).toBeNull();
+      expect(loadingAttribute).toBe('eager');
     });
 
     it('should lazy load when lazy is truthy', () => {

@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
+    atiAnalyticsProducerName: 'AMHARIC',
+    useReverb: true,
     chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
@@ -39,11 +41,24 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/amharic/institutional-49283133',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
-    manifestPath: '/manifest.json',
+    manifestPath: '/amharic/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'ዜና',
+    homePageTitle: 'ዜና',
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'ቢቢሲ አማርኛ በዋትስአፕ',
+      brandTitle: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
+      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በቀጥታ በዋትስአፕ ለማግኘት',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe//p0krq6vq.png',
+        alt: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
+      },
+      linkLabel: {
+        text: 'ይህን በመጫን የቻናላችን አባል ይሁኑ!',
+        href: 'https://bit.ly/4gsoTyI',
+      },
+    },
     translations: {
       pagination: {
         page: 'ገፁ',
@@ -134,7 +149,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'እሺ',
           reject: 'ምን እንደተቀየረ ይመልከቱ',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -221,6 +236,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'ቀጣይ የሬዲዮ ስርጭት',
         duration: 'ርዝመት',
         recentEpisodes: 'ያለፉ ዝግጅቶች’',
+        closeVideo: 'ይውጡ',
       },
       socialEmbed: {
         caption: {
@@ -318,7 +334,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'ብዙ የተነበቡ',
+      header: 'በስፋት የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
       hasMostRead: true,
@@ -329,7 +345,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ርዝመት %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብዙ የተነበቡ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -362,6 +382,10 @@ export const service: DefaultServiceConfig = {
           text: 'ቢቢሲን ያግኙ',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'ቢቢሲን በተለያዩ ቋንቋዎች',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -378,6 +402,34 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ኢትዮጵያ',
         url: '/amharic/topics/c7zp57r92v5t',
+      },
+      {
+        title: 'ፖለቲካ',
+        url: '/amharic/topics/cg7265pj1jvt',
+      },
+      {
+        title: 'ሴቶች',
+        url: '/amharic/topics/cnq681w4dq6t',
+      },
+      {
+        title: 'ጤና',
+        url: '/amharic/topics/cxnyk76p0q2t',
+      },
+      {
+        title: 'ስፖርት',
+        url: '/amharic/topics/cdr56g2x71dt',
+      },
+      {
+        title: 'ጥበብ',
+        url: '/amharic/topics/cr50yvqzzwpt',
+      },
+      {
+        title: 'ቴክኖሎጂ',
+        url: '/amharic/topics/c06gq8wx467t',
+      },
+      {
+        title: 'ምጣኔ ሃብት',
+        url: '/amharic/topics/cnq6815jj3xt',
       },
       {
         title: 'ቪዲዮ',

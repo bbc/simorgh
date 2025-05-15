@@ -1,10 +1,10 @@
 import Cookie from 'js-cookie';
-import { v4 as uuid } from 'uuid';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
-import onClient from '../utilities/onClient';
-import isOperaProxy from '../utilities/isOperaProxy';
+import onClient from '#lib/utilities/onClient';
+import getUUID from '#lib/utilities/getUUID';
+import isOperaProxy from '#lib/utilities/isOperaProxy';
 import {
   MEDIUM_CAMPAIGN_IDENTIFIER,
   XTOR_CAMPAIGN_IDENTIFIER,
@@ -78,6 +78,8 @@ export const getAppType = platform => {
       return 'amp';
     case 'app':
       return 'mobile-app';
+    case 'lite':
+      return 'lite';
     case 'canonical':
       return 'responsive';
     default:
@@ -174,7 +176,7 @@ export const getHref = platform => {
   return null;
 };
 
-export const getReferrer = (platform, origin, previousPath) => {
+export const getReferrer = platform => {
   if (platform === 'amp') {
     /* On AMP, `\${documentReferrer}` is an amp analytics variable that resolves
        to a `document.referrer` equivalent as the window document is undefined on amp pages.
@@ -183,11 +185,8 @@ export const getReferrer = (platform, origin, previousPath) => {
     return `\${documentReferrer}`;
   }
 
-  if (onClient() && (document.referrer || previousPath)) {
-    const referrer = previousPath
-      ? `${origin}${previousPath}`
-      : document.referrer;
-    return referrer;
+  if (onClient() && document.referrer) {
+    return document.referrer;
   }
 
   return null;
@@ -214,7 +213,7 @@ export const getAtUserId = () => {
     }
   }
 
-  const val = path(['val'], cookie) || uuid();
+  const val = path(['val'], cookie) || getUUID();
 
   Cookie.set(cookieName, JSON.stringify({ val }), {
     expires,
@@ -269,7 +268,7 @@ export const getEventInfo = ({
   pageIdentifier = '',
   componentName = '',
   campaignID = '',
-  variant = '', // not a service variant - used for A/B testing
+  experimentVariant = '',
   format = '',
   detailedPlacement = '',
   advertiserID = '',
@@ -278,7 +277,7 @@ export const getEventInfo = ({
   const generalPlacement = pageIdentifier;
   const creation = componentName;
 
-  return `PUB-[${campaignID}]-[${creation}]-[${variant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
+  return `PUB-[${campaignID}]-[${creation}]-[${experimentVariant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
 };
 
 export const getThingAttributes = (attribute, articleData) => {

@@ -14,6 +14,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import FrostedGlassPromo from '../../../components/FrostedGlassPromo/lazy';
@@ -60,10 +61,25 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   }
 `;
 
-const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
+const PromoListComponent = ({
+  promoItems,
+  dir = 'ltr',
+  sendOptimizelyEvents,
+}) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
-  const viewRef = useViewTracker(eventTrackingData.block);
+  const eventTrackingDataWithOptimizely = {
+    block: {
+      ...eventTrackingData.block,
+      ...(sendOptimizelyEvents && {
+        optimizely,
+        optimizelyMetricNameOverride: 'features',
+      }),
+    },
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
     <StoryPromoUlFeatures>
@@ -71,7 +87,7 @@ const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
         return (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
-            ref={viewRef}
+            {...viewTracker}
             border={false}
           >
             <FrostedGlassPromo
@@ -81,7 +97,7 @@ const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
               displayImage
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={eventTrackingData}
+              eventTrackingData={eventTrackingDataWithOptimizely}
               sectionType="features-and-analysis"
             />
           </StoryPromoLiFeatures>
@@ -91,19 +107,30 @@ const PromoListComponent = ({ promoItems, dir = 'ltr' }) => {
   );
 };
 
-const PromoComponent = ({ promo, dir = 'ltr' }) => {
+const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
+  const { optimizely } = useContext(OptimizelyContext);
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
-  const viewRef = useViewTracker(eventTrackingData);
+  const eventTrackingDataWithOptimizely = {
+    block: {
+      ...eventTrackingData.block,
+      ...(sendOptimizelyEvents && {
+        optimizely,
+        optimizelyMetricNameOverride: 'features',
+      }),
+    },
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <div ref={viewRef}>
+    <div {...viewTracker}>
       <FrostedGlassPromo
         item={promo}
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
-        eventTrackingData={eventTrackingData}
+        eventTrackingData={eventTrackingDataWithOptimizely}
         sectionType="features-and-analysis"
       />
     </div>
@@ -111,9 +138,10 @@ const PromoComponent = ({ promo, dir = 'ltr' }) => {
 };
 
 const FeaturesAnalysis = ({
-  content = [],
+  content,
   parentColumns,
   sectionLabelBackground,
+  sendOptimizelyEvents,
 }) => {
   const { translations } = useContext(ServiceContext);
 
@@ -133,6 +161,7 @@ const FeaturesAnalysis = ({
       promoListComponent={PromoListComponent}
       columnType="secondary"
       sectionLabelBackground={sectionLabelBackground}
+      sendOptimizelyEvents={sendOptimizelyEvents}
     />
   );
 };

@@ -1,68 +1,50 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "markupType": "plain_text",
-        "text": "बीबीसी नेपाली रेडियो",
-        "type": "heading"
-      },
-      {
-        "text": "नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.",
-        "type": "paragraph"
-      },
-      {
-        "available": true,
-        "caption": "",
-        "duration": "PT0S",
-        "embedding": false,
-        "externalId": "bbc_nepali_radio",
-        "format": "audio",
-        "id": "liveradio",
-        "live": true,
-        "subType": "primary",
-        "type": "version"
-      }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "contentType": "player-live",
-      "pageIdentifier": "nepali.bbc_nepali_radio.liveradio.page",
-      "pageTitle": "बीबीसी नेपाली रेडियो - BBC News नेपाली",
-      "producer": "NEPALI",
-      "producerId": "63"
-    },
-    "atiAnalytics": {},
-    "blockTypes": ["heading", "version", "paragraph"],
-    "createdBy": "nepali",
-    "firstPublished": 0,
-    "id": "urn:bbc:ares:ws_media:live:bbc_nepali_radio",
+  "data": {
+    "heading": "बीबीसी नेपाली रेडियो",
+    "bodySummary": "नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.",
     "language": "ne",
-    "lastPublished": 0,
-    "lastUpdated": 0,
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_nepali_radio"
-    },
-    "options": {},
-    "tags": {},
-    "type": "WS-LIVE",
-    "version": "1.1.2"
-  },
-  "promo": {
-    "contentType": "WS-LIVE",
     "id": "urn:bbc:ares:ws_media:live:bbc_nepali_radio",
     "name": "बीबीसी नेपाली रेडियो",
     "summary": "नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.",
-    "type": "link",
-    "uri": "/nepali/bbc_nepali_radio/liveradio"
+    "masterBrand": "bbc_nepali_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_nepali_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "nepali.bbc_nepali_radio.liveradio.page",
+        "pageTitle": "बीबीसी नेपाली रेडियो - BBC News नेपाली"
+      }
+    },
+    "mediaBlock": [
+      {
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "बीबीसी नेपाली रेडियो",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_nepali_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
+      }
+    ]
   },
-  "relatedContent": {
-    "groups": [],
-    "site": {
-      "name": "nepali",
-      "subType": "simple",
-      "type": "simple",
-      "uri": "/nepali"
-    }
-  }
+  "contentType": "application/json; charset=utf-8"
 }

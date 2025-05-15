@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
+    atiAnalyticsProducerName: 'TELUGU',
+    useReverb: true,
     chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/telugu/institutional-50420343',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/telugu/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'వార్తలు',
+    homePageTitle: 'వార్తలు',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
@@ -138,7 +140,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ఓకే',
           reject: 'ఏం మార్పులు చేశామో తెలుసుకోండి',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -227,6 +229,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'వినండి',
         watch: 'చూడండి',
+        watchMoments: 'షార్ట్ వీడియో చూడండి',
         listenLive: 'లైవ్ వినండి',
         liveLabel: 'లైవ్',
         nextLabel: 'NEXT',
@@ -234,6 +237,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
         recentEpisodes: 'ఇటీవలి ఎపిసోడ్లు',
+        closeVideo: 'నిష్క్రమించు',
       },
       socialEmbed: {
         caption: {
@@ -270,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
-      header: 'ఎక్కువమంది చదివినవి',
+      header: 'Popular Reads',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -279,7 +283,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ఎక్కువమంది చదివినవి',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -310,6 +318,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/telugu/send/u50853775',
           text: 'BBCని సంప్రదించండి',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'ఇతర భాషల్లో బీబీసీ వార్తలు',
         },
         {
           id: 'COOKIE_SETTINGS',

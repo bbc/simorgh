@@ -6,6 +6,7 @@ import {
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Paragraph from '.';
+import { TV_PAGE } from '../../../routes/utils/pageTypes';
 
 describe('MediaPageBlocks Paragraph', () => {
   it('should render correctly', () => {
@@ -21,8 +22,7 @@ describe('MediaPageBlocks Paragraph', () => {
       <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" />,
       {
         service: 'news',
-        pageType: 'media',
-        derivedPageType: 'On Demand TV',
+        pageType: TV_PAGE,
       },
     );
     expect(container).toMatchSnapshot();

@@ -11,54 +11,61 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 
 exports[`Canonical Live Header Navigation link should match text and url 2`] = `
 {
+  "text": "شاهد البث المباشر",
+  "url": "/arabic/media-49522519",
+}
+`;
+
+exports[`Canonical Live Header Navigation link should match text and url 3`] = `
+{
   "text": "أخبار",
   "url": "/arabic/topics/cv2xyrnr8dnt",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 3`] = `
+exports[`Canonical Live Header Navigation link should match text and url 4`] = `
 {
   "text": "اقتصاد",
   "url": "/arabic/topics/cqywj97d487t",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 4`] = `
+exports[`Canonical Live Header Navigation link should match text and url 5`] = `
 {
   "text": "صحة وعلوم",
   "url": "/arabic/topics/clmj3d7282gt",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 5`] = `
+exports[`Canonical Live Header Navigation link should match text and url 6`] = `
 {
   "text": "رياضة",
   "url": "/arabic/topics/cyx5kw7g1j2t",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 6`] = `
+exports[`Canonical Live Header Navigation link should match text and url 7`] = `
 {
   "text": "فيديو",
   "url": "/arabic/topics/cz9mm6r1q5et",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 7`] = `
+exports[`Canonical Live Header Navigation link should match text and url 8`] = `
 {
   "text": "تحقيقات",
   "url": "/arabic/topics/c51nnzdeg9zt",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 8`] = `
+exports[`Canonical Live Header Navigation link should match text and url 9`] = `
 {
   "text": "بودكاست",
   "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 9`] = `
+exports[`Canonical Live Header Navigation link should match text and url 10`] = `
 {
   "text": "برامجنا",
   "url": "/arabic/topics/crgyknwdlwnt",

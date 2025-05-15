@@ -1,8 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = `
+exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 .emotion-0 {
   background-color: #141414;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
 }
 
 .emotion-2 {
@@ -207,25 +231,19 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width: 63rem) {
   .emotion-7 {
-    margin: 2.5rem 0px 0px;
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-7 {
-    margin-top: 1rem;
+    margin: 0px 0px 0px;
   }
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-7 {
-    margin: 1rem -1rem 0px;
+    margin: 0px -1rem 0px;
   }
 }
 
 @media (max-width: 24.9375rem) {
   .emotion-7 {
-    margin: 0.5rem -0.5rem 0px;
+    margin: 0px -0.5rem 0px;
   }
 }
 
@@ -756,7 +774,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           id="content"
           tabindex="-1"
         >
-           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
+           د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴
         </h1>
         <figure
           class="emotion-7"
@@ -825,8 +843,9 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
               <img
                 alt=""
                 class="emotion-18"
-                src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
-                srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+                loading="eager"
+                src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
+                srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
               />
             </div>
           </div>
@@ -862,12 +881,13 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           class="emotion-29 emotion-30"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+
         </p>
         <time
           class="emotion-31 emotion-32"
-          datetime="۲۰۲۴-۰۹-۱۷"
+          datetime="۲۰۲۴-۱۱-۲۱"
         >
-          ۱۷ سپتمبر ۲۰۲۴
+          ۲۱ نومبر ۲۰۲۴
         </time>
       </div>
     </main>
@@ -875,9 +895,33 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 </div>
 `;
 
-exports[`OnDemand TV Brand Page  should show the expired content message if episode is expired 1`] = `
+exports[`OnDemand TV Page  should show the expired content message if episode is expired 1`] = `
 .emotion-0 {
   background-color: #141414;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
 }
 
 .emotion-2 {
@@ -1110,8 +1154,8 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
+  color: #F6F6F6;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1437,7 +1481,7 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
           id="content"
           tabindex="-1"
         >
-           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
+           د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴
         </h1>
         <div
           class="emotion-7 emotion-8"
@@ -1485,12 +1529,13 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
           class="emotion-21 emotion-22"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+
         </p>
         <time
           class="emotion-23 emotion-24"
-          datetime="۲۰۲۴-۰۹-۱۷"
+          datetime="۲۰۲۴-۱۱-۲۱"
         >
-          ۱۷ سپتمبر ۲۰۲۴
+          ۲۱ نومبر ۲۰۲۴
         </time>
       </div>
     </main>
@@ -1498,9 +1543,33 @@ exports[`OnDemand TV Brand Page  should show the expired content message if epis
 </div>
 `;
 
-exports[`OnDemand TV Brand Page  should show the future content message if episode is not yet available 1`] = `
+exports[`OnDemand TV Page  should show the future content message if episode is not yet available 1`] = `
 .emotion-0 {
   background-color: #141414;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
 }
 
 .emotion-2 {
@@ -1733,8 +1802,8 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
+  color: #F6F6F6;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2060,7 +2129,7 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
           id="content"
           tabindex="-1"
         >
-           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
+           د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴
         </h1>
         <div
           class="emotion-7 emotion-8"
@@ -2108,635 +2177,13 @@ exports[`OnDemand TV Brand Page  should show the future content message if episo
           class="emotion-21 emotion-22"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+
         </p>
         <time
           class="emotion-23 emotion-24"
-          datetime="۲۰۲۴-۰۹-۱۷"
+          datetime="۲۰۲۴-۱۱-۲۱"
         >
-          ۱۷ سپتمبر ۲۰۲۴
-        </time>
-      </div>
-    </main>
-  </div>
-</div>
-`;
-
-exports[`OnDemand TV Brand Page  should show the future content message if episode is pending 1`] = `
-.emotion-0 {
-  background-color: #141414;
-}
-
-.emotion-2 {
-  width: 100%;
-  padding-bottom: 2rem;
-}
-
-@supports (display: grid) {
-  .emotion-2 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-2 {
-      grid-template-columns: repeat(20, 1fr);
-      grid-column-end: span 20;
-      grid-column-gap: 1rem;
-    }
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-2 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    width: 100%;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-4 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-4 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-4 {
-    margin-right: 16.666666666666668%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-4 {
-    margin-right: 33.333333333333336%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-4 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-4 {
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-6 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-7 {
-  margin: 2.5rem 0 1.5rem;
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-7 {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-7 {
-    margin: 1rem -1rem 0;
-  }
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-7 {
-    margin: 0.5rem -0.5rem 0;
-  }
-}
-
-.emotion-9 {
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  line-height: 1.375rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
-    font-size: 0.9375rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-9 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-9 {
-    background-color: transparent;
-  }
-}
-
-.emotion-10 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-10 {
-    padding: 1rem;
-  }
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-10 {
-    background-color: window;
-  }
-}
-
-.emotion-12 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #F6F6F6;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1.75rem;
-    line-height: 2.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 2.5rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-12 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-12 {
-    padding: 1rem 0;
-  }
-}
-
-.emotion-14 {
-  display: block;
-  line-height: 1;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  word-break: break-word;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-14 {
-    padding-bottom: 1rem;
-    word-break: break-word;
-    line-height: 1.09;
-  }
-}
-
-.emotion-17 {
-  display: inline-block;
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-17 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-17 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-19 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-19 {
-    padding: 0 0.5rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
-    padding: 0 1rem;
-    margin-right: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-19 {
-    margin-right: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-19 {
-    margin-right: 40%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-19 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-19 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-19 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-19 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-19 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-19 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-19 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-21 {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #F6F6F6;
-  padding-bottom: 1.5rem;
-  margin: 0;
-  padding-bottom: 16px;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    font-size: 1rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-21 {
-    padding-bottom: 0.5rem;
-  }
-}
-
-.emotion-23 {
-  font-size: 0.9375rem;
-  line-height: 1.375rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #AEAEB5;
-  display: inline-block;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
-    font-size: 0.9375rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-23 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-
-<div>
-  <div
-    class="emotion-0"
-  >
-    <div>
-      chartbeat
-    </div>
-    <noscript />
-    <main
-      class="emotion-1 emotion-2 emotion-3"
-      dir="rtl"
-      role="main"
-    >
-      <div
-        class="emotion-4 emotion-3"
-        dir="rtl"
-      >
-        <h1
-          class="emotion-6"
-          id="content"
-          tabindex="-1"
-        >
-           د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴
-        </h1>
-        <div
-          class="emotion-7 emotion-8"
-        >
-          <div>
-            <div
-              class="emotion-9"
-            >
-              <strong
-                class="emotion-10"
-              >
-                دغه پروګرام د خپرولو لپاره چمتو نه دی.
-              </strong>
-            </div>
-          </div>
-        </div>
-        <strong
-          aria-hidden="true"
-          class="emotion-11 emotion-12 emotion-13"
-        >
-          <span
-            class="emotion-14 emotion-15"
-            data-testid="brand-title"
-          >
-             د بي بي سي خبرونه 
-          </span>
-          <span
-            class="emotion-6"
-          >
-            , 
-          </span>
-          <span
-            class="emotion-17 emotion-18"
-            data-testid="sub-heading"
-          >
-             د بي بي سي خبرونه 
-          </span>
-        </strong>
-      </div>
-      <div
-        class="emotion-19 emotion-3"
-        dir="rtl"
-      >
-        <p
-          class="emotion-21 emotion-22"
-        >
-          نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
-        </p>
-        <time
-          class="emotion-23 emotion-24"
-          datetime="۲۰۲۴-۰۹-۱۷"
-        >
-          ۱۷ سپتمبر ۲۰۲۴
+          ۲۱ نومبر ۲۰۲۴
         </time>
       </div>
     </main>

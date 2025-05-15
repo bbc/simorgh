@@ -22,10 +22,12 @@ import OEmbedLoader from '.';
 const Component = ({
   props,
   isAmp,
+  isLite,
   service = 'pidgin',
 }: {
   props: OEmbedProps;
   isAmp: boolean;
+  isLite?: boolean;
   service?: Services;
 }) => {
   const OEmbedValue = useMemo(
@@ -33,6 +35,7 @@ const Component = ({
       ({
         id: 'c0000000000o',
         isAmp,
+        isLite,
         isApp: false,
         pageType: ARTICLE_PAGE,
         pathname: '/pathname',
@@ -40,7 +43,7 @@ const Component = ({
         statusCode: 200,
         canonicalLink: 'canonical_link',
       }) as unknown as RequestContextProps,
-    [isAmp, service],
+    [isAmp, isLite, service],
   );
   return (
     <RequestContext.Provider value={OEmbedValue}>
@@ -185,6 +188,15 @@ describe('OEmbed', () => {
 
       expect(iFrameElement).toBe(null);
       expect(errorMessage).toBeInTheDocument();
+    });
+  });
+
+  describe('Lite', () => {
+    it('Should return null if isLite is true', () => {
+      const { container } = render(
+        <Component props={sampleRiddleProps} isAmp={false} isLite />,
+      );
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });

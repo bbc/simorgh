@@ -16,7 +16,51 @@ exports[`Canonical Home Page Ads should have the following properties 2`] = `
 />
 `;
 
-exports[`Canonical Home Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Acx35pee6zvpt]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[BBC%2520News%2520%D8%B9%D8%B1%D8%A8%D9%8A]"/>"`;
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "5",
+  },
+  {
+    "p": "arabic.page",
+  },
+  {
+    "x1": "[urn:bbc:tipo:topic:cx35pee6zvpt]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-arabic]",
+  },
+  {
+    "x4": "[ar]",
+  },
+  {
+    "x7": "[index-home]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[BBC%20News%20عربي]",
+  },
+]
+`;
 
 exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
 {
@@ -69,12 +113,19 @@ exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
 {
+  "text": "بي بي سي نيوز عربي في لغات أخرى",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
   "text": "Do not share or sell my info",
   "url": "#",
 }
 `;
 
-exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+exports[`Canonical Home Page Footer Anchors should match text and url 10`] = `
 {
   "text": "سياستنا بخصوص الروابط الخارجية.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
@@ -83,7 +134,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -96,54 +147,61 @@ exports[`Canonical Home Page Header Navigation link should match text and url 1`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "شاهد البث المباشر",
+  "url": "/arabic/media-49522519",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
   "text": "أخبار",
   "url": "/arabic/topics/cv2xyrnr8dnt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
 {
   "text": "اقتصاد",
   "url": "/arabic/topics/cqywj97d487t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "صحة وعلوم",
   "url": "/arabic/topics/clmj3d7282gt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "رياضة",
   "url": "/arabic/topics/cyx5kw7g1j2t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "فيديو",
   "url": "/arabic/topics/cz9mm6r1q5et",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "تحقيقات",
   "url": "/arabic/topics/c51nnzdeg9zt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "بودكاست",
   "url": "/arabic/topics/cljddp5lw0dt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "برامجنا",
   "url": "/arabic/topics/crgyknwdlwnt",
@@ -158,7 +216,8 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 <img
   alt="الرياضه"
   class="bbc-139onq"
-  loading="lazy"
+  fetchpriority="high"
+  loading="eager"
   src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
   style="aspect-ratio:16 / 9"
 />

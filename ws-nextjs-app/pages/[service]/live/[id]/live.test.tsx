@@ -374,7 +374,7 @@ describe('Live Page', () => {
 
     expect(
       screen.getByText(
-        'The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering'
+        'The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering',
       ),
     ).toBeInTheDocument();
   });

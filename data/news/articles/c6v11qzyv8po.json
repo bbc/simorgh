@@ -27,33 +27,19 @@
                                   "text": "Royal wedding 2018: Bouquet laid on tomb of unknown warrior",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "de84ecb0",
@@ -83,37 +69,19 @@
                                         "text": "Duchess of Sussex's bouquet on the tomb of the unknown warrior",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        2,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [2, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  2,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [2, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            2,
-                            1,
-                            1
-                          ]
+                          "position": [2, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      2,
-                      1
-                    ]
+                    "position": [2, 1]
                   },
                   {
                     "id": "7b8997b9",
@@ -125,16 +93,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "PA"
                     },
-                    "position": [
-                      2,
-                      2
-                    ]
+                    "position": [2, 2]
                   }
                 ]
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "462cad53",
@@ -143,9 +106,7 @@
                 "firstPublished": 1559050259827,
                 "lastPublished": 1559050259827
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "7fdfaf17",
@@ -165,18 +126,11 @@
                             "text": "The Duchess of Sussex has followed tradition by having her bridal bouquet placed on the tomb of the unknown warrior at Westminster Abbey.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            1,
-                            1
-                          ]
+                          "position": [4, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      1
-                    ]
+                    "position": [4, 1]
                   },
                   {
                     "id": "4fb65142",
@@ -191,18 +145,11 @@
                             "text": "The royal tradition, started by the Queen Mother, usually takes place the day after the wedding.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
+                          "position": [4, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      2
-                    ]
+                    "position": [4, 2]
                   },
                   {
                     "id": "e5f44431",
@@ -217,58 +164,21 @@
                             "text": "Meghan paid tribute to Prince Harry's mother, Princess Diana, at their wedding by including forget-me-nots, her favourite flowers, in the bouquet.",
                             "attributes": []
                           },
-                          "position": [
-                            4,
-                            3,
-                            1
-                          ]
+                          "position": [4, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      4,
-                      3
-                    ]
-                  },
-                  {
-                    "id": "d17e7543",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "It also contained flowers handpicked by the prince at Kensington Palace.",
-                      "blocks": [
-                        {
-                          "id": "c2aed9ed",
-                          "type": "fragment",
-                          "model": {
-                            "text": "It also contained flowers handpicked by the prince at Kensington Palace.",
-                            "attributes": []
-                          },
-                          "position": [
-                            4,
-                            4,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      4,
-                      4
-                    ]
+                    "position": [4, 3]
                   }
                 ]
               },
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "23e2dbc0",
               "type": "mpu",
               "model": {},
-              "position": [
-                5
-              ]
+              "position": [5]
             },
             {
               "id": "caa5c5d1",
@@ -288,11 +198,7 @@
                             "text": "It was designed by London-based florist Philippa Craddock, who also created the floral displays for St George's Chapel and St George's Hall using locally sourced foliage, ",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
+                          "position": [6, 1, 1]
                         },
                         {
                           "id": "9ecff0d0",
@@ -307,22 +213,13 @@
                                   "text": "which were later donated to local hospices",
                                   "attributes": []
                                 },
-                                "position": [
-                                  6,
-                                  1,
-                                  2,
-                                  1
-                                ]
+                                "position": [6, 1, 2, 1]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/news/articles/c8xxl4l3dzeo",
                             "isExternal": false
                           },
-                          "position": [
-                            6,
-                            1,
-                            2
-                          ]
+                          "position": [6, 1, 2]
                         },
                         {
                           "id": "e1e9e17a",
@@ -331,24 +228,15 @@
                             "text": ".",
                             "attributes": []
                           },
-                          "position": [
-                            6,
-                            1,
-                            3
-                          ]
+                          "position": [6, 1, 3]
                         }
                       ]
                     },
-                    "position": [
-                      6,
-                      1
-                    ]
+                    "position": [6, 1]
                   }
                 ]
               },
-              "position": [
-                6
-              ]
+              "position": [6]
             },
             {
               "id": "cfac08ae",
@@ -356,9 +244,7 @@
               "model": {
                 "type": "recommendations"
               },
-              "position": [
-                7
-              ]
+              "position": [7]
             },
             {
               "id": "23d20d02",
@@ -388,37 +274,19 @@
                                         "text": "Prince Harry and Meghan Markle leave St George's Chapel though a gateway of flowers",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        8,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [8, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [8, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            8,
-                            1,
-                            1
-                          ]
+                          "position": [8, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      8,
-                      1
-                    ]
+                    "position": [8, 1]
                   },
                   {
                     "id": "c57fef8e",
@@ -430,16 +298,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "PA"
                     },
-                    "position": [
-                      8,
-                      2
-                    ]
+                    "position": [8, 2]
                   }
                 ]
               },
-              "position": [
-                8
-              ]
+              "position": [8]
             },
             {
               "id": "da446308",
@@ -464,33 +327,19 @@
                                   "text": "Queen Victoria’s myrtle",
                                   "attributes": []
                                 },
-                                "position": [
-                                  9,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [9, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            9,
-                            1,
-                            1
-                          ]
+                          "position": [9, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      9,
-                      1
-                    ]
+                    "position": [9, 1]
                   }
                 ]
               },
-              "position": [
-                9
-              ]
+              "position": [9]
             },
             {
               "id": "3bd72bba",
@@ -510,18 +359,11 @@
                             "text": "Myrtle sprigs from stems planted by Queen Victoria at Osborne House, on the \nIsle of Wight, in 1845, were included, as well as sprigs taken from a plant grown from the myrtle used in the Queen's wedding bouquet in 1947.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
+                          "position": [10, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      1
-                    ]
+                    "position": [10, 1]
                   },
                   {
                     "id": "393a5c90",
@@ -536,18 +378,11 @@
                             "text": "The plant became a family favourite after Queen Victoria was given myrtle \nby Prince Albert's grandmother during a visit to Gotha in Germany.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            2,
-                            1
-                          ]
+                          "position": [10, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      2
-                    ]
+                    "position": [10, 2]
                   },
                   {
                     "id": "06b292d8",
@@ -562,18 +397,11 @@
                             "text": "Later that year, the couple bought Osborne House as a family retreat and they planted the sprig against the terrace walls, where it continues to bloom.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            3,
-                            1
-                          ]
+                          "position": [10, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      3
-                    ]
+                    "position": [10, 3]
                   },
                   {
                     "id": "e837ee1a",
@@ -588,24 +416,15 @@
                             "text": "It then became tradition for royal brides to carry the plant after Queen Victoria's eldest daughter, Princess Victoria, used it in her bouquet in 1858 - including the Duchess of Cambridge and Princess Diana.",
                             "attributes": []
                           },
-                          "position": [
-                            10,
-                            4,
-                            1
-                          ]
+                          "position": [10, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      10,
-                      4
-                    ]
+                    "position": [10, 4]
                   }
                 ]
               },
-              "position": [
-                10
-              ]
+              "position": [10]
             },
             {
               "id": "1a4cad13",
@@ -635,37 +454,19 @@
                                         "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        11,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            1,
-                            1
-                          ]
+                          "position": [11, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      1
-                    ]
+                    "position": [11, 1]
                   },
                   {
                     "id": "9086ac45",
@@ -690,37 +491,19 @@
                                         "text": "The Duke and Duchess of Cambridge on their wedding day (l) alongside Prince Harry and Meghan Markle (r)",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        11,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [11, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  11,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [11, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            11,
-                            2,
-                            1
-                          ]
+                          "position": [11, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      11,
-                      2
-                    ]
+                    "position": [11, 2]
                   },
                   {
                     "id": "d12c5419",
@@ -732,16 +515,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "AFP/Getty Images"
                     },
-                    "position": [
-                      11,
-                      3
-                    ]
+                    "position": [11, 3]
                   }
                 ]
               },
-              "position": [
-                11
-              ]
+              "position": [11]
             },
             {
               "id": "a8c7eceb",
@@ -761,18 +539,11 @@
                             "text": "The petite bouquet carried by Meghan also contained scented sweet peas, lily of the valley, astilbe, jasmine and astrantia.",
                             "attributes": []
                           },
-                          "position": [
-                            12,
-                            1,
-                            1
-                          ]
+                          "position": [12, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      1
-                    ]
+                    "position": [12, 1]
                   },
                   {
                     "id": "0e02706c",
@@ -787,18 +558,11 @@
                             "text": "Lily of the valley - the birth flower for May - is said to represent love and appreciation, the astilbe is said to symbolise patience and dedication, and astrantia means strength and courage.",
                             "attributes": []
                           },
-                          "position": [
-                            12,
-                            2,
-                            1
-                          ]
+                          "position": [12, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      2
-                    ]
+                    "position": [12, 2]
                   },
                   {
                     "id": "da24ea6d",
@@ -813,24 +577,15 @@
                             "text": "The flowers were then bound with a naturally dyed, raw silk ribbon.",
                             "attributes": []
                           },
-                          "position": [
-                            12,
-                            3,
-                            1
-                          ]
+                          "position": [12, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      12,
-                      3
-                    ]
+                    "position": [12, 3]
                   }
                 ]
               },
-              "position": [
-                12
-              ]
+              "position": [12]
             },
             {
               "id": "d71c3891",
@@ -855,33 +610,19 @@
                                   "text": "The origins of the tradition",
                                   "attributes": []
                                 },
-                                "position": [
-                                  13,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [13, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            13,
-                            1,
-                            1
-                          ]
+                          "position": [13, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      13,
-                      1
-                    ]
+                    "position": [13, 1]
                   }
                 ]
               },
-              "position": [
-                13
-              ]
+              "position": [13]
             },
             {
               "id": "b75ab226",
@@ -901,24 +642,15 @@
                             "text": "The Queen Mother began the tradition of leaving the flowers on the grave in Westminster Abbey in 1923 after her wedding to the Duke of York - who later became King George VI.",
                             "attributes": []
                           },
-                          "position": [
-                            14,
-                            1,
-                            1
-                          ]
+                          "position": [14, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      14,
-                      1
-                    ]
+                    "position": [14, 1]
                   }
                 ]
               },
-              "position": [
-                14
-              ]
+              "position": [14]
             },
             {
               "id": "56ebe927",
@@ -948,37 +680,19 @@
                                         "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        15,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [15, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  15,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [15, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            15,
-                            1,
-                            1
-                          ]
+                          "position": [15, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      15,
-                      1
-                    ]
+                    "position": [15, 1]
                   },
                   {
                     "id": "1e7c3f7a",
@@ -1003,37 +717,19 @@
                                         "text": "The Duke of York and Lady Elizabeth Bowes Lyon on their wedding day in 1923",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        15,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [15, 2, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  15,
-                                  2,
-                                  1,
-                                  1
-                                ]
+                                "position": [15, 2, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            15,
-                            2,
-                            1
-                          ]
+                          "position": [15, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      15,
-                      2
-                    ]
+                    "position": [15, 2]
                   },
                   {
                     "id": "d5eb5e3e",
@@ -1045,16 +741,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [
-                      15,
-                      3
-                    ]
+                    "position": [15, 3]
                   }
                 ]
               },
-              "position": [
-                15
-              ]
+              "position": [15]
             },
             {
               "id": "f306635e",
@@ -1079,33 +770,19 @@
                                   "text": "What is the tomb of the unknown warrior?",
                                   "attributes": []
                                 },
-                                "position": [
-                                  16,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [16, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            16,
-                            1,
-                            1
-                          ]
+                          "position": [16, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      16,
-                      1
-                    ]
+                    "position": [16, 1]
                   }
                 ]
               },
-              "position": [
-                16
-              ]
+              "position": [16]
             },
             {
               "id": "e847a771",
@@ -1135,37 +812,19 @@
                                         "text": "Tomb of the unknown warrior",
                                         "attributes": []
                                       },
-                                      "position": [
-                                        17,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
+                                      "position": [17, 1, 1, 1, 1]
                                     }
                                   ]
                                 },
-                                "position": [
-                                  17,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [17, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            17,
-                            1,
-                            1
-                          ]
+                          "position": [17, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      17,
-                      1
-                    ]
+                    "position": [17, 1]
                   },
                   {
                     "id": "02aa7a60",
@@ -1177,16 +836,11 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [
-                      17,
-                      2
-                    ]
+                    "position": [17, 2]
                   }
                 ]
               },
-              "position": [
-                17
-              ]
+              "position": [17]
             },
             {
               "id": "89cc7d39",
@@ -1206,18 +860,11 @@
                             "text": "The grave - which is to the west of the Nave of the Abbey - contains the body of a soldier brought back from France after World War One.",
                             "attributes": []
                           },
-                          "position": [
-                            18,
-                            1,
-                            1
-                          ]
+                          "position": [18, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      18,
-                      1
-                    ]
+                    "position": [18, 1]
                   },
                   {
                     "id": "b26d38a6",
@@ -1232,18 +879,11 @@
                             "text": "He was buried on Remembrance Day, 11 November, in 1920, along with soil from the country.",
                             "attributes": []
                           },
-                          "position": [
-                            18,
-                            2,
-                            1
-                          ]
+                          "position": [18, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      18,
-                      2
-                    ]
+                    "position": [18, 2]
                   },
                   {
                     "id": "d15ec2e3",
@@ -1258,18 +898,11 @@
                             "text": "The idea is thought to have come from a chaplain, the Reverend David Railton, who served at the front during the war, after he saw a grave in a back garden in France with the words \"an unknown British soldier\" pencilled on.",
                             "attributes": []
                           },
-                          "position": [
-                            18,
-                            3,
-                            1
-                          ]
+                          "position": [18, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      18,
-                      3
-                    ]
+                    "position": [18, 3]
                   },
                   {
                     "id": "e33a6dbc",
@@ -1284,18 +917,11 @@
                             "text": "A large public ceremony took place for the burial, which included King George V laying a wreath of red roses and bay leaves on the coffin.",
                             "attributes": []
                           },
-                          "position": [
-                            18,
-                            4,
-                            1
-                          ]
+                          "position": [18, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      18,
-                      4
-                    ]
+                    "position": [18, 4]
                   },
                   {
                     "id": "c19ff6f2",
@@ -1310,24 +936,15 @@
                             "text": "The grave is covered by a slab of black Belgian marble and contains a long inscription, including the words: \"They buried him among the kings because he had done good toward God and toward his house.\"",
                             "attributes": []
                           },
-                          "position": [
-                            18,
-                            5,
-                            1
-                          ]
+                          "position": [18, 5, 1]
                         }
                       ]
                     },
-                    "position": [
-                      18,
-                      5
-                    ]
+                    "position": [18, 5]
                   }
                 ]
               },
-              "position": [
-                18
-              ]
+              "position": [18]
             }
           ]
         }
@@ -1406,11 +1023,7 @@
                 "thingLabel": "Wedding of Prince Harry and Meghan Markle",
                 "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
                 "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
-                "thingType": [
-                  "core:Thing",
-                  "tagging:TagConcept",
-                  "core:Event"
-                ],
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
                 "thingSameAs": [],
                 "thingEnglishLabel": "Wedding of Prince Harry and Meghan Markle",
                 "type": "about"
@@ -1447,9 +1060,7 @@
                   "core:Person",
                   "tagging:AmbiguousTerm"
                 ],
-                "thingSameAs": [
-                  "http://dbpedia.org/resource/Meghan_Markle"
-                ],
+                "thingSameAs": ["http://dbpedia.org/resource/Meghan_Markle"],
                 "thingEnglishLabel": "Duchess of Sussex",
                 "type": "about"
               },
@@ -1479,11 +1090,7 @@
                 "thingLabel": "Westminster Abbey",
                 "thingUri": "http://www.bbc.co.uk/things/e248c597-4f16-40f9-8313-678e7e911891#id",
                 "thingId": "e248c597-4f16-40f9-8313-678e7e911891",
-                "thingType": [
-                  "tagging:TagConcept",
-                  "core:Place",
-                  "core:Thing"
-                ],
+                "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
                 "thingSameAs": [
                   "http://sws.geonames.org/6618996/",
                   "http://www.wikidata.org/entity/Q5933",
@@ -1529,11 +1136,7 @@
               "thingLabel": "Wedding of Prince Harry and Meghan Markle",
               "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id",
               "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
-              "thingType": [
-                "core:Thing",
-                "tagging:TagConcept",
-                "core:Event"
-              ],
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
               "thingSameAs": [],
               "thingEnglishLabel": "Wedding of Prince Harry and Meghan Markle",
               "thingLabelLanguage": "en-gb",
@@ -1570,9 +1173,7 @@
                 "core:Person",
                 "tagging:AmbiguousTerm"
               ],
-              "thingSameAs": [
-                "http://dbpedia.org/resource/Meghan_Markle"
-              ],
+              "thingSameAs": ["http://dbpedia.org/resource/Meghan_Markle"],
               "thingEnglishLabel": "Duchess of Sussex",
               "thingLabelLanguage": "en-gb",
               "thingPreferredLabel": "Duchess of Sussex"
@@ -1602,11 +1203,7 @@
               "thingLabel": "Westminster Abbey",
               "thingUri": "http://www.bbc.co.uk/things/e248c597-4f16-40f9-8313-678e7e911891#id",
               "thingId": "e248c597-4f16-40f9-8313-678e7e911891",
-              "thingType": [
-                "tagging:TagConcept",
-                "core:Place",
-                "core:Thing"
-              ],
+              "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
               "thingSameAs": [
                 "http://sws.geonames.org/6618996/",
                 "http://www.wikidata.org/entity/Q5933",
@@ -2090,9 +1687,7 @@
             "versions": [
               {
                 "versionId": "p01g2pxh",
-                "types": [
-                  "Podcast"
-                ],
+                "types": ["Podcast"],
                 "duration": 174,
                 "durationISO8601": "PT2M54S",
                 "warnings": {},
@@ -2750,10 +2345,7 @@
                       "thingLabel": "Design and Technology",
                       "thingUri": "http://www.bbc.co.uk/things/add89d72-af77-4490-b479-25fd45bb5e72#id",
                       "thingId": "add89d72-af77-4490-b479-25fd45bb5e72",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/education/subjects/zykw2hv#field-of-study"
                       ],
@@ -2911,10 +2503,7 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "tagging:Format"
-                      ],
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",

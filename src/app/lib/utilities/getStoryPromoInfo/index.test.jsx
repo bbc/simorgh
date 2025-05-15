@@ -20,6 +20,31 @@ const assetTypeCode = {
   type: 'link',
 };
 
+const optimoPromoItem = {
+  name: '以色列哈马斯战争一周年：当地人的生活改变——受伤、成为孤儿、精神创伤',
+  summary: 'abc',
+  indexImage: {
+    id: '64061011',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/2B08/test/_64061011_3d193a51-62c9-4853-a403-cafa9f26cee3.jpg',
+    path: '/cpsdevpb/2B08/test/_64061011_3d193a51-62c9-4853-a403-cafa9f26cee3.jpg',
+    height: 288,
+    width: 512,
+    altText: '一個男子在烤披薩。',
+    caption: '從左到右: 阿卜杜拉, 巴特舍瓦，阿卜杜勒拉赫曼, 克里斯蒂娜',
+    copyrightHolder: 'Stanley Leung',
+    allowSyndication: true,
+    type: 'image',
+  },
+  uri: 'https://www.bbc.com/zhongwen/articles/cl01rmr1d8po/trad',
+  aresUrl:
+    'https://ares-api.test.api.bbci.co.uk/api/asset/zhongwen/articles/cl01rmr1d8po/trad',
+  contentType: 'Text',
+  assetTypeCode: 'PRO',
+  timestamp: 1728290963000,
+  type: 'link',
+};
+
 const noAssetTypeCode = {
   headlines: {
     headline:
@@ -106,6 +131,18 @@ describe('getStoryPromoInfo', () => {
     it('should return the correct url for noAssetTypeCode', () => {
       expect(getUrl(noAssetTypeCode)).toEqual(
         '/turkce/haberler-dunya-48735662',
+      );
+    });
+
+    it('should return the correct url for optimoPromoItem', () => {
+      expect(getUrl(optimoPromoItem, 'trad')).toEqual(
+        '/zhongwen/articles/cl01rmr1d8po/trad',
+      );
+      expect(getUrl(optimoPromoItem, 'simp')).toEqual(
+        '/zhongwen/articles/cl01rmr1d8po/simp',
+      );
+      expect(getUrl(optimoPromoItem)).toEqual(
+        '/zhongwen/articles/cl01rmr1d8po/trad',
       );
     });
 

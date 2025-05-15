@@ -1,112 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP Boilerplate JavaScript should render AMP AD 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-ad"
-    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_ACCESS_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-access",
+  "src": "https://cdn.ampproject.org/v0/amp-access-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP Access JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-access"
-    src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_AD 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-ad",
+  "src": "https://cdn.ampproject.org/v0/amp-ad-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP Analytics JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-analytics"
-    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_ADS_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-ad",
+  "src": "https://cdn.ampproject.org/v0/amp-ad-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP Bind JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-bind"
-    src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_ANALYTICS_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-analytics",
+  "src": "https://cdn.ampproject.org/v0/amp-analytics-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP Consent JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-consent"
-    src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_BIND_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-bind",
+  "src": "https://cdn.ampproject.org/v0/amp-bind-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP Geo JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-geo"
-    src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_CONSENT_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-consent",
+  "src": "https://cdn.ampproject.org/v0/amp-consent-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP JS 1`] = `
-<div>
-  <script
-    async=""
-    src="https://cdn.ampproject.org/v0.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_GEO_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-geo",
+  "src": "https://cdn.ampproject.org/v0/amp-geo-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP List JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-list"
-    src="https://cdn.ampproject.org/v0/amp-list-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_LIST_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-list",
+  "src": "https://cdn.ampproject.org/v0/amp-list-0.1.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP Mustache JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-template="amp-mustache"
-    src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_MUSTACHE_JS 1`] = `
+{
+  "async": true,
+  "custom-template": "amp-mustache",
+  "src": "https://cdn.ampproject.org/v0/amp-mustache-0.2.js",
+}
 `;
 
-exports[`AMP Boilerplate JavaScript should render AMP SCRIPT JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-script"
-    src="https://cdn.ampproject.org/v0/amp-script-0.1.js"
-  />
-</div>
-`;
-
-exports[`AMP Boilerplate JavaScript should render AMP ads JS 1`] = `
-<div>
-  <script
-    async=""
-    custom-element="amp-ad"
-    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-  />
-</div>
+exports[`AMP Boilerplate JavaScript should render AMP_SCRIPT_JS 1`] = `
+{
+  "async": true,
+  "custom-element": "amp-script",
+  "src": "https://cdn.ampproject.org/v0/amp-script-0.1.js",
+}
 `;
 
 exports[`AMP Boilerplate styles should render AMP NoScript 1`] = `

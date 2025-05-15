@@ -1,4 +1,4 @@
-import services from '../../../../../../lib/config/services/loadableConfig';
+import services from '#lib/config/services/loadableConfig';
 
 export default url => {
   const [service] = url.split('/').filter(Boolean);

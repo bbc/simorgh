@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
+    atiAnalyticsProducerName: 'KYRGYZ',
+    useReverb: true,
     chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
@@ -39,9 +41,9 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
     script: cyrillic,
-    manifestPath: '/manifest.json',
+    manifestPath: '/kyrgyz/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
+    homePageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
@@ -131,7 +133,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ЖАРАЙТ',
           reject: 'Кандай өзгөрүүлөр болгонун билип алыңыз.',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -234,6 +236,7 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'Мурдагы берүүлөр',
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
         download: 'Подкастты жүктөп алыңыз',
+        closeVideo: 'Чыгуу',
       },
       socialEmbed: {
         caption: {
@@ -269,7 +272,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Соңку',
     },
     mostRead: {
-      header: 'Эң көп окулгандар',
+      header: 'Көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -278,7 +281,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Эң көп окулгандар',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -309,6 +316,10 @@ export const service: DefaultServiceConfig = {
         {
           href: 'https://www.bbc.co.uk/kyrgyz/send/u50853445',
           text: 'Би-Би-Си менен байланышыңыз',
+        },
+        {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'Башка тилдерде',
         },
         {
           id: 'COOKIE_SETTINGS',

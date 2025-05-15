@@ -30,7 +30,7 @@ const StyledSectionLabel = styled(SectionLabel)`
 `;
 
 const RelatedTopics = ({
-  topics = [],
+  topics,
   mobileDivider = true,
   bar = true,
   className = '',
@@ -40,24 +40,32 @@ const RelatedTopics = ({
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
+
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
   const topicsPath = pathOr('topics', ['topicsPath'], translations);
 
   const getTopicPageUrl = id => {
+    const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
+    const hostname = `https://www.bbc.${isPublicService.includes(service) ? 'co.uk' : 'com'}`;
+
     return variant
-      ? `/${service}/${variant}/${topicsPath}/${id}`
-      : `/${service}/${topicsPath}/${id}`;
+      ? `${hostname}/${service}/${topicsPath}/${id}/${variant}`
+      : `${hostname}/${service}/${topicsPath}/${id}`;
   };
 
-  return (
+  const shouldDisplayTopics =
     topics &&
-    topics.length !== 0 && (
+    topics.length > 0 &&
+    !(service === 'zhongwen' && variant === 'simp');
+
+  return (
+    shouldDisplayTopics && (
       <StyledTopicsWrapper
         data-testid="related-topics"
         aria-labelledby="related-topics"
         role="complementary"
-        {...(className && { className })}
+        {...(className ? { className } : undefined)}
       >
         <StyledSectionLabel
           bar={bar}
@@ -79,8 +87,8 @@ const RelatedTopics = ({
             <TopicTag
               name={topics[0].topicName}
               link={getTopicPageUrl(topics[0].topicId)}
-              onClick={clickTrackerHandler}
-              ref={viewRef}
+              {...clickTrackerHandler}
+              {...viewTracker}
               key={topics[0].topicId}
             />
           ) : (
@@ -88,8 +96,8 @@ const RelatedTopics = ({
               <TopicTag
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
-                onClick={clickTrackerHandler}
-                ref={viewRef}
+                {...clickTrackerHandler}
+                {...viewTracker}
                 key={topicId}
               />
             ))

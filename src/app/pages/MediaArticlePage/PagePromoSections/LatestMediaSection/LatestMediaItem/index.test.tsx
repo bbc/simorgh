@@ -35,7 +35,6 @@ const Fixture = ({ mediaType, imageAlt }: FixtureProps) => {
       <LatestMediaItem
         item={item}
         ariaLabelledBy="promo-item"
-        ref={() => Promise.resolve()}
         eventTrackingData={{} as EventTrackingBlock}
       />
     </PromoContext.Provider>

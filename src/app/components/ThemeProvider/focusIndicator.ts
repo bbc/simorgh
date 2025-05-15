@@ -54,7 +54,8 @@ const focusIndicator = ({ palette }: Theme) => css`
   }
 
   // Overrides focus indicator styles with inverted colours. Used on a dark background page. E.g. Episode lists.
-  a.focusIndicatorInvert:focus-visible {
+  a.focusIndicatorInvert:focus-visible,
+  button.focusIndicatorInvert:focus-visible {
     outline: ${focusIndicatorThickness} solid ${palette.WHITE};
     box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.BLACK};
     outline-offset: ${focusIndicatorThickness};

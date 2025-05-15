@@ -1,13 +1,13 @@
-import { Agent } from 'http';
-import fetchDataFromBFF from '.';
+import { Agent } from 'undici';
 import {
   ARTICLE_PAGE,
   CPS_ASSET,
   HOME_PAGE,
   MOST_READ_PAGE,
   TOPIC_PAGE,
-} from '../pageTypes';
-import * as fetchPageData from '../fetchPageData';
+} from '#app/routes/utils/pageTypes';
+import * as fetchPageData from '#app/routes/utils/fetchPageData';
+import fetchDataFromBFF from '.';
 
 jest.mock('../fetchPageData', () =>
   jest.fn().mockImplementation(() => {
@@ -18,11 +18,13 @@ jest.mock('../fetchPageData', () =>
   }),
 );
 
-const mockAgent = { cert: 'cert', ca: 'ca', key: 'key' };
+const mockAgent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
 
-jest.mock('../../../../server/utilities/getAgent', () =>
-  jest.fn(() => Promise.resolve(mockAgent as unknown as Agent)),
-);
+const mockGetAgent = () => Promise.resolve(mockAgent);
+
+jest.mock('../../../../server/utilities/getAgent', () => jest.fn(mockGetAgent));
 
 const localTimeout = 60000;
 
@@ -57,6 +59,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: ARTICLE_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -94,6 +97,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: CPS_ASSET,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -132,6 +136,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: TOPIC_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -169,6 +174,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: MOST_READ_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
@@ -190,7 +196,6 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                     | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/tipohome'}                                                    | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=c93v2kkz841t&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=ck3yk9nz25qt&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=c93v2kkz841t&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
@@ -206,6 +211,7 @@ describe('Fetch Data from BFF', () => {
           pathname,
           pageType: HOME_PAGE,
           service: 'pidgin',
+          getAgent: mockGetAgent,
         });
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({

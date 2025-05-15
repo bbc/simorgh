@@ -1,0 +1,1377 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0lz1",
+    "locators": {
+      "pid": "w3ct0lz1",
+      "brandPid": "p0340v0j"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_pashto_radio",
+    "language": "ps",
+    "lastUpdated": 1732638505000,
+    "firstPublished": 1588359026000,
+    "lastPublished": 1588359026000,
+    "timestamp": 1588359026000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "ماښامنۍ خپرونه - BBC News پښتو",
+      "pageIdentifier": "pashto.bbc_pashto_radio.w3ct0lz1.page",
+      "producerId": "68",
+      "contentType": "player-episode",
+      "producer": "PASHTO"
+    },
+    "passport": {
+      "home": "",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.4.50",
+    "blockTypes": ["media"],
+    "title": "ماښامنۍ خپرونه",
+    "releaseDateTimeStamp": 1588291200000,
+    "useSensitiveOnwardJourneys": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w3ct0lz1",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "01/05/2020 GMT",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "ماښامنۍ خپرونه",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "ماښامنۍ خپرونه"
+    },
+    "locators": {
+      "pid": "w3ct0lz1",
+      "brandPid": "p0340v0j"
+    },
+    "media": {
+      "id": "w3ct0lz1",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "01/05/2020 GMT",
+      "synopses": {
+        "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+        "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "ماښامنۍ خپرونه",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "p0k5sc1d",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+      "height": 1080,
+      "width": 1920,
+      "altText": "ماښامنۍ خپرونه",
+      "caption": "له بي‌ بي سي دا خپرونه اورئ",
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1588291200000,
+    "brand": {
+      "pid": "p0340v0j",
+      "title": "ماښامنۍ خپرونه"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0lz1",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cr5",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cr5",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "26/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3gbt",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1735237800000,
+                  "availableFrom": 1732635000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732579200000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cr5",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cln",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cln",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "25/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g69",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1735151400000,
+                  "availableFrom": 1732548600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732492800000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cln",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cnw",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cnw",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "24/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g8j",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1735065000000,
+                  "availableFrom": 1732462200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732406400000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cnw",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cmr",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cmr",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "23/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g7d",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734978600000,
+                  "availableFrom": 1732375800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732320000000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cmr",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7ckh",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7ckh",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "22/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g54",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734892200000,
+                  "availableFrom": 1732289400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732233600000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7ckh",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cq0",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cq0",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "21/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g9n",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734805800000,
+                  "availableFrom": 1732203000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732147200000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cq0",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cs8",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cs8",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "20/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3gcx",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734719400000,
+                  "availableFrom": 1732116600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1732060800000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cs8",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cr4",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cr4",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "19/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3gbs",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734633000000,
+                  "availableFrom": 1732030200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731974400000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cr4",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7clm",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7clm",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g68",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734546600000,
+                  "availableFrom": 1731943800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731888000000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7clm",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cnv",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cnv",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "17/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g8h",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734460200000,
+                  "availableFrom": 1731857400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731801600000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cnv",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cmq",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cmq",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "16/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g7c",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734373800000,
+                  "availableFrom": 1731771000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731715200000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cmq",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7ckg",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7ckg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "15/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g53",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734287400000,
+                  "availableFrom": 1731684600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731628800000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7ckg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cpz",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cpz",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "14/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g9m",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734201000000,
+                  "availableFrom": 1731598200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731542400000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cpz",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cs7",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cs7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "13/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3gcw",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734114600000,
+                  "availableFrom": 1731511800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731456000000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cs7",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cr3",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cr3",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "12/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3gbr",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1734028200000,
+                  "availableFrom": 1731425400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731369600000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cr3",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cll",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cll",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "11/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g67",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1733941800000,
+                  "availableFrom": 1731339000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731283200000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cll",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cnt",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cnt",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "10/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g8g",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1733855400000,
+                  "availableFrom": 1731252600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731196800000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cnt",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cmp",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cmp",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "09/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g7b",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1733769000000,
+                  "availableFrom": 1731166200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731110400000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cmp",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7ckf",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7ckf",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "08/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g52",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1733682600000,
+                  "availableFrom": 1731079800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1731024000000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7ckf",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "ماښامنۍ خپرونه"
+            },
+            "locators": {
+              "pid": "w3ct7cpy",
+              "brandPid": "p0340v0j"
+            },
+            "media": {
+              "id": "w3ct7cpy",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "07/11/2024 GMT",
+              "synopses": {
+                "short": "ماښامنۍ خبري راډيويي خپرونه",
+                "medium": "ماښامنۍ خبري راډيويي خپرونه",
+                "long": "دا خپرونه له بي‌ بي سي پښتو څانګې اورئ"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hr3g9l",
+                  "types": ["Original"],
+                  "duration": 1770,
+                  "durationISO8601": "PT29M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1733596200000,
+                  "availableFrom": 1730993400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Current Affairs Evening Programme ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "p0k5sc1d",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0k5sc1d.png",
+              "height": 1080,
+              "width": 1920,
+              "altText": "ماښامنۍ خپرونه",
+              "caption": "له بي‌ بي سي دا خپرونه اورئ",
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1730937600000,
+            "brand": {
+              "pid": "p0340v0j",
+              "title": "ماښامنۍ خپرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct7cpy",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

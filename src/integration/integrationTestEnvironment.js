@@ -18,14 +18,16 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     } = context.docblockPragmas;
     const pageType = getPageTypeFromTestPath(context.testPath);
 
+    const platformForPath = ['amp', 'lite'].includes(platform)
+      ? `.${platform}`
+      : '';
+
     this.pageType = camelCaseToText(pageType);
     this.service = service;
     this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
     this.isInUK = isInUK;
-    this.url = `http://localhost:7080${pathname}${
-      platform === 'amp' ? '.amp' : ''
-    }`;
+    this.url = `http://localhost:7080${pathname}${platformForPath}`;
   }
 
   async setup() {
@@ -46,6 +48,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         service: { value: this.service },
         window: { value: dom.window },
         document: { value: dom.window.document },
+        fetch: { value: fetch },
       });
     } catch (e) {
       console.error(e);

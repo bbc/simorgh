@@ -1,553 +1,194 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08wtg4d",
-    "locators": { "pid": "p08wtg4d", "brandPid": "p02pc9qc" },
-    "type": "WSRADIO",
-    "createdBy": "bbc_arabic_radio",
+  "data": {
+    "metadata": {
+      "type": "Podcast",
+      "atiAnalytics": {
+        "pageIdentifier": "arabic.bbc_arabic_radio.podcasts.p08wtg4d.page",
+        "contentType": "player-episode",
+        "pageTitle": "بي بي سي إكسترا - BBC News Arabic",
+        "language": "ar",
+        "contentId": "urn:bbc:pips:p08wtg4d"
+      }
+    },
     "language": "ar",
-    "lastUpdated": 1604309877147,
-    "firstPublished": 1603983776000,
-    "lastPublished": 1603983776000,
-    "timestamp": 1603983776000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "BBC Xtra - BBC News Arabic",
-      "pageIdentifier": "arabic.bbc_arabic_radio.p08wtg4d.page",
-      "producerId": "5",
-      "contentType": "player-episode",
-      "producer": "ARABIC"
-    },
-    "tags": {},
-    "version": "v1.3.8",
-    "blockTypes": ["media"],
-    "title": "BBC Xtra",
-    "releaseDateTimeStamp": 1603929600000,
-    "atiAnalytics": {}
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p08wtg4d",
-        "subType": "episode",
-        "format": "Audio",
-        "title": "",
-        "synopses": {
-          "short": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
-          "medium": "التصويت الانتخابي عبر البريد خيار يلجأ إليه البعض\nمتى وكيف بدأ توتر العلاقات بين الدولة العثمانية وفرنسا؟\nونتابع احتفالات المغاربة بالمولد النبوي\nبي بي سي إكسترا بصحبة محمد مطر"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-        "embedding": true,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "p08wsxz2",
-            "types": ["Podcast"],
-            "duration": 410,
-            "durationISO8601": "PT6M50S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableUntil": 1606575660000,
-            "availableFrom": 1603983660000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "radioProgramme",
-        "episodeTitle": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "BBC Xtra" },
-    "locators": { "pid": "p08wtg4d", "brandPid": "p02pc9qc" },
-    "media": {
-      "id": "p08wtg4d",
-      "subType": "episode",
-      "format": "Audio",
-      "title": "",
-      "synopses": {
-        "short": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
-        "long": "التصويت الانتخابي عبر البريد خيار يلجأ إليه البعض\nمتى وكيف بدأ توتر العلاقات بين الدولة العثمانية وفرنسا؟\nونتابع احتفالات المغاربة بالمولد النبوي\nبي بي سي إكسترا بصحبة محمد مطر"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-      "embedding": true,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "p08wsxz2",
-          "types": ["Podcast"],
-          "duration": 410,
-          "durationISO8601": "PT6M50S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableUntil": 1606575660000,
-          "availableFrom": 1603983660000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "radioProgramme",
-      "episodeTitle": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-      "height": 0,
-      "width": 0,
-      "altText": null,
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1603929600000,
-    "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
+    "brandTitle": "بي بي سي إكسترا",
+    "episodeTitle": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
+    "headline": "بي بي سي إكسترا",
+    "shortSynopsis": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
+    "mediumSynopsis": "",
     "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08wtg4d",
-    "type": "ws_radio"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Arabic",
-      "uri": "/arabic",
-      "type": "simple"
-    },
-    "groups": [
+    "brandId": "p02pc9qc",
+    "episodeId": "p08wtg4d",
+    "masterBrand": "bbc_arabic_radio",
+    "releaseDateTimeStamp": "2020-10-29T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg",
+    "imageAltText": "",
+    "promoBrandTitle": "بي بي سي إكسترا",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p09t98w8.jpg",
+    "episodeAvailability": "expired",
+    "recentEpisodes": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08wkzvd", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08wkzvd",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "كيف نضمن حق الاعتقاد والتعبد للأقليات الدينية؟",
-                "long": "في هذه الحلقة من بي بي سي إكسترا:\n-\tهل تقبل الجزائر على تحسن لواقع الحريات الدينية؟\n-\tانقسام في بولندا بشأن قوانين الإجهاض.\n-\tتفاؤل بين أصحاب الشركات الكبرى في السودان بعد شطبه من قائمة الدول الراعية للإرهاب.\n-\tومحلات كويتية تقاطع المنتجات الفرنسية.\nإكسترا اليوم مع هالة صالح."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08wknst",
-                  "types": ["Podcast"],
-                  "duration": 2667,
-                  "durationISO8601": "PT44M27S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1606404480000,
-                  "availableFrom": 1603812480000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "كيف نضمن حق الاعتقاد والتعبد للأقليات الدينية؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1603756800000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08wkzvd",
-            "type": "ws_radio"
+        "id": "p0fk8gw9",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "زلزال تركيا و سوريا: ناجون من أنطاكيا يتحدثون عن مرارة الهجرة",
+        "timestamp": "2023-04-28T00:00:00.000Z",
+        "duration": "PT18M28S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0fk8gx6.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0fgnwjn",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "إكسترا رمضان: ما قصة زواج محمد المصري مع يوكو اليابانية؟",
+        "timestamp": "2023-04-14T00:00:00.000Z",
+        "duration": "PT13M21S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0fgnwl6.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0fffqlh",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "إكسترا رمضان: زواجي المختلط",
+        "timestamp": "2023-04-07T00:00:00.000Z",
+        "duration": "PT13M44S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0fffqnf.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0fcyrx8",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "إكسترا بودكاست: بلا وظيفة... ما العمل؟",
+        "timestamp": "2023-03-31T00:00:00.000Z",
+        "duration": "PT17M29S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0fcys0c.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0fbqvst",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "أكسترا بودكاست : ما بعد الزلزال ...",
+        "timestamp": "2023-03-24T00:00:00.000Z",
+        "duration": "PT29M39S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0fbqvv7.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0f99zjf",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "إكسترا بودكاست: بلا وظيفة... ما العمل؟",
+        "timestamp": "2023-03-17T00:00:00.000Z",
+        "duration": "PT20M28S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0f9vxs0.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0f8nc0z",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "بي بي سي إكسترا الإذاعي يودع مستمعيه في حلقة استثنائية على الهواء",
+        "timestamp": "2023-03-14T00:00:00.000Z",
+        "duration": "PT50M45S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p09t98w8.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0f8n8yz",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "أسرار بدايات بي بي سي إكسترا",
+        "timestamp": "2023-03-14T00:00:00.000Z",
+        "duration": "PT50M32S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p09t98w8.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0f7yvl7",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "إكسترا بودكاست: ما بعد الزلزال",
+        "timestamp": "2023-03-10T00:00:00.000Z",
+        "duration": "PT18M48S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0f7yvmb.jpg",
+        "altText": "بي بي سي إكسترا"
+      },
+      {
+        "id": "p0dz2633",
+        "brandTitle": "بي بي سي إكسترا",
+        "episodeTitle": "بي بي سي إكسترا",
+        "timestamp": "2023-01-26T00:00:00.000Z",
+        "duration": "PT50M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0dz264z.jpg",
+        "altText": "بي بي سي إكسترا"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "p08wtg4d",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "بي بي سي إكسترا",
+          "synopses": {
+            "short": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
+            "long": "التصويت الانتخابي عبر البريد خيار يلجأ إليه البعض\nمتى وكيف بدأ توتر العلاقات بين الدولة العثمانية وفرنسا؟\nونتابع احتفالات المغاربة بالمولد النبوي\nبي بي سي إكسترا بصحبة محمد مطر"
           },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08wg9ff", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08wg9ff",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "لماذا يكون العمر عائقا لتألق المرأة كمذيعة ؟",
-                "long": "في هذه الحلقة من بي بي سي إكسترا نسأل ما هي فرص المذيعات للحضور الإعلامي مع التقدم في العمر؟ وهل هناك أسباب لغياب المساواة بين المذيعين والمذيعات؟\nكما نتعرف على أطفال القمر الذين لا يتحملون الشمس.. ونتابع ردود الفعل في أستراليا حيال قضية فحص تعرضت له مسافرات أستراليات من الدوحة ووصفنه بالمهين.\nالحلقة بصحبة محمد مطر."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08wfn0f",
-                  "types": ["Podcast"],
-                  "duration": 2667,
-                  "durationISO8601": "PT44M27S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1606317780000,
-                  "availableFrom": 1603725780000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "لماذا يكون العمر عائقا لتألق المرأة كمذيعة ؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1603670400000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08wg9ff",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08w1lmp", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08w1lmp",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "فرنسا: تهديدات لمسلمين بعد ذبح مدرس",
-                "long": "اليوم في بي بي سي إكسترا: \nتهديدات لمسلمين بعد حادث ذبح مدرس في فرنسا.\nوهجوم على قطع أثرية في جزيرة المتاحف في برلين. \nوأخيراً في السودان، مقتل شخص في تظاهرات الأربعاء بعد وقوع اشتباكات. \nبي بي سي إكسترا بصحبة ياسمين أبو خضرا"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08w14mh",
-                  "types": ["Podcast"],
-                  "duration": 2660,
-                  "durationISO8601": "PT44M20S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1605971340000,
-                  "availableFrom": 1603379340000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "فرنسا: تهديدات لمسلمين بعد ذبح مدرس",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1603324800000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08w1lmp",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08vtncm", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08vtncm",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "الحوار .. اللجوء لطرف ثالث .. ما الحل لخلافات زوجية متجذرة ؟",
-                "long": "في حلقة اليوم من بي بي سي إكسترا .. نسأل هل المشكلة الأكبر بين الأزواج أحيانا هي الخلاف حول حل المشكلة؟ وهل تدخل العائلة نافع دائما؟\nفي اكسترا أيضا نناقش الآثار النفسية لكورونا التي تعقدها أحيانا تعامل الآخرين معها.. ونتعرف على جريمة الآداب العامة التي بسببها رُحلت مذيعة لبنانية من الكويت \nهذه الحلقة بصحبة بسمة كراشة"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08vt825",
-                  "types": ["Podcast"],
-                  "duration": 2688,
-                  "durationISO8601": "PT44M48S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1605798600000,
-                  "availableFrom": 1603206600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "الحوار .. اللجوء لطرف ثالث .. ما الحل لخلافات زوجية متجذرة ؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1603152000000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08vtncm",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08vqk5t", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08vqk5t",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "من جيل \"أعطني الآن بندقية إلى فلسطين خذوني\" إلى جيل \"خذني زيارة لتل آبيب\"",
-                "long": "في هذه الحلقة من بي بي سي إكسترا نسأل هل الشعوب العربية كالحكومات اختلفت حول التطبيع مع إسرائيل؟  ونتعرف على وثائقي جديد لبي بي سي حول تعذيب طلبة في الخلوات السودانية ونستمع لشهادة  مهندسةُ آبار نفط عمانية عن المشاكل التي و اجهتها  \nهذه الحلقة بصحبة بسمة كراشة"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08vq2fm",
-                  "types": ["Podcast"],
-                  "duration": 2621,
-                  "durationISO8601": "PT43M41S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1605713280000,
-                  "availableFrom": 1603121280000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "من جيل \"أعطني الآن بندقية إلى فلسطين خذوني\" إلى جيل \"خذني زيارة لتل آبيب\"",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1603065600000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08vqk5t",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08vdb7x", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08vdb7x",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "جيل محمود ياسين هل مازال حيا في الذاكرة؟",
-                "long": "في هذه الحلقة من بي بي سي اكسترا: \nمحمود ياسين بعيون ابنته رانيا\nوماذا يقوله مخرج شاب عن العمل مع النجم الراحل\nهذه أسباب النزاع على الحدود البحرية بين لبنان وإسرائيل\nوماهي شبكة الجيل الخامس؟"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08vd1w1",
-                  "types": ["Podcast"],
-                  "duration": 2635,
-                  "durationISO8601": "PT43M55S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1605367560000,
-                  "availableFrom": 1602775560000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "جيل محمود ياسين هل مازال حيا في الذاكرة؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1602720000000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08vdb7x",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08v5gf3", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08v5gf3",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "الحنين إلى لقاء الطبيب وجها لوجه وليس عبر الهاتف",
-                "long": "في هذه الحلقة نسأل كيف ينظر المرضى للاستشارات عن بعد؟ وهل التشخيص عبر الإنترنت دقيق؟ كما نحاول التعرف على شكل كليوباترا الحقيقي وما إذا كانت تشبه نجمات هوليوود اللواتي قدمنها؟ ونتعرف على الجدل الحاصل في الجزائر بسبب درجات الثانوية العامة\n\nإكسترا اليوم مع منال جوهر"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08v56x2",
-                  "types": ["Podcast"],
-                  "duration": 403,
-                  "durationISO8601": "PT6M43S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1605194880000,
-                  "availableFrom": 1602602880000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "الحنين إلى لقاء الطبيب وجها لوجه وليس عبر الهاتف",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1602547200000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08v5gf3",
-            "type": "ws_radio"
-          },
-          {
-            "headlines": { "headline": "BBC Xtra" },
-            "locators": { "pid": "p08v2mmd", "brandPid": "p02pc9qc" },
-            "media": {
-              "id": "p08v2mmd",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "",
-              "synopses": {
-                "short": "ما الحلول البديلة إذا لم تتوفر المراحيض العامة؟",
-                "long": "في حلقة اليوم من بي بي سي إكسترا: \n•\tفي غياب المراحيض العامة، البعض يضطر إلى البدائل. \n•\tلماذا قرر فيسبوك منع الإعلانات السياسية بعد الانتخابات الأمريكية؟\n•\tنتعرف على مبادرة في موريتانيا للتوعية بأخطار سرطان الثدي. \n•\tنستمع إلى حالات كانت تعانى من الاكتئاب في السودان. \nحلقة إكسترا من تقديم محمد قطب"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "p08v28v4",
-                  "types": ["Podcast"],
-                  "duration": 2653,
-                  "durationISO8601": "PT44M13S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableUntil": 1605108180000,
-                  "availableFrom": 1602516180000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "radioProgramme",
-              "episodeTitle": "ما الحلول البديلة إذا لم تتوفر المراحيض العامة؟",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02rt7vj.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1602460800000,
-            "brand": { "pid": "p02pc9qc", "title": "BBC Xtra" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p08v2mmd",
-            "type": "ws_radio"
-          }
-        ]
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t98w8.jpg",
+          "embedding": true,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "ar",
+          "pageIdentifierOverride": "arabic.bbc_arabic_radio.p08wtg4d.page"
+        }
+      }
+    ],
+    "isPodcast": true,
+    "summary": "التصويت عبر البريد في الانتخابات الرئاسية الأميركية",
+    "radioScheduleData": [
+      {
+        "id": "p0k1cpty",
+        "state": "next",
+        "startTime": "2024-12-05T05:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300sfc9c0zjt",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k16srk",
+        "state": "onDemand",
+        "startTime": "2024-12-04T14:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300sv2nn9tkj",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k12xxz",
+        "state": "onDemand",
+        "startTime": "2024-12-04T05:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300sfc9by2mq",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k0y0sl",
+        "state": "onDemand",
+        "startTime": "2024-12-03T14:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300sv2nn6xnf",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
       }
     ]
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

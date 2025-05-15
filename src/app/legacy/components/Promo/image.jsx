@@ -19,7 +19,7 @@ const ChildWrapper = styled.div`
 
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
-const createSrcSet = (imageUrl, suffix = '', isProgrammeImage) => {
+const createSrcSet = (imageUrl, isProgrammeImage, suffix = '') => {
   const imageResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
   const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672, 800];
 
@@ -58,14 +58,20 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
 };
 
 const Image = props => {
-  const { children = null, src, useLargeImages = false, ...rest } = props;
+  const {
+    children = null,
+    src,
+    useLargeImages = false,
+    className,
+    ...rest
+  } = props;
   const isProgrammeImage = src.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
   const suffix = src.endsWith('.webp') ? '' : '.webp';
-  const primarySrcSet = createSrcSet(src, suffix, isProgrammeImage);
+  const primarySrcSet = createSrcSet(src, isProgrammeImage, suffix);
 
-  const fallbackSrcSet = createSrcSet(src, '', isProgrammeImage).replaceAll(
+  const fallbackSrcSet = createSrcSet(src, isProgrammeImage).replaceAll(
     '.webp',
     '',
   );
@@ -83,7 +89,9 @@ const Image = props => {
         sizes={sizes}
         aspectRatio={[16, 9]}
       />
-      {children && <ChildWrapper>{children}</ChildWrapper>}
+      {children && (
+        <ChildWrapper className={className}>{children}</ChildWrapper>
+      )}
     </Wrapper>
   );
 };

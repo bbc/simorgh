@@ -61,5 +61,30 @@ describe(`BrandContainer`, () => {
         container.querySelector('a[href="/news"]'),
       );
     });
+
+    it.each`
+      service       | variant   | expectedHref
+      ${'serbian'}  | ${'lat'}  | ${'/serbian/lat'}
+      ${'serbian'}  | ${'cyr'}  | ${'/serbian/cyr'}
+      ${'zhongwen'} | ${'trad'} | ${'/zhongwen/trad'}
+      ${'zhongwen'} | ${'simp'} | ${'/zhongwen/simp'}
+      ${'uzbek'}    | ${'lat'}  | ${'/uzbek/lat'}
+      ${'uzbek'}    | ${'cyr'}  | ${'/uzbek/cyr'}
+    `(
+      'should render correctly with link provided for $service $variant',
+      ({ service, variant, expectedHref }) => {
+        const { container } = render(
+          BrandContainerWithContext(mockSkipLink, mockScriptLink, 'brandLink'),
+          {
+            service,
+            variant,
+          },
+        );
+
+        const brandLink = container.querySelector('a');
+
+        expect(brandLink.getAttribute('href')).toEqual(expectedHref);
+      },
+    );
   });
 });

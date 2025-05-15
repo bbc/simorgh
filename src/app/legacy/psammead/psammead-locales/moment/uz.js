@@ -5,7 +5,7 @@ moment.updateLocale('uz', {
   relativeTime: {
     // these keys have been overridden with our translations
     // some other keys have been left as set upstream
-    // see https://github.com/moment/moment/blob/develop/src/locale/yo.js
+    // see https://github.com/moment/moment/blob/develop/src/locale/uz.js
     past: '%s аввал',
     m: '1 дақиқа',
     mm: '%d дақиқалар',

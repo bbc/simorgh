@@ -12,6 +12,8 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
+    atiAnalyticsProducerName: 'HINDI',
+    useReverb: true,
     chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
@@ -39,25 +41,25 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/hindi/institutional-50223932',
     isTrustProjectParticipant: true,
     script: devanagari,
-    manifestPath: '/manifest.json',
+    manifestPath: '/hindi/manifest.json',
     swPath: '/sw.js',
-    frontPageTitle:
+    homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
+      brandTitle: 'कहानी ज़िंदगी की',
       brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+        'मशहूर हस्तियों की कहानी पूरी तसल्ली और इत्मीनान से इरफ़ान के साथ.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
-        alt: 'दिनभर',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0l8hm5m.jpg',
+        alt: 'पॉडकास्ट: कहानी ज़िंदगी की',
       },
       linkLabel: {
-        text: 'दिनभर: पूरा दिन,पूरी ख़बर',
-        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
+        text: 'एपिसोड',
+        href: 'https://www.bbc.com/hindi/podcasts/p08s9wv2',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -73,8 +75,6 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
-      recommendationTitle: 'ये भी पढ़ें',
-      splitRecommendationTitle: 'कुछ और जानिए',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
@@ -159,7 +159,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ओके',
           reject: 'जानें कि क्या बदला है',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/your-data-matters',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -252,6 +252,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'सुनिए',
         watch: 'देखिए',
+        watchMoments: 'शॉर्ट वीडियो देखिए',
         listenLive: 'लाइव सुनें',
         listenNext: 'इसके बाद सुनिए',
         liveLabel: 'लाइव',
@@ -262,6 +263,7 @@ export const service: DefaultServiceConfig = {
         recentEpisodes: 'प्रसारण का समय',
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
         download: 'एपिसोड डाउनलोड करें',
+        closeVideo: 'बाहर निकलें',
       },
       socialEmbed: {
         caption: {
@@ -367,7 +369,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'सबसे अधिक पढ़ी गईं',
+      header: 'सबसे अधिक लोकप्रिय',
       lastUpdated: 'अंतिम अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -376,7 +378,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'सबसे अधिक पढ़ी गईं',
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
         endTextVisuallyHidden: 'समाप्त',
@@ -413,6 +415,10 @@ export const service: DefaultServiceConfig = {
           text: 'बीबीसी से संपर्क',
         },
         {
+          href: 'https://www.bbc.com/ws/languages',
+          text: 'अन्य भाषाएँ',
+        },
+        {
           id: 'COOKIE_SETTINGS',
           href: '#',
           text: 'Do not share or sell my info',
@@ -439,8 +445,16 @@ export const service: DefaultServiceConfig = {
         url: '/hindi/topics/c9wpm0en87xt',
       },
       {
+        title: 'हेल्थ',
+        url: '/hindi/topics/cr50ykdx5wqt',
+      },
+      {
         title: 'मनोरंजन',
         url: '/hindi/topics/c06gq3n0pp7t',
+      },
+      {
+        title: 'फ़ाइनेंस',
+        url: '/hindi/topics/c5qvpx5dq4qt',
       },
       {
         title: 'खेल',
@@ -460,7 +474,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'पॉडकास्ट',
-        url: '/hindi/institutional-61824775',
+        url: '/hindi/topics/cv22x3pmrvmt',
       },
     ],
   },

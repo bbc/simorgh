@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_dari_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_dari_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "persian",
+  "data": {
+    "heading": "بی بی سی افغانستان (برنامه های دری)",
+    "bodySummary": "بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.",
     "language": "fa",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "بی بی سی افغانستان (برنامه های دری) - BBC News فارسی",
-      "pageIdentifier": "persian.bbc_dari_radio.liveradio.page",
-      "producerId": "69",
-      "contentType": "player-live",
-      "producer": "PERSIAN"
+    "id": "urn:bbc:ares:ws_media:live:bbc_dari_radio",
+    "name": "بی بی سی افغانستان (برنامه های دری)",
+    "summary": "بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.",
+    "masterBrand": "bbc_dari_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k09903",
+        "state": "next",
+        "startTime": "2024-11-30T01:30:00.000Z",
+        "link": "/persian/bbc_dari_radio/w3ct79kf",
+        "brandTitle": "چشم انداز بامدادی 1",
+        "summary": "برنامه خبری صبح بی بی سی  ۱\n",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0k01bzz",
+        "state": "onDemand",
+        "startTime": "2024-11-29T16:00:00.000Z",
+        "link": "/persian/bbc_dari_radio/w172zyy8fyhhp56",
+        "brandTitle": "خبر و نظر",
+        "summary": "برنامه نظر و تحلیل شنوندگان\n",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0k01bzv",
+        "state": "onDemand",
+        "startTime": "2024-11-29T14:00:00.000Z",
+        "link": "/persian/bbc_dari_radio/w3ct79zz",
+        "brandTitle": "مجله شامگاهی",
+        "summary": "برنامه خبری و تحلیلی شامگاهی \n",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k01bz6",
+        "state": "onDemand",
+        "startTime": "2024-11-29T02:30:00.000Z",
+        "link": "/persian/bbc_dari_radio/w3ct79r2",
+        "brandTitle": "چشم انداز بامدادی 2",
+        "summary": "برنامه خبری صبح بی بی سی  ۱",
+        "duration": "PT29M30S"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_dari_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "persian.bbc_dari_radio.liveradio.page",
+        "pageTitle": "بی بی سی افغانستان (برنامه های دری) - BBC News فارسی"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "بی بی سی افغانستان (برنامه های دری)",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_dari_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "بی بی سی افغانستان (برنامه های دری)",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_dari_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "بی بی سی افغانستان (برنامه های دری)",
-    "summary": "بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.",
-    "uri": "/persian/bbc_dari_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_dari_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "persian",
-      "uri": "/persian",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

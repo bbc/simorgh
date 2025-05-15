@@ -55,6 +55,7 @@ export const CROSS_PLATFORM = [
   { colorName: 'SERVICE_NEUTRAL_DARK', colorCode: '#0051AD' },
   { colorName: 'LIVE_CORE', colorCode: '#009E9E' },
   { colorName: 'LIVE_LIGHT', colorCode: '#00CCC7' },
+  { colorName: 'LIVE_MEDIUM', colorCode: '#008282' },
   { colorName: 'LIVE_DARK', colorCode: '#006666' },
   { colorName: 'SUCCESS_CORE', colorCode: '#148A00' },
   { colorName: 'SUCCESS_LIGHT', colorCode: '#49CC29' },

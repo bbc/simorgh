@@ -20,14 +20,6 @@ describe('Amp AdSlot', () => {
       );
       expect(container).toMatchSnapshot();
     });
-
-    it('should correctly render a mpu AdSlot', () => {
-      const { container } = render(
-        <AdSlot service="mundo" slotType="mpu" pageType="FIX" />,
-        { service: 'mundo' },
-      );
-      expect(container).toMatchSnapshot();
-    });
   });
 });
 

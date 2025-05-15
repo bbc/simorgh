@@ -15,7 +15,6 @@ import tamilTopicWithMessageBanners from '#data/tamil/topics/c03dm2xmzzpt.json';
 import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
 import persianAfghanistan from '#data/persian/topics/crezq2dg9zwt.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withServicesDecorator from '#storybook/withServicesDecorator';
 import Page from './TopicPage';
 import ThemeProvider from '../../components/ThemeProvider';
 
@@ -67,33 +66,13 @@ export default {
   title: 'Pages/Topic Page',
   Component,
   parameters: { chromatic: { disable: true }, layout: 'fullscreen' },
-  decorators: [withServicesDecorator({ defaultService: 'mundo' })],
 };
 
 export const Example = (_, { service, variant }) => (
   <Component service={service} variant={variant} />
 );
 
-export const MundoWithBannerVariations = () => (
-  <Component service="mundo" fixture={mundoTopicWithMessageBannerVariations} />
-);
-
-export const KyrgyzWithMessageBanners = () => (
-  <Component service="kyrgyz" fixture={kyrgyzTopicWithMessageBanners} />
-);
-
-export const PersianWithMessageBanners = () => (
-  <Component service="persian" fixture={persianTopicWithMessageBanners} />
-);
 
 export const PersianAfghanistan = () => (
   <Component service="persian" fixture={persianAfghanistan} />
-);
-
-export const ArabicWithMessageBanners = () => (
-  <Component service="arabic" fixture={arabicTopicWithMessageBanners} />
-);
-
-export const TamilWithMessageBanners = () => (
-  <Component service="tamil" fixture={tamilTopicWithMessageBanners} />
 );

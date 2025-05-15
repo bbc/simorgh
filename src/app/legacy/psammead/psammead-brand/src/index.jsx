@@ -10,6 +10,7 @@ import {
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
+  GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -29,8 +30,8 @@ const SvgWrapper = styled.div`
   max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
   margin: 0 auto;
 
-  @media (max-width: ${({ longBrandWithVariant }) =>
-      longBrandWithVariant
+  @media (max-width: ${({ isLongBrand }) =>
+      isLongBrand
         ? GEL_GROUP_1_SCREEN_WIDTH_MAX
         : GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     display: block;
@@ -46,6 +47,11 @@ const Banner = styled.div`
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    height: ${60 / 16}rem;
+    padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -136,34 +142,39 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => (
-  <>
-    {svg && (
-      <>
-        <BrandSvg
-          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-          viewBox={[
-            svg.viewbox.minX || 0,
-            svg.viewbox.minY || 0,
-            svg.viewbox.width,
-            svg.viewbox.height,
-          ].join(' ')}
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          aria-hidden="true"
-          height="32"
-        >
-          {svg.group}
-        </BrandSvg>
-        <LocalisedBrandName
-          linkId={linkId}
-          product={product}
-          serviceLocalisedName={serviceLocalisedName}
-        />
-      </>
-    )}
-  </>
-);
+const StyledBrand = ({
+  linkId,
+  product,
+  serviceLocalisedName = null,
+  svg,
+  isLongBrand,
+}) => {
+  return svg ? (
+    <>
+      <BrandSvg
+        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+        viewBox={[
+          svg.viewbox.minX || 0,
+          svg.viewbox.minY || 0,
+          svg.viewbox.width,
+          svg.viewbox.height,
+        ].join(' ')}
+        xmlns="http://www.w3.org/2000/svg"
+        focusable="false"
+        aria-hidden="true"
+        height="32"
+        isLongBrand={isLongBrand}
+      >
+        {svg.group}
+      </BrandSvg>
+      <LocalisedBrandName
+        linkId={linkId}
+        product={product}
+        serviceLocalisedName={serviceLocalisedName}
+      />
+    </>
+  ) : null;
+};
 
 const Brand = forwardRef((props, ref) => {
   const {
@@ -174,7 +185,7 @@ const Brand = forwardRef((props, ref) => {
     borderTop = false,
     borderBottom = false,
     scriptLink = null,
-    longBrandWithVariant = false,
+    isLongBrand = false,
     skipLink = null,
     linkId = null,
     ...rest
@@ -188,7 +199,7 @@ const Brand = forwardRef((props, ref) => {
       scriptLink={scriptLink}
       {...rest}
     >
-      <SvgWrapper ref={ref} longBrandWithVariant={longBrandWithVariant}>
+      <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
         {url ? (
           <StyledLink
             href={url}

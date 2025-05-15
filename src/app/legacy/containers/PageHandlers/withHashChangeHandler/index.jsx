@@ -18,7 +18,7 @@ const useHashChangeHandler = hash => {
 const getHashProp = path(['location', 'hash']);
 
 const withHashChangeHandler = Component => props => {
-  const hash = getHashProp(props);
+  const hash = decodeURIComponent(getHashProp(props));
 
   useHashChangeHandler(hash);
 

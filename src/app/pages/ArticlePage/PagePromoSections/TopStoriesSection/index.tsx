@@ -1,12 +1,13 @@
 /** @jsx jsx */
 
 import { jsx, useTheme } from '@emotion/react';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import PromoItem from '#components/OptimoPromos/PromoItem/index.styles';
 import PromoList from '#components/OptimoPromos/PromoList';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import styles from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
@@ -17,14 +18,14 @@ type TopStoriesListProps = {
   item: TopStoryItem;
   index: number;
   eventTrackingData: EventTrackingBlock;
-  viewRef: React.Ref<HTMLDivElement>;
+  viewTracker: React.Ref<HTMLDivElement>;
 };
 
 const renderTopStoriesList = ({
   item,
   index,
   eventTrackingData,
-  viewRef,
+  viewTracker,
 }: TopStoriesListProps) => {
   const contentType = item?.contentType ?? '';
   const assetUri = item?.locators?.assetUri ?? '';
@@ -45,22 +46,33 @@ const renderTopStoriesList = ({
       <TopStoriesItem
         item={item}
         ariaLabelledBy={ariaLabelledBy}
-        ref={viewRef}
+        ref={viewTracker}
         eventTrackingData={eventTrackingData}
       />
     </PromoItem>
   );
 };
 
-const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
+const TopStoriesSection = ({
+  content = [],
+  sendOptimizelyEvents,
+}: {
+  content: TopStoryItem[];
+  sendOptimizelyEvents?: boolean;
+}) => {
   const { translations, script, service } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
+
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
+      ...(sendOptimizelyEvents && {
+        optimizely,
+      }),
     },
   };
   const eventTrackingDataSend = eventTrackingData?.block;
-  const viewRef = useViewTracker(eventTrackingDataSend);
+  const viewTracker = useViewTracker(eventTrackingDataSend);
 
   const {
     palette: { GREY_2 },
@@ -104,13 +116,18 @@ const TopStoriesSection = ({ content = [] }: { content: TopStoryItem[] }) => {
         <TopStoriesItem
           item={content[0]}
           ariaLabelledBy={ariaLabelledBy}
-          ref={viewRef}
+          ref={viewTracker}
           eventTrackingData={eventTrackingData}
         />
       ) : (
         <PromoList css={styles.promoList}>
           {content.map((item, index) =>
-            renderTopStoriesList({ item, index, eventTrackingData, viewRef }),
+            renderTopStoriesList({
+              item,
+              index,
+              eventTrackingData,
+              viewTracker,
+            }),
           )}
         </PromoList>
       )}

@@ -53,6 +53,13 @@ exports[`Canonical Send Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Send Footer Anchors should match text and url 8`] = `
 {
+  "text": "Wararka BBC ee luqadaha kale",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 9`] = `
+{
   "text": "Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -60,7 +67,7 @@ exports[`Canonical Send Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
 
-exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2024 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
 exports[`Canonical Send Header I can see the branding 1`] = `"BBC News, Somali"`;
 

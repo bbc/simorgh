@@ -286,7 +286,7 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'GMT',
     articlePath: '/russian/articles/ck7pz7re3zgo',
   },
-  serbianCyr: {
+  'serbian-cyr': {
     service: 'serbian',
     variant: 'cyr',
     text: 'Караџић се годинама крио пре него што је ухапшен 2008. године',
@@ -297,7 +297,7 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'GMT',
     articlePath: '/serbian/articles/c805k05kr73o/cyr',
   },
-  serbianLat: {
+  'serbian-lat': {
     service: 'serbian',
     variant: 'lat',
     text: 'Karadžić se godinama krio pre nego što je uhapšen 2008. godine',
@@ -389,7 +389,7 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'Asia/Istanbul',
     articlePath: '/turkce/articles/c8q1ze59n25o',
   },
-  ukchinaSimp: {
+  'ukchina-simp': {
     service: 'ukchina',
     variant: 'simp',
     text: '该计划的批评者说，这个政策不能解决住房短缺的问题',
@@ -400,7 +400,7 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'GMT',
     articlePath: '/ukchina/articles/c0e8weny66ko/simp',
   },
-  ukchinaTrad: {
+  'ukchina-trad': {
     service: 'ukchina',
     variant: 'trad',
     text: '該計劃的批評者說，這個政策不能解決住房短缺的問題',
@@ -439,6 +439,28 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'GMT',
     articlePath: '/uzbek/articles/cxj3rjxm6r0o',
   },
+  uzbekCyr: {
+    service: 'uzbek',
+    variant: 'cyr',
+    text: 'Дариға Назарбоева Қозоғистон президентининг Британияга охирги сафарида отасига ҳамроҳлик',
+    longText:
+      'Ўзбекистон: 12 йиллик муҳожиратдан кейин Ватанга қайтган фаол вафот этди - Толиб Ёқубов мустақил Ўзбекистондаги илк ва энг таниқли инсон ҳуқуқлари ҳимоячиларидан бири эди. У Каримов даврида Ўзбекистонни тарк этишга мажбур бўлган, муҳожиратда экан, фуқароликдан маҳрум этилганди.',
+    script: 'cyrillic',
+    locale: 'uz',
+    timezone: 'GMT',
+    articlePath: '/uzbek/articles/cxj3rjxm6r0o/cyr',
+  },
+  uzbekLat: {
+    service: 'uzbek',
+    variant: 'lat',
+    text: "Darig'a Nazarboeva Qo'zog'iston prezidentining hayotiga oxiri safarda otasiga hamrohlik",
+    longText:
+      "O'zbekiston: 12 yil muhojiratdan keyin Vatanga qaytgan faol vafot etdi - Tolib Yoqubov O'zbekistondagi birinchi va eng tanish inson huquqlari himoyachilaridan biri edi. U Karimov davrida O'zbekistonni qo'llab-quvvatlash uchun zarur, muhojiratda ekan, harakatlanishdan foydalanishdi.",
+    script: 'latin',
+    locale: 'uz',
+    timezone: 'GMT',
+    articlePath: '/uzbek/articles/cxj3rjxm6r0o/lat',
+  },
   vietnamese: {
     text: 'Ông Nazarbayev bất ngờ tuyên bố từ chức hôm 19/3/2019',
     longText:
@@ -457,7 +479,7 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'Africa/Lagos',
     articlePath: '/yoruba/articles/clw06m0nj8qo',
   },
-  zhongwenSimp: {
+  'zhongwen-simp': {
     service: 'zhongwen',
     variant: 'simp',
     text: '郑文杰：中国警方公布“嫖娼证据” 引发中港网友论战',
@@ -468,7 +490,7 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'GMT',
     articlePath: '/zhongwen/articles/c3xd4x9prgyo/simp',
   },
-  zhongwenTrad: {
+  'zhongwen-trad': {
     service: 'zhongwen',
     variant: 'trad',
     text: '鄭文傑：中國警方公布「嫖娼證據」 引發中港網友論戰',

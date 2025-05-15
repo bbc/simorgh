@@ -3,15 +3,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
 import { LiveRadioBlock } from '#app/models/types/media';
+import afriquePageData from '#data/afrique/bbc_afrique_radio/liveradio.json';
+import gahuzaPageData from '#data/gahuza/bbc_gahuza_radio/liveradio.json';
 import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import LiveRadioPage from './LiveRadioPage';
-import afriquePageData from './fixtureData/afrique.json';
-import indonesianPageData from './fixtureData/indonesia.json';
-import gahuzaPageData from './fixtureData/gahuza.json';
 import { LiveRadioPageData } from './types';
 
 type Props = {
@@ -22,11 +21,11 @@ type Props = {
 
 const Page = ({ pageData, service, lang }: Props) => (
   <BrowserRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider toggles={{ liveRadioSchedule: { enabled: true } }}>
       <ServiceContextProvider service={service} pageLang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
-          pageType={MEDIA_PAGE}
+          pageType={LIVE_RADIO_PAGE}
           pathname="/pathname"
           service={service}
           statusCode={200}
@@ -49,7 +48,7 @@ describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', () => {
     const { container } = render(
       <Page
-        pageData={afriquePageData as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageData}
         service="afrique"
         lang="fr"
       />,
@@ -61,7 +60,7 @@ describe('Radio Page Main', () => {
   it('should show the title for the Live Radio page', () => {
     const { getByText } = render(
       <Page
-        pageData={afriquePageData as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageData}
         service="afrique"
         lang="fr"
       />,
@@ -73,7 +72,7 @@ describe('Radio Page Main', () => {
   it('should show the summary for the Live Radio page', () => {
     const { getByText } = render(
       <Page
-        pageData={afriquePageData as unknown as LiveRadioPageData}
+        pageData={afriquePageData.data as unknown as LiveRadioPageData}
         service="afrique"
         lang="fr"
       />,
@@ -115,7 +114,7 @@ describe('Radio Page Main', () => {
       <Page
         pageData={
           {
-            ...afriquePageData,
+            ...afriquePageData.data,
             mediaBlock: mockMediaBlock,
           } as unknown as LiveRadioPageData
         }
@@ -133,12 +132,12 @@ describe('Radio Page Main', () => {
   it('should show the radio schedule for the Live Radio page on canonical', () => {
     const { getByText } = render(
       <Page
-        pageData={indonesianPageData as unknown as LiveRadioPageData}
-        service="indonesia"
-        lang="id"
+        pageData={afriquePageData.data as unknown as LiveRadioPageData}
+        service="afrique"
+        lang="fr"
       />,
     );
-    const radioScheduleTitle = getByText('Siaran radio');
+    const radioScheduleTitle = getByText('Journaux et Magazines');
     const scheduleWrapper = document.querySelector(
       '[data-e2e="radio-schedule"]',
     );
@@ -150,7 +149,7 @@ describe('Radio Page Main', () => {
   it('should not show the radio schedule for services without a schedule', async () => {
     const { container } = render(
       <Page
-        pageData={gahuzaPageData as unknown as LiveRadioPageData}
+        pageData={gahuzaPageData.data as unknown as LiveRadioPageData}
         service="gahuza"
         lang="rw"
       />,

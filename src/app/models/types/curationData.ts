@@ -1,13 +1,14 @@
 import { OEmbedData } from '#app/components/Embeds/types';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { MostReadData } from '../../components/MostRead/types';
+import { PortraitVideoItem } from './portraitVideoCarousel';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {
   imageUrl: string;
   link: string;
   imageAlt: string;
-  description: string;
+  description?: string;
   title: string;
   id?: string;
   type: string;
@@ -30,6 +31,7 @@ export const VISUAL_STYLE = {
   LINKS: 'LINKS',
   FEED: 'FEED',
   RANKED: 'RANKED',
+  INSITU: 'INSITU',
 } as const;
 
 export const VISUAL_PROMINENCE = {
@@ -59,10 +61,14 @@ export interface BaseCuration {
   mostRead?: MostReadData;
   radioSchedule?: RadioScheduleData[];
   embed?: OEmbedData;
+  portraitVideo?: {
+    items: PortraitVideoItem[];
+  };
 }
 
 export interface Curation extends BaseCuration {
   topStoriesTitle?: string;
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
+  renderVisuallyHiddenH2Title?: boolean;
 }

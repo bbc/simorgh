@@ -5,6 +5,8 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
 import { BaseRendererProps } from './types';
+import ReverbTemplate from './ReverbTemplate';
+import ComponentTracking from './ComponentTracking';
 
 interface Props extends BaseRendererProps {
   data: Record<string, unknown>;
@@ -35,6 +37,7 @@ export default function CanonicalRenderer({
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
       <head>
+        <ReverbTemplate />
         {isApp && <meta name="robots" content="noindex" />}
         {title}
         {helmetMetaTags}
@@ -49,6 +52,10 @@ export default function CanonicalRenderer({
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
+        />
+        <ComponentTracking
+          trackComponentViews={false}
+          enableStaticClickTrackingOnOperaMiniOnly
         />
       </head>
       <body>

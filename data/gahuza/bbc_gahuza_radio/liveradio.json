@@ -1,67 +1,50 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_gahuza_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_gahuza_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "gahuza",
+  "data": {
+    "heading": "Radio BBC Gahuza",
+    "bodySummary": "Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.",
     "language": "rw",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "Radio BBC Gahuza - BBC News Gahuza",
-      "pageIdentifier": "gahuza.bbc_gahuza_radio.liveradio.page",
-      "producerId": "40",
-      "contentType": "player-live",
-      "producer": "GAHUZA"
+    "id": "urn:bbc:ares:ws_media:live:bbc_gahuza_radio",
+    "name": "Radio BBC Gahuza",
+    "summary": "Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.",
+    "masterBrand": "bbc_gahuza_radio",
+    "radioScheduleData": null,
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_gahuza_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "gahuza.bbc_gahuza_radio.liveradio.page",
+        "pageTitle": "Radio BBC Gahuza - BBC News Gahuza"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "Radio BBC Gahuza",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_gahuza_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "Radio BBC Gahuza",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_gahuza_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "Radio BBC Gahuza",
-    "summary": "Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.",
-    "uri": "/gahuza/bbc_gahuza_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_gahuza_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "gahuza",
-      "uri": "/gahuza",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

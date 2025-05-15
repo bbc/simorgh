@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_arabic_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_arabic_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "arabic",
+  "data": {
+    "heading": "مباشر: إذاعة بي بي سي عربي",
+    "bodySummary": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
     "language": "ar",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "إذاعة بي بي سي العربية - BBC News Arabic",
-      "pageIdentifier": "arabic.bbc_arabic_radio.liveradio.page",
-      "producerId": "5",
-      "contentType": "player-live",
-      "producer": "ARABIC"
+    "id": "urn:bbc:ares:ws_media:live:bbc_arabic_radio",
+    "name": "مباشر: إذاعة بي بي سي عربي",
+    "summary": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
+    "masterBrand": "bbc_arabic_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k0bdf6",
+        "state": "next",
+        "startTime": "2024-11-30T05:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300sf011fmr5",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k01c0p",
+        "state": "onDemand",
+        "startTime": "2024-11-29T14:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300stqdbqgrw",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0k01c0m",
+        "state": "onDemand",
+        "startTime": "2024-11-29T05:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300sf011bqv2",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      },
+      {
+        "id": "p0jzy6j5",
+        "state": "onDemand",
+        "startTime": "2024-11-28T14:59:30.000Z",
+        "link": "/arabic/bbc_arabic_radio/w17300stqdbmkvs",
+        "brandTitle": "غزة اليوم ",
+        "summary": "البرنامج يقدم خدمة اخبارية  ومعلومات   تهدف الى توعية  الجمهور في غزة  بما يحدث على الأرض ",
+        "duration": "PT30M"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_arabic_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "arabic.bbc_arabic_radio.liveradio.page",
+        "pageTitle": "مباشر: إذاعة بي بي سي عربي - BBC News Arabic"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "إذاعة بي بي سي العربية",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_arabic_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "مباشر: إذاعة بي بي سي عربي",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_arabic_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "إذاعة بي بي سي العربية",
-    "summary": "خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي",
-    "uri": "/arabic/bbc_arabic_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_arabic_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "arabic",
-      "uri": "/arabic",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -2,7 +2,51 @@
 
 exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand Audio Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_radio.w3ct0lz1.page&amp;x1=[urn%3Abbc%3Apips%3Aw3ct0lz1]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%85%D8%A7%DA%9A%D8%A7%D9%85%D9%86%DB%8D%2520%D8%AE%D9%BE%D8%B1%D9%88%D9%86%D9%87%2520-%2520BBC%2520News%2520%D9%BE%DA%9A%D8%AA%D9%88]"/>"`;
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical On Demand Audio Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "68",
+  },
+  {
+    "p": "pashto.bbc_pashto_radio.w3ct7cnw.page",
+  },
+  {
+    "x1": "[urn:bbc:pips:w3ct7cnw]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-pashto]",
+  },
+  {
+    "x4": "[ps]",
+  },
+  {
+    "x7": "[player-episode]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[ماښامنۍ%20خپرونه%20-%20BBC%20News%20پښتو]",
+  },
+]
+`;
 
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
 {
@@ -55,6 +99,13 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
 {
+  "text": "نورې ژبې",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
+{
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -62,7 +113,7 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -110,33 +161,26 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
 {
-  "text": "ويډيوګانې",
-  "url": "/pashto/topics/c2m45zyk0mmt",
+  "text": "اقتصاد او سوداګري",
+  "url": "/pashto/topics/cy087kqvl1yt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 8`] = `
 {
-  "text": "ځانګړې پاڼې",
-  "url": "/pashto/topics/c6pxyz4e0ryt",
+  "text": "ساینس او ټکنالوژي",
+  "url": "/pashto/topics/ckgrvled11kt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 9`] = `
 {
-  "text": "کالم",
-  "url": "/pashto/topics/cq57nwne9lzt",
+  "text": "هنر او ادب",
+  "url": "/pashto/topics/c8xqkd91knnt",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 10`] = `
-{
-  "text": "پر سټلایت خپرونې",
-  "url": "/pashto/articles/c4n55eygdn0o",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 11`] = `
 {
   "text": "راډیویي خپرونې",
   "url": "/pashto/topics/c9xz1ekw79nt",
@@ -145,13 +189,13 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
-exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
+exports[`Canonical On Demand Audio Page I can see the episode summary 1`] = `"ماښامنۍ خبري راډيويي خپرونه"`;
 
-exports[`Canonical On Demand Audio Page I can see the episode title 1`] = `"۱ می ۲۰۲۰"`;
+exports[`Canonical On Demand Audio Page I can see the episode title 1`] = `"Current Affairs Evening Programme "`;
 
-exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png.webp"`;
+exports[`Canonical On Demand Audio Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p0k5sc1d.png.webp"`;
 
-exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
+exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"ماښامنۍ خپرونه, Current Affairs Evening Programme "`;
 
 exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1`] = `
 <figure
@@ -161,35 +205,39 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
   <div
     class="bbc-1eua7yp"
     data-e2e="media-player"
-  />
+  >
+    <noscript>
+      &lt;div&gt;&lt;div class="bbc-q0ilh"&gt;&lt;strong class="bbc-pow7hy"&gt;په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+    </noscript>
+  </div>
 </figure>
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, ۹ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct155x",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۵ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_radio/w3ct7cln",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, ۸ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct154s",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۳ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_radio/w3ct7cmr",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, ۷ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct1508",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۲ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_radio/w3ct7ckh",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, ۶ ډیسمبر ۲۰۲۰,  موده ۲۹،۳۰  موده ۲۹:۳۰",
-  "url": "/pashto/bbc_pashto_radio/w3ct152h",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۱ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_radio/w3ct7cq0",
 }
 `;
 
@@ -263,13 +311,13 @@ exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attrib
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1"`;
+exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct7cnw"`;
 
 exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`Canonical On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
+exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"ماښامنۍ خپرونه, Current Affairs Evening Programme "`;
 
 exports[`Canonical On Demand Audio Page SEO Lang attribute 1`] = `"ps"`;
 
@@ -291,9 +339,9 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "name": "Pashto",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1",
+        "@id": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct7cnw",
         "@type": "WebPage",
-        "name": "ماښامنۍ خپرونه",
+        "name": "Current Affairs Evening Programme  - ماښامنۍ خپرونه - Pashto",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -307,23 +355,23 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
       },
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
-      "url": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1",
+      "url": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct7cnw",
     },
     {
       "@type": "AudioObject",
-      "description": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+      "description": "ماښامنۍ خبري راډيويي خپرونه",
       "duration": "PT29M30S",
       "name": "ماښامنۍ خپرونه",
-      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
-      "uploadDate": "2020-05-01T00:00:00.000Z",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k5sc1d.png",
+      "uploadDate": "2024-11-24T00:00:00.000Z",
     },
   ],
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
+exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"ماښامنۍ خبري راډيويي خپرونه"`;
 
-exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b23c8.png"`;
+exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k5sc1d.png"`;
 
 exports[`Canonical On Demand Audio Page SEO OG image alt 1`] = `"BBC News پښتو"`;
 
@@ -331,13 +379,13 @@ exports[`Canonical On Demand Audio Page SEO OG locale 1`] = `"ps"`;
 
 exports[`Canonical On Demand Audio Page SEO OG site name 1`] = `"BBC News پښتو"`;
 
-exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
+exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"Current Affairs Evening Programme  - ماښامنۍ خپرونه - Pashto - BBC News پښتو"`;
 
 exports[`Canonical On Demand Audio Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1"`;
+exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct7cnw"`;
 
-exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
+exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"Current Affairs Evening Programme  - ماښامنۍ خپرونه - Pashto - BBC News پښتو"`;
 
 exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -345,14 +393,14 @@ exports[`Canonical On Demand Audio Page SEO Twitter card 1`] = `"summary_large_i
 
 exports[`Canonical On Demand Audio Page SEO Twitter creator 1`] = `"@bbcpashto"`;
 
-exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
+exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"ماښامنۍ خبري راډيويي خپرونه"`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter image alt 1`] = `"BBC News پښتو"`;
 
-exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b23c8.png"`;
+exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k5sc1d.png"`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter site 1`] = `"@bbcpashto"`;
 
-exports[`Canonical On Demand Audio Page SEO Twitter title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
+exports[`Canonical On Demand Audio Page SEO Twitter title 1`] = `"Current Affairs Evening Programme  - ماښامنۍ خپرونه - Pashto - BBC News پښتو"`;
 
-exports[`Canonical On Demand Audio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
+exports[`Canonical On Demand Audio Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"ماښامنۍ خپرونه, Current Affairs Evening Programme "`;

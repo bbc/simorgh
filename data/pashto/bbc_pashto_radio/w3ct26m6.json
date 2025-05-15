@@ -1,0 +1,143 @@
+{
+  "data": {
+    "isPodcast": false,
+    "metadata": {
+      "type": "On Demand Radio",
+      "atiAnalytics": {
+        "pageIdentifier": "pashto.bbc_pashto_radio.w3ct26m6.page",
+        "contentType": "player-episode",
+        "pageTitle": "New Home New Life/gold In The Dust - BBC News پښتو",
+        "contentId": "urn:bbc:pips:w3ct26m6"
+      }
+    },
+    "language": "ps",
+    "brandTitle": "New Home New Life/gold In The Dust",
+    "episodeTitle": "New Home New Life/gold In The Dust",
+    "headline": "New Home New Life/gold In The Dust",
+    "shortSynopsis": "Programming from the BBC Pashto Service",
+    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct26m6",
+    "brandId": "p0340ysc",
+    "summary": "Programming from the BBC Pashto Service",
+    "contentType": "player-episode",
+    "episodeId": "w3ct26m6",
+    "masterBrand": "bbc_pashto_radio",
+    "releaseDateTimeStamp": 1621209600000,
+    "pageTitle": "New Home New Life/gold In The Dust - BBC News پښتو",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gswq8m.png",
+    "imageAltText": null,
+    "promoBrandTitle": "New Home New Life/gold In The Dust",
+    "durationISO8601": null,
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0gswq8m.png",
+    "episodeAvailability": "expired",
+    "radioScheduleData": [
+      {
+        "id": "p0jyfk8t",
+        "state": "next",
+        "startTime": "2024-11-21T13:30:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7hdq",
+        "brandTitle": "پښتو تلویزیون",
+        "summary": "دا خپرونه له بي‌ بي سي پښتو اورئ",
+        "duration": "PT28M"
+      },
+      {
+        "id": "p0jy9tmq",
+        "state": "onDemand",
+        "startTime": "2024-11-21T05:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w172zzqw08z2l1d",
+        "brandTitle": "د نن خبرې",
+        "summary": "د اورېدونکو نظرونه او وړانديزونه\n",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0jy9tml",
+        "state": "onDemand",
+        "startTime": "2024-11-21T03:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7cg3",
+        "brandTitle": "دویمه سهارنۍ خپرونه",
+        "summary": "دوهمه سهارنۍ خبري راډيويي خپرونه",
+        "duration": "PT29M30S"
+      },
+      {
+        "id": "p0jy88tz",
+        "state": "onDemand",
+        "startTime": "2024-11-21T02:00:00.000Z",
+        "link": "/pashto/bbc_pashto_radio/w3ct7c66",
+        "brandTitle": "لومړنۍ سهارنۍ خپرونه",
+        "summary": "لومړۍ  سهارنۍ  خبري راډيويي خپرونه",
+        "duration": "PT29M30S"
+      }
+    ],
+    "recentEpisodes": [
+      {
+        "id": "w3ct7d14",
+        "brandTitle": "New Home New Life/gold In The Dust",
+        "episodeTitle": "New Home New Life/Gold in the Dust",
+        "timestamp": "2024-11-18T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gswq8m.png",
+        "altText": "New Home New Life/gold In The Dust"
+      },
+      {
+        "id": "w3ct7d13",
+        "brandTitle": "New Home New Life/gold In The Dust",
+        "episodeTitle": "New Home New Life/Gold in the Dust",
+        "timestamp": "2024-11-11T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gswq8m.png",
+        "altText": "New Home New Life/gold In The Dust"
+      },
+      {
+        "id": "w3ct7d12",
+        "brandTitle": "New Home New Life/gold In The Dust",
+        "episodeTitle": "New Home New Life/Gold in the Dust",
+        "timestamp": "2024-11-04T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gswq8m.png",
+        "altText": "New Home New Life/gold In The Dust"
+      },
+      {
+        "id": "w3ct6jv5",
+        "brandTitle": "New Home New Life/gold In The Dust",
+        "episodeTitle": "New Home New Life/Gold in the Dust",
+        "timestamp": "2024-10-28T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gswq8m.png",
+        "altText": "New Home New Life/gold In The Dust"
+      },
+      {
+        "id": "w3ct6jv4",
+        "brandTitle": "New Home New Life/gold In The Dust",
+        "episodeTitle": "New Home New Life/Gold in the Dust",
+        "timestamp": "2024-10-21T00:00:00.000Z",
+        "duration": "PT29M30S",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gswq8m.png",
+        "altText": "New Home New Life/gold In The Dust"
+      }
+    ],
+    "externalLinkVersionId": null,
+    "mediaBlocks": [
+      {
+        "type": "audio",
+        "model": {
+          "id": "w3ct26m6",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "17/05/2021 GMT",
+          "synopses": {
+            "short": "Programming from the BBC Pashto Service",
+            "medium": "Programming from the BBC Pashto Service"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gswq8m.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [],
+          "availability": "notAvailable",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "New Home New Life/gold In The Dust",
+          "type": "media"
+        }
+      }
+    ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}

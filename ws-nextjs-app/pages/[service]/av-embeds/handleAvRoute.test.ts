@@ -4,7 +4,7 @@ import russianFixtureData from '#data/russian/av-embeds/features-49881797/pid/p0
 import handleAvRoute from './handleAvRoute';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-jest.mock('../../../utilities/undiciAgent', () =>
+jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
 
@@ -69,6 +69,15 @@ describe('Handle AV Route', () => {
       producerName: 'RUSSIAN',
       producerId: '75',
     });
+  });
+
+  it('should set the x-robots-tag header to noindex', async () => {
+    await handleAvRoute(mockGetServerSidePropsContext);
+
+    expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
+      'x-robots-tag',
+      'noindex',
+    );
   });
 
   it('should remove the x-frame-options header', async () => {

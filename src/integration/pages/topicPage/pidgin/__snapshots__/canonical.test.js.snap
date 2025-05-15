@@ -2,7 +2,51 @@
 
 exports[`Canonical Topic Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`Canonical Topic Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.topics.c95y35941vrt.page&amp;x1=[urn%3Abbc%3Atipo%3Atopic%3Ac95y35941vrt]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-category]&amp;x8=[simorgh-nojs]&amp;x9=[Donald%2520Trump]"/>"`;
+exports[`Canonical Topic Page Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical Topic Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Topic Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "70",
+  },
+  {
+    "p": "pidgin.topics.c95y35941vrt.page",
+  },
+  {
+    "x1": "[urn:bbc:tipo:topic:c95y35941vrt]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-pidgin]",
+  },
+  {
+    "x4": "[pcm]",
+  },
+  {
+    "x7": "[index-category]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Donald%20Trump]",
+  },
+]
+`;
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 1`] = `
 {
@@ -55,6 +99,13 @@ exports[`Canonical Topic Page Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Topic Page Footer Anchors should match text and url 8`] = `
 {
+  "text": "BBC News for oda languages",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Topic Page Footer Anchors should match text and url 9`] = `
+{
   "text": "De way wey we de take go external link.",
   "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
 }
@@ -62,7 +113,7 @@ exports[`Canonical Topic Page Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Topic Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Topic Page Footer Paragraphs should match text 1`] = `"© 2024 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Topic Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Topic Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 

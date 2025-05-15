@@ -34,6 +34,7 @@ import {
 import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
+import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -155,6 +156,7 @@ export default class AppDocument extends Document<DocProps> {
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
             <Head>
+              <ReverbTemplate />
               <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{

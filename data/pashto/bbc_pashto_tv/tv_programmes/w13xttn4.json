@@ -1,1211 +1,260 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:brand:bbc_pashto_tv/w13xttn4",
-    "locators": { "pid": "w172zmsln64zg23", "brandPid": "w13xttn4" },
-    "type": "WSTV",
-    "createdBy": "bbc_pashto_tv",
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "pashto.bbc_pashto_tv.tv_programmes.w13xttn4.page",
+        "contentType": "player-episode",
+        "pageTitle": " د بي بي سي خبرونه  - BBC News پښتو",
+        "contentId": "urn:bbc:pips:w13xttn4"
+      }
+    },
     "language": "ps",
-    "lastUpdated": 1726589247000,
-    "firstPublished": 1723560935000,
-    "lastPublished": 1723560935000,
-    "timestamp": 1723560935000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": " د بي بي سي خبرونه  - BBC News پښتو",
-      "pageIdentifier": "pashto.bbc_pashto_tv.tv_programmes.w13xttn4.page",
-      "producerId": "68",
-      "contentType": "player-episode",
-      "producer": "PASHTO"
-    },
-    "passport": { "home": "", "taggings": [] },
-    "tags": {},
-    "version": "v1.4.48",
-    "blockTypes": ["media"],
-    "title": " د بي بي سي خبرونه ",
-    "releaseDateTimeStamp": 1726531200000,
-    "useSensitiveOnwardJourneys": false
-  },
-  "content": {
-    "blocks": [
+    "brandTitle": " د بي بي سي خبرونه ",
+    "episodeTitle": " د بي بي سي خبرونه ",
+    "headline": " د بي بي سي خبرونه ",
+    "shortSynopsis": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي\n",
+    "mediumSynopsis": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي\n",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_pashto_tv/w13xttn4",
+    "brandId": "w13xttn4",
+    "episodeId": "w172zmspxm05lbv",
+    "masterBrand": "bbc_pashto_tv",
+    "releaseDateTimeStamp": "2024-11-21T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png",
+    "imageAltText": null,
+    "promoBrandTitle": " د بي بي سي خبرونه ",
+    "durationISO8601": "PT28M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k5s1yz.png",
+    "episodeAvailability": "available",
+    "recentEpisodes": [
       {
-        "id": "w172zmsln64zg23",
-        "subType": "episode",
-        "format": "Video",
-        "title": "17/09/2024 GMT",
-        "synopses": {
-          "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-          "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-          "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-        "embedding": false,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mskz6ljjcbqbb",
-            "types": ["Original"],
-            "duration": 1680,
-            "durationISO8601": "PT28M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1726581480000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "programme",
+        "id": "w172zmspxm02pfr",
+        "brandTitle": " د بي بي سي خبرونه ",
         "episodeTitle": " د بي بي سي خبرونه ",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": " د بي بي سي خبرونه " },
-    "locators": { "pid": "w172zmsln64zg23", "brandPid": "w13xttn4" },
-    "media": {
-      "id": "w172zmsln64zg23",
-      "subType": "episode",
-      "format": "Video",
-      "title": "17/09/2024 GMT",
-      "synopses": {
-        "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-        "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-        "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+        "timestamp": "2024-11-20T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-      "embedding": false,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mskz6ljjcbqbb",
-          "types": ["Original"],
-          "duration": 1680,
-          "durationISO8601": "PT28M",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1726581480000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "programme",
-      "episodeTitle": " د بي بي سي خبرونه ",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "p08b23c8",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-      "height": 1080,
-      "width": 1920,
-      "altText": "ستاسې غږ",
-      "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1726531200000,
-    "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsln64zg23",
-    "type": "ws_tv"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Pashto",
-      "uri": "/pashto",
-      "type": "simple"
-    },
-    "groups": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsln64wk50", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsln64wk50",
-              "subType": "episode",
-              "format": "Video",
-              "title": "16/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6ljjc7tf7",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1726495080000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1726444800000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsln64wk50",
-            "type": "ws_tv"
+        "id": "w172zmspxlzzsjn",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-19T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmspxlzwwmk",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-18T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmspkbphbn3",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-15T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmspkbpdfr0",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-14T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmspkbp9jtx",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-13T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmspkbp6mxt",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-12T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmspkbp3r0q",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-11T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62cwzvg",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-10T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62ct2yc",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-09T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62cq618",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-08T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62cm945",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-07T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62cjd72",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-06T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62cfh9z",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-05T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsp62cbldw",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-04T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsntt23v7m",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-03T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsntt20ybj",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-02T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsntt1y1ff",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-11-01T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsntt1v4jb",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-10-31T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      },
+      {
+        "id": "w172zmsntt1r7m7",
+        "brandTitle": " د بي بي سي خبرونه ",
+        "episodeTitle": " د بي بي سي خبرونه ",
+        "timestamp": "2024-10-30T00:00:00.000Z",
+        "duration": "PT28M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0k5s1yz.png",
+        "altText": " د بي بي سي خبرونه "
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "w172zmspxm05lbv",
+          "subType": "episode",
+          "format": "Video",
+          "title": " د بي بي سي خبرونه ",
+          "synopses": {
+            "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي\n",
+            "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي\n",
+            "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
           },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xvnszr", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xvnszr",
-              "subType": "episode",
-              "format": "Video",
-              "title": "15/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w1mskz6psy6jvm2",
+              "types": ["Original"],
+              "duration": 1680,
+              "durationISO8601": "PT28M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l582127z",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1726408680000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1726358400000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xvnszr",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xvkx2n", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xvkx2n",
-              "subType": "episode",
-              "format": "Video",
-              "title": "14/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l581y5bw",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1726322280000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1726272000000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xvkx2n",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xvh05k", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xvh05k",
-              "subType": "episode",
-              "format": "Video",
-              "title": "13/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l581v8fs",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1726235880000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1726185600000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xvh05k",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xvd38g", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xvd38g",
-              "subType": "episode",
-              "format": "Video",
-              "title": "12/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l581rcjp",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1726149480000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1726099200000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xvd38g",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xv96cc", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xv96cc",
-              "subType": "episode",
-              "format": "Video",
-              "title": "11/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l581ngml",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1726063080000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1726012800000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xv96cc",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xv69g8", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xv69g8",
-              "subType": "episode",
-              "format": "Video",
-              "title": "10/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l581kkqh",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725976680000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725926400000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xv69g8",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmsl8xv3dk5", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmsl8xv3dk5",
-              "subType": "episode",
-              "format": "Video",
-              "title": "09/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6l581gntd",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725890280000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725840000000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmsl8xv3dk5",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjwncx", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjwncx",
-              "subType": "episode",
-              "format": "Video",
-              "title": "08/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszr7xn4",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725803880000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725753600000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjwncx",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjsrgt", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjsrgt",
-              "subType": "episode",
-              "format": "Video",
-              "title": "07/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszr50r1",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725717480000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725667200000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjsrgt",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjpvkq", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjpvkq",
-              "subType": "episode",
-              "format": "Video",
-              "title": "06/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszr23ty",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725631080000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725580800000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjpvkq",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjlynm", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjlynm",
-              "subType": "episode",
-              "format": "Video",
-              "title": "05/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszqz6xv",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725544680000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725494400000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjlynm",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjj1rj", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjj1rj",
-              "subType": "episode",
-              "format": "Video",
-              "title": "04/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszqwb0r",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725458280000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725408000000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjj1rj",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjf4vf", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjf4vf",
-              "subType": "episode",
-              "format": "Video",
-              "title": "03/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszqsf3n",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725371880000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725321600000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjf4vf",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskxnjb7yb", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskxnjb7yb",
-              "subType": "episode",
-              "format": "Video",
-              "title": "02/09/2024 GMT",
-              "synopses": {
-                "short": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "medium": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kszqpj6k",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725285480000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725235200000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskxnjb7yb",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskkd73hs2", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskkd73hs2",
-              "subType": "episode",
-              "format": "Video",
-              "title": "01/09/2024 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kfqfgs19",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725199080000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725148800000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskkd73hs2",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskkd70lvz", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskkd70lvz",
-              "subType": "episode",
-              "format": "Video",
-              "title": "31/08/2024 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kfqfcw46",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725112680000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1725062400000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskkd70lvz",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskkd6xpyw", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskkd6xpyw",
-              "subType": "episode",
-              "format": "Video",
-              "title": "30/08/2024 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kfqf8z73",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1725026280000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1724976000000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskkd6xpyw",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskkd6tt1s", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskkd6tt1s",
-              "subType": "episode",
-              "format": "Video",
-              "title": "29/08/2024 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kfqf62b0",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1724939880000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1724889600000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskkd6tt1s",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": " د بي بي سي خبرونه " },
-            "locators": { "pid": "w172zmskkd6qx4p", "brandPid": "w13xttn4" },
-            "media": {
-              "id": "w172zmskkd6qx4p",
-              "subType": "episode",
-              "format": "Video",
-              "title": "28/08/2024 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "long": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mskz6kfqf35dx",
-                  "types": ["Original"],
-                  "duration": 1680,
-                  "durationISO8601": "PT28M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1724853480000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": " د بي بي سي خبرونه ",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b23c8",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "ستاسې غږ",
-              "caption": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1724803200000,
-            "brand": { "pid": "w13xttn4", "title": " د بي بي سي خبرونه " },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172zmskkd6qx4p",
-            "type": "ws_tv"
-          }
-        ]
+              "availableFrom": "2024-11-21T13:30:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "programme",
+          "episodeTitle": " د بي بي سي خبرونه ",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "ps",
+          "pageIdentifierOverride": "pashto.bbc_pashto_tv.tv.w172zmspxm05lbv.page"
+        }
       }
     ]
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

@@ -37,7 +37,9 @@ import {
   KINGFISHER,
   LE_TEAL,
   LIVE_LIGHT,
+  LIVE_MEDIUM,
   LIVE_DARK,
+  LIVE_CORE,
   LUNAR,
   LUNAR_LIGHT,
   METAL,
@@ -130,14 +132,12 @@ import {
 
 import gridWidths from './gridWidths';
 
-import { MEDIA_ARTICLE_PAGE, MEDIA_PAGE } from '../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '../../routes/utils/pageTypes';
 import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 import { PageTypes } from '../../models/types/global';
 
-const isDarkUiPage = (pageType: PageTypes, derivedPageType: string | null) =>
-  pageType === MEDIA_ARTICLE_PAGE ||
-  (pageType === MEDIA_PAGE &&
-    derivedPageType?.toLowerCase() === 'on demand tv');
+const isDarkUiPage = (pageType: PageTypes) =>
+  pageType === MEDIA_ARTICLE_PAGE || pageType === TV_PAGE;
 
 type Props = {
   children: React.ReactNode;
@@ -245,7 +245,9 @@ const withThemeProvider = ({
       KINGFISHER,
       LE_TEAL,
       LIVE_LIGHT,
+      LIVE_MEDIUM,
       LIVE_DARK,
+      LIVE_CORE,
       LUNAR,
       LUNAR_LIGHT,
       METAL,
@@ -293,12 +295,11 @@ const withThemeProvider = ({
   };
 
   const ThemeProvider: React.FC<Props> = ({ children }) => {
-    const { isAmp, isLite, pageType, derivedPageType } =
-      useContext(RequestContext);
+    const { isAmp, isLite, pageType } = useContext(RequestContext);
 
     const theme = {
       ...themeConfig,
-      isDarkUi: isDarkUiPage(pageType, derivedPageType),
+      isDarkUi: isDarkUiPage(pageType),
       isLite,
     };
 

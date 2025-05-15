@@ -1,25 +1,25 @@
-import React, { useContext, useEffect, useState, Fragment } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
+import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
+import addInlineScript, {
+  InlineScriptProps,
+} from '#app/lib/utilities/addInlineScript';
 import { ATIAnalyticsProps } from '../types';
-import sendBeaconOperaMiniScript from './sendBeaconOperaMiniScript';
+import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
+import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-const getNoJsATIPageViewUrl = (atiPageViewUrl: string) =>
-  atiPageViewUrl.includes('x8=[simorgh]')
-    ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
-    : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
+type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
 const renderNoScriptTrackingPixel = (
-  atiPageViewUrl: string,
-  isLite: boolean,
+  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
 ) => {
-  const ImgPixelWrapper = isLite ? Fragment : 'noscript';
-
   return (
-    <ImgPixelWrapper>
+    <noscript>
       <img
         height="1px"
         width="1px"
@@ -28,38 +28,46 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoJsATIPageViewUrl(atiPageViewUrl)}
+        src={getNoScriptTrackingPixelUrl(reverbParams)}
       />
-    </ImgPixelWrapper>
+    </noscript>
   );
 };
 
-const addOperaMiniExtremeScript = (atiPageViewUrlString: string) => {
-  const script = sendBeaconOperaMiniScript(atiPageViewUrlString);
-
-  return (
-    <Helmet>
-      <script type="text/javascript">{script}</script>
-    </Helmet>
-  );
+const addScript = ({ script, parameters }: InlineScriptProps) => {
+  return <Helmet>{addInlineScript({ script, parameters })}</Helmet>;
 };
 
-const CanonicalATIAnalytics = ({ pageviewParams }: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({
+  pageviewParams,
+  reverbParams,
+}: ATIAnalyticsProps) => {
   const { isLite } = useContext(RequestContext);
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
 
+  const [reverbBeaconConfig] = useState(reverbParams);
+
   const [atiPageViewUrl] = useState(atiPageViewUrlString);
 
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl);
-  }, [atiPageViewUrl]);
+    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
+  }, [atiPageViewUrl, reverbBeaconConfig]);
 
   return (
     <>
-      {addOperaMiniExtremeScript(atiPageViewUrlString)}
-      {renderNoScriptTrackingPixel(atiPageViewUrl, isLite)}
+      {addScript({ script: addSendStaticBeaconToWindow() })}
+      {isLite &&
+        addScript({
+          script: sendPageViewBeaconLite,
+          parameters: atiPageViewUrlString,
+        })}
+      {!isLite &&
+        addScript({
+          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+        })}
+      {renderNoScriptTrackingPixel(reverbParams)}
     </>
   );
 };

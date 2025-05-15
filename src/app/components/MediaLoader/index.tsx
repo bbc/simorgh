@@ -1,6 +1,5 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-
 import { jsx } from '@emotion/react';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
@@ -27,6 +26,7 @@ import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
+import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -35,7 +35,7 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-const BumpLoader = () => (
+export const BumpLoader = () => (
   <Helmet>
     <script
       type="text/javascript"
@@ -96,9 +96,16 @@ const AdvertTagLoader = () => {
 type MediaContainerProps = {
   playerConfig: PlayerConfig;
   showAds: boolean;
+  uniqueId?: string;
+  noJsMessage?: string;
 };
 
-const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
+const MediaContainer = ({
+  playerConfig,
+  showAds,
+  uniqueId,
+  noJsMessage,
+}: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -111,6 +118,15 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
           );
 
           mediaPlayer.load();
+
+          if (uniqueId != null) {
+            const { mediaPlayers } = window;
+            if (mediaPlayers == null) {
+              window.mediaPlayers = { [uniqueId]: mediaPlayer };
+            } else {
+              mediaPlayers[uniqueId] = mediaPlayer;
+            }
+          }
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
@@ -143,7 +159,7 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds]);
+  }, [playerConfig, showAds, uniqueId]);
 
   return (
     <div
@@ -154,7 +170,11 @@ const MediaContainer = ({ playerConfig, showAds }: MediaContainerProps) => {
           ? styles.audioMediaContainer
           : styles.standardMediaContainer
       }
-    />
+    >
+      <noscript>
+        <Message message={noJsMessage} />
+      </noscript>
+    </div>
   );
 };
 
@@ -162,10 +182,11 @@ type Props = {
   blocks: MediaBlock[];
   className?: string;
   embedded?: boolean;
+  uniqueId?: string;
 };
 
-const MediaLoader = ({ blocks, className, embedded }: Props) => {
-  const { lang, translations } = useContext(ServiceContext);
+const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
+  const { lang, service, translations } = useContext(ServiceContext);
   const { pageIdentifier } = useContext(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -173,7 +194,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
     id,
     pageType,
     statsDestination,
-    service,
     isAmp,
     isLite,
     showAdsBasedOnLocation,
@@ -217,6 +237,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
   } = config;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
+  const isPortraitVideo = orientation === 'portrait';
 
   const {
     placeholderSrc,
@@ -225,9 +246,9 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
     mediaInfo,
   } = placeholderConfig ?? {};
 
-  const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
+  const noJsMessage = translatedNoJSMessage || translations?.media?.noJs;
 
-  const showPortraitTitle = orientation === 'portrait' && !embedded;
+  const hasPlaceholder = Boolean(showPlaceholder && placeholderSrc);
 
   return (
     <>
@@ -237,9 +258,6 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
           <Metadata blocks={blocks} embedURL={playerConfig?.externalEmbedUrl} />
         )
       }
-      {showPortraitTitle && (
-        <strong css={styles.titlePortrait}>Watch Moments</strong>
-      )}
       <figure
         data-e2e="media-loader__container"
         className={className}
@@ -258,7 +276,7 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
             title={mediaInfo?.title}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
-            noJsMessage={translatedNoJSMessage}
+            noJsMessage={noJsMessage}
           />
         ) : (
           <>
@@ -268,23 +286,29 @@ const MediaLoader = ({ blocks, className, embedded }: Props) => {
               <Placeholder
                 src={placeholderSrc}
                 srcSet={placeholderSrcset}
-                noJsMessage={translatedNoJSMessage}
+                noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
               />
             ) : (
-              <MediaContainer playerConfig={playerConfig} showAds={showAds} />
+              <MediaContainer
+                playerConfig={playerConfig}
+                showAds={showAds}
+                uniqueId={uniqueId}
+                noJsMessage={noJsMessage}
+              />
             )}
           </>
         )}
         {captionBlock && (
           <Caption
+            className={isPortraitVideo ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
             css={[
               styles.figure(embedded),
               playerConfig?.ui?.skin === 'classic' && [
-                orientation === 'portrait' && styles.captionPortrait,
+                isPortraitVideo && styles.captionPortrait,
               ],
               playerConfig?.ui?.skin === 'audio' && styles.captionAudio,
             ]}

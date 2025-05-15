@@ -1,3 +1,4 @@
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import { ChartbeatProps } from '#app/components/ChartbeatAnalytics/types';
 import { LiveRadioBlock } from '#app/models/types/media';
 
@@ -10,4 +11,5 @@ export type LiveRadioPageData = {
   contentType: ChartbeatProps['contentType'];
   radioScheduleData: [];
   mediaBlock: LiveRadioBlock[];
+  metadata: { type: string; atiAnalytics: ATIData };
 };

@@ -1,1189 +1,259 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:brand:bbc_afrique_tv/w13xttmz",
-    "locators": { "pid": "w172yrnhsjqw4c9", "brandPid": "w13xttmz" },
-    "type": "WSTV",
-    "createdBy": "bbc_afrique_tv",
+  "data": {
+    "metadata": {
+      "type": "On Demand TV",
+      "atiAnalytics": {
+        "pageIdentifier": "afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page",
+        "contentType": "player-episode",
+        "pageTitle": "BBC Info - BBC News Afrique",
+        "contentId": "urn:bbc:pips:w13xttmz"
+      }
+    },
     "language": "fr",
-    "lastUpdated": 1726585911000,
-    "firstPublished": 1676059765000,
-    "lastPublished": 1676059765000,
-    "timestamp": 1676059765000,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "BBC Info - BBC News Afrique",
-      "pageIdentifier": "afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page",
-      "producerId": "3",
-      "contentType": "player-episode",
-      "producer": "AFRIQUE"
-    },
-    "passport": { "home": "", "taggings": [] },
-    "tags": {},
-    "version": "v1.4.48",
-    "blockTypes": ["media"],
-    "title": "BBC Info",
-    "releaseDateTimeStamp": 1679011200000,
-    "useSensitiveOnwardJourneys": false
-  },
-  "content": {
-    "blocks": [
+    "brandTitle": "BBC Info",
+    "episodeTitle": "BBC Info",
+    "headline": "BBC Info",
+    "shortSynopsis": "Le journal télévisé international de BBC Afrique.",
+    "mediumSynopsis": "Le journal télévisé international de BBC Afrique.",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_afrique_tv/w13xttmz",
+    "brandId": "w13xttmz",
+    "episodeId": "w172yrnhsjqw4c9",
+    "masterBrand": "bbc_afrique_tv",
+    "releaseDateTimeStamp": "2023-03-17T00:00:00.000Z",
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+    "imageAltText": null,
+    "promoBrandTitle": "BBC Info",
+    "durationISO8601": "PT15M",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b22y1.png",
+    "episodeAvailability": "available",
+    "recentEpisodes": [
       {
-        "id": "w172yrnhsjqw4c9",
-        "subType": "episode",
-        "format": "Video",
-        "title": "17/03/2023 GMT",
-        "synopses": {
-          "short": "Le journal télévisé international de BBC Afrique.",
-          "medium": "Le journal télévisé international de BBC Afrique."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-        "embedding": false,
-        "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1msk0thd8j6rng",
-            "types": ["Original"],
-            "duration": 900,
-            "durationISO8601": "PT15M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1679081400000,
-            "availabilityStatus": "available"
-          }
-        ],
-        "availability": "available",
-        "smpKind": "programme",
+        "id": "w172yj93rrkg6r7",
+        "brandTitle": "BBC Info",
         "episodeTitle": "BBC Info",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": { "headline": "BBC Info" },
-    "locators": { "pid": "w172yrnhsjqw4c9", "brandPid": "w13xttmz" },
-    "media": {
-      "id": "w172yrnhsjqw4c9",
-      "subType": "episode",
-      "format": "Video",
-      "title": "17/03/2023 GMT",
-      "synopses": {
-        "short": "Le journal télévisé international de BBC Afrique.",
-        "medium": "Le journal télévisé international de BBC Afrique."
+        "timestamp": "2023-03-17T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-      "embedding": false,
-      "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1msk0thd8j6rng",
-          "types": ["Original"],
-          "duration": 900,
-          "durationISO8601": "PT15M",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1679081400000,
-          "availabilityStatus": "available"
-        }
-      ],
-      "availability": "available",
-      "smpKind": "programme",
-      "episodeTitle": "BBC Info",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "p08b22y1",
-      "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-      "height": 1080,
-      "width": 1920,
-      "altText": "Bulletin D'informations",
-      "caption": "Le tour du monde de l'actualité en 2 minutes",
-      "copyrightHolder": null,
-      "type": "image"
-    },
-    "releaseDateTimestamp": 1679011200000,
-    "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhsjqw4c9",
-    "type": "ws_tv"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Afrique",
-      "uri": "/afrique",
-      "type": "simple"
-    },
-    "groups": [
       {
-        "type": "other-episode",
-        "promos": [
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93rrkg6r7", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93rrkg6r7",
-              "subType": "episode",
-              "format": "Video",
-              "title": "17/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8y99xz8j",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1679073300000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1679011200000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93rrkg6r7",
-            "type": "ws_tv"
+        "id": "w172yrnhsjqs7g6",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-16T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93rrkc9v4",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-16T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhsjqpbk3",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-15T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93rrk8dy1",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-15T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhsjqlfn0",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-14T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93rrk5j0y",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-14T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhsjqhjqx",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-13T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93rrk2m3v",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-13T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhf8f2zrg",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-10T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93dh7p24d",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-10T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhf8f02vc",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-09T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93dh7l579",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-09T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhf8dx5y8",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-08T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93dh7h8b6",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-08T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhf8dt915",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-07T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93dh7dcf3",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-07T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnhf8dqd42",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-06T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yj93dh79gj0",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-06T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      },
+      {
+        "id": "w172yrnh2039v4m",
+        "brandTitle": "BBC Info",
+        "episodeTitle": "BBC Info",
+        "timestamp": "2023-03-03T00:00:00.000Z",
+        "duration": "PT15M",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png",
+        "altText": "BBC Info"
+      }
+    ],
+    "mediaBlocks": [
+      {
+        "type": "tv",
+        "model": {
+          "id": "w172yrnhsjqw4c9",
+          "subType": "episode",
+          "format": "Video",
+          "title": "BBC Info",
+          "synopses": {
+            "short": "Le journal télévisé international de BBC Afrique.",
+            "medium": "Le journal télévisé international de BBC Afrique."
           },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhsjqs7g6", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhsjqs7g6",
-              "subType": "episode",
-              "format": "Video",
-              "title": "16/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "w1msk0thd8j6rng",
+              "types": ["Original"],
+              "duration": 900,
+              "durationISO8601": "PT15M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0thd8j3vrc",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678995000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678924800000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhsjqs7g6",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93rrkc9v4", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93rrkc9v4",
-              "subType": "episode",
-              "format": "Video",
-              "title": "16/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8y99v2cf",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678986900000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678924800000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93rrkc9v4",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhsjqpbk3", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhsjqpbk3",
-              "subType": "episode",
-              "format": "Video",
-              "title": "15/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0thd8j0yv8",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678908600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678838400000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhsjqpbk3",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93rrk8dy1", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93rrk8dy1",
-              "subType": "episode",
-              "format": "Video",
-              "title": "15/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8y99r5gb",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678900500000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678838400000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93rrk8dy1",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhsjqlfn0", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhsjqlfn0",
-              "subType": "episode",
-              "format": "Video",
-              "title": "14/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0thd8hy1y5",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678822200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678752000000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhsjqlfn0",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93rrk5j0y", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93rrk5j0y",
-              "subType": "episode",
-              "format": "Video",
-              "title": "14/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8y99n8k7",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678814100000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678752000000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93rrk5j0y",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhsjqhjqx", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhsjqhjqx",
-              "subType": "episode",
-              "format": "Video",
-              "title": "13/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0thd8hv512",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678735800000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678665600000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhsjqhjqx",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93rrk2m3v", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93rrk2m3v",
-              "subType": "episode",
-              "format": "Video",
-              "title": "13/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8y99kcn4",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678727700000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678665600000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93rrk2m3v",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhf8f2zrg", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhf8f2zrg",
-              "subType": "episode",
-              "format": "Video",
-              "title": "10/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0th106fm1m",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678476600000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678406400000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhf8f2zrg",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93dh7p24d", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93dh7p24d",
-              "subType": "episode",
-              "format": "Video",
-              "title": "10/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8l104tnp",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678468500000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678406400000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93dh7p24d",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhf8f02vc", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhf8f02vc",
-              "subType": "episode",
-              "format": "Video",
-              "title": "09/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0th106bq4j",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678390200000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678320000000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhf8f02vc",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93dh7l579", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93dh7l579",
-              "subType": "episode",
-              "format": "Video",
-              "title": "09/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8l101xrl",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678382100000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678320000000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93dh7l579",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhf8dx5y8", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhf8dx5y8",
-              "subType": "episode",
-              "format": "Video",
-              "title": "08/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0th1067t7f",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678303800000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678233600000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhf8dx5y8",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93dh7h8b6", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93dh7h8b6",
-              "subType": "episode",
-              "format": "Video",
-              "title": "08/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8l0zz0vh",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678295700000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678233600000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93dh7h8b6",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhf8dt915", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhf8dt915",
-              "subType": "episode",
-              "format": "Video",
-              "title": "07/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0th1064xbb",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678217400000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678147200000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhf8dt915",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93dh7dcf3", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93dh7dcf3",
-              "subType": "episode",
-              "format": "Video",
-              "title": "07/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8l0zw3yd",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678209300000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678147200000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93dh7dcf3",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnhf8dqd42", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnhf8dqd42",
-              "subType": "episode",
-              "format": "Video",
-              "title": "06/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0th10620f7",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678131000000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678060800000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnhf8dqd42",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yj93dh79gj0", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yj93dh79gj0",
-              "subType": "episode",
-              "format": "Video",
-              "title": "06/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msjrz8l0zs719",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1678122900000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1678060800000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yj93dh79gj0",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": { "headline": "BBC Info" },
-            "locators": { "pid": "w172yrnh2039v4m", "brandPid": "w13xttmz" },
-            "media": {
-              "id": "w172yrnh2039v4m",
-              "subType": "episode",
-              "format": "Video",
-              "title": "03/03/2023 GMT",
-              "synopses": {
-                "short": "Le journal télévisé international de BBC Afrique.",
-                "medium": "Le journal télévisé international de BBC Afrique."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msk0tgnqwngfs",
-                  "types": ["Original"],
-                  "duration": 900,
-                  "durationISO8601": "PT15M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1677871800000,
-                  "availabilityStatus": "available"
-                }
-              ],
-              "availability": "available",
-              "smpKind": "programme",
-              "episodeTitle": "BBC Info",
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "p08b22y1",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b22y1.png",
-              "height": 1080,
-              "width": 1920,
-              "altText": "Bulletin D'informations",
-              "caption": "Le tour du monde de l'actualité en 2 minutes",
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "releaseDateTimestamp": 1677801600000,
-            "brand": { "pid": "w13xttmz", "title": "BBC Info" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_tv/w172yrnh2039v4m",
-            "type": "ws_tv"
-          }
-        ]
+              "availableFrom": "2023-03-17T19:30:00.000Z",
+              "availabilityStatus": "available",
+              "availableUntil": null
+            }
+          ],
+          "availability": "available",
+          "smpKind": "programme",
+          "episodeTitle": "BBC Info",
+          "type": "media"
+        }
+      },
+      {
+        "type": "mediaOverrides",
+        "model": {
+          "language": "fr",
+          "pageIdentifierOverride": "afrique.bbc_afrique_tv.tv.w172yrnhsjqw4c9.page"
+        }
       }
     ]
-  }
+  },
+  "contentType": "application/json; charset=utf-8"
 }

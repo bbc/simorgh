@@ -4,7 +4,6 @@ import { render, screen } from '../react-testing-library-with-providers';
 import Byline from '.';
 import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
 import {
-  bylineWithNoRole,
   bylineWithNoAuthor,
   bylineWithNameAndRole,
   bylineWithLink,
@@ -22,12 +21,6 @@ describe('Byline', () => {
 
     expect(author).toBeInTheDocument();
     expect(role).toBeInTheDocument();
-  });
-
-  it('Should return null when there is no role in the data', () => {
-    const { container } = render(<Byline blocks={bylineWithNoRole} />);
-
-    expect(container).toBeEmptyDOMElement();
   });
 
   it('Should return null when there is no author in the data', () => {

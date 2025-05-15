@@ -75,4 +75,16 @@ describe('EmbedImages', () => {
       );
     });
   });
+
+  describe('Lite', () => {
+    it('Should return null if isLite is true', () => {
+      const { container } = render(
+        <EmbedImages blocks={chartEmbedImages.blocks} />,
+        {
+          isLite: true,
+        },
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+  });
 });

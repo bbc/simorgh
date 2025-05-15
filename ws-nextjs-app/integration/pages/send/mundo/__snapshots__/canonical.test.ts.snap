@@ -53,6 +53,13 @@ exports[`Canonical Send Footer Anchors should match text and url 7`] = `
 
 exports[`Canonical Send Footer Anchors should match text and url 8`] = `
 {
+  "text": "Otros idiomas",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Send Footer Anchors should match text and url 9`] = `
+{
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -60,7 +67,7 @@ exports[`Canonical Send Footer Anchors should match text and url 8`] = `
 
 exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2024 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2025 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Send Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -87,8 +94,8 @@ exports[`Canonical Send Header Navigation link should match text and url 3`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 4`] = `
 {
-  "text": "Elecciones EE.UU. 2024",
-  "url": "/mundo/topics/c1v8en6r2qgt",
+  "text": "EE.UU.",
+  "url": "/mundo/topics/cdr5613yzwqt",
 }
 `;
 
@@ -131,13 +138,6 @@ exports[`Canonical Send Header Navigation link should match text and url 10`] = 
 {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 11`] = `
-{
-  "text": "Centroamérica Cuenta",
-  "url": "/mundo/topics/c404v5z1k8wt",
 }
 `;
 

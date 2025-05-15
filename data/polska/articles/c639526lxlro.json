@@ -1,0 +1,350 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c639526lxlro",
+          "contentType": "article",
+          "language": "pl",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": null,
+          "pageTitle": "Polski artykuł testowy",
+          "timePublished": "2025-03-26T10:40:12.938Z",
+          "timeUpdated": "2025-03-26T10:40:12.938Z"
+        },
+        "id": "urn:bbc:ares::article:c639526lxlro",
+        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c639526lxlro" },
+        "type": "article",
+        "createdBy": "Polska",
+        "language": "pl",
+        "firstPublished": 1742985612938,
+        "lastPublished": 1742985612938,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c639526lxlro",
+          "producer": "BBC",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "pl",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Polska",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2025-03-26T10:40:12.938Z"
+            }
+          ],
+          "predicates": {
+            "dateFirstReleased": [
+              {
+                "value": "2025-03-26T10:40:12.938Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "altText",
+          "rawImage"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "breakingNews": { "isBreaking": false },
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 117 },
+        "isTransliterated": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "3d9f5223",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "86610ea0",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "43cf1494",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Polski artykuł testowy",
+                            "blocks": [
+                              {
+                                "id": "0b437b02",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Polski artykuł testowy",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "4a0693aa",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1742985612938,
+                "lastPublished": 1742985612938
+              },
+              "position": [2]
+            },
+            {
+              "id": "36fb6a5c",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "52a99d89",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue dwa piwa proszę non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                      "blocks": [
+                        {
+                          "id": "ca90e878",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue dwa piwa proszę non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                            "attributes": []
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "69c45360",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "9823bd3c",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f9d5ef7c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "a5b4858c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Rzeszow",
+                                  "blocks": [
+                                    {
+                                      "id": "a6f1e006",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Rzeszow",
+                                        "attributes": []
+                                      },
+                                      "position": [4, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [4, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  },
+                  {
+                    "id": "08c182b8",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1365,
+                      "locator": "a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC",
+                      "suitableForSyndication": true
+                    },
+                    "position": [4, 2]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "71bb829c",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "582af062",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                      "blocks": [
+                        {
+                          "id": "4a24228b",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel lacus non nisi imperdiet venenatis id eu odio. Mauris scelerisque metus in risus porttitor, non vehicula ex pulvinar. Quisque est diam, pulvinar at mattis et, tincidunt quis eros. Nulla semper augue non volutpat luctus. Praesent pretium magna sed augue pharetra, et sodales sapien elementum ",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            { "id": "2f28545e", "type": "mpu", "model": {}, "position": [6] }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "Polski artykuł testowy",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Polski artykuł testowy",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Polski artykuł testowy",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Rzeszow",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Rzeszow",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 2048,
+                  "height": 1365,
+                  "locator": "a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Polska",
+        "breakingNews": { "isBreaking": false },
+        "consumableAsSFV": false
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

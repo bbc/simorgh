@@ -14,7 +14,7 @@ For more information on Next.js and how to use the framework, see the [Next.js d
 
 - Run `yarn install` to install dependencies
 - Run `yarn dev` to start the development server on `http://localhost:7081`
-- Navigate to `http://localhost:7081/kyrgyz/live/cz74kjpyk07t` to see the page
+- Navigate to `http://localhost:7081/pidgin/live/c7p765ynk9qt` to see the page
 
 ## Running Unit and E2E tests
 

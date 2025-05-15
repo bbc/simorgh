@@ -2,7 +2,51 @@
 
 exports[`Canonical On Demand T V Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand T V Page Analytics ATI 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" src="https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_tv.tv_programmes.w13xttn4.page&amp;x1=[urn%3Abbc%3Apips%3Aw13xttn4]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%AF%2520%D8%A8%D9%8A%2520%D8%A8%D9%8A%2520%D8%B3%D9%8A%2520%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2520%2520-%2520BBC%2520News%2520%D9%BE%DA%9A%D8%AA%D9%88]"/>"`;
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel excluding src 1`] = `
+<img
+  alt=""
+  height="1px"
+  style="position:absolute"
+  width="1px"
+/>
+`;
+
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical On Demand T V Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "68",
+  },
+  {
+    "p": "pashto.bbc_pashto_tv.tv_programmes.w13xttn4.page",
+  },
+  {
+    "x1": "[urn:bbc:pips:w13xttn4]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-pashto]",
+  },
+  {
+    "x4": "[ps]",
+  },
+  {
+    "x7": "[player-episode]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[د%20بي%20بي%20سي%20خبرونه%20%20-%20BBC%20News%20پښتو]",
+  },
+]
+`;
 
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 1`] = `
 {
@@ -55,6 +99,13 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 7
 
 exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8`] = `
 {
+  "text": "نورې ژبې",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9`] = `
+{
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
   "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
@@ -62,7 +113,7 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 8
 
 exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2024 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -110,33 +161,26 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 7`] = `
 {
-  "text": "ويډيوګانې",
-  "url": "/pashto/topics/c2m45zyk0mmt",
+  "text": "اقتصاد او سوداګري",
+  "url": "/pashto/topics/cy087kqvl1yt",
 }
 `;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 8`] = `
 {
-  "text": "ځانګړې پاڼې",
-  "url": "/pashto/topics/c6pxyz4e0ryt",
+  "text": "ساینس او ټکنالوژي",
+  "url": "/pashto/topics/ckgrvled11kt",
 }
 `;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 9`] = `
 {
-  "text": "کالم",
-  "url": "/pashto/topics/cq57nwne9lzt",
+  "text": "هنر او ادب",
+  "url": "/pashto/topics/c8xqkd91knnt",
 }
 `;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 10`] = `
-{
-  "text": "پر سټلایت خپرونې",
-  "url": "/pashto/articles/c4n55eygdn0o",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 11`] = `
 {
   "text": "راډیویي خپرونې",
   "url": "/pashto/topics/c9xz1ekw79nt",
@@ -145,11 +189,14 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 
 exports[`Canonical On Demand T V Page I can see the brand title 1`] = `" د بي بي سي خبرونه "`;
 
-exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي"`;
+exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `
+"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+"
+`;
 
 exports[`Canonical On Demand T V Page I can see the episode title 1`] = `" د بي بي سي خبرونه "`;
 
-exports[`Canonical On Demand T V Page Main heading should match text 1`] = `" د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴"`;
+exports[`Canonical On Demand T V Page Main heading should match text 1`] = `" د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴"`;
 
 exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can read the media player title 1`] = `"Play video, " د بي بي سي خبرونه ", موده 28,00"`;
 
@@ -219,8 +266,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     <img
       alt=""
       class="bbc-ipdj63"
-      src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
-      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+      loading="eager"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
       style="aspect-ratio:auto"
     />
   </div>
@@ -293,8 +341,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     <img
       alt=""
       class="bbc-ipdj63"
-      src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
-      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+      loading="eager"
+      src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
+      srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
       style="aspect-ratio:auto"
     />
   </div>
@@ -303,7 +352,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1293i7j"
+  class="bbc-1ac0ozh"
   data-e2e="media-loader__container"
 >
   <div
@@ -371,8 +420,9 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       <img
         alt=""
         class="bbc-ipdj63"
-        src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png"
-        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b23c8.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b23c8.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b23c8.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b23c8.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b23c8.png.webp 800w"
+        loading="eager"
+        src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
+        srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
         style="aspect-ratio:auto"
       />
     </div>
@@ -382,29 +432,29 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۶ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsln64wk50",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۲۰ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmspxm02pfr",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۵ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvnszr",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۹ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmspxlzzsjn",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۴ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvkx2n",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۸ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmspxlzwwmk",
 }
 `;
 
 exports[`Canonical On Demand T V Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۳ سپتمبر ۲۰۲۴",
-  "url": "/pashto/bbc_pashto_tv/tv/w172zmsl8xvh05k",
+  "text": "۲۸:۰۰ویډیو,  د بي بي سي خبرونه ,  د بي بي سي خبرونه , موده ۲۸،۰۰ ۱۵ نومبر ۲۰۲۴",
+  "url": "/pashto/bbc_pashto_tv/tv/w172zmspkbphbn3",
 }
 `;
 
@@ -484,7 +534,7 @@ exports[`Canonical On Demand T V Page SEO Dir attribute 1`] = `"rtl"`;
 
 exports[`Canonical On Demand T V Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `" د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴"`;
+exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `" د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴"`;
 
 exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"ps"`;
 
@@ -526,17 +576,21 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
     },
     {
       "@type": "VideoObject",
-      "description": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي",
+      "description": "نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+",
       "duration": "PT28M",
       "name": " د بي بي سي خبرونه ",
-      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
-      "uploadDate": "2024-09-17T00:00:00.000Z",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k5s1yz.png",
+      "uploadDate": "2024-11-21T00:00:00.000Z",
     },
   ],
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO OG description 1`] = `"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي"`;
+exports[`Canonical On Demand T V Page SEO OG description 1`] = `
+"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+"
+`;
 
 exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
 
@@ -560,7 +614,10 @@ exports[`Canonical On Demand T V Page SEO Twitter card 1`] = `"summary_large_ima
 
 exports[`Canonical On Demand T V Page SEO Twitter creator 1`] = `"@bbcpashto"`;
 
-exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي"`;
+exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `
+"نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
+"
+`;
 
 exports[`Canonical On Demand T V Page SEO Twitter image alt 1`] = `"BBC News پښتو"`;
 
@@ -570,4 +627,4 @@ exports[`Canonical On Demand T V Page SEO Twitter site 1`] = `"@bbcpashto"`;
 
 exports[`Canonical On Demand T V Page SEO Twitter title 1`] = `" د بي بي سي خبرونه  -  د بي بي سي خبرونه  - BBC News پښتو - BBC News پښتو"`;
 
-exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۱۷ سپتمبر ۲۰۲۴"`;
+exports[`Canonical On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `" د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴"`;

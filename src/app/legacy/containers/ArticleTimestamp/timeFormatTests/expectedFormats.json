@@ -259,6 +259,16 @@
       "exact date and time with timezone": "12 July 2019, 13:55 WAT"
     }
   },
+  "polska": {
+    "default": {
+      "one minute ago": "minutę temu",
+      "five minutes ago": "5 minut temu",
+      "one hour ago": "godzinę temu",
+      "five hours ago": "5 godzin temu",
+      "exact date": "10 października 2018",
+      "exact date and time with timezone": "12 lipca 2019, 14:55 CEST"
+    }
+  },
   "portuguese": {
     "default": {
       "one minute ago": "Há 1 minuto",
@@ -471,12 +481,12 @@
       "exact date and time with timezone": "12 июл 2019, 12:55 GMT"
     },
     "lat": {
-      "one minute ago": "1 дақиқа аввал",
-      "five minutes ago": "5 дақиқалар аввал",
-      "one hour ago": "1 cоат аввал",
-      "five hours ago": "5 соатлар аввал",
-      "exact date": "10 октябр 2018",
-      "exact date and time with timezone": "12 июл 2019, 12:55 GMT"
+      "one minute ago": "1 daqiqa avval",
+      "five minutes ago": "5 daqiqalar avval",
+      "one hour ago": "1 soat avval",
+      "five hours ago": "5 soatlar avval",
+      "exact date": "10 Oktabr 2018",
+      "exact date and time with timezone": "12 Iyul 2019, 12:55 GMT"
     }
   },
   "vietnamese": {
@@ -509,12 +519,12 @@
       "exact date and time with timezone": "2019年7月12日下午12点55分"
     },
     "trad": {
-      "one minute ago": "1 分钟前",
-      "five minutes ago": "5 分钟前",
-      "one hour ago": "1 小时前",
-      "five hours ago": "5 小时前",
+      "one minute ago": "1 分鐘前",
+      "five minutes ago": "5 分鐘前",
+      "one hour ago": "1 小時前",
+      "five hours ago": "5 小時前",
       "exact date": "2018年10月10日",
-      "exact date and time with timezone": "2019年7月12日下午12点55分"
+      "exact date and time with timezone": "2019年7月12日下午12時55分"
     }
   }
 }

@@ -638,8 +638,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #141414;
-  margin: 0;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
+  margin: calc(1.5rem - 0.5rem) 0;
+  scroll-margin-top: 1rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -658,8 +659,14 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-31 {
-    padding-top: 2rem;
+    margin-top: calc(2rem - 0.5rem);
   }
+}
+
+.emotion-31:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-35 {
@@ -772,7 +779,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -863,6 +872,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                   <img
                     alt=""
                     class="emotion-17"
+                    loading="eager"
                     src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp"
                     srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w"
                   />

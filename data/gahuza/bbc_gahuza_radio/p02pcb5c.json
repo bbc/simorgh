@@ -1,0 +1,157 @@
+{
+  "data": {
+    "brandId": "p02pcb5c",
+    "brandTitle": "Imvo  n'imvano",
+    "contentType": "player-episode",
+    "durationISO8601": "PT59M",
+    "episodeAvailability": "available",
+    "episodeId": "p0k4wwwb",
+    "episodeTitle": "Imvo n'Imvano 16/11/2024",
+    "externalLinkVersionId": "p0k4wvt7",
+    "headline": "Imvo  n'imvano",
+    "id": "urn:bbc:ares:ws_media:brand:bbc_gahuza_radio/p02pcb5c",
+    "imageAltText": null,
+    "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gdh4dw.png",
+    "isPodcast": false,
+    "language": "rw",
+    "masterBrand": "bbc_gahuza_radio",
+    "mediaBlocks": [
+      {
+        "model": {
+          "advertising": false,
+          "availability": "available",
+          "embedding": true,
+          "episodeTitle": "Imvo n'Imvano 16/11/2024",
+          "format": "Audio",
+          "id": "p0k4wwwb",
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0gdh4dw.png",
+          "smpKind": "radioProgramme",
+          "subType": "episode",
+          "synopses": {
+            "short": "Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika"
+          },
+          "title": "",
+          "type": "media",
+          "versions": [
+            {
+              "availabilityStatus": "available",
+              "availableFrom": "2024-11-16T07:00:00.000Z",
+              "availableTerritories": {
+                "nonUk": true,
+                "uk": true,
+                "world": false
+              },
+              "availableUntil": "2024-12-15T16:54:00.000Z",
+              "duration": 3540,
+              "durationISO8601": "PT59M",
+              "types": ["Podcast"],
+              "versionId": "p0k4wvt7",
+              "warnings": {}
+            }
+          ]
+        },
+        "type": "audio"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:pips:p0k4wwwb",
+        "contentType": "player-episode",
+        "pageIdentifier": "gahuza.bbc_gahuza_radio.podcasts.programmes.p02pcb5c.page",
+        "pageTitle": "Imvo  n'imvano - BBC News Gahuza"
+      },
+      "type": "On Demand Radio"
+    },
+    "pageTitle": "Imvo  n'imvano - BBC News Gahuza",
+    "promoBrandTitle": "Imvo  n'imvano",
+    "radioScheduleData": [
+      {
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "duration": "PT15M",
+        "id": "p0jwzxz9",
+        "link": "/gahuza/bbc_gahuza_radio/w17300mbzfvchv9",
+        "startTime": "2024-11-14T16:29:30.000Z",
+        "state": "next",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+      },
+      {
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "duration": "PT30M",
+        "id": "p0jwq89q",
+        "link": "/gahuza/bbc_gahuza_radio/liveradio",
+        "startTime": "2024-11-13T16:29:30.000Z",
+        "state": "live",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+      },
+      {
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "duration": "PT15M",
+        "id": "p0jwk04v",
+        "link": "/gahuza/bbc_gahuza_radio/w17300mbzfv5q13",
+        "startTime": "2024-11-12T16:29:30.000Z",
+        "state": "onDemand",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+      },
+      {
+        "brandTitle": "Amakuru ya Gahuzamiryango",
+        "duration": "PT30M",
+        "id": "p0jwk03y",
+        "link": "/gahuza/bbc_gahuza_radio/w172zyj3mr6kz9l",
+        "startTime": "2024-11-11T16:29:30.000Z",
+        "state": "onDemand",
+        "summary": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+      }
+    ],
+    "recentEpisodes": [
+      {
+        "altText": "Imvo  n'imvano",
+        "brandTitle": "Imvo  n'imvano",
+        "duration": "PT59M",
+        "episodeTitle": "Imvo n'Imvano 9/11/2024",
+        "id": "p0k39nk4",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gdh4dw.png",
+        "timestamp": "2024-11-09T00:00:00.000Z"
+      },
+      {
+        "altText": "Imvo  n'imvano",
+        "brandTitle": "Imvo  n'imvano",
+        "duration": "PT59M",
+        "episodeTitle": "Imvo n'Imvano yo kuwa gatandatu 02/11/2024",
+        "id": "p0k1qjp9",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gdh4dw.png",
+        "timestamp": "2024-11-02T00:00:00.000Z"
+      },
+      {
+        "altText": "Imvo  n'imvano",
+        "brandTitle": "Imvo  n'imvano",
+        "duration": "PT59M",
+        "episodeTitle": "Imvo n'Imvano yo kuwa gatandatu 26/10/2024",
+        "id": "p0k07jvv",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p0gdh4dw.png",
+        "timestamp": "2024-10-25T00:00:00.000Z"
+      },
+      {
+        "altText": "Imvo  n'imvano",
+        "brandTitle": "Imvo  n'imvano",
+        "duration": "PT59M",
+        "episodeTitle": "Imvo n'Imvano 11/01/2020: Iyicwa rya Qassem Soleimani",
+        "id": "p080298w",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p08029b4.jpg",
+        "timestamp": "2020-01-11T00:00:00.000Z"
+      },
+      {
+        "altText": "Imvo  n'imvano",
+        "brandTitle": "Imvo  n'imvano",
+        "duration": "PT59M",
+        "episodeTitle": "Imvo n'Imvano yo ku wa 16/11/2019",
+        "id": "p07vc5fz",
+        "image": "//ichef.bbci.co.uk/images/ic/768x432/p07vc5g9.jpg",
+        "timestamp": "2019-11-18T00:00:00.000Z"
+      }
+    ],
+    "releaseDateTimeStamp": 1731715200000,
+    "shortSynopsis": "Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika",
+    "summary": "Ibitekerezo ku kiganiro cyavugaga ku matora yo muri Amerika",
+    "thumbnailImageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0gdh4dw.png"
+  }
+}

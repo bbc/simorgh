@@ -40,7 +40,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     translations,
     product,
     serviceLocalizedName,
-    frontPageTitle,
+    homePageTitle,
     lang,
     brandName,
   } = useContext(ServiceContext);
@@ -52,11 +52,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
     metadata: { atiAnalytics },
   } = pageData;
   const itemList = getItemList({ curations, name: brandName });
+
   return (
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={frontPageTitle}
+        title={homePageTitle}
         lang={lang}
         description={description}
         openGraphType="website"
@@ -92,6 +93,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   mostRead,
                   radioSchedule,
                   embed,
+                  portraitVideo,
                 },
                 index,
               ) => {
@@ -114,13 +116,15 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       topStoriesTitle={topStoriesTitle}
                       position={position}
                       link={link}
-                      curationLength={curations && curations.length}
+                      curationLength={curations?.length}
                       mostRead={mostRead}
                       radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
                       embed={embed}
+                      portraitVideo={portraitVideo}
+                      renderVisuallyHiddenH2Title={position === 0}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>

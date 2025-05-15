@@ -17,3 +17,12 @@ it('should get the page type from integration test paths for canonical', () => {
 
   expect(actual).toEqual(expected);
 });
+
+it('should get the page type from integration test paths for lite', () => {
+  const actual = getPageTypeFromTestPath(
+    'src/integration/pages/articles/pidgin/canonical.test.js',
+  );
+  const expected = 'articles';
+
+  expect(actual).toEqual(expected);
+});

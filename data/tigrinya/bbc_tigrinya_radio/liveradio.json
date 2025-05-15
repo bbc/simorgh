@@ -1,67 +1,87 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_tigrinya_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_tigrinya_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "tigrinya",
+  "data": {
+    "heading": "ስምዑ",
+    "bodySummary": "መደባትና",
     "language": "ti",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "ስምዑ - BBC News ትግርኛ",
-      "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page",
-      "producerId": "91",
-      "contentType": "player-live",
-      "producer": "TIGRINYA"
+    "id": "urn:bbc:ares:ws_media:live:bbc_tigrinya_radio",
+    "name": "ስምዑ",
+    "summary": "መደባትና",
+    "masterBrand": "bbc_tigrinya_radio",
+    "radioScheduleData": [
+      {
+        "id": "p0k01c0r",
+        "state": "next",
+        "startTime": "2024-11-29T18:09:47.000Z",
+        "link": "/tigrinya/bbc_tigrinya_radio/w3ct7557",
+        "brandTitle": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+        "duration": "PT14M43S"
+      },
+      {
+        "id": "p0k00j1g",
+        "state": "onDemand",
+        "startTime": "2024-11-28T18:09:47.000Z",
+        "link": "/tigrinya/bbc_tigrinya_radio/w3ct757h",
+        "brandTitle": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+        "duration": "PT14M43S"
+      },
+      {
+        "id": "p0jzr5tw",
+        "state": "onDemand",
+        "startTime": "2024-11-27T18:09:47.000Z",
+        "link": "/tigrinya/bbc_tigrinya_radio/w3ct759r",
+        "brandTitle": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+        "duration": "PT14M43S"
+      },
+      {
+        "id": "p0jzgthd",
+        "state": "onDemand",
+        "startTime": "2024-11-26T18:09:47.000Z",
+        "link": "/tigrinya/bbc_tigrinya_radio/w3ct758m",
+        "brandTitle": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+        "duration": "PT14M43S"
+      }
+    ],
+    "metadata": {
+      "type": "Live Radio",
+      "atiAnalytics": {
+        "contentId": "urn:bbc:ares:ws_media:live:bbc_tigrinya_radio",
+        "contentType": "player-live",
+        "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page",
+        "pageTitle": "ስምዑ - BBC News ትግርኛ"
+      }
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
-  "content": {
-    "blocks": [
+    "mediaBlock": [
       {
-        "text": "ስምዑ",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "መደባትና",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_tigrinya_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "type": "liveRadio",
+        "model": [
+          {
+            "text": "ስምዑ",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "መደባትና",
+            "type": "paragraph"
+          },
+          {
+            "id": "liveradio",
+            "subType": "primary",
+            "format": "audio",
+            "externalId": "bbc_tigrinya_radio",
+            "duration": "PT0S",
+            "caption": "",
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          }
+        ]
       }
     ]
   },
-  "promo": {
-    "name": "ስምዑ",
-    "summary": "መደባትና",
-    "uri": "/tigrinya/bbc_tigrinya_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
-    "type": "link"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "tigrinya",
-      "uri": "/tigrinya",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

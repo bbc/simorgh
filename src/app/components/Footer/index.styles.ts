@@ -17,12 +17,21 @@ const styles = {
       margin: 0,
       padding: `${spacings.DOUBLE}rem 0`,
     }),
-  siteWideLinksWrapper: ({ palette, fontSizes, fontVariants }: Theme) =>
+  siteWideLinksWrapper: ({
+    palette,
+    fontSizes,
+    fontVariants,
+    mq,
+    spacings,
+  }: Theme) =>
     css({
       ...fontSizes.brevier,
       ...fontVariants.sansRegular,
       backgroundColor: palette.EBON,
-      padding: `0 ${FULL}rem`,
+      padding: `0 ${spacings.DOUBLE}rem`,
+      [mq.GROUP_1_MAX_WIDTH]: {
+        padding: `0 ${FULL}rem`,
+      },
     }),
   ampCookieSettingButton: ({ palette, spacings, fontVariants }: Theme) =>
     css({
