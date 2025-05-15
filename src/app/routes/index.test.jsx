@@ -77,6 +77,9 @@ jest.mock('#app/hooks/useOptimizelyMvtVariation', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
+jest.mock('#src/app/components/ATIAnalytics', () => () => (
+  <div>ATI Analytics</div>
+));
 
 describe('Routes', () => {
   beforeEach(() => {
