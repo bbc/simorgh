@@ -57,21 +57,14 @@ const reverbPageViews = async ({ reverbInstance }) => {
 
 const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
   const {
-    eventPublisher,
-    componentName,
-    container,
-    attribute,
-    placement,
-    source,
-    result,
-    item,
-    group,
-    event,
-    personalisation,
     anchorElement,
-    originalEvent,
-    isClick,
     experience,
+    event,
+    eventPublisher,
+    group,
+    isClick,
+    item,
+    originalEvent,
   } = eventDetails;
 
   const actionName = '';
