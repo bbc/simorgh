@@ -546,7 +546,7 @@ export const buildReverbPageSectionEventModel = ({
         category: 'viewability',
         action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
       },
-      isClick: type === 'click',
+      isClick: type === CLICK_EVENT,
       ...(experimentVariant && {
         experience: {
           engine_id: `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
