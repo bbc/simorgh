@@ -34,9 +34,10 @@ describe('AMP ATI Analytics', () => {
             app_type: 'amp',
             content_language: 'rw',
             product_platform: null,
-            referrer_url: null,
             // eslint-disable-next-line no-template-curly-in-string
-            x5: null,
+            referrer_url: '${documentReferrer}',
+            // eslint-disable-next-line no-template-curly-in-string
+            x5: '${sourceUrl}',
             x8: 'simorgh',
             x9: "US%20irashishikariza%20u%20Rwanda%20na%20DR%20Congo%20kugera%20ku%20mahoro%20bikazana%20n'ishoramari%20rya%20miliyari%20z'amadorari",
             x10: null,
