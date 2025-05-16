@@ -30,18 +30,12 @@ export default {
       position: 'relative',
       padding: 0,
     }),
-  openButton: ({ mq }: Theme) =>
+  openButton: () =>
     css({
       cursor: 'pointer',
       backgroundColor: 'unset',
       border: 'unset',
       textAlign: 'start',
-      [mq.GROUP_2_MAX_WIDTH && mq.GROUP_3_MAX_WIDTH && mq.GROUP_4_MAX_WIDTH]: {
-        marginTop: '0.75rem',
-      },
-      [mq.GROUP_5_MIN_WIDTH]: {
-        marginTop: '0.75rem',
-      },
     }),
   watchLiveCTAText: ({ spacings, palette, mq }: Theme) =>
     css({
@@ -127,6 +121,7 @@ export default {
       width: '100%',
       marginTop: 0,
       span: { margin: 0 },
+      minHeight: '3.75rem',
     }),
   openMediaDescription: ({ palette }: Theme) =>
     css({
