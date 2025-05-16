@@ -1,6 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { PROMO_ITEM_WIDTH } from '.';
+import { PROMO_ITEM_WIDTH_MIN } from '.';
 
 const styles = {
   heading: ({ fontSizes, fontVariants, palette }: Theme) =>
@@ -40,7 +40,7 @@ const styles = {
       overflow: 'hidden',
 
       [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
       },
     }),
   endBlankItem: ({ mq }: Theme) =>
@@ -49,7 +49,7 @@ const styles = {
 
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'block',
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH / 1.5)}rem`,
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN / 1.5)}rem`,
       },
     }),
 };

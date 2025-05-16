@@ -1,21 +1,33 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-import { PROMO_ITEM_WIDTH } from '..';
+import {
+  PROMO_ITEM_WIDTH_GROUP_3_MIN,
+  PROMO_ITEM_WIDTH_GROUP_4_MIN,
+  PROMO_ITEM_WIDTH_GROUP_5_MIN,
+  PROMO_ITEM_WIDTH_MIN,
+} from '..';
 
 const styles = {
   button: ({ mq }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
-      flex: '0 0 35%',
       textDecoration: 'none',
       display: 'block',
       position: 'relative',
       overflow: 'hidden',
       cursor: 'pointer',
-
+      [mq.GROUP_1_MIN_WIDTH]: {
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_MIN)}rem`,
+      },
       [mq.GROUP_3_MIN_WIDTH]: {
-        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH)}rem`,
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_3_MIN)}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_4_MIN)}rem`,
+      },
+      [mq.GROUP_5_MIN_WIDTH]: {
+        flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
       },
     }),
   image: () =>
@@ -26,29 +38,43 @@ const styles = {
       aspectRatio: '9/16',
       display: 'block',
     }),
-  gradientOverlay: () =>
+  gradientOverlay: ({ spacings }: Theme) =>
     css({
       position: 'absolute',
       bottom: 0,
       left: 0,
       right: 0,
-      padding: '3rem 0.5rem 0.5rem',
+      padding: `${pixelsToRem(28)}rem ${spacings.FULL}rem ${spacings.FULL}rem`,
       background:
-        'linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0) 100%)',
+        'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 24%, rgba(0, 0, 0, 1) 100%)',
+
       zIndex: 1,
     }),
-
-  heading: ({ fontVariants, palette }: Theme) =>
+  durationContainer: ({ palette }: Theme) =>
     css({
-      ...fontVariants.sansBold,
-      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
       color: palette.WHITE,
-      fontSize: '0.875rem',
-      zIndex: 2,
-      textDecoration: 'none',
-      '&:hover': {
+    }),
+  playIcon: () =>
+    css({
+      fill: 'currentcolor',
+    }),
+  duration: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.WHITE,
+      margin: `0 0 0 ${spacings.HALF}rem`,
+    }),
+  title: ({ palette, fontVariants, spacings }: Theme) =>
+    css({
+      display: 'block',
+      ...fontVariants.sansBold,
+      color: palette.WHITE,
+      margin: `${spacings.FULL}rem 0 0 0`,
+      'button:hover &': {
         textDecoration: 'underline',
       },
+      zIndex: 2,
     }),
 };
 

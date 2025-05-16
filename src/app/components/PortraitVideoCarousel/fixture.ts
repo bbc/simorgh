@@ -16,6 +16,11 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx7v',
       },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
+      },
     },
     {
       id: 'urn:bbc:optimo:asset:cgp62emnrk5o',
@@ -30,6 +35,11 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/portuguese/articles/cgp62emnrk5o',
+      },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
       },
     },
     {
@@ -46,6 +56,11 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx5y',
       },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx4r',
@@ -60,6 +75,11 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/programmes/p01wjx4r',
+      },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
       },
     },
     {
@@ -76,6 +96,11 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx3q',
       },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx3g',
@@ -91,6 +116,11 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx3g',
       },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx35',
@@ -105,6 +135,11 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/programmes/p01wjx35',
+      },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
       },
     },
     {
@@ -122,6 +157,11 @@ const portraitVideoFixture = {
       link: {
         path: '/programmes/p01wjx7v',
       },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
+      },
     },
     {
       id: 'urn:bbc:optimo:asset:cgp62emnrk5o1',
@@ -137,6 +177,11 @@ const portraitVideoFixture = {
       link: {
         path: '/portuguese/articles/cgp62emnrk5o',
       },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
+      },
     },
     {
       id: 'urn:bbc:pips:pid:p01wjx5y1',
@@ -151,6 +196,11 @@ const portraitVideoFixture = {
       },
       link: {
         path: '/programmes/p01wjx5y',
+      },
+      video: {
+        version: {
+          duration: 'PT13S',
+        },
       },
     },
   ],
