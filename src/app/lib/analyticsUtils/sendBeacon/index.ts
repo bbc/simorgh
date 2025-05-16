@@ -1,11 +1,23 @@
+import { ReverbClient } from '#app/models/types/eventTracking';
+import {
+  ReverbBeaconConfig,
+  ReverbEventDetails,
+  ReverbPageVars,
+  ReverbUserVars,
+} from '#app/components/ATIAnalytics/types';
 import onClient from '../../utilities/onClient';
-import isLive from '../../utilities/isLive';
 import nodeLogger from '../../logger.node';
 import { ATI_LOGGING_ERROR } from '../../logger.const';
 
 const logger = nodeLogger(__filename);
 
-const setReverbPageValues = async ({ pageVars, userVars }) => {
+const setReverbPageValues = async ({
+  pageVars,
+  userVars,
+}: {
+  pageVars: ReverbPageVars;
+  userVars: ReverbUserVars;
+}) => {
   window.bbcpage = {};
 
   window.bbcpage = Object.assign(window.bbcpage, {
@@ -13,7 +25,7 @@ const setReverbPageValues = async ({ pageVars, userVars }) => {
       return Promise.resolve(pageVars.name);
     },
     getLanguage() {
-      return Promise.resolve(pageVars.additionalProperties.content_language);
+      return Promise.resolve(pageVars?.additionalProperties?.content_language);
     },
     getDestination() {
       return Promise.resolve(pageVars.destination);
@@ -52,33 +64,36 @@ const setReverbPageValues = async ({ pageVars, userVars }) => {
   };
 };
 
-const reverbPageViews = async ({ reverbInstance }) => {
+const reverbPageViews = async ({
+  reverbInstance,
+}: {
+  reverbInstance: ReverbClient;
+}) => {
   reverbInstance.viewEvent();
 };
 
-const reverbComponentTracking = async ({ reverbInstance, eventDetails }) => {
+type ReverbComponentTrackingProps = {
+  reverbInstance: ReverbClient;
+  eventDetails: ReverbEventDetails;
+};
+
+const reverbComponentTracking = async ({
+  reverbInstance,
+  eventDetails,
+}: ReverbComponentTrackingProps) => {
   const {
-    eventPublisher,
-    componentName,
-    container,
-    attribute,
-    placement,
-    source,
-    result,
-    item,
-    group,
-    event,
-    personalisation,
     anchorElement,
-    originalEvent,
-    isClick,
     experience,
+    event,
+    eventPublisher,
+    group,
+    isClick,
+    item,
+    originalEvent,
   } = eventDetails;
 
-  const actionName = isLive() ? componentName : '';
-  const actionAdditionalLabels = isLive()
-    ? { attribute, container, personalisation, placement, result, source }
-    : { event, group, item, experience };
+  const actionName = '';
+  const actionAdditionalLabels = { event, group, item, experience };
 
   return reverbInstance.userActionEvent(
     eventPublisher,
@@ -96,25 +111,17 @@ const reverbHandlers = {
   sectionClick: reverbComponentTracking,
 };
 
-const callReverb = async eventDetails => {
+const callReverb = async (eventDetails: ReverbEventDetails) => {
   const { eventName } = eventDetails;
 
   // eslint-disable-next-line no-underscore-dangle
   window.__reverb.__reverbLoadedPromise.then(
     async reverb => {
-      if (reverb.isReady()) {
-        await reverbHandlers[eventName]({
-          reverbInstance: reverb,
-          eventDetails,
-        });
-        return;
-      }
+      if (!reverb.isReady()) await reverb.initialise();
 
-      reverb.initialise().then(async () => {
-        await reverbHandlers[eventName]({
-          reverbInstance: reverb,
-          eventDetails,
-        });
+      await reverbHandlers[eventName]({
+        reverbInstance: reverb,
+        eventDetails,
       });
     },
     () => {
@@ -125,7 +132,10 @@ const callReverb = async eventDetails => {
   );
 };
 
-const sendBeacon = async (url, reverbBeaconConfig) => {
+const sendBeacon = async (
+  url: string,
+  reverbBeaconConfig?: ReverbBeaconConfig | null,
+) => {
   if (onClient()) {
     try {
       if (reverbBeaconConfig) {
