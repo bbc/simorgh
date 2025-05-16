@@ -241,9 +241,9 @@ export const ArticlePageWithPortraitVideoRightToLeft = () => (
   />
 );
 
-export const WithAudioClip = () => {
-  <ComponentWithContext data={articleDataWithAudioClip} service="pidgin" />;
-};
+export const WithAudioClip = () => (
+  <ComponentWithContext data={articleDataWithAudioClip} service="pidgin" />
+);
 
 export const ArticlePageWithElectionBanner = {
   render: () => (
