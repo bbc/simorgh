@@ -1,3 +1,4 @@
+import { ReverbBeaconConfig } from '../types';
 import ampAnalyticsJson from './ampAnalyticsJson';
 
 describe('AMP ATI Analytics', () => {
@@ -55,7 +56,8 @@ describe('AMP ATI Analytics', () => {
         },
       },
       eventDetails: {
-        eventName: 'pageView',
+        eventName:
+          'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
       },
     };
 
