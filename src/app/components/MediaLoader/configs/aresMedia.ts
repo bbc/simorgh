@@ -156,7 +156,7 @@ export default ({
         ...(subType === 'episode' && { episodePID: videoId }),
       },
     },
-    placeholderConfig,
+    ...(actualFormat !== 'audio' && { placeholderConfig }),
     showAds,
     orientation,
     ...(ampIframeUrl && { ampIframeUrl }),
