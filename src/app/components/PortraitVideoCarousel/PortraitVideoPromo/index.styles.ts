@@ -7,6 +7,12 @@ import {
   PROMO_ITEM_WIDTH_MIN,
 } from '..';
 
+const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
+  boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${innerColor}`,
+  outline: `${pixelsToRem(2)}rem solid ${outerColor}`,
+  outlineOffset: `${pixelsToRem(2)}rem`,
+});
+
 const styles = {
   button: ({ mq, palette }: Theme) =>
     css({
@@ -30,9 +36,7 @@ const styles = {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
       },
       [`&[type='button']:focus-visible`]: {
-        boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${palette.WHITE}`,
-        outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
-        outlineOffset: `${pixelsToRem(2)}rem`,
+        ...customFocusIndicatorStyle(palette.WHITE, palette.BLACK),
       },
     }),
   image: () =>
@@ -79,9 +83,7 @@ const styles = {
         textDecoration: 'underline',
       },
       'button:focus-visible &': {
-        boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${palette.BLACK}`,
-        outline: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(2)}rem`,
+        ...customFocusIndicatorStyle(palette.BLACK, palette.WHITE),
       },
       zIndex: 2,
     }),
