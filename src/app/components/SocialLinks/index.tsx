@@ -76,7 +76,8 @@ const SocialLink = ({ summary }: { summary: Summary }) => {
         {...(hasDescription && { 'aria-labelledby': linkLabelId })}
       >
         {hasDescription ? (
-          <span id={linkLabelId}>
+          // eslint-disable-next-line jsx-a11y/aria-role
+          <span id={linkLabelId} role="text">
             {summary.title}
             <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
           </span>
