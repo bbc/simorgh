@@ -8,6 +8,7 @@ export const assertSocialEmbedComponentView = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a view event for the Social Embed component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +23,7 @@ export const assertSocialEmbedComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };
@@ -31,6 +33,7 @@ export const assertSocialEmbedComponentClick = ({
   contentType,
   useReverb,
   path,
+  applicationType,
 }) => {
   it('should send a click event for the Social Embed component', () => {
     interceptATIAnalyticsBeacons();
@@ -48,6 +51,7 @@ export const assertSocialEmbedComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
     });
   });
 };

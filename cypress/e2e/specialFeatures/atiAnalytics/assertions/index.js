@@ -9,8 +9,8 @@ import {
   interceptATIAnalyticsBeacons,
 } from '../helpers';
 
-const usesReverbViewabilityModel = useReverb =>
-  useReverb && Cypress.env('APP_ENV') !== 'live';
+const usesReverbViewabilityModel = applicationType =>
+  applicationType !== 'lite';
 
 const assertATIPageViewEventParamsExist = ({
   params,
@@ -34,6 +34,10 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x5'); // url
   }
 
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
+
   if (contentType !== 'list-datadriven') {
     expect(params).to.have.property('x1'); // content ID
   }
@@ -48,6 +52,7 @@ const assertATIPageViewEventParamsExist = ({
 
 const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('ati'); // view event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -59,6 +64,7 @@ const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
 
 const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('idclient');
   expect(params).to.have.property('atc'); // click event
   expect(params).to.have.property('type');
   expect(params.type).to.equal('AT', 'params.type');
@@ -143,12 +149,15 @@ const assertClickPerViewModelViewEvent = ({
   contentType,
   useReverb,
   params,
+  applicationType,
 }) => {
   assertATIComponentViewEventParamsExist({ params, useReverb });
 
   if (!useReverb) {
     expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
   }
+
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   expect(params.ati).to.match(
     getViewClickDetailsRegex({
@@ -189,8 +198,9 @@ export const assertATIComponentViewEvent = ({
   pageIdentifier,
   contentType,
   useReverb,
+  applicationType,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
+  const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-view`
     : `@${component}-ati-view`;
@@ -214,6 +224,7 @@ export const assertATIComponentViewEvent = ({
           contentType,
           useReverb,
           params,
+          applicationType,
         });
       }
     });
@@ -233,9 +244,7 @@ const assertClickPerViewModelClickEvent = ({
     applicationType,
   });
 
-  if (applicationType === 'lite') {
-    expect(params.app_type).to.equal(applicationType, 'params.app_type');
-  }
+  expect(params.app_type).to.equal(applicationType, 'params.app_type');
 
   if (useReverb) {
     expect(params.patc).to.equal(
@@ -287,7 +296,7 @@ export const assertATIComponentClickEvent = ({
   applicationType,
   useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
+  const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-click`
     : `@${component}-ati-click`;

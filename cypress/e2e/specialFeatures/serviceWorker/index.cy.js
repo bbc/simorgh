@@ -14,21 +14,39 @@ const tests = [
 
 const testSuites = [
   {
-    path: '/pidgin/articles/czje40pxkypo?renderer_env=live',
-    runforEnv: ['local', 'test', 'live'],
+    path: '/pidgin/articles/ce9wk6glg4lo',
+    runforEnv: ['local', 'live'],
     service: 'pidgin',
     tests,
   },
   {
-    path: '/serbian/articles/crm32wvejv1o/cyr?renderer_env=live',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'serbian',
+    path: '/pidgin/articles/cwl08rd38l6o',
+    runforEnv: ['test'],
+    service: 'pidgin',
     tests,
   },
   {
-    path: '/serbian/articles/crm32wvejv1o/lat?renderer_env=live',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'serbian',
+    path: '/uzbek/articles/cxj3rjxm6r0o/cyr',
+    runforEnv: ['local', 'test'],
+    service: 'uzbek',
+    tests,
+  },
+  {
+    path: '/uzbek/articles/c6272xwee16o/cyr',
+    runforEnv: ['live'],
+    service: 'uzbek',
+    tests,
+  },
+  {
+    path: '/uzbek/articles/cxj3rjxm6r0o/lat',
+    runforEnv: ['local', 'test'],
+    service: 'uzbek',
+    tests,
+  },
+  {
+    path: '/uzbek/articles/c6272xwee16o/lat',
+    runforEnv: ['live'],
+    service: 'uzbek',
     tests,
   },
 ];
