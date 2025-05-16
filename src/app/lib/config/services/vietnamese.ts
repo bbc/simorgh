@@ -264,7 +264,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
-      header: 'Đọc nhiều or Phổ biến',
+      header: 'Phổ biến',
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
