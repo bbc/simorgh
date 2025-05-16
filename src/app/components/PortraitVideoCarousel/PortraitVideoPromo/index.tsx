@@ -33,7 +33,7 @@ export default (item: PortraitVideoPromoProps) => {
             </time>
           </div>
         )}
-        <Text size="pica" fontVariant="sansBold" css={styles.title}>
+        <Text size="pica" as="p" fontVariant="sansBold" css={styles.title}>
           <VisuallyHiddenText as="strong">{hiddenText}</VisuallyHiddenText>
           <span aria-hidden="true">{headline}</span>
         </Text>

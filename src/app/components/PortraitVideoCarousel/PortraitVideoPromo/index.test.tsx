@@ -10,7 +10,18 @@ describe('PortraitVideoPromo', () => {
       <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
     );
 
-    const heading = container.querySelector('h3');
+    const heading = container.querySelector('p')?.querySelector('span');
+    expect(heading?.innerHTML).toBe('Sample Heading');
+  });
+
+  it('Should contain a visually hidden text with required screen reader details for the component', () => {
+    const sampleHeadlines = { promoHeadline: 'Sample Heading' };
+
+    const { container } = render(
+      <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
+    );
+
+    const heading = container.querySelector('p')?.querySelector('span');
     expect(heading?.innerHTML).toBe('Sample Heading');
   });
 
