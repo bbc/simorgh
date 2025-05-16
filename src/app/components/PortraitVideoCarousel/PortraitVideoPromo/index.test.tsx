@@ -21,8 +21,10 @@ describe('PortraitVideoPromo', () => {
       <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
     );
 
-    const heading = container.querySelector('p')?.querySelector('span');
-    expect(heading?.innerHTML).toBe('Sample Heading');
+    const heading = container.querySelector('strong');
+    expect(heading?.innerHTML).toBe(
+      'Sample Heading, video, undefined, Play video',
+    );
   });
 
   it('Should contain an image', () => {
