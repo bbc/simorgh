@@ -19,6 +19,7 @@ import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
+import articleDataWithAudioClip from '#data/pidgin/articles/cgwk9w4zlg8o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
@@ -239,6 +240,10 @@ export const ArticlePageWithPortraitVideoRightToLeft = () => (
     service="persian"
   />
 );
+
+export const WithAudioClip = () => {
+  <ComponentWithContext data={articleDataWithAudioClip} service="pidgin" />;
+};
 
 export const ArticlePageWithElectionBanner = {
   render: () => (
