@@ -166,6 +166,73 @@ describe('liveMediaStream', () => {
     expect(window.mediaPlayers.p0gh4n67.play).toHaveBeenCalledTimes(playCalls);
   });
 
+  describe('Visually hidden text', () => {
+    it('renders VisuallyHiddenText comma for warnings when media is not shown', () => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.version.warnings = {
+        warning_text: 'Contains some upsetting scenes.',
+        warning: [
+          {
+            warning_code: 'D1',
+            short_description: 'some upsetting scenes',
+          },
+        ],
+      };
+
+      render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const warningMessage = screen.getByTestId('warning-message');
+      const warningVisuallyHiddenText = warningMessage.querySelector(
+        'span[class*="visuallyHiddenText"]',
+      );
+      expect(warningVisuallyHiddenText).toBeInTheDocument();
+      expect(warningVisuallyHiddenText?.textContent).toBe(', ');
+    });
+
+    it('renders VisuallyHiddenText comma for watch button when media is not shown & no warnings', () => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.version.warnings = null;
+
+      const { container } = render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const watchButton = container.querySelector('.hoverStylesCTA');
+      const watchButtonVisuallyHiddenText = watchButton?.querySelector(
+        'span[class*="visuallyHiddenText"]',
+      );
+      expect(watchButtonVisuallyHiddenText).toBeInTheDocument();
+      expect(watchButtonVisuallyHiddenText?.textContent).toBe(', ');
+    });
+
+    it('renders VisuallyHiddenText comma when media is shown', () => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.version.warnings = {
+        warning_text: 'Contains some upsetting scenes.',
+        warning: [
+          {
+            warning_code: 'D1',
+            short_description: 'some upsetting scenes',
+          },
+        ],
+      };
+      const { container } = render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const playCloseButton = screen.getByTestId('watch-now-close-button');
+      fireEvent.click(playCloseButton);
+
+      const visuallyHiddenText = container.querySelector(
+        'span[class*="visuallyHiddenText"]',
+      );
+      expect(visuallyHiddenText).toBeInTheDocument();
+      expect(visuallyHiddenText?.textContent).toBe('Close video, ');
+    });
+  });
+
   describe('Event Tracking', () => {
     const eventTrackingData = { componentName: 'live-header-media' };
 
