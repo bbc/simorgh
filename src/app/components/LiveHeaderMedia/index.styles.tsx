@@ -121,7 +121,7 @@ export default {
       width: '100%',
       marginTop: 0,
       span: { margin: 0 },
-      minHeight: '3.75rem',
+      minHeight: '2.5rem',
     }),
   openMediaDescription: ({ palette }: Theme) =>
     css({
