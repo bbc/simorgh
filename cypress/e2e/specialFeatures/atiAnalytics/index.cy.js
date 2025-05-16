@@ -376,7 +376,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/polska',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'polska',
     pageIdentifier: 'polska.page',
     applicationType: 'responsive',
@@ -390,7 +390,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/polska/articles/c639526lxlro',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'polska',
     pageIdentifier: 'polska.articles.c639526lxlro.page',
     applicationType: 'responsive',
