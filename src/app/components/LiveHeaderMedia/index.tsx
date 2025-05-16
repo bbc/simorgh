@@ -11,7 +11,6 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
-import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import styles from './index.styles';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -91,8 +90,6 @@ const LiveHeaderMedia = ({
     warningLevel = WARNING_LEVELS[highestWarning.warning_code];
   }
 
-  const titleHasPunctuation = short.slice(-1).match(regexPunctuationSymbols);
-
   const clickToggleMedia = () => {
     const mediaPlayer = window.mediaPlayers?.[vpid];
     if (showMedia) {
@@ -127,7 +124,6 @@ const LiveHeaderMedia = ({
       {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
       <Text size="pica" fontVariant="sansBold" as="span">
         {short}
-        {!titleHasPunctuation && ','}
       </Text>
     </Text>
   );
