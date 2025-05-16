@@ -7,6 +7,8 @@ import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './index.styles';
 
+// FOCUS INDICATOR
+
 export default (item: PortraitVideoPromoProps) => {
   const { images, headlines, video, onClick } = item;
 
@@ -15,9 +17,8 @@ export default (item: PortraitVideoPromoProps) => {
   const headline = headlines?.promoHeadline || '';
   const duration = video?.version.duration;
   const mediaType = 'video';
-  const action = 'play video';
 
-  const hiddenText = `${headline}, ${mediaType}, ${duration && duration}, ${action}`;
+  const hiddenText = `${headline}, ${mediaType}, ${duration && duration}, Play $${mediaType}`;
 
   return (
     <button type="button" onClick={onClick} css={styles.button}>
@@ -35,7 +36,12 @@ export default (item: PortraitVideoPromoProps) => {
             </time>
           </div>
         )}
-        <Text size="pica" css={styles.title} aria-hidden="true">
+        <Text
+          size="pica"
+          fontVariant="sansBold"
+          css={styles.title}
+          aria-hidden="true"
+        >
           {headline}
         </Text>
       </div>

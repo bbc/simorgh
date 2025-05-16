@@ -8,7 +8,7 @@ import {
 } from '..';
 
 const styles = {
-  button: ({ mq }: Theme) =>
+  button: ({ mq, palette }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -28,6 +28,11 @@ const styles = {
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         flex: `0 0 ${pixelsToRem(PROMO_ITEM_WIDTH_GROUP_5_MIN)}rem`,
+      },
+      [`&[type='button']:focus-visible`]: {
+        boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${palette.WHITE}`,
+        outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(2)}rem`,
       },
     }),
   image: () =>
@@ -65,14 +70,18 @@ const styles = {
       color: palette.WHITE,
       margin: `0 0 0 ${spacings.HALF}rem`,
     }),
-  title: ({ palette, fontVariants, spacings }: Theme) =>
+  title: ({ palette, spacings }: Theme) =>
     css({
       display: 'block',
-      ...fontVariants.sansBold,
       color: palette.WHITE,
       margin: `${spacings.FULL}rem 0 0 0`,
-      'button:hover &': {
+      'button:focus-visible &, button:hover &': {
         textDecoration: 'underline',
+      },
+      'button:focus-visible &': {
+        boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${palette.BLACK}`,
+        outline: `${pixelsToRem(2)}rem solid ${palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(2)}rem`,
       },
       zIndex: 2,
     }),
