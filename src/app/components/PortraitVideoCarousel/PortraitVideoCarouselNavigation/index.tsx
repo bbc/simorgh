@@ -16,12 +16,12 @@ const defaultTranslations = {
 };
 
 export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
-  const { dir } = useContext(ServiceContext);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
   const {
+    dir,
     translations: { carousel = defaultTranslations },
   } = useContext(ServiceContext);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   const { scrollLeft: scrollLeftAria, scrollRight: scrollRightAria } = carousel;
 
