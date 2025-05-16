@@ -18,14 +18,11 @@ export default (item: PortraitVideoPromoProps) => {
   const duration = video?.version.duration;
   const mediaType = 'video';
 
-  const hiddenText = `${headline}, ${mediaType}, ${duration && duration}, Play $${mediaType}`;
+  const hiddenText = `${headline}, ${mediaType}, ${duration && duration}, Play ${mediaType}`;
 
   return (
     <button type="button" onClick={onClick} css={styles.button}>
       <div css={styles.gradientOverlay}>
-        <p>
-          <VisuallyHiddenText as="strong">{hiddenText}</VisuallyHiddenText>
-        </p>
         {duration && (
           <div css={styles.durationContainer} aria-hidden="true">
             <Play css={styles.playIcon} />
@@ -36,13 +33,9 @@ export default (item: PortraitVideoPromoProps) => {
             </time>
           </div>
         )}
-        <Text
-          size="pica"
-          fontVariant="sansBold"
-          css={styles.title}
-          aria-hidden="true"
-        >
-          {headline}
+        <Text size="pica" fontVariant="sansBold" css={styles.title}>
+          <VisuallyHiddenText as="strong">{hiddenText}</VisuallyHiddenText>
+          <span aria-hidden="true">{headline}</span>
         </Text>
       </div>
       {imageUrl && (

@@ -3,7 +3,7 @@ import { render } from '#app/components/react-testing-library-with-providers';
 import PortraitVideoPromo from '.';
 
 describe('PortraitVideoPromo', () => {
-  it('Should contain a h3 level title', () => {
+  it('Should contain a title', () => {
     const sampleHeadlines = { promoHeadline: 'Sample Heading' };
 
     const { container } = render(
