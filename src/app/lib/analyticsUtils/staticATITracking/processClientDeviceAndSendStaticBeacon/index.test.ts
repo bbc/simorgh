@@ -1,4 +1,4 @@
-import addProcessClientDeviceAndSendStaticBeaconToWindow from '.';
+import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   const originalWindowLocation = window.location;

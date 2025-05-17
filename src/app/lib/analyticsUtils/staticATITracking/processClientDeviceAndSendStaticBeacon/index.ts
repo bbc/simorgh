@@ -1,4 +1,5 @@
-export default () => {
+/* istanbul ignore next */
+export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   window.processClientDeviceAndSendStaticBeacon = atiURL => {
     if (atiURL) {
       const {
@@ -73,4 +74,10 @@ export default () => {
       window.sendStaticBeacon(`${atiURL}&${paramValues}`);
     }
   };
+};
+
+export default (atiURL: string) => {
+  window.addEventListener('load', () => {
+    window.processClientDeviceAndSendStaticBeacon(atiURL);
+  });
 };

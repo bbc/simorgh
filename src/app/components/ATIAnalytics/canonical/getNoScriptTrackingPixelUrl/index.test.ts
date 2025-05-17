@@ -1,4 +1,5 @@
 import getNoScriptTrackingPixelUrl from '.';
+import { ReverbBeaconConfig } from '../../types';
 
 const mockReverbParams = {
   params: {
@@ -31,7 +32,8 @@ const mockReverbParams = {
     user: { isSignedIn: false },
   },
   eventDetails: { eventName: 'pageView' },
-};
+} as unknown as ReverbBeaconConfig;
+
 describe('trackingPixelUrl', () => {
   it('should return the correct tracking pixel URL', () => {
     const { origin, pathname, searchParams } = new URL(
