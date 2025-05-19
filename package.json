@@ -8,9 +8,6 @@
     "./src/app/legacy/psammead/psammead-locales/**/*.*",
     "./cypress/**/*.*"
   ],
-  "resolutions": {
-    "winston@3.8.2": "patch:winston@npm:3.8.2#.yarn/patches/winston-npm-3.8.2-2035e9cac4.patch"
-  },
   "workspaces": {
     "packages": [
       "ws-nextjs-app",
