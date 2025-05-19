@@ -463,10 +463,10 @@ describe('Reverb', () => {
       });
     });
 
-    it('should return the correct Reverb component specific event model', () => {
+    it('should return the correct Reverb item event model', () => {
       const componentSpecificTrack = buildReverbEventModel({
         ...input,
-        componentSpecificTrackers: {
+        itemTracker: {
           type: 'portrait-video-promo',
           text: 'Rollercoaster facts... while riding a rollercoaster',
           position: 1,
@@ -487,10 +487,10 @@ describe('Reverb', () => {
       });
     });
 
-    it('should return the correct Reverb block specific event model', () => {
+    it('should return the correct Reverb group event model', () => {
       const blockSpecificTrack = buildReverbEventModel({
         ...input,
-        blockSpecificTrackers: {
+        groupTracker: {
           itemCount: 11,
           resourceId: 'blockLevelResourceId',
         },

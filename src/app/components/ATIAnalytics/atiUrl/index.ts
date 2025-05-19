@@ -516,16 +516,17 @@ export const buildReverbEventModel = ({
   advertiserID,
   url,
   experimentVariant,
-  componentSpecificTrackers,
-  blockSpecificTrackers,
+  itemTracker = {},
+  groupTracker = {},
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
-  const itemCount = blockSpecificTrackers?.itemCount;
-  const blockLevelResourceId = blockSpecificTrackers?.resourceId;
-  const componentType = componentSpecificTrackers?.type;
-  const componentText = componentSpecificTrackers?.text;
-  const componentPosition = componentSpecificTrackers?.position;
-  const componentDuration = componentSpecificTrackers?.duration;
-  const componentResourceId = componentSpecificTrackers?.resourceId;
+  const {
+    type: itemType,
+    text,
+    position,
+    duration,
+    resourceId: itemResourceId,
+  } = itemTracker;
+  const { itemCount, resourceId: groupResourceId } = groupTracker;
 
   return {
     params: {
@@ -548,16 +549,16 @@ export const buildReverbEventModel = ({
         ...(advertiserID && { attribution: advertiserID }),
         name: componentName,
         ...(url && { link: url }),
-        ...(componentType && { type: componentType }),
-        ...(componentText && { text: componentText }),
-        ...(componentPosition && { position: componentPosition }),
-        ...(componentDuration && { duration: componentDuration }),
-        ...(componentResourceId && { resource_id: componentResourceId }),
+        ...(itemType && { type: itemType }),
+        ...(text && { text }),
+        ...(position && { position }),
+        ...(duration && { duration }),
+        ...(itemResourceId && { resource_id: itemResourceId }),
       },
       group: {
         name: campaignID,
         ...(itemCount && { item_count: itemCount }),
-        ...(blockLevelResourceId && { resource_id: blockLevelResourceId }),
+        ...(groupResourceId && { resource_id: groupResourceId }),
       },
       event: {
         category: 'viewability',
