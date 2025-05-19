@@ -9,10 +9,12 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 
 export default (item: PortraitVideoPromoProps) => {
-  const { images, headlines, video, onClick } = item;
+  const { id, images, headlines, video, onClick, itemPosition, groupTracker } =
+    item;
   const { translations } = useContext(ServiceContext);
 
   const imageUrl = images?.[0]?.url;
@@ -22,11 +24,12 @@ export default (item: PortraitVideoPromoProps) => {
   const mediaType = 'video';
 
   const durationTranslation = translations?.media?.duration || 'Duration';
+  let momentDuration = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
     const separator = ':';
-    const momentDuration = moment.duration(mediaISO8601Duration, 'seconds');
+    momentDuration = moment.duration(mediaISO8601Duration, 'seconds');
     durationString = formatDuration({
       duration: momentDuration,
       padMinutes: true,
@@ -39,8 +42,35 @@ export default (item: PortraitVideoPromoProps) => {
 
   const hiddenText = `${headline}, ${mediaType}, ${mediaISO8601Duration ? `${durationTranslation}  ${durationSpokenString}, ` : ''}Play ${mediaType}`;
 
+  const eventTrackingData = {
+    componentName: `portrait-video-promo-${itemPosition}`,
+    groupTracker,
+    itemTracker: {
+      type: 'portrait-video-promo',
+      text: headline,
+      position: itemPosition,
+      ...(momentDuration && { duration: momentDuration.asSeconds() }),
+      resourceId: id,
+    },
+  };
+
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
+
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    if (clickTrackerHandler) {
+      clickTrackerHandler(e);
+    }
+    if (onClick) onClick();
+  };
+
   return (
-    <button type="button" onClick={onClick} css={styles.button}>
+    <button
+      type="button"
+      onClick={e => handleClick(e)}
+      css={styles.button}
+      data-testid="promo"
+    >
       <div css={styles.gradientOverlay}>
         {mediaISO8601Duration && (
           <div css={styles.durationContainer} aria-hidden="true">

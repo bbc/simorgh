@@ -62,6 +62,7 @@ export default ({
   embed,
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
+  curationId,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -158,7 +159,11 @@ export default ({
         !isLive()
       ) {
         return (
-          <PortraitVideoCarousel title={title} items={portraitVideo.items} />
+          <PortraitVideoCarousel
+            title={title}
+            items={portraitVideo.items}
+            {...(curationId && { curationId })}
+          />
         );
       }
       return null;

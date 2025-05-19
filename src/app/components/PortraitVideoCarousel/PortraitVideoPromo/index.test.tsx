@@ -1,8 +1,16 @@
 import React from 'react';
-import { render } from '#app/components/react-testing-library-with-providers';
+import {
+  render,
+  act,
+} from '#app/components/react-testing-library-with-providers';
+import * as useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import PortraitVideoPromo from '.';
 
 describe('PortraitVideoPromo', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Should contain a title', () => {
     const sampleHeadlines = { promoHeadline: 'Sample Heading' };
 
@@ -68,5 +76,39 @@ describe('PortraitVideoPromo', () => {
       'img[src="https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg"]',
     );
     expect(heading).toBeInTheDocument();
+  });
+
+  it('Should initialise the useClickTracker hook with the correct data', async () => {
+    const sampleHeadlines = { promoHeadline: 'Sample Heading' };
+    const groupTracker = {
+      itemCount: 15,
+      resourceId: 'test-group-resource-id',
+    };
+    const clickTrackerSpy = jest.spyOn(useClickTrackerHandler, 'default');
+
+    await act(async () => {
+      render(
+        <PortraitVideoPromo
+          id="testId"
+          groupTracker={groupTracker}
+          itemPosition={2}
+          headlines={sampleHeadlines}
+        />,
+      );
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'portrait-video-promo-2',
+      groupTracker: {
+        itemCount: 15,
+        resourceId: 'test-group-resource-id',
+      },
+      itemTracker: {
+        position: 2,
+        resourceId: 'testId',
+        text: 'Sample Heading',
+        type: 'portrait-video-promo',
+      },
+    });
   });
 });

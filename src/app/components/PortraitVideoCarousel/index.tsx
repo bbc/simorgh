@@ -16,6 +16,7 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 const PortraitVideoCarousel = ({
   title,
   items,
+  curationId,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -50,11 +51,16 @@ const PortraitVideoCarousel = ({
             css={styles.scrollWrapper}
             data-testid="pv-scroll-panel"
           >
-            {items.map(item => (
+            {items.map((item, index) => (
               <PortraitVideoPromo
                 {...item}
                 key={item.id}
                 onClick={() => handlePromoClick(item)}
+                itemPosition={index}
+                groupTracker={{
+                  itemCount: items.length,
+                  resourceId: curationId,
+                }}
               />
             ))}
             <div css={[styles.promo, styles.endBlankItem]} />

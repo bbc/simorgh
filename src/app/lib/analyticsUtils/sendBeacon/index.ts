@@ -136,6 +136,7 @@ const sendBeacon = async (
   url: string,
   reverbBeaconConfig?: ReverbBeaconConfig | null,
 ) => {
+  console.log('CHECL BEAC');
   if (onClient()) {
     try {
       if (reverbBeaconConfig) {

@@ -167,6 +167,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     optimizelyVariation,
     detailedPlacement,
     useReverb,
+    itemTracker,
+    groupTracker,
   ]);
 
   const viewTracker = useCallback(
