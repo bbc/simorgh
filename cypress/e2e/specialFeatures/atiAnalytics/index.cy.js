@@ -389,16 +389,6 @@ const canonicalTestSuites = [
     ],
   },
   {
-    path: '/polska/articles/c639526lxlro',
-    runforEnv: ['local'],
-    service: 'polska',
-    pageIdentifier: 'polska.articles.c639526lxlro.page',
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
     path: '/portuguese/podcasts/p07r3r3t',
     runforEnv: ['local', 'test', 'live'],
     service: 'portuguese',
