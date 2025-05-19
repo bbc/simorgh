@@ -118,7 +118,8 @@ export type ReverbUserVars = {
 export type ReverbEventDetails = {
   anchorElement?: HTMLElement;
   experience?: {
-    engine_id: string;
+    engine_type: Array<string>;
+    engine_id: Array<string>;
   };
   event?: {
     category: string;
