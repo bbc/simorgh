@@ -1,6 +1,6 @@
-import { addProcessClientDeviceAndSendStaticBeaconToWindow as processClientDeviceAndSendStaticBeaconToWindow } from '.';
+import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
 
-describe('processClientDeviceAndSendStaticBeaconToWindow script', () => {
+describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   const originalWindowLocation = window.location;
   const testSystemTime = new Date('2024-11-13T16:30:02.000Z');
   const testHour = testSystemTime.getHours();
@@ -18,7 +18,7 @@ describe('processClientDeviceAndSendStaticBeaconToWindow script', () => {
         mockCookie = cookieValue;
       },
     });
-    processClientDeviceAndSendStaticBeaconToWindow();
+    addProcessClientDeviceAndSendStaticBeaconToWindow();
   });
 
   beforeEach(() => {
@@ -69,7 +69,7 @@ describe('processClientDeviceAndSendStaticBeaconToWindow script', () => {
 
     const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(document.cookie).toBe(
-      'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=34300800; Secure;',
+      'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=397; Secure;',
     );
     expect(callParam).toContain('idclient=randomUniqueId');
   });
