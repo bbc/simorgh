@@ -20,7 +20,8 @@ const UsefulLinks = ({
 }: UsefulLinksProps) => {
   const { dir } = useContext(ServiceContext);
 
-  if (!summaries.length) {
+  // Early return if no summaries are provided
+  if (summaries.length === 0) {
     return null;
   }
 
@@ -38,18 +39,17 @@ const UsefulLinks = ({
       </Heading>
       {hasMultipleSummaries ? (
         <ul css={styles.unorderedList} dir={dir} role="list">
-          {summaries.map(summary => {
-            return (
-              <li css={styles.item} key={summary.title}>
-                <a href={summary.link} css={styles.link}>
-                  {/* eslint-disable-next-line jsx-a11y/aria-role */}
-                  <span role="text">{summary.title}</span>
-                </a>
-              </li>
-            );
-          })}
+          {summaries.map(summary => (
+            <li css={styles.item} key={summary.title}>
+              <a href={summary.link} css={styles.link}>
+                {/* eslint-disable-next-line jsx-a11y/aria-role */}
+                <span role="text">{summary.title}</span>
+              </a>
+            </li>
+          ))}
         </ul>
       ) : (
+        // When only one summary, render a single div
         <div css={styles.item} dir={dir}>
           <a href={summaries[0].link} css={styles.link}>
             {/* eslint-disable-next-line jsx-a11y/aria-role */}

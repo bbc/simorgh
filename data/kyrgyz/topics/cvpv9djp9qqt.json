@@ -516,7 +516,7 @@
         "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
         "curationType": "tipo-curation",
         "position": 5,
-        "title": "Test links low visual prominence",
+        "title": "Related sites",
         "visualProminence": "LOW",
         "visualStyle": "LINKS"
       },

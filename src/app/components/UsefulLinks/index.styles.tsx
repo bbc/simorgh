@@ -22,6 +22,7 @@ const styles = {
       gap: `${spacings.DOUBLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: `${spacings.TRIPLE}rem`,
       },
     }),
   item: ({ spacings, mq }: Theme) =>
@@ -35,7 +36,7 @@ const styles = {
         gap: `${spacings.DOUBLE}rem`,
       },
     }),
-  link: ({ palette, fontVariants, fontSizes }: Theme) =>
+  link: ({ palette, fontVariants, fontSizes, mq }: Theme) =>
     css({
       color: palette.GREY_10,
       textDecoration: 'none',
@@ -49,12 +50,19 @@ const styles = {
         textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '::before': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          top: `${pixelsToRem(-12)}rem`,
+          bottom: `${pixelsToRem(-12)}rem`,
+          insetBlock: `${pixelsToRem(-12)}rem`,
+        },
         position: 'absolute',
-        top: 0,
+        top: `${pixelsToRem(-6)}rem`,
         right: 0,
-        bottom: 0,
+        bottom: `${pixelsToRem(-6)}rem`,
         left: 0,
         content: '""',
+        insetBlock: `${pixelsToRem(-6)}rem`,
+        insetInline: '0px',
       },
     }),
 };

@@ -11,20 +11,17 @@ import {
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
 import UsefulLinks from '.';
-// import readme from './README.md';
+import readme from './README.md';
 
 const getUsefulLinksData = (numberOfItems?: number): Curation => {
-  const curations = fixture.data.curations.find(
-    curation => {
-      return (
-        curation.visualStyle === VISUAL_STYLE.LINKS &&
-        curation.visualProminence === VISUAL_PROMINENCE.LOW
-      );
-    },
-  ) as Curation;
+  const curations = fixture.data.curations.find(curation => {
+    return (
+      curation.visualStyle === VISUAL_STYLE.LINKS &&
+      curation.visualProminence === VISUAL_PROMINENCE.LOW
+    );
+  }) as Curation;
 
-  if (!curations.summaries || !numberOfItems)
-    return curations;
+  if (!curations.summaries || !numberOfItems) return curations;
 
   return {
     ...curations,
@@ -57,7 +54,7 @@ export default {
   Component,
   title: 'Components/UsefulLinks',
   parameters: {
-    // docs: { readme },
+    docs: { readme },
   },
 };
 
