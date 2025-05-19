@@ -161,6 +161,21 @@ export interface ATIEventTrackingProps {
   experimentVariant?: string;
   ampExperimentName?: string;
   preventNavigation?: string;
+  componentSpecificTrackers?: ComponentSpecificTrackers;
+  blockSpecificTrackers?: BlockSpecificTrackers;
+}
+
+export interface ComponentSpecificTrackers {
+  type?: string;
+  text?: string;
+  position?: number;
+  duration?: number;
+  resourceId?: string;
+}
+
+export interface BlockSpecificTrackers {
+  itemCount?: number;
+  resourceId?: string;
 }
 
 export interface ATIPageTrackingProps {
