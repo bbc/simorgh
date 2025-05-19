@@ -5,7 +5,7 @@ import {
   PROMO_ITEM_WIDTH_GROUP_4_MIN,
   PROMO_ITEM_WIDTH_GROUP_5_MIN,
   PROMO_ITEM_WIDTH_MIN,
-} from '..';
+} from '../const';
 
 const customFocusIndicatorStyle = (innerColor: string, outerColor: string) => ({
   boxShadow: `0 0 0 ${pixelsToRem(2)}rem ${innerColor}`,

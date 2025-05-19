@@ -1,7 +1,7 @@
 {
   "alpha": false,
   "lastUpdated": {
-    "day": 8,
+    "day": 16,
     "month": "May",
     "year": 2025
   },
@@ -20,7 +20,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Useful-social-links-components--Ck~~I_w96eBOzeUkwslP~tX2Ag-b7yhY4YEKvI0CkntHQ36m",
       "label": "Accessibility Swarm Notes"

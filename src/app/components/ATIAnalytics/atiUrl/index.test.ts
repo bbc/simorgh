@@ -606,7 +606,8 @@ describe('Reverb', () => {
           },
           isClick: false,
           experience: {
-            engine_id: 'optimizely.mockFlagKey.variant_1',
+            engine_type: ['experimentation'],
+            engine_id: ['optimizely.mockFlagKey.variant_1'],
           },
         });
       });
