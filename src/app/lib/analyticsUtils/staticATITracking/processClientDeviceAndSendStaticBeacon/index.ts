@@ -15,8 +15,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
       // COOKIE SETTINGS
       const cookieName = 'atuserid';
-      const days = 397; // expires in 13 months
-      const daysInSeconds = days * 24 * 60 * 60;
+      const days = 397; // = 13 months
+      const expires = days * 24 * 60 * 60; // days in seconds
 
       const getAtUserIdFromCookie = () => {
         const match = document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/);
@@ -40,7 +40,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       const stringifiedCookieValue = JSON.stringify(user);
       const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
 
-      document.cookie = `${cookieName}=${encodedCookieValue}; path=/; max-age=${daysInSeconds}; Secure;`;
+      document.cookie = `${cookieName}=${encodedCookieValue}; path=/; max-age=${expires}; Secure;`;
 
       const screenResolutionColourDepth = [
         width || 0,
