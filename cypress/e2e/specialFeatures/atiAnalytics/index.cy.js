@@ -311,7 +311,7 @@ const canonicalTestSuites = [
   },
   {
     path: '/pidgin/articles/ce9wk6glg4lo',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'live'],
     service: 'pidgin',
     pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
     applicationType: 'responsive',
@@ -376,8 +376,12 @@ const canonicalTestSuites = [
   },
   {
     path: '/polska',
-    runforEnv: ['test'],
+    runforEnv: ['local'],
     service: 'polska',
+    pageIdentifier: 'polska.page',
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
     tests: [
       assertPageView,
       assertMessageBannerComponentView,
@@ -386,8 +390,12 @@ const canonicalTestSuites = [
   },
   {
     path: '/polska/articles/c639526lxlro',
-    runforEnv: ['test'],
+    runforEnv: ['local'],
     service: 'polska',
+    pageIdentifier: 'polska.articles.c639526lxlro.page',
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
     tests: [assertPageView],
   },
   {

@@ -10,8 +10,8 @@ import {
   interceptATIAnalyticsBeacons,
 } from '../helpers';
 
-const usesReverbViewabilityModel = useReverb =>
-  useReverb && Cypress.env('APP_ENV') !== 'live';
+const usesReverbViewabilityModel = applicationType =>
+  applicationType !== 'lite';
 
 const assertATIPageViewEventParamsExist = ({
   params,
@@ -216,7 +216,7 @@ export const assertATIComponentViewEvent = ({
   useReverb,
   applicationType,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
+  const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-view`
     : `@${component}-ati-view`;
@@ -322,7 +322,7 @@ export const assertATIComponentClickEvent = ({
   applicationType,
   useReverb,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(useReverb);
+  const useViewabilty = usesReverbViewabilityModel(applicationType);
   const requestAlias = useViewabilty
     ? `@${component}-viewability-click`
     : `@${component}-ati-click`;

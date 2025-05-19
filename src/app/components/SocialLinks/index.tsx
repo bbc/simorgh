@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
+import React, { useContext, useId } from 'react';
 import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
@@ -64,17 +64,26 @@ const SocialLinkImage = ({ imageUrl }: { imageUrl: string }) => {
 };
 
 const SocialLink = ({ summary }: { summary: Summary }) => {
+  const linkLabelId = useId();
+  const hasDescription = Boolean(summary.description);
+
   return (
     <>
       <SocialLinkImage imageUrl={summary.imageUrl} />
-      <a href={summary.link} css={styles.link}>
-        {/* eslint-disable-next-line jsx-a11y/aria-role */}
-        <span role="text">
-          {summary.title}
-          {summary.description ? (
+      <a
+        href={summary.link}
+        css={styles.link}
+        {...(hasDescription && { 'aria-labelledby': linkLabelId })}
+      >
+        {hasDescription ? (
+          // eslint-disable-next-line jsx-a11y/aria-role
+          <span id={linkLabelId} role="text">
+            {summary.title}
             <VisuallyHiddenText>{`, ${summary.description}`}</VisuallyHiddenText>
-          ) : null}
-        </span>
+          </span>
+        ) : (
+          summary.title
+        )}
       </a>
     </>
   );
