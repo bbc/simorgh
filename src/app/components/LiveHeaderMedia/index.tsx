@@ -11,6 +11,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import styles from './index.styles';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -73,6 +74,10 @@ const LiveHeaderMedia = ({
       version: { vpid, warnings },
     },
   } = mediaItem;
+
+  const titleHasPunctuation = regexPunctuationSymbols.test(
+    short.trim().slice(-1),
+  );
 
   if (warnings) {
     const { warning } = warnings;
@@ -155,7 +160,9 @@ const LiveHeaderMedia = ({
                 css={styles.guidanceMessage}
                 data-testid="warning-message"
               >
-                <VisuallyHiddenText>, </VisuallyHiddenText>
+                <VisuallyHiddenText>
+                  {titleHasPunctuation ? ' ' : ', '}
+                </VisuallyHiddenText>
                 {warnings.warning_text}
               </Text>
             )}

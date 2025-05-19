@@ -210,7 +210,7 @@ describe('liveMediaStream', () => {
         title: 'Displays correct text content in open state with punctuation',
         inputTitle: 'Title with punctuation!',
         expectedResult:
-          'Title with punctuation!, Contains some upsetting scenes.Watch',
+          'Title with punctuation! Contains some upsetting scenes.Watch',
       },
     ])('Open state - $title', ({ inputTitle, expectedResult }) => {
       const mediaBlock = fixtureData[0];
@@ -248,7 +248,7 @@ describe('liveMediaStream', () => {
         title: 'Displays correct text content in close state with punctuation',
         inputTitle: 'Title with punctuation!',
         expectedResult:
-          'Close video, Title with punctuation!, Contains some upsetting scenes.',
+          'Close video, Title with punctuation! Contains some upsetting scenes.',
       },
     ])('Close state - $title', ({ inputTitle, expectedResult }) => {
       const mediaBlock = fixtureData[0];
