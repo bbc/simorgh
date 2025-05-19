@@ -10,11 +10,19 @@ import formatDuration from '#app/lib/utilities/formatDuration';
 import { useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import styles from './index.styles';
 
 export default (item: PortraitVideoPromoProps) => {
-  const { id, images, headlines, video, onClick, itemPosition, groupTracker } =
-    item;
+  const {
+    id,
+    images,
+    headlines,
+    video,
+    onClick,
+    itemPosition = 0,
+    groupTracker,
+  } = item;
   const { translations } = useContext(ServiceContext);
 
   const imageUrl = images?.[0]?.url;
@@ -42,18 +50,20 @@ export default (item: PortraitVideoPromoProps) => {
 
   const hiddenText = `${headline}, ${mediaType}, ${mediaISO8601Duration ? `${durationTranslation}  ${durationSpokenString}, ` : ''}Play ${mediaType}`;
 
+  const adjustedItemPosition = itemPosition + 1;
   const eventTrackingData = {
-    componentName: `portrait-video-promo-${itemPosition}`,
+    componentName: `portrait-video-promo-${adjustedItemPosition}`,
     groupTracker,
     itemTracker: {
       type: 'portrait-video-promo',
       text: headline,
-      position: itemPosition,
+      position: adjustedItemPosition,
       ...(momentDuration && { duration: momentDuration.asSeconds() }),
       resourceId: id,
     },
   };
 
+  const viewTracker = useViewTracker(eventTrackingData);
   const { onClick: clickTrackerHandler } =
     useClickTrackerHandler(eventTrackingData);
 
@@ -69,7 +79,7 @@ export default (item: PortraitVideoPromoProps) => {
       type="button"
       onClick={e => handleClick(e)}
       css={styles.button}
-      data-testid="promo"
+      {...viewTracker}
     >
       <div css={styles.gradientOverlay}>
         {mediaISO8601Duration && (

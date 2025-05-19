@@ -98,13 +98,13 @@ describe('PortraitVideoPromo', () => {
     });
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
-      componentName: 'portrait-video-promo-2',
+      componentName: 'portrait-video-promo-3',
       groupTracker: {
         itemCount: 15,
         resourceId: 'test-group-resource-id',
       },
       itemTracker: {
-        position: 2,
+        position: 3,
         resourceId: 'testId',
         text: 'Sample Heading',
         type: 'portrait-video-promo',
