@@ -166,73 +166,6 @@ describe('liveMediaStream', () => {
     expect(window.mediaPlayers.p0gh4n67.play).toHaveBeenCalledTimes(playCalls);
   });
 
-  describe('Visually hidden text', () => {
-    it('renders VisuallyHiddenText comma for warnings when media is not shown', () => {
-      const mediaBlock = fixtureData[0];
-      mediaBlock.model.version.warnings = {
-        warning_text: 'Contains some upsetting scenes.',
-        warning: [
-          {
-            warning_code: 'D1',
-            short_description: 'some upsetting scenes',
-          },
-        ],
-      };
-
-      render(
-        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
-      );
-
-      const warningMessage = screen.getByTestId('warning-message');
-      const warningVisuallyHiddenText = warningMessage.querySelector(
-        'span[class*="visuallyHiddenText"]',
-      );
-      expect(warningVisuallyHiddenText).toBeInTheDocument();
-      expect(warningVisuallyHiddenText?.textContent).toBe(', ');
-    });
-
-    it('renders VisuallyHiddenText comma for watch button when media is not shown & no warnings', () => {
-      const mediaBlock = fixtureData[0];
-      mediaBlock.model.version.warnings = null;
-
-      const { container } = render(
-        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
-      );
-
-      const watchButton = container.querySelector('.hoverStylesCTA');
-      const watchButtonVisuallyHiddenText = watchButton?.querySelector(
-        'span[class*="visuallyHiddenText"]',
-      );
-      expect(watchButtonVisuallyHiddenText).toBeInTheDocument();
-      expect(watchButtonVisuallyHiddenText?.textContent).toBe(', ');
-    });
-
-    it('renders VisuallyHiddenText comma when media is shown', () => {
-      const mediaBlock = fixtureData[0];
-      mediaBlock.model.version.warnings = {
-        warning_text: 'Contains some upsetting scenes.',
-        warning: [
-          {
-            warning_code: 'D1',
-            short_description: 'some upsetting scenes',
-          },
-        ],
-      };
-      const { container } = render(
-        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
-      );
-
-      const playCloseButton = screen.getByTestId('watch-now-close-button');
-      fireEvent.click(playCloseButton);
-
-      const visuallyHiddenText = container.querySelector(
-        'span[class*="visuallyHiddenText"]',
-      );
-      expect(visuallyHiddenText).toBeInTheDocument();
-      expect(visuallyHiddenText?.textContent).toBe('Close video, ');
-    });
-  });
-
   describe('Event Tracking', () => {
     const eventTrackingData = { componentName: 'live-header-media' };
 
@@ -261,6 +194,95 @@ describe('liveMediaStream', () => {
 
         expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
       });
+    });
+  });
+
+  describe('Text content states', () => {
+    it.each([
+      {
+        title:
+          'Displays correct text content in open state with no punctuation',
+        inputTitle: 'Title with no punctuation',
+        expectedResult:
+          'Title with no punctuation, Contains some upsetting scenes.Watch',
+      },
+      {
+        title: 'Displays correct text content in open state with punctuation',
+        inputTitle: 'Title with punctuation!',
+        expectedResult:
+          'Title with punctuation!, Contains some upsetting scenes.Watch',
+      },
+    ])('Open state - $title', ({ inputTitle, expectedResult }) => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.synopses.short = inputTitle;
+      mediaBlock.model.version.warnings = {
+        warning_text: 'Contains some upsetting scenes.',
+        warning: [
+          {
+            warning_code: 'D1',
+            short_description: 'some upsetting scenes',
+          },
+        ],
+      };
+
+      const { container } = render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const mediaLoader = container.querySelector(
+        'button[data-testid="watch-now-close-button"]',
+      );
+
+      expect(mediaLoader?.textContent).toEqual(expectedResult);
+    });
+
+    it.each([
+      {
+        title:
+          'Displays correct text content in close state with no punctuation',
+        inputTitle: 'Title with no punctuation',
+        expectedResult:
+          'Close video, Title with no punctuation, Contains some upsetting scenes.',
+      },
+      {
+        title: 'Displays correct text content in close state with punctuation',
+        inputTitle: 'Title with punctuation!',
+        expectedResult:
+          'Close video, Title with punctuation!, Contains some upsetting scenes.',
+      },
+    ])('Close state - $title', ({ inputTitle, expectedResult }) => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.synopses.short = inputTitle;
+      mediaBlock.model.version.warnings = {
+        warning_text: 'Contains some upsetting scenes.',
+        warning: [
+          {
+            warning_code: 'D1',
+            short_description: 'some upsetting scenes',
+          },
+        ],
+      };
+
+      window.mediaPlayers = {
+        p0gh4n67: {
+          player: { paused: jest.fn().mockReturnValueOnce(true) },
+          play: jest.fn(),
+          pause: jest.fn(),
+        },
+      };
+
+      const { container } = render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const mediaLoader = container.querySelector(
+        'button[data-testid="watch-now-close-button"]',
+      );
+
+      const playCloseButton = screen.getByTestId('watch-now-close-button');
+      fireEvent.click(playCloseButton);
+
+      expect(mediaLoader?.textContent).toEqual(expectedResult);
     });
   });
 });
