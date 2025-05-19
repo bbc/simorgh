@@ -42,8 +42,7 @@ const UsefulLinks = ({
           {summaries.map(summary => (
             <li css={styles.item} key={summary.title}>
               <a href={summary.link} css={styles.link}>
-                {/* eslint-disable-next-line jsx-a11y/aria-role */}
-                <span role="text">{summary.title}</span>
+                <span>{summary.title}</span>
               </a>
             </li>
           ))}
@@ -52,8 +51,7 @@ const UsefulLinks = ({
         // When only one summary, render a single div
         <div css={styles.item} dir={dir}>
           <a href={summaries[0].link} css={styles.link}>
-            {/* eslint-disable-next-line jsx-a11y/aria-role */}
-            <span role="text">{summaries[0].title}</span>
+            <span>{summaries[0].title}</span>
           </a>
         </div>
       )}

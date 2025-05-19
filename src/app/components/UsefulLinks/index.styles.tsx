@@ -47,7 +47,6 @@ const styles = {
       },
       '&:hover, &:focus': {
         textDecoration: 'underline',
-        textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '::before': {
         [mq.GROUP_3_MIN_WIDTH]: {
