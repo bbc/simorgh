@@ -69,12 +69,12 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
 
     const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(document.cookie).toBe(
-      'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=397; Secure;',
+      'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=34300800; Secure;',
     );
     expect(callParam).toContain('idclient=randomUniqueId');
   });
 
-  it('Does not overwrite content in atuserid cookie if it already exists', () => {
+  it('Overwrites content in atuserid cookie if it already exists', () => {
     const oldCookieId = 'oldCookieId';
     document.cookie = `atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22${oldCookieId}%22%2C%22options%22%3A%7B%22end%22%3A%222026-03-11T10%3A23%3A55.442Z%22%2C%22path%22%3A%22%2F%22%7D%7D; path=/; max-age=397; Secure;`;
     (crypto.randomUUID as jest.Mock).mockReturnValueOnce('newCookieId');
@@ -84,7 +84,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
 
     const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(document.cookie).toBe(
-      `atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22${oldCookieId}%22%2C%22options%22%3A%7B%22end%22%3A%222026-03-11T10%3A23%3A55.442Z%22%2C%22path%22%3A%22%2F%22%7D%7D; path=/; max-age=397; Secure;`,
+      `atuserid=%7B%22val%22%3A%22${oldCookieId}%22%7D; path=/; max-age=34300800; Secure;`,
     );
     expect(callParam).toContain('idclient=oldCookieId');
   });
