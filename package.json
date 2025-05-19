@@ -90,6 +90,9 @@
     "url": "https://github.com/bbc/simorgh/issues"
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
+  "resolutions": {
+    "react-is": "19"
+  },
   "dependencies": {
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.0.0.tgz",
     "@bbc/web-vitals": "2.5.3",
