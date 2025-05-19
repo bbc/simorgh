@@ -190,7 +190,7 @@ const nonSmokeCanonicalTestSuites = [
   },
   {
     path: '/polska/articles/c639526lxlro',
-    runforEnv: ['test'],
+    runforEnv: ['local', 'test'],
     service: 'polska',
     tests: [...canonicalTests],
   },
