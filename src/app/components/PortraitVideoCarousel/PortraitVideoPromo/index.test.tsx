@@ -14,7 +14,34 @@ describe('PortraitVideoPromo', () => {
     expect(heading?.innerHTML).toBe('Sample Heading');
   });
 
-  it('Should contain a visually hidden text with required screen reader details for the component', () => {
+  it('Should contain a visually hidden text with required screen reader details for the component - with duration', () => {
+    const sampleHeadlines = {
+      promoHeadline: 'Sample Heading',
+    };
+    const sampleVideoData = {
+      id: 'p01wjx7v',
+      version: {
+        duration: 'PT13S',
+        kind: 'programme',
+        territories: ['uk', 'nonuk'],
+      },
+    };
+
+    const { container } = render(
+      <PortraitVideoPromo
+        id="testId"
+        headlines={sampleHeadlines}
+        video={sampleVideoData}
+      />,
+    );
+
+    const heading = container.querySelector('strong');
+    expect(heading?.innerHTML).toBe(
+      'Sample Heading, video, Duration  0:13, Play video',
+    );
+  });
+
+  it('Should contain a visually hidden text with required screen reader details for the component - no duration', () => {
     const sampleHeadlines = { promoHeadline: 'Sample Heading' };
 
     const { container } = render(
@@ -22,9 +49,7 @@ describe('PortraitVideoPromo', () => {
     );
 
     const heading = container.querySelector('strong');
-    expect(heading?.innerHTML).toBe(
-      'Sample Heading, video, undefined, Play video',
-    );
+    expect(heading?.innerHTML).toBe('Sample Heading, video, Play video');
   });
 
   it('Should contain an image', () => {
