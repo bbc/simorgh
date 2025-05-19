@@ -10,7 +10,7 @@ describe('PortraitVideoPromo', () => {
       <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
     );
 
-    const heading = container.querySelector('p')?.querySelector('span');
+    const heading = container.querySelector('p')?.querySelectorAll('span')[1];
     expect(heading?.innerHTML).toBe('Sample Heading');
   });
 
@@ -35,7 +35,7 @@ describe('PortraitVideoPromo', () => {
       />,
     );
 
-    const heading = container.querySelector('strong');
+    const heading = container.querySelector('p')?.querySelectorAll('span')[0];
     expect(heading?.innerHTML).toBe(
       'Sample Heading, video, Duration  0:13, Play video',
     );
@@ -48,7 +48,7 @@ describe('PortraitVideoPromo', () => {
       <PortraitVideoPromo id="testId" headlines={sampleHeadlines} />,
     );
 
-    const heading = container.querySelector('strong');
+    const heading = container.querySelector('p')?.querySelectorAll('span')[0];
     expect(heading?.innerHTML).toBe('Sample Heading, video, Play video');
   });
 
