@@ -331,6 +331,10 @@ export const service: DefaultServiceConfig = {
         url: '/korean',
       },
       {
+        title: '2025 대선',
+        url: '/korean/topics/crldxe422e0t',
+      },
+      {
         title: '비디오',
         url: '/korean/topics/cnwng7v0e54t',
       },
