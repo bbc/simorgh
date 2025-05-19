@@ -69,7 +69,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
 
     const callParam = (window.sendStaticBeacon as jest.Mock).mock.calls[0][0];
     expect(document.cookie).toBe(
-      'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=397; Secure;',
+      'atuserid=%7B%22val%22%3A%22randomUniqueId%22%7D; path=/; max-age=34300800; Secure;',
     );
     expect(callParam).toContain('idclient=randomUniqueId');
   });
