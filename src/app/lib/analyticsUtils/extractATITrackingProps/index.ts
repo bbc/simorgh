@@ -16,6 +16,8 @@ export default ({
     detailedPlacement,
     preventNavigation,
     sendOptimizelyEvents,
+    itemTracker,
+    groupTracker,
   } = eventTrackingData || {};
 
   const {
@@ -44,5 +46,7 @@ export default ({
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    itemTracker,
+    groupTracker,
   };
 };

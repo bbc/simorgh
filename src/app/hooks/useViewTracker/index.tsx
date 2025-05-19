@@ -35,6 +35,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    groupTracker,
+    itemTracker,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
@@ -122,6 +124,8 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             url,
             detailedPlacement,
             useReverb,
+            ...(groupTracker && { groupTracker }),
+            ...(itemTracker && { itemTracker }),
             ...(optimizelyVariation &&
               optimizelyVariation !== 'off' && {
                 experimentVariant: optimizelyVariation,
