@@ -100,7 +100,7 @@ type MediaContainerProps = {
   noJsMessage?: string;
 };
 
-const playerHasAudioSkin = (playerConfig: PlayerConfig) =>
+const isAudioPlayer = (playerConfig: PlayerConfig) =>
   playerConfig?.ui?.skin === 'audio';
 
 const MediaContainer = ({
@@ -110,7 +110,7 @@ const MediaContainer = ({
   noJsMessage,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
-  const isAudioPlayer = playerHasAudioSkin(playerConfig);
+  const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
@@ -169,11 +169,7 @@ const MediaContainer = ({
     <div
       ref={playerElementRef}
       data-e2e="media-player"
-      css={
-        isAudioPlayer
-          ? styles.audioMediaContainer
-          : styles.standardMediaContainer
-      }
+      css={isAudio ? styles.audioMediaContainer : styles.standardMediaContainer}
     >
       <noscript>
         <Message message={noJsMessage} />
@@ -242,7 +238,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
 
   const captionBlock = getCaptionBlock(blocks, pageType);
   const isPortraitVideo = orientation === 'portrait';
-  const isAudioPlayer = playerHasAudioSkin(playerConfig);
+  const isLandscapeVideo = orientation === 'landscape';
+  const isAudio = isAudioPlayer(playerConfig);
 
   const {
     placeholderSrc,
@@ -268,10 +265,10 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         className={className}
         css={[
           styles.figure(embedded),
-          isAudioPlayer && styles.audioFigure,
-          !isAudioPlayer && [
+          isAudio && styles.audioFigure,
+          !isAudio && [
             isPortraitVideo && styles.portraitFigure(embedded),
-            orientation === 'landscape' && styles.landscapeFigure,
+            isLandscapeVideo && styles.landscapeFigure,
           ],
         ]}
       >
@@ -315,7 +312,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
               playerConfig?.ui?.skin === 'classic' && [
                 isPortraitVideo && styles.captionPortrait,
               ],
-              isAudioPlayer && styles.captionAudio,
+              isAudio && styles.captionAudio,
             ]}
           />
         )}
