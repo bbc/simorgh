@@ -1,0 +1,176 @@
+const { defineConfig, globalIgnores } = require('eslint');
+
+const globals = require('globals');
+const babelParser = require('@babel/eslint-parser');
+const prettier = require('eslint-plugin-prettier');
+const json = require('eslint-plugin-json');
+const jsxA11Y = require('eslint-plugin-jsx-a11y');
+const reactHooks = require('eslint-plugin-react-hooks');
+const cypress = require('eslint-plugin-cypress');
+const importPlugin = require('eslint-plugin-import');
+const noOnlyTests = require('eslint-plugin-no-only-tests');
+
+const { fixupPluginRules } = require('@eslint/compat');
+
+const tsParser = require('@typescript-eslint/parser');
+const js = require('@eslint/js');
+
+const { FlatCompat } = require('@eslint/eslintrc');
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
+const { eslintDirAlias } = require('./dirAlias');
+
+module.exports = defineConfig([
+  {
+    extends: compat.extends(
+      'airbnb',
+      'plugin:prettier/recommended',
+      'plugin:jsx-a11y/recommended',
+      'plugin:cypress/recommended',
+    ),
+
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+        ...globals.node,
+      },
+
+      parser: babelParser,
+      ecmaVersion: 2017,
+      sourceType: 'module',
+
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+
+        requireConfigFile: false,
+      },
+    },
+
+    plugins: {
+      prettier,
+      json,
+      'jsx-a11y': jsxA11Y,
+      'react-hooks': fixupPluginRules(reactHooks),
+      cypress,
+      import: fixupPluginRules(importPlugin),
+      'no-only-tests': noOnlyTests,
+    },
+
+    rules: {
+      'react/prop-types': 'off',
+      'react/forbid-foreign-prop-types': 'error',
+      'react/jsx-one-expression-per-line': 'off',
+      'react/jsx-props-no-spreading': 'off',
+      'react/function-component-definition': 'off',
+
+      'react/no-unknown-property': [
+        'error',
+        {
+          ignore: [
+            'amp-boilerplate',
+            'amp-custom',
+            'amp-access',
+            'amp-access-hide',
+            'amp-install-serviceworker',
+            'css',
+            'custom-element',
+            'custom-template',
+            'fallback',
+          ],
+        },
+      ],
+
+      'linebreak-style':
+        process.platform === 'win32' ? 'off' : ['error', 'unix'],
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+
+      'import/no-import-module-exports': [
+        'error',
+        {
+          exceptions: ['**/*/startServer.js'],
+        },
+      ],
+
+      'import/no-extraneous-dependencies': [
+        'off',
+        {
+          devDependencies: ['**/stories.jsx', '/src/testHelpers/**'],
+        },
+      ],
+
+      'import/extensions': [
+        1,
+        {
+          json: 'ignorePackages',
+        },
+      ],
+
+      'jsx-a11y/no-redundant-roles': 'off',
+      'no-only-tests/no-only-tests': 'error',
+      'no-unsafe-optional-chaining': 'error',
+    },
+
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
+
+        alias: eslintDirAlias,
+      },
+    },
+  },
+  globalIgnores([
+    '**/tz/**/*',
+    '**/index.stories.jsx',
+    '**/index.amp.stories.jsx',
+    '.storybook/**/*',
+  ]),
+  {
+    files: ['**/*.{ts,tsx}'],
+
+    languageOptions: {
+      parser: tsParser,
+
+      parserOptions: {
+        project: true,
+      },
+    },
+
+    extends: compat.extends('plugin:@typescript-eslint/recommended'),
+
+    rules: {
+      'react/jsx-filename-extension': [
+        2,
+        {
+          extensions: ['.jsx', '.tsx'],
+        },
+      ],
+
+      'no-use-before-define': 'off',
+      '@typescript-eslint/no-use-before-define': ['error'],
+
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+
+      '@typescript-eslint/prefer-optional-chain': ['error'],
+      'react/require-default-props': 'off',
+      'react/no-unused-prop-types': 'off',
+    },
+  },
+]);
