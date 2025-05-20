@@ -4,7 +4,12 @@ import path from 'ramda/src/path';
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
 import envConfig from '../../../support/config/envs';
 
-export default ({ service, pageType, variant }) => {
+export default ({
+  service,
+  pageType,
+  path: currentPath,
+  variant = 'default',
+}) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe(
       'Audio Player',
@@ -15,9 +20,7 @@ export default ({ service, pageType, variant }) => {
         it('should render a valid media player', () => {
           cy.getPageDataFromWindow().then(({ pageData }) => {
             if (!getEpisodeAvailability(pageData)) {
-              return cy.log(
-                `Episode is not available: ${Cypress.env('currentPath')}`,
-              );
+              return cy.log(`Episode is not available: ${currentPath}}`);
             }
 
             cy.get('[data-e2e="media-loader__container"]').should('be.visible');
@@ -33,7 +36,7 @@ export default ({ service, pageType, variant }) => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
           let toggleName;
 
-          if (Cypress.env('currentPath').includes('podcasts')) {
+          if (currentPath?.includes('podcasts')) {
             toggleName = 'recentPodcastEpisodes';
           } else {
             toggleName = 'recentAudioEpisodes';
