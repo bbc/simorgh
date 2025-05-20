@@ -241,7 +241,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .emotion-10 {
-  height: 130px;
+  height: 165px;
   margin: 0 0 0.5rem 0;
 }
 
