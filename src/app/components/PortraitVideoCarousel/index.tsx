@@ -16,7 +16,7 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 const PortraitVideoCarousel = ({
   title,
   items,
-  curationId,
+  groupTrackingId,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -59,7 +59,7 @@ const PortraitVideoCarousel = ({
                 itemPosition={index}
                 groupTracker={{
                   itemCount: items.length,
-                  resourceId: curationId,
+                  resourceId: groupTrackingId,
                 }}
               />
             ))}

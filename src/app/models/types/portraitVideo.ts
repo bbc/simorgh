@@ -49,7 +49,7 @@ export interface PortraitVideoCarouselNavigationProps {
 
 export interface PortraitVideoCarouselProps {
   title: string;
-  curationId?: string;
+  groupTrackingId?: string;
   items: PortraitVideoPromoProps[];
 }
 

@@ -162,7 +162,7 @@ export default ({
           <PortraitVideoCarousel
             title={title}
             items={portraitVideo.items}
-            {...(curationId && { curationId })}
+            {...(curationId && { groupTrackingId: curationId })}
           />
         );
       }
