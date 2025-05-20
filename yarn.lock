@@ -13181,7 +13181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.0.0, minimatch@npm:^10.0.1":
+"minimatch@npm:^10.0.0":
   version: 10.0.1
   resolution: "minimatch@npm:10.0.1"
   dependencies:
@@ -13687,14 +13687,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:8.0.1":
-  version: 8.0.1
-  resolution: "npm-run-all2@npm:8.0.1"
+"npm-run-all2@npm:8.0.2":
+  version: 8.0.2
+  resolution: "npm-run-all2@npm:8.0.2"
   dependencies:
     ansi-styles: "npm:^6.2.1"
     cross-spawn: "npm:^7.0.6"
     memorystream: "npm:^0.3.1"
-    minimatch: "npm:^10.0.1"
+    picomatch: "npm:^4.0.2"
     pidtree: "npm:^0.6.0"
     read-package-json-fast: "npm:^4.0.0"
     shell-quote: "npm:^1.7.3"
@@ -13704,7 +13704,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10/afa8edf143bd2767a8a884379f52364b6cf465b0c6219f035a730b279397a459d7215d110204ff6089ca160492d8120763cd84880e07c0f4d0cc8e6ef3fb218a
+  checksum: 10/71f83e26ed1522553e6191ab4ae630a78b13d66efcf0ba48fde82aac81506c1067de6cc53f8c7d87c4d2576a664e561eed033fdc56bf4ffa75a0648081ec9e52
   languageName: node
   linkType: hard
 
@@ -15925,7 +15925,7 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     next: "npm:15.3.2"
     next-test-api-route-handler: "npm:4.0.16"
-    npm-run-all2: "npm:8.0.1"
+    npm-run-all2: "npm:8.0.2"
     ts-node: "npm:^10.9.2"
   languageName: unknown
   linkType: soft
@@ -16055,7 +16055,7 @@ __metadata:
     moment: "npm:2.30.1"
     moment-timezone: "npm:0.5.48"
     morgan: "npm:1.10.0"
-    npm-run-all2: "npm:8.0.1"
+    npm-run-all2: "npm:8.0.2"
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.5.3"
     puppeteer: "npm:24.8.2"
