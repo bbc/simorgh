@@ -97,7 +97,7 @@ exports[`AMP Media Article Page AMP Geo config 1`] = `
 exports[`AMP Media Article Page Analytics ATI 1`] = `
 {
   "requests": {
-    "base": "https://logws1363.ati-host.net?",
+    "base": "https://logws1363.ati-host.net/hit.xiti?",
     "pageview": [
       {
         "s": "598343",

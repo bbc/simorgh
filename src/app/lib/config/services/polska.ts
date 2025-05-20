@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
     atiAnalyticsProducerName: 'POLSKA',
+    useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -386,7 +387,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Warsaw',
     navigation: [
       {
         title: 'News',
