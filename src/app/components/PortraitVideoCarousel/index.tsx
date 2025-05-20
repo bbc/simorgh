@@ -8,6 +8,7 @@ import {
   PortraitVideoPromoProps,
 } from '#app/models/types/portraitVideo';
 import styles from './index.styles';
+import portraitPromoStyles from './PortraitVideoPromo/index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
@@ -42,12 +43,13 @@ const PortraitVideoCarousel = ({
         aria-label={title}
         role="region"
         data-testid="portrait-video-carousel"
+        css={styles.section}
       >
         <h2 css={styles.heading}>{title}</h2>
-        <div css={styles.scrollContainer}>
+        <div css={styles.carouselContainer}>
           <div
             ref={scrollRef}
-            css={styles.scrollWrapper}
+            css={styles.carousel}
             data-testid="pv-scroll-panel"
           >
             {items.map(item => (
@@ -57,7 +59,7 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(item)}
               />
             ))}
-            <div css={[styles.promo, styles.endBlankItem]} />
+            {/* <div css={[portraitPromoStyles.button, styles.endBlankItem]} /> */}
           </div>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
         </div>
