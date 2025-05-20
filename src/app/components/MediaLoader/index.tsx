@@ -100,6 +100,9 @@ type MediaContainerProps = {
   noJsMessage?: string;
 };
 
+const playerHasAudioSkin = (playerConfig: PlayerConfig) =>
+  playerConfig?.ui?.skin === 'audio';
+
 const MediaContainer = ({
   playerConfig,
   showAds,
@@ -107,6 +110,7 @@ const MediaContainer = ({
   noJsMessage,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+  const isAudioPlayer = playerHasAudioSkin(playerConfig);
 
   useEffect(() => {
     try {
@@ -166,7 +170,7 @@ const MediaContainer = ({
       ref={playerElementRef}
       data-e2e="media-player"
       css={
-        playerConfig?.ui?.skin === 'audio'
+        isAudioPlayer
           ? styles.audioMediaContainer
           : styles.standardMediaContainer
       }
@@ -238,6 +242,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
 
   const captionBlock = getCaptionBlock(blocks, pageType);
   const isPortraitVideo = orientation === 'portrait';
+  const isAudioPlayer = playerHasAudioSkin(playerConfig);
 
   const {
     placeholderSrc,
@@ -263,11 +268,11 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         className={className}
         css={[
           styles.figure(embedded),
-          playerConfig?.ui?.skin === 'classic' && [
+          isAudioPlayer && styles.audioFigure,
+          !isAudioPlayer && [
             isPortraitVideo && styles.portraitFigure(embedded),
             orientation === 'landscape' && styles.landscapeFigure,
           ],
-          playerConfig?.ui?.skin === 'audio' && styles.audioFigure,
         ]}
       >
         {isAmp ? (
@@ -310,7 +315,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
               playerConfig?.ui?.skin === 'classic' && [
                 isPortraitVideo && styles.captionPortrait,
               ],
-              playerConfig?.ui?.skin === 'audio' && styles.captionAudio,
+              isAudioPlayer && styles.captionAudio,
             ]}
           />
         )}
