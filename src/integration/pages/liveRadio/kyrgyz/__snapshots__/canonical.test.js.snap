@@ -163,11 +163,11 @@ exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-q31s7w"
+  class="bbc-76jzja"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-1eua7yp"
+    class="bbc-elyeao"
     data-e2e="media-player"
   >
     <noscript>
