@@ -58,7 +58,7 @@ export default {
 
   audioMediaContainer: ({ mq, spacings }: Theme) =>
     css({
-      height: '130px',
+      height: '165px',
       margin: `0 0 ${spacings.FULL}rem 0`,
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${spacings.FULL}rem`,
