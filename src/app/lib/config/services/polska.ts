@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
     atiAnalyticsProducerName: 'POLSKA',
+    useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -344,8 +345,8 @@ export const service: DefaultServiceConfig = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Dlaczego BBC jest godne zaufania',
+        href: 'https://www.bbc.com/polska/articles/c0l0x321d1xo',
+        text: 'Dlaczego ufamy BBC',
       },
       externalLink: {
         href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
@@ -353,16 +354,16 @@ export const service: DefaultServiceConfig = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/usingthebbc/terms/',
-          text: 'Zasady użytkowania',
+          href: 'https://www.bbc.com/polska/articles/c9djv7vl647o',
+          text: 'Warunki użytkowania',
         },
         {
-          href: 'https://www.bbc.com/aboutthebbc',
+          href: 'https://www.bbc.com/polska/articles/cwyn84e4n08o',
           text: 'O BBC',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
-          text: 'Polityka Prywatności',
+          href: 'https://www.bbc.com/polska/articles/ce82e738g0do',
+          text: 'Polityka prywatności',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -370,11 +371,11 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/polska/send/u203797512',
-          text: 'Skontaktuj się z BBC',
+          text: 'Skontaktuj się z nami',
         },
         {
           href: 'https://www.bbc.com/ws/languages',
-          text: 'BBC News w innych językach',
+          text: 'Inne języki',
         },
         {
           id: 'COOKIE_SETTINGS',
@@ -386,7 +387,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Warsaw',
     navigation: [
       {
         title: 'News',

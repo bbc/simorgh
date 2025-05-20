@@ -19,6 +19,7 @@ import Embed from '../Embeds/OEmbed';
 import Billboard from '../Billboard';
 import PortraitVideoCarousel from '../PortraitVideoCarousel';
 import UsefulLinks from '../UsefulLinks';
+import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 
 const {
@@ -32,6 +33,7 @@ const {
   BILLBOARD,
   PORTRAIT_VIDEO_CAROUSEL,
   USEFUL_LINKS,
+  SOCIAL_LINKS,
 } = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
@@ -168,6 +170,14 @@ export default ({
           summaries={summaries}
           title={title}
           id={`useful-links-${nthCurationByStyleAndProminence}`}
+        />
+      );
+    case SOCIAL_LINKS:
+      return (
+        <SocialLinks
+          summaries={summaries}
+          title={title}
+          id={`social-links-${nthCurationByStyleAndProminence}`}
         />
       );
     case SIMPLE_CURATION_GRID:

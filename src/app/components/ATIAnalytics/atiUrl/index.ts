@@ -1,6 +1,10 @@
+import {
+  CLICK_EVENT,
+  VIEW_EVENT,
+  VIEWABILITY_CLICK_EVENT,
+} from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import isLive from '../../../lib/utilities/isLive';
 import {
   getDestination,
   getAppType,
@@ -20,7 +24,11 @@ import {
   getATIMarketingString,
   getRSSMarketingString,
 } from '../../../lib/analyticsUtils';
-import { ATIEventTrackingProps, ATIPageTrackingProps } from '../types';
+import {
+  ATIEventTrackingProps,
+  ATIPageTrackingProps,
+  ReverbBeaconConfig,
+} from '../types';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -444,7 +452,7 @@ export const buildReverbAnalyticsModel = ({
   timePublished,
   timeUpdated,
   experimentVariant,
-}: ATIPageTrackingProps) => {
+}: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
 
@@ -453,11 +461,12 @@ export const buildReverbAnalyticsModel = ({
     .join('~');
 
   const eventDetails = {
-    eventName: 'pageView',
+    eventName: 'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
   };
 
   const reverbVariables = {
     params: {
+      env: getEnvConfig().SIMORGH_APP_ENV,
       page: {
         contentId,
         contentType,
@@ -503,53 +512,11 @@ export const buildReverbPageSectionEventModel = ({
   statsDestination,
   componentName,
   campaignID,
-  format,
   type,
   advertiserID,
   url,
   experimentVariant,
-}: ATIEventTrackingProps) => {
-  const eventDetails = isLive()
-    ? {
-        eventName: type === 'view' ? 'sectionView' : 'sectionClick',
-        eventPublisher: type === 'click' ? 'click' : 'impression',
-        componentName,
-        container: campaignID,
-        attribute: componentName,
-        metadata: format,
-        placement: pageIdentifier,
-        isClick: type === 'click',
-        ...(advertiserID && { source: advertiserID }),
-        ...(url && { result: url }),
-        ...(experimentVariant && {
-          personalisation: {
-            EXP: `${OPTIMIZELY_CONFIG.flagKey}::${experimentVariant}`,
-          },
-        }),
-      }
-    : {
-        eventName: type === 'view' ? 'sectionView' : 'sectionClick',
-        eventPublisher: 'viewability',
-        item: {
-          ...(advertiserID && { attribution: advertiserID }),
-          name: componentName,
-          ...(url && { link: url }),
-        },
-        group: {
-          name: campaignID,
-        },
-        event: {
-          category: 'viewability',
-          action: type === 'click' ? 'select' : 'view',
-        },
-        isClick: type === 'click',
-        ...(experimentVariant && {
-          experience: {
-            engine_id: `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
-          },
-        }),
-      };
-
+}: ATIEventTrackingProps): ReverbBeaconConfig => {
   return {
     params: {
       page: {
@@ -564,6 +531,30 @@ export const buildReverbPageSectionEventModel = ({
         isSignedIn: false,
       },
     },
-    eventDetails,
+    eventDetails: {
+      eventName: type === VIEW_EVENT ? 'sectionView' : 'sectionClick',
+      eventPublisher: 'viewability',
+      item: {
+        ...(advertiserID && { attribution: advertiserID }),
+        name: componentName,
+        ...(url && { link: url }),
+      },
+      group: {
+        name: campaignID,
+      },
+      event: {
+        category: 'viewability',
+        action: type === CLICK_EVENT ? VIEWABILITY_CLICK_EVENT : VIEW_EVENT,
+      },
+      isClick: type === CLICK_EVENT,
+      ...(experimentVariant && {
+        experience: {
+          engine_type: ['experimentation'],
+          engine_id: [
+            `optimizely.${OPTIMIZELY_CONFIG.flagKey}.${experimentVariant}`,
+          ],
+        },
+      }),
+    },
   };
 };

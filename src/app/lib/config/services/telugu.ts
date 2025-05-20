@@ -274,7 +274,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'తాజా వార్తలు',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'పాపులర్',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
       numberOfItems: 10,
       hasMostRead: true,

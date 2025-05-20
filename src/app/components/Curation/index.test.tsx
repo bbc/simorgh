@@ -47,6 +47,14 @@ const usefulLinksCuration = kyrgyzFixture.data.curations.find(
     summaries.length > 0,
 );
 
+const socialLinksCuration = kyrgyzFixture.data.curations.find(
+  ({ visualStyle, visualProminence, summaries }) =>
+    visualStyle === LINKS &&
+    visualProminence === NORMAL &&
+    summaries &&
+    summaries.length > 0,
+);
+
 const components = {
   'curation-grid-normal': {
     visualStyle: NONE,
@@ -78,10 +86,15 @@ const components = {
     visualProminence: MAXIMUM,
     summaries: billboardCuration?.summaries,
   },
-  'social-links-1': {
+  'useful-links-1': {
     visualStyle: LINKS,
     visualProminence: LOW,
     summaries: usefulLinksCuration?.summaries,
+  },
+  'social-links-1': {
+    visualStyle: LINKS,
+    visualProminence: NORMAL,
+    summaries: socialLinksCuration?.summaries,
   },
 };
 
